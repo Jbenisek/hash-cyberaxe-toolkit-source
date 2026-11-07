@@ -1,0 +1,3 @@
+instances compared 200  identical root sets 200  mismatches 0
+roots 204  rebuilt and all 78 relations hold 204  root-count histogram [(0, 68), (1, 79), (2, 40), (3, 8), (4, 4), (5, 1)]
+generator instances 8  generating C0.b1 among the roots 8

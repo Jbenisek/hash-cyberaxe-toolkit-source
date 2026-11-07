@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m13 (w13 = W13 = 0x0007c006; read by D2.a2 in round 0 and C3.a2 in round 1; pinned)",
+ "question": "Q2 necessity: relax the condition, recount outcome mass",
+ "labels": [
+  "S"
+ ],
+ "status": "COMPUTED",
+ "number": "Exact outcome mass of the condition on w13 over all 2^32 values: d-output equal 16 values, b-output equal 30 values, both 1 (W13 only). Relaxed to one group: rebuilt blocks with each of the 15 d-only and 29 b-only values (admissible X constants 150/150 each) give digest words 0,2,5,7 equal in 0 of 150 each, while W13 gives them in 150/150: both groups are necessary. Changing w13 in both blocks without re-solving: constants kept 0/3000, digest equal 0/12000. Top-byte-zero group: 2^24 of 2^32 values, of the 15 d-only values 8 (0x8000c006..0x8007c006) violate it.",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/w13enum.c; research/dig/incoming/blake3-r2-U12/work/w13enum_out.txt; research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U12/work/scan_m1213.out.json; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m13|msgword|Q2. d-only list: 0000c006..0006c006, 8000c006..8007c006 (15 besides W13); b-only list: 0007bec6.. etc (29). Relaxing never adds a usable member.",
+ "topic": "blake3-r2 m13 word"
+}

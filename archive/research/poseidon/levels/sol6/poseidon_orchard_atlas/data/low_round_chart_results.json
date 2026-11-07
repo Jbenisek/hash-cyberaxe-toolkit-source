@@ -1,0 +1,36 @@
+{
+  "source": "derived from the exact pinned first two full rounds",
+  "tests": 2048,
+  "one_round_plane_normal": [
+    "0x2fcbba6f9159a219723a63a0c09dab26aef9112e952fdbb52a418d8d73a7c908",
+    "0x1ec7372574f3851bb4ddd4b4d6452256c5e4960d7424cd3776efab42d4fba90b",
+    "0xd0c2efd6472f12a3c26fa4b7d25b1e487a7435d30f8be81adc8933c6f3c72ee"
+  ],
+  "one_round_plane_constant": "0x1bb8b6550fd0a299151ec6e764ce7a0e7639053ef68202d771242177f32f108c",
+  "one_round_per_digest_preimages": "28948022309329048855892746252171976963363056481941560715954676764349967630337",
+  "one_round_distinct_ordered_pair_probability": "1/28948022309329048855892746252171976963363056481941560715954676764349967630338",
+  "two_round_degree_in_transformed_coordinates": 5,
+  "coefficient_count": 21,
+  "nonzero_coefficient_count": 21,
+  "leading_Y5": "0x18cb659238953f74f43f33c9256fef8aad7cf48a4fcfa59a784e1f6f088a0fc",
+  "leading_X5": "0x1db024d80af1d0edf785da1d22666637eb9c268035fdbaee895de557d36ea376",
+  "two_round_fixed_X_target_roots_max": 5,
+  "two_round_all_digest_mean_preimages": "28948022309329048855892746252171976963363056481941560715954676764349967630337",
+  "exact_two_round_full_fibre_counts": "OPEN",
+  "coordinate_conversion": "X=(m0+c00)^5, Y=(m1+c01)^5; inverse uses exponent d=5^-1 mod(p-1)",
+  "optimized_digest_only_field_ops": {
+    "r1": {
+      "online_additions": 4,
+      "online_multiplications": 8,
+      "total": 12,
+      "one_time_precomputation_ops": 5
+    },
+    "r2": {
+      "online_additions": 10,
+      "online_multiplications": 24,
+      "total": 34,
+      "one_time_precomputation_ops": 10
+    }
+  },
+  "pricing_scope": "field arithmetic only; excludes loads, serialization, loop/control, and contest qualification; not submitted scores"
+}

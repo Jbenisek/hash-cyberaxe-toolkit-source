@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+Downloaded external reference page: citation only, not a project-authored instrument.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/newpaths/literature/papers/ehash_blake.txt
+Publisher/preprint locator (derived from the source identifier): https://ehash.iaik.tugraz.at/wiki/BLAKE.html

@@ -1,0 +1,1 @@
+2021/578	Cryptanalytic Applications of the Polynomial Method for Solving Multivariate Equation Systems over GF(2)	owner_download	https://eprint.iacr.org/2021/578.pdf

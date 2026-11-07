@@ -1,0 +1,24 @@
+package: pkg_check_exec/poseidon-orchard-r3
+mem-includes-prep             PASS    L9: "* `time_log2 = 30.08182` in target-compression units (`C(3) = 279` primitive operations pe..."
+mem-gate                      PASS    [PASS] 13 stage peaks stated, all <= 2^27.9000
+selection-charged             N/A     no selection wording
+prob-tail-abort               N/A     no probabilistic-tail wording
+machine-premises-declared     PASS    heuristic H1-charging-rules
+allowance-in-ledger           N/A     no allowance wording
+printed-code-matches-shipped  N/A     no printed python overlapping shipped functions
+ledger-sign                   N/A     no printed saving/charge arithmetic
+restrictions<=1024            PASS    longest item 479 chars (2 items, total 718)
+exp-sources<=64KiB            N/A     no experiment files
+evidence<=524288B             PASS    472 B in 3 files
+LF-endings                    PASS    no CR in text files
+no-imperative-wording         PASS    none
+R03-retained-advice           EXPOSED claim nonuniform_advice_log2_bytes=0 but the proof retains a selected value: 1 hit(s); L1099: "* The ranges of constant pattern are found by split_regions below, whose operations are all"
+R05-extrapolation             EXPOSED 1 hit(s); L134: "tion unit charges. Nothing is extrapolated or taken from another run: every figure below i"
+R07-iid-from-selected         PASS    no seed/replay/iid-sample wording
+R12-dev-runs-in-ledger        EXPOSED 2 hit(s); L84: "re held in integer registers (not charged as memory accesses). The 256-bit constants of the" | L536: "sqrt_calls; /* informational, not charged separately */ } fp_counters; extern fp_counters f"
+R13-transfer-scope            PASS    no transfer / measured-subset wording
+R16-one-ledger                PASS    no separate-copy / path-absent wording
+R19-evidence-package          PASS    claim manifests exist under package
+R20-input-format              PASS    target poseidon-orchard-r3-prefix-v1 has explicit input/encoding or reader wording: 7 hit(s); L23: "0,1}`), so every `(U, V)` has exactly one canonical preimage. `K` is a constant. 2.2 Round"
+R21-answers-by-id             PASS    all 6 fatal/material ids of ['4086e210'] named in proof/note
+SUMMARY: 3 EXPOSED, 13 PASS, 6 N/A

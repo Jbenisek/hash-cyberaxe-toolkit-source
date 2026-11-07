@@ -1,0 +1,23 @@
+{
+  "id": "D559-SHA3-R6-S6K3-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6K3 prefile audit",
+  "question": "What is creditable for pkgS6K3 without a supplied public request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6K3 prefile ALL PASS: N=7130988207924363499240421458831153293892, time_log2=121.72219, log2(N/1626)=121.72218618. All intake checks pass. No supplied public request file; no new campaign, score, or premise credit.",
+  "source": "our workflow: D559 read-only pkgS6K3 prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D559_s6k3_prefile.md; research/tools/build_pkg/scratch/pkgS6K3/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6K3/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6K3/work/intake_s6k3.log",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No supplied public request; no package/stage/filing/submission.",
+  "held_fixed": "pkgS6K3 package bytes and work logs as found; no package writes",
+  "reopen_if": "supplied public request or owner/organizer ruling"
+}

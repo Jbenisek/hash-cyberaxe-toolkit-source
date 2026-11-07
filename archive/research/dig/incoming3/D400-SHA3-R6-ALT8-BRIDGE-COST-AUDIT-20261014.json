@@ -1,0 +1,22 @@
+{
+  "id": "D400-SHA3-R6-ALT8-BRIDGE-COST-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "alternative 8-bit predicate bridge and charge audit",
+  "question": "Do the finite mixed pre-chi predicate screens provide a lossless cheaper replacement for the filed eight-form filter?",
+  "labels": ["C", "S"],
+  "status": "OPEN",
+  "number": "alt8.py tests rank-8 XOR forms of arbitrary 320-bit round-5 pre-chi outputs, whereas CAMP-F proves a specific eight-form target over ten planes (x=0..4,z=0,1). The finite derivative screen gives no universal predicate proof and no generated-program charge. A support/rank/target check, folded liveness regeneration, FES regeneration, and KAT are required before any transfer.",
+  "source": "our workflow: read-only source-level bridge and cost audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D400_sha3r6_alt8_bridge_cost_audit.md; research/retest/sha3_r6_alt8/alt8.py; research/retest/sha3_r6_alt8/RESULT.md; research/tools/build_pkg/scratch/pkgS6K/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.5,
+  "prior": 0.05,
+  "gain_basis": "C",
+  "notes": "The current exact baseline is S_g=4,594,894,479,069 operations/group and 244 operations/point for the ten-plane retained round-5 step. Generic mixed masks may touch more planes and change FES/cache/register costs. No score, package, staging, or submission credit.",
+  "reopen_if": "An owner-approved candidate form set has a proved target equivalence and a regenerated, KAT-clean, charged setup/FES/kernel with register and memory bounds."
+}

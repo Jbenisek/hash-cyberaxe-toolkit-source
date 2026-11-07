@@ -1,0 +1,1 @@
+n=16 free starts T=15.9: aborted at total progress 4 with 8337381 states

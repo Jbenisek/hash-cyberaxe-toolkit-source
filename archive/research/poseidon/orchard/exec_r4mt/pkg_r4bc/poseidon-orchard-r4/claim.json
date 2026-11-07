@@ -1,0 +1,37 @@
+{
+ "schema_version": 3,
+ "submission_state": "ready",
+ "target_profile": "poseidon-orchard-r4-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 4,
+ "claim": {
+  "time_log2": 32.23854,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 27.87046,
+  "preprocessing_log2": 0,
+  "success_probability": 1,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r4-prefix-v1 only (four partial rounds plus the eight fixed full rounds); the construction uses the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "Success probability 1: one deterministic procedure was executed once from the start on the fixed target and stopped with a collision at the precommitted verified centre c = 2 (single-trial schedule; the failed centre-1 trial is not run), single-threaded (T = 1; no thread control charged). The time re-prices that one run by the three declared reductions of proof.md section 10: single-trial base N1 = 1,988,654,736,397; CRT transform de-padding -269,390,000,000; stage-D degree-1-certifying truncated half-gcd -199,114,398,130 (one half of the trial-2 half-gcd; the full-descent half is retained). Final N = 1,520,150,338,267, log2(N/300) = 32.23854. Memory is the section 10.4 static footprint, 245,382,600 bytes, log2 27.87046, a credited derivative of 0xshikhar 52120fad."
+ ],
+ "baseline_improved": "poseidon-orchard-r4-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H1-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 describe the executed program of proof.md section 9 under the stated rules: 1 per field operation (a Montgomery conversion is one multiplication), 1 per element load or store plus 1 address operation, 3 per loop iteration plus 2 per loop exit (the loops written with the macro FOR8 are unrolled eight times in the source and charged 3 per pass of eight; the generated kernels are straight-line), 1 per other executed index or control operation, 300 per reduced permutation evaluation, and a register file of 18 words of 256 bits per transform block (16 data words plus two working words: the twiddle operand and the butterfly temporary) as the only register assumption; the allocator (`xalloc`, `xfree`) is charged per executed operation, and the report formatting, the single write and the exit are charged in stage I. The run used 6 threads: each thread counts its own operations, the main thread sums them, the loop control of a split loop is charged once, and the thread control (10,000 operations per futex or clone system call, 1,000 per woken worker, small constants per dispatch and chunk) is charged on top and listed in the THREADS line (proof.md section 4.5). The best-case recount of proof.md section 10 re-prices this same executed run under a single-trial single-thread (T=1) precommitted schedule and two declared stacked levers (CRT transform de-padding; stage-D degree-1-certifying truncated half-gcd), each an exact arithmetic reduction of the section 6 stage totals; the memory placement of section 10.4 is a credited derivative of 0xshikhar 52120fad.",
+   "scope": "All stages of the executed run of proof.md section 4 at the target dimensions (m = 4882812 for the powering, N = 12582912 and N' = 6291456 in its transforms, 12582912 evaluations of the line).",
+   "extrapolation": "None. The time is the executed total of one run of the shipped source, with every trial charged and the output stage, stage I and the thread control included; the only bounds in it are the stated constants of stage I and of the stage bookkeeping (proof.md section 4.2); no estimate or other run enters it.",
+   "evidence_ids": [
+    "proof:57-135",
+    "proof:141-184",
+    "proof:5952-5995"
+   ],
+   "limitations": "The counts are produced by the instrumentation written into the source; the source is part of the proof text and was not run by the organizer. Word-level costs outside the stated rules (cache, bandwidth) are not part of the model."
+  }
+ ]
+}

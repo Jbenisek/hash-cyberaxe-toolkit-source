@@ -1,0 +1,41 @@
+COST.txt of research/pkg7 (a DRAFT): cost per trial and time_log2 for the program blake3-r2/experiments/halfsearch.py
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; python -B work/tools/cost.py; figures and arithmetic: tools/pkg7_data.py
+sub-class (e1 AND 07ef8303) == 030c0303, 131072 members, 18725 list words; R of the sub-class under the model 185,377,197.55 (count/a15_totals.txt)
+formula: time_log2 = 123.339 - log2(f) + log2(charged / 34) + 0.012; charged = budgeted * 1.04 rounded up to 0.1; budget on stage 2: a share 2^-(n - 3) of the batches; expected: the share 1 - (1 - 2^-n)^7
+
+COUNTS (the program's machine, 40 cases per row, all lanes right, same counts in every case, equal to TABLES and to tools/pkg7_data.py)
+  outer step 148+91+21 = 260 (operations + loads + stores); table build per list word 43+26+5 = 74; middle step per value of X2 85+40+9 = 134 (its 9 loads of the class loop entry included)
+  registers in use: batch 16, outer step 11, table build 7, middle step 13, of 16; words kept in registers during a class loop: 9 ['A16', 'B16', 'A12', 'B12', 'A mask 1', 'A mask 2', 'A all', 'A carry', 'not bit 32']
+  program: rule 4: stage A 29+8 = 37, stage 2 101+27 = 128; rule 6: stage A 32+9 = 41, stage 2 105+30 = 135; rule 8: stage A 37+10 = 47, stage 2 105+30 = 135; middle step 134, registers of the batch 16
+  every read a load: rule 4: stage A 29+18 = 47, stage 2 100+43 = 143; rule 6: stage A 32+19 = 51, stage 2 100+43 = 143; rule 8: stage A 37+20 = 57, stage 2 100+43 = 143; middle step 146, registers of the batch 10
+  amortised per trial: middle step 134 / 131072 = 0.001022; table build and outer step (74 * 18725 + 260) / 2^32 / 131072 = 2.46e-09; a batch counts as 18725 / 131072 = 1 / 6.99984 per trial (the last list word has three spare lanes)
+
+TABLE 1: the program as it is (16 registers, 9 words kept in registers during a class loop, every executed load and store charged); kept count EXACT
+  rule (name) | kept count | stage A, stage 2 | expected | budgeted | charged | margin 3.75: f, log2 f, time_log2 | margin 2.4: f, log2 f, time_log2 | f = 49400000 (the program's FACTOR): margin, time_log2
+  4 (p4) | 185,358,154.95 | 37, 128 | 11.9339 | 14.4299 | 15.1 | 49,428,841, 25.5588, 96.621 | 77,232,565, 26.2027, 95.977 | 3.7522, 96.622
+  6 (old6) | 185,358,125.47 | 41, 135 | 7.8714 | 8.2691 | 8.6 | 49,428,833, 25.5588, 95.809 | 77,232,552, 26.2027, 95.165 | 3.7522, 95.810
+  8 (S8) | 185,358,111.47 | 47, 135 | 7.2367 | 7.3182 | 7.7 | 49,428,830, 25.5588, 95.650 | 77,232,546, 26.2027, 95.006 | 3.7522, 95.650
+
+TABLE 2: the same with the CONSERVATIVE kept count (every outcome with a violating solution in the sub-class dropped whole)
+  rule (name) | kept count | stage A, stage 2 | expected | budgeted | charged | margin 3.75: f, log2 f, time_log2 | margin 2.4: f, log2 f, time_log2 | f = 49400000 (the program's FACTOR): margin, time_log2
+  4 (p4) | 185,355,465.45 | 37, 128 | 11.9339 | 14.4299 | 15.1 | 49,428,124, 25.5588, 96.621 | 77,231,444, 26.2027, 95.977 | 3.7521, 96.622
+  6 (old6) | 185,355,465.45 | 41, 135 | 7.8714 | 8.2691 | 8.6 | 49,428,124, 25.5588, 95.809 | 77,231,444, 26.2027, 95.165 | 3.7521, 95.810
+  8 (S8) | 185,355,453.45 | 47, 135 | 7.2367 | 7.3182 | 7.7 | 49,428,121, 25.5588, 95.650 | 77,231,439, 26.2027, 95.006 | 3.7521, 95.650
+
+TABLE 3: every read of a memory word a load (the line KEPT = 0; the sentence of the filed text); kept count EXACT
+  rule (name) | kept count | stage A, stage 2 | expected | budgeted | charged | margin 3.75: f, log2 f, time_log2 | margin 2.4: f, log2 f, time_log2 | f = 49400000 (the program's FACTOR): margin, time_log2
+  4 (p4) | 185,358,154.95 | 47, 143 | 14.1415 | 16.9301 | 17.7 | 49,428,841, 25.5588, 96.850 | 77,232,565, 26.2027, 96.207 | 3.7522, 96.851
+  6 (old6) | 185,358,125.47 | 51, 143 | 9.4194 | 9.8406 | 10.3 | 49,428,833, 25.5588, 96.069 | 77,232,552, 26.2027, 95.425 | 3.7522, 96.070
+  8 (S8) | 185,358,111.47 | 57, 143 | 8.6963 | 8.7826 | 9.2 | 49,428,830, 25.5588, 95.906 | 77,232,546, 26.2027, 95.262 | 3.7522, 95.907
+
+RULE IN USE: 8 conditions (S8): expected 7.2367, budgeted 7.3182, charged 7.7; time_log2 95.650 at margin 3.75 and 95.006 at margin 2.4; with the program's FACTOR 49400000 (margin 3.7522): 95.650
+  one operation or load more in stage A adds 0.1429 per trial; the charged figure has room for 0.60 of them before it rises
+
+EVIDENCE QUOTED (for this SHA-256 only)
+  selftest_250000_rule4_61.json: 250000 cases, exit 0, 1750000 of 1750000 lanes right, stored words right in 250000, stage A 29+8, stage 2 101+27, counts equal TABLES True, registers 16, rule A patterns 16 of 16; 109228 lanes satisfy the rule, 53713 batches enter stage 2 (every fourth case is the short last batch)
+  selftest_250000_rule6_61.json: 250000 cases, exit 0, 1750000 of 1750000 lanes right, stored words right in 250000, stage A 32+9, stage 2 105+30, counts equal TABLES True, registers 16, rule A patterns 512 of 512; 27297 lanes satisfy the rule, 22005 batches enter stage 2 (every fourth case is the short last batch)
+  selftest_1000000_rule8_61.json: 1000000 cases, exit 0, 7000000 of 7000000 lanes right, stored words right in 1000000, stage A 37+10, stage 2 105+30, counts equal TABLES True, registers 16, rule A patterns 65536 of 65536; 27068 lanes satisfy the rule, 23368 batches enter stage 2 (every fourth case is the short last batch)
+  selftest_40000_rule8_pkg7-second.json: 40000 cases, exit 0, 280000 of 280000 lanes right, stored words right in 40000, stage A 37+10, stage 2 105+30, counts equal TABLES True, registers 16, rule A patterns 65536 of 65536; 1048 lanes satisfy the rule, 895 batches enter stage 2 (every fourth case is the short last batch)
+  entry_share_512x16_1.txt (MEASUREMENT, not used in the budget; 2^30 real trials): rule 8: share of the trials 2^-7.9992, share of the batches that enter stage 2 0.026224 (budget 1/32 = 0.031250); largest and smallest single context 0.042083 (123/0) 0.011963 (77/5); per outer step 0.028852 0.023858
+  entry_share_8192x1_1.txt (MEASUREMENT, not used in the budget; 2^30 real trials): rule 8: share of the trials 2^-8.0019, share of the batches that enter stage 2 0.026170 (budget 1/32 = 0.031250); largest and smallest single context 0.042083 (123/0) 0.007103 (7834/0); per outer step 0.042083 0.007103
+  entry_share_8192x1_2.txt (MEASUREMENT, not used in the budget; 2^30 real trials): rule 8: share of the trials 2^-8.0000, share of the batches that enter stage 2 0.026222 (budget 1/32 = 0.031250); largest and smallest single context 0.040587 (7242/0) 0.012230 (6425/0); per outer step 0.040587 0.012230

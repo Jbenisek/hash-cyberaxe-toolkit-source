@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m13 (w13 = W13 = 0x0007c006; read by D2.a2 in round 0 and C3.a2 in round 1; pinned)",
+ "question": "Q1 difference/condition count at this word",
+ "labels": [
+  "S"
+ ],
+ "status": "COMPUTED",
+ "number": "Difference A vs B: 0 (20000/20000 builds have w13 = W13 = 0x0007c006 in both blocks; top byte 0 in all). Conditions on the word: ONE value out of 2^32 passes the condition set \"C3 on (X3,X7,X11,X15) with w4=W4 vs W4' returns the same d and b outputs\" (exhaustive 2^32 count, 35 s C program): 32 bits of condition; the honest-string condition (top byte of w13 = 0, byte 55 of the 55-byte message) is a further 8 of those bits at the message level, 2^24 candidates, still 1 solution.",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/w13enum.c; research/dig/incoming/blake3-r2-U12/work/w13enum_out.txt; research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U12/work/scan_m1213.out.json; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m13|msgword|Q1. Reproduces Fact P of proof.md 3.2 (A: a2=8127c181 d2=bbfbdffe c2=7af77f38 b2=76f7aefd; B: a2=7edf3e7e c2=850000c3, same d2,b2). XOR difference at C3: a2 fff8ffff, c2 fff77ffb.",
+ "topic": "blake3-r2 m13 word"
+}

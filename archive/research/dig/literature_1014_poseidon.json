@@ -1,0 +1,21 @@
+{
+  "id": "LIT-1014-POSEIDON-TRIAGE-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon/Poseidon2 literature lead triage",
+  "question": "Which listed algebraic-attack papers provide a usable Orchard lever and what is the cheapest local test?",
+  "labels": ["K", "E"],
+  "status": "OPEN",
+  "number": "Sixteen one-line assessments saved. Immediate tests are static Orchard degree/MDS/subspace checks followed by one smallest Graeffe/resultant example; no paper result is directly score-usable.",
+  "source": "research/wide_1014/lit_poseidon.md",
+  "own_test": true,
+  "evidence": "research/sol_answer_literature_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 1.0,
+  "topic": "poseidon-r1-r2.literature-triage",
+  "peak_mem": null,
+  "notes": "Abstract-note triage only; no paper code run and no package/stage/filing/submission."
+}

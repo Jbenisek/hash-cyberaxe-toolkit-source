@@ -1,0 +1,1 @@
+2014/302	Branching Heuristics in Differential Collision Search with Applications to SHA-512	s2	https://link.springer.com/content/pdf/10.1007/978-3-662-46706-0_24.pdf

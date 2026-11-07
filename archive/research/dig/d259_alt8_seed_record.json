@@ -1,0 +1,22 @@
+{
+  "id": "D259-SHA3-R6-ALT8-SEED-DIVERSITY",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "seed-diversity screen for mixed-lane/mixed-slice alternative 8-bit predicates",
+  "question": "Does a new seed and larger finite sample retain rank 8, degree 8, and no degree-9 term?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "seed 0xD259; 96 rank-8 predicate sets x 96 affine 9-cubes = 9216; 73728/73728 eighth forms witnessed, per-form witness count 34..66/96; 0/73728 nonzero ninth derivatives; KAT PASS",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/sha3_r6_alt8/PREREG_D259_SEED_DIVERSITY.md; research/retest/sha3_r6_alt8/D259_run_summary.md; research/retest/sha3_r6_alt8/alt8.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite seed-diversity evidence only; universal predicate degree, survivor uniformity, and generated-kernel cost remain open. No safe claimable gain.",
+  "held_fixed": "Filed W40 span; eight independent masks touching at least two lanes and two slices; seed 0xD259; 96 sets and 96 random affine 9-cubes per set",
+  "reopen_if": "Exhaustive or preregistered comparison of the admissible alternative predicate class, including generated-program operation cost and survivor distribution",
+  "topic": "sha3-r6 alternative 8-bit predicates"
+}

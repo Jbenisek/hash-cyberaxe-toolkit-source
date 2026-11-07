@@ -1,0 +1,1 @@
+{"checks":["Chapter, speed, pause/resume and stale completion after Stop","Chapter advance, live rate change and voice-error fallback"],"scope":"Mock speech engine checks UI state and cancellation races. Actual audio depends on installed browser voices; no listening test claimed."}

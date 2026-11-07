@@ -1,0 +1,1 @@
+Part 1b: k = 12: 20000 outer steps, all t in [1, 2^12) inverted; mean cube hits per outer step 1.9928 +- 0.1320 (uniform prediction 1.9995; ratio 0.997); outer steps with a hit 310 (0.0155); mean hits given a hit 128.6; max 256

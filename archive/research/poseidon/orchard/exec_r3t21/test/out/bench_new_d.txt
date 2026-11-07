@@ -1,0 +1,2 @@
+bench d gcd_len=1 total=56461085936
+mem_peak=202802752 bytes (6.3376 M slots) arena_hwm=300000000 live_at_peak=11

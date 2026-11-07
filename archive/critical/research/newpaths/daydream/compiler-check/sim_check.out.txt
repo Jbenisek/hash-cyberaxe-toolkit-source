@@ -1,0 +1,15 @@
+S1 n=12 excluded (32, 33): executed 145065 closed form 145065 equal True
+S1 n=12 excluded (62, 63): executed 145065 closed form 145065 equal True
+S1 n=12 excluded (36, 48): executed 145065 closed form 145065 equal True
+S1 n=12 reference step-major uncached ops 229941
+S1 n=14 excluded (32, 33): executed 690897 closed form 690897 equal True
+S1 n=14 excluded (62, 63): executed 690897 closed form 690897 equal True
+S1 n=14 excluded (39, 43): executed 690897 closed form 690897 equal True
+S1 n=14 reference step-major uncached ops 1031517
+S2 large spaces: {'runs': 200, 'hits': 26490, 'false_hits': 0, 'wrong_latest': 0, 'max_path': 12, 'verif_gt_pairs': 0, 'detect_fail': 0, 'detect_cases': 9, 'badtriple_runs': 43, 'latest_ne_first': 10132}
+S2 crowded: {'runs': 200, 'hits': 215, 'false_hits': 0, 'wrong_latest': 0, 'max_path': 12, 'verif_gt_pairs': 0, 'detect_fail': 0, 'detect_cases': 8, 'badtriple_runs': 192, 'latest_ne_first': 3}
+S2 key=digest (no bad triples possible): {'runs': 200, 'hits': 200, 'false_hits': 0, 'wrong_latest': 0, 'max_path': 12, 'verif_gt_pairs': 0, 'detect_fail': 0, 'detect_cases': 200, 'badtriple_runs': 0, 'latest_ne_first': 0}
+S4 trial 0: plain ALU 3948 LD 144 ST 144 total with chi 4656; const-row ALU 3956 total 4664; outputs ok True
+S4 trial 1: plain ALU 3948 LD 144 ST 144 total with chi 4656; const-row ALU 3956 total 4664; outputs ok True
+S4 trial 2: plain ALU 3948 LD 144 ST 144 total with chi 4656; const-row ALU 3956 total 4664; outputs ok True
+ALL_OK

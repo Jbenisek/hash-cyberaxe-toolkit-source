@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-fadd-negative",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 modular-f map audit",
+  "question": "Can modular addition f'=f+r with induced g and constant h XOR close a residual class toggle?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact CEGIS found no map for deltas 00002000, 00001000, and 00000400 after 4, 2, and 5 witnesses.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/synth_fadd_map_summary.md; research/retest/b3_omega_coupled/exact/synth_fadd_map.py; research/retest/b3_omega_coupled/exact/synth_fadd_map.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Negative only for the modular-f plus constant-h-XOR family. General nonlinear maps and universal class invariance remain OPEN; no saving credited."
+}

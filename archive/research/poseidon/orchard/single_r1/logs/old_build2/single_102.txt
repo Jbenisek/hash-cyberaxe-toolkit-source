@@ -1,0 +1,23 @@
+r=1 seed=102 line=0 m=39062
+lean-pow breakdown: newton total=302926663 arith=21679385 | prefix+scale total=508491 | loop steps=238 total=45263370942 arith=3515054480 per-step total=190182230 arith=14769136
+gcd degree 1, charged 6392270690, derived bound 11942345981 (within)
+  init (twiddle table)                     arith=       17359 other=      126642 total=      144001     0.0s peak=524288
+  line setup                               arith=         391 other=        3519 total=        3910     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  B: build g                               arith=     1436260 other=    41901935 total=    43338195     0.5s peak=3347168
+  C: S^((p-1)/2) mod g                     arith=  3536772927 other= 42030109940 total= 45566882867    72.2s peak=8468544
+  D: gcd(g, S^h - 1) (half-gcd)            arith=   389577467 other=  6002693235 total=  6392270702     8.3s peak=9103968
+  E: root isolation                        arith=           2 other=           5 total=           7     0.0s peak=524416
+  F: sqrt + map back                       arith=        3147 other=       40323 total=       43470     0.0s peak=524288
+  G: verification (2 reference hashes)     arith=         474 other=        4266 total=        4740     0.0s peak=524288
+RESULT found=1 success=1 roots_degree=1
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=52002687895 total_arith=3927808027 units=219420624.0 log2_units=27.7091 heap_peak=9103968 secs=81.0
+TYPES add=1368825116 sub=1279204609 mul=1246451982 sqr=33326320 ld=1513188856 st=841035568 ctl=45697357395 rnd=1 perm=23298048
+COLLISION nk1  0x20fd85a842465b19de851224a0ceb28aa85a319acefd40311676c9e5d55e1d31
+COLLISION rho1 0x1fbd2baf281499778ceaaf9326334fa24473e1419ca93c373111ec32b695f1f5
+COLLISION nk2  0x0b01892adae410c995ed5e1db2a55d603ae9c58c600bd0190cbd28c2ba905fee
+COLLISION rho2 0x177d07c89d6d90bfbc3d9dd60e145d2b0cea854f196c0ee5834253de1ef5d798
+COLLISION digest 0x071f7c90a26be6596552338ffc69ba82e6d78d23bb905194d3880d4743a9b1af
+COLLISION centre 0x09c100b4af415ca0f42f25188e393b566019e756a807e1d500000019b3c0d9e6
+EXIT 0

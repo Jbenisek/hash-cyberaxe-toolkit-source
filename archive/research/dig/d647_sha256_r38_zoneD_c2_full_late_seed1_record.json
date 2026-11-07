@@ -1,0 +1,23 @@
+{
+  "id": "D647-SHA256-R38-ZONED-C2-FULL-LATE-SEED1-20261014",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 37,
+  "object": "SHA-256 r38 Zone-D C2 full-late continuation on independent seed 1",
+  "question": "Does an independent row-4 split's complete row-14 C2 family produce any rows-16..37 or final-state-equal members?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Exact c2all14late seed 1 scanned all 1024 E14 cells and every E15 value for each of 160 row-14 expansion passers: strict-row15=1, total-C2=1 at E14x=0x21966471, full-late rows16..37=0, state-equal=0, published-pair failures=0. Runtime 73.77 s, RSS 7768 KiB.",
+  "source": "our workflow: D647 exact Zone-D r38 C2 full-late independent-split continuation",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/c2all14late_seed1.out; research/tools/traillab/digs/zoneD38/zd38c2lateall",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "current zd38c2late program, deterministic seed-1 split, complete row-14 expansion family, full E15 scan, and rows16..37 rebuild",
+  "notes": "Exact selected-split evidence only. It does not prove split transfer, global completion rate, charged score, package, stage, filing, or submission.",
+  "reopen_if": "A production-law split-transfer proof or a complete multi-split late-family campaign becomes available"
+}

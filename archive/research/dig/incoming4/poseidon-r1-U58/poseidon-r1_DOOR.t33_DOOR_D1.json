@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t33 symmetries (i-symmetry, mu4 scaling, Frobenius twist)",
+ "question": "RELABEL re-ask of the door at r = 1",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "x^5 is mu4-equivariant ((zx)^5 = z x^5, z^4=1: True) but the reduced hash is not: H(z nk, z rho) != z H and != H on 5 random inputs (constants break it); Frobenius twist is trivial on F_p",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc3.py research/dig/incoming4/_scan_poseidon/calc3a.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc3.py with poseidon_ref.hash_reduced r=1. | universe cell poseidon-r1|DOOR.t33|DOOR|D1",
+ "held_fixed": "r=1 pinned constants",
+ "reopen_if": "a symmetry of the round constants (e.g. a rescaled constants table)"
+}

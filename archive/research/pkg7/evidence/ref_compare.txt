@@ -1,0 +1,7 @@
+PROGRAM sha256 d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb; python -B tools/ref_compare.py 2000 25
+1. constants, class mask 03cf8303, value 030c0303, 524288 members: equal; members equal 59802 of 59802
+2. context and trial against h8_ref.py: words, messages and state equal in 50000 of 50000 trials (2000 contexts, every fifth with extreme words)
+3. test vectors ref_vectors.txt: words of the trial and both digests equal in 2000 of 2000 vectors
+4. batch with RULE_CONDITIONS = 4 against h8_batch.py (its rule): stage-2 words, their flags, the final branch, the stage-A flags and the stage-A branch equal in 400 of 400 batches (line found 1 time)
+RESULT: all equal
+exit status 0

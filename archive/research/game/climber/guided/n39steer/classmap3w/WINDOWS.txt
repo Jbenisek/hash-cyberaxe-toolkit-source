@@ -1,0 +1,13 @@
+ctl FREE=9,10,12,13,14,15 cap=10 rc=124 sec=10 
+ctl FREE=9,10,12,13,14,15 cap=30 rc=10 sec=21 s SATISFIABLE
+ctl FREE=8,9,10,12,13,14,15 cap=10 rc=124 sec=10 
+ctl FREE=8,9,10,12,13,14,15 cap=30 rc=10 sec=21 s SATISFIABLE
+ctl FREE=7,8,9,10,12,13,14,15 cap=10 rc=124 sec=10 
+ctl FREE=7,8,9,10,12,13,14,15 cap=30 rc=10 sec=24 s SATISFIABLE
+ctl FREE=6,7,8,9,10,12,13,14,15 cap=10 rc=124 sec=10 
+ctl FREE=6,7,8,9,10,12,13,14,15 cap=30 rc=10 sec=21 s SATISFIABLE
+ctl FREE=4,5,6,7,8,9,10,12,13,14,15 cap=10 rc=124 sec=10 
+ctl FREE=4,5,6,7,8,9,10,12,13,14,15 cap=30 rc=10 sec=25 s SATISFIABLE
+ctl FREE=0,1,2,3,4,5,6,7,8,9,10,12,13,14,15 cap=10 rc=124 sec=10 
+ctl FREE=0,1,2,3,4,5,6,7,8,9,10,12,13,14,15 cap=30 rc=10 sec=28 s SATISFIABLE
+windows done 14:36

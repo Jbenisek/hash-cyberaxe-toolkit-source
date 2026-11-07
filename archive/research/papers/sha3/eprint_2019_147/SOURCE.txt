@@ -1,0 +1,1 @@
+2019/147	Practical Collision Attacks against Round-Reduced SHA-3	owner_download	https://eprint.iacr.org/2019/147.pdf

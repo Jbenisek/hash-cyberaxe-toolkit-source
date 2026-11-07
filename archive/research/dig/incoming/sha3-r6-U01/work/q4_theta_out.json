@@ -1,0 +1,20 @@
+{
+ "F64": {
+  "nvars": 512,
+  "colparity_rank": 320,
+  "kernel_dim": 192,
+  "pair_span_dim": 192,
+  "weight2_kernel_vectors": 192,
+  "theta_identity_on_200_pairs": 192,
+  "columns_with_single_bit": 128
+ },
+ "F135": {
+  "nvars": 1080,
+  "colparity_rank": 320,
+  "kernel_dim": 760,
+  "pair_span_dim": 760,
+  "weight2_kernel_vectors": 1320,
+  "theta_identity_on_200_pairs": 200,
+  "columns_with_single_bit": 0
+ }
+}

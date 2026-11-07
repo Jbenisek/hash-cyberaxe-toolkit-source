@@ -1,0 +1,20 @@
+{
+  "id": "WIDE-B3-DIGEST-WORD-PRUNE-B3Z4-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3Z4 final digest-word pruning",
+  "question": "Can B3Z4 compute or compare only digest words 0,2,5,7 without changing the ordinary-collision predicate?",
+  "labels": ["K", "E"],
+  "status": "COMPUTED",
+  "number": "No: the construction has a four-word half-collision, but step 3 performs two complete BLAKE3 evaluations and checks both complete digests. Exact lossless saving: 0 operations; time_log2 remains 62.56224.",
+  "source": "local B3Z4 proof.md and claim.json static audit",
+  "own_test": true,
+  "evidence": "research/retest/wide_1014/b3_digest_word_prune_audit.py; research/sol_answer_WIDE_B3_digest_word_prune.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3-r2.wide.digest-word-prune",
+  "peak_mem": 20000000,
+  "notes": "Static proof audit only; no package, staging, filing, or submission changed."
+}

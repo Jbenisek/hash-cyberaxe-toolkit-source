@@ -1,0 +1,20 @@
+{
+  "id": "D243-S38-C2ROW14-SPLITS",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 14,
+  "object": "Zone D 38 row-14 C2 fixed-split enumeration",
+  "question": "Does the row-14 C2 subtest have any E15 passers on the fixed splits?",
+  "labels": ["C", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Exact C2 counts over 2^32 E15 values: published=0, seed1=0, seed2=0, seed3=0",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-c2row14-splits.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Split-specific C2 only; row-16 target differences are derived from each selected pair. The full row-14 C2 family and global impossibility remain OPEN.",
+  "held_fixed": "one published or seeded W6/W7/E16..E21 split; E15 varied over all 2^32 values",
+  "topic": "sha256-38 zoneD38 residual C2 row14"
+}

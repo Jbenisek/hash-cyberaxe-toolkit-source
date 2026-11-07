@@ -1,0 +1,23 @@
+{
+  "id": "D742-SHA256-R37-R37M-FAMILY-SIZE-CONTROL-20261014",
+  "hash": "sha256-37",
+  "row_i": 5,
+  "row_j": 6,
+  "object": "R37M enlarged-family exact size control at n>=3456",
+  "question": "Does exact enumeration of all 64 E5/E6 dense parts reproduce the dossier's family class and variant totals?",
+  "labels": ["C", "D", "N"],
+  "status": "COMPUTED",
+  "number": "Exact 64-part enumeration at n>=3456 yields 171,853 classes, 892,633,578 variants, maximum class size 23,808, and 63,924 classes with cube-{0,2,3}/bit1 closure; the class and variant totals match the dossier exactly.",
+  "source": "our workflow: D742 exact enlarged-family size control",
+  "own_test": true,
+  "evidence": "research/sol_answer_D742_sha256_r37_r37m_family_size_control.md; research/retest/zoneD_family/run_D742_inventory.py; research/retest/zoneD_family/out/D742_inventory.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.15,
+  "prior": 0.02,
+  "gain_basis": "D",
+  "held_fixed": "existing classes executable, all 64 E5/E6 dense parts, exact n>=3456 cutoff, sequential one-process enumeration",
+  "notes": "Family-size control only. It does not implement R37M, test the selected set end to end, measure q3, or authorize score/package/stage/filing/submission.",
+  "reopen_if": "Per-context R37M implementation, self-test, KAT, end-to-end run, and q3 study are available"
+}

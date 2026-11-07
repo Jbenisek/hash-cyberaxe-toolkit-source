@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JRUNNER experiment runner cannot size the digest",
+ "question": "score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "no score term; consequence: no execution evidence, proofs and certificates must carry the claim (judge expectation 5); source must be inside proof.md",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "chatlog-backup/claude-project/memory/poseidon-judge-expectations.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Memory note on the rulings. | universe cell poseidon-r1|JUDGE.JRUNNER|JUDGE|R4",
+ "held_fixed": "organizer runner as of 10-12",
+ "reopen_if": "runner change"
+}

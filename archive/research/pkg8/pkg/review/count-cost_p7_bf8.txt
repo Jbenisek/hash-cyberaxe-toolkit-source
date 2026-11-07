@@ -1,0 +1,52 @@
+case 0: members 8 eta b9 sub 5b/49 rules 2,3,2 cond; nonzero N1 81478, N3 1459; differ N1 0, N3 0, identities 0; joint bf 786432 393216 65536 196608 counter 786432 393216 65536 196608 equal
+case 1: members 16 eta 40 sub 47/40 rules 0,1,1 cond; nonzero N1 4644, N3 48; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 2: members 4 eta de sub 7d/79 rules 1,2,1 cond; nonzero N1 13328, N3 1810; differ N1 0, N3 0, identities 0; joint bf 786432 393216 0 786432 counter 786432 393216 0 786432 equal
+case 3: members 64 eta 1a sub 21/21 rules 4,1,2 cond; nonzero N1 2990, N3 553; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 4: members 32 eta 11 sub 19/00 rules 1,3,1 cond; nonzero N1 4666, N3 586; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 5: members 4 eta fd sub 5f/0f rules 3,3,2 cond; nonzero N1 1044, N3 3941; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 6: members 16 eta 59 sub 95/15 rules 2,2,0 cond; nonzero N1 1234, N3 2289; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 7: members 8 eta 72 sub 67/22 rules 2,2,3 cond; nonzero N1 63720, N3 1187; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 8: members 16 eta 4f sub 74/44 rules 1,1,3 cond; nonzero N1 23660, N3 3002; differ N1 0, N3 0, identities 0; joint bf 34078720 17039360 34078720 12845056 counter 34078720 17039360 34078720 12845056 equal
+case 9: members 4 eta fe sub 6f/6e rules 2,3,1 cond; nonzero N1 36447, N3 1898; differ N1 0, N3 0, identities 0; joint bf 811008 131072 22528 405504 counter 811008 131072 22528 405504 equal
+case 10: members 8 eta 72 sub 37/20 rules 2,2,1 cond; nonzero N1 48034, N3 1356; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 11: members 64 eta 0c sub 41/00 rules 1,1,1 cond; nonzero N1 7267, N3 73; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+bf seed 7101: cases 12, different 0
+case 0: members 8 eta 32 sub 37/06 rules 1,0,2 cond; nonzero N1 8768, N3 916; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 1: members 16 eta 86 sub 6a/08 rules 2,0,0 cond; nonzero N1 53229, N3 265; differ N1 0, N3 0, identities 0; joint bf 131072 0 131072 131072 counter 131072 0 131072 131072 equal
+case 2: members 16 eta 9b sub 39/31 rules 4,2,3 cond; nonzero N1 42194, N3 2027; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 3: members 16 eta ad sub 5a/40 rules 4,1,2 cond; nonzero N1 43859, N3 2562; differ N1 0, N3 0, identities 0; joint bf 794624 106496 397312 262144 counter 794624 106496 397312 262144 equal
+case 4: members 64 eta 90 sub 09/08 rules 2,2,1 cond; nonzero N1 2754, N3 116; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 5: members 16 eta 51 sub 95/85 rules 2,1,3 cond; nonzero N1 24869, N3 1920; differ N1 0, N3 0, identities 0; joint bf 786432 196608 393216 98304 counter 786432 196608 393216 98304 equal
+case 6: members 8 eta 7b sub 37/01 rules 1,1,1 cond; nonzero N1 24970, N3 5234; differ N1 0, N3 0, identities 0; joint bf 294912 278528 147456 135168 counter 294912 278528 147456 135168 equal
+case 7: members 2 eta f7 sub 7f/43 rules 3,3,3 cond; nonzero N1 82730, N3 2929; differ N1 0, N3 0, identities 0; joint bf 24576 1920 4864 5888 counter 24576 1920 4864 5888 equal
+case 8: members 64 eta 90 sub 09/01 rules 1,2,1 cond; nonzero N1 9669, N3 114; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 9: members 16 eta a9 sub 3a/22 rules 1,2,1 cond; nonzero N1 7304, N3 2109; differ N1 0, N3 0, identities 0; joint bf 851968 425984 212992 425984 counter 851968 425984 212992 425984 equal
+case 10: members 8 eta b0 sub 6b/23 rules 2,0,1 cond; nonzero N1 15098, N3 139; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 11: members 32 eta 0a sub a8/00 rules 1,1,1 cond; nonzero N1 67139, N3 272; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+bf seed 7102: cases 12, different 0
+case 0: members 16 eta ec sub 4e/4a rules 2,1,4 cond; nonzero N1 15608, N3 635; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 1: members 8 eta 79 sub 97/07 rules 1,3,3 cond; nonzero N1 15985, N3 2235; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 2: members 32 eta 62 sub 26/06 rules 1,3,1 cond; nonzero N1 4354, N3 633; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 3: members 8 eta 79 sub 1f/12 rules 1,3,1 cond; nonzero N1 8414, N3 2262; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 4: members 8 eta 95 sub d9/99 rules 1,2,2 cond; nonzero N1 13349, N3 1461; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 5: members 8 eta 93 sub 3d/01 rules 3,1,1 cond; nonzero N1 9564, N3 1181; differ N1 0, N3 0, identities 0; joint bf 7340032 131072 3670016 3670016 counter 7340032 131072 3670016 3670016 equal
+case 6: members 8 eta f1 sub 1f/16 rules 1,1,1 cond; nonzero N1 10640, N3 1655; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 7: members 16 eta d9 sub 1d/0d rules 1,4,0 cond; nonzero N1 11406, N3 1882; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 8: members 64 eta 10 sub 11/00 rules 1,3,3 cond; nonzero N1 72388, N3 88; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 9: members 4 eta 7b sub 77/02 rules 3,1,3 cond; nonzero N1 13238, N3 4173; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 10: members 16 eta 26 sub 6a/0a rules 2,1,1 cond; nonzero N1 52466, N3 754; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 11: members 8 eta a7 sub 7a/38 rules 2,2,4 cond; nonzero N1 13578, N3 1967; differ N1 0, N3 0, identities 0; joint bf 360448 90112 81920 22528 counter 360448 90112 81920 22528 equal
+bf seed 7103: cases 12, different 0
+case 0: members 8 eta d4 sub 4f/49 rules 3,2,1 cond; nonzero N1 28642, N3 643; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 1: members 32 eta 1c sub 43/40 rules 1,1,2 cond; nonzero N1 34112, N3 330; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 2: members 4 eta 95 sub db/12 rules 1,1,3 cond; nonzero N1 10868, N3 1604; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 3: members 16 eta 09 sub 35/34 rules 2,2,2 cond; nonzero N1 15109, N3 271; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 4: members 32 eta 89 sub 58/08 rules 3,3,1 cond; nonzero N1 28351, N3 542; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 5: members 16 eta 39 sub 93/93 rules 1,1,3 cond; nonzero N1 10813, N3 1759; differ N1 0, N3 0, identities 0; joint bf 524288 262144 262144 32768 counter 524288 262144 262144 32768 equal
+case 6: members 16 eta 05 sub f0/c0 rules 3,2,0 cond; nonzero N1 34457, N3 218; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 7: members 32 eta 94 sub 49/01 rules 1,4,2 cond; nonzero N1 50193, N3 451; differ N1 0, N3 0, identities 0; joint bf 1048576 524288 131072 524288 counter 1048576 524288 131072 524288 equal
+case 8: members 4 eta ed sub 5f/5b rules 1,1,1 cond; nonzero N1 62274, N3 2932; differ N1 0, N3 0, identities 0; joint bf 262144 262144 131072 131072 counter 262144 262144 131072 131072 equal
+case 9: members 32 eta 64 sub 46/00 rules 3,1,1 cond; nonzero N1 39820, N3 515; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 10: members 16 eta a4 sub ca/02 rules 0,2,1 cond; nonzero N1 7615, N3 398; differ N1 0, N3 0, identities 0; joint bf 0 0 0 0 counter 0 0 0 0 equal
+case 11: members 16 eta 65 sub 56/04 rules 1,2,2 cond; nonzero N1 59004, N3 2620; differ N1 0, N3 0, identities 0; joint bf 1572864 786432 393216 393216 counter 1572864 786432 393216 393216 equal
+bf seed 7104: cases 12, different 0

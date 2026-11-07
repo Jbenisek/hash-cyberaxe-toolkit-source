@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "two chunks: recount (chunk compress + parent compress per step)",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "a variable x lives in a chunk whose cv feeds the parent: 595 (chunk, flags 3, counter 1) + 595 (parent, flags 12, left cv 0) = 1190 operations, time_log2 +1.0000; with a real left cv (random nonzero words) the parent costs 611-612, total 1206-1207, +1.019 to +1.021",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_ops.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Left cv = 0 is not reachable (preimage); 1.0000 is a lower bound for any tree.",
+ "held_fixed": "chunk counter 1, parent counter 0 length 64",
+ "reopen_if": "a tree shape where the variable part enters a root without its own compression",
+ "topic": "blake3-r3|ALT.CHUNK|ALT|Q2"
+}

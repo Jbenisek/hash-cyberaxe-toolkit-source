@@ -1,0 +1,4 @@
+title: Handbook of Applied Cryptography (Menezes, van Oorschot, Vanstone)
+files: hac-chap01..15.pdf + hac-appendix.pdf (16 PDFs, one per chapter)
+source_url: https://cacr.uwaterloo.ca/hac/ (chapters at about/chapN.pdf, appendix.pdf; free, author-granted)
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

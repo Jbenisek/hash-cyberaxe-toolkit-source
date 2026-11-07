@@ -1,0 +1,18 @@
+fixed                        vars 100 eqs 96 freedom 4 | core vars 93 core eqs 89 core deficiency 4 | stranded 0
+outhalf                      vars 128 eqs 116 freedom 12 | core vars 121 core eqs 109 core deficiency 12 | stranded 0
+outhalf held=-               vars 128 eqs 112 freedom 16 | core vars 0 core eqs 0 core deficiency 0 | stranded 16
+outhalf held=out0            vars 128 eqs 113 freedom 15 | core vars 117 core eqs 102 core deficiency 15 | stranded 0
+outhalf held=out2            vars 128 eqs 113 freedom 15 | core vars 117 core eqs 102 core deficiency 15 | stranded 0
+outhalf held=out5            vars 128 eqs 113 freedom 15 | core vars 119 core eqs 104 core deficiency 15 | stranded 0
+outhalf held=out7            vars 128 eqs 113 freedom 15 | core vars 119 core eqs 104 core deficiency 15 | stranded 0
+outhalf held=out0,out2       vars 128 eqs 114 freedom 14 | core vars 119 core eqs 105 core deficiency 14 | stranded 0
+outhalf held=out0,out5       vars 128 eqs 114 freedom 14 | core vars 120 core eqs 106 core deficiency 14 | stranded 0
+outhalf held=out0,out7       vars 128 eqs 114 freedom 14 | core vars 119 core eqs 105 core deficiency 14 | stranded 0
+outhalf held=out2,out5       vars 128 eqs 114 freedom 14 | core vars 119 core eqs 105 core deficiency 14 | stranded 0
+outhalf held=out2,out7       vars 128 eqs 114 freedom 14 | core vars 120 core eqs 106 core deficiency 14 | stranded 0
+outhalf held=out5,out7       vars 128 eqs 114 freedom 14 | core vars 121 core eqs 107 core deficiency 14 | stranded 0
+outhalf held=out0,out2,out5  vars 128 eqs 115 freedom 13 | core vars 120 core eqs 107 core deficiency 13 | stranded 0
+outhalf held=out0,out2,out7  vars 128 eqs 115 freedom 13 | core vars 120 core eqs 107 core deficiency 13 | stranded 0
+outhalf held=out0,out5,out7  vars 128 eqs 115 freedom 13 | core vars 121 core eqs 108 core deficiency 13 | stranded 0
+outhalf held=out2,out5,out7  vars 128 eqs 115 freedom 13 | core vars 121 core eqs 108 core deficiency 13 | stranded 0
+core equations for held=out0: ['C0:a1', 'C0:a2', 'C0:b1', 'C0:c1', 'C0:c2', 'C0:d1', 'C0:d2', 'C1:a1', 'C1:a2', 'C1:b1', 'C1:b2', 'C1:c1', 'C1:c2', 'C1:d1', 'C1:d2', 'C2:a1', 'C2:a2', 'C2:b1', 'C2:c1', 'C2:c2', 'C2:d1', 'C2:d2', 'C3:a1', 'C3:a2', 'C3:b1', 'C3:b2', 'C3:c1', 'C3:c2', 'C3:d1', 'C3:d2', 'D0:a2', 'D0:b1', 'D0:b2', 'D0:c1', 'D0:c2', 'D0:d1', 'D0:d2', 'D1:a1', 'D1:a2', 'D1:b1', 'D1:b2', 'D1:c1', 'D1:c2', 'D1:d1', 'D1:d2', 'D2:a2', 'D2:b1', 'D2:b2', 'D2:c1', 'D2:c2', 'D2:d1', 'D2:d2', 'D3:a1', 'D3:b1', 'D3:b2', 'D3:c1', 'D3:c2', 'D3:d1', 'D3:d2', 'E0:a1', 'E0:a2', 'E0:b1', 'E0:c1', 'E0:d1', 'E2:a1', 'E2:a2', 'E2:b1', 'E2:c1', 'E2:c2', 'E2:d1', 'E2:d2', 'K0:a1', 'K0:a2', 'K0:b1', 'K0:b2', 'K0:c1', 'K0:c2', 'K0:d1', 'K0:d2', 'K1:a1', 'K1:a2', 'K1:b1', 'K1:b2', 'K1:c1', 'K1:c2', 'K1:d1', 'K1:d2', 'K2:a1', 'K2:b1', 'K2:b2', 'K2:c1', 'K2:c2', 'K2:d1', 'K3:a1', 'K3:a2', 'K3:b1', 'K3:b2', 'K3:c1', 'K3:c2', 'K3:d1', 'K3:d2', 'out0']

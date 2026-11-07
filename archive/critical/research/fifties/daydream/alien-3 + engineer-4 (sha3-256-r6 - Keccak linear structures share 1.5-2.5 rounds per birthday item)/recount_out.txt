@@ -1,0 +1,5 @@
+naive plan ops/msg 1189.0 -> score 127.541
+2-round-shared naive ops/msg 918.0 -> score 127.168
+leader ops/msg 104.89 -> main-loop score 124.0386 (claimed 124.04565 incl. candidates/setup)
+all of block (b) (impossible upper bound)      saves 1869 ops/z-step -> delta -0.1041 bits -> ~123.9416
+realistic: (b) minus the affine-patch floor    saves  209 ops/z-step -> delta -0.0113 bits -> ~124.0344

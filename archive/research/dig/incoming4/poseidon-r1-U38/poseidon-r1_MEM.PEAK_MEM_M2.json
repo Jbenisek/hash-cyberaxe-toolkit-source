@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.PEAK peak of the pipeline",
+ "question": "necessity of the memory",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "peak 8,468,544 B at stage C and 8,468,640 B at stage D (fresh run peaks); stage B peaks at 3,347,168 B; total 8,638,495 B incl. 100,223 B image, 65,536 stack bound, 4,096 allocator",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_seed100001.txt research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Peak per stage is printed by the fresh run; D sits within 96 B of C. | universe cell poseidon-r1|MEM.PEAK|MEM|M2",
+ "held_fixed": "filed schedule",
+ "reopen_if": "a stage whose peak is lower and unchanged others"
+}

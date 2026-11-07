@@ -1,0 +1,22 @@
+{
+  "id": "D407-SHA3-R6-WIDER-KEY-COST-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "wider-key setup and FES cost model",
+  "question": "Does changing the key width b change the charged setup/FES terms in the current SHA3-r6 ledger?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Exact source audit and D262-ledger replay: per-group setup=4,594,894,479,069; FES-A=83,839,420,175,613; FES-B=84,663,852,569,844; FES-control=268,435,458, identical for b=140,144,148. Conditional upward time_log2 rows are 121.71644, 121.69452, 121.69732 respectively. Width-dependent changes are only the failure model and measured generated-list/kernel budgets in this model.",
+  "source": "our workflow: exact wider-key source and ledger audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D407_sha3r6_wider_key_cost_audit.md; research/retest/lens_t3/d407_wider_key_cost_audit.py; research/retest/lens_t3/D407_run.json; research/retest/lens_t3/D262_run_summary.md; research/tools/build_pkg/scratch/pkgS6K/work/new/ledger_r6.py; research/tools/build_pkg/scratch/pkgS6K/work/new/kgen.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.024,
+  "prior": 0.3,
+  "gain_basis": "C",
+  "notes": "This closes only the missing setup/FES-width accounting term. Wider-key generated-kernel/source, register/memory, and organizer gates remain open; conditional D262 rows receive no filing credit.",
+  "reopen_if": "A lossless wider-key route supplies the generated source, KAT, register/memory bound, and organizer acceptance, or shows a width-dependent setup/FES term absent from the current source."
+}

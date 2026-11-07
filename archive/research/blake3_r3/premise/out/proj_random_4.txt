@@ -1,0 +1,1 @@
+PROJ src=random k=4 name=W4 bits=32 observed=523800 expected=524288.0 ratio=0.9991 z=-0.67

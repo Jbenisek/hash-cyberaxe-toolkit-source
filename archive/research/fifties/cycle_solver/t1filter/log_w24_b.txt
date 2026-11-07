@@ -1,0 +1,8 @@
+batch 8: table 526386227 entries, build 35.1s, queries 2.57s
+batch 9: table 527105311 entries, build 30.3s, queries 2.33s
+batch 10: table 502004855 entries, build 29.3s, queries 2.40s
+batch 11: table 527695832 entries, build 30.7s, queries 2.43s
+batch 12: table 502792157 entries, build 29.7s, queries 2.56s
+batch 13: table 492241594 entries, build 28.5s, queries 2.25s
+batch 14: table 480836846 entries, build 27.2s, queries 2.24s
+batch 15: table 521471636 entries, build 30.3s, queries 2.79s

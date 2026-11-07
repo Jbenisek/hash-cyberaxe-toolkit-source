@@ -1,0 +1,4 @@
+HEAD arr filed W 8 set 0 eta d9 ncls 16 sumper 4227072 beta 0 nd 0 nouter 260112 first 0 count 1
+RUN arr filed W 8 set 0 run 0 seed 75 14 36 f0 nouter 260112 trials 1065418752 tzero 0 bad 0 coll 0 bogus 0 z1 4160582 z3 3213646 z4 4156987 z6 4522585 z2 105301
+PART arr filed W 8 set 0 first 0 count 1 trials 1065418752 tzero 0 bad 0 coll 0 bogus 0 seconds 141.0 rate 7.56e+06
+END

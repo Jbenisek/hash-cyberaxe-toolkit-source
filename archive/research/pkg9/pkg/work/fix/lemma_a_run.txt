@@ -1,0 +1,2 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; Lemma A as stated in the text, (a) to (d): 262144 cases (2^16 patterns of the 13 bits of z and the 3 bits of e1, 4 fillings each); wrong 0; the rule holds in 1024 (0.003906, 2^-8 is 0.003906); the word v of the text equals rule_word() of the program in every case
+exit 0

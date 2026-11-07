@@ -1,0 +1,32 @@
+own N recomputed 6022417582191478187278; equals F.N True; equals TEXT N True
+baseline time_log2 63.602640
+table max 34484, U_mask 236, per-context 98419
+KEY: XF1 decision row reproduced: time_log2 63.313775 (claimed 63.313775; diff -1.17e-07)
+sensitivity (DERIVED corrections not in XF1's ledger):
+  +8/opened: two more frame words (IX, guard word) at 4 units each                 63.335130
+  +12/opened: broadcast by shifts/ORs (no multiply on the 6.5 machine), 7 ops per word 63.345690
+  +8 +12 +4 const loads per opened, table x2                                       63.388661
+  +40/opened, +50,000/context (XF1 stress)                                         63.434054
+  +73/opened (XF1 break-even)                                                      63.497834
+
+SWEEP: 1000 contexts; pack_bad (universal, all 2^19 members) [0]
+  opened                     7358346
+  fired_all                  65408
+  fallback                   29224
+  lost                       0
+  lost_fired_if_masked       21
+  mis_exact_alive16          0
+  mis_window14_alive16       0
+  prefix_split_quiet         0
+  t2_outside_exact_alive16   0
+  fill_dom_viol              0
+  chunk_bad                  0
+  coref_bad                  0
+  t2_bad                     0
+  gate_bad                   0
+  e_members_opened           28429456
+  fired_all values: [0, 128]; perm_ok 1000 of 1000; partner survivors max 9; table ops max 33940
+  opened/context 7358.3 (budget A/K 7526.3); fallback share 0.00397; survivors hist {'0': 699694, '8': 3336202, '9': 3293226}
+  units per opened: old 368.00, new mean 202.71, new max (quiet) 236
+  fills/context old 12481.2 (premise 12466), new 6753.6; contexts new > old: 0
+  information: row at measured mean 202.71: 63.221352

@@ -1,0 +1,1 @@
+2025/439	Preimage Attacks on up to 5 Rounds of SHA-3 Using Internal Differentials	owner_download	https://eprint.iacr.org/2025/439.pdf

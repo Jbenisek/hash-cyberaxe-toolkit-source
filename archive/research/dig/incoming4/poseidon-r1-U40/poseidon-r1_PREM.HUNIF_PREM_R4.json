@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HUNIF uniform-coefficient model",
+ "question": "score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "if the true per-centre rate is q: two-centre success 1-(1-q)^2 = 0.534 (q=0.318), 0.632 (0.3935), 0.676 (0.431); the cost is unaffected, only the claimed probability; the judges have refused sampled bounds (3 rulings)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "arithmetic. | universe cell poseidon-r1|PREM.HUNIF|PREM|R4",
+ "held_fixed": "two centres",
+ "reopen_if": "a proved q"
+}

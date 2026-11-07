@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FREELUNCH (ALT)",
+ "question": "Q3: degrees of freedom of the system",
+ "labels": [
+  "K"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "CICO-1 fixes one output with 1 free input; our collision has 2 free inputs and 1 compared lane. The only variable left after the skip is W (one), so the system has 1 degree of freedom and the GB is the univariate polynomial.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/freelunch/FREELUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FREELUNCH|ALT|Q3. Derived in the scout note; not tested.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a collision-specific FreeLunch variant is published"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "D399-SHA256-R37-AC-FLOOR-COST-RECONCILIATION-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "A_C floor cost decomposition audit",
+  "question": "Do the landed sparse and dense artifacts establish a complete sub-2^60 r37 characteristic-search cost?",
+  "labels": ["C", "S"],
+  "status": "OPEN",
+  "number": "D142 is only a lower bound >2^46.20320 CE for one stopped paper query; the sparse/message and state-window artifacts total 2^18.40 and 2^11.629 CE but omit dense rows 0..15; job112's 2^18.201 CE is SAT given chi37 and fixed W15 bits, not characteristic derivation. Complete A_C and a floor below 2^60 therefore remain UNKNOWN/OPEN.",
+  "source": "our workflow: read-only A_C artifact reconciliation",
+  "own_test": false,
+  "evidence": "research/sol_answer_D399_r37_ac_floor_cost_reconciliation.md; research/sol_answer_D142_measured_char_search.md; research/grok/work/job108_sparse_search/ANSWER.md; research/grok/work/job112_dense_finish/ANSWER.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 1.585,
+  "prior": 0.08,
+  "gain_basis": "C",
+  "notes": "No participant artifact was rerun. The missing term is an owned end-to-end dense characteristic derivation/search and join; the paper's 2^41.3 figure is conditional message finding, not that term. No score or filing credit.",
+  "reopen_if": "An owner-approved, end-to-end metered characteristic derivation covers dense rows 0..15 and joins to the sparse side."
+}

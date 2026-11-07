@@ -1,0 +1,6 @@
+roundtrip c1*(t0) -> t_lo==t0: bad 0 of 9000
+collisions among c1->t_lo images (should be 0): 0
+N 4194304 hits [2092, 2029, 2129] expected 2^-11*N = 2048.0 time 432
+ p=4.9877e-04  log2=-10.969  Wilson95 log2 [-11.031,-10.908]
+ p=4.8375e-04  log2=-11.013  Wilson95 log2 [-11.076,-10.951]
+ p=5.0759e-04  log2=-10.944  Wilson95 log2 [-11.005,-10.883]

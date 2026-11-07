@@ -1,0 +1,24 @@
+{
+  "id": "D269-SHA3-ALT8-DIGEST-PLANE-BOUND",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "alternative eight-bit digest predicates",
+  "question": "Can a predicate formed from eight selected digest lane bits use fewer planes or less filter work than the shipped choice?",
+  "labels": [
+    "C",
+    "Z"
+  ],
+  "status": "COMPUTED",
+  "number": "Restricted exact result: per-row lane counts 1/2/3/4 require 3/4/5/5 pre-chi planes; an exhaustive split DP gives minimum 10 planes for any eight selected digest bits, attained by the shipped two rows of four lanes. Equivalent packed Boolean factoring is 33 versus 32 word ops, about 5.3e-5 bit if not already folded. Internal/non-digest predicates remain OPEN.",
+  "source": "our workflow: D269 SHA3 alternative-filter audit",
+  "evidence": "research/sol_answer_D269_sha3_alt8_digest_bound.md; research/dig/incoming2/sha3-r6-G06-U05/work/e_filter.py; research/dig/incoming2/sha3-r6-G06-U05/work/e_out.json",
+  "date": "2026-10-13",
+  "own_test": true,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Exact only for the declared digest-bit candidate class. It does not close the broader chi or ROW.FORMS8 cells because XOR/value-mask/internal predicates and their charged FES degree were not enumerated. No package, staging, submission, or process change.",
+  "held_fixed": "six-round SHA3 layout, four digest lanes, pre-chi plane dependency, current ledger operation convention",
+  "reopen_if": "A preregistered non-digest candidate class with lower degree or fewer planes is defined and charged"
+}

@@ -1,0 +1,6 @@
+matching_pairs=1569347842019130970897634729918464
+R_numerator=85074516985129
+R_denominator=524288
+positive_betas=60
+parity_checked=66871
+elapsed_seconds=281.195

@@ -1,0 +1,5 @@
+run k=2 ncubes=12000 mode=span tshare=2400 dshare=1: 2.30s
+run k=4 ncubes=12000 mode=span tshare=2400 dshare=1: 2.47s
+run k=7 ncubes=12000 mode=span tshare=2400 dshare=1: 2.63s
+run k=8 ncubes=12000 mode=span tshare=2400 dshare=1: 2.68s
+run k=16 ncubes=1200 mode=span tshare=600 dshare=1: 0.35s

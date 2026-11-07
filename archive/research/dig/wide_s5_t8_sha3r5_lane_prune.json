@@ -1,0 +1,20 @@
+{
+  "id": "WIDE-S5-T8-SHA3R5-LANE-PRUNE-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r5 final-round output-lane pruning",
+  "question": "Can the final five-round digest compute only the four compared lanes without changing them, and what is the exact r5-ledger saving?",
+  "labels": ["K", "E"],
+  "status": "COMPUTED",
+  "number": "Generic five-round schedule: 1210 full word operations versus 1047 with lanes 0..3 retained; saving 163. 128/128 random 25-lane KAT vectors passed.",
+  "source": "our source-level five-round schedule from r5_copy.py; direct reference KAT",
+  "own_test": true,
+  "evidence": "research/retest/wide_1014/sha3r5_last_round_prune_count.py; research/retest/wide_1014/sha3r5_last_round_prune_count.json; research/sol_answer_WIDE_S5_T8_sha3r5_lane_prune.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "topic": "sha3-r5.wide.s5_t8.last_round_lane_prune",
+  "peak_mem": 19030016,
+  "notes": "The checked-in r5 ledger prices a complete five-round permutation as one indivisible target unit, so no proof-grade filed saving is credited. A conditional primitive re-price saves 24636.457564575645 units at the 50*2^11 stage-2 cap but leaves upward time_log2 at 32.79669 and score unchanged. No package, staging, filing, or submission changed."
+}

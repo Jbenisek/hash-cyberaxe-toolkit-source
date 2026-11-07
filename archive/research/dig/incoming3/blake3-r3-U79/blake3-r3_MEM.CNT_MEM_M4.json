@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "counters and working words",
+ "question": "M4 breakpoint at 2^20 for the counters",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Total 966,272 B; 82,304 B of headroom to 2^20 (the counters would have to grow 40-fold to cross). Beyond 2^20 each byte costs log2(1 + 1/1,048,576) = 1.4e-6 bit. No stored counter is needed beyond the 47 words.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out",
+ "notes": "universe cell blake3-r3|MEM.CNT|MEM|M4. Ledger arithmetic.",
+ "held_fixed": "table and code as filed",
+ "reopen_if": "none",
+ "gain_basis": "S"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "S7-LS1R7-RESOURCE-20261015",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "ls1r7 current-source experiment resource measurements",
+  "question": "Can the unresolved experiment resource placeholders be measured locally from the exact current source?",
+  "labels": ["C", "I"],
+  "status": "OPEN",
+  "number": "Two full local runs; conservative maxima: rho-w22 256/256, 17.66796875 mean steps, 8.66823 s, 78,368,768 B (76,532 KiB); proj-w256 107/256, 12.803 s, 61,087,744 B (59,656 KiB)",
+  "source": "research/r7/ls1r7/pkg/sha3-256/experiments/ls1.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_ls1r7_resource_audit_1015.md",
+  "date": "2026-10-15",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Local seed-specific measurements only; proj rate 107/256 gives z=+0.805 against model 0.3934. Candidate placeholder values are not organizer-qualified. No package/stage/filing/submission."
+}

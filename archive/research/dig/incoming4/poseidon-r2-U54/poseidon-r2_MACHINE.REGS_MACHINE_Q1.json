@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.REGS (MACHINE)",
+ "question": "Q1: register budget and spills: operations charged",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Not stated in the ledger; the model assumes a register file of 16 field words per transform block (note: \"the register file of 16 words per transform block is the one structural assumption\"). No spill traffic is charged separately: a block that does not fit would show as extra ld/st that the model does not count.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MACHINE.REGS|MACHINE|Q1. Assumption listed by the filed r1 note as a limit.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use; counts are from the two-centre observed run (evaluation units excluded), per centre = half",
+ "reopen_if": "the r2 entry is rebuilt (two-family template), the charging rules change (control ops, dispatch, address ops), or an r2 run disagrees with these numbers"
+}

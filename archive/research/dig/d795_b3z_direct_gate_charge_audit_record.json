@@ -1,0 +1,22 @@
+{
+  "id": "D795-B3Z2-DIRECT-GATE-CHARGE-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3Z2 direct xg_entry expression and scalar operation DAG",
+  "question": "Can the raw direct gate be charged exactly after replacing the large table with the derived formula?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "The source gate equals the explicit direct expression on 2,097,224 deterministic addresses with zero mismatches. The explicit scalar DAG is 15 word operations under a stated model; packed-lane contest charge remains OPEN.",
+  "source": "owned B3Z2 frontline.py and D787/D788 exact gate audits",
+  "own_test": true,
+  "evidence": "research/retest/b3z_gate9/d795_direct_gate_charge_audit.py; research/sol_answer_D795_b3z_direct_gate_charge_audit.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "source expression, scalar 32-bit operation model, deterministic address protocol",
+  "notes": "The 15-op count is conditional and not a contest score. No raw 9-bit dependence claim is made; bit 7 is the only ignored address bit. No package/stage/filing/submission.",
+  "reopen_if": "An owned packed-lane implementation with measured operation mapping and a contest-primitive ledger is available.",
+  "peak_mem": "0 FREE"
+}

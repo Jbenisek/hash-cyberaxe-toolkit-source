@@ -1,0 +1,23 @@
+{
+  "id": "D480-BLAKE3-R3-TUNED-CV-MECHANICS-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "tuned-CV last-block two-block mechanics",
+  "question": "Does a prefix-derived non-root CV followed by a root last block reproduce the organizer three-round BLAKE3 output?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Owned/reference cross-check, seed 480017, 256 random 64-byte prefixes and suffixes: two-block mismatches 0/256; single-block control mismatches 0/256. Peak working set 27328512 B = 2^24.7039035734; exit 0.",
+  "source": "our workflow: D480 tuned-CV mechanics",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d480_tuned_cv_mechanics.py; research/retest/blake3_r3/D480_PREREG.md; research/sol_answer_D480_blake3_r3_tuned_cv_mechanics.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "27328512 B = 2^24.7039035734 maximum working set; one thread",
+  "notes": "Mechanics/model bridge only. Does not prove the tuned-CV search rate, PH=590 count, advice charge, worst-case bound, or organizer acceptance. No package/stage/submit.",
+  "held_fixed": "three-round BLAKE3; owned b3h.py arithmetic; organizer verifier blake3.py as output oracle; flags 1 then 10; seed 480017",
+  "reopen_if": "A reference mismatch appears, or the tuned-CV route needs a distinct tree/mode beyond this two-block composition"
+}

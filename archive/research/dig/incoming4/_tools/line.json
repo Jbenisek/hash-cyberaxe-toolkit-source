@@ -1,0 +1,34 @@
+{
+ "plane": {
+  "normal_nonzero": [
+   true,
+   true,
+   true
+  ],
+  "delta": "0x42a69a67ea3d08919fa2aa53805806b2410eada8700d85b899be94d874b0a83",
+  "delta_nonzero": true,
+  "all_nine_2x2_minors_nonzero": true,
+  "n_minors": 9
+ },
+ "assignments_with_line": [
+  "aab",
+  "aba",
+  "baa"
+ ],
+ "canonical_assignments": [
+  "aab",
+  "aba",
+  "baa"
+ ],
+ "extra_assignments_beyond_canonical": [],
+ "scale_lambda_gives_same_family": [
+  3,
+  3
+ ],
+ "translated_base_tau_coeffs_nonzero": [
+  true,
+  true,
+  true,
+  true
+ ]
+}

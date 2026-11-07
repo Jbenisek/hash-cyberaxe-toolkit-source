@@ -1,0 +1,24 @@
+load: 24.95 22.77 22.39 29/488 1095231
+control loop cpu_user=6.00 wall=6.58
+control loop cpu_user=8.30 wall=10.66
+L(shipped fdef4bab) vt-q3-smc-r38 pub rep1 cpu_user=12.30 sys=0.25 wall=13.70 maxrss_KB=25544
+   out_sha=69ee1d21e961 bytes=25831
+L(shipped fdef4bab) vt-ram-r38 pub rep1 cpu_user=3.59 sys=0.18 wall=4.10 maxrss_KB=45292
+   out_sha=0fb3d9e91abe bytes=164377
+L(shipped fdef4bab) vt-q3-smc-r38 pub rep2 cpu_user=14.90 sys=0.21 wall=16.59 maxrss_KB=25128
+   out_sha=69ee1d21e961 bytes=25831
+L(shipped fdef4bab) vt-ram-r38 pub rep2 cpu_user=7.09 sys=0.28 wall=7.59 maxrss_KB=45152
+   out_sha=0fb3d9e91abe bytes=164377
+L vt-q3-smc-r38 fresh cpu_user=15.78 sys=0.10 wall=17.24 maxrss_KB=25096
+   out_sha=ee772b2876e4 bytes=25833
+L vt-ram-r38 fresh cpu_user=5.23 sys=0.26 wall=6.10 maxrss_KB=44964
+   out_sha=34d5bc68f66e bytes=164367
+N(cfeb996a) vt-q3-smc-r38 pub cpu_user=16.84 sys=0.12 wall=18.79 maxrss_KB=37768
+   out_sha=da2912975ecd bytes=26562
+N(cfeb996a) vt-ram-r38 pub cpu_user=4.73 sys=0.20 wall=5.17 maxrss_KB=44576
+   out_sha=0fb3d9e91abe bytes=164377
+M3(staged) a0-online-r38 pub cpu_user=0.93 sys=0.03 wall=1.11 maxrss_KB=25476
+   out_sha=32396e6c015c bytes=20451
+M3(staged) a0-q3-r38 pub cpu_user=15.64 sys=0.80 wall=17.30 maxrss_KB=25336
+   out_sha=439b42e6a537 bytes=27900
+load: 25.35 23.82 22.84 26/490 1095566

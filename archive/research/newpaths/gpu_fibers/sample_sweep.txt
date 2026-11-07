@@ -1,0 +1,15 @@
+W=6 rot=3,2,2,1 N=2^30 seed=1 fixed=21,a,2b,1d pairs=1980 expected_if_equal_fibers=2048.00 ratio=0.967 maxrun=2 runs: 2:1980
+W=6 rot=3,2,2,1 N=2^30 seed=2 fixed=1e,38,3e,2b pairs=2038 expected_if_equal_fibers=2048.00 ratio=0.995 maxrun=2 runs: 2:2038
+W=6 rot=3,2,2,1 N=2^30 seed=3 fixed=23,2,1e,19 pairs=2032 expected_if_equal_fibers=2048.00 ratio=0.992 maxrun=2 runs: 2:2032
+W=6 rot=3,2,2,1 N=2^30 seed=4 fixed=a,0,1b,3f pairs=2044 expected_if_equal_fibers=2048.00 ratio=0.998 maxrun=2 runs: 2:2044
+W=6 rot=3,2,2,1 N=2^30 seed=5 fixed=25,0,f,33 pairs=2068 expected_if_equal_fibers=2048.00 ratio=1.010 maxrun=2 runs: 2:2068
+W=6 rot=3,2,2,1 N=2^30 seed=6 fixed=15,5,17,21 pairs=1969 expected_if_equal_fibers=2048.00 ratio=0.961 maxrun=2 runs: 2:1969
+W=7 rot=4,3,2,1 N=2^30 seed=1 fixed=21,a,6b,5d pairs=8 expected_if_equal_fibers=8.00 ratio=1.000 maxrun=2 runs: 2:8
+W=7 rot=4,3,2,1 N=2^30 seed=2 fixed=5e,38,3e,2b pairs=13 expected_if_equal_fibers=8.00 ratio=1.625 maxrun=2 runs: 2:13
+W=7 rot=4,3,2,1 N=2^30 seed=3 fixed=63,42,5e,19 pairs=6 expected_if_equal_fibers=8.00 ratio=0.750 maxrun=2 runs: 2:6
+W=7 rot=4,3,2,1 N=2^30 seed=4 fixed=4a,40,5b,3f pairs=4 expected_if_equal_fibers=8.00 ratio=0.500 maxrun=2 runs: 2:4
+W=8 rot=4,3,2,1 N=2^30 seed=1 fixed=21,a,6b,5d pairs=0 expected_if_equal_fibers=0.03 ratio=0.000 maxrun=0 runs:
+W=8 rot=4,3,2,1 N=2^30 seed=2 fixed=5e,38,3e,2b pairs=0 expected_if_equal_fibers=0.03 ratio=0.000 maxrun=0 runs:
+W=8 rot=4,3,2,1 N=2^30 seed=3 fixed=63,c2,de,99 pairs=0 expected_if_equal_fibers=0.03 ratio=0.000 maxrun=0 runs:
+W=8 rot=4,3,2,1 N=2^30 seed=4 fixed=ca,40,db,3f pairs=0 expected_if_equal_fibers=0.03 ratio=0.000 maxrun=0 runs:
+SWEEPDONE

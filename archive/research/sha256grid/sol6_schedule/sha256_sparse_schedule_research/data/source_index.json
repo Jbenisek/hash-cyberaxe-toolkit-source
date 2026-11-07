@@ -1,0 +1,28 @@
+{
+  "standard": {
+    "title": "FIPS 180-4, section 6.2.2",
+    "url": "https://csrc.nist.gov/pubs/fips/180-4/upd1/final"
+  },
+  "provided_paper": {
+    "name": "2026-1120(2).pdf",
+    "sha256": "1242eac38c5e096fe1b9b0cb9443bea64f9c8c2b74de5fa6b0b85c35d09c1978",
+    "identifier": "ePrint 2026/1120",
+    "used": "recurrence and published support sets; not a minimum-weight certificate"
+  },
+  "reference_pair": {
+    "source": "Provided REFERENCE_CARD, Table 17 message data",
+    "status": "both schedules recomputed from initial messages"
+  },
+  "own_evidence": [
+    "results.json",
+    "linear_full_supports.csv",
+    "../certificates/linear_min_infosets.json",
+    "../certificates/*.min.json",
+    "../certificates/modular_witnesses.json"
+  ],
+  "environment": {
+    "cpu": "AMD EPYC 9V74 virtual CPU",
+    "compiler_flags": "g++ -O3 -march=native",
+    "network_used_by_computation": false
+  }
+}

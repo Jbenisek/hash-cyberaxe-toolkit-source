@@ -1,0 +1,5 @@
+logs/single_102.txt collision verified reference ok organizer ok
+logs/single_103.txt collision verified reference ok organizer ok
+logs/single_105.txt collision verified reference ok organizer ok
+logs/single_107.txt collision verified reference ok organizer ok
+logs/single_110.txt collision verified reference ok organizer ok

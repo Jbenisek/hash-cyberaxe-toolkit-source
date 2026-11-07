@@ -1,0 +1,28 @@
+r=2 ncentres=2 seed=7 m=195312
+INIT arith=66509 other=595918 total=662427
+lean-pow breakdown: newton total=377843160 arith=99688065 | prefix+scale total=3906435 | loop steps=236 total=54256880909 arith=16031889220 per-step total=229902037 arith=67931733
+CENTRE 0 j=0 degG=0 success=0 arith=19308714999 all=73796042626 sec=713.7
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=2097152
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=2097152
+  build g                                  arith=     6421153 other=   115051923 total=   121473076     7.2s peak=14638624
+  S^((p-1)/2) mod g                        arith= 16131772597 other= 38506857907 total= 54638630504   585.7s peak=37624320
+  gcd(g, S^h-1) (half-gcd)                 arith=  3170520858 other= 15865414186 total= 19035935044   120.9s peak=40741792
+lean-pow breakdown: newton total=377805176 arith=99682785 | prefix+scale total=3906435 | loop steps=236 total=54256880909 arith=16031889220 per-step total=229902037 arith=67931733
+CENTRE 1 j=0 degG=1 success=1 arith=19308713038 all=73796038203 sec=623.9
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=2097152
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=2097152
+  build g                                  arith=     6421153 other=   115051923 total=   121473076     3.3s peak=14638624
+  S^((p-1)/2) mod g                        arith= 16131767317 other= 38506825203 total= 54638592520   531.3s peak=37624320
+  gcd(g, S^h-1) (half-gcd)                 arith=  3170520527 other= 15865412108 total= 19035932635    89.3s peak=40741792
+  root finding                             arith=           1 other=           6 total=           7     0.0s peak=2097216
+  sqrt + map back                          arith=        3133 other=       30250 total=       33383     0.0s peak=2097152
+  verification (2 reference hashes)        arith=         516 other=        2064 total=        2580     0.0s peak=2097152
+COLLISION nk1  0x377baeb7cf481fbf37c1eac44267803738853e5b0fa1c7f71a7eb9ebb64cc0ed
+COLLISION rho1 0x33ae6a31191998b7e7d9e861b08acc9b0be94017f5203bbc17672dfd9acdfc20
+COLLISION nk2  0x04fd2eedea2d57610a6d68e75d083e5b6ccd72b3a15db07107f6a8281a622a62
+COLLISION rho2 0x0ac03404c0220a698e8c124a2dd70ea445f179d0a5539497670fca7d702dc19d
+COLLISION digest 0x261dbfd7dff7a06e656fb91f887d8d6a633b764335d35badba5ed3a840244333
+COLLISION centre 0x2485f312d6bcc7a448b36c52f6649ad1b641438e4a20ea457599f7ca4374a382
+SUMMARY r=2 centres=2 success=1 total_all=147592743256 total_arith=38617494546 units=572064896.3 log2_units=29.0916 heap_peak=40741792 secs=1337.6
+GAPS gcd=16747965 root=7
+TYPES add=13435325042 sub=12622540897 mul=12274801600 sqr=284827007 ld=15396537559 st=8656647975 ctl=84719163718 rnd=2 perm=202899456

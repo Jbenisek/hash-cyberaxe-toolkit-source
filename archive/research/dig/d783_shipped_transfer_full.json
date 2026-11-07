@@ -1,0 +1,21 @@
+{
+  "id": "D783-SHIPPED-Q3-TRANSFER-FULL-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "D783 shipped-q3 joint-law transfer full run",
+  "question": "Does the D250 component-B gain transfer to the shipped a0lean38 q3 law?",
+  "labels": ["K", "E"],
+  "status": "OPEN",
+  "number": "32 outer seeds x 20 SMC replicates per arm, 1280 arm runs, 755.642461 s. F: 1,052,892 tails, 4,795 CELLS, 5,913 EXACT, 4,795 JOINT. A: 1,052,838 tails, 5,024 CELLS, 6,197 EXACT, 5,024 JOINT. B_F mean 1.3209497163, Student-99 lower 1.2225703720; STACK mean 1.3470477907, lower 1.2088969662.",
+  "source": "research/retest/D783_transfer_full.json and shipped a0lean38.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_D783_r38_shipped_transfer_full.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 3.4,
+  "topic": "sha256-r38.d783.shipped-q3-transfer",
+  "peak_mem": null,
+  "notes": "Finite local transfer evidence only; source hash C72B756B489AB89687FFCA1B28C02B58B621096D47B6770267C02BC13E45B6EE. Exact counts match unchanged package returns; no failed rebuilds. Full-run peak RSS was not sampled, so memory and any ledger substitution remain OPEN. No package/stage/filing/submission."
+}

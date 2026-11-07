@@ -1,0 +1,5 @@
+-rwxrwxrwx 1 root root 1022520 Oct 10 02:30 k3gpu
+Sat Oct 10 02:30:40 MDT 2026
+k3gpu h7=5be0cd19 flags=11: samples 5723043921920 (2^42.38) in 120.1 s; compat 369820692 (2^-13.92/sample); K3 sols 22 (2^-37.92/sample); D2 hits among K3 sols 0; D2 hits among compat passes 0; records 22
+k3gpu h7=5be0cd19 flags=11: samples 6680553193472 (2^42.60) in 120.1 s; compat 15415773 (2^-18.73/sample); K3 sols 0 (2^-999.00/sample); D2 hits among K3 sols 0; D2 hits among compat passes 0; records 0
+Sat Oct 10 02:34:41 MDT 2026

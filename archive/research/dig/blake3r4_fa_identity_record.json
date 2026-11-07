@@ -1,0 +1,21 @@
+{
+  "id": "B3R4-FA-IDENTITIES-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "alternative full-adder identities",
+  "question": "Can an equivalent full-adder identity or rotation-friendly form cut the 24422-gate r4 step?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "prop_ab 29957; prop_ac 29878; majority-xor 37860; all KATs pass; existing pivot 24422",
+  "source": "research/dig_new/blake3-r4/fa_identity_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_fa_identities_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "peak_mem": "771-772 live/register planes; package ledger not rebuilt",
+  "notes": "Negative result for three identities plus prior tie-order probe; not an exhaustive Boolean lower bound. No package/stage/filing/submission.",
+  "potential_bits": 0.1,
+  "prior": 0.15
+}

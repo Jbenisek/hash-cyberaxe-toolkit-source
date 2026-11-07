@@ -1,0 +1,24 @@
+{
+  "id": "D267-B3M-ONE-MESSAGE-SOURCE-SCHEDULE",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M one-message output schedule imported from shipped source",
+  "question": "Can the output phase construct and compress A, release it, then construct and compress B without changing the shipped equations?",
+  "labels": [
+    "C",
+    "Z"
+  ],
+  "status": "LOCAL_ONLY",
+  "number": "256 root plus 256 nonzero-counter direct source-level KATs: 0 payload/digest mismatches, 55/63-byte lengths in every case, 256/256 distinct root A/B payloads, 256/256 root half-collision predicates, and 256/256 counter cases with nonzero t. Conditional one-message bound M_one=4,398,046,645,375 < Q=6,013,036,259,648 gives S=84.88595; shipped RELEASE remains 85.43472.",
+  "source": "our workflow: D267 source-level schedule audit",
+  "evidence": "research/retest/b3m_one_message_source/source_schedule.py; research/sol_answer_D267_b3m_one_message_source.md",
+  "date": "2026-10-13",
+  "own_test": true,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "The shipped frontline.py was imported unchanged. The audit copies step_ct's scalar equations and keeps only scalar state while constructing/compressing A, deleting A, then constructing/compressing B. It tests both ROOT_FLAGS with t=0 and FLAGS=3 with 256 independently selected nonzero counters. This is stronger local source evidence than the separate equation harness, but it is not a production rewrite or organizer ruling. No package, staging, or submission.",
+  "held_fixed": "shipped frontline.py, ROOT_FLAGS, exact compression, proof Section 12 arithmetic",
+  "reopen_if": "A production source rewrite, allocator/release trace, exact ledger, and organizer acceptance of the one-message memory rule are supplied"
+}

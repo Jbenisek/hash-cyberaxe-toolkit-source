@@ -1,0 +1,37 @@
+system fixed.sys: N=100 E=96 F=4  rho(all,{})=0  covered words=100
+group K0    |eqs|=8  inner width 1  list 1
+group K1    |eqs|=8  inner width 2  list 2
+group K2    |eqs|=8  inner width 2  list 2
+group K3    |eqs|=8  inner width 2  list 2
+group D0    |eqs|=8  inner width 5  list 5
+group D1    |eqs|=8  inner width 5  list 5
+group D2    |eqs|=8  inner width 6  list 6
+group D3    |eqs|=8  inner width 5  list 5
+group C0    |eqs|=8  inner width 4  list 4
+group C1    |eqs|=8  inner width 4  list 4
+group C2    |eqs|=8  inner width 4  list 4
+group C3    |eqs|=8  inner width 4  list 4
+EXACT brick-level optimum (12 groups): width 9
+JOIN J=2 list=0 : K0 K1 K2 K3 D0 D1 D2 D3 C0 C1 C2 C3
+  JOIN J=7 list=5 : K0 K1 K3 D0 D1 D2 D3 C0 C1 C2 C3
+    JOIN J=9 list=9 : K0 K1 K3 D1 D2 D3 C0 C1 C2 C3
+      JOIN J=8 list=8 : D2 C3
+        [C3] inner 4
+        [D2] inner 6
+      JOIN J=9 list=9 : K0 K1 K3 D1 D3 C0 C1 C2
+        JOIN J=9 list=9 : K0 K1 K3 D1 D3 C1 C2
+          JOIN J=9 list=9 : K0 K1 K3 D1 C1 C2
+            JOIN J=9 list=9 : K0 K3 D1 C1 C2
+              JOIN J=9 list=9 : K0 D1 C1 C2
+                JOIN J=8 list=8 : K0 C1 C2
+                  JOIN J=8 list=8 : C1 C2
+                    [C2] inner 4
+                    [C1] inner 4
+                  [K0] inner 1
+                [D1] inner 5
+              [K3] inner 2
+            [K1] inner 2
+          [D3] inner 5
+        [C0] inner 4
+    [D0] inner 5
+  [K2] inner 2

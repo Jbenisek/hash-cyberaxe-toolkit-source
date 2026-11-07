@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.TWID twiddle table",
+ "question": "time cost of shrinking",
+ "labels": [
+  "N",
+  "S"
+ ],
+ "status": "COMPUTED",
+ "number": "tableless costs +3.28% of a centre (7,289,544,780 vs 7,057,887,852, same seed class, old charging) = +0.0466 bit and saves 0.0904 bit of memory score: net -0.0438 bit; under the fix charging the extra arith is +45.9M per centre (+0.08%) but the control cost of the on-demand twiddle is not measured",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_mem_seed1001.txt research/poseidon/orchard/lean_r1/logs/final_ledger.txt research/poseidon/orchard/lean_r1_mem/logs/mem_ledger.txt research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.044,
+ "notes": "Own rerun confirms the mem build numbers (total_all=7,289,544,780, arith 3,939,867,764). Comparison base: final_ledger CENTRE 1 (j=0) total all=7,057,887,852. Not yet measured with the fix-style control charging. | universe cell poseidon-r1|MEM.TWID|MEM|M3",
+ "held_fixed": "old charging; seed 1001 line 0",
+ "reopen_if": "a measurement of the tableless build under the fix charging that shows net time cost above 0.09 bit",
+ "gain_basis": "S"
+}

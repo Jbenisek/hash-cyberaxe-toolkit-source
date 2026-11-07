@@ -1,0 +1,23 @@
+{
+  "id": "D486-SHA3-R6-S6LS-PACKAGE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "read-only audit of newer S6LS scratch package",
+  "question": "Does the newer S6LS scratch package pass its arithmetic/package checks and finite test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "S6LS prefile ALL PASS with N=55143574691449961658368535021444063567770 and time_log2=124.67321; a one-trial rho-w22 request returned a valid distinct-message 22-bit partial match.",
+  "source": "our workflow: D486 read-only newer scratch-package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D486_new_scratch_package_audit.md; research/launch/prefile_check.py; research/tools/build_pkg/scratch/pkgS6LS/pkg/sha3-256-r6/experiments/s6ls.py; research/tools/build_pkg/scratch/pkgR38M7/pkg/sha256-r38/experiments/a0lean38.py; research/tools/build_pkg/scratch/pkgB3Z2/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package/self-test evidence only; the S6LS reduced-width rho result does not prove the target full-collision success premise. No package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; existing claim ledgers; one-thread read-only commands",
+  "reopen_if": "package contents change or an organizer prefile ruling requires a new audit"
+}

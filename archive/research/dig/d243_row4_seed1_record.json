@@ -1,0 +1,20 @@
+{
+  "id": "D243-S38-ROW4-FIXED-SPLIT-SEED1",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 14,
+  "object": "Zone D 38 row-4 W8 G seed-1 negative control",
+  "question": "Does the row-4 W8 G family retain the fixed-split signature on an independent seeded split?",
+  "labels": ["S", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Exact seed-1 split: G=2^26; rows 5..15 pass 2^26; final state-equal 0",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-row4full-seed1.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Fixed W6/W7/E16..E21 seed-1 split; W8 exhaustive over G. This is a negative control, not a global impossibility proof. D243-S38-ROW4 remains OPEN.",
+  "held_fixed": "W6=0c8b1b1f, W7=496b5373, E16=482306fe, E17=c104d7a6, E18=c561d40c, E19=bb3b48c1, E20=0d3f7ede, E21=35e973e4; W8 varied over all G members",
+  "topic": "sha256-38 zoneD38 residual row4"
+}

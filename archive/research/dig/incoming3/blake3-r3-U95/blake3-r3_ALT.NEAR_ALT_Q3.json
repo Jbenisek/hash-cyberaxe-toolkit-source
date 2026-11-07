@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "near-collision: best differing cv word j and number of near pairs",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "no cv word j stands out: min digest-difference weight per j 86-91 (j=0..7, random and MSB delta). A single (cv,cv') pair is the best use of stage A: with M pairs, each stage B gets n/M evaluations and the collision probability falls as n^2/(M*2^256), so total cost >= 2^128",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_near.py; research/blake3_r3/alt/exp_near.log",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "The second sentence is a counting argument under the random-function premise, not a test.",
+ "held_fixed": "random function premise",
+ "reopen_if": "structure in stage B",
+ "topic": "blake3-r3|ALT.NEAR|ALT|Q3"
+}

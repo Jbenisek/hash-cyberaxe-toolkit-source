@@ -1,0 +1,5 @@
+after R0: lane forms M_i0*U+M_i1*V : roots per lane (F_p) = 1 each (linear), gcd degree = 0
+after R1 : formal degree 5 ; distinct F_p roots per lane [1, 1, 0] ; deg gcd(lane0,lane1,lane2) = 0 (common roots over closure; 0 means no direction drops all three lanes)
+after R2 : formal degree 25 ; distinct F_p roots per lane [1, 2, 1] ; deg gcd(lane0,lane1,lane2) = 0 (common roots over closure; 0 means no direction drops all three lanes)
+after R3 : formal degree 125 ; distinct F_p roots per lane [0, 0, 1] ; deg gcd(lane0,lane1,lane2) = 0 (common roots over closure; 0 means no direction drops all three lanes)
+after R4 : formal degree 625 ; distinct F_p roots per lane [0, 0, 0] ; deg gcd(lane0,lane1,lane2) = 625 (common roots over closure; 0 means no direction drops all three lanes)

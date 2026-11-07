@@ -1,0 +1,23 @@
+{
+  "id": "D547-SHA3-R5-S5-CAMPAIGN-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS5 prefile and supplied reduced campaign request",
+  "question": "What is verified for pkgS5 when the ledger appendix is absent?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS5 claims time_log2=99.5682; prefile SOME FAIL only for no executable ledger appendix; other checks pass. Supplied 256-trial campaign-reduced request completes with zero returned pairs; totals visits=24576, survivors=384, records=384, invalid=0, column_draws=209874, planted=384, rounds=74496, free_xors=23040, corr_xors=68601, parities=138240, radix_passes=2048, comparisons=320, digest_equal=0, verify_calls=0, record_mismatch=0.",
+  "source": "our workflow: D547 read-only pkgS5 campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D547_s5_audit.md; research/tools/build_pkg/scratch/pkgS5/pkg/sha3-256-r5/claim.json; research/tools/build_pkg/scratch/pkgS5/pkg/sha3-256-r5/proof.md; research/tools/build_pkg/scratch/pkgS5/pkg/sha3-256-r5/experiments/campaign.py; research/tools/build_pkg/scratch/pkgS5/work/request_public.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite reduced mechanics only; missing ledger prevents exact score credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS5 package bytes and supplied request specification as found; one process; no file writes",
+  "reopen_if": "ledger appendix repair or owner/organizer acceptance ruling arrives"
+}

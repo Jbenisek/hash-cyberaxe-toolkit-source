@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "written-out code",
+ "question": "M2 time to hold less code (smaller unroll) instead of the 9,587-operation body",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Held: at most 10,400 instructions x 36 B = 374,400 B (main body 9,587, recovery 640, handlers about 170). Unroll U (instructions U x 599 + 3 + 810): U=1 1,412 instr, 50,832 B, T +0.00672 bit; U=2 +0.00314; U=4 +0.00135 (115,524 B); U=8 +0.00045 (201,780 B); U=16 filed. Generating code at run time is not cheaper than holding it (each emitted instruction costs at least one operation; not priced). Dropping the whole unroll costs 0.0067 bit and frees 323,568 B.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out",
+ "notes": "universe cell blake3-r3|MEM.CODE|MEM|M2. Instruction size 36 B (opcode, registers and inline 256-bit immediate) is the entry's own statement; recount of the instruction count only.",
+ "held_fixed": "table 589,824 B, counters 2,048 B, d = 114",
+ "reopen_if": "an instruction encoding below 36 B (frees room for the d=113 move in MEM.DPTAB M3)",
+ "gain_basis": "T"
+}

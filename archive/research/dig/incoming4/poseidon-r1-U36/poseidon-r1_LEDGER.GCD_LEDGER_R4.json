@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.GCD half-gcd",
+ "question": "score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "the worst case charges the 8.8e9 budget twice (16.11% of a centre) although observed is 5.85e9: budget 6.1e9 gives 28.7069 (-0.0731 bit), budget at the observed 5.850e9 gives -0.0801 bit; a derived (not sampled) bound at that level would be a lever of 0.07 bit",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/dig/incoming4/_scan_poseidon/calc2.py",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.073,
+ "notes": "Recount of the worst-case sum with the D budget replaced. The judge rulings demand halts that cannot happen / derived budgets, so the tighter budget needs a proof of the half-gcd worst case; not available here. | universe cell poseidon-r1|LEDGER.GCD|LEDGER|R4",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run, half-gcd as implemented",
+ "reopen_if": "a proved worst-case bound for the half-gcd stage below 8.8e9 operations",
+ "gain_basis": "T"
+}

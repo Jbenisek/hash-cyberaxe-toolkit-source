@@ -1,0 +1,19 @@
+{
+  "id": "R6-DPrho-control-model-kat",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "DP-rho packed control KAT",
+  "question": "Do vector-mask, scalar-lane mask, and 120-bit counter control paths agree on real packed SHA3-r6 outputs?",
+  "labels": ["D", "X", "B", "E"],
+  "status": "COMPUTED",
+  "number": "8 batches; 0 mask mismatches; 0 counter mismatches; vector=12, scalar-mask=1024, counter=768 operations per batch",
+  "source": "our workflow: control-model KAT",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-DPrho-control-kat.md; research/retest/t1/control_model_kat.py; research/retest/t1/control_model_kat.json",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Finite functional agreement only. The KAT does not implement a full rho walk or prove organizer acceptance of restart/gather operations.",
+  "reopen_if": "A production packed walk with actual lane restarts and charged control instructions."
+}

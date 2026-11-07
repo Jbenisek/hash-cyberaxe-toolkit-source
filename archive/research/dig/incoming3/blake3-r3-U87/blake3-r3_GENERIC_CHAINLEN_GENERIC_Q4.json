@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.CHAINLEN trail (chain) length",
+ "question": "Alternatives to the age cap for bounding recovery and trail length.",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "No cap (kappa 20 stands in): +0.00517 bit and an unbounded recovery that cannot be charged. Cap by halting instead of cutting: same arithmetic as the kappa sweep. Fixed-length trails (no DP): detect only merges at equal depth, so they miss collisions (argued, not run). Brent/Floyd instead of DP: see GENERIC.DPFRAC Q4 (+0.63 / +1.19 bit).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.CHAINLEN|GENERIC|Q4. Fixed-length trails argument: end(A)=f^(l-i)(m), end(B)=f^(l-j)(m) differ when i != j; not simulated. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed formulas.",
+ "reopen_if": "A detection scheme for unequal-depth merges without DP."
+}

@@ -1,0 +1,8 @@
+q3_model 2^-102 (filed): log2 S -68.42135  N_G 398563284869814990705  NE_MAX 578375349533157559511618  NW_MAX 39285380938092027141708  N1_MAX 148808261129136466446  online 11938977653196641712347327  T 2^72.633442
+  matches proof.md 7 (N_G 398563284869814990705, NE_MAX 578375349533157559511618, NW_MAX 39285380938092027141708, N1_MAX 148808261129136466446, online 11938977653196641712347327): True
+no-pad L = -ln(0.61) rounded up = 0.494297; structural pair delta = 0.002931
+success-bound-only row (L 0.39, q3 2^-102): T 2^72.614886  (proof.md 7: 72.61489)
+q3_model 2^-101.0101 (leader R1 bound = go line)       T 2^72.069342 (vs 72.64 -0.5707) | no pad 72.055551 | pair 0.002931 71.669114 | pair + no pad 71.660016
+q3_model 2^-101.0002 (G2 bound, rounded)               T 2^72.064547 (vs 72.64 -0.5755) | no pad 72.050805 | pair 0.002931 71.665947 | pair + no pad 71.656891
+q3_model 2^-101.00017 (G2 bound, unrounded)            T 2^72.064532 (vs 72.64 -0.5755) | no pad 72.050790 | pair 0.002931 71.665937 | pair + no pad 71.656882
+q3_model 2^-101.00030 (checker fresh replicate bound)  T 2^72.064595 (vs 72.64 -0.5754) | no pad 72.050853 | pair 0.002931 71.665979 | pair + no pad 71.656922

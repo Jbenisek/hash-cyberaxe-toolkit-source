@@ -1,0 +1,9 @@
+AC eq1 solutions for x': 0 t=175s
+AC eq1 solutions for x': 0 t=334s
+./research/dig/incoming2/blake3-r2-G05-U03/work/t5.py:30: RuntimeWarning: overflow encountered in scalar add
+  a1p=(U(a)+U(b)+u); d1p=vror(U(d)^a1p,16); c1p=U(c)+d1p; b1p=vror(U(b)^c1p,12)
+AC eq1 solutions for x': 1 t=528s
+AC eq2 solutions for y: 0 t=663s
+AC eq1 solutions for x': 2 t=802s
+AC eq2 solutions for y: 0 t=934s
+AC eq1 solutions for x': 1 t=1201s

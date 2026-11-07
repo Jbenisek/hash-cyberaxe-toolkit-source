@@ -1,0 +1,1 @@
+RHO keyed=1 n=32 runs=2000 mean_T=82754.9 pred=82137.2 ratio=1.0075 z_mean=0.64 E[T^2]/(2N)=1.0197 z_T2=0.88 KS=0.783

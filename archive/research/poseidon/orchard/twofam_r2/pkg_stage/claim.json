@@ -1,0 +1,47 @@
+{
+ "schema_version": 3,
+ "submission_state": "ready",
+ "target_profile": "poseidon-orchard-r2-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 2,
+ "claim": {
+  "time_log2": 34.917,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 26.169,
+  "preprocessing_log2": 12.007,
+  "success_probability": 0.4999999999,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r2-prefix-v1 only (two partial rounds plus the eight fixed full rounds); the construction uses the first two full rounds being skippable on two lines and gives no claim for other round counts.",
+  "One attempt of the program; the claimed success probability 0.4999999999 is the lower bound proved in proof.md section 9 (counting lemma times the root-isolation bound 1 - 2^-35, minus the sampler failure 2^-127) and uses independent uniform random words as the model primitive."
+ ],
+ "baseline_improved": "poseidon-orchard-r2-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H1-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 describe the executed program of proof.md section 11 under the stated rules: 1 per field operation, 1 per element load or store plus 1 address operation, 3 per loop iteration plus 2 per loop exit, 1 per other executed index or control operation, 258 per reduced permutation evaluation, and a 16-word register file per transform block as the only register assumption.",
+   "scope": "All stages of the program of proof.md section 4 at the target dimensions (m = 390625 for the main powering, N = 786432 and N' = 393216 in its transforms, 393216 evaluations per family).",
+   "extrapolation": "None for the data-independent stages (they are executed totals) or for the sampler and driver (enumerated). The data-dependent stages (classical gcd, deflation, root isolation) are charged at derived bounds that the program asserts against its own counters at every execution.",
+   "evidence_ids": [
+    "proof:96-112",
+    "proof:130-211"
+   ],
+   "limitations": "The counts are produced by the instrumentation written into the source; the source is part of the proof text and was not run by the organizer. Word-level costs outside the stated rules (cache, bandwidth) are not part of the model."
+  },
+  {
+   "id": "H2-level-structure",
+   "role": "supporting",
+   "statement": "In the worst-case bound of the root isolation, the charge of one step of the Taylor shift and of Z^((p-1)/2) mod G is a nondecreasing function of the degree, halving the degree at least halves it, and the number of steps of the powering for a degree d <= k exceeds the number at k by at most 2 (so the bound pow(k) + 2P + (s + 2 - u)X holds for all d <= k, with P the per-step charge and X the extra charge of an exponent bit 1).",
+   "scope": "Stage F of proof.md section 7, levels k = 390625, 195312, ... , 5; levels at or below 47 are charged by the maximum of the calibrated charge of every degree up to k.",
+   "extrapolation": "From the measured charge at each level's maximum degree to every smaller degree at that level, by the structure of the code (plan sizes and linear passes), not by a margin.",
+   "evidence_ids": [
+    "proof:130-211"
+   ],
+   "limitations": "A statement about the code, checked at the calibrated degrees and not run for every degree. It affects only the charged time of a branch that is entered with probability below 2^-35 beyond the level d = 3 and not the success probability."
+  }
+ ]
+}

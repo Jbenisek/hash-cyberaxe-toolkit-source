@@ -1,0 +1,1 @@
+2026/232	Collision Attacks on SHA-256 up to 37 Steps with Improved Trail Search	owner_download	https://eprint.iacr.org/2026/232.pdf

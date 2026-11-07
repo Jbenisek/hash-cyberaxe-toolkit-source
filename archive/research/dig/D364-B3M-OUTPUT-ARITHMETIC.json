@@ -1,0 +1,22 @@
+{
+  "id": "D364-B3M-OUTPUT-ARITHMETIC",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M output-phase payload bound",
+  "question": "Does the proof's output bound reconcile exactly with the largest two messages and their digests?",
+  "labels": ["N", "D", "S", "I"],
+  "status": "COMPUTED",
+  "number": "For t<2^32, the two messages total at most 2^43-1930 bytes; two 32-byte digests give 2^43-1866 = 8,796,093,020,342 B. The declared output bound 2^43+133302 = 8,796,093,155,510 B leaves exactly 135,168 B for the final routine and fixed metadata.",
+  "source": "our workflow: dig b3m-output",
+  "own_test": true,
+  "evidence": "research/sol_answer_D364_b3m_output_arithmetic.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/proof.md §§1,12",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Exact payload arithmetic only. The final routine is not byte-identified, and organizer treatment of emitted bytes, allocator pages, and release liveness remains open under D339; no score or memory credit is transferred.",
+  "held_fixed": "Proof message lengths, t range, two 256-bit digests, and declared output upper bound",
+  "reopen_if": "A byte-identified output routine or organizer ruling changes the live output/sink accounting",
+  "peak_mem": "43.00001 ESTIMATED proof output upper bound"
+}

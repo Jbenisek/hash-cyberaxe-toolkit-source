@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.TOTAL (LEDGER)",
+ "question": "R4: score sensitivity (where a bit comes from)",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "score = time_log2 + (memory_log2 - 20) = 30.133 + 5.287 = 35.420. One bit = halving ops or memory. Centres 4 -> 2: -1.000 bit; ctl share 57.4 percent of observed ops (halving it: 0.488 bit; quartering: 0.812); r=1 precedent: straight-lining took the r1 entry from 28.781 to 27.954 (-0.827 bit, HANDOFF 19:37).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|LEDGER.TOTAL|LEDGER|R4. The ctl row is the largest single lever visible in the r2 ledger; the r2 numbers above predate any straight-lining of the r2 kernels (ledger run 19:42).",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "a r2 build with straight-lined kernels is measured",
+ "gain_basis": "T"
+}

@@ -1,0 +1,4 @@
+literal, 2^64.5 members (1 expected collision), member = 1 unit    log2 total =  65.02   (build 62.71, merge 61.25, members 64.53)
+literal, 2^64 members (0.5 expected collision, 39%)                log2 total =  64.61   (build 62.71, merge 60.25, members 64.03)
+literal, 2^64.5 members, member cascade as ~250 word ops           log2 total =  64.52   (build 62.71, merge 61.25, members 63.76)
+over-count: every list element = 1 full unit, 2^64.5 members       log2 total =  66.49   (build 66.00, merge 61.25, members 64.53)

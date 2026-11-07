@@ -1,0 +1,7 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563 TOOL entry_share.py sha256 447f4f8538f9fdfbb6d5095b51f97502182f3da15ced859efb6a44825639d26d
+MEASUREMENT (not used in the budget of the program or of the cost table)
+outer steps 8192, values of X2 per outer step 1 (seed text 2): contexts 8192, every one independent of the others; members 131072, trials 1073741824 (2^30.00), batches 153395200 (18725 per context, the last with 4 members); anchors against the complete compression of message A: 65536 of 65536 equal; 68 s
+rule: conditions | trials that satisfy it | share of the trials | as a power of two | batches with such a trial | share of the batches | 1 - (1 - share of the trials)^7 | 7 * share of the trials | budget of the program | largest and smallest share of the batches of one context (outer step/value) | largest and smallest share of the batches of one outer step
+RULE 4 | 67077531 | 0.06247082 | 2^-4.0007 | 37028328 | 0.241392 | 0.363361 | 0.437296 | 1/2 = 0.500000 | 0.347076 (8008/0) 0.107236 (5967/0) | 0.347076 0.107236
+RULE 6 | 16773393 | 0.01562144 | 2^-6.0003 | 15052043 | 0.098126 | 0.104357 | 0.109350 | 1/8 = 0.125000 | 0.158131 (2988/0) 0.053191 (3954/0) | 0.158131 0.053191
+RULE 8 | 4194386 | 0.00390633 | 2^-8.0000 | 4022396 | 0.026222 | 0.027026 | 0.027344 | 1/32 = 0.031250 | 0.040587 (7242/0) 0.012230 (6425/0) | 0.040587 0.012230

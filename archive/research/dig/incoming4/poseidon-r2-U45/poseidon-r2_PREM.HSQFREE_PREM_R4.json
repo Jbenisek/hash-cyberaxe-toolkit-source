@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQFREE (PREM)",
+ "question": "R4: score sensitivity",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "if g had a repeated factor the gcd stage would return it and the centre fails; at probability 2^-236 per centre, no effect on any score.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/d192_r2_results.jsonl; research/poseidon/d189_gpu_results.jsonl",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HSQFREE|PREM|R4. Negligible.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a repeated factor in any r2 centre"
+}

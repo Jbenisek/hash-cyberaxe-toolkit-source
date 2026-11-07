@@ -1,0 +1,19 @@
+{
+  "id": "SHA256-D177b-P1-A012-probe",
+  "hash": "sha256-37",
+  "row_i": 10,
+  "row_j": 17,
+  "object": "Procedure-C P1-A012 local dense-part move",
+  "question": "Does the complete listed QF_BV predicate have any A0/A1/A2 models on solver-generated E5/E6 projections?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "All 24 pair projections reached 5000 distinct E4 models at the cap; all 120000 distinct capped models replay rows 0-15; 141 pass row 16 and 0 pass row 17; no exact total.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/d177b_procedure_c/probe_p1.py; research/retest/d177b_procedure_c/p1_z3_exact.py; research/retest/d177b_procedure_c/P1_PROBE.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT_pair0_5000.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT_pairs1_4_5000.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT_pairs5_8_5000.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT_pairs9_12_5000.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT_pairs13_16_5000.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT_pairs17_20_5000.txt; research/retest/d177b_procedure_c/P1_Z3_EXACT_pairs21_23_5000.txt; research/retest/d177b_procedure_c/replay_p1_cap.py; research/retest/d177b_procedure_c/P1_REPLAY_5000.txt; research/retest/d177b_procedure_c/replay_p1_file.py; research/retest/d177b_procedure_c/P1_REPLAY_24K.txt; research/retest/d177b_procedure_c/P1_REPLAY_20K.txt; research/retest/d177b_procedure_c/P1_REPLAY_20K_5_8.txt; research/retest/d177b_procedure_c/P1_REPLAY_20K_9_12.txt; research/retest/d177b_procedure_c/P1_REPLAY_20K_13_16.txt; research/retest/d177b_procedure_c/P1_REPLAY_20K_17_20.txt; research/retest/d177b_procedure_c/P1_REPLAY_15K_21_23.txt; research/sol_answer_D177b_procedure_c.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Bounded existence only. Every model-cap row remained SAT; full N_A012, schedule replay and row-16/17 survival remain OPEN. No score or package credit."
+}

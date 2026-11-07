@@ -1,0 +1,29 @@
+=== r=1: executed operations of the plain algorithm (no shortcuts), then the same with folding of constants and dead lanes ===
+ round | kind    | sboxes | mults | adds | cum sboxes | cum mults | layers (log5 of nk,rho-degree) | degree (nk,rho)
+  R0   | full    |      3 |    18 |    9 |          3 |        18 |                              1 | 5^1 = 5
+  R1   | full    |      3 |    18 |    9 |          6 |        36 |                              2 | 5^2 = 25
+  R2   | full    |      3 |    18 |    9 |          9 |        54 |                              3 | 5^3 = 125
+  R3   | full    |      3 |    18 |    9 |         12 |        72 |                              4 | 5^4 = 625
+  R4   | partial |      1 |    12 |    9 |         13 |        84 |                              5 | 5^5 = 3125
+  R60  | full    |      3 |    18 |    9 |         16 |       102 |                              6 | 5^6 = 15625
+  R61  | full    |      3 |    18 |    9 |         19 |       120 |                              7 | 5^7 = 78125
+  R62  | full    |      3 |    18 |    9 |         22 |       138 |                              8 | 5^8 = 390625
+  R63  | full    |      3 |    18 |    9 |         25 |       156 |                              9 | 5^9 = 1953125
+  total executed: sboxes 25, mults 156; with folding (R0 lane 2 constant, R63 rows 1,2 dead): sboxes 24, mults 144
+  output degree in (nk,rho) 5^9 = 1953125; in (A,B) 5^8 = 390625; mults per unit of log5-degree: 17.3 naive
+  S-boxes per sequential layer: 2.78; partial rounds add a layer of degree for 1 S-box (and 12 mults) instead of 3 (18)
+=== r=2: executed operations of the plain algorithm (no shortcuts), then the same with folding of constants and dead lanes ===
+ round | kind    | sboxes | mults | adds | cum sboxes | cum mults | layers (log5 of nk,rho-degree) | degree (nk,rho)
+  R0   | full    |      3 |    18 |    9 |          3 |        18 |                              1 | 5^1 = 5
+  R1   | full    |      3 |    18 |    9 |          6 |        36 |                              2 | 5^2 = 25
+  R2   | full    |      3 |    18 |    9 |          9 |        54 |                              3 | 5^3 = 125
+  R3   | full    |      3 |    18 |    9 |         12 |        72 |                              4 | 5^4 = 625
+  R4   | partial |      1 |    12 |    9 |         13 |        84 |                              5 | 5^5 = 3125
+  R5   | partial |      1 |    12 |    9 |         14 |        96 |                              6 | 5^6 = 15625
+  R60  | full    |      3 |    18 |    9 |         17 |       114 |                              7 | 5^7 = 78125
+  R61  | full    |      3 |    18 |    9 |         20 |       132 |                              8 | 5^8 = 390625
+  R62  | full    |      3 |    18 |    9 |         23 |       150 |                              9 | 5^9 = 1953125
+  R63  | full    |      3 |    18 |    9 |         26 |       168 |                             10 | 5^10 = 9765625
+  total executed: sboxes 26, mults 168; with folding (R0 lane 2 constant, R63 rows 1,2 dead): sboxes 25, mults 156
+  output degree in (nk,rho) 5^10 = 9765625; in (A,B) 5^9 = 1953125; mults per unit of log5-degree: 16.8 naive
+  S-boxes per sequential layer: 2.60; partial rounds add a layer of degree for 1 S-box (and 12 mults) instead of 3 (18)

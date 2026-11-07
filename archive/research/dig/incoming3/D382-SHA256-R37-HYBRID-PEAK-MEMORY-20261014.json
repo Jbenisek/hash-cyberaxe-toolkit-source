@@ -1,0 +1,22 @@
+{
+  "id": "D382-SHA256-R37-HYBRID-PEAK-MEMORY-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "owned r37 dense hybrid CNF-generation peak RSS",
+  "question": "What peak RSS does the owned r37 signed/value hybrid preprocessing component use?",
+  "labels": ["C", "S"],
+  "status": "SAMPLED",
+  "number": "Maximum RSS 81,008 KiB = 82,952,192 bytes = 2^26.3057767689 under /usr/bin/time -v; exit 0; 78,644 variables and 437,036 clauses.",
+  "source": "our controlled dense_dig signed hybrid probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D382_r37_hybrid_peak_memory.md; research/retest/r37_hybrid_probe.out; research/retest/r37_hybrid_probe.time; research/dense_dig/signed/hybrid.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Measured owned one-process CNF/value-model preprocessing component only. Not a full characteristic-search, development/advice, libc/allocator, or multithread production bound; no filing score transfer.",
+  "held_fixed": "A<=24, E<=57, value layer through step 24, one WSL process, nice 10",
+  "reopen_if": "A complete characteristic-search and development/preprocessing memory bound is required for LOW37/A_C scoring.",
+  "peak_mem": "26.3057767689 MEASURED /usr/bin/time -v maximum RSS; one-process owned hybrid CNF build"
+}

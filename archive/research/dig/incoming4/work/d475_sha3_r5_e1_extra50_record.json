@@ -1,0 +1,23 @@
+{
+  "id": "D475-SHA3-R5-E1-EXTRA50-CONSTRUCTOR",
+  "hash": "sha3-r5",
+  "row_i": 2,
+  "row_j": 2,
+  "object": "r5 round-2 FES ANF equations over 50 additional constructor spaces",
+  "question": "Do disjoint exact package-constructor spaces 50-99 contain constant or rank-deficient E1 equations?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "50/50 spaces pass: 1,200/1,200 equations globally nonconstant; constant-0=0, constant-1=0; linear, quadratic, and combined ranks all 24 in every space.",
+  "source": "our exact fes_setup ANF census, D475 preregistered seed block",
+  "own_test": true,
+  "evidence": "research/retest/sha3_r5_anf_50/PREREG_D475_EXTRA50.md; research/retest/sha3_r5_anf_50/run_d475_extra50.py; research/retest/sha3_r5_anf_50/ANF_CENSUS_D475_EXTRA50.json; research/sol_answer_D475_sha3_r5_e1_extra50.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "UNKNOWN (single-process run; no peak sampler)",
+  "notes": "Bounded constructor-space evidence only; historical R7 connector states are absent. No package/staging/filing/submission.",
+  "held_fixed": "Exact owned fes_setup, seeds 50-99, 24 equations, all 256 outer-coordinate bits, and preregistered pass rule",
+  "reopen_if": "Historical R7 connector states or a released full connector-space generator lands"
+}

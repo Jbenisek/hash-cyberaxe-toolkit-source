@@ -1,0 +1,155 @@
+{
+ "uses": {
+  "10": {
+   "round0_slot": 10,
+   "round1_slot": 3
+  },
+  "11": {
+   "round0_slot": 11,
+   "round1_slot": 9
+  }
+ },
+ "Q1": {
+  "N": 20000,
+  "A_vs_B_diff_nonzero": 0,
+  "X11_equals_pin": 20000,
+  "D1_forward_reproduces_X1_X6_X11_X12": 20000,
+  "max_bit_bias_w10": 0.009749999999999981,
+  "max_bit_bias_w11": 0.007900000000000018,
+  "bitcount_range_w10": [
+   9805,
+   10139
+  ],
+  "bitcount_range_w11": [
+   9862,
+   10158
+  ]
+ },
+ "Q2": {
+  "w10": {
+   "contexts": 1500,
+   "same_bitflip_trials": 6000,
+   "same_flip_consts_kept": 0,
+   "same_flip_X11_kept": 0,
+   "same_flip_Y4_kept": 0,
+   "same_flip_lemmaH_kept": 0,
+   "same_flip_S_equal": 6000,
+   "Bonly_trials": 6000,
+   "Bonly_lemmaH_kept": 0,
+   "Bonly_X_equal": 0,
+   "ctrl_lemmaH": 1500,
+   "xchg_lanes": {
+    "1": 6000,
+    "6": 6000,
+    "11": 6000,
+    "12": 6000
+   }
+  },
+  "w11": {
+   "contexts": 1500,
+   "same_bitflip_trials": 6000,
+   "same_flip_consts_kept": 0,
+   "same_flip_X11_kept": 0,
+   "same_flip_Y4_kept": 0,
+   "same_flip_lemmaH_kept": 0,
+   "same_flip_S_equal": 6000,
+   "Bonly_trials": 6000,
+   "Bonly_lemmaH_kept": 0,
+   "Bonly_X_equal": 0,
+   "ctrl_lemmaH": 1500,
+   "xchg_lanes": {
+    "1": 6000,
+    "6": 6000,
+    "11": 6000,
+    "12": 6000
+   }
+  },
+  "pin_X11_solve": {
+   "ctxs": 20,
+   "w10_trials": 40000,
+   "unique_w11_hits": 40000,
+   "other_w11_trials": 40000,
+   "other_w11_hits": 0
+  }
+ },
+ "Q3_y_sweep": {
+  "consecutive": {
+   "n": 33554432,
+   "distinct_y": 33554432,
+   "distinct_w10": 33554432,
+   "distinct_w11": 33430973,
+   "distinct_pair": 33554432,
+   "inverse_w10_to_y_roundtrip": 33554432
+  },
+  "random": {
+   "n": 33554432,
+   "distinct_y": 33554432,
+   "distinct_w10": 33554432,
+   "distinct_w11": 33423767,
+   "distinct_pair": 33554432,
+   "inverse_w10_to_y_roundtrip": 33554432
+  },
+  "validated_vs_build": 2000
+ },
+ "Q3_dependence": {
+  "C0c1": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  },
+  "C0d1": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  },
+  "D3d1": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  },
+  "S15": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  },
+  "S9": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  },
+  "w5": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  },
+  "X2": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  },
+  "y": {
+   "trials": 1500,
+   "w10_changed": 1500,
+   "w11_changed": 1500
+  }
+ },
+ "Q3_global": {
+  "builds": 150000,
+  "distinct_w10": 150000,
+  "distinct_w11": 149998,
+  "distinct_pairs": 150000
+ },
+ "Q4_D1_absorb": {
+  "trials": 100000,
+  "S1S12_diff_absorbed": 100000,
+  "S1_only_absorbed": 100000,
+  "S12_only_absorbed": 100000,
+  "S6_recovered_from_outputs_equals_A": 100000,
+  "S11_recovered_from_outputs_equals_A": 100000
+ },
+ "Q4_K0_S12_function_of_S4_S8": {
+  "trials": 200000,
+  "S12_equals_S8_minus_K0c1": 200000
+ },
+ "seconds": 413.52444291114807
+}

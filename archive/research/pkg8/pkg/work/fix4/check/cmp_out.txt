@@ -1,0 +1,60 @@
+== prev snapshot vs prev FROZEN ==
+./certificates/manifest.json: OK
+./claim.json: OK
+./experiments/halfsearch.py: OK
+./experiments/manifest.json: OK
+./proof.md: OK
+prev note: ef173f0e3ec28907f0d7070190c5103f690201469c621776959a4fa0c458e950 vs ef173f0e3ec28907f0d7070190c5103f690201469c621776959a4fa0c458e950
+== present vs present FROZEN ==
+./certificates/manifest.json: OK
+./claim.json: OK
+./experiments/halfsearch.py: OK
+./experiments/manifest.json: OK
+./proof.md: OK
+present note: 3bfda493803b260c7b3bed6907c1543fdb4a94c27a774b775a5f45e0eca2fe63 vs 3bfda493803b260c7b3bed6907c1543fdb4a94c27a774b775a5f45e0eca2fe63
+== files present in package not listed in FROZEN ==
+./certificates/manifest.json
+./claim.json
+./experiments/halfsearch.py
+./experiments/manifest.json
+./proof.md
+== per-file prev vs present ==
+DIFF ./FILE_STEPS.md
+DIFF ./FROZEN_fix.sha256
+DIFF ./FROZEN_fix_note.sha256
+SAME ./blake3-r2/certificates/manifest.json
+DIFF ./blake3-r2/claim.json
+SAME ./blake3-r2/experiments/halfsearch.py
+SAME ./blake3-r2/experiments/manifest.json
+DIFF ./blake3-r2/proof.md
+DIFF ./src/claim.json
+SAME ./src/manifest.json
+DIFF ./src/note.md
+SAME ./src/parts/class_q.md
+SAME ./src/parts/count_12.md
+SAME ./src/parts/count_3.md
+SAME ./src/parts/count_4.md
+SAME ./src/parts/lemma_n.md
+SAME ./src/parts/packed.md
+SAME ./src/parts/residual.md
+SAME ./src/parts/s1_s3.md
+SAME ./src/proof_cost.md
+DIFF ./src/proof_evidence.md
+DIFF ./src/proof_head.md
+SAME ./src/proof_search.md
+DIFF ./submission-note-r2.md
+SAME ./tools/pkg7_text.py
+DIFF ./validation_log_before.txt
+== present files under src/ blake3-r2/ not in prev ==
+== CRLF / BOM ==
+0
+ 23 20 41
+ 23 20 62
+== sizes ==
+  2389 147348 ./research/pkg7/blake3-r2/proof.md
+    56  16748 ./research/pkg7/blake3-r2/claim.json
+   221  12829 ./research/pkg7/submission-note-r2.md
+  2257 138012 ./research/pkg7/work/fix4/prev/blake3-r2/proof.md
+    56  16360 ./research/pkg7/work/fix4/prev/blake3-r2/claim.json
+   217  12523 ./research/pkg7/work/fix4/prev/submission-note-r2.md
+  5196 343820 total

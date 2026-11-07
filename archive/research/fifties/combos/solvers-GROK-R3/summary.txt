@@ -1,0 +1,7 @@
+ctl_bad      result=unsat    model_equals_true_guess=None stats={'max-memory': '17.73', 'time': '0.01'}
+ctl_pinned   result=sat      model_equals_true_guess=True stats={'max-memory': '17.73', 'time': '0.00'}
+inst_true    result=timeout  model_equals_true_guess=None stats={'max-memory': '113.69', 'time': '899.99'}
+part_b04     result=sat      model_equals_true_guess=True stats={'max-memory': '30.13', 'sat-conflicts': '5393', 'sat-decisions': '8736', 'time': '0.56'}
+part_b06     result=sat      model_equals_true_guess=True stats={'max-memory': '39.09', 'sat-conflicts': '279622', 'sat-decisions': '385073', 'time': '44.42'}
+part_b07     result=sat      model_equals_true_guess=True stats={'max-memory': '50.38', 'sat-conflicts': '479493', 'sat-decisions': '698325', 'time': '185.06'}
+part_b08     result=timeout  model_equals_true_guess=None stats={'max-memory': '50.91', 'time': '119.99'}

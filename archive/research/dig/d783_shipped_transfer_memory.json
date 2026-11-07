@@ -1,0 +1,21 @@
+{
+  "id": "D783-SHIPPED-Q3-TRANSFER-MEMORY-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "D783 shipped-q3 transfer memory audit",
+  "question": "What process memory did the deterministic shipped-q3 transfer run use?",
+  "labels": ["K", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "A deterministic duplicate of all 1280 arm runs matched every recorded result. Windows working-set sampler at 100 ms took 5291 samples and measured peak 26574848 B = 2^24.6635581042.",
+  "source": "research/retest/D783_transfer_full_memrun_memory.json",
+  "own_test": true,
+  "evidence": "research/sol_answer_D783_r38_shipped_transfer_full.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": null,
+  "topic": "sha256-r38.d783.shipped-q3-transfer",
+  "peak_mem": 26574848,
+  "notes": "Process working-set bound on deterministic duplicate only; not an organizer/package memory proof. No package/stage/filing/submission."
+}

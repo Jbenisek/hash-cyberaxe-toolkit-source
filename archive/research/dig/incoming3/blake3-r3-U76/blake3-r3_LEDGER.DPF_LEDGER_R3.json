@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "distinguished-point filter (4 operations per batch)",
+ "question": "R3 control: truth table of the filter expression, a negative control, and the metered stage-2 event count",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Filter flag == (some lane has word 0 == 0) on 300,000 random and edge words (0, 1, 0xFFFFFFFF, 0x80000000 mixtures): 0 mismatches. Negative control: with dirty guard bits and no mask the test misfires (983 of 1000 dirty words flagged). The digest words are clean (masked), checked by the extreme-input run. Metered stage-2 events of the shipped program (batches where some lane has word 0 = 0): n = 32 max 356 of the 630 budget, n = 22 max 156 of 376, never above the bound.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out, research/dig/incoming3/blake3-r3-U76/work/ctrl.py, research/dig/incoming3/blake3-r3-U76/work/ctrl32.out, research/dig/incoming3/blake3-r3-U76/work/ctrl22.out",
+ "notes": "universe cell blake3-r3|LEDGER.DPF|LEDGER|R3. The filter is a necessary condition for the DP (low 114 bits zero implies word 0 zero); stage 2 handles the rest.",
+ "held_fixed": "s1 = 32 filter, clean 32-bit lanes",
+ "reopen_if": "a lane word 0 == 0 that the filter misses on any clean input",
+ "gain_basis": "count"
+}

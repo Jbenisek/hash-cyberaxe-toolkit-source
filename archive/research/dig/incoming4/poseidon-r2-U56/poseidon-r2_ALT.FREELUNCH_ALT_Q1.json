@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FREELUNCH (ALT)",
+ "question": "Q1: FreeLunch applied to r=2: degree and cost",
+ "labels": [
+  "K"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "Poseidon is not in the FreeLunch paper (Griffin, Anemoi, Arion, XHash8). For forward x^5 the free Groebner basis is vacuous: ideal degree D_I = 5^(6+r) = 390,625 at r=2, the same univariate polynomial we already have. FGLM cost O(D_I^3) or the faster char-poly route is worse than gcd with x^p - x.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/freelunch/FREELUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FREELUNCH|ALT|Q1. Scout reading of the CRYPTO 2024 slides and abstract (research/poseidon/levels/freelunch/FREELUNCH.md); the paper PDF was not retrievable. No code run.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a Poseidon-specific partial-round model in the full paper gives ideal degree below 5^8"
+}

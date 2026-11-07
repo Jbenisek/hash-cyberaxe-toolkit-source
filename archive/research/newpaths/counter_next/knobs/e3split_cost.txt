@@ -1,0 +1,5 @@
+targets 1 (C 25165824); outer steps 1000: mean nodes LOW 112.3, HIGH 2.8, JOIN pairs 0.00; total mean 115.1, median 6, max 4370
+targets 3 (C 58720256); outer steps 1000: mean nodes LOW 337.7, HIGH 17.6, JOIN pairs 0.00; total mean 355.3, median 34, max 4662
+targets 7 (C 109051904); outer steps 1000: mean nodes LOW 800.4, HIGH 42.3, JOIN pairs 0.00; total mean 842.7, median 170, max 9618
+targets 20 (C 166723584); outer steps 1000: mean nodes LOW 2259.8, HIGH 116.1, JOIN pairs 245.76; total mean 2621.6, median 592, max 114396
+targets 60 (C 185364480); outer steps 1000: mean nodes LOW 6021.9, HIGH 248.7, JOIN pairs 1654.78; total mean 7925.4, median 2792, max 1197688

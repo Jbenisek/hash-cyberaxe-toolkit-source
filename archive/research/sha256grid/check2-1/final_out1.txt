@@ -1,0 +1,46 @@
+Sat Oct 10 14:31:34 MDT 2026
+== independent verification: scout solutions, then mine
+transcription: scout r38core.py vs package vt38.py: {'K': True, 'CHAR': True, 'TWOBIT': True, 'PCV': True, 'PMY': True, 'PMX': True}
+published pair: ds0(W10) = 10005f30; with its ds1(W23), dW9, dW18 it gives dW25 = e0000000 (characteristic e0000000)
+S* (published pair): failures [] | W7 cell True | dW22=0 True | published W16 in row-16 set: True | derived words equal published M': True
+step1_base.sols.json[0]    failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+step1_base.sols.json[1]    failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+step1_k1r16.sols.json[0]   failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): False / False | rows equal to S*: []
+   claimed row-16 W16 values: 1, distinct 1, all pass row 16: True
+   shares A6..A15 with step1_base.sols.json[0]
+step1_g32.sols.json[0]     failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+   claimed row-16 W16 values: 32, distinct 32, all pass row 16: True
+step1_g8.sols.json[0]      failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: [7, 8, 9, 10, 11, 12, 13, 14, 15]
+   claimed row-16 W16 values: 8, distinct 8, all pass row 16: True
+c_base.sols.json[0]        failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): False / False | rows equal to S*: []
+   shares A7..A15 with step1_base.sols.json[1]
+c_base.sols.json[1]        failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): False / False | rows equal to S*: []
+c_base.sols.json[2]        failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+c_g8.sols.json[0]          failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: [7, 8, 9, 10, 11, 12, 13, 14, 15]
+   claimed row-16 W16 values: 8, distinct 8, all pass row 16: True
+   same A3..A13 core as step1_g8.sols.json[0]
+   shares A0..A15 with step1_g8.sols.json[0]
+s_base.sols.json[0]        failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+   same A3..A13 core as step1_base.sols.json[0]
+   shares A0..A15 with step1_base.sols.json[0]
+   shares A6..A15 with step1_k1r16.sols.json[0]
+== my runs (units at 10^10/2728 per CPU-s)
+sbase_s2: s SATISFIABLE | conflicts 228217 | 27.85 CPU-s = 2^26.605 units | rc=10 start=1791663408.120117864 end=1791663436.343897888 wall=28.223780024
+cbase_s1: s SATISFIABLE | conflicts 696343 | 94.79 CPU-s = 2^28.372 units | rc=10 start=1791663436.559681087 end=1791663535.554800913 wall=98.995119826
+cbase_s2: s SATISFIABLE | conflicts 1127132 | 157.89 CPU-s = 2^29.108 units | rc=10 start=1791663535.614033813 end=1791663693.881169852 wall=158.267136039
+cbase_s3: s SATISFIABLE | conflicts 1104842 | 111.80 CPU-s = 2^28.610 units | rc=10 start=1791663693.943358251 end=1791663806.113098981 wall=112.169740730
+g8_s1: s SATISFIABLE | conflicts 3889351 | 676.63 CPU-s = 2^31.208 units | rc=10 start=1791663205.333958266 end=1791663890.399560082 wall=685.065601816
+k2_s1: s UNSATISFIABLE | conflicts 2608641 | 381.16 CPU-s = 2^30.380 units | rc=20 start=1791663890.474961986 end=1791664282.981312878 wall=392.506350892
+wsl : Traceback (most recent call last):
+At line:1 char:302
++ ... tch {} } }; wsl -d Ubuntu -- bash "historical-sources/~~Projects/~HashSmash/works ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 1, in <module>
+    import math; print('%.3f' % (math.log2() + math.log2(1e10/2728)))
+                                 ~~~~~~~~~^^
+TypeError: math.log2() takes exactly one argument (0 given)
+g32_s2:  |  |  CPU-s = 2^ units | 
+Sat Oct 10 14:31:35 MDT 2026

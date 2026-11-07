@@ -1,0 +1,9 @@
+# toy w=6 rots=(3, 2, 2, 1) random baselines: one word 2^-6, half (4 words) 2^-24, digest 2^-48
+w=6 filed: IV t=0 flags=11             N=2^24 Xbad=0 | log2 p: ZA -14.46 A -14.46 Afold -23.00 [2] | ZB -inf B -23.00 Bfold -23.00 [2] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.74 dY7=0 -7.29 dY15=0 -7.42 | 56.0s
+w=6 chunk t=1 flags=3                  N=2^24 Xbad=0 | log2 p: ZA -14.42 A -14.42 Afold -inf [0] | ZB -inf B -21.68 Bfold -21.68 [5] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.75 dY7=0 -7.29 dY15=0 -7.41 | 51.7s
+w=6 chunk t=rand0 flags=3              N=2^24 Xbad=0 | log2 p: ZA -14.38 A -14.38 Afold -24.00 [1] | ZB -inf B -23.00 Bfold -23.00 [2] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.75 dY7=0 -7.29 dY15=0 -7.41 | 49.2s
+w=6 chunk t=rand1 flags=3              N=2^24 Xbad=0 | log2 p: ZA -14.49 A -14.48 Afold -24.00 [1] | ZB -inf B -22.42 Bfold -22.42 [3] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.74 dY7=0 -7.28 dY15=0 -7.41 | 51.7s
+w=6 chunk t=rand2 flags=3              N=2^24 Xbad=0 | log2 p: ZA -14.46 A -14.45 Afold -22.42 [3] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.75 dY7=0 -7.29 dY15=0 -7.42 | 51.4s
+w=6 2-block cv=rand0 t=rand flags=2    N=2^24 Xbad=0 | log2 p: ZA -14.37 A -14.36 Afold -22.00 [4] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.75 dY7=0 -7.28 dY15=0 -7.42 | 53.5s
+w=6 2-block cv=rand1 t=rand flags=2    N=2^24 Xbad=0 | log2 p: ZA -14.35 A -14.35 Afold -inf [0] | ZB -inf B -24.00 Bfold -24.00 [1] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.75 dY7=0 -7.28 dY15=0 -7.41 | 50.2s
+w=6 2-block cv=rand2 t=rand flags=2    N=2^24 Xbad=0 | log2 p: ZA -14.47 A -14.47 Afold -inf [0] | ZB -inf B -24.00 Bfold -24.00 [1] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.75 dY7=0 -7.29 dY15=0 -7.42 | 49.6s

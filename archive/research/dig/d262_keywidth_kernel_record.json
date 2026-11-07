@@ -1,0 +1,22 @@
+{
+  "id": "D262-SHA3-R6-CURRENT-KEYWIDTH-KERNEL",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "current-generator wider-key kernel cost screen",
+  "question": "Does the current S6K generator support a lower conditional ledger time at b=144 or b=148 after measuring its K/G costs?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "seed 77; 40 lists each; b=140 K mean 37540.075 sd 55.953455, G mean 5530330.575 sd 7996.083454; b=144 K mean 37691.25 sd 45.726472, G mean 5545865.725 sd 6620.982420; b=148 K mean 37798.5 sd 69.469418, G mean 5556308.275 sd 9727.904157; conditional times 121.71644, 121.69452, 121.69732",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/lens_t3/PREREG_D262_CURRENT_KEYWIDTH_KERNEL.md; research/retest/lens_t3/D262_run_summary.md; research/retest/lens_t3/keywidth_kernel_cost_current.py; research/sol_answer_D262_sha3_keywidth_kernel_current.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite conditional pricing only. Wider-key FES/setup-plane work, memory/register cost, source/kernel implementation and organizer acceptance remain open; no safe claimable gain.",
+  "held_fixed": "Current pkgS6K work/new generator; seed 77; 40 samples per NZ; K_BUD=ceil_50(mean+6sd), GEN_BUD=ceil_20000(mean+6sd), OVER=147, K_G=47897+180*(NZ-35)",
+  "reopen_if": "A complete wider-key generator and exact charged FES/setup/kernel proof are supplied and accepted",
+  "topic": "sha3-r6 key-width lever"
+}

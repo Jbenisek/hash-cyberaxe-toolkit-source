@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-exact-rep",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "coupled omega representative typed-list enumeration",
+  "question": "For one representative in each of the 16 classes, do all typed E words produce exact kept lists and what is the resulting ledger mean?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "462,791,680 typed-word/class tests; all 16 CUDA lists equal independent exact lists; 389,525,760 kept; E_KEPT=24,345,360",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_omega_class.md; research/retest/b3_omega_coupled/build_inputs/cost_exact.out; research/retest/b3_omega_coupled/build_inputs/ledger_exact.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Exact representative enumeration and exact ledger conditioning only. It does not prove that the representative list is invariant over the other 32767 members; that claim remains OPEN."
+}

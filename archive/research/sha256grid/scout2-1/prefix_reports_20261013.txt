@@ -1,0 +1,13 @@
+### selftest_fix.sols.json
+selftest_fix.sols.json[0] selftest_fix.out: |L*| = 1 (W14 values 1, row-14 survivors 160), own (W14,W15) in L*: True, |G| per L* element [32]  26.7s
+### selftest_fix16.sols.json
+selftest_fix16.sols.json[0] selftest_fix16.out: |L*| = 1 (W14 values 1, row-14 survivors 160), own (W14,W15) in L*: True, |G| per L* element [32]  24.9s
+### step1_base.sols.json
+step1_base.sols.json[0] r1base_s2.out: |L*| = 1 (W14 values 1, row-14 survivors 192), own (W14,W15) in L*: True, |G| per L* element [4]  29.3s
+step1_base.sols.json[1] r1base_s1.out: |L*| = 1 (W14 values 1, row-14 survivors 256), own (W14,W15) in L*: True, |G| per L* element [0]  34.6s
+### step1_g32.sols.json
+step1_g32.sols.json[0] r4g32_s1.out: |L*| = 1 (W14 values 1, row-14 survivors 512), own (W14,W15) in L*: True, |G| per L* element [56]  56.8s
+### step1_g8.sols.json
+step1_g8.sols.json[0] r4g8_s1.out: |L*| = 1 (W14 values 1, row-14 survivors 160), own (W14,W15) in L*: True, |G| per L* element [32]  25.7s
+### step1_k1r16.sols.json
+step1_k1r16.sols.json[0] r2r16_s1.out: |L*| = 1 (W14 values 1, row-14 survivors 192), own (W14,W15) in L*: True, |G| per L* element [4]  31.5s

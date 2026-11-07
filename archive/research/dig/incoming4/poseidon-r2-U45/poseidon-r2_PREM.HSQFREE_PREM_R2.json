@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQFREE (PREM)",
+ "question": "R2: own recount",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "squarefree in 12/12 GPU d192 r2 centres (field \"squarefree\": true); 20/20 at r1 (D189). CPU: gcd degrees consistent (no repeated factor seen in 11 runs).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/d192_r2_results.jsonl; research/poseidon/d189_gpu_results.jsonl",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HSQFREE|PREM|R2. Counted from the JSONL.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a repeated factor in any r2 centre"
+}

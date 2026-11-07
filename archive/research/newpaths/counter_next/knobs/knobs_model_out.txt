@@ -1,0 +1,42 @@
+[ctr1] Q1 full system: words 101, equations 92, basis size 9
+  Y4 + E1.d1 + X  YES: E1.a1 Y0 Y8 Y12 w2 w3 w5 w6 w7 w12 X2 X9 X14 C2.a1 C2.d1
+  Y4 + E1.d1 + X  NO : E1.b1 E1.a2 E3.h1 E3.g1 E3.f1 E3.e2 Y1 Y2 Y5 Y6 Y9 Y10 Y13 Y14 w0 w1 w8 w9 w10 w11 C2.b1 C2.c1
+[ctr2] Q1 full system: words 102, equations 92, basis size 10
+  Y4 + E1.d1 + X  YES: E1.a1 Y0 Y8 Y12 w2 w3 w5 w6 w7 w8 w12 X2 X9 X14 C2.b1 C2.c1 C2.a1 C2.d1
+  Y4 + E1.d1 + X  NO : E1.b1 E1.a2 E3.h1 E3.g1 E3.f1 E3.e2 Y1 Y2 Y5 Y6 Y9 Y10 Y13 Y14 w0 w1 w9 w10 w11
+[ctr1] Q2 outer subsystem: words 85, equations 77, outer basis size 8
+  Y4 + X (outer) YES: Y0 Y8 Y12 w2 w3 w5 w6 w7 w12 X2 X9 X14 C2.a1 C2.d1
+  Y4 + X (outer) NO : Y1 Y5 Y9 Y13 w8 w9 w10 w11 C2.b1 C2.c1
+[ctr2] Q2 outer subsystem: words 86, equations 77, outer basis size 9
+  Y4 + X (outer) YES: Y0 Y8 Y12 w2 w3 w5 w6 w7 w8 w12 X2 X9 X14 C2.b1 C2.c1 C2.a1 C2.d1
+  Y4 + X (outer) NO : Y1 Y5 Y9 Y13 w9 w10 w11
+    Y0: basis with T1 also in the basis (T1 chosen per outer step) = True
+    Y8: basis with T1 also in the basis (T1 chosen per outer step) = True
+    Y12: basis with T1 also in the basis (T1 chosen per outer step) = True
+    w2: basis with T1 also in the basis (T1 chosen per outer step) = True
+    w3: basis with T1 also in the basis (T1 chosen per outer step) = True
+    w5: basis with T1 also in the basis (T1 chosen per outer step) = True
+    w6: basis with T1 also in the basis (T1 chosen per outer step) = True
+    w7: basis with T1 also in the basis (T1 chosen per outer step) = True
+    w8: basis with T1 also in the basis (T1 chosen per outer step) = False  -> T1 must be SOLVED per outer step (filter 2^-13 on outer steps)
+    w12: basis with T1 also in the basis (T1 chosen per outer step) = True
+    X2: basis with T1 also in the basis (T1 chosen per outer step) = True
+    X9: basis with T1 also in the basis (T1 chosen per outer step) = True
+    X14: basis with T1 also in the basis (T1 chosen per outer step) = True
+    C2.b1: basis with T1 also in the basis (T1 chosen per outer step) = False  -> T1 must be SOLVED per outer step (filter 2^-13 on outer steps)
+    C2.c1: basis with T1 also in the basis (T1 chosen per outer step) = False  -> T1 must be SOLVED per outer step (filter 2^-13 on outer steps)
+    C2.a1: basis with T1 also in the basis (T1 chosen per outer step) = True
+    C2.d1: basis with T1 also in the basis (T1 chosen per outer step) = True
+    Y4 + w8 + Y9 (outer, T1 free): False
+    Y4 + w8 + Y12 (outer, T1 free): True
+    Y4 + w8 + Y1 (outer, T1 free): False
+    Y4 + w8 + w12 (outer, T1 free): True
+    Y4 + w8 + w5 (outer, T1 free): True
+    Y4 + w8 + C2.b1 (outer, T1 free): False
+[cv] words 113, equations 96, basis size 17
+  basis containing Y4, E1.d1, all eight CV words: True
+  dropping one CV word from the forced set gives a basis for: cv0 cv1 cv2 cv3 cv4 cv5 cv6 cv7
+  (a CV word that is SOLVED must hit a prescribed 32-bit value: a 2^-32 preimage filter)
+[cvT] words 113, equations 96, basis size 17
+  basis containing Y4, E1.d1, all eight CV words and T0: False
+  T0 fixed, cv0 solved (preimage): Y4 + E1.d1 basis exists

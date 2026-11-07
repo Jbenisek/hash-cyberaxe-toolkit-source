@@ -1,0 +1,9 @@
+423d554f68c0dba5e296a7bdecfbd5caa05909fb990c890e3d7acb0fe9df782f  run_r5t/single
+423d554f68c0dba5e296a7bdecfbd5caa05909fb990c890e3d7acb0fe9df782f  final_r5t/single
+total 440
+-rw-r--r-- 1 root root     32 Oct 15 22:56 end.txt
+-rw-r--r-- 1 root root      0 Oct 15 16:48 mem.err
+-rw-r--r-- 1 root root    675 Oct 15 22:56 mem.tmp
+-rw-r--r-- 1 root root   2864 Oct 15 22:56 run.tmp
+-rwxr-xr-x 1 root root 430288 Oct 15 16:48 single
+-rw-r--r-- 1 root root     32 Oct 15 16:48 start.txt

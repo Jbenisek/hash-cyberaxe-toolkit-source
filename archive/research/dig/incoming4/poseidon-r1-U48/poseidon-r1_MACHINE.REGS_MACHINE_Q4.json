@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.REGS register budget and spills",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "not stated whether registers spill; alternative = charge spills as loads/stores (cost <= the 0.12 bit above)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Reading. | universe cell poseidon-r1|MACHINE.REGS|MACHINE|Q4",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "build"
+}

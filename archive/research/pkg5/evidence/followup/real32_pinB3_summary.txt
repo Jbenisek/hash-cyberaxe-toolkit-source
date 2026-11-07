@@ -1,0 +1,36 @@
+runs: real 4 (2^40.00 trials), model 0 (2^0.00 trials)
+bad                                        real 0
+early test passes                          real 11407
+E1 requires the eta of Y4                  real 1390
+contradictions                             real 0
+pass A                                     real 17179784810 (2^-6.0000)
+pass B                                     real 228898572674 (2^-2.2641)
+pass A and B                               real 3576459145 (2^-8.2641)
+pass A, B and the E1-only test             real 12 (2^-36.4150)
+residual word 0 zero                       real 213
+residual word 1 zero                       real 2445
+residual word 2 zero                       real 184
+residual word 3 zero                       real 387
+low 16 bits of word 0 zero                 real 13185539
+low 16 bits of word 1 zero                 real 87155736
+low 16 bits of word 2 zero                 real 16781810
+low 16 bits of word 3 zero                 real 21153586
+low 16 bits of words 01 both zero          real 1295
+low 16 bits of words 02 both zero          real 840
+low 16 bits of words 03 both zero          real 141
+low 16 bits of words 12 both zero          real 1273
+low 16 bits of words 13 both zero          real 4287
+low 16 bits of words 23 both zero          real 291
+low 8 bits of all four zero                real 1018
+weight <= 16                               real 0
+weight <= 24                               real 30
+weight <= 32                               real 104635
+weight <= 40                               real 65203784
+at least 24 trailing zero bits             real 58258
+at least 28 trailing zero bits             real 3667
+at least 32 trailing zero bits             real 213
+at least 36 trailing zero bits             real 40
+at least 40 trailing zero bits             real 2
+at least 44 trailing zero bits             real 0
+at least 48 trailing zero bits             real 0
+no model runs in these files: real counts only (the pass rates of the stage rules are what they are for)

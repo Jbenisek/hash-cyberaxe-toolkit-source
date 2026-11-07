@@ -1,0 +1,6 @@
+published {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 160, 'W14 cell': 160, 'E15 cand': 5242880, 'plus15': 2621440, 'A15 cell': 16384, 'W15 cell': 6656, 's1W15': 40, 's0W15': 8, 'P (dE16)': 2, 'R (dA16)': 1}
+step1_base.sols.json[0] {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 192, 'W14 cell': 192, 'E15 cand': 6291456, 'plus15': 3145728, 'A15 cell': 123392, 'W15 cell': 37760, 's1W15': 192, 's0W15': 16, 'P (dE16)': 4, 'R (dA16)': 1}
+step1_base.sols.json[1] {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 256, 'W14 cell': 256, 'E15 cand': 8388608, 'plus15': 4194304, 'A15 cell': 20224, 'W15 cell': 7520, 's1W15': 16, 's0W15': 2, 'P (dE16)': 1, 'R (dA16)': 1}
+step1_g32.sols.json[0] {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 512, 'W14 cell': 512, 'E15 cand': 16777216, 'plus15': 8388608, 'A15 cell': 36864, 'W15 cell': 15744, 's1W15': 16, 's0W15': 4, 'P (dE16)': 2, 'R (dA16)': 1}
+step1_g8.sols.json[0] {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 160, 'W14 cell': 160, 'E15 cand': 5242880, 'plus15': 2621440, 'A15 cell': 16384, 'W15 cell': 6656, 's1W15': 40, 's0W15': 8, 'P (dE16)': 2, 'R (dA16)': 1}
+step1_k1r16.sols.json[0] {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 192, 'W14 cell': 192, 'E15 cand': 6291456, 'plus15': 3145728, 'A15 cell': 123392, 'W15 cell': 37760, 's1W15': 192, 's0W15': 16, 'P (dE16)': 4, 'R (dA16)': 1}

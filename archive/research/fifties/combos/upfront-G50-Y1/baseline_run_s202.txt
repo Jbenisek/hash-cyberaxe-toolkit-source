@@ -1,0 +1,143 @@
+alive low bytes 104 of 256
+expected passes 32.48807300243061
+c 0 hits 29268 prefix_reps 6656 passes 32 pilot 62
+c 1 hits 37968 prefix_reps 6656 passes 36 pilot 70
+c 2 hits 43000 prefix_reps 6656 passes 54 pilot 74
+c 3 hits 33600 prefix_reps 6656 passes 49 pilot 51
+c 4 hits 39376 prefix_reps 6656 passes 42 pilot 74
+c 5 hits 24080 prefix_reps 6656 passes 33 pilot 39
+c 6 hits 21632 prefix_reps 6656 passes 31 pilot 39
+c 7 hits 35012 prefix_reps 6656 passes 35 pilot 65
+c 8 hits 23856 prefix_reps 6656 passes 33 pilot 45
+c 9 hits 21862 prefix_reps 6656 passes 23 pilot 54
+c 10 hits 51604 prefix_reps 6656 passes 70 pilot 110
+c 11 hits 17201 prefix_reps 6656 passes 17 pilot 27
+c 12 hits 34080 prefix_reps 6656 passes 33 pilot 72
+c 13 hits 45777 prefix_reps 6656 passes 65 pilot 106
+c 14 hits 24336 prefix_reps 6656 passes 23 pilot 55
+c 15 hits 23816 prefix_reps 6656 passes 23 pilot 47
+c 16 hits 35564 prefix_reps 6656 passes 38 pilot 82
+c 17 hits 21905 prefix_reps 6656 passes 31 pilot 38
+c 18 hits 23856 prefix_reps 6656 passes 36 pilot 45
+c 19 hits 36994 prefix_reps 6656 passes 42 pilot 74
+c 20 hits 24032 prefix_reps 6656 passes 33 pilot 40
+c 21 hits 25088 prefix_reps 6656 passes 34 pilot 44
+c 22 hits 36624 prefix_reps 6656 passes 46 pilot 99
+c 23 hits 26208 prefix_reps 6656 passes 25 pilot 55
+c 24 hits 22562 prefix_reps 6656 passes 22 pilot 44
+c 25 hits 25692 prefix_reps 6656 passes 22 pilot 49
+c 26 hits 21792 prefix_reps 6656 passes 18 pilot 48
+c 27 hits 17248 prefix_reps 6656 passes 19 pilot 28
+c 28 hits 27873 prefix_reps 6656 passes 28 pilot 46
+c 29 hits 23504 prefix_reps 6656 passes 32 pilot 47
+c 30 hits 22776 prefix_reps 6656 passes 25 pilot 43
+c 31 hits 15696 prefix_reps 6656 passes 15 pilot 23
+c 32 hits 24304 prefix_reps 6656 passes 23 pilot 53
+c 33 hits 35360 prefix_reps 6656 passes 37 pilot 58
+c 34 hits 37814 prefix_reps 6656 passes 51 pilot 64
+c 35 hits 24080 prefix_reps 6656 passes 25 pilot 37
+c 36 hits 32376 prefix_reps 6656 passes 32 pilot 71
+c 37 hits 43472 prefix_reps 6656 passes 42 pilot 94
+c 38 hits 25929 prefix_reps 6656 passes 23 pilot 33
+c 39 hits 24232 prefix_reps 6656 passes 30 pilot 38
+c 40 hits 47736 prefix_reps 6656 passes 56 pilot 92
+c 41 hits 25648 prefix_reps 6656 passes 32 pilot 47
+c 42 hits 46226 prefix_reps 6656 passes 40 pilot 97
+c 43 hits 32064 prefix_reps 6656 passes 30 pilot 51
+c 44 hits 36232 prefix_reps 6656 passes 57 pilot 84
+c 45 hits 47146 prefix_reps 6656 passes 46 pilot 98
+c 46 hits 35644 prefix_reps 6656 passes 42 pilot 73
+c 47 hits 46936 prefix_reps 6656 passes 44 pilot 86
+c 48 hits 36132 prefix_reps 6656 passes 44 pilot 66
+c 49 hits 5824 prefix_reps 6656 passes 12 pilot 9
+c 50 hits 35056 prefix_reps 6656 passes 42 pilot 78
+c 51 hits 36680 prefix_reps 6656 passes 34 pilot 66
+c 52 hits 12880 prefix_reps 6656 passes 16 pilot 27
+c 53 hits 23358 prefix_reps 6656 passes 27 pilot 47
+c 54 hits 21981 prefix_reps 6656 passes 32 pilot 32
+c 55 hits 12227 prefix_reps 6656 passes 14 pilot 14
+c 56 hits 36293 prefix_reps 6656 passes 33 pilot 66
+c 57 hits 32376 prefix_reps 6656 passes 51 pilot 57
+c 58 hits 27584 prefix_reps 6656 passes 26 pilot 58
+c 59 hits 23664 prefix_reps 6656 passes 21 pilot 41
+c 60 hits 38472 prefix_reps 6656 passes 47 pilot 87
+c 61 hits 35448 prefix_reps 6656 passes 42 pilot 66
+c 62 hits 35070 prefix_reps 6656 passes 38 pilot 63
+c 63 hits 35628 prefix_reps 6656 passes 47 pilot 63
+c 64 hits 23744 prefix_reps 6656 passes 24 pilot 52
+c 65 hits 34380 prefix_reps 6656 passes 34 pilot 63
+c 66 hits 30128 prefix_reps 6656 passes 44 pilot 66
+c 67 hits 49728 prefix_reps 6656 passes 44 pilot 96
+c 68 hits 37128 prefix_reps 6656 passes 39 pilot 75
+c 69 hits 35511 prefix_reps 6656 passes 51 pilot 69
+c 70 hits 34400 prefix_reps 6656 passes 40 pilot 60
+c 71 hits 36792 prefix_reps 6656 passes 44 pilot 61
+c 72 hits 23744 prefix_reps 6656 passes 26 pilot 53
+c 73 hits 24377 prefix_reps 6656 passes 29 pilot 51
+c 74 hits 4285 prefix_reps 6656 passes 1 pilot 12
+c 75 hits 12768 prefix_reps 6656 passes 13 pilot 25
+c 76 hits 36145 prefix_reps 6656 passes 41 pilot 61
+c 77 hits 12344 prefix_reps 6656 passes 23 pilot 26
+c 78 hits 51068 prefix_reps 6656 passes 63 pilot 91
+c 79 hits 33668 prefix_reps 6656 passes 37 pilot 82
+c 80 hits 36551 prefix_reps 6656 passes 41 pilot 76
+c 81 hits 46161 prefix_reps 6656 passes 57 pilot 86
+c 82 hits 25088 prefix_reps 6656 passes 37 pilot 52
+c 83 hits 21944 prefix_reps 6656 passes 14 pilot 48
+c 84 hits 36288 prefix_reps 6656 passes 39 pilot 86
+c 85 hits 27660 prefix_reps 6656 passes 23 pilot 57
+c 86 hits 34080 prefix_reps 6656 passes 45 pilot 68
+c 87 hits 30750 prefix_reps 6656 passes 32 pilot 66
+c 88 hits 18021 prefix_reps 6656 passes 21 pilot 40
+c 89 hits 22880 prefix_reps 6656 passes 28 pilot 53
+c 90 hits 25170 prefix_reps 6656 passes 19 pilot 51
+c 91 hits 12152 prefix_reps 6656 passes 12 pilot 23
+c 92 hits 22695 prefix_reps 6656 passes 33 pilot 45
+c 93 hits 34880 prefix_reps 6656 passes 32 pilot 75
+c 94 hits 24584 prefix_reps 6656 passes 29 pilot 40
+c 95 hits 32680 prefix_reps 6656 passes 29 pilot 60
+c 96 hits 49032 prefix_reps 6656 passes 47 pilot 91
+c 97 hits 35280 prefix_reps 6656 passes 43 pilot 69
+c 98 hits 17195 prefix_reps 6656 passes 21 pilot 31
+c 99 hits 24528 prefix_reps 6656 passes 27 pilot 48
+c 100 hits 20473 prefix_reps 6656 passes 24 pilot 34
+c 101 hits 36386 prefix_reps 6656 passes 45 pilot 71
+c 102 hits 36404 prefix_reps 6656 passes 53 pilot 75
+c 103 hits 48244 prefix_reps 6656 passes 63 pilot 101
+c 104 hits 37308 prefix_reps 6656 passes 48 pilot 72
+c 105 hits 36042 prefix_reps 6656 passes 55 pilot 68
+c 106 hits 48672 prefix_reps 6656 passes 49 pilot 100
+c 107 hits 24005 prefix_reps 6656 passes 23 pilot 47
+c 108 hits 23408 prefix_reps 6656 passes 32 pilot 44
+c 109 hits 13104 prefix_reps 6656 passes 12 pilot 17
+c 110 hits 46816 prefix_reps 6656 passes 65 pilot 96
+c 111 hits 39312 prefix_reps 6656 passes 48 pilot 83
+c 112 hits 14767 prefix_reps 6656 passes 19 pilot 28
+c 113 hits 12471 prefix_reps 6656 passes 10 pilot 17
+c 114 hits 31340 prefix_reps 6656 passes 39 pilot 60
+c 115 hits 38136 prefix_reps 6656 passes 52 pilot 77
+c 116 hits 12656 prefix_reps 6656 passes 14 pilot 20
+c 117 hits 36456 prefix_reps 6656 passes 41 pilot 69
+c 118 hits 25539 prefix_reps 6656 passes 35 pilot 55
+c 119 hits 36514 prefix_reps 6656 passes 56 pilot 62
+c 120 hits 12824 prefix_reps 6656 passes 15 pilot 22
+c 121 hits 35952 prefix_reps 6656 passes 46 pilot 73
+c 122 hits 23296 prefix_reps 6656 passes 21 pilot 46
+c 123 hits 35242 prefix_reps 6656 passes 34 pilot 75
+c 124 hits 24128 prefix_reps 6656 passes 35 pilot 53
+c 125 hits 25378 prefix_reps 6656 passes 32 pilot 54
+c 126 hits 0 prefix_reps 6656 passes 0 pilot 0
+c 127 hits 0 prefix_reps 6656 passes 0 pilot 0
+sec 381.565
+corr(hits, passes) 0.896541631456141
+hit mean/sd 29378.5625 10783.6158229295 pass mean/sd 33.9765625 13.987319816519758 binomial_sd 5.82894179933202
+corr(hits, prefix_reps) None prefix mean/sd 6656.0 0.0
+low-half hit share 0.3486869677507196
+low-half pass share 0.3421476201425615
+low-half prefix share 0.5
+top-half pass share 0.6578523798574385 R 1.315704759714877
+oracle work ratio 0.8566058193810728 bits 0.22329661662677402
+corr(pilot, passes) 0.8556511181153413 corr(pilot, hits) 0.9540841116840484
+pilot top-half pass share 0.6465854219360773 Rp 1.2931708438721545 work ratio 0.8645204592928633 bits 0.21002798854312532
+pilot keep 0.25 R 1.4164175672568406 bits 0.2787407711142037
+pilot keep 0.125 R 1.5433432973097263 bits 0.3407838714193355

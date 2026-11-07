@@ -1,0 +1,1 @@
+n=16 T=15.9, 136 start vectors with <= 1 guessed carry: {'unreachable': 136}

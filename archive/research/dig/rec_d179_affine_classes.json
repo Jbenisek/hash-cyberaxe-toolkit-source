@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-affine-classes",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "coupled omega member-class affine structure",
+  "question": "What exact XOR-affine structure do the 16 D179 member classes have?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "All 16 classes have 32768 members, XOR rank 15, and the same 17 dual parity masks; only the coset representative changes",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/class_affine.py; research/retest/b3_omega_coupled/exact/class_affine.out; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Exact generator property and proof-relevant reduction: a future class-invariance proof only needs the 15 independent XOR toggles plus composable witness maps. This does not prove alive(E,y) invariance."
+}

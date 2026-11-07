@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "algebraic degree: necessity of the cube placement (top bits, spread bits)",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "cube of d=4,8,12,16 on the top bits or on bits spread over m8, 8 bases: round 1 left 174-238 always-zero digest bits, round 2 0-3, round 3 0-3 (chance level about 1): placement does not matter from round 2 on",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_deg.py; research/blake3_r3/alt/exp_deg.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Same limits as Q1.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); word m8 only",
+ "reopen_if": "any placement of a 16-bit cube with more than 8 always-zero digest bits at 3 rounds",
+ "topic": "blake3-r3|ALT.ALGDEG|ALT|Q2"
+}

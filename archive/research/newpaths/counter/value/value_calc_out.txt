@@ -1,0 +1,11 @@
+rate factor of a counter trial over a filed trial: 747.92 = 2^9.547 (sub-class);  whole class 904.92 = 2^9.822
+H1 factors: filed 92675904 = 2^26.4657; counter 69323456512 = 2^36.0126
+trials: filed 2^100.534 (trial-equivalents), counter 2^90.987
+per-trial budgeted cost: filed 7.3181, counter 6.1796 (ratio 0.8444 = 2^-0.244)
+ 92.529  (+0.000 vs filed claim)  filed 64c075ac: clusters, charge 1.65 per trial-equivalent (H1-H6)
+ 94.751  (+2.222 vs filed claim)  filed arrangement without clusters, charge 7.7 per trial (H1-H3)
+ 85.204  (-7.325 vs filed claim)  counter, no clusters, charge = filed charge 7.7 (cost not improved)
+ 84.960  (-7.569 vs filed claim)  counter, no clusters, charge 6.5 (machine count x 1.04, rounded up to 0.1)
+ 84.960  (-7.568 vs filed claim)  counter, no clusters, charge 6.502 (same allowance factor as filed)
+ 84.877  (-7.652 vs filed claim)  counter, whole class (beta* part 71,698,432; rule A not recounted there), charge as above
+board convention margin 1.4: subtract 0.515 from every row

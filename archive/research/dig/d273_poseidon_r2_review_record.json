@@ -1,0 +1,21 @@
+{
+  "id": "D273-POSEIDON-R2-REVIEW-VERDICT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "paired-review verdict for dossier 1f8b9107",
+  "question": "What does the completed review establish for the Poseidon-r2 dossier 1f8b9107?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Dossier 1f8b9107 is REFUTED and ineligible at claimed time 27.06355: fatal uncharged loads/stores to the allocated 520-word RF contradict the declared 18-word register assumption; allocator/output work is also omitted.",
+  "source": "our workflow: D273 external review verdict audit",
+  "evidence": "research/sol_answer_D273_review_verdicts_followup.md; research/dossiers/1f8b9107/review/reports/tracks/poseidon-pareto/aggregate.json; research/dossiers/1f8b9107/review/reports/tracks/poseidon-pareto/judge-dossier.json",
+  "date": "2026-10-13",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "External paired-review result audited read-only; no package or filing state changed.",
+  "held_fixed": "review aggregate status and binding hashes",
+  "reopen_if": "A corrected ledger charges every RF access and is independently reviewed"
+}

@@ -1,0 +1,196 @@
+q=257 r=0 cauchy=True seed=1: l0:pairs=8484775 ratio=0.9997 var/mean=0.924 img=257 | p01 33073 (1.001) p02 33089 (1.002) p12 32608 (0.987) | full distinct 66049/66049 [0s]
+q=257 r=0 cauchy=True seed=2: l0:pairs=8488089 ratio=1.0001 var/mean=1.024 img=257 | p01 32755 (0.992) p02 33022 (1.000) p12 33065 (1.001) | full distinct 66049/66049 [1s]
+q=257 r=0 cauchy=True seed=3: l0:pairs=8489083 ratio=1.0002 var/mean=1.054 img=257 | p01 32969 (0.998) p02 32757 (0.992) p12 32777 (0.993) | full distinct 66049/66049 [1s]
+q=257 r=0 cauchy=True seed=4: l0:pairs=8484808 ratio=0.9997 var/mean=0.925 img=257 | p01 32875 (0.995) p02 32663 (0.989) p12 32821 (0.994) | full distinct 66049/66049 [1s]
+q=257 r=0 cauchy=True seed=5: l0:pairs=8486161 ratio=0.9999 var/mean=0.966 img=257 | p01 32896 (0.996) p02 33240 (1.007) p12 32747 (0.992) | full distinct 66049/66049 [1s]
+q=257 r=0 cauchy=True seed=6: l0:pairs=8480206 ratio=0.9992 var/mean=0.785 img=257 | p01 32641 (0.988) p02 32715 (0.991) p12 32987 (0.999) | full distinct 66049/66049 [1s]
+q=257 r=0 cauchy=False seed=1: l0:pairs=8483257 ratio=0.9995 var/mean=0.878 img=257 | p01 33067 (1.001) p02 32770 (0.992) p12 32724 (0.991) | full distinct 66049/66049 [1s]
+q=257 r=0 cauchy=False seed=2: l0:pairs=8490556 ratio=1.0004 var/mean=1.099 img=257 | p01 32940 (0.997) p02 32792 (0.993) p12 32584 (0.987) | full distinct 66049/66049 [2s]
+q=257 r=0 cauchy=False seed=3: l0:pairs=8486176 ratio=0.9999 var/mean=0.966 img=257 | p01 32787 (0.993) p02 32990 (0.999) p12 33054 (1.001) | full distinct 66049/66049 [2s]
+q=257 r=0 cauchy=False seed=4: l0:pairs=8489898 ratio=1.0003 var/mean=1.079 img=257 | p01 32732 (0.991) p02 33022 (1.000) p12 32997 (0.999) | full distinct 66049/66049 [2s]
+q=257 r=0 cauchy=False seed=5: l0:pairs=8485652 ratio=0.9998 var/mean=0.950 img=257 | p01 32737 (0.991) p02 32786 (0.993) p12 33015 (1.000) | full distinct 66049/66049 [2s]
+q=257 r=0 cauchy=False seed=6: l0:pairs=8489882 ratio=1.0003 var/mean=1.078 img=257 | p01 33129 (1.003) p02 32843 (0.995) p12 32939 (0.997) | full distinct 66049/66049 [3s]
+q=257 r=1 cauchy=True seed=1: l0:pairs=8492965 ratio=1.0007 var/mean=1.172 img=257 | p01 32976 (0.999) p02 32844 (0.995) p12 32917 (0.997) | full distinct 66049/66049 [3s]
+q=257 r=1 cauchy=True seed=2: l0:pairs=8484812 ratio=0.9997 var/mean=0.925 img=257 | p01 32960 (0.998) p02 32900 (0.996) p12 32922 (0.997) | full distinct 66049/66049 [3s]
+q=257 r=1 cauchy=True seed=3: l0:pairs=8489501 ratio=1.0003 var/mean=1.067 img=257 | p01 33139 (1.003) p02 32953 (0.998) p12 32767 (0.992) | full distinct 66049/66049 [3s]
+q=257 r=1 cauchy=True seed=4: l0:pairs=8484760 ratio=0.9997 var/mean=0.923 img=257 | p01 32920 (0.997) p02 33025 (1.000) p12 32865 (0.995) | full distinct 66049/66049 [3s]
+q=257 r=1 cauchy=True seed=5: l0:pairs=8481471 ratio=0.9993 var/mean=0.824 img=257 | p01 32818 (0.994) p02 33004 (0.999) p12 32949 (0.998) | full distinct 66049/66049 [4s]
+q=257 r=1 cauchy=True seed=6: l0:pairs=8488426 ratio=1.0001 var/mean=1.034 img=257 | p01 32937 (0.997) p02 32729 (0.991) p12 32952 (0.998) | full distinct 66049/66049 [4s]
+q=257 r=1 cauchy=False seed=1: l0:pairs=8485693 ratio=0.9998 var/mean=0.951 img=257 | p01 32925 (0.997) p02 33141 (1.004) p12 32791 (0.993) | full distinct 66049/66049 [4s]
+q=257 r=1 cauchy=False seed=2: l0:pairs=8484493 ratio=0.9997 var/mean=0.915 img=257 | p01 32687 (0.990) p02 32991 (0.999) p12 33013 (1.000) | full distinct 66049/66049 [4s]
+q=257 r=1 cauchy=False seed=3: l0:pairs=8487338 ratio=1.0000 var/mean=1.001 img=257 | p01 32770 (0.992) p02 33061 (1.001) p12 33068 (1.001) | full distinct 66049/66049 [4s]
+q=257 r=1 cauchy=False seed=4: l0:pairs=8487536 ratio=1.0000 var/mean=1.007 img=257 | p01 33143 (1.004) p02 32869 (0.995) p12 32900 (0.996) | full distinct 66049/66049 [4s]
+q=257 r=1 cauchy=False seed=5: l0:pairs=8492147 ratio=1.0006 var/mean=1.147 img=257 | p01 32760 (0.992) p02 33087 (1.002) p12 33058 (1.001) | full distinct 66049/66049 [4s]
+q=257 r=1 cauchy=False seed=6: l0:pairs=8483942 ratio=0.9996 var/mean=0.898 img=257 | p01 32924 (0.997) p02 32813 (0.994) p12 33002 (0.999) | full distinct 66049/66049 [4s]
+q=257 r=2 cauchy=True seed=1: l0:pairs=8489082 ratio=1.0002 var/mean=1.054 img=257 | p01 33218 (1.006) p02 33181 (1.005) p12 32937 (0.997) | full distinct 66049/66049 [4s]
+q=257 r=2 cauchy=True seed=2: l0:pairs=8484863 ratio=0.9997 var/mean=0.926 img=257 | p01 33239 (1.007) p02 32633 (0.988) p12 32832 (0.994) | full distinct 66049/66049 [4s]
+q=257 r=2 cauchy=True seed=3: l0:pairs=8489841 ratio=1.0003 var/mean=1.077 img=257 | p01 33122 (1.003) p02 33211 (1.006) p12 32890 (0.996) | full distinct 66049/66049 [4s]
+q=257 r=2 cauchy=True seed=4: l0:pairs=8489898 ratio=1.0003 var/mean=1.079 img=257 | p01 32915 (0.997) p02 33134 (1.003) p12 33108 (1.003) | full distinct 66049/66049 [4s]
+q=257 r=2 cauchy=True seed=5: l0:pairs=8487020 ratio=1.0000 var/mean=0.992 img=257 | p01 32606 (0.987) p02 32715 (0.991) p12 32834 (0.994) | full distinct 66049/66049 [4s]
+q=257 r=2 cauchy=True seed=6: l0:pairs=8488681 ratio=1.0002 var/mean=1.042 img=257 | p01 32676 (0.989) p02 33336 (1.009) p12 32576 (0.986) | full distinct 66049/66049 [5s]
+q=257 r=2 cauchy=False seed=1: l0:pairs=8487307 ratio=1.0000 var/mean=1.000 img=257 | p01 32962 (0.998) p02 32827 (0.994) p12 32923 (0.997) | full distinct 66049/66049 [5s]
+q=257 r=2 cauchy=False seed=2: l0:pairs=8486200 ratio=0.9999 var/mean=0.967 img=257 | p01 32980 (0.999) p02 32935 (0.997) p12 32931 (0.997) | full distinct 66049/66049 [5s]
+q=257 r=2 cauchy=False seed=3: l0:pairs=8488788 ratio=1.0002 var/mean=1.045 img=257 | p01 32715 (0.991) p02 32801 (0.993) p12 33075 (1.002) | full distinct 66049/66049 [5s]
+q=257 r=2 cauchy=False seed=4: l0:pairs=8487205 ratio=1.0000 var/mean=0.997 img=257 | p01 32389 (0.981) p02 32990 (0.999) p12 32624 (0.988) | full distinct 66049/66049 [5s]
+q=257 r=2 cauchy=False seed=5: l0:pairs=8482968 ratio=0.9995 var/mean=0.869 img=257 | p01 32892 (0.996) p02 32945 (0.998) p12 33080 (1.002) | full distinct 66049/66049 [5s]
+q=257 r=2 cauchy=False seed=6: l0:pairs=8492329 ratio=1.0006 var/mean=1.152 img=257 | p01 33008 (1.000) p02 32866 (0.995) p12 32881 (0.996) | full distinct 66049/66049 [5s]
+q=257 r=3 cauchy=True seed=1: l0:pairs=8489813 ratio=1.0003 var/mean=1.076 img=257 | p01 32879 (0.996) p02 32993 (0.999) p12 32944 (0.998) | full distinct 66049/66049 [5s]
+q=257 r=3 cauchy=True seed=2: l0:pairs=8486431 ratio=0.9999 var/mean=0.974 img=257 | p01 32657 (0.989) p02 32793 (0.993) p12 32858 (0.995) | full distinct 66049/66049 [5s]
+q=257 r=3 cauchy=True seed=3: l0:pairs=8487522 ratio=1.0000 var/mean=1.007 img=257 | p01 32996 (0.999) p02 32413 (0.981) p12 32888 (0.996) | full distinct 66049/66049 [5s]
+q=257 r=3 cauchy=True seed=4: l0:pairs=8492246 ratio=1.0006 var/mean=1.150 img=257 | p01 32940 (0.997) p02 32587 (0.987) p12 32829 (0.994) | full distinct 66049/66049 [5s]
+q=257 r=3 cauchy=True seed=5: l0:pairs=8486272 ratio=0.9999 var/mean=0.969 img=257 | p01 32720 (0.991) p02 32835 (0.994) p12 33225 (1.006) | full distinct 66049/66049 [5s]
+q=257 r=3 cauchy=True seed=6: l0:pairs=8486829 ratio=1.0000 var/mean=0.986 img=257 | p01 32789 (0.993) p02 32893 (0.996) p12 32780 (0.993) | full distinct 66049/66049 [5s]
+q=257 r=3 cauchy=False seed=1: l0:pairs=8488153 ratio=1.0001 var/mean=1.026 img=257 | p01 32857 (0.995) p02 33077 (1.002) p12 33092 (1.002) | full distinct 66049/66049 [6s]
+q=257 r=3 cauchy=False seed=2: l0:pairs=8482006 ratio=0.9994 var/mean=0.840 img=257 | p01 32857 (0.995) p02 32582 (0.987) p12 33024 (1.000) | full distinct 66049/66049 [6s]
+q=257 r=3 cauchy=False seed=3: l0:pairs=8483085 ratio=0.9995 var/mean=0.872 img=257 | p01 32795 (0.993) p02 32876 (0.996) p12 32629 (0.988) | full distinct 66049/66049 [6s]
+q=257 r=3 cauchy=False seed=4: l0:pairs=8489957 ratio=1.0003 var/mean=1.081 img=257 | p01 32878 (0.996) p02 32913 (0.997) p12 32918 (0.997) | full distinct 66049/66049 [6s]
+q=257 r=3 cauchy=False seed=5: l0:pairs=8487708 ratio=1.0001 var/mean=1.012 img=257 | p01 32740 (0.991) p02 32921 (0.997) p12 32773 (0.992) | full distinct 66049/66049 [6s]
+q=257 r=3 cauchy=False seed=6: l0:pairs=8485133 ratio=0.9998 var/mean=0.934 img=257 | p01 32779 (0.993) p02 32682 (0.990) p12 32680 (0.990) | full distinct 66049/66049 [6s]
+q=769 r=1 cauchy=True seed=1: l0:pairs=227367981 ratio=1.0000 var/mean=0.965 img=769 | p01 294217 (0.995) p02 295086 (0.998) p12 295249 (0.999) | full distinct 591361/591361 [7s]
+q=769 r=1 cauchy=True seed=2: l0:pairs=227373543 ratio=1.0000 var/mean=0.984 img=769 | p01 296950 (1.004) p02 295506 (0.999) p12 295238 (0.999) | full distinct 591361/591361 [9s]
+q=769 r=1 cauchy=True seed=3: l0:pairs=227400056 ratio=1.0001 var/mean=1.074 img=769 | p01 295272 (0.999) p02 294536 (0.996) p12 294321 (0.995) | full distinct 591361/591361 [10s]
+q=769 r=1 cauchy=True seed=4: l0:pairs=227348205 ratio=0.9999 var/mean=0.898 img=769 | p01 295229 (0.998) p02 293975 (0.994) p12 294908 (0.997) | full distinct 591361/591361 [12s]
+q=769 r=1 cauchy=False seed=1: l0:pairs=227346227 ratio=0.9999 var/mean=0.892 img=769 | p01 294562 (0.996) p02 294899 (0.997) p12 295979 (1.001) | full distinct 591361/591361 [14s]
+q=769 r=1 cauchy=False seed=2: l0:pairs=227378550 ratio=1.0000 var/mean=1.001 img=769 | p01 296026 (1.001) p02 296644 (1.003) p12 294987 (0.998) | full distinct 591361/591361 [16s]
+q=769 r=1 cauchy=False seed=3: l0:pairs=227379793 ratio=1.0000 var/mean=1.005 img=769 | p01 294826 (0.997) p02 295966 (1.001) p12 295169 (0.998) | full distinct 591361/591361 [17s]
+q=769 r=1 cauchy=False seed=4: l0:pairs=227359884 ratio=0.9999 var/mean=0.938 img=769 | p01 295759 (1.000) p02 295667 (1.000) p12 295374 (0.999) | full distinct 591361/591361 [19s]
+q=769 r=2 cauchy=True seed=1: l0:pairs=227382229 ratio=1.0000 var/mean=1.013 img=769 | p01 294660 (0.997) p02 295691 (1.000) p12 294915 (0.997) | full distinct 591361/591361 [20s]
+q=769 r=2 cauchy=True seed=2: l0:pairs=227376542 ratio=1.0000 var/mean=0.994 img=769 | p01 295755 (1.000) p02 294608 (0.996) p12 295699 (1.000) | full distinct 591361/591361 [24s]
+q=769 r=2 cauchy=True seed=3: l0:pairs=227384411 ratio=1.0000 var/mean=1.021 img=769 | p01 295722 (1.000) p02 295790 (1.000) p12 294962 (0.998) | full distinct 591361/591361 [25s]
+q=769 r=2 cauchy=True seed=4: l0:pairs=227380697 ratio=1.0000 var/mean=1.008 img=769 | p01 295009 (0.998) p02 295477 (0.999) p12 295219 (0.998) | full distinct 591361/591361 [26s]
+q=769 r=2 cauchy=False seed=1: l0:pairs=227374554 ratio=1.0000 var/mean=0.987 img=769 | p01 295249 (0.999) p02 295167 (0.998) p12 294824 (0.997) | full distinct 591361/591361 [28s]
+q=769 r=2 cauchy=False seed=2: l0:pairs=227386228 ratio=1.0000 var/mean=1.027 img=769 | p01 295612 (1.000) p02 295057 (0.998) p12 295795 (1.000) | full distinct 591361/591361 [30s]
+q=769 r=2 cauchy=False seed=3: l0:pairs=227368871 ratio=1.0000 var/mean=0.968 img=769 | p01 294451 (0.996) p02 294668 (0.997) p12 295189 (0.998) | full distinct 591361/591361 [33s]
+q=769 r=2 cauchy=False seed=4: l0:pairs=227347966 ratio=0.9999 var/mean=0.897 img=769 | p01 295458 (0.999) p02 295624 (1.000) p12 295405 (0.999) | full distinct 591361/591361 [34s]
+q=1009 r=1 cauchy=True seed=1: l0:pairs=513594269 ratio=0.9999 var/mean=0.946 img=1009 | p01 508686 (0.999) p02 508861 (1.000) p12 509252 (1.000) | full distinct 1018081/1018081 [37s]
+q=1009 r=1 cauchy=True seed=2: l0:pairs=513654137 ratio=1.0001 var/mean=1.063 img=1009 | p01 508717 (0.999) p02 507831 (0.998) p12 507966 (0.998) | full distinct 1018081/1018081 [40s]
+q=1009 r=1 cauchy=True seed=3: l0:pairs=513593735 ratio=0.9999 var/mean=0.945 img=1009 | p01 508254 (0.998) p02 508141 (0.998) p12 508011 (0.998) | full distinct 1018081/1018081 [43s]
+q=1009 r=1 cauchy=True seed=4: l0:pairs=513587486 ratio=0.9999 var/mean=0.932 img=1009 | p01 508672 (0.999) p02 508430 (0.999) p12 507029 (0.996) | full distinct 1018081/1018081 [46s]
+q=1009 r=1 cauchy=False seed=1: l0:pairs=513652567 ratio=1.0001 var/mean=1.060 img=1009 | p01 510442 (1.003) p02 507956 (0.998) p12 508499 (0.999) | full distinct 1018081/1018081 [49s]
+q=1009 r=1 cauchy=False seed=2: l0:pairs=513624257 ratio=1.0000 var/mean=1.005 img=1009 | p01 509359 (1.001) p02 508190 (0.998) p12 508022 (0.998) | full distinct 1018081/1018081 [52s]
+q=1009 r=1 cauchy=False seed=3: l0:pairs=513621290 ratio=1.0000 var/mean=0.999 img=1009 | p01 509993 (1.002) p02 508859 (1.000) p12 507597 (0.997) | full distinct 1018081/1018081 [56s]
+q=1009 r=1 cauchy=False seed=4: l0:pairs=513626670 ratio=1.0000 var/mean=1.009 img=1009 | p01 508137 (0.998) p02 509163 (1.000) p12 506739 (0.995) | full distinct 1018081/1018081 [59s]
+q=1009 r=2 cauchy=True seed=1: l0:pairs=513594871 ratio=0.9999 var/mean=0.947 img=1009 | p01 508088 (0.998) p02 507713 (0.997) p12 508291 (0.999) | full distinct 1018081/1018081 [65s]
+q=1009 r=2 cauchy=True seed=2: l0:pairs=513673598 ratio=1.0001 var/mean=1.102 img=1009 | p01 507850 (0.998) p02 508656 (0.999) p12 509784 (1.001) | full distinct 1018081/1018081 [69s]
+q=1009 r=2 cauchy=True seed=3: l0:pairs=513616220 ratio=1.0000 var/mean=0.989 img=1009 | p01 508276 (0.998) p02 508822 (1.000) p12 507606 (0.997) | full distinct 1018081/1018081 [71s]
+q=1009 r=2 cauchy=True seed=4: l0:pairs=513628686 ratio=1.0000 var/mean=1.013 img=1009 | p01 508084 (0.998) p02 507984 (0.998) p12 508321 (0.999) | full distinct 1018081/1018081 [74s]
+q=1009 r=2 cauchy=False seed=1: l0:pairs=513613593 ratio=1.0000 var/mean=0.984 img=1009 | p01 508374 (0.999) p02 508019 (0.998) p12 508393 (0.999) | full distinct 1018081/1018081 [77s]
+q=1009 r=2 cauchy=False seed=2: l0:pairs=513598453 ratio=1.0000 var/mean=0.954 img=1009 | p01 507096 (0.996) p02 509762 (1.001) p12 507787 (0.998) | full distinct 1018081/1018081 [80s]
+q=1009 r=2 cauchy=False seed=3: l0:pairs=513611327 ratio=1.0000 var/mean=0.979 img=1009 | p01 509187 (1.000) p02 509502 (1.001) p12 509055 (1.000) | full distinct 1018081/1018081 [83s]
+q=1009 r=2 cauchy=False seed=4: l0:pairs=513633039 ratio=1.0000 var/mean=1.022 img=1009 | p01 509327 (1.001) p02 509792 (1.001) p12 509115 (1.000) | full distinct 1018081/1018081 [86s]
+q=4099 r=1 cauchy=True seed=1: l0:pairs=34435049417 ratio=1.0000 var/mean=0.971 img=4099 | p01 8397348 (1.000) p02 8396608 (0.999) p12 8399190 (1.000) [131s]
+q=4099 r=1 cauchy=True seed=2: l0:pairs=34435057494 ratio=1.0000 var/mean=0.972 img=4099 | p01 8398925 (1.000) p02 8398995 (1.000) p12 8397635 (1.000) [173s]
+q=4099 r=1 cauchy=False seed=1: l0:pairs=34435156895 ratio=1.0000 var/mean=0.984 img=4099 | p01 8397771 (1.000) p02 8393299 (0.999) p12 8397020 (1.000) [220s]
+q=4099 r=1 cauchy=False seed=2: l0:pairs=34435259500 ratio=1.0000 var/mean=0.996 img=4099 | p01 8399904 (1.000) p02 8400096 (1.000) p12 8403431 (1.000) [252s]
+q=4099 r=2 cauchy=True seed=1: l0:pairs=34435119951 ratio=1.0000 var/mean=0.980 img=4099 | p01 8395952 (0.999) p02 8400931 (1.000) p12 8394450 (0.999) [285s]
+q=4099 r=2 cauchy=True seed=2: l0:pairs=34435382732 ratio=1.0000 var/mean=1.011 img=4099 | p01 8398443 (1.000) p02 8403891 (1.000) p12 8401999 (1.000) [323s]
+q=4099 r=2 cauchy=False seed=1: l0:pairs=34435270193 ratio=1.0000 var/mean=0.998 img=4099 | p01 8397535 (1.000) p02 8395204 (0.999) p12 8399357 (1.000) [376s]
+q=4099 r=2 cauchy=False seed=2: l0:pairs=34435288081 ratio=1.0000 var/mean=1.000 img=4099 | p01 8398862 (1.000) p02 8393941 (0.999) p12 8401790 (1.000) [544s]
+
+SUMMARY mean +- spread of ratio(l0), var/mean, p01 ratio, p12 ratio
+q=257 r=0 cauchy=True l0ratio: mean 0.9998 sd 0.0003 min 0.9992 max 1.0002
+q=257 r=0 cauchy=True var/mean: mean 0.9462 sd 0.0865 min 0.7853 max 1.0541
+q=257 r=0 cauchy=True p01: mean 0.9953 sd 0.0042 min 0.9884 max 1.0015
+q=257 r=0 cauchy=True p02: mean 0.9967 sd 0.0065 min 0.9891 max 1.0065
+q=257 r=0 cauchy=True p12: mean 0.9943 sd 0.0046 min 0.9874 max 1.0012
+q=257 r=0 cauchy=False l0ratio: mean 1.0000 sd 0.0003 min 0.9995 max 1.0004
+q=257 r=0 cauchy=False var/mean: mean 1.0083 sd 0.0819 min 0.8777 max 1.0987
+q=257 r=0 cauchy=False p01: mean 0.9962 sd 0.0048 min 0.9912 max 1.0032
+q=257 r=0 cauchy=False p02: mean 0.9953 sd 0.0031 min 0.9923 max 0.9999
+q=257 r=0 cauchy=False p12: mean 0.9958 sd 0.0052 min 0.9867 max 1.0009
+q=257 r=1 cauchy=True l0ratio: mean 1.0000 sd 0.0004 min 0.9993 max 1.0007
+q=257 r=1 cauchy=True var/mean: mean 0.9907 sd 0.1135 min 0.8236 max 1.1716
+q=257 r=1 cauchy=True p01: mean 0.9980 sd 0.0029 min 0.9938 max 1.0035
+q=257 r=1 cauchy=True p02: mean 0.9965 sd 0.0031 min 0.9911 max 1.0000
+q=257 r=1 cauchy=True p12: mean 0.9961 sd 0.0019 min 0.9922 max 0.9978
+q=257 r=1 cauchy=False l0ratio: mean 1.0000 sd 0.0003 min 0.9996 max 1.0006
+q=257 r=1 cauchy=False var/mean: mean 0.9867 sd 0.0821 min 0.8984 max 1.1469
+q=257 r=1 cauchy=False p01: mean 0.9953 sd 0.0046 min 0.9898 max 1.0036
+q=257 r=1 cauchy=False p02: mean 0.9991 sd 0.0036 min 0.9936 max 1.0035
+q=257 r=1 cauchy=False p12: mean 0.9984 sd 0.0030 min 0.9929 max 1.0013
+q=257 r=2 cauchy=True l0ratio: mean 1.0001 sd 0.0002 min 0.9997 max 1.0003
+q=257 r=2 cauchy=True var/mean: mean 1.0283 sd 0.0540 min 0.9263 max 1.0788
+q=257 r=2 cauchy=True p01: mean 0.9981 sd 0.0076 min 0.9873 max 1.0065
+q=257 r=2 cauchy=True p02: mean 1.0003 sd 0.0080 min 0.9882 max 1.0094
+q=257 r=2 cauchy=True p12: mean 0.9951 sd 0.0048 min 0.9864 max 1.0025
+q=257 r=2 cauchy=False l0ratio: mean 1.0000 sd 0.0003 min 0.9995 max 1.0006
+q=257 r=2 cauchy=False var/mean: mean 1.0051 sd 0.0850 min 0.8689 max 1.1524
+q=257 r=2 cauchy=False p01: mean 0.9940 sd 0.0066 min 0.9808 max 0.9995
+q=257 r=2 cauchy=False p02: mean 0.9961 sd 0.0020 min 0.9932 max 0.9990
+q=257 r=2 cauchy=False p12: mean 0.9968 sd 0.0046 min 0.9879 max 1.0017
+q=257 r=3 cauchy=True l0ratio: mean 1.0001 sd 0.0003 min 0.9999 max 1.0006
+q=257 r=3 cauchy=True var/mean: mean 1.0269 sd 0.0656 min 0.9690 max 1.1499
+q=257 r=3 cauchy=True p01: mean 0.9941 sd 0.0036 min 0.9889 max 0.9992
+q=257 r=3 cauchy=True p02: mean 0.9918 sd 0.0059 min 0.9815 max 0.9991
+q=257 r=3 cauchy=True p12: mean 0.9969 sd 0.0044 min 0.9926 max 1.0061
+q=257 r=3 cauchy=False l0ratio: mean 0.9999 sd 0.0003 min 0.9994 max 1.0003
+q=257 r=3 cauchy=False var/mean: mean 0.9610 sd 0.0860 min 0.8398 max 1.0806
+q=257 r=3 cauchy=False p01: mean 0.9938 sd 0.0015 min 0.9914 max 0.9956
+q=257 r=3 cauchy=False p02: mean 0.9945 sd 0.0050 min 0.9866 max 1.0016
+q=257 r=3 cauchy=False p12: mean 0.9948 sd 0.0052 min 0.9880 max 1.0021
+q=769 r=1 cauchy=True l0ratio: mean 1.0000 sd 0.0001 min 0.9999 max 1.0001
+q=769 r=1 cauchy=True var/mean: mean 0.9802 sd 0.0626 min 0.8982 max 1.0736
+q=769 r=1 cauchy=True p01: mean 0.9991 sd 0.0033 min 0.9951 max 1.0043
+q=769 r=1 cauchy=True p02: mean 0.9969 sd 0.0019 min 0.9942 max 0.9994
+q=769 r=1 cauchy=True p12: mean 0.9975 sd 0.0013 min 0.9954 max 0.9985
+q=769 r=1 cauchy=False l0ratio: mean 0.9999 sd 0.0001 min 0.9999 max 1.0000
+q=769 r=1 cauchy=False var/mean: mean 0.9588 sd 0.0471 min 0.8915 max 1.0050
+q=769 r=1 cauchy=False p01: mean 0.9987 sd 0.0021 min 0.9962 max 1.0012
+q=769 r=1 cauchy=False p02: mean 1.0004 sd 0.0021 min 0.9974 max 1.0033
+q=769 r=1 cauchy=False p12: mean 0.9990 sd 0.0013 min 0.9977 max 1.0010
+q=769 r=2 cauchy=True l0ratio: mean 1.0000 sd 0.0000 min 1.0000 max 1.0000
+q=769 r=2 cauchy=True var/mean: mean 1.0090 sd 0.0097 min 0.9940 max 1.0207
+q=769 r=2 cauchy=True p01: mean 0.9987 sd 0.0016 min 0.9966 max 1.0003
+q=769 r=2 cauchy=True p02: mean 0.9990 sd 0.0016 min 0.9964 max 1.0004
+q=769 r=2 cauchy=True p12: mean 0.9984 sd 0.0011 min 0.9974 max 1.0001
+q=769 r=2 cauchy=False l0ratio: mean 1.0000 sd 0.0001 min 0.9999 max 1.0000
+q=769 r=2 cauchy=False var/mean: mean 0.9699 sd 0.0469 min 0.8974 max 1.0268
+q=769 r=2 cauchy=False p01: mean 0.9984 sd 0.0015 min 0.9958 max 0.9998
+q=769 r=2 cauchy=False p02: mean 0.9981 sd 0.0012 min 0.9966 max 0.9998
+q=769 r=2 cauchy=False p12: mean 0.9987 sd 0.0012 min 0.9971 max 1.0004
+q=1009 r=1 cauchy=True l0ratio: mean 1.0000 sd 0.0001 min 0.9999 max 1.0001
+q=1009 r=1 cauchy=True var/mean: mean 0.9716 sd 0.0533 min 0.9325 max 1.0634
+q=1009 r=1 cauchy=True p01: mean 0.9991 sd 0.0004 min 0.9985 max 0.9994
+q=1009 r=1 cauchy=True p02: mean 0.9986 sd 0.0007 min 0.9976 max 0.9996
+q=1009 r=1 cauchy=True p12: mean 0.9981 sd 0.0016 min 0.9960 max 1.0004
+q=1009 r=1 cauchy=False l0ratio: mean 1.0000 sd 0.0000 min 1.0000 max 1.0001
+q=1009 r=1 cauchy=False var/mean: mean 1.0183 sd 0.0245 min 0.9989 max 1.0603
+q=1009 r=1 cauchy=False p01: mean 1.0009 sd 0.0017 min 0.9982 max 1.0028
+q=1009 r=1 cauchy=False p02: mean 0.9990 sd 0.0010 min 0.9979 max 1.0002
+q=1009 r=1 cauchy=False p12: mean 0.9974 sd 0.0013 min 0.9955 max 0.9989
+q=1009 r=2 cauchy=True l0ratio: mean 1.0000 sd 0.0001 min 0.9999 max 1.0001
+q=1009 r=2 cauchy=True var/mean: mean 1.0127 sd 0.0566 min 0.9470 max 1.1016
+q=1009 r=2 cauchy=True p01: mean 0.9981 sd 0.0003 min 0.9977 max 0.9985
+q=1009 r=2 cauchy=True p02: mean 0.9985 sd 0.0009 min 0.9974 max 0.9996
+q=1009 r=2 cauchy=True p12: mean 0.9989 sd 0.0016 min 0.9972 max 1.0015
+q=1009 r=2 cauchy=False l0ratio: mean 1.0000 sd 0.0000 min 1.0000 max 1.0000
+q=1009 r=2 cauchy=False var/mean: mean 0.9848 sd 0.0243 min 0.9540 max 1.0220
+q=1009 r=2 cauchy=False p01: mean 0.9989 sd 0.0017 min 0.9962 max 1.0006
+q=1009 r=2 cauchy=False p02: mean 1.0004 sd 0.0014 min 0.9980 max 1.0015
+q=1009 r=2 cauchy=False p12: mean 0.9991 sd 0.0011 min 0.9975 max 1.0001
+q=4099 r=1 cauchy=True l0ratio: mean 1.0000 sd 0.0000 min 1.0000 max 1.0000
+q=4099 r=1 cauchy=True var/mean: mean 0.9717 sd 0.0005 min 0.9712 max 0.9722
+q=4099 r=1 cauchy=True p01: mean 0.9997 sd 0.0001 min 0.9996 max 0.9998
+q=4099 r=1 cauchy=True p02: mean 0.9996 sd 0.0001 min 0.9995 max 0.9998
+q=4099 r=1 cauchy=True p12: mean 0.9997 sd 0.0001 min 0.9996 max 0.9998
+q=4099 r=1 cauchy=False l0ratio: mean 1.0000 sd 0.0000 min 1.0000 max 1.0000
+q=4099 r=1 cauchy=False var/mean: mean 0.9901 sd 0.0061 min 0.9840 max 0.9962
+q=4099 r=1 cauchy=False p01: mean 0.9998 sd 0.0001 min 0.9996 max 0.9999
+q=4099 r=1 cauchy=False p02: mean 0.9995 sd 0.0004 min 0.9991 max 0.9999
+q=4099 r=1 cauchy=False p12: mean 0.9999 sd 0.0004 min 0.9995 max 1.0003
+q=4099 r=2 cauchy=True l0ratio: mean 1.0000 sd 0.0000 min 1.0000 max 1.0000
+q=4099 r=2 cauchy=True var/mean: mean 0.9953 sd 0.0156 min 0.9796 max 1.0109
+q=4099 r=2 cauchy=True p01: mean 0.9996 sd 0.0001 min 0.9994 max 0.9997
+q=4099 r=2 cauchy=True p02: mean 1.0002 sd 0.0002 min 1.0000 max 1.0004
+q=4099 r=2 cauchy=True p12: mean 0.9997 sd 0.0004 min 0.9992 max 1.0001
+q=4099 r=2 cauchy=False l0ratio: mean 1.0000 sd 0.0000 min 1.0000 max 1.0000
+q=4099 r=2 cauchy=False var/mean: mean 0.9986 sd 0.0011 min 0.9975 max 0.9996
+q=4099 r=2 cauchy=False p01: mean 0.9997 sd 0.0001 min 0.9996 max 0.9998
+q=4099 r=2 cauchy=False p02: mean 0.9992 sd 0.0001 min 0.9992 max 0.9993
+q=4099 r=2 cauchy=False p12: mean 1.0000 sd 0.0001 min 0.9998 max 1.0001
+
+X6 trail vector check (toy exhaustive on states):
+q=257 cauchy=True: states where two partial rounds keep lane0 diff 0 along trail vector: 0/2000
+q=257 cauchy=False: states where two partial rounds keep lane0 diff 0 along trail vector: 0/2000
+q=1009 cauchy=True: states where two partial rounds keep lane0 diff 0 along trail vector: 0/2000
+q=1009 cauchy=False: states where two partial rounds keep lane0 diff 0 along trail vector: 0/2000

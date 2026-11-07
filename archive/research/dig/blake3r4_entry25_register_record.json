@@ -1,0 +1,22 @@
+{
+  "id": "B3R4-ENTRY25-REGSURFACE-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "25-byte entry and register-file surface",
+  "question": "How does the exact 25-byte entry compose with the declared register-file size?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "R=800 winner: Tp=22, tmax=2100, N=42894307898137926602842375226733029395155, time_log2=125.25339616, P_lower=0.3906512065, peak=1048556 B; conservative surcharge time=125.25411129",
+  "source": "research/dig_new/blake3-r4/entry25_register_surface.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_entry25_register_surface_1014.md; research/dig_new/blake3-r4/entry25_probe.py; research/dig_new/blake3-r4/entry25_kat.c",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.09936,
+  "gain_basis": "T",
+  "potential_bits": 0.12,
+  "prior": 0.5,
+  "peak_mem": "1048556 B at R=800; 20 B headroom",
+  "notes": "Conditional ledger only; all rows have zero spills because circuit peak is 771. Requires integrated serialization, declared R=800 acceptance, generated KAT/prefile; no package/stage/filing/submission."
+}

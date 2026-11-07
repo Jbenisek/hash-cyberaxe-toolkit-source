@@ -1,0 +1,15 @@
+{
+  "toy_prime": 257,
+  "exhaustive_delta_eta_cases": 65792,
+  "toy_ddt_count_histogram": {
+    "0": 40960,
+    "2": 16640,
+    "3": 256,
+    "4": 7936
+  },
+  "native_cases": 256,
+  "native_known_image_case_count": 128,
+  "max_roots": 4,
+  "all_native_roots_verified": true,
+  "zero_difference_for_nonzero_delta_impossible": true
+}

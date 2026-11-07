@@ -1,0 +1,38 @@
+{
+ "j": 0,
+ "inner_degree_m": 5,
+ "F_degree": 78125,
+ "field": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001",
+ "model": "levels/decomp/decomp.py Line(j) circuit(s0_line(L),1); r=1",
+ "H": "monic, H(0)=0, degree m, coefficient list ascending (c0..cm), 64-hex per coefficient",
+ "H_sha256_of_hexlist": "8840f75ffdc024bc36ba14df639542d9e49c18963259e498e36f6a1b284d9029",
+ "nonconstant_digit_index": 0,
+ "digit_degree": 4,
+ "digit_constant_term_hex": "377750d3532ab3675ec29845d512150699bf55a88dbbc51be33be0cfc95738ca",
+ "digit_sha256_of_hexlist": "1d37f5d1ba62a583226341cafc6ad987722ce0ce9a3159081476484c10c0a0e4",
+ "nonconstant_digit_count": 15624,
+ "digits_visited": 15626,
+ "meaning": "F = sum_i c_i H^i with deg c_i < m; c_idx is nonconstant, so F is not G(H) for any G",
+ "independent_peel_verification": true,
+ "runtime_s": {
+  "H_candidate": 0.0,
+  "digit_expansion": 3.4,
+  "verify": 0.0,
+  "total": 3.5
+ },
+ "H_coeffs_hex": [
+  "0000000000000000000000000000000000000000000000000000000000000000",
+  "03ff2db5473dc703f2bac300c77fab9f4ffde4c6c03aa8582b441c04077f7bbf",
+  "327c844ae651401c74f463f4b60daf8063c9129ab02ce3e446f5755dde036a95",
+  "0de0503c494f7e16a6961babeb2eba94e9aa2a623e5db848cf50eb03a23d7b82",
+  "1e85d34b8d30aa58fd9cd73abd3775d4f665edd8534213968b2c87a02edcd1fe",
+  "0000000000000000000000000000000000000000000000000000000000000001"
+ ],
+ "digit_coeffs_hex": [
+  "377750d3532ab3675ec29845d512150699bf55a88dbbc51be33be0cfc95738ca",
+  "2b04431f50bc1aa56e31e3c3246b690d970652b388e29755de13677b18b04fa2",
+  "0e7bc06bad2a2e8590cede7d488a8c86a03f87e81e9b3b2f4e4f8b90b652abfa",
+  "209c9f27bacc5a201ca29636b1ce8c7e7c68c05fb35c6e12c680c382bc266a88",
+  "3c6505de3481698d5e01f7cfac750d97c61c20c4ba3881250dd72f1e6afd28fb"
+ ]
+}

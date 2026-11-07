@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.GBUF (MEM)",
+ "question": "M2: necessity: drop the stored g (recompute from F per use) and recount",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "g = 195,313 x 32 = 6,250,016 B. Recomputing it each loop step costs one build g (121,473,076 ops) x 236 steps = 28,667,645,936 ops per centre (38 percent of a centre): memory saving log2(40934171/34684155) = 0.2390 bit vs time cost log2(1+0.378) = 0.462 bit. Not worth it.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/pkg_stage_r2/submission-note.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.GBUF|MEM|M2. Assumes the recompute is a full build g (upper bound on the cost).",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "a different buffer layout or a measured smaller peak"
+}

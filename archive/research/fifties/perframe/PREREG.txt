@@ -1,0 +1,137 @@
+PREREGISTRATION - perframe: per-frame clustering of DEEP trial events of the frame search of entry 9a9f3b7b
+(premise H7prime-ak-cluster). Written 2026-10-09 before any step ran with a main-kind key. Local research only: no
+yukon, no network, nothing submitted.
+
+1. WHY
+   The judge refused entry 9a9f3b7b (research/dossiers/9a9f3b7b; status not_evaluable, reasons
+   lane_*/heuristic/H7prime-ak-cluster): "No experiment, implementation, or scaled model measures the frame-level
+   factorial-moment bound asserted by H7prime-ak-cluster"; "has no supporting proof or experiment at frame scale".
+   The premise (research/pkg16/pkg/blake3-r2/claim.json, score-critical): for a frame of proof.md Section 9 (the six
+   outer words C0.d1, D2.b1, S11, S4, X9, w6 and a member y of the sub-class, drawn uniformly), W = the number of
+   listed good valid trials over all 2^32 values of D2.a1 and all 2^21 members of Q*; assume E[W(W-1)] <= 0.0065 E[W].
+   E[W] = 2^32 (2^21 - 1) p_good = 2^-38.47 with p_good = (5/7) 1033 2^27 / 2^128 = 2^-91.473 (H1prime-rate). The
+   premise allows a cross-step clustering factor over independence of ALLOWED = 0.0065 / ((2^32-1) 2^21 p_good) =
+   2^31.207 (the within-step part, Rw (2^21-1) p_good, is negligible unless Rw > 2^63). This run measures, in the
+   pattern of research/impl/memberloop/prereg8, the per-frame clustering of the deepest measurable trial events of the
+   frame search, with a control arm of fresh frames and two generators.
+
+2. DEFINITIONS (frozen in perframe.cu and, independently, in ref_pf.py; constants and step CO generated from the filed
+   program research/pkg16/pkg/blake3-r2/experiments/halfsearch.py by gen_consts.py)
+   Frame: eight generator words; the first six are C0.d1, D2.b1, S11, S4, X9, w6, the seventh is unused, the eighth mod
+     2^17 is the member number, y = halfsearch.class_member (the sub-class of 131,072). (As step 1 of proof.md 9.1.)
+   Outer step: frame + g = D2.a1; step CO = halfsearch.ctr_outer. Trial: outer step + c1 in Q* = {c1 : c1 AND
+     0e09818b = 02008000}; step CT = halfsearch.ctr_trial; t = T0; t = 0 trials are not valid: excluded from every
+     event and counted. E1 = G(Y1, Y6, Y11/Y11', Y12, w12, w5 / w5 + delta) and E3 = G(Y3/Y3', Y4, Y9, Y14, 0, w8) on
+     messages A and B. tau, eps, beta = XOR differences of E1's a output, c output, first-half b; eps3, j1, j3 = E3's
+     a output, first-half c, c output; h1 = E3's first-half d on A; r = XOR of chaining-value word 1 = tau ^ j3.
+   Sampling in a frame: G = 2^19 values g_i = bg XOR Lg.gray(i) (Lg nineteen uniform 32-bit columns conditioned on rank
+     19, bg uniform), so every ordered pair of distinct g is sampled with equal probability; k = K_TRIALS values c1_j =
+     CV | deposit(b XOR L.gray(j)) (L ten uniform 21-bit columns of rank 10, b uniform), the SAME k c1 in every outer
+     step of the frame, so every ordered pair of distinct c1 is equally likely and same-c1 cross-step pairs are
+     sampled 2^21/k times more often than in the frame (weighted back in section 3).
+   EVENTS (T7 = the seven outcomes of beta*: taus 175020a0 185020a0 275020a0 285020a0 385020a0 675020a0 685020a0,
+   eps* = 6e21be55, beta* = 18b0e098, G(tau) = ROL(tau ^ ROR(tau,1), 12)):
+     (d) T2 per outer step: automaton (2) of halfsearch on Y3 + Y4 + w8 nonzero
+     (d) P  per outer step: mask1(Y9) AND mask2(Y3 + Y4 + w8) nonzero (the filter pass, seven taus)
+     (a0) E1a per trial: tau in T7
+     (a) E1L per trial: tau in T7, eps = eps*, beta = beta*: the E1-listed event of 9.6 = the roots of the frame search
+     (b) E3P per trial: eps3 = eps* and j1 = G(tau_q) for a tau_q of T7: (J2) and (J1) of the E3 side of a listed good
+         trial; every E3P must lie in a step whose pass mask has bit q (checked)
+     (c) R16, R24 per trial: the low 16, 24 bits of r zero
+     (e) RA per trial: rule A on h1 (halfsearch.rule_a), a condition of a good trial
+   ARMS: ctx (arm 0): one frame per block (slot 0xFFFFFFFF), 2^19 outer steps. ctrl (arm 1): the same g walk and c1
+     set, fresh frame words for every outer step (slot = step index).
+   GENERATORS: G1 Philox4x32-10 (= cuRAND = Random123 KAT), key = first 8 bytes of keyhex(kind, 1), counter (slot,
+     block, arm, 2*purpose + h); G2 SHA-256 of bytes.fromhex(keyhex(kind, 2)) || BE32(arm, block, slot, purpose).
+     g subspace: slot 0xFFFFFFFE purposes 3a..3a+2; c1 subspace: slot 0xFFFFFFFD purpose a (attempt a).
+
+3. STATISTICS (frozen in analyse_pf.py; per arm, pooled over G1 and G2, and per generator; unit = frame)
+   Per frame and trial event: n, SW = sum over outer steps of n_s(n_s-1), SC = sum over the k c1 of n_c(n_c-1).
+   m = G (step events) or G k (trial events, nominal); N, p = N/(C m), v = 1 + (var - m p (1-p))/mean^2,
+   F = sum n(n-1)/N, E0 = (m-1)p, R = F/E0; Rw = (SW/N)/((k-1)p); Rx_same = (SC/N)/((G-1)p);
+   Rx_diff = ((SF-SW-SC)/N)/((G-1)(k-1)p); Rx = 2^-21 Rx_same + (1-2^-21) Rx_diff (the cross-step factor of the whole
+   frame); Rx_pool = ((SF-SW)/N)/((G-1)k p) (descriptive); rho_x_full = Rx (2^32-1) 2^21 p, rho_w_full = Rw (2^21-1) p.
+   SE: delete-one-group jackknife, 128 contiguous groups of the arm's frames (G1 blocks ascending, then G2).
+   ctx - ctrl differences with SEs in quadrature; pair counts per stratum against no clustering; exact Poisson upper
+   limits (95 %, 99.865 %) of a stratum's ratio when its pairs are fewer than 30; mean/nominal (P CTR_SHARE/2^64, E1L
+   53 2^-38). Descriptive: pairs_pf.py lists the E1L and E3P pairs by stratum and whether same-c1 pairs share K_O(g).
+
+4. FILES (sha256; analyse_pf.py --prereg re-checks every line of this form after the run)
+   bb5a9e59e943f483756d5f4cb2b2f135f5ac5b1bd4be38938577402db8f40827  research/fifties/perframe/perframe.cu
+   7eb87eff6fec6396972164508bd6097e61efe4c2735f28639b2078d8733d16e1  research/fifties/perframe/perframe
+   b5b9ab21929e5addc2ad98e3f7562c055fe359b6a6a137cb6a66e0ace892478b  research/fifties/perframe/pf_consts.cuh
+   df6ad70e14b9d2da8d138919f7db54bceb2de0f02f83ed7cb8bcbe7cead22797  research/fifties/perframe/gen_consts.py
+   da80097968ca185ce99a32f5958aa090c0a07295c5f725728efc50887c52c68d  research/fifties/perframe/ref_pf.py
+   32aeda2b8a21443a3a8054ece998bb1d5b782a3f59809ace078d23782c750594  research/fifties/perframe/seeds.py
+   b05a934926597a9a923431e47f3faea4b065f8e7c2bdb6e2dd39a7b420d622ed  research/fifties/perframe/run_main.py
+   f4c85515c965f280764d2acab32f6a1b0fbfc97d8219d5fb4e5ced51f195154c  research/fifties/perframe/analyse_pf.py
+   a43fe4a0962d9997bc6abb9e59f1b19f50f8881170110ffc717678cb3ed0e35f  research/fifties/perframe/pairs_pf.py
+   9b4638fec6069ca73de2a4d300ff9abb698ef7ff39e1ca65bbe5790ee74899b9  research/fifties/perframe/build.sh
+   035d10422bc0c4bdd19a089621de6187de35980aa97f7db849261d1319091add  research/fifties/perframe/validate.sh
+   195e24c6baea0917e5ccc5e86c046feac3e1bf511c67565fce8f3998a736615c  research/fifties/perframe/validate2.sh
+   cbf3b9d79a42f54aecfc204e6b77e0e410965f20cf4fe3fc33f3e9fefdc998b8  research/fifties/perframe/post.sh
+   0733998e496b400caae59a8eaf1ae66a74f952fb653155110a7eadac0b844a69  research/fifties/perframe/start_main.sh
+   e259008353c9f36059e1bf04f36be3a8458c20f1de2471d234737e65d37b9b2e  research/fifties/perframe/SIZING_RULE.txt
+   cddad7a4d9df7e22bedcef33ec60a16de9f062bcb6cba28a0ab4552fad7fc248  research/fifties/perframe/timing.json
+   bad46cfb640c5f15c11a8a5db838d12394e03605d6191523bc20367be6ecc6f7  research/fifties/perframe/kat_check.json
+   d99ef135c4bcaa75629955d4f05d2673e3cacd80101d804437d018e6191c7f66  research/fifties/perframe/dry_out.json
+   dc33c6d98300e19f7daa8a808c317a47a843d5774f47f1222caf90ff974c4f1f  research/fifties/perframe/val/VALIDATION.json
+   344da6a21700d479b3ce58190405ec68895ebc6ccdf45cc21cb81006d788e943  research/fifties/perframe/val/VALIDATION2.json
+   916fb2c57547d4f250277634ea565dc4015b3e396b0cc19a53f1999fd490e3f4  research/fifties/perframe/val/val_check.json
+   35beb9a85d06237f9dcd2b00b9c40e9ffac52aaaf59fd9a4772d8b9a0aeb6cf2  research/fifties/perframe/val/cmp_check.json
+   bd8917d6113ab60c2a011e642bdd94d8a0e0c25a66406e5e3fa331154370676e  research/fifties/perframe/val/hits_check.json
+   4fafd5a221fa3cb70d2621320adb74b8d93123253c33ecd47ca2a3ab6e72770e  research/fifties/perframe/val/hits2_check.json
+   1ef0469eeee25833b5992f2824267b14b86c2f0ff739b76c87c8dbc70e9ce435  research/fifties/perframe/val/code.sha256
+   7078cf8a1bc8ea79937564298fd5f8ca75fea446cb3463089b355bc40741f83d  research/pkg16/pkg/blake3-r2/experiments/halfsearch.py
+   7d944e19f3844202ce2e85b529960f8d95438e7840f9810d78a0f81dc0c30964  research/pkg16/pkg/blake3-r2/claim.json
+
+5. VALIDATION (done before this file; kind 'validate'; val/VALIDATION.json and val/VALIDATION2.json PASS)
+   KAT: Philox of perframe.cu = cuRAND = Python = Random123 (3 vectors); GPU SHA-256 = hashlib. GPU val kernel against
+   ref_pf.py (halfsearch ctr_outer, ctr_trial, both real 2-round compressions with counter t and flags 3, and
+   halfsearch.ctr_lane on every trial): 160 frames, 74,880 outer steps, 1,376,256 trials (k 16, 64, 1,024; G 16 to
+   8,192; both arms, both generators): 0 mismatches (frame words, g, member, masks, K, every c1, tau, eps, beta, eps3,
+   j1, j3, h1, t, event bits, per-step counts, whole frame records with Ws and Wc). Production kernel (32 chunks per
+   frame, per-c1 reduce kernel) at G 8,192 = val kernel, frame records equal (4 of 4). Full size (G 2^19, k 512):
+   1,203 hits (2 E1L, 1,201 R24) and, in part 2, 61 hits (47 E1L, 14 E3P) recomputed by real compressions: all ok.
+   Dry run (kind 'dry run', 1,024 frames per arm, k 512): code test only, not evidence.
+
+6. SAMPLE SIZE (rule fixed in SIZING_RULE.txt before the timing run; timing.json: t_512 = 0.00344 s per frame,
+   2^19 t_512 = 1805 s <= 0.75 x 2700 s  =>  K = 512)
+K_TRIALS = 512
+SEG_FRAMES = 4096
+MAX_SEGMENTS = 32
+CAP_SECONDS = 2700
+   Segment s = frames s*4096 .. s*4096+4095 for (ctx, G1), (ctrl, G1), (ctx, G2), (ctrl, G2), in that order; up to 32
+   segments = 2^18 frames per arm (2^17 per arm and generator), 2^46 trials per arm; segment s >= 1 starts only if
+   elapsed + duration of segment s-1 <= 2700 s. Minimum target 16 segments; a shortfall is reported.
+
+7. SEEDS
+   SEED_TEXT = 'HashSmash perframe 9a9f3b7b H7prime-ak-cluster per-frame clustering of deep trial events, frame search
+   of proof.md 9, counter instance, 2026-10-09 | %s | G%d' (one line); keyhex(kind, g) = sha256(SEED_TEXT % (kind, g)).
+   MAIN             G1 9e4dffb9fb14e315f11ed83aa06e13e3fab48578d9587da13c827410c9870ce5
+                    G2 3e19568ac223d7bbdf77f2a19027882b37148ab5cf4d79fb80ed77628e10c1b5
+   MAIN ATTEMPT 2   G1 a9949dd5258e797f023bc8ded731866442e7f8e9a7070361486ee623611883cf   (only if the main run crashes)
+                    G2 c42c9b18205277c25c7db242f8dc5ef5a24d7e3b83bb9091508b8ddb7d5c4b3f
+   Freshness: ripgrep of research/ (case-folded) for the first 16 hex digits of the four main / attempt-2 keys before
+   this file: no file.
+
+8. RUN PROTOCOL AND DECISION RULE
+   `bash start_main.sh` (= `python3 -B run_main.py main`) checks this file against PREREG.sha256, reads K_TRIALS,
+   SEG_FRAMES, MAX_SEGMENTS, CAP_SECONDS from it and runs the segments once. The only stop is the wall-time rule of
+   section 6; no frame or run is excluded. If a run crashes the main run is void, reported, and repeated once in full
+   with attempt 2. Then `bash post.sh`: sha256sum -c PREREG.sha256; analyse_pf.py main main_out.json --prereg;
+   ref_pf.py hits (every E1L and E3P hit of the main run recomputed by real compressions; any failure is reported);
+   pairs_pf.py.
+   PRIMARY, per deep event E1L, E3P, R24, ctx arm: U = (1 - 2^-21) U_diff + 2^-21 U_same, with U_s = Rx_s + 3 SE
+     (jackknife) when the stratum has >= 30 pairs, else its exact 99.865 % Poisson limit. BOUNDED-2 iff U <= 2,
+     BOUNDED-16 iff U <= 16; reported with log2 U and its margin to ALLOWED = 2^31.207.
+   VERDICT on H7prime-ak-cluster at the deepest reachable events: SUPPORTED iff every primary U <= 16 (a margin of at
+     least 27.2 bits); NOT SUPPORTED iff some primary U > 2^31.207; WEAK otherwise.
+   SECONDARY: NO-EXCESS iff |Rx(ctx) - Rx(ctrl)| <= 3 SE (per primary event); the same for Rx_same, Rx_diff, Rw, v and
+     R of every event; per generator; checks: beta = beta* on every valid trial, no E3P outside a pass with its bit,
+     row shapes, per-c1 totals = n, hits, hashes.
+   SCOPE: E1L (the E1 half of a listed good trial: 96 bits, the roots of the frame search) and E3P ((J1) and (J2) of
+   the E3 half) are measured separately; a listed good trial (2^-91.47 per trial, 2^-38.47 per frame) is not reachable.
+   The run bounds the per-frame clustering of the deepest reachable partial events, not that of listed good trials; the
+   transfer to the joint event remains the premise. Pseudo-random generators stand for uniform words; counter
+   instance only; the GPU may be shared.

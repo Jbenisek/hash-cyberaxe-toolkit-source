@@ -1,0 +1,25 @@
+A mine(empty,7) = af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262 True
+A org (empty,7) = af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262 True
+A mine(abc,7) matches remembered vector: True org: True
+B lengths x rounds 1..7 x 4 patterns done in 10.2s
+B chunk-count boundaries (k<=10) at rounds=2 done in 29.7s
+C counter=0xffffffffffffffff: equal=True
+C counter=0x10000000000000000 (UNREACHABLE via blake3()): org returns words wider than 32 bits: False
+C counter=0x20000000000000003 (UNREACHABLE via blake3()): org returns words wider than 32 bits: False
+D tree logic (stand-in compress) done in 46.0s
+E rounds=0: rejected (ValueError)
+E rounds=8: rejected (ValueError)
+E rounds=True: rejected (ValueError)
+E rounds=2.0: rejected (ValueError)
+E rounds=-1: rejected (ValueError)
+E bytearray: rejected (ValueError)
+E str: rejected (ValueError)
+E memoryview: rejected (ValueError)
+E bytes subclass accepted and equal: True
+
+A: 2 comparisons, 0 differ
+B-len: 2688 comparisons, 0 differ
+B-chunks: 330 comparisons, 0 differ
+C-counter: 588 comparisons, 0 differ
+D-tree: 957 comparisons, 0 differ
+FIRST DIFFS: none

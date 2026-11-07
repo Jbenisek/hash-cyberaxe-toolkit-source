@@ -1,0 +1,23 @@
+{
+  "id": "D586-SHA256-R38-ZONED-ROW4-FIXED-SPLIT-SEED65536-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 14,
+  "object": "Zone D 38 row-4 W8 G seed-65536 negative control",
+  "question": "Does the row-4 W8 G family retain the full-path signature on an additional fixed seeded split?",
+  "labels": ["S", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Exact fixed split seed 65536: cell-domain 2^29, G=2^26=67108864; all 67108864 rebuilds consistent, all 67108864 pass rows 5..15, final state-equal 0. Published pair rows 0..15 base+expansion failures=0.",
+  "source": "our workflow: D586 isolated zoneD38 row4full seed65536",
+  "own_test": true,
+  "evidence": "research/sol_answer_D586_sha256_r38_zoneD_row4_seed65536.md; research/retest/zoneD38/row4full_seed65536.out; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "not material to the finite exact enumeration",
+  "notes": "Additional fixed-split negative control only. Parent D243-S38-ROW4 remains OPEN because split transfer, attack-weighted rate, and charged full path are unproved. No package/stage/filing/submission.",
+  "held_fixed": "seed65536 W6/W7/E16..E21 split; W8 varied over all G members; current zd38 source",
+  "reopen_if": "global split transfer or attack-weighted charged rate is established"
+}

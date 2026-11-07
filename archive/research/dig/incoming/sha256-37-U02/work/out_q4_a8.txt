@@ -1,0 +1,30 @@
+== q4_a8 seeds 1,2 np 4096 mt 1024 relax: P=sym E17 =0=====+01=unn1=+==0==1===un====
+model chi37: 37 steps, anchor row 14 (x and y rows 11..14 held), E-driven rows 16..21, lowest conditioned row 4
+  conditions: 31 two-bit/linear (printed), 25 in the attack model; 'except' words: W6 W7
+  free word W6 (late): W6 fset s0 03c00800 late
+  free word W7 (late): W7 fset s0 017f8000 late
+  free word W8 (late): W8 cell+fset s0 043ff800 back late
+  free word W15 (early): W15 list 7dd41680 7dd41681 7dd416a0 7dd416a1 7dd41a80 7dd41a81 7dd41aa0 7dd41aa1 7dd43680 
+  relaxation R1
+  relaxation R2disputed
+WINDOW rows 22..36 event=out np 4096 m 256 mt2 1024 mw 256 mt 1024 threads 3 prefix-conditions prefix
+-- seed 1
+  init: 4096 particles, acceptance 1.000000 (rows 15..15)
+  stage 16 (E-driven): forced  9 bits, accepted 4113 of 1048576, log2 est -16.9940
+  stage 17 (E-driven): forced 11 bits, accepted 65503 of 1048576, log2 est -31.9948
+  stage 18: dead
+  seed 1: no samples
+-- seed 2
+  init: 4096 particles, acceptance 1.000000 (rows 15..15)
+  stage 16 (E-driven): forced  9 bits, accepted 4053 of 1048576, log2 est -17.0152
+  stage 17 (E-driven): forced 11 bits, accepted 65661 of 1048576, log2 est -32.0125
+  stage 18: dead
+  seed 2: no samples
+== pooled over 2 seeds: samples 0
+   cells          0 (with exact 0)
+   EXACT          0
+   EXACT/cells pooled -nan ; per-seed mean -nan, seed-to-seed sd 0.00000, 95% of the mean +- nan
+
+real	0m0.509s
+user	0m0.276s
+sys	0m0.065s

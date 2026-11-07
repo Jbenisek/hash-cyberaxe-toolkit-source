@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "distinguished-point table",
+ "question": "M4 breakpoint at 2^20 bytes: S on both sides and whether crossing is worth it",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Slack below 2^20 is 82,304 B (7.85 percent). Crossing by one doubling of the table (d=113, filed 32 B entries): total 1,516,704 B = 2^20.533, T -0.00529, memory term +0.533, S +0.527: not worth it. Halving (d=115): T +0.01052, memory term 0, S +0.01052. Every further DP bit gained costs a doubling (1 bit) and gives back under 0.011 bit of time (d=104: -0.0106 at 2^29). Crossing is never worth it; the useful move is to use the whole 2^20 (see M3).",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out",
+ "notes": "universe cell blake3-r3|MEM.DPTAB|MEM|M4. Ledger arithmetic as in M3.",
+ "held_fixed": "filed code and counters; entry 32 B",
+ "reopen_if": "none",
+ "gain_basis": "S"
+}

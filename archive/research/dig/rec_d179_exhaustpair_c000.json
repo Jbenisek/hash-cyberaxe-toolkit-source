@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-exhaustpair-c000",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 exhaustive class-000 representative/toggle audit",
+  "question": "Do the three residual class toggles preserve aliveness for every typed omega word in both type lists?",
+  "labels": ["I", "K"],
+  "status": "SAMPLED",
+  "number": "Six complete typed-list comparisons found zero splits: type 0 has 23,820,160 words and 20,034,560 alive on each side; type 1 has 34,028,800 words and 28,620,800 alive on each side, for each delta 00002000, 00001000, and 00000400.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/exhaustive_pair_audit_summary.md; research/retest/b3_omega_coupled/exact/exhaustpair_t0_c0_002000.out; research/retest/b3_omega_coupled/exact/exhaustpair_t0_c0_001000.out; research/retest/b3_omega_coupled/exact/exhaustpair_t0_c0_000400.out; research/retest/b3_omega_coupled/exact/exhaustpair_t1_c0_002000.out; research/retest/b3_omega_coupled/exact/exhaustpair_t1_c0_001000.out; research/retest/b3_omega_coupled/exact/exhaustpair_t1_c0_000400.out; research/retest/b3_omega_coupled/exact/alive_exhaustpair",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Finite exhaustive audit for class 000 only. It strengthens the prior all-member sampled audits but is not a universal proof; the three coupled directions and global class-invariance claim remain OPEN, with no saving credited."
+}

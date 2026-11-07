@@ -1,0 +1,112 @@
+{
+ "1": {
+  "Mu0": 0,
+  "trail_pairs": 5206,
+  "trail_collisions": 52,
+  "trail_rate": 0.00999,
+  "ctrl": [
+   [
+    5418,
+    50
+   ],
+   [
+    5366,
+    54
+   ],
+   [
+    5220,
+    38
+   ]
+  ],
+  "ctrl_rate": 0.00887,
+  "random_rate": 0.00971
+ },
+ "2": {
+  "Mu0": 0,
+  "trail_pairs": 5232,
+  "trail_collisions": 55,
+  "trail_rate": 0.01051,
+  "ctrl": [
+   [
+    5336,
+    48
+   ],
+   [
+    5259,
+    52
+   ],
+   [
+    5202,
+    45
+   ]
+  ],
+  "ctrl_rate": 0.00918,
+  "random_rate": 0.00971
+ },
+ "3": {
+  "Mu0": 0,
+  "trail_pairs": 5267,
+  "trail_collisions": 59,
+  "trail_rate": 0.0112,
+  "ctrl": [
+   [
+    5428,
+    52
+   ],
+   [
+    5196,
+    47
+   ],
+   [
+    5323,
+    53
+   ]
+  ],
+  "ctrl_rate": 0.00953,
+  "random_rate": 0.00971
+ },
+ "4": {
+  "Mu0": 0,
+  "trail_pairs": 5203,
+  "trail_collisions": 52,
+  "trail_rate": 0.00999,
+  "ctrl": [
+   [
+    5313,
+    47
+   ],
+   [
+    5246,
+    48
+   ],
+   [
+    5370,
+    45
+   ]
+  ],
+  "ctrl_rate": 0.00879,
+  "random_rate": 0.00971
+ },
+ "5": {
+  "Mu0": 0,
+  "trail_pairs": 5238,
+  "trail_collisions": 48,
+  "trail_rate": 0.00916,
+  "ctrl": [
+   [
+    5300,
+    52
+   ],
+   [
+    5167,
+    49
+   ],
+   [
+    5258,
+    39
+   ]
+  ],
+  "ctrl_rate": 0.0089,
+  "random_rate": 0.00971
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "register count",
+ "question": "Q4 alternatives: reorder the circuit to need fewer registers",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Greedy list scheduling (free-most-operands-first) on the DAG gives the same peak, 25; at R=12 it is slightly better (68 vs 69 extra ops/batch), at R=8 worse (134 vs 112). The state of the 3 rounds is 16 words plus the 8 message words that are re-used by the permutation, which makes 24 a floor for this circuit shape; fewer needs a different dataflow (for example processing the four columns of a round in two halves with message words reloaded, which is what the spill rows measure). No alternative below 25 without loads was found.",
+ "evidence": "research/dig/incoming3/blake3-r3-U81/work/regs.py, research/dig/incoming3/blake3-r3-U81/work/regs.out",
+ "notes": "universe cell blake3-r3|MACHINE.REGS|MACHINE|Q4. Heuristic search, not a proof of the minimum.",
+ "held_fixed": "same DAG",
+ "reopen_if": "a schedule with zero spills at 20 registers",
+ "gain_basis": "count"
+}

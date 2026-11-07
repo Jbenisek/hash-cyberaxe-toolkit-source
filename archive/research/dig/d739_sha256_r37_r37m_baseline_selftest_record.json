@@ -1,0 +1,23 @@
+{
+  "id": "D739-SHA256-R37-R37M-BASELINE-SELFTEST-20261014",
+  "hash": "sha256-37",
+  "row_i": 5,
+  "row_j": 6,
+  "object": "R37M published-family baseline executable self-test and ledger audit",
+  "question": "Does the checked-in R37M lowm executable reproduce its published class, row-16, and charged-ledger baseline before any enlarged-family implementation is attempted?",
+  "labels": ["C", "D", "N"],
+  "status": "COMPUTED",
+  "number": "Baseline selftest passes with 222 classes, 782,800 variants, zero mismatches in all listed checks, and zero F7 sampler violations. Exact ledger reproduces g=830.9881687164307, nfb=89178350626437310, T_num=1801289457482742881995, T_den=661, time_log2=61.24102, log2_T=61.2410135642979, with tight_up/down true.",
+  "source": "our workflow: D739 bounded R37M baseline executable audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D739_sha256_r37_r37m_baseline_selftest.md; research/tools/build_pkg/scratch/pkgR37M/pkg/sha256-r37/experiments/lowm.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "published pkgR37M lowm.py, one nice-19 WSL worker, unchanged source and ledger model",
+  "notes": "Baseline reproducibility only. It does not build or run the enlarged E5/E6 family, prove its projected time, or authorize score/package/stage/filing/submission.",
+  "reopen_if": "An enlarged-family lowm implementation and end-to-end KAT are available"
+}

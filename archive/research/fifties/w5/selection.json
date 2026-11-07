@@ -1,0 +1,13 @@
+{
+ "note": "chosen from main (discovery) data only, before any fresh data was analysed",
+ "bit_E1L": [
+  10,
+  1
+ ],
+ "bit_E1a": [
+  4,
+  0
+ ],
+ "byte_E1L": 198,
+ "byte_E1a": 174
+}

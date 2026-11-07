@@ -1,0 +1,6 @@
+unchanged  blake3-r2\proof.md  (126999 bytes)
+unchanged  blake3-r2\claim.json  (17599 bytes)
+unchanged  blake3-r2\experiments\manifest.json  (5161 bytes)
+unchanged  submission-note-r2.md  (31999 bytes)
+ranges: {'constr': 'proof:227-433', 'trials': 'proof:437-488', 'early': 'proof:507-608', 'algo': 'proof:610-640', 'batch': 'proof:642-862', 's7': 'proof:864-943', 'h2': 'proof:885-891', 'h3': 'proof:893-911', 's10': 'proof:1048-1998'}
+claim: time_log2 97.6, factor 2^25, trials 2^102, charge 19.1, count with rule A 126,003,600 (all solutions 162,266,764), class 830303cf (524,288 members); note 31999 bytes

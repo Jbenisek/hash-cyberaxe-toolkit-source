@@ -1,0 +1,3 @@
+n=32 best frames {'Y12': 8, 'd1': 0, 'a1': 0, 'Dd1': 16, 'w10': 0, 'C1a1': 8, 'C1c1': 20, 'Y1': 0, 'chk': 20}
+  events 419, bit guesses 112 (g 32, early intermediate 80), carry guesses 5
+  predicted peak level 75.75 bits, predicted log2(transitions) 79.92, exhaustive log2 = 32

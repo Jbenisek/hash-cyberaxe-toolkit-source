@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t32 (DOOR)",
+ "question": "D1: alternative parametrisations and host curves, r=2",
+ "labels": [
+  "K"
+ ],
+ "status": "BEDROCK",
+ "number": "The three canonical lines (constant coordinate j of the round-1 S-box input) are complete for affine families (proved earlier); (A,B) coordinates done. Higher-degree curves: Cloud 46 claims degree rigidity for all polynomial state curves at the two-round cut; Luna 3 P3.19 reports the certificate checks (toy q = 1,000,003 and Pallas r=2 constants) match. Not checked by me beyond reading.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_19_verify_degree_rigidity.md; HANDOFF.md 10-12 21:05",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|DOOR.t32|DOOR|D1. Cited, not rerun by me.",
+ "held_fixed": "r=2 target, 4 full + 2 partial + 4 full rounds, Pallas MDS and constants pinned; toy tests use random Cauchy MDS and random constants over F_103",
+ "reopen_if": "a curve of degree > 1 with S-box outputs of degree < 5 per cut round is found"
+}

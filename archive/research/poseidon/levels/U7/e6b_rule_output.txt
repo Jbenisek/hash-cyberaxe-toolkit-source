@@ -1,0 +1,1 @@
+F,F const: #(a0,a1,a2) with sum ceil(a_j/5) <= 5 : 2076 (observed 2076)

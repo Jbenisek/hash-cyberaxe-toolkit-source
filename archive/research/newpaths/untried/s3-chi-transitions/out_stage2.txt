@@ -1,0 +1,7 @@
+loaded 1157 words 273152 variants; |K3c| min/median 34 54 0.2
+word pairs 668746 killed chi1 43752 chi2 42570 chi3 426282 survive 156142 1.4
+TIME GUARD: variant level stopped after 9195 of 156142 word pairs
+word pairs with a compatible variant pair 3083 variant pairs 259785 420.0
+word triangles (pairwise, any variants) 1040 420.0
+variant triangles (one variant per word) 8904 420.2
+{"words": 1157, "kp_variants": 273152, "word_pairs": 668746, "killed_chi1_exact": 43752, "killed_chi2_relaxed": 42570, "killed_chi3_relaxed": 426282, "word_pairs_surviving_wordlevel": 156142, "variant_level_pairs_done": 9195, "word_pairs_with_compatible_variants": 3083, "compatible_variant_pairs": 259785, "stop_variant_pairs_compatible_relaxed": 10887, "max_word_degree": 143, "word_triangles": 1040, "variant_triangles": 8904, "variant_triangles_first20": [[1, 12, 51, 257, 2935, 11712], [1, 12, 51, 257, 2932, 11712], [1, 12, 51, 257, 2932, 11713], [1, 12, 51, 257, 2933, 11712], [1, 14, 793, 256, 3209, 190752], [1, 14, 793, 256, 3337, 190752], [1, 14, 43, 256, 3201, 9856], [1, 14, 43, 256, 3201, 9858], [1, 14, 43, 256, 3201, 9860], [1, 14, 43, 256, 3201, 9862], [1, 14, 43, 256, 3201, 9892], [1, 14, 43, 256, 3201, 9894], [1, 14, 43, 256, 3205, 9856], [1, 14, 43, 256, 3205, 9858], [1, 14, 43, 256, 3209, 9856], [1, 14, 43, 256, 3209, 9860], [1, 14, 43, 256, 3209, 9894], [1, 14, 43, 256, 3213, 9856], [1, 14, 43, 388, 3201, 9856], [1, 14, 43, 388, 3205, 9856]], "secs": 424.4}

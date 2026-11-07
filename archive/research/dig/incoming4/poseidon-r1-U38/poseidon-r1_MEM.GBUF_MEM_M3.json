@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.GBUF coefficient buffer of g",
+ "question": "time cost of shrinking",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "not holding g (rebuild per step, 238 x 43,338,189 x 2 centres = 2.063e10 ops) saves 0.2255 bit of memory and costs +0.2495 bit of time: net +0.0240 bit (worse)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Exact arithmetic on the fix ledger (rebuilding g = stage B each step), memory 8,638,495 -> 7,388,479 B. | universe cell poseidon-r1|MEM.GBUF|MEM|M3",
+ "held_fixed": "fix ledger, B charged per step",
+ "reopen_if": "a rebuild of g costing < 10% of the BUILDG stage"
+}

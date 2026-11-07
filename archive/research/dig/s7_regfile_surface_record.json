@@ -1,0 +1,22 @@
+{
+  "id": "S7-REGFILE-SURFACE-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "r7 register-file convention surface",
+  "question": "What is the exact step/memory tradeoff when the S7LS allocator has more than 1024 registers?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "Total 1102 registers (KR=1096) gives BSTEP=44661, N=66732508223957455963950832233902770232274, upward time_log2=124.72601, 1036704 B, score 124.72601; 2192-register convention gives raw time 124.72370 but conditional score 124.75338 after memory.",
+  "source": "research/r7/s7ls/regfile_surface_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_regfile_surface_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.00846,
+  "potential_bits": 0.12,
+  "prior": 0.3,
+  "gain_basis": "T",
+  "peak_mem": "1036704 B at KR=1096; 1070368 B at total 2192",
+  "notes": "Conditional allocator/ledger surface; generated package, full prefile and organizer register convention remain open. No package/stage/filing/submission."
+}

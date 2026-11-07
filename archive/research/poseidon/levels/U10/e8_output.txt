@@ -1,0 +1,24 @@
+real MDS is_mds True is_cauchy True
+generic runner == poseidon_ref on 50 inputs: True
+REAL Cauchy MDS r=1: X2 2000/2000 X5 2000/2000 X7 2000/2000
+REAL Cauchy MDS r=2: X2 2000/2000 X5 2000/2000 X7 2000/2000
+random MDS is_mds True is_cauchy False
+NON-Cauchy random MDS on real p r=1: X2 2000/2000 X5 2000/2000 X7 2000/2000
+NON-Cauchy random MDS on real p r=2: X2 2000/2000 X5 2000/2000 X7 2000/2000
+X6 trail vector real: lane0 equal after R4,R5 in 0/300 random states (and states differ: True)
+X6 trail vector noncauchy: lane0 equal after R4,R5 in 0/300 random states (and states differ: True)
+i^2 == -1: True
+zero consts, cap=0, r=0: y(i x)=i y(x) in 40/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 20/20
+zero consts, cap=0, r=1: y(i x)=i y(x) in 40/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+zero consts, cap=0, r=2: y(i x)=i y(x) in 40/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+real consts, cap=0, r=0: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+real consts, cap=0, r=1: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+real consts, cap=0, r=2: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+zero consts, cap=2^65, r=0: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+zero consts, cap=2^65, r=1: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+zero consts, cap=2^65, r=2: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+real consts, cap=2^65, r=0: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+real consts, cap=2^65, r=1: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+real consts, cap=2^65, r=2: y(i x)=i y(x) in 0/40 ; y(lam x)=lam^(5^8) y(x) (arbitrary lam) in 0/20
+x^5=x solutions found in {0,1,-1,i,-i}: 5 => S-layer fixed triples 125 (x^4-1 has exactly 4 roots since 4 | p-1)
+5th root exponent d bits 254 popcount 125 hex 0x333333333333333333333333333333334e9ee0c9a10a60e2e0f0f3f0cccccccd

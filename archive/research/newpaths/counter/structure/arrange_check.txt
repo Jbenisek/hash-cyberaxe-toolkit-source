@@ -1,0 +1,25 @@
+part 2c: 60 outer steps x 50 trials = 3000 trials, seed 11, 1s
+  organizer last-chunk descriptor (IV, words, counter t, len 55/63, flags 3): 3000/3000
+  lengths 55 and 63: 3000/3000
+  B's bytes 55..63 zero (w14 = w15 = 0, top byte w13 = 0): 3000/3000
+  CV words 0,2,5,7 equal (organizer _compress, counter t, flags 3): 3000/3000
+  Y4 = prescribed member (both messages): 3000/3000
+  Y4 in the sub-class (Lemma Q2): 3000/3000
+  E1.d1 = prescribed value (both messages): 3000/3000
+  c1 in the T1 cube: 3000/3000
+  beta = b1 ^ b1' = 18b0e098 (forward): 3000/3000
+  eta = h1 ^ h1' = 830303cf (forward): 3000/3000
+  equal round-0 state X for A and B: 3000/3000
+  round-0 states S, X equal to the first trial of the same outer step: 3000/3000
+  message words w2..w15 equal to the first trial of the same outer step: 3000/3000
+  internal-word mismatches, construction vs forward trace (about 75 words per trial): 0
+  own compress vs organizer CV mismatches: 0
+  full CV equal (a full collision; expected 0): 0
+  counter t: zero 0, min 3712949, max 4293149896, mean log2 30.54, fraction < 2^20 0.00000, < 2^31 0.524; v13 = 0 in all
+part 3: whole T1 cube (2^21 values of c1) per outer step, 6 outer steps
+  outer 0: distinct t over the cube 2097152/2097152; min t 21238800; count t < 2^16: 0
+  outer 1: distinct t over the cube 2097152/2097152; min t 296493794; count t < 2^16: 0
+  outer 2: distinct t over the cube 2097152/2097152; min t 135274564; count t < 2^16: 0
+  outer 3: distinct t over the cube 2097152/2097152; min t 1111572521; count t < 2^16: 0
+  outer 4: distinct t over the cube 2097152/2097152; min t 4194312; count t < 2^16: 0
+  outer 5: distinct t over the cube 2097152/2097152; min t 549732613; count t < 2^16: 0

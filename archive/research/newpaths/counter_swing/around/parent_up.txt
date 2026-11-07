@@ -1,0 +1,6 @@
+w=32 right child half-collides: m9 m11 m12 m14    N=262144 round-0 equal 0 | mean words differing after round 0 16.00 | hA 0 hB 0
+w=32 one word of right child: m8                  N=262144 round-0 equal 0 | mean words differing after round 0 4.00 | hA 0 hB 0
+w=32 two words of left child: m2 m3               N=262144 round-0 equal 0 | mean words differing after round 0 16.00 | hA 0 hB 0
+w= 8 right child half-collides: m9 m11 m12 m14    N=8388608 round-0 equal 0 | mean words differing after round 0 15.97 | hA 0 hB 0
+w= 8 one word of right child: m8                  N=8388608 round-0 equal 0 | mean words differing after round 0 3.99 | hA 0 hB 0
+w= 8 two words of left child: m2 m3               N=8388608 round-0 equal 0 | mean words differing after round 0 15.89 | hA 0 hB 0

@@ -1,0 +1,15 @@
+CTX 4096 contexts: outer words of layout run 1, X14 = 2ae46489 + i * 9e3779b1; 524288 members each; bad 0
+CTX count over the members of one context              mean       variance   binomial var dispersion       min       max  sd / mean
+CTX rule on h1 passes                             32756.571     3274144.07       30710.00    106.615     23476     42980    0.05524
+CTX listed beta (any)                              2111.063        2035.37        2102.56      0.968      1942      2273    0.02137
+CTX beta 18b0e098                                   255.929         241.36         255.80      0.944       207       315    0.06070
+CTX beta 18d0e098                                   255.917         257.25         255.79      1.006       200       319    0.06267
+CTX beta 18b1a098                                   255.585         249.69         255.46      0.977       193       311    0.06183
+CTX beta 18d1a098                                   255.863         243.81         255.74      0.953       193       314    0.06103
+CTX trailing zeros = 0                           348142.065      120991.96      116965.88      1.034    346689    349240    0.00100
+CTX low 16 of word 0 zero                             7.949           7.81           7.95      0.983         0        22    0.35157
+CTX low 16 of word 1 zero                            20.577          20.44          20.58      0.993         5        39    0.21970
+CTX low 16 of word 2 zero                            12.543          12.29          12.54      0.980         3        25    0.27947
+CTX low 16 of word 3 zero                             6.203           6.23           6.20      1.005         0        18    0.40253
+CTX h1 bit 0 = 0 (one of the four rule bits)     262144.093         269.09      131072.00      0.002    262062    262220    0.00006
+CTX rule on h1: mean pass rate 2^-4.000503; with 4096 contexts a dispersion of 1 would be measured to about +-0.022

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "tree alternatives: counter on the chunk, deeper trees",
+ "question": "Alternatives?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "chunk counter value does not change the operation count (counters 0,1,2,3,255,2^32,2^40+5 all give 595); deeper trees add one compression per level; every message above 1024 bytes ends in a parent root, so each evaluation costs at least 2 compressions",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_ops.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Spec-derived (tree rule of the target profile) plus the counter scan.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "none",
+ "topic": "blake3-r3|ALT.CHUNK|ALT|Q4"
+}

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R0D0.q2 (c1,b1): 3-round BLAKE3 generic-birthday circuit, round 0 diagonal call D0, quarter-step 2",
+ "question": "Q4 alternatives: other lane pitch, no immediate merging, other lane counts; recount.",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Alternatives, this step / circuit total: pitch 33: 7/684; 34: 7/622; 35: 7/603; 36 (filed): 7/595 ops. No immediate merging: step 7, circuit 599 (+4). Earlier counter swar_count.py gives 612 for the circuit. 8 lanes at pitch 32 not modelled (no guard bit; OPEN). No variant beats the filed step.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work/b3steps.py; research/dig/incoming3/work/scan.py; research/dig/incoming3/work/scan_out.json; research/dig/incoming3/work/validate_out.txt; research/blake3_r3/candidate_blake3/experiments/rho.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R0D0.q2|step|Q4. Same tracer with pitch/lane and merge parameters; only the filed pitch-36 circuit was executed and checked.",
+ "held_fixed": "blake3-r3 filed circuit: 7 lanes x 36 bits, 595 ops/batch, prefix 0^32, m8..m15 free",
+ "reopen_if": "an 8-lane or cheaper-rotation layout shown correct",
+ "topic": "blake3-r3 R0D0.q2 step op count"
+}

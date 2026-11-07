@@ -1,0 +1,7 @@
+r=1 ncentres=6 seed=12 m=39062
+CENTRE 0 j=0 degG=0 success=0 arith=3911281948 all=6663440906 sec=118.9
+  line_setup                               arith=         391 other=        1564 total=        1955     0.0s
+  random centre                            arith=           0 other=           3 total=           3     0.0s
+  build g                                  arith=    18737764 other=    58088975 total=    76826739     1.0s
+  S^((p-1)/2) mod g                        arith=  3536772927 other=  2315546480 total=  5852319407   107.5s
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770866 other=   378521936 total=   734292802    10.5s

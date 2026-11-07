@@ -1,0 +1,23 @@
+{
+  "id": "D427-B3M-QUADRATIC-PREDICTOR-SCREEN-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "quadratic ridge predictor for step-level rate multiplier",
+  "question": "Can a fixed quadratic ridge model on the 64 raw uG/v bits select high-rate BLAKE3-r2 steps on the held-out split?",
+  "labels": ["C", "D", "Z"],
+  "status": "SAMPLED",
+  "number": "On the fixed 120/40 split, 2,080 quadratic features reduced to 990; CV selected alpha=10000. Held-out r=-0.1385601818 and top-quarter rate ratio=1.0216784219, versus pass thresholds r>=0.39 and ratio>=1.10. Permutation p=0.4105. FAIL; only this quadratic model class is closed and the broader B3-rate cell remains OPEN.",
+  "source": "our preregistered D427 quadratic predictor screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D427_b3m_quadratic_predictor_screen.md; research/retest/t2/PREREG_D427_QUADRATIC_SCREEN.md; research/retest/t2/pred_quadratic_screen.py; research/retest/t2/D427_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "UNKNOWN (single-threaded short predictor screen; no RSS measurement)",
+  "notes": "Finite LOCAL_ONLY evidence. No score/package/stage/submission credit. Nonlinear carry-aware models and the full predictor remain OPEN.",
+  "held_fixed": "D341 split, D341 pass rule, seed 0xD427, fixed feature map and alpha grid",
+  "reopen_if": "A preregistered carry-aware or richer predictor with exact selection-cost and memory ledger is supplied"
+}

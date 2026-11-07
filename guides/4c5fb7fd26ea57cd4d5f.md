@@ -1,0 +1,37 @@
+# build gen
+
+Source: `research/blake3_r7/b9v3/gen_c/build_gen.py`
+
+Public SHA-256: `f22fef02cf411b41f4291325bb7d3f1436f31cde56491eff95e98e28fc466a36`
+
+## Purpose recorded in the source
+
+Read the source and linked research notes for this program's role.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "build_r7",
+  "os",
+  "sys"
+]
+```
+
+## Read alongside
+
+- research/blake3_r7/b9v3/proof_t8.md
+- research/blake3_r7/b9v3/proof_t9.md
+- research/blake3_r7/b9v3/mk_proof9.py
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

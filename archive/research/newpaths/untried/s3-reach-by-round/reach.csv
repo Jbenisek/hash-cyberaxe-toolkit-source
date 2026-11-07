@@ -1,0 +1,25 @@
+technique,round,works,cost,label,source
+low-degree-W40-FES,3,yes,133.42521 (log2 word-ops; /813 = 123.75810 u),COMPUTED (ledger_by_round.py),D19 generalized; affine f_t; birthday-level
+low-degree-W40-FES,4,yes,133.49425 (log2 word-ops; /1084 = 123.41210 u),COMPUTED (ledger_by_round.py),D19 generalized; birthday-level
+low-degree-W40-FES,5,yes,123.21715 (log2 units /1355),COMPUTED (ledger_by_round.py),D19 generalized; birthday-level
+low-degree-W40-FES,6,yes,123.18242 (log2 units /1626),COMPUTED (ledger_by_round.py),D19 generalized; beats board 124.04565 by 0.863
+low-degree-W40-FES,7,yes-but-not-best-depth,136.74027 (log2 word-ops; /1897 = 125.85077 u),COMPUTED (ledger_by_round.py),D19 generalized; setup 2^136 (deg-16 init=3^40 naive / P_16~2^37 Moebius); beats generic ~128 but 2.7b worse than r6; no r7 track
+2-round-linear-structure,5,yes,~128 (birthday w/ cheap step; not separately priced r5),GUESS,MAP 3.4 (SOLCLOUD_16)
+2-round-linear-structure,6,yes,132.0744 (log2 units /1626; standalone) / +0.013 as leader patch,DERIVED,MAP 3.4; D15 sec8
+2-round-linear-structure,7,yes,~128 birthday-level (parent of FES; superseded),GUESS,MAP 3.4
+3-round-structure,3,no,rank<=2: no family through chi3 (obstruction theta3),DERIVED,MAP 3.5/3.7 (linstruct3)
+3-round-structure,4,no,n/a (fails already at round 3),DERIVED,MAP 3.5
+3-round-structure,5,no,"n/a; best-case saving <=0.18 bit, likely 0",DERIVED,MAP 3.5
+3-round-structure,6,no,n/a; <=0.18 bit if rank-2 realizable (it is not a family),DERIVED,MAP 3.5
+internal-differential,3,yes,<=2^105 (fewer rounds; not separately computed),GUESS,MAP 3.1 (<= r5 line)
+internal-differential,4,yes,<=2^105 (not separately computed),GUESS,MAP 3.1
+internal-differential,5,yes,2^105 perms (= ~105 log2 units /1355); SUB-BIRTHDAY,DERIVED,MAP 3.1 (ZHL2023 period-32)
+internal-differential,6,no,2^172 perms (169.5 best branch); 67 bits worse than r5,DERIVED,MAP 3.1/3.2
+internal-differential,7,no,n/a; worse than r6,DERIVED,MAP 3.1
+connector+trail,6,no,2^206 (2^197 early-abort); 2-rd connector short >=33 DF; floors ~2^132,DERIVED,MAP 3.3 (GLST/shake)
+connector+trail,5,open,not computed for SHA3-256 r5 (designed for 6-rd SHAKE),GUESS,MAP 3.3
+generic-birthday,3,yes,~128 units (2^128 r-round perms + overhead),DERIVED,RULES.md cost model
+generic-birthday,4,yes,~128 units,DERIVED,RULES.md
+generic-birthday,5,yes,~128 units /1355,DERIVED,RULES.md
+generic-birthday,6,yes,124.04565 board best (cheap-step birthday); 124.27 promoted,DERIVED,RULES.md board
+generic-birthday,7,yes,~128 units,DERIVED,RULES.md

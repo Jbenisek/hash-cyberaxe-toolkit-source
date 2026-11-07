@@ -1,0 +1,18 @@
+row-preserving maps that keep columns->columns, diagonals->diagonals: 4
+  map with row 0 columns -> [0, 1, 2, 3]: message orbits [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]] -> 16 free words
+      state orbits 16 -> a symmetric state has 16 free words
+  map with row 0 columns -> [1, 2, 3, 0]: message orbits [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]] -> 1 free words
+      state orbits 4 -> a symmetric state has 4 free words
+  map with row 0 columns -> [2, 3, 0, 1]: message orbits [[0, 2, 3, 4, 6, 7], [1, 5, 8, 9, 10, 11, 12, 13, 14, 15]] -> 2 free words
+      state orbits 8 -> a symmetric state has 8 free words
+  map with row 0 columns -> [3, 0, 1, 2]: message orbits [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]] -> 1 free words
+      state orbits 4 -> a symmetric state has 4 free words
+row-preserving maps that swap columns <-> diagonals: 4
+  rows [[0, 3, 2, 1], [1, 0, 3, 2], [2, 1, 0, 3], [3, 2, 1, 0]]: [('C0', 'D0'), ('C1', 'D3'), ('C2', 'D2'), ('C3', 'D1'), ('D0', 'C0'), ('D1', 'C3'), ('D2', 'C2'), ('D3', 'C1')]
+      keeps the feed-forward pairs (i, i+8)? False
+  rows [[1, 0, 3, 2], [2, 1, 0, 3], [3, 2, 1, 0], [0, 3, 2, 1]]: [('C0', 'D1'), ('C1', 'D0'), ('C2', 'D3'), ('C3', 'D2'), ('D0', 'C1'), ('D1', 'C0'), ('D2', 'C3'), ('D3', 'C2')]
+      keeps the feed-forward pairs (i, i+8)? False
+  rows [[2, 1, 0, 3], [3, 2, 1, 0], [0, 3, 2, 1], [1, 0, 3, 2]]: [('C0', 'D2'), ('C1', 'D1'), ('C2', 'D0'), ('C3', 'D3'), ('D0', 'C2'), ('D1', 'C1'), ('D2', 'C0'), ('D3', 'C3')]
+      keeps the feed-forward pairs (i, i+8)? False
+  rows [[3, 2, 1, 0], [0, 3, 2, 1], [1, 0, 3, 2], [2, 1, 0, 3]]: [('C0', 'D3'), ('C1', 'D2'), ('C2', 'D1'), ('C3', 'D0'), ('D0', 'C3'), ('D1', 'C2'), ('D2', 'C1'), ('D3', 'C0')]
+      keeps the feed-forward pairs (i, i+8)? False

@@ -1,0 +1,23 @@
+{
+ "object": "step R2D3.q3",
+ "question": "Q3: round 2, call D3 = G(3,4,9,14), quarter-step q3: a = a + b + y; d = ror8(d ^ a), y = m1 (a ZERO word: its add is not emitted) - degrees of freedom / score-optimal value (here: is the internal overflow mask needed?).",
+ "status": "SAMPLED",
+ "number": "Score-optimal value of the one free choice at this step: the internal mask. With it the step is 8 ops; without it 7 ops (tracer, 0 mismatches vs scalar on 200 inputs), a saving of 1 op = 0.00241 bit of time_log2 (all 3 internal masks: 592 ops, 0.00724 bit). The mask only protects against a lane sum reaching 2^36. Sampled on 53477376 random inputs with the mask left out: the unreduced a-chain at this step has mean 8.074 units (independent-uniform model 8.074), variance 1.84 (model 1.33); P(sum >= 12 units) = 1.31e-03, P(>= 13) = 4.18e-05, largest seen 14.38 units; the lane limit is 16. No overflow in the sample. The independent-uniform model understates the tail (it gives 2.9e-06 at 13), so it is not used. Extrapolating by the smallest observed per-unit tail ratio (5.4): P(>= 16) <= 2.6e-07 per evaluation (an extrapolation, not a proof). An overflow corrupts that lane and its neighbour, so a point is wrong; cost about 4p of success probability, at most 1.0e-06 for this site against the 1.5e-3 margin of the filed entry.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_steps.py; research/dig/incoming3/blake3-r3-U46/work/steps_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula); research/dig/incoming3/blake3-r3-U46/work/exp_tail.py; research/dig/incoming3/blake3-r3-U46/work/tail_out.json",
+ "lever": true,
+ "gain_bits": 0.00241,
+ "gain_basis": "T",
+ "labels": [
+  "E"
+ ],
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. LEVER CANDIDATE, small: dropping the mask is exact except with probability p per evaluation that the unreduced sum reaches 2^36; p is bounded here only by sampling plus a ratio extrapolation. Sampling: 51 chunks of 2^20 random inputs (5.3e7), one process, under 5 min. research/blake3_r3/levers_step_count.md called this idea a GUESS that it is false and did not test it; the sampled tail stays well under 16 units (max 14.9). Not filing-ready: needs a rigorous bound (exact chain distribution or importance sampling) and a ledger line for the added failure probability. Gain counts this site only; the three sites together are 0.0072 bit.",
+ "held_fixed": "same circuit except the mask at q3 of round 2 call 3.; all other masks (160 in rotations, 4 digest masks, the other two internal masks) kept",
+ "reopen_if": "an importance-sampled or exact distribution of this chain puts P(sum >= 16 units) below 1e-6 (then file the saving), or above 1e-3 (then close)",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|R2D3.q3|step|Q3"
+}

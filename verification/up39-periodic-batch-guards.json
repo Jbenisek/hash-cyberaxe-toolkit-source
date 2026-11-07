@@ -1,0 +1,1 @@
+{"passed":true,"temporary_site_only":true,"public_files_written":false,"payloads_checked":8,"baseline_checks_before_commit":1,"pending_flags_preserved":true,"refusal_controls":["unfinished or unretained baseline","wrong component scope","overlapping component routes"],"scope":"Batch ordering and exact route scope in a disposable tree; no actual admission."}

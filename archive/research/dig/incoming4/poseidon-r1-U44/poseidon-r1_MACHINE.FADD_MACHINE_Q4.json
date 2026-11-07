@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.FADD add/sub charge",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "alternative: merge add/sub into fused butterfly counts is the same 2 ops; cannot beat the 0.0756 bit bound",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Bound only. | universe cell poseidon-r1|MACHINE.FADD|MACHINE|Q4",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "a charging change"
+}

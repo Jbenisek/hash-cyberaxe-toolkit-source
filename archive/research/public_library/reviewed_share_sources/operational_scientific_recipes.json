@@ -1,0 +1,88 @@
+{
+  "title": "Scientific build and validation obligations preserved from operational wrappers",
+  "scope": "Independent curated summaries, not runnable remote-control scripts. No connection details, private paths or credentials.",
+  "status": "Source inspection only; no new compile, collision search or verifier execution.",
+  "records": [
+    {
+      "path": "research/poseidon/orchard/FINISH_r4r5.sh",
+      "source_sha256": "67b87523efde322e01d94d980eeb28defad74deef436833dc5cc03ef94eaff0c",
+      "referenced_program_basenames": [
+        "verify_collision.py",
+        "build_package.py",
+        "slotstage_pareto.sh",
+        "cycle.sh",
+        "w_finish.sh",
+        "collect.py",
+        "prefile_check.py",
+        "rulecheck.py"
+      ],
+      "scientific_preservation": [
+        "A measured run is accepted only when its memory report has exit equal to zero and failed false.",
+        "Collected collision data are independently checked by verify_collision.py before the package is built.",
+        "The script asserts that claimed mem_bytes is at least the measured peak_bytes of the counted run. It separately warns that development, probe and duplicate runs must also fit the declared peak; that latter obligation is not proved by the single assertion.",
+        "Preserve these conditions and local collector/verifier dependencies in a clean scientific account. Do not publish or execute the connection, process-management, staging or interactive approval wrapper."
+      ]
+    },
+    {
+      "path": "research/poseidon/orchard/exec_r6mt/build_cloud_r6.sh",
+      "source_sha256": "585e3a4eebc03b6a6b52cd2d4783cdf66ff009c4ddce82cea2857807bdad433a",
+      "referenced_program_basenames": [
+        "cycle.sh",
+        "attack.h",
+        "common.c",
+        "common.h",
+        "hgcd.c",
+        "hgcd.h",
+        "lean.c",
+        "line.c",
+        "nolibc.c",
+        "ntt.c",
+        "ntt_a3.h",
+        "ntt_kern.h",
+        "outbuf.h",
+        "pallas.c",
+        "pallas.h",
+        "pallas_consts.h",
+        "poly.c",
+        "single.c",
+        "split.c",
+        "par.c",
+        "par.h"
+      ],
+      "scientific_preservation": [
+        "The source list for the no-libc Poseidon executable: single.c, common.c, ntt.c, poly.c, lean.c, line.c, split.c, hgcd.c, pallas.c, par.c and nolibc.c, with their included headers.",
+        "Compiler configuration includes -O3, -march=native, -mcmodel=medium, -static, -nostdlib, -fno-stack-protector, -fno-pie, -no-pie and section garbage collection. Architecture-dependent flags require a stated build environment; these are historical flags, not a portable command promise.",
+        "The wrapper records source and binary hashes and executable size. Preserve those provenance steps without remote addresses, private paths or credential options."
+      ]
+    },
+    {
+      "path": "research/poseidon/orchard/exec_r5u/fin.sh",
+      "source_sha256": "f2440b59f1ec846ed8e469a44d1a3d1fedb28b1ea0ae7e6fd8cbb7a98d1cddb2",
+      "referenced_program_basenames": [
+        "collect.py",
+        "verify_collision.py",
+        "build_package.py"
+      ],
+      "scientific_preservation": [
+        "Preserve the collect.py to verify_collision.py to build_package.py dependency sequence as a local reproduction guide.",
+        "Retain binary hash/size and measured memory provenance; remove machine-specific fetching and output destinations."
+      ]
+    },
+    {
+      "path": "research/poseidon/orchard/exec_r5tt/fin.sh",
+      "source_sha256": "de8fc27801d75e0c0ccf8a2a1724a68d425ce29e4c601cc240c0faf4b35485d0",
+      "referenced_program_basenames": [
+        "collect.py",
+        "verify_collision.py",
+        "build_package.py",
+        "prefile_check.py",
+        "rulecheck.py"
+      ],
+      "scientific_preservation": [
+        "collect.py reads the completed run into collision data; verify_collision.py independently checks the run before build_package.py consumes it.",
+        "The wrapper also records executable hash/size and memory output. Its prefile/rule checking and staging are operational release steps, not the collision proof.",
+        "Keep these scientific Python sources and their local data dependencies separately reviewed; omit remote fetch configuration and automatic package-staging behavior."
+      ]
+    }
+  ]
+}

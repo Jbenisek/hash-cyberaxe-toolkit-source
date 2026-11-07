@@ -1,0 +1,23 @@
+{
+  "id": "D641-BLAKE3-R3-U8-N32-EQUIVALENCE-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 U=8 grouped search equivalence at n=32",
+  "question": "Does the U=8 grouped search agree with the per-batch U=1 search on a reduced exact n=32 instance?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Current b3r3s rho.py with CFG[32][U]=8: 24 deterministic starts, grouped U=8 equals U=1 in every result and counter comparison. Plan Q=72576, B=10368, L=256, tmax=1196, e2max=631; mismatch_count=0.",
+  "source": "our workflow: D641 isolated U=8 n=32 reduced-instance equivalence",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d641_u8_n32_equivalence.py; research/retest/blake3_r3/d641_u8_n32_equivalence.out; research/blake3_r3/b3r3s/pkg/blake3/experiments/rho.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0014,
+  "prior": 0.3,
+  "gain_basis": "D",
+  "held_fixed": "current b3r3s rho.py, n=32 reduced plan, U=8 grouped path versus U=1 reference, 24 deterministic equivalence seeds",
+  "notes": "Reduced-width functional validation only. It does not establish the n=256 mixed-DP proof, full implementation, organizer acceptance, package, stage, filing, or submission.",
+  "reopen_if": "A full-width U=8 implementation or a reduced-instance mismatch appears"
+}

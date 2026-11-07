@@ -1,0 +1,9 @@
+exact count over all 2^32 Y9: feasible for at least one of the 7 beta* outcomes: 134896128 = 2^-4.9927 of all Y9 (share 0.031408)
+  tau 285020a0 dg1 830f03c7: 14110208 = 2^-8.2498
+  tau 385020a0 dg1 830f0247: 56440832 = 2^-6.2498
+  tau 185020a0 dg1 830f0147: 56440832 = 2^-6.2498
+  tau 175020a0 dg1 830f01cf: 14110208 = 2^-8.2498
+  tau 685020a0 dg1 830f05c7: 27998208 = 2^-7.2612
+  tau 275020a0 dg1 830f034f: 14110208 = 2^-8.2498
+  tau 675020a0 dg1 830f054f: 27998208 = 2^-7.2612
+gain of skipping infeasible outer steps in the cube program (rate per kept outer step / average): 31.839 = 2^4.9927

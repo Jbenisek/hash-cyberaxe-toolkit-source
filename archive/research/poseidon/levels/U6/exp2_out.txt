@@ -1,0 +1,35 @@
+PLANTED relation test (3,-7,2 + -1): found [3, 0, 0, 0, 0, -7, 0, 0, 0, 2, 0, 0, -1] norm 7.937253933193772
+--- calibration: random elements of F_p
+random k=6: k=6 shortest relation norm 2^41.74  GH(expected) 2^41.58  ratio 1.12  max|coef| 2^41.1  (0.0s)
+random k=10: k=10 shortest relation norm 2^25.39  GH(expected) 2^25.01  ratio 1.29  max|coef| 2^25.0  (0.0s)
+random k=20: k=20 shortest relation norm 2^12.93  GH(expected) 2^12.81  ratio 1.08  max|coef| 2^12.0  (0.0s)
+random k=30: k=30 shortest relation norm 2^8.95  GH(expected) 2^8.87  ratio 1.05  max|coef| 2^7.6  (0.1s)
+random k=40: k=40 shortest relation norm 2^7.24  GH(expected) 2^6.96  ratio 1.21  max|coef| 2^5.7  (0.1s)
+--- real: per-round triple + 1
+R0 lanes+1: k=4 shortest relation norm 2^63.04  GH(expected) 2^62.45  ratio 1.50  max|coef| 2^62.8  (0.0s)
+R1 lanes+1: k=4 shortest relation norm 2^63.18  GH(expected) 2^62.45  ratio 1.66  max|coef| 2^62.4  (0.0s)
+R2 lanes+1: k=4 shortest relation norm 2^63.00  GH(expected) 2^62.45  ratio 1.46  max|coef| 2^62.4  (0.0s)
+R3 lanes+1: k=4 shortest relation norm 2^63.04  GH(expected) 2^62.45  ratio 1.50  max|coef| 2^62.3  (0.0s)
+R4 lanes+1: k=4 shortest relation norm 2^63.29  GH(expected) 2^62.45  ratio 1.79  max|coef| 2^62.9  (0.0s)
+R5 lanes+1: k=4 shortest relation norm 2^62.79  GH(expected) 2^62.45  ratio 1.27  max|coef| 2^62.4  (0.0s)
+R60 lanes+1: k=4 shortest relation norm 2^62.63  GH(expected) 2^62.45  ratio 1.13  max|coef| 2^62.6  (0.0s)
+R61 lanes+1: k=4 shortest relation norm 2^63.25  GH(expected) 2^62.45  ratio 1.74  max|coef| 2^63.1  (0.0s)
+R62 lanes+1: k=4 shortest relation norm 2^61.90  GH(expected) 2^62.45  ratio 0.68  max|coef| 2^61.5  (0.0s)
+R63 lanes+1: k=4 shortest relation norm 2^62.97  GH(expected) 2^62.45  ratio 1.44  max|coef| 2^62.6  (0.0s)
+--- real: 10 used rounds x 3 = 30 constants
+used30: k=30 shortest relation norm 2^8.98  GH(expected) 2^8.87  ratio 1.08  max|coef| 2^7.6  (0.0s)
+used30+1+2^65: k=32 shortest relation norm 2^8.71  GH(expected) 2^8.39  ratio 1.25  max|coef| 2^7.4  (0.0s)
+MDS9: k=9 shortest relation norm 2^27.99  GH(expected) 2^27.76  ratio 1.17  max|coef| 2^27.0  (0.0s)
+MDS9+1: k=10 shortest relation norm 2^25.53  GH(expected) 2^25.01  ratio 1.43  max|coef| 2^25.0  (0.0s)
+used30+MDS9+1+2^65 (41): k=41 shortest relation norm 2^7.10  GH(expected) 2^6.83  ratio 1.21  max|coef| 2^5.6  (0.1s)
+--- all 192 constants (k=192 too big) -> 4 blocks of 48 via 16-round windows
+rounds 0..15: k=48 shortest relation norm 2^6.61  GH(expected) 2^6.04  ratio 1.49  max|coef| 2^5.1  (0.1s)
+rounds 16..31: k=48 shortest relation norm 2^6.77  GH(expected) 2^6.04  ratio 1.67  max|coef| 2^5.0  (0.2s)
+rounds 32..47: k=48 shortest relation norm 2^6.49  GH(expected) 2^6.04  ratio 1.37  max|coef| 2^4.8  (0.1s)
+rounds 48..63: k=48 shortest relation norm 2^6.44  GH(expected) 2^6.04  ratio 1.32  max|coef| 2^4.8  (0.2s)
+--- lane columns across used rounds
+lane 0 used rounds: k=11 shortest relation norm 2^23.27  GH(expected) 2^22.77  ratio 1.41  max|coef| 2^22.3  (0.0s)
+lane 1 used rounds: k=11 shortest relation norm 2^22.99  GH(expected) 2^22.77  ratio 1.17  max|coef| 2^22.3  (0.0s)
+lane 2 used rounds: k=11 shortest relation norm 2^22.84  GH(expected) 2^22.77  ratio 1.04  max|coef| 2^22.2  (0.0s)
+--- c0 lanes with 2^65
+R0 lanes + 2^65 + 1: k=5 shortest relation norm 2^49.95  GH(expected) 2^49.91  ratio 1.03  max|coef| 2^49.2  (0.0s)

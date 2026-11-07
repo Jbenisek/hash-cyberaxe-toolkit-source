@@ -1,0 +1,65 @@
+=== 1. r=2 is r=1 with R5 inserted ===
+OBSERVED 300 random inputs: tail(state after R4) lane0 == hash_reduced r=1: failures 0 ; tail(R5(state after R4)) lane0 == hash_reduced r=2: failures 0
+OBSERVED full 3-lane state: G2 = Psi o R5 o Psi^-1 o G1 (Psi = R60..R63, G1 = r=1 state): failures 0 of 600 checks
+OBSERVED schedule(1) = [0, 1, 2, 3, 4, 60, 61, 62, 63]  schedule(2) = [0, 1, 2, 3, 4, 5, 60, 61, 62, 63]  prefix equal: True  suffix equal: True
+OBSERVED hash r=1 != hash r=2 at a random input: True
+
+=== 2. degree tracker (top-form evaluation along nk=a+u t, rho=b+v t, exact) ===
+r=1 cancellations: []
+  r=1 after R0 : lane degrees [5, 5, 5]  = 5^[1.0, 1.0, 1.0]
+  r=1 after R1 : lane degrees [25, 25, 25]  = 5^[2.0, 2.0, 2.0]
+  r=1 after R2 : lane degrees [125, 125, 125]  = 5^[3.0, 3.0, 3.0]
+  r=1 after R3 : lane degrees [625, 625, 625]  = 5^[4.0, 4.0, 4.0]
+  r=1 after R4 : lane degrees [3125, 3125, 3125]  = 5^[5.0, 5.0, 5.0]
+  r=1 after R60: lane degrees [15625, 15625, 15625]  = 5^[6.0, 6.0, 6.0]
+  r=1 after R61: lane degrees [78125, 78125, 78125]  = 5^[7.0, 7.0, 7.0]
+  r=1 after R62: lane degrees [390625, 390625, 390625]  = 5^[8.0, 8.0, 8.0]
+  r=1 after R63: lane degrees [1953125, 1953125, 1953125]  = 5^[9.0, 9.0, 9.0]
+r=2 cancellations: []
+  r=2 after R0 : lane degrees [5, 5, 5]  = 5^[1.0, 1.0, 1.0]
+  r=2 after R1 : lane degrees [25, 25, 25]  = 5^[2.0, 2.0, 2.0]
+  r=2 after R2 : lane degrees [125, 125, 125]  = 5^[3.0, 3.0, 3.0]
+  r=2 after R3 : lane degrees [625, 625, 625]  = 5^[4.0, 4.0, 4.0]
+  r=2 after R4 : lane degrees [3125, 3125, 3125]  = 5^[5.0, 5.0, 5.0]
+  r=2 after R5 : lane degrees [15625, 15625, 15625]  = 5^[6.0, 6.0, 6.0]
+  r=2 after R60: lane degrees [78125, 78125, 78125]  = 5^[7.0, 7.0, 7.0]
+  r=2 after R61: lane degrees [390625, 390625, 390625]  = 5^[8.0, 8.0, 8.0]
+  r=2 after R62: lane degrees [1953125, 1953125, 1953125]  = 5^[9.0, 9.0, 9.0]
+  r=2 after R63: lane degrees [9765625, 9765625, 9765625]  = 5^[10.0, 10.0, 10.0]
+OBSERVED r=1 final lane0 degree over 32 directions (incl. both axes): {1953125}; directions with a cancellation: 0; 5^9 = 1953125
+OBSERVED r=2 final lane0 degree over 32 directions (incl. both axes): {9765625}; directions with a cancellation: 0; 5^10 = 9765625
+ratio lane-0 degree r=2 / r=1 at tail positions R60,R61,R62,R63: [5, 5, 5, 5] ; R5 vs R4 (r=2): 5 ; R4 r=1 vs r=2 identical: True ; R0..R4 identical: True
+OBSERVED drop-direction lane 0, r=1: degrees (lane0) after R0..R4 [None, 25, 125, 625, 3125] | final 1953125 | cancel [(0, 0)]
+OBSERVED drop-direction lane 0, r=2: degrees (lane0) after R0..R4 [None, 25, 125, 625, 3125] | final 9765625 | cancel [(0, 0)]
+OBSERVED drop-direction lane 1, r=1: degrees (lane0) after R0..R4 [5, 25, 125, 625, 3125] | final 1953125 | cancel [(0, 1)]
+OBSERVED drop-direction lane 1, r=2: degrees (lane0) after R0..R4 [5, 25, 125, 625, 3125] | final 9765625 | cancel [(0, 1)]
+OBSERVED drop-direction lane 2, r=1: degrees (lane0) after R0..R4 [5, 25, 125, 625, 3125] | final 1953125 | cancel [(0, 2)]
+OBSERVED drop-direction lane 2, r=2: degrees (lane0) after R0..R4 [5, 25, 125, 625, 3125] | final 9765625 | cancel [(0, 2)]
+
+=== 3. trail vectors on the real field ===
+trail vector d = (0, M02, -M01) = (0, 0x7c045d5f5e9e5a6d803952bbb364fdfa0a3b71a5fb1573519d1cf25d8e8345d, 0xe6e99d71a75a544d6c0f0f2779386abfe394e7f49d9a1e50a62db56166954a3)
+(M d)_0 = 0x0  (M^2 d)_0 = 0x3141e9b5462006d0906f3d691c47ce59002af987df7adb19c151022db9175747
+observability det[e0; e0 M; e0 M^2] = 0x1875f9a272a44c8bbdb211e0729fc02ce6cc5f7133f30688f4237a303c9c8bb5
+OBSERVED 200 pairs equal in lane0 entering R4 with random d1,d2: output diff == M(0,d1,d2): failures 0
+OBSERVED 200 pairs along trail line t*d entering R4: lane0 equal after R4.M: failures 0 ; diff after R5.M == M^2 (t d) in 200 of 200; lane0 of that diff is nonzero: True
+OBSERVED r=1 diff entering R60 lies in M*{d0=0} (2-dim); r=2 diff entering R60 lies on the line spanned by M^2 d = ['0x3141e9b5462006d0906f3d691c47ce59002af987df7adb19c151022db9175747', '0x1978ec4716cec311ad9acbc6bba0b7615ea4860a9a776948c171e57fb91d120e', '0x167d4c4f956a21d64338f74067d8926fd9f9cbba50d43feefa2efa1ce737389f']
+derivation check: a pair entering R4 with d0=0 stays lane-0-equal after k partial rounds iff (M^j d)_0=0 for j=0..k-1: dims 3-k (k=1: 2, k=2: 1, k=3: det!=0 -> 0)
+
+=== 4. ladder arrows ===
+OBSERVED arrow init->P0: (M^-1 s)_2 == K on 200 random inputs, failures 0
+OBSERVED (A,B)-line, state after R0: Delta^2 = [0, 0, 0] ; Delta^1 nonzero per lane [True, True, True] -> exact degree in t = 1  (0.0s)
+OBSERVED (A,B)-line, state after R0-R1: Delta^6 = [0, 0, 0] ; Delta^5 nonzero per lane [True, True, True] -> exact degree in t = 5  (0.0s)
+OBSERVED (A,B)-line, state after R0-R2: Delta^26 = [0, 0, 0] ; Delta^25 nonzero per lane [True, True, True] -> exact degree in t = 25  (0.0s)
+OBSERVED (A,B)-line, state after R0-R3: Delta^126 = [0, 0, 0] ; Delta^125 nonzero per lane [True, True, True] -> exact degree in t = 125  (0.1s)
+OBSERVED (A,B)-line, state after R0-R4: Delta^626 = [0, 0, 0] ; Delta^625 nonzero per lane [True, True, True] -> exact degree in t = 625  (0.6s)
+OBSERVED (A,B)-line, state after R0-R4,R60 (r=1): Delta^3126 = [0, 0, 0] ; Delta^3125 nonzero per lane [True, True, True] -> exact degree in t = 3125  (2.2s)
+OBSERVED (A,B)-line, state after R0-R5 (r=2): Delta^3126 = [0, 0, 0] ; Delta^3125 nonzero per lane [True, True, True] -> exact degree in t = 3125  (1.8s)
+OBSERVED R4 = M(w, s1+c41, s2+c42), w=(s0+c40)^5, 1000 random states, failures 0
+OBSERVED y = sum_j M0j T_j, T = S(state after R62.M + c63), r=1, 1000 inputs, failures 0
+
+=== 5. inversion cost: 5th roots ===
+OBSERVED forward hash r=1 89 us; one 5th root pow(x,d,p) 110 us; d: 254 bits, popcount 125 -> 253 squarings + 124 mults (plain square-and-multiply)
+OBSERVED r=1: full-state inverse returns input 20/20; 5th roots per round {0: 3, 1: 3, 2: 3, 3: 3, 4: 1, 60: 3, 61: 3, 62: 3, 63: 3}; total 25; back to the state after R0.M 22; to (A,B) +0, to (nk,rho) +2 = 24
+OBSERVED r=1: from output y with T0,T1 free: 22 5th roots to reach the state after R0.M; forward check lane0==y: True; plane residual (M^-1 s)_2-K nonzero (random T0,T1 is not a preimage)
+OBSERVED r=2: full-state inverse returns input 20/20; 5th roots per round {0: 3, 1: 3, 2: 3, 3: 3, 4: 1, 5: 1, 60: 3, 61: 3, 62: 3, 63: 3}; total 26; back to the state after R0.M 23; to (A,B) +0, to (nk,rho) +2 = 25
+OBSERVED r=2: from output y with T0,T1 free: 23 5th roots to reach the state after R0.M; forward check lane0==y: True; plane residual (M^-1 s)_2-K nonzero (random T0,T1 is not a preimage)

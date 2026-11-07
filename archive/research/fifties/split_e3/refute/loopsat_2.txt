@@ -1,0 +1,3 @@
+instance  1853: GPU roots 1, kissat UNKNOWN(cap) in 150.00 s (cnf 2117 vars, 10161 clauses)
+instance  3001: GPU roots 1, kissat UNKNOWN(cap) in 150.00 s (cnf 2117 vars, 10161 clauses)
+instance  2781: GPU roots 1, kissat UNKNOWN(cap) in 150.00 s (cnf 2117 vars, 10161 clauses)

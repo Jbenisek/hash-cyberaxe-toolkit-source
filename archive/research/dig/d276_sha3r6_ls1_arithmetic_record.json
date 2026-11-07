@@ -1,0 +1,21 @@
+{
+  "id": "D276-SHA3-R6-LS1-ARITHMETIC-RECHECK",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "independent LS1 integer ledger recheck",
+  "question": "Does an independent integer recheck reproduce the owner LS1 N, certificate exponent, and memory sum?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Independent recheck reproduces N=39582258537115801702010357171060089177438, upward certificate e=12419487/100000 (time_log2=124.19487), and memory=1,042,630 B <= 2^20 exactly. This confirms arithmetic only; kernel/driver/success-law/organizer gates remain open.",
+  "source": "our workflow: D276 independent LS1 arithmetic recheck",
+  "evidence": "research/sol_answer_D276_sha3r6_ls1_arithmetic_recheck.md; research/retest/sha3r6_ls1_certificate_recheck.py; research/retest/sha3r6_ls1_certificate_recheck.json; research/sha3r6_gap/ls1/cert_out.txt",
+  "date": "2026-10-13",
+  "own_test": true,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Independent exact arithmetic only; no generated source, driver, package, filing, staging, submission, or heavy process change.",
+  "held_fixed": "owner LS1 ledger formulas, BSTEP, TB, Lc, replay/rare/pre terms, memory parts",
+  "reopen_if": "A semantic or organizer discrepancy changes any ledger input"
+}

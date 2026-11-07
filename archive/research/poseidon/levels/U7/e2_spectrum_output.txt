@@ -1,0 +1,39 @@
+== E2a real field Pallas, sampling (random a, random b): independent root count vs closed form ==
+samples 1500 counts {0: 937, 2: 385, 4: 178} mismatch vs closed form: 0
+fractions: {0: 0.6247, 2: 0.2567, 4: 0.1187}   predicted 0:5/8=.625 2:1/4=.25 4:1/8=.125 (3: 1/p)
+== E2b real field, the special b ==
+b=2h^5 = a^5/16 -> solutions 3  closed form 3
+b=-8h^5 (D=0) -> solutions 2  closed form 2
+b=0 -> solutions 0  closed form 0
+b=a^5 (x=0 is a root) -> solutions 4  closed form 4
+== E2c homogeneity: spectrum for a depends on a only via scaling b -> a^5 b (check 200 pairs) ==
+agree 200 /200
+== E2d toys exhaustive: spectrum {#b with k solutions}, a=1, primes with gcd(5,q-1)=1; formula fits by q mod 8 ==
+q=   13 q%8=5  {0: 7, 1: 1, 2: 4, 3: 0, 4: 1}
+q=   17 q%8=1  {0: 10, 2: 5, 3: 1, 4: 1}
+q=   19 q%8=3  {0: 12, 2: 4, 3: 1, 4: 2}
+q=   23 q%8=7  {0: 14, 1: 1, 2: 5, 3: 0, 4: 3}
+q=   29 q%8=5  {0: 17, 1: 1, 2: 8, 3: 0, 4: 3}
+q=   37 q%8=5  {0: 22, 1: 1, 2: 10, 3: 0, 4: 4}
+q=   43 q%8=3  {0: 27, 2: 10, 3: 1, 4: 5}
+q=   47 q%8=7  {0: 29, 1: 1, 2: 11, 3: 0, 4: 6}
+q=   53 q%8=5  {0: 32, 1: 1, 2: 14, 3: 0, 4: 6}
+q=   59 q%8=3  {0: 37, 2: 14, 3: 1, 4: 7}
+q=   67 q%8=3  {0: 42, 2: 16, 3: 1, 4: 8}
+q=   73 q%8=1  {0: 45, 2: 19, 3: 1, 4: 8}
+q= 3463 q%8=7  {0: 2164, 1: 1, 2: 865, 3: 0, 4: 433}
+q= 3467 q%8=3  {0: 2167, 2: 866, 3: 1, 4: 433}
+q= 3469 q%8=5  {0: 2167, 1: 1, 2: 868, 3: 0, 4: 433}
+q= 3499 q%8=3  {0: 2187, 2: 874, 3: 1, 4: 437}
+-- fits n_k = (alpha*q + beta)/8, per class q mod 8, fitted on the two smallest, checked on all
+class q=1 mod 8 (91 primes):  n0=(5 q + -5)/8 fits=True; n1=(0 q + 0)/8 fits=True; n2=(2 q + 6)/8 fits=True; n3=(0 q + 8)/8 fits=True; n4=(1 q + -9)/8 fits=True
+class q=3 mod 8 (93 primes):  n0=(5 q + 1)/8 fits=True; n1=(0 q + 0)/8 fits=True; n2=(2 q + -6)/8 fits=True; n3=(0 q + 8)/8 fits=True; n4=(1 q + -3)/8 fits=True
+class q=5 mod 8 (91 primes):  n0=(5 q + -9)/8 fits=True; n1=(0 q + 8)/8 fits=True; n2=(2 q + 6)/8 fits=True; n3=(0 q + 0)/8 fits=True; n4=(1 q + -5)/8 fits=True
+class q=7 mod 8 (90 primes):  n0=(5 q + -3)/8 fits=True; n1=(0 q + 8)/8 fits=True; n2=(2 q + -6)/8 fits=True; n3=(0 q + 0)/8 fits=True; n4=(1 q + 1)/8 fits=True
+-- closed form (u-parametrisation) vs brute force on toys, all b, a random
+checked 18796 (a,b) pairs, mismatches 0
+== E2e prediction for Pallas (p = 1 mod 8): counts per a, as exact numbers ==
+n4 = (p-9)/8 = 3618502788666131106986593281521497120420382060242695089494334595543745953791
+n2 = (p+3)/4 = 7237005577332262213973186563042994240840764120485390178988669191087491907585
+n3 = 1
+n0 = 5(p-1)/8 = 18092513943330655534932966407607485602101910301213475447471672977718729768960   check 5(p-1)/8: True

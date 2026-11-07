@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 121674	    776	   5464	 127914	  1f3aa	exec_attack

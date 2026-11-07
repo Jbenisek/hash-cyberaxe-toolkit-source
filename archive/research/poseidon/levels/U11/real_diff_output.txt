@@ -1,0 +1,60 @@
+## 1. S-box and C preserve the zero pattern of a difference (PROVED); M obeys wt(d)+wt(Md)>=4
+  support (1, 2), (Md)_0=0: d_1=1, d_2=0x18d388fcdf0d3abc803317af3c0546aba848569617d2fbdc44fc83abad66883e; zero lanes of Md = [0]
+  support (1, 2), (Md)_1=0: d_1=1, d_2=0x173c0b9a7197cf66d4c69726ac68e35aeb45c6092505b8e0dae567eb3525828f; zero lanes of Md = [1]
+  support (1, 2), (Md)_2=0: d_1=1, d_2=0x309c1f883db9652d42291f641db036664f68545bd8931e2362854eb4629d45e8; zero lanes of Md = [2]
+  support (0, 2), (Md)_0=0: d_0=1, d_2=0x1d6e06a694a05c03bdc359ab1313d9e87b60db67497500ebdfdda443e932cfba; zero lanes of Md = [0]
+  support (0, 2), (Md)_1=0: d_0=1, d_2=0x31afbf3633b0e4a3e262ac20352c7b85762743c19fba45c5b94fe1739ba2fad0; zero lanes of Md = [1]
+  support (0, 2), (Md)_2=0: d_0=1, d_2=0x2c6575b3f18a5618aaba29b410528acc621a5bf1a96640ad780c49fed5e57c9c; zero lanes of Md = [2]
+  support (0, 1), (Md)_0=0: d_0=1, d_1=0x2a898463346e8634eece49c1336d62a17b5f98dfb28760892b07bd9be72ddd23; zero lanes of Md = [0]
+  support (0, 1), (Md)_1=0: d_0=1, d_1=0x18184c2a30e96f0695f03e5d88c9acc955c54d6d11fa35411764ec6ff00d147; zero lanes of Md = [1]
+  support (0, 1), (Md)_2=0: d_0=1, d_1=0x344aea5040e34d423295c339ecd8fcf23ef801285055d5ff41bf44595253fdc5; zero lanes of Md = [2]
+  Md = e_0: nonzero lanes of d = [0, 1, 2] (M^-1 has no zero entry)
+  Md = e_1: nonzero lanes of d = [0, 1, 2] (M^-1 has no zero entry)
+  Md = e_2: nonzero lanes of d = [0, 1, 2] (M^-1 has no zero entry)
+r=1 300 random input pairs, weight histogram of the state difference per level: {'init': {2: 300}, 'R0': {3: 300}, 'R1': {3: 300}, 'R2': {3: 300}, 'R3': {3: 300}, 'R4': {3: 300}, 'R60': {3: 300}, 'R61': {3: 300}, 'R62': {3: 300}, 'R63': {3: 300}}
+r=2 300 random input pairs, weight histogram of the state difference per level: {'init': {2: 300}, 'R0': {3: 300}, 'R1': {3: 300}, 'R2': {3: 300}, 'R3': {3: 300}, 'R4': {3: 300}, 'R5': {3: 300}, 'R60': {3: 300}, 'R61': {3: 300}, 'R62': {3: 300}, 'R63': {3: 300}}
+r=1 pair differing only in nk: weights per level: [('init', 1), ('R0', 3), ('R1', 3), ('R2', 3), ('R3', 3), ('R4', 3), ('R60', 3), ('R61', 3), ('R62', 3), ('R63', 3)]
+r=1 pair differing only in rho: weights per level: [('init', 1), ('R0', 3), ('R1', 3), ('R2', 3), ('R3', 3), ('R4', 3), ('R60', 3), ('R61', 3), ('R62', 3), ('R63', 3)]
+
+## 2. line degrees: Phi(s + t d) as polynomials in t, from the state entering R4.C (after R3.M)
+r=1 generic d (all lanes): lane degrees in t by round: [('R4', [5, 5, 5]), ('R60', [25, 25, 25]), ('R61', [125, 125, 125]), ('R62', [625, 625, 625]), ('R63', [3125, 3125, 3125])]
+r=1 d0=0 generic: lane degrees in t by round: [('R4', [1, 1, 1]), ('R60', [5, 5, 5]), ('R61', [25, 25, 25]), ('R62', [125, 125, 125]), ('R63', [625, 625, 625])]
+r=1 d0=0 on trail (Md)_0=0: lane degrees in t by round: [('R4', [0, 1, 1]), ('R60', [5, 5, 5]), ('R61', [25, 25, 25]), ('R62', [125, 125, 125]), ('R63', [625, 625, 625])]
+r=2 generic d (all lanes): lane degrees in t by round: [('R4', [5, 5, 5]), ('R5', [25, 25, 25]), ('R60', [125, 125, 125]), ('R61', [625, 625, 625]), ('R62', [3125, 3125, 3125]), ('R63', [15625, 15625, 15625])]
+r=2 d0=0 generic: lane degrees in t by round: [('R4', [1, 1, 1]), ('R5', [5, 5, 5]), ('R60', [25, 25, 25]), ('R61', [125, 125, 125]), ('R62', [625, 625, 625]), ('R63', [3125, 3125, 3125])]
+r=2 d0=0 on trail (Md)_0=0: lane degrees in t by round: [('R4', [0, 1, 1]), ('R5', [1, 1, 1]), ('R60', [5, 5, 5]), ('R61', [25, 25, 25]), ('R62', [125, 125, 125]), ('R63', [625, 625, 625])]
+
+## 3. a real pair with equal lane 0 after R3.M (found by root finding) followed through the tail
+r=1: pair #1 = (0x2410dcac673e.., 0x3fdc7a11fc8a..)  #2 = (0x13c99be3545b.., 0x33c0400f63cf..)
+    init: zero lanes of difference [2]
+      R0: zero lanes of difference []
+      R1: zero lanes of difference []
+      R2: zero lanes of difference []
+      R3: zero lanes of difference [0]
+      R4: zero lanes of difference []
+     R60: zero lanes of difference []
+     R61: zero lanes of difference []
+     R62: zero lanes of difference []
+     R63: zero lanes of difference []
+   line s3 + t*(t3-s3), lane degrees: [('R4', [1, 1, 1]), ('R60', [5, 5, 5]), ('R61', [25, 25, 25]), ('R62', [125, 125, 125]), ('R63', [625, 625, 625])]
+   final lane0 differs: True
+r=2: pair #1 = (0x2410dcac673e.., 0x3fdc7a11fc8a..)  #2 = (0x13c99be3545b.., 0x33c0400f63cf..)
+    init: zero lanes of difference [2]
+      R0: zero lanes of difference []
+      R1: zero lanes of difference []
+      R2: zero lanes of difference []
+      R3: zero lanes of difference [0]
+      R4: zero lanes of difference []
+      R5: zero lanes of difference []
+     R60: zero lanes of difference []
+     R61: zero lanes of difference []
+     R62: zero lanes of difference []
+     R63: zero lanes of difference []
+   line s3 + t*(t3-s3), lane degrees: [('R4', [1, 1, 1]), ('R5', [5, 5, 5]), ('R60', [25, 25, 25]), ('R61', [125, 125, 125]), ('R62', [625, 625, 625]), ('R63', [3125, 3125, 3125])]
+   final lane0 differs: True
+
+## 4. structural reductions, 200 random inputs each
+X2 (start from M*(A,B,K), skip R0) mismatches: 0
+X7 (only row 0 of M in R63) mismatches: 0
+X5 (lane 1,2 constants of R4 carried into R60) mismatches: 0
+effective R60 constants for r=1: ['0x2b6546a276988b200287bdc6e5eb62cca85c9b200e5e53ab30481739aac76811', '0xa57eba61a1e654396f0dc000b4c8b39876f172ffd961a43a85bfd6d8ce968f9', '0x9659017378a38081689ef91f63e8d504fe259cd7f4629b17e308ffb2d360161']

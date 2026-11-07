@@ -1,0 +1,22 @@
+{
+  "id": "D783-SHA256-R38-STACK-B-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "D250 exact rows-22..37 versus cell event",
+  "question": "For the same-seed FILED prefix, what is the exact-event to rows-22..37-cell gain?",
+  "labels": ["C", "S", "E"],
+  "status": "SAMPLED",
+  "number": "32 paired seeds: mean gain +1.3645416193 bits, sd 0.0189984559, preregistered one-sided 99% Student lower bound +1.3563039291 bits; pooled exact/cell counts 337767/131185, log2 ratio +1.364425615; all diagnostics zero.",
+  "source": "our workflow: D250 r38 STACK preregistered paired run",
+  "own_test": true,
+  "evidence": "research/prereg_D250_r38.md; research/retest/r38_stack_D250/run.sh; research/retest/r38_stack_D250/SUMMARY.md; research/sol_answer_D783_r38_stack_transfer.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 1.3563039291,
+  "gain_basis": "q3",
+  "peak_mem": "187884 KiB = 192393216 B = 2^27.51948269 B, representative seed-7133 maximum RSS audit",
+  "held_fixed": "chi38.txt; rows 22..37; event out; np=8192; mt=32768; 2^28 proposals per seed; seeds 7101..7132; same seed paired FILED cell and exact counts",
+  "notes": "Finite paired sampling under the chi38 law. This is a local exact/cell ratio and not a proof of global rows-22..37 independence or transfer to the shipped package. No package/stage/filing/submission.",
+  "reopen_if": "Independent valid-prefix transfer or organizer replay changes the exact/cell ratio or its charge."
+}

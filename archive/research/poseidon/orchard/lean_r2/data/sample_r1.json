@@ -1,0 +1,19 @@
+{
+ "by_j": {
+  "0": [
+   9,
+   24
+  ],
+  "1": [
+   9,
+   23
+  ],
+  "2": [
+   11,
+   23
+  ]
+ },
+ "desc": "Samples: 5 executions of this build (one centre each, seeds in the logs, line j given by the seed; only the first centre of an execution is counted), and 65 executions of the first build of the program (same arithmetic, degree cap 8, larger budgets than ever reached). Every counted success was verified by a big-integer reference of the hash and by the organizer's hash implementation.",
+ "n_own": 5,
+ "n_extra": 0
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D561-SHA3-R6-S6G-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6g prefile audit",
+  "question": "What is creditable for pkgS6g without a public request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6g claims time_log2=127.61957. Prefile SOME FAIL only for rho.py not known-good. Exact N=425046645596102976677544529502402955123461, log2(N/1626)=127.61956152. No request or new campaign; no score/premise credit.",
+  "source": "our workflow: D561c read-only pkgS6g prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D561_s6g_prefile.md; research/tools/build_pkg/scratch/pkgS6g/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6g/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No public request; no package/stage/filing/submission.",
+  "held_fixed": "pkgS6g package bytes as found; no writes",
+  "reopen_if": "registry repair or public request"
+}

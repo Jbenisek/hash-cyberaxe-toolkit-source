@@ -1,0 +1,23 @@
+{
+  "id": "D375-POSR2-ADDRESS-CONTROL-CORRECTION",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.ADDR correction to the r2 LD/ST audit",
+  "question": "Does the r2 LD+ST TYPES subtotal equal the address-control subtotal?",
+  "labels": ["N", "K"],
+  "status": "OPEN",
+  "number": "No. r2 common.h LD/ST macros increment only X.ld/X.st, not X.ctl. The exact 24053185534 access count cannot be subtracted from ctl. Address terms are spread across CTL(G), twiddle CTL(1/2/4), pass/base/index and radix-3 sites; C1915 remains open. D373's 6291456 direct strided subcount is still valid.",
+  "source": "our corrective source audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D375_poseidon_r2_address_control_correction.md; research/sol_answer_D374_poseidon_r2_address_control_exact.md; research/poseidon/orchard/lean_r2/common.h; research/poseidon/orchard/lean_r2/ntt.c; research/poseidon/orchard/lean_r2/ntt_kern.h; research/poseidon/orchard/lean_r2/pkg_stage_r2/proof.md; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "S",
+  "notes": "Retracts D374's invalid LD+ST address-control inference and supersedes C1915 with the corrected OPEN status. No score or package credit.",
+  "held_fixed": "lean_r2 source macros and pkg_stage_r2 TYPES line",
+  "reopen_if": "a dedicated address counter or complete audited CTL decomposition is produced",
+  "supersedes": ["D374-POSR2-ADDRESS-CONTROL-EXACT", "C1915"],
+  "peak_mem": "UNKNOWN"
+}

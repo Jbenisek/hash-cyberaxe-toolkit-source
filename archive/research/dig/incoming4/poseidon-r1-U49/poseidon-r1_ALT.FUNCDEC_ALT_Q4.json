@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FUNCDEC functional decomposition of the odd part g",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "NEW GROUND: inner degree 2 on the odd part g_c (deg 39,062 = 2 x 19,531, 19,531 prime so only 2 or 19,531): after the forced shift S -> S - a/2, 19,530 of the 19,531 odd coefficients are nonzero for j = 0, 1, 2 (planted control: 0; perturbed control: 50)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc4.py research/dig/incoming4/_scan_poseidon/calc4.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc4.py: circuit() of decomp.py, Taylor shift at a random centre, odd part, symmetry test with controls. Outer degree 2 (inner 19,531) is not tested. | universe cell poseidon-r1|ALT.FUNCDEC|ALT|Q4",
+ "held_fixed": "r=1, one random centre per line j",
+ "reopen_if": "inner degree 19,531 (outer 2) test, or a different centre family"
+}

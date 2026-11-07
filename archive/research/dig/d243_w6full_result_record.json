@@ -1,0 +1,21 @@
+{
+  "id": "D243-S38-W6FULL-RESULT",
+  "hash": "sha256-38",
+  "row_i": 5,
+  "row_j": 15,
+  "object": "Zone D 38 full 2^32 W6 run",
+  "question": "What is the exact full-domain W6 count for the r38 rows-5-15 family?",
+  "labels": ["D", "X", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact W6:all: enumerated=2^32, members=2^32, prefix=2^32, rows5..15 cells=2^32, final state-equal=0; 226.7 s with 8 threads",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-w6full-spec.md; research/tools/traillab/src/smc.c; research/tools/traillab/chi/chi38.txt",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Complete published-base W6 domain under the existing exact state-event command. Negative result; no q3/score credit. Supersedes the OPEN residual only; row-4 transfer, rows5-6 trees, and row-14 alternatives remain separate.",
+  "held_fixed": "Published chi38 base/prefix, W6 varied over all 2^32 values, rows 5..15 event=state, W7/W8 and E-driven coordinates as specified by chi38",
+  "topic": "sha256-38 zoneD38 residual W6 full",
+  "supersedes": ["D243-S38-W6FULL"]
+}

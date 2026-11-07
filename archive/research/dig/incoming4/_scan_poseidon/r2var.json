@@ -1,0 +1,1010 @@
+{
+ "validation": true,
+ "kat": [
+  [
+   true,
+   false,
+   true
+  ],
+  [
+   true,
+   false,
+   true
+  ],
+  [
+   true,
+   false,
+   true
+  ]
+ ],
+ "base": {
+  "label": "base",
+  "valid_lines": [
+   0,
+   1,
+   2
+  ],
+  "n_valid": 3,
+  "digest_degrees": [
+   390625
+  ],
+  "detail": {
+   "0": [
+    "ok",
+    true,
+    5,
+    390625
+   ],
+   "1": [
+    "ok",
+    true,
+    5,
+    390625
+   ],
+   "2": [
+    "ok",
+    true,
+    5,
+    390625
+   ]
+  }
+ },
+ "variants": {
+  "R0.L0.ARC.Q2": {
+   "label": "R0.L0.ARC.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L0.ARC.Q4": {
+   "label": "R0.L0.ARC.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L0.SBOX.Q2": {
+   "label": "R0.L0.SBOX.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L0.SBOX.Q4": {
+   "label": "R0.L0.SBOX.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L0.MDS.Q2": {
+   "label": "R0.L0.MDS.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L0.MDS.Q4": {
+   "label": "R0.L0.MDS.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L1.ARC.Q2": {
+   "label": "R0.L1.ARC.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L1.ARC.Q4": {
+   "label": "R0.L1.ARC.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L1.SBOX.Q2": {
+   "label": "R0.L1.SBOX.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L1.SBOX.Q4": {
+   "label": "R0.L1.SBOX.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L1.MDS.Q2": {
+   "label": "R0.L1.MDS.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L1.MDS.Q4": {
+   "label": "R0.L1.MDS.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L2.ARC.Q2": {
+   "label": "R0.L2.ARC.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L2.ARC.Q4": {
+   "label": "R0.L2.ARC.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L2.SBOX.Q2": {
+   "label": "R0.L2.SBOX.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L2.SBOX.Q4": {
+   "label": "R0.L2.SBOX.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L2.MDS.Q2": {
+   "label": "R0.L2.MDS.Q2",
+   "valid_lines": [
+    2
+   ],
+   "n_valid": 1,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "no point (2x2 singular)",
+     null,
+     null,
+     null
+    ],
+    "1": [
+     "no point (2x2 singular)",
+     null,
+     null,
+     null
+    ],
+    "2": [
+     "lane j constant on whole plane: pencil of lines",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R0.L2.MDS.Q4": {
+   "label": "R0.L2.MDS.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L0.ARC.Q2": {
+   "label": "R1.L0.ARC.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L0.ARC.Q4": {
+   "label": "R1.L0.ARC.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L0.SBOX.Q2": {
+   "label": "R1.L0.SBOX.Q2",
+   "valid_lines": [
+    0
+   ],
+   "n_valid": 1,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     null,
+     1953125
+    ],
+    "2": [
+     "ok",
+     true,
+     null,
+     1953125
+    ]
+   }
+  },
+  "R1.L0.SBOX.Q4": {
+   "label": "R1.L0.SBOX.Q4",
+   "valid_lines": [
+    0
+   ],
+   "n_valid": 1,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     null,
+     2734375
+    ],
+    "2": [
+     "ok",
+     true,
+     null,
+     2734375
+    ]
+   }
+  },
+  "R1.L0.MDS.Q2": {
+   "label": "R1.L0.MDS.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L0.MDS.Q4": {
+   "label": "R1.L0.MDS.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L1.ARC.Q2": {
+   "label": "R1.L1.ARC.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L1.ARC.Q4": {
+   "label": "R1.L1.ARC.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L1.SBOX.Q2": {
+   "label": "R1.L1.SBOX.Q2",
+   "valid_lines": [
+    1
+   ],
+   "n_valid": 1,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     null,
+     1953125
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     null,
+     1953125
+    ]
+   }
+  },
+  "R1.L1.SBOX.Q4": {
+   "label": "R1.L1.SBOX.Q4",
+   "valid_lines": [
+    1
+   ],
+   "n_valid": 1,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     null,
+     2734375
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     null,
+     2734375
+    ]
+   }
+  },
+  "R1.L1.MDS.Q2": {
+   "label": "R1.L1.MDS.Q2",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  },
+  "R1.L1.MDS.Q4": {
+   "label": "R1.L1.MDS.Q4",
+   "valid_lines": [
+    0,
+    1,
+    2
+   ],
+   "n_valid": 3,
+   "digest_degrees": [
+    390625
+   ],
+   "detail": {
+    "0": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "1": [
+     "ok",
+     true,
+     5,
+     390625
+    ],
+    "2": [
+     "ok",
+     true,
+     5,
+     390625
+    ]
+   }
+  }
+ },
+ "relabel_checks": {
+  "R0.L0.ARC drop == input shift": true,
+  "R0.L1.ARC drop == input shift": true,
+  "R0.L0.SBOX drop == bijective relabel (x+c)^5": true,
+  "R0.L1.SBOX drop == bijective relabel (x+c)^5": true
+ }
+}

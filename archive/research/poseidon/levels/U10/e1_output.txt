@@ -1,0 +1,7 @@
+q prime True gcd(5,q-1) 1 q-1= 1000002 v2= 1 q mod 4 3 q mod 5 3
+cauchy=True r=1: X2 20000/20000  X5 20000/20000  X7 20000/20000
+cauchy=True r=2: X2 20000/20000  X5 20000/20000  X7 20000/20000
+cauchy=False r=1: X2 20000/20000  X5 20000/20000  X7 20000/20000
+cauchy=False r=2: X2 20000/20000  X5 20000/20000  X7 20000/20000
+5th root inverse d= 400001 check True
+N 200000 distinct full outputs among distinct inputs ok; lane0 birthday collisions seen 18680 expected approx 19999.94000018

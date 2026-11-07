@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "experiments": [
+    {
+      "id": "rho-w22",
+      "kind": "python-message-pairs-v1",
+      "scope": "The search of proof.md Section 4 on the exact sha3-256-r7-prefix-v1 hash, run end to end at width 22. experiments/ls1.py regenerates the claimed straight line of Section 3 (same algorithm as the generator of Appendix B; the 5-byte encoding must hash to the SHA-256 printed in Section 3, else the program stops), checks it against a plain seven-round implementation (two chained steps of 256 points), and executes it on Python integers: one integer holds a plane for all trials of the request (trial t in bits 256 t to 256 t + 255), trials never interact. Points are 22-bit values u (upper bits zero), the message is m(u) of Section 2 (128 bytes), and after every step the planes 22 to 255 are set to zero (the only difference from the full-size program). Per trial: 256 walks from starts rho + i (rho from SHAKE-256 of the trial seed), distinguished point = 4 low image bits zero, cap 128 steps, at most 3,000 trails and 400 steps per attempt, a table end -> (trail, length), restarts, and the replay of Section 4.4 with the plain implementation. It returns two different messages whose seven-round digests agree on the 22 low bits.",
+      "hypothesis": "Every trial returns two different messages m(a), m(b) whose digests agree on the 22 masked bits (bytes 0 and 1 and the low 6 bits of byte 2), found by walks, the table and the replay. Observations (untrusted): steps of the successful attempt, trails, dead walks, attempts, table size, replayed evaluations. Our ideal-function control with the same parameters needs 17.94 steps on average (20,000 trials, sd 7.05). Nothing about the cost at 256 bits is inferred from the run.",
+      "program": "experiments/ls1.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffff3f0000000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "proj-w256",
+      "kind": "python-message-pairs-v1",
+      "scope": "The same regenerated straight line at full width: per trial 256 uniform 256-bit points (SHAKE-256 of the trial seed), eight chained steps of the full program (2,048 evaluations per trial), and the first pair, in step-major order, of distinct evaluated inputs whose images agree on the 22 low bits; the two inputs are recomputed with the plain implementation and returned as messages m(a), m(b). A trial without such a pair returns two nulls. A success is a 22-bit partial match, not a collision.",
+      "hypothesis": "If the images of the 2,048 distinct evaluated inputs are uniform on 22 bits, a trial succeeds with probability 1 - prod_{i<2048}(1 - i/2^22) = 0.3934: about 100.7 of 256 successes, standard deviation 7.8. A wrong straight line would give digests that the organizer's recomputation does not match, and failed pairs.",
+      "program": "experiments/ls1.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffff3f0000000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    }
+  ]
+}

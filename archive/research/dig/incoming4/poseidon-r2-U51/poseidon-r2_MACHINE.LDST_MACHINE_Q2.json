@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.LDST (MACHINE)",
+ "question": "Q2: loads and stores: necessity (drop or change, recount)",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Free loads/stores would save 0.257 bit; a wider register block (5 layers per pass) removes at most 1/5 of the NTT pass traffic: <= 0.048 bit.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MACHINE.LDST|MACHINE|Q2. Bound; assumes all ld/st are pass traffic.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use; counts are from the two-centre observed run (evaluation units excluded), per centre = half",
+ "reopen_if": "the r2 entry is rebuilt (two-family template), the charging rules change (control ops, dispatch, address ops), or an r2 run disagrees with these numbers"
+}

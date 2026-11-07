@@ -1,0 +1,8 @@
+ctx groups: 256 x 1024 rows
+relations of R over all groups: 1482
+  a.K1 constant on the group: 1478 ; a.K3 constant: 1478 ; both constant (relation splits into an E1 part and an E3 part): 1478 ; neither: 4
+  relations with constant 1 (they exclude R = 0): 476 ; of these, split ones: 476
+groups with 0 in the hull: 70 of 256
+number of constant-1 relations per group: histogram {0: 70, 1: 7, 2: 122, 3: 21, 4: 23, 5: 8, 6: 5}
+rank of K3 per group vs rank of R: corr 0.677 ; mean K3 rank 77.29
+groups with 0 in hull per context (16 members each): [5, 3, 5, 4, 9, 1, 7, 5, 4, 1, 6, 3, 6, 5, 4, 2]

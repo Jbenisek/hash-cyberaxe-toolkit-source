@@ -1,0 +1,22 @@
+{
+  "id": "D362-POSR1-TWOLEVEL-INIT-CHARGE",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "two-level twiddle initialization charge",
+  "question": "What exact initialization work changes when the 2^14 twiddle table is replaced by H[q]=rho^(128q) and L[r]=rho^r?",
+  "labels": ["N", "D", "S"],
+  "status": "COMPUTED",
+  "number": "Twiddle-specific init changes from 16,383 multiplies + 16,384 stores + 4,096 loop-control units to 254 multiplies + 7 squarings + 256 stores + 64 loop-control units: exact saving 36,282 operations. Including D360 fetch replacement, net +834,578,276 ops (0.15638337 old / 0.02321282 fixed bits), or +1,669,192,834 with two extra address/control ops per fetch (0.29746673 / 0.04605905 bits).",
+  "source": "our source-level arithmetic audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D362_poseidon_r1_twolevel_init_charge.md; research/poseidon/orchard/pkg_r1/src/ntt.c; research/poseidon/orchard/lean_r2/pkg_stage_r1/proof.md; D359-D360",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Exact only for the stated two-table generation and unchanged allocator/ledger model. Initialization saving is negligible; rebuilt fetch address/control/register/KAT/peak evidence remains open. No score or package credit.",
+  "held_fixed": "D359 F=417307279; D360 old N=7289544780 and fixed N=51453520952; common root/constant initialization unchanged",
+  "reopen_if": "A rebuilt factorized implementation reports dynamic ledger and memory evidence",
+  "peak_mem": "conditional 7952544 B tracked heap if only the twiddle allocation changes"
+}

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GKR (ALT)",
+ "question": "Q1: subspace trail at r=2: dimension",
+ "labels": [
+  "N"
+ ],
+ "status": "BEDROCK",
+ "number": "Trail dimension 2, 1, 0 for k = 1, 2, 3 partial rounds (PROVED, levels/LEVELS.md); at r=2 the dimension is 1 (direction u = (0, M02, -M01) at the R3.M output). Real MDS checks today: all 9 + 9 + 1 minors nonzero (so MDS), pinned permutation vectors 11/11.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testA.json; research/dig/incoming4/work/testF.json; research/poseidon/levels/LEVELS.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.GKR|ALT|Q1. Minors recomputed by me on the pinned MDS (testA.json); det[e0; e0M; e0M^2] = 0xebe164ab9dff92f6...8ba recomputed by me and equal to the LEVELS value, nonzero; (M u)_0 = 0 and (M^2 u)_0 != 0 on the real MDS (testF.json).",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a nonzero invariant subspace of M is found (it would raise the dimension)"
+}

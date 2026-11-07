@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "free first block: choose cv so folded constants vanish",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "each folded immediate that is exactly 0 saves exactly one operation: with synthetic cv values solving post-column d'=0 in j columns the tracer gives 594, 593, 592, 591 operations for j=1..4 (32 bits of cv each); d'=0 and c'=0 in column 0: 593 (64 bits); in all four columns: 587 (256 bits). Per operation time_log2 -0.0024 (the entry's ledger formula). Runnable here: j=1 needs a first block whose cv0,cv4 satisfy one 32-bit condition (about 2^32 compressions), gain 0.0024 bits; 2^96 preprocessing would give 3 operations (-0.0072) but is not runnable here",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_multi.py; research/blake3_r3/alt/exp_multi.json; research/blake3_r3/alt/opcount.py",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.0024,
+ "notes": "The prefix block has NOT been searched: numbers are tracer counts with algebraically constructed cv. A judge must accept an offline-found prefix (charge 2^32 units, negligible) and 128-byte messages; the saving is 0.2 percent of the score exponent. Candidate LEVER, small.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches) but flags 10, first block free, cv constructed",
+ "reopen_if": "a found prefix block whose compression ledger-verifies at 594 or fewer operations",
+ "topic": "blake3-r3|ALT.MULTI|ALT|Q3",
+ "gain_basis": "T"
+}

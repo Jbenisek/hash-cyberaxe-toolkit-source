@@ -1,0 +1,6 @@
+{"best_dim": 46, "runs": 1601, "top_of_histogram": {"40": 38, "41": 13, "42": 11, "43": 4, "46": 1}, "failing_pairs": 0, "rank": 46, "dim_cap_W40": 3}
+{"round2_second_diff_nonzero_words_of_256x25": 0}
+{"cube_dim": 2, "after_round": 2, "nonzero_sums": 0, "cubes": 8}
+{"cube_dim": 3, "after_round": 3, "nonzero_sums": 0, "cubes": 8}
+{"cube_dim": 16, "after_round": 6, "nonzero_sums": 8, "cubes": 8}
+{"cube_dim": 17, "after_round": 6, "nonzero_sums": 0, "cubes": 8}

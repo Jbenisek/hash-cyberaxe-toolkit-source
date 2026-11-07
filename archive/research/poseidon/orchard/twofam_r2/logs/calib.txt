@@ -1,0 +1,102 @@
+SQRT A_q=267 A_qp1h=266 max_arith_over_4000=1029
+LEVEL d=3 shift=5701 pow=74807 shift_abs_peak=4194784 pow_abs_peak=4194720 live_before=4194528 secs 0.0 0.0
+LEVEL d=4 shift=5869 pow=133897 shift_abs_peak=4194912 pow_abs_peak=4194848 live_before=4194592 secs 0.0 0.0
+LEVEL d=5 shift=6055 pow=210697 shift_abs_peak=4195040 pow_abs_peak=4194976 live_before=4194656 secs 0.0 0.0
+LEVEL d=6 shift=6264 pow=305207 shift_abs_peak=4195168 pow_abs_peak=4195104 live_before=4194720 secs 0.0 0.0
+LEVEL d=7 shift=6498 pow=417427 shift_abs_peak=4195296 pow_abs_peak=4195232 live_before=4194784 secs 0.0 0.0
+LEVEL d=8 shift=6761 pow=547357 shift_abs_peak=4195424 pow_abs_peak=4195360 live_before=4194848 secs 0.0 0.0
+LEVEL d=9 shift=7043 pow=694997 shift_abs_peak=4195552 pow_abs_peak=4195488 live_before=4194912 secs 0.0 0.0
+LEVEL d=10 shift=7348 pow=860347 shift_abs_peak=4195680 pow_abs_peak=4195616 live_before=4194976 secs 0.0 0.0
+LEVEL d=11 shift=7678 pow=1043407 shift_abs_peak=4195808 pow_abs_peak=4195744 live_before=4195040 secs 0.0 0.0
+LEVEL d=12 shift=8030 pow=1244177 shift_abs_peak=4195936 pow_abs_peak=4195872 live_before=4195104 secs 0.0 0.0
+LEVEL d=13 shift=8408 pow=1462657 shift_abs_peak=4196064 pow_abs_peak=4196000 live_before=4195168 secs 0.0 0.0
+LEVEL d=14 shift=8809 pow=1698847 shift_abs_peak=4196192 pow_abs_peak=4196128 live_before=4195232 secs 0.0 0.0
+LEVEL d=15 shift=9235 pow=1952747 shift_abs_peak=4196320 pow_abs_peak=4196256 live_before=4195296 secs 0.0 0.0
+LEVEL d=16 shift=9689 pow=2224357 shift_abs_peak=4196448 pow_abs_peak=4196384 live_before=4195360 secs 0.0 0.0
+LEVEL d=17 shift=10163 pow=2513677 shift_abs_peak=4196576 pow_abs_peak=4196512 live_before=4195424 secs 0.0 0.0
+LEVEL d=18 shift=10660 pow=2820707 shift_abs_peak=4196704 pow_abs_peak=4196640 live_before=4195488 secs 0.0 0.0
+LEVEL d=19 shift=11182 pow=3145447 shift_abs_peak=4196832 pow_abs_peak=4196768 live_before=4195552 secs 0.0 0.0
+LEVEL d=20 shift=11726 pow=3487897 shift_abs_peak=4196960 pow_abs_peak=4196896 live_before=4195616 secs 0.0 0.0
+LEVEL d=21 shift=12296 pow=3848057 shift_abs_peak=4197088 pow_abs_peak=4197024 live_before=4195680 secs 0.0 0.0
+LEVEL d=22 shift=12889 pow=4225927 shift_abs_peak=4197216 pow_abs_peak=4197152 live_before=4195744 secs 0.0 0.0
+LEVEL d=23 shift=13507 pow=4621507 shift_abs_peak=4197344 pow_abs_peak=4197280 live_before=4195808 secs 0.0 0.0
+LEVEL d=24 shift=70263 pow=5034797 shift_abs_peak=4202592 pow_abs_peak=4197408 live_before=4195872 secs 0.0 0.0
+LEVEL d=25 shift=67790 pow=5465797 shift_abs_peak=4202720 pow_abs_peak=4197536 live_before=4195936 secs 0.0 0.0
+LEVEL d=26 shift=68391 pow=5914507 shift_abs_peak=4202848 pow_abs_peak=4197664 live_before=4196000 secs 0.0 0.0
+LEVEL d=27 shift=68981 pow=6380927 shift_abs_peak=4202976 pow_abs_peak=4197792 live_before=4196064 secs 0.0 0.0
+LEVEL d=28 shift=69587 pow=6865057 shift_abs_peak=4203104 pow_abs_peak=4197920 live_before=4196128 secs 0.0 0.0
+LEVEL d=29 shift=70189 pow=7366897 shift_abs_peak=4203232 pow_abs_peak=4198048 live_before=4196192 secs 0.0 0.0
+LEVEL d=30 shift=70778 pow=7886447 shift_abs_peak=4203360 pow_abs_peak=4198176 live_before=4196256 secs 0.0 0.0
+LEVEL d=31 shift=71386 pow=8423707 shift_abs_peak=4203488 pow_abs_peak=4198304 live_before=4196320 secs 0.0 0.0
+LEVEL d=32 shift=71519 pow=8978677 shift_abs_peak=4203616 pow_abs_peak=4198432 live_before=4196384 secs 0.0 0.0
+LEVEL d=33 shift=71477 pow=9551357 shift_abs_peak=4203744 pow_abs_peak=4198560 live_before=4196448 secs 0.0 0.0
+LEVEL d=34 shift=71452 pow=10141747 shift_abs_peak=4203872 pow_abs_peak=4198688 live_before=4196512 secs 0.0 0.0
+LEVEL d=35 shift=71422 pow=10749847 shift_abs_peak=4204000 pow_abs_peak=4198816 live_before=4196576 secs 0.0 0.0
+LEVEL d=36 shift=71378 pow=11375657 shift_abs_peak=4204128 pow_abs_peak=4198944 live_before=4196640 secs 0.0 0.0
+LEVEL d=37 shift=71354 pow=12019177 shift_abs_peak=4204256 pow_abs_peak=4199072 live_before=4196704 secs 0.0 0.0
+LEVEL d=38 shift=71323 pow=12680407 shift_abs_peak=4204384 pow_abs_peak=4199200 live_before=4196768 secs 0.0 0.0
+LEVEL d=39 shift=71281 pow=13359347 shift_abs_peak=4204512 pow_abs_peak=4199328 live_before=4196832 secs 0.0 0.0
+LEVEL d=40 shift=71254 pow=14055997 shift_abs_peak=4204640 pow_abs_peak=4199456 live_before=4196896 secs 0.0 0.0
+lean-pow breakdown: newton total=175039 arith=7489 | prefix+scale total=723 | loop steps=248 total=26434900 arith=1278203 per-step total=106592 arith=5154
+LEVEL d=41 shift=71224 pow=26610876 shift_abs_peak=4204768 pow_abs_peak=4202336 live_before=4196960 secs 0.0 0.0
+POWSTEPS d=41 steps=248 ones=45 mulx_total=22320
+lean-pow breakdown: newton total=166269 arith=6517 | prefix+scale total=736 | loop steps=248 total=26402712 arith=1286230 per-step total=106462 arith=5186
+LEVEL d=42 shift=71181 pow=26569931 shift_abs_peak=4204896 pow_abs_peak=4202432 live_before=4197024 secs 0.0 0.0
+POWSTEPS d=42 steps=248 ones=45 mulx_total=22860
+lean-pow breakdown: newton total=166693 arith=6531 | prefix+scale total=749 | loop steps=248 total=26369036 arith=1293761 per-step total=106326 arith=5216
+LEVEL d=43 shift=71157 pow=26536692 shift_abs_peak=4205024 pow_abs_peak=4202528 live_before=4197088 secs 0.0 0.0
+POWSTEPS d=43 steps=248 ones=45 mulx_total=23400
+lean-pow breakdown: newton total=167112 arith=6545 | prefix+scale total=762 | loop steps=248 total=26333872 arith=1300796 per-step total=106184 arith=5245
+LEVEL d=44 shift=71125 pow=26501960 shift_abs_peak=4205152 pow_abs_peak=4202624 live_before=4197152 secs 0.0 0.0
+POWSTEPS d=44 steps=248 ones=45 mulx_total=23940
+lean-pow breakdown: newton total=167548 arith=6563 | prefix+scale total=775 | loop steps=248 total=26301684 arith=1308823 per-step total=106055 arith=5277
+LEVEL d=45 shift=71083 pow=26470221 shift_abs_peak=4205280 pow_abs_peak=4202720 live_before=4197216 secs 0.0 0.0
+POWSTEPS d=45 steps=248 ones=45 mulx_total=24480
+lean-pow breakdown: newton total=167967 arith=6577 | prefix+scale total=788 | loop steps=248 total=26268008 arith=1316354 per-step total=105919 arith=5307
+LEVEL d=46 shift=71058 pow=26436977 shift_abs_peak=4205408 pow_abs_peak=4202816 live_before=4197280 secs 0.0 0.0
+POWSTEPS d=46 steps=248 ones=45 mulx_total=25020
+lean-pow breakdown: newton total=168391 arith=6591 | prefix+scale total=801 | loop steps=248 total=26232844 arith=1323389 per-step total=105777 arith=5336
+LEVEL d=47 shift=71028 pow=26402250 shift_abs_peak=4205536 pow_abs_peak=4202912 live_before=4197344 secs 0.0 0.0
+POWSTEPS d=47 steps=248 ones=45 mulx_total=25560
+lean-pow breakdown: newton total=369545 arith=15825 | prefix+scale total=1485 | loop steps=247 total=56196332 arith=3104790 per-step total=227515 arith=12570
+LEVEL d=95 shift=145800 pow=56567709 shift_abs_peak=4210688 pow_abs_peak=4211616 live_before=4200416 secs 0.0 0.1
+POWSTEPS d=95 steps=247 ones=45 mulx_total=51480
+lean-pow breakdown: newton total=771718 arith=37289 | prefix+scale total=2787 | loop steps=246 total=114870930 arith=7104796 per-step total=466955 arith=28881
+LEVEL d=190 shift=288009 pow=115645908 shift_abs_peak=4227008 pow_abs_peak=4228928 live_before=4206496 secs 0.0 0.1
+POWSTEPS d=190 steps=246 ones=45 mulx_total=102780
+lean-pow breakdown: newton total=1595023 arith=86265 | prefix+scale total=5316 | loop steps=245 total=234629872 arith=15992256 per-step total=957672 arith=65274
+LEVEL d=381 shift=578871 pow=236231146 shift_abs_peak=4259712 pow_abs_peak=4263648 live_before=4218720 secs 0.0 0.3
+POWSTEPS d=381 steps=245 ones=45 mulx_total=205920
+lean-pow breakdown: newton total=3436118 arith=196293 | prefix+scale total=10315 | loop steps=244 total=542507192 arith=35506682 per-step total=2223390 arith=145519
+LEVEL d=762 shift=1326356 pow=545955029 shift_abs_peak=4325056 pow_abs_peak=4332992 live_before=4243104 secs 0.0 0.7
+POWSTEPS d=762 steps=244 ones=45 mulx_total=411660
+lean-pow breakdown: newton total=7516377 arith=440537 | prefix+scale total=20280 | loop steps=243 total=1145432952 arith=78006910 per-step total=4713715 arith=321016
+LEVEL d=1525 shift=2698600 pow=1152972826 shift_abs_peak=4455808 pow_abs_peak=4471776 live_before=4291936 secs 0.0 1.5
+POWSTEPS d=1525 steps=243 ones=45 mulx_total=823680
+lean-pow breakdown: newton total=15695992 arith=977399 | prefix+scale total=40164 | loop steps=242 total=2330741358 arith=169875355 per-step total=9631162 arith=701964
+LEVEL d=3051 shift=5476364 pow=2346482537 shift_abs_peak=4717312 pow_abs_peak=4749344 live_before=4389600 secs 0.0 3.2
+POWSTEPS d=3051 steps=242 ones=45 mulx_total=1647720
+lean-pow breakdown: newton total=32363194 arith=2147877 | prefix+scale total=79886 | loop steps=241 total=4737247860 arith=367228438 per-step total=19656630 arith=1523769
+LEVEL d=6103 shift=11131252 pow=4769703145 shift_abs_peak=5240320 pow_abs_peak=5304480 live_before=4584928 secs 0.0 6.9
+POWSTEPS d=6103 steps=241 ones=45 mulx_total=3295800
+lean-pow breakdown: newton total=68824780 arith=4682359 | prefix+scale total=159284 | loop steps=240 total=10620135700 arith=788927397 per-step total=44250565 arith=3287197
+LEVEL d=12207 shift=25094814 pow=10689139158 shift_abs_peak=6286336 pow_abs_peak=6414752 live_before=4975584 secs 0.0 15.4
+POWSTEPS d=12207 steps=240 ones=45 mulx_total=6591960
+lean-pow breakdown: newton total=148120648 arith=10138363 | prefix+scale total=318021 | loop steps=239 total=22176472846 arith=1685824431 per-step total=92788589 arith=7053658
+LEVEL d=24414 shift=51059427 pow=22324959602 shift_abs_peak=8378304 pow_abs_peak=8635200 live_before=5756832 secs 0.1 36.3
+POWSTEPS d=24414 steps=239 ones=45 mulx_total=13183740
+lean-pow breakdown: newton total=307039635 arith=21824513 | prefix+scale total=635449 | loop steps=238 total=44947969634 arith=3585672902 per-step total=188857015 arith=15065852
+LEVEL d=48828 shift=103521148 pow=45255721491 shift_abs_peak=12562240 pow_abs_peak=13076096 live_before=7319328 secs 0.2 84.0
+POWSTEPS d=48828 steps=238 ones=45 mulx_total=26367300
+lean-pow breakdown: newton total=629821357 arith=46745079 | prefix+scale total=1270259 | loop steps=237 total=91017918574 arith=7595561715 per-step total=384041850 arith=32048783
+LEVEL d=97656 shift=210033853 pow=91649201665 shift_abs_peak=20930112 pow_abs_peak=21957888 live_before=10444320 secs 0.3 157.9
+POWSTEPS d=97656 steps=237 ones=45 mulx_total=52734420
+lean-pow breakdown: newton total=1325433887 arith=99682785 | prefix+scale total=2539833 | loop steps=236 total=199914709776 arith=16031889220 per-step total=847096227 arith=67931733
+LEVEL d=195312 shift=465518508 pow=201242989680 shift_abs_peak=37665856 pow_abs_peak=39721472 live_before=16694304 secs 0.6 323.4
+POWSTEPS d=195312 steps=236 ones=45 mulx_total=105468660
+lean-pow breakdown: newton total=2818645571 arith=211751345 | prefix+scale total=5078948 | loop steps=235 total=414260531664 arith=33729983410 per-step total=1762810773 arith=143531844
+LEVEL d=390625 shift=945095972 pow=417085021140 shift_abs_peak=71137408 pow_abs_peak=75248736 live_before=29194336 secs 1.4 672.9
+POWSTEPS d=390625 steps=235 ones=45 mulx_total=210937680
+REMOVE d=390625 charged=11328133
+REMOVE d=1000 charged=29008
+EXIT 0

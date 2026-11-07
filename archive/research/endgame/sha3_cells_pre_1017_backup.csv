@@ -1,0 +1,289 @@
+grid,row,col,mark,alive,dead,open_logged,reason
+SHA3 freextech,msg,trail,tried-alive,r5:3round-trail-after-connector(others),,,
+SHA3 freextech,msg,conn,tried-alive,"r5:connector+trail-route(GLL20-line,board-best-32.93,others)",r6:SHAKE128-3r-connector-transfer-2^206,r6:3r-connector-exact-rank(unknown),
+SHA3 freextech,msg,idiff,untried,,,,
+SHA3 freextech,msg,lin,tried-alive,r6:leader-linear-prefix-chi1-conditions(others),,,
+SHA3 freextech,msg,deg,untried,,,,
+SHA3 freextech,msg,bday,tried-alive,r6:leader-bitsliced-Gray-birthday-124.05(others),,,
+SHA3 freextech,msg,tda,tried-dead,,r6:DDS-target-difference-alg+3r-trail(s3-tda-sat),,
+SHA3 freextech,msg,sat,untried,,,r6:SAT-tail-search-after-2r-connector(weeks),
+SHA3 freextech,msg,cost,tried-alive,r6:leader-round4-6-key-cones(others),,,
+SHA3 freextech,blk1,trail,untried,,,,
+SHA3 freextech,blk1,conn,untried,,,,
+SHA3 freextech,blk1,idiff,tried-alive,"r5:pkgS5-internal-diff-99.57(ours,passed) r5:pkgS5-short-final-key(Astra)",r5:rivals-internal-diff(11-refuted) r6:idiff-plus-1-round-2^172(Grok55) r6:native-5r-family-to-6r->=130.15(Astra20) r6:first-block-break-at-r6(Astra20),r5:cadamcat-generalized-idiff(not-evaluable),
+SHA3 freextech,blk1,lin,untried,,,r6:2-block-capacity-reshapes-r2-affinity(3r-field-dim1-at-random-caps),
+SHA3 freextech,blk1,deg,untried,,,,
+SHA3 freextech,blk1,bday,untried,,,,
+SHA3 freextech,blk1,tda,untried,,,,
+SHA3 freextech,blk1,sat,untried,,,,
+SHA3 freextech,blk1,cost,untried,,,,
+SHA3 freextech,field,trail,tried-dead,,"r6:fix-delta-in-35space-34cond(D17) r6:non-identity-chi-transitions-rank<=2(exhaustive-6bit,certified)",,
+SHA3 freextech,field,conn,impossible,,,,a connector solves for message bits; the field already fixes rounds 1-2 as affine (row msg)
+SHA3 freextech,field,idiff,tried-dead,,"r6:idiff-x-lowdegree(deg-delta6>=15,symmetric-birthday>=2^187)",,
+SHA3 freextech,field,lin,tried-dead,,"r6:2r-linear-structure-35/40dim(+0.08max) r6:3r-structure-rank<=2(linstruct3,Astra22) r6:double-kernel-ISD-186dim-wt>=262",r6:rounds4-5-kernel(SolCloud17),
+SHA3 freextech,field,deg,tried-alive,"r5:LOW-DEGREE-route-122.9881(D23,unfiled,premise-open) r6:LOW-DEGREE-FES-pkgS6-FILED-e641788b-122.98920 r6:low-degree-deg16-rounds3-6-together-123.6",r6:per-plane-degrees-all-exactly-8(0-bit) r6:low-degree-deg4-rounds3-4-hybrid-123.9/124.7 r6:low-degree-deg2-round3-only-125.05,,
+SHA3 freextech,field,bday,tried-alive,r6:H_coset-prereg-2^30-digests-PASS,,,
+SHA3 freextech,field,tda,untried,,,,
+SHA3 freextech,field,sat,untried,,,,
+SHA3 freextech,field,cost,tried-dead,,r6:Grok56-123.x-count-artefact,,
+SHA3 freextech,pad,trail,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,conn,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,idiff,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,lin,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,deg,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,bday,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,tda,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,sat,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,pad,cost,impossible,,,,"padding is fixed by the length; a length change is a last-block byte difference, already row msg"
+SHA3 freextech,cap,trail,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,conn,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,idiff,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,lin,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,deg,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,bday,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,tda,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,sat,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,cap,cost,impossible,,,,capacity bits are 0 in a single block; they move only through a chosen first block (row blk1)
+SHA3 freextech,none,trail,impossible,,,,"no freedom added: trails, connectors, structures and searches need free bits; only cost changes"
+SHA3 freextech,none,conn,impossible,,,,"no freedom added: trails, connectors, structures and searches need free bits; only cost changes"
+SHA3 freextech,none,idiff,impossible,,,,"no freedom added: trails, connectors, structures and searches need free bits; only cost changes"
+SHA3 freextech,none,lin,impossible,,,,"no freedom added: trails, connectors, structures and searches need free bits; only cost changes"
+SHA3 freextech,none,deg,impossible,,,,"no freedom added: trails, connectors, structures and searches need free bits; only cost changes"
+SHA3 freextech,none,bday,untried,,,,
+SHA3 freextech,none,tda,impossible,,,,"no freedom added: trails, connectors, structures and searches need free bits; only cost changes"
+SHA3 freextech,none,sat,impossible,,,,"no freedom added: trails, connectors, structures and searches need free bits; only cost changes"
+SHA3 freextech,none,cost,tried-dead,,r6:cost-levers-packing/tables/abort/Hellman,,
+SHA3 layerxtech,r1-2,trail,untried,,,,
+SHA3 layerxtech,r1-2,conn,tried-alive,"r5:connector+trail-route(GLL20-line,board-best-32.93,others)",r6:SHAKE128-3r-connector-transfer-2^206,r6:3r-connector-exact-rank(unknown),
+SHA3 layerxtech,r1-2,idiff,tried-dead,,r6:first-block-break-at-r6(Astra20),r5:cadamcat-generalized-idiff(not-evaluable),
+SHA3 layerxtech,r1-2,lin,tried-alive,r6:leader-linear-prefix-chi1-conditions(others),r6:2r-linear-structure-35/40dim(+0.08max),,
+SHA3 layerxtech,r1-2,deg,impossible,,,,rounds 1-2 are already affine on the field (degree 1): nothing to lower
+SHA3 layerxtech,r1-2,bday,untried,,,,
+SHA3 layerxtech,r1-2,tda,tried-dead,,r6:DDS-target-difference-alg+3r-trail(s3-tda-sat),,
+SHA3 layerxtech,r1-2,sat,untried,,,,
+SHA3 layerxtech,r1-2,cost,untried,,,,
+SHA3 layerxtech,r3,trail,tried-alive,r5:3round-trail-after-connector(others),"r6:fix-delta-in-35space-34cond(D17) r6:non-identity-chi-transitions-rank<=2(exhaustive-6bit,certified)",,
+SHA3 layerxtech,r3,conn,untried,,,,
+SHA3 layerxtech,r3,idiff,untried,,,,
+SHA3 layerxtech,r3,lin,tried-dead,,"r6:3r-structure-rank<=2(linstruct3,Astra22) r6:double-kernel-ISD-186dim-wt>=262",r6:2-block-capacity-reshapes-r2-affinity(3r-field-dim1-at-random-caps),
+SHA3 layerxtech,r3,deg,tried-dead,,r6:low-degree-deg2-round3-only-125.05,,
+SHA3 layerxtech,r3,bday,untried,,,,
+SHA3 layerxtech,r3,tda,untried,,,,
+SHA3 layerxtech,r3,sat,untried,,,,
+SHA3 layerxtech,r3,cost,untried,,,,
+SHA3 layerxtech,r4,trail,untried,,,,
+SHA3 layerxtech,r4,conn,untried,,,,
+SHA3 layerxtech,r4,idiff,untried,,,,
+SHA3 layerxtech,r4,lin,untried,,,r6:rounds4-5-kernel(SolCloud17),
+SHA3 layerxtech,r4,deg,tried-dead,,r6:low-degree-deg4-rounds3-4-hybrid-123.9/124.7,,
+SHA3 layerxtech,r4,bday,untried,,,,
+SHA3 layerxtech,r4,tda,untried,,,,
+SHA3 layerxtech,r4,sat,untried,,,,
+SHA3 layerxtech,r4,cost,tried-alive,r6:leader-round4-6-key-cones(others),,,
+SHA3 layerxtech,r5,trail,untried,,,,
+SHA3 layerxtech,r5,conn,untried,,,,
+SHA3 layerxtech,r5,idiff,tried-alive,r5:pkgS5-short-final-key(Astra),,,
+SHA3 layerxtech,r5,lin,untried,,,,
+SHA3 layerxtech,r5,deg,tried-alive,"r5:LOW-DEGREE-route-122.9881(D23,unfiled,premise-open) r6:LOW-DEGREE-FES-pkgS6-FILED-e641788b-122.98920",r6:per-plane-degrees-all-exactly-8(0-bit),,
+SHA3 layerxtech,r5,bday,untried,,,,
+SHA3 layerxtech,r5,tda,untried,,,,
+SHA3 layerxtech,r5,sat,untried,,,,
+SHA3 layerxtech,r5,cost,untried,,,,
+SHA3 layerxtech,r6,trail,untried,,,,
+SHA3 layerxtech,r6,conn,untried,,,,
+SHA3 layerxtech,r6,idiff,tried-dead,,r6:idiff-plus-1-round-2^172(Grok55),,
+SHA3 layerxtech,r6,lin,untried,,,,
+SHA3 layerxtech,r6,deg,untried,,,,
+SHA3 layerxtech,r6,bday,untried,,,,
+SHA3 layerxtech,r6,tda,untried,,,,
+SHA3 layerxtech,r6,sat,untried,,,,
+SHA3 layerxtech,r6,cost,untried,,,,
+SHA3 layerxtech,all,trail,untried,,,,
+SHA3 layerxtech,all,conn,untried,,,,
+SHA3 layerxtech,all,idiff,tried-alive,"r5:pkgS5-internal-diff-99.57(ours,passed)","r5:rivals-internal-diff(11-refuted) r6:native-5r-family-to-6r->=130.15(Astra20) r6:idiff-x-lowdegree(deg-delta6>=15,symmetric-birthday>=2^187)",,
+SHA3 layerxtech,all,lin,untried,,,,
+SHA3 layerxtech,all,deg,tried-alive,r6:low-degree-deg16-rounds3-6-together-123.6,,,
+SHA3 layerxtech,all,bday,tried-alive,r6:leader-bitsliced-Gray-birthday-124.05(others) r6:H_coset-prereg-2^30-digests-PASS,,,
+SHA3 layerxtech,all,tda,untried,,,,
+SHA3 layerxtech,all,sat,untried,,,r6:SAT-tail-search-after-2r-connector(weeks),
+SHA3 layerxtech,all,cost,tried-dead,,r6:cost-levers-packing/tables/abort/Hellman r6:Grok56-123.x-count-artefact,,
+SHA3 trackxtech,r5,trail,tried-alive,r5:3round-trail-after-connector(others),,,
+SHA3 trackxtech,r5,conn,tried-alive,"r5:connector+trail-route(GLL20-line,board-best-32.93,others)",,,
+SHA3 trackxtech,r5,idiff,tried-alive,"r5:pkgS5-internal-diff-99.57(ours,passed) r5:pkgS5-short-final-key(Astra)",r5:rivals-internal-diff(11-refuted),r5:cadamcat-generalized-idiff(not-evaluable),
+SHA3 trackxtech,r5,lin,untried,,,,
+SHA3 trackxtech,r5,deg,tried-alive,"r5:LOW-DEGREE-route-122.9881(D23,unfiled,premise-open)",,,
+SHA3 trackxtech,r5,bday,untried,,,,
+SHA3 trackxtech,r5,tda,untried,,,,
+SHA3 trackxtech,r5,sat,untried,,,,
+SHA3 trackxtech,r5,cost,untried,,,,
+SHA3 trackxtech,r6,trail,tried-dead,,"r6:fix-delta-in-35space-34cond(D17) r6:non-identity-chi-transitions-rank<=2(exhaustive-6bit,certified)",,
+SHA3 trackxtech,r6,conn,tried-dead,,r6:SHAKE128-3r-connector-transfer-2^206,r6:3r-connector-exact-rank(unknown),
+SHA3 trackxtech,r6,idiff,tried-dead,,"r6:idiff-plus-1-round-2^172(Grok55) r6:native-5r-family-to-6r->=130.15(Astra20) r6:first-block-break-at-r6(Astra20) r6:idiff-x-lowdegree(deg-delta6>=15,symmetric-birthday>=2^187)",,
+SHA3 trackxtech,r6,lin,tried-alive,r6:leader-linear-prefix-chi1-conditions(others),"r6:2r-linear-structure-35/40dim(+0.08max) r6:3r-structure-rank<=2(linstruct3,Astra22) r6:double-kernel-ISD-186dim-wt>=262",r6:2-block-capacity-reshapes-r2-affinity(3r-field-dim1-at-random-caps) r6:rounds4-5-kernel(SolCloud17),
+SHA3 trackxtech,r6,deg,tried-alive,r6:LOW-DEGREE-FES-pkgS6-FILED-e641788b-122.98920 r6:low-degree-deg16-rounds3-6-together-123.6,r6:per-plane-degrees-all-exactly-8(0-bit) r6:low-degree-deg4-rounds3-4-hybrid-123.9/124.7 r6:low-degree-deg2-round3-only-125.05,,
+SHA3 trackxtech,r6,bday,tried-alive,r6:leader-bitsliced-Gray-birthday-124.05(others) r6:H_coset-prereg-2^30-digests-PASS,,,
+SHA3 trackxtech,r6,tda,tried-dead,,r6:DDS-target-difference-alg+3r-trail(s3-tda-sat),,
+SHA3 trackxtech,r6,sat,untried,,,r6:SAT-tail-search-after-2r-connector(weeks),
+SHA3 trackxtech,r6,cost,tried-alive,r6:leader-round4-6-key-cones(others),r6:cost-levers-packing/tables/abort/Hellman r6:Grok56-123.x-count-artefact,,
+SHA3 trackxtech,r7,trail,tried-dead,,r7: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r7,conn,tried-dead,,r7: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r7,idiff,tried-dead,,r7: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r7,lin,tried-dead,,"rounds 1-2 linearization already inside the live LS1 line; 3-round rank-3 structure not found (ceiling 0.13 bit at r7, likely 0)",,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r7,deg,tried-dead,,r7: time 123.97 but needs a 2^146-byte table -> scored ~249 (memory charged),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r7,bday,tried-alive,r7:LS1-birthday-line-filed(none=124.73447 3183c941=124.73447),,,
+SHA3 trackxtech,r7,tda,tried-dead,,r7: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r7,sat,open,,,r7: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r7,cost,tried-alive,r7:dig-10-17-cost-ledger,,,
+SHA3 trackxtech,r8,trail,tried-dead,,r8: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r8,conn,tried-dead,,r8: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r8,idiff,tried-dead,,r8: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r8,lin,tried-dead,,r8: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r8,deg,tried-dead,,r8: needs a field of >=72 dimensions (none known); memory term as r7,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r8,bday,tried-alive,r8:LS1-birthday-line-filed(4fe20ada=124.79004),,,
+SHA3 trackxtech,r8,tda,tried-dead,,r8: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r8,sat,open,,,r8: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r8,cost,tried-alive,r8:dig-10-17-cost-ledger,,,
+SHA3 trackxtech,r9,trail,tried-dead,,r9: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r9,conn,tried-dead,,r9: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r9,idiff,tried-dead,,r9: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r9,lin,tried-dead,,r9: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r9,deg,tried-dead,,r9: needs a field of >=148 dimensions (none known),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r9,bday,tried-alive,r9:LS1-birthday-line-filed(de66b998=124.82363),,,
+SHA3 trackxtech,r9,tda,tried-dead,,r9: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r9,sat,open,,,r9: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r9,cost,tried-alive,r9:dig-10-17-cost-ledger(time_log2=124.28129),,,
+SHA3 trackxtech,r10,trail,tried-dead,,r10: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r10,conn,tried-dead,,r10: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r10,idiff,tried-dead,,r10: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r10,lin,tried-dead,,r10: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r10,deg,tried-dead,,r10: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r10,bday,tried-alive,r10:LS1-birthday-line-filed(9b321875=124.85745),,,
+SHA3 trackxtech,r10,tda,tried-dead,,r10: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r10,sat,open,,,r10: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r10,cost,tried-alive,r10:dig-10-17-cost-ledger(time_log2=124.31932),,,
+SHA3 trackxtech,r11,trail,tried-dead,,r11: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r11,conn,tried-dead,,r11: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r11,idiff,tried-dead,,r11: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r11,lin,tried-dead,,r11: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r11,deg,tried-dead,,r11: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r11,bday,tried-alive,r11:LS1-birthday-line-filed(ae2b08bd=124.8767),,,
+SHA3 trackxtech,r11,tda,tried-dead,,r11: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r11,sat,open,,,r11: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r11,cost,tried-alive,r11:dig-10-17-cost-ledger(time_log2=124.35007),,,
+SHA3 trackxtech,r12,trail,tried-dead,,r12: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r12,conn,tried-dead,,r12: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r12,idiff,tried-dead,,r12: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r12,lin,tried-dead,,r12: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r12,deg,tried-dead,,r12: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r12,bday,tried-alive,r12:LS1-birthday-line-filed(3c285e5b=124.89966 c7ff4942=124.89966),,,
+SHA3 trackxtech,r12,tda,tried-dead,,r12: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r12,sat,open,,,r12: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r12,cost,tried-alive,r12:dig-10-17-cost-ledger(time_log2=124.37525),,,
+SHA3 trackxtech,r13,trail,tried-dead,,r13: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r13,conn,tried-dead,,r13: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r13,idiff,tried-dead,,r13: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r13,lin,tried-dead,,r13: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r13,deg,tried-dead,,r13: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r13,bday,tried-alive,r13:LS1-birthday-line-filed(dad704b9=124.91233),,,
+SHA3 trackxtech,r13,tda,tried-dead,,r13: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r13,sat,open,,,r13: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r13,cost,tried-alive,r13:dig-10-17-cost-ledger(time_log2=124.39651),,,
+SHA3 trackxtech,r14,trail,tried-dead,,r14: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r14,conn,tried-dead,,r14: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r14,idiff,tried-dead,,r14: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r14,lin,tried-dead,,r14: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r14,deg,tried-dead,,r14: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r14,bday,tried-alive,r14:LS1-birthday-line-filed(45b18164=124.92907),,,
+SHA3 trackxtech,r14,tda,tried-dead,,r14: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r14,sat,open,,,r14: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r14,cost,tried-alive,r14:dig-10-17-cost-ledger(time_log2=124.41480),,,
+SHA3 trackxtech,r15,trail,tried-dead,,r15: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r15,conn,tried-dead,,r15: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r15,idiff,tried-dead,,r15: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r15,lin,tried-dead,,r15: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r15,deg,tried-dead,,r15: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r15,bday,tried-alive,r15:LS1-birthday-line-filed(4f35a54b=124.93791),,,
+SHA3 trackxtech,r15,tda,tried-dead,,r15: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r15,sat,open,,,r15: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r15,cost,tried-alive,r15:dig-10-17-cost-ledger(time_log2=124.43097),,,
+SHA3 trackxtech,r16,trail,tried-dead,,r16: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r16,conn,tried-dead,,r16: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r16,idiff,tried-dead,,r16: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r16,lin,tried-dead,,r16: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r16,deg,tried-dead,,r16: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r16,bday,tried-alive,r16:LS1-birthday-line-filed(6ff4e6cc=124.95074),,,
+SHA3 trackxtech,r16,tda,tried-dead,,r16: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r16,sat,open,,,r16: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r16,cost,tried-alive,r16:dig-10-17-cost-ledger(time_log2=124.44507),,,
+SHA3 trackxtech,r17,trail,tried-dead,,r17: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r17,conn,tried-dead,,r17: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r17,idiff,tried-dead,,r17: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r17,lin,tried-dead,,r17: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r17,deg,tried-dead,,r17: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r17,bday,tried-alive,r17:LS1-birthday-line-filed(1fbb45f8=124.95717),,,
+SHA3 trackxtech,r17,tda,tried-dead,,r17: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r17,sat,open,,,r17: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r17,cost,tried-alive,r17:dig-10-17-cost-ledger(time_log2=124.45787),,,
+SHA3 trackxtech,r18,trail,tried-dead,,r18: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r18,conn,tried-dead,,r18: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r18,idiff,tried-dead,,r18: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r18,lin,tried-dead,,r18: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r18,deg,tried-dead,,r18: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r18,bday,tried-alive,r18:LS1-birthday-line-filed(0c3594f9=124.96738),,,
+SHA3 trackxtech,r18,tda,tried-dead,,r18: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r18,sat,open,,,r18: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r18,cost,tried-alive,r18:dig-10-17-cost-ledger,,,
+SHA3 trackxtech,r19,trail,tried-dead,,r19: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r19,conn,tried-dead,,r19: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r19,idiff,tried-dead,,r19: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r19,lin,tried-dead,,r19: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r19,deg,tried-dead,,r19: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r19,bday,tried-alive,r19:LS1-birthday-line-filed(7243618d=124.9722 00d143ef=124.9722),,,
+SHA3 trackxtech,r19,tda,tried-dead,,r19: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r19,sat,open,,,r19: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r19,cost,tried-alive,r19:dig-10-17-cost-ledger(time_log2=124.48137),,,
+SHA3 trackxtech,r20,trail,tried-dead,,r20: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r20,conn,tried-dead,,r20: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r20,idiff,tried-dead,,r20: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r20,lin,tried-dead,,r20: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r20,deg,tried-dead,,r20: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r20,bday,tried-alive,r20:LS1-birthday-line-filed(06aa269f=124.98055),,,
+SHA3 trackxtech,r20,tda,tried-dead,,r20: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r20,sat,open,,,r20: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r20,cost,tried-alive,r20:dig-10-17-cost-ledger(time_log2=124.49177),,,
+SHA3 trackxtech,r21,trail,tried-dead,,r21: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r21,conn,tried-dead,,r21: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r21,idiff,tried-dead,,r21: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r21,lin,tried-dead,,r21: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r21,deg,tried-dead,,r21: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r21,bday,tried-alive,r21:LS1-birthday-line-filed(cd30f68e=124.98425),,,
+SHA3 trackxtech,r21,tda,tried-dead,,r21: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r21,sat,open,,,r21: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r21,cost,tried-alive,r21:dig-10-17-cost-ledger(time_log2=124.50266),,,
+SHA3 trackxtech,r22,trail,tried-dead,,r22: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r22,conn,tried-dead,,r22: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r22,idiff,tried-dead,,r22: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r22,lin,tried-dead,,r22: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r22,deg,tried-dead,,r22: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r22,bday,tried-alive,r22:LS1-birthday-line-filed(c26329eb=124.99124),,,
+SHA3 trackxtech,r22,tda,tried-dead,,r22: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r22,sat,open,,,r22: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r22,cost,tried-alive,r22:dig-10-17-cost-ledger,,,
+SHA3 trackxtech,r23,trail,tried-dead,,r23: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r23,conn,tried-dead,,r23: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r23,idiff,tried-dead,,r23: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r23,lin,tried-dead,,r23: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r23,deg,tried-dead,,r23: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r23,bday,tried-alive,r23:LS1-birthday-line-filed(8e4b4d90=124.84928 0dc77160=124.84948),,,
+SHA3 trackxtech,r23,tda,tried-dead,,r23: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r23,sat,open,,,r23: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r23,cost,tried-alive,r23:dig-10-17-cost-ledger(time_log2=124.84948),,,
+SHA3 trackxtech,r24,trail,tried-dead,,r24: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r24,conn,tried-dead,,r24: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r24,idiff,tried-dead,,r24: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r24,lin,tried-dead,,r24: no linear structure beyond the 2 rounds LS1 already uses,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r24,deg,tried-dead,,r24: dead for every field size (degree-128 step exceeds the live budget),,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r24,bday,tried-alive,r24:LS1-birthday-line-filed(1dba296d=124.85522 0bd0022d=124.85542),,,
+SHA3 trackxtech,r24,tda,tried-dead,,r24: trail floor >=2^132 (best published weight 141) above the 2^128 birthday; connector has 5 free degrees,,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r24,sat,open,,,r24: no solver run; dead on the same trail floor (>=2^132 > 2^128 birthday) unless a shorter trail exists,tested 10-17 (research/levers_1017/sha3_tech/RESULT.md)
+SHA3 trackxtech,r24,cost,tried-alive,r24:dig-10-17-cost-ledger(time_log2=124.85542),,,

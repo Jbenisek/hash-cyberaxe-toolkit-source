@@ -1,0 +1,6 @@
+(1) FES n=14 D=8: step-major == direct f(g(i)) on sampled points: True
+    plane-major values == step-major values at every step and plane: True
+    plane-major executed 690897 ; formula planes*(62 + sum c + (2^n-1)) = 690897 ; equal: True
+    per plane-step: step-major in-memory 20.9875, plane-major 14.0572 (+1 chi load each)
+(2) table: 5000 probes, 3980 hits, path costs seen [6, 9], max 9 (claimed 9 with A2+A3+A4)
+(3) transpose: plain correct True ALU 3948 ; constant row 140 correct True ALU 3956 ; extra 8

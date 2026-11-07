@@ -1,0 +1,23 @@
+{
+  "id": "D638-POSEIDON-R2-GBUF-HYBRID-CONTROL-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 retained raw-g-spectrum hybrid control",
+  "question": "Can retaining the raw g spectrum at Np replace streamed g transforms losslessly, and does the memory/time trade beat the current row?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Exact raw-CG hybrid KATs pass at r=0 and r=1. r=0: streamed 1,387,066,785 ops versus hybrid 1,284,622,108 (7.386% saving), peak 2,179,584 -> 2,572,800 B. r=1: 6,273,132,842 versus 5,782,416,081 (7.823% saving), peak 9,718,528 -> 11,291,392 B. At r=2 the added CG buffer is exactly 6,291,456 B; beating the current score requires >9.2% stage-C saving. Full r=2 hybrid ledger remains open.",
+  "source": "our workflow: D638 isolated raw-CG hybrid and convolution equivalence controls",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/d636_hybrid_probe.c; research/retest/poseidon_r2/d636_conv_equiv_probe.c; research/retest/poseidon_r2/d636_hybrid_r0_r1.out; research/retest/poseidon_r2/d636_conv_equiv_probe.out; research/poseidon/orchard/exec_r2b/src/lean.c; research/poseidon/orchard/exec_r2b/src/ntt.c",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.02,
+  "prior": 0.2,
+  "gain_basis": "D",
+  "held_fixed": "current exec_r2b arithmetic, exact raw spectrum, same line/centre/exponent, coefficient-vector equality KATs at r=0 and r=1",
+  "notes": "Reduced-r controls only. Scaled CG variants fail the convolution equivalence; raw CG passes. Full r=2 KAT, ledger, compiler/register audit and judge acceptance are open. No score/package/stage/filing/submission credit.",
+  "reopen_if": "A full r=2 raw-CG hybrid run and complete charge either exceeds the 9.2% stage-C threshold or proves the route noncompetitive"
+}

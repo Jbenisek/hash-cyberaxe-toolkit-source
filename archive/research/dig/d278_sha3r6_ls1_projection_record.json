@@ -1,0 +1,21 @@
+{
+  "id": "D278-SHA3-R6-LS1-PROJECTION-SCOUT",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "LS1 22-bit projected-collision scout",
+  "question": "Does the owner LS1 map's finite 22-bit projected trial rate disagree with its model?",
+  "labels": ["S"],
+  "status": "LOCAL_ONLY",
+  "number": "Owner projection run: 16,384 trials, 2,048 points and 8 chained steps per trial; 6,360 successes (0.3882) versus model 0.3934, z=-1.36. Finite 22-bit evidence only; no full-width success-law inference or filing credit.",
+  "source": "owner artifact audited by our workflow: D278 LS1 projection scout",
+  "evidence": "research/sol_answer_D278_sha3r6_ls1_projection_scout.md; research/sha3r6_gap/ls1/proj_out.txt; research/sha3r6_gap/ls1/proj_test.c",
+  "date": "2026-10-13",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite low-width projection scout; no full-width/adaptive iid inference and no package/filing change.",
+  "held_fixed": "owner LS1 kernel, 22-bit projection, eight-step trial shape, model rate",
+  "reopen_if": "Full-width experiments or a proof addresses the adaptive success process"
+}

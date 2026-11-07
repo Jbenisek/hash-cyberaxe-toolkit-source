@@ -1,0 +1,19 @@
+{
+  "id": "D243-POSEIDON-D15625",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "ALT.FUNCDEC unresolved inner degree d=15,625",
+  "question": "Does the r=2, j=0 skip-line polynomial have a functional decomposition at inner degree 15,625?",
+  "labels": ["N", "K"],
+  "status": "OPEN",
+  "number": "not run; estimated about 35 minutes",
+  "source": "our workflow: dig-poseidon-close",
+  "own_test": false,
+  "evidence": "research/poseidon/levels/decomp/RESULT.md; research/poseidon/levels/decomp/run2.log",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Residual after C1971 partial close. Run j=0 first; a constant remainder would reopen the decomposition route. No run started.",
+  "topic": "poseidon alt funcdec residual d=15625"
+}

@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m12 (w12; read by D2.a1 in round 0 and E1.a1 in round 1; free, solved from X2)",
+ "question": "Q4 alternative outcomes / carry patterns and whether they reach the same later differences",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "No alternative carry pattern at the word: A and B share w12, so D2 and E1.a1/E1.d1 are identical (3000/3000). The only place w12 shapes a difference is E1 (c1 = Y11 + d1(w12), additive difference of Y11 fixed): exhaustive 2^32 sweep of w12 through E1 for one real pair (Y11A=2063040312, Y11B=2231369923; w5 differs by 8): XOR difference of the four E1 outputs is never zero in any word (0 of 2^32 for each of dA2,dB2,dC2,dD2), mean weight 60.4 of 128, minimum 32 (at w12=0ef33c2d), no value with <=30. So every w12 reaches a nonzero, different later difference; none cancels a lane.",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/e1sweep.c; research/dig/incoming/blake3-r2-U12/work/e1sweep_out.txt; research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U12/work/scan_m1213.out.json; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m12|msgword|Q4. LOCAL_ONLY: one pair context (Q4_ctx in scan_m1213.out.json), E1 window only, not carried to the digest R. The minimum weight 32 is one number for one context, not a lever.",
+ "topic": "blake3-r2 m12 word"
+}

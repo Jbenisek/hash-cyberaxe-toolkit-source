@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 284734	   1712	   5336	 291782	  473c6	single_cap6

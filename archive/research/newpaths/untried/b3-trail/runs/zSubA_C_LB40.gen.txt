@@ -1,0 +1,1 @@
+vars=78848 clauses=188326 weight_lits=1736 lm_adds=145

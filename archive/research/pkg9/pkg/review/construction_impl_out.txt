@@ -1,0 +1,42 @@
+construction_impl.py: text-only implementation of proof.md Sections 1-6 against the organizer's verifier/blake3.py; seed 20261006
+trials (two real messages each, hashed by the organizer's blake3 with rounds=2): 120000; class members among them 113201; distinct messages A in parts 1-2: 109999
+ok               1 of         1  3.1/3.2 constants: K = 5bf2cd1d, K + W4 = f33a2355, W4' = 97475640, W4 - W4' = fffffff8, top byte W13 0
+ok               2 of         2  Fact P: the eight displayed values of each execution, own G and organizer _g
+ok               1 of         1  Fact P: d and b outputs equal, a and c outputs differ
+ok               1 of         1  Lemma Q arithmetic: DY3 = fdb77cfd, ROL(eta,16) = 03cf8303, DY3 + x = 01870000, value 030c0303, 19 free
+ok          200000 of    200000  Lemma L: K2 with (55; w4, w5) and (63; w4', w5') leaves the same four words (organizer _g)
+ok          120000 of    120000  lengths 55 and 63; B ends in eight zero bytes
+ok          120000 of    120000  zero-filled block of A is the 16 words of S1+T; of B the same with w4', w5'
+ok          120000 of    120000  w14 = w15 = 0 and top byte of w13 zero in both blocks
+ok          120000 of    120000  A and B share every word except w4, w5 (and those two differ)
+ok          120000 of    120000  w4 = W4, w4' = W4', w5' = w5 - 8, w13 = W13
+ok          120000 of    120000  states after round 0 equal for A (n=55) and B (n=63), organizer _g
+ok          120000 of    120000  pin in place: X3, X7, X11, X15
+ok          120000 of    120000  own compression (Section 1) = organizer blake3(.,2) for A and B
+ok          120000 of    120000  organizer digests agree on words 0, 2, 5, 7
+ok          120000 of    120000  state after the column step = S0..S15 of step S1
+ok          120000 of    120000  state after round 0 = X0..X15 of steps S1 and T
+ok          120000 of    120000  Lemma S: K0, K1, K2, K3, D2, D3 (inputs, words, eight values each)
+ok          120000 of    120000  Lemma F: D0, D1 (inputs, words, eight values each)
+ok          120000 of    120000  Lemma Y: C0 in A and in B (inputs, words, eight values)
+ok          120000 of    120000  Y4 = y in A and in B
+ok          120000 of    120000  Fact P in the trial: Y3, Y3', Y11, Y11', and Y equal elsewhere
+ok          120000 of    120000  6.2: inputs and words of E1 and E3 on A and B as displayed
+ok          120000 of    120000  Lemma Q on this y: definition and mask form agree, and (h1 xor h1' = eta) exactly for members
+ok          120000 of    120000  Lemma E as an identity: early word = ROL(D4,7) xor D1 of the organizer digests
+ok          120000 of    120000  Lemma A (a): ROL(h1,24) = z xor ROL(e1,8); Y14 = ROR(z,8)
+ok          113201 of    113201  Lemma T: eta = 830303cf for a class member
+ok          113201 of    113201  Lemma N: n = D3 xor ROL(D6,8) of the organizer digests (class members)
+ok          113201 of    113201  Lemma A (b), (c): rule A on h1 = conditions on z = zero word (class members)
+ok               1 of         1  Lemma Q, all 2^32 values of Y4: definition = mask form, and 524,288 members
+ok               1 of         1  numbering: the 2^19 numbers give 2^19 distinct members, all in the class, e1 increasing with k
+ok               1 of         1  program constants = text: W4', delta, Y3, Y3', Y11, Y11', class mask/value/size, rule constants, lengths
+ok               1 of         1  program class_member(k) = text numbering for all 2^19 numbers
+ok               1 of         1  program list: last word holds members 524286, 524287 and repeats the last; lanes hold ROL(y,7)
+ok            3000 of      3000  program context()/trial()/messages() = steps S1, T, S2, S3 of the text (words and both messages)
+ok            3000 of      3000  program rule_a(h1) = rule A as written in 6.3
+class trials that satisfy rule A: 3563 (share 0.03147; 2^-5 = 0.03125); with n = 0: 0; early word 0: 0
+Lemma Q exhaustive: members 524288, mismatches 0
+first failing trial: None
+seconds: trials 33, Lemma Q 62, program 3
+RESULT: all checks hold

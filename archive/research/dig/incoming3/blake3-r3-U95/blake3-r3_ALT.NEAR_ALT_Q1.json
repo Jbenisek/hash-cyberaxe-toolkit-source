@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "near-collision of first-block chaining values: stage A exact count",
+ "question": "Value or count as used in the filed entry (blake3-r3, 125.1087)?",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "stage A (cv and cv' equal in at least 7 of 8 words, the differing word may be any): pairs needed 2^224/8, n = sqrt(2*2^224/8) = 2^111.0 evaluations (B3R3-C1 wrote 2^112); times 0.133 compression per SWAR step = 2^108.1 units. Stage A alone gives no collision",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_near.py; research/blake3_r3/alt/exp_near.log",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Counting formula only (birthday on 224 chosen bits, 8 choices of the free word); no search run.",
+ "held_fixed": "first block 64 bytes, rho search on 224 bits",
+ "reopen_if": "a stage B with a pin (see Q2)",
+ "topic": "blake3-r3|ALT.NEAR|ALT|Q1"
+}

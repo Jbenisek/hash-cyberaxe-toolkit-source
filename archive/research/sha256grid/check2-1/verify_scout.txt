@@ -1,0 +1,11 @@
+transcription: scout r38core.py vs package vt38.py: {'K': True, 'CHAR': True, 'TWOBIT': True, 'PCV': True, 'PMY': True, 'PMX': True}
+published pair: ds0(W10) = 10005f30; with its ds1(W23), dW9, dW18 it gives dW25 = e0000000 (characteristic e0000000)
+S* (published pair): failures [] | W7 cell True | published W16 in row-16 set: True | derived words equal published M': True
+step1_base.sols.json[0]    failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+step1_base.sols.json[1]    failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+step1_k1r16.sols.json[0]   failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): False / False | rows equal to S*: []
+   claimed row-16 W16 values: 1, distinct 1, all pass row 16: True
+step1_g32.sols.json[0]     failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: []
+   claimed row-16 W16 values: 32, distinct 32, all pass row 16: True
+step1_g8.sols.json[0]      failures [] | same on a random CV: True | W7 cell / dW22=0 on published CV (Step 2): True / False | rows equal to S*: [7, 8, 9, 10, 11, 12, 13, 14, 15]
+   claimed row-16 W16 values: 8, distinct 8, all pass row 16: True

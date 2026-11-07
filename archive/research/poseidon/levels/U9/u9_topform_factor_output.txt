@@ -1,0 +1,21 @@
+--- r=1
+after R1  (full) deg 5: lane0 factors: [(1, 1), (4, 1)]
+after R2  (full) deg 25: lane0 factors: [(1, 1), (5, 1), (19, 1)]
+after R3  (full) deg 125: lane0 factors: [(4, 1), (9, 1), (112, 1)]
+after R4  (partial) deg 625: lane0 factors: [(4, 5), (9, 5), (112, 5)]  lanes proportional: True
+after R60 (full) deg 3125: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+after R61 (full) deg 15625: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+after R62 (full) deg 78125: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+after R63 (full) deg 390625: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+r=1: output top form == c * (Phi_R3,0)^(5^5) with c=0x26726671eb865f9f... ? True   (degree 390625)
+--- r=2
+after R1  (full) deg 5: lane0 factors: [(1, 1), (4, 1)]
+after R2  (full) deg 25: lane0 factors: [(1, 1), (5, 1), (19, 1)]
+after R3  (full) deg 125: lane0 factors: [(4, 1), (9, 1), (112, 1)]
+after R4  (partial) deg 625: lane0 factors: [(4, 5), (9, 5), (112, 5)]  lanes proportional: True
+after R5  (partial) deg 3125: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+after R60 (full) deg 15625: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+after R61 (full) deg 78125: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+after R62 (full) deg 390625: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+after R63 (full) deg 1953125: lanes proportional (f_1 = c1 f_0, f_2 = c2 f_0): True
+r=2: output top form == c * (Phi_R3,0)^(5^6) with c=0x8887ce0a72f78d3a... ? True   (degree 1953125)

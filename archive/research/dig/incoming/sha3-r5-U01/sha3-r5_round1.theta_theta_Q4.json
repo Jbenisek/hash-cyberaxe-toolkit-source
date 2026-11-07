@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r5",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "row_i": 1,
+ "row_j": 1,
+ "object": "r5 round-1 theta kernel membership and alternatives",
+ "question": "Is alpha1 in the column-parity kernel, and do alternatives reach the same alpha2?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "alpha1 NOT in kernel in 16 of 16 pairs (145-177 nonzero parity columns); active rows alpha1 280-318 -> beta1 exactly 59 rows in all 16 pairs (the 59 rows of alpha2). Exact alpha2 reachable through chi: base yes; all 1600 single-bit flips: 0 reach; kernel-preserving same-column pairs reaching: 13/14/15 of 3200 (first 3 pairs).",
+ "evidence": "research/dig/incoming/sha3-r5-U01/work/theta_scan.py; work/theta_scan.log; work/theta_scan.json",
+ "notes": "Universe cell sha3-r5|round1.theta|theta|Q4. Method: own Keccak (tools/traillab/sha3_atlas/kk.py) on the 16 collision pairs of the pkgR5L certificates (all 16 reproduce the equal 4-lane digest, beta2 = trail BETA2 and alpha3 = trail alpha3 in the CP kernel, validated first); alternatives tested on the first 3 pairs: every single-bit flip of the round input (non-kernel) and every same-column bit pair (kernel-preserving), counting active chi rows of L(.) and reachability of the required next difference. Window only (16 pairs, local flips), not all kernel alternatives. The few reaching pair flips are neighbouring beta1 row choices (the connector's own D2/M2 choices); not tested as new freedom.",
+ "topic": "sha3.r5.theta.r1.kernel"
+}

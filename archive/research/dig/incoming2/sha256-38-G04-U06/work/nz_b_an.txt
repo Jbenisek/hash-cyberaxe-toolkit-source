@@ -1,0 +1,17 @@
+records 24559 cells(rows24..36) 1516 zero output difference 1667 zero but not cells 151 cells but not zero 0
+support patterns (bit k = names[k] nonzero), top 12:
+  ff dA36,dA35,dA34,dA33,dE36,dE35,dE34,dE33  22892  (0.9321)
+  00 none                                     1667  (0.0679)
+number of nonzero words histogram: {0: 1667, 8: 22892}
+shape A-words zero, some E word nonzero (the only shape rows 0..3 can absorb): 0 of 24559
+nonzero-difference records 22892 distinct 22892 max multiplicity 1
+no colliding pair among 22892 -> support > 2^27.97 (birthday)
+  dA36: distinct 22892, zero fraction 0.0000, top [('9a686f87', 1), ('056b2112', 1), ('4f2019d7', 1)]
+  dA35: distinct 22892, zero fraction 0.0000, top [('4d560545', 1), ('93e07a26', 1), ('3ab29eee', 1)]
+  dA34: distinct 22892, zero fraction 0.0000, top [('6dff70f1', 1), ('dca05f2b', 1), ('634be904', 1)]
+  dA33: distinct 22892, zero fraction 0.0000, top [('78e38d48', 1), ('262580d1', 1), ('ee77a21d', 1)]
+  dE36: distinct 22892, zero fraction 0.0000, top [('bff5cd0f', 1), ('adbecaad', 1), ('cafd53a8', 1)]
+  dE35: distinct 22892, zero fraction 0.0000, top [('b8cd72a5', 1), ('fca0017a', 1), ('51383b6e', 1)]
+  dE34: distinct 22892, zero fraction 0.0000, top [('43ea1b47', 1), ('20171cba', 1), ('99ad4526', 1)]
+  dE33: distinct 22892, zero fraction 0.0000, top [('c2ce0e22', 1), ('0c9c1fe5', 1), ('70bd15bd', 1)]
+popcount of the 256-bit difference (nonzero records): min 97, median 128, mean 128.1

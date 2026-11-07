@@ -1,0 +1,14 @@
+58fca7a18e mean_lin -74.3399  lcb99 -74.4140  lcb999 -74.4489  lcb_log -74.4156  parity01_99 -74.5162  -> QDECL -74.46
+7111e7edc4 mean_lin -74.3587  lcb99 -74.4419  lcb999 -74.4813  lcb_log -74.4438  parity01_99 -74.4672  -> QDECL -74.50
+566c26bd10 mean_lin -75.2379  lcb99 -75.3141  lcb999 -75.3500  lcb_log -75.3156  parity01_99 -75.3751  -> QDECL -75.36
+7f900642a2 mean_lin -75.2401  lcb99 -75.3352  lcb999 -75.3805  lcb_log -75.3367  parity01_99 -75.4564  -> QDECL -75.40
+3e4c6ceaf9 mean_lin -75.2532  lcb99 -75.3280  lcb999 -75.3633  lcb_log -75.3286  parity01_99 -75.4138  -> QDECL -75.38
+cde0acf011 mean_lin -75.2575  lcb99 -75.3206  lcb999 -75.3501  lcb_log -75.3212  parity01_99 -75.3012  -> QDECL -75.37
+b8cb3120ea mean_lin -75.2722  lcb99 -75.4314  lcb999 -75.5098  lcb_log -75.4255  parity01_99 -75.3817  -> QDECL -75.52
+35d0d27869 mean_lin -75.2827  lcb99 -75.3892  lcb999 -75.4402  lcb_log -75.3918  parity01_99 -75.4143  -> QDECL -75.46
+dade958e31 mean_lin -75.2858  lcb99 -75.3828  lcb999 -75.4290  lcb_log -75.3855  parity01_99 -75.4996  -> QDECL -75.44
+b09c9d592d mean_lin -75.3136  lcb99 -75.4805  lcb999 -75.5631  lcb_log -75.4850  parity01_99 -75.4695  -> QDECL -75.58
+3d6ddf7dbe mean_lin -75.3186  lcb99 -75.3958  lcb999 -75.4323  lcb_log -75.3954  parity01_99 -75.5021  -> QDECL -75.45
+fbe0332343 mean_lin -75.3485  lcb99 -75.4373  lcb999 -75.4795  lcb_log -75.4374  parity01_99 -75.5432  -> QDECL -75.49
+9755b8d5b6 mean_lin -75.3911  lcb99 -75.5598  lcb999 -75.6433  lcb_log -75.5590  parity01_99 -75.5508  -> QDECL -75.66
+3602c1ee40 mean_lin -75.3964  lcb99 -75.5400  lcb999 -75.6101  lcb_log -75.5406  parity01_99 -75.6206  -> QDECL -75.63

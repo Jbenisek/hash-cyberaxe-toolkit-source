@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "single block (flags 11, cv = IV) as used",
+ "question": "Value or count as used in the filed entry (blake3-r3, 125.1087)?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "595 operations per 7-lane step (add 100, xor 88, shr 80, and 167, shl 80, or 80), time_log2 125.1087; own tracer rebuilt from rho.py gives 595",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/opcount.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Tracer = parameterised copy of candidate_blake3/experiments/rho.py (our own code).",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "none",
+ "topic": "blake3-r3|ALT.MULTI|ALT|Q1"
+}

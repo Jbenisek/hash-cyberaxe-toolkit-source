@@ -1,0 +1,91 @@
+{
+  "record_type": "Independent scientific paraphrase and bounded source audit",
+  "review_date": "2026-10-29",
+  "title": "BLAKE3 r2 Z0 typed-list method: mechanism, lineage and later qualifications",
+  "publication_boundary": "No inherited proof or program is reproduced. Original paths are provenance identifiers, not redistribution approval. Only independently authored scientific descriptions and factual numbers are included. No archived code was executed.",
+  "scope": "The available package is research/tools/build_pkg/scratch/pkgB3Z0/pkg. The short scratch/pkgB3Z0 path was absent. This is a historical technical account, not a fresh package acceptance or success certification.",
+  "sources": [
+    {
+      "path": "research/tools/build_pkg/scratch/pkgB3Z0/pkg/blake3-r2/proof.md",
+      "sha256": "8488769b2e5b1f444c54b9964790cd9fb8b00ac346c0b965597623544a0839ef",
+      "read_coverage": "Selected scientific sections fully read: lines 1-220; 1260-1294 (joint-root definitions and carry discussion); 1731-2076 (high-counter walk, list method, block/list allowances); 3070-3214 (memory, preprocessing and advice); 3587-3666 (credits). Not a complete read of the inherited 4130-line proof.",
+      "ownership": "Mixed credited derivative containing an inherited external proof; curate only."
+    },
+    {
+      "path": "research/tools/build_pkg/scratch/pkgB3Z0/pkg/blake3-r2/experiments/frontline.py",
+      "sha256": "0a4ddf8392c499e97213b14bef4f744342c526b1ec2def986bcaf22c492877c9",
+      "read_coverage": "Lines 1-380 and 909-1290: constants, member map, ledger, automata, typed test-(2), packed Y9 functions, level-16 lists, interval decomposition, counter walk, reference comparison and self-test. Solver internals in the intervening range were not independently audited.",
+      "ownership": "Credited derivative source; not reproduced or run."
+    },
+    {
+      "path": "research/tools/build_pkg/scratch/pkgB3Z0/pkg/blake3-r2/claim.json",
+      "sha256": "8f70d12fd1fa820526dedf9040158bbf602e32e1027c6b589976e4c114d13f45",
+      "read_coverage": "Complete",
+      "ownership": "Historical claim metadata; numeric fields paraphrased."
+    },
+    {
+      "path": "research/tools/build_pkg/scratch/pkgB3Z0/pkg/submission-note-r2.md",
+      "sha256": "0e5efe94d3fa63daa1ee65e7623313514910bae4ec1659bde9ea5afb8f85bdc8",
+      "read_coverage": "Complete",
+      "ownership": "Historical derivative note; curate only."
+    },
+    {
+      "path": "research/sol_answer_D139_package_repair.md",
+      "sha256": "bfa8c3242fde227f46264fdab6ee299861fd03fa7ee762027a1027b09cc11631",
+      "read_coverage": "Complete",
+      "ownership": "Project historical provenance note; operational prose omitted."
+    },
+    {
+      "path": "research/sol_answer_D305_b3z0_prefile_and_selftest.md",
+      "sha256": "c3cbe8c4a15894d235bd795dce5940b70049fd9004141c3f9e294eae69e2e370",
+      "read_coverage": "Complete",
+      "ownership": "Project local audit; scientific qualifications paraphrased."
+    },
+    {
+      "path": "research/sol_answer_D330_b3m_member_list_rss.md",
+      "sha256": "275272f0eb9dba1d6499b024c474d09fd0cd757dc74544b0c418650468d942fc",
+      "read_coverage": "Complete",
+      "ownership": "Project formula-only memory probe report; measurements paraphrased."
+    }
+  ],
+  "mechanism": {
+    "baseline": "An inherited construction makes the 55-byte and 63-byte last chunks agree on chaining-value words 0,2,5,7. For equal prefixes and a common chunk counter, complete agreement on all eight chaining words gives a complete-message collision. The initial half equality alone is not a full collision.",
+    "counter_walk": "For one member, t_hi=s XOR KS with KS the low 16 bits of ROL(K1.d1,16). Then K1.a1=(K0r-KS)+s while X0 and w3 decrease by one as s increases. Across 2^16 steps, X0's upper half changes at most once, creating at most two blocks. Within a block the low half of E=omega is fixed.",
+    "typed_relation": "For member type t=Y4[4] XOR Y4[5], necessary test-(2) witness relations are f[9] XOR f[10]=1 and f[24] XOR f[25]=1 XOR t. The member class has 262144 members of each type. Typed carry automata reject impossible low-half blocks and index lists of accepted upper halves for live blocks.",
+    "list_selection": "The upper-half mapping from X0's low half is an XOR with a fixed half-word followed by a fixed modular addition. An interval decomposes into at most 16 aligned binary intervals. XOR preserves each aligned interval as an interval; addition introduces at most one wrap across the disjoint images, giving at most 17 ordinary ranges. Prefix-count tables select exact slices of sorted accepted-high-half lists. Seven 36-bit entries fit a 256-bit word. This skips rejected steps rather than scanning them.",
+    "solver_boundary": "List acceptance is a necessary existential projection of J2, not a collision certificate. The eventual root h must satisfy J1, J2 and J3 with the same witness f=ROR(y XOR (Q+h),12); subsequent screening and capped solving remain necessary."
+  },
+  "current_typed_counts": {
+    "members_per_type": 262144,
+    "accepted_E_type0": 23820160,
+    "accepted_E_type1": 34028800,
+    "mean_accepted_E": 28924480,
+    "live_low_halves_per_type": 4160,
+    "reported_PASS1_plain": 14110208,
+    "reported_PASS1_paired": 8778240,
+    "pass_budget_product": "253906027315200",
+    "N": "98522649610738605293",
+    "normalization": 430,
+    "time_log2_reported": "57.66889638062893",
+    "time_log2_rounded_up": "57.6689",
+    "memory_bytes_bound": "2^60",
+    "preprocessing_bound": "2^54",
+    "advice_bytes": "2^7",
+    "success_statement": "At least 0.39 under inherited H1-prime, H4-prime, H5-screen and H_G-cluster; not an unconditional fixed-target success proof."
+  },
+  "qualifications": [
+    "The opening ledger supersedes the inherited proof's old 7072 live states and 63633856 E count; mixing revisions produces the wrong row.",
+    "The prefix reports a separate independent bit-serial paired-predicate replay. The inspected shipped self-test's screen_counts check asserts the stored PASS1 constant; it is not itself that independent paired-count derivation. No new paired replay was performed for this article.",
+    "D305 reports a historical self-test exit 0 in approximately 4.7 seconds with two full contexts and zero mismatches/halts. It also reports four prefile defects: an unrecognized executable ledger block, internal staged label, non-LF-normalized source, and source hash absent from the known-good list. Historical test success did not remove these intake defects.",
+    "D330's formula-only probe reports 19726336-byte peak for one member pair at a time and 26517504-byte peak for two packed arrays. The packed numerical payload is 4194304 bytes; both checksums are 201850880. These are not complete Z0/Y9/J3 runtime peaks.",
+    "The abstract proof allocates two 256-bit words per class member, unlike D330's two 32-bit array entries. Representations and machine units must not be interchanged.",
+    "The 2^60 memory declaration includes complete output messages as well as tables and search state. A small member-list probe cannot replace that declaration. No new score or package readiness is inferred."
+  ],
+  "attribution": {
+    "idea_index_title": "BLAKE3 r2 Z0 list method",
+    "idea_index_credit": "Gridwalker 10-11",
+    "idea_index_historical_label": "ACCEPTED; not used here as evidence of acceptance of this later package snapshot",
+    "immediate_base": "Th0rgal fa97a08f-2ab3-4a36-a3c3-8ea42327318a",
+    "earlier_mechanism": "The inherited proof credits Jbenisek a14831c1 for the high-counter walk and successor 643db72a for the sorted-list method; 0xshikhar d93db0f for the packed word test, f73c5d2 for joint screening, and Th0rgal for member/word hoists. The Z0 opening modification is the member-type split and typed lists. Full source credit also retains tanctl, Th0rgal and the wider derivative chain."
+  }
+}

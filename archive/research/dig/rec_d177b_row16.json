@@ -1,0 +1,20 @@
+{
+  "id": "S37-D177B-ROW16-MASK",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": 16,
+  "object": "Procedure C row-16 failure mask",
+  "question": "Which row-16 cells fail in the bounded 200-model free-CV replay, with MSB-first indexing?",
+  "labels": ["D", "X", "Z"],
+  "status": "SAMPLED",
+  "number": "A16 bits 29/30/31:97/97/45; E16 bits 7/9/11/12/17/18/22/23/30:95-120/200; W16 printed cells:0 failures",
+  "source": "our workflow: d177b_procedure_c",
+  "own_test": true,
+  "evidence": "research/retest/d177b_procedure_c/RESULT.md; research/sol_answer_D177b_procedure_c.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "r37.d177b.row16_failure_mask",
+  "notes": "Diagnostic only for the first 200 SAT models under one free-CV construction; characteristic strings are MSB-first. Not a family-wide invariant or rate. The held-out P1 signature test remains OPEN and is specified in SIGNATURE_TEST_SPEC.md."
+}

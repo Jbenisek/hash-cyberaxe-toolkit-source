@@ -1,0 +1,37 @@
+representatives examined      : 393216
+gate-open share               : 0.0628764   (text 0.0624630, model 2^-4=0.0625)
+rule-A share among reps       : 0.00376383  (2^-8=0.00390625)
+rule-A neighbours found / rep : 0.173444  (text 0.15630)
+YIELD  (nb found/rep)/2^-8    : 44.402   (H4 assumes 40.02)
+trial-equivalents/rep 1+yield : 45.402   (text 41.02; lossless would be 64)
+rule-A found / rule-A present : 0.70883  (= TE/64, text 41.02/64=0.64094)
+opened clusters               : 24724
+rule-A nbrs per opened cluster: 2.7585  (text 2.5008)
+opened clusters with none     : 0.0000  (text 0.1436)
+rep words with an open lane   : 0.244373  (text 0.241596; indep. 0.363503)
+rep words with a rule-A lane  : 0.025356  (text 0.026178 / 0.02622)
+open-lane histogram 0..7      : [0.7556, 0.1231, 0.071, 0.0321, 0.0133, 0.0037, 0.001, 0.0001]
+   (text 0.7584 0.1238 0.0668 0.0315 0.0137 0.0046 0.0011 0.0002)
+neighbour words run / rep     : 0.56589  (text 0.5625 = 9*gate rate)
+neighbour words into stage 2  : 0.26587  (text 0.1364 / 0.1367)
+per-position rates /2^-8, rep excluded, min/max: 9.3189 15.2208
+   (text: the 63 rates lie between 0.543 and 0.874 -- same quantity /16)
+   as a share of the independent value 1/16: min 0.5824 max 0.9513
+
+cost/rep from 6.5 counts: stageA 33.311 + stage2 20.800 = 54.111 ; per TE 1.1918 ; per nominal trial 0.8455
+stage-2 share of all stage-A words: 0.21739  (Section 8 charges 1/32=0.03125)
+outer tuples 400, representatives 6553600, opened 410896
+gate-open share   0.0626978  (text 0.0624630)
+rule-A share/rep  0.00393250 (2^-8=0.00390625, ratio 1.00672)
+YIELD             40.202  +- 0.465 (between-tuple sd 9.30 = 23.1%)   H4 assumes 40.02
+per-tuple yield   min 16.70 max 83.44
+trial-equivalents 41.202  (text 41.02; lossless 64)
+TE/64             0.64378  (text 0.64094)
+rule-A nbrs/opened cluster 2.5047 (text 2.5008)
+opened clusters with none  0.1432 (text 0.1436)
+rep words open lane  0.241610 (text 0.241596)
+rep words rule-A     0.026355 (text 0.026178)
+nb words / rep       0.56428 (text 0.5625)
+nb words into st2    0.24425 (text 0.1364)
+63 retention rates   min 0.5401 max 0.8689 mean 0.6361 (text 0.543..0.874)
+cost/rep 52.350 -> per TE 1.2706 ; per nominal trial 0.8180 ; stage-2 share of words 0.20023

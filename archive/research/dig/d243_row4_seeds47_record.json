@@ -1,0 +1,20 @@
+{
+  "id": "D243-S38-ROW4-FIXED-SPLIT-SEEDS47",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 14,
+  "object": "Zone D 38 row-4 W8 G seeds 4-7 zero controls",
+  "question": "Do four further seeded fixed splits retain the row-4 W8 G full-path signature?",
+  "labels": ["S", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Seeds 4-7: each G=2^26, rows 5..15 pass 2^26, final state-equal 0",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-row4full-seeds47.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Four additional fixed W6/W7/E16..E21 splits, W8 exhaustive over G. Combined with published and seeds 1-3: 4604/0/0/0/0/0/0/0; no general rate or impossibility theorem.",
+  "held_fixed": "Seed-specific W6, W7, E16..E21 coordinates listed in the answer; W8 varied over all G members",
+  "topic": "sha256-38 zoneD38 residual row4"
+}

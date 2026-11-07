@@ -1,0 +1,9 @@
+S8=8796064307936 S7=7696575922199 S6=6597068892902; S8-S7=1099488385737 S8-S6=2198995415034
+candidates = Nv/charge = 2^127.992892; Fv per candidate = 16.785103
+8->7 one plane                 : saves 0.011719 ops/candidate -> 0.000292 bit -> time_log2 123.18214
+8->7 one z (5 planes)          : saves 0.058593 ops/candidate -> 0.001460 bit -> time_log2 123.18097
+8->7 all 175 key-cone planes   : saves 2.050738 ops/candidate -> 0.051983 bit -> time_log2 123.13045
+8->6 one plane                 : saves 0.023437 ops/candidate -> 0.000584 bit -> time_log2 123.18185
+8->6 one z (5 planes)          : saves 0.117186 ops/candidate -> 0.002921 bit -> time_log2 123.17951
+8->6 all 175 key-cone planes   : saves 4.101511 ops/candidate -> 0.105910 bit -> time_log2 123.07652
+measured: qualifying planes = 0, qualifying z = 0 -> saving 0 ops/candidate, 0 bit, time_log2 stays 123.18243

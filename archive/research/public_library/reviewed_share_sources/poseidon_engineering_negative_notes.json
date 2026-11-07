@@ -1,0 +1,60 @@
+{
+  "title": "Dated Poseidon transform and memory experiments: reviewed scientific extracts",
+  "review_date": "2026-10-29",
+  "status": "SOURCE-REPORTED counts and closures; not independently replayed",
+  "scope": "Four complete, specifically selected scientific ledger entries covering three engineering topics. The surrounding mixed coordination ledger is not admitted as publication text.",
+  "provenance": {
+    "source_path": "research/LEVERS.md",
+    "source_sha256": "afb0d37d07ffd41bdf931ac322f7eb7f31d2d758931d04b46ec0861d44fde68d",
+    "selected_lines": [
+      1972,
+      2811,
+      2826,
+      2846
+    ],
+    "selection_rule": "Preserve numerical result, scope, credited method and missing evidence. Omit commands, queue/filing instructions and unrelated coordination. These are new paraphrases, not copied external text."
+  },
+  "records": [
+    {
+      "id": "three-array-tradeoff",
+      "date": "2026-10-23 05:24",
+      "source_line": 1972,
+      "status": "Reported negative count for the specified r9/r13/r15 schedules",
+      "finding": "The tested three-array C/D schedule increased the time exponent by about 0.36 to 0.65 bits, while the realized memory improvement was only about 0.03 to 0.04 bits because stage D and Newton workspace still constrained the peak. The ledger records every tested case as worse or short of its intended improvement threshold.",
+      "correction": "The same entry rejects the earlier r15 score 90.96140 because its PD_KMAXJ=34 setting exceeded the relevant 2-adicity limit. It records 90.98045 at PD_KMAXJ=31 as the valid comparison.",
+      "evidence_boundary": "The cited scratchpad/api11 directory was not found at the workspace root or under research during this bounded review. This is a preserved report, not a newly verified count or an all-algorithm memory lower bound."
+    },
+    {
+      "id": "r17-two-array-tradeoff",
+      "date": "2026-10-28 21:01",
+      "source_line": 2811,
+      "status": "Reported lower-bound argument for a selected implementation family",
+      "finding": "The r17 entry identifies three n1-sized arrays R,W,g as the stage-C floor for its non-in-place squaring layout. The evaluated in-place alternative is reported to require at least twice the stage-C work, causing about +0.683 time bits against a 0.62-bit saving budget and leaving the score at least about 100.04.",
+      "evidence_boundary": "The underlying derivation and exact implementation of the cited Giorgi–Grenet–Roche-style alternative were not located or replayed in this bounded review. The report leaves a cheaper in-place squaring open. It is not a universal lower bound for every representation, recomputation strategy or future implementation."
+    },
+    {
+      "id": "b2-folding-crossover",
+      "date": "2026-10-29 01:15",
+      "source_line": 2826,
+      "status": "Reported cross-row gain and loss; no new replay",
+      "finding": "The B2 variant places stage-B kappa inverse-transform work on stage-C column passes and uses a natural-order point loop. The ledger reports about a 0.0083-bit improvement at r14 but a loss at small kappa, including r9.",
+      "attribution": "The ledger identifies mpjunior92 entries 4a13fe68, 3a4f2047 and 755611f3, and akki-rock05's lower-row port 67fe23d7.",
+      "evidence_boundary": "This short entry does not provide a complete transform identity, operation numerator or allocator trace. The separate r9 Graeffe improvement on the same source line is not attributed to B2. No predecessor proof text is reproduced."
+    },
+    {
+      "id": "radix3-coset-group-recount",
+      "date": "2026-10-29 05:53",
+      "source_line": 2846,
+      "status": "Reported negative recount, not independently executed",
+      "finding": "For the proposed stage-C coset group of size 3*2^32, the ledger replaces an estimated 3.3% saving with a recounted 5.4% increase in stage C and 4.2% more memory. Its reported overall score is 72.29947 versus 72.18682. The source attributes the mismatch to an underpriced radix-3 pass of roughly 8.5 operations per point.",
+      "control": "Even assigning the fused radix-3 work zero cost gives a reported score of 72.25275, still worse than the baseline. The tested VSHIFT=2 alternative lowers stage-C work but loses after memory is scored.",
+      "evidence_boundary": "No exact numerator, complete parameter snapshot or replay script is attached to this ledger entry. These numerical comparisons are retained as source-reported results, not recertified costs or a rejection of all radix-3 algorithms."
+    }
+  ],
+  "publication_rights": "Scientific paraphrase of the project's own ledger; no ordinary chat, external paper payload or predecessor proof copied. The original mixed ledger should not be exported through this note.",
+  "review_limitations": [
+    "Only the four selected entries were reviewed for this note, not the entire ledger.",
+    "No research computation was run. Missing local scratchpad paths are not proof the artifacts do not exist on another system.",
+    "The exact dated counts are valuable negative evidence, but replay requires recovering the original parameter and program snapshots."
+  ]
+}

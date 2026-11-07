@@ -1,0 +1,20 @@
+{
+  "id": "S37-JOB2-PAT",
+  "hash": "sha256-37",
+  "row_i": 18,
+  "row_j": 21,
+  "object": "rows 18/19 four-pattern survival through rows 19-21 to exact event",
+  "question": "For each of the 4 row-18/19 parity-collapse patterns (E18[1],E18[10]), what are the staged rates rows 19..21 and the late exact event over many prefixes - does any pattern survive better?",
+  "labels": ["P", "K", "B", "E"],
+  "status": "SAMPLED",
+  "number": "Only 2 of 4 patterns survive. P01 (E18[1]=0,E18[10]=1) exact 2^-13.68 and P11/published (1,1) exact 2^-13.65 are statistically tied (3 seeds each, 0 false, re-hashed). P00 (0,0) and P10 (1,0) are DEAD: row-21 cell stage unsatisfiable (carrier dead all seeds); with carrier none over 2^24 proposals P00 EXACT 0, P10 EXACT 1 at 2^-23 only by violating the rows 19-21 cells. Distinguishing bit is E18[10]: =1 lives, =0 dies. Real freedom at the 18/19 parity = 1 bit, not the nominal 2.",
+  "source": "our workflow: close37/job2",
+  "own_test": true,
+  "evidence": "research/retest/close37/job2/RESULT.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 1.0,
+  "gain_basis": "q3",
+  "topic": "r37.rows1819.pattern_survival",
+  "notes": "traillab window --chi chi37_job2 --rows 19 21 --event out --prefix-relax P00/P01/P10/P11, np 2048 mt 4096, seeds 1,2,3, threads 3; pattern relaxations = R1 parity structure + fixed (E18[1],E18[10]) coset. SMC draws many prefixes/particles; EXACT = zero 37-step output difference re-rebuilt per proposal (0 replay mismatches). Confirms grokL single-fibre result (only id 11 collided there) was fibre-limited: over many prefixes P01 also survives, equal to P11. No surviving pattern survives better than the other. Resolves OPEN cells (18,19) and (20,21) downstream-survival split."
+}

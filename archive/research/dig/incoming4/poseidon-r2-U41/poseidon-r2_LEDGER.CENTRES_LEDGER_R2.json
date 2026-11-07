@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.CENTRES (LEDGER)",
+ "question": "R2: own recount: centres needed for success 1/2 and 0.8",
+ "labels": [
+  "B"
+ ],
+ "status": "COMPUTED",
+ "number": "at p = 0.3935 (Poisson(1/2)) 2 centres give 0.632, 4 give 0.865; at the measured pooled rate 8/23 = 0.348 4 centres give 0.819; at the Wilson 95 percent lower limit 0.188: 4 centres give 0.566.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/d192_r2_results.jsonl; research/poseidon/orchard/lean_r2/logs/r2_s20*.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|LEDGER.CENTRES|LEDGER|R2. Pooled sample = GPU d192 (4/12) + CPU r2 first centres (4/11), line 0 only.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "more samples move the pooled rate",
+ "topic": "poseidon-r2 centres"
+}

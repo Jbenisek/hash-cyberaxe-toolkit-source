@@ -1,0 +1,23 @@
+r=1 seed=303 D=78125
+  init (twiddle table)                         arith=         33742 other=        241330 total=        275072     0.0s peak=1048576
+  two line setups + intersection               arith=          1131 other=         12489 total=         13620     0.0s peak=1048576
+  sample x, y = H(x)                           arith=             0 other=           319 total=           319     0.0s peak=1048576
+x: family 0
+  family 0: build F (evaluations + NTT)        arith=       2525873 other=      61471246 total=      63997119     0.6s peak=6694336
+  family 0: W^p mod F                          arith=    7533028466 other=   85123176368 total=   92656204834   158.7s peak=16937184
+  family 0: gcd(F, W^p - W)                    arith=   12232811826 other=   61222182678 total=   73454994504   293.8s peak=13548704
+    gcd degree 3, charged 73454994504, derived bound 73664065176 (within)
+  family 0: remove the roots of x              arith=             6 other=           110 total=           116     0.0s peak=3548736
+    remaining roots: 2
+  family 0: isolate one root                   arith=          1177 other=         14319 total=         15496     0.0s peak=1048672
+  map back (two inputs)                        arith=          2274 other=         20466 total=         22740     0.0s peak=1048576
+  verification (2 reference hashes)            arith=           474 other=          4266 total=          4740     0.0s peak=1048576
+RESULT found=1 success=1 split_levels=0 split_tries=0
+COLLISION nk1  0x36997930da947f09afb896a01be7df1789f1425fd8b74d7fd16f59ad271527e2
+COLLISION rho1 0x29e88f0c5935a54af97680b12c347457027c6547037ef6add737cff1b4628b97
+COLLISION nk2  0x33f4a584a95f9cad5ad8d93bb656e2ae10904435dbfa911c99f1f81c2db350e2
+COLLISION rho2 0x1703917b4379c1584a902b5441274d0fd7963ca5e18a11d5cd73608fce9c5e49
+COLLISION digest 0x38055121fc27c0b2b392b3c3f70c358b30b0c0316765528eac2b9f64e8dde953
+SUMMARY total_all=166175528560 units=701162567.8 log2_units=29.3852 heap_peak=16937184
+SPLIT shift=0 pow=0 gcd=0 div=0
+EXIT 0

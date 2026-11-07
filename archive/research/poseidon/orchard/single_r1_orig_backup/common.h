@@ -1,0 +1,87 @@
+/* Shared definitions for the Orchard odd-part root finder.  All field arithmetic goes through pallas.c
+ * (counted: add, sub, mul, sqr).  Additional charged primitives are counted here: 256-bit loads (ld), stores (st),
+ * loop-control / index operations (ctl) and random words (rnd).  See SOLVE.md for the machine model. */
+#ifndef COMMON_H
+#define COMMON_H
+#include "pallas.h"
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+typedef struct { uint64_t ld, st, ctl, rnd, perm; } xcnt_t;   /* perm: reduced permutation evaluations charged as C(r) primitive operations each */
+extern xcnt_t X;
+/* Counting rule: every executed operation of the code below is charged where it is written.
+ *  - LD(n)/ST(n): n element loads/stores; each is charged together with one address-formation operation (counted as control).
+ *  - a loop that runs n iterations: 3n+2 control operations (per iteration the index update, the bound comparison and the
+ *    conditional branch; on exit one more comparison and branch).  loopc(n) charges exactly this.
+ *  - every other executed shift, mask, add, multiply, modulo, comparison or branch of index and control code: 1 each via CTL(). */
+#define LD(n)  do { X.ld  += (uint64_t)(n); X.ctl += (uint64_t)(n); } while (0)
+#define ST(n)  do { X.st  += (uint64_t)(n); X.ctl += (uint64_t)(n); } while (0)
+#define CTL(n) (X.ctl += (uint64_t)(n))
+static inline void loopc(size_t nel) { X.ctl += 3 * (uint64_t)nel + 2; }
+#define INV_CTL 2310     /* control of fp_inv outside the per-operation stages: 253 iterations x 9 (index update, compare, branch, word and bit selection, bit test) + 3 x 8 for the search of the top bit */
+
+typedef struct { uint64_t add, sub, mul, sqr, ld, st, ctl, rnd, perm; } snap_t;
+snap_t snap(void);
+snap_t snap_sub(snap_t a, snap_t b);
+uint64_t snap_arith(snap_t s);           /* add+sub+mul+sqr */
+uint64_t snap_total(snap_t s);           /* everything charged */
+void snap_restore(snap_t s);             /* restore counters (used to exclude test/debug-only work) */
+
+/* ---- memory accounting (every buffer goes through xalloc) */
+void *xalloc(size_t bytes);
+void  xfree(void *p);
+extern size_t mem_cur, mem_peak;
+void  mem_reset_peak(void);
+
+/* ---- field helpers */
+#define NEW_FP(n) ((fp *)xalloc((size_t)(n) * sizeof(fp)))
+
+/* ---- NTT engine (ntt.c) */
+typedef struct {
+    int rows;          /* 1: plain 2^a transform; 3: Good-Thomas radix-3 x 2^a */
+    int a;             /* log2 of row length */
+    size_t n, N;       /* row length, total length */
+    int shift;         /* amax - a (twiddle table stride shift) */
+    int npass, kk[8];  /* layers per pass; last pass is the one fused with pointwise ops */
+    int c0;            /* radix-3 rotation constant (rows==3) */
+} plan_t;
+
+void   ntt_init(int amax);               /* roots of unity + twiddle table (counted) */
+void   ntt_free(void);
+plan_t make_plan(int rows, int a);
+plan_t plan_for_len(size_t len, int allow3); /* smallest {2^a, 3*2^a} >= len */
+size_t ntt_table_bytes(void);
+
+/* forward transform: src[off .. off+len) (zero beyond) -> dst (layout order); dst may equal src when off==0 */
+void ntt_fwd(const plan_t *P, fp *dst, const fp *src, size_t off, size_t len);
+/* inverse (unnormalised: result = N * coefficients), in place; only positions < outlen are produced */
+void ntt_inv(const plan_t *P, fp *buf, size_t outlen);
+/* fused convolution kernels (unnormalised cyclic convolution of length N, result = N * (x*y mod x^N-1)) */
+void conv_sq (const plan_t *P, fp *buf, size_t len, size_t outlen);
+void conv_mulc(const plan_t *P, fp *dst, const fp *src, size_t off, size_t len, const fp *C, size_t outlen);
+/* point of layout position (row, pos) i.e. exponent k -> index in dst */
+size_t layout_index(const plan_t *P, size_t k);
+void   plan_theta(const plan_t *P, fp *theta);      /* theta such that the transform evaluates at theta^k (counted-free, uses table) */
+
+extern fp ntt_w3, ntt_invN_cache;
+/* lean variant: second operand B (compact, lenB coefficients, cyclic offset boff) transformed row by row into tmp (P->n entries) */
+void   conv_mulc_otf(const plan_t *P, fp *dst, const fp *src, size_t off, size_t len, fp *tmp,
+                     const fp *B, size_t lenB, size_t boff, size_t outlen);
+void   conv_sum_otf(const plan_t *P, fp *out, int nt, const fp *const *A, const size_t *lenA, const fp *const *B,
+                    const size_t *lenB, const int *sign, fp *tmpA, fp *tmpB, size_t outlen);
+plan_t plan3_for_len(size_t len);                    /* smallest 3*2^a >= len */
+
+/* ---- polynomial tools (poly.c) */
+typedef struct { fp *c; size_t len; } pv;   /* view: len coefficients, len==0 -> zero polynomial; c[len-1] != 0 when normalised */
+void poly_mul(fp *r, const fp *a, size_t la, const fp *b, size_t lb);  /* r has la+lb-1 entries, counted */
+void poly_mul_naive(fp *r, const fp *a, size_t la, const fp *b, size_t lb);
+void plan_invN(const plan_t *P, fp *out);              /* 1/N as a field element (cached, counted once) */
+
+/* ---- modular exponentiation x^E mod g (lean.c) */
+void powx_lean(fp *F, const fp *g, size_t m, const uint64_t E[4], int quiet);
+
+
+#endif

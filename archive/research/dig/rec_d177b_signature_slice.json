@@ -1,0 +1,20 @@
+{
+  "id": "S37-D177B-SIGNATURE-SLICE163840",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": 16,
+  "object": "Procedure C twenty-projection randomized pre-screen",
+  "question": "Do exact local P1 candidate projections produce row-16 survivors under randomized free-CV contexts?",
+  "labels": ["D", "X", "Z"],
+  "status": "SAMPLED",
+  "number": "20 projections x 8,192 contexts = 163,840; rows 0..15 pass 163,840/163,840; row-16 pass 0/163,840",
+  "source": "our workflow: d177b bounded P1 candidate sweep",
+  "own_test": true,
+  "evidence": "research/retest/d177b_procedure_c/SIGNATURE_LOCAL_SLICE.md; research/retest/d177b_procedure_c/SIGNATURE_LOCAL_SLICE.txt; research/retest/d177b_procedure_c/signature_local_slice.py",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "r37.d177b.signature_slice_row16",
+  "notes": "Bounded randomized pre-screen only: first 20 distinct E5/E6 projections, no P0 control and no late-tail estimate. Zero row-16 hits means later signature fields were not reached; no family-wide impossibility is claimed."
+}

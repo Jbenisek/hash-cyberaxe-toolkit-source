@@ -1,0 +1,23 @@
+{
+  "id": "D438-B3M-COMPILED-8TREE-KAT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "compact 8-tree selector integer-path KAT",
+  "question": "Does an extracted integer evaluator reproduce the fixed D437 8-tree forest exactly on original and fresh rows?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "The extracted 8-tree depth-4 forest has 226 nodes. On 100 original/fresh points, the integer-path evaluator had zero wrong predictions and zero maximum error; visits were 28..32 comparisons (mean 31.29) plus 8 leaf accumulations per candidate. This is a structural KAT only; no score credit.",
+  "source": "our workflow: D438 preregistered compact selector KAT",
+  "own_test": true,
+  "evidence": "research/sol_answer_D438_b3m_compiled_8tree_kat.md; research/retest/t2/PREREG_D438_COMPILED_8TREE_KAT.md; research/retest/t2/D438_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic single-worker KAT",
+  "notes": "Feature extraction, compiled charge, selection protocol, judge acceptance, and rate-to-success linkage remain open. No package/stage/filing/submission.",
+  "held_fixed": "D437 model and PR858 no-transfer rule",
+  "reopen_if": "Compiled selector charge and accepted protocol are supplied"
+}

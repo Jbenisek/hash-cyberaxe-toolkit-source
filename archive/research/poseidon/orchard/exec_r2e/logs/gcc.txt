@@ -1,0 +1,19 @@
+ntt.c: In function ‘stageA_fwd’:
+ntt.c:289:154: warning: ‘u’ may be used uninitialized [-Wmaybe-uninitialized]
+  289 |                 switch (rot) { case 0: v[0] = u[0]; v[1] = u[1]; v[2] = u[2]; break; case 1: v[0] = u[1]; v[1] = u[2]; v[2] = u[0]; break; default: v[0] = u[2]; v[1] = u[0]; v[2] = u[1]; break; }
+      |                                                                                                                                                     ~~~~~^~~~~~
+ntt.c:280:16: note: ‘u’ declared here
+  280 |             fp u[3], v[3], o[3];
+      |                ^
+ntt.c:289:112: warning: ‘u’ may be used uninitialized [-Wmaybe-uninitialized]
+  289 |                 switch (rot) { case 0: v[0] = u[0]; v[1] = u[1]; v[2] = u[2]; break; case 1: v[0] = u[1]; v[1] = u[2]; v[2] = u[0]; break; default: v[0] = u[2]; v[1] = u[0]; v[2] = u[1]; break; }
+      |                                                                                                           ~~~~~^~~~~~
+ntt.c:280:16: note: ‘u’ declared here
+  280 |             fp u[3], v[3], o[3];
+      |                ^
+ntt.c:289:71: warning: ‘u’ may be used uninitialized [-Wmaybe-uninitialized]
+  289 |                 switch (rot) { case 0: v[0] = u[0]; v[1] = u[1]; v[2] = u[2]; break; case 1: v[0] = u[1]; v[1] = u[2]; v[2] = u[0]; break; default: v[0] = u[2]; v[1] = u[0]; v[2] = u[1]; break; }
+      |                                                                  ~~~~~^~~~~~
+ntt.c:280:16: note: ‘u’ declared here
+  280 |             fp u[3], v[3], o[3];
+      |                ^

@@ -1,0 +1,47 @@
+RUN rates lo=6 li=16 sub=1 cube=1 seed=1
+CNT trials                                   4194304
+CNT beta=18b0e098                            4194304
+CNT listed beta                              4194304
+CNT listed tau                               3780
+CNT listed E1 outcome                        0
+CNT rule A (8)                               15539
+CNT gate H4                                  263091
+CNT listed partial E3                        0
+CNT listed partial E3 eps 6e21be55           0
+CNT early word 0                             0
+CNT eta condition                            0
+CNT listed tau & rule A                      20
+CNT listed tau & gate H4                     159
+CNT listed partial E3 & rule A               0
+CNT listed outcome & listed partial E3       0
+CNT residual word 0 zero                     0
+CNT residual word 1 zero                     0
+CNT residual word 2 zero                     0
+CNT residual word 3 zero                     0
+CNT residual words 0,1 zero                  0
+CNT residual low 16 bits all zero            0
+CNT rule-A trials with flips                 15539
+CNT listed tau & partial E3 eps 6e21be55     0
+CNT listed outcome & rule A                  0
+SQ rule_per_outer 1.200069e+07 tau_per_outer 9.057160e+05 outer 64 inner 65536
+COP bit  2 gate 15491 rule 7430
+COP bit  4 gate 15421 rule 0
+COP bit  5 gate 14621 rule 0
+COP bit  6 gate 6511 rule 0
+COP bit  9 gate 0 rule 0
+COP bit 10 gate 0 rule 0
+COP bit 11 gate 15538 rule 14771
+COP bit 12 gate 15538 rule 14085
+COP bit 13 gate 15538 rule 13604
+COP bit 14 gate 15538 rule 13011
+COP bit 17 gate 15284 rule 0
+COP bit 18 gate 15072 rule 0
+COP bit 20 gate 14306 rule 14274
+COP bit 21 gate 12861 rule 12829
+COP bit 22 gate 11069 rule 10589
+COP bit 23 gate 8193 rule 8193
+COP bit 24 gate 3136 rule 815
+COP bit 28 gate 15539 rule 0
+COP bit 29 gate 15539 rule 9774
+COP bit 30 gate 15539 rule 6953
+COP bit 31 gate 15539 rule 0

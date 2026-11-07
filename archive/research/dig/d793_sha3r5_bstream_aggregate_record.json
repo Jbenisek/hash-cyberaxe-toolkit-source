@@ -1,0 +1,22 @@
+{
+  "id": "D793-SHA3-R5-BSTREAM-AGGREGATE-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "candidate-B streamed half-table four-core KAT logs",
+  "question": "What exact query/counter totals and per-core RSS are present in the owned four-core reference/stream logs?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "Across cores 0..3: 16,664,940 queries, 34,255,710 Gray/key calls, 16,664,940 dict lookups, 24,396 hits, and 2,283,624 B summed stream structbytes; all seven result rows and digests match per core and all capped=false.",
+  "source": "owned SHA3-r5 bstream output/time logs",
+  "own_test": true,
+  "evidence": "research/memcomp/sha3-r5/B__P_half_tables_streamed_per_block__Gra/out_core*_*.txt; research/memcomp/sha3-r5/B__P_half_tables_streamed_per_block__Gra/time_core*_*.txt; research/retest/sha3_r5_memcomp/d793_bstream_aggregate.py; research/sol_answer_D793_sha3r5_bstream_aggregate.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "existing candidate-B executable, inputs, and recorded logs",
+  "notes": "Read-only aggregate of existing finite KAT logs. Maximum stream RSS is 3,228 KiB; maximum reference RSS is 36,576 KiB. This does not close the 48-run production charge, A/B rewrite, B price, memory rule, or organizer acceptance. No package/stage/filing/submission.",
+  "reopen_if": "The candidate-B source or full production run set changes, or raw logs are regenerated.",
+  "peak_mem": "MEASURED per-run: stream max 3305472 B (2^21.65642486327778); ref max 37453824 B (2^25.15860968821448)"
+}

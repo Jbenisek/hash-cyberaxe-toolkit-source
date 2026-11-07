@@ -1,0 +1,8 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563 (used only for the last comparison); python -B work/tools/lemma_a_enum.py 64
+RULE WITH 4 CONDITIONS: support found by flipping bits: z [8, 9, 24, 25], free bits of e1 [] (expected [8, 9, 24, 25], []: True); patterns 16 * 64 fills = 1024 inputs, TEST = RULE in 1024; RULE holds in 64 (a share 2^-4: True); a lane inside a word of seven lanes with random neighbours gives the same eight bits as alone in 140000 of 140000; ok
+   the steps, the read positions, the wanted bits, the rule and the sub-class typed here are those of the program: True
+RULE WITH 6 CONDITIONS: support found by flipping bits: z [2, 3, 8, 9, 24, 25, 26, 27], free bits of e1 [27] (expected [2, 3, 8, 9, 24, 25, 26, 27], [27]: True); patterns 512 * 64 fills = 32768 inputs, TEST = RULE in 32768; RULE holds in 512 (a share 2^-6: True); a lane inside a word of seven lanes with random neighbours gives the same eight bits as alone in 140000 of 140000; ok
+   the steps, the read positions, the wanted bits, the rule and the sub-class typed here are those of the program: True
+RULE WITH 8 CONDITIONS: support found by flipping bits: z [2, 3, 4, 5, 8, 9, 16, 17, 24, 25, 26, 27, 30], free bits of e1 [27, 28, 29] (expected [2, 3, 4, 5, 8, 9, 16, 17, 24, 25, 26, 27, 30], [27, 28, 29]: True); patterns 65536 * 64 fills = 4194304 inputs, TEST = RULE in 4194304; RULE holds in 16384 (a share 2^-8: True); a lane inside a word of seven lanes with random neighbours gives the same eight bits as alone in 140000 of 140000; ok
+   the steps, the read positions, the wanted bits, the rule and the sub-class typed here are those of the program: True
+RESULT: TEST = RULE on every pattern, for the three rules

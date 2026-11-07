@@ -1,0 +1,1 @@
+{"O0 shipped model (ANF virtual 31.8 MB + EVEC + 32 KiB buf)": 44558469, "O0b same with code-true 64 KiB buffer": 44591237, "O1 ANF touched entries only (G 12,951 x 768)": 22704773, "O2 ANF freed after setup, loop peak (EVEC+buf)": 12758405, "O3 ANF streamed from A (165,796 B) + EVEC": 12924201, "O4 O3 + D4 as u32 rows (42,504 B)": 4805937}

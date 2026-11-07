@@ -1,0 +1,15 @@
+rule_layout_review_h8.py: rule A (five conditions) over whole contexts, reviewer's implementation; seed 20261006
+lanes compared with rule A on h1 of the complete compression of the real message A: 10000 of 10000 right
+A. 1024 independent contexts, all 524,288 members each (536870912 trials):
+   four conditions: mean share 0.99779 x 2^-4, per context sd 6.61% of the mean, range 0.729 to 1.455 x 2^-4 (package, graphics card, 4,096 contexts: sd 6.3%, 0.66 to 1.38)
+   five conditions: mean share 0.99771 x 2^-5 (2^-5.0033), per context sd 6.60% of the mean, range 0.730 to 1.455 x 2^-5 (package, processor, 2,048 contexts: 2^-5.0030, up to 1.31)
+   batches that hold a trial satisfying rule A: mean share 0.1222, range 0.0750 to 0.1684 (package: 0.1216, 0.0731 to 0.1654); budget 0.25
+B. layout of 6.4: seed words held, vd < 2^19, 1024 consecutive values of X14 per pair (vc, vd):
+   seed set 1 pair 1: five conditions mean 1.00051 x 2^-5 (sd between contexts 5.51%, range 0.807 to 1.251); four conditions mean 1.00048 x 2^-4; batches entering stage 2 0.1184 (max 0.1463)
+   seed set 1 pair 2: five conditions mean 1.00038 x 2^-5 (sd between contexts 4.67%, range 0.835 to 1.196); four conditions mean 1.00027 x 2^-4; batches entering stage 2 0.1188 (max 0.1358)
+   seed set 1 pair 3: five conditions mean 1.00021 x 2^-5 (sd between contexts 3.68%, range 0.866 to 1.157); four conditions mean 1.00020 x 2^-4; batches entering stage 2 0.1254 (max 0.1445)
+   seed set 2 pair 1: five conditions mean 1.00041 x 2^-5 (sd between contexts 8.47%, range 0.724 to 1.324); four conditions mean 1.00044 x 2^-4; batches entering stage 2 0.1082 (max 0.1377)
+   seed set 2 pair 2: five conditions mean 1.00024 x 2^-5 (sd between contexts 6.61%, range 0.709 to 1.262); four conditions mean 1.00023 x 2^-4; batches entering stage 2 0.1182 (max 0.1431)
+   seed set 2 pair 3: five conditions mean 1.00080 x 2^-5 (sd between contexts 7.33%, range 0.680 to 1.382); four conditions mean 1.00076 x 2^-4; batches entering stage 2 0.1170 (max 0.1527)
+   the six pair means, five conditions: 1.00021 to 1.00080 x 2^-5, sd 0.021%; expected from the between-context sd of part A over 1024 contexts: 0.206%; H3 budget 1.142 x 2^-5
+seconds 210; trials in all 3758096384

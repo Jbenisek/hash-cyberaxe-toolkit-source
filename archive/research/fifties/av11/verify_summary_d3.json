@@ -1,0 +1,75 @@
+{
+ "dflag": 3,
+ "frames": 1102,
+ "python_ref_mismatches": 0,
+ "c_twin_mismatches_incl_seed_labels": 0,
+ "by_kind": {
+  "A_q00000000": {
+   "frames": 200,
+   "roots_total": 215,
+   "maxR": 3,
+   "R0": 50
+  },
+  "B_q00000000": {
+   "frames": 200,
+   "roots_total": 341,
+   "maxR": 5,
+   "R0": 0
+  },
+  "P_q00000000": {
+   "frames": 100,
+   "roots_total": 161,
+   "maxR": 4,
+   "R0": 0
+  },
+  "Z_q00000000": {
+   "frames": 50,
+   "roots_total": 61,
+   "maxR": 2,
+   "R0": 0
+  },
+  "X_q00000000": {
+   "frames": 1,
+   "roots_total": 2,
+   "maxR": 2,
+   "R0": 0
+  },
+  "A_q80000000": {
+   "frames": 200,
+   "roots_total": 201,
+   "maxR": 4,
+   "R0": 63
+  },
+  "B_q80000000": {
+   "frames": 200,
+   "roots_total": 344,
+   "maxR": 4,
+   "R0": 0
+  },
+  "P_q80000000": {
+   "frames": 100,
+   "roots_total": 173,
+   "maxR": 4,
+   "R0": 0
+  },
+  "Z_q80000000": {
+   "frames": 50,
+   "roots_total": 59,
+   "maxR": 2,
+   "R0": 0
+  },
+  "X_q80000000": {
+   "frames": 1,
+   "roots_total": 2,
+   "maxR": 2,
+   "R0": 0
+  }
+ },
+ "kinds": {
+  "A": "random (z,f), y uniform in C13",
+  "B": "planted h, arbitrary y",
+  "P": "planted h with y in C13",
+  "Z": "K=u=0 subfamily planted",
+  "X": "K=u=0, V=00800080 (11.2 example)"
+ }
+}

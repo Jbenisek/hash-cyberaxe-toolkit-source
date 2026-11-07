@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GROEBNER Groebner / resultant elimination",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "alternatives: FGLM-free weighted order (FreeLunch) and the two-free-round line; the line is the only one with a finite measured ledger",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc3.py research/dig/incoming4/_scan_poseidon/calc3a.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Pointer. | universe cell poseidon-r1|ALT.GROEBNER|ALT|Q4",
+ "held_fixed": "r=1",
+ "reopen_if": "a system with d_reg < 20"
+}

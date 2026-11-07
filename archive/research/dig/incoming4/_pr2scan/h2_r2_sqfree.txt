@@ -1,0 +1,5 @@
+{"r": 2, "j": 0, "c": "0x315c50ace9f0fcf8e6e9d6a12a8161e5fe1b14343b106980550caef9618a9262", "deg_g": 195312, "gcd_g_gprime_degree": 0, "deg_gcd_square_roots": 0, "deg_gcd_nonsquare_roots": 0, "sec_build": 33.1, "sec_sqfree": 41.7, "sec_roots": 0.0}
+
+real	1m15.396s
+user	0m0.000s
+sys	0m0.061s

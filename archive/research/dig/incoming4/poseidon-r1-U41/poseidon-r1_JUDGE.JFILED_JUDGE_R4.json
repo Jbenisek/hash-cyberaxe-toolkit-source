@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JFILED rulings on the r=1 filings",
+ "question": "score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "score sensitivity to the judge: the three tries span 28.879 -> 31.824 -> 31.001; each charging rule moves the score by more than any algebraic lever left (memory 0.09, D budget 0.07, split 0.0002)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "HANDOFF.md research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Differences of claimed numbers. | universe cell poseidon-r1|JUDGE.JFILED|JUDGE|R4",
+ "held_fixed": "claimed values",
+ "reopen_if": "next ruling"
+}

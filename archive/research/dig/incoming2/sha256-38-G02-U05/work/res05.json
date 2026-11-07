@@ -1,0 +1,55 @@
+{
+ "T0": 87.90373595441501,
+ "B0": 1045792,
+ "S0": 87.90373595441501,
+ "headroom": 2784,
+ "hold_ops": 691200,
+ "hold_dT": 0.0,
+ "gen_nodes_max": 1535,
+ "gen_instr_max": 1426,
+ "variants": {
+  "list_packed4B": {
+   "extra": 15360,
+   "B": 1061152,
+   "mem_term": 0.017199892815192186,
+   "S": 87.9209358472302,
+   "over": 12576
+  },
+  "list_word32B": {
+   "extra": 122880,
+   "B": 1168672,
+   "mem_term": 0.15643864857610623,
+   "S": 88.06017460299111,
+   "over": 120096
+  },
+  "gen_dag": {
+   "extra": 49120,
+   "B": 1094912,
+   "mem_term": 0.06238349187633219,
+   "S": 87.96611944629134,
+   "over": 46336
+  },
+  "list_packed4B+gen_dag": {
+   "extra": 64480,
+   "B": 1110272,
+   "mem_term": 0.08248172786310448,
+   "S": 87.98621768227812,
+   "over": 61696
+  },
+  "list_word32B+gen_dag": {
+   "extra": 172000,
+   "B": 1217792,
+   "mem_term": 0.21583630996245518,
+   "S": 88.11957226437747,
+   "over": 169216
+  }
+ },
+ "price_per_byte_at_2e20": 1.375861206902469e-06,
+ "free_scratch_dead_online": 10496,
+ "reuse_budget_dead_plus_headroom": 13280,
+ "PRE_total": 4515430400,
+ "PRE_log2": 32.07221636247902,
+ "PRE_over_N": -67.24514752096017,
+ "stream_ops_vs_ledger": 0,
+ "hold_gain_bits": -0.0
+}

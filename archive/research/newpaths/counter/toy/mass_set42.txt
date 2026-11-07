@@ -1,0 +1,17 @@
+MASS W 8 set 42 eta d9 n 16 sumper 4587520 ref 4587520 EQUAL e1model_bad 0
+BETA 70 nd1 64 mass 0 share 0.00000 gain 0.0000
+BETA af nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA b0 nd1 64 mass 2097152 share 0.45714 gain 1.8286
+BETA b1 nd1 32 mass 0 share 0.00000 gain 0.0000
+BETA b3 nd1 16 mass 2097152 share 0.45714 gain 7.3143
+BETA b7 nd1 8 mass 0 share 0.00000 gain 0.0000
+BETA bf nd1 4 mass 393216 share 0.08571 gain 5.4857
+BETA ef nd1 2 mass 0 share 0.00000 gain 0.0000
+BETA f0 nd1 32 mass 0 share 0.00000 gain 0.0000
+BETA f1 nd1 16 mass 0 share 0.00000 gain 0.0000
+BETA f3 nd1 8 mass 0 share 0.00000 gain 0.0000
+BETA f7 nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA ff nd1 2 mass 0 share 0.00000 gain 0.0000
+HEAVIEST beta b3 nd1 16 mass 2097152 share 0.45714 gain 7.3143
+BESTGAIN beta b3 nd1 16 mass 2097152 gain 7.3143
+D1LIST beta b3: f 11 2f 31 4f 51 6f 71 8f 91 af b1 cf d1 ef f1

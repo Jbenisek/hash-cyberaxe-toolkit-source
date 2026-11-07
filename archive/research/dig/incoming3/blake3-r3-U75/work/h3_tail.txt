@@ -1,0 +1,6 @@
+   r2 end cumulative 583 delta 119
+   digest cumulative 595 delta 12
+extreme/structured inputs: lanes checked 14343 mismatches vs scalar 0
+max bit length of any non-shl intermediate on all-ones input: 252 (machine word 256)
+control: unfolded generic 3-round compress counted with our tracer (5-op rotations, guard bits): total 736 {'add': 144, 'xor': 104, 'shr': 96, 'and': 200, 'shl': 96, 'or': 96} ; organizer reference_cost(blake3,3) = 638 (orgcount.out: 145 and, 97 shr, 96 add, 108 xor, 96 shl, 96 or)
+folded fixed-key circuit (our target): 595 per batch; per lane-step 85.0 = 0.1332 unit; one lane alone 595 = 0.9326 unit

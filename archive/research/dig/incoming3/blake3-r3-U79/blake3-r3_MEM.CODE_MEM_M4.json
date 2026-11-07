@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "written-out code",
+ "question": "M4 breakpoint at 2^20 for the code",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Crossing 2^20 through code growth: U=20 total 1,052,420 B = 2^20.0053, T -0.00009, S +0.00519; U=24 S +0.1188; U=32 (719,316 B of code) S +0.3222; U=64 S +0.9321. Time never gains more than 0.00034 bit from any unroll, so crossing is a pure loss.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out",
+ "notes": "universe cell blake3-r3|MEM.CODE|MEM|M4. Ledger arithmetic.",
+ "held_fixed": "filed table and counters",
+ "reopen_if": "none",
+ "gain_basis": "S"
+}

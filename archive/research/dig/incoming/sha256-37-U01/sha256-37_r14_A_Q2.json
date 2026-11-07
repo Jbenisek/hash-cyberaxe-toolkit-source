@@ -1,0 +1,20 @@
+{
+ "hash": "sha256-37",
+ "row_i": 14,
+ "row_j": null,
+ "status": "LOCAL_ONLY",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/sha256-37-U01/work/out_row14.txt; research/dig/incoming/sha256-37-U01/work/zoneD14.c; research/dig/incoming/sha256-37-U01/work/out_row8.txt (validation)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "q3",
+ "question": "Q2 necessity for row 14 of chi37: drop each printed condition singly; row-local solution count (dense row) and whether the event survives on the full path.",
+ "object": "row14 A cells A14[15,23,25] drop-one",
+ "labels": [
+  "Z"
+ ],
+ "number": "A14[15], [23], [25]: dropping any one leaves the row-14 dense-row count at 8 (baseline 8, all 6 bases): implied by the E14/W14 cells + step equation. Local flip breaks A14 itself on all 6 bases (NECESSARY as event condition). Consistent bit-flip: y not anchor-consistent (cons0), rows<=15 fail, EXACT 0. All 7 non-published row solutions (baseline = relaxed): consistent but 0 of 7 pass rows<=15, EXACT 0.",
+ "notes": "Universe cell sha256-37|r14|A|Q2. Tool research/dig/incoming/sha256-37-U01/work/zoneD14.c = zoneD.c helpers unchanged + new row-generic drop-one code; validated on row 8 (known answers from zoneD local.out/fwd.out: whole-row-8 count 8 on all 6 bases, A8[30,29,21,16,11,4] break A9; unmodified-anchor rebuild reproduces P0 incl. EXACT=1). Method: (A) flip bit in both members, hold the rest, first row<=15 whose modular difference breaks (P0 + 5 A0-variants); (B) row-local count: E14^x candidates (2^9 with the E value bits fixed, 2^10 when an E value bit is dropped), rows<10..13 held, whole-row-14 conditions with the one condition removed; (C) bit flip rebuilt with tl_build with the flipped row as anchor (W14: wx[14] flip); (D) every extra solution of the relaxed row (up to 256) rebuilt consistently with tl_build (anchor row 14 replaced) and checked rows<=15, 16..22, 23..36, EXACT. Baseline: the dense row has 8 row-14 solutions on all 6 bases (published + 7 others); the 7 others already fail rows<=15 (row 15) and EXACT, so the full path has 1 member. Row 14 is anchor-held (Pr 1); nothing here is a cost. Not rerun: S37-ZDOWN-04..13, anchor Pr 1. LOCAL_ONLY: single-row perturbation on P0 + 5 A0-variants, full path checked on P0 only."
+}

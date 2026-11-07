@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "count",
+ "object": "E1 q2 cube bits necessity and effect on beta",
+ "question": "Is each of the 11 fixed bits of c1 in Q* necessary, and which beta does flipping it give?",
+ "labels": [
+  "I",
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "all 11 fixed bits (c1 positions 0,1,3,7,8,15,16,19,25,26,27) individually necessary: flipping any one gives 0/2^21 beta*; flip of bit 0 gives beta2 18d0e098 for half the half-cube; flips of bits 15 and 25 give a single beta each (18b0e088, 18b0a098); other bits give 4-11 betas; no 10-bit subset suffices (count over 2^32 is exactly 2^21)",
+ "evidence": "research/dig/incoming/blake3-r2-U04/work/q2cube.py; research/dig/incoming/blake3-r2-U04/work/q2cube_out.txt; research/dig/incoming/blake3-r2-U04/work/cube_out.txt",
+ "topic": "b3.r2.E1.q2.cube_necessity",
+ "notes": "Universe cell blake3-r2|E1.q2|step|Q2. Exact over carries: each relaxed cube (2^22 c1) enumerated, beta=ROR(c1^(c1+DY11),12). Flip of bit 27 gives 18b1e098/18b3e098 (the third-beta row of ATLAS_BLAKE3 B appears here as a neighbor of Q*). Does not change the ledger by itself; no gain."
+}

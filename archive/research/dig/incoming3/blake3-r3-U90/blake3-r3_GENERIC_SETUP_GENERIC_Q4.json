@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.SETUP setup / table build",
+ "question": "Alternatives: compress table entries; claim preprocessing exactly.",
+ "labels": [
+  "N",
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "Entry 32 B -> 25 B (8 B key, 2 B trail id, 15 B length) frees room for 26,885 keys and a density 2^-113.34: -0.003894 bit (GENERIC.DPFRAC Q3). Claim preprocessing_log2 as 1.65 instead of 2: no score effect (preprocessing is inside time).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.0039,
+ "notes": "universe cell blake3-r3|GENERIC.SETUP|GENERIC|Q4. 25 B layout not built. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed ledger.",
+ "reopen_if": "Entry layout rejected by the judge.",
+ "gain_basis": "T"
+}

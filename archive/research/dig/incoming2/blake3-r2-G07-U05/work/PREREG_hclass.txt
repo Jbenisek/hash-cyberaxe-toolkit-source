@@ -1,0 +1,6 @@
+Written Mon Oct 12 14:42:06 MDT 2026 before the fresh run. Tool: u05 (copy of validated alive_gpu.cu + modes fresh/ctrl).
+Premise H_class: for each list class and typed word E of its type, E is alive for all 32,768 members or for none.
+Rule: seed 20261012705 (never used: prior seeds were first-N and 12000+class). 3000 typed words per class drawn uniformly with replacement
+from the typed list of the class type (NOT conditioned on any kept list), each tested against all 32,768 members of its class.
+Premise HOLDS on the sample iff mixed=0 and err=0 over all 16*3000 groups. Any mixed group is reported, not re-run.
+Control (already run, before): ctrl 0 0 3 200 : words alive for rep(class0) xor rep(class3) tested vs union must be mixed (all 200), vs each class alone uniform.

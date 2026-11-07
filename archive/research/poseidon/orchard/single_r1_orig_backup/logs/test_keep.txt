@@ -1,0 +1,1 @@
+poly_gcd_keep d=39062: gcd degree 0 charged 6392266308, peak above the live inputs 7329696, absolute peak 10353984 bytes (inputs 3024288)

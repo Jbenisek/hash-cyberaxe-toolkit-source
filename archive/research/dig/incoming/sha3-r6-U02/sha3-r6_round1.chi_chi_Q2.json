@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "necessity of each prefix condition group for the leader's chi2 patch (L5, L15, D3/L12, L8, lane16)",
+ "question": "Q2 drop each condition group in turn: does the z-structure (affine A2, 22-word all-ones footprint, 499-word patch) survive?",
+ "labels": [
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "Exact linear algebra: dropping L5, L15 or L8 leaves 32 of the 128 needed equations unimplied, dropping the L12 (D3=all-ones) group leaves 64 unimplied; dropping lane16=0 leaves 0 (that 56-bit group is NOT needed: killed freedom). Measured (512 slices x 32 z-bits, 20 random z-pair second-difference tests each): z-affinity of A2 holds in ALL cases (0/20 fails) because each chi1 row has only one varying input; what breaks is the constant all-ones pattern. Full conditions: footprint 22 words, 22 chi2 rows, uniform, 499 patched words. Drop L16: unchanged (22/22/499). Drop L5: 32 words/32 rows/705 patched, not slice-uniform. Drop L15: 32/32/735. Drop L8: 33/33/692. Drop D3 (L12): 44 words/43 rows/860. Minimum set actually needed: 128 equations (rank 128) vs the 312 imposed, so 184 imposed bits are slack.",
+ "evidence": "research/dig/incoming/sha3-r6-U02/work/t2_conditions.py; research/dig/incoming/sha3-r6-U02/work/t2_conditions_out.json; research/dig/incoming/sha3-r6-U02/work/t3_q2_drop.py; research/dig/incoming/sha3-r6-U02/work/t3_q2_drop_out.json; research/dig/incoming/sha3-r6-U02/work/t1_q1_chi2.py",
+ "notes": "Universe cell sha3-r6|round1.chi|chi|Q2. Four condition groups are each necessary for the AND-free all-ones patch (not for correctness: the birthday still works on a looser structure, only the per-step patch gets state-dependent masks, 692-860 words instead of 499, no longer a constant W pattern). The 128-equation minimum is plane-restricted (only the 32 planes a z-bit touches); the leader's lane-wide L5/L15/L8/L12 are a convenient superset. Prefix-of-path result (rounds 1-2 only).",
+ "topic": "sha3-r6 leader route condition necessity"
+}

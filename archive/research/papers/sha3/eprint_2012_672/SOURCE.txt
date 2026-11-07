@@ -1,0 +1,1 @@
+2012/672	Collision Attacks on Up to 5 Rounds of SHA-3 Using Generalized Internal Differentials	s2	https://link.springer.com/content/pdf/10.1007/978-3-662-43933-3_12.pdf

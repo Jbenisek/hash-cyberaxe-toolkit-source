@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "counters and working words",
+ "question": "M2 time to hold less of the counters and working words",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Bound used: 64 registers x 32 B = 2,048 B (0.21 percent of the 966,272 B). Needed by our own count: 25 simultaneously live batch values (exact liveness, U81 regs.py) + 7 lane indices + 7 birth counters + about 8 counters and limits = 47 words = 1,504 B. The working words are state, not a table, so they cannot be recomputed instead of held; shrinking the bound to 1,504 B frees 544 B and changes no score.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out, research/dig/incoming3/blake3-r3-U81/work/regs.py, research/dig/incoming3/blake3-r3-U81/work/regs.out",
+ "notes": "universe cell blake3-r3|MEM.CNT|MEM|M2. The 47-word list is our own itemisation; the entry states only 'below 2,048 B'.",
+ "held_fixed": "table 589,824 B, code 374,400 B",
+ "reopen_if": "none",
+ "gain_basis": "count"
+}

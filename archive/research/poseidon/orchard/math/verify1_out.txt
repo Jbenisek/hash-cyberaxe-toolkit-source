@@ -1,0 +1,29 @@
+p = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001
+K = (2^65+c0[2])^5 = 0x1bb8b6550fd0a299151ec6e764ce7a0e7639053ef68202d771242177f32f108c
+j 0 2x2 minor rows [1, 2] cols 0,1 nonzero: True
+j 1 2x2 minor rows [0, 2] cols 0,1 nonzero: True
+j 2 2x2 minor rows [0, 1] cols 0,1 nonzero: True
+--- j = 0 I = [1, 2]
+ Q=(U,V) 0x2de17246e844b000296eefaaf2116b9705e3af63806d80541c7d6b4be442036c 0x2622542e119aef1f7c021664aae329063a3e73651cd62e02756427f9437fdd96
+ direction (a,b) 0x31916628e58a5abb293f0f0d886c7954240d4a7cbf7357368eca5596e996ab5e 0x354a1a478b5972184c2a60423736152b8a6ef850e5c7edc566ee0c66281ee49e
+ d = ['0x0', '0x2b1cf2a34b2b6723837c31d51d5c91d12d1a715784a437124e3daf150a8d2b15', '0x194af15c17a9f125b198b4fcacb6f6a0d7525c1960573b90b20d8c6a16f61d57']  d_j==0: True  other d nonzero: True
+ x(Q) = ['0x2a78890d8503b228bfa6bd9b312401c7af4e02a6376ceebb003ef1138f67c72c', '0x0', '0x0']  x_i(Q)==0 for i!=j: True  x_j(Q) nonzero True
+ random tau checked (exact equality, canonical nk,rho, digest r=0,1,2 = F(tau^5)): 20 / 20
+ round-2 S-box input l_k(W)=alpha_k+beta_k*W; beta_k nonzero: [True, True, True]
+ zero of l_k pairwise equal?  [False, False, False]
+--- j = 1 I = [0, 2]
+ Q=(U,V) 0x3c80d88605267033c2acc6e39978ff96d087a8e77d92f7c14652fc91b04c8f83 0x1f430622884d4c88c3767dfd251d039a0114a4032402ba9f73e7a14f77073e2e
+ direction (a,b) 0x25cae2599892a8b0b36664548d60957d78f8365c85bbab07402270113e047a2e 0x1cce9d9cf1406128071db0997dd3d260e83c52bbc08f8210c8e363242f7ae985
+ d = ['0x14e30d5cb4d498dc7c83ce2ae2a36e2ef52c27a484a8c2094aef81d7f572d4ec', '0x0', '0x29ff5d012f09098bd15bbf637fb69b9102e1567bbf433f63d5987016a23d1cc2']  d_j==0: True  other d nonzero: True
+ x(Q) = ['0x0', '0x56ca88352495e3b531f6639906f2a46f1123cf5ea8ca2ead4467a8cc69282fa', '0x0']  x_i(Q)==0 for i!=j: True  x_j(Q) nonzero True
+ random tau checked (exact equality, canonical nk,rho, digest r=0,1,2 = F(tau^5)): 20 / 20
+ round-2 S-box input l_k(W)=alpha_k+beta_k*W; beta_k nonzero: [True, True, True]
+ zero of l_k pairwise equal?  [False, False, False]
+--- j = 2 I = [0, 1]
+ Q=(U,V) 0x3a6b4715e36197c96a9a6f3872a4228ff76b2e677bc2daee281769346513ae75 0x165d64bda0c30365e498649bf11808b860bc6a7b495927fd0ba21062a3e476bb
+ direction (a,b) 0x1d1aab4ec1cd678892d15e7dceef1665cbeaf48b3a0624c3c771effa43263664 0x11d622a639b4efc80ccc556e3c7ccb9c00de8a5043e137bd9a458758b07b241d
+ d = ['0x26b50ea3e8560eda4e674b035349095f4af43ce2a8f5bd8ae71fa482e909e2aa', '0x1600a2fed0f6f6742ea4409c8049646f1f6542804a09b9b7c394c0d65dc2e33f', '0x0']  d_j==0: True  other d nonzero: True
+ x(Q) = ['0x0', '0x0', '0x9b2d7e67acf680114704863d53135870423bf02a5b6414ddd79da0955bb7210']  x_i(Q)==0 for i!=j: True  x_j(Q) nonzero True
+ random tau checked (exact equality, canonical nk,rho, digest r=0,1,2 = F(tau^5)): 20 / 20
+ round-2 S-box input l_k(W)=alpha_k+beta_k*W; beta_k nonzero: [True, True, True]
+ zero of l_k pairwise equal?  [False, False, False]

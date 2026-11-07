@@ -1,0 +1,15 @@
+trials 60, single-bit flips 14460: residual Hamming distance mean 63.52, min 37, 1st percentile 50, 10th 56, median 64
+lowest mean distance per (word, bit)  [y bits are indices of the 17 free sub-class bits]:
+  D3.d1  bit  7: mean  61.50  min 49
+  S15    bit  8: mean  61.67  min 48
+  w5     bit 29: mean  61.72  min 49
+  S9     bit 28: mean  61.77  min 48
+  C0.c1  bit 17: mean  61.77  min 51
+  D3.d1  bit 23: mean  61.87  min 48
+  w5     bit 25: mean  61.93  min 49
+  y      bit 14: mean  62.00  min 51
+  S9     bit 20: mean  62.13  min 50
+  S15    bit 15: mean  62.15  min 53
+  C0.d1  bit  2: mean  62.22  min 48
+  w5     bit 22: mean  62.22  min 50
+flips with distance <= 16: 0 of 14460; <= 32: 0

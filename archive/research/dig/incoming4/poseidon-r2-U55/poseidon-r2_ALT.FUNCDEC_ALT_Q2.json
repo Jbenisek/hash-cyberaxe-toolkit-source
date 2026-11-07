@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FUNCDEC (ALT)",
+ "question": "Q2: necessity: what a decomposition would be worth",
+ "labels": [
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "If F = G(H) with deg H = d, collisions F(a) = F(b) include all H(a) = H(b) (a free collision family of equation degree d instead of 390,625) plus G-collisions on the image; none exists, so the odd-part route stays the only one. The proof of the good-centre fraction also needs indecomposability (Burnside-Schur chain).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "HANDOFF.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FUNCDEC|ALT|Q2. Argument; HANDOFF 10-12 19:35.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a decomposition is found"
+}

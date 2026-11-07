@@ -1,0 +1,108 @@
+{
+ "Q1": {
+  "N": 20000,
+  "A_vs_B_diff_nonzero": 0,
+  "differing_words_in_pair": [],
+  "max_bit_bias_w6": 0.008299999999999974,
+  "max_bit_bias_w7": 0.008850000000000025,
+  "bitcount_range_w6": [
+   9886,
+   10166
+  ],
+  "bitcount_range_w7": [
+   9910,
+   10177
+  ],
+  "fixed_bits_w6": 0,
+  "fixed_bits_w7": 0
+ },
+ "Q2": {
+  "w6": {
+   "trials": 3000,
+   "same_change_A_B_consts_kept": 0,
+   "same_change_A_B_lemmaH_kept": 0,
+   "same_change_A_B_S_equal": 3000,
+   "B_only_lemmaH_kept": 0,
+   "B_only_S_equal": 0,
+   "unchanged_ctrl_lemmaH": 3000,
+   "mean_words_differ_B_only": 8.0
+  },
+  "w7": {
+   "trials": 3000,
+   "same_change_A_B_consts_kept": 0,
+   "same_change_A_B_lemmaH_kept": 0,
+   "same_change_A_B_S_equal": 3000,
+   "B_only_lemmaH_kept": 0,
+   "B_only_S_equal": 0,
+   "unchanged_ctrl_lemmaH": 3000,
+   "mean_words_differ_B_only": 8.0
+  }
+ },
+ "Q3_k3_roundtrip": {
+  "trials": 200000,
+  "fwd_inv_ok": 200000,
+  "inv_fwd_ok": 200000
+ },
+ "Q3_dependence": {
+  "C0c1": [
+   0,
+   0,
+   2000
+  ],
+  "C0d1": [
+   0,
+   0,
+   2000
+  ],
+  "D3d1": [
+   2000,
+   2000,
+   2000
+  ],
+  "S15": [
+   2000,
+   2000,
+   2000
+  ],
+  "S9": [
+   2000,
+   2000,
+   2000
+  ],
+  "w5": [
+   2000,
+   2000,
+   2000
+  ],
+  "X2": [
+   0,
+   0,
+   2000
+  ],
+  "y": [
+   0,
+   0,
+   2000
+  ]
+ },
+ "Q3_S15_sweep": {
+  "n": 65536,
+  "distinct_w6": 65536,
+  "distinct_w7": 65536
+ },
+ "Q3_surjective_targets": {
+  "trials": 20000,
+  "pair_hit": 20000,
+  "pair_hit_with_consts_and_lemmaH": 20000
+ },
+ "Q4_alt_diff_on_w6_w7": {
+  "trials": 3000,
+  "S_equal": 0,
+  "lemmaH": 0,
+  "K3_state_equal": 0
+ },
+ "Q4_K3_injective_check": {
+  "samples": 300000,
+  "collisions": 0
+ }
+}

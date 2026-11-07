@@ -1,0 +1,1 @@
+W=16: 29 T0-solvable seeds / 46423; mean log2 tuples 5.38; mean log2 distinct (X15 xor-diff) 2.66; tuples breaking S0: 0

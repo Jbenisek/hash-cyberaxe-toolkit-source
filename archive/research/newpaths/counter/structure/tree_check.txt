@@ -1,0 +1,33 @@
+t=    1 len(M)=1079/1087  a,b ok 6  C ok True  stack 1  0s
+t=    2 len(M)=2103/2111  a,b ok 6  C ok True  stack 1  0s
+t=    3 len(M)=3127/3135  a,b ok 6  C ok True  stack 2  0s
+t=    4 len(M)=4151/4159  a,b ok 6  C ok True  stack 1  0s
+t=    5 len(M)=5175/5183  a,b ok 6  C ok True  stack 2  1s
+t=    6 len(M)=6199/6207  a,b ok 6  C ok True  stack 2  1s
+t=    7 len(M)=7223/7231  a,b ok 6  C ok True  stack 3  1s
+t=    8 len(M)=8247/8255  a,b ok 6  C ok True  stack 1  1s
+t=    9 len(M)=9271/9279  a,b ok 6  C ok True  stack 2  1s
+t=   15 len(M)=15415/15423  a,b ok 6  C ok True  stack 4  1s
+t=   16 len(M)=16439/16447  a,b ok 6  C ok True  stack 1  1s
+t=   17 len(M)=17463/17471  a,b ok 6  C ok True  stack 2  2s
+t=   31 len(M)=31799/31807  a,b ok 6  C ok True  stack 5  2s
+t=   32 len(M)=32823/32831  a,b ok 6  C ok True  stack 1  2s
+t=   33 len(M)=33847/33855  a,b ok 6  C ok True  stack 2  2s
+t=   63 len(M)=64567/64575  a,b ok 6  C ok True  stack 6  3s
+t=   64 len(M)=65591/65599  a,b ok 6  C ok True  stack 1  3s
+t=   65 len(M)=66615/66623  a,b ok 6  C ok True  stack 2  3s
+t=  100 len(M)=102455/102463  a,b ok 6  C ok True  stack 3  4s
+t=  255 len(M)=261175/261183  a,b ok 6  C ok True  stack 8  5s
+t=  256 len(M)=262199/262207  a,b ok 6  C ok True  stack 1  6s
+t=  257 len(M)=263223/263231  a,b ok 6  C ok True  stack 2  7s
+t= 1000 len(M)=1024055/1024063  a,b ok 6  C ok True  stack 6  11s
+t= 1024 len(M)=1048631/1048639  a,b ok 6  C ok True  stack 1  15s
+t= 1025 len(M)=1049655/1049663  a,b ok 6  C ok True  stack 2  19s
+(a) organizer digest == own root(stack, CV_t(X)): 150/150
+(b) organizer last-chunk descriptor = (IV, words, t, len, 3) and same CV: 150/150
+(c) planted CV collision -> organizer digests equal: 75/75
+(d) unpatched pairs have different digests: 75/75
+(e) C tree64 == organizer digests and stack (all X of the t): 25/25 values of t
+(f) t >= 2^32 last-chunk CV, organizer == own (v12 = t & mask, v13 = t >> 32): 10/10
+shortest pair: t = 1, lengths 1079 and 1087 bytes; counter words v12 = 1, v13 = 0, v14 = 55/63, v15 = 3
+length bound: verifier rejects len >= 2^61 bytes -> t <= 2^51 - 1, v13 < 2^19

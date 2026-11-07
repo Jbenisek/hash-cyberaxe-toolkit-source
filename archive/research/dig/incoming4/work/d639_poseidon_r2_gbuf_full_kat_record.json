@@ -1,0 +1,23 @@
+{
+  "id": "D639-POSEIDON-R2-GBUF-FULL-KAT-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 retained raw-g-spectrum full KAT and score closure",
+  "question": "Does the lossless retained g spectrum beat the streamed r=2 layout after the contest memory charge?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Full r=2 coefficient-vector KAT passes. Stage C: lean 28,730,483,921 ops; raw-CG hybrid 26,546,853,201; delta 2,183,630,720 (7.600396589%). Adjusted production peaks are 37,624,320 and 43,915,776 B. Hybrid N=31,879,903,746, time_log2_up=26.88071, counted memory=44,113,322 B, memory_log2_up=25.39472, score_up=32.27543 versus current 32.26329; alternative is slower in score by about 0.01214 bits.",
+  "source": "our workflow: D639 full r=2 raw-CG hybrid KAT and exact score audit",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/d636_hybrid_probe.c; research/retest/poseidon_r2/d636_hybrid_r2.out; research/poseidon/orchard/exec_r2b/src/lean.c; research/poseidon/orchard/exec_r2b/src/ntt.c; research/poseidon/orchard/exec_r2b/pkg_stage/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "current r=2 g builder, line, centre and exponent; raw unscaled CG; same powering coefficient-vector output and contest memory charge",
+  "notes": "Lossless full r=2 powering KAT only; no new collision certificate. D636/D638 reduced controls are superseded for this GBUF question. Streamed powx_lean remains score winner. No package/stage/filing/submission.",
+  "reopen_if": "A genuinely sparse r=2 structural representation or a different retained layout changes both the charged operation and memory rows"
+}

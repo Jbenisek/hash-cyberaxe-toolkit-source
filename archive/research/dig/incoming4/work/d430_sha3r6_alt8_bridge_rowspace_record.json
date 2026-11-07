@@ -1,0 +1,23 @@
+{
+  "id": "D430-SHA3-R6-ALT8-BRIDGE-ROWSPACE-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "alternative-8-bit predicate bridge row-space and support audit",
+  "question": "Can a generic rank-8 alt8 predicate reuse the filed ten-plane CAMP-F predicate at the structural bridge level?",
+  "labels": ["D", "Z"],
+  "status": "COMPUTED",
+  "number": "The baseline CAMP-F forms have rank 8 and ten-bit support. All 64 preregistered mixed-lane/mixed-slice rank-8 masks passed rank but failed both ten-plane support and row-space equality; all 64 positive-control invertible bases passed all three checks.",
+  "source": "our workflow: D430 preregistered bridge row-space audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D430_sha3r6_alt8_bridge_rowspace_audit.md; research/retest/sha3_r6_alt8/PREREG_D430_BRIDGE_ROWSPACE.md; research/retest/sha3_r6_alt8/bridge_rowspace_audit.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured (sub-30-second structural audit; single-threaded)",
+  "notes": "Finite structural evidence only. Target-vector equivalence, regenerated liveness/FES/kernel, KAT, and exact charge remain open. No package/stage/filing/submission.",
+  "held_fixed": "D400 bridge criterion and PR858 no-transfer rule",
+  "reopen_if": "A candidate row-space/support-equivalent predicate and regenerated lossless kernel are supplied"
+}

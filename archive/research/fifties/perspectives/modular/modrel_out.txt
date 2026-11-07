@@ -1,0 +1,53 @@
+
+====================================================================================================
+J. exact GF(2)-affine relations of the residual bits (128-bit rows; found on rand rows [0,4096))
+====================================================================================================
+  R    rank 126/128, 2 relation(s)
+     relation: XOR of w3.b0 ^ w3.b1 ^ w3.b2 ^ w3.b3 ^ w3.b4 ^ w3.b5 ^ w3.b6 ^ w3.b7 ^ w4.b25 ^ w6.b0 ^ w6.b25 ^ w6.b26 ^ w6.b27 ^ w6.b28 ^ w6.b29 ^ w6.b30 ^ w6.b31 = 0
+       holds on rand rows: 1048576/1048576 (value [0]) ; ctx rows: 262144/262144 (value [0])
+       => the zero residual R = 0 SATISFIES this relation
+     relation: XOR of w3.b8 ^ w3.b9 ^ w3.b10 ^ w3.b11 ^ w3.b12 ^ w3.b13 ^ w3.b14 ^ w3.b15 ^ w3.b16 ^ w3.b17 ^ w3.b18 ^ w3.b19 ^ w3.b20 ^ w3.b21 ^ w3.b22 ^ w3.b23 ^ w3.b24 ^ w3.b25 ^ w3.b26 ^ w3.b27 ^ w3.b28 ^ w3.b29 ^ w3.b30 ^ w3.b31 ^ w4.b25 ^ w6.b1 ^ w6.b2 ^ w6.b3 ^ w6.b4 ^ w6.b5 ^ w6.b6 ^ w6.b7 ^ w6.b8 ^ w6.b9 ^ w6.b10 ^ w6.b11 ^ w6.b12 ^ w6.b13 ^ w6.b14 ^ w6.b15 ^ w6.b16 ^ w6.b17 ^ w6.b18 ^ w6.b19 ^ w6.b20 ^ w6.b21 ^ w6.b22 ^ w6.b23 ^ w6.b24 = 0
+       holds on rand rows: 1048576/1048576 (value [0]) ; ctx rows: 262144/262144 (value [0])
+       => the zero residual R = 0 SATISFIES this relation
+  Rm   rank 128/128, 0 relation(s)
+  K1   rank 59/128, 69 relation(s)
+  K3   rank 93/128, 35 relation(s)
+  CTRL rank 128/128, 0 relation(s)
+
+====================================================================================================
+K. word 3: near-cancellation of the constant modular input differences modulo 2^20
+====================================================================================================
+  dc1 = E1.c1 A-B values: ['0xf5f77e75'] ; de1 = E3.e1 A-B values: ['0x2488303']
+  dc1 + de1 = f8400178 ; mod 2^20 = 00178 (= 376), signed mod 2^32 = -130023048
+    mod 2^8: residue 120  (|residue| / 2^k = 0.46875; uniform expectation 0.25)
+    mod 2^12: residue 376  (|residue| / 2^k = 0.09180; uniform expectation 0.25)
+    mod 2^16: residue 376  (|residue| / 2^k = 0.00574; uniform expectation 0.25)
+    mod 2^20: residue 376  (|residue| / 2^k = 0.00036; uniform expectation 0.25)
+    mod 2^24: residue 4194680  (|residue| / 2^k = 0.25002; uniform expectation 0.25)
+    mod 2^28: residue -130023048  (|residue| / 2^k = 0.48437; uniform expectation 0.25)
+    mod 2^32: residue -130023048  (|residue| / 2^k = 0.03027; uniform expectation 0.25)
+  identity M1.w3 + M3.w3 == (dc1+de1) + dd2 + df1 on every rand row: True
+    mod 2^12  dd2           median |signed residue|/2^k 0.0544   P(< 1/64) 0.2183 (uniform 0.0312)
+    mod 2^12  df1           median |signed residue|/2^k 0.0134   P(< 1/64) 0.5010 (uniform 0.0312)
+    mod 2^12  dd2+df1       median |signed residue|/2^k 0.0579   P(< 1/64) 0.1728 (uniform 0.0312)
+    mod 2^12  M1.w3+M3.w3   median |signed residue|/2^k 0.1033   P(< 1/64) 0.0678 (uniform 0.0312)
+    mod 2^12  Rm.w3         median |signed residue|/2^k 0.2219   P(< 1/64) 0.0334 (uniform 0.0312)
+    mod 2^12  ctrl          median |signed residue|/2^k 0.2502   P(< 1/64) 0.0309 (uniform 0.0312)
+    mod 2^16  dd2           median |signed residue|/2^k 0.3169   P(< 1/64) 0.0003 (uniform 0.0312)
+    mod 2^16  df1           median |signed residue|/2^k 0.1863   P(< 1/64) 0.0000 (uniform 0.0312)
+    mod 2^16  dd2+df1       median |signed residue|/2^k 0.2566   P(< 1/64) 0.0785 (uniform 0.0312)
+    mod 2^16  M1.w3+M3.w3   median |signed residue|/2^k 0.2600   P(< 1/64) 0.0765 (uniform 0.0312)
+    mod 2^16  Rm.w3         median |signed residue|/2^k 0.2635   P(< 1/64) 0.0454 (uniform 0.0312)
+    mod 2^16  ctrl          median |signed residue|/2^k 0.2497   P(< 1/64) 0.0313 (uniform 0.0312)
+    mod 2^20  dd2           median |signed residue|/2^k 0.4648   P(< 1/64) 0.0000 (uniform 0.0312)
+    mod 2^20  df1           median |signed residue|/2^k 0.4883   P(< 1/64) 0.0010 (uniform 0.0312)
+    mod 2^20  dd2+df1       median |signed residue|/2^k 0.0393   P(< 1/64) 0.1502 (uniform 0.0312)
+    mod 2^20  M1.w3+M3.w3   median |signed residue|/2^k 0.0395   P(< 1/64) 0.1503 (uniform 0.0312)
+    mod 2^20  Rm.w3         median |signed residue|/2^k 0.0859   P(< 1/64) 0.1053 (uniform 0.0312)
+    mod 2^20  ctrl          median |signed residue|/2^k 0.2494   P(< 1/64) 0.0313 (uniform 0.0312)
+  k=8: P(R.w3 low k zero) 6.992e-03 (uniform 3.906e-03) ; given |M1+M3 mod 2^k| < 2^(k-4): 1.338e-02 (rows 130874) ; otherwise 6.081e-03
+  k=12: P(R.w3 low k zero) 4.578e-04 (uniform 2.441e-04) ; given |M1+M3 mod 2^k| < 2^(k-4): 9.489e-04 (rows 278210) ; otherwise 2.804e-04
+  k=16: P(R.w3 low k zero) 3.815e-05 (uniform 1.526e-05) ; given |M1+M3 mod 2^k| < 2^(k-4): 1.114e-04 (rows 89762) ; otherwise 3.129e-05
+  other words: E1 / E3 input modular differences entering additively (A-B):
+    word 1: a2 = a1 + b1 + w5 (da1 = 0, dw5 = +8 for A-B) ; g2 = g1 + h2 ... (no constant)
+    word 6, word 4: enter through rotations only (b2 = ROR(b1^c2,7), d2 = ROR(d1^a2,8), f2 = ROR(f1^g2,7), h2 = ROR(h1^e2,8))

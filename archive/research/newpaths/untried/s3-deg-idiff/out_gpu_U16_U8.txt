@@ -1,0 +1,12 @@
+{"space": "U16", "round": 6, "dim": 31, "mode": "basis", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 2, "mean_delta_sum_bits": 137.0, "sec": 0.8}
+{"space": "U16", "round": 6, "dim": 31, "mode": "span", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 2, "mean_delta_sum_bits": 124.0, "sec": 0.7}
+{"space": "U16", "round": 6, "dim": 32, "mode": "basis", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 1.1}
+{"space": "U16", "round": 6, "dim": 32, "mode": "span", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 1.2}
+{"space": "U16", "round": 6, "dim": 33, "mode": "basis", "cubes": 2, "nonzero_digest_sums": 0, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 2.0}
+{"space": "U16", "round": 6, "dim": 33, "mode": "span", "cubes": 2, "nonzero_digest_sums": 0, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 2.0}
+{"space": "U8", "round": 6, "dim": 31, "mode": "basis", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 2, "mean_delta_sum_bits": 129.0, "sec": 0.7}
+{"space": "U8", "round": 6, "dim": 31, "mode": "span", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 2, "mean_delta_sum_bits": 127.0, "sec": 0.7}
+{"space": "U8", "round": 6, "dim": 32, "mode": "basis", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 1.1}
+{"space": "U8", "round": 6, "dim": 32, "mode": "span", "cubes": 2, "nonzero_digest_sums": 2, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 1.1}
+{"space": "U8", "round": 6, "dim": 33, "mode": "basis", "cubes": 2, "nonzero_digest_sums": 0, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 2.0}
+{"space": "U8", "round": 6, "dim": 33, "mode": "span", "cubes": 2, "nonzero_digest_sums": 0, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 2.0}

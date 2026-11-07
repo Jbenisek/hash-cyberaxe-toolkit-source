@@ -1,0 +1,88 @@
+N = 2^20 = 1048576 real pinned pairs, seed 7, 2.5 s
+checks: {'lemmaL_bad': 0, 'pins_bad': 0, 'c3_bad': 0, 'half_bad': 0, 'half_bothzero': 1048576, 'ident_bad': 0, 'e1_out_zero': 0, 'e3_out_zero': 0, 'resid_all_bothzero': 0, 'resid_fold_full': 0, 'e1_d_identity_bad': 0, 'e3only_identity_bad': 0, 'e1eta_identity_bad': 0, 'parity_dB1_even': 525028, 'parity_db1_dD1_even': 524234}
+
+per word: log2 rates on the low k bits (same pair = real event; cross = independence prediction)
+ w  pair          k   fold(same) fold(cross)  both0(same) both0(cross)  P(dp=0)  P(dq=0)   both0/fold
+ 1  E1.a~E3.c   4    -4.17     -4.17       -4.32       -4.33      -0.15    -4.18   0.8974
+ 1  E1.a~E3.c   8    -8.11     -8.10      -15.30      -15.08      -7.14    -7.94   0.0068
+ 1  E1.a~E3.c  12   -12.01    -12.05      -19.00      -21.33      -9.68   -11.65   0.0078
+ 1  E1.a~E3.c  16   -15.83    -16.24        -inf        -inf       -inf   -16.19   0.0000
+ 1  E1.a~E3.c  20   -20.00    -20.21        -inf        -inf       -inf   -20.00   0.0000
+ 1  E1.a~E3.c  24     -inf    -24.17        -inf        -inf       -inf     -inf   nan
+ 1  E1.a~E3.c  32     -inf    -32.01        -inf        -inf       -inf     -inf   nan
+
+ 3  E3.a~E1.c   4    -3.89     -3.88      -10.35      -10.43      -5.21    -5.22   0.0114
+ 3  E3.a~E1.c   8    -7.39     -7.38      -20.00      -22.08     -11.71   -10.37   0.0002
+ 3  E3.a~E1.c  12   -11.35    -11.29        -inf      -32.85     -19.00   -13.85   0.0000
+ 3  E3.a~E1.c  16   -14.48    -14.64        -inf        -inf       -inf   -19.00   0.0000
+ 3  E3.a~E1.c  20   -17.68    -17.60        -inf        -inf       -inf   -19.00   0.0000
+ 3  E3.a~E1.c  24   -20.00    -21.73        -inf        -inf       -inf     -inf   0.0000
+ 3  E3.a~E1.c  32     -inf    -29.71        -inf        -inf       -inf     -inf   nan
+
+ 4  E3.b~E1.d   4    -3.97     -3.98       -5.60       -5.61      -3.96    -1.64   0.3233
+ 4  E3.b~E1.d   8    -7.95     -7.95        -inf      -22.50      -7.79   -14.71   0.0000
+ 4  E3.b~E1.d  12   -11.85    -11.95        -inf      -28.93     -11.73   -17.19   0.0000
+ 4  E3.b~E1.d  16   -15.68    -15.89        -inf        -inf     -16.09     -inf   0.0000
+ 4  E3.b~E1.d  20   -20.00    -19.88        -inf        -inf     -18.42     -inf   0.0000
+ 4  E3.b~E1.d  24     -inf    -23.88        -inf        -inf     -20.00     -inf   nan
+ 4  E3.b~E1.d  32     -inf    -31.79        -inf        -inf       -inf     -inf   nan
+
+ 6  E1.b~E3.d   4    -3.97     -3.97       -7.75       -7.74      -4.07    -3.66   0.0727
+ 6  E1.b~E3.d   8    -8.38     -8.39      -18.42      -20.40     -10.08   -10.33   0.0010
+ 6  E1.b~E3.d  12   -12.55    -12.34        -inf      -29.14     -14.05   -15.09   0.0000
+ 6  E1.b~E3.d  16   -16.09    -16.34        -inf      -37.68     -17.68   -20.00   0.0000
+ 6  E1.b~E3.d  20     -inf    -20.33        -inf        -inf       -inf     -inf   nan
+ 6  E1.b~E3.d  24     -inf    -24.27        -inf        -inf       -inf     -inf   nan
+ 6  E1.b~E3.d  32     -inf    -32.00        -inf        -inf       -inf     -inf   nan
+
+joint fold event, all four words, low k bits each (4k bits in all): count, log2 rate, log2 product of per-word same-pair rates
+  k=1 ( 4 bits):     65910    -3.99     n/a
+  k=2 ( 8 bits):      4095    -8.00     n/a
+  k=3 (12 bits):       320   -11.68     n/a
+  k=4 (16 bits):        10   -16.68   -16.00
+  k=5 (20 bits):         0     -inf     n/a
+  k=6 (24 bits):         0     -inf     n/a
+  k=8 (32 bits):         0     -inf   -31.83
+
+fold algebra: residual (r1, r3, r4, r6) -> (r1, r3, w4' = r4 ^ ROR(r1,8), w6' = r6 ^ ROR(r3,8)) is an invertible XOR-linear change of coordinates
+  w4' depends on E3 only (dB1, dZ9); w6' on E1 (db1, dZ11) and E3's eta (dD1)
+  k   log2 P(w4'=0)  log2 P(w6'=0)  log2 P(both)
+   4      -3.93          -3.83         -7.76
+   8      -8.20          -8.66        -17.42
+  12     -12.25         -12.46          -inf
+  16     -16.42         -17.00          -inf
+  20     -20.00           -inf          -inf
+  24       -inf           -inf          -inf
+  32       -inf           -inf          -inf
+  parity(dB1) even: 0.500706; parity(db1 ^ dD1) even: 0.499949
+  most common values: {'w4p': {'distinct': 1048459, 'top': [('fe7ca9cd', 2), ('fbb7e720', 2), ('f896d9a7', 2), ('f894017c', 2), ('f76c28ba', 2)]}, 'w6p': {'distinct': 1048395, 'top': [('ff42cf35', 2), ('fe80cb9d', 2), ('fde3ce15', 2), ('fd5a8156', 2), ('fc391c15', 2)]}}
+
+top full-width common differences delta (dp = dq = delta) by cross-pair mass: delta, n_p, n_q, share
+  w=1: distinct dp 738924, dq 1048422; max count dp 96, dq 2
+     ('ebb06080', 13, 1, 0.051181102362204724)
+     ('e8f0e1b0', 12, 1, 0.047244094488188976)
+     ('e770e080', 10, 1, 0.03937007874015748)
+     ('2b776080', 7, 1, 0.027559055118110236)
+     ('28b12070', 7, 1, 0.027559055118110236)
+     ('1eb0e080', 6, 1, 0.023622047244094488)
+  w=3: distinct dp 1041476, dq 1042472; max count dp 5, dq 5
+     ('2640f515', 3, 1, 0.0024)
+     ('ea40d2d3', 2, 1, 0.0016)
+     ('aa30d3fd', 1, 2, 0.0016)
+     ('bad15575', 1, 2, 0.0016)
+     ('9e613355', 1, 2, 0.0016)
+     ('9a20d377', 1, 2, 0.0016)
+  w=4: distinct dp 1048444, dq 738924; max count dp 2, dq 96
+     ('b018b0e0', 1, 13, 0.04391891891891892)
+     ('b0685161', 1, 7, 0.02364864864864865)
+     ('70395121', 1, 5, 0.016891891891891893)
+     ('806ff0e1', 1, 5, 0.016891891891891893)
+     ('80e9d7e0', 1, 5, 0.016891891891891893)
+     ('e07930a1', 1, 5, 0.016891891891891893)
+  w=6: distinct dp 1047539, dq 1047931; max count dp 3, dq 2
+     ('85fac676', 1, 2, 0.0078125)
+     ('04ab08f7', 1, 1, 0.00390625)
+     ('05cec37f', 1, 1, 0.00390625)
+     ('0564cc24', 1, 1, 0.00390625)
+     ('0a252260', 1, 1, 0.00390625)
+     ('0b074ddf', 1, 1, 0.00390625)

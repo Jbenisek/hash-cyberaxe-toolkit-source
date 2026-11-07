@@ -1,0 +1,22 @@
+{
+  "id": "D264-B3M-ZIPPER-CLOSURE-RECHECK",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "inside-out zipper singleton-peeling closure enumeration",
+  "question": "Does the unfinished r=3 side-case close at depth 4, 5, or 6 when w14 and w15 are freed?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Native Windows/WSL rerun; graph 88 variables/78 equations; exhaustive singleton-peeling depth-5/6 cases. w14_free_full5: closure_counts [0,0,0,0,0,188403], visited [1,71,2431,53087,821927,9441933]. w14w15_free_full5: closure_counts [0,0,0,0,0,87882], visited [1,72,2505,55778,885989,10567497]. w14w15_free_full6: closure_counts [0,0,0,0,0,87882,5317367], visited [1,72,2505,55778,885989,95802109].",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/pre_blake3_1/peel_w14.py; research/retest/pre_blake3_1/RESULT.md; research/sol_answer_D264_b3m_zipper_recheck.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Exact for the supplied singleton-peeling graph and the three specified free-word cases. Completes the previously unfinished r=3 side-case enumeration only within this model; simultaneous cyclic/carry solving, native work lower bound, and any profitable family remain open. No package/stage/submit.",
+  "held_fixed": "Sol cloud 14 outer equations, D3 w14/w15 patch, WSL g++ compile, exhaustive increasing selection",
+  "reopen_if": "A carry-aware cyclic/SAT solver or a larger valid closure family is supplied",
+  "topic": "blake3-r2 inside-out zipper"
+}

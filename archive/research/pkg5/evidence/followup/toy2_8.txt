@@ -1,0 +1,58 @@
+== 8 bits, 40 seeds: sub-class = best half, A2, B2
+toy BLAKE3, 2 rounds, 8-bit words; pin 73 6a 84 e7 e3 44; plain c = 4.0510; class eta = 97, 8 members, class rate 72.3750
+  A2: 1 XOR conditions hold for all the class mass (64 values of h1 carry mass): 4:0
+  B2: 5 betas carry class mass; they agree on 2 bits: ((beta ^ 24) & 24) == 0
+  T: best 4 of 8 members; exact rate of T 72.5000 (x1.002 of the class); with A and B 72.5000 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 67/67 86/86 63/63 77/77 69/69 81/81 85/85 83/83 76/76 74/74 72/72 62/62 77/77 72/72 72/72 78/78 79/79 87/87 75/75 71/71 60/60 73/73 71/71 73/73 61/61 76/76 78/78 91/91 73/73 64/64 70/70 69/69 78/78 86/86 70/70 60/60 69/69 77/77 65/65 71/71
+  RESULT W=8 T=4/8 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 2900.0 observed 2941 (variance/mean 0.80); with A and B: predicted 2900.0 observed 2941 (variance/mean 0.80)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^-1.000; pass B 2^-0.142; pass A and B 2^-1.142; pass C (E1-only test) 2^-7.739; pass old test 2^-7.334; pass A, B and C 352497426; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0
+toy BLAKE3, 2 rounds, 8-bit words; pin 55 c9 21 52 63 5b; plain c = 1.3416; class eta = 35, 16 members, class rate 10.4375
+  A2: 0 XOR conditions hold for all the class mass (72 values of h1 carry mass):
+  B2: 4 betas carry class mass; they agree on 2 bits: ((beta ^ 21) & 21) == 0
+  T: best 8 of 16 members; exact rate of T 16.5625 (x1.587 of the class); with A and B 16.5625 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 19/19 14/14 13/13 8/8 19/19 17/17 16/16 18/18 18/18 17/17 13/13 21/21 21/21 11/11 11/11 16/16 19/19 11/11 18/18 20/20 9/9 25/25 15/15 16/16 16/16 17/17 19/19 18/18 6/6 15/15 21/21 18/18 19/19 16/16 12/12 13/13 18/18 21/21 16/16 24/24
+  RESULT W=8 T=8/16 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 662.5 observed 654 (variance/mean 1.04); with A and B: predicted 662.5 observed 654 (variance/mean 1.04)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^0.000; pass B 2^-0.678; pass A and B 2^-0.678; pass C (E1-only test) 2^-8.036; pass old test 2^-8.024; pass A, B and C 463624848; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0
+toy BLAKE3, 2 rounds, 8-bit words; pin 49 58 24 e9 20 b7; plain c = 3.0891; class eta = 97, 8 members, class rate 78.1250
+  A2: 0 XOR conditions hold for all the class mass (80 values of h1 carry mass):
+  B2: 6 betas carry class mass; they agree on 1 bits: ((beta ^ 20) & 20) == 0
+  T: best 4 of 8 members; exact rate of T 78.2500 (x1.002 of the class); with A and B 78.2500 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 84/84 92/92 70/70 82/82 81/81 73/73 81/81 92/92 87/87 77/77 64/64 80/80 83/83 83/83 75/75 62/62 71/71 65/65 93/93 82/82 82/82 62/62 62/62 81/81 92/92 70/70 75/75 74/74 68/68 77/77 67/67 80/80 89/89 70/70 69/69 81/81 95/95 83/83 80/80 78/78
+  RESULT W=8 T=4/8 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 3130.0 observed 3112 (variance/mean 1.07); with A and B: predicted 3130.0 observed 3112 (variance/mean 1.07)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^0.000; pass B 2^0.000; pass A and B 2^0.000; pass C (E1-only test) 2^-7.953; pass old test 2^-7.180; pass A, B and C 693224717; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0
+toy BLAKE3, 2 rounds, 8-bit words; pin 30 19 41 90 28 9b; plain c = 0.2052; class eta = f7, 2 members, class rate 14.8281
+  A2: 3 XOR conditions hold for all the class mass (20 values of h1 carry mass): 1:0 6:0 32:1
+  B2: 4 betas carry class mass; they agree on 3 bits: ((beta ^ 24) & 26) == 0
+  T: best 1 of 2 members; exact rate of T 14.8281 (x1.000 of the class); with A and B 14.8281 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 18/18 13/13 17/17 6/6 14/14 13/13 16/16 19/19 11/11 13/13 19/19 18/18 13/13 13/13 18/18 18/18 14/14 12/12 9/9 14/14 16/16 15/15 11/11 14/14 12/12 14/14 14/14 18/18 13/13 13/13 17/17 10/10 16/16 8/8 17/17 17/17 21/21 18/18 15/15 14/14
+  RESULT W=8 T=1/2 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 593.1 observed 581 (variance/mean 0.72); with A and B: predicted 593.1 observed 581 (variance/mean 0.72)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^-3.000; pass B 2^-0.093; pass A and B 2^-3.093; pass C (E1-only test) 2^-7.877; pass old test 2^-8.000; pass A, B and C 82198434; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0
+toy BLAKE3, 2 rounds, 8-bit words; pin 47 fe dc a9 fa 2f; plain c = 0.9376; class eta = f1, 8 members, class rate 2.5000
+  A2: 2 XOR conditions hold for all the class mass (64 values of h1 carry mass): 10:0 20:1
+  B2: 1 betas carry class mass; they agree on 8 bits: ((beta ^ fd) & ff) == 0
+  T: best 4 of 8 members; exact rate of T 2.5000 (x1.000 of the class); with A and B 2.5000 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 1/1 1/1 2/2 1/1 2/2 1/1 3/3 0/0 1/1 1/1 4/4 2/2 4/4 3/3 2/2 3/3 5/5 4/4 2/2 5/5 6/6 4/4 2/2 5/5 3/3 0/0 2/2 1/1 1/1 1/1 1/1 2/2 1/1 1/1 1/1 8/8 4/4 3/3 4/4 4/4
+  RESULT W=8 T=4/8 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 100.0 observed 101 (variance/mean 1.24); with A and B: predicted 100.0 observed 101 (variance/mean 1.24)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^-2.000; pass B 2^-6.000; pass A and B 2^-8.000; pass C (E1-only test) 2^-7.794; pass old test 2^-8.300; pass A, B and C 5446011; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0
+== 8 bits, 40 seeds: whole class, A2, B2
+toy BLAKE3, 2 rounds, 8-bit words; pin 73 6a 84 e7 e3 44; plain c = 4.0510; class eta = 97, 8 members, class rate 72.3750
+  A2: 1 XOR conditions hold for all the class mass (64 values of h1 carry mass): 4:0
+  B2: 5 betas carry class mass; they agree on 2 bits: ((beta ^ 24) & 24) == 0
+  T: best 8 of 8 members; exact rate of T 72.3750 (x1.000 of the class); with A and B 72.3750 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 64/64 69/69 62/62 73/73 68/68 69/69 78/78 57/57 74/74 77/77 77/77 63/63 62/62 61/61 58/58 63/63 75/75 67/67 73/73 69/69 67/67 66/66 82/82 71/71 59/59 65/65 64/64 69/69 76/76 66/66 70/70 86/86 67/67 81/81 84/84 68/68 72/72 66/66 68/68 76/76
+  RESULT W=8 T=8/8 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 2895.0 observed 2782 (variance/mean 0.71); with A and B: predicted 2895.0 observed 2782 (variance/mean 0.71)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^-1.000; pass B 2^-0.142; pass A and B 2^-1.142; pass C (E1-only test) 2^-7.738; pass old test 2^-7.334; pass A, B and C 352506559; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0
+toy BLAKE3, 2 rounds, 8-bit words; pin 49 58 24 e9 20 b7; plain c = 3.0891; class eta = 97, 8 members, class rate 78.1250
+  A2: 0 XOR conditions hold for all the class mass (80 values of h1 carry mass):
+  B2: 6 betas carry class mass; they agree on 1 bits: ((beta ^ 20) & 20) == 0
+  T: best 8 of 8 members; exact rate of T 78.1250 (x1.000 of the class); with A and B 78.1250 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 89/89 74/74 69/69 76/76 86/86 86/86 79/79 74/74 83/83 52/52 83/83 102/102 76/76 86/86 64/64 68/68 85/85 74/74 88/88 88/88 74/74 58/58 77/77 67/67 78/78 73/73 76/76 75/75 85/85 61/61 81/81 91/91 62/62 74/74 75/75 69/69 84/84 65/65 65/65 74/74
+  RESULT W=8 T=8/8 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 3125.0 observed 3046 (variance/mean 1.35); with A and B: predicted 3125.0 observed 3046 (variance/mean 1.35)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^0.000; pass B 2^0.000; pass A and B 2^0.000; pass C (E1-only test) 2^-7.953; pass old test 2^-7.180; pass A, B and C 693192419; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0
+toy BLAKE3, 2 rounds, 8-bit words; pin 47 fe dc a9 fa 2f; plain c = 0.9376; class eta = f1, 8 members, class rate 2.5000
+  A2: 2 XOR conditions hold for all the class mass (64 values of h1 carry mass): 10:0 20:1
+  B2: 1 betas carry class mass; they agree on 8 bits: ((beta ^ fd) & ff) == 0
+  T: best 8 of 8 members; exact rate of T 2.5000 (x1.000 of the class); with A and B 2.5000 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 1/1 2/2 4/4 3/3 0/0 5/5 3/3 3/3 3/3 1/1 5/5 3/3 2/2 2/2 6/6 3/3 2/2 2/2 4/4 6/6 4/4 2/2 4/4 2/2 2/2 2/2 3/3 5/5 3/3 5/5 1/1 4/4 3/3 1/1 3/3 3/3 4/4 2/2 7/7 0/0
+  RESULT W=8 T=8/8 ka=-1 useb=2 seeds=40: sub-class, no rejection: predicted 100.0 observed 120 (variance/mean 0.85); with A and B: predicted 100.0 observed 120 (variance/mean 0.85)
+  CHECKS trials 2^37.32; Y4 wrong 0; pass A 2^-2.000; pass B 2^-6.000; pass A and B 2^-8.000; pass C (E1-only test) 2^-7.794; pass old test 2^-8.300; pass A, B and C 5454144; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0

@@ -1,0 +1,58 @@
+{
+ "schema_version": 3,
+ "submission_state": "ready",
+ "target_profile": "poseidon-orchard-r1-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 1,
+ "claim": {
+  "time_log2": 28.781,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 23.043,
+  "preprocessing_log2": 9.243,
+  "success_probability": 0.53,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r1-prefix-v1 only (one partial round plus the eight fixed full rounds); the construction relies on the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "The run is probabilistic: at most two independent centres on two different lines; the claimed success probability is for the whole run, with the implemented halts of proof.md section 4 counted as failures, and follows from the measured per-centre success rate (lower end of its 95% interval)."
+ ],
+ "baseline_improved": "poseidon-orchard-r1-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H1-sample-success-rate",
+   "role": "score-critical",
+   "statement": "Each centre of the program (a uniform 254-bit centre c on a line j, odd-part polynomial g_c, roots of G = gcd(g_c, S^((p-1)/2) - 1)) succeeds with probability at least q = 0.318, independently of the other centre; two centres on two different lines then succeed with probability at least 1 - (1 - q)^2 = 0.534, claimed as 0.53.",
+   "scope": "The program of proof.md section 4 at the selected target with at most two centres on lines (j0 + k) mod 3; fresh independent random words per centre (the sample used a deterministic generator for c).",
+   "extrapolation": "From 65 complete single-centre executions at the selected target (28 successes, rate 0.431, Wilson 95% interval [0.318, 0.552]; lines pooled: line 0: 8 of 22; line 1: 9 of 21; line 2: 11 of 22) to the true per-centre rate: the lower end of the interval is used as q. The sample runs used the line rule j = seed mod 3, so all three lines are represented; the program uses two different lines per run.",
+   "evidence_ids": [
+    "proof:194-201"
+   ],
+   "limitations": "A 95%% interval fails to contain the true rate about 5%% of the time (its lower end is too high about 2.5%% of the time); the 65 runs are not independent of the build (26 with an earlier build of identical arithmetic); the certificates show only that found roots yield collisions. The Poisson(1/2) root-count model (rate 0.3935) is context only and is not used for the claim."
+  },
+  {
+   "id": "H2-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 are the totals of an instrumented execution of the program whose complete source is in proof.md section 10, under the stated rules: 1 per field operation, 1 per element load or store plus 1 address operation, 3 per loop iteration plus 2 per loop exit, 1 per other executed index or control operation (shift, mask, add, multiply, modulo, compare, branch), 237 per reduced permutation evaluation of stage B, and a 16-word register file per transform block as the only register assumption.",
+   "scope": "All stages of the program of proof.md section 4 at the target dimensions (m = 39062, N = 98304, N' = 49152, H = 49152).",
+   "extrapolation": "None beyond the executed dimensions; the worst case for two centres is formed from the measured data-independent stages and the implemented budgets of the data-dependent stages.",
+   "evidence_ids": [
+    "proof:83-100",
+    "proof:128-172"
+   ],
+   "limitations": "The counts are produced by the instrumentation written into the source; the source is part of the proof text and was not run by the organizer. Word-level costs outside the stated rules (cache, bandwidth) are not part of the model; the control charges are written next to the statements they price."
+  },
+  {
+   "id": "H3-gcd-budget",
+   "role": "supporting",
+   "statement": "The half-gcd stage on (g, R - 1) stays within 8,800,000,000 charged operations (about 1.5 times the largest observed cost); the stage has this budget as an implemented halt, a halt counts as a failure of the run, and the worst-case total charges the full budget for every centre.",
+   "scope": "Stage D of proof.md section 4 for inputs produced by stages B and C.",
+   "extrapolation": "From the 2 centres of the ledger run (stage totals 5,850,477,654 to 5,850,480,330) to all inputs; exceeding the budget requires a non-normal remainder sequence (probability about 1/p per step) or a gcd of large degree.",
+   "evidence_ids": [
+    "proof:206-207"
+   ],
+   "limitations": "Cost concentration is observed and argued, not proved; the budget itself bounds the loss."
+  }
+ ]
+}

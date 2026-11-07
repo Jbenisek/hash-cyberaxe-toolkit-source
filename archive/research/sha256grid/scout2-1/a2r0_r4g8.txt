@@ -1,0 +1,7 @@
+dW10 core fcfeed6a (need fcfeed6a)
+A2 list (proof 4.2 conditions) 3072; with dW9 3072
+samples 16776192 (NS 5461 per A2), A0-free valid hits 770368: N_free ~ 2^36.140
+|R(own A0 4493f513)| ~ 2^31.743 (36565 hits); |R(published A0 b75dae71)| ~ 2^28.595 (4124 hits)
+mean |R(A0)| over 64 random A0 ~ 2^30.119
+top A0 by hill-climb (48 restarts): 45a36175 |R| ~ 2^32.638 (68003 hits)
+wall 2.916470603

@@ -1,0 +1,128 @@
+rows rand 1048576 (train 524288 / test 524288), ctx 262144; control = uniform u32, same shape, seed 0x4D4F44554C415201
+
+====================================================================================================
+0. identities (COMPUTED on every row of rand and ctx)
+====================================================================================================
+  [rand] R==0 <=> Rm==0 per word: True | low-k zero sets equal for all k<32: True | lsb(R)==lsb(Rm): True
+  [rand] R == K1^K3 exactly: True | Rm == M1+M3 mod 2: True | M1 word1 == 0 mod 16: True
+  [ctx] R==0 <=> Rm==0 per word: True | low-k zero sets equal for all k<32: True | lsb(R)==lsb(Rm): True
+  [ctx] R == K1^K3 exactly: True | Rm == M1+M3 mod 2: True | M1 word1 == 0 mod 16: True
+
+====================================================================================================
+1. per word: distinct, collision entropy H2 (all 2^20 rand rows), bit bias, independent-bit entropy deficit
+====================================================================================================
+  H2 from colliding pairs; uniform 32-bit expects ~128 pairs -> H2 ~ 32.0. bias = |P(bit=1)-1/2|.
+  deficit = sum_b (1 - h(p_b)) bits (independent-bit model). max bias: location chosen on TRAIN, value on TEST.
+  view   word  distinct     pairs      H2 | maxbias train(bit)     test     |  deficit  ctx_def
+  R      1      1048381       195   31.39 | 0.2037 (b 0)          0.2032   |    0.185    0.169
+  R      3      1047897       681   29.59 | 0.3300 (b19)          0.3308   |    0.784    0.798
+  R      4      1048407       169   31.60 | 0.1526 (b25)          0.1523   |    0.125    0.117
+  R      6      1048197       379   30.43 | 0.2506 (b11)          0.2512   |    0.474    0.479
+  Rm     1      1048419       157   31.71 | 0.2037 (b 0)          0.2032   |    0.123    0.104
+  Rm     3      1048144       432   30.25 | 0.0288 (b 2)          0.0276   |    0.003    0.003
+  Rm     4      1048446       130   31.98 | 0.0223 (b 4)          0.0210   |    0.001    0.001
+  Rm     6      1048374       202   31.34 | 0.0200 (b 4)          0.0187   |    0.001    0.001
+  K1     1       144687  28433947   14.24 | 0.5000 (b 0)          0.5000   |   11.888   11.876
+  K1     3       986224     77525   22.76 | 0.4248 (b25)          0.4259   |    3.682    3.676
+  K1     4       144687  28433947   14.24 | 0.5000 (b24)          0.5000   |   11.888   11.876
+  K1     6       986224     77525   22.76 | 0.4248 (b18)          0.4259   |    3.682    3.676
+  K3     1      1048369       208   31.30 | 0.2037 (b 0)          0.2032   |    0.243    0.222
+  K3     3      1028537     21067   24.64 | 0.4103 (b19)          0.4107   |    2.869    2.862
+  K3     4      1048424       152   31.75 | 0.1526 (b25)          0.1523   |    0.133    0.127
+  K3     6      1028537     21067   24.64 | 0.4103 (b11)          0.4107   |    2.869    2.862
+  M1     1         2048 268426977   11.00 | 0.5000 (b 0)          0.5000   |    4.377    4.422
+  M1     3       373186   9758033   15.78 | 0.5000 (b26)          0.5000   |    6.776    6.774
+  M1     4       373186   9758033   15.78 | 0.2497 (b 1)          0.2501   |    0.939    0.939
+  M1     6      1043195      5452   26.59 | 0.0674 (b 2)          0.0681   |    0.017    0.018
+  M3     1      1048307       269   30.93 | 0.2037 (b 0)          0.2032   |    0.123    0.105
+  M3     3       448033   4611468   16.86 | 0.4921 (b11)          0.4920   |    9.449    9.428
+  M3     4      1048425       151   31.76 | 0.0239 (b 4)          0.0244   |    0.002    0.003
+  M3     6      1047853       726   29.50 | 0.2037 (b 0)          0.2032   |    0.165    0.146
+  CTRL   1      1048443       133   31.94 | 0.0020 (b 1)          0.0006   |    0.000    0.000
+  CTRL   3      1048435       141   31.86 | 0.0013 (b 1)          0.0007   |    0.000    0.000
+  CTRL   4      1048440       136   31.91 | 0.0014 (b22)          0.0001   |    0.000    0.000
+  CTRL   6      1048450       126   32.02 | 0.0016 (b19)          0.0005   |    0.000    0.000
+
+====================================================================================================
+2. signed-digit weight: XOR Hamming weight of R vs NAF weight of Rm (and of the signed value), vs control
+====================================================================================================
+  NAF weight is min over the representatives x, x-2^32. control: uniform u32 (NAF of uniform; HW of uniform).
+  word 1: mean HW(R) 16.016 (ctrl 16.000) | mean NAF(Rm) 10.799 (ctrl 10.776) | min NAF 3 | NAF<=HW all rows: True | mean HW-NAF 5.218
+  word 3: mean HW(R) 15.008 (ctrl 16.005) | mean NAF(Rm) 10.202 (ctrl 10.777) | min NAF 1 | NAF<=HW all rows: True | mean HW-NAF 4.807
+  word 4: mean HW(R) 16.014 (ctrl 15.999) | mean NAF(Rm) 10.741 (ctrl 10.775) | min NAF 3 | NAF<=HW all rows: True | mean HW-NAF 5.272
+  word 6: mean HW(R) 15.973 (ctrl 16.003) | mean NAF(Rm) 10.720 (ctrl 10.777) | min NAF 2 | NAF<=HW all rows: True | mean HW-NAF 5.253
+  128-bit totals: mean HW(R) 63.01 (ctrl 64.01), min 32 (ctrl min 38) | mean NAF(Rm) 42.46 (ctrl 43.11), min 23 (ctrl min 27)
+  P(total NAF <= 20): data 0.000e+00  ctrl 0.000e+00 | P(total HW <= 36): data 1.812e-05 ctrl 0.000e+00
+  P(total NAF <= 24): data 1.907e-06  ctrl 0.000e+00 | P(total HW <= 40): data 2.356e-04 ctrl 1.144e-05
+  P(total NAF <= 28): data 6.866e-05  ctrl 1.144e-05 | P(total HW <= 44): data 2.035e-03 ctrl 2.508e-04
+
+====================================================================================================
+3. signed magnitude of Rm: P(|Rm| < 2^m) per word vs uniform 2^(m-31) (is the modular residual small?)
+====================================================================================================
+  word 1: m=20 5.90e-04/4.88e-04(c 4.62e-04)  m=24 7.74e-03/7.81e-03(c 7.85e-03)  m=26 3.12e-02/3.12e-02(c 3.13e-02)  m=28 1.25e-01/1.25e-01(c 1.25e-01)  m=30 5.00e-01/5.00e-01(c 5.00e-01)  | frac Rm>0 (signed) 0.5001
+  word 3: m=20 4.75e-04/4.88e-04(c 4.79e-04)  m=24 6.13e-03/7.81e-03(c 7.71e-03)  m=26 2.00e-02/3.12e-02(c 3.13e-02)  m=28 8.48e-02/1.25e-01(c 1.25e-01)  m=30 4.13e-01/5.00e-01(c 5.00e-01)  | frac Rm>0 (signed) 0.4992
+  word 4: m=20 3.12e-04/4.88e-04(c 4.81e-04)  m=24 6.34e-03/7.81e-03(c 7.79e-03)  m=26 3.12e-02/3.12e-02(c 3.14e-02)  m=28 1.25e-01/1.25e-01(c 1.25e-01)  m=30 5.00e-01/5.00e-01(c 5.01e-01)  | frac Rm>0 (signed) 0.4993
+  word 6: m=20 3.16e-04/4.88e-04(c 5.15e-04)  m=24 7.56e-03/7.81e-03(c 7.76e-03)  m=26 3.07e-02/3.12e-02(c 3.11e-02)  m=28 1.24e-01/1.25e-01(c 1.25e-01)  m=30 5.00e-01/5.00e-01(c 5.00e-01)  | frac Rm>0 (signed) 0.4998
+
+====================================================================================================
+4. plug-in entropy (Miller-Madow) of the low k bits / top k bits, per word and jointly, TRAIN vs TEST vs CONTROL
+====================================================================================================
+  per word, k bits (entropy deficit = k - H; control deficit shows estimator bias at this sample size):
+  k= 4 low | w1 R 0.1226 Rm 0.1226 ctrl -0.0000 | w3 R 0.0539 Rm 0.0529 ctrl -0.0000 | w4 R 0.0000 Rm 0.0000 ctrl -0.0000 | w6 R 0.0152 Rm 0.0017 ctrl -0.0000
+  k= 4 top | w1 R -0.0000 Rm -0.0000 ctrl 0.0000 | w3 R 0.0448 Rm 0.0304 ctrl -0.0000 | w4 R -0.0000 Rm 0.0000 ctrl 0.0000 | w6 R 0.0127 Rm 0.0000 ctrl -0.0000
+  k= 8 low | w1 R 0.1226 Rm 0.1226 ctrl -0.0000 | w3 R 0.1259 Rm 0.1040 ctrl 0.0000 | w4 R 0.1244 Rm 0.0892 ctrl -0.0000 | w6 R 0.1803 Rm 0.1076 ctrl 0.0000
+  k= 8 top | w1 R 0.0000 Rm -0.0000 ctrl 0.0000 | w3 R 0.1410 Rm 0.0775 ctrl -0.0000 | w4 R 0.0696 Rm 0.0225 ctrl -0.0000 | w6 R 0.1583 Rm 0.0000 ctrl -0.0000
+  k=12 low | w1 R 0.2354 Rm 0.2010 ctrl 0.0002 | w3 R 0.1640 Rm 0.1297 ctrl -0.0000 | w4 R 0.1242 Rm 0.0892 ctrl 0.0001 | w6 R 0.5925 Rm 0.3597 ctrl -0.0001
+  k=12 top | w1 R 0.0205 Rm 0.0133 ctrl 0.0000 | w3 R 0.1429 Rm 0.0991 ctrl 0.0003 | w4 R 0.0699 Rm 0.0301 ctrl -0.0000 | w6 R 0.1890 Rm 0.0203 ctrl -0.0001
+  k=16 low | w1 R 0.2414 Rm 0.2057 ctrl 0.0027 | w3 R 0.5136 Rm 0.3322 ctrl 0.0026 | w4 R 0.1283 Rm 0.0936 ctrl 0.0026 | w6 R 0.6066 Rm 0.3687 ctrl 0.0024
+  k=16 top | w1 R 0.0220 Rm 0.0154 ctrl 0.0024 | w3 R 0.9912 Rm 0.6735 ctrl 0.0024 | w4 R 0.0732 Rm 0.0322 ctrl 0.0020 | w6 R 0.2748 Rm 0.0549 ctrl 0.0025
+  jointly, low k bits of all four words (4k bits), deficit = 4k - H on TEST half; P(all 4k bits zero) on all rand:
+  k=1 ( 4 bits): low R 0.1226  low Rm 0.1226  ctrl -0.0000 | top-k Rm 0.0000 ctrl 0.0000 | P(low zero) 3.718e-02 vs 2^-4=6.250e-02
+  k=2 ( 8 bits): low R 0.1226  low Rm 0.1226  ctrl 0.0000 | top-k Rm 0.0220 ctrl 0.0000 | P(low zero) 2.339e-03 vs 2^-8=3.906e-03
+  k=3 (12 bits): low R 0.1861  low Rm 0.1707  ctrl 0.0001 | top-k Rm 0.0284 ctrl -0.0000 | P(low zero) 2.060e-04 vs 2^-12=2.441e-04
+  k=4 (16 bits): low R 0.1980  low Rm 0.1812  ctrl 0.0019 | top-k Rm 0.0330 ctrl 0.0014 | P(low zero) 1.049e-05 vs 2^-16=1.526e-05
+  k=5 (20 bits): low R 1.2765  low Rm 1.1881  ctrl 0.8844 | top-k Rm 0.9024 ctrl 0.8839 | P(low zero) 9.537e-07 vs 2^-20=9.537e-07
+
+====================================================================================================
+5. coordinate-free anchor: -log2 P(low k bits of word w are zero) (same set in XOR and modular coordinates)
+====================================================================================================
+  rand all rows; ctx in brackets. uniform = k. 'excess' = k - (-log2 P).
+  word 1: k4 4.75[4.67]  k8 8.75[8.71]  k12 12.10[12.22]  k14 14.48[14.09]  k16 16.83[16.42]  k18 19.00[18.00]
+  word 3: k4 3.71[3.72]  k8 7.16[7.16]  k12 11.09[11.11]  k14 12.29[12.19]  k16 14.68[14.42]  k18 16.54[18.00]
+  word 4: k4 4.00[3.99]  k8 7.25[7.23]  k12 11.20[11.37]  k14 13.23[13.09]  k16 15.00[14.83]  k18 16.54[18.00]
+  word 6: k4 3.89[3.85]  k8 9.13[9.08]  k12 12.05[12.22]  k14 14.09[14.54]  k16 16.30[16.00]  k18 18.00[18.00]
+
+====================================================================================================
+6. do the modular parts combine simply? R = K1^K3 always; Rm vs M1 (+/-) M3
+====================================================================================================
+  DERIVED: x^y = x + y - 2(x&y), so Rm - M1 - M3 = -2*((aA&gA) - (aB&gB)) mod 2^32; exact iff aA&gA == aB&gB.
+  v2 = 2-adic valuation of (Rm - M1 - M3): the modular split holds mod 2^v2. control: uniform aA,gA,aB,gB.
+  word 1: P(Rm==M1+M3) 0.000e+00 (ctrl 0.000e+00)  P(Rm==M1-M3) 0.000e+00 | mean v2 3.25 (ctrl 2.66) | P(v2>=8) 0.0750 (ctrl 0.0368)
+  word 3: P(Rm==M1+M3) 9.537e-07 (ctrl 0.000e+00)  P(Rm==M1-M3) 9.537e-07 | mean v2 2.34 (ctrl 2.66) | P(v2>=8) 0.0201 (ctrl 0.0368)
+  word 4: P(Rm==M1+M3) 1.907e-06 (ctrl 0.000e+00)  P(Rm==M1-M3) 4.768e-06 | mean v2 3.11 (ctrl 2.66) | P(v2>=8) 0.0637 (ctrl 0.0368)
+  word 6: P(Rm==M1+M3) 0.000e+00 (ctrl 0.000e+00)  P(Rm==M1-M3) 0.000e+00 | mean v2 2.71 (ctrl 2.66) | P(v2>=8) 0.0296 (ctrl 0.0368)
+  word 1: rows sharing (M1,M3) with a neighbour: 0 ; of those, Rm differs: 0 | rows sharing (K1,K3): R differs never (identity)
+  word 3: rows sharing (M1,M3) with a neighbour: 88 ; of those, Rm differs: 88 | rows sharing (K1,K3): R differs never (identity)
+  word 4: rows sharing (M1,M3) with a neighbour: 0 ; of those, Rm differs: 0 | rows sharing (K1,K3): R differs never (identity)
+  word 6: rows sharing (M1,M3) with a neighbour: 0 ; of those, Rm differs: 0 | rows sharing (K1,K3): R differs never (identity)
+
+====================================================================================================
+7. E-part differences in three coordinates: XOR (K), modular (M), signed-bit (BSD = XOR pattern + signs)
+====================================================================================================
+  H2 from colliding pairs on all 2^20 rand rows (uniform 32-bit ~32, 64-bit key: no pairs expected).
+  mid E1.a1: XOR distinct       1 H2   0.00 top 00000000 p=1.0000 | MOD distinct       1 H2   0.00 top 00000000 p=1.0000 | BSD distinct       1 H2   0.00
+  mid E1.b1: XOR distinct       1 H2   0.00 top 18b0e098 p=1.0000 | MOD distinct    2048 H2  11.00 top e76f6078 p=0.0006 | BSD distinct    2048 H2  11.00
+  mid E1.c1: XOR distinct       1 H2   0.00 top 0e09818b p=1.0000 | MOD distinct       1 H2   0.00 top f5f77e75 p=1.0000 | BSD distinct       1 H2   0.00
+  mid E1.d1: XOR distinct       1 H2   0.00 top 00000000 p=1.0000 | MOD distinct       1 H2   0.00 top 00000000 p=1.0000 | BSD distinct       1 H2   0.00
+  mid E3.e1: XOR distinct       1 H2   0.00 top 03cf8303 p=1.0000 | MOD distinct       1 H2   0.00 top 02488303 p=1.0000 | BSD distinct       1 H2   0.00
+  mid E3.f1: XOR distinct  140466 H2  14.30 top 0c983010 p=0.0003 | MOD distinct  448033 H2  16.86 top 03e81010 p=0.0001 | BSD distinct 1007979 H2  23.31
+  mid E3.g1: XOR distinct  140466 H2  14.30 top 830100c9 p=0.0003 | MOD distinct    4096 H2  12.00 top 8302fcbb p=0.0003 | BSD distinct  977728 H2  22.55
+  mid E3.h1: XOR distinct       1 H2   0.00 top 830303cf p=1.0000 | MOD distinct    4096 H2  12.00 top 8302fcbb p=0.0003 | BSD distinct    8192 H2  13.00
+  out E1.a2: XOR distinct  144687 H2  14.24 top 18b0a090 p=0.0005 | MOD distinct    2048 H2  11.00 top e76f6080 p=0.0006 | BSD distinct  891986 H2  21.04
+  out E1.b2: XOR distinct  986224 H2  22.76 top 9b2541e2 p=0.0000 | MOD distinct 1043195 H2  26.59 top 66fd00e4 p=0.0000 | BSD distinct 1048566 H2  35.68
+  out E1.c2: XOR distinct  986224 H2  22.76 top 8a1011d5 p=0.0000 | MOD distinct  373186 H2  15.78 top 75ef0e95 p=0.0003 | BSD distinct 1047678 H2  29.18
+  out E1.d2: XOR distinct  144687 H2  14.24 top 9018b0a0 p=0.0005 | MOD distinct  373186 H2  15.78 top 7ff79020 p=0.0003 | BSD distinct  985624 H2  22.35
+  out E3.e2: XOR distinct 1028537 H2  24.64 top 06e09313 p=0.0000 | MOD distinct  448033 H2  16.86 top 06309313 p=0.0001 | BSD distinct 1048309 H2  30.93
+  out E3.f2: XOR distinct 1048424 H2  31.75 top 0217613c p=0.0000 | MOD distinct 1048425 H2  31.76 top 005f6aa0 p=0.0000 | BSD distinct 1048576 H2    inf
+  out E3.g2: XOR distinct 1048369 H2  31.30 top 908a33e1 p=0.0000 | MOD distinct 1048307 H2  30.93 top 0318d39d p=0.0000 | BSD distinct 1048575 H2  39.00
+  out E3.h2: XOR distinct 1028537 H2  24.64 top dc85e390 p=0.0000 | MOD distinct 1047853 H2  29.50 top 1624d2d0 p=0.0000 | BSD distinct 1048575 H2  39.00

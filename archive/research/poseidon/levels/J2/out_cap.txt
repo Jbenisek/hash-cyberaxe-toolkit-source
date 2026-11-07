@@ -1,0 +1,6 @@
+cap 0: nfac 7 deg4 1 roots 0 | 188 188 94 60 60 30 4 (9s)
+cap 1: nfac 14 deg4 1 roots 0 | 108 108 76 76 54 52 52 38 13 13 12 12 6 4 (6s)
+cap 2: nfac 11 deg4 3 roots 0 | 364 91 60 40 28 20 7 4 4 4 2 (5s)
+cap 3: nfac 8 deg4 2 roots 1 | 320 188 47 40 20 4 4 1 (6s)
+cap 4: nfac 14 deg4 4 roots 3 | 356 89 84 40 21 12 4 4 4 4 3 1 1 1 (5s)
+cap 5: nfac 14 deg4 5 roots 0 | 340 76 76 38 28 28 14 4 4 4 4 4 2 2 (6s)

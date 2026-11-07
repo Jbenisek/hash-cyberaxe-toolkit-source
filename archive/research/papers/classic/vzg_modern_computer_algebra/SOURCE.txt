@@ -1,0 +1,3 @@
+original_filename: vonzurgathen-gerhard_Modern-Computer-Algebra_3e.pdf
+source_url: http://lib.ysu.am/disciplines_bk/8daf5ccde25503ca099cd564bc4018f2.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

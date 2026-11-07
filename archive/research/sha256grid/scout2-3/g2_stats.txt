@@ -1,0 +1,12 @@
+g2_main.log: 131072 runs, mean 2^-100.9999, relative sd 0.0256, min 2^-101.1733, max 2^-100.8427, one-sided 99% bound 2^-101.0002 (131071 df, t = 2.3264)
+  stage means (log2, rows 17..22, tail): -17.0000 -13.0000 -15.0002 -6.0000 -7.0000 -1.0000 -15.0001  (+ row 16: -27 exact)
+  stage sds: 0.0191 0.0049 0.0206 0.0000 0.0080 0.0000 0.0220
+  tail successes 561159493, failed re-verifications 0, extinct runs 0
+variant sampler: 536870912 accepted; per-A0 counts vs |R_j|/SR: chi2 = 279.3 on 255 df (z = 1.07)
+per-A0 tail factor (q3 of an A0 relative to the average, log2): sd 0.0009 (binomial noise alone 0.0010), min -0.0024 (A0 b66add50), max +0.0026 (A0 3661fd50); heterogeneity chi2 = 224.2 on 255 df (z = -1.39); hits per A0 2183873..2202332
+  implied A0-to-A0 spread of q3 beyond noise: sd 0.0000 bit
+pricing (levers_r38.py ledger; N_G scaled at fixed success bound; units = 2728 ops):
+  leader ledger rebuilt: 72.63344 (claimed 72.64; derivative row 72.61489)
+  q3_model 2^-102 -> 2^-101.0101 (leader fixed-sample 99% bound): 72.06934 (-0.5707 vs 72.64); with pair budget structural 0.002931: 71.66911; + A_S 2^50 + no pad: 71.11116
+  q3_model 2^-102 -> 2^-101.0051 (leader population 99% bound): 72.06692 (-0.5731 vs 72.64); with pair budget structural 0.002931: 71.66751; + A_S 2^50 + no pad: 71.10885
+  q3_model 2^-102 -> 2^-101.0002 (this study 99% bound): 72.06453 (-0.5755 vs 72.64); with pair budget structural 0.002931: 71.66594; + A_S 2^50 + no pad: 71.10658

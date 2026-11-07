@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JHEUR score-critical heuristic H1",
+ "question": "score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "sensitivity: the claim P=0.53 uses the Wilson low 0.318; a proved two-family bound p/(2p-1) > 1/2 for two centres or the cloud-49 one-orbit bound 1/3 per centre (0.556 for two) would remove the heuristic with no extra centre",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Arithmetic; the bounds themselves are not proved here (cloud 49: CLAIMED-UNTESTED). | universe cell poseidon-r1|JUDGE.JHEUR|JUDGE|R4",
+ "held_fixed": "two centres",
+ "reopen_if": "the certificate check of cloud 49 on our F"
+}

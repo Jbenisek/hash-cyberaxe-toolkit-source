@@ -1,0 +1,40 @@
+# splitz
+
+Source: `research/newpaths/variants/splitz.c`
+
+Public SHA-256: `71dd1eb6b65dbb442f8dbabf1f4a50f31217d1a32116f389fdb3ca9b3bc9b90e`
+
+## Purpose recorded in the source
+
+Meet-in-the-middle split analysis of guess sets (see SPLIT_MODEL in README).
+usage: split model solfile F logN [maxsol]
+For every solution (line "SOL v1 .. vk") and every labelling of its guesses into core Z, side A, side B:
+  PA = cl(Z+A), PB = cl(Z+B), S = PA u PB; dim(X) = |X| - #equations inside X.
+  per core value: list A from 2^(32|A|) side guesses, list B from 2^(32|B|), hash join on every separable
+  condition (output 2^(32 s'), s' = dim S - dim clZ), post-filter to members 2^(32 f'), f' = F - dim clZ;
+  the core itself costs 2^(32 cZ) guesses per surviving core value, cZ = |Z| - dim clZ.
+  log2 cost for N = 2^logN members (max-of-terms approximation; see README):
+    K0 = logN - 32 f';  if K0 >= 0: cost = K0 + 32*max(cZ, |A|, |B|, s')
+    else (one core value is more than enough: shrink lists, x + y = K0): cost = max(32 cZ, K0 + 32 s', bal)
+         bal = min over x+y=K0, -32|A|<=x<=0, -32|B|<=y<=0 of max(x + 32|A|, y + 32|B|)
+include <stdio.h>
+include <stdlib.h>
+include <string.h>
+define MAXR 4096
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/newpaths/variants/README.txt
+- research/newpaths/variants/RESULTS.txt
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

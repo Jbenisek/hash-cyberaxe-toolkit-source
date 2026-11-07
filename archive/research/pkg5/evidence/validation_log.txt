@@ -1,0 +1,44 @@
+validate_pkg5.sh check tests intake-ready (2026-10-06 13:33)
+--- candidate files (mirror, from research/pkg5)
+644     48 lanes/exploratory/candidates/blake3-r2/certificates/manifest.json
+644  18884 lanes/exploratory/candidates/blake3-r2/claim.json
+644  37063 lanes/exploratory/candidates/blake3-r2/experiments/halfsearch.py
+644   4956 lanes/exploratory/candidates/blake3-r2/experiments/manifest.json
+644 137374 lanes/exploratory/candidates/blake3-r2/proof.md
+sha256 a3c78779269ab224b0a36cc0cc075aaebdfb496a3a695bce1e743cf7bd45c4c8  certificates/manifest.json
+sha256 bbb857dd9bbaf56ae826244f90621263ff18fcdc2e4c3f8c56760c3a570b4c38  claim.json
+sha256 a07cf2692118690fdee98288b91151a34e40012f8055b5a8cfc7dafeea25edc1  experiments/halfsearch.py
+sha256 f9f95ab6280bb0136368e7f5941638612bfa3a031ed156afabb44e7e4663e743  experiments/manifest.json
+sha256 e2eacce0c40a6d231f68d6e05ab0c259b2744fb210ca7f2e63c63568a2c90da8  proof.md
+--- placeholders still in the candidate: none
+--- local_tracks.py check blake3-r2-exploratory
+[
+  {
+    "track": "blake3-r2-exploratory",
+    "status": "mechanically_valid",
+    "submission_state": "ready",
+    "certificates_verified": 0,
+    "qualified": false
+  }
+]
+--- .yukon/setup.sh
+Ran 176 tests in 7.283s
+
+OK (skipped=5)
+HashSmash paired-lane setup and tests passed
+--- intake with the mirror copy marked ready
+docker.io/library/python:3.12.12-slim-bookworm@sha256:2986c55feb36e6cae00fa1fefb454283e4b33f35e75ff8bdd123b134130be301
+{"certificates_verified": 0, "evidence": "lanes/exploratory/.yukon/work/tracks/blake3-r2-exploratory/judge-evidence.json", "package_sha256": "7d64a872a36bc0ad5a825b2f8fd5b35e9fb2bd3a707c464b07f13b25e935678d", "status": "mechanically_valid"}
+experiment status: passed
+  program sha256: {'experiments/halfsearch.py': 'a07cf2692118690fdee98288b91151a34e40012f8055b5a8cfc7dafeea25edc1'}
+  half-collision: trials=256 successes=256 full collisions=0 no pair=0 repeated=0 replay identical=True
+  residual-search: trials=256 successes=256 full collisions=0 no pair=0 repeated=0 replay identical=True tries mean=334.9 max=1662
+    observation batch_lanes_right: 256 rows, values [7], sum 1792
+    observation batch_stage_2_entered: 256 rows, values [0, 1], sum 22
+    observation batch_stage_2_loads: 256 rows, values [42], sum 10752
+    observation batch_stage_2_operations: 256 rows, values [96], sum 24576
+    observation batch_stage_a_loads: 256 rows, values [36], sum 9216
+    observation batch_stage_a_operations: 256 rows, values [64], sum 16384
+  earlier report, program sha256 ['5b0f03b2e5dd1d3c4ae2c879a14cf74a5c837738125897e68088ac801e40c156']: half-collision: same request True, pairs identical in 256 of 256 trials
+  earlier report, program sha256 ['5b0f03b2e5dd1d3c4ae2c879a14cf74a5c837738125897e68088ac801e40c156']: residual-search: same request True, pairs identical in 256 of 256 trials
+exit status 0

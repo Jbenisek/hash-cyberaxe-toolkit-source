@@ -1,0 +1,42 @@
+{
+ "0": {
+  "c": "0",
+  "shift_sec": 0.22,
+  "deg_g": 39062,
+  "nnz_g": 39063,
+  "lc_g_eq_2lcF": true,
+  "shift_matches_direct_eval": true,
+  "gcd_g_gprime_deg": 0,
+  "gcd_sec": 5.8
+ },
+ "0xf77dae0fe3": {
+  "c": "0xf77dae0fe3f7f14e06fc89649f9b43a99fb6ec663bc45c18c1a87369f4b56d2",
+  "shift_sec": 0.62,
+  "deg_g": 39062,
+  "nnz_g": 39063,
+  "lc_g_eq_2lcF": true,
+  "shift_matches_direct_eval": true,
+  "gcd_g_gprime_deg": 0,
+  "gcd_sec": 5.5
+ },
+ "0x351eff21d2": {
+  "c": "0x351eff21d27ba20ecfae3e63d07da4792027d9dd804b29624fefc8ef35ae2cd6",
+  "shift_sec": 0.65,
+  "deg_g": 39062,
+  "nnz_g": 39063,
+  "lc_g_eq_2lcF": true,
+  "shift_matches_direct_eval": true,
+  "gcd_g_gprime_deg": 0,
+  "gcd_sec": 5.7
+ },
+ "0x20d40a4870": {
+  "c": "0x20d40a48706ca8fc02cb40cd2b05600a73465a408c5ee086182163037f058744",
+  "shift_sec": 0.65,
+  "deg_g": 39062,
+  "nnz_g": 39063,
+  "lc_g_eq_2lcF": true,
+  "shift_matches_direct_eval": true,
+  "gcd_g_gprime_deg": 0,
+  "gcd_sec": 6.1
+ }
+}

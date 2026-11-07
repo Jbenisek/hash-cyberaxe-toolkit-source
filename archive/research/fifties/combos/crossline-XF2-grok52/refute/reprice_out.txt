@@ -1,0 +1,31 @@
+K 1220926580812448 _S 110495547 A_BUDGET 9189056937678035781 mean_filed 9189055127318993733 tail 1810359042048
+log2 today 63.602639888117075
+52/128 exact, p_g=0                      guard_units 0  log2 63.505789  delta -0.0969
+52/128 exact, p_g=0                      guard_units 2  log2 63.516002  delta -0.0866
+52/128 exact, p_g=0                      guard_units 3  log2 63.521082  delta -0.0816
+52/128 exact, p_g=0                      guard_units 4  log2 63.526143  delta -0.0765
+brief formula at p_g=9/65536             guard_units 0  log2 63.505803  delta -0.0968
+brief formula at p_g=9/65536             guard_units 2  log2 63.516016  delta -0.0866
+brief formula at p_g=9/65536             guard_units 3  log2 63.521095  delta -0.0815
+brief formula at p_g=9/65536             guard_units 4  log2 63.526157  delta -0.0765
+measured 0.40691 (600k re-check)         guard_units 0  log2 63.507033  delta -0.0956
+measured 0.40691 (600k re-check)         guard_units 2  log2 63.517237  delta -0.0854
+measured 0.40691 (600k re-check)         guard_units 3  log2 63.522313  delta -0.0803
+measured 0.40691 (600k re-check)         guard_units 4  log2 63.527370  delta -0.0753
+measured 0.40729 (Astra 18 / EBG)        guard_units 0  log2 63.507749  delta -0.0949
+measured 0.40729 (Astra 18 / EBG)        guard_units 2  log2 63.517948  delta -0.0847
+measured 0.40729 (Astra 18 / EBG)        guard_units 3  log2 63.523021  delta -0.0796
+measured 0.40729 (Astra 18 / EBG)        guard_units 4  log2 63.528076  delta -0.0746
+uniform old gate 0.44823 (no proof)      guard_units 0  log2 63.582857  delta -0.0198
+uniform old gate 0.44823 (no proof)      guard_units 2  log2 63.592541  delta -0.0101
+uniform old gate 0.44823 (no proof)      guard_units 3  log2 63.597358  delta -0.0053
+uniform old gate 0.44823 (no proof)      guard_units 4  log2 63.602160  delta -0.0005
+filed p* (no change)                     guard_units 0  log2 63.602640  delta 0.0000
+filed p* (no change)                     guard_units 2  log2 63.612192  delta 0.0096
+filed p* (no change)                     guard_units 3  log2 63.616945  delta 0.0143
+filed p* (no change)                     guard_units 4  log2 63.621682  delta 0.0190
+proof-grade share 52/128+(38/64)(9/65536) guard_units 2 +20/context  log2 63.516161  delta -0.0865
+proof-grade share 52/128+(38/64)(9/65536) guard_units 3 +20/context  log2 63.521240  delta -0.0814
+cruder bound 52/128 + 9/65536, 2 guard units +20/context  log2 63.516265
+largest opening rate with 2 guard units and log2 <= 63.55: 0.42462124127129885
+guard units per cluster that reach 63.55 at 52/128: 9 -> 63.55118925236771

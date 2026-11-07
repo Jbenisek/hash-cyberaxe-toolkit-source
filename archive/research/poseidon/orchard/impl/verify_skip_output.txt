@@ -1,0 +1,9 @@
+r=1 j=0: S-box outputs d_i^5*W exact; state after round 1 affine in W; degree after round 3 (+k partial) = [25, 125] verified; distinct inputs 129
+r=1 j=1: S-box outputs d_i^5*W exact; state after round 1 affine in W; degree after round 3 (+k partial) = [25, 125] verified; distinct inputs 129
+r=1 j=2: S-box outputs d_i^5*W exact; state after round 1 affine in W; degree after round 3 (+k partial) = [25, 125] verified; distinct inputs 129
+r=1: map-back round trip ok; F(W) = hash(nk(W), rho(W)) well-defined
+r=2 j=0: S-box outputs d_i^5*W exact; state after round 1 affine in W; degree after round 3 (+k partial) = [25, 125, 625] verified; distinct inputs 629
+r=2 j=1: S-box outputs d_i^5*W exact; state after round 1 affine in W; degree after round 3 (+k partial) = [25, 125, 625] verified; distinct inputs 629
+r=2 j=2: S-box outputs d_i^5*W exact; state after round 1 affine in W; degree after round 3 (+k partial) = [25, 125, 625] verified; distinct inputs 629
+r=2: map-back round trip ok; F(W) = hash(nk(W), rho(W)) well-defined
+verify_skip: OK

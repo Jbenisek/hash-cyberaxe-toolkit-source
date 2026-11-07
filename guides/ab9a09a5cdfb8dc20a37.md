@@ -1,0 +1,83 @@
+# text scan pkg7
+
+Source: `research/pkg7/tools/text_scan_pkg7.py`
+
+Public SHA-256: `c65957041e225453018ff13a6835c3658cf05dd183e684bb62159cf3b06f9cc7`
+
+## Purpose recorded in the source
+
+Scan of everything that a submission of the seventh package (a DRAFT) would make public. The tool of the filed
+package with the data module of this one; nothing else is changed. Research helper, not submitted.
+
+    python -B tools/text_scan_pkg7.py [--quiet] [--program]
+
+Files: every file under blake3-r2/ and the submission note; with --program only the experiment program and its
+manifest. Per line it looks for
+  - bytes outside ASCII, control characters, HTML comments and links;
+  - file-system paths (drive letters, home folders, mount points, the workspace's folder names);
+  - the names of the accounts on this machine (taken from the environment at run time, never written here),
+    e-mail addresses and handles that start with @;
+  - strings that look like keys or tokens (known prefixes, private-key headers, long runs of base64);
+  - offensive words, also in hex or digit spelling, and sentences that address or instruct a reviewer or a model:
+    both with the word list and the patterns of research/public_text_scan.py, which are read from that file.
+It prints one line per file and the place of anything found, never the matched text of a name, key or word.
+The exit status is 0 only if nothing is found.
+
+One exception, stated in the output whenever it is used: the six constants of the pin (tools/pkg7_data.py, PIN) are
+numbers that the package has to print. Written with eight hexadecimal digits, one of them contains three digits
+that the digit spelling of the word list reads as
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "getpass",
+  "os",
+  "pathlib",
+  "pkg7_data",
+  "re",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "machine_names",
+    "line": 54,
+    "arguments": [],
+    "doc": "Account names of this machine, lower case, from the environment; nothing is typed here."
+  },
+  {
+    "name": "word_rules",
+    "line": 76,
+    "arguments": [],
+    "doc": "BAD, LEET and INJECT of research/public_text_scan.py, read from that file; (None, None, None) if they are not there."
+  },
+  {
+    "name": "main",
+    "line": 92,
+    "arguments": [],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/pkg7/tools/proof_lines_check.py
+- research/pkg7/tools/proof_lines_pkg7.py
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

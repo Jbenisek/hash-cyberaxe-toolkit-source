@@ -1,0 +1,6 @@
+INPUT evidence/h8/e3p_expected_H8.txt sha256 fd300c2a71d312bd06a078458d6b84e8b9180b9840d4bbc6507d288b09e2d68d
+events 183; own count equal to e3p_expected_H8.txt in 183 of 183
+P(listed partial E3 event) per trial under M: 2^-32.1987  (count 8427275126237729543684096)
+exact share of the listed partial E3 events whose h1 satisfies the rule, under M: rule 4: 0.580935   rule 5: 0.484216   rule 6: 0.412442
+   (a uniform h1 independent of the event would give 0.0625, 0.03125, 0.015625)
+SHARE events 183 equal 183 count 8427275126237729543684096 rule4 4895701313558257015455744 rule5 4080618091603345195139072 rule6 3475763188484464279814144

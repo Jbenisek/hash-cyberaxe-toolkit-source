@@ -1,0 +1,15 @@
+r=2 seed=401 D=390625
+  init (twiddle table)                         arith=        132044 other=        929236 total=       1061280     0.0s peak=4194304
+  two line setups + intersection               arith=          1131 other=         12489 total=         13620     0.0s peak=4194304
+  sample x, y = H(x)                           arith=             0 other=           394 total=           394     0.0s peak=4194304
+x: family 0
+  family 0: build F (evaluations + NTT)        arith=      11463423 other=     268227364 total=     279690787     2.6s peak=29277248
+  family 0: W^p mod F                          arith=   34086292492 other=  384765364145 total=  418851656637   731.6s peak=75248736
+  family 0: gcd(F, W^p - W)                    arith=1 other=1 total=1741505861917 1.0s peak=1
+    gcd degree 1, charged 1741505861917, derived bound 1833164065176 (within)
+  family 0: remove the roots of x              arith=2 other=39 total=41     0.0s peak=1
+  map back (two inputs)                        arith=          2274 other=         20466 total=         22740     0.0s peak=4194304
+  verification (2 reference hashes)            arith=          474 other=          4266 total=          4740     0.0s peak=4194304
+RESULT found=1 success=1
+SUMMARY total_all=1 units=1 log2_units=1 heap_peak=80000000
+DRIVER ops_outside_stages=72

@@ -1,0 +1,27 @@
+# One command for the full-size executed-outcome run (r=2, odd-part, centres c_i = i in order, fixed line j=0).
+
+Source: `research/poseidon/orchard/exec_r2c/src/run_full.sh`
+
+Public SHA-256: `3a75067c35fb6a31063e914af147358f89588d8d2f0126ae2e72230bc9b8d773`
+
+## Purpose recorded in the source
+
+One command for the full-size executed-outcome run (r=2, odd-part, centres c_i = i in order, fixed line j=0).
+usage: bash run_full.sh [maxcentres]     (owner's go required: one centre takes ~20-40 min of one core)
+Runs the counted program once (nice 10), writes logs/full_r2.txt, then verifies the collision with the reference hash.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+Companion documents are not listed here. Use the linked source for interfaces and prerequisites.
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

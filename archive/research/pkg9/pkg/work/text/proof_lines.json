@@ -1,0 +1,26 @@
+{
+ "tuples": 20000,
+ "extreme": 2000,
+ "lines": 96,
+ "per_step": {
+  "O": 29,
+  "M": 21,
+  "Y": 10,
+  "T": 12,
+  "R": 24
+ },
+ "table_c_cells": 88,
+ "right": {
+  "names": 20000,
+  "program": 20000,
+  "words": 20000,
+  "half": 20000,
+  "y4": 20000,
+  "eta": 10000,
+  "back": 20000,
+  "in_sub": 10000
+ },
+ "problems": [],
+ "display_sha256": "0d56c0bedde9c74fbad93854932337208af6ccd81da29b8065a4c2e670a7d0d9",
+ "program_sha256": "da24853f53b3be12b0c8e343a2b39e4f4e135a6cf5fe992c2a569be2ed8d3324"
+}

@@ -1,0 +1,4 @@
+HEAD arr ctr W 8 set 2 eta b9 ncls 16 sumper 5505024 beta 100 nd 256 nouter 780 first 1005 count 1
+RUN arr ctr W 8 set 2 run 1005 seed 30 5e 93 d7 nouter 780 trials 814694400 tzero 3194880 bad 0 coll 0 bogus 0 z1 3182412 z3 2852602 z4 3182802 z6 3749316 z2 74359
+PART arr ctr W 8 set 2 first 1005 count 1 trials 814694400 tzero 3194880 bad 0 coll 0 bogus 0 seconds 91.2 rate 8.93e+06
+END

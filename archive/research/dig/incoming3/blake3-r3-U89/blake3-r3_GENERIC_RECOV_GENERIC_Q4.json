@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.RECOV recovery of the colliding pair",
+ "question": "Alternatives: parallel or checkpointed recovery, scalar compression.",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "The walk is sequential (x -> f(x)), so 7 lanes cannot split it; a scalar compression costs 638 ops against 595 for the 7-lane batch used with 1-2 lanes, so the batch is cheaper. Checkpoints need memory: headroom 82,304 B holds 2,572 entries of 32 B for 18,432 trails, which cannot shorten the walk of the one trail pair in general. No alternative beats the shipped walk.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.RECOV|GENERIC|Q4. Argument by counts, no program run for checkpoints. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed recover().",
+ "reopen_if": "A cheap way to locate the merge without walking from the start."
+}

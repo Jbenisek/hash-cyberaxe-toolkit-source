@@ -1,0 +1,23 @@
+{
+  "id": "D741-SHA256-R37-R37M-CLASS-INVENTORY-20261014",
+  "hash": "sha256-37",
+  "row_i": 5,
+  "row_j": 6,
+  "object": "R37M enlarged-family exact class inventory at n>=17728",
+  "question": "Does the enlarged-family class generator supply the claimed 500-class selection input at the projected cutoff?",
+  "labels": ["C", "D", "N"],
+  "status": "COMPUTED",
+  "number": "Across 64 dense parts, exact class enumeration at n>=17728 yields 905 eligible classes and 19,485,792 variants. Deterministic top-500 selection has minimum n=21,248 and 11,281,856 variants. 410 eligible classes satisfy allbit1 plus closure under flips 0,2,3; the remaining eligible classes are not full cube-{0,2,3} classes.",
+  "source": "our workflow: D741 exact enlarged-family class inventory",
+  "own_test": true,
+  "evidence": "research/sol_answer_D741_sha256_r37_r37m_class_inventory.md; research/retest/zoneD_family/run_D741_classes.sh; research/retest/zoneD_family/parse_D741_classes.py; research/retest/zoneD_family/out/D741_classes_n17728.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.15,
+  "prior": 0.02,
+  "gain_basis": "D",
+  "held_fixed": "existing classes executable, 64 E5/E6 dense parts, exact n>=17728 cutoff, sequential one-process enumeration",
+  "notes": "Exact selection-input inventory only. It does not implement R37M, test the selected classes end-to-end, measure q3, or authorize score/package/stage/filing/submission. Runtime wrapper output was unreliable and is not claimed.",
+  "reopen_if": "Per-context R37M implementation, self-test, KAT, end-to-end run, and q3 study are available"
+}

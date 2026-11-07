@@ -1,0 +1,23 @@
+{
+  "id": "D443-B3M-SELECTOR-CONDITIONAL-SCORE-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Conditional compact-selector score charge",
+  "question": "What exact score margins follow if the D431/D437 selector gain is charged either nowhere or once per baseline context step?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact baseline N=190440978718867836423, T0=58.61971299651685, and n_steps=1073086620974800437248. The selector-free finite diagnostic ceilings are 58.4792379602 (r=1.102268), 58.3456093198 (r=1.2092425728), 58.2555688067 (r=1.2871178816), 58.2801115148 (r=1.265407), and 58.2292368026 (r=1.310826). If charged at every context step, the D442 165/225-op bounds give 68.3414617544/68.7885073220 for r=1.102268 and 68.1177926008/68.5648381684 for r=1.2871178816; all such rows are counterfactual. Break-even charges are 0.0181495302 to 0.0551623760 ops per step. Safe gain is zero.",
+  "source": "our workflow: D443 exact arithmetic from b3_basextech_fh_cost/cost_out.json and D442 SWAR charge",
+  "own_test": true,
+  "evidence": "research/sol_answer_D443_b3m_selector_conditional_score.md; research/gridwave6/b3_basextech_fh_cost/cost_out.json; research/sol_answer_D442_b3m_swar_extraction_charge.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "T",
+  "notes": "Conditional arithmetic only. Exact selector invocation count, compiled charged implementation, skipped-success count, and routing acceptance beyond h[3] remain open. No package/stage/filing/submission.",
+  "peak_mem": "not measured; arithmetic only",
+  "held_fixed": "D431/D437 finite selector diagnostics, D442 165/225-op SWAR model, PR858 no-transfer rule",
+  "reopen_if": "Lossless compiled router with exact invocation/skip ledger and judge acceptance is available"
+}

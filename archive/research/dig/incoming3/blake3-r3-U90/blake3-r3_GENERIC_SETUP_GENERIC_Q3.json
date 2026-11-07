@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.SETUP setup / table build",
+ "question": "Score-optimal table size (halt at 18,432 keys) and setup parameters.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Needed table: mean 16,364.7 finished trails at halt, so 18,432 gives P(full)=8.6e-57; 17,000 would give about 1e-7 failure; no gain below 2^20 bytes unless the freed room is used for a smaller d (GENERIC.DPFRAC Q3: -0.00198 bit at 21,004 keys). Stage-2 halt e2max = 2 x mean; events cost 1.03e9 ops.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.SETUP|GENERIC|Q3. 17,000 keys figure from Poisson tail by log-gamma sum, not a proof of the table bound in the proof's Lemma. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed formulas.",
+ "reopen_if": "Memory rule changed."
+}

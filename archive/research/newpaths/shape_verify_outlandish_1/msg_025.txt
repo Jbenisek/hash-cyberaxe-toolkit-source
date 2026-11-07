@@ -1,0 +1,2 @@
+held=(0, 2, 5) msg subsets tested 58650; core-size histogram (by tens) {100: 23947, 110: 34703}
+BEST core eqs left 107  F' 12  P=('m0',)

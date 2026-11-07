@@ -1,0 +1,208 @@
+PIN H8, CLASS eta = 830303cf: THE EXACT COUNT OF THE CLASS RATE (research; nothing here is filed)
+pin (X3,X7,X11,X15,W4,W13) = (29d4fa98, bee3af28, 44036000, 40c58500, 97475638, 0007c006), W4' = 97475640, delta = fffffff8;
+Y3 = 8127c181, D3 = fdb77cfd, Y11 = 7af77f38, D11 = 0a08818b; class: 13 fixed bits of e1 = Y3 + Y4, 2^19 members.
+Unit: collision probability per trial in units of 2^-128. part(beta) = sum over its outcomes of E1 * N3 / 2^83,
+E1 = number of triples (c1, b1, a2) with that beta that give (tau, eps), N3 = number of quadruples (Y4, h1, Y9, w8).
+
+1. THE BETAS (own enumeration h8_betas.py; files betas_k14.txt, betas_histogram.txt)
+   D11 0a08818b: valid x in all 133742, shares add up to 1.000000 (must be 1)
+   k <= 14: 4550 betas, share of c1 0.588745; k > 14: 129192 betas, share 0.411255
+   by k (count): 9:6 10:47 11:187 12:543 13:1267 14:2500 15:4330 16:6729 17:9516 18:12327 19:14668 20:16037 21:16113 22:14852 23:12499 24:9501 25:6386 26:3673 27:1732 28:634 29:166 30:27 31:2
+   list counted: every beta with k <= 14: 4550 betas; no eps (odd weight of beta XOR ROR(eta,1)) 2949; enumerated completely 1601; with a part 15
+
+2. EVERY BETA WITH A PART, k <= 14 (own build of the night's calculator, cap 31 = complete enumeration; file H8_recount_k14.txt)
+   beta      k  outcomes  exact part            share    sampler mean +- s.e. (16 runs)   deviation
+   18b0e098  11       14       71,698,432.0000  0.441865     77,225,148 +- 13,619,663          +0.41
+   18d0e098  11       19       54,005,760.0000  0.332828     47,906,293 +-  8,273,827          -0.74
+   18b1a098  11       16       25,692,160.0000  0.158336     26,624,000 +-  2,432,080          +0.38
+   18d1a098  11       18        8,429,568.0000  0.051950      7,301,120 +-  1,284,239          -0.88
+   18b3e098  13        8        1,566,720.0000  0.009655
+   18d3e098  13       10          838,656.0000  0.005168
+   18d1a398  13        6           11,152.0000  0.000069
+   19f1a098  13       10            8,640.0000  0.000053
+   18d16398  13        6            6,664.0000  0.000041
+   18f1e098  13       12            3,632.5000  0.000022
+   19f0e098  13        7            1,357.2500  0.000008
+   19b1e098  13       28              314.1248  0.000002
+   19d1e098  13       10               15.8071  0.000000
+   19b0a098  11       16               12.6172  0.000000
+   19d0a098  11        3                0.1875  0.000000
+   sum               183      162,263,084.4866
+   calculator's own sum of the printed parts (H8_recount_k14.total): 162,263,084.4
+   by k: k=11: 6 betas, 159,825,932.8047; k=13: 9 betas, 2,437,151.6819
+   the night's file pinH8_830303cf.total (1,500 lightest betas): sum 159,833,954.0; the own count on the same 1,500 betas: 159,833,954.0; every line equal: yes
+
+3. OUTCOMES AND FALLBACKS, k <= 14 (file H8_recount_k14.txt)
+   outcomes that pass the necessary conditions 7,082; with a nonzero E3 count 294; of them with a nonzero E1 count (nonzero product) 183, with E1 count zero 111
+   outcomes through the random-subset branch of the E3 count: 0; E1 counts by the product formula (fallback): 0; calculator runs with a nonzero exit status: 0
+   night_pair_calc2 as it is (file H8_calc2_mass.txt): 15 betas, sum of the parts 162,263,084.4; every part equal to the own build's: yes; sampled 0, fallbacks 0; outcomes with a nonzero E3 count 293, with a nonzero product 183, the same 183 outcomes: yes
+   night_pair_calc2 on the whole list (file H8_calc2_k14.total): 4550 betas, evaluated 1601, with a part 15, sum 162,263,084.4, lines with a remark 0
+   [calc2_cmp_k14.txt] night_pair_calc2 (binary sha256 aa02c98936ffeb25, executed as it is) on all 4550 betas with k <= 14: evaluated 1601, no eps 2949, with a part 15, sum 162263084.4; lines with a remark (sampled, fallbacks) 0; lines that differ from the own count (beta, k, outcomes with N3 > 0, part): 0
+
+4. THE 16 HEAVIEST OUTCOMES (file H8_recount_k14.txt; last two columns log2(calculator / ApproxMC) on the own CNF, files check_e1_amc.txt, check_e3_amc.txt)
+   beta      tau       eps       E1 (triples)            N3 (quadruples)                 adds          share    E1 vs AMC  N3 vs AMC
+   18b0e098  285020a0  6e21be55   2,251,799,813,685,248       108,086,391,056,891,904    25,165,824.0  0.1551     +0.000     +0.077
+   18b0e098  385020a0  6e21be55   1,125,899,906,842,624       144,115,188,075,855,872    16,777,216.0  0.1034     +0.000     -0.055
+   18b0e098  185020a0  6e21be55   2,251,799,813,685,248        72,057,594,037,927,936    16,777,216.0  0.1034     +0.011     +0.023
+   18d0e098  285020a0  6e61be55   2,251,799,813,685,248        54,043,195,528,445,952    12,582,912.0  0.0775     +0.000     -0.087
+   18d0e098  17d020a0  6e61be55   1,125,899,906,842,624       108,086,391,056,891,904    12,582,912.0  0.0775     +0.000     +0.000
+   18d0e098  385020a0  6e61be55   1,125,899,906,842,624        72,057,594,037,927,936     8,388,608.0  0.0517     +0.000     +0.000
+   18d0e098  185020a0  6e61be55   2,251,799,813,685,248        36,028,797,018,963,968     8,388,608.0  0.0517     +0.023     -0.129
+   18b1a098  189060a0  6e203e55   4,503,599,627,370,496        18,014,398,509,481,984     8,388,608.0  0.0517     +0.000     -0.022
+   18b0e098  175020a0  6e21be55     562,949,953,421,312       108,086,391,056,891,904     6,291,456.0  0.0388     +0.000     +0.015
+   18b1a098  389060a0  6e203e55   2,251,799,813,685,248        18,014,398,509,481,984     4,194,304.0  0.0258     +0.000     -0.022
+   18b1a098  289060a0  6e203e55   4,503,599,627,370,496         9,007,199,254,740,992     4,194,304.0  0.0258     +0.000     +0.093
+   18d0e098  175020a0  6e61be55     562,949,953,421,312        54,043,195,528,445,952     3,145,728.0  0.0194     -0.011     +0.159
+   18d1a098  185060a0  6e603e55   1,125,899,906,842,624        18,014,398,509,481,984     2,097,152.0  0.0129     +0.000     +0.046
+   18b1a098  18d060a0  6e203e55   1,125,899,906,842,624        18,014,398,509,481,984     2,097,152.0  0.0129     +0.000     +0.093
+   18b1a098  185060a0  6e203e55   1,125,899,906,842,624        18,014,398,509,481,984     2,097,152.0  0.0129     +0.000     -0.022
+   18d0e098  27d020a0  6e61be55     844,424,930,131,971        18,014,398,509,481,984     1,572,864.0  0.0097     +0.000     +0.023
+   the 16 together: 134,742,016.0 = 0.8304 of the count; outcomes with a nonzero product in all: 183
+   SUMMARY e1: compared 16 of 16, mean log2(calculator/ApproxMC) +0.0014, largest |difference| 0.023 bits, ApproxMC zero 0, no answer 0
+   SUMMARY e3: compared 16 of 16, mean log2(calculator/ApproxMC) +0.0118, largest |difference| 0.159 bits, ApproxMC zero 0, no answer 0
+
+5. BETAS WITH k >= 15 (pruned search mk_pruned.py; files H8_allb.txt = batch count in order of k, stopped by hand, and H8_satc.txt = the betas
+   that the solver found satisfiable and the batch count had not reached; solver: files sysall/chunk_*.txt, own CNF of the whole system, kissat)
+   betas finished by the calculator 31,591 of 133,742 valid betas; betas decided by the solver 133,742 (SAT 60, UNSAT 133,682, undecided 0); SAT models that check in plain arithmetic 60 of 60
+   k   valid   calculator: finished  no eps  N3>0 outc.  sampled  fallb.  with a part  sum of the parts      solver: SAT   UNSAT  not tried   SAT not counted   neither counted nor UNSAT
+    9       6                     6       0           0        0       0            0            0.0000                0       6          0                 0                           0
+   10      47                    47      47           0        0       0            0            0.0000                0      47          0                 0                           0
+   11     187                   187       0         134        0       0            6  159,825,932.8047                6     181          0                 0                           0
+   12     543                   543     531           0        0       0            0            0.0000                0     543          0                 0                           0
+   13   1,267                 1,267      64         160        0       0            9    2,437,151.6819                9   1,258          0                 0                           0
+   14   2,500                 2,500   2,307           0        0       0            0            0.0000                0   2,500          0                 0                           0
+   15   4,330                 4,330     442         133       16       0           13        3,259.5007               13   4,317          0                 0                           0
+   16   6,729                 6,729   5,895           0        0       0            0            0.0000                0   6,729          0                 0                           0
+   17   9,516                 6,813     684         589       66       0           21          419.4532               21   9,495          0                 0                           0
+   18  12,327                 6,164   5,157           6        0       0            0            0.0000                0  12,327          0                 0                           0
+   19  14,668                 3,003       0         597       35       0            9            0.2117                9  14,659          0                 0                           0
+   20  16,037                     0       0           0        0       0            0            0.0000                0  16,037          0                 0                           0
+   21  16,113                     2       0          43        1       0            2            0.0057                2  16,111          0                 0                           0
+   22  14,852                     0       0           0        0       0            0            0.0000                0  14,852          0                 0                           0
+   23  12,499                     0       0           0        0       0            0            0.0000                0  12,499          0                 0                           0
+   24   9,501                     0       0           0        0       0            0            0.0000                0   9,501          0                 0                           0
+   25   6,386                     0       0           0        0       0            0            0.0000                0   6,386          0                 0                           0
+   26   3,673                     0       0           0        0       0            0            0.0000                0   3,673          0                 0                           0
+   27   1,732                     0       0           0        0       0            0            0.0000                0   1,732          0                 0                           0
+   28     634                     0       0           0        0       0            0            0.0000                0     634          0                 0                           0
+   29     166                     0       0           0        0       0            0            0.0000                0     166          0                 0                           0
+   30      27                     0       0           0        0       0            0            0.0000                0      27          0                 0                           0
+   31       2                     0       0           0        0       0            0            0.0000                0       2          0                 0                           0
+   all betas finished by the calculator: with a part 60, sum 162,266,763.6579; of it from k >= 15: 3,679.1713 (2.267e-05 of the sum), 45 betas
+   solver against calculator on the 31,591 betas that both decided: betas with a part 60, SAT betas 60, the two sets equal: yes
+   NOT EXACT: betas with an outcome through the random-subset branch of the E3 count or an E1 formula fallback: 21 (sampled outcomes 118, formula fallbacks 0), lightest k 15; their parts (estimates) add up to 0.282041; an outcome whose E3 value that branch put at zero would be missing
+   every beta with a part and k >= 15 that the calculator finished (45):
+      beta      k  outcomes  part              remark
+      18d3e398  15        6     1226.25000000  
+      18d1af98  15        4     1156.00000000  
+      18d16f98  15        4      850.00000000  
+      18d37f98  17        4      165.00000000  
+      18d1ff98  17        4      153.00000000  
+      18d3bf98  17        2       61.87500000  
+      18d3ef98  17        2       30.93750000  
+      19f1a398  15        4       12.50000000  
+      19f0e398  15        7       12.21875000  
+      19f3e398  17       10        7.07031250  
+      18f1e398  15        4        2.19726562  
+      1ff1a398  17        4        0.93750000  
+      19b36398  15        2        0.19921875  
+      1ff3e398  19       13        0.19915771  
+      1ff0e398  17        4        0.19531250  
+      18f17f98  17        3        0.10937500  
+      19b1bf98  17        5        0.10289001  estimate: 23 outcomes through the random-subset branch
+      1fb36398  17       16        0.08822823  estimate: 1 outcomes through the random-subset branch
+      1fb3a098  15       12        0.05603027  
+      19b1e398  15        4        0.04498291  estimate: 15 outcomes through the random-subset branch
+      18f1ef98  17        3        0.03802490  
+      19b17f98  17        7        0.03289795  estimate: 12 outcomes through the random-subset branch
+      1fb36098  15        4        0.03076172  
+      18f1df98  17        2        0.03021240  
+      1fb3a398  17       28        0.01659203  
+      18f1bf98  17        1        0.01562500  
+      1fb3ff98  21       21        0.00562572  estimate: 1 outcomes through the random-subset branch
+      1fb3af98  19       12        0.00415039  
+      1fb1bf98  19        3        0.00399780  estimate: 9 outcomes through the random-subset branch
+      1fb17f98  19        5        0.00341797  estimate: 2 outcomes through the random-subset branch
+      1fd3a098  15        4        0.00195312  
+      1fd36398  17        8        0.00188446  
+      1fd3a398  17       10        0.00121689  
+      1fd36098  15        2        0.00097656  
+      19d1e398  15        2        0.00077820  
+      1fd36f98  19        9        0.00041676  
+      19d1ef98  17        2        0.00038910  
+      1fd3af98  19        7        0.00032234  
+      1fd1e398  17        3        0.00014496  
+      1fd1bf98  19        5        0.00011301  
+      1fd3ff98  21        9        0.00010252  
+      1fd17f98  19        5        0.00008011  
+      19d17f98  17        1        0.00003052  
+      19d1bf98  17        1        0.00002289  
+      1fd1ef98  19        2        0.00002098  
+   flagged betas whose part is zero as computed: 14; the solver says UNSAT (no solution at all, so the part is zero) for 14 of them, SAT for 0: e8b0a19b(k15,sampled 1,UNSAT) 19b1ef98(k17,sampled 13,UNSAT) 1fb1e398(k17,sampled 6,UNSAT) e8b0a1fb(k17,sampled 3,UNSAT) e8b3619b(k17,sampled 3,UNSAT) e8b3a19b(k17,sampled 4,UNSAT) e8f0e19b(k17,sampled 1,UNSAT) e750e17f(k19,sampled 3,UNSAT) e751a17f(k19,sampled 6,UNSAT) e7f0e19b(k19,sampled 1,UNSAT) e8b361fb(k19,sampled 5,UNSAT) eb50e17f(k19,sampled 1,UNSAT) ebb3619b(k19,sampled 6,UNSAT) f9b1e19b(k19,sampled 2,UNSAT)
+   flagged betas with a nonzero part (estimates): 7, together 0.282041
+   SAT betas that the calculator did not finish: 0
+   the batch count was stopped by hand; its six slices were then working on: 1fb1bf98 19; 1fb36398 17; 19b17f98 17; 19b1bf98 17; f950e1fb 19; 1fb7e398 19
+   every valid beta is either counted by the calculator or UNSAT by the solver (no proof certificate was kept or checked)
+
+6. CHECKS (each line is the summary line of its file)
+   [check_sys.txt] SUMMARY sys: betas 4550, SAT 15, UNSAT 4535, undecided 0; SAT models that are solutions in plain arithmetic 15 of 15; betas with a part 15: SAT 15, UNSAT 0, undecided 0; betas without a part: SAT 0, UNSAT 4535, undecided 0
+   [check_bf8.txt] delta +-2: E1 exact count against brute force at 8-bit words: 30 cases, 43539 outcomes with solutions: 43539 equal, 0 different; zero outcomes sampled: 30055 agree, 0 disagree
+   [check_bf8.txt] delta +-4: E1 exact count against brute force at 8-bit words: 30 cases, 43991 outcomes with solutions: 43991 equal, 0 different; zero outcomes sampled: 30077 agree, 0 disagree
+   [check_bf8.txt] delta +-8: E1 exact count against brute force at 8-bit words: 30 cases, 36826 outcomes with solutions: 36826 equal, 0 different; zero outcomes sampled: 30448 agree, 0 disagree
+   [check_bf8.txt] delta +-16: E1 exact count against brute force at 8-bit words: 30 cases, 48325 outcomes with solutions: 48325 equal, 0 different; zero outcomes sampled: 29615 agree, 0 disagree
+   [check_bf8.txt] delta +-8, seed 808, 60 cases: E1 exact count against brute force at 8-bit words: 60 cases, 85708 outcomes with solutions: 85708 equal, 0 different; zero outcomes sampled: 60311 agree, 0 disagree
+   [check_bf8.txt] E3 count n3x against brute force at 8-bit words: 6 cases, outcomes with solutions 62639: 62639 equal, 0 different (solutions in all 94255088); empty outcomes sampled: 1572897 agree, 0 disagree; outcomes through the random-subset branch 0
+   [pruned_cmp_k14.txt] k <= 14, 4550 betas: OUTX/OUTS/EXACT-E1 lines unpruned d1506cc6231f2da2 pruned d1506cc6231f2da2 SAME; PAIR lines without the leaf count: aa295d47a79606ae aa295d47a79606ae SAME
+   [pruned_cmp_k14.txt] outcomes passing the necessary conditions (unpruned, pruned): 7082 7082; leaves of the search (unpruned, pruned): 1662606632 17501
+   [pruned_test16.txt] 16-bit words, 400 random cases (202 with an eps, searched): pruned = unpruned in 400, different in 0; outcomes with a nonzero E3 count in all 15, with a nonzero product 3
+   [pruned_listcmp.txt] pruned against unpruned search (H8_NOCUT=1), lists of passing (tau, eps), pin H8, betas with k >= 15: compared 204 (k=15: 98 k=16: 1 k=17: 104 k=19: 1 ), same list 204, different 0, unpruned timeout 0, betas without an eps skipped 184; passing outcomes compared 9081; leaves pruned 31962, unpruned 962620288
+   [batch_cmp_k14.txt] batch binary on the 4550 betas with k <= 14, one thread, 128 s: OUTX/OUTS/EXACT-E1 lines d1506cc6231f2da2 d1506cc6231f2da2 SAME; PAIR lines without the leaf count aa295d47a79606ae aa295d47a79606ae SAME
+   [members_bf8.txt] per-member split (own build, credit by pattern) against brute force at 8-bit words: 12 cases equal, 0 different; solutions compared 10166784
+   [confirm_H8.txt] sampler, four betas together: 159,056,561 against 159,825,920 counted; single errors combined in quadrature 16,171,448: deviation -0.05
+   [pair_cf_H8_830303cf_*_n.txt] the same over the 16 seeds (the betas share their seeds): mean of the sums 159,056,562, standard error 16,128,603, deviation -0.05; smallest and largest sum of a seed 68,322,367, 280,776,148
+      18b0e098: recomputed from the 16 run files 77,225,148 +- 13,619,663 (confirm_H8.txt 77,225,148 +- 13,619,663); runs below the exact part 9 of 16
+      18d0e098: recomputed from the 16 run files 47,906,293 +- 8,273,827 (confirm_H8.txt 47,906,293 +- 8,273,827); runs below the exact part 12 of 16
+      18b1a098: recomputed from the 16 run files 26,624,000 +- 2,432,080 (confirm_H8.txt 26,624,000 +- 2,432,080); runs below the exact part 9 of 16
+      18d1a098: recomputed from the 16 run files 7,301,120 +- 1,284,239 (confirm_H8.txt 7,301,120 +- 1,284,239); runs below the exact part 10 of 16
+
+7. THE MEMBERS AND THE NEIGHBOURING CLASSES
+   [members_H8.log] SUMS by outcomes 162263084.486572 by members 162263084.487170
+   [members_H8.log] MEMBERS eta 830303cf members 524288 keys 183 positive 183 sampled 0  sum 2^27.27 (by members 2^27.27)  largest key share 0.155  members with mass 524288
+   [members_H8.log] SHARE of the mass held by the best n members, and gain = share * members / n:  n=1: 0.000 (x1.1)  n=4: 0.000 (x1.1)  n=16: 0.000 (x1.1)  n=64: 0.000 (x1.1)  n=256: 0.001 (x1.1)  n=1024: 0.002 (x1.1)
+   [members_H8.txt] members 524288 (2^19); sum of the masses 162263084.4866; class rate of the count 162263084.4866; ratio 1.000000000
+   [members_H8.txt] members with mass zero 0 (0.0000); largest member rate / class rate 1.148; median / mean 1.0003; 90th percentile / mean 1.147; 99th 1.148
+   [members_H8.txt] share of the rate held by the heaviest members: 0.001 of the members 0.0011, 0.01 of the members 0.0115, 0.05 of the members 0.0574, 0.1 of the members 0.1147, 0.25 of the members 0.2868, 0.5 of the members 0.5712
+   [members_H8.txt] members needed for half of the rate 229323, for 90% 462786, for 99% 518138
+   [members_H8.txt] member bit j is bit of e1: 0:2 1:3 2:4 3:5 4:6 5:7 6:10 7:11 8:12 9:13 10:14 11:20 12:21 13:26 14:27 15:28 16:29 17:30 18:31
+   [members_H8.txt] single member bits, best six (gain, e1 bit, value, share): x1.001 e1[2]=1 0.5007; x1.000 e1[7]=1 0.5000; x1.000 e1[3]=1 0.5000; x1.000 e1[5]=1 0.5000; x1.000 e1[4]=0 0.5000; x1.000 e1[6]=1 0.5000
+   [members_H8.txt] best cube on 2 bits (exhaustive): e1 bits [21, 26] = [1, 1], members 131072, share 0.2856, gain x1.142
+   [members_H8.txt] best cube on 3 bits (exhaustive): e1 bits [21, 26, 28] = [1, 1, 1], members 65536, share 0.1428, gain x1.142
+   [members_H8.txt] best cube on 4 bits (exhaustive): e1 bits [3, 4, 21, 26] = [0, 0, 0, 0], members 32768, share 0.0717, gain x1.147
+   [members_H8.txt] greedy cubes: 1 bits: members 262144 share 0.5007 gain x1.001 (+ e1[2]=1); 2 bits: members 131072 share 0.2504 gain x1.001 (+ e1[5]=1); 3 bits: members 65536 share 0.1252 gain x1.001 (+ e1[7]=1); 4 bits: members 32768 share 0.0626 gain x1.001 (+ e1[6]=1); 5 bits: members 16384 share 0.0313 gain x1.001 (+ e1[4]=0); 6 bits: members 8192 share 0.0157 gain x1.005 (+ e1[3]=0); 7 bits: members 4096 share 0.0079 gain x1.005 (+ e1[31]=1); 8 bits: members 2048 share 0.0039 gain x1.005 (+ e1[30]=1); 9 bits: members 1024 share 0.0020 gain x1.005 (+ e1[29]=1); 10 bits: members 512 share 0.0010 gain x1.005 (+ e1[28]=1); 11 bits: members 256 share 0.0005 gain x1.005 (+ e1[27]=1); 12 bits: members 128 share 0.0002 gain x1.005 (+ e1[21]=1)
+   [members_H8.txt] single bits of Y4, best six (gain, bit, value, share of rate, share of members): x1.001 Y4[2]=1 0.5007 0.5000; x1.000 Y4[9]=1 0.5000 0.5000; x1.000 Y4[8]=0 0.5000 0.5000; x1.000 Y4[7]=0 0.5000 0.5000; x1.000 Y4[3]=1 0.5000 0.5000; x1.000 Y4[5]=1 0.5000 0.5000
+   [grid_summary.txt] grid_H8.out: 330 lines, last written 13:39:16, read 14:17:19; etas in the grid list 305, betas in the grid list 799; grid process running: 0
+   [grid_summary.txt] line kinds: PART 254; CLASS 76; 
+   classes with a part in the grid so far: 76; the twelve largest (the grid's own list of betas, not the list of this count):
+      CLASS 830303cf fixed_bits 13 members 2^19 betas_with_a_part 13 total 162245268.4
+      CLASS 8f0306cf fixed_bits 15 members 2^17 betas_with_a_part 9 total 47846516.7
+      CLASS 830503cf fixed_bits 13 members 2^19 betas_with_a_part 6 total 28588755.2
+      CLASS 830302cf fixed_bits 12 members 2^20 betas_with_a_part 7 total 17631250.2
+      CLASS 830703cf fixed_bits 14 members 2^18 betas_with_a_part 8 total 7254325.1
+      CLASS 83031dcf fixed_bits 15 members 2^17 betas_with_a_part 4 total 2957568.1
+      CLASS 830303d7 fixed_bits 13 members 2^19 betas_with_a_part 8 total 1917952.4
+      CLASS 830305cf fixed_bits 13 members 2^19 betas_with_a_part 4 total 1405508.0
+      CLASS 83031ecf fixed_bits 15 members 2^17 betas_with_a_part 2 total 1114112.0
+      CLASS 830302d7 fixed_bits 12 members 2^20 betas_with_a_part 10 total 1101518.8
+      CLASS 830502cf fixed_bits 12 members 2^20 betas_with_a_part 5 total 906688.0
+      CLASS 830306cf fixed_bits 13 members 2^19 betas_with_a_part 3 total 771072.4
+
+8. TOTALS AND MARGINS
+   count over all 4,550 betas with k <= 14: 162,263,084.4866 = 2^27.2738   (15 betas with a part, 183 outcomes)
+   count over the 31,591 betas finished by the calculator (all 60 SAT betas among them; includes the estimates of section 5, 0.28 in all): 162,266,763.6579 = 2^27.2738   (60 betas with a part, 453 outcomes with a nonzero product)
+   valid betas that are neither counted nor UNSAT by the solver: 0; so this is the count over ALL valid betas, given the solver's UNSAT answers (one solver, one encoding, no proof certificates)
+   against an assumed factor 2^25 = 33,554,432: count / 2^25 = 4.8358 (k <= 14), 4.8359 (all finished betas)
+   against an assumed factor 2^26 = 67,108,864: count / 2^26 = 2.4179 (k <= 14), 2.4180 (all finished betas)
+   against an assumed factor 2^27 = 134,217,728: count / 2^27 = 1.2090 (k <= 14), 1.2090 (all finished betas)
+   arithmetic: the calculator works in double precision; E1 is returned through a logarithm, so a printed E1 can differ from the integer by a relative 1e-15
+   (e.g. 844,424,930,131,971 for 3 * 2^48); the sums above are sums of the printed factors, exact as fractions, and carry that error (below 1e-6 in the total).
+   heaviest beta 18b0e098: 0.4419 of the count; the two heaviest 0.7747; the four heaviest 0.9850

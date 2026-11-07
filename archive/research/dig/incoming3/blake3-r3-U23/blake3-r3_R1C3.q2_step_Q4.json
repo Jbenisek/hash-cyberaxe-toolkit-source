@@ -1,0 +1,21 @@
+{
+ "object": "R1C3.q2 q2 = (c1,b1): c=c+d; b=ror12(b^c): alternative implementations",
+ "question": "Q4 alternatives: other rotation forms and other lane pitches for this step.",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "alternatives built and tested (all 0 wrong lanes): rotation mask-before-shift = 595 total ops (tie, 595); rotation as ror(d)^ror(a) = 600 (+5); pitch 35 = 603 (step 7 ops), 34 = 622, 33 = 684 (7 lanes); pitch 37 and 40 = 592 ops but 6 lanes = 98.67 ops/instance vs 595/7 = 85.00 -> none beats 595 per 7 lanes",
+ "notes": "cell blake3-r3|R1C3.q2|step|Q4. Step at pitch 33/34/35: 8/7/7 ops (guard bits too few, extra masks). 256 bits fit at most 7 lanes at pitch 36; pitch >= 37 gives 6 lanes. Not tried: duplicated-lane pitch-64 layouts (4 lanes), 8 lanes at pitch 32 with SWAR adds (levers_step_count.md estimates worse, GUESS).",
+ "held_fixed": "same op price list (add and or xor shl shr = 1 each), same message/state constants",
+ "reopen_if": "the op model prices rotations or masks differently, or a 3-4 op rotation layout with 7 lanes is found",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "evidence": "research/blake3_r3/step_profile_r1.py (tracer; validate: empty-input 7-round vector, 64-byte msgs vs verifier blake3.py at 7 and 3 rounds, packed circuit 0 wrong of 371 lanes, 595 ops, source identical to candidate_blake3/experiments/rho.py); research/blake3_r3/step_scan_r1.py; research/blake3_r3/step_scan_r1.json"
+}

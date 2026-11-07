@@ -1,0 +1,24 @@
+{
+  "id": "D267-B3M-ONE-MESSAGE-COUNTER-KAT",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M one-message output schedule counter arm",
+  "question": "Does the source-level sequential output schedule remain exact for nonzero counter values and FLAGS=3?",
+  "labels": [
+    "C",
+    "Z"
+  ],
+  "status": "LOCAL_ONLY",
+  "number": "256 FLAGS=3 probes with independently selected nonzero t: 0 counter/digest mismatches, exact 55/63-byte lengths in every case. This is a semantic schedule KAT, not a collision-rate measurement or organizer ruling.",
+  "source": "our workflow: D267 source-level schedule audit",
+  "evidence": "research/retest/b3m_one_message_source/source_schedule.py; research/sol_answer_D267_b3m_one_message_source.md",
+  "date": "2026-10-13",
+  "own_test": true,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "The unchanged shipped frontline.py was imported. The sequential routine was compared with step_ct and compression at FLAGS=3 for 256 nonzero counters. It does not prove production allocator/release accounting or organizer acceptance. No package, staging, or submission.",
+  "held_fixed": "shipped frontline.py, FLAGS=3, exact scalar equations and compression",
+  "reopen_if": "A production rewrite, exact charged ledger, and organizer memory-rule acceptance are supplied"
+}

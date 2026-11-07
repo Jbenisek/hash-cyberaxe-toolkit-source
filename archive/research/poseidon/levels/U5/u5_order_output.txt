@@ -1,0 +1,17 @@
+f1*f2==C: True ; g1*g2==C'': True
+f1 bits 69 probable prime: 1  p mod x (for group-order check):
+f2 bits 143 probable prime: 1  p mod x (for group-order check):
+g1 bits 79 probable prime: 1  p mod x (for group-order check):
+g2 bits 334 probable prime: 1  p mod x (for group-order check):
+exponent/orders:
+  alpha^(n/q)!=1 for q=2 : True
+  alpha^(n/q)!=1 for q=3 : True
+  alpha^(n/q)!=1 for q=463 : True
+  alpha^(n/q)!=1 for q=73 : True
+  alpha^(n/q)!=1 for q=5839 : True
+  alpha^(n/q)!=1 for q=12221196943 : True
+  alpha^(n/q)!=1 for q=5187662682403 : True
+  alpha^(n/q)!=1 for q=539204044132271846773 : True
+  alpha^(n/q)!=1 for q=487887715480415483992657 : True
+  alpha^(n/q)!=1 for q=899919475885..(143b) : True
+  alpha^(n/q)!=1 for q=211860431322..(334b) : True

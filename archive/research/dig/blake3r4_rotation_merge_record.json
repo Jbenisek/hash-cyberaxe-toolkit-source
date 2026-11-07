@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-ROTATION-MERGE-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "rotation-merge identity",
+  "question": "Does moving ROR through XOR expose gate reuse or lower register pressure?",
+  "labels": ["N", "C"],
+  "status": "COMPUTED",
+  "number": "post-XOR and pre-rotate-XOR both 24422 gates, zero hash-consing hits/dead gates, 771 peak/registers; allocated and scalar 256-lane KAT PASS",
+  "source": "research/dig_new/blake3-r4/rotation_merge_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_rotation_merge_1014.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "771 live/register planes",
+  "notes": "Exact identity only; broader Boolean rewrites remain open. No package/stage/filing/submission."
+}

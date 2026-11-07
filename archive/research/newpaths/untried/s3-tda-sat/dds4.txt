@@ -1,0 +1,8 @@
+class 0: w(chi3)=12 mids=64  min exact T3 = 153 (w2=12, F=129); non-exact mids T3 >= 146  [35.9s]
+class 1: w(chi3)=12 mids=64  min exact T3 = 152 (w2=12, F=128); non-exact mids T3 >= 153  [23.8s]
+class 2: w(chi3)=12 mids=64  min exact T3 = 148 (w2=12, F=124); non-exact mids T3 >= 152  [52.0s]
+class 3: w(chi3)=12 mids=64  min exact T3 = 149 (w2=12, F=125); non-exact mids T3 >= 163  [86.3s]
+class 4: w(chi3)=12 mids=64  min exact T3 = 130 (w2=12, F=106); non-exact mids T3 >= 136  [122.1s]
+class 5: w(chi3)=12 mids=64  min exact T3 = 128 (w2=11, F=105); non-exact mids T3 >= 143  [174.6s]
+class 6: w(chi3)=12 mids=64  min exact T3 = 134 (w2=12, F=110); non-exact mids T3 >= 123  [208.7s]
+class 7: w(chi3)=12 mids=64  min exact T3 = 134 (w2=12, F=110); non-exact mids T3 >= 123  [244.8s]

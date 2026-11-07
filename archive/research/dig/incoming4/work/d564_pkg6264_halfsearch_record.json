@@ -1,0 +1,23 @@
+{
+  "id": "D564-BLAKE3-R2-PKG6264-HALFSEARCH-SELFTEST-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkg6264 shared halfsearch selftest",
+  "question": "What finite executable evidence is available for the D564 shared halfsearch candidates?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkg6264 claim time_log2=109.2793; executable is byte-identical to the D564 self-tested halfsearch.py (SHA-256 710040147D4099E202353526372D30BAE7717F788053F54C27AAE0D8C64C7BD0). Shared selftest: 256 cases, 1792/1792 lanes, zero test-word mismatches, 16 registers, 74/65536 passing counter steps, halt_right=true. Prefile SOME FAIL for absent executable ledger; no exact N or score credit.",
+  "source": "our workflow: D564 read-only shared-halfsearch selftest audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D564_b3m_halfsearch_selftests.md; research/tools/build_pkg/scratch/pkg6264/pkg/blake3-r2/experiments/halfsearch.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; executable ledger appendix missing. No package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; one process; no package writes",
+  "reopen_if": "executable ledger appendix or organizer ruling"
+}

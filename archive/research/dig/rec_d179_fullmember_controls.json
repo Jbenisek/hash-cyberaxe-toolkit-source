@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-fullmember-controls",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 exact fixed-member full typed-list scans",
+  "question": "Do selected non-representative class-0 members reproduce the representative coupled omega list?",
+  "labels": ["I", "K"],
+  "status": "SAMPLED",
+  "number": "Eight members, each over 23820160 typed words: 20034560 alive, zero errors, zero list mismatches; total 190561280 exact evaluations",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/member_t0_c0_i1.bin; research/retest/b3_omega_coupled/exact/member_t0_c0_i2.bin; research/retest/b3_omega_coupled/exact/member_t0_c0_i4.bin; research/retest/b3_omega_coupled/exact/member_t0_c0_i8.bin; research/retest/b3_omega_coupled/exact/member_t0_c0_i1024.bin; research/retest/b3_omega_coupled/exact/member_t0_c0_i4096.bin; research/retest/b3_omega_coupled/exact/member_t0_c0_i2048.bin; research/retest/b3_omega_coupled/exact/member_t0_c0_i1024low.bin; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Selected exact finite scans include all four unresolved directions 03e00000, 00002000, 00001000, and 00000400, plus controls 00000040, 00000380, 00000008, and 00000030. Universal class invariance remains OPEN."
+}

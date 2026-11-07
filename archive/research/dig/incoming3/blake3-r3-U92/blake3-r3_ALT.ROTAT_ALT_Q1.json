@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "rotational relation d(rotl_k m) = rotl_k d(m), actual constants",
+ "question": "Value or count as used in the filed entry (blake3-r3, 125.1087)?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "used: none. All 31 rotation amounts k, 2^18 random messages each (m0..m7=0 is rotation-invariant, m8..m15 rotated): max rotated-equal digest words 0; min weight of d(m')^rotl_k d(m) = 87 of 256 (random level); the initial state (IV, counter, length, flags) has rotational distance 174 to 234 of 512 bits for every k, never 0",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_rot.py; research/blake3_r3/alt/exp_rot.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Constants are not rotation-symmetric, so the relation fails at round 0 for every k.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); message words m8..m15 random, rotated as a whole",
+ "reopen_if": "a chaining-value constant set (multi-block cv) that is exactly rotation-symmetric for some k, plus a measured round-3 relation probability above 2^-20",
+ "topic": "blake3-r3|ALT.ROTAT|ALT|Q1"
+}

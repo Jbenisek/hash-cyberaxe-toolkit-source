@@ -1,0 +1,21 @@
+r=1 ncentres=1 seed=10001 m=39062
+INIT arith=17359 other=20480 total=37839
+lean-pow breakdown: newton total=40263761 arith=21679385 | prefix+scale total=175813 | loop steps=238 total=6201143993 arith=3515054480 per-step total=26055226 arith=14769136
+CENTRE 0 j=2 degG=1 success=1 arith=3893983756 all=7057892342 sec=118.5
+  line_setup                               arith=         391 other=        1564 total=        1955     0.0s
+  random centre                            arith=           0 other=           3 total=           3     0.0s
+  build g                                  arith=     1436260 other=    24567311 total=    26003571     1.1s
+  S^((p-1)/2) mod g                        arith=  3536772927 other=  2704810640 total=  6241583567   106.3s
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770535 other=   434514494 total=   790285029    11.1s
+  root finding                             arith=           1 other=           6 total=           7     0.0s
+  sqrt + map back                          arith=        3168 other=       12672 total=       15840     0.0s
+  verification (2 reference hashes)        arith=         474 other=        1896 total=        2370     0.0s
+COLLISION nk1  0x3d37a11b29c917f816a2808eb14529434fa37e83ca1ae2d09e7880ea97e41648
+COLLISION rho1 0x2d78846c9cbb6a11d4b865858b6c05ebdc8f9060e9fcdb8e28a35111448aa36a
+COLLISION nk2  0x113a7a80ba76c72868c3e0c761600ad42ce6dd62ba1b54520459f05ba5810753
+COLLISION rho2 0x1570cf7f52f96f20bdef2c33a7dbd64fea5b866c67764b28911d83d9db939104
+COLLISION digest 0x0e23037293c903676d42bcc6827c0eb347e275b60f2151140f9dd4ae2ff36975
+COLLISION centre 0x2c9a27f1c1662cf0da7ed8e84dbb5b8719c4cdf8be714f59000009d782d5c31f
+SUMMARY r=1 centres=1 success=1 total_all=7057930181 total_arith=3894001115 units=29780296.1 log2_units=24.8279 heap_peak=8468640 secs=118.5
+GAPS gcd=21617616 root=7
+TYPES add=1357769928 sub=1267418948 mul=1235485902 sqr=33326337 ld=1498585393 st=831662390 ctl=810383234 rnd=1 perm=23298048

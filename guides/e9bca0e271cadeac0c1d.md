@@ -1,0 +1,30 @@
+# pallas
+
+Source: `research/poseidon/orchard/exec_r3/pallas.c`
+
+Public SHA-256: `d264eb8bcaa81005225ac5a83d2731f24cf20f8d40937221b6aa82f4314c2ad2`
+
+## Purpose recorded in the source
+
+include "pallas.h"
+include "pallas_consts.h"
+include <string.h>
+include <stdio.h>
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/poseidon/orchard/exec_r3/proof_template_exec.md
+- research/poseidon/d189_gpu_results.jsonl
+- research/poseidon/d192_r2_results.jsonl
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

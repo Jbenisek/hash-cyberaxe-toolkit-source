@@ -1,0 +1,1 @@
+2016/878	Linear Structures: Applications to Cryptanalysis of Round-Reduced Keccak	owner_download	https://eprint.iacr.org/2016/878.pdf

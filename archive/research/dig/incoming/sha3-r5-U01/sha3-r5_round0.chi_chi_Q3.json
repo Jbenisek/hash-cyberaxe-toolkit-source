@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r5",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "row_i": 0,
+ "row_j": 0,
+ "object": "r5 round-0 chi connector freedom",
+ "question": "How many degrees of freedom of the 1600-bit space remain after the round-0 conditions (F, M2, M3)?",
+ "labels": [
+  "C"
+ ],
+ "status": "SAMPLED",
+ "number": "DF after F+M2+M3 = 1600 - rank(E_M) = 157-173 (mean 164.4) (before M4); needed final DF is 33 (final DF is the round-1 cell). E_D reaches full rank 1600 in every attempt (beta0 fully determined).",
+ "evidence": "research/dig/incoming/sha3-r5-U01/work/conn_count.py; work/conn_k1,2,5,6,8,9,11 .json/.log; work/summ.txt",
+ "notes": "Universe cell sha3-r5|round0.chi|chi|Q3. Scope: 7 advice runs of the shipped constructor (R7 labels k=1,2,5,6,8,9,11; bprime candidate 0, its (c,j,DF) matches the proof table), up to 40 connector attempts each, 158 accepted attempts; instrumented copy of r5.py _attempt that only adds rank counters. Not the 50 historical R7 spaces (not persisted); a sample, not the full population.",
+ "topic": "sha3.r5.conn.r0.df"
+}

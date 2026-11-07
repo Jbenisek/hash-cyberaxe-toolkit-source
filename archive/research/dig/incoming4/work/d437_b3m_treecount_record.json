@@ -1,0 +1,23 @@
+{
+  "id": "D437-B3M-TREECOUNT-SWEEP-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "compact B3M selector tree-count sensitivity",
+  "question": "What is the smallest fixed-depth compact forest that retains the D435 diagnostic signal on original and fresh sets?",
+  "labels": ["B", "D", "Z"],
+  "status": "SAMPLED",
+  "number": "With depth=4, leaf=4, max_features=.5, seed D437, 4/8/16/32 trees had all-set pass flags false/true/true/false. The 8-tree model has 226 nodes and a depth-4 bound of 32 comparisons plus 8 accumulators; 20-point D432 ratio=1.1022684705 (p=.1385). Finite LOCAL_ONLY, safe gain 0.",
+  "source": "our workflow: D437 preregistered tree-count sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D437_b3m_treecount_sweep.md; research/retest/t2/PREREG_D437_TREECOUNT_SWEEP.md; research/retest/t2/D437_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic single-worker sweep",
+  "notes": "Feature extraction, compiled charge, selector protocol, judge acceptance, and rate-to-success linkage remain open. No package/stage/filing/submission.",
+  "held_fixed": "D435 feature map/layout, original/fresh sets, and PR858 no-transfer rule",
+  "reopen_if": "A charged compiled 8-tree selector and accepted rate-to-success derivation are available"
+}

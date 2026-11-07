@@ -1,0 +1,22 @@
+{
+  "id": "D248-SHA256-R38-GATE-SECOND-PREFIX-20261013",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 18,
+  "object": "row16/17/18 gate across an independent valid prefix",
+  "question": "Do the exact row-16/17/18 relation-drop counts and dependency map persist on a second valid 38-step prefix?",
+  "labels": ["D", "C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Independent SAT pair: 32 complete row-16 states out of 2^22; published-pair and independent-pair row18 controls both DP=brute=524288; all six row-16 W relations retain exact row18 totals 412316860416, 549755813888, 274877906944, 824633720832, 274877906944, 550292684800; all six nonempty row-17 A-relation drops have zero row18 continuation.",
+  "source": "our workflow: r38 row16 gate second-prefix replay",
+  "own_test": true,
+  "evidence": "research/sol_answer_S38-prefix-generality-recheck-20261013.md; row_interactions/row16_gate_alt.out; row_interactions/row16_gate.c; 2nd_openai_workspace/kit/prior_reports/job115_r38_pair_ANSWER.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "topic": "sha256-38.row16-18.prefix-generality",
+  "held_fixed": "The published Table-4/5 row predicates, 38-step recurrence, independent SAT pair's CV and message pair, and exact DP/brute gate code; only the valid prefix/CV/message pair changed.",
+  "reopen_if": "Repeat the exact gate on a larger attack-weighted prefix sample or prove prefix invariance algebraically; full rows 19-37 and Table-4 independence remain untested.",
+  "notes": "Second-prefix local confirmation only. Counts match the published prefix but do not establish universal prefix transfer, late-row necessity, or a claimable score gain. No package, staging, or submission."
+}

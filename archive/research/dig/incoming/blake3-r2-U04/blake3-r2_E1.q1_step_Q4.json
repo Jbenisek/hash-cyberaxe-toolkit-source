@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "count",
+ "object": "E1 q1 (a1,d1) alternatives to equality",
+ "question": "Which alternative (nonzero) a1,d1 differences exist and what do they cost in activated calls?",
+ "labels": [
+  "0",
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "alternatives by injection word: v0/v4/v8/v12 -> C0 active, 6 calls; v1/v5/v9/v13 -> C1, 6 calls; v2/v6/v10/v14 -> C2, 6 calls; v3/v7/v11/v15 -> no E1 q1 effect (C3 inputs), 5 calls; baseline 3 calls (C3,E1,E3); E0 and E2 become active in every alternative; 0/120 per word keep CV words 0,2,5,7 equal",
+ "evidence": "research/dig/incoming/blake3-r2-U04/work/q1relax.py; research/dig/incoming/blake3-r2-U04/work/q1relax_out.txt",
+ "topic": "b3.r2.E1.q1.alt",
+ "notes": "Universe cell blake3-r2|E1.q1|step|Q4. Every alternative to equal (a1,d1) activates C0/C1/C2 plus E0 and E2 (the calls whose outputs the event needs equal), i.e. costs about 128 bits of equality on words 0,2,5,7 instead of 0; no alternative found cheaper than the construction. One-bit differences only (window), generic A/B pair from frontline CO/CT/CS; not a proof that a compensated multi-word difference is impossible. No gain."
+}

@@ -1,0 +1,4 @@
+VALIDATE ok (7 anchors)
+trials 1073741824 (2^30.0000) contexts 2048 members 524288
+rule b0=0,b1=1,b16=0,b17=0 on h1: passes 67046617  rate 6.24420280e-02  2^-4.0013  (expected 2^-4)
+E1 test (Lemma N word n == 0): passes 0  rate 0.00000000e+00  2^-0.0000

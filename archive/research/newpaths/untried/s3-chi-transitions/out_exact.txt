@@ -1,0 +1,1 @@
+{"tested": 8864, "chi1_const_clash": 3964, "z3": {"unsat": 4268, "unsat-const": 632}, "native": {}, "found": [], "secs": 300.0}

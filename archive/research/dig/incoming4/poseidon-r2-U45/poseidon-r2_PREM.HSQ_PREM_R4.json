@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQ (PREM)",
+ "question": "R4: score sensitivity",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "Per +0.05 of the one-centre rate the 4-centre success moves +0.039; going from 2 to 4 centres costs +1.000 bit of time. Rate at the lower limit 0.188 would need 4 centres for 1/2 and 8 for 0.8.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HSQ|PREM|R4. Arithmetic.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a sample of 100+ r2 centres per line shows a rate outside the model band"
+}

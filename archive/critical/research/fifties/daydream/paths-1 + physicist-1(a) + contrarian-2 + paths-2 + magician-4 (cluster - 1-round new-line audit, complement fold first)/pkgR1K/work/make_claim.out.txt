@@ -1,0 +1,1 @@
+restriction lengths [667, 176, 131, 330, 254, 299] ; proof bytes 12665 LF only ; ascii True ; digest a60b648064d9445baa8f41405ca2283f497c0ecbe4ab151c020d61c692d60301

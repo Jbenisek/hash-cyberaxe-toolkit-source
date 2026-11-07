@@ -1,0 +1,8 @@
+set 0: best joint (member, beta) gain 49.61 (member 0, beta bf, |D| 4); best single (member,d1) gain 63.5
+set 1: best joint (member, beta) gain 13.58 (member 0, beta b3, |D| 16); best single (member,d1) gain 62.1
+set 2: best joint (member, beta) gain 10.67 (member 0, beta b3, |D| 16); best single (member,d1) gain 48.8
+set 3: best joint (member, beta) gain 13.18 (member 2, beta b3, |D| 16); best single (member,d1) gain 50.2
+set 4: best joint (member, beta) gain 27.15 (member 0, beta 6f, |D| 4); best single (member,d1) gain 27.2
+set 5: best joint (member, beta) gain 14.37 (member 0, beta b3, |D| 16); best single (member,d1) gain 52.2
+set 6: best joint (member, beta) gain 49.61 (member 2, beta bf, |D| 4); best single (member,d1) gain 63.5
+set 7: best joint (member, beta) gain 29.26 (member 0, beta bf, |D| 4); best single (member,d1) gain 58.5

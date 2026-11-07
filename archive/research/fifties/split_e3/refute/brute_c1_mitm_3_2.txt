@@ -1,0 +1,6 @@
+mitm |A|=3 |P|=|Q|=2: 62196 sets A
+mitm |A|=3 |P|=|Q|=2: non-redundant A 49955, covering (A,P,Q) 0
+
+real	0m18.697s
+user	0m37.222s
+sys	0m0.000s

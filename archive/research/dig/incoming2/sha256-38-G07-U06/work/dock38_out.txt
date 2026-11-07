@@ -1,0 +1,4 @@
+load: 25.15 23.83 22.85 24/481 1095588
+docker L vt-q3-smc-r38 wall 35.169020461 s out=69ee1d21e961
+docker L vt-ram-r38 wall 12.455610818 s out=0fb3d9e91abe
+load: 24.68 23.87 22.91 23/480 1095868

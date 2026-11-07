@@ -1,0 +1,21 @@
+negative control (shifted pairing, 199 pairs): mismatches 199
+cases 1000 mismatches (C vs organizer-reference, all 61 observables + damage/info/chk): 0 {}
+fast-path disagreements: 0
+  D free-word blocks                                      379
+  D: (Y9 damaged) <=> chk != 0 holds                      379
+  D: (damage beyond T1RANGE == 0) <=> chk == 0 holds      379
+  D: damage subset of {Y9,K3,T1RANGE} holds               379
+  frame D                                                 418
+  frame O                                                 293
+  frame R                                                 289
+  kind all                                                81
+  kind bit                                                227
+  kind dense                                              85
+  kind msb                                                71
+  kind multi                                              296
+  kind pair                                               72
+  kind word_k                                             89
+  kind zero                                               79
+  zero damage                                             86
+  zero damage, K1 moved                                   0
+  zero damage, real point moved                           0

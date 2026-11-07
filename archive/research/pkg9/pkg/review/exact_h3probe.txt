@@ -1,0 +1,11 @@
+run 0: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02611, min 0.02211, max 0.03172, s.d. of a context 0.00219; members satisfying rule A per context: mean 507.2 (512)
+run 1: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02608, min 0.02286, max 0.03140, s.d. of a context 0.00146; members satisfying rule A per context: mean 514.4 (512)
+run 2: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02654, min 0.02264, max 0.02996, s.d. of a context 0.00142; members satisfying rule A per context: mean 511.2 (512)
+run 3: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02630, min 0.02270, max 0.02948, s.d. of a context 0.00148; members satisfying rule A per context: mean 512.9 (512)
+run 4: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02642, min 0.02344, max 0.02927, s.d. of a context 0.00133; members satisfying rule A per context: mean 512.8 (512)
+run 5: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02587, min 0.02243, max 0.02996, s.d. of a context 0.00149; members satisfying rule A per context: mean 504.3 (512)
+run 6: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02603, min 0.02328, max 0.03087, s.d. of a context 0.00158; members satisfying rule A per context: mean 510.3 (512)
+run 7: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02623, min 0.02254, max 0.03023, s.d. of a context 0.00158; members satisfying rule A per context: mean 513.7 (512)
+run 8: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02623, min 0.02291, max 0.02895, s.d. of a context 0.00119; members satisfying rule A per context: mean 508.8 (512)
+run 9: 64 contexts (8 outer steps x 8 X2); share of batches entering stage 2: mean 0.02624, min 0.01880, max 0.03578, s.d. of a context 0.00305; members satisfying rule A per context: mean 516.3 (512)
+all 640 contexts: mean 0.02620 (budget 0.03125, text 0.0262); contexts above the budget: 4; run means from 0.02587 to 0.02654, s.d. between runs 0.00018; expected s.d. of a run mean from the contexts alone 0.00022

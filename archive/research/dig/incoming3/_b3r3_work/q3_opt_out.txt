@@ -1,0 +1,11 @@
+model optimum 595
+built circuit ops 595
+Counter({'and': 167, 'add': 100, 'xor': 88, 'shr': 80, 'shl': 80, 'or': 80})
+equals scalar on 300 batches: True
+mask op 507 (2, 5, 3)
+mask op 538 (2, 6, 3)
+mask op 568 (2, 7, 3)
+mask op 584 ('final',)
+mask op 586 ('final',)
+mask op 588 ('final',)
+mask op 590 ('final',)

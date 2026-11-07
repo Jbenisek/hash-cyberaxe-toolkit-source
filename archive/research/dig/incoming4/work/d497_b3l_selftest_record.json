@@ -1,0 +1,23 @@
+{
+  "id": "D497-BLAKE3-R2-B3L-SELFTEST-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "package-specific frontline self-test for B3L",
+  "question": "Does the B3L shipped frontline program pass its 256-case self-test and exact finite invariants?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "B3L frontline --selftest 256 exits 0 with ok=true, zero full-context mismatches/halts, all automata/partition/replica/level-16 checks true, halt drills true, and embedded N=172201855951281526588.",
+  "source": "our workflow: D497 read-only B3L frontline self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D497_b3l_selftest.md; research/tools/build_pkg/scratch/pkgB3L/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; score-critical premises remain conditional. No score/package/stage/filing/submission.",
+  "held_fixed": "B3L scratch package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package/source changes or premise evidence arrives"
+}

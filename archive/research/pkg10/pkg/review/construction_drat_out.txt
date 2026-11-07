@@ -1,0 +1,59 @@
+construction_drat.py: DRAT proofs (cadical --plain, text) for the reviewer's formula of question 2, checked by the reviewer's forward RUP checker
+ENCODING: unit propagation on the two G calls gives every variable and the 16 values of plain arithmetic for 300 of 300 random inputs; the three clauses of 'h1 violates rule A' are right on 64 of 64 bit patterns
+PROOFS: kept outcomes 54 (sum 126003600.7598); proofs verified by the reviewer's checker 54, carrying 126003600.7598 of the count that the claim uses; not verified 0; clauses checked in all 187867; largest proof 5679
+PROOFS: drat-trim is not installed; only the reviewer's checker was used
+seconds 15, workers 3
+PROOF 18b0e098 285020a0 6e21be55 adds 25165824.0000 VERIFIED clauses 2928 drat-trim None seconds 0.6
+PROOF 18b0e098 185020a0 6e21be55 adds 16777216.0000 VERIFIED clauses 3210 drat-trim None seconds 0.8
+PROOF 18b0e098 385020a0 6e21be55 adds 16777216.0000 VERIFIED clauses 2818 drat-trim None seconds 0.5
+PROOF 18d0e098 285020a0 6e61be55 adds 12582912.0000 VERIFIED clauses 3455 drat-trim None seconds 0.8
+PROOF 18d0e098 17d020a0 6e61be55 adds 12582912.0000 VERIFIED clauses 2825 drat-trim None seconds 0.7
+PROOF 18d0e098 185020a0 6e61be55 adds 8388608.0000 VERIFIED clauses 2732 drat-trim None seconds 0.6
+PROOF 18d0e098 385020a0 6e61be55 adds 8388608.0000 VERIFIED clauses 3065 drat-trim None seconds 0.5
+PROOF 18b1a098 185060a0 6e203e55 adds 2097152.0000 VERIFIED clauses 3490 drat-trim None seconds 1.0
+PROOF 18d1a098 185060a0 6e603e55 adds 2097152.0000 VERIFIED clauses 3544 drat-trim None seconds 0.9
+PROOF 18d0e098 27d020a0 6e61be55 adds 1572864.0000 VERIFIED clauses 3502 drat-trim None seconds 0.7
+PROOF 18b0e098 685020a0 6e21be55 adds 1572864.0000 VERIFIED clauses 3627 drat-trim None seconds 0.6
+PROOF 18b0e098 285060a0 6e21be55 adds 1572864.0000 VERIFIED clauses 2669 drat-trim None seconds 0.5
+PROOF 18d0e098 685020a0 6e61be55 adds 1572864.0000 VERIFIED clauses 3210 drat-trim None seconds 0.4
+PROOF 18d0e098 285060a0 6e61be55 adds 1572864.0000 VERIFIED clauses 3371 drat-trim None seconds 0.9
+PROOF 18b0e098 185060a0 6e21be55 adds 1048576.0000 VERIFIED clauses 3680 drat-trim None seconds 0.8
+PROOF 18b0e098 385060a0 6e21be55 adds 1048576.0000 VERIFIED clauses 3867 drat-trim None seconds 0.8
+PROOF 18d0e098 185060a0 6e61be55 adds 1048576.0000 VERIFIED clauses 3157 drat-trim None seconds 0.5
+PROOF 18d0e098 385060a0 6e61be55 adds 1048576.0000 VERIFIED clauses 3582 drat-trim None seconds 0.8
+PROOF 18b1a098 285060a0 6e203e55 adds 1048576.0000 VERIFIED clauses 4918 drat-trim None seconds 1.0
+PROOF 18b1a098 385060a0 6e203e55 adds 1048576.0000 VERIFIED clauses 3264 drat-trim None seconds 0.6
+PROOF 18d1a098 2850a0a0 6e603e55 adds 1048576.0000 VERIFIED clauses 3489 drat-trim None seconds 0.7
+PROOF 18d1a098 285060a0 6e603e55 adds 1048576.0000 VERIFIED clauses 3537 drat-trim None seconds 1.0
+PROOF 18d1a098 385060a0 6e603e55 adds 1048576.0000 VERIFIED clauses 3534 drat-trim None seconds 0.9
+PROOF 18b3e098 185020a0 6e23be55 adds 1048576.0000 VERIFIED clauses 3022 drat-trim None seconds 0.7
+PROOF 18d0e098 2850a0a0 6e61be55 adds 786432.0000 VERIFIED clauses 3019 drat-trim None seconds 0.5
+PROOF 18d3e098 185020a0 6e63be55 adds 524288.0000 VERIFIED clauses 3903 drat-trim None seconds 0.8
+PROOF 18b3e098 285020a0 6e23be55 adds 262144.0000 VERIFIED clauses 5679 drat-trim None seconds 1.1
+PROOF 18d0e098 67d020a0 6e61be55 adds 196608.0000 VERIFIED clauses 2675 drat-trim None seconds 0.4
+PROOF 18d0e098 685060a0 6e61be55 adds 196608.0000 VERIFIED clauses 3321 drat-trim None seconds 0.6
+PROOF 18d1a098 6850a0a0 6e603e55 adds 131072.0000 VERIFIED clauses 3659 drat-trim None seconds 0.8
+PROOF 18d1a098 685060a0 6e603e55 adds 131072.0000 VERIFIED clauses 3373 drat-trim None seconds 1.0
+PROOF 18d3e098 285020a0 6e63be55 adds 131072.0000 VERIFIED clauses 2976 drat-trim None seconds 0.8
+PROOF 18b0e098 685060a0 6e21be55 adds 98304.0000 VERIFIED clauses 2613 drat-trim None seconds 0.4
+PROOF 18d0e098 6850a0a0 6e61be55 adds 98304.0000 VERIFIED clauses 3408 drat-trim None seconds 0.6
+PROOF 18b1a098 685060a0 6e203e55 adds 65536.0000 VERIFIED clauses 4626 drat-trim None seconds 1.1
+PROOF 18b3e098 185060a0 6e23be55 adds 65536.0000 VERIFIED clauses 4308 drat-trim None seconds 1.1
+PROOF 18d3e098 185060a0 6e63be55 adds 65536.0000 VERIFIED clauses 3675 drat-trim None seconds 0.8
+PROOF 18b3e098 285060a0 6e23be55 adds 16384.0000 VERIFIED clauses 3566 drat-trim None seconds 0.7
+PROOF 18d3e098 285060a0 6e63be55 adds 16384.0000 VERIFIED clauses 2657 drat-trim None seconds 0.6
+PROOF 18d3e098 2850a0a0 6e63be55 adds 8192.0000 VERIFIED clauses 2612 drat-trim None seconds 0.7
+PROOF 19f1a098 6850a0a0 6fa03e55 adds 1024.0000 VERIFIED clauses 3353 drat-trim None seconds 0.7
+PROOF 19f0e098 6850a0a0 6fa1be55 adds 768.0000 VERIFIED clauses 3982 drat-trim None seconds 0.9
+PROOF 19f0e098 685060a0 6fa1be55 adds 384.0000 VERIFIED clauses 3552 drat-trim None seconds 0.8
+PROOF 19f1a098 685060a0 6fa03e55 adds 256.0000 VERIFIED clauses 4219 drat-trim None seconds 0.9
+PROOF 19f0e098 67d160a0 6fa1be55 adds 10.5000 VERIFIED clauses 3805 drat-trim None seconds 0.8
+PROOF 19b0a098 379160a0 6fde3e55 adds 3.0000 VERIFIED clauses 3339 drat-trim None seconds 0.9
+PROOF 19d1e098 6850a0a0 6f9fbe55 adds 1.5000 VERIFIED clauses 3490 drat-trim None seconds 0.7
+PROOF 19d1e098 685060a0 6f9fbe55 adds 1.0000 VERIFIED clauses 3537 drat-trim None seconds 0.7
+PROOF 19b0a098 279160a0 6fde3e55 adds 0.5000 VERIFIED clauses 3761 drat-trim None seconds 0.8
+PROOF 19b0a098 679160a0 6fde3e55 adds 0.1250 VERIFIED clauses 3300 drat-trim None seconds 0.5
+PROOF 19d0a098 67d160a0 6f9e3e55 adds 0.1250 VERIFIED clauses 3443 drat-trim None seconds 0.6
+PROOF 1fb3a098 279560a0 6bdc3e55 adds 0.0078 VERIFIED clauses 3249 drat-trim None seconds 0.5
+PROOF 1fb3a098 679560a0 6bdc3e55 adds 0.0010 VERIFIED clauses 3572 drat-trim None seconds 0.6
+PROOF 1fd3a098 67d560a0 6b9c3e55 adds 0.0010 VERIFIED clauses 4699 drat-trim None seconds 0.7

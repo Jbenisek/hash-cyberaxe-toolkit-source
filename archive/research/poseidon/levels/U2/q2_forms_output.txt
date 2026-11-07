@@ -1,0 +1,35 @@
+form R0 lane 0: tau-degree 1 (formal 1); nonzero coefficients 2/2; squarefree=True; t=0.0s
+   F_p roots of f(tau): 1 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 1
+   distinct-degree pattern {factor degree: total degree}: {1: 1}
+form R0 lane 1: tau-degree 1 (formal 1); nonzero coefficients 2/2; squarefree=True; t=0.1s
+   F_p roots of f(tau): 1 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 1
+   distinct-degree pattern {factor degree: total degree}: {1: 1}
+form R0 lane 2: tau-degree 1 (formal 1); nonzero coefficients 2/2; squarefree=True; t=0.2s
+   F_p roots of f(tau): 1 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 1
+   distinct-degree pattern {factor degree: total degree}: {1: 1}
+form R1 lane 0: tau-degree 5 (formal 5); nonzero coefficients 6/6; squarefree=True; t=0.3s
+   F_p roots of f(tau): 1 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 1
+   distinct-degree pattern {factor degree: total degree}: {1: 1, 4: 4}
+form R1 lane 1: tau-degree 5 (formal 5); nonzero coefficients 6/6; squarefree=True; t=0.7s
+   F_p roots of f(tau): 1 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 1
+   distinct-degree pattern {factor degree: total degree}: {1: 1, 4: 4}
+form R1 lane 2: tau-degree 5 (formal 5); nonzero coefficients 6/6; squarefree=True; t=1.2s
+   F_p roots of f(tau): 0 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 0
+   distinct-degree pattern {factor degree: total degree}: {5: 5}
+form R2 lane 0: tau-degree 25 (formal 25); nonzero coefficients 26/26; squarefree=True; t=1.6s
+   F_p roots of f(tau): 1 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 1
+   distinct-degree pattern {factor degree: total degree}: {1: 1, 5: 5, 19: 19}
+form R2 lane 1: tau-degree 25 (formal 25); nonzero coefficients 26/26; squarefree=True; t=7.0s
+   F_p roots of f(tau): 2 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 2
+   distinct-degree pattern {factor degree: total degree}: {1: 2, 2: 4, 4: 4, 5: 5, 10: 10}
+form R2 lane 2: tau-degree 25 (formal 25); nonzero coefficients 26/26; squarefree=True; t=9.5s
+   F_p roots of f(tau): 1 ; V=0 direction extra root if degree dropped: 0 => linear factors of the (nk,rho)-form: 1
+   distinct-degree pattern {factor degree: total degree}: {1: 1, 2: 2, 5: 5, 17: 17}
+form R3 lane 0: tau-degree 125 (formal 125); nonzero coefficients 126/126; squarefree=True; t=13.4s
+   F_p roots of f(tau) (distinct): 0 ; t=21.3s
+form R3 lane 1: tau-degree 125 (formal 125); nonzero coefficients 126/126; squarefree=True; t=21.4s
+   F_p roots of f(tau) (distinct): 0 ; t=28.6s
+form R3 lane 2: tau-degree 125 (formal 125); nonzero coefficients 126/126; squarefree=True; t=28.6s
+   F_p roots of f(tau) (distinct): 1 ; t=38.0s
+--- gcds of forms (non-trivial degree only) ---
+(all other pairs coprime)

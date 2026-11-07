@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work_b3r3/analyze.py; research/dig/incoming3/work_b3r3/b3steps.py; research/dig/incoming3/work_b3r3/analysis.json; research/blake3_r3/candidate_blake3/experiments/rho.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "question": "Q1 value/count as used: what does the filed 595-operation circuit spend on R1D1.q3 and on what inputs?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "8 operations per 7-lane batch (2 add, 1 xor, 1 shr, 2 and, 1 shl, 1 or) = 1.34% of 595 = 1.143 ops per instance; adds message word m11 (variable input word); state words (a,b,c,d) entering the step are v33/v32/v33/v32 (c = constant, vN = lane bound below 2^N), leaving v34/v32/v33/v32; masks inserted at this step: 0",
+ "notes": "validation first: filed scalar digest vs organizer verifier/blake3.py matched 300/300 random 64-byte messages at 7, 3, 2 and 1 rounds; verifier empty-input 7-round hash = af1349b9...3262 (spec vector) ok; numpy tracer vs scalar 200/200; filed packed circuit selftest True (595 ops). Counting uses the filed Tracer (subclass with step tags); totals reproduce 595 = 100 add + 88 xor + 80 shr + 80 shl + 80 or + 167 and. Round 1 = first round; call Dk = diagonal k, Ck = column k; q1=(a,d) with message x, q2=(c,b), q3=(a,d) with message y, q4=(c,b).",
+ "held_fixed": "filed circuit: 7 lanes x 36 bits, add order as filed, rotation = shr/and/shl/and/or, constants folded, target 0^32||x, flags 11, 3 rounds",
+ "reopen_if": "the filed circuit changes (pitch, rotation recipe or constant folding) so that the per-step count differs from 8",
+ "object": "step R1D1.q3 (G call R1D1 quarter-step q3)"
+}

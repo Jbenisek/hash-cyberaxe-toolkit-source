@@ -1,0 +1,22 @@
+{
+  "id": "D265-B3M-ONE-MESSAGE-OUTPUT-SCHEDULE",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "one-message-at-a-time B3M output schedule",
+  "question": "Can the root-output phase construct and compress A and B sequentially without retaining both payloads while preserving the shipped equations?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Seed D265-b3m-one-message-output; 256 deterministic contexts/class members; exact scalar schedule KAT: payload mismatches 0, counter mismatches 0, lengths {55,63}; A is released before B is constructed.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3m_one_message/one_message_output_schedule.py; research/sol_answer_D265_b3m_one_message_output_schedule.md; research/sol_answer_D258_B3M-one-message-output-audit.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Exact for the tested equations and schedule. The shipped package was not changed. Organizer allocator/output-protocol acceptance and the unconditional memory claim remain open; no safe filing credit.",
+  "held_fixed": "pkgB3S2 frontline equations, ROOT_FLAGS output compression, 256 deterministic contexts and member indices, sequential A-then-B construction",
+  "reopen_if": "Organizer accepts the source-level release protocol and a shipped self-test/ledger records the one-message peak",
+  "topic": "blake3-r2 B3M streamed output"
+}

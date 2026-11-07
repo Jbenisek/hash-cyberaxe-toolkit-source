@@ -1,0 +1,23 @@
+{
+  "id": "D736-SHA256-R38-ROW4-SIGNATURE-AGGREGATE-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 15,
+  "object": "Zone-D r38 row-4 signature fixed-split aggregate refresh",
+  "question": "What does the published split plus four independent row-4 signature controls show in aggregate?",
+  "labels": ["C", "B", "Z"],
+  "status": "COMPUTED",
+  "number": "Five exact row4hits controls (seed 0, 65544, 65549, 65550, 65551) total 335,544,320 rebuilds and 5,242,880 signature candidates; all rows5..15 base passes, seed 0 has 4,604 final state-equalities, all four independent controls have 0, and published-pair failures are 0.",
+  "source": "our workflow: D736 fixed-split aggregate refresh",
+  "own_test": true,
+  "evidence": "research/sol_answer_D736_sha256_r38_row4_signature_aggregate.md; research/sol_answer_D727_sha256_r38_row4_signature_aggregate.md; research/sol_answer_D735_sha256_r38_row4_signature_seed65551.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "same checked-in row4hits family and predicates across the five deterministic fixed splits",
+  "notes": "Finite split-local aggregate only. The repeated signature-space size and split-specific equality count do not establish production-law transfer or score.",
+  "reopen_if": "A production-law split sampler or accepted split-transfer argument is available"
+}

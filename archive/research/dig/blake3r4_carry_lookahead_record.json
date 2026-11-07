@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-CARRY-LOOKAHEAD-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "per-bit propagate/generate adder architecture",
+  "question": "Can replacing the pivot ripple full adder by a propagate/generate carry form reduce the 4-round BLAKE3-r4 step?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "30282 gates, 800 registers, 768 lane KAT and allocated KAT PASS; baseline 24422 gates, 771 registers; delta +5860 gates",
+  "source": "research/dig_new/blake3-r4/carry_lookahead_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_carry_lookahead_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "800 live/register planes",
+  "notes": "Concrete negative result only; prefix/cross-bit/non-Boolean architectures remain open. No package/stage/filing/submission."
+}

@@ -1,0 +1,14 @@
+('b',) ([4, 5], 4, 'B')
+('flags',) ([6, 7], 4, 'A')
+('b', 'flags') ([4, 5, 6, 7], 4, 'B')
+('t_lo',) ([0, 1], 4, 'A')
+('t_hi',) ([2, 3], 4, 'A')
+('t_lo', 't_hi') ([0, 1, 2, 3], 4, 'A')
+('t_lo', 't_hi', 'b', 'flags') ([0, 1, 2, 3, 4, 5, 6, 7], 8, 'AB')
+('t_lo', 'b') ([0, 1, 4, 5], 8, 'AB')
+('t_lo', 't_hi', 'b', 'flags') ([0, 1, 2, 3, 4, 5, 6, 7], 8, 'AB')
+h-only subsets 15 {(4, 'A')}
+min k over all 4 count k4 191 k8 64
+k=8 subsets sample [['t_lo', 'b'], ['t_lo', 't_hi', 'b'], ['t_lo', 'b', 'flags'], ['t_lo', 'b', 'h0'], ['t_lo', 'b', 'h1'], ['t_lo', 'b', 'h2']]
+involution failures 0 of 100000
+row-b diff: b output differs after a1-fix 20000 of 20000

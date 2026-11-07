@@ -1,0 +1,11 @@
+Part 1: 36000 probes x 3 schedules, 20243 hits; every outcome equal to the filed probe and to the first candidate of the key
+   filed  ops by path: {'bound': [11], 'hit': [10], 'mismatch': [15]}
+   P1     ops by path: {'bound': [7], 'hit': [9], 'mismatch': [10]}
+   P1+P2  ops by path: {'bound': [6], 'hit': [8], 'mismatch': [9]}
+Part 2 group h=12345: 131073 probes (incl. the vcheck re-probe), 512 Gray points; P2 keys = filed keys OR 2^140 on every probe, 4096 injected XORs = 8 per point; filed counts still pass; observations equal except key_mismatch (= 512 native checks, bit 140 by design)
+   shadow ops by path: {'P1/bound': [7], 'P1/hit': [9], 'P1/mismatch': [10], 'P1+P2/bound': [6], 'P1+P2/hit': [8], 'P1+P2/mismatch': [9]}
+   filed obs: table_ops=1572000 in_range_mismatches=32552 dense_count=131072 key_matches=0
+Part 2 group h=777: 131073 probes (incl. the vcheck re-probe), 512 Gray points; P2 keys = filed keys OR 2^140 on every probe, 4096 injected XORs = 8 per point; filed counts still pass; observations equal except key_mismatch (= 512 native checks, bit 140 by design)
+   shadow ops by path: {'P1/bound': [7], 'P1/hit': [9], 'P1/mismatch': [10], 'P1+P2/bound': [6], 'P1+P2/hit': [8], 'P1+P2/mismatch': [9]}
+   filed obs: table_ops=1573552 in_range_mismatches=32940 dense_count=131072 key_matches=0
+ALL_OK

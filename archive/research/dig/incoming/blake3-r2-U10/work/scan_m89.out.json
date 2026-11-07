@@ -1,0 +1,103 @@
+{
+ "Q1": {
+  "N": 20000,
+  "blocks_where_AB_differ_in_w8_or_w9": 0,
+  "diff_bits": 0,
+  "max_bit_bias_w8": 0.007299999999999973,
+  "max_bit_bias_w9": 0.009099999999999997,
+  "w8_eq_w9": 0,
+  "pinned_conditions_on_this_word": "X15 and X0 of col G(0,5,10,15) (2x32 bits) fix (w8,w9) uniquely",
+  "consts_hold_trials": 2000,
+  "consts_hold": 2000
+ },
+ "Q2": {
+  "w8": {
+   "trials_diff_in_B_only": 6000,
+   "lemmaH_events_kept": 0,
+   "round1_state_X_equal": 0,
+   "mean_digest_words_differing": 8.0,
+   "min_digest_words_differing": 8,
+   "value_changed_keep_admissible": 0,
+   "value_changed_trials": 3000
+  },
+  "w9": {
+   "trials_diff_in_B_only": 6000,
+   "lemmaH_events_kept": 0,
+   "round1_state_X_equal": 0,
+   "mean_digest_words_differing": 8.0,
+   "min_digest_words_differing": 8,
+   "value_changed_keep_admissible": 0,
+   "value_changed_trials": 3000
+  }
+ },
+ "Q3_pair_bijection": {
+  "trials": 20000,
+  "inverse_recovers_w8_w9": 20000,
+  "meaning": "given round-1 half-state and pinned X0,X15, (w8,w9) is unique: 64 bits fixed by 64 bits of conditions, 0 dof left in this word pair"
+ },
+ "Q3_param_sweeps": {
+  "C0c1": {
+   "samples": 65536,
+   "distinct_w8": 65536,
+   "distinct_w9": 65535,
+   "distinct_pair": 65536
+  },
+  "C0d1": {
+   "samples": 65536,
+   "distinct_w8": 65536,
+   "distinct_w9": 65536,
+   "distinct_pair": 65536
+  },
+  "D3d1": {
+   "samples": 65536,
+   "distinct_w8": 65534,
+   "distinct_w9": 65536,
+   "distinct_pair": 65536
+  },
+  "S15": {
+   "samples": 65536,
+   "distinct_w8": 65536,
+   "distinct_w9": 65536,
+   "distinct_pair": 65536
+  },
+  "S9": {
+   "samples": 65536,
+   "distinct_w8": 65536,
+   "distinct_w9": 65536,
+   "distinct_pair": 65536
+  },
+  "w5": {
+   "samples": 65536,
+   "distinct_w8": 65535,
+   "distinct_w9": 65536,
+   "distinct_pair": 65536
+  },
+  "X2": {
+   "samples": 65536,
+   "distinct_w8": 65534,
+   "distinct_w9": 65441,
+   "distinct_pair": 65536
+  },
+  "y": {
+   "samples": 65536,
+   "distinct_w8": 65536,
+   "distinct_w9": 65536,
+   "distinct_pair": 65536
+  }
+ },
+ "Q3_random_pairs": {
+  "samples": 100000,
+  "distinct_pairs": 100000
+ },
+ "Q4_compensated_w8w9_alt": {
+  "trials": 3000,
+  "X0_kept_X15_kept": 0,
+  "X0_kept_only": 3000,
+  "X15_kept_only": 0,
+  "lemmaH_kept": 0,
+  "X5_kept": 0,
+  "X10_kept": 0,
+  "mean_words_differ": 8.0,
+  "min_words_differ": 8
+ }
+}

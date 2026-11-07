@@ -1,0 +1,23 @@
+{
+  "id": "D554-SHA3-R5M-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR5M prefile audit",
+  "question": "What is creditable for pkgR5M when the ledger prints no numerator?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR5M claims time_log2=32.79669, memory_log2=26.955591790424, preprocessing_log2=32.72970, success_probability=0.4. Prefile SOME FAIL solely because the ledger runner prints N=None; other intake checks pass. Proof declares rational total 2021883198761905708573/271000000000, but it is not promoted to executable ledger evidence. No fresh request; no score/premise credit.",
+  "source": "our workflow: D554 read-only pkgR5M prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D554_r5m_prefile.md; research/tools/build_pkg/scratch/pkgR5M/pkg/sha3-256-r5/claim.json; research/tools/build_pkg/scratch/pkgR5M/pkg/sha3-256-r5/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No fresh organizer request; no package/stage/filing/submission.",
+  "held_fixed": "pkgR5M package bytes as found; no package writes",
+  "reopen_if": "ledger repair or supplied public organizer request"
+}

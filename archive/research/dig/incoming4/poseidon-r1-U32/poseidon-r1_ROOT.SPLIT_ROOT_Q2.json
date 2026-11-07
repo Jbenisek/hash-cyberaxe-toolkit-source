@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.SPLIT root splitting of gcd (degree 1,2,3 fibres)",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N",
+  "B"
+ ],
+ "status": "COMPUTED",
+ "number": "campaign 65 centres: deg G histogram 0:37, 1:20, 2:7, 3:1 -> with splitting 28/65 = 0.4308 per centre, without (use only deg G = 1) 20/65 = 0.3077; splitting adds 8 of 28 successes (28.6%) and costs at most 1,541,920 ops per shift, 10,000,000 budget = 0.000165 bit of the 28.780",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/data/stats.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Recount of the stats.json histogram and of the E-stage budget (calc.py). Without splitting two centres give 1-(1-0.3077)^2=0.521 vs 0.676 (sampled); Poisson model P(exactly 1 root)=0.3033 vs P(>=1)=0.3935. Splitting is cheap and needed for the probability; no score gain from dropping it. | universe cell poseidon-r1|ROOT.SPLIT|ROOT|Q2",
+ "held_fixed": "the 65-centre campaign data of lean_r1_fix (old build for 26 runs), E budget 10,000,000 and 2.5e6 gap bound of the fix ledger",
+ "reopen_if": "a centre with deg G >= 2 whose split costs more than 1e6 ops, or a proved per-centre success bound that does not need roots of degree >= 2"
+}

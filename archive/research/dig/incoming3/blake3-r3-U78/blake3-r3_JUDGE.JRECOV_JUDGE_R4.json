@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "REFUTED: lane_cost/F1-recovery-undercharge (ruling 77715f8b, blake3-pareto, exploratory lane, policy paired-lanes-v1)",
+ "question": "R4 score sensitivity of the recovery ruling",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "The whole recovery term is 0.561 percent of the ledger = 0.0081 bit. The ruling moved the claim 125.1081 -> 125.1087 (+0.0006 bit; our ledger +0.00048 at 659 vs 620). A tenfold recovery charge would add 0.0711 bit; the exact-need charge (624) would give back 0.00043 bit.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|JUDGE.JRECOV|JUDGE|R4. Exact ledger.",
+ "held_fixed": "ledger of the filed entry",
+ "reopen_if": "none",
+ "gain_basis": "T"
+}

@@ -1,0 +1,6 @@
+n=3000  failures: {'lemmaL': 0, 'pins': 0, 'c3': 0, 'half': 0, 'bytes': 0, 'numpy': 0, 'e1zero': 0, 'e3zero': 0}
+distinct C3 output tuples seen: 1
+  C3 A: 8127c181 76f7aefd 7af77f38 bbfbdffe | B: 7edf3e7e 76f7aefd 850000c3 bbfbdffe
+W4'=97475640  DW5=fffffff8  K=5bf2cd1d
+framing check (t=1, reference blake3 vs hand-built parent): 20/20
+elapsed 0.3s

@@ -1,0 +1,58 @@
+{
+ "schema_version": 3,
+ "submission_state": "ready",
+ "target_profile": "poseidon-orchard-r2-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 2,
+ "claim": {
+  "time_log2": 30.133,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 25.287,
+  "preprocessing_log2": 11.327,
+  "success_probability": 0.0,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r2-prefix-v1 only (two partial rounds 4-5 plus the eight fixed full rounds); the construction relies on the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "The run is probabilistic: at most 4 independent centres on line 0; the claimed success probability is for the whole run, with the implemented halts of proof.md section 4 counted as failures."
+ ],
+ "baseline_improved": "poseidon-orchard-r2-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H1-per-line-success-rate",
+   "role": "score-critical",
+   "statement": "For each line j used by the run, one centre c uniform in [0, 2^254) ends with a verified output without a halt with probability at least L_j, where L_j is the Wilson lower limit (z = 2.576) of the measured success fraction of the program on that line; the centres of a run are independent. The smallest limit is 0.0000, so a run of 4 centres succeeds with probability at least 0.0000 (claimed 0.00).",
+   "scope": "The program of proof.md section 4 at the selected target, centres on line 0, algorithmic random words modelled as independent uniform; every halt of the program active in every counted execution.",
+   "extrapolation": "From the per-line executions of proof.md section 8 to the true per-line success probability, by the stated confidence limit only. No model of the number of roots of the odd-part polynomial is used.",
+   "evidence_ids": [
+    "proof:198-219"
+   ],
+   "limitations": "A statistical limit, not a proof: each line's limit holds with confidence about 99.5 percent, the samples come from a deterministic generator, and the sample sizes are small (about 20 executions per line); the certificates show only that found roots yield collisions and say nothing about their frequency."
+  },
+  {
+   "id": "H2-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 are the totals of an instrumented execution of the program whose complete source is in proof.md section 10: 1 per field operation, 1 per element load or store, every executed integer, comparison, branch, shift and address operation charged where it occurs, 258 per reduced permutation evaluation of stage B, and 16-element register blocks as the only register assumption.",
+   "scope": "All stages of the program of proof.md section 4 at the target dimensions (m = 195312, N = 393216, N' = 196608, H = 196608).",
+   "extrapolation": "None beyond the executed dimensions; the worst case for 4 centres is formed from the measured data-independent stages and the halt budgets of the data-dependent stages.",
+   "evidence_ids": [
+    "proof:83-94",
+    "proof:133-174"
+   ],
+   "limitations": "Word-level costs outside the stated rules (cache, bandwidth) are not part of the model; the charges are written next to the statements of the source and are not an independent count of machine instructions."
+  },
+  {
+   "id": "H3-stage-budgets",
+   "role": "supporting",
+   "statement": "Stages D and E stop the program when their work exceeds the halt budgets of proof.md section 4.4 (21,108,000,000 and 187,665,120 operations); the work between two checks is bounded by 21,000,000 and 1,172,907 operations.",
+   "scope": "Stages D and E of proof.md section 4.",
+   "extrapolation": "None: the budgets are enforced by the executed program, and a halt is a failure counted in H1. The budgets are derived by running the shipped node procedures on the sizes of the normal-case recursion tree (bound_gcd.c, bound_root.c).",
+   "evidence_ids": [
+    "proof:117-127"
+   ],
+   "limitations": "The gap bound between two checks is measured on the shipped procedures at the largest node sizes with all checks active, and the factor 1.25 and the 10 percent budget margin are design choices."
+  }
+ ]
+}

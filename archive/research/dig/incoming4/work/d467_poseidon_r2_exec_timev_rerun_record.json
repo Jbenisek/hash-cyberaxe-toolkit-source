@@ -1,0 +1,22 @@
+{
+  "id": "D467-POSEIDON-R2-EXEC-TIMEV-RERUN-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 exec_r2d original executable time/RSS rerun",
+  "question": "Does a fresh one-thread run reproduce the exact executable counters, collision, and peak RSS?",
+  "labels": ["C", "D", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "One-thread run exits 0 with the deterministic centre-1 collision; total_all=49,887,124,164, units=193,360,946.4 (log2=27.5267211984), heap_peak=43,123,392 B (log2=25.3619673263), payload=37,624,352 B, wall=5:01.38. Digest matches the prior run.",
+  "source": "our workflow: D467 one-thread /usr/bin/time -v rerun of checked-in exec_r2d/single",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/D467_exec_single_timev_rerun.txt; research/poseidon/orchard/exec_r2d/exec_run.txt; research/poseidon/orchard/exec_r2d/logs/time_v.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Reproducibility only. D462 half-table variant remains unbuilt; revised register/spill charge, full-attack KAT, and peak are not closed. No package/stage/filing/submission.",
+  "peak_mem": "43,123,392 B maximum RSS; PEAKLIVE payload 37,624,352 B plus 704 B headers",
+  "held_fixed": "existing exec_r2d source and original executable, centre sequence c=1, one thread",
+  "reopen_if": "D462 half-table or other alternative variant is rebuilt and requires an independent full-run charge",
+  "supersedes": ["D456-POSEIDON-R2-MACHINE-BOUNDARIES-20261014"]
+}

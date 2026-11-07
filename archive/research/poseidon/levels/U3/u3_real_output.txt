@@ -1,0 +1,53 @@
+== Q1 X5 exact on 1000 inputs ==
+X5 direct: mismatches 0 /1000 ; carried-constant single round mismatches 0 /1000
+carried constants full pipeline r=1: mismatches 0/1000
+carried constants full pipeline r=2: mismatches 0/1000
+
+== Q6 effective carried constants ==
+r=1
+  R4 lane-0 const original 0x1cbaf2b371dac6a81d0453416d3e235cb8d9e2d4f314f46f6198785f0cd6b9af ; effective 0x1cbaf2b371dac6a81d0453416d3e235cb8d9e2d4f314f46f6198785f0cd6b9af ; lanes1,2 original (0x1d5b2777692c205b0e6c49d061b6b5f4293c4ab038fdbbdc343e07610f3fede5, 0x2e9bdbba3dd34bffaa30535bdd749a7e06a9adb0c1e6f962f60e971b8d73b04f) -> 0 (carried)
+  R60 original lane0..2: 0x1f697cac4d07feb710f1cc6df8b4bcd760414abe362d01c977c5b024848371ae 0x267a750fe5d7cfbc26e6c851fbd572a63145c478063109d6786add244aa0ef29 0xc91feab4a43193a678c9996d9a472c8af285fa82ce4fae5180e2b4d3e756f65
+  R60 effective lane0..2: 0x2b6546a276988b200287bdc6e5eb62cca85c9b200e5e53ab30481739aac76811 0xa57eba61a1e654396f0dc000b4c8b39876f172ffd961a43a85bfd6d8ce968f9 0x9659017378a38081689ef91f63e8d504fe259cd7f4629b17e308ffb2d360161
+  carry into R60 (= c60eff - c60): 0xbfbc9f629908c68f195f158ed36a5f5481b5061d83151e1b88267152643f663 0x23dd769634469587700a13ae0f771893786febb400b20988c91e5136424879d1 0x3cd3916bed471ecdaefd55fb1c9a1a87c30093215bae27e7ff4f959aeec091fd
+   R60 eff lane 0: bits 254, quad-residue False, in{0,+-1,+-i}? False
+   R60 eff lane 1: bits 252, quad-residue False, in{0,+-1,+-i}? False
+   R60 eff lane 2: bits 252, quad-residue False, in{0,+-1,+-i}? False
+r=2
+  R4 lane-0 const original 0x1cbaf2b371dac6a81d0453416d3e235cb8d9e2d4f314f46f6198785f0cd6b9af ; effective 0x1cbaf2b371dac6a81d0453416d3e235cb8d9e2d4f314f46f6198785f0cd6b9af ; lanes1,2 original (0x1d5b2777692c205b0e6c49d061b6b5f4293c4ab038fdbbdc343e07610f3fede5, 0x2e9bdbba3dd34bffaa30535bdd749a7e06a9adb0c1e6f962f60e971b8d73b04f) -> 0 (carried)
+  R5 lane-0 const original 0x2de11886b18011ca8bd5bae36969299fde40fbe26d047b05035a13661f22418b ; effective 0x39dce27cdb109e337d6bac3c569fcf95265c4c444535cce6bbdc7a7b456637ee ; lanes1,2 original (0x2e07de1780b8a70d0d5b4a3f1841dcd82ab9395c449be947bc998884ba96a721, 0xf69f1854d20ca0cbbdb63dbd52dad16250440a99d6b8af3825e4c2bb74925ca) -> 0 (carried)
+  R60 original lane0..2: 0x1f697cac4d07feb710f1cc6df8b4bcd760414abe362d01c977c5b024848371ae 0x267a750fe5d7cfbc26e6c851fbd572a63145c478063109d6786add244aa0ef29 0xc91feab4a43193a678c9996d9a472c8af285fa82ce4fae5180e2b4d3e756f65
+  R60 effective lane0..2: 0x316d25f0263092263d1c9e04071a611cddccf0d56b607d929cccd2d4284a4d0e 0x2c284cc1f8f406ab208b1212f8cbaaeff069dff93101cfa5ea00fd7b10b54c83 0x36c5e7535db072e176f482f4fd58ed8ec38c57cb53d205adb1c12a242ec26831
+  carry into R60 (= c60eff - c60): 0x1203a943d928936f2c2ad1960e65a4457d8ba61735337bc9250722afa3c6db60 0x5add7b2131c36eef9a449c0fcf63849bf241b812ad0c5cf71962056c6145d5a 0x2a33e8a8136d59a70f67e95e23b47ac61463f82326ed0ac899b2fed6f04cf8cc
+   R60 eff lane 0: bits 254, quad-residue False, in{0,+-1,+-i}? False
+   R60 eff lane 1: bits 254, quad-residue True, in{0,+-1,+-i}? False
+   R60 eff lane 2: bits 254, quad-residue False, in{0,+-1,+-i}? False
+R5 lane0 extra from carry = M01*c41+M02*c42 = 0xbfbc9f629908c68f195f158ed36a5f5481b5061d83151e1b88267152643f663 ; R5 lane1,2 extra = 0x23dd769634469587700a13ae0f771893786febb400b20988c91e5136424879d1 0x3cd3916bed471ecdaefd55fb1c9a1a87c30093215bae27e7ff4f959aeec091fd
+R5 effective lane0 const = c50 + that = 0x39dce27cdb109e337d6bac3c569fcf95265c4c444535cce6bbdc7a7b456637ee (bits 254)
+
+== Q2/Q4 difference spaces ==
+trail vector r=2: (0, M02, -M01) = ['0x0', '0x7c045d5f5e9e5a6d803952bbb364fdfa0a3b71a5fb1573519d1cf25d8e8345d', '0xe6e99d71a75a544d6c0f0f2779386abfe394e7f49d9a1e50a62db56166954a3']
+r=1: 200 hand-built pairs with d0=0 pushed through R4: output diff == M(0,d1,d2) mismatches 0
+r=2: 200 pairs along trail through R4,R5: failures 0 (lane-0 diff after R4 = 0, R5 w equal, diff after R5 = M(0,e1,e2))
+r=2 negative control: generic d0=0 (not on trail line): lane0 equal after R4 in 0 /200
+negative control: random d: lane0 equal after R4 in 0 /200
+r=2 trail: d=(0,M02,-M01); M d = ['0x0', '0x1b1c7e8f4e01c987011af7a328c3aeb466d5b810b3849e30c251c22a2773a5fc', '0x14e50e88550bc9c3846eb9c41c765ed1462766c0d778b7d677b1f997ee84d578']  (lane0 should be 0: True )
+  M^2 d (diff after R5 for unit t) = ['0x3141e9b5462006d0906f3d691c47ce59002af987df7adb19c151022db9175747', '0x1978ec4716cec311ad9acbc6bba0b7615ea4860a9a776948c171e57fb91d120e', '0x167d4c4f956a21d64338f74067d8926fd9f9cbba50d43feefa2efa1ce737389f']  lane0 nonzero: True
+r=1: rank of [e0; e0 M; ...; e0 M^(r-1)] = 1 -> surviving trail direction dimension 2
+r=2: rank of [e0; e0 M; ...; e0 M^(r-1)] = 2 -> surviving trail direction dimension 1
+r=3: rank of [e0; e0 M; ...; e0 M^(r-1)] = 3 -> surviving trail direction dimension 0
+r=4: rank of [e0; e0 M; ...; e0 M^(r-1)] = 3 -> surviving trail direction dimension 0
+r=5: rank of [e0; e0 M; ...; e0 M^(r-1)] = 3 -> surviving trail direction dimension 0
+det[e0;e0M;e0M^2] = 0xebe164ab9dff92f6f90c296e3b831a7221b9f7429d21e01d7dc2ebf46e8a8ba
+
+== Q3 degrees of lane 0 after R3 / R4 / R5 on lines (finite differences) ==
+line 0
+  lane0 after R3: Delta^625 != 0: True ; Delta^626 == 0: True ; Delta^627 == 0: True  => degree exactly 625
+  lane1 after R3: Delta^625 != 0: True ; Delta^626 == 0: True ; Delta^627 == 0: True  => degree exactly 625
+  lane0 after R4: Delta^3125 != 0: True ; Delta^3126 == 0: True ; Delta^3127 == 0: True  => degree exactly 3125
+  lane0 after R5: Delta^15625 != 0: True ; Delta^15626 == 0: True ; Delta^15627 == 0: True  => degree exactly 15625
+line 1
+  lane0 after R3: Delta^625 != 0: True ; Delta^626 == 0: True ; Delta^627 == 0: True  => degree exactly 625
+  lane1 after R3: Delta^625 != 0: True ; Delta^626 == 0: True ; Delta^627 == 0: True  => degree exactly 625
+  lane0 after R4: Delta^3125 != 0: True ; Delta^3126 == 0: True ; Delta^3127 == 0: True  => degree exactly 3125
+  lane0 after R3, line in (A,B) coords: Delta^125 != 0: True ; Delta^126 == 0: True ; Delta^127 == 0: True  => degree exactly 125
+done real

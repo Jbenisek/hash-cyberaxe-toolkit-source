@@ -1,0 +1,1 @@
+PROJ src=chain k=3 name=W3 bits=32 observed=523704 expected=524288.0 ratio=0.9989 z=-0.81

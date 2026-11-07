@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t33 (DOOR)",
+ "question": "D1: symmetries (i-symmetry, mu4 scaling, Frobenius twist of M), r=2",
+ "labels": [
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "p mod 4 = 1 so i exists and S(ix) = i S(x); the symmetry needs all round constants zero: 0 of 30 constants in the r=2 schedule are zero, and the capacity 2^65 is not scaled: broken. Frobenius twist: Aut(F_p) is trivial, so the twist of M is M itself and gives nothing over the prime field.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testA.json; research/poseidon/levels/LEVELS.md (T33)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|DOOR.t33|DOOR|D1. Zero-constant count by me on the pinned constants; Frobenius statement is field theory.",
+ "held_fixed": "r=2 target, 4 full + 2 partial + 4 full rounds, Pallas MDS and constants pinned; toy tests use random Cauchy MDS and random constants over F_103",
+ "reopen_if": "a field automorphism or a scaling that fixes constants and capacity is found"
+}

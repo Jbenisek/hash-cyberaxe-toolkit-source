@@ -1,0 +1,17 @@
+{
+ "schema_version": 1,
+ "experiments": [
+  {
+   "id": "lowbits-birthday",
+   "kind": "python-message-pairs-v1",
+   "scope": "Reduced event on the selected Orchard Poseidon target at its own round count: the first 14 bits of the big-endian reading of the 32-byte digest agree for two distinct canonical messages. One birthday search per organizer trial over fresh inputs from the trial seed. No full collision is expected or claimed.",
+   "hypothesis": "A search of at most 1200 fresh inputs returns a pair whose digests agree on those 14 bits in every trial, as a random 14-bit function would (about 160 inputs on average). Checks the digest of the selected target at one reduced width; it says nothing about the full-width map, the cost or the success probability.",
+   "program": "experiments/exp_lowbits.py",
+   "event": {
+    "kind": "digest-xor-mask",
+    "mask_hex": "fffc000000000000000000000000000000000000000000000000000000000000",
+    "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  }
+ ]
+}

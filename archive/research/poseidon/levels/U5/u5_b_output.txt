@@ -1,0 +1,61 @@
+=== Q4 Cauchy relations ===
+  x1-x0 0x3b959c880a97b198c023dd469213c42fe7143ea2a76535542eede466de4024be signed bits 251 legendre -1
+  x2-x0 0x3b3028510f30238929d1ab69b00fed3d07cc86bdc2ad684504ec9b3f44bca846 signed bits 251 legendre 1
+  x2-x1 0x3f9a8bc9049871f069adce231dfc290d42fee11724952c0c6f2be7c5667c8389 signed bits 247 legendre 1
+  y1-y0 0x11ef1db71d46cf61d948ae0876dad760f927452585f5926f31d34da2607e73e5 signed bits 253 legendre -1
+  y2-y0 0x88c361d801ac5360d2f79078d3b52ee4eb5d781b61ee518638ee49457b242a7 signed bits 252 legendre -1
+  y2-y1 0x369d186662d3f5d433e6caff16607b8d77d52b5839764bc4cae8c7def733cec3 signed bits 252 legendre 1
+pairs of Cauchy quantities with small-rational ratio u/v (|u|,v<=60): [('x0+y0', 'y0', 1, 1), ('x0+y1', 'y1', 1, 1), ('x0+y2', 'y2', 1, 1), ('x1', 'x1-x0', 1, 1), ('x2', 'x2-x0', 1, 1)]
+small integer linear relations (|c|<=4) among x1-x0,x2-x0,y1-y0,y2-y0: []
+(x1-x0)(y2-y0)-(x2-x0)(y1-y0) = 0x2139942bdef5d834366be3c5169db2c1e11a8bb16b9dd7e5fdf6ab61e227eb01
+round constants that are small-rational multiples (|u|,v<=12) of a Cauchy quantity: []
+round constants equal to +-Cauchy quantity: []
+Legendre x-diffs: [-1, 1, 1] y-diffs: [-1, -1, 1]
+Legendre M: [[-1, -1, 1], [-1, 1, 1], [1, -1, 1]]
+Cauchy det formula == det M: True
+closed Cauchy inverse formula (M^-1)_{ji} matches: True
+M^-1 Legendre: [[1, -1, -1], [-1, -1, -1], [1, -1, 1]]
+M^-1 Cauchy-like (1/entries second difference zero): False
+Y M^-1 + M^-1 X == -(M^-1 1)(1^T M^-1): False
+=== Q5/Q6 planes ===
+normal n = row2 of M^-1: ['0x2fcbba6f9159a219723a63a0c09dab26aef9112e952fdbb52a418d8d73a7c908', '0x1ec7372574f3851bb4ddd4b4d6452256c5e4960d7424cd3776efab42d4fba90b', '0xd0c2efd6472f12a3c26fa4b7d25b1e487a7435d30f8be81adc8933c6f3c72ee']
+n . col_j of M: [0, 0, 1]
+X6 trail d=(0,M02,-M01); (M d)_0 = 0  (Md)_1,(Md)_2 nonzero: True True  n.d = 0x2f5958a117f69f870e149744fedf1b39013334e099b159f84960dcf037cf0e1f
+L_i = {v0=0} ^ {(Mv)_i=0} direction (0,M_i2,-M_i1); L_0 is the X6 vector
+  slope relation: -M_i1/M_i2 == -(x_i+y_2)/(x_i+y_1)? True
+  n . L_i (is L_i in the P0 direction plane): ['0x2f5958a117f69f870e149744fedf1b39013334e099b159f84960dcf037cf0e1f', '0x1dd541516dba086658e4993c66fe0b69325892c01b15e0308a90d3372b7b44aa', '0xc5e6997362b60ca116ab9380d6687fe8ceaaf83d9a6fbc70376b51f69f780f5']
+  atlas line u = {v0=0}^P0dir: n.u = 0
+   row0.u = 0x10a6a75ee8096078f1eb68bb0120e4c72113641b6f9b9f234fcc53fcc830f1e2
+   row1.u = 0x222abeae9245f799a71b66c39901f496efee063bee3718eb0e9c5db5d484bb57
+   row2.u = 0x33a19668c9d49f35ee9546c7f2997801955be9782fa5fd5495b67bcd96087f0c
+  line P_0^P0dir = M2[0][1]*col0 - M2[0][0]*col1 = ['0x1c86fea22cfc15f540d2b304684331d61252b64f1ba1830e65f3158c82c6e638', '0x35fb82f6786c37fdd689d781e1d23bdaee0c9711900858c233613c6df9d11bd2', '0x2cebae2a57199d865230c87ad49a6f20939df39f8da65bef6f38af6ac2f28f84']
+  line P_1^P0dir = M2[1][1]*col0 - M2[1][0]*col1 = ['0x1ff712832c3470c1bffac21df5b89bae91e25e917c1ca1260ba307c3a5fe71f', '0xa2e4a7dc095559b8a0e18a57b33701cf2de8ee9edf855fdb275b0f232b88c42', '0x31a822a16cb65ef8c5696a560ea5445cdae9b2d0b20c4e3a152e02a04dc09b9b']
+  line P_2^P0dir = M2[2][1]*col0 - M2[2][0]*col1 = ['0x1626024e881db72e18f9dd3773d4e3de9bb9a5768bfedbfd95e3e272f76ae0d0', '0x3633961d59a0e2b677b748da5cbbf49f35215d1f5a36f1a1ff69ce414399552c', '0x6fc6915495f9702f529d6b2f36b8b1c24af85b5bf8100d02168fd7c8041da59']
+  P_0^P_1 direction = cross(row0,row1) = const * column 2 of M^-1: ratios equal: True  const= 0x9729bde00d1e0d80a9ebc3ef5c053f8664f4b7b04c9a6fb6eef310a2567ad8f  det M = 0x9729bde00d1e0d80a9ebc3ef5c053f8664f4b7b04c9a6fb6eef310a2567ad8f
+  P_0^P_2 direction = cross(row0,row2) = const * column 1 of M^-1: ratios equal: True  const= 0x368d6421ff2e1f27f56143c10a3fac07bbf74d81048352202a3dffe2da985272  det M = 0x9729bde00d1e0d80a9ebc3ef5c053f8664f4b7b04c9a6fb6eef310a2567ad8f
+  P_1^P_2 direction = cross(row1,row2) = const * column 0 of M^-1: ratios equal: True  const= 0x9729bde00d1e0d80a9ebc3ef5c053f8664f4b7b04c9a6fb6eef310a2567ad8f  det M = 0x9729bde00d1e0d80a9ebc3ef5c053f8664f4b7b04c9a6fb6eef310a2567ad8f
+  (so the 3 pairwise plane-intersection lines are the columns of M^-1; the 3 planes Pi={v:(Mv)_i=0} are M^-1 e_i^perp)
+=== Q7 Krylov / F_{p^3} picture ===
+phi(e0) = ['0x1', '0x0', '0x0']
+phi(e1) = ['0xe1f22a3ddbcfe1ed6acef0045c4931336f67b6615c0ffffc5adccf0ac25e22b', '0x3807885f8731dfd63cdfea415a45f9579e52dadcdc300b0bb56edfa6425c5929', '0x2d65768b178eab24b956f8144db7693ee3de4125330a81673a13d05298af373c']
+phi(e2) = ['0x3fb1dcbb95c2b8565043bbb4a61892e4bec3a507fc6df0f63bea93b02547b229', '0x38de227be3e71622fba4c22d9659882c80305a5941d239b68484e5a13366c1df', '0x14d226f98ef0619481e51bba122915b3a4813a6d0bf7fc690999b182d0a10525']
+beta_lane0 = ['0x32fb022711d3b01e6cacd5478840551d690edd4bf7642d8a6405aa6cf5bf3cd0', '0x328969acf407eb9067fe7e72387f1184962a26804ad8c80fb378efd17730ed2d', '0x315240b9d40045d5df88bc40f558ee58c7a4dbcdc4939ca2765c0823e08d1c7e']
+beta_lane1 = ['0x20ab9b0d69b99f1d4f3de38cbfb48ca6738049adc17061ee3dfc94f2a0ba4695', '0xc166f720f73cf0e5d4e7fa43b1564bebfd38a37e2713b3a55bb2eeb08c98370', '0x180f57b4e380d315f98825d66247967fca7989fed6989b361dc74721e9a54928']
+beta_lane2 = ['0x208479ad5b9dabf98add099b219ab89b3280f70cd51a2f8ceb5816473f498854', '0x984e8695e518c1b8ff616752e79afc154cf50d5bf9b4492a65429cebd080eff', '0x353063601b3687823fa16c7913313200cdb8ca388a83b012a7ba19eba234ef0e']
+verified: phi(Mv)=alpha*phi(v); v_i = Tr(beta_i*phi(v))
+output functional beta_out = alpha*beta_0 = ['0x30cdf13d5f2c6a9b2c205ebcaf73af1b6d819700012bb29a11bd8f1ca8968c3e', '0x20898edcac28a9f62b6eaccf5ce3775cc63b6a052d244b4681d5dfaaac5606b4', '0x1ca3d2a3d4a9cd73db79e60b3446f86688287a86c1337a748759c3688963b296']
+plane-normal functional beta_n (n.v = Tr(beta_n phi(v))) = ['0x2d97d8cefed1e8cf48b79a743491e0f8cf46735b5459458aa1de014eb799983a', '0x117e858cfdb761358f743273e23a19c71590106f025208edf7e68d9e8ad8bc94', '0x2ff706e77a3447b55cfedb72840255b85687311bcbe67ec62a0fd4d0fbd770ed']
+  beta_n vs alpha^-1 * beta_2 (since n=row2 of M^-1 => n.v = (M^-1 v)_2): True
+  phi(e1): norm 0x12d41bb8c9afd14b9a436af0e61933dfb23826a6bd15ba537193e82c96d32bfa trace 0x1e6c71c19ca2c34e2dc07db6b3d3efab54c98e1a27cd0551769eab581901f15 leg(norm) -1 | alpha^2-coeff zero: False; inverse alpha^2-coeff zero: False
+  phi(e2): norm 0x1d2c4f94b16d3b2fc2ee744deea74a750ac23d1d98aebcdb586a88596e83e1a6 trace 0x3bdf49bdfd8b3f62d0020c9e6a2e3c060ecdc07eb4a69c3ea7749282472ddbfc leg(norm) -1 | alpha^2-coeff zero: False; inverse alpha^2-coeff zero: False
+  beta0: norm 0xdcd35e25fc4c59e4441b0b327ffd7b202f9e96f7af5657632bbfb295ae5ed1c trace 0x1 leg(norm) -1 | alpha^2-coeff zero: False; inverse alpha^2-coeff zero: False
+  beta1: norm 0x10b110b869a210fe19b3553b2d5108780bed81070a47eabcc0452462f929b121 trace 0x0 leg(norm) 1 | alpha^2-coeff zero: False; inverse alpha^2-coeff zero: False
+  beta2: norm 0x2bc3d4b0cf95d86249aafe2fd7cc8715e3f748dd85329cb2a5bf43bbdf8d3441 trace 0x0 leg(norm) -1 | alpha^2-coeff zero: False; inverse alpha^2-coeff zero: False
+  beta_n: norm 0x3ea36a72b951fd1e7fe620851c24ba1ee3af60f73abf9722f13f27b96dde2fc4 trace 0x2fcbba6f9159a219723a63a0c09dab26aef9112e952fdbb52a418d8d73a7c908 leg(norm) 1 | alpha^2-coeff zero: False; inverse alpha^2-coeff zero: False
+  beta_out: norm 0xa06e3f7ce0897a057603fbe8c257d5fbaceb898f6b6acd05a5abc414fb9c081 trace 0xab5e5b874a68de7b3d59fbdc8c9ead497d7a0ab23850b56323f2486d7e11b63 leg(norm) 1 | alpha^2-coeff zero: False; inverse alpha^2-coeff zero: False
+  beta1/beta0 = ['0x13fcd0bb1f296b96314430dad70028492574b79e335258ea94948515f5b462ce', '0x1c57a72c65b4516706ea33281a973123af20ac2a85192613df50b84876b88d01', '0x7b625ff0204eb5db97bae8287af8c99b68f77178738847c7bd09293ad29c5c2']  norm 0x21ad5ba28814a3f1e30d63968bc42438d6b45f2e5d76bff13bb26b495cc23f0a
+  beta2/beta0 = ['0x26a8517714ae0c7390ba633559f707f8123bed6111794d2a7b91bdcdc9d926c2', '0x1b48af238e57b477f6351e2043ea08ec7ad343cffafb058f9281f1696875e2b9', '0x1baff647571a2e4374a7f7c13cee35a0dee7988894778c29ce687f23563e91d9']  norm 0x56a768a0eb33df2452825189a3d3261c2ec200b08482443a16915765b40f4a6
+  beta2/beta1 = ['0x2ba08725168583cf002a10f86d2efbc48d5ac9169a747e5da01175095cbab0e0', '0x3470ccea903d6b3ba196932ef2b9f38cb6b2ac334af16a7b5445e3736e3be087', '0xaa346a22cb29c1bb4dd609010a6f4a8cbf0549cc6d5c05307af49aef16585f4']  norm 0x215594b358845d5327c236ced7785a6f07c72cef677f30e8643b7669aa012415
+  Tr(beta_i phi(e_j)) matrix: [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+=== eigenvector vs Cauchy ===
+eigenvector coordinates v_i = c/(x_i + t) for a single t in F_{p^3}? False

@@ -1,0 +1,1 @@
+(bit8, alive14 count of 32 windows, alive16 count) -> number of alive 9-bit prefixes: {(0, 16, 8): 104, (1, 18, 9): 104}

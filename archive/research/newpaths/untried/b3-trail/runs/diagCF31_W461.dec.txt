@@ -1,0 +1,28 @@
+solver: s SATISFIABLE
+message differences:
+  dm0  = 80000000
+  dm1  = 80000000
+  dm2  = 00000000
+  dm3  = 00000000
+  dm4  = 00000000
+  dm5  = 00000000
+  dm6  = 00000001
+  dm7  = 00000001
+  dm8  = 00000000
+  dm9  = 00000000
+  dm10 = 00000000
+  dm11 = 00000000
+  dm12 = 00000000
+  dm13 = 00000000
+  dm14 = 00000000
+  dm15 = 00000000
+per G call (inputs a b c d x y -> outputs a2 b2 c2 d2), LM weight:
+  r1d0: in 00000001 00000000 11810100 00000000 80000000 00000000 -> out ecdfc1be 0c7fc181 8030010b 8dd95488   w=159
+  r1d1: in 00000000 20230202 00000000 01000000 00000000 00000000 -> out c5ea2ade cb129e4c 139e5d49 03fa1474   w=121
+  r1d2: in 80000011 00000000 01000000 00000000 00000000 00000000 -> out 8030010b 8dd95488 ecdfc1be 0c7fc181   w=75
+  r1d3: in 00000000 00020000 00000000 11800100 00000000 00000000 -> out 139e5d49 03fa1474 c5ea2ade cb129e4c   w=78
+final state diff: ecdfc1be c5ea2ade 8030010b 139e5d49 03fa1474 0c7fc181 cb129e4c 8dd95488 ecdfc1be c5ea2ade 8030010b 139e5d49 03fa1474 0c7fc181 cb129e4c 8dd95488
+collision condition (dv[i]==dv[i+8]): True
+invalid transitions: 0
+TOTAL LM WEIGHT (recomputed): 433
+COUNTED WEIGHT (all): 433

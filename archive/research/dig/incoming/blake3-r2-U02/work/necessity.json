@@ -1,0 +1,60 @@
+{
+ "record": {
+  "d2_equal": true,
+  "b2_equal": true,
+  "digest_words_always_equal": [
+   0,
+   2,
+   5,
+   7
+  ],
+  "digest_words_never_equal": [
+   1,
+   3,
+   4,
+   6
+  ]
+ },
+ "ablation": {
+  "a1": {
+   "quarter": "q1",
+   "single_bit_flips_keeping_d2_equal": 1,
+   "keeping_b2_equal": 0,
+   "keeping_both": 0,
+   "keeping_digest_0257": 0,
+   "random_replacements_keeping_both_of_2000": 0
+  },
+  "d1": {
+   "quarter": "q1",
+   "single_bit_flips_keeping_d2_equal": 4,
+   "keeping_b2_equal": 0,
+   "keeping_both": 0,
+   "keeping_digest_0257": 0,
+   "random_replacements_keeping_both_of_2000": 0
+  },
+  "c1": {
+   "quarter": "q2",
+   "single_bit_flips_keeping_d2_equal": 3,
+   "keeping_b2_equal": 1,
+   "keeping_both": 1,
+   "keeping_digest_0257": 1,
+   "random_replacements_keeping_both_of_2000": 0
+  },
+  "b1": {
+   "quarter": "q2",
+   "single_bit_flips_keeping_d2_equal": 25,
+   "keeping_b2_equal": 2,
+   "keeping_both": 1,
+   "keeping_digest_0257": 1,
+   "random_replacements_keeping_both_of_2000": 0
+  },
+  "w13": {
+   "quarter": "q3",
+   "single_bit_flips_keeping_d2_equal": 4,
+   "keeping_b2_equal": 4,
+   "keeping_both": 0,
+   "keeping_digest_0257": 0,
+   "random_replacements_keeping_both_of_2000": 0
+  }
+ }
+}

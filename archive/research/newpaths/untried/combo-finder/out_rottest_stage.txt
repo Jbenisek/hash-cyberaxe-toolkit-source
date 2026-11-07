@@ -1,0 +1,10 @@
+Sat Oct 10 02:24:09 MDT 2026
+rottest R=8 forward: bad=0
+rottest R=16 forward: bad=0
+rottest R=8 exact: dp=98304 brute=98304 OK
+rottest R=8 exact: dp=294912 brute=294912 OK
+rottest R=16 exact: dp=24576 brute=24576 OK
+rottest R=16 exact: dp=12288 brute=12288 OK
+K3 real-G check: 5 solutions, 14294188032 tries, log2 rate -31.41, bad 5 (120.1 s)
+K1 real-G check: 0 solutions, 11056185344 tries, log2 rate -inf, bad 0 (120.1 s)
+Sat Oct 10 02:28:12 MDT 2026

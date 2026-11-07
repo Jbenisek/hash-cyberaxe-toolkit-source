@@ -1,0 +1,1134 @@
+{
+ "scan": {
+  "0": {
+   "hist": {
+    "0": 4294967289,
+    "1": 7
+   },
+   "sites": {
+    "0": {
+     "count": 2,
+     "first": [
+      244171820,
+      2964340370
+     ]
+    },
+    "5": {
+     "count": 2,
+     "first": [
+      3440130950,
+      3455860086
+     ]
+    },
+    "10": {
+     "count": 1,
+     "first": [
+      1823381927
+     ]
+    },
+    "12": {
+     "count": 1,
+     "first": [
+      2147976204
+     ]
+    },
+    "15": {
+     "count": 1,
+     "first": [
+      2871674345
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 244171820,
+   "col": 0,
+   "role": 0
+  },
+  "1": {
+   "hist": {
+    "0": 4294967295,
+    "1": 1
+   },
+   "sites": {
+    "0": {
+     "count": 1,
+     "first": [
+      1466361979
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 1466361979,
+   "col": 1,
+   "role": 0
+  },
+  "2": {
+   "hist": {
+    "0": 4294967292,
+    "1": 4
+   },
+   "sites": {
+    "2": {
+     "count": 1,
+     "first": [
+      1912990981
+     ]
+    },
+    "8": {
+     "count": 3,
+     "first": [
+      522044906,
+      1032019920,
+      2812624242
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 522044906,
+   "col": 2,
+   "role": 0
+  },
+  "3": {
+   "hist": {
+    "0": 4294967290,
+    "1": 6
+   },
+   "sites": {
+    "6": {
+     "count": 3,
+     "first": [
+      1442631123,
+      1768113779,
+      3363734126
+     ]
+    },
+    "8": {
+     "count": 2,
+     "first": [
+      556750874,
+      4252452977
+     ]
+    },
+    "12": {
+     "count": 1,
+     "first": [
+      2785371723
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 556750874,
+   "col": 3,
+   "role": 0
+  },
+  "4": {
+   "hist": {
+    "0": 4294967293,
+    "1": 3
+   },
+   "sites": {
+    "0": {
+     "count": 2,
+     "first": [
+      979647226,
+      2414017156
+     ]
+    },
+    "12": {
+     "count": 1,
+     "first": [
+      3721799112
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 979647226,
+   "col": 0,
+   "role": 1
+  },
+  "5": {
+   "hist": {
+    "0": 4294967290,
+    "1": 6
+   },
+   "sites": {
+    "0": {
+     "count": 2,
+     "first": [
+      1005520452,
+      2361463358
+     ]
+    },
+    "3": {
+     "count": 3,
+     "first": [
+      935502555,
+      3520168419,
+      4225419893
+     ]
+    },
+    "14": {
+     "count": 1,
+     "first": [
+      2776985263
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 935502555,
+   "col": 1,
+   "role": 1
+  },
+  "6": {
+   "hist": {
+    "0": 4294967291,
+    "1": 5
+   },
+   "sites": {
+    "2": {
+     "count": 1,
+     "first": [
+      552508721
+     ]
+    },
+    "4": {
+     "count": 2,
+     "first": [
+      1504365619,
+      2808202792
+     ]
+    },
+    "8": {
+     "count": 2,
+     "first": [
+      328677850,
+      2352529153
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 328677850,
+   "col": 2,
+   "role": 1
+  },
+  "7": {
+   "hist": {
+    "0": 4294967289,
+    "1": 7
+   },
+   "sites": {
+    "6": {
+     "count": 2,
+     "first": [
+      1461689382,
+      2134880084
+     ]
+    },
+    "8": {
+     "count": 2,
+     "first": [
+      2956031993,
+      3130184676
+     ]
+    },
+    "11": {
+     "count": 2,
+     "first": [
+      2527234651,
+      2615052565
+     ]
+    },
+    "12": {
+     "count": 1,
+     "first": [
+      25986044
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 25986044,
+   "col": 3,
+   "role": 1
+  },
+  "8": {
+   "hist": {
+    "0": 4294967291,
+    "1": 5
+   },
+   "sites": {
+    "0": {
+     "count": 1,
+     "first": [
+      632455586
+     ]
+    },
+    "5": {
+     "count": 1,
+     "first": [
+      2152118923
+     ]
+    },
+    "10": {
+     "count": 2,
+     "first": [
+      3490187643,
+      4007476170
+     ]
+    },
+    "15": {
+     "count": 1,
+     "first": [
+      168699085
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 168699085,
+   "col": 0,
+   "role": 2
+  },
+  "9": {
+   "hist": {
+    "0": 4294967290,
+    "1": 6
+   },
+   "sites": {
+    "3": {
+     "count": 2,
+     "first": [
+      986111702,
+      2621444105
+     ]
+    },
+    "4": {
+     "count": 1,
+     "first": [
+      2048050712
+     ]
+    },
+    "9": {
+     "count": 1,
+     "first": [
+      3252637209
+     ]
+    },
+    "14": {
+     "count": 2,
+     "first": [
+      72455496,
+      3356842372
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 72455496,
+   "col": 1,
+   "role": 2
+  },
+  "10": {
+   "hist": {
+    "0": 4294967291,
+    "1": 5
+   },
+   "sites": {
+    "2": {
+     "count": 1,
+     "first": [
+      1008749224
+     ]
+    },
+    "4": {
+     "count": 1,
+     "first": [
+      2478082548
+     ]
+    },
+    "7": {
+     "count": 1,
+     "first": [
+      2374311856
+     ]
+    },
+    "8": {
+     "count": 1,
+     "first": [
+      3792655446
+     ]
+    },
+    "13": {
+     "count": 1,
+     "first": [
+      3926995659
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 1008749224,
+   "col": 2,
+   "role": 2
+  },
+  "11": {
+   "hist": {
+    "0": 4294967289,
+    "1": 7
+   },
+   "sites": {
+    "1": {
+     "count": 1,
+     "first": [
+      1706364891
+     ]
+    },
+    "6": {
+     "count": 2,
+     "first": [
+      1050607710,
+      2321269914
+     ]
+    },
+    "8": {
+     "count": 1,
+     "first": [
+      767198607
+     ]
+    },
+    "11": {
+     "count": 2,
+     "first": [
+      534247269,
+      908248438
+     ]
+    },
+    "12": {
+     "count": 1,
+     "first": [
+      3208087085
+     ]
+    }
+   },
+   "best_n": 1,
+   "best_v": 534247269,
+   "col": 3,
+   "role": 2
+  }
+ },
+ "demo": {
+  "0": [
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 244171820,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   },
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 2964340370,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   },
+   {
+    "site": 5,
+    "name": "xor p12 (D1)",
+    "value": 3440130950,
+    "zero_sites": [
+     5
+    ],
+    "ops": 594
+   },
+   {
+    "site": 5,
+    "name": "xor p12 (D1)",
+    "value": 3455860086,
+    "zero_sites": [
+     5
+    ],
+    "ops": 594
+   },
+   {
+    "site": 10,
+    "name": "add p8 (D2)",
+    "value": 1823381927,
+    "zero_sites": [
+     10
+    ],
+    "ops": 594
+   },
+   {
+    "site": 12,
+    "name": "sum p3+p4 (x-add D3)",
+    "value": 2147976204,
+    "zero_sites": [
+     12
+    ],
+    "ops": 593
+   },
+   {
+    "site": 15,
+    "name": "xor p4 (D3)",
+    "value": 2871674345,
+    "zero_sites": [
+     15
+    ],
+    "ops": 594
+   }
+  ],
+  "1": [
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 1466361979,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   }
+  ],
+  "2": [
+   {
+    "site": 2,
+    "name": "add p10 (D0)",
+    "value": 1912990981,
+    "zero_sites": [
+     2
+    ],
+    "ops": 594
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 522044906,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 1032019920,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 2812624242,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   }
+  ],
+  "3": [
+   {
+    "site": 6,
+    "name": "add p11 (D1)",
+    "value": 1442631123,
+    "zero_sites": [
+     6
+    ],
+    "ops": 594
+   },
+   {
+    "site": 6,
+    "name": "add p11 (D1)",
+    "value": 1768113779,
+    "zero_sites": [
+     6
+    ],
+    "ops": 594
+   },
+   {
+    "site": 6,
+    "name": "add p11 (D1)",
+    "value": 3363734126,
+    "zero_sites": [
+     6
+    ],
+    "ops": 594
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 556750874,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 4252452977,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 12,
+    "name": "sum p3+p4 (x-add D3)",
+    "value": 2785371723,
+    "zero_sites": [
+     12
+    ],
+    "ops": 593
+   }
+  ],
+  "4": [
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 979647226,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   },
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 2414017156,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   },
+   {
+    "site": 12,
+    "name": "sum p3+p4 (x-add D3)",
+    "value": 3721799112,
+    "zero_sites": [
+     12
+    ],
+    "ops": 593
+   }
+  ],
+  "5": [
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 1005520452,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   },
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 2361463358,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   },
+   {
+    "site": 3,
+    "name": "xor p5 (D0)",
+    "value": 935502555,
+    "zero_sites": [
+     3
+    ],
+    "ops": 594
+   },
+   {
+    "site": 3,
+    "name": "xor p5 (D0)",
+    "value": 3520168419,
+    "zero_sites": [
+     3
+    ],
+    "ops": 594
+   },
+   {
+    "site": 3,
+    "name": "xor p5 (D0)",
+    "value": 4225419893,
+    "zero_sites": [
+     3
+    ],
+    "ops": 594
+   },
+   {
+    "site": 14,
+    "name": "add p9 (D3)",
+    "value": 2776985263,
+    "zero_sites": [
+     14
+    ],
+    "ops": 594
+   }
+  ],
+  "6": [
+   {
+    "site": 2,
+    "name": "add p10 (D0)",
+    "value": 552508721,
+    "zero_sites": [
+     2
+    ],
+    "ops": 594
+   },
+   {
+    "site": 4,
+    "name": "sum p1+p6 (x-add D1)",
+    "value": 1504365619,
+    "zero_sites": [
+     4
+    ],
+    "ops": 593
+   },
+   {
+    "site": 4,
+    "name": "sum p1+p6 (x-add D1)",
+    "value": 2808202792,
+    "zero_sites": [
+     4
+    ],
+    "ops": 593
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 328677850,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 2352529153,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   }
+  ],
+  "7": [
+   {
+    "site": 6,
+    "name": "add p11 (D1)",
+    "value": 1461689382,
+    "zero_sites": [
+     6
+    ],
+    "ops": 594
+   },
+   {
+    "site": 6,
+    "name": "add p11 (D1)",
+    "value": 2134880084,
+    "zero_sites": [
+     6
+    ],
+    "ops": 594
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 2956031993,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 3130184676,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 11,
+    "name": "xor p7 (D2)",
+    "value": 2527234651,
+    "zero_sites": [
+     11
+    ],
+    "ops": 594
+   },
+   {
+    "site": 11,
+    "name": "xor p7 (D2)",
+    "value": 2615052565,
+    "zero_sites": [
+     11
+    ],
+    "ops": 594
+   },
+   {
+    "site": 12,
+    "name": "sum p3+p4 (x-add D3)",
+    "value": 25986044,
+    "zero_sites": [
+     12
+    ],
+    "ops": 593
+   }
+  ],
+  "8": [
+   {
+    "site": 0,
+    "name": "sum p0+p5 (x-add D0)",
+    "value": 632455586,
+    "zero_sites": [
+     0
+    ],
+    "ops": 594
+   },
+   {
+    "site": 5,
+    "name": "xor p12 (D1)",
+    "value": 2152118923,
+    "zero_sites": [
+     5
+    ],
+    "ops": 594
+   },
+   {
+    "site": 10,
+    "name": "add p8 (D2)",
+    "value": 3490187643,
+    "zero_sites": [
+     10
+    ],
+    "ops": 594
+   },
+   {
+    "site": 10,
+    "name": "add p8 (D2)",
+    "value": 4007476170,
+    "zero_sites": [
+     10
+    ],
+    "ops": 594
+   },
+   {
+    "site": 15,
+    "name": "xor p4 (D3)",
+    "value": 168699085,
+    "zero_sites": [
+     15
+    ],
+    "ops": 594
+   }
+  ],
+  "9": [
+   {
+    "site": 3,
+    "name": "xor p5 (D0)",
+    "value": 986111702,
+    "zero_sites": [
+     3
+    ],
+    "ops": 594
+   },
+   {
+    "site": 3,
+    "name": "xor p5 (D0)",
+    "value": 2621444105,
+    "zero_sites": [
+     3
+    ],
+    "ops": 594
+   },
+   {
+    "site": 4,
+    "name": "sum p1+p6 (x-add D1)",
+    "value": 2048050712,
+    "zero_sites": [
+     4
+    ],
+    "ops": 593
+   },
+   {
+    "site": 9,
+    "name": "xor p13 (D2)",
+    "value": 3252637209,
+    "zero_sites": [
+     9
+    ],
+    "ops": 594
+   },
+   {
+    "site": 14,
+    "name": "add p9 (D3)",
+    "value": 72455496,
+    "zero_sites": [
+     14
+    ],
+    "ops": 594
+   },
+   {
+    "site": 14,
+    "name": "add p9 (D3)",
+    "value": 3356842372,
+    "zero_sites": [
+     14
+    ],
+    "ops": 594
+   }
+  ],
+  "10": [
+   {
+    "site": 2,
+    "name": "add p10 (D0)",
+    "value": 1008749224,
+    "zero_sites": [
+     2
+    ],
+    "ops": 594
+   },
+   {
+    "site": 4,
+    "name": "sum p1+p6 (x-add D1)",
+    "value": 2478082548,
+    "zero_sites": [
+     4
+    ],
+    "ops": 593
+   },
+   {
+    "site": 7,
+    "name": "xor p6 (D1)",
+    "value": 2374311856,
+    "zero_sites": [
+     7
+    ],
+    "ops": 594
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 3792655446,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 13,
+    "name": "xor p14 (D3)",
+    "value": 3926995659,
+    "zero_sites": [
+     13
+    ],
+    "ops": 594
+   }
+  ],
+  "11": [
+   {
+    "site": 1,
+    "name": "xor p15 (D0)",
+    "value": 1706364891,
+    "zero_sites": [
+     1
+    ],
+    "ops": 594
+   },
+   {
+    "site": 6,
+    "name": "add p11 (D1)",
+    "value": 1050607710,
+    "zero_sites": [
+     6
+    ],
+    "ops": 594
+   },
+   {
+    "site": 6,
+    "name": "add p11 (D1)",
+    "value": 2321269914,
+    "zero_sites": [
+     6
+    ],
+    "ops": 594
+   },
+   {
+    "site": 8,
+    "name": "sum p2+p7 (x-add D2)",
+    "value": 767198607,
+    "zero_sites": [
+     8
+    ],
+    "ops": 593
+   },
+   {
+    "site": 11,
+    "name": "xor p7 (D2)",
+    "value": 534247269,
+    "zero_sites": [
+     11
+    ],
+    "ops": 594
+   },
+   {
+    "site": 11,
+    "name": "xor p7 (D2)",
+    "value": 908248438,
+    "zero_sites": [
+     11
+    ],
+    "ops": 594
+   },
+   {
+    "site": 12,
+    "name": "sum p3+p4 (x-add D3)",
+    "value": 3208087085,
+    "zero_sites": [
+     12
+    ],
+    "ops": 593
+   }
+  ]
+ },
+ "combos": {
+  "1": {
+   "ops": 593,
+   "additive_estimate": 593,
+   "pick": [
+    [
+     0,
+     12,
+     "0x8007840c"
+    ]
+   ],
+   "zero_sites": [
+    12
+   ]
+  },
+  "2": {
+   "ops": 591,
+   "additive_estimate": 591,
+   "pick": [
+    [
+     0,
+     12,
+     "0x8007840c"
+    ],
+    [
+     2,
+     8,
+     "0x1f1dc5ea"
+    ]
+   ],
+   "zero_sites": [
+    8,
+    12
+   ]
+  },
+  "3": {
+   "ops": 590,
+   "additive_estimate": 590,
+   "pick": [
+    [
+     0,
+     12,
+     "0x8007840c"
+    ],
+    [
+     2,
+     8,
+     "0x1f1dc5ea"
+    ],
+    [
+     5,
+     3,
+     "0x37c2a2db"
+    ]
+   ],
+   "zero_sites": [
+    3,
+    8,
+    12
+   ]
+  },
+  "4": {
+   "ops": 590,
+   "additive_estimate": 590,
+   "pick": [
+    [
+     0,
+     12,
+     "0x8007840c"
+    ],
+    [
+     2,
+     8,
+     "0x1f1dc5ea"
+    ],
+    [
+     5,
+     3,
+     "0x37c2a2db"
+    ]
+   ],
+   "zero_sites": [
+    3,
+    8,
+    12
+   ],
+   "note": "best of at most k sites (no better k-site set in the found pool)"
+  }
+ },
+ "gain": {
+  "0": {
+   "ops_saved": 0,
+   "delta_time_log2": 0.0,
+   "pre_search_log2": 0,
+   "pre_search_relative_bits": 0.0,
+   "net": 0.0
+  },
+  "1": {
+   "ops_saved": 2,
+   "delta_time_log2": -0.0048,
+   "pre_search_log2": 32,
+   "pre_search_relative_bits": 0.0,
+   "net": -0.0048
+  },
+  "2": {
+   "ops_saved": 4,
+   "delta_time_log2": -0.00961,
+   "pre_search_log2": 64,
+   "pre_search_relative_bits": 0.0,
+   "net": -0.00961
+  },
+  "3": {
+   "ops_saved": 5,
+   "delta_time_log2": -0.01202,
+   "pre_search_log2": 96,
+   "pre_search_relative_bits": 2.492e-09,
+   "net": -0.01202
+  },
+  "4": {
+   "ops_saved": 5,
+   "delta_time_log2": -0.01202,
+   "pre_search_log2": 128,
+   "pre_search_relative_bits": 3.073715202168,
+   "net": 3.06169
+  },
+  "5": {
+   "ops_saved": 5,
+   "delta_time_log2": -0.01202,
+   "pre_search_log2": 160,
+   "pre_search_relative_bits": 34.891300000045,
+   "net": 34.87928
+  }
+ },
+ "loop_share": 0.9944,
+ "L": 599.1875
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D526-BLAKE3-R2-ANSEL-AV-DRAFT-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgANsel/pkgAV draft-path claims and shared halfsearch executable",
+  "question": "Do the ANsel and AV draft packages add a distinct executable or accepted row beyond the already audited halfsearch?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "ANsel claim 69.2789 and AV claim 84.2073; both prefile SOME FAIL for missing ledger appendix plus note label (pkg19/audit). Both share halfsearch.py SHA-256 710040147D4099E202353526372D30BAE7717F788053F54C27AAE0D8C64C7BD0. Fresh ANsel selftest 256/256 cases and 1792/1792 lanes right, zero mismatches/halts, 16 registers, exact 37/105 stages, and all bounds pass; executable already covered by D520/D521. No score credit.",
+  "source": "our workflow: D526 read-only ANsel/AV draft-path audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D526_b3m_ansel_av_audit.md; research/tools/build_pkg/scratch/pkgANsel/pkg/blake3-r2/experiments/halfsearch.py; research/tools/build_pkg/scratch/pkgAV/pkg/blake3-r2/experiments/halfsearch.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Shared executable and draft claim/path audit only; no score/package/stage/filing/submission.",
+  "held_fixed": "pkgANsel/pkgAV package contents; one-thread selftest; D520/D521 executable coverage",
+  "reopen_if": "repaired ledger and labels, changed halfsearch.py, or owner/organizer acceptance ruling arrives"
+}

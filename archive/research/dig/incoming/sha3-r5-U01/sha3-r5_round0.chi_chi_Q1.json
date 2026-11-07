@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r5",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "row_i": 0,
+ "row_j": 0,
+ "object": "r5 round-0 chi connector conditions (beta0 -> alpha1)",
+ "question": "How many connector conditions does the package constructor use at round 0 chi?",
+ "labels": [
+  "C"
+ ],
+ "status": "SAMPLED",
+ "number": "F fixed bits = 520 exactly (every attempt; rank 520 in E_D and E_M); E_D zero-difference rows: 2-13 (mean 6.9) inactive alpha1 rows (E_D rank gain 10-65 (mean 34.5)); M2 row conditions add E_M rank 884-908 (mean 892.9) (of 1600); M3 linearisation adds 13-35 (mean 22.8); active alpha1 rows 307-318.",
+ "evidence": "research/dig/incoming/sha3-r5-U01/work/conn_count.py; work/conn_k1,2,5,6,8,9,11 .json/.log; work/summ.txt",
+ "notes": "Universe cell sha3-r5|round0.chi|chi|Q1. Scope: 7 advice runs of the shipped constructor (R7 labels k=1,2,5,6,8,9,11; bprime candidate 0, its (c,j,DF) matches the proof table), up to 40 connector attempts each, 158 accepted attempts; instrumented copy of r5.py _attempt that only adds rank counters. Not the 50 historical R7 spaces (not persisted); a sample, not the full population. 520 = bits 1080..1599 (capacity plus the 0x86 pad byte). M2 rank = E_M rank gain from the chosen (d, affine W) per active row.",
+ "topic": "sha3.r5.conn.r0.count"
+}

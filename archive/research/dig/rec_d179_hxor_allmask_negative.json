@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-hxor-allmask-negative",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 wider input-masked XOR h-map audit",
+  "question": "Can a 160-bit XOR mask map depending on g, e2, f, and E preserve the coupled equations for the residual class toggles?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact CEGIS found no map for delta 00002000 after 5 witnesses and no map for delta 00001000 after 4 witnesses; delta 00000400 reached the ten-iteration limit and is inconclusive.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/synth_hxor_allmask_summary.md; research/retest/b3_omega_coupled/exact/synth_hxor_allmask.py; research/retest/b3_omega_coupled/exact/synth_hxor_allmask_002000.out; research/retest/b3_omega_coupled/exact/synth_hxor_allmask_001000.out; research/retest/b3_omega_coupled/exact/synth_hxor_allmask_000400.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Negative only for the tested constant-mask family. The 00000400 case is not decided by this run; arbitrary nonlinear maps and universal class invariance remain OPEN, with no saving credited."
+}

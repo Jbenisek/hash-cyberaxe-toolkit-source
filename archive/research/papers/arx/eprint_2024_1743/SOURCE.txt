@@ -1,0 +1,1 @@
+2024/1743	The Window Heuristic: Automating Differential Trail Search in ARX Ciphers with Partial Linearization Trade-offs	owner_download	https://eprint.iacr.org/2024/1743.pdf

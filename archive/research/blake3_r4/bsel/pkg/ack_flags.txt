@@ -1,0 +1,4 @@
+proof.md:3: 124.86023 is the score of the base entry 0ecdfe35, named as the credited base; correct
+proof.md:38: 124.86023 is the base 0ecdfe35 score, stated as the no-select fallback; correct
+submission-note.md:7: 124.86023 is the base 0ecdfe35 score in the lineage sentence; correct
+claim.json:21: 124.86023 is the base 0ecdfe35 score in the credit restriction; correct

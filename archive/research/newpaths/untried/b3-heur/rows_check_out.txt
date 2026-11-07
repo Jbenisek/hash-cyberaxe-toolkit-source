@@ -1,0 +1,15 @@
+cubes parsed: 498
+S tau 175020a0: 1 distinct value(s): 6,291,456 x498
+S tau 185020a0: 1 distinct value(s): 16,777,216 x498
+S tau 275020a0: 1 distinct value(s): 1,048,576 x498
+S tau 285020a0: 1 distinct value(s): 25,165,824 x498
+S tau 385020a0: 1 distinct value(s): 16,777,216 x498
+S tau 685020a0: 1 distinct value(s): 1,572,864 x498
+  tau 175060a0: 3 distinct value(s): 196,608 x37, 393,216 x311, 786,432 x148
+  tau 185060a0: 2 distinct value(s): 1,048,576 x349, 2,097,152 x148
+  tau 275060a0: 3 distinct value(s): 32,768 x37, 65,536 x311, 131,072 x148
+  tau 285060a0: 2 distinct value(s): 1,572,864 x349, 3,145,728 x148
+  tau 385060a0: 2 distinct value(s): 1,048,576 x349, 2,097,152 x148
+  tau 675020a0: 1 distinct value(s): 65,536 x498
+  tau 675060a0: 3 distinct value(s): 2,048 x37, 4,096 x311, 8,192 x148
+  tau 685060a0: 2 distinct value(s): 98,304 x349, 196,608 x148

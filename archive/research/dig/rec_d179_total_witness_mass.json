@@ -1,0 +1,18 @@
+{
+  "id": "C0962",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 total (f,h) witness mass",
+  "question": "Does exact total J2-valid f plus coupled J1/J3 h witness mass stay invariant under the residual class toggles?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "14/20 equal and 6/20 unequal for each of 00002000, 00001000, 00000400",
+  "source": "our workflow: D179 total-witness DP",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_total_witness_mass.md; research/retest/b3_omega_coupled/exact/total_witness_count_dp.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Finite diagnostic only; existential aliveness remains equal in prior scans and universal class invariance remains OPEN."
+}

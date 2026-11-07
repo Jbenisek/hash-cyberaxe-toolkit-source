@@ -1,0 +1,3 @@
+toy q=1000003 seed=1 (nk,rho) R4 lane 0: monomials 4881247, law predicts 4881251, outside law 0, missing from law 4 (accidental-zero expectation ~ 4.9), total degree 3125 degx 3125 degy 3125
+toy q=1000003 seed=1 (nk,rho) R4 lane 1: monomials 4881247, law predicts 4881251, outside law 0, missing from law 4 (accidental-zero expectation ~ 4.9), total degree 3125 degx 3125 degy 3125
+toy q=1000003 seed=1 (nk,rho) R4 lane 2: monomials 4881247, law predicts 4881251, outside law 0, missing from law 4 (accidental-zero expectation ~ 4.9), total degree 3125 degx 3125 degy 3125

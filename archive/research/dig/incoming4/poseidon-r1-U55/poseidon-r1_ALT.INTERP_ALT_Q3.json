@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.INTERP interpolation",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "score-optimal evaluation count = D + 1 = 78,126 points with a non-power-of-two transform; 98,304 charged now; gain <= 0.0002 bit",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json drop_build 0.00115 bit bound. | universe cell poseidon-r1|ALT.INTERP|ALT|Q3",
+ "held_fixed": "r=1",
+ "reopen_if": "never (bound)"
+}

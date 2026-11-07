@@ -1,0 +1,10 @@
+outcomes 453; seconds 104
+N3 of this enumeration equal to the calculator's N3: 392 of 392 outcomes of the betas counted in full; 60 of 61 outcomes of the betas that hold estimates
+rule 4: outcomes whose every solution satisfies the rule (N3 = N3_rule), by this count: 132; the solver files say UNSAT for 132; the two sets are equal: True; of them in betas with estimates: 0
+   conservative count (kept outcomes, betas in full): 162,241,316.4448; exact rate of the solutions that satisfy the rule under M, r_A: betas in full 162,243,609.8307, all 60 betas 162,243,609.8556 (/ 2^25 = 4.8352, / 2^26 = 2.4176); conservative / exact = 1.0000
+rule 5: outcomes whose every solution satisfies the rule (N3 = N3_rule), by this count: 54; the solver files say UNSAT for 54; the two sets are equal: True; of them in betas with estimates: 0
+   conservative count (kept outcomes, betas in full): 126,003,600.7598; exact rate of the solutions that satisfy the rule under M, r_A: betas in full 144,123,440.8829, all 60 betas 144,123,440.8878 (/ 2^25 = 4.2952, / 2^26 = 2.1476); conservative / exact = 0.8743
+rule 6: outcomes whose every solution satisfies the rule (N3 = N3_rule), by this count: 35; the solver files say UNSAT for 35; the two sets are equal: True; of them in betas with estimates: 0
+   conservative count (kept outcomes, betas in full): 91,072,901.5000; exact rate of the solutions that satisfy the rule under M, r_A: betas in full 123,244,449.0020, all 60 betas 123,244,449.0044 (/ 2^25 = 3.6730, / 2^26 = 1.8365); conservative / exact = 0.7390
+count of all solutions with this enumeration's N3 and the calculator's E1: 162,266,763.658770 (calculator 162,266,763.6579; the other model's recount 162,266,763.6588); the betas with estimates here: 0.282956
+rule 5, the outcomes that lose most to the rule (exact, lost part / part): 18b1a098 189060a0 6e203e55 4,194,304.0 / 8,388,608.0; 18b0e098 175020a0 6e21be55 3,145,728.0 / 6,291,456.0; 18b1a098 389060a0 6e203e55 2,097,152.0 / 4,194,304.0; 18b1a098 289060a0 6e203e55 2,097,152.0 / 4,194,304.0; 18d0e098 175020a0 6e61be55 1,572,864.0 / 3,145,728.0

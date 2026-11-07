@@ -1,0 +1,3 @@
+LEVEL d=4 shift=5926 pow=133897 shift_abs_peak=524896 pow_abs_peak=524832 live_before=524576 secs 0.0 0.0
+LEVEL d=9 shift=7093 pow=694997 shift_abs_peak=525536 pow_abs_peak=525472 live_before=524896 secs 0.0 0.0
+EXIT 0

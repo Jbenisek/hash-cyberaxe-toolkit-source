@@ -1,0 +1,110 @@
+{
+ "stride7": {
+  "zs": [
+   0,
+   4,
+   5,
+   6,
+   7,
+   11,
+   12,
+   13,
+   14,
+   18,
+   19,
+   20,
+   21,
+   25,
+   26,
+   27,
+   28,
+   32,
+   33,
+   34,
+   35,
+   39,
+   40,
+   41,
+   42,
+   46,
+   47,
+   48,
+   49,
+   54,
+   55,
+   56,
+   61,
+   62,
+   63
+  ],
+  "chi5_in": 175,
+  "chi4_out": 1163,
+  "chi4_in": 1368
+ },
+ "cones": {
+  "z0..34 (35 planes, 140-bit key)": {
+   "key_bits": 140,
+   "chi5_in": 175,
+   "theta5_out": 175,
+   "chi4_out_cone": 1505,
+   "chi4_in_cone": 1600,
+   "chi4_out_rows": 320,
+   "chi4_in_rows": 320,
+   "columns": 301
+  },
+  "z0..28 (29 planes, 116-bit key)": {
+   "key_bits": 116,
+   "chi5_in": 145,
+   "theta5_out": 145,
+   "chi4_out_cone": 1362,
+   "chi4_in_cone": 1600,
+   "chi4_out_rows": 320,
+   "chi4_in_rows": 320,
+   "columns": 278
+  },
+  "z0..63 (all, 256-bit digest)": {
+   "key_bits": 256,
+   "chi5_in": 320,
+   "theta5_out": 320,
+   "chi4_out_cone": 1600,
+   "chi4_in_cone": 1600,
+   "chi4_out_rows": 320,
+   "chi4_in_rows": 320,
+   "columns": 320
+  }
+ },
+ "empirical": {
+  "z0..34": {
+   "emp_out": 1505,
+   "emp_in": 1600,
+   "out_outside_cone": 0,
+   "in_outside_cone": 0,
+   "cone_not_hit_out": 0,
+   "cone_not_hit_in": 0
+  },
+  "z0..28": {
+   "emp_out": 1362,
+   "emp_in": 1600,
+   "out_outside_cone": 0,
+   "in_outside_cone": 0,
+   "cone_not_hit_out": 0,
+   "cone_not_hit_in": 0
+  },
+  "z0..63": {
+   "emp_out": 1600,
+   "emp_in": 1600,
+   "out_outside_cone": 0,
+   "in_outside_cone": 0,
+   "cone_not_hit_out": 0,
+   "cone_not_hit_in": 0
+  }
+ },
+ "rand35_min": 1258,
+ "rand35_max": 1375,
+ "strided": {
+  "stride1": 1505,
+  "stride3": 1305,
+  "stride5": 1312,
+  "stride7": 1163
+ }
+}

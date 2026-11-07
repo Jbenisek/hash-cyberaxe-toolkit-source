@@ -1,0 +1,54 @@
+# Cell map 1022 (appended to CELLS.jsonl, ids CM1022-*)
+
+| hash | row | cells added |
+|---|---|---|
+| poseidon | r24 | 14 |
+| poseidon | r25 | 14 |
+| poseidon | r26 | 14 |
+| poseidon | r27 | 14 |
+| poseidon | r28 | 14 |
+| poseidon | r29 | 14 |
+| poseidon | r30 | 14 |
+| poseidon | r31 | 14 |
+| poseidon | r32 | 14 |
+| poseidon | r33 | 14 |
+| poseidon | r34 | 14 |
+| poseidon | r35 | 14 |
+| poseidon | r36 | 14 |
+| poseidon | r37 | 14 |
+| poseidon | r38 | 14 |
+| poseidon | r39 | 14 |
+| poseidon | r40 | 14 |
+| poseidon | r41 | 14 |
+| poseidon | r42 | 14 |
+| poseidon | r43 | 14 |
+| poseidon | r44 | 14 |
+| poseidon | r45 | 14 |
+| poseidon | r46 | 14 |
+| poseidon | r47 | 14 |
+| poseidon | r48 | 14 |
+| poseidon | r49 | 14 |
+| poseidon | r50 | 14 |
+| poseidon | r51 | 14 |
+| poseidon | r52 | 14 |
+| poseidon | r53 | 14 |
+| poseidon | r54 | 14 |
+| poseidon | r55 | 14 |
+| poseidon | r56 | 14 |
+| sha3 | r8 | 12 |
+| sha3 | r9 | 12 |
+| sha3 | r10 | 12 |
+| sha3 | r11 | 12 |
+| sha3 | r12 | 12 |
+| sha3 | r13 | 12 |
+| sha3 | r14 | 12 |
+| sha3 | r15 | 12 |
+| sha3 | r16 | 12 |
+| sha3 | r17 | 12 |
+| sha3 | r18 | 12 |
+| sha3 | r19 | 12 |
+| sha3 | r20 | 12 |
+| sha3 | r21 | 12 |
+| sha3 | r22 | 12 |
+| sha3 | r23 | 12 |
+| sha3 | r24 | 12 |

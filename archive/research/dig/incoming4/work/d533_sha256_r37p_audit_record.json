@@ -1,0 +1,23 @@
+{
+  "id": "D533-SHA256-R37-R37P-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR37P prefile and shipped self-test",
+  "question": "Does pkgR37P remain internally clean under the current prefile and finite self-test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR37P prefile ALL PASS; exact N=3986385751109904905594, time_log2=60.38707 (ledger 60.38706485); one-thread xtab.py selftest exits 0 with F7 violations 0, 155092 fibre lanes, 108798 good pairs, 0 mismatches, packed-u 6000/0 mismatches, and mask-lookup mismatches 0.",
+  "source": "our workflow: D533 read-only pkgR37P audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D533_r37p_audit.md; research/tools/build_pkg/scratch/pkgR37P/pkg/sha256-r37/claim.json; research/tools/build_pkg/scratch/pkgR37P/pkg/sha256-r37/proof.md; research/tools/build_pkg/scratch/pkgR37P/pkg/sha256-r37/experiments/xtab.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package mechanics and ledger confirmation only. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgR37P package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "owner/organizer acceptance ruling or a changed package artifact arrives"
+}

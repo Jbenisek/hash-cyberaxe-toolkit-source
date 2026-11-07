@@ -1,0 +1,22 @@
+{
+  "id": "D358-POSR1-TWOLEVEL-CHARGE-BOUND",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "two-level twiddle field-operation charge bound",
+  "question": "What exact bound can be placed on the extra field multiplication cost of the factorized r1 twiddle table?",
+  "labels": ["N", "D", "S"],
+  "status": "COMPUTED",
+  "number": "Field-only upper bounds: old charge +0.23010355 bit (N=7289544780, mul=1260501718); fixed charge +0.03423219 bit (N=51453520952, mul=1235485896); storage delta 0.09071385 bit conditional on unchanged peak",
+  "source": "our source-ledger arithmetic audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D358_poseidon_r1_twolevel_charge_bound.md; research/poseidon/twiddle_twolevel_check.py; research/poseidon/orchard/lean_r1_mem/logs/mem_ledger.txt; research/dig/incoming4/_fresh_run_seed100001.txt",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Rigorous field-multiplication ceiling only. Two table loads, index/control operations, register budget, and whole-run peak are not priced; no score credit. D357 remains the exact functional identity.",
+  "held_fixed": "Existing r1 operation counters and 516096-byte table reduction; one added field multiplication per reconstructed nontrivial twiddle",
+  "reopen_if": "A complete two-level implementation emits exact dynamic fetch/control counts, passes KAT, and reports peak memory",
+  "peak_mem": "UNKNOWN"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "R6-DPrho-mask-extraction-audit",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "DP-rho hit-mask extraction",
+  "question": "What is the exact cost of consuming the four 64-bit words after the 115-plane DP OR tree under an explicit portable scalar fallback?",
+  "labels": ["D", "X", "B", "E"],
+  "status": "COMPUTED",
+  "number": "12 operations per no-hit batch; at most 33 per extracted hit; U=10000 gives R=1232167864 and conditional 64-plane time_log2=127.813390487432024",
+  "source": "our workflow: mask extraction audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-DPrho-mask-extraction-audit.md; research/retest/t1/mask_extract_audit.py; research/retest/t1/mask_extract_audit.json",
+  "date": "2026-10-13",
+  "lever": true,
+  "gain_bits": 0.218038497078,
+  "gain_basis": "T",
+  "notes": "The scalar fallback is a declared conditional upper-bound model. Synthetic cases and a 256-lane SHA3-r6 KAT pass. Organizer vector bit-scan, lane gather, restart/control, and packed-width/register spill charges remain OPEN; no filing-safe gain claimed.",
+  "reopen_if": "A production packed extraction/restart implementation and organizer ruling on its primitive accounting."
+}

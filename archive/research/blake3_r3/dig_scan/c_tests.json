@@ -1,0 +1,27 @@
+{
+ "group_filter_logic": {
+  "trials": 200000,
+  "mismatches": 0,
+  "triggered": 105149
+ },
+ "search_n22": {
+  "n": 22,
+  "attempts": 1500,
+  "success": 697,
+  "halts": 87,
+  "frac": 0.4646666666666667,
+  "time_s": 20.113434076309204,
+  "B": 357,
+  "mean_batches_on_success": 227.50215208034433
+ },
+ "search_n32_small": {
+  "n": 32,
+  "attempts": 40,
+  "success": 17,
+  "halts": 0,
+  "frac": 0.425,
+  "time_s": 10.621826887130737,
+  "B": 10361,
+  "mean_batches_on_success": 6979.705882352941
+ }
+}

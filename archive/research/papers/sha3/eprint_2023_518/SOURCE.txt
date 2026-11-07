@@ -1,0 +1,1 @@
+2023/518	Weak-Diffusion Structure: Meet-in-the-Middle Attacks on Sponge-based Hashing Revisited	wayback_copy_v20230522 (found in folder, not via eprint_in)	https://eprint.iacr.org/2023/518.pdf

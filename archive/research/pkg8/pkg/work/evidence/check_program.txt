@@ -1,0 +1,8 @@
+TIER strict; PROGRAM sha256 da24853f53b3be12b0c8e343a2b39e4f4e135a6cf5fe992c2a569be2ed8d3324; python -B work/tools/check_program.py 20000 256
+(a) context() and trial() of the program against a forward 2-round compression, 20000 random trials
+    trials that satisfy rule A: 77 of 20000 (a share of 2^-8 is 78.1); organizer reference: not available
+(b) the program through its stdin/stdout contract, 256 seeds per experiment (manifest: work copy, unchanged)
+    half-collision: pairs 256 of 256, full collisions 0, 73651 bytes of output
+    residual-search: pairs 256 of 256, full collisions 0, 121750 bytes of output, members tried: mean 451.9, max 2686; counted batches in which a lane satisfies rule A: 11 of 256
+RESULT (a), (b): all checks of the program passed
+lines marked ok: 43; detail in work/evidence/check_program.txt

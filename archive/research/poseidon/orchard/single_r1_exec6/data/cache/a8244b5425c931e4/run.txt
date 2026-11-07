@@ -1,0 +1,2 @@
+out of memory (1572864)
+EXIT 2

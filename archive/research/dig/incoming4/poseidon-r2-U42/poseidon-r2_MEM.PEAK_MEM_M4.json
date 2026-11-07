@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.PEAK (MEM)",
+ "question": "M4: alternatives: peak of the power stage",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Power-stage items: Y 12,582,912 B (33.4 percent of the 37,624,320 B power-stage total) and the three 6.25 MB vectors (49.8 percent). Because the heap peak is set by the half-gcd stage, shrinking any power-stage item alone does not change the score term until the gcd stage falls too (the gcd peak is the floor).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.PEAK|MEM|M4. Item arithmetic only.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "a different buffer layout or a measured smaller peak"
+}

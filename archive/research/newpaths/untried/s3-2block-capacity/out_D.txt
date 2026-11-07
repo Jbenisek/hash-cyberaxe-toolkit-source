@@ -1,0 +1,16 @@
+{"nbases": 3, "caps": ["zero", "cap1", "cap2", "cap3", "cap4"]}
+{"k": 2, "cap": "zero", "compatible_pairs": 9324, "triangles": 37461, "greedy_max_clique": 5, "sec": 0.7}
+{"k": 2, "cap": "cap1", "compatible_pairs": 8350, "triangles": 46626, "greedy_max_clique": 10, "sec": 0.7}
+{"k": 2, "cap": "cap2", "compatible_pairs": 8634, "triangles": 53250, "greedy_max_clique": 7, "sec": 0.7}
+{"k": 2, "cap": "cap3", "compatible_pairs": 7871, "triangles": 36645, "greedy_max_clique": 7, "sec": 0.8}
+{"k": 2, "cap": "cap4", "compatible_pairs": 8214, "triangles": 44420, "greedy_max_clique": 9, "sec": 0.8}
+{"k": 3, "cap": "zero", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.7}
+{"k": 3, "cap": "cap1", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.8}
+{"k": 3, "cap": "cap2", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.7}
+{"k": 3, "cap": "cap3", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.8}
+{"k": 3, "cap": "cap4", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.7}
+{"k": 4, "cap": "zero", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.8}
+{"k": 4, "cap": "cap1", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.8}
+{"k": 4, "cap": "cap2", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.8}
+{"k": 4, "cap": "cap3", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.7}
+{"k": 4, "cap": "cap4", "compatible_pairs": 0, "triangles": 0, "greedy_max_clique": 1, "sec": 0.7}

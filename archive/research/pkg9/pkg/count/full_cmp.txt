@@ -1,0 +1,16 @@
+KIND full: PIN d3 fdb77cfd d11 0a08818b delta fffffff8 y3 8127c181 y11 7af77f38 eta 830303cf fixed_bits 13 rules 8 mode 3 nocut 0 extra_mask 00000000 extra_value 00000000
+total R: ours 85074516985129/524288 = 162,266,763.658769608 | Sol 85074516985129/524288 | EQUAL
+rule F5    pass: ours 2722188192869763/16777216 = 162,255,060.247764766 | Sol (K k = 5) 2722188192869763/16777216 | EQUAL
+rule old6  pass: ours 5443991608233427/33554432 = 162,243,592.984480470 | Sol (K k = 6) 5443991608233427/33554432 | EQUAL
+rule K7    pass: ours 302248762304709/2097152 = 144,123,440.887789249 | Sol (K k = 7) 302248762304709/2097152 | EQUAL
+rule K8    pass: ours 528287346417605/4194304 = 125,953,518.490220308 | Sol (K k = 8) 528287346417605/4194304 | EQUAL
+rule S6    pass: ours 2722188192874883/33554432 = 81,127,530.124034971 | Sol: no figure for this rule in this class
+rule S7    pass: ours 5105306373346779/67108864 = 76,074,993.213218138 | Sol: no figure for this rule in this class
+rule S8    pass: ours 5105157355890091/67108864 = 76,072,772.680075333 | Sol: no figure for this rule in this class
+rule p5    pass: ours 302248762304709/2097152 = 144,123,440.887789249 | Sol (E rule 5) 302248762304709/2097152 | EQUAL
+rules with a figure of Sol: 5 of 8; Sol rules of the table not run by us: 0
+rule p5    kept_whole: ours 64513843589/512 | Sol (answer E) 64513843589/512 | EQUAL
+outcomes with a nonzero product (gpt_sol_outcomes_E.csv): ours 453, Sol 453 (its file has 453 rows, 0 of them with zero pairs); in both 453; only ours 0; only Sol 0; integers compared 1359, differing 0
+betas with a part: ours 60, Sol (sum of its outcome rows) 60; R per beta differing 0
+outcomes of ours not counted: 0; differences inside our run (two functions, n3x, E1): 0
+RESULT: everything equal

@@ -1,0 +1,28 @@
+[rand] rows 1048576
+  R  word 1: distinct  1048381  mean HW 16.016  max bit bias 0.2034 at bit  0  constant bits -
+  R  word 3: distinct  1047897  mean HW 15.008  max bit bias 0.3304 at bit 19  constant bits -
+  R  word 4: distinct  1048407  mean HW 16.014  max bit bias 0.1524 at bit 25  constant bits -
+  R  word 6: distinct  1048197  mean HW 15.973  max bit bias 0.2509 at bit 11  constant bits -
+  K1 word 1: distinct   144687  mean HW 11.922  max bit bias 0.5000 at bit  0  constant bits [0, 1, 2, 3]
+  K1 word 3: distinct   986224  mean HW 15.768  max bit bias 0.4253 at bit 25  constant bits -
+  K1 word 4: distinct   144687  mean HW 11.922  max bit bias 0.5000 at bit 24  constant bits [24, 25, 26, 27]
+  K1 word 6: distinct   986224  mean HW 15.552  max bit bias 0.4253 at bit 18  constant bits -
+  K3 word 1: distinct  1048369  mean HW 16.226  max bit bias 0.2034 at bit  0  constant bits -
+  K3 word 3: distinct  1028537  mean HW 16.491  max bit bias 0.4105 at bit 19  constant bits -
+  K3 word 4: distinct  1048424  mean HW 16.004  max bit bias 0.1524 at bit 25  constant bits -
+  K3 word 6: distinct  1028537  mean HW 15.675  max bit bias 0.4105 at bit 11  constant bits -
+  distinct 128-bit residuals: 1048576 of 1048576
+[ctx] rows 262144
+  R  word 1: distinct   262087  mean HW 16.008  max bit bias 0.1878 at bit  0  constant bits -
+  R  word 3: distinct   262053  mean HW 14.983  max bit bias 0.3334 at bit 19  constant bits -
+  R  word 4: distinct   262082  mean HW 16.019  max bit bias 0.1410 at bit  4  constant bits -
+  R  word 6: distinct   262063  mean HW 15.932  max bit bias 0.2531 at bit 11  constant bits -
+  K1 word 1: distinct    79169  mean HW 11.929  max bit bias 0.5000 at bit  0  constant bits [0, 1, 2, 3]
+  K1 word 3: distinct   257572  mean HW 15.770  max bit bias 0.4250 at bit 25  constant bits -
+  K1 word 4: distinct    79169  mean HW 11.929  max bit bias 0.5000 at bit 24  constant bits [24, 25, 26, 27]
+  K1 word 6: distinct   257572  mean HW 15.553  max bit bias 0.4250 at bit 18  constant bits -
+  K3 word 1: distinct   262042  mean HW 16.175  max bit bias 0.1878 at bit  0  constant bits -
+  K3 word 3: distinct   253546  mean HW 16.392  max bit bias 0.4142 at bit 19  constant bits -
+  K3 word 4: distinct   262059  mean HW 15.980  max bit bias 0.1508 at bit  4  constant bits -
+  K3 word 6: distinct   253546  mean HW 15.615  max bit bias 0.4142 at bit 11  constant bits -
+  distinct 128-bit residuals: 262092 of 262144

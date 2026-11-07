@@ -1,0 +1,23 @@
+{
+  "id": "D528-SHA3-R6-REDUCED-CAMPAIGN-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6c reduced fes campaign package row",
+  "question": "Does the unindexed reduced SHA3-r6 package pass its supplied finite campaign request, and is its intake row clean?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Claim S6c 122.9892. The 256-trial request completes with zero key mismatches and zero key matches; fes_ops=1,258,642, in_range_mismatches=32,690, and own_pairs16 ranges 0..7. Prefile defects: missing ledger appendix and note label D20. Reduced-width mechanics only; no score credit.",
+  "source": "our workflow: D528 read-only reduced SHA3-r6 campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D528_sha3_reduced_campaign_audit.md; research/tools/build_pkg/scratch/pkgS6c/pkg/sha3-256-r6/experiments/fes_campaign.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite reduced-width campaign check only; no score/package/stage/filing/submission.",
+  "held_fixed": "supplied request file, shipped campaign source, one-thread run",
+  "reopen_if": "repaired ledger/labels, changed campaign source, or owner/organizer acceptance ruling arrives"
+}

@@ -1,0 +1,12 @@
+outcomes bstar: 7 rows, 7 distinct tau, 7 distinct (tau, eps); mass sum R = 67,698,688.00
+(1) Q with some tau solvable: 134896128 of 2^32 = 2^-4.993   (13 patterns, DP width 61)
+(2) E with some (tau,eps) solvable: 233715456 of 2^32 = 2^-4.200   (25 patterns, DP width 74)
+   tau 175020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 185020a0: P(1 solvable) = 2^-6.250 | eps 6e21be55: P(2 solvable) = 2^-4.495
+   tau 275020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 285020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-6.495
+   tau 385020a0: P(1 solvable) = 2^-6.250 | eps 6e21be55: P(2 solvable) = 2^-4.910
+   tau 675020a0: P(1 solvable) = 2^-7.261 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 685020a0: P(1 solvable) = 2^-7.261 | eps 6e21be55: P(2 solvable) = 2^-6.495
+P(pass) = 20504986129465344 / 2^64 = 1.111578e-03 = 2^-9.8132  (exact)
+mass per passing outer step is 1/P(pass) = 2^9.813 times the average (skipped steps carry none)

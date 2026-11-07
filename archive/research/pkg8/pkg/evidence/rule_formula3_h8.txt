@@ -1,0 +1,462 @@
+FILES: outcomes 453 in 60 betas; betas with estimates 7 (61 outcomes, 0.282041); package solver file: base 453, second question 453, UNSAT 54
+FILES: sum of all outcomes 162266763.6579; kept outcomes in betas with estimates: 0; sum of the kept outcomes 135295336110358535/1073741824 = 126003600.7598; equals 135295336110358535/1073741824: True
+FILES: kept table of proof.md has 54 rows; same set as the package's 54 UNSAT answers: True; every printed 'Adds' equals E1*N3/2^83 to the printed digits: True; same outcome set in all three files: True
+FILES: distinct pairs (tau, eps) 453; pairs with two different answers in the package's file: 0
+SAT (reviewer's formula, kissat, 2 workers, 49 s): base satisfiable 453 of 453, models that are solutions with Y4 in the class 453, base models that satisfy rule A 118
+SAT second question (system AND h1 violates rule A): UNSAT 54, SAT 399 (models that are solutions and violate rule A: 399), undecided 0; answers equal to the package's: 453 of 453; reviewer's kept set = package's kept set: True
+SAT: models in which the interior difference psi = tau xor ROR(tau,1) holds: 852 of 852 (output form of the reviewer = interior form of the text on every model)
+SAT: cadical on the reviewer's second question for the package's kept outcomes: UNSAT 54 of 54
+SAT: sum of the outcomes without a violating solution by the reviewer's answers, betas with estimates left out: 126003600.7598
+OUT 18b0e098 285020a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 685020a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 185020a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 385020a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 275020a0 6e21be55 base SAT violate SAT model Y4 7a14bd9a Y9 f7bd5fc0 Y14 5b52b1e3 w8 d7faffae h1 cef8a06e
+OUT 18b0e098 675020a0 6e21be55 base SAT violate SAT model Y4 6de48da6 Y9 cffeb760 Y14 d08e4cff w8 ffa8f72e h1 03d83f82
+OUT 18b0e098 175020a0 6e21be55 base SAT violate SAT model Y4 7e14bd9a Y9 e7bde0f0 Y14 1dc2a1e3 w8 d778ff1a h1 def8e2fe
+OUT 18b0e098 285060a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 685060a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 185060a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 385060a0 6e21be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b0e098 275060a0 6e21be55 base SAT violate SAT model Y4 ba14b266 Y9 7511dc40 Y14 149eacd3 w8 dbfde06a h1 df342fa2
+OUT 18b0e098 675060a0 6e21be55 base SAT violate SAT model Y4 7de4adb6 Y9 049116b0 Y14 036e10f3 w8 f5fefe7a h1 7fc4fc62
+OUT 18b0e098 175060a0 6e21be55 base SAT violate SAT model Y4 7a14b276 Y9 a4b960f0 Y14 161eac8b w8 fdfee3ae h1 df7ced22
+OUT 18d0e098 285020a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 685020a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 185020a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 385020a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 275020a0 6e61be55 base SAT violate SAT model Y4 d5e48a36 Y9 53f9c450 Y14 b582480b w8 7ddcf77b h1 03bce28e
+OUT 18d0e098 675020a0 6e61be55 base SAT violate SAT model Y4 7de489da Y9 ffc982b0 Y14 5fa2b4b7 w8 f7cef7ef h1 ffeca0ae
+OUT 18d0e098 175020a0 6e61be55 base SAT violate SAT model Y4 7df46d96 Y9 dbe96310 Y14 0d82e5ab w8 37b754c2 h1 cabcf29e
+OUT 18d0e098 27d020a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 67d020a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 17d020a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 2850a0a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 6850a0a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 285060a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 685060a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 185060a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 385060a0 6e61be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d0e098 275060a0 6e61be55 base SAT violate SAT model Y4 1de48e16 Y9 2c7e43c0 Y14 d25e234f w8 3ede9f1e h1 6cd84d52
+OUT 18d0e098 675060a0 6e61be55 base SAT violate SAT model Y4 7de4ae56 Y9 e4766530 Y14 d0be8307 w8 f3d9ffda h1 ecd02fb2
+OUT 18d0e098 175060a0 6e61be55 base SAT violate SAT model Y4 6a04b9ca Y9 b47d1710 Y14 05beb493 w8 fdb5d7fe h1 cfd8ee92
+OUT 18b1a098 289060a0 6e203e55 base SAT violate SAT model Y4 5e14a5e6 Y9 0575701f Y14 11bef877 w8 3bf5e7ee h1 9f10ce82
+OUT 18b1a098 689060a0 6e203e55 base SAT violate SAT model Y4 be14a5e6 Y9 a5656f1f Y14 f3bef847 w8 abe7e7ee h1 9f20cc82
+OUT 18b1a098 189060a0 6e203e55 base SAT violate SAT model Y4 76147196 Y9 ed3a414f Y14 996edc0b w8 d4fb213a h1 ef1c6e52
+OUT 18b1a098 389060a0 6e203e55 base SAT violate SAT model Y4 59e441e6 Y9 e6e1eb51 Y14 140e07a3 w8 3ff951e6 h1 04c4cf02
+OUT 18b1a098 285060a0 6e203e55 base SAT violate UNSAT cadical UNSAT
+OUT 18b1a098 685060a0 6e203e55 base SAT violate UNSAT cadical UNSAT
+OUT 18b1a098 185060a0 6e203e55 base SAT violate UNSAT cadical UNSAT
+OUT 18b1a098 385060a0 6e203e55 base SAT violate UNSAT cadical UNSAT
+OUT 18b1a098 295060a0 6e203e55 base SAT violate SAT model Y4 39e4725a Y9 e57d5c08 Y14 698237e3 w8 1ec0bff4 h1 0438d28e
+OUT 18b1a098 695060a0 6e203e55 base SAT violate SAT model Y4 e1f445ba Y9 58d5fae8 Y14 b03207cb w8 94256ef1 h1 00f0d32e
+OUT 18b1a098 195060a0 6e203e55 base SAT violate SAT model Y4 91f4b9ba Y9 46d910a8 Y14 e172a7c7 w8 005a5aee h1 dcfcf26e
+OUT 18b1a098 395060a0 6e203e55 base SAT violate SAT model Y4 31e445a6 Y9 66d95c48 Y14 5dce63db w8 2825ce0d h1 64fceec2
+OUT 18b1a098 28d060a0 6e203e55 base SAT violate SAT model Y4 79f4bde6 Y9 66ea340e Y14 f78e231b w8 defbcfbe h1 5c7c0c92
+OUT 18b1a098 68d060a0 6e203e55 base SAT violate SAT model Y4 69f4b232 Y9 d359ccf2 Y14 a7be738f w8 fcfb5e7f h1 003c4ca2
+OUT 18b1a098 18d060a0 6e203e55 base SAT violate SAT model Y4 79f45de6 Y9 ed36553e Y14 b58e1357 w8 dffdcfbe h1 0c304e92
+OUT 18b1a098 38d060a0 6e203e55 base SAT violate SAT model Y4 79f461a2 Y9 c7116f52 Y14 17de2757 w8 dffbee0e h1 0474ecc2
+OUT 18d1a098 2850a0a0 6e603e55 base SAT violate UNSAT cadical UNSAT
+OUT 18d1a098 6850a0a0 6e603e55 base SAT violate UNSAT cadical UNSAT
+OUT 18d1a098 2950a0a0 6e603e55 base SAT violate SAT model Y4 fa14767a Y9 91bdbc28 Y14 d7be4083 w8 6f2fee42 h1 7778ac82
+OUT 18d1a098 6950a0a0 6e603e55 base SAT violate SAT model Y4 7a14765a Y9 8d3e6cf8 Y14 b46ecc23 w8 ff2cef6f h1 fbf84f52
+OUT 18d1a098 28d0a0a0 6e603e55 base SAT violate SAT model Y4 75f47e26 Y9 edbdd3fe Y14 580e377f w8 df9fe41e h1 08d8af12
+OUT 18d1a098 68d0a0a0 6e603e55 base SAT violate SAT model Y4 fa14a196 Y9 7e35beee Y14 979e9827 w8 6fff3ec7 h1 fb30eca2
+OUT 18d1a098 285060a0 6e603e55 base SAT violate UNSAT cadical UNSAT
+OUT 18d1a098 685060a0 6e603e55 base SAT violate UNSAT cadical UNSAT
+OUT 18d1a098 185060a0 6e603e55 base SAT violate UNSAT cadical UNSAT
+OUT 18d1a098 385060a0 6e603e55 base SAT violate UNSAT cadical UNSAT
+OUT 18d1a098 295060a0 6e603e55 base SAT violate SAT model Y4 59f4a19a Y9 cb762c18 Y14 0a02634b w8 0cc9739c h1 0050d11e
+OUT 18d1a098 695060a0 6e603e55 base SAT violate SAT model Y4 f9f4719a Y9 bd7e8ee8 Y14 147e6743 w8 7eba0419 h1 54586f62
+OUT 18d1a098 195060a0 6e603e55 base SAT violate SAT model Y4 fe044a5a Y9 b1c642b8 Y14 cd7278cb w8 5fb3fff0 h1 7310b25e
+OUT 18d1a098 395060a0 6e603e55 base SAT violate SAT model Y4 79e4599a Y9 4f79a328 Y14 09e27f47 w8 d2e47a95 h1 645cf2ee
+OUT 18d1a098 28d060a0 6e603e55 base SAT violate SAT model Y4 59e48e76 Y9 cab99412 Y14 365e672b w8 fe04025d h1 28dced52
+OUT 18d1a098 68d060a0 6e603e55 base SAT violate SAT model Y4 79f4a986 Y9 5abd46f2 Y14 37ae03cf w8 fcdbe6a2 h1 68c8ccb2
+OUT 18d1a098 18d060a0 6e603e55 base SAT violate SAT model Y4 e9f4a982 Y9 fb32389e Y14 26ae0b57 w8 6a6ae7af h1 60544db2
+OUT 18d1a098 38d060a0 6e603e55 base SAT violate SAT model Y4 fe149626 Y9 c2b2d8ae Y14 700e1c73 w8 9f7d18b0 h1 4bd40f32
+OUT 18b3e098 285020a0 6e23be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b3e098 185020a0 6e23be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b3e098 295020a0 6e23be55 base SAT violate SAT model Y4 7614a67a Y9 c375f808 Y14 95b2633b w8 dff9de2a h1 04c0628e
+OUT 18b3e098 195020a0 6e23be55 base SAT violate SAT model Y4 7de4be7a Y9 b3b17f38 Y14 3eb2b26f w8 d7f5ffaa h1 cd94c1be
+OUT 18b3e098 285060a0 6e23be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b3e098 185060a0 6e23be55 base SAT violate UNSAT cadical UNSAT
+OUT 18b3e098 295060a0 6e23be55 base SAT violate SAT model Y4 02049186 Y9 7b19dfd8 Y14 ed9e38ab w8 6757d9a2 h1 6bac6eb2
+OUT 18b3e098 195060a0 6e23be55 base SAT violate SAT model Y4 1de44d86 Y9 5bc9f568 Y14 328e6f0b w8 2cabc79f h1 600cad82
+OUT 18d3e098 285020a0 6e63be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d3e098 185020a0 6e63be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d3e098 295020a0 6e63be55 base SAT violate SAT model Y4 79f47e5a Y9 f389f3d8 Y14 a5ae3a77 w8 df3dfcd7 h1 05ac5eb2
+OUT 18d3e098 195020a0 6e63be55 base SAT violate SAT model Y4 9df47e7a Y9 3f9964b8 Y14 82aee247 w8 df3dffb2 h1 ddbc9db2
+OUT 18d3e098 2850a0a0 6e63be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d3e098 2950a0a0 6e63be55 base SAT violate SAT model Y4 7614563a Y9 39b99c08 Y14 8a5e69c7 w8 f2298f7f h1 7e7c7d62
+OUT 18d3e098 285060a0 6e63be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d3e098 185060a0 6e63be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d3e098 295060a0 6e63be55 base SAT violate SAT model Y4 7a149e1a Y9 7cf9cff8 Y14 6a422057 w8 dd2dac94 h1 7fcc917e
+OUT 18d3e098 195060a0 6e63be55 base SAT violate SAT model Y4 6a144a5a Y9 debdf738 Y14 768ed723 w8 e830e36c h1 dcf89db2
+OUT 18d1a398 1852a0a0 6e603c55 base SAT violate SAT model Y4 3a04b9d2 Y9 3e218f34 Y14 c1881964 w8 f274a7fe h1 62377aa4
+OUT 18d1a398 1952a0a0 6e603c55 base SAT violate SAT model Y4 bdf47e3a Y9 7df13b38 Y14 de60dcec w8 573f1e73 h1 e357e17c
+OUT 18d1a398 18d2a0a0 6e603c55 base SAT violate SAT model Y4 7a149dae Y9 7e1e609e Y14 f9403d44 w8 d77ffffe h1 626b027c
+OUT 18d1a398 1852a2a0 6e603c55 base SAT violate SAT model Y4 7df4467e Y9 02b1f2b4 Y14 bab498d3 w8 dcff5fae h1 9f2c45a8
+OUT 18d1a398 1952a2a0 6e603c55 base SAT violate SAT model Y4 7df44e3e Y9 c231fac8 Y14 8a741193 w8 df3b4ff2 h1 1e2c7568
+OUT 18d1a398 18d2a2a0 6e603c55 base SAT violate SAT model Y4 020441aa Y9 6e25d11e Y14 65567310 w8 c863621a h1 703be67a
+OUT 19f1a098 6890a0a0 6fa03e55 base SAT violate SAT model Y4 75e44676 Y9 0679faff Y14 37e2a6eb w8 1271d9ce h1 a11cc0ee
+OUT 19f1a098 6990a0a0 6fa03e55 base SAT violate SAT model Y4 7de4b1b6 Y9 3931cb25 Y14 0fc23dc3 w8 fb7f699f h1 4ef4f0ce
+OUT 19f1a098 6850a0a0 6fa03e55 base SAT violate UNSAT cadical UNSAT
+OUT 19f1a098 6950a0a0 6fa03e55 base SAT violate SAT model Y4 7de499fe Y9 d9716308 Y14 3fa2a4ab w8 eaf542ac h1 ffd4c0ae
+OUT 19f1a098 69d0a0a0 6fa03e55 base SAT violate SAT model Y4 6de4be3e Y9 1939d10e Y14 0c420073 w8 f9945c17 h1 7fcce34e
+OUT 19f1a098 689060a0 6fa03e55 base SAT violate SAT model Y4 4e04a222 Y9 2aa9aeff Y14 000ef80f w8 4b48108e h1 9baccf22
+OUT 19f1a098 699060a0 6fa03e55 base SAT violate SAT model Y4 4614698a Y9 8afa050b Y14 8bbe70e7 w8 433d7eb0 h1 5bec4c82
+OUT 19f1a098 685060a0 6fa03e55 base SAT violate UNSAT cadical UNSAT
+OUT 19f1a098 695060a0 6fa03e55 base SAT violate SAT model Y4 56045e02 Y9 b52d24f8 Y14 387ef01b w8 2308ee2f h1 ef98ef52
+OUT 19f1a098 69d060a0 6fa03e55 base SAT violate SAT model Y4 51e45d8e Y9 f91ea30e Y14 80021fd7 w8 1799d99b h1 00d8530e
+OUT 18d16398 1852a0a0 6e60bc55 base SAT violate SAT model Y4 7e14462e Y9 3de2a31c Y14 fa4667e8 w8 d3dfdc7f h1 6047057a
+OUT 18d16398 1952a0a0 6e60bc55 base SAT violate SAT model Y4 8604be3a Y9 7d72d4b8 Y14 06529f7c w8 263f2493 h1 e0c7017e
+OUT 18d16398 18d2a0a0 6e60bc55 base SAT violate SAT model Y4 7e145d92 Y9 d23dd932 Y14 129ed258 w8 200b7f20 h1 cd4beda2
+OUT 18d16398 1852a2a0 6e60bc55 base SAT violate SAT model Y4 79f445ee Y9 42bd9534 Y14 1db4984f w8 dffa9f42 h1 9f20e6a8
+OUT 18d16398 1952a2a0 6e60bc55 base SAT violate SAT model Y4 0604423a Y9 6d71b538 Y14 56507214 w8 5f38a3ef h1 71afd17c
+OUT 18d16398 18d2a2a0 6e60bc55 base SAT violate SAT model Y4 79f449ae Y9 d231f51e Y14 b960c443 w8 cfa0977e h1 cf6c427c
+OUT 18f1e098 285020a0 6e5fbe55 base SAT violate SAT model Y4 fdf4ad8a Y9 6c2df7fc Y14 2789e623 w8 5afb503c h1 89285895
+OUT 18f1e098 685020a0 6e5fbe55 base SAT violate SAT model Y4 f1f459a2 Y9 6409a924 Y14 a859dcef w8 9796ab0c h1 c7ccdb45
+OUT 18f1e098 295020a0 6e5fbe55 base SAT violate SAT model Y4 b9f485a2 Y9 6005f428 Y14 63994e93 w8 df36be2f h1 09b05885
+OUT 18f1e098 695020a0 6e5fbe55 base SAT violate SAT model Y4 6a1469be Y9 bbb9d4d8 Y14 7c45fed3 w8 1d34527f h1 d5ec9779
+OUT 18f1e098 2850a0a0 6e5fbe55 base SAT violate SAT model Y4 fe14826a Y9 2ea96ffc Y14 a4690be7 w8 977b9adf h1 480cdb55
+OUT 18f1e098 6850a0a0 6e5fbe55 base SAT violate SAT model Y4 2e1445aa Y9 3dce12fc Y14 d7a92f43 w8 37d79fff h1 28687895
+OUT 18f1e098 2950a0a0 6e5fbe55 base SAT violate SAT model Y4 79f4ade6 Y9 f9e9d428 Y14 079da08b w8 df3877ce h1 cfecfc81
+OUT 18f1e098 6950a0a0 6e5fbe55 base SAT violate SAT model Y4 39f46a22 Y9 3a7a2908 Y14 c059568f w8 2ddb780f h1 7d2c7b45
+OUT 18f1e098 285060a0 6e5fbe55 base SAT violate SAT model Y4 65e48d96 Y9 f8fd900c Y14 938507df w8 4309e817 h1 48c87489
+OUT 18f1e098 685060a0 6e5fbe55 base SAT violate SAT model Y4 6a144da2 Y9 e5619b04 Y14 10594b77 w8 fed7ffae h1 4454fb65
+OUT 18f1e098 295060a0 6e5fbe55 base SAT violate SAT model Y4 9de4521a Y9 fe31c7e8 Y14 cc61cf6f w8 fa67f8af h1 dcf4d36d
+OUT 18f1e098 695060a0 6e5fbe55 base SAT violate SAT model Y4 9df44266 Y9 7e665f08 Y14 03bdc417 w8 eb364b52 h1 c7f01ca1
+OUT 19f0e098 6850a0a0 6fa1be55 base SAT violate UNSAT cadical UNSAT
+OUT 19f0e098 6a50a0a0 6fa1be55 base SAT violate SAT model Y4 a9e48e2a Y9 45fdf4e4 Y14 677e8d13 w8 bdec93ff h1 c2b84c72
+OUT 19f0e098 685060a0 6fa1be55 base SAT violate UNSAT cadical UNSAT
+OUT 19f0e098 6a5060a0 6fa1be55 base SAT violate SAT model Y4 edf4a222 Y9 72d14cf4 Y14 a37ef377 w8 7a182f8e h1 90d4cc62
+OUT 19f0e098 675060a0 6fa1be55 base SAT violate SAT model Y4 7df47652 Y9 cc7a1d20 Y14 90ae1b0f w8 e75cf7f2 h1 2cdc6fb2
+OUT 19f0e098 675160a0 6fa1be55 base SAT violate SAT model Y4 02049986 Y9 6c7eb360 Y14 b0a2d8df w8 6985b926 h1 83d8338e
+OUT 19f0e098 67d160a0 6fa1be55 base SAT violate UNSAT cadical UNSAT
+OUT 18d3e398 1852a0a0 6e63bc55 base SAT violate SAT model Y4 51f4926e Y9 2dbd751c Y14 3aaa2114 w8 1ffc0f43 h1 72fbe9b6
+OUT 18d3e398 1952a0a0 6e63bc55 base SAT violate SAT model Y4 a60455ba Y9 3d7dccb8 Y14 f550f680 w8 df380e77 h1 e1bbd27c
+OUT 18d3e398 1852a2a0 6e63bc55 base SAT violate SAT model Y4 79f4865e Y9 4239d32c Y14 5ea4d87b w8 d7fbdfce h1 9fa4a5b8
+OUT 18d3e398 1952a2a0 6e63bc55 base SAT violate SAT model Y4 66045e3e Y9 ed6dfb38 Y14 7254ee0c w8 df3807eb h1 f1b39578
+OUT 18d3e398 382ea2a0 6e63bc55 base SAT violate SAT model Y4 360465fe Y9 f1fe90b6 Y14 fc1af81c w8 2fa2fcd4 h1 df634b36
+OUT 18d3e398 392ea2a0 6e63bc55 base SAT violate SAT model Y4 71f4b262 Y9 b161c0c6 Y14 7c3e4f5f w8 dbdce7c2 h1 3cbc8f22
+OUT 18d1af98 1952a0a0 6e603455 base SAT violate SAT model Y4 7df4bda6 Y9 bdf1c4b8 Y14 816c9c10 w8 d73fdffe h1 e3377e70
+OUT 18d1af98 18d2a0a0 6e603455 base SAT violate SAT model Y4 7a149dce Y9 6d9d792e Y14 11802da4 w8 d0fffbfe h1 72ebeabc
+OUT 18d1af98 1952a2a0 6e603455 base SAT violate SAT model Y4 fdf47e66 Y9 422242b8 Y14 7aac21db w8 df3b1bca h1 1e3c05b0
+OUT 18d1af98 18d2a2a0 6e603455 base SAT violate SAT model Y4 fdf47dde Y9 51b25d2e Y14 75a0f0b3 w8 8c30dff4 h1 cfec0abc
+OUT 18d16f98 1952a0a0 6e60b455 base SAT violate SAT model Y4 01f47e46 Y9 3d76daa8 Y14 9ebc5e04 w8 4b3f596f h1 61c31da0
+OUT 18d16f98 18d2a0a0 6e60b455 base SAT violate SAT model Y4 41f499e6 Y9 c1beb8b2 Y14 ee7e47ac w8 ffdf48ee h1 1ccb2d62
+OUT 18d16f98 1952a2a0 6e60b455 base SAT violate SAT model Y4 fe0471c6 Y9 6d75cea8 Y14 998cc2ec w8 e72bb763 h1 f1abe6a0
+OUT 18d16f98 18d2a2a0 6e60b455 base SAT violate SAT model Y4 41f451fa Y9 c1e9dd32 Y14 01a0ce0f w8 0a208faf h1 dd74c2bc
+OUT 19b1e098 285020a0 6fdfbe55 base SAT violate SAT model Y4 c1e44226 Y9 d3cdbffc Y14 3ba9f0cf w8 e7ebf92e h1 f36878a5
+OUT 19b1e098 685020a0 6fdfbe55 base SAT violate SAT model Y4 55e44256 Y9 cc0e550c Y14 f39584ff w8 10ebf902 h1 87282499
+OUT 19b1e098 265020a0 6fdfbe55 base SAT violate SAT model Y4 15e47e62 Y9 37aeb444 Y14 9b6ecd7b w8 3f67fe4e h1 f2980c62
+OUT 19b1e098 665020a0 6fdfbe55 base SAT violate SAT model Y4 21e4b1b6 Y9 5f9df8c4 Y14 f362cdaf w8 7367c7ee h1 be98506e
+OUT 19b1e098 295020a0 6fdfbe55 base SAT violate SAT model Y4 99e485a6 Y9 cf7e3018 Y14 779e8dff w8 ff2bf68e h1 cad86c92
+OUT 19b1e098 695020a0 6fdfbe55 base SAT violate SAT model Y4 5de499ae Y9 7bdda518 Y14 b39ea177 w8 3b291fff h1 fa586c92
+OUT 19b1e098 29d020a0 6fdfbe55 base SAT violate SAT model Y4 81f4898a Y9 634e63ea Y14 53b213b3 w8 d777ee26 h1 58b850ae
+OUT 19b1e098 69d020a0 6fdfbe55 base SAT violate SAT model Y4 99f449a6 Y9 635de106 Y14 4bb2739f w8 ff77ef06 h1 78b850ae
+OUT 19b1e098 2850a0a0 6fdfbe55 base SAT violate SAT model Y4 79f4419a Y9 9e01a7f4 Y14 1fb5983f w8 dfb7d98d h1 9b24e4a9
+OUT 19b1e098 6850a0a0 6fdfbe55 base SAT violate SAT model Y4 3e14459a Y9 f2695704 Y14 48659057 w8 3bb897c1 h1 974cf759
+OUT 19b1e098 2a50a0a0 6fdfbe55 base SAT violate SAT model Y4 79f44db6 Y9 be41c40c Y14 578e8523 w8 ddb8cefa h1 8a14ac92
+OUT 19b1e098 6a50a0a0 6fdfbe55 base SAT violate SAT model Y4 d1f44652 Y9 221e4f0c Y14 7f8dd17b w8 b5d9de5e h1 d6a82c91
+OUT 19b1e098 2950a0a0 6fdfbe55 base SAT violate SAT model Y4 79e4a5fa Y9 59adc808 Y14 6ba27be3 w8 df2b36aa h1 1c9890ae
+OUT 19b1e098 6950a0a0 6fdfbe55 base SAT violate SAT model Y4 69e4a5a6 Y9 61722ef8 Y14 845ea3e3 w8 fd27350a h1 c4c46f52
+OUT 19b1e098 29d0a0a0 6fdfbe55 base SAT violate SAT model Y4 61f44672 Y9 3e398c22 Y14 1c5d5e5f w8 f754dfbf h1 59acff41
+OUT 19b1e098 69d0a0a0 6fdfbe55 base SAT violate SAT model Y4 e1f45272 Y9 ae39af02 Y14 8c7d7b5f w8 b754d33f h1 68acef61
+OUT 19b1e098 285060a0 6fdfbe55 base SAT violate SAT model Y4 65f46e2a Y9 50ce5c04 Y14 a3b5ccc3 w8 f3b6fdfd h1 e36844a9
+OUT 19b1e098 685060a0 6fdfbe55 base SAT violate SAT model Y4 6de4a186 Y9 7f7a4724 Y14 7845772b w8 f963f1c8 h1 142c9749
+OUT 19b1e098 2a5060a0 6fdfbe55 base SAT violate SAT model Y4 7df4ae1a Y9 f481540c Y14 004d204f w8 da37fe8a h1 4fd4ff51
+OUT 19b1e098 6a5060a0 6fdfbe55 base SAT violate SAT model Y4 bdf475ba Y9 f8fe6f1c Y14 539dcff3 w8 aa373ef9 h1 f8c86c81
+OUT 19b1e098 265060a0 6fdfbe55 base SAT violate SAT model Y4 95e4798a Y9 44be739c Y14 5b7eb793 w8 ff47b2c0 h1 8c984c72
+OUT 19b1e098 665060a0 6fdfbe55 base SAT violate SAT model Y4 0de4bda2 Y9 746e2ce4 Y14 f34ec09b w8 7747ed9a h1 bfb87c42
+OUT 19b1e098 295060a0 6fdfbe55 base SAT violate SAT model Y4 62045dae Y9 58adf428 Y14 bfad17a7 w8 f6ebf7af h1 08885c81
+OUT 19b1e098 695060a0 6fdfbe55 base SAT violate SAT model Y4 52045dae Y9 e8adfd28 Y14 8fad77a7 w8 b6ebf72f h1 68885c81
+OUT 19b1e098 29d060a0 6fdfbe55 base SAT violate SAT model Y4 820489a2 Y9 612e6402 Y14 4382139b w8 d747ff0f h1 58b840ae
+OUT 19b1e098 69d060a0 6fdfbe55 base SAT violate SAT model Y4 5df499ce Y9 c281a50a Y14 205d18db w8 2b35ef8a h1 4394ff41
+OUT 19b1e098 265160a0 6fdfbe55 base SAT violate SAT model Y4 65e4a99e Y9 c0e2141c Y14 7772e7cb w8 f768c8bf h1 8cd4907e
+OUT 19b1e098 665160a0 6fdfbe55 base SAT violate SAT model Y4 e5e4ba1e Y9 6c82011c Y14 d7b2fb4b w8 7f6ab1bf h1 80d4b0be
+OUT 18d37f98 1952a0a0 6e635455 base SAT violate SAT model Y4 7a0481be Y9 ad5a2aa8 Y14 8940b2c0 w8 f93853fe h1 f1ff726c
+OUT 18d37f98 18d2a0a0 6e635455 base SAT violate SAT model Y4 7df44a46 Y9 bdba2f12 Y14 8aaeea68 w8 d7d7fedf h1 e1af75b2
+OUT 18d37f98 1952a2a0 6e635455 base SAT violate SAT model Y4 72046a3a Y9 4221bca8 Y14 9982b584 w8 083464ff h1 9e3f6aae
+OUT 18d37f98 18d2a2a0 6e635455 base SAT violate SAT model Y4 15f49206 Y9 6e6e0932 Y14 b1be21b7 w8 5ef3c5c4 h1 723026a2
+OUT 18d1ff98 1952a0a0 6e605455 base SAT violate SAT model Y4 7de4b5c2 Y9 ed51caa8 Y14 51ac85a4 w8 f6cc97ed h1 f2e7aea0
+OUT 18d1ff98 18d2a0a0 6e605455 base SAT violate SAT model Y4 c204bd9a Y9 51f2293e Y14 fa90b26c w8 9a4af8b6 h1 cd77b9bc
+OUT 18d1ff98 1952a2a0 6e605455 base SAT violate SAT model Y4 7df45646 Y9 c231faa8 Y14 d2bc09eb w8 df3b73ee h1 1e2c2da0
+OUT 18d1ff98 18d2a2a0 6e605455 base SAT violate SAT model Y4 82044dbe Y9 3de5be8e Y14 f150ee44 w8 f1200768 h1 e17bf27c
+OUT 18d3bf98 1952a0a0 6e63d455 base SAT violate SAT model Y4 a60445ba Y9 3d7dd4b8 Y14 9d50e6e0 w8 df3027ef h1 e1dbba7c
+OUT 18d3bf98 1952a2a0 6e63d455 base SAT violate SAT model Y4 a6044a46 Y9 2d660b28 Y14 e28cfa7c w8 df302fee h1 f1bbc5a0
+OUT 18d3ef98 1952a0a0 6e63b455 base SAT violate SAT model Y4 660455c6 Y9 ed75eca8 Y14 098ce6f4 w8 df380ae7 h1 f1b3eea0
+OUT 18d3ef98 1952a2a0 6e63b455 base SAT violate SAT model Y4 66045a3a Y9 ed69fb38 Y14 7e50ea0c w8 df380fef h1 f1b7997c
+OUT 19d1e098 6850a0a0 6f9fbe55 base SAT violate UNSAT cadical UNSAT
+OUT 19d1e098 6a50a0a0 6f9fbe55 base SAT violate SAT model Y4 0614b206 Y9 b93a58f4 Y14 a4528d7b w8 71f83443 h1 fefc236e
+OUT 19d1e098 6950a0a0 6f9fbe55 base SAT violate SAT model Y4 2e1481ae Y9 ed466908 Y14 ef92a9cf w8 6af4a285 h1 eae040ae
+OUT 19d1e098 69d0a0a0 6f9fbe55 base SAT violate SAT model Y4 89f4b63e Y9 a939dada Y14 78621b63 w8 fcfa636e h1 6cdc737e
+OUT 19d1e098 685060a0 6f9fbe55 base SAT violate UNSAT cadical UNSAT
+OUT 19d1e098 6a5060a0 6f9fbe55 base SAT violate SAT model Y4 0de44a7e Y9 5726c114 Y14 bf829f7f w8 59a6082a h1 9480308e
+OUT 19d1e098 665060a0 6f9fbe55 base SAT violate SAT model Y4 fde4b232 Y9 f0962f44 Y14 63ae2013 w8 9727f77a h1 53a01ca2
+OUT 19d1e098 695060a0 6f9fbe55 base SAT violate SAT model Y4 3de485ce Y9 6d564af8 Y14 ffb228cf w8 2945ae6f h1 6f8040be
+OUT 19d1e098 69d060a0 6f9fbe55 base SAT violate SAT model Y4 8a048992 Y9 e3464102 Y14 3b8220b3 w8 0d479f14 h1 6ba030ae
+OUT 19d1e098 665160a0 6f9fbe55 base SAT violate SAT model Y4 bde4adf6 Y9 810662d4 Y14 4f928357 w8 b726bd3e h1 ec20709e
+OUT 19b0a098 269160a0 6fde3e55 base SAT violate SAT model Y4 b6147de6 Y9 70c573b9 Y14 d782c3a7 w8 dee6cfd3 h1 fcc0e0be
+OUT 19b0a098 669160a0 6fde3e55 base SAT violate SAT model Y4 0e04b232 Y9 8c95d8c7 Y14 df821073 w8 5ef41f9a h1 63c050ae
+OUT 19b0a098 369160a0 6fde3e55 base SAT violate SAT model Y4 b614b1e6 Y9 5085e7a9 Y14 57b28fa7 w8 dae3dfbe h1 fcc0608e
+OUT 19b0a098 769160a0 6fde3e55 base SAT violate SAT model Y4 b1f4960a Y9 8d0660a9 Y14 4352f7eb w8 4d2a1825 h1 a060704e
+OUT 19b0a098 279160a0 6fde3e55 base SAT violate UNSAT cadical UNSAT
+OUT 19b0a098 679160a0 6fde3e55 base SAT violate UNSAT cadical UNSAT
+OUT 19b0a098 379160a0 6fde3e55 base SAT violate UNSAT cadical UNSAT
+OUT 19b0a098 265160a0 6fde3e55 base SAT violate SAT model Y4 91e4865e Y9 30f2681c Y14 40b2db3b w8 d347eefa h1 9ce453be
+OUT 19b0a098 665160a0 6fde3e55 base SAT violate SAT model Y4 71e4b5de Y9 60de5abc Y14 a3929ba7 w8 f347fe7e h1 ecf8509e
+OUT 19b0a098 365160a0 6fde3e55 base SAT violate SAT model Y4 71e4bd9e Y9 b02e408c Y14 83c2e3e7 w8 ef47ed17 h1 9cf870ce
+OUT 19b0a098 275160a0 6fde3e55 base SAT violate SAT model Y4 09e46e62 Y9 c061f840 Y14 68a2a007 w8 5ba77fe6 h1 8fe4e3ae
+OUT 19b0a098 675160a0 6fde3e55 base SAT violate SAT model Y4 51f47652 Y9 7071d930 Y14 80a2cb17 w8 2099f584 h1 fcc453be
+OUT 19b0a098 375160a0 6fde3e55 base SAT violate SAT model Y4 69e46e62 Y9 5061ef90 Y14 0812f007 w8 f7a77fee h1 dfe4e31e
+OUT 19b0a098 27d160a0 6fde3e55 base SAT violate SAT model Y4 1614aa2e Y9 bf9d702a Y14 73851be7 w8 3ef7fe7e h1 7048e4b9
+OUT 19b0a098 67d160a0 6fde3e55 base SAT violate SAT model Y4 6e046996 Y9 b37ddf66 Y14 1b65547f w8 fc668012 h1 7f68f449
+OUT 19b0a098 37d160a0 6fde3e55 base SAT violate SAT model Y4 1614aa2e Y9 bb9e106a Y14 d3c51fe7 w8 3af7fe76 h1 744844f9
+OUT 19f1a398 68afa2a0 6fa03c55 base SAT violate SAT model Y4 7a049e52 Y9 99e1e500 Y14 c47e776c w8 ff4afffe h1 28bf3f52
+OUT 19f1a398 69afa2a0 6fa03c55 base SAT violate SAT model Y4 92044dca Y9 f9add4dc Y14 6c5e6738 w8 f75f9910 h1 68737f72
+OUT 19f1a398 68af62a0 6fa03c55 base SAT violate SAT model Y4 b9f47a22 Y9 52ae8500 Y14 078ecc13 w8 ac635328 h1 f7b03c92
+OUT 19f1a398 69af62a0 6fa03c55 base SAT violate SAT model Y4 79f49e76 Y9 9369c104 Y14 18306883 w8 ff1975ba h1 3774e32c
+OUT 19f0e398 682fa2a0 6fa1bc55 base SAT violate SAT model Y4 660459d2 Y9 39e9eb26 Y14 8faa9ae4 w8 00038361 h1 81b76886
+OUT 19f0e398 6a2fa2a0 6fa1bc55 base SAT violate SAT model Y4 e9f4620e Y9 9df65112 Y14 6b92ee27 w8 7d7eff22 h1 cda8008e
+OUT 19f0e398 6a2f62a0 6fa1bc55 base SAT violate SAT model Y4 e2044a66 Y9 d2f9d30a Y14 13b25c40 w8 b580a34f h1 57a7709e
+OUT 19f0e398 672f62a0 6fa1bc55 base SAT violate SAT model Y4 b5f4b58e Y9 313ab962 Y14 7490502b w8 d57a76c3 h1 2724438c
+OUT 19f0e398 682fe2a0 6fa1bc55 base SAT violate SAT model Y4 3e044992 Y9 3af1eb0a Y14 f7ba8a7c w8 28f127a2 h1 816f4896
+OUT 19f0e398 6a2fe2a0 6fa1bc55 base SAT violate SAT model Y4 ee04565e Y9 faedfb0a Y14 9c72766c w8 9a2bd7ec h1 61b3f35e
+OUT 19f0e398 672fe2a0 6fa1bc55 base SAT violate SAT model Y4 09f44216 Y9 9ceaa13e Y14 db8039a3 w8 eb95693a h1 3a34509c
+OUT 19f3e398 682fa2a0 6fa3bc55 base SAT violate SAT model Y4 7e0461ce Y9 19e57312 Y14 17aaa234 w8 fac00002 h1 817be886
+OUT 19f3e398 6a2fa2a0 6fa3bc55 base SAT violate SAT model Y4 79f489a6 Y9 5ec550ea Y14 1ba2243f w8 1d7e9b8c h1 6f18e0be
+OUT 19f3e398 692fa2a0 6fa3bc55 base SAT violate SAT model Y4 69f4561e Y9 39f5f90a Y14 2bd074f7 w8 ff070927 h1 6368c0cc
+OUT 19f3e398 6a2f62a0 6fa3bc55 base SAT violate SAT model Y4 25f441b6 Y9 72e2f91e Y14 a792648b w8 71d29014 h1 67bc008e
+OUT 19f3e398 662f62a0 6fa3bc55 base SAT violate SAT model Y4 7df45e36 Y9 30a9d156 Y14 ac429b03 w8 f779cffe h1 84b4535e
+OUT 19f3e398 692f62a0 6fa3bc55 base SAT violate SAT model Y4 720441da Y9 5361cada Y14 00106464 w8 f705eaea h1 673ff33c
+OUT 19f3e398 682fe2a0 6fa3bc55 base SAT violate SAT model Y4 9e04be22 Y9 fca9fb0a Y14 e7ba7554 w8 fbc80fb7 h1 0af7f896
+OUT 19f3e398 6a2fe2a0 6fa3bc55 base SAT violate SAT model Y4 55f4821e Y9 b6b258e2 Y14 742272f3 w8 21860838 h1 316ca33e
+OUT 19f3e398 662fe2a0 6fa3bc55 base SAT violate SAT model Y4 75f4b642 Y9 5dc278e2 Y14 a492e5df w8 f57bffea h1 921c538e
+OUT 19f3e398 692fe2a0 6fa3bc55 base SAT violate SAT model Y4 29f45e36 Y9 58ee6106 Y14 23b86d47 w8 beb7d8fa h1 72f088a4
+OUT 18f1e398 1812a2a0 6e5fbc55 base SAT violate SAT model Y4 61f49a26 Y9 31c21f35 Y14 a674f4fb w8 df89fffe h1 af5c4568
+OUT 18f1e398 1912a2a0 6e5fbc55 base SAT violate SAT model Y4 79f44d9e Y9 22161ea9 Y14 e9703157 w8 fb4a4fae h1 3e48126c
+OUT 18f1e398 1852a2a0 6e5fbc55 base SAT violate SAT model Y4 f9f4465e Y9 c1f1971c Y14 dea598b3 w8 9a9a18ce h1 9f6ca5b9
+OUT 18f1e398 1952a2a0 6e5fbc55 base SAT violate SAT model Y4 6604563a Y9 adadc738 Y14 3651e648 w8 df2648ef h1 f1f3d17d
+OUT 1ff1a398 68afa2a0 6ba03c55 base SAT violate SAT model Y4 1204bdc6 Y9 f5ca12e0 Y14 a0508ad0 w8 64462280 h1 f597337c
+OUT 1ff1a398 69afa2a0 6ba03c55 base SAT violate SAT model Y4 3df4ba2a Y9 51e2a4ec Y14 a03c0897 w8 375dde8a h1 733c1f20
+OUT 1ff1a398 68af62a0 6ba03c55 base SAT violate SAT model Y4 61f461b2 Y9 5269aef0 Y14 6c3e87c7 w8 83702d24 h1 a4f48f22
+OUT 1ff1a398 69af62a0 6ba03c55 base SAT violate SAT model Y4 6e046a76 Y9 73be2124 Y14 5c604cd4 w8 fd26fe5a h1 6723b34c
+OUT 19b36398 1ad2a0a0 6fdcbc55 base SAT violate SAT model Y4 1e1441ca Y9 d1cda6c6 Y14 6a664cf0 w8 55fbdb7e h1 4fbbf55a
+OUT 19b36398 1ad2a2a0 6fdcbc55 base SAT violate SAT model Y4 260455ee Y9 3dc9ef4a Y14 15b1f6b8 w8 4609c6d8 h1 e1d7b29d
+OUT 1ff3e398 652ea2a0 6ba3bc55 base SAT violate SAT model Y4 71f45e1e Y9 b5c5b8a6 Y14 9868e707 w8 f7fcfe2e h1 f8986b74
+OUT 1ff3e398 682fa2a0 6ba3bc55 base SAT violate SAT model Y4 8e0499d2 Y9 79b5bb0e Y14 447abab8 w8 eac48480 h1 e1eb4b56
+OUT 1ff3e398 6a2fa2a0 6ba3bc55 base SAT violate SAT model Y4 3e0475ba Y9 79c1eb12 Y14 6fa204a4 w8 27f0ab77 h1 339fd08e
+OUT 1ff3e398 692fa2a0 6ba3bc55 base SAT violate SAT model Y4 ae047dba Y9 f9dd72fa Y14 c4381eb8 w8 4aaae321 h1 2183eb14
+OUT 1ff3e398 665562a0 6ba3bc55 base SAT violate SAT model Y4 8df47e76 Y9 2cf98144 Y14 af722c53 w8 d969f35a h1 13a4a06e
+OUT 1ff3e398 655562a0 6ba3bc55 base SAT violate SAT model Y4 85f4822a Y9 6f229ec8 Y14 2b8e93d7 w8 081a0fa7 h1 d07c2c92
+OUT 1ff3e398 65d562a0 6ba3bc55 base SAT violate SAT model Y4 05f49626 Y9 412d9aa2 Y14 14622b17 w8 843a20ac h1 7cb0937e
+OUT 1ff3e398 662d62a0 6ba3bc55 base SAT violate SAT model Y4 da049e5a Y9 4469cb3e Y14 0b72446c w8 3937f773 h1 1bb7505e
+OUT 1ff3e398 652d62a0 6ba3bc55 base SAT violate SAT model Y4 bdf45a02 Y9 20b2113a Y14 ffb0246f w8 b808592b h1 3fecc0ac
+OUT 1ff3e398 6a2f62a0 6ba3bc55 base SAT violate SAT model Y4 6df44222 Y9 b63648fa Y14 bc72d34b w8 07c7c804 h1 d0e8536e
+OUT 1ff3e398 662f62a0 6ba3bc55 base SAT violate SAT model Y4 5a04421e Y9 74a29952 Y14 ebb24020 w8 06678f0f h1 43bf309e
+OUT 1ff3e398 692f62a0 6ba3bc55 base SAT violate SAT model Y4 d20451ce Y9 96ee4ada Y14 dbd8f0fc w8 24f79e05 h1 e3b388f4
+OUT 1ff3e398 652f62a0 6ba3bc55 base SAT violate SAT model Y4 fa0471a2 Y9 50ee6b5a Y14 1b60c7d0 w8 73f69a2e h1 f4f3604c
+OUT 1ff0e398 682fa2a0 6ba1bc55 base SAT violate SAT model Y4 2604b1d2 Y9 b5f9c2fa Y14 5c7a65b4 w8 55c4290b h1 16e7fb56
+OUT 1ff0e398 6a2fa2a0 6ba1bc55 base SAT violate SAT model Y4 d604bdb6 Y9 dddae2e2 Y14 479240b0 w8 93ffe3fb h1 3f8710be
+OUT 1ff0e398 6a2f62a0 6ba1bc55 base SAT violate SAT model Y4 4df44672 Y9 16a5b91a Y14 2c52740b w8 27b88bd6 h1 73f8e34e
+OUT 1ff0e398 672f62a0 6ba1bc55 base SAT violate SAT model Y4 1204498a Y9 b4fe2ad2 Y14 20b0e828 w8 5f46cb42 h1 e323b39c
+OUT 19d0a098 665160a0 6f9e3e55 base SAT violate SAT model Y4 f1e4419e Y9 51c6431c Y14 c372bf1f w8 fb24b392 h1 bc00b07e
+OUT 19d0a098 675160a0 6f9e3e55 base SAT violate SAT model Y4 96045d9e Y9 a0d66140 Y14 5772737f w8 f76af630 h1 6c60405e
+OUT 19d0a098 67d160a0 6f9e3e55 base SAT violate UNSAT cadical UNSAT
+OUT 18f17f98 1952a2a0 6e5f5455 base SAT violate SAT model Y4 6e0485fa Y9 41aeaf38 Y14 f651da88 w8 ff29cdbf h1 9df3197d
+OUT 18f17f98 18d2a2a0 6e5f5455 base SAT violate SAT model Y4 9e0479d6 Y9 7e1e3892 Y14 719eda14 w8 b7465dd8 h1 e1436eb2
+OUT 18f17f98 18d2aaa0 6e5f5455 base SAT violate SAT model Y4 1604b236 Y9 c23e5f12 Y14 819e2df4 w8 bbc982fb h1 5e4316b2
+OUT 19b1bf98 1a52a2a0 6fdfd455 base SAT violate SAT model Y4 fe0455ba Y9 02a69eac Y14 7692c900 w8 764a2e6a h1 de3b09be
+OUT 19b1bf98 1952a2a0 6fdfd455 base SAT violate SAT model Y4 6e04725e Y9 ae5284b8 Y14 c691c150 w8 0ce5f570 h1 f28f29bd
+OUT 19b1bf98 19d2a2a0 6fdfd455 base SAT violate SAT model Y4 5a04b26a Y9 424e2cb6 Y14 955d2e78 w8 5285d23f h1 5d934e71
+OUT 19b1bf98 19afa2a0 6fdfd455 base SAT violate SAT model Y4 8e0499de Y9 da8e8ab4 Y14 5a5d390c w8 24a8adee h1 62535571
+OUT 19b1bf98 19efcaa0 6fdfd455 base SAT violate SAT model Y4 2a0451d2 Y9 fb0a7723 Y14 f64c51a4 w8 c35ac281 h1 42f75d60
+OUT 1fb36398 255560a0 6bdcbc55 base SAT violate SAT model Y4 62046a2a Y9 44edffa8 Y14 d191d0f0 w8 3c066786 h1 fb5b32bd
+OUT 1fb36398 655560a0 6bdcbc55 base SAT violate SAT model Y4 15e46e7e Y9 86fde4a8 Y14 2b7e9424 w8 682865b1 h1 bbdbbc72
+OUT 1fb36398 275560a0 6bdcbc55 base SAT violate SAT model Y4 a2144e72 Y9 b4a9fc30 Y14 9b5a878c w8 ff58c5b2 h1 887fb866
+OUT 1fb36398 675560a0 6bdcbc55 base SAT violate SAT model Y4 62149e3a Y9 84cea150 Y14 e3b2e7c0 w8 ff5873fe h1 b87b008e
+OUT 1fb36398 1ad560a0 6bdcbc55 base SAT violate SAT model Y4 621451d2 Y9 4cf684a6 Y14 c9896020 w8 dff67cd2 h1 73732ab5
+OUT 1fb36398 26d560a0 6bdcbc55 base SAT violate SAT model Y4 9df4563e Y9 d139b856 Y14 9d8078e0 w8 b4f6db11 h1 6f5f829c
+OUT 1fb36398 66d560a0 6bdcbc55 base SAT violate SAT model Y4 a214a992 Y9 0129baba Y14 c8a8544c w8 c0d7632b h1 3f5feb94
+OUT 1fb36398 255562a0 6bdcbc55 base SAT violate SAT model Y4 e204420e Y9 c6d5b028 Y14 cd9ef844 w8 73e7ed4c h1 fbcbaeb2
+OUT 1fb36398 655562a0 6bdcbc55 base SAT violate SAT model Y4 95f49dd6 Y9 0366a4d8 Y14 0b9ee02f w8 00183800 h1 bf781c82
+OUT 1fb36398 275562a0 6bdcbc55 base SAT violate SAT model Y4 2204a642 Y9 d34dc830 Y14 2d5d8890 w8 ff69868a h1 ef538e71
+OUT 1fb36398 675562a0 6bdcbc55 base SAT violate SAT model Y4 1df46e06 Y9 beb6ccb0 Y14 9bb5ac6f w8 60966422 h1 83e804a9
+OUT 1fb36398 1ad562a0 6bdcbc55 base SAT violate SAT model Y4 ddf449de Y9 72a9e32a Y14 81ae44ab w8 d036894f h1 4ff4deb2
+OUT 1fb36398 26d562a0 6bdcbc55 base SAT violate SAT model Y4 6204423e Y9 255e8c2a Y14 a3809bfc w8 ff078cf7 h1 984340ac
+OUT 1fb36398 66d562a0 6bdcbc55 base SAT violate SAT model Y4 1df445d2 Y9 7881eb46 Y14 fc70408f w8 5b17a701 h1 47dc636c
+OUT 1fb36398 1ad55ea0 6bdcbc55 base SAT violate SAT model Y4 de0475a2 Y9 d9828d26 Y14 0d5052cc w8 ac296b2f h1 65ef527c
+OUT 1fb36398 1aed5ea0 6bdcbc55 base SAT violate SAT model Y4 19e481ba Y9 3631ed4b Y14 2a90a964 w8 3018a020 h1 ea5fb19c
+OUT 1fb3a098 259560a0 6bdc3e55 base SAT violate SAT model Y4 66049252 Y9 b395c045 Y14 9abe5fb3 w8 ec369659 h1 0c607d92
+OUT 1fb3a098 659560a0 6bdc3e55 base SAT violate SAT model Y4 9e04bd82 Y9 cf69f53d Y14 508e0c5f w8 efb8ae2a h1 735c4fa2
+OUT 1fb3a098 279560a0 6bdc3e55 base SAT violate UNSAT cadical UNSAT
+OUT 1fb3a098 679560a0 6bdc3e55 base SAT violate UNSAT cadical UNSAT
+OUT 1fb3a098 255560a0 6bdc3e55 base SAT violate SAT model Y4 5e044e56 Y9 90f1dbd8 Y14 16a9a093 w8 400705f9 h1 af44c985
+OUT 1fb3a098 655560a0 6bdc3e55 base SAT violate SAT model Y4 9e048daa Y9 153dc2d8 Y14 ef62e453 w8 c3e7be06 h1 ab78f04e
+OUT 1fb3a098 275560a0 6bdc3e55 base SAT violate SAT model Y4 261495fa Y9 e8da6ba0 Y14 e6428327 w8 7f75ffbe h1 d45c417e
+OUT 1fb3a098 675560a0 6bdc3e55 base SAT violate SAT model Y4 de0465ba Y9 fade5ce0 Y14 10ade0c3 w8 a4684417 h1 c7f84f81
+OUT 1fb3a098 25d560a0 6bdc3e55 base SAT violate SAT model Y4 99f47616 Y9 8d0d6bbe Y14 fbb2044f w8 ffd7ff9a h1 33d8e0ae
+OUT 1fb3a098 65d560a0 6bdc3e55 base SAT violate SAT model Y4 a1f48202 Y9 7a51df4a Y14 ef8d0747 w8 e3f707cf h1 44c4cc91
+OUT 1fb3a098 27d560a0 6bdc3e55 base SAT violate SAT model Y4 a1e44256 Y9 9fa1c83e Y14 57552393 w8 c20815de h1 20447459
+OUT 1fb3a098 67d560a0 6bdc3e55 base SAT violate SAT model Y4 d9e49dba Y9 ff95bf32 Y14 bca51c6b w8 a407f976 h1 4350e7a9
+OUT 19b1e398 1852a2a0 6fdfbc55 base SAT violate SAT model Y4 9e044612 Y9 fe36549c Y14 2a55a4b8 w8 cfaa5d3d h1 a32b3579
+OUT 19b1e398 1a52a2a0 6fdfbc55 base SAT violate SAT model Y4 c604adae Y9 bda1faac Y14 2550cdd0 w8 6e29af96 h1 a2ff627c
+OUT 19b1e398 1952a2a0 6fdfbc55 base SAT violate SAT model Y4 51f489f6 Y9 7d5df8c8 Y14 aebc28b7 w8 02f9d0ae h1 63c07da0
+OUT 19b1e398 19d2a2a0 6fdfbc55 base SAT violate SAT model Y4 7e04459a Y9 bd79e72a Y14 5d4265bc w8 ef4621b7 h1 62a7a26e
+OUT 18f1ef98 1912a2a0 6e5fb455 base SAT violate SAT model Y4 a9f4919e Y9 b1764f3b Y14 31607df7 w8 0205d02e h1 2ee81a7c
+OUT 18f1ef98 1952a2a0 6e5fb455 base SAT violate SAT model Y4 2e04825a Y9 3dd6b2b8 Y14 9691a210 w8 2d2a20d5 h1 e1cb39bd
+OUT 18f1ef98 1912aaa0 6e5fb455 base SAT violate SAT model Y4 79f4aa7e Y9 32159b29 Y14 42b04597 w8 c949b1ce h1 2e68b9ac
+OUT 19b17f98 1952a2a0 6fdf5455 base SAT violate SAT model Y4 4df4520e Y9 4259fea8 Y14 527dcecb w8 ff15e5a3 h1 dd449d61
+OUT 19b17f98 18d2a2a0 6fdf5455 base SAT violate SAT model Y4 a604b9e2 Y9 7db63cb2 Y14 119e1988 w8 df65f14f h1 62eb36b2
+OUT 19b17f98 19d2a2a0 6fdf5455 base SAT violate SAT model Y4 a204be1a Y9 ed2270be Y14 22520d64 w8 d9261a2f h1 72ff017e
+OUT 19b17f98 18afa2a0 6fdf5455 base SAT violate SAT model Y4 f9f441ca Y9 99c6b8b0 Y14 5e7e6193 w8 5a9c5302 h1 62d82562
+OUT 19b17f98 19afa2a0 6fdf5455 base SAT violate SAT model Y4 c6044a26 Y9 99e9b334 Y14 1591e250 w8 0f27ba0b h1 e9f752bd
+OUT 19b17f98 18d2aaa0 6fdf5455 base SAT violate SAT model Y4 3df49616 Y9 7e3e089e Y14 e1aeb6d7 w8 ff5617ae h1 e1405eb2
+OUT 19b17f98 18efaaa0 6fdf5455 base SAT violate SAT model Y4 e6047dda Y9 f98d729f Y14 a19fdea8 w8 ffb7ee5d h1 e1f3c6b3
+OUT 1fb36098 255560a0 6bdcbe55 base SAT violate SAT model Y4 5df4bda2 Y9 6cfdd848 Y14 b689af6b w8 fff62e22 h1 d0486995
+OUT 1fb36098 655560a0 6bdcbe55 base SAT violate SAT model Y4 5a0441de Y9 c6d9cf38 Y14 378ef8a3 w8 1fe7a7ce h1 fbfceca2
+OUT 1fb36098 275560a0 6bdcbe55 base SAT violate SAT model Y4 95e4827a Y9 1cfd9c30 Y14 b762e0a3 w8 bfa7a9ae h1 a358a06e
+OUT 1fb36098 675560a0 6bdcbe55 base SAT violate SAT model Y4 5a14464a Y9 28c9eac0 Y14 8b529097 w8 2f77ce02 h1 975c506e
+OUT 18f1df98 1912a2a0 6e5f9455 base SAT violate SAT model Y4 61f4419a Y9 e199c32b Y14 39703fdf w8 0b46682e h1 3cc4da6c
+OUT 18f1df98 1912aaa0 6e5f9455 base SAT violate SAT model Y4 f9f4be1e Y9 b215bf39 Y14 f26050f7 w8 c8498eae h1 2f68897c
+OUT 1fb3a398 259560a0 6bdc3c55 base SAT violate SAT model Y4 66148596 Y9 5ed9dfbd Y14 b95e27e8 w8 2fa66734 h1 60ff5e62
+OUT 1fb3a398 659560a0 6bdc3c55 base SAT violate SAT model Y4 e1f44d92 Y9 cb95575b Y14 8f5e7b50 w8 97a84743 h1 7443ec42
+OUT 1fb3a398 279560a0 6bdc3c55 base SAT violate SAT model Y4 e6048636 Y9 d025442d Y14 9f8a2b54 w8 bfb850f2 h1 6ce3f8a6
+OUT 1fb3a398 679560a0 6bdc3c55 base SAT violate SAT model Y4 66049a36 Y9 b035292d Y14 1f8a5754 w8 ffb83b92 h1 0ce3f8a6
+OUT 1fb3a398 255560a0 6bdc3c55 base SAT violate SAT model Y4 61f4625e Y9 4a51d038 Y14 6cbdd708 w8 eff767f2 h1 f4d78fa1
+OUT 1fb3a398 655560a0 6bdc3c55 base SAT violate SAT model Y4 e1f4b266 Y9 39516338 Y14 b0b2f780 w8 1ff7016f h1 8467d3ae
+OUT 1fb3a398 275560a0 6bdc3c55 base SAT violate SAT model Y4 de044de6 Y9 a6d65c30 Y14 28559494 w8 8187dce6 h1 9bf37779
+OUT 1fb3a398 675560a0 6bdc3c55 base SAT violate SAT model Y4 9e14663a Y9 14ce4ac0 Y14 0fa28ce0 w8 ff582d76 h1 ab5b109e
+OUT 1fb3a398 25d560a0 6bdc3c55 base SAT violate SAT model Y4 6614be36 Y9 c221345a Y14 19bd0340 w8 ff75f775 h1 7cf7fe81
+OUT 1fb3a398 65d560a0 6bdc3c55 base SAT violate SAT model Y4 5e0445ee Y9 a8e9d8c2 Y14 0fb21090 w8 278902b7 h1 17ffd09e
+OUT 1fb3a398 27d560a0 6bdc3c55 base SAT violate SAT model Y4 5e148da6 Y9 a0d67c26 Y14 948a5064 w8 4a378a13 h1 1f434bb6
+OUT 1fb3a398 67d560a0 6bdc3c55 base SAT violate SAT model Y4 a1e491aa Y9 10a5f152 Y14 688a7f48 w8 fae7d7ff h1 2c634b86
+OUT 1fb3a398 259562a0 6bdc3c55 base SAT violate SAT model Y4 e604a5c6 Y9 26fe4c3d Y14 3a4e7fa4 w8 83b8c30f h1 18e35d62
+OUT 1fb3a398 659562a0 6bdc3c55 base SAT violate SAT model Y4 660451fa Y9 67817cbd Y14 384e4b24 w8 2c36d8bb h1 585fdf62
+OUT 1fb3a398 279562a0 6bdc3c55 base SAT violate SAT model Y4 e60485f6 Y9 c021e3ad Y14 3c4a3b88 w8 bfb850b2 h1 7cff5b66
+OUT 1fb3a398 679562a0 6bdc3c55 base SAT violate SAT model Y4 9e0495be Y9 3421e345 Y14 d4ba5cc0 w8 dfb800fa h1 0bffcb96
+OUT 1fb3a398 255562a0 6bdc3c55 base SAT violate SAT model Y4 5e0459ae Y9 d901e428 Y14 2f52fcf0 w8 ffe72ffd h1 e7dff07e
+OUT 1fb3a398 655562a0 6bdc3c55 base SAT violate SAT model Y4 61f46606 Y9 bf666f48 Y14 af8ea7ff w8 1ff6af42 h1 80784c92
+OUT 1fb3a398 275562a0 6bdc3c55 base SAT violate SAT model Y4 1e046a7e Y9 c0dddfc0 Y14 ed70d4bc w8 7b696ad2 h1 ff43725c
+OUT 1fb3a398 675562a0 6bdc3c55 base SAT violate SAT model Y4 a1f45dfa Y9 791de0d0 Y14 d042db3b w8 e477d03b h1 c440f35e
+OUT 1fb3a398 25d562a0 6bdc3c55 base SAT violate SAT model Y4 99f46d82 Y9 6cfa703e Y14 7ab27ce7 w8 c3ba06a6 h1 53e461ae
+OUT 1fb3a398 65d562a0 6bdc3c55 base SAT violate SAT model Y4 a604b1c2 Y9 82265cd2 Y14 786d4fb8 w8 f0480411 h1 3cfb5f41
+OUT 1fb3a398 27d562a0 6bdc3c55 base SAT violate SAT model Y4 9e045a26 Y9 b7765022 Y14 4b9510cc w8 c60a109e h1 0b6b54b9
+OUT 1fb3a398 67d562a0 6bdc3c55 base SAT violate SAT model Y4 26049612 Y9 00c940ae Y14 5f8a6bc4 w8 59a9bfb9 h1 3c57f8a6
+OUT 1fb3a398 25ad62a0 6bdc3c55 base SAT violate SAT model Y4 5e045256 Y9 2702cfcc Y14 d0bc6808 w8 ffa655ff h1 7bdf0f90
+OUT 1fb3a398 65ad62a0 6bdc3c55 base SAT violate SAT model Y4 e6047e26 Y9 62363cdc Y14 1bad034c w8 07a73801 h1 3ceb7c81
+OUT 1fb3a398 27ad62a0 6bdc3c55 base SAT violate SAT model Y4 de0489be Y9 60c5eba4 Y14 969a3464 w8 87ca8b1a h1 7f5bc9b6
+OUT 1fb3a398 67ad62a0 6bdc3c55 base SAT violate SAT model Y4 59f48a2a Y9 e6f5ece4 Y14 3f953043 w8 11da8c06 h1 7be8e489
+OUT 18f1bf98 1952a2a0 6e5fd455 base SAT violate SAT model Y4 1a046a5a Y9 2de56728 Y14 668ed9a0 w8 3a4a2203 h1 f27bfda2
+OUT 1fb3ff98 255560a0 6bdc5455 base SAT violate SAT model Y4 62147e2a Y9 42320458 Y14 5dbdc35c w8 eff6687e h1 fcf7be81
+OUT 1fb3ff98 1d5560a0 6bdc5455 base SAT violate SAT model Y4 e5f4424a Y9 2451ed48 Y14 a9ad9b1c w8 be167262 h1 98d7ceb1
+OUT 1fb3ff98 275560a0 6bdc5455 base SAT violate SAT model Y4 a60481f2 Y9 c0818fd0 Y14 8e62bfa4 w8 ff89c2de h1 fcd7a94e
+OUT 1fb3ff98 25d560a0 6bdc5455 base SAT violate SAT model Y4 de14425e Y9 c53557a6 Y14 8d42781c w8 cbd6fc4f h1 7bc3d27e
+OUT 1fb3ff98 1dd560a0 6bdc5455 base SAT violate SAT model Y4 59e44632 Y9 b335a706 Y14 79720870 w8 ea268629 h1 0fc3a27e
+OUT 1fb3ff98 255562a0 6bdc5455 base SAT violate SAT model Y4 61f4960a Y9 68b67828 Y14 d1a183e3 w8 eff6be2e h1 d46832bd
+OUT 1fb3ff98 1d5562a0 6bdc5455 base SAT violate SAT model Y4 99f45d96 Y9 9941ab08 Y14 6eacb84b w8 e21a0940 h1 a75c75b0
+OUT 1fb3ff98 275562a0 6bdc5455 base SAT violate SAT model Y4 9df445d6 Y9 ef49d840 Y14 ca7dd403 w8 fe998179 h1 d354d561
+OUT 1fb3ff98 25d562a0 6bdc5455 base SAT violate SAT model Y4 ddf479f6 Y9 0cfd5836 Y14 94720897 w8 c0596838 h1 33e0cb6e
+OUT 1fb3ff98 1dd562a0 6bdc5455 base SAT violate SAT model Y4 a204898a Y9 344e00c6 Y14 969d43d8 w8 9da6c22e h1 08d3b5b1
+OUT 1fb3ff98 25ad62a0 6bdc5455 base SAT violate SAT model Y4 65f45e26 Y9 a4a9684c Y14 5c4167d3 w8 ebb77f0e h1 7874bb5d
+OUT 1fb3ff98 1dad62a0 6bdc5455 base SAT violate SAT model Y4 9df49a36 Y9 26b5ecc4 Y14 756120df w8 da57f9fb h1 7b686a7d
+OUT 1fb3ff98 25d54aa0 6bdc5455 base SAT violate SAT model Y4 e5f49222 Y9 752eb02e Y14 4c621a73 w8 bf999297 h1 49d02b7e
+OUT 1fb3ff98 1dd54aa0 6bdc5455 base SAT violate SAT model Y4 9e04b64e Y9 252a288e Y14 819c6d18 w8 8e697d88 h1 1ad79eb0
+OUT 1fb3ff98 1ded4aa0 6bdc5455 base SAT violate SAT model Y4 da048dba Y9 222260ad Y14 d27331e4 w8 fdf69e1b h1 7edf895f
+OUT 1fb3ff98 25555aa0 6bdc5455 base SAT violate SAT model Y4 25f4ad8e Y9 edc12c48 Y14 528dbef3 w8 43f90c1d h1 d1fcf591
+OUT 1fb3ff98 1d555aa0 6bdc5455 base SAT violate SAT model Y4 a20479ce Y9 b5619b08 Y14 869eb290 w8 06065d04 h1 89dfa5b2
+OUT 1fb3ff98 1d555ea0 6bdc5455 base SAT violate SAT model Y4 6214426a Y9 0e612d08 Y14 1141b2a7 w8 fdf86564 h1 b14cf27d
+OUT 1fb3ff98 1dd55ea0 6bdc5455 base SAT violate SAT model Y4 e604ad82 Y9 25213142 Y14 8a9c76ec w8 22480da6 h1 19efedb0
+OUT 1fb3ff98 1dad5ea0 6bdc5455 base SAT violate SAT model Y4 9df47a4a Y9 21227284 Y14 31ae4527 w8 edb833dc h1 7eec2eb2
+OUT 1fb3ff98 1ded5ea0 6bdc5455 base SAT violate SAT model Y4 a204a5be Y9 a2214d21 Y14 d2731af0 w8 e999ff0e h1 7dcff15f
+OUT 1fb3af98 259560a0 6bdc3455 base SAT violate SAT model Y4 99f45e72 Y9 c0e5fbad Y14 53626010 w8 ffe859c0 h1 7fe3487e
+OUT 1fb3af98 255560a0 6bdc3455 base SAT violate SAT model Y4 61f4625e Y9 4a51d838 Y14 64bdd708 w8 eff76bf2 h1 f4d787a1
+OUT 1fb3af98 275560a0 6bdc3455 base SAT violate SAT model Y4 e1e47266 Y9 4029bc50 Y14 1140cf18 w8 7286fc72 h1 fcff724c
+OUT 1fb3af98 25d560a0 6bdc3455 base SAT violate SAT model Y4 6614be36 Y9 c2213c5a Y14 11bd0340 w8 ff75fb75 h1 7cf7f681
+OUT 1fb3af98 259562a0 6bdc3455 base SAT violate SAT model Y4 61f4be7e Y9 af1ddba3 Y14 876e6f3f w8 07a7dac8 h1 10c06472
+OUT 1fb3af98 255562a0 6bdc3455 base SAT violate SAT model Y4 61f4860a Y9 68b66028 Y14 b9a193e3 w8 eff6de2e h1 d4685abd
+OUT 1fb3af98 275562a0 6bdc3455 base SAT violate SAT model Y4 d9f48e2a Y9 eac63fd0 Y14 2d9d9873 w8 be97fe8e h1 d7d87681
+OUT 1fb3af98 25d562a0 6bdc3455 base SAT violate SAT model Y4 99f44dc6 Y9 1ae1e7b6 Y14 447c28bb w8 08798317 h1 27fc5f60
+OUT 1fb3af98 25ad62a0 6bdc3455 base SAT violate SAT model Y4 5e044a6a Y9 25027ba4 Y14 84907034 w8 ffa679e2 h1 7bdf5bbc
+OUT 1fb3af98 25955aa0 6bdc3455 base SAT violate SAT model Y4 1df4b9da Y9 494247d5 Y14 e6520da7 w8 87c6dc72 h1 76fc794e
+OUT 1fb3af98 25555aa0 6bdc3455 base SAT violate SAT model Y4 e2045e62 Y9 596643b8 Y14 f880fa38 w8 47e6ffd1 h1 e5db9bac
+OUT 1fb3af98 256d5aa0 6bdc3455 base SAT violate SAT model Y4 9a0489fe Y9 c5c5fc29 Y14 d852d104 w8 3ff65ed2 h1 9a7bc37e
+OUT 1fb1bf98 19afa2a0 6bdfd455 base SAT violate SAT model Y4 5df4bd8e Y9 9eb6b12c Y14 ceb11927 w8 f135fe1e h1 662811ad
+OUT 1fb1bf98 25af5ea0 6bdfd455 base SAT violate SAT model Y4 69e48dce Y9 55322844 Y14 52523d90 w8 efc97d5f h1 72dfb95e
+OUT 1fb1bf98 256f5ea0 6bdfd455 base SAT violate SAT model Y4 96148a42 Y9 31629839 Y14 5d52bd0f w8 ffe86feb h1 f6cc4a6e
+OUT 1fb17f98 18afa2a0 6bdf5455 base SAT violate SAT model Y4 51f4a9c6 Y9 f9d6b0d0 Y14 f64d098f w8 ef9b460e h1 62c82551
+OUT 1fb17f98 1aafa2a0 6bdf5455 base SAT violate SAT model Y4 61f451fa Y9 fddeb8c8 Y14 d240f5bb w8 33fc3cd6 h1 e6c0315c
+OUT 1fb17f98 19afa2a0 6bdf5455 base SAT violate SAT model Y4 91f481d6 Y9 5986396c Y14 b65e21cf w8 c6d9625a h1 6298a542
+OUT 1fb17f98 18efaaa0 6bdf5455 base SAT violate SAT model Y4 f9f4a20a Y9 5d8dfd31 Y14 958f1d7b w8 bd69ea4f h1 7ef0ee93
+OUT 1fb17f98 25af5ea0 6bdf5455 base SAT violate SAT model Y4 5df449d2 Y9 912217a4 Y14 74627ebf w8 38367c03 h1 75ecab7e
+OUT 1fd3a098 655560a0 6b9c3e55 base SAT violate SAT model Y4 61e4b18a Y9 2ba9b6a8 Y14 2cbee717 w8 8448a428 h1 941ccfb2
+OUT 1fd3a098 675560a0 6b9c3e55 base SAT violate SAT model Y4 e604424e Y9 6946f930 Y14 6752d7cf w8 7f481082 h1 d400007e
+OUT 1fd3a098 65d560a0 6b9c3e55 base SAT violate SAT model Y4 61e489ae Y9 45a510ce Y14 1352336f w8 2467ed07 h1 7840f05e
+OUT 1fd3a098 67d560a0 6b9c3e55 base SAT violate UNSAT cadical UNSAT
+OUT 1fd36398 655560a0 6b9cbc55 base SAT violate SAT model Y4 55e4bde6 Y9 a8b2b2c8 Y14 d790e890 w8 100836cf h1 97f7009c
+OUT 1fd36398 675560a0 6b9cbc55 base SAT violate SAT model Y4 a5f4a64a Y9 13728560 Y14 3357cb8c w8 bf786c0e h1 ac47144b
+OUT 1fd36398 66d560a0 6b9cbc55 base SAT violate SAT model Y4 65e45226 Y9 414dc14a Y14 0f88ef9c w8 ff68a0fe h1 fc3be884
+OUT 1fd36398 655562a0 6b9cbc55 base SAT violate SAT model Y4 ea045e42 Y9 92fd9cb8 Y14 0f46b320 w8 83c9caf6 h1 ace3646a
+OUT 1fd36398 675562a0 6b9cbc55 base SAT violate SAT model Y4 ddf4b246 Y9 6cbdfb40 Y14 4f42a367 w8 b4987aea h1 d0a0105e
+OUT 1fd36398 66d562a0 6b9cbc55 base SAT violate SAT model Y4 620471be Y9 00f5989a Y14 08980c54 w8 9ee69e8e h1 3f6bebb4
+OUT 1fd36398 652d62a0 6b9cbc55 base SAT violate SAT model Y4 55f4ae4e Y9 a505ab3a Y14 af781417 w8 3bf448e7 h1 7bd87864
+OUT 1fd36398 672d62a0 6b9cbc55 base SAT violate SAT model Y4 2204aa36 Y9 e44aa09e Y14 93905060 w8 47892cf6 h1 3bd730bc
+OUT 1fd3a398 655560a0 6b9c3c55 base SAT violate SAT model Y4 e1e45242 Y9 53859d58 Y14 8f4effe0 w8 94288106 h1 ec23ec42
+OUT 1fd3a398 675560a0 6b9c3c55 base SAT violate SAT model Y4 e604924a Y9 c6fdced0 Y14 fb6fab00 w8 a48897fc h1 f8cb9c43
+OUT 1fd3a398 65d560a0 6b9c3c55 base SAT violate SAT model Y4 1e149a1a Y9 41d542ae Y14 4f8224b8 w8 80186f31 h1 7f23d0be
+OUT 1fd3a398 67d560a0 6b9c3c55 base SAT violate SAT model Y4 e1f4623e Y9 c09552ca Y14 ab9a5f3c w8 bb59066e h1 7c83c886
+OUT 1fd3a398 655562a0 6b9c3c55 base SAT violate SAT model Y4 a6049d96 Y9 550da338 Y14 c483b704 w8 d827f9c6 h1 e813e3af
+OUT 1fd3a398 675562a0 6b9c3c55 base SAT violate SAT model Y4 6604862e Y9 8465c330 Y14 5f88ff54 w8 2aa90d16 h1 b8fbb8a4
+OUT 1fd3a398 65d562a0 6b9c3c55 base SAT violate SAT model Y4 61f46e72 Y9 3cd5c32e Y14 13632fbb w8 1f763a5e h1 0048f07f
+OUT 1fd3a398 67d562a0 6b9c3c55 base SAT violate SAT model Y4 6604a20e Y9 405de34e Y14 9faa1f4c w8 30877316 h1 7cc37886
+OUT 1fd3a398 65ad62a0 6b9c3c55 base SAT violate SAT model Y4 a1f49e66 Y9 2491c344 Y14 b083676b w8 e0374ceb h1 388c939f
+OUT 1fd3a398 67ad62a0 6b9c3c55 base SAT violate SAT model Y4 e1f4523a Y9 e34dd4c4 Y14 f7876f2b w8 979ac1fe h1 7c90949b
+OUT 1fd36098 655560a0 6b9cbe55 base SAT violate SAT model Y4 1a04a5c6 Y9 ed2acad8 Y14 8862b43b w8 4c0827e6 h1 d37c134e
+OUT 1fd36098 675560a0 6b9cbe55 base SAT violate SAT model Y4 e2147a66 Y9 6ca5e320 Y14 4342eb67 w8 9e97996e h1 d080207e
+OUT 19d1e398 662f62a0 6f9fbc55 base SAT violate SAT model Y4 5df46e76 Y9 b11d409a Y14 0f62dbb7 w8 0c947ede h1 f440d07e
+OUT 19d1e398 662fe2a0 6f9fbc55 base SAT violate SAT model Y4 7604ada6 Y9 9acd12b6 Y14 07535ef4 w8 ef87fe83 h1 31d3f07f
+OUT 1fd36f98 655560a0 6b9cb455 base SAT violate SAT model Y4 e2044db6 Y9 c582f2d8 Y14 68a0f710 w8 ffe779fa h1 f8270b8c
+OUT 1fd36f98 675560a0 6b9cb455 base SAT violate SAT model Y4 25f4b672 Y9 8381fd50 Y14 235fcbb4 w8 bf7860de h1 bc478443
+OUT 1fd36f98 66d560a0 6b9cb455 base SAT violate SAT model Y4 e5e45a3a Y9 d13da946 Y14 9f80f780 w8 7f6891f2 h1 ec3bf88c
+OUT 1fd36f98 655562a0 6b9cb455 base SAT violate SAT model Y4 a5f4b5d2 Y9 06b98f48 Y14 8b8fcf37 w8 c7f84efb h1 b864ac93
+OUT 1fd36f98 675562a0 6b9cb455 base SAT violate SAT model Y4 1df46a66 Y9 ec81b8d0 Y14 0740fb3b w8 5db888d2 h1 d0dc985c
+OUT 1fd36f98 66d562a0 6b9cb455 base SAT violate SAT model Y4 ddf45a7a Y9 7929d8ca Y14 77505ccf w8 9af89136 h1 4734284c
+OUT 1fd36f98 652d62a0 6b9cb455 base SAT violate SAT model Y4 ddf45e72 Y9 a50290c6 Y14 0f40676f w8 8ff6d0de h1 789c505c
+OUT 1fd36f98 672d62a0 6b9cb455 base SAT violate SAT model Y4 ddf4a9e2 Y9 a11dfb22 Y14 04601723 w8 9a973eca h1 7c405b7c
+OUT 1fd36f98 66d56aa0 6b9cb455 base SAT violate SAT model Y4 1a049e16 Y9 10e1b89a Y14 eb907008 w8 e1297732 h1 2f9f70bc
+OUT 19d1ef98 662f62a0 6f9fb455 base SAT violate SAT model Y4 5df4a5de Y9 b15e28a6 Y14 5fb2501f w8 36b88ff7 h1 374080ae
+OUT 19d1ef98 662fe2a0 6f9fb455 base SAT violate SAT model Y4 65f48e2a Y9 dc9d4946 Y14 0fb24e2b w8 fe785efe h1 0180e8ae
+OUT 1fd3af98 655560a0 6b9c3455 base SAT violate SAT model Y4 61f4761a Y9 ef295d58 Y14 0c5ee7e4 w8 04171938 h1 d07fef42
+OUT 1fd3af98 675560a0 6b9c3455 base SAT violate SAT model Y4 e6044586 Y9 c521d960 Y14 04a0ff20 w8 a3a8102e h1 f827638c
+OUT 1fd3af98 65d560a0 6b9c3455 base SAT violate SAT model Y4 1e149a1a Y9 41d53aae Y14 478224b8 w8 80186b31 h1 7f23d8be
+OUT 1fd3af98 655562a0 6b9c3455 base SAT violate SAT model Y4 e1f46652 Y9 4701dca8 Y14 2caedf4f w8 8c1767df h1 f89c4fb2
+OUT 1fd3af98 675562a0 6b9c3455 base SAT violate SAT model Y4 e60449c2 Y9 134adce0 Y14 706fa7d4 w8 9f48a606 h1 ac971743
+OUT 1fd3af98 65d562a0 6b9c3455 base SAT violate SAT model Y4 61f46672 Y9 3cd5c32e Y14 1b6327bb w8 1f763e5e h1 0048f87f
+OUT 1fd3af98 65ad62a0 6b9c3455 base SAT violate SAT model Y4 61f451ee Y9 a4ce48ac Y14 f3a32b3f w8 3078524f h1 385010bf
+OUT 1fd1e398 652ea2a0 6b9fbc55 base SAT violate SAT model Y4 6e04a1c6 Y9 75de5136 Y14 f4481bc4 w8 1fcabf01 h1 78831b64
+OUT 1fd1e398 662f62a0 6b9fbc55 base SAT violate SAT model Y4 a2045e7a Y9 719d732a Y14 8342ebf8 w8 df876f5f h1 f403a06e
+OUT 1fd1e398 652f62a0 6b9fbc55 base SAT violate SAT model Y4 65f47d8a Y9 31755aa6 Y14 0ca80b63 w8 0c3b76c6 h1 3468ebb4
+OUT 1fd1bf98 65afa2a0 6b9fd455 base SAT violate SAT model Y4 d1f46df2 Y9 99e2cd3c Y14 547e5d4f w8 b7f6383e h1 723c0762
+OUT 1fd1bf98 622f62a0 6b9fd455 base SAT violate SAT model Y4 7a0485f6 Y9 5091431e Y14 3043e3f8 w8 ee0b5d5f h1 a48fcb6f
+OUT 1fd1bf98 662f62a0 6b9fd455 base SAT violate SAT model Y4 41f44636 Y9 b59dd926 Y14 23b214f7 w8 1f3be2f0 h1 1340e0ae
+OUT 1fd1bf98 652f62a0 6b9fd455 base SAT violate SAT model Y4 75f4ba2a Y9 153e2aaa Y14 4c60db0b w8 13d746ac h1 a0a0bb7c
+OUT 1fd1bf98 65af62a0 6b9fd455 base SAT violate SAT model Y4 66044e2e Y9 11360934 Y14 4c403b04 w8 ffe9adfe h1 34abab6c
+OUT 1fd3ff98 655560a0 6b9c5455 base SAT violate SAT model Y4 a1f4621a Y9 3efd8d58 Y14 ec5fa3c0 w8 c4375938 h1 805bcf43
+OUT 1fd3ff98 675560a0 6b9c5455 base SAT violate SAT model Y4 a6044e52 Y9 13925f70 Y14 b36fa3f4 w8 df688876 h1 ac279443
+OUT 1fd3ff98 65d560a0 6b9c5455 base SAT violate SAT model Y4 de04aa66 Y9 ac0e292a Y14 e493781c w8 83c6fae9 h1 13fbbbbf
+OUT 1fd3ff98 655562a0 6b9c5455 base SAT violate SAT model Y4 1df46e26 Y9 417a98b8 Y14 d470d0c3 w8 60375a27 h1 ff644b6c
+OUT 1fd3ff98 675562a0 6b9c5455 base SAT violate SAT model Y4 65f461fe Y9 388268c0 Y14 d442a7a3 w8 1f77782e h1 84dc335e
+OUT 1fd3ff98 65d562a0 6b9c5455 base SAT violate SAT model Y4 25f49e7a Y9 acd2434a Y14 37434fb7 w8 6c983dbf h1 104c905f
+OUT 1fd3ff98 652d62a0 6b9c5455 base SAT violate SAT model Y4 1e04427e Y9 256560ca Y14 677038c4 w8 5be800d6 h1 3b3bf85c
+OUT 1fd3ff98 672d62a0 6b9c5455 base SAT violate SAT model Y4 61f49e7a Y9 a145fb3e Y14 1b4023e3 w8 1f763d5b h1 7c18f85c
+OUT 1fd3ff98 65ad62a0 6b9c5455 base SAT violate SAT model Y4 9df4862e Y9 e52278b4 Y14 5c727c13 w8 cff93c82 h1 3bbc436e
+OUT 1fd17f98 65afa2a0 6b9f5455 base SAT violate SAT model Y4 f60495fa Y9 55b96ed4 Y14 d86c221c w8 6be7fad1 h1 7567af40
+OUT 1fd17f98 652f62a0 6b9f5455 base SAT violate SAT model Y4 8df46a3a Y9 95c61946 Y14 57801ba3 w8 d7f761a0 h1 3018589c
+OUT 1fd17f98 62af62a0 6b9f5455 base SAT violate SAT model Y4 31f445f6 Y9 5742e918 Y14 b872642b w8 e61b80d2 h1 635c0b6e
+OUT 1fd17f98 66af62a0 6b9f5455 base SAT violate SAT model Y4 c20449d6 Y9 9159fb58 Y14 f8703c50 w8 bb0bdaee h1 3707bb5c
+OUT 1fd17f98 65af62a0 6b9f5455 base SAT violate SAT model Y4 21f4ba02 Y9 73de14dc Y14 7f9e0c83 w8 5b96ef35 h1 7700dc82
+OUT 19d17f98 66af62a0 6f9f5455 base SAT violate SAT model Y4 b6047e36 Y9 512252b8 Y14 44721888 w8 d4c7c7f2 h1 273f735e
+OUT 19d1bf98 662f62a0 6f9fd455 base SAT violate SAT model Y4 c1f47d92 Y9 106298ee Y14 089268ef w8 c0d99c9a h1 57fc4b8e
+OUT 1fd1ef98 662f62a0 6b9fb455 base SAT violate SAT model Y4 3df46e7e Y9 d51d90b2 Y14 6f62cfbf w8 30bb7adf h1 e040d07e
+OUT 1fd1ef98 652f62a0 6b9fb455 base SAT violate SAT model Y4 b5f45e7a Y9 b16698b6 Y14 1f70f8c3 w8 37f9d8b2 h1 e738286c

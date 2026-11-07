@@ -1,0 +1,15 @@
+cv  0 flags 11 cv0=6a09e667 cv6=1f83d9ab: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  1 flags 10 cv0=09c58722 cv6=39427cfb: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  2 flags 10 cv0=fe9a1aab cv6=b183f902: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  3 flags 10 cv0=053a4ab1 cv6=2bdfcdff: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  4 flags 10 cv0=25a0a1b6 cv6=e266925c: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  5 flags 10 cv0=4e22919c cv6=ecd9d831: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  6 flags 10 cv0=de474428 cv6=f76a7890: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  7 flags 10 cv0=87e88ffb cv6=f6e12513: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  8 flags 10 cv0=9b7f7209 cv6=db378545: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv  9 flags 10 cv0=5bc6606f cv6=0b9aff07: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv 10 flags 10 cv0=c932989d cv6=c7c0dbb4: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+cv 11 flags 10 cv0=0791ea37 cv6=e4958794: 25 pairs half-collide (words 0,2,5,7) via organizer reference
+total 300 pairs OK over 12 chaining values
+distinct C3 output tuples (Y3,Y7,Y11,Y15 of A and B) over all CVs: 1 -> 8127c181 76f7aefd 7af77f38 bbfbdffe 7edf3e7e 76f7aefd 850000c3 bbfbdffe
+distinct w5 differences over all CVs: 1 -> fffffff8

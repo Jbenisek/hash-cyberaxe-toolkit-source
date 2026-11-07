@@ -1,0 +1,13 @@
+launched S=1 pid 260013
+launched S=2 pid 260014
+launched S=3 pid 260016
+launched S=4 pid 260017
+launched S=5 pid 260019
+launched S=6 pid 260020
+launched S=7 pid 260021
+launched S=8 pid 260022
+launched S=9 pid 260023
+launched S=10 pid 260024
+launched S=11 pid 260025
+launched S=12 pid 260026
+ALL DONE Mon Oct 26 23:58:42 MDT 2026

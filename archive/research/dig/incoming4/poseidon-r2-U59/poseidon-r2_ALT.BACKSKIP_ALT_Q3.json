@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.BACKSKIP (ALT)",
+ "question": "Q3: degrees of freedom: backward output lines",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "P3.12 (Luna 3): backward output lines are affine after one inverse x^5; on toys q = 23/43 their two-sided intersections capture only a small fraction of collisions. Output lane fixed to y leaves 2 free lanes after the last MDS: a 2-parameter family, one inverse S-box layer deep.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/ANSWER.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.BACKSKIP|ALT|Q3. Cited from ANSWER.md; not rerun.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "two backward layers stay low degree on a toy"
+}

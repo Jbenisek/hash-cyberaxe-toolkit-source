@@ -1,0 +1,29 @@
+{
+ "schema_version": 1,
+ "experiments": [
+  {
+   "id": "rho-n14",
+   "kind": "python-message-pairs-v1",
+   "scope": "The poseidon-orchard-r56-prefix-v1 target (all 64 rounds), messages (v, 0) with v below 2^14: one run of the shipped single-trail search (`search` in experiments/rho.py: distinguished points of density 1/16, 256 steps, table of 64 points, recovery from stored points) on the walk v -> low 14 bits of the real digest of (v, 0), from a start derived from the trial seed. Returns the two messages (a, 0), (b, 0) when the search ends with a pair, two nulls otherwise.",
+   "hypothesis": "For every returned pair the two messages are distinct canonical inputs (a, b below 2^14, rho = 0) and the complete 56-partial-round digests agree in the low 14 bits. This is exact: the program recovers the merge point of its own trail. The number of trials that return a pair is a program check, not an estimate of any success probability; no probability or cost is inferred from it. Observations (untrusted): status, evals. Not shown: any width-254 cost or success probability.",
+   "program": "experiments/rho.py",
+   "event": {
+    "kind": "digest-xor-mask",
+    "mask_hex": "ff3f000000000000000000000000000000000000000000000000000000000000",
+    "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  },
+  {
+   "id": "proj-w254",
+   "kind": "python-message-pairs-v1",
+   "scope": "The poseidon-orchard-r56-prefix-v1 target at full width: 64 points of the real walk x -> digest(x, 0) on field elements from a start derived from the trial seed (a 254-bit value), messages (x, 0). Returns two distinct points whose complete digests agree in the low 10 bits when the 64 points contain such a pair, two nulls otherwise.",
+   "hypothesis": "For every returned pair the two messages are distinct canonical inputs (x, 0) with x below p and their complete digests agree in the low 10 bits. This checks the walk map, the message construction and the digest at full width. The number of returned pairs is a program check, not an estimate; no probability or cost is inferred. Observations (untrusted): status, j. Not shown: collision structure at 2^127 evaluations.",
+   "program": "experiments/rho.py",
+   "event": {
+    "kind": "digest-xor-mask",
+    "mask_hex": "ff03000000000000000000000000000000000000000000000000000000000000",
+    "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  }
+ ]
+}

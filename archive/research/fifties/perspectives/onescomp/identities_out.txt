@@ -1,0 +1,10 @@
+ROR(x,16) == 2^(32-16) x mod M : True
+ROR(x,12) == 2^(32-12) x mod M : True
+ROR(x,8) == 2^(32-8) x mod M : True
+ROR(x,7) == 2^(32-7) x mod M : True
+x+y mod 2^32 == x + y - carry mod M : True ; carry=1 fraction 0.5001
+x^y == x + y - 2(x&y) mod M : True
+period-4 words = {k*0x11111111}: rotation-invariant by 4: True; in Z/M they are the multiples of M/15 (k=15 is 0xFFFFFFFF = 0)
+ROR by 16,12,8 is the identity mod 15 (so mod 3 and mod 5): True; ROR 7 = x2 mod 15 (ROL 7 = x8): True
+order of 2 mod p: {3: 2, 5: 4, 17: 8, 257: 16, 65537: 32}
+dA == dB mod M  <=>  dA == dB or {dA,dB} = {0, 0xFFFFFFFF}  (only 0 and 0xFFFFFFFF share a residue)

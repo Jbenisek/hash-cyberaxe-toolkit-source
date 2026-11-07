@@ -1,0 +1,66 @@
+=== word diff blake3-r2\proof.md
+replace [185,377,197] -> [185,377,197.55]
+replace [(162,266,763] -> [(162,266,763.66]
+insert [] -> [(the eighth under the name Y4 in the lines of round 1)]
+replace [among those] -> [the line for E3.h1 and the ten it depends]
+replace [which E3.h1 depends (the lines for X0,] -> [(X0,]
+replace [Y14 and E3.h1).] -> [Y14).]
+replace [word.] -> [word and each mask word holding the printed value in every lane (6.5).]
+replace [registers;] -> [registers, and 15 do not run it, under the program's convention that the result of an instruction may reuse]
+replace [file of 15 does not run it.] -> [whose source value is used for the last time on that same instruction; if instead every source stays live until its instruction finishes, the batch peaks at 17 registers, and the one extra word, spilled and loaded again inside the batch, costs far less than the margin already left between the budget and the charge.]
+replace [2^70.04] -> [2^70.03]
+replace [1.1428] -> [1.1429]
+replace [3.75.] -> [3.74.]
+replace [2.6] -> [2.67]
+replace [0.0270] -> [0.027025]
+replace [batches] -> [batches, which rounds to 0.0270,]
+replace [1.14287 rounded down; 1.1428 is the figure] -> [1.142868;]
+replace [decimals.] -> [decimals that rounds down to 1.1428, and the nearest four-decimal figure is 1.1429.]
+=== word diff submission-note-r2.md
+insert [] -> [package. winglock, Th0rgal, 5kyguy and tekkac are named in the co-author field of this submission, for the contributions this note credits to them; no co-author is represented as having reviewed or endorsed the]
+replace [The] -> [Both parts of H1, the]
+insert [] -> [and the absence of clustering of the good trials, are assumed; no experiment measures the factor, and the count it is set against]
+replace [measured by any experiment.] -> [a measurement of the trials.]
+=== claim.json field diff
+CHANGED .heuristics[0].extrapolation
+CHANGED .heuristics[0].evidence_ids[6] : 'proof:1215-1303' -> 'proof:1220-1308'
+CHANGED .heuristics[0].evidence_ids[7] : 'proof:1454-1940' -> 'proof:1459-1945'
+CHANGED .heuristics[1].scope
+CHANGED .heuristics[1].evidence_ids[2] : 'proof:1240-1248' -> 'proof:1245-1253'
+CHANGED .heuristics[1].evidence_ids[3] : 'proof:1454-1940' -> 'proof:1459-1945'
+CHANGED .heuristics[2].scope
+CHANGED .heuristics[2].evidence_ids[2] : 'proof:903-1213' -> 'proof:903-1218'
+CHANGED .heuristics[2].evidence_ids[3] : 'proof:1250-1264' -> 'proof:1255-1269'
+CHANGED .heuristics[2].evidence_ids[4] : 'proof:1454-1940' -> 'proof:1459-1945'
+submission_state='draft' time_log2=None
+=== evidence_ids ranges (prev range -> now range): first/last line identical?
+240-540 -> 240-540 first True last True before True after True | ## 4. Construction: the message from eig ... 2^256 different half-colliding pairs.
+544-616 -> 544-616 first True last True before True after True | **6.1 Trials.** A *context* is the six w ... by the definition of the class. QED.
+635-772 -> 635-772 first True last True before True after True | **6.3 Two tests of a trial.** The algori ... than half of the count; the rule is a ru
+774-901 -> 774-901 first True last True before True after True | **6.4 Algorithm.** ... about 2^52.44, and a run has 2^49 such p
+1215-1303 -> 1220-1308 first True last True before True after True | ## 7. Success probability ... None of the three heuristics is proved. 
+1454-1940 -> 1459-1945 first True last True before True after True | ## 10. Evidence, scope and field meaning ...   changes.
+635-772 -> 635-772 first True last True before True after True | **6.3 Two tests of a trial.** The algori ... than half of the count; the rule is a ru
+774-901 -> 774-901 first True last True before True after True | **6.4 Algorithm.** ... about 2^52.44, and a run has 2^49 such p
+1240-1248 -> 1245-1253 first True last True before True after True | **Heuristic H2 (supporting).** With prob ... the assumption.)
+1454-1940 -> 1459-1945 first True last True before True after True | ## 10. Evidence, scope and field meaning ...   changes.
+635-772 -> 635-772 first True last True before True after True | **6.3 Two tests of a trial.** The algori ... than half of the count; the rule is a ru
+774-901 -> 774-901 first True last True before True after True | **6.4 Algorithm.** ... about 2^52.44, and a run has 2^49 such p
+903-1213 -> 903-1218 first True last True before True after True | **6.5 Seven trials in one word.** A pack ... organizer verification of the cost.
+1250-1264 -> 1255-1269 first True last True before True after True | **Heuristic H3 (supporting).** With prob ... of 19 percent that these samples show, i
+1454-1940 -> 1459-1945 first True last True before True after True | ## 10. Evidence, scope and field meaning ...   changes.
+=== arithmetic
+log2 N = 101.441993 ; lN - 31.41 = 70.03199
+P = 959206.094073 per trial 7.31816173
+charged per X2 1009254.4000 ; (charged - P)/W = 2.672807
+charge above budget 5.2177 percent
+indep share 0.02702539 ; cost at it 7.236685 ; cost at 0.0270 7.236196
+expected good (floor count) 1.876068 ; (exact cons) 1.876068
+m max for e=1.8700 : 3.74579
+m max for e=1.8761 : 3.75795
+m=3.74: 1-exp(-1.87/m)-0.003 = 0.39047 ; with 1.8761: 0.39145
+m=3.75: 1-exp(-1.87/m)-0.003 = 0.38966 ; with 1.8761: 0.39064
+18725/16384 = 1.14288330 ; 74899/65536 = 1.142868042
+r_sub 194382080300609/1048576 = 185377197.5523 ; r_class 85074516985129/524288 = 162266763.6588
+budget rate log2(2^84/N) = -17.44199 ; gap 84 - (lN-31.41) = 13.9680
+margin 185355453.45/49.4e6 = 3.75213

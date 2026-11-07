@@ -1,0 +1,20 @@
+events 183; own count equal to e3p_expected_H8.txt in 183 of 183
+P(listed partial E3 event) per trial under M: 2^-32.1987  (count 8427275126237729543684096)
+exact share of the listed partial E3 events whose h1 satisfies the rule, under M: rule 4: 0.580935   rule 5: 0.484216   rule 6: 0.412442
+   (a uniform h1 independent of the event would give 0.0625, 0.03125, 0.015625)
+
+group | trials | partial E3 events (exact expectation, z) | of them passing rule 4 | share | z against the exact share
+real, independent contexts (cited in the text): real40, real42, real45 | 2^45.21 | 8233 (8253.5, -0.23) | 4727 | 0.5742 | -1.25
+real, layout runs 1..8 (cited) | 2^43.00 | 1870 (1784.5, +2.02) | 1063 | 0.5684 | -1.09
+real, spread runs 1..8 (not in the text) | 2^43.00 | 1786 (1784.5, +0.03) | 1052 | 0.5890 | +0.69
+real, layout runs 9..24 (text cites their early test only) | 2^44.00 | 3623 (3569.1, +0.90) | 2092 | 0.5774 | -0.43
+real, independent contexts, 2^45 each, seeds 8201.. as far as finished (not in the text) | 2^46.58 | 21372 (21414.5, -0.29) | 12467 | 0.5833 | +0.71
+MODEL draws: model40, model42, model44 | 2^44.39 | 4659 (4684.4, -0.37) | 2791 | 0.5991 | +2.51
+ALL REAL RUNS | 2^47.37 | 36884 (36806.2, +0.41) | 21401 | 0.5802 | -0.28
+REAL RUNS CITED IN THE TEXT (2^45.49) | 2^45.49 | 10103 | 5790 | 0.5731 | -1.60
+real (cited) against the model draws, two-sample: -2.97
+
+rule 4 on h1, layout runs 1..8: 8 runs; share within 4.97 parts in 100,000 of 2^-4; below 2^-4 in 6 runs; variance / binomial 39.4; pooled -11.92 binomial s.d.; with the spread of these runs themselves: -1.90 standard errors (7 d.f.); with the variance of independent contexts (4,230,272 per context): -1.02
+rule 4 on h1, layout runs 9..24: 16 runs; share within 2.85 parts in 100,000 of 2^-4; below 2^-4 in 8 runs; variance / binomial 11.4; pooled +2.25 binomial s.d.; with the spread of these runs themselves: +0.67 standard errors (15 d.f.); with the variance of independent contexts (4,230,272 per context): +0.19
+rule 4 on h1, layout runs 1..24: 24 runs; share within 4.97 parts in 100,000 of 2^-4; below 2^-4 in 14 runs; variance / binomial 24.7; pooled -5.04 binomial s.d.; with the spread of these runs themselves: -1.01 standard errors (23 d.f.); with the variance of independent contexts (4,230,272 per context): -0.43
+rule 4 on h1, spread runs 1..8: 8 runs; share within 5.75 parts in 100,000 of 2^-4; below 2^-4 in 5 runs; variance / binomial 95.6; pooled -8.17 binomial s.d.; with the spread of these runs themselves: -0.84 standard errors (7 d.f.); with the variance of independent contexts (4,230,272 per context): -0.70

@@ -1,0 +1,23 @@
+{
+  "id": "D252-SHA3-R6-B144-BUDGET-RESAMPLE-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "b=144 wider-key K_BUD/GEN_BUD resample",
+  "question": "Does the preregistered b=144 generator resample support finite K/G budgets without outside or over-budget lists?",
+  "labels": ["C", "S"],
+  "status": "SAMPLED",
+  "number": "PASS: NZ=36, sample A 2000 lists seed 252101 and sample B 4000 lists seed 252202. A has zero outside; the fixed mean+6SD rule gives K_BUD=38050 and GEN_BUD=5600000. B has zero outside/over-budget lists. A K mean/sd=37680.1205/55.6535860531043, G mean/sd=5544431.4585/7825.361996320968; B K mean/sd=37681.16725/55.01373378678992, G mean/sd=5544538.948/7781.952323503872.",
+  "source": "our workflow: D252 preregistered b=144 budget resample",
+  "own_test": true,
+  "evidence": "research/sol_answer_D252_sha3r6_b144_budget_resample.md; research/retest/sha3_r6_b144_budget/PREREG_D252.md; research/retest/sha3_r6_b144_budget/resample.py; research/retest/sha3_r6_b144_budget/A.json; research/retest/sha3_r6_b144_budget/B.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.02107,
+  "prior": 0.2,
+  "gain_basis": "S",
+  "notes": "Finite local support only. The b=144 wider generated-kernel charge, full H_K tail, memory/register/spill audit, exact ledger rerun, and organizer acceptance remain OPEN; no score or filing credit is claimed.",
+  "reopen_if": "A production b=144 kernel with exact charge and organizer-accepted budget/premise evidence is built.",
+  "peak_mem": "25.2761244053 MEASURED log2(bytes), /usr/bin/time -v one-list NZ=36 generator; full 6000-list driver RSS was not separately wrapped"
+}

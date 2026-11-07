@@ -1,0 +1,22 @@
+{
+  "id": "D414-SHA3-R6-141-PROOF-ERRATA-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 141-bit proof-refresh errata specification",
+  "question": "What exact narrative and formula replacements are required to make the 141-bit proof agree with its ledger?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Replace active Section-9 constants by G=19262931545893435657738815, Q=5422033208259315580998022577179475312640, S_cap=21179837418410660155028713941243002880, r denominator 2^134, R=20598036581680667104474137759156385, and survivor-scale bad triples S_cap(S_cap-1)(S_cap-2)/2^382=0.000964516191153013582... . Replace active 140-bit/R140/2^140 wording, use all D413 Section-10 rows, and parameterize the ledger diagnostic denominator by BKEY.",
+  "source": "D411-D413 exact source and ledger audits",
+  "own_test": true,
+  "evidence": "research/sol_answer_D414_sha3r6_141_proof_errata.md; research/sol_answer_D411_sha3r6_141_metadata_audit.md; research/sol_answer_D412_sha3r6_141_ledger_reconciliation.md; research/sol_answer_D413_sha3r6_141_refresh_numbers.md; research/retest/lens_t3/D413_run.json; research/tools/build_pkg/scratch/pkgS6K141/work/ledger_r6.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 1.0,
+  "gain_basis": "C",
+  "notes": "Errata only; no package edit, staging, filing, or submission. Organizer acceptance and H_coset remain open.",
+  "reopen_if": "The proof/claim are regenerated and prefile-validated from the 141-bit ledger."
+}

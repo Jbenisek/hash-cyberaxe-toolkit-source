@@ -1,0 +1,19 @@
+{
+  "id": "D243-S38-ROW4",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 14,
+  "object": "Zone D 38 row-4 signature family",
+  "question": "Does the unresolved row-4 signature family produce a distinct full-path r38 event?",
+  "labels": ["S", "B"],
+  "status": "OPEN",
+  "number": "not run; row-4 signature test remains residual",
+  "source": "main session",
+  "own_test": false,
+  "evidence": "research/tools/traillab/row_cards/zoneD38_row_04.md; research/tools/traillab/digs/zoneD38/",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "New residual cell after the partial Zone D 38 close. Prefix/row-4 family must be tested with a fixed split and full-path counter.",
+  "topic": "sha256-38 zoneD38 residual row4"
+}

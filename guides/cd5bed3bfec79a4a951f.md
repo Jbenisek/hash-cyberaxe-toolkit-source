@@ -1,0 +1,27 @@
+# The second formula with two other solvers (tools/rule_a_sat2.py) for the rules named (default 5 4 6), three threads.
+
+Source: `research/pkg10/pkg/tools/rule_a_sat2_all.sh`
+
+Public SHA-256: `aa8fb34b36f8f132497978d2a41a4081168a529ed449f80beacc1dd5926e0b45`
+
+## Purpose recorded in the source
+
+The second formula with two other solvers (tools/rule_a_sat2.py) for the rules named (default 5 4 6), three threads.
+Run after tools/rule_a_sat_all.sh. Log: evidence/rule_a_sat2_all.log. Research helper, not submitted. CPU only.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/pkg10/pkg/tools/proof_lines_check.py
+- research/pkg10/pkg/tools/proof_lines_pkg7.py
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

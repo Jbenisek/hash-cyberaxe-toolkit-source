@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "neutral bits: reach of each free message word through the rounds",
+ "question": "Value or count as used in the filed entry (blake3-r3, 125.1087)?",
+ "labels": [
+  "N",
+  "0"
+ ],
+ "status": "SAMPLED",
+ "number": "used: none. Flip each of the 256 free bits (m8..m15) in 2048 random messages: after round 1 each message word changes exactly 4 of 16 state words (96 of 128 word-pairs have zero influence); after rounds 2 and 3 all 128 pairs are reached; at the digest every flip changes all 8 digest words in all samples (P=1.0)",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_neutral.py; research/blake3_r3/alt/exp_neutral.log; research/blake3_r3/alt/exp_neutral.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Round-1 reach follows the diagonal G pairing (m8,m9 -> G4; m10,m11 -> G5; m12,m13 -> G6; m14,m15 -> G7); the column half sees only the constant prefix.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); m0..m7=0",
+ "reopen_if": "none (structural table)",
+ "topic": "blake3-r3|ALT.NEUTRAL|ALT|Q1"
+}

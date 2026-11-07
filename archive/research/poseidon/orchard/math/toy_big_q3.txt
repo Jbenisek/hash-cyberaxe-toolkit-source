@@ -1,0 +1,6 @@
+q=3 D=125 cs=0 j=0 succ=39525/100000 alt=6217/10000 verified=39525 fail=0 t=43s
+q=3 D=125 cs=0 j=1 succ=39290/100000 alt=6283/10000 verified=39290 fail=0 t=43s
+q=3 D=125 cs=0 j=2 succ=39441/100000 alt=6344/10000 verified=39441 fail=0 t=42s
+q=3 D=125 cs=1 j=0 succ=39243/100000 alt=6275/10000 verified=39243 fail=0 t=42s
+q=3 D=125 cs=1 j=1 succ=39372/100000 alt=6276/10000 verified=39372 fail=0 t=42s
+q=3 D=125 cs=1 j=2 succ=39345/100000 alt=6294/10000 verified=39345 fail=0 t=42s

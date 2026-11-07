@@ -1,0 +1,8 @@
+batch 16: table 18873257 entries, build 15.2s, queries 0.06s
+batch 17: table 18875811 entries, build 15.0s, queries 0.07s
+batch 18: table 18872769 entries, build 14.3s, queries 0.06s
+batch 19: table 18874591 entries, build 13.7s, queries 0.07s
+batch 20: table 18874371 entries, build 14.1s, queries 0.07s
+batch 21: table 18875685 entries, build 13.4s, queries 0.06s
+batch 22: table 18874277 entries, build 14.6s, queries 0.08s
+batch 23: table 18873719 entries, build 14.5s, queries 0.06s

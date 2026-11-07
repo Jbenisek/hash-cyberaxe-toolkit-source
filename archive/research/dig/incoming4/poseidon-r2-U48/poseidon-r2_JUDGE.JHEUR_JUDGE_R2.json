@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JHEUR (JUDGE)",
+ "question": "R2: own recount: the premise against our data",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "pooled r2 rate 8/23 = 0.348 [0.188, 0.551] (95 percent); a claim at the Wilson limit with 20 samples per line was planned and not made.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JHEUR|JUDGE|R2. See PREM.HSQ R2.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a sample of 100+ r2 centres per line shows a rate outside the model band"
+}

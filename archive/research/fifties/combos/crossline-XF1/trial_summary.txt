@@ -1,0 +1,27 @@
+trials 40 same 40 first equal 40
+ e_lanes      ref     1757  x     1757
+ passes       ref       29  x       29
+ solver_calls ref        6  x        6
+ roots        ref        0  x        0
+ certified    ref        0  x        0
+ fills        ref      761  x      428
+ members      ref    19043  x     5580
+ mismatches   ref        0  x        0
+ checks       ref    67811  x    53423
+ lost 0 fallback 0 masked_members 4300
+SUPPLEMENTARY nr=120: trials 40 same 39 first equal 39
+ e_lanes      ref     54185  x     54185
+ passes       ref      1011  x      1011
+ solver_calls ref       257  x       257
+ leaves       ref         0  x         0
+ roots        ref         0  x         0
+ certified    ref         0  x         0
+ opened       ref     15000  x     15000
+ fills        ref     23986  x     12937
+ members      ref    498480  x    147172
+ mismatches   ref         0  x         0
+ checks       ref   1796595  x   1421620
+ units        ref   9708208  x   8009012
+ lost 0 fallback 56 masked_members 111956 halted []
+trial 33 first ref/x [9375, 10015] members of first: (g,j) = [(287, 18), (287, 28)]
+ diff keys: ['members', 'units', 'checks', 'fills']

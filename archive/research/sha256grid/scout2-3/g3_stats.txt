@@ -1,0 +1,22 @@
+g3_v1.log: 65536 runs, mean 2^-101.0000, relative sd 0.0338, min 2^-101.1975, max 2^-100.7976, one-sided 99% bound 2^-101.0004 (65535 df, t = 2.3264)
+  stage means (log2, rows 17..22, tail): -17.0001 -13.0000 -15.0002 -6.0000 -7.0000 -1.0000 -15.0005  (+ row 16: -27 exact)
+  stage sds: 0.0192 0.0049 0.0205 0.0000 0.0080 0.0000 0.0385
+  tail successes 280585659, failed re-verifications 0, extinct runs 0
+variant sampler: 65536 accepted; per-A0 counts vs |R_j|/SR: chi2 = 262.9 on 255 df (z = 0.38)
+per-A0 tail factor (q3 of an A0 relative to the average, log2): sd 0.0024 (binomial noise alone 0.0014), min -0.0063 (A0 366a7d50), max +0.0071 (A0 3660fd5a); heterogeneity chi2 = 777.7 on 255 df (z = 15.28); hits per A0 932777..1278135
+  implied A0-to-A0 spread of q3 beyond noise: sd 0.0020 bit
+g3_pool.log: 4096 runs, mean 2^-101.0002, relative sd 0.0255, min 2^-101.1728, max 2^-100.8607, one-sided 99% bound 2^-101.0015 (4095 df, t = 2.3273)
+  stage means (log2, rows 17..22, tail): -16.9997 -13.0001 -15.0004 -6.0000 -7.0001 -1.0000 -15.0004  (+ row 16: -27 exact)
+  stage sds: 0.0189 0.0048 0.0205 0.0000 0.0080 0.0000 0.0224
+  tail successes 17533633, failed re-verifications 0, extinct runs 0
+variant sampler: 268435456 accepted; per-A0 counts vs |R_j|/SR: chi2 = 238.4 on 255 df (z = -0.72)
+per-A0 tail factor (q3 of an A0 relative to the average, log2): sd 0.0053 (binomial noise alone 0.0055), min -0.0160 (A0 b6615d4e), max +0.0161 (A0 36617d50); heterogeneity chi2 = 236.1 on 255 df (z = -0.83); hits per A0 67701..69395
+  implied A0-to-A0 spread of q3 beyond noise: sd 0.0000 bit
+g2_main.log + g3_pool.log: 135168 runs, mean 2^-100.9999, relative sd 0.0256, min 2^-101.1733, max 2^-100.8427, one-sided 99% bound 2^-101.0002 (135167 df, t = 2.3264)
+  stage means (log2, rows 17..22, tail): -17.0000 -13.0000 -15.0002 -6.0000 -7.0000 -1.0000 -15.0002  (+ row 16: -27 exact)
+  stage sds: 0.0191 0.0049 0.0206 0.0000 0.0080 0.0000 0.0221
+  tail successes 578693126, failed re-verifications 0, extinct runs 0
+cpu_m4242_lane0.log + cpu_m4242_lane1.log + cpuB_m4343.log: 2490 runs, mean 2^-100.9987, relative sd 0.0247, min 2^-101.1105, max 2^-100.8903, one-sided 99% bound 2^-101.0004 (2489 df, t = 2.3278)
+  stage means (log2, rows 17..22, tail): -16.9995 -12.9999 -15.0002 -6.0000 -7.0001 -1.0000 -14.9996  (+ row 16: -27 exact)
+  stage sds: 0.0189 0.0049 0.0204 0.0000 0.0080 0.0000 0.0217
+  tail successes 10664683, failed re-verifications 0, extinct runs 0

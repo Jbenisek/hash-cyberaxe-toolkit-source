@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JHEUR score-critical heuristic H1",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "sample behind the 0.53 claim: 28/65 = 0.4308 (Wilson 0.318-0.552); 180-centre per-line sample 57/180 = 0.317 (j0 18/60, j1 19/60, j2 20/60) with halts counted as failures; D189 8/20",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/data/stats.json research/poseidon/orchard/lean_r1_fix/per_line_sample.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Numbers read from our own stats.json (recomputed rate and Wilson check in calc.py: 28/65). | universe cell poseidon-r1|JUDGE.JHEUR|JUDGE|R2",
+ "held_fixed": "old/new builds mixed (26 old)",
+ "reopen_if": "a proved per-centre bound"
+}

@@ -1,0 +1,21 @@
+context ee7cb7a9 0008b4ac 6d6dddb0 13977e3f bdf2e450 6d3ddef1, X2 0d329c81
+ok   one pass: 18,725 batches, 131072 different messages A (131,072 members)
+ok   bytes 55..63 of both blocks zero                                                131075 cases, wrong 0
+ok   H from the bytes = the traced compression                                       131075 cases, wrong 0
+ok   digest words 0, 2, 5, 7 agree (Theorem of Section 5)                            131075 cases, wrong 0
+ok   every name of the 96 lines = its value in the compression of A (T2 b)           131075 cases, wrong 0
+ok   schedule of Section 1                                                           131075 cases, wrong 0
+ok   block admissible: w4 w13 w14 w15 and X3 X7 X11 X15                              131075 cases, wrong 0
+ok   the eight words read back from the compression (T2 d, injective)                131075 cases, wrong 0
+ok   B: same S and same X as A (Lemma L)                                             131075 cases, wrong 0
+ok   B: Y differs from A in Y3 and Y11 only, values of Fact P                        131075 cases, wrong 0
+ok   Y4 = y in A and in B                                                            131075 cases, wrong 0
+ok   eta = 830303cf exactly for the members of the class (Lemma Q / T)               131075 cases, wrong 0
+ok   class membership by the mask of Lemma Q                                         131075 cases, wrong 0
+ok   Lemma N: n = D3 XOR ROL(D6, 8) (with the trial's own eta)                       131075 cases, wrong 0
+ok   Lemma A (a): ROL(h1, 24) = z XOR ROL(e1, 8)                                     131075 cases, wrong 0
+ok   Lemma A (b): rule A on h1 = the conditions on z                                 131075 cases, wrong 0
+ok   stage A flag of the lane = rule A on the real h1                                131075 cases, wrong 0
+ok   stage 2 word of the lane = n of the real messages                               131075 cases, wrong 0
+members that satisfy rule A: 592 (131,072 / 256 = 512); batches that run stage 2: 562 of 18,725 = 0.03001 (budget 0.03125); members with n = 0: 0
+all checks of this part hold

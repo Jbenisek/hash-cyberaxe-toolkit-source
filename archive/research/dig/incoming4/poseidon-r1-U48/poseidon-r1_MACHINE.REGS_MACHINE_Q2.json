@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.REGS register budget and spills",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "without the 16-word file each butterfly would load 2 words (+ twiddle) and store 2 words with address ops: about 2.25e9 butterflies x 8 ops = 1.8e10 vs 9.3e9 now: +0.12 bit (estimate)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Butterfly total 2 centres x 238 steps x 4,718,592 = 2.25e9; estimate only. | universe cell poseidon-r1|MACHINE.REGS|MACHINE|Q2",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "instrumented run with the assumption removed"
+}

@@ -1,0 +1,22 @@
+{
+ "object": "step R2D2.q4",
+ "question": "Q3: round 2, call D2 = G(2,7,8,13), quarter-step q4: c = c + d; b = ror7(b ^ c) - degrees of freedom / score-optimal value.",
+ "status": "COMPUTED",
+ "number": "No free parameter at this step in the op model: the rotation amount is fixed by the spec, the operand order does not change the op count, and the step has no internal mask. It costs 7 ops in the shipped layout and 7 ops with all internal masks dropped; other layouts give pitch35 x7: 7, pitch34 x7: 8, pitch36 x7 no internal masks: 7, pitch42 x6: 7. So 7 ops is the score-optimal value found; a cheaper-by-one-op case exists only at q3 steps (the internal masks).",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_steps.py; research/dig/incoming3/blake3-r3-U46/work/steps_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. Only layouts and mask policies were varied (pitch 35, 34, no internal masks, 6/5/4 lanes). The 5-op rotation form and the constant folding were not re-searched; research/blake3_r3/levers_step_count.md reports no saving in its parts (a)-(d) and its brute force over mask choices was not re-run.",
+ "held_fixed": "spec rotation amounts, add order a+b+m, xor then rotate; ledger formula of rho.py",
+ "reopen_if": "a rotation form under 5 ops for a 36-pitch lane is found, or a merged xor+rotate form",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|R2D2.q4|step|Q3",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

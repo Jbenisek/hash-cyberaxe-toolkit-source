@@ -1,0 +1,5 @@
+Xsym: 112 unknown words, 112 equations, freedom 0 words
+  guess-count histogram {5: 104, 6: 913, 7: 1242, 8: 516, 9: 163, 10: 53, 11: 6, 12: 3}
+  best 5 guesses -> 5 checks; guesses ['D1.b2', 'D3.b1', 'K3.c1', 'D3.c1', 'K3.c2']
+  check equations ['out_eq3', 'K1:b2', 'K2:b1', 'K2:b2', 'K2:c2']
+  DM largest block over index choices from the best order: min 80, max 80

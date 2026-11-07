@@ -1,0 +1,24 @@
+VALIDATE traced compression vs blake3._compress (2 rounds): 300 random inputs, 0 mismatches/failed relations
+
+== variant root: free words 92, relations 84, structural dim 8 words (256 bits); constant checks 0
+  (a) one extra pinned word (d_S<=1), d_U>=1, d_V>=1: INFEASIBLE (The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None))
+  (b) no non-degenerate split at all: {'status': 2, 'message': 'The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)'}
+  (c) max min(d_U,d_V) = 0 (d_U=4, d_V=0, d_S=4)
+  (d) Pareto (d_U>=a, max d_V=b, d_S at that point): []
+  join floor: min(d_U,d_V)=0 words -> >= 2^inf list entries per 128-bit match (DERIVED)
+
+== variant ctr: free words 93, relations 84, structural dim 9 words (288 bits); constant checks 0
+  (a) one extra pinned word (d_S<=1), d_U>=1, d_V>=1: INFEASIBLE (The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None))
+  (b) no non-degenerate split at all: {'status': 2, 'message': 'The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)'}
+  (c) max min(d_U,d_V) = 0 (d_U=5, d_V=0, d_S=4)
+  (d) Pareto (d_U>=a, max d_V=b, d_S at that point): []
+  join floor: min(d_U,d_V)=0 words -> >= 2^inf list entries per 128-bit match (DERIVED)
+
+== variant ctr2: free words 94, relations 84, structural dim 10 words (320 bits); constant checks 0
+  (a) one extra pinned word (d_S<=1), d_U>=1, d_V>=1: INFEASIBLE (The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None))
+  (b) no non-degenerate split at all: {'status': 2, 'message': 'The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)'}
+  (c) max min(d_U,d_V) = 0 (d_U=6, d_V=0, d_S=4)
+  (d) Pareto (d_U>=a, max d_V=b, d_S at that point): []
+  join floor: min(d_U,d_V)=0 words -> >= 2^inf list entries per 128-bit match (DERIVED)
+
+elapsed 9.5 s

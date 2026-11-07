@@ -1,0 +1,2 @@
+g2_main.hits: 131072 successes re-verified with vt38 (outcome/compress/cells): 0 failures
+TOTAL disagreements/failures: 0

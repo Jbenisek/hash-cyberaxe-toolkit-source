@@ -1,0 +1,18 @@
+{
+  "id": "S39-TABLE21-22-CONDITION-COUNT-20261014",
+  "hash": "sha256-39",
+  "row_i": 16,
+  "row_j": 38,
+  "object": "LLW24 39-step SHA-256 characteristic late-condition count",
+  "question": "Do the printed Table 21 and Table 22 transcription reproduce the claimed 168 post-16 conditions?",
+  "labels": ["N", "D", "C"],
+  "status": "COMPUTED",
+  "number": "Table21 non-= cells 91 + Table22 bracketed relations 77 = 168",
+  "source": "research/dig_new/sha256-39/condition_count.py; research/dense_dig/paper/p.txt",
+  "own_test": true,
+  "evidence": "research/sol_answer_S39_table21_22_condition_count_1014.md; parser asserts (91,77,168)",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Static transcription audit only. Confirms the paper's 2^168 Step-3 count; no new characteristic, probability, package, stage, filing, or submission credit."
+}

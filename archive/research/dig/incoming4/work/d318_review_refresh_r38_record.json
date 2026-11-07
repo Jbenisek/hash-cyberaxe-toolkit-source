@@ -1,0 +1,21 @@
+{
+  "id": "D318-SHA256R38-REVIEW-REFRESH",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "current paired-review verdict refresh for SHA-256-r38 dossiers",
+  "question": "What current review status applies to the r38 exploratory claims  fb72740f and 3f99bba2?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Both r38 dossiers remain ineligible: fb72740f (time 87.90374; score 98.90374 under its memory rule) is NOT_EVALUABLE for unsupported H4c development allowance, and 3f99bba2 (time 70.17399) is NOT_EVALUABLE for the same unmetered development allowance. No score credit changes.",
+  "source": "our workflow: D318 current paired-review refresh",
+  "own_test": false,
+  "evidence": "research/sol_answer_D318_review_refresh.md; research/dossiers/fb72740f/review/aggregate.json; research/dossiers/fb72740f/review/judge-dossier.json; research/dossiers/3f99bba2/review/aggregate.json; research/dossiers/3f99bba2/review/judge-dossier.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "External review audit only; complete metered development/preprocessing and memory evidence is still required. No package, staging, filing, or submission change.",
+  "held_fixed": "paired-lanes-v1 aggregate status and binding dossier artifacts",
+  "reopen_if": "A metered lineage-wide development bound and complete preprocessing-memory envelope are reviewed"
+}

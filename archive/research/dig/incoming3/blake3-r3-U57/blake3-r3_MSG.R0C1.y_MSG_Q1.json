@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "read y of call R0C1 = message word m3",
+ "question": "Q1 value/count as used at this read",
+ "labels": [
+  "0"
+ ],
+ "status": "COMPUTED",
+ "number": "Read R0C1.y: m3 is a zero key word of the target prefix 0^32 (constant 0). Value as used: word index m3 (index checked by running the scalar compression with marker words 100..115 and recording the schedule: m3 at round 0, call C1, position y). The read adds the constant 0, which the filed Tracer skips (marginal ops of the read 0: replacing it by constant 0 leaves the total at 595); this is a round-0 column call whose state and both message words are constants, so the whole call is folded at build time (0 ops). Statement ops (the a+b (second add) add statement) 0; ops of the whole call 0 of 595. Own sampled check, one xor-perturbation of only this read on 400 random chain inputs: on average 8.00 of 8 digest words and 128.4 of 256 digest bits change (minimum 8 words); digest words that changed in every trial: 0,1,2,3,4,5,6,7.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U55/work/msg_reads.py; research/dig/incoming3/blake3-r3-U55/work/msg_reads.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MSG.R0C1.y|MSG|Q1. exact trace counts (COMPUTED); the perturbation counts are sampled (400 trials, fixed seed). validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "target 0^32||x (m0..m7 = 0, m8..m15 chain words, identity embedding), standard IV/counter 0/length 64/flags 11, 3 rounds, filed circuit rules (7 lanes x 36-bit pitch, filed Tracer rules, 595 ops per batch of 7); all other reads unchanged",
+ "reopen_if": "the machine rule charged an add of constant 0 (then the zero-key reads would cost), or the evaluation order of the add chain (a+b)+x changed so that the read could be folded into a constant earlier",
+ "topic": "blake3-r3|MSG.R0C1.y|MSG|Q1"
+}

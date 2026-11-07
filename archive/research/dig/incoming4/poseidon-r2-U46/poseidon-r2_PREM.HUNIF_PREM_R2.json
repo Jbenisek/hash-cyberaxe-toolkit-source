@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HUNIF (PREM)",
+ "question": "R2: own recount: random-coefficient model of g against the real g",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "toy p=257 one-centre 0.367-0.404 (earlier work); real r2 pooled 0.348 (n=23) and r1 0.317-0.40 (n=180/20): all within about two standard errors of 0.3935 except r1 per-line (z=-2.11).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HUNIF|PREM|R2. No new toy run; only the real samples were recounted.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure; centres independent (fresh random centre each)",
+ "reopen_if": "a sample of 100+ r2 centres per line shows a rate outside the model band",
+ "topic": "poseidon-r2 HSQ rate"
+}

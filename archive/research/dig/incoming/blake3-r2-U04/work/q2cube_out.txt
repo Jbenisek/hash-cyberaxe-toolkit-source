@@ -1,0 +1,22 @@
+Q3 DP: distinct beta values over all 2^32 c1 = 162507  total c1 covered = 4294967296 (must be 2^32=4294967296)
+Q3 distribution: cube dimension (free c1 bits) -> number of betas: []
+  free-dimension nf : #betas -> {0: 2, 1: 27, 2: 166, 3: 634, 4: 1734, 5: 3696, 6: 6506, 7: 9889, 8: 13394, 9: 16451, 10: 18465, 11: 19045, 12: 18144, 13: 16002, 14: 13051, 15: 9815, 16: 6779, 17: 4274, 18: 2435, 19: 1227, 20: 531, 21: 187, 22: 47, 23: 6}
+  betas with dim 21 (11 fixed bits): 187  -> includes beta* and beta2
+Q3 DP check beta* count = 2097152  beta2 count = 2097152  (C brute force over 2^32: 2097152 each, 0 mismatches vs cube mask: cube.c / cube_out.txt)
+Q3 rate: P(c1 in Q*) = 2^21/2^32 = 2^-11 exactly (c1 uniform under the translation by Y11, proof Lemma S1); x2^11 rate when c1 is prescribed in Q*
+real-pair check (organizer-style reconstruction via frontline.step_ct): c1 in Q* -> E1 b1 diff == beta*: 40 / 40
+real-pair check: c1 in Q_2 -> beta2: 40 / 40
+Q2 base: all 2^21 cube members give beta* (numpy re-check): True
+  bit  0 (needs c1[0]=0): flipping gives 11 distinct betas, 0 of 2^21 still beta*, top [(1048576, '18d0e098'), (524288, '1950e098'), (262144, '1b50e098')], xor to beta* multi
+  bit  1 (needs c1[1]=0): flipping gives 11 distinct betas, 0 of 2^21 still beta*, top [(1048576, '18f0e098'), (524288, '1970e098'), (262144, '1b70e098')], xor to beta* multi
+  bit  3 (needs c1[3]=0): flipping gives 10 distinct betas, 0 of 2^21 still beta*, top [(1048576, '19b0e098'), (524288, '1bb0e098'), (262144, '1fb0e098')], xor to beta* multi
+  bit  7 (needs c1[7]=0): flipping gives 7 distinct betas, 0 of 2^21 still beta*, top [(1048576, '28b0e098'), (524288, '68b0e098'), (262144, 'e8b0e098')], xor to beta* multi
+  bit  8 (needs c1[8]=0): flipping gives 7 distinct betas, 0 of 2^21 still beta*, top [(1048576, '38b0e098'), (524288, '78b0e098'), (262144, 'f8b0e098')], xor to beta* multi
+  bit 15 (needs c1[15]=1): flipping gives 1 distinct betas, 0 of 2^21 still beta*, top [(2097152, '18b0e088')], xor to beta* 00000010
+  bit 16 (needs c1[16]=0): flipping gives 8 distinct betas, 0 of 2^21 still beta*, top [(1048576, '18b0e0b8'), (524288, '18b0e0f8'), (262144, '18b0e178')], xor to beta* multi
+  bit 19 (needs c1[19]=0): flipping gives 6 distinct betas, 0 of 2^21 still beta*, top [(1048576, '18b0e198'), (524288, '18b0e398'), (262144, '18b0e798')], xor to beta* multi
+  bit 25 (needs c1[25]=1): flipping gives 1 distinct betas, 0 of 2^21 still beta*, top [(2097152, '18b0a098')], xor to beta* 00004000
+  bit 26 (needs c1[26]=0): flipping gives 4 distinct betas, 0 of 2^21 still beta*, top [(1048576, '18b16098'), (524288, '18b36098'), (262144, '18bf6098')], xor to beta* multi
+  bit 27 (needs c1[27]=0): flipping gives 4 distinct betas, 0 of 2^21 still beta*, top [(1048576, '18b1e098'), (524288, '18b3e098'), (262144, '18bfe098')], xor to beta* multi
+Q2 result: each of the 11 cube bits is individually necessary (flip -> beta != beta*): True ; beta2 reachable by flipping bit(s)? [0]
+Q2: sufficiency exact: #c1 with beta=beta* over all 2^32 =2^21 = size of the 11-bit cube, so no 10-bit subset suffices (C brute force).

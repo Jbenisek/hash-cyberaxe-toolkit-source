@@ -1,0 +1,19 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m3, alternative outcomes / carry patterns",
+ "question": "Alternative outcomes/carry patterns at m3 and whether they reach the same later differences",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Required XOR difference on m3 is 0, which has exactly 1 additive pattern (0); any nonzero single-bit difference has 2 patterns, d=0x3 has 4, d=0x15 has 8 (exhaustive 16-bit). Alternative: put a difference on m3 (xor/+/-, 32 bits each, 96 deltas, 60 samples each): 0/96 reach a zero round-0 state difference; all 16 state words differ every time (K1 outputs feed all four diagonal calls). The length difference cancels only in K2 (w4,w5).",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U07/work/b3ctr.py; research/dig/incoming/blake3-r2-U07/work/validate.py; research/dig/incoming/blake3-r2-U07/work/exp.py; research/dig/incoming/blake3-r2-U07/work/exp_out.json; research/dig/incoming/blake3-r2-U07/work/img.c; research/dig/incoming/blake3-r2-U07/work/img_out.txt; research/dig/incoming/blake3-r2-U07/work/surj.py; research/dig/incoming/blake3-r2-U07/work/surj_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m3|msgword|Q4. validated first: counter-construction (pkgB3U Sec 8 steps CO+CT) transcribed in b3ctr.py; 2000/2000 random free-word sets give pinned X3,X7,X11,X15, equal round-0 state for A/B, and equal digest words 0,2,5,7 (known answer reproduced). No alternative carry pattern exists for m3, and no alternative placement of the message difference on it reaches the same later differences (Z: tested, no gain)."
+}

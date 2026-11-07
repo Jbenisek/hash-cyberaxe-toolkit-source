@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.NEWTON (ROOT)",
+ "question": "Q1: exact cost of the Newton reciprocal of the modulus",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "377,843,160 ops per centre at r=2 (99,688,065 arith) = 0.692 percent of the S^((p-1)/2) stage (54,638,630,504) and 0.512 percent of an observed centre; r=1 strict recount: 86,672,156 (ratio 4.36 for a 5x modulus). Stage sum check: 377,843,160 + 3,906,435 (prefix, scale) + 54,256,880,909 (236 loop steps) = 54,638,630,504.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ROOT.NEWTON|ROOT|Q1. Read from the lean-pow breakdown line of logs/ledger_r2.txt; identity verified by my arithmetic.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "a different reduction scheme is used for the power stage"
+}

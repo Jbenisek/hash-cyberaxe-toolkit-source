@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/root/r39comb/r39tail_p_nb3row20newchar39s1_luna.py", line 262, in <module>
+    if __name__=="__main__":main()
+                            ~~~~^^
+  File "/root/r39comb/r39tail_p_nb3row20newchar39s1_luna.py", line 243, in main
+    assert kat==1 and mv==0 and len(pat8)==1152 and len(pat9)==2080
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

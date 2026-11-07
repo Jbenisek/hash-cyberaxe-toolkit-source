@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m14",
+ "question": "Q2 necessity: pin the word (stop feeding digest word 6 back), recount the outcome",
+ "labels": [
+  "K"
+ ],
+ "status": "SAMPLED",
+ "number": "Pinning m14 to a constant cuts the circuit from 595 to 579 ops (nonzero constant) or 576 ops (zero): at best 0.0462 bits of time (filed loop share 99.44 percent, 599.19 ops per batch with filter and loop control). But the fed-back state then has 224 bits against a 256-bit tag; a rho collision of the 224-bit state is a full digest collision with probability 2^-32, so the cost is multiplied by 2^((256-224)/2) = 2^16 (random-function law). Own test of the law on the real 3-round function, small analogue (state = 32 bits in m8, m9..m15 pinned, a fresh pinned constant drawn for every trajectory, tag = 32 state bits + e low bits of digest word p, the word that would feed m12..m15; cost = mean evaluations until two different inputs share the tag): cost(e) / (2^e * cost(0)), cost(0) = 83476 evaluations (1000 runs, ratio 1.016 to the random-mapping value sqrt(pi 2^32/2)): at e=4, 100 runs each, word 4 1.13+-0.13, word 5 1.16+-0.12, word 6 0.73+-0.07, word 7 0.88+-0.07 (this word 6: 0.73+-0.07); ideal-function control at e=4 0.94+-0.09; at e=8 (12 runs, word 4) real 0.79+-0.20, control 1.52+-0.45. So the cost grows as 2^e with the dropped bits (all within -26 to +17 percent; word 6 at 0.73 is about 3.9 sigma low in this 100-run sample: a possible small correlation between the low bits of digest word 6 and state collisions, not followed up; it would be a gain only if it survived at 256 bits, which this analogue cannot say). Net effect of pinning at width 256: +16 bits of time against -0.0462: closed (K).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U55/work/pintest.c; research/dig/incoming3/blake3-r3-U55/work/pin_run.sh; research/dig/incoming3/blake3-r3-U55/work/pin_all.txt; research/dig/incoming3/blake3-r3-U55/work/words.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|m14|msgword|Q2. the 2^16 factor at width 256 is the random-function formula checked at e=4 and e=8 (not run at 256). Method note: a first version restarted on ONE fixed function and found the same failing state-collision pair again and again (122 to 1753 trajectories per success at e=4 instead of 16; e=0 cost 0.70 of the random-mapping value for that fixed function), the known single-functional-graph effect (the filed note's earlier 0.70-1.65 ratios); the numbers above are from the corrected version (fresh pinned constant per trajectory). validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "3-round digest of 0^32||x with m9..m15 pinned to fixed constants (m9 re-drawn per trajectory); tag width 32+e; plain table, no distinguished points; identity feed of digest word 0 into m8; other state constants standard",
+ "reopen_if": "a way to recover the 32 lost tag bits without 2^32 state collisions (a structure tying digest word 6 to the fed-back words, e.g. the word-6 deviation confirmed at larger samples), or a cost model that charges the 16 saved ops more than 16 bits",
+ "topic": "blake3-r3|m14|msgword|Q2"
+}

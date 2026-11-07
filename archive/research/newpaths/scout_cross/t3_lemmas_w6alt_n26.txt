@@ -1,0 +1,1 @@
+w=6 rots=(3, 2, 2, 1) N=2^26: {'N': 67108864, 'dY3zero': 0, 'E1d1_nonzero': 0, 'E1d2_rule_fail': 0, 'Beq': 8, 'lemma2_fail_on_Beq': 0}

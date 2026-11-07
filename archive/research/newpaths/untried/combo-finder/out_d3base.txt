@@ -1,0 +1,2 @@
+D3(i) solvable, N=100000 each: random 52 (0.0005); eta=0 1 (0.0000); D in -D2 (odd, 672 values) 70 (0.0007); M from K1 (93 values), eta=0 0 (0.0000)
+D3(ii) given D3(i), D in -D2: (i)-solvable 1186 of 2000000; first-sample (ii) 3; any of 64 samples (ii) 7

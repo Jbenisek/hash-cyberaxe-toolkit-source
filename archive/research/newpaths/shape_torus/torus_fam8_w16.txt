@@ -1,0 +1,2 @@
+w=16 iv=0 parity(IV0..7 bit0)=1: curve hits 1, stage-1 solutions 65536, fam8 members 0 (hits with members 0), construction/forward failures 0
+w=16 iv=2 parity(IV0..7 bit0)=0: curve hits 0, stage-1 solutions 0, fam8 members 0 (hits with members 0), construction/forward failures 0

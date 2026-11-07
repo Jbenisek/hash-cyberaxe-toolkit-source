@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t36 (DOOR)",
+ "question": "D1: branch number / minimal active S-boxes in R60-R63, r=2",
+ "labels": [
+  "N"
+ ],
+ "status": "BEDROCK",
+ "number": "Real MDS: all minors nonzero (9, 9, 1), branch number 4. Support chains over the four tail rounds: 403 pass the MDS rule, 337 of 2401 end with lane 0 zero, 25 weight patterns; minimum total active S-box positions across the four rounds is 8. The tail is the same for every r, so the table is identical at r=1 and r=2. Reproduces LEVELS (337 / 25).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testA.json; research/poseidon/levels/LEVELS.md (J6, OQ-T-1)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|DOOR.t36|DOOR|D1. Exact enumeration with the pinned MDS; supports realised for a large field by the MDS property (exact-support vectors exist when |A| + |B| >= 4).",
+ "held_fixed": "r=2 target, 4 full + 2 partial + 4 full rounds, Pallas MDS and constants pinned; toy tests use random Cauchy MDS and random constants over F_103",
+ "reopen_if": "a different MDS or round layout"
+}

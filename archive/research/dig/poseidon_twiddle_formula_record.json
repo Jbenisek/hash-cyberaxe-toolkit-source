@@ -1,0 +1,22 @@
+{
+  "id": "POSEIDON-R2-TWIDDLE-FORMULA-20261013",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "stage-D NTT twiddle fetch formula",
+  "question": "What exact twiddle-fetch count does each generated NTT pass contribute to stage D?",
+  "labels": ["D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Generated kernels: normal forward/inverse u_k=2^k-1=(1,3,7,15), peeled b=0 z_k=2^k-k-1=(0,1,4,11). A pass with s=P.n/2^(l0+k), ngrp=2^l0 has exact twiddle fetches ngrp*(z_k+(s-1)u_k); fused last pass has 2*z_k*(P.n/2^k).",
+  "source": "our workflow: poseidon r2 twiddle source audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_poseidon_r2_twiddle_formula_20261013.md; research/poseidon/orchard/exec_r2d/ntt.c; research/poseidon/orchard/exec_r2d/ntt_kern.h; research/poseidon/orchard/exec_r2d/pkg_stage_exec/proof.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "poseidon-r2.MEM.TWID.stage-D",
+  "held_fixed": "The checked-in generated kernels and source charging macros; only per-pass formulas are asserted.",
+  "reopen_if": "An instrumented stage-D half-gcd trace emits call counts and plan sizes, allowing the formulas to be summed into a run-level total.",
+  "notes": "Exact source-level partial result. Dynamic stage-D call multiplicities are not emitted by the current ledger, so no complete stage-D price or score credit is claimed."
+}

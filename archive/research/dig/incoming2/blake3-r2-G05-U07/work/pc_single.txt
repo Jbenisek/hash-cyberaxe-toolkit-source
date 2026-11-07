@@ -1,0 +1,6 @@
+mode 1 rounds 2 N=2^26 expected pairs at 40 bits 2048.0 (sd 45.3)
+  key w0,w2,w5.lo8 (E0/E2 half)    pairs 2025  ratio 0.9888  z -0.51
+  key w1,w3,w4.lo8 (E1/E3 half)    pairs 2105  ratio 1.0278  z 1.26
+  key w0,w1,w2.lo8                 pairs 2108  ratio 1.0293  z 1.33
+  key w6,w7,w5.lo8                 pairs 2059  ratio 1.0054  z 0.24
+  key control rng                  pairs 2029  ratio 0.9907  z -0.42

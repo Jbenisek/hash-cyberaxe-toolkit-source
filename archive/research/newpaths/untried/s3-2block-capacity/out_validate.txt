@@ -1,0 +1,1 @@
+cd.rnd(6) == organizer permutation(rounds=6) on 300/300 FULL random states (nonzero capacity)

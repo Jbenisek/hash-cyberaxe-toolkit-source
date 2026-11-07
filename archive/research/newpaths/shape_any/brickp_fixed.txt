@@ -1,0 +1,2 @@
+start: brick width 7 (F'=2, |P|=2)
+BRICKP best brick width 7  P=m0,m4,

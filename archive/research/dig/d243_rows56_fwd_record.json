@@ -1,0 +1,20 @@
+{
+  "id": "D243-S38-ROWS56-FWD",
+  "hash": "sha256-38",
+  "row_i": 5,
+  "row_j": 6,
+  "object": "Zone D 38 rows 5-6 forward local counts",
+  "question": "What are the exact published-prefix forward counts for rows 5 and 6?",
+  "labels": ["D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Row 5: 2^32/2^32 local pass; row 6: 2^23 full pass out of 2^26 diff-only, exact factor 1/8",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-fwd56.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Exact fwd 5 and fwd 6 on the published prefix only. Full rows-5/6 drop-family trees and global transfer remain OPEN; this record does not supersede D243-S38-ROWS56.",
+  "held_fixed": "published prefix and all non-scanned coordinates; E5 or E6 varied over its forward domain",
+  "topic": "sha256-38 zoneD38 residual rows5-6"
+}

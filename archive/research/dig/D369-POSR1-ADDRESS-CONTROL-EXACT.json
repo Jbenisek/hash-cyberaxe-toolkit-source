@@ -1,0 +1,22 @@
+{
+  "id": "D369-POSR1-ADDRESS-CONTROL-EXACT",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.ADDR exact LD/ST address-control count",
+  "question": "Can the open Q3 address-operation count be fixed exactly from the checked-in source and ledger?",
+  "labels": ["N", "D"],
+  "status": "COMPUTED",
+  "number": "Exact as-run counts: ld=2997348202, st=1663304782, hence LD+ST address controls=4660652984. This is 4.5290028841% of N_run=102906823052. Freeing them would lower log2(N/237) by 0.0668655677 bits; current rules require the charge, so no score credit.",
+  "source": "our exact source-and-ledger reconciliation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D369_poseidon_r1_address_control_exact.md; research/poseidon/orchard/lean_r1_fix/common.h; research/poseidon/orchard/lean_r1_fix/ntt.c; research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Supersedes stale C1773 Q3 bookkeeping. LD/ST address controls are already included in X.ctl; butterfly slot addresses and other CTL terms are separate and not double-counted. Q4 alternative kernel remains open. No package, staging, filing, or submission.",
+  "held_fixed": "lean_r1_fix proof TYPES as-run total 102906823052, C(1)=237, 16-word register model",
+  "reopen_if": "the source macros or judge charging rule changes, or a rebuilt alternative kernel changes the count",
+  "supersedes": ["C1773"],
+  "peak_mem": "22.922985 ESTIMATED proof-tracked peak 8468640 B"
+}

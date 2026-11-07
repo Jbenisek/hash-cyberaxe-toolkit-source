@@ -1,0 +1,1 @@
+case=lift peak<=2: NONE (exhaustive)  nodes=3915 states=1143  0.0s

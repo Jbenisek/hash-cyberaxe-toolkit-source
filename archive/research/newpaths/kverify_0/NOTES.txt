@@ -1,0 +1,72 @@
+kverify_0 - skeptic check of: "4 lists of 2^(n/2) give up to 2^n members at O(1) amortized; work per member
+2^(n - min(a1+a2, a3+a4)); needs every check 4-way separable, which never happens here; 66 only if it did."
+Labels: COMPUTED (a program in this folder produced it), DERIVED (follows from model + computed facts), GUESS.
+Read-only imports of ../gd_order.py and ../kmath/kmerge.py (no bytecode written).  Nothing outside this folder written.
+
+FILES
+  kv_merge.py         own 4-list merge (not kmath's code), exact completeness check   -> merge_results.txt
+  kv_rerun_kmerge.py  reruns kmath/kmerge.py configs                                    -> kmerge_rerun.txt
+  kv_closure.py       own closure/delta code on build("fixed"), controls, random-walk sample of valid 8-sets,
+                      every partition into 2, 3, 4 blocks (plain and LIN)               -> closure_s11..13.txt
+  kv_outhalf.py       same for outhalf 16-sets (all bipartitions, 20000 random 4-splits) -> outhalf_s21..22.txt
+  kv_region_sat.py    own CNF encoding of the SAT facts behind ksplit R8/R10b; peel bound -> r1_*.cnf, r2_*.cnf
+  kv_decode.py        re-checks SAT models in plain Python;  run_sat_a.sh, run_sat_b.sh  -> sat_a.log, sat_b.log
+
+RESULTS (filled in below)
+1. THE 4-LIST MATH HOLDS (COMPUTED, own code kv_merge.py; merge_results.txt)
+  - Completeness: with all 2^(n/2) clamp values the merge finds EXACTLY the true number of 4-tuples
+    (exact count by pair histograms): n=12: 3973 = 3973; n=16: 65720 = 65720; n=20: 1049042 = 1049042; 0 bad.
+    7.0 steps per solution at ~2^n solutions.
+  - One clamp value (members M = 2^(n/2), the case that matters: 2^64 members with n = 128):
+    11.97 / 13.14 / 12.87 / 12.94 steps per member at n = 20/24/28/32, list build included.
+  - kmath rerun (kmerge_rerun.txt, same code, different RNG state): reproduces kmath within noise
+    (7.09 / 7.37 steps per solution near 2^n; 12.76 / 13.05 at M = 2^(n/2)); bad=0 dup=0 everywhere.
+  - Formula: per member = 2*(2^(n-a3-a4) + 2^(n-a1-a2)) + stream + 1, stream = 2^(n+t-a2-a3-a4) + 2^(n+t-a1-a2-a4).
+    Measured vs predicted (n=20): a=(10,10,6,6) t=10: 803 vs 787; t=4: 503 vs 519; (12,8,10,10): 10.0 vs 10.0;
+    (8,8,8,8) t=4: 66.5 vs 67.0.  So "2^(n - min(a1+a2, a3+a4))" is the right leading term, but NOT
+    independent of t (stream term, shown at t=10 where it exceeds the main term) and off by a factor ~2.
+    Minor; t is free, so choosing t small removes the stream term.
+  - DERIVED: the hypothetical cost (4 sides of 2 words, 4 separable checks, n = 128, M = 2^64) is
+    ~13 * 2^64 = 2^67.7 element steps, not 2^66 ("7 steps" only applies near M = 2^n).  In contest units
+    (word ops /430) GUESS ~2^64.5-2^65.5, dominated by the 2^64.5 members needed for a 128-bit birthday.
+
+2. THE SIDES ARE NOT SEPARABLE (COMPUTED, own closure code kv_closure.py on gd_order.build("fixed"))
+  - Model: 100 words, 96 equations, F = 4.  Largest closure of 1 / 2 guesses = 9 / 14 (= ksplit R1).
+    Peeling core 93 words, peeled C0.b2 C2.b2 m12 m15 m5 K2.a2 m8 (= ksplit); max peel over 3000 random
+    orders = 7, so any J with cl(J) = W and delta(J) = 4 has >= 93 words.
+  - Controls (detector must fire): m0 | K0.d1 n_sep = 1;  greedy set | extra word n_sep = 1.
+  - Greedy 8-set and 900 valid 8-sets from a random walk (3 seeds x 300): every partition into 2, 3 and 4
+    blocks has n_sep = 0, also with the linear-chain refinement; no proper subset carries a condition.
+    So all 4 checks are post (global) for every split tested - confirms ksplit R2/R3 on an independent sample.
+  - Outhalf (kv_outhalf.py): 21 valid 16-sets (4 checks), all 32767 bipartitions and 20000 random 4-splits
+    each: max n_sep = 0 everywhere.  (sample only, like ksplit R4/R6)
+  - Checks ARE group relations: every primitive equation is one add relation (a1, c1, a2, c2) or one
+    xor-after-rotation relation (d1, b1, d2, b2), so a check whose words all lie in side closures IS a sum of
+    per-side terms.  The obstruction is that no check has all its words in side closures.
+  - DERIVED (refinement of the claim's wording): the two-level merge needs only the CLAMPED bits 4-way
+    separable; root-matched bits need only separability between cl(S1 u S2) and cl(S3 u S4).  Even that
+    weaker 2-way form fails here (all bipartitions n_sep = 0), so the conclusion is stronger, not weaker.
+
+3. GENERAL BOUND REPRODUCED (COMPUTED, own CNF encoding kv_region_sat.py + kissat; sat_a.log, sat_b.log)
+  - Controls: delta<=4 & |A|>=25 SAT (model re-checked: 25 words, closed, delta 4); delta<=2 & >=14 SAT
+    (re-checked); delta<=2 & >=15 UNSAT (250 s); two regions bound 12 covering >=93 SAT (re-checked:
+    82 + 78 words, union 100, delta 4).
+  - "proper closed region with delta <= 4 and >= 47 words": UNSAT (156 s) = ksplit R8, independent encoding.
+  - With section-3 reasoning of ksplit (which I re-derived: lowest node with closure W joins two proper closed
+    regions of delta <= 4 whose union has delta 4 and >= 93 words) this gives ksplit R10: in the fixed variant
+    no join tree (any k, cores, clamping, MITM guesses) costs < 2^96 joined pairs for 2^64 members.
+    Caveat (DERIVED): R10 is a generic-model, word-level bound.  In contest units 2^96 pairs at >= ~2 word ops
+    each is ~2^88, not 2^96.  Bit-level / sub-word splits are outside the model and untested here.
+  - Two regions, delta(A), delta(B), delta(A u B) <= 4, |A u B| >= 93: UNSAT (20 s) = ksplit R10b.
+    Robustness: same with |A u B| >= 90: UNSAT (73 s), so the result does not hang on the peel bound of 7.
+
+4. VERDICT (DERIVED)
+  - Claim CONFIRMED in substance: the 4-list math is right (leading term; t-dependent stream term and a factor
+    ~2 omitted), the toy results reproduce, the checks are group relations, and no split of any tested guess set
+    has even one separable check; the general bound (no tree below 2^96 pairs, fixed variant) reproduces.
+  - Corrections: hypothetical cost is 2^67.7 element steps (13 per member at M = 2^(n/2)), not 2^66;
+    "every check 4-way separable" is stronger than needed (root bits need only 2-way), irrelevant here.
+  - Real exponent of the k-list route in this system: >= 96 (pairs; ~88 in contest units, GUESS), best actual
+    structure 192 (brute force).  66 is unreachable.
+  - Not covered: bit-level / sub-word splits; outhalf only sampled (and conditional on no 12-word basis, R11).
+  Blocked: nothing.

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.RULE memory term max(0, log2 bytes - 20)",
+ "question": "necessity of the memory",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "with the filed 8,638,495 B the term is 3.043 of 31.824 (9.6%); one dense g alone is 1,250,016 B = 2^20.253, so any schedule that stores g densely has a term >= 0.253 bit; the term cannot be removed without dropping g",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "log2(1,250,016) = 20.2534. | universe cell poseidon-r1|MEM.RULE|MEM|M2",
+ "held_fixed": "score rule as stated",
+ "reopen_if": "a method with all vectors below 1 MiB total"
+}

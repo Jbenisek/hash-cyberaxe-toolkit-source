@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.ADDR (MACHINE)",
+ "question": "Q2: addressing arithmetic and index computation: necessity (drop or change, recount)",
+ "labels": [
+  "Z"
+ ],
+ "status": "OPEN",
+ "number": "No separate count exists, so a recount without addresses is not possible from the ledger; an instrumented rerun with a separate ADDR counter was not made.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MACHINE.ADDR|MACHINE|Q2. Untested.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use; counts are from the two-centre observed run (evaluation units excluded), per centre = half",
+ "reopen_if": "built and counted with a fresh ledger run",
+ "prior": 0.1,
+ "potential_bits": 0.05
+}

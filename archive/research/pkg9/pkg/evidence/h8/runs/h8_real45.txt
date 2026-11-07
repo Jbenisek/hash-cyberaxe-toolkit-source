@@ -1,0 +1,45 @@
+real: pin 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006  eta 830303cf  class of 2^19 values of Y4  D3 fdb77cfd
+  lengths 55/63  w4' 97475640  delta fffffff8  Y3 8127c181 Y3' 7edf3e7e  Y11 7af77f38 Y11' 850000c3 D11 0a08818b  class mask 03cf8303 value 030c0303
+STAT real trials 2^45.00  bad 0
+STAT real early test passes: 1551878 (2^-24.434)   E1 requires the eta of Y4: 12489 (2^-31.392)   contradictions (must be 0): 0
+STAT real E1 deep: trials with a listed beta 141734019992 (2^-7.956)   trials with a listed E1 outcome 38
+STAT real E3 deep: trials with a listed partial E3 event 7103 (2^-32.206)
+STAT real word zero:             8694 (2^-31.914)      43167 (2^-29.602)       8634 (2^-31.924)       5282 (2^-32.633)
+STAT real low 16 zero:      530709958 (2^-16.017) 1373220151 (2^-14.645)  840601677 (2^-15.353)  410718939 (2^-16.386)
+STAT real low 16 of two:   01:23937 02:58242 03:9865 12:35056 13:4182 23:15453
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 5857   weight <= 16/24/32/40: 0 1901 6101710 2877664657   lowest weight seen 18
+STAT real trailing zero bits >= 24..48: 24:2184296 28:141744 32:8694 36:679 40:70 44:4 48:0
+STAT real trailing zero bits exactly 0..23: 23363004208916 5910685638919 2955338781571 1477672077485 738835907482 369417916057 184709061638 92354329040 46177064557 23088624187 11544093989 3117122718 4209356867 2108953628 1054481417 523760403 265373217 132677883 66335696 33110182 16557437 8328709 4187888 1954650
+STAT real rule on h1 (bits 0=0, 1=1, 16=0, 17=0): passes 2199023556487 (2^-4.000000)   listed partial E3 events that pass it: 4095
+STAT real E1 beta 18b0e098: trials 17179849465   with a listed tau 10351635   with a listed outcome 6
+STAT real E1 beta 18d0e098: trials 17179978794   with a listed tau 24775464   with a listed outcome 14
+STAT real E1 beta 18b1a098: trials 17180037438   with a listed tau 10623335   with a listed outcome 7
+STAT real E1 beta 18d1a098: trials 17179933272   with a listed tau 19662468   with a listed outcome 9
+STAT real E1 beta 18b3e098: trials 4294901236   with a listed tau 589061   with a listed outcome 2
+STAT real E1 beta 18d3e098: trials 4295002843   with a listed tau 1376102   with a listed outcome 0
+STAT real E1 beta 18d1a398: trials 4294980025   with a listed tau 653527   with a listed outcome 0
+STAT real E1 beta 19f1a098: trials 4294897434   with a listed tau 491976   with a listed outcome 0
+STAT real E1 beta 18d16398: trials 4294974924   with a listed tau 327747   with a listed outcome 0
+STAT real E1 beta 18f1e098: trials 4294953195   with a listed tau 884803   with a listed outcome 0
+STAT real E1 beta 19f0e098: trials 4294951810   with a listed tau 229162   with a listed outcome 0
+STAT real E1 beta 19b1e098: trials 4294981150   with a listed tau 1056432   with a listed outcome 0
+STAT real E1 beta 19d1e098: trials 4294970668   with a listed tau 492704   with a listed outcome 0
+STAT real E1 beta 19b0a098: trials 17179808855   with a listed tau 1212136   with a listed outcome 0
+STAT real E1 beta 19d0a098: trials 17179798883   with a listed tau 196254   with a listed outcome 0
+STAT real E3 eps 6e61be55: listed partial events 2191
+STAT real E3 eps 6e21be55: listed partial events 1785
+STAT real E3 eps 6e203e55: listed partial events 1187
+STAT real E3 eps 6e603e55: listed partial events 948
+STAT real E3 eps 6e23be55: listed partial events 363
+STAT real E3 eps 6e63be55: listed partial events 267
+STAT real E3 eps 6e5fbe55: listed partial events 93
+STAT real E3 eps 6fdfbe55: listed partial events 97
+STAT real E3 eps 6fa03e55: listed partial events 82
+STAT real E3 eps 6fa1be55: listed partial events 36
+STAT real E3 eps 6e603c55: listed partial events 17
+STAT real E3 eps 6e60bc55: listed partial events 8
+STAT real E3 eps 6fde3e55: listed partial events 13
+STAT real E3 eps 6f9fbe55: listed partial events 14
+STAT real E3 eps 6f9e3e55: listed partial events 2
+RUN h8_real45: h8_class_gpu real 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006 830303cf 18 12 32768 9971 ; exit 0 ; 1349 s ; finished 2026-10-06 15:37:07

@@ -1,0 +1,4 @@
+# NAME W TIME KCONF args   (one kissat at a time; each run well under 10 minutes)
+r2_flag_m67_W200 200 240 sat --rounds 2 --dv15 7 --msg 6,7
+r2_flag_m67_W62 62 240 unsat --rounds 2 --dv15 7 --msg 6,7
+r2_flag_W30 30 240 unsat --rounds 2 --dv15 7

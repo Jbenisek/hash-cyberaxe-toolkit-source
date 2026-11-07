@@ -1,0 +1,108 @@
+{
+ "readers": {
+  "2": [
+   "K1/first",
+   "C0/first"
+  ],
+  "3": [
+   "K1/second",
+   "C1/first"
+  ]
+ },
+ "msg_diff_words_A_vs_B": [
+  4,
+  5
+ ],
+ "calls_where_full_state_differs_A_vs_B_of_500": {
+  "K0": 500,
+  "K1": 500,
+  "K2": 0,
+  "K3": 0,
+  "D0": 0,
+  "D1": 0,
+  "D2": 0,
+  "D3": 0,
+  "C0": 0,
+  "C1": 0,
+  "C2": 0,
+  "C3": 500,
+  "E0": 500,
+  "E1": 500,
+  "E2": 500,
+  "E3": 500
+ },
+ "dependence_fraction_of_single_bit_flips_changing_w2_w3": {
+  "C0d1": [
+   0.0,
+   0.0
+  ],
+  "D2a1": [
+   1.0,
+   1.0
+  ],
+  "D2b1": [
+   1.0,
+   1.0
+  ],
+  "S11": [
+   1.0,
+   1.0
+  ],
+  "S4": [
+   1.0,
+   1.0
+  ],
+  "X9": [
+   1.0,
+   1.0
+  ],
+  "w6": [
+   1.0,
+   1.0
+  ],
+  "Y4": [
+   0.0,
+   0.0
+  ],
+  "t_hi": [
+   1.0,
+   1.0
+  ],
+  "c1": [
+   0.0,
+   0.0
+  ]
+ },
+ "relax_flip_one_bit_both_msgs": {
+  "w2": {
+   "total": 9600,
+   "pins_kept": 0,
+   "half_collision_kept": 0
+  },
+  "w3": {
+   "total": 9600,
+   "pins_kept": 0,
+   "half_collision_kept": 0
+  }
+ },
+ "alt_difference_on_word_only_in_A": {
+  "w2": {
+   "min_X_words_differing_over_all": 16,
+   "deltas_with_zero_X_diff": 0,
+   "n_deltas": 96,
+   "mean_over_all": 16.0
+  },
+  "w3": {
+   "min_X_words_differing_over_all": 16,
+   "deltas_with_zero_X_diff": 0,
+   "n_deltas": 96,
+   "mean_over_all": 16.0
+  }
+ },
+ "carry_patterns_per_xor_diff": {
+  "d=1<<5": 2,
+  "d=0x3": 4,
+  "d=0x15": 8,
+  "d=0": 1
+ }
+}

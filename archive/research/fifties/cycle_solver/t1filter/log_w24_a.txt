@@ -1,0 +1,8 @@
+batch 0: table 510919049 entries, build 34.5s, queries 2.44s
+batch 1: table 480575144 entries, build 28.5s, queries 2.38s
+batch 2: table 508493322 entries, build 30.1s, queries 2.64s
+batch 3: table 534379892 entries, build 31.4s, queries 2.45s
+batch 4: table 526451146 entries, build 29.8s, queries 2.65s
+batch 5: table 521339887 entries, build 29.9s, queries 2.36s
+batch 6: table 500824467 entries, build 27.3s, queries 2.16s
+batch 7: table 507314034 entries, build 29.2s, queries 2.72s

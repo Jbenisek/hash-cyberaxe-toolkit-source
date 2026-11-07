@@ -1,0 +1,73 @@
+{
+ "root": {
+  "q": 0,
+  "dU": 0,
+  "dV": 0,
+  "dS": 8,
+  "c": 0,
+  "optimal": true,
+  "profile": [
+   [
+    0,
+    0,
+    0,
+    0,
+    8,
+    0
+   ],
+   [
+    1,
+    0,
+    1,
+    1,
+    7,
+    1
+   ],
+   [
+    2,
+    0,
+    2,
+    2,
+    6,
+    2
+   ],
+   [
+    4,
+    0,
+    2,
+    2,
+    6,
+    2
+   ],
+   [
+    8,
+    0,
+    2,
+    4,
+    4,
+    2
+   ]
+  ],
+  "floor_log2_entries": 129
+ },
+ "ctr": {
+  "q": 0,
+  "dU": 0,
+  "dV": 0,
+  "dS": 9,
+  "c": 0,
+  "optimal": true,
+  "profile": [],
+  "floor_log2_entries": 129
+ },
+ "ctr2": {
+  "q": 0,
+  "dU": 2,
+  "dV": 2,
+  "dS": 8,
+  "c": 2,
+  "optimal": true,
+  "profile": [],
+  "floor_log2_entries": 129
+ }
+}

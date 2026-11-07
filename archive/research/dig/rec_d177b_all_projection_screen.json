@@ -1,0 +1,18 @@
+{
+  "id": "C0963",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": null,
+  "object": "D177b all-projection row-16 screen",
+  "question": "Do any of the 80 distinct P1-A012 projections reach row 16 in a small free-CV context screen?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "0/20,480 row-16 survivors; 20,480/20,480 rows 0..15 prefix passes",
+  "source": "our workflow: D177b exploratory all-projection screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D177b_all_projection_screen.md; research/retest/d177b_procedure_c/SIGNATURE_SCAN_ALL_256.txt",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Exploratory 256 contexts per projection; no P0 control or held-out signature claim."
+}

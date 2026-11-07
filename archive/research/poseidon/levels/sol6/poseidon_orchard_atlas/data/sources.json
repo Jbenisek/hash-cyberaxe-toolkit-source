@@ -1,0 +1,100 @@
+[
+  {
+    "source_id": "S01",
+    "title": "HashSmash Orchard target proposal #923",
+    "url": "https://github.com/Layr-Labs/hash-smash/pull/923",
+    "scope": "LIVE CONNECTOR SNAPSHOT",
+    "note": "Open/unmerged when queried; no Yukon registration or baselines in this PR; field-cost question explicitly open. Head 01f736268b7086d97f38837d343d63a81bf31649."
+  },
+  {
+    "source_id": "S02",
+    "title": "Proposed contest verifier",
+    "url": "https://github.com/Annkkitaaa/hash-smash/blob/01f736268b7086d97f38837d343d63a81bf31649/verifier/poseidon.py",
+    "scope": "PINNED PROPOSAL SOURCE",
+    "note": "Exact target encoding, schedule, constants and output. Reviewed source; not copied as an authenticated full checkout."
+  },
+  {
+    "source_id": "S03",
+    "title": "Official P128Pow5T3 parameters",
+    "url": "https://github.com/zcash/halo2/blob/halo2_poseidon-0.2.0/halo2_poseidon/src/p128pow5t3.rs",
+    "scope": "PRIMARY SOURCE",
+    "note": "RF=8, RP=56, exponent 5; official parameter and vector tests."
+  },
+  {
+    "source_id": "S04",
+    "title": "Official Poseidon round and hash mode",
+    "url": "https://github.com/zcash/halo2/blob/halo2_poseidon-0.2.0/halo2_poseidon/src/lib.rs",
+    "scope": "PRIMARY SOURCE",
+    "note": "Round constants -> S-box -> MDS; ConstantLength<2> capacity=2^65; one output field element."
+  },
+  {
+    "source_id": "S05",
+    "title": "Official Grain constant generation",
+    "url": "https://github.com/zcash/halo2/blob/halo2_poseidon-0.2.0/halo2_poseidon/src/grain.rs",
+    "scope": "PRIMARY SOURCE",
+    "note": "80-bit self-shrinking LFSR; reproduced in poseidon_core.py."
+  },
+  {
+    "source_id": "S06",
+    "title": "Official Cauchy MDS generation",
+    "url": "https://github.com/zcash/halo2/blob/halo2_poseidon-0.2.0/halo2_poseidon/src/mds.rs",
+    "scope": "PRIMARY SOURCE",
+    "note": "Cauchy 1/(x_i+y_j), secure_mds selection 0 for this parameter set; reproduced locally."
+  },
+  {
+    "source_id": "S07",
+    "title": "Official permutation vectors",
+    "url": "https://github.com/zcash/zcash-test-vectors/blob/master/test-vectors/json/orchard_poseidon.json",
+    "scope": "PRIMARY SOURCE / TRANSCRIBED SUBSET",
+    "note": "First 3 of 11 vectors transcribed into local JSON and replayed. Do not report all 11 as tested."
+  },
+  {
+    "source_id": "S08",
+    "title": "Official constant-length hash vectors",
+    "url": "https://github.com/zcash/zcash-test-vectors/blob/master/test-vectors/json/orchard_poseidon_hash.json",
+    "scope": "PRIMARY SOURCE / TRANSCRIBED COPY",
+    "note": "All 11 vectors transcribed and replayed. Source master is not a pinned commit; local manifest pins the copy used."
+  },
+  {
+    "source_id": "S09",
+    "title": "Proposed contest regression tests",
+    "url": "https://github.com/Annkkitaaa/hash-smash/blob/01f736268b7086d97f38837d343d63a81bf31649/tests/test_poseidon.py",
+    "scope": "PINNED PROPOSAL SOURCE",
+    "note": "22-vector suite and 27/54 reference arithmetic described there; our run separately replayed 14 official vectors."
+  },
+  {
+    "source_id": "S10",
+    "title": "POSEIDON design paper",
+    "url": "https://eprint.iacr.org/2019/458",
+    "scope": "PRIMARY RESEARCH / LANDING ABSTRACT ONLY",
+    "note": "Design context, not a new native attack or a transferred numeric bound. Full paper not reviewed in this pass."
+  },
+  {
+    "source_id": "S11",
+    "title": "Algebraic Cryptanalysis of HADES Design Strategy: Application to POSEIDON and Poseidon2",
+    "url": "https://eprint.iacr.org/2023/537",
+    "scope": "PRIMARY RESEARCH / LANDING ABSTRACT ONLY",
+    "note": "Algebraic complexity revisions for specified settings; no Orchard collision result established here."
+  },
+  {
+    "source_id": "S12",
+    "title": "Breaking Poseidon Challenges with Graeffe Transforms and Complexity Analysis by FFT Lower Bounds",
+    "url": "https://eprint.iacr.org/2025/950",
+    "scope": "PRIMARY RESEARCH / LANDING ABSTRACT ONLY",
+    "note": "Challenge/CICO targets and memory-access costs are not automatically this two-input collision target."
+  },
+  {
+    "source_id": "S13",
+    "title": "A Zero-Dimensional Groebner Basis for Poseidon",
+    "url": "https://eprint.iacr.org/2024/310",
+    "scope": "WITHDRAWN",
+    "note": "Landing record reports withdrawal on 2024-12-23. Not used to justify a bound."
+  },
+  {
+    "source_id": "S14",
+    "title": "Orchard native PRF use",
+    "url": "https://github.com/zcash/orchard/blob/main/src/spec.rs",
+    "scope": "PRIMARY SOURCE / LIVE BRANCH",
+    "note": "prf_nf(nk,rho) uses P128Pow5T3 ConstantLength<2>. Protocol usage is not the same as freely chosen two-field contest inputs."
+  }
+]

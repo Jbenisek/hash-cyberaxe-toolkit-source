@@ -1,0 +1,9 @@
+# w=6 N=2^24 filed instance; baseline equal = 2^-6
+out0 = E0.a^E2.c: log2 P[equal]   -6.02 | zero channel  -12.93 | fold channel   -6.03
+out1 = E1.a^E3.c: log2 P[equal]   -6.01 | zero channel  -12.63 | fold channel   -6.03
+out2 = E2.a^E0.c: log2 P[equal]   -6.00 | zero channel  -11.08 | fold channel   -6.05
+out3 = E3.a^E1.c: log2 P[equal]   -6.07 | zero channel  -14.27 | fold channel   -6.07
+out4 = E3.b^E1.d: log2 P[equal]   -6.01 | zero channel  -12.87 | fold channel   -6.02
+out5 = E0.b^E2.d: log2 P[equal]   -6.00 | zero channel  -10.96 | fold channel   -6.04
+out6 = E1.b^E3.d: log2 P[equal]   -6.04 | zero channel  -12.45 | fold channel   -6.06
+out7 = E2.b^E0.d: log2 P[equal]   -6.00 | zero channel  -11.09 | fold channel   -6.05

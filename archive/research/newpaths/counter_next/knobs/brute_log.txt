@@ -1,0 +1,7 @@
+case 0 y=49e459aa Y9=f67ab01c w8=621bb0a5: # count 768 in 9 s
+case 1 y=49f4b1c6 Y9=7b411f4e w8=6ffd9c65: # count 128 in 5 s
+case 2 y=09f47a5e Y9=bbe2532f w8=37d0dc6b: # count 256 in 4 s
+case 3 y=c9f45a0e Y9=0b5ed812 w8=8e3674ba: # count 320 in 6 s
+case 4 y=79f49e62 Y9=caea0518 w8=79827b7a: # count 0 in 5 s
+case 5 y=49e44996 Y9=f69542b8 w8=8330550f: # count 0 in 4 s
+done

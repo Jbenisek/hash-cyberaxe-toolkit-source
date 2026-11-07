@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.MEMTRAF memory traffic (loads / stores)",
+ "question": "Score-optimal register count (degrees of freedom of the schedule).",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Zero-spill minimum = 25 registers in the emitted order (Belady); a greedy minimum-live reschedule of the same DAG gives peak 26, no better. So the schedule is already at its minimum for practical purposes; the score cost of traffic in the shipped program is exactly 0 at any R>=28.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.MEMTRAF|MACHINE|Q3. Greedy reschedule is a heuristic upper bound on the true minimum, not a proof of optimality. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "same DAG; no instruction duplication.",
+ "reopen_if": "A scheduler that gets under 25 live values (only matters if R<25 is declared)."
+}

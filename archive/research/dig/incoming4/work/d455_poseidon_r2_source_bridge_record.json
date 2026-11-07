@@ -1,0 +1,21 @@
+{
+  "id": "D455-POSEIDON-R2-SOURCE-BRIDGE-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 proof/source reproducibility bridge",
+  "question": "Does the checked-in proof embed the exact current r2 source set?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Source bridge reports embedded_count=18/18. Nine files are byte-exact; nine are LF_TRAILING_ONLY after CR/LF and final-newline normalization. Proof and run-log hashes are in D455_source_bridge.txt. This closes reproducibility only; no score gain.",
+  "source": "our workflow: D455 Poseidon-r2 source bridge execution",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/D455_source_bridge.txt; research/poseidon/orchard/exec_r2/audit_source_bridge.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Source/proof bridge only. Register spills, address charge, layouts, centre independence, and score levers remain open; no package/stage/filing/submission.",
+  "peak_mem": "not measured; source comparison only",
+  "held_fixed": "checked-in exec_r2 proof and source tree",
+  "reopen_if": "Proof/source divergence or a regenerated source set appears"
+}

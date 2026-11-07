@@ -1,0 +1,2 @@
+lean m=39062: ok   lean arith=3536772927 total=5852319407 peak(extra)=5444256 112.1s | cached arith=2758322184 total=4449449879 92.6s
+LEAN TESTS PASSED

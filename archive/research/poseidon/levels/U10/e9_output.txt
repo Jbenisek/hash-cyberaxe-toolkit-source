@@ -1,0 +1,8 @@
+REAL p, real Cauchy M: lane0 equal after R4.M 500/500; R5 output diff == M(0,d1',d2') 500/500; random d (d0=0, generic) lane0 equal after R4,R5: 0/500
+toy q=257 cauchy=True: lane0 equal after R4.M 500/500; R5 output diff == M(0,d1',d2') 500/500; random d (d0=0, generic) lane0 equal after R4,R5: 4/500
+toy q=257 cauchy=False: lane0 equal after R4.M 500/500; R5 output diff == M(0,d1',d2') 500/500; random d (d0=0, generic) lane0 equal after R4,R5: 1/500
+toy q=1000003 cauchy=True: lane0 equal after R4.M 500/500; R5 output diff == M(0,d1',d2') 500/500; random d (d0=0, generic) lane0 equal after R4,R5: 0/500
+toy q=1000003 cauchy=False: lane0 equal after R4.M 500/500; R5 output diff == M(0,d1',d2') 500/500; random d (d0=0, generic) lane0 equal after R4,R5: 0/500
+toy q=257 fixed state [61, 148, 77]: nonzero (d1,d2) with d0=0 and equal lane 0 after R4.M (= R5 S-box sees no difference): 256 total (linear condition, exactly q-1=256 expected); of the 256 nonzero points on the predicted line c*(M02,-M01): 256 found
+toy q=257 fixed state [121, 200, 217]: nonzero (d1,d2) with d0=0 and equal lane 0 after R4.M (= R5 S-box sees no difference): 256 total (linear condition, exactly q-1=256 expected); of the 256 nonzero points on the predicted line c*(M02,-M01): 256 found
+toy q=257 fixed state [152, 9, 18]: nonzero (d1,d2) with d0=0 and equal lane 0 after R4.M (= R5 S-box sees no difference): 256 total (linear condition, exactly q-1=256 expected); of the 256 nonzero points on the predicted line c*(M02,-M01): 256 found

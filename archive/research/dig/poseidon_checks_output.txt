@@ -1,0 +1,18 @@
+p mod 5 = 2  gcd(5,p-1) = 1  v2(p-1) = 32  (p-1) mod 3 = 0  (p-1) mod 5 = 1
+e5 = 5^-1 mod (p-1): bits 254 popcount 125
+(p-1)/2: bits 254 popcount 46  p-2: bits 255 popcount 77
+r=1 D=78125 n=39062 C=237  product length 2n-1=78123  L2=131072 L3=3*2^15=98304 (ratio 0.7500)
+   pow-phase words 4n+5L: L2 -> 811608 (25971456 B)  L3 -> 647768 (20728576 B)  memory ratio 0.7981 = 0.3253 bits
+   evaluation-based build: H >= n+1=39063 -> H=65536 (2^) or 49152 (3*2^a); evaluations 2H=131072 or 98304; inverse-NTT array 2097152 B or 1572864 B; 2H divides p-1: True True
+   Luna3 composition peak = 34083264 B  (log2 25.0226, penalty 5.0226)
+   pow-phase 4n+5L = 25971456 B  (log2 24.6304, penalty 4.6304)
+   gain if the peak falls from the composition peak to the pow-phase peak: 0.3921 bits
+r=2 D=390625 n=195312 C=258  product length 2n-1=390623  L2=524288 L3=3*2^17=393216 (ratio 0.7500)
+   pow-phase words 4n+5L: L2 -> 3402688 (108886016 B)  L3 -> 2747328 (87914496 B)  memory ratio 0.8074 = 0.3086 bits
+   evaluation-based build: H >= n+1=195313 -> H=262144 (2^) or 196608 (3*2^a); evaluations 2H=524288 or 393216; inverse-NTT array 8388608 B or 6291456 B; 2H divides p-1: True True
+   Luna3 composition peak = 157832000 B  (log2 27.2338, penalty 7.2338)
+   pow-phase 4n+5L = 108886016 B  (log2 26.6982, penalty 6.6982)
+   gain if the peak falls from the composition peak to the pow-phase peak: 0.5356 bits
+six-term Bonferroni lower bound (odd part, a=(p-1)/2): 0.393467881944  margin over 0.39: 0.003468
+six-term Bonferroni lower bound (fixed value, a=p-1): 0.631944444444
+Poisson: 1-exp(-1/2) = 0.393469340287  1-exp(-1) = 0.632120558829

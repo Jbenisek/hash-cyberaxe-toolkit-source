@@ -1,0 +1,23 @@
+{
+  "id": "D488-SHA3-R6-S6K141-CURRENT-EXPERIMENT-REPLAY-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "current 141-bit S6K experiment replay and stale-output provenance audit",
+  "question": "Does the current shipped 141-bit experiment replay cleanly, and do saved local outputs belong to the same source?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Current fes_campaign.py exits 0 on hcoset-within16 with 256 trials, 35 null pairs, pairs16_within=499, pairs16_cross=130275, pairs24_cross=520, key_mismatch=0, and stdout SHA-256 71a24a7c3342de873ac1948853088a701b5dc9207be31cc7d0930497ed53d66b. Saved out_new/out_dk outputs hash 6ba7363e... and contain 140-bit counts, so they are stale relative to the shipped 141-bit source.",
+  "source": "our workflow: D488 current S6K141 experiment replay",
+  "own_test": true,
+  "evidence": "research/sol_answer_D488_s6k141_current_experiment_replay.md; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6K141/work/req_hcoset-within16.json; research/tools/build_pkg/scratch/pkgS6K141/work/out_new_hcoset-within16.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Current reduced-width 141-bit replay is finite evidence only. Stale 140-bit local outputs must not be used as current-package evidence. No score/package/stage/filing/submission.",
+  "held_fixed": "current pkgS6K141 package bytes and checked-in request; one-thread replay",
+  "reopen_if": "refreshed 141-bit output artifacts are generated or package bytes change"
+}

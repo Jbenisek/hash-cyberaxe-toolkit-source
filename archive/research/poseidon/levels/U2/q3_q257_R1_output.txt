@@ -1,0 +1,7 @@
+q=257 seed=1 R1: degree <= 20: 1771 monomials, rank 1771 on 1831 sampled points -> NO vanishing polynomial (PROVED for this point set) t=41.5s
+q=257 seed=1 R1: degree <= 21: 2024 monomials, rank 2024 on 2084 sampled points -> NO vanishing polynomial (PROVED for this point set) t=102.4s
+q=257 seed=1 R1: degree <= 22: 2300 monomials, rank 2300 on 2360 sampled points -> NO vanishing polynomial (PROVED for this point set) t=197.4s
+q=257 seed=1 R1: degree <= 23: 2600 monomials, rank 2600 on 2660 sampled points -> NO vanishing polynomial (PROVED for this point set) t=344.6s
+q=257 seed=1 R1: degree <= 24: 2925 monomials, rank 2925 on 2985 sampled points -> NO vanishing polynomial (PROVED for this point set) t=526.6s
+q=257 seed=1 R1: degree <= 25: 3276 monomials, rank 3275 on 3336 sampled points, nullity 1; verified vanishing on all 66049 points: True t=1470.2s
+q=257 seed=1 R1: LEAST DEGREE of a vanishing polynomial = 25 (searched up to 27); #points 66049; counting bound: first d with C(d+3,3) > 66049 is 72

@@ -1,0 +1,1 @@
+BOUND_ROOT_SHIFT deg=16 cost=1172907

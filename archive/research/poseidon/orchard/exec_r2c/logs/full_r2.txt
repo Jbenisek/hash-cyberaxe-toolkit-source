@@ -1,0 +1,23 @@
+r=2 ncentres=8 seed=1 m=195312
+INIT arith=66509 other=104398 total=170907
+lean-pow breakdown: newton total=177807647 arith=99688065 | prefix+scale total=976763 | loop steps=236 total=28551699511 arith=16031889220 per-step total=120981777 arith=67931733
+CENTRE 0 j=0 degG=1 success=1 arith=18655665508 all=30357505298 sec=355.2
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=2097152
+  centre c_i = i (i = 1, 2, 3, ...)        arith=           0 other=           1 total=           1     0.0s peak=2097152
+  build g                                  arith=     6421153 other=   109612408 total=   116033561     2.2s peak=14638624
+  S^((p-1)/2) mod g                        arith= 16131772597 other= 12598711324 total= 28730483921   302.7s peak=37624320
+  gcd(g, S^h-1) (half-gcd)                 arith=  2517467784 other=  2699303982 total=  5216771766    50.3s peak=37624352
+  root finding                             arith=           1 other=           4 total=           5     0.0s peak=2097216
+  sqrt + map back                          arith=        3066 other=       29661 total=       32727     0.0s peak=2097152
+  verification (2 reference hashes)        arith=         516 other=        2064 total=        2580     0.0s peak=2097152
+COLLISION nk1  0x1e9184a9a5a1539378059e3b69f23b79673cdb74d72b6f5a84ee38db72abfda5
+COLLISION rho1 0x01919ee9056d2c96f89a12c78f41a2e1cf177323a1eca609bc9b2cd5583a85fd
+COLLISION nk2  0x13e388f2207d5702ae743d0e00eac6fe7128fadfdb84607df58235957e60d88f
+COLLISION rho2 0x20d04e9f04eda131112868489d41071de943fe9bff92b168a2c60f77a3ad28b5
+COLLISION digest 0x3ab2143957ab5cfff46c586d178bda5719070a9795fdbf25272f32cd82cf3451
+COLLISION centre 0x0000000000000000000000000000000000000000000000000000000000000001
+FAULTS detected=0
+HALFUNITS hc=7411712058
+SUMMARY r=2 centres=1 success=1 total_all=34063499466 total_arith=18655732017 units=132029067.7 log2_units=26.9763 heap_peak=37624352 secs=355.2
+GAPS gcd=0 root=0
+TYPES add=6410476651 sub=6125697472 mul=5977140998 sqr=142416896 ld=7171217140 st=4000255866 ctl=428988686 rnd=0 perm=101449728

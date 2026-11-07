@@ -1,0 +1,3 @@
+original_filename: bostan-etal_Algorithmes-Efficaces-en-Calcul-Formel.pdf
+source_url: https://mathexp.eu/chyzak/aecf-distrib/pdf/aecf-screen-1.0.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

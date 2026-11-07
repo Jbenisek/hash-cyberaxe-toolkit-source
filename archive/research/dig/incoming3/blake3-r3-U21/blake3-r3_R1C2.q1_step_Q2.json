@@ -1,0 +1,21 @@
+{
+ "object": "R1C2.q1 q1 = (a1,d1): a=a+b+x; d=ror16(d^a): necessity of each charged op",
+ "question": "Q2 necessity: delete each op of the step, recount the exact outcome against the scalar digest.",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "0 of 7 ops removable: deleting any single op (replace its result by each of its operands) leaves 85%-100% of 371 test lanes wrong (random, all-ones, all-zero, mixed extreme inputs); by kind necessary: {\"add\": 1, \"and\": 2, \"or\": 1, \"shl\": 1, \"shr\": 1, \"xor\": 1}",
+ "notes": "cell blake3-r3|R1C2.q1|step|Q2. Both AND masks of the rotation are needed (guard-bit and neighbour-lane garbage); the add and xor are the arithmetic itself. A deletion that is NOT shown wrong would be a saving of 0.00240 bit per op; none found. Only operand-replacement deletions were tried, not arbitrary rewrites.",
+ "held_fixed": "rest of the circuit unchanged, 371 test lanes incl. all-ones/all-zeros, replacement = each operand register of the op",
+ "reopen_if": "a deletion passes a larger or adversarial lane test, or a proof of tighter lane bounds shows an AND is redundant",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "evidence": "research/blake3_r3/step_profile_r1.py (tracer; validate: empty-input 7-round vector, 64-byte msgs vs verifier blake3.py at 7 and 3 rounds, packed circuit 0 wrong of 371 lanes, 595 ops, source identical to candidate_blake3/experiments/rho.py); research/blake3_r3/step_scan_r1.py; research/blake3_r3/step_scan_r1.json"
+}

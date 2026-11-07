@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.INTERP (ALT)",
+ "question": "Q3: degrees of freedom: evaluation count of the line",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "g has 195,313 coefficients; the build evaluates F(c+s_i) and F(c-s_i) at an NTT of size 196,608 = 3 x 2^16: 2 x 196,608 = 393,216 evaluations. Lower bound 2 x 195,313 = 390,626; the surplus is 2,590 evaluations = 668,220 ops per centre = 1.27e-05 bit.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r2/pkg_stage_r2/submission-note.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.INTERP|ALT|Q3. Reading of the build stage (pkg_stage_r2 note) plus arithmetic.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a non-power-of-two transform that removes the surplus is built (gain below 1e-6 bit)"
+}

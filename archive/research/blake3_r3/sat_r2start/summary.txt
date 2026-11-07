@@ -1,0 +1,4 @@
+W=8 rc=20 secs=169 s UNSATISFIABLE
+W=16 rc=0 secs=300 s UNKNOWN
+W=32 rc=0 secs=300 s UNKNOWN
+DONE

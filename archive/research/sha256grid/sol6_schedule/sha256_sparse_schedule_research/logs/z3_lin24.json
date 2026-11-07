@@ -1,0 +1,7 @@
+{
+  "status": "UNKNOWN",
+  "cpu_seconds": 5.010342313,
+  "wall_seconds": 5.012039911000102,
+  "stats": "(:added-eqs           9468378\n :arith-make-feasible 1\n :arith-max-columns   4\n :binary-propagations 1121015\n :bv-bit2core         171293\n :bv-dynamic-diseqs   3874734\n :bv-dynamic-eqs      549\n :bv->core-eq         172035\n :conflicts           10579\n :decisions           18441\n :del-clause          4045006\n :max-memory          26.15\n :memory              19.50\n :minimized-lits      30507\n :mk-bool-var         3882516\n :mk-clause           4056468\n :mk-clause-binary    2936\n :num-allocs          28466663\n :num-checks          1\n :pb-conflicts        77\n :pb-predicates       577\n :pb-propagations     4873501\n :pb-resolves         77\n :propagations        10694673\n :restarts            74\n :rlimit-count        30413279\n :solve-eqs-elim-vars 16\n :solve-eqs-steps     204\n :time                5.00)",
+  "reason": "timeout"
+}

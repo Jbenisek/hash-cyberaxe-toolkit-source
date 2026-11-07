@@ -1,0 +1,10 @@
+{
+  "derivative_trap_native_checks": 64,
+  "toy_mds_nonzero_minors": 19,
+  "toy_exact_bookkeeping_rows": 64,
+  "partial_chart_legal_active_triples_exact": "p^2",
+  "partial_chart_all_active_triples_exact": "p^3",
+  "legal_fraction_of_uniform_unrestricted_active_triples_exact": "1/p",
+  "proof": "Every prefix is a permutation of Fp^3. The canonical input plane has p^2 elements. The three-active-input partial-window chart is a bijection on Fp^3, so the image of the legal plane has exactly p^2 triples.",
+  "cpu_seconds": 0.004928006000000096
+}

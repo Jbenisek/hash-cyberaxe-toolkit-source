@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-allmember5000",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 5,000-word all-member audit",
+  "question": "Do representative-kept/rejected decisions remain constant over every member for a larger deterministic word sample in all 16 classes?",
+  "labels": ["I", "K"],
+  "status": "SAMPLED",
+  "number": "160,000 complete groups and 5,242,880,000 exact word/member evaluations: 80,000 all-alive groups, 80,000 all-dead groups, 0 mixed groups, 0 internal errors, 0 expected-label mismatches.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/allmember_5000_summary.md; research/retest/b3_omega_coupled/exact/allmember_5000.out; research/retest/b3_omega_coupled/exact/allmember_5000.err; research/retest/b3_omega_coupled/exact/alive_allmember",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Deterministic finite sample: first 5,000 representative-kept and first 5,000 representative-rejected typed words per class, all 32,768 members. Stronger evidence only; universal class invariance remains OPEN and no saving is credited."
+}

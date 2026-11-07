@@ -1,0 +1,20 @@
+{
+  "id": "WIDE-B3R3BS2-PINS-GENERATOR-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3R3BS2 PINS bounded-memory generator",
+  "question": "Can the unshipped PINS polarity hill-climb be replaced by a bounded-memory generator with a credited saving?",
+  "labels": ["K"],
+  "status": "OPEN",
+  "number": "NOT_EVALUABLE: no B3R3BS2 source, PINS objective, acceptance predicate, memory layout, or ledger is present in the workspace.",
+  "source": "research/wide_1014/transfer.md and local NOT_EVALUABLE ruling",
+  "own_test": true,
+  "evidence": "research/sol_answer_WIDE_B3R3BS2_pins_generator.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3-r3.wide.b3r3bs2-pins-generator",
+  "peak_mem": 20000000,
+  "notes": "Awaiting the missing source/proof; no package/staging/filing/submission."
+}

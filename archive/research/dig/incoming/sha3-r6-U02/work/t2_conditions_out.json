@@ -1,0 +1,67 @@
+{
+ "lane16_msg_zero": {
+  "rows": 56,
+  "rank_alone": 56,
+  "inconsistent": 0
+ },
+ "L8_zero": {
+  "rows": 64,
+  "rank_alone": 64,
+  "inconsistent": 0
+ },
+ "L5_eq": {
+  "rows": 64,
+  "rank_alone": 64,
+  "inconsistent": 0
+ },
+ "L15_eq": {
+  "rows": 64,
+  "rank_alone": 64,
+  "inconsistent": 0
+ },
+ "L12_eq(D3=ones)": {
+  "rows": 64,
+  "rank_alone": 64,
+  "inconsistent": 0
+ },
+ "ALL_leader_conditions": {
+  "rank": 312,
+  "message_dim": 768
+ },
+ "needed_neighbor_bits": 128,
+ "needed_rank": 128,
+ "needed_by_word_rank": {
+  "(16, 0)": 32,
+  "(19, 1)": 32,
+  "(23, 0)": 32,
+  "(21, 1)": 32
+ },
+ "needed_implied_by_leader": true,
+ "drop_one_exact": {
+  "lane16_msg_zero": {
+   "rank_without": 256,
+   "needed_eqs_not_implied": 0,
+   "of": 128
+  },
+  "L8_zero": {
+   "rank_without": 248,
+   "needed_eqs_not_implied": 32,
+   "of": 128
+  },
+  "L5_eq": {
+   "rank_without": 248,
+   "needed_eqs_not_implied": 32,
+   "of": 128
+  },
+  "L15_eq": {
+   "rank_without": 248,
+   "needed_eqs_not_implied": 32,
+   "of": 128
+  },
+  "L12_eq(D3=ones)": {
+   "rank_without": 248,
+   "needed_eqs_not_implied": 64,
+   "of": 128
+  }
+ }
+}

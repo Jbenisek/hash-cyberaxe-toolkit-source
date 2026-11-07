@@ -1,0 +1,7 @@
+sources (sha256/16): {'b3': 'bf67aca295b45b06', 'fl': '5936cfad516e9ede', 'ck': 'ad2da559a567f408'}
+research/frontline/program/frontline.py same bytes as pkgCG copy: True
+[rand] whole-set identity failures: {'rows': 1048576, 'res == digA^digB': 0, 'res == K1^K3': 0, 'K1 from eout': 0, 'K3 from eout': 0, 'digA from eout': 0, 'digB from eout': 0, 'c1 in Q*': 0, 'e1 in class': 0, 't != 0': 0, 'dh1 = eta': 0, 'emid E1.c1(A) = c1': 0}
+[rand] 1000 rows vs organizer blake3.py + frontline.py + check.py, failures: {'member/Y4': 0, 'c1 from j': 0, 't': 0, 'einputs': 0, 'org _compress vs trace': 0, 'words 0,2,5,7 equal': 0, 'dig stored': 0, 'res stored': 0, 'eout stored': 0, 'emid stored': 0, 'keys vs check.py key1/key3': 0, 'res = K1^K3 (check.py)': 0, 'frontline chart cons': 0, 'frontline compress2': 0}
+[ctx] whole-set identity failures: {'rows': 262144, 'res == digA^digB': 0, 'res == K1^K3': 0, 'K1 from eout': 0, 'K3 from eout': 0, 'digA from eout': 0, 'digB from eout': 0, 'c1 in Q*': 0, 'e1 in class': 0, 't != 0': 0, 'dh1 = eta': 0, 'emid E1.c1(A) = c1': 0}
+[ctx] 1000 rows vs organizer blake3.py + frontline.py + check.py, failures: {'member/Y4': 0, 'c1 from j': 0, 't': 0, 'einputs': 0, 'org _compress vs trace': 0, 'words 0,2,5,7 equal': 0, 'dig stored': 0, 'res stored': 0, 'eout stored': 0, 'emid stored': 0, 'keys vs check.py key1/key3': 0, 'res = K1^K3 (check.py)': 0, 'frontline chart cons': 0, 'frontline compress2': 0}
+TOTAL FAILURES 0

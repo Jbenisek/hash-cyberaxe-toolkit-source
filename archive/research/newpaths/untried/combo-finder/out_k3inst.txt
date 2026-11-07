@@ -1,0 +1,5 @@
+Sat Oct 10 02:57:52 MDT 2026
+k3gpu h7=8f1bbcdc flags=0: samples 2646907813888 (2^41.27) in 90.1 s; compat 170380185 (2^-13.92/sample); K3 sols 6 (2^-38.68/sample); D2 hits among K3 sols 0; D2 hits among compat passes 0; records 6
+k3gpu h7=2a5b9c13 flags=2: samples 3026609766400 (2^41.46) in 90.1 s; compat 196615903 (2^-13.91/sample); K3 sols 3 (2^-39.88/sample); D2 hits among K3 sols 0; D2 hits among compat passes 0; records 3
+k3gpu h7=5be0cd19 flags=0: samples 2823001473024 (2^41.36) in 90.1 s; compat 181779972 (2^-13.92/sample); K3 sols 4 (2^-39.36/sample); D2 hits among K3 sols 0; D2 hits among compat passes 0; records 4
+Sat Oct 10 03:02:23 MDT 2026

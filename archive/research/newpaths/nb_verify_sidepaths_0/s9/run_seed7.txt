@@ -1,0 +1,11 @@
+S9 bitsliced stage A, seed 7
+correctness: 15360 of 15360 lanes right (gate and rule A vs real h1 of the real message); real gate opens 317, rule A passes 13 in 5120 lanes
+R=14 design J: ops 592.6 [569,611]  loads 172.2 [163,174]  stores 57.2 [51,59]  dispatch 0  tail 8  TOTAL 830.0 [793,850] = 3.242 per trial (max 3.320)
+R=14 design D: ops 657.4 [634,680]  loads 185.2 [176,191]  stores 64.5 [57,71]  dispatch 32  tail 8  TOTAL 947.2 [908,977] = 3.700 per trial (max 3.816)
+R=14 design G: ops 986.2 [985,987]  loads 355.0 [355,355]  stores 77.0 [77,77]  dispatch 0  tail 8  TOTAL 1426.2 [1425,1427] = 5.571 per trial (max 5.574)
+R=16 design J: ops 593.1 [571,609]  loads 166.1 [160,168]  stores 52.2 [49,53]  dispatch 0  tail 8  TOTAL 819.3 [793,838] = 3.200 per trial (max 3.273)
+R=16 design D: ops 658.3 [632,679]  loads 176.8 [167,184]  stores 58.4 [52,66]  dispatch 32  tail 8  TOTAL 933.5 [899,963] = 3.647 per trial (max 3.762)
+R=16 design G: ops 986.3 [985,987]  loads 347.0 [347,347]  stores 72.0 [72,72]  dispatch 0  tail 8  TOTAL 1413.3 [1412,1414] = 5.521 per trial (max 5.523)
+R=12 design J: ops 594.5 [579,607]  loads 180.5 [175,182]  stores 60.7 [57,61]  dispatch 0  tail 8  TOTAL 843.7 [823,858] = 3.296 per trial (max 3.352)
+R=12 design D: ops 657.6 [635,680]  loads 195.2 [188,200]  stores 71.3 [62,78]  dispatch 32  tail 8  TOTAL 964.0 [931,992] = 3.766 per trial (max 3.875)
+R=12 design G: ops 986.3 [985,987]  loads 364.0 [364,364]  stores 84.0 [84,84]  dispatch 0  tail 8  TOTAL 1442.3 [1441,1443] = 5.634 per trial (max 5.637)

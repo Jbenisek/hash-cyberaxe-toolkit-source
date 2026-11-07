@@ -1,0 +1,157 @@
+{
+ "rows": [
+  {
+   "id": "0ae69bcb",
+   "T": 72.64,
+   "prep": 71.12,
+   "prep_share": 0.34868591658760234,
+   "form": "single",
+   "status": "plausible_not_refuted",
+   "eligible": true,
+   "h4_fatal": false,
+   "reasons_h4": []
+  },
+  {
+   "id": "1393e83b",
+   "T": 71.34862,
+   "prep": 70.15744,
+   "prep_share": 0.4379445133239124,
+   "form": "split",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": true,
+   "reasons_h4": [
+    "lane_cryptanalysis/heuristic/H4a-allowance-characteristic-search",
+    "lane_experiments/heuristic/H4a-allowance-characteristic-search"
+   ]
+  },
+  {
+   "id": "1c8889ab",
+   "T": 72.03195,
+   "prep": 71.11,
+   "prep_share": 0.5277951504880365,
+   "form": "single",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": true,
+   "reasons_h4": [
+    "lane_cost/heuristic/H4-advice-allowances",
+    "lane_experiments/heuristic/H4-advice-allowances"
+   ]
+  },
+  {
+   "id": "3b532546",
+   "T": 78.11,
+   "prep": 78.09,
+   "prep_share": 0.9862327044933619,
+   "form": "single",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": false,
+   "reasons_h4": []
+  },
+  {
+   "id": "426af47b",
+   "T": 72.63,
+   "prep": 71.11,
+   "prep_share": 0.34868591658760234,
+   "form": "single",
+   "status": "refuted",
+   "eligible": false,
+   "h4_fatal": false,
+   "reasons_h4": []
+  },
+  {
+   "id": "8bc7d6c5",
+   "T": 70.23909,
+   "prep": 67.36125,
+   "prep_share": 0.13604539228904397,
+   "form": "single",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": true,
+   "reasons_h4": [
+    "lane_cost/heuristic/H4-advice-allowances",
+    "lane_experiments/heuristic/H4-advice-allowances"
+   ]
+  },
+  {
+   "id": "c99df2dc",
+   "T": 78.12,
+   "prep": 78.09,
+   "prep_share": 0.9794202975869261,
+   "form": "single",
+   "status": "plausible_not_refuted",
+   "eligible": true,
+   "h4_fatal": false,
+   "reasons_h4": []
+  },
+  {
+   "id": "cfeb996a",
+   "T": 70.27233,
+   "prep": 70.16576,
+   "prep_share": 0.9287936410540438,
+   "form": "split",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": true,
+   "reasons_h4": [
+    "lane_experiments/heuristic/H4a-allowance-characteristic-search"
+   ]
+  },
+  {
+   "id": "de030a60",
+   "T": 71.11412,
+   "prep": 70.19528,
+   "prep_share": 0.5289341392296637,
+   "form": "single",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": true,
+   "reasons_h4": [
+    "lane_experiments/heuristic/H4-advice-allowances"
+   ]
+  },
+  {
+   "id": "def724e5",
+   "T": 124.05198,
+   "prep": 100,
+   "prep_share": 5.749532919210599e-08,
+   "form": "single",
+   "status": "plausible_not_refuted",
+   "eligible": true,
+   "h4_fatal": false,
+   "reasons_h4": []
+  },
+  {
+   "id": "fc4632b4",
+   "T": 72.61489,
+   "prep": 71.12,
+   "prep_share": 0.3548078907685917,
+   "form": "single",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": true,
+   "reasons_h4": [
+    "lane_experiments/heuristic/H4-advice-allowances"
+   ]
+  },
+  {
+   "id": "fd3ac033",
+   "T": 72.45,
+   "prep": 70.5,
+   "prep_share": 0.25881623096034384,
+   "form": "single",
+   "status": "not_evaluable",
+   "eligible": false,
+   "h4_fatal": true,
+   "reasons_h4": [
+    "lane_cryptanalysis/heuristic/H4-advice-allowances",
+    "lane_experiments/heuristic/H4-advice-allowances"
+   ]
+  }
+ ],
+ "share_ac": 0.0010439439716134397,
+ "share_prep": 0.001109257482320831,
+ "exact_share": 0.00104394689903043
+}

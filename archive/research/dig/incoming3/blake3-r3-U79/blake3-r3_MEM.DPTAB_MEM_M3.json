@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.0049,
+ "object": "distinguished-point table",
+ "question": "M3 score-optimal point for this object: S = T + max(0, log2 bytes - 20) over the DP bits d (table = tmax entries), entry size and unroll",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Sweep of d with the filed 32 B entry and code (tmax = mean + 16.2 sigma, ledger rerun per d): d=114 (filed) T 125.10856, 966,464 B; d=113 T -0.0053 but 1,516,704 B = 2^20.53 so S +0.527; d=115 T +0.0105 (685,696 B); d=116 +0.0313; d=118 +0.150; d=104 T -0.0106 at 2^29. With the filed entry d=114 is the optimum. Joint optimum when the entry is packed (key 6 B, index 2 B, length 15 B = 23 B; false key match tmax^2/2^49 = 2.3e-6 charged) and the unroll lowered to fit: d=113, U=9: total 1,044,951 B = 2^19.995, T = S = 125.10363, that is -0.00493 bit against the filed entry (U=8 -0.00483, key 8 B entry 25 B U=5 -0.00430). The lever is the table sitting 7.85 percent below 2^20 while the code takes 38.7 percent of the budget: spending the code slack on one more DP bit.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out",
+ "notes": "universe cell blake3-r3|MEM.DPTAB|MEM|M3. COMPUTED on the ledger with rho.py plan/ledger patched for d; NOT built or tested: table behaviour at d=113 (halt budgets, Chernoff bounds for tmax = mean + 16.2 sigma, 15-byte length field, recovery with packed entries) is not re-proved, and the entry would need a new proof. Gain is under 0.005 bit.",
+ "held_fixed": "rho.py ledger formulas; INFLIGHT 28, kappa 12, 7 lanes; code 36 B per instruction as stated in proof.md Section 7; counters 2,048 B",
+ "reopen_if": "a build that confirms the packed 23 B entry, the d=113 halt budgets and the Chernoff bounds (then it is a lever to file), or an entry below 20 B or code below 30 B per instruction (then d=112 fits)",
+ "gain_basis": "S"
+}

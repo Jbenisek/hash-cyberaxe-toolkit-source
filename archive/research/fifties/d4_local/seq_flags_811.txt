@@ -1,0 +1,24 @@
+fast_solvable self-test: 300000 instances, 0 disagreements
+seq arm flags: time 1500.0 s rounds 1259 A 75175877 B 659697507 C-entries 14775 C 6698807988 fastchecks 8103903968 found 0 pifail 0 mean log2|S| 16.43
+root-combination ensemble: 0 combos; full-width D passes 0 0 0 0
+perturbations of completed constructions: applied, still complete, and among complete: count of e_j unchanged j=0..3
+resample diag0 pair (n=0): P(e_j changed) j=0..3: -1.0000 -1.0000 -1.0000 -1.0000
+resample diag1 pair (n=0): P(e_j changed) j=0..3: -1.0000 -1.0000 -1.0000 -1.0000
+resample diag2 pair (n=0): P(e_j changed) j=0..3: -1.0000 -1.0000 -1.0000 -1.0000
+resample diag3 pair (n=0): P(e_j changed) j=0..3: -1.0000 -1.0000 -1.0000 -1.0000
+k  1 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  2 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  3 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  4 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  5 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  6 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  7 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  8 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  9 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 10 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 11 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 12 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 13 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 14 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 15 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 16 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0

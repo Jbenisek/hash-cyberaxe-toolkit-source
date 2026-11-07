@@ -1,0 +1,12 @@
+tau#0 175020a0: nfix 24: y 11e45e7a q 5fcd62f0 w8 8683a6e1 h1 66f8f2be in 0.0 s; passes filter True; DFS simple finds it True, joint True; solutions 1
+tau#1 185020a0: nfix 24: y 61f491f6 q abbadd5c w8 ba2aec39 h1 329c154a in 0.0 s; passes filter True; DFS simple finds it True, joint True; solutions 1
+tau#2 275020a0: nfix 24: UNSAT
+tau#2 275020a0: nfix 16: UNSAT
+tau#2 275020a0: nfix 8: y c1e47e1e q 046203c0 w8 17bc052f h1 0e54176a in 0.0 s; passes filter True; DFS simple finds it True, joint True; solutions 1
+tau#3 285020a0: nfix 24: y 81f459f2 q 6b61800c w8 26e3a05d h1 0fc4b896 in 0.0 s; passes filter True; DFS simple finds it True, joint True; solutions 1
+tau#4 385020a0: nfix 24: UNSAT
+tau#4 385020a0: nfix 16: y 59f49dea q dc25d744 w8 f4afdbdd h1 fb009ae6 in 0.0 s; passes filter True; DFS simple finds it True, joint True; solutions 1
+tau#5 675020a0: nfix 24: y 79f47dfe q c00e34b0 w8 89614626 h1 c2a8576a in 0.0 s; passes filter True; DFS simple finds it True, joint True; solutions 1
+tau#6 685020a0: nfix 24: UNSAT
+tau#6 685020a0: nfix 16: UNSAT
+tau#6 685020a0: nfix 8: y 19f4859e q 73fa0efc w8 dbeaf88b h1 525c372a in 0.0 s; passes filter True; DFS simple finds it True, joint True; solutions 1

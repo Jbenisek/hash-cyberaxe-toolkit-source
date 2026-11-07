@@ -1,0 +1,15 @@
+== fixed_02_64_t0
+r=1 max checks 0  counts: 0:72
+r=2 max checks 1  counts: 0:2545 1:11
+r=3 max checks 2  counts: 0:58765 1:865 2:10
+r=4 max checks 3  counts: 0:994801 1:33175 2:809 3:5
+== fixed_02_64_t1
+r=1 max checks 0  counts: 0:64
+r=2 max checks 0  counts: 0:2016
+r=3 max checks 1  counts: 0:41570 1:94
+r=4 max checks 2  counts: 0:629516 1:5815 2:45
+== part_02_t0_Y13
+r=1 max checks 0  counts: 0:75
+r=2 max checks 1  counts: 0:2765 1:10
+r=3 max checks 2  counts: 0:66688 1:827 2:10
+r=4 max checks 3  counts: 0:1181278 1:33341 2:826 3:5

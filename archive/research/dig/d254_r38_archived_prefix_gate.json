@@ -1,0 +1,22 @@
+{
+  "id": "D254-SHA256-R38-ARCHIVED-PREFIX-GATE-20261013",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 18,
+  "object": "row-16/17/18 gate on five archived stage-1 prefixes",
+  "question": "Can archived distinct stage-1 solver prefixes serve as additional full 38-step gate profiles?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Five reconstructed profiles pass Python rows 0--15 and dW16=0x20000000,dW17=0, but the independent C replay returns state_collision=0 for all five; the published control returns state_collision=1 and DP_row18=brute_row18=524288.",
+  "source": "our workflow: D254 archived-prefix gate audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D254_r38_archived_prefix_gate.md; row_interactions/r38_prefix_profiles/gate_results.txt; row_interactions/row16_gate.c; research/sha256grid/scout2-1/r38core.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "The five files are stage-1 prefixes, not full 38-step collision pairs, so no row-16/17/18 continuation count is valid for them. R38 prefix generality remains OPEN; no score/package/stage/submission credit.",
+  "potential_bits": 0.3,
+  "prior": 0.1,
+  "gain_basis": "S",
+  "reopen_if": "A valid-prefix generator or a second full 38-step pair with a genuinely varying row-16 anchor"
+}

@@ -1,0 +1,25 @@
+# gcd bounds
+
+Source: `research/poseidon/orchard/single_r1_fb/data/cache/gcdb/2696d3688c6d7b8c/gcd_bounds.h`
+
+Public SHA-256: `e6516e915691f2bd2b887745f952e8efb24561c922a63ac443eb572749d70e4c`
+
+## Purpose recorded in the source
+
+define NLEVELB 9
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+Companion documents are not listed here. Use the linked source for interfaces and prerequisites.
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

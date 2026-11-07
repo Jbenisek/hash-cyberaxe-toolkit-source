@@ -1,0 +1,31 @@
+=== 1. Grain re-derivation details
+LFSR steps after 160-bit warm-up: 160
+RC match pinned: 192 /192
+LFSR steps consumed by 192 constants (incl. rejections): 411658  output bits taken = steps/2 approx; rejected 255-bit draws: 212
+rejections per round (R0..R63): [7, 1, 2, 5, 2, 0, 3, 5, 1, 3, 8, 5, 9, 2, 0, 1, 3, 12, 9, 1, 0, 3, 6, 4, 2, 3, 0, 3, 1, 5, 5, 4, 3, 4, 2, 6, 4, 3, 3, 1, 3, 2, 1, 2, 5, 1, 7, 3, 2, 3, 5, 0, 4, 2, 3, 4, 9, 2, 0, 2, 3, 3, 3, 2]
+rejections in used rounds: {0: 7, 1: 1, 2: 2, 3: 5, 4: 2, 5: 0, 60: 3, 61: 3, 62: 3, 63: 2} total used 28
+raw MDS draws >= p (needing reduction)? [True, True, False, False, True, False]  (drawn WITHOUT rejection, reduced mod p)
+MDS from Cauchy(xs,ys) match pinned: True
+xs = ['0x4ed363e2dba5e0c33ea93e01a687ca41033a36de858e8f6bcbfbcf79f56aab8', '0x82d2c638520fa4f40e7126ac7c40d3d50149148671252f528070717d96cf75', '0x1d5e8f3cea81955dbc3f49ca7869e0f5b9912fa1b95820287f2749e41352fd']
+ys = ['0x1f91faac992dd42021f16d20e960a18a380e5f61f1eaa9fa880e11ee465f2d6', '0x13e83d61e6d9aca3db67c4da8570e1799ca82b1ba5143d0eda542ec144e466bb', '0xa8555c849ada2780f4e8fd99bd15d06f236bd77d53d8fb80c0fc5b33c18357d']
+raw draws as drawn: ['0x44ed363e2dba5e0c33ea93e01a687ca4327a3c69f1a5e21255ecede49f56aab9', '0x4082d2c638520fa4f40e7126ac7c40d3f747e2108fbe1e4aebada15e7d96cf76', '0x1d5e8f3cea81955dbc3f49ca7869e0f5b9912fa1b95820287f2749e41352fd', '0x1f91faac992dd42021f16d20e960a18a380e5f61f1eaa9fa880e11ee465f2d6', '0x53e83d61e6d9aca3db67c4da8570e179beeec417ae61362a73815fae44e466bc', '0xa8555c849ada2780f4e8fd99bd15d06f236bd77d53d8fb80c0fc5b33c18357d']
+x_i+y_j never 0, xs distinct, ys distinct: True True True
+consecutive-draw note: the 2 reduced draws: raw0-p=0x4ed363e2dba5e0c33ea93e01a687ca41033a36de858e8f6bcbfbcf79f56aab8 raw1-p=0x82d2c638520fa4f40e7126ac7c40d3d50149148671252f528070717d96cf75
+=== 1b. what if regenerated for the reduced round counts (we do NOT; constants stay R_P=56)
+ R_P=1: first constant 0x1f19a4352d872d08.. equals pinned: False
+ R_P=2: first constant 0xfdff07880399792b.. equals pinned: False
+ R_P=56: first constant 0x360d7470611e473d.. equals pinned: True
+ R_P=57: first constant 0x2ef5299e2077b239.. equals pinned: False
+ R_P=55: first constant 0x1c07c723706e180a.. equals pinned: False
+ sbox=1(inverse): first const equals pinned: False
+ t=2: first const equals pinned: False
+ R_F=6: first const equals pinned: False
+ nbits=254: first const equals pinned: False
+ field=0: first const equals pinned: False
+ discard 159 / 161 bits warm-up: [False, False]
+=== TOY: same Grain generation over small primes, exact null rates for the relation detectors
+q=257 (bits 9, 2-adicity 8, gcd(5,q-1)=1): 68544 (pair,k) tests: exact 0 (expect ~0.00404), collinear 2 (expect ~1.04); coplanar triples 166/41664 (expect ~162); M MDS-ish: det!=0
+q=12289 (bits 14, 2-adicity 12, gcd(5,q-1)=1): 68544 (pair,k) tests: exact 0 (expect ~3.69e-08), collinear 0 (expect ~0.000454); coplanar triples 3/41664 (expect ~3.39); M MDS-ish: det!=0
+q=65537 (bits 17, 2-adicity 16, gcd(5,q-1)=1): 68544 (pair,k) tests: exact 0 (expect ~2.44e-10), collinear 0 (expect ~1.6e-05); coplanar triples 0/41664 (expect ~0.636); M MDS-ish: det!=0
+q=1000003 (bits 20, 2-adicity 1, gcd(5,q-1)=1): 68544 (pair,k) tests: exact 0 (expect ~6.85e-14), collinear 0 (expect ~6.85e-08); coplanar triples 0/41664 (expect ~0.0417); M MDS-ish: det!=0
+q=7340033 (bits 23, 2-adicity 20, gcd(5,q-1)=1): 68544 (pair,k) tests: exact 0 (expect ~1.73e-16), collinear 0 (expect ~1.27e-09); coplanar triples 0/41664 (expect ~0.00568); M MDS-ish: det!=0

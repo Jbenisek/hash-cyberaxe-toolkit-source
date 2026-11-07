@@ -1,0 +1,126 @@
+W 32 modes ['C0', 'T0', 'T0T1', 'E1d1', 'E3h1'] seed 4040; screen1 bases=1 draws=2; screen2 bases=2 draws=6; confirm bases=3 draws=16
+=== mode C0 free c1,d1,dd,s15,s9,w5,x2,y
+verify True trials 40 half 40
+word influence (resample one word; hits on Y1 Y6 Y12 w12 w5 | Y4 Y9 Y14 w8; key1 moved; key3 moved):
+  c1    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  d1    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  dd    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s15   n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s9    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  w5    n=24  E1in [24, 24, 24, 24, 24] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  x2    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  y     n=24  E1in [24, 24, 24, 0, 0] | E3in [24, 24, 24, 24]  key1 24 key3 24
+bitflip per-bit: bits 128 split_candidates 0 coupled 128 one_sided 0 neither 0
+  per word (#key1 bits moved, #key3 bits moved): c1:124/128 d1:128/128 dd:128/128 s15:124/128 s9:128/128 w5:128/128 x2:128/128 y:128/128
+axis screen1 (6561 codes) partitions with k>0: 5920
+axis screen2 partitions with k>0: 7
+  cand k=16 U=d1,dd V=c1,w5
+  cand k=16 U=d1 V=s15,s9,x2
+  cand k=15 U=dd,s9,y V=d1,s15,x2
+  cand k=15 U=s15,s9,x2 V=d1,dd,y
+  cand k=15 U=d1,s9,x2 V=s15,w5,y
+  cand k=15 U=d1 V=c1,dd,s15,w5,x2,y
+  cand k=14 U=c1 V=d1,s9,w5,x2
+  cand k=14 U=s15,s9,y V=c1,d1,dd,w5,x2
+mode C0: candidates 19, confirmed max k = 0  (3s)
+=== mode T0 free c1,d1,dd,s15,s9,w5,x2,y,T0
+verify True trials 40 half 40
+word influence (resample one word; hits on Y1 Y6 Y12 w12 w5 | Y4 Y9 Y14 w8; key1 moved; key3 moved):
+  c1    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  d1    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  dd    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s15   n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s9    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  w5    n=24  E1in [24, 24, 24, 24, 24] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  x2    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  y     n=24  E1in [24, 24, 24, 0, 0] | E3in [24, 24, 24, 24]  key1 24 key3 24
+  T0    n=24  E1in [0, 24, 0, 0, 0] | E3in [0, 0, 24, 0]  key1 24 key3 24
+bitflip per-bit: bits 128 split_candidates 0 coupled 128 one_sided 0 neither 0
+  per word (#key1 bits moved, #key3 bits moved): c1:126/128 d1:128/128 dd:128/128 s15:128/128 s9:128/128 w5:128/128 x2:128/128 y:128/128 T0:124/126
+axis screen1 (19683 codes) partitions with k>0: 18253
+axis screen2 partitions with k>0: 32
+  cand k=18 U=w5,x2 V=c1,s15
+  cand k=17 U=c1,x2 V=d1,s15,s9,w5,y
+  cand k=17 U=T0 V=d1,dd,s9,w5,x2
+  cand k=17 U=w5,y,T0 V=c1,s15,x2
+  cand k=17 U=c1,s9 V=d1,dd,s15,x2,T0
+  cand k=16 U=x2,y V=d1,dd,s9
+  cand k=16 U=T0 V=c1,dd,s15,x2
+  cand k=16 U=c1 V=dd,s9,T0
+mode T0: candidates 24, confirmed max k = 0  (8s)
+=== mode T0T1 free c1,d1,dd,s15,s9,w5,x2,y,T0,T1
+verify True trials 40 half 40
+word influence (resample one word; hits on Y1 Y6 Y12 w12 w5 | Y4 Y9 Y14 w8; key1 moved; key3 moved):
+  c1    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  d1    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  dd    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s15   n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s9    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  w5    n=24  E1in [24, 24, 24, 24, 24] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  x2    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  y     n=24  E1in [24, 24, 24, 0, 0] | E3in [24, 24, 24, 24]  key1 24 key3 24
+  T0    n=24  E1in [0, 24, 0, 0, 0] | E3in [0, 0, 24, 0]  key1 24 key3 24
+  T1    n=24  E1in [24, 24, 0, 0, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+bitflip per-bit: bits 128 split_candidates 0 coupled 128 one_sided 0 neither 0
+  per word (#key1 bits moved, #key3 bits moved): c1:128/128 d1:128/128 dd:124/128 s15:126/128 s9:128/128 w5:128/128 x2:128/128 y:124/128 T0:124/128 T1:126/128
+axis screen1 (59049 codes) partitions with k>0: 55788
+axis screen2 partitions with k>0: 85
+  cand k=21 U=s9,y,T1 V=c1,dd,s15,x2,T0
+  cand k=19 U=T0 V=w5,T1
+  cand k=18 U=dd,T1 V=d1,s9,w5
+  cand k=18 U=d1,w5,T1 V=s15,y,T0
+  cand k=18 U=w5,x2,T1 V=d1,s15,s9,y,T0
+  cand k=17 U=dd,T0 V=c1,d1,s15,s9,x2
+  cand k=17 U=d1,s15,w5,x2,T0 V=c1,dd,s9,y
+  cand k=17 U=c1,d1 V=s15,s9,x2,T0
+mode T0T1: candidates 24, confirmed max k = 0  (25s)
+=== mode E1d1 free c1,d1,dd,s15,s9,w5,x2,y,E1d1
+verify True trials 40 half 40
+word influence (resample one word; hits on Y1 Y6 Y12 w12 w5 | Y4 Y9 Y14 w8; key1 moved; key3 moved):
+  c1    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  d1    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  dd    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s15   n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  s9    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  w5    n=24  E1in [24, 24, 24, 24, 24] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  x2    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 24, 24]  key1 24 key3 24
+  y     n=24  E1in [24, 24, 24, 0, 0] | E3in [24, 24, 24, 24]  key1 24 key3 24
+  E1d1  n=24  E1in [0, 24, 0, 0, 0] | E3in [0, 0, 24, 0]  key1 24 key3 24
+bitflip per-bit: bits 128 split_candidates 0 coupled 126 one_sided 2 neither 0
+  per word (#key1 bits moved, #key3 bits moved): c1:120/128 d1:120/128 dd:120/128 s15:120/128 s9:118/128 w5:120/128 x2:116/128 y:120/128 E1d1:122/128
+axis screen1 (19683 codes) partitions with k>0: 18125
+axis screen2 partitions with k>0: 63
+  cand k=19 U=s15,s9,w5 V=d1
+  cand k=19 U=d1,s15,s9 V=x2
+  cand k=19 U=c1,d1,w5,E1d1 V=x2
+  cand k=19 U=y,E1d1 V=d1
+  cand k=18 U=w5,E1d1 V=s15
+  cand k=18 U=E1d1 V=w5,x2,y
+  cand k=18 U=E1d1 V=c1,d1,w5,x2,y
+  cand k=17 U=s9,y V=s15
+mode E1d1: candidates 24, confirmed max k = 0  (9s)
+=== mode E3h1 free c1,d1,dd,s15,s9,w5,x2,y,E3h1
+verify True trials 40 half 40
+word influence (resample one word; hits on Y1 Y6 Y12 w12 w5 | Y4 Y9 Y14 w8; key1 moved; key3 moved):
+  c1    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 0, 24]  key1 24 key3 24
+  d1    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 0, 24]  key1 24 key3 24
+  dd    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 0, 24]  key1 24 key3 24
+  s15   n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 0, 24]  key1 24 key3 24
+  s9    n=24  E1in [24, 24, 24, 24, 0] | E3in [0, 24, 0, 24]  key1 24 key3 24
+  w5    n=24  E1in [24, 24, 24, 24, 24] | E3in [0, 24, 0, 24]  key1 24 key3 24
+  x2    n=24  E1in [24, 24, 0, 24, 0] | E3in [0, 24, 0, 24]  key1 24 key3 24
+  y     n=24  E1in [24, 24, 24, 0, 0] | E3in [24, 24, 24, 24]  key1 24 key3 24
+  E3h1  n=24  E1in [0, 24, 0, 0, 0] | E3in [0, 0, 24, 0]  key1 24 key3 24
+bitflip per-bit: bits 128 split_candidates 0 coupled 128 one_sided 0 neither 0
+  per word (#key1 bits moved, #key3 bits moved): c1:128/128 d1:124/128 dd:124/128 s15:128/128 s9:128/128 w5:128/128 x2:124/128 y:128/128 E3h1:126/126
+axis screen1 (19683 codes) partitions with k>0: 18218
+axis screen2 partitions with k>0: 49
+  cand k=22 U=dd,s9 V=d1,s15,x2,y
+  cand k=19 U=d1,s15 V=c1,dd
+  cand k=18 U=c1,d1,x2 V=s9,w5,y
+  cand k=18 U=x2 V=c1,dd,s9,w5,y,E3h1
+  cand k=17 U=c1,x2 V=d1,dd,s15,w5,y
+  cand k=17 U=c1,s9 V=s15,E3h1
+  cand k=16 U=d1,s9 V=y
+  cand k=16 U=d1,dd V=s9,y
+mode E3h1: candidates 24, confirmed max k = 0  (9s)

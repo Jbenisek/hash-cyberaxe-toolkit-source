@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.CTL loop control and branches",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "scenario table (exact arithmetic): control /2 = -0.835 bit, /4 = -1.552, /8 = -2.113; code size growth of unrolled kernels (~10 KB) costs 0.002 bit of memory",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Scenario arithmetic, not a measurement. | universe cell poseidon-r1|MACHINE.CTL|MACHINE|Q4",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "measured unrolled build"
+}

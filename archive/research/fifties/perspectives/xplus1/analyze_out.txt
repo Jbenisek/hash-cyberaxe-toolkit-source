@@ -1,0 +1,521 @@
+xplus1 analyze.py  numpy 2.4.6
+== 0. Self-test of the lens (COMPUTED) ==
+words tested 22042, failures 0  (reconstruction w = sum c_j (x+1)^j, valuation by exact division, involution, rotation invariance, v(a^b) >= min, period-4 words have v >= 28)
+  v(eta = dE3.h1 = 830303cf) = 0
+  v(dY3 (E3 input a) = fff8ffff) = 0
+  v(dY11 (E1 input c) = fff77ffb) = 0
+rand rows 1048576, ctx rows 262144; CONTROL = 1048576 rows of uniform u32 (seeded)
+
+== 1. Ring-linear identities used below (COMPUTED on every row) ==
+  K1w4 = x^-8 K1w1: True;  K3w6 = x^-8 (K3w3 + eta): True
+  U = x^-8 R1 + R4 = x^-8 K3w1 + K3w4 (E3 only): True;  V = x^-8 R3 + R6 = x^-8 K1w3 + K1w6 + x^-8 eta (E1 only): True
+  => v(K1w4) = v(K1w1) and v(K3w6) = v(K3w3 + eta) exactly (DERIVED: rotation is a unit).
+
+== 1. Ring-linear identities used below (COMPUTED on every row) ==
+  K1w4 = x^-8 K1w1: True;  K3w6 = x^-8 (K3w3 + eta): True
+  U = x^-8 R1 + R4 = x^-8 K3w1 + K3w4 (E3 only): True;  V = x^-8 R3 + R6 = x^-8 K1w3 + K1w6 + x^-8 eta (E1 only): True
+  => v(K1w4) = v(K1w1) and v(K3w6) = v(K3w3 + eta) exactly (DERIVED: rotation is a unit).
+ctx: 52 repeated input rows removed for sections 3, 5, 6 and 12 (262092 rows left); section 8 keeps the group layout
+
+== 2. Valuation laws vs uniform, set rand (train = first half, test = second half) ==
+R w1 train             N=  524288 mean_v=0.9979 (z  -1.06)  chi2=    14.4/df13 p=0.349  P(v=0)=0.5001 P(v>=4)=0.06223  worst bin 10 z=-1.88
+R w1 test              N=  524288 mean_v=1.0027 (z  +1.37)  chi2=     9.0/df13 p=0.776  P(v=0)=0.4995 P(v>=4)=0.06266  worst bin 3 z=+1.68
+R w3 train             N=  524288 mean_v=1.0029 (z  +1.50)  chi2=    16.4/df13 p=0.226  P(v=0)=0.4993 P(v>=4)=0.06311  worst bin 6 z=+2.07
+R w3 test              N=  524288 mean_v=0.9974 (z  -1.35)  chi2=    13.1/df13 p=0.444  P(v=0)=0.5014 P(v>=4)=0.06219  worst bin 0 z=+1.96
+R w4 train             N=  524288 mean_v=1.0011 (z  +0.55)  chi2=    12.1/df13 p=0.519  P(v=0)=0.4998 P(v>=4)=0.06262  worst bin 6 z=+2.23
+R w4 test              N=  524288 mean_v=0.9981 (z  -1.00)  chi2=    14.3/df13 p=0.352  P(v=0)=0.5005 P(v>=4)=0.06229  worst bin 5 z=-2.36
+R w6 train             N=  524288 mean_v=1.0008 (z  +0.39)  chi2=    25.8/df13 p=0.0181  P(v=0)=0.4993 P(v>=4)=0.06285  worst bin 10 z=+2.63
+R w6 test              N=  524288 mean_v=0.9980 (z  -1.02)  chi2=    17.1/df13 p=0.195  P(v=0)=0.5014 P(v>=4)=0.06213  worst bin 11 z=+2.56
+U=x^-8R1+R4 train      N=  524288 mean_v=0.9997 (z  -0.17)  chi2=    14.4/df13 p=0.348  P(v=0)=0.5004 P(v>=4)=0.06268  worst bin 3 z=-1.96
+U=x^-8R1+R4 test       N=  524288 mean_v=0.9981 (z  -0.98)  chi2=    12.2/df13 p=0.511  P(v=0)=0.4999 P(v>=4)=0.06191  worst bin 4 z=-1.98
+V=x^-8R3+R6 train      N=  524288 mean_v=1.9968 (z +510.35)  chi2=524375.8/df13 p=0  P(v=0)=0.0000 P(v>=4)=0.12483  worst bin 0 z=-724.08
+V=x^-8R3+R6 test       N=  524288 mean_v=2.0040 (z +514.03)  chi2=524386.2/df13 p=0  P(v=0)=0.0000 P(v>=4)=0.12569  worst bin 0 z=-724.08
+K1 w1 train            N=  524288 mean_v=0.9833 (z  -8.55)  chi2=  1827.6/df13 p=0  P(v=0)=0.5010 P(v>=4)=0.06265  worst bin 8 z=-25.96
+K1 w1 test             N=  524288 mean_v=0.9839 (z  -8.22)  chi2=  1753.6/df13 p=0  P(v=0)=0.4999 P(v>=4)=0.06206  worst bin 8 z=-25.87
+K1 w3 train            N=  524288 mean_v=1.0027 (z  +1.40)  chi2=    56.9/df13 p=1.88e-07  P(v=0)=0.4992 P(v>=4)=0.06267  worst bin 8 z=+3.91
+K1 w3 test             N=  524288 mean_v=1.0003 (z  +0.16)  chi2=    57.6/df13 p=1.41e-07  P(v=0)=0.5012 P(v>=4)=0.06264  worst bin 11 z=+3.89
+K1 w4 train            N=  524288 mean_v=0.9833 (z  -8.55)  chi2=  1827.6/df13 p=0  P(v=0)=0.5010 P(v>=4)=0.06265  worst bin 8 z=-25.96
+K1 w4 test             N=  524288 mean_v=0.9839 (z  -8.22)  chi2=  1753.6/df13 p=0  P(v=0)=0.4999 P(v>=4)=0.06206  worst bin 8 z=-25.87
+K1 w6 train            N=  524288 mean_v=0.9993 (z  -0.37)  chi2=    29.8/df13 p=0.00503  P(v=0)=0.5008 P(v>=4)=0.06238  worst bin 6 z=-3.55
+K1 w6 test             N=  524288 mean_v=1.0014 (z  +0.70)  chi2=    33.3/df13 p=0.00153  P(v=0)=0.4988 P(v>=4)=0.06219  worst bin 6 z=-3.28
+K3 w1 train            N=  524288 mean_v=0.9957 (z  -2.21)  chi2=    17.9/df13 p=0.16  P(v=0)=0.5013 P(v>=4)=0.06198  worst bin 6 z=-2.81
+K3 w1 test             N=  524288 mean_v=1.0019 (z  +0.95)  chi2=    10.6/df13 p=0.647  P(v=0)=0.5001 P(v>=4)=0.06287  worst bin 1 z=-1.86
+K3 w3 train            N=  524288 mean_v=0.9991 (z  -0.47)  chi2=    18.8/df13 p=0.13  P(v=0)=0.4999 P(v>=4)=0.06246  worst bin 7 z=-2.48
+K3 w3 test             N=  524288 mean_v=1.0006 (z  +0.32)  chi2=    24.7/df13 p=0.0252  P(v=0)=0.5005 P(v>=4)=0.06266  worst bin 8 z=+2.72
+K3 w4 train            N=  524288 mean_v=1.0021 (z  +1.08)  chi2=    19.4/df13 p=0.111  P(v=0)=0.4985 P(v>=4)=0.06280  worst bin 0 z=-2.12
+K3 w4 test             N=  524288 mean_v=0.9992 (z  -0.40)  chi2=     8.4/df13 p=0.82  P(v=0)=0.5003 P(v>=4)=0.06232  worst bin 5 z=+1.48
+K3 w6 train            N=  524288 mean_v=1.0012 (z  +0.61)  chi2=     8.6/df13 p=0.803  P(v=0)=0.5001 P(v>=4)=0.06267  worst bin 3 z=+1.45
+K3 w6 test             N=  524288 mean_v=0.9991 (z  -0.46)  chi2=    21.7/df13 p=0.0599  P(v=0)=0.4995 P(v>=4)=0.06254  worst bin 8 z=-2.35
+digA w1 train          N=  524288 mean_v=1.0036 (z  +1.85)  chi2=    17.1/df13 p=0.194  P(v=0)=0.4994 P(v>=4)=0.06326  worst bin 9 z=+2.61
+digA w1 test           N=  524288 mean_v=1.0019 (z  +1.00)  chi2=    12.4/df13 p=0.494  P(v=0)=0.5000 P(v>=4)=0.06304  worst bin 4 z=+2.45
+digA w3 train          N=  524288 mean_v=1.0023 (z  +1.16)  chi2=    11.4/df13 p=0.575  P(v=0)=0.4999 P(v>=4)=0.06312  worst bin 11 z=-1.59
+digA w3 test           N=  524288 mean_v=1.0048 (z  +2.45)  chi2=    17.6/df13 p=0.174  P(v=0)=0.4993 P(v>=4)=0.06314  worst bin 1 z=-2.03
+digA w4 train          N=  524288 mean_v=0.9988 (z  -0.59)  chi2=    10.0/df13 p=0.694  P(v=0)=0.4999 P(v>=4)=0.06232  worst bin 1 z=+1.29
+digA w4 test           N=  524288 mean_v=1.0006 (z  +0.30)  chi2=    12.9/df13 p=0.453  P(v=0)=0.4996 P(v>=4)=0.06231  worst bin 12 z=-1.88
+digA w6 train          N=  524288 mean_v=1.0004 (z  +0.19)  chi2=     8.9/df13 p=0.781  P(v=0)=0.4997 P(v>=4)=0.06234  worst bin 12 z=-1.50
+digA w6 test           N=  524288 mean_v=0.9987 (z  -0.65)  chi2=     9.4/df13 p=0.741  P(v=0)=0.5001 P(v>=4)=0.06246  worst bin 8 z=-1.47
+CONTROL u0 train       N=  524288 mean_v=1.0008 (z  +0.43)  chi2=    16.7/df13 p=0.215  P(v=0)=0.5010 P(v>=4)=0.06273  worst bin 13+ z=+2.63
+CONTROL u0 test        N=  524288 mean_v=0.9991 (z  -0.44)  chi2=    12.5/df13 p=0.486  P(v=0)=0.5001 P(v>=4)=0.06233  worst bin 13+ z=+2.25
+CONTROL u1 train       N=  524288 mean_v=0.9993 (z  -0.38)  chi2=    12.4/df13 p=0.498  P(v=0)=0.5007 P(v>=4)=0.06240  worst bin 9 z=+2.03
+CONTROL u1 test        N=  524288 mean_v=0.9987 (z  -0.67)  chi2=    13.7/df13 p=0.395  P(v=0)=0.5006 P(v>=4)=0.06236  worst bin 11 z=+1.94
+CONTROL u2 train       N=  524288 mean_v=1.0009 (z  +0.47)  chi2=     4.8/df13 p=0.979  P(v=0)=0.4995 P(v>=4)=0.06260  worst bin 6 z=+1.41
+CONTROL u2 test        N=  524288 mean_v=1.0015 (z  +0.75)  chi2=    19.4/df13 p=0.112  P(v=0)=0.4988 P(v>=4)=0.06257  worst bin 1 z=+2.71
+CONTROL u3 train       N=  524288 mean_v=0.9982 (z  -0.91)  chi2=     8.7/df13 p=0.795  P(v=0)=0.4999 P(v>=4)=0.06192  worst bin 11 z=-1.41
+CONTROL u3 test        N=  524288 mean_v=0.9972 (z  -1.41)  chi2=    14.6/df13 p=0.331  P(v=0)=0.5010 P(v>=4)=0.06214  worst bin 5 z=-1.82
+
+== 3. Descent toward period-2^s ideals, set rand: P(v>=k+1 | v>=k) (uniform 0.5) ==
+   word        k:       0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17
+   R w1        r:  0.500  0.500  0.500  0.499  0.499  0.499  0.503  0.500  0.503  0.495  0.524  0.502  0.502  0.496  0.672  0.533  0.458  0.545
+               z:   +0.4   -0.1   +0.5   -0.7   -0.4   -0.3   +0.7   -0.0   +0.4   -0.4   +1.6   +0.1   +0.1   -0.1   +2.8   +0.4   -0.4   +0.3
+   R w3        r:  0.500  0.500  0.501  0.501  0.503  0.499  0.493  0.509  0.496  0.488  0.520  0.484  0.532  0.537  0.653  0.532  0.480  0.667
+               z:   -0.6   +0.1   +0.7   +0.6   +1.6   -0.5   -1.8   +1.6   -0.6   -1.1   +1.3   -0.7   +1.0   +0.9   +2.6   +0.4   -0.2   +1.2
+   R w4        r:  0.500  0.499  0.499  0.501  0.501  0.506  0.499  0.501  0.508  0.489  0.489  0.536  0.522  0.461  0.508  0.515  0.765  0.615
+               z:   -0.2   -0.8   -0.7   +0.7   +0.3   +2.0   -0.2   +0.1   +1.1   -1.0   -0.7   +1.6   +0.7   -0.9   +0.1   +0.2   +2.2   +0.8
+   R w6        r:  0.500  0.499  0.500  0.500  0.498  0.500  0.506  0.503  0.519  0.527  0.507  0.464  0.509  0.507  0.478  0.455  0.600  0.667
+               z:   -0.6   -0.8   +0.5   +0.2   -1.1   +0.1   +1.5   +0.6   +2.4   +2.5   +0.5   -1.8   +0.3   +0.2   -0.4   -0.5   +0.8   +1.0
+   U           r:  0.500  0.499  0.499  0.500  0.501  0.501  0.509  0.502  0.501  0.504  0.496  0.493  0.521  0.526  0.563  0.475  0.684  0.385
+               z:   -0.3   -1.8   -0.5   +0.2   +0.7   +0.4   +2.2   +0.4   +0.1   +0.3   -0.2   -0.3   +0.7   +0.6   +1.1   -0.3   +1.6   -0.8
+   V           r:  1.000  0.500  0.500  0.501  0.500  0.499  0.498  0.473  0.526  0.499  0.509  0.539  0.456  0.461  0.427  0.560  0.464  0.615
+               z: +1024.0   +0.4   +0.2   +0.8   +0.3   -0.4   -0.9   -6.8   +4.7   -0.1   +0.8   +2.5   -2.1   -1.3   -1.6   +0.8   -0.4   +0.8
+   CONTROL u0  r:  0.499  0.501  0.500  0.500  0.499  0.500  0.501  0.507  0.513  0.512  0.503  0.524  0.582  0.449  0.440  0.515  0.647  0.455
+               z:   -1.1   +1.1   +0.4   -0.3   -0.5   -0.1   +0.3   +1.2   +1.6   +1.1   +0.2   +1.1   +2.8   -1.3   -1.0   +0.2   +1.2   -0.3
+   CONTROL u1  r:  0.499  0.501  0.499  0.500  0.500  0.499  0.500  0.509  0.500  0.485  0.532  0.499  0.522  0.536  0.507  0.526  0.450  0.444
+               z:   -1.3   +0.8   -0.6   -0.2   -0.2   -0.2   +0.1   +1.7   -0.0   -1.3   +2.0   -0.0   +0.7   +0.8   +0.1   +0.3   -0.4   -0.3
+   all four R words in I_k (R in I_k^4): count obs vs N*2^-4k, and CONTROL
+     k=1: obs   131180  exp    65536.0  ratio  2.002  z +256.42   CONTROL    65296 ratio  0.996
+     k=2: obs     8110  exp     4096.0  ratio  1.980  z +62.72   CONTROL     4099 ratio  1.001
+     k=3: obs      498  exp      256.0  ratio  1.945  z +15.12   CONTROL      229 ratio  0.895
+     k=4: obs       31  exp       16.0  ratio  1.938  z  +3.75   CONTROL       14 ratio  0.875
+     k=5: obs        1  exp        1.0  ratio  1.000  z  +0.00   CONTROL        3 ratio  3.000
+
+== 3. Descent toward period-2^s ideals, set ctx: P(v>=k+1 | v>=k) (uniform 0.5) ==
+   word        k:       0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17
+   R w1        r:  0.501  0.501  0.503  0.502  0.505  0.495  0.488  0.496  0.507  0.498  0.500  0.543  0.536  0.514  0.474  0.556  0.600  0.333
+               z:   +0.6   +1.0   +1.6   +0.6   +1.4   -1.0   -1.6   -0.4   +0.5   -0.1   +0.0   +1.0   +0.6   +0.2   -0.2   +0.3   +0.4   -0.6
+   R w3        r:  0.498  0.501  0.497  0.501  0.500  0.506  0.503  0.518  0.512  0.512  0.518  0.500  0.562  0.463  0.526  0.400  0.250  0.000
+               z:   -1.6   +1.0   -1.4   +0.2   +0.1   +1.2   +0.4   +1.6   +0.8   +0.6   +0.6   +0.0   +1.1   -0.5   +0.2   -0.6   -1.0   -1.0
+   R w4        r:  0.500  0.501  0.499  0.496  0.506  0.511  0.506  0.513  0.506  0.529  0.527  0.416  0.484  0.452  0.500  0.000
+               z:   +0.4   +0.7   -0.8   -1.6   +1.5   +2.0   +0.8   +1.2   +0.4   +1.4   +0.9   -2.1   -0.2   -0.5   +0.0   -2.6
+   R w6        r:  0.498  0.501  0.502  0.501  0.495  0.490  0.502  0.515  0.514  0.500  0.509  0.489  0.455  0.667  0.500  0.800  0.500  0.500
+               z:   -1.6   +0.7   +0.9   +0.5   -1.3   -1.9   +0.3   +1.3   +0.9   +0.0   +0.3   -0.3   -0.7   +1.8   +0.0   +1.9   +0.0   +0.0
+   U           r:  0.499  0.501  0.500  0.496  0.497  0.504  0.489  0.507  0.501  0.481  0.512  0.496  0.403  0.520  0.538  0.286  1.000  1.000
+               z:   -0.5   +0.8   +0.2   -1.4   -0.9   +0.7   -1.4   +0.6   +0.1   -0.8   +0.4   -0.1   -1.5   +0.2   +0.3   -1.1   +1.4   +1.4
+   V           r:  1.000  0.499  0.500  0.501  0.497  0.504  0.499  0.477  0.517  0.506  0.535  0.507  0.446  0.532  0.455  0.733  0.364  0.500
+               z: +511.9   -0.5   +0.1   +0.5   -1.2   +1.1   -0.2   -3.0   +1.5   +0.4   +1.6   +0.2   -1.3   +0.5   -0.5   +1.8   -0.9   +0.0
+   CONTROL u0  r:  0.500  0.501  0.501  0.502  0.501  0.505  0.502  0.506  0.528  0.519  0.512  0.456  0.500  0.412  0.429  0.833  0.600  0.667
+               z:   -0.4   +1.1   +0.5   +0.6   +0.4   +1.0   +0.2   +0.6   +1.8   +0.9   +0.4   -1.1   +0.0   -1.0   -0.5   +1.6   +0.4   +0.6
+   CONTROL u1  r:  0.500  0.500  0.503  0.496  0.497  0.492  0.494  0.516  0.517  0.479  0.508  0.531  0.515  0.600  0.524  0.364  0.500  1.000
+               z:   -0.4   +0.2   +1.5   -1.6   -0.9   -1.4   -0.8   +1.4   +1.1   -1.0   +0.3   +0.7   +0.2   +1.2   +0.2   -0.9   +0.0   +1.4
+   all four R words in I_k (R in I_k^4): count obs vs N*2^-4k, and CONTROL
+     k=1: obs    32721  exp    16380.8  ratio  1.998  z +127.67   CONTROL    16531 ratio  1.009
+     k=2: obs     2031  exp     1023.8  ratio  1.984  z +31.48   CONTROL     1072 ratio  1.047
+     k=3: obs      113  exp       64.0  ratio  1.766  z  +6.13   CONTROL       66 ratio  1.031
+     k=4: obs        5  exp        4.0  ratio  1.250  z  +0.50   CONTROL        6 ratio  1.500
+     k=5: obs        0  exp        0.2  ratio  0.000  z  -0.50   CONTROL        2 ratio  8.002
+
+== 4. Bias of each (x+1)-adic digit c_j (a fixed XOR mask: bits i that are supersets of j), set rand ==
+  lens digits c_j: max|z| train 724.08; 6x32 tests, null max|z| ~3.4.  top-8 train -> test:
+     V      j= 0 (|mask|=32)  z_train +724.08  z_test +724.08   bias_test +1.0000
+     R w3   j=31 (|mask|= 1)  z_train -125.61  z_test -125.80   bias_test -0.1737
+     R w3   j=30 (|mask|= 2)  z_train -124.99  z_test -126.04   bias_test -0.1741
+     R w3   j=15 (|mask|= 2)  z_train  +12.09  z_test  +13.77   bias_test +0.0190
+     R w3   j=14 (|mask|= 4)  z_train  +11.29  z_test  +13.27   bias_test +0.0183
+     R w3   j=29 (|mask|= 2)  z_train   -9.43  z_test   -9.83   bias_test -0.0136
+     R w4   j=10 (|mask|= 8)  z_train   -2.57  z_test   -0.27   bias_test -0.0004
+     R w6   j=24 (|mask|= 8)  z_train   -2.41  z_test   +0.92   bias_test +0.0013
+     train/test correlation of all 192 z values: +1.000
+  raw bits (XOR view): max|z| train 616.24; 6x32 tests, null max|z| ~3.4.  top-8 train -> test:
+     V      j=17 (|mask|= 1)  z_train +616.24  z_test +616.14   bias_test +0.8509
+     V      j=11 (|mask|= 1)  z_train +584.11  z_test +583.48   bias_test +0.8058
+     V      j= 4 (|mask|= 1)  z_train -532.52  z_test -531.64   bias_test -0.7342
+     V      j=16 (|mask|= 1)  z_train +509.38  z_test +508.16   bias_test +0.7018
+     R w3   j=19 (|mask|= 1)  z_train +477.82  z_test +479.08   bias_test +0.6616
+     V      j=10 (|mask|= 1)  z_train +440.90  z_test +441.43   bias_test +0.6096
+     V      j= 3 (|mask|= 1)  z_train +383.68  z_test +383.84   bias_test +0.5301
+     V      j=15 (|mask|= 1)  z_train +383.21  z_test +382.12   bias_test +0.5277
+     train/test correlation of all 192 z values: +1.000
+  CONTROL digits: max|z| train   2.64; 6x32 tests, null max|z| ~3.4.  top-8 train -> test:
+     u2     j=30 (|mask|= 2)  z_train   +2.64  z_test   +0.39   bias_test +0.0005
+     u4     j= 2 (|mask|=16)  z_train   -2.47  z_test   -0.94   bias_test -0.0013
+     u4     j=23 (|mask|= 2)  z_train   -2.44  z_test   +0.72   bias_test +0.0010
+     u4     j= 8 (|mask|=16)  z_train   -2.37  z_test   +0.95   bias_test +0.0013
+     u0     j= 2 (|mask|=16)  z_train   +2.17  z_test   -1.70   bias_test -0.0023
+     u3     j= 1 (|mask|=16)  z_train   -2.07  z_test   +0.43   bias_test +0.0006
+     u3     j=27 (|mask|= 2)  z_train   -2.06  z_test   +1.29   bias_test +0.0018
+     u4     j=30 (|mask|= 2)  z_train   -1.98  z_test   -0.73   bias_test -0.0010
+     train/test correlation of all 192 z values: +0.058
+  lens: coordinates with |z|>4 in both halves, same sign: 6 of 192
+  raw: coordinates with |z|>4 in both halves, same sign: 51 of 192
+  CONTROL: coordinates with |z|>4 in both halves, same sign: 0 of 192
+  lens: sum over the 128 coordinates of R of (1 - H(p)) on test half = 0.0447 bits (an upper bound on what single-coordinate biases alone can save)
+  raw: sum over the 128 coordinates of R of (1 - H(p)) on test half = 1.5696 bits (an upper bound on what single-coordinate biases alone can save)
+  CONTROL: sum over the 128 coordinates of R of (1 - H(p)) on test half = 0.0002 bits (an upper bound on what single-coordinate biases alone can save)
+
+== 5. Entropy of the folds R mod (x+1)^m, all four words jointly (4m bits), set rand ==
+   lens = low m digits (= XOR-fold to m bits when m is a power of 2); compared with the XOR-view low/high m bits,
+   3 random linear projections of the 128-bit R to 4m bits, and the CONTROL (uniform words, lens projection).
+   P(R mod (x+1)^m = 0 on all four words) = P(fold of K1 = fold of K3):
+     m=1 ( 4 bits): obs  131180  exp   65536.00  ratio  2.002  z +256.42   CONTROL   65296 ratio  0.996
+     m=2 ( 8 bits): obs    8110  exp    4096.00  ratio  1.980  z +62.72   CONTROL    4099 ratio  1.001
+     m=3 (12 bits): obs     498  exp     256.00  ratio  1.945  z +15.12   CONTROL     229 ratio  0.895
+     m=4 (16 bits): obs      31  exp      16.00  ratio  1.938  z  +3.75   CONTROL      14 ratio  0.875
+     m=5 (20 bits): obs       1  exp       1.00  ratio  1.000  z  +0.00   CONTROL       3 ratio  3.000
+   full-histogram tests (4m <= 16):  chi2/df, p, entropy deficit (Miller-Madow) in bits
+     m=1 lens R             chi2/df 69905.454 p=0  deficit +1.00000 bits  P(0)/2^-4 =  2.002
+     m=1 lens (R1,R3,U,V)   chi2/df 69905.454 p=0  deficit +1.00000 bits  P(0)/2^-4 =  2.002
+     m=1 lowbits R          chi2/df 11571.848 p=0  deficit +0.12293 bits  P(0)/2^-4 =  0.595
+     m=1 highbits R         chi2/df 2107.581 p=0  deficit +0.02185 bits  P(0)/2^-4 =  0.821
+     m=1 randlin R #0       chi2/df   0.768 p=0.715  deficit -0.00000 bits  P(0)/2^-4 =  0.997
+     m=1 CONTROL lens       chi2/df   1.039 p=0.41  deficit +0.00000 bits  P(0)/2^-4 =  0.996
+     m=2 lens R             chi2/df 4112.858 p=0  deficit +0.99998 bits  P(0)/2^-8 =  1.980
+     m=2 lens (R1,R3,U,V)   chi2/df 4112.858 p=0  deficit +0.99998 bits  P(0)/2^-8 =  1.980
+     m=2 lowbits R          chi2/df 681.825 p=0  deficit +0.12295 bits  P(0)/2^-8 =  0.599
+     m=2 highbits R         chi2/df 257.096 p=0  deficit +0.04572 bits  P(0)/2^-8 =  0.626
+     m=2 randlin R #0       chi2/df   0.900 p=0.872  deficit -0.00002 bits  P(0)/2^-8 =  0.989
+     m=2 CONTROL lens       chi2/df   0.986 p=0.551  deficit -0.00000 bits  P(0)/2^-8 =  1.001
+     m=3 lens R             chi2/df 257.064 p=0  deficit +1.00000 bits  P(0)/2^-12 =  1.945
+     m=3 lens (R1,R3,U,V)   chi2/df 257.064 p=0  deficit +1.00000 bits  P(0)/2^-12 =  1.945
+     m=3 lowbits R          chi2/df  69.430 p=0  deficit +0.18631 bits  P(0)/2^-12 =  0.844
+     m=3 highbits R         chi2/df  18.628 p=0  deficit +0.05024 bits  P(0)/2^-12 =  0.578
+     m=3 randlin R #0       chi2/df   0.961 p=0.964  deficit -0.00011 bits  P(0)/2^-12 =  0.938
+     m=3 CONTROL lens       chi2/df   1.005 p=0.404  deficit +0.00002 bits  P(0)/2^-12 =  0.895
+     m=4 lens R             chi2/df  17.003 p=0  deficit +1.00021 bits  P(0)/2^-16 =  1.938
+     m=4 lens (R1,R3,U,V)   chi2/df  17.003 p=0  deficit +1.00021 bits  P(0)/2^-16 =  1.938
+     m=4 lowbits R          chi2/df   5.534 p=0  deficit +0.19480 bits  P(0)/2^-16 =  0.688
+     m=4 highbits R         chi2/df   2.409 p=0  deficit +0.06353 bits  P(0)/2^-16 =  0.312
+     m=4 randlin R #0       chi2/df   0.997 p=0.695  deficit +0.00035 bits  P(0)/2^-16 =  1.250
+     m=4 CONTROL lens       chi2/df   1.007 p=0.101  deficit +0.00086 bits  P(0)/2^-16 =  0.875
+   collision (Renyi-2) entropy, 4m bits: deficit = log2(collisions / expected); z vs uniform
+   (the lens projection contains parity(R3)+parity(R6), which is 0 on every row, so its baseline deficit is exactly 1 bit;
+    "beyond1" = collisions vs 2x expected, z under the uniform-on-the-127-dim-subspace law)
+     20 bits lens beyond the parity bit: 1049263/1048575.0  deficit beyond +0.001  z +0.67
+     24 bits lens beyond the parity bit: 65571/65535.9  deficit beyond +0.001  z +0.14
+     28 bits lens beyond the parity bit: 4162/4096.0  deficit beyond +0.023  z +1.03
+     32 bits lens beyond the parity bit: 277/256.0  deficit beyond +0.114  z +1.31
+     36 bits lens beyond the parity bit: 21/16.0  deficit beyond +0.392  z +1.25
+     40 bits lens beyond the parity bit: 2/1.0  deficit beyond +1.000  z +1.00
+     20 bits: lens R 1049263/524287.5 d+1.001 z+725.0 | lens RUV 1049263/524287.5 d+1.001 z+725.0 | lowbits 1039724/524287.5 d+0.988 z+711.9 | highbits 591021/524287.5 d+0.173 z+92.2 | randlin0 524381/524287.5 d+0.000 z+0.1 | randlin1 524335/524287.5 d+0.000 z+0.1 | randlin2 524697/524287.5 d+0.001 z+0.6 | CONTROL 524106/524287.5 d-0.000 z-0.3
+     24 bits: lens R 65571/32768.0 d+1.001 z+181.2 | lens RUV 65571/32768.0 d+1.001 z+181.2 | lowbits 64697/32768.0 d+0.981 z+176.4 | highbits 38486/32768.0 d+0.232 z+31.6 | randlin0 32577/32768.0 d-0.008 z-1.1 | randlin1 32761/32768.0 d-0.000 z-0.0 | randlin2 32771/32768.0 d+0.000 z+0.0 | CONTROL 32665/32768.0 d-0.005 z-0.6
+     28 bits: lens R 4162/2048.0 d+1.023 z+46.7 | lens RUV 4162/2048.0 d+1.023 z+46.7 | lowbits 3905/2048.0 d+0.931 z+41.0 | highbits 2826/2048.0 d+0.465 z+17.2 | randlin0 2057/2048.0 d+0.006 z+0.2 | randlin1 2092/2048.0 d+0.031 z+1.0 | randlin2 2101/2048.0 d+0.037 z+1.2 | CONTROL 2048/2048.0 d+0.000 z+0.0
+     32 bits: lens R 277/128.0 d+1.114 z+13.2 | lens RUV 277/128.0 d+1.114 z+13.2 | lowbits 317/128.0 d+1.308 z+16.7 | highbits 283/128.0 d+1.145 z+13.7 | randlin0 134/128.0 d+0.066 z+0.5 | randlin1 136/128.0 d+0.087 z+0.7 | randlin2 137/128.0 d+0.098 z+0.8 | CONTROL 109/128.0 d-0.232 z-1.7
+     36 bits: lens R 21/8.0 d+1.392 z+4.6 | lens RUV 21/8.0 d+1.392 z+4.6 | lowbits 34/8.0 d+2.087 z+9.2 | highbits 39/8.0 d+2.285 z+11.0 | randlin0 9/8.0 d+0.170 z+0.4 | randlin1 7/8.0 d-0.193 z-0.4 | randlin2 10/8.0 d+0.322 z+0.7 | CONTROL 6/8.0 d-0.415 z-0.7
+     40 bits: lens R 2/0.5 d+2.000 z+2.1 | lens RUV 2/0.5 d+2.000 z+2.1 | lowbits 4/0.5 d+3.000 z+4.9 | highbits 3/0.5 d+2.585 z+3.5 | randlin0 0/0.5 d-inf z-0.7 | randlin1 2/0.5 d+2.000 z+2.1 | randlin2 0/0.5 d-inf z-0.7 | CONTROL 1/0.5 d+1.000 z+0.7
+   single word, low m digits (m = 20, 24, 28) vs low m bits vs CONTROL: collisions / expected
+     R w1: m20: lens 525878/524287.5 (z+2.2) low 701051 (z+244.1) ctrl 525098 (z+1.1) | m24: lens 32773/32768.0 (z+0.0) low 45075 (z+68.0) ctrl 32553 (z-1.2) | m28: lens 2055/2048.0 (z+0.2) low 2894 (z+18.7) ctrl 2070 (z+0.5)
+     R w3: m20: lens 530916/524287.5 (z+9.2) low 2177654 (z+2283.4) ctrl 523735 (z-0.8) | m24: lens 34984/32768.0 (z+12.2) low 136631 (z+573.8) ctrl 32913 (z+0.8) | m28: lens 2289/2048.0 (z+5.3) low 9809 (z+171.5) ctrl 2050 (z+0.0)
+     R w4: m20: lens 524937/524287.5 (z+0.9) low 610231 (z+118.7) ctrl 523536 (z-1.0) | m24: lens 32723/32768.0 (z-0.2) low 38398 (z+31.1) ctrl 32548 (z-1.2) | m28: lens 2046/2048.0 (z-0.0) low 2663 (z+13.6) ctrl 2066 (z+0.4)
+     R w6: m20: lens 526705/524287.5 (z+3.3) low 1129384 (z+835.7) ctrl 524622 (z+0.5) | m24: lens 33471/32768.0 (z+3.9) low 72037 (z+216.9) ctrl 32624 (z-0.8) | m28: lens 2159/2048.0 (z+2.5) low 5384 (z+73.7) ctrl 2076 (z+0.6)
+
+== 5. Entropy of the folds R mod (x+1)^m, all four words jointly (4m bits), set ctx ==
+   lens = low m digits (= XOR-fold to m bits when m is a power of 2); compared with the XOR-view low/high m bits,
+   3 random linear projections of the 128-bit R to 4m bits, and the CONTROL (uniform words, lens projection).
+   P(R mod (x+1)^m = 0 on all four words) = P(fold of K1 = fold of K3):
+     m=1 ( 4 bits): obs   32721  exp   16380.75  ratio  1.998  z +127.67   CONTROL   16531 ratio  1.009
+     m=2 ( 8 bits): obs    2031  exp    1023.80  ratio  1.984  z +31.48   CONTROL    1072 ratio  1.047
+     m=3 (12 bits): obs     113  exp      63.99  ratio  1.766  z  +6.13   CONTROL      66 ratio  1.031
+     m=4 (16 bits): obs       5  exp       4.00  ratio  1.250  z  +0.50   CONTROL       6 ratio  1.500
+     m=5 (20 bits): obs       0  exp       0.25  ratio  0.000  z  -0.50   CONTROL       2 ratio  8.002
+   full-histogram tests (4m <= 16):  chi2/df, p, entropy deficit (Miller-Madow) in bits
+     m=1 lens R             chi2/df 17473.275 p=0  deficit +0.99999 bits  P(0)/2^-4 =  1.998
+     m=1 lens (R1,R3,U,V)   chi2/df 17473.275 p=0  deficit +0.99999 bits  P(0)/2^-4 =  1.998
+     m=1 lowbits R          chi2/df 2467.143 p=0  deficit +0.10436 bits  P(0)/2^-4 =  0.626
+     m=1 highbits R         chi2/df 478.221 p=0  deficit +0.01979 bits  P(0)/2^-4 =  0.830
+     m=1 randlin R #0       chi2/df   0.557 p=0.909  deficit -0.00002 bits  P(0)/2^-4 =  0.997
+     m=1 CONTROL lens       chi2/df   0.759 p=0.725  deficit -0.00001 bits  P(0)/2^-4 =  1.009
+     m=2 lens R             chi2/df 1028.608 p=0  deficit +0.99993 bits  P(0)/2^-8 =  1.984
+     m=2 lens (R1,R3,U,V)   chi2/df 1028.608 p=0  deficit +0.99993 bits  P(0)/2^-8 =  1.984
+     m=2 lowbits R          chi2/df 146.740 p=0  deficit +0.10475 bits  P(0)/2^-8 =  0.642
+     m=2 highbits R         chi2/df  55.966 p=0  deficit +0.03923 bits  P(0)/2^-8 =  0.626
+     m=2 randlin R #0       chi2/df   1.084 p=0.17  deficit +0.00006 bits  P(0)/2^-8 =  0.992
+     m=2 CONTROL lens       chi2/df   0.839 p=0.971  deficit -0.00011 bits  P(0)/2^-8 =  1.047
+     m=3 lens R             chi2/df  65.033 p=0  deficit +1.00018 bits  P(0)/2^-12 =  1.766
+     m=3 lens (R1,R3,U,V)   chi2/df  65.033 p=0  deficit +1.00018 bits  P(0)/2^-12 =  1.766
+     m=3 lowbits R          chi2/df  16.426 p=0  deficit +0.16883 bits  P(0)/2^-12 =  0.969
+     m=3 highbits R         chi2/df   4.830 p=0  deficit +0.04378 bits  P(0)/2^-12 =  0.641
+     m=3 randlin R #0       chi2/df   1.028 p=0.101  deficit +0.00031 bits  P(0)/2^-12 =  1.063
+     m=3 CONTROL lens       chi2/df   1.003 p=0.438  deficit +0.00008 bits  P(0)/2^-12 =  1.031
+     m=4 lens R             chi2/df   5.007 p=0  deficit +1.00309 bits  P(0)/2^-16 =  1.250
+     m=4 lens (R1,R3,U,V)   chi2/df   5.007 p=0  deficit +1.00309 bits  P(0)/2^-16 =  1.250
+     m=4 lowbits R          chi2/df   2.047 p=0  deficit +0.20544 bits  P(0)/2^-16 =  1.250
+     m=4 highbits R         chi2/df   1.323 p=0  deficit +0.07633 bits  P(0)/2^-16 =  0.500
+     m=4 randlin R #0       chi2/df   1.000 p=0.464  deficit +0.01494 bits  P(0)/2^-16 =  1.000
+     m=4 CONTROL lens       chi2/df   1.000 p=0.473  deficit +0.01540 bits  P(0)/2^-16 =  1.500
+   collision (Renyi-2) entropy, 4m bits: deficit = log2(collisions / expected); z vs uniform
+   (the lens projection contains parity(R3)+parity(R6), which is 0 on every row, so its baseline deficit is exactly 1 bit;
+    "beyond1" = collisions vs 2x expected, z under the uniform-on-the-127-dim-subspace law)
+     20 bits lens beyond the parity bit: 65714/65509.8  deficit beyond +0.004  z +0.80
+     24 bits lens beyond the parity bit: 4159/4094.4  deficit beyond +0.023  z +1.01
+     28 bits lens beyond the parity bit: 256/255.9  deficit beyond +0.001  z +0.01
+     32 bits lens beyond the parity bit: 16/16.0  deficit beyond +0.001  z +0.00
+     36 bits lens beyond the parity bit: 1/1.0  deficit beyond +0.001  z +0.00
+     40 bits lens beyond the parity bit: 0/0.1  deficit beyond -inf  z -0.25
+     20 bits: lens R 65714/32754.9 d+1.004 z+182.1 | lens RUV 65714/32754.9 d+1.004 z+182.1 | lowbits 64379/32754.9 d+0.975 z+174.7 | highbits 36999/32754.9 d+0.176 z+23.5 | randlin0 32610/32754.9 d-0.006 z-0.8 | randlin1 32997/32754.9 d+0.011 z+1.3 | randlin2 32410/32754.9 d-0.015 z-1.9 | CONTROL 32576/32754.9 d-0.008 z-1.0
+     24 bits: lens R 4159/2047.2 d+1.023 z+46.7 | lens RUV 4159/2047.2 d+1.023 z+46.7 | lowbits 3939/2047.2 d+0.944 z+41.8 | highbits 2465/2047.2 d+0.268 z+9.2 | randlin0 2018/2047.2 d-0.021 z-0.6 | randlin1 2005/2047.2 d-0.030 z-0.9 | randlin2 2074/2047.2 d+0.019 z+0.6 | CONTROL 2037/2047.2 d-0.007 z-0.2
+     28 bits: lens R 256/127.9 d+1.001 z+11.3 | lens RUV 256/127.9 d+1.001 z+11.3 | lowbits 230/127.9 d+0.846 z+9.0 | highbits 173/127.9 d+0.435 z+4.0 | randlin0 121/127.9 d-0.081 z-0.6 | randlin1 107/127.9 d-0.258 z-1.9 | randlin2 126/127.9 d-0.022 z-0.2 | CONTROL 130/127.9 d+0.023 z+0.2
+     32 bits: lens R 16/8.0 d+1.001 z+2.8 | lens RUV 16/8.0 d+1.001 z+2.8 | lowbits 19/8.0 d+1.249 z+3.9 | highbits 25/8.0 d+1.644 z+6.0 | randlin0 12/8.0 d+0.586 z+1.4 | randlin1 7/8.0 d-0.192 z-0.4 | randlin2 11/8.0 d+0.460 z+1.1 | CONTROL 4/8.0 d-0.999 z-1.4
+     36 bits: lens R 1/0.5 d+1.001 z+0.7 | lens RUV 1/0.5 d+1.001 z+0.7 | lowbits 0/0.5 d-inf z-0.7 | highbits 3/0.5 d+2.586 z+3.5 | randlin0 0/0.5 d-inf z-0.7 | randlin1 0/0.5 d-inf z-0.7 | randlin2 0/0.5 d-inf z-0.7 | CONTROL 0/0.5 d-inf z-0.7
+     40 bits: lens R 0/0.0 d-inf z-0.2 | lens RUV 0/0.0 d-inf z-0.2 | lowbits 0/0.0 d-inf z-0.2 | highbits 3/0.0 d+6.586 z+16.8 | randlin0 0/0.0 d-inf z-0.2 | randlin1 0/0.0 d-inf z-0.2 | randlin2 0/0.0 d-inf z-0.2 | CONTROL 0/0.0 d-inf z-0.2
+   single word, low m digits (m = 20, 24, 28) vs low m bits vs CONTROL: collisions / expected
+     R w1: m20: lens 32740/32754.9 (z-0.1) low 43627 (z+60.1) ctrl 32866 (z+0.6) | m24: lens 2132/2047.2 (z+1.9) low 2784 (z+16.3) ctrl 2037 (z-0.2) | m28: lens 134/127.9 (z+0.5) low 190 (z+5.5) ctrl 124 (z-0.3)
+     R w3: m20: lens 33323/32754.9 (z+3.1) low 139279 (z+588.6) ctrl 32921 (z+0.9) | m24: lens 2177/2047.2 (z+2.9) low 8627 (z+145.4) ctrl 2009 (z-0.8) | m28: lens 129/127.9 (z+0.1) low 616 (z+43.1) ctrl 145 (z+1.5)
+     R w4: m20: lens 32802/32754.9 (z+0.3) low 38292 (z+30.6) ctrl 32967 (z+1.2) | m24: lens 2116/2047.2 (z+1.5) low 2328 (z+6.2) ctrl 2066 (z+0.4) | m28: lens 114/127.9 (z-1.2) low 183 (z+4.9) ctrl 129 (z+0.1)
+     R w6: m20: lens 32640/32754.9 (z-0.6) low 73735 (z+226.4) ctrl 32531 (z-1.2) | m24: lens 2052/2047.2 (z+0.1) low 4720 (z+59.1) ctrl 2004 (z-1.0) | m28: lens 140/127.9 (z+1.1) low 360 (z+20.5) ctrl 129 (z+0.1)
+
+== 6. Do the E1 part (K1) and E3 part (K3) share valuation / fold?  set rand ==
+   P(v(K1)=v(K3)) observed vs independence (product of the observed marginals) vs a row-shuffle CONTROL;
+   uniform words would give 1/3.  G-test of independence on the valuation table (capped at 8).
+   w1: train: P_eq 0.3336 indep 0.3342 z  -0.93 G p=0.43 | test: P_eq 0.3340 indep 0.3333 z  +1.06 G p=0.93 | shuffle-CONTROL P_eq 0.3338
+   w3: train: P_eq 0.3341 indep 0.3331 z  +1.52 G p=0.44 | test: P_eq 0.3325 indep 0.3337 z  -1.79 G p=0.94 | shuffle-CONTROL P_eq 0.3335
+   w4: train: P_eq 0.3337 indep 0.3333 z  +0.56 G p=0.18 | test: P_eq 0.3333 indep 0.3335 z  -0.42 G p=0.74 | shuffle-CONTROL P_eq 0.3340
+   w6: train: P_eq 0.3335 indep 0.3334 z  +0.15 G p=0.46 | test: P_eq 0.3323 indep 0.3330 z  -1.16 G p=0.84 | shuffle-CONTROL P_eq 0.3331
+   fold sharing: P(K1 mod (x+1)^m = K3 mod (x+1)^m) per word, observed vs independence sum_x p1(x)p3(x) vs 2^-m
+   w1 (obs*2^m / indep*2^m): m1: 1.000/1.000 z+0.4 m2: 1.000/1.000 z+0.1 m4: 0.999/1.000 z-0.2 m8: 1.001/1.000 z+0.1 m12: 1.051/1.001 z+0.8 m16: 1.500/1.010 z+1.9
+   w3 (obs*2^m / indep*2^m): m1: 0.999/1.000 z-0.6 m2: 0.999/1.000 z-0.3 m4: 1.002/1.000 z+0.6 m8: 1.010/1.000 z+0.6 m12: 0.984/0.999 z-0.2 m16: 1.562/1.095 z+1.8
+   w4 (obs*2^m / indep*2^m): m1: 1.000/1.000 z-0.2 m2: 0.999/1.000 z-0.8 m4: 0.999/1.000 z-0.2 m8: 1.011/1.000 z+0.7 m12: 1.055/1.000 z+0.9 m16: 1.062/1.002 z+0.2
+   w6 (obs*2^m / indep*2^m): m1: 0.999/1.000 z-0.6 m2: 0.998/1.000 z-1.0 m4: 1.000/1.000 z-0.0 m8: 1.015/1.000 z+1.0 m12: 1.043/1.000 z+0.7 m16: 0.938/0.988 z-0.2
+   entropy of each part on its own (lens low-m digits, Miller-Madow deficit in bits; m=16):
+   w1: K1 deficit 3.6445  K3 deficit 0.0006  R deficit 0.0007
+   w3: K1 deficit 0.3297  K3 deficit 0.2982  R deficit 0.0098
+   w4: K1 deficit 3.6445  K3 deficit 0.0002  R deficit 0.0006
+   w6: K1 deficit 0.3297  K3 deficit 0.2982  R deficit 0.0034
+
+== 6. Do the E1 part (K1) and E3 part (K3) share valuation / fold?  set ctx ==
+   P(v(K1)=v(K3)) observed vs independence (product of the observed marginals) vs a row-shuffle CONTROL;
+   uniform words would give 1/3.  G-test of independence on the valuation table (capped at 8).
+   w1: train: P_eq 0.3321 indep 0.3331 z  -0.81 G p=0.064 | test: P_eq 0.3352 indep 0.3331 z  +1.61 G p=0.086 | shuffle-CONTROL P_eq 0.3331
+   w3: train: P_eq 0.3317 indep 0.3332 z  -1.11 G p=0.55 | test: P_eq 0.3330 indep 0.3338 z  -0.56 G p=0.78 | shuffle-CONTROL P_eq 0.3322
+   w4: train: P_eq 0.3325 indep 0.3330 z  -0.32 G p=0.32 | test: P_eq 0.3337 indep 0.3333 z  +0.29 G p=0.84 | shuffle-CONTROL P_eq 0.3325
+   w6: train: P_eq 0.3331 indep 0.3332 z  -0.02 G p=0.56 | test: P_eq 0.3321 indep 0.3327 z  -0.45 G p=0.94 | shuffle-CONTROL P_eq 0.3316
+   fold sharing: P(K1 mod (x+1)^m = K3 mod (x+1)^m) per word, observed vs independence sum_x p1(x)p3(x) vs 2^-m
+   w1 (obs*2^m / indep*2^m): m1: 1.001/1.000 z+0.6 m2: 1.004/1.000 z+1.1 m4: 1.014/1.000 z+1.8 m8: 0.982/1.001 z-0.6 m12: 1.078/1.003 z+0.6 m16: 1.250/0.982 z+0.5
+   w3 (obs*2^m / indep*2^m): m1: 0.997/1.000 z-1.6 m2: 1.000/1.000 z-0.1 m4: 0.995/1.000 z-0.6 m8: 1.051/1.000 z+1.6 m12: 1.141/0.998 z+1.1 m16: 1.000/1.095 z-0.2
+   w4 (obs*2^m / indep*2^m): m1: 1.001/1.000 z+0.4 m2: 1.003/1.000 z+0.8 m4: 0.991/1.000 z-1.2 m8: 1.065/1.000 z+2.1 m12: 1.000/0.999 z+0.0 m16: 0.000/0.998 z-2.0
+   w6 (obs*2^m / indep*2^m): m1: 0.997/1.000 z-1.6 m2: 0.999/1.000 z-0.4 m4: 1.005/1.000 z+0.7 m8: 1.008/1.000 z+0.3 m12: 1.031/1.000 z+0.3 m16: 2.000/0.992 z+2.0
+   entropy of each part on its own (lens low-m digits, Miller-Madow deficit in bits; m=16):
+   w1: K1 deficit 3.6484  K3 deficit 0.0129  R deficit 0.0156
+   w3: K1 deficit 0.3594  K3 deficit 0.3660  R deficit 0.0250
+   w4: K1 deficit 3.6484  K3 deficit 0.0159  R deficit 0.0159
+   w6: K1 deficit 0.3594  K3 deficit 0.3660  R deficit 0.0172
+
+== 7. Valuation coupling between the four R words (and a rotation scan), set rand ==
+   v(R w1) vs v(R w3): R G=   31.3/df36 p=0.69 | CONTROL G=   53.6/df36 p=0.03
+   v(R w1) vs v(R w4): R G=   21.6/df36 p=0.97 | CONTROL G=   24.9/df36 p=0.92
+   v(R w1) vs v(R w6): R G=   25.6/df36 p=0.9 | CONTROL G=   51.7/df36 p=0.043
+   v(R w3) vs v(R w4): R G=   21.5/df36 p=0.97 | CONTROL G=   28.9/df36 p=0.79
+   v(R w3) vs v(R w6): R G=1453649.5/df36 p=0 | CONTROL G=   33.4/df36 p=0.59
+   v(R w4) vs v(R w6): R G=   31.3/df36 p=0.69 | CONTROL G=   37.1/df36 p=0.42
+   v(R w3) vs v(R w6) on rows with both v >= 1 (the parity bit removed): G=14.9/df25 p=0.94;  P(v(R3)=0 xor v(R6)=0) = 0.0000
+   rotation scan ("spiral" view: angle r, radius v): mean v(ROR(Ra, r) ^ Rb) over r = 0..31 for every ordered pair;
+   uniform mean 1, sd of a half-sample mean = sqrt(2/(N/2)).  Low digits of ROR(a,r) depend only on r mod 2^s.
+   Raw mean: every (R3,R6,r) cell sits at z ~ +512 because parity(R3) = parity(R6) on every row (section 12) and parity is
+   rotation-invariant.  The scan below removes that bit: statistic = mean(v - 1 | v >= 1), uniform 1, sd sqrt(2/n1).
+   R: 384 (a,b,r) cells; top 6 by |z_train|:
+     (R4, R1, r=25): z_train   +5.83  z_test   +4.15
+     (R1, R4, r= 7): z_train   +5.83  z_test   +4.15
+     (R4, R1, r= 9): z_train   +5.82  z_test   +4.14
+     (R1, R4, r=23): z_train   +5.82  z_test   +4.14
+     (R4, R1, r=17): z_train   +5.81  z_test   +4.06
+     (R1, R4, r=15): z_train   +5.81  z_test   +4.06
+   CONTROL: 384 (a,b,r) cells; top 6 by |z_train|:
+     (u3, u2, r=29): z_train   +1.91  z_test   +0.15
+     (u2, u3, r= 3): z_train   +1.91  z_test   +0.15
+     (u3, u2, r=13): z_train   +1.90  z_test   +0.15
+     (u2, u3, r=19): z_train   +1.90  z_test   +0.15
+     (u1, u0, r=24): z_train   -1.85  z_test   -0.00
+     (u0, u1, r= 8): z_train   -1.85  z_test   -0.00
+
+== 8. ctx/: does the residual fold depend on the context or the member (fixed outer words / fixed k)? ==
+   groups = (context, member), 256 groups of 1,024 random j.  Homogeneity chi2 of each digit indicator across groups;
+   split-half test: correlation across groups of the per-group bias in j-rows [0,512) vs [512,1024) (null r ~ N(0,1/256)).
+   R w1 c0            P(1)=0.4995 chi2=  203.5/df255 p=0.99  split-half r=-0.097 (z  -1.5)  group P(1) range [0.465,0.535]
+   R w1 c1            P(1)=0.4995 chi2=  243.0/df255 p=0.7  split-half r=+0.024 (z  +0.4)  group P(1) range [0.459,0.544]
+   R w1 c2            P(1)=0.4995 chi2=  263.8/df255 p=0.34  split-half r=-0.017 (z  -0.3)  group P(1) range [0.453,0.541]
+   R w1 c3            P(1)=0.4995 chi2=  236.1/df255 p=0.8  split-half r=-0.001 (z  -0.0)  group P(1) range [0.449,0.546]
+   R w1 c4            P(1)=0.5009 chi2=  266.8/df255 p=0.29  split-half r=-0.006 (z  -0.1)  group P(1) range [0.458,0.544]
+   R w1 c5            P(1)=0.5010 chi2=  290.7/df255 p=0.061  split-half r=+0.084 (z  +1.3)  group P(1) range [0.448,0.557]
+   R w1 c6            P(1)=0.5001 chi2=  262.6/df255 p=0.36  split-half r=+0.036 (z  +0.6)  group P(1) range [0.459,0.545]
+   R w1 c7            P(1)=0.5012 chi2=  284.7/df255 p=0.098  split-half r=+0.113 (z  +1.8)  group P(1) range [0.462,0.547]
+   R w1 v>=2          P(1)=0.2510 chi2=  246.2/df255 p=0.64  split-half r=+0.069 (z  +1.1)  group P(1) range [0.212,0.289]
+   R w1 v>=3          P(1)=0.1262 chi2=  258.7/df255 p=0.42  split-half r=+0.053 (z  +0.9)  group P(1) range [0.101,0.156]
+   R w1 v>=4          P(1)=0.0633 chi2=  256.8/df255 p=0.46  split-half r=-0.004 (z  -0.1)  group P(1) range [0.042,0.089]
+   R w3 c0            P(1)=0.5015 chi2=  265.3/df255 p=0.32  split-half r=-0.042 (z  -0.7)  group P(1) range [0.438,0.547]
+   R w3 c1            P(1)=0.4978 chi2=  263.4/df255 p=0.35  split-half r=+0.018 (z  +0.3)  group P(1) range [0.455,0.533]
+   R w3 c2            P(1)=0.5014 chi2=  258.4/df255 p=0.43  split-half r=-0.060 (z  -1.0)  group P(1) range [0.453,0.546]
+   R w3 c3            P(1)=0.4987 chi2=  259.7/df255 p=0.41  split-half r=-0.004 (z  -0.1)  group P(1) range [0.459,0.539]
+   R w3 c4            P(1)=0.5002 chi2=  253.4/df255 p=0.52  split-half r=-0.007 (z  -0.1)  group P(1) range [0.458,0.548]
+   R w3 c5            P(1)=0.4994 chi2=  253.9/df255 p=0.51  split-half r=+0.005 (z  +0.1)  group P(1) range [0.451,0.548]
+   R w3 c6            P(1)=0.4995 chi2=  219.8/df255 p=0.95  split-half r=-0.074 (z  -1.2)  group P(1) range [0.456,0.544]
+   R w3 c7            P(1)=0.5022 chi2=  289.8/df255 p=0.066  split-half r=+0.125 (z  +2.0)  group P(1) range [0.449,0.549]
+   R w3 v>=2          P(1)=0.2499 chi2=  273.0/df255 p=0.21  split-half r=+0.034 (z  +0.5)  group P(1) range [0.220,0.286]
+   R w3 v>=3          P(1)=0.1243 chi2=  255.5/df255 p=0.48  split-half r=-0.018 (z  -0.3)  group P(1) range [0.101,0.146]
+   R w3 v>=4          P(1)=0.0622 chi2=  263.9/df255 p=0.34  split-half r=-0.062 (z  -1.0)  group P(1) range [0.044,0.083]
+   R w4 c0            P(1)=0.4996 chi2=  254.0/df255 p=0.51  split-half r=+0.047 (z  +0.7)  group P(1) range [0.461,0.544]
+   R w4 c1            P(1)=0.4995 chi2=  254.9/df255 p=0.49  split-half r=+0.006 (z  +0.1)  group P(1) range [0.455,0.532]
+   R w4 c2            P(1)=0.4989 chi2=  253.1/df255 p=0.52  split-half r=-0.008 (z  -0.1)  group P(1) range [0.449,0.548]
+   R w4 c3            P(1)=0.5009 chi2=  249.5/df255 p=0.59  split-half r=-0.038 (z  -0.6)  group P(1) range [0.447,0.539]
+   R w4 c4            P(1)=0.4999 chi2=  270.3/df255 p=0.24  split-half r=+0.019 (z  +0.3)  group P(1) range [0.457,0.550]
+   R w4 c5            P(1)=0.4999 chi2=  240.3/df255 p=0.74  split-half r=-0.099 (z  -1.6)  group P(1) range [0.453,0.545]
+   R w4 c6            P(1)=0.5010 chi2=  276.4/df255 p=0.17  split-half r=+0.019 (z  +0.3)  group P(1) range [0.453,0.540]
+   R w4 c7            P(1)=0.5000 chi2=  238.6/df255 p=0.76  split-half r=-0.103 (z  -1.6)  group P(1) range [0.461,0.554]
+   R w4 v>=2          P(1)=0.2506 chi2=  240.0/df255 p=0.74  split-half r=-0.017 (z  -0.3)  group P(1) range [0.216,0.289]
+   R w4 v>=3          P(1)=0.1249 chi2=  213.9/df255 p=0.97  split-half r=-0.114 (z  -1.8)  group P(1) range [0.099,0.154]
+   R w4 v>=4          P(1)=0.0619 chi2=  234.3/df255 p=0.82  split-half r=-0.036 (z  -0.6)  group P(1) range [0.040,0.082]
+   R w6 c0            P(1)=0.5015 chi2=  265.3/df255 p=0.32  split-half r=-0.042 (z  -0.7)  group P(1) range [0.438,0.547]
+   R w6 c1            P(1)=0.5004 chi2=  236.9/df255 p=0.79  split-half r=+0.017 (z  +0.3)  group P(1) range [0.463,0.557]
+   R w6 c2            P(1)=0.4990 chi2=  282.3/df255 p=0.12  split-half r=-0.001 (z  -0.0)  group P(1) range [0.449,0.539]
+   R w6 c3            P(1)=0.4996 chi2=  236.6/df255 p=0.79  split-half r=-0.055 (z  -0.9)  group P(1) range [0.461,0.540]
+   R w6 c4            P(1)=0.5016 chi2=  258.5/df255 p=0.43  split-half r=+0.073 (z  +1.2)  group P(1) range [0.463,0.543]
+   R w6 c5            P(1)=0.4998 chi2=  264.1/df255 p=0.33  split-half r=-0.014 (z  -0.2)  group P(1) range [0.457,0.544]
+   R w6 c6            P(1)=0.4988 chi2=  292.9/df255 p=0.051  split-half r=+0.100 (z  +1.6)  group P(1) range [0.455,0.538]
+   R w6 c7            P(1)=0.5002 chi2=  275.7/df255 p=0.18  split-half r=+0.037 (z  +0.6)  group P(1) range [0.463,0.550]
+   R w6 v>=2          P(1)=0.2497 chi2=  272.4/df255 p=0.22  split-half r=+0.011 (z  +0.2)  group P(1) range [0.206,0.277]
+   R w6 v>=3          P(1)=0.1253 chi2=  252.2/df255 p=0.54  split-half r=-0.045 (z  -0.7)  group P(1) range [0.097,0.152]
+   R w6 v>=4          P(1)=0.0628 chi2=  238.7/df255 p=0.76  split-half r=+0.012 (z  +0.2)  group P(1) range [0.043,0.087]
+   K1 w1 c0           P(1)=0.4985 chi2=  236.5/df255 p=0.79  split-half r=-0.020 (z  -0.3)  group P(1) range [0.464,0.545]
+   K1 w1 c1           P(1)=0.5005 chi2=  236.8/df255 p=0.79  split-half r=-0.013 (z  -0.2)  group P(1) range [0.452,0.542]
+   K1 w1 c2           P(1)=0.5010 chi2=  248.5/df255 p=0.6  split-half r=-0.065 (z  -1.0)  group P(1) range [0.458,0.554]
+   K1 w1 c3           P(1)=0.4999 chi2=  287.0/df255 p=0.082  split-half r=+0.102 (z  +1.6)  group P(1) range [0.450,0.544]
+   K3 w1 c0           P(1)=0.4997 chi2=  274.7/df255 p=0.19  split-half r=-0.013 (z  -0.2)  group P(1) range [0.445,0.547]
+   K3 w1 c1           P(1)=0.5000 chi2=  271.5/df255 p=0.23  split-half r=+0.084 (z  +1.3)  group P(1) range [0.447,0.552]
+   K3 w1 c2           P(1)=0.4983 chi2=  263.5/df255 p=0.34  split-half r=+0.054 (z  +0.9)  group P(1) range [0.449,0.540]
+   K3 w1 c3           P(1)=0.5013 chi2=  228.7/df255 p=0.88  split-half r=+0.050 (z  +0.8)  group P(1) range [0.455,0.557]
+   K1 w3 c0           P(1)=0.4995 chi2=  276.7/df255 p=0.17  split-half r=+0.065 (z  +1.0)  group P(1) range [0.454,0.561]
+   K1 w3 c1           P(1)=0.4998 chi2=  227.8/df255 p=0.89  split-half r=-0.115 (z  -1.8)  group P(1) range [0.461,0.541]
+   K1 w3 c2           P(1)=0.4986 chi2=  248.3/df255 p=0.61  split-half r=-0.046 (z  -0.7)  group P(1) range [0.457,0.551]
+   K1 w3 c3           P(1)=0.4996 chi2=  229.5/df255 p=0.87  split-half r=-0.024 (z  -0.4)  group P(1) range [0.460,0.535]
+   K3 w3 c0           P(1)=0.5013 chi2=  215.9/df255 p=0.96  split-half r=-0.016 (z  -0.2)  group P(1) range [0.462,0.543]
+   K3 w3 c1           P(1)=0.5002 chi2=  275.5/df255 p=0.18  split-half r=+0.035 (z  +0.6)  group P(1) range [0.459,0.553]
+   K3 w3 c2           P(1)=0.5000 chi2=  288.6/df255 p=0.073  split-half r=+0.036 (z  +0.6)  group P(1) range [0.432,0.542]
+   K3 w3 c3           P(1)=0.4998 chi2=  255.0/df255 p=0.49  split-half r=-0.001 (z  -0.0)  group P(1) range [0.458,0.547]
+   K1 w4 c0           P(1)=0.4985 chi2=  236.5/df255 p=0.79  split-half r=-0.020 (z  -0.3)  group P(1) range [0.464,0.545]
+   K1 w4 c1           P(1)=0.5005 chi2=  236.8/df255 p=0.79  split-half r=-0.013 (z  -0.2)  group P(1) range [0.452,0.542]
+   K1 w4 c2           P(1)=0.5010 chi2=  248.5/df255 p=0.6  split-half r=-0.065 (z  -1.0)  group P(1) range [0.458,0.554]
+   K1 w4 c3           P(1)=0.4999 chi2=  287.0/df255 p=0.082  split-half r=+0.102 (z  +1.6)  group P(1) range [0.450,0.544]
+   K3 w4 c0           P(1)=0.5000 chi2=  229.6/df255 p=0.87  split-half r=-0.047 (z  -0.8)  group P(1) range [0.444,0.534]
+   K3 w4 c1           P(1)=0.5000 chi2=  246.3/df255 p=0.64  split-half r=+0.045 (z  +0.7)  group P(1) range [0.458,0.556]
+   K3 w4 c2           P(1)=0.5022 chi2=  261.0/df255 p=0.39  split-half r=-0.002 (z  -0.0)  group P(1) range [0.462,0.538]
+   K3 w4 c3           P(1)=0.4999 chi2=  279.1/df255 p=0.14  split-half r=+0.042 (z  +0.7)  group P(1) range [0.452,0.549]
+   K1 w6 c0           P(1)=0.5005 chi2=  276.7/df255 p=0.17  split-half r=+0.065 (z  +1.0)  group P(1) range [0.439,0.546]
+   K1 w6 c1           P(1)=0.4999 chi2=  251.8/df255 p=0.54  split-half r=-0.000 (z  -0.0)  group P(1) range [0.456,0.542]
+   K1 w6 c2           P(1)=0.4986 chi2=  271.8/df255 p=0.22  split-half r=+0.053 (z  +0.9)  group P(1) range [0.444,0.542]
+   K1 w6 c3           P(1)=0.5002 chi2=  243.1/df255 p=0.69  split-half r=-0.026 (z  -0.4)  group P(1) range [0.444,0.533]
+   K3 w6 c0           P(1)=0.4987 chi2=  215.9/df255 p=0.96  split-half r=-0.016 (z  -0.2)  group P(1) range [0.457,0.538]
+   K3 w6 c1           P(1)=0.4998 chi2=  275.5/df255 p=0.18  split-half r=+0.035 (z  +0.6)  group P(1) range [0.447,0.541]
+   K3 w6 c2           P(1)=0.5000 chi2=  288.6/df255 p=0.073  split-half r=+0.036 (z  +0.6)  group P(1) range [0.458,0.568]
+   K3 w6 c3           P(1)=0.5002 chi2=  255.0/df255 p=0.49  split-half r=-0.001 (z  -0.0)  group P(1) range [0.453,0.542]
+   CONTROL u0 c0      P(1)=0.5015 chi2=  261.8/df255 p=0.37  split-half r=-0.048 (z  -0.8)  group P(1) range [0.459,0.545]
+   CONTROL u0 c1      P(1)=0.5011 chi2=  237.8/df255 p=0.77  split-half r=+0.003 (z  +0.1)  group P(1) range [0.443,0.541]
+   CONTROL u0 c2      P(1)=0.5017 chi2=  239.2/df255 p=0.75  split-half r=-0.052 (z  -0.8)  group P(1) range [0.455,0.543]
+   CONTROL u0 c3      P(1)=0.5015 chi2=  303.4/df255 p=0.02  split-half r=+0.016 (z  +0.3)  group P(1) range [0.461,0.553]
+   CONTROL u1 c0      P(1)=0.4994 chi2=  229.1/df255 p=0.88  split-half r=-0.093 (z  -1.5)  group P(1) range [0.457,0.543]
+   CONTROL u1 c1      P(1)=0.4996 chi2=  250.8/df255 p=0.56  split-half r=+0.047 (z  +0.8)  group P(1) range [0.453,0.544]
+   CONTROL u1 c2      P(1)=0.5009 chi2=  286.9/df255 p=0.083  split-half r=+0.197 (z  +3.2)  group P(1) range [0.444,0.542]
+   CONTROL u1 c3      P(1)=0.4990 chi2=  267.3/df255 p=0.29  split-half r=-0.080 (z  -1.3)  group P(1) range [0.454,0.551]
+   CONTROL u2 c0      P(1)=0.5001 chi2=  209.1/df255 p=0.98  split-half r=-0.039 (z  -0.6)  group P(1) range [0.459,0.539]
+   CONTROL u2 c1      P(1)=0.4997 chi2=  264.8/df255 p=0.32  split-half r=-0.061 (z  -1.0)  group P(1) range [0.457,0.545]
+   CONTROL u2 c2      P(1)=0.5012 chi2=  269.6/df255 p=0.25  split-half r=+0.013 (z  +0.2)  group P(1) range [0.457,0.576]
+   CONTROL u2 c3      P(1)=0.4991 chi2=  233.8/df255 p=0.83  split-half r=-0.042 (z  -0.7)  group P(1) range [0.460,0.546]
+   CONTROL u3 c0      P(1)=0.4997 chi2=  280.0/df255 p=0.14  split-half r=+0.019 (z  +0.3)  group P(1) range [0.465,0.551]
+   CONTROL u3 c1      P(1)=0.5023 chi2=  233.3/df255 p=0.83  split-half r=+0.007 (z  +0.1)  group P(1) range [0.461,0.548]
+   CONTROL u3 c2      P(1)=0.5003 chi2=  205.9/df255 p=0.99  split-half r=-0.182 (z  -2.9)  group P(1) range [0.451,0.541]
+   CONTROL u3 c3      P(1)=0.5014 chi2=  247.6/df255 p=0.62  split-half r=+0.011 (z  +0.2)  group P(1) range [0.463,0.554]
+   per-group P(R mod (x+1)^m = 0, all four words) scaled by 2^4m; max over 256 groups vs CONTROL max; train=j-rows<512, test=rest
+     m=1: best train group 67 (ctx 4, member 3) train 2.72  test 2.16;  corr(train,test) over groups +0.107;  CONTROL max 1.39
+     m=2: best train group 51 (ctx 3, member 3) train 4.50  test 4.50;  corr(train,test) over groups -0.046;  CONTROL max 2.75
+
+== 9. Do single input bits predict the low digits of R?  set rand (train/test halves) ==
+   inputs: k (19 bits), j (21 bits), t (32 bits), c1 (32 bits), Y4 (32 bits); targets: digits c0..c7 of each R word, and v>=2.
+   4896 (input bit, target) pairs; Bonferroni null max|z| ~ 4.41. Top 10 by |z_train|:
+     t[18]    -> R w1 c3      z_train   +3.49  z_test   +0.72
+     k[4]     -> R w4 c4      z_train   +3.34  z_test   -0.36
+     Y4[6]    -> R w4 c4      z_train   +3.34  z_test   -0.36
+     j[16]    -> R w3 c3      z_train   -3.26  z_test   +0.06
+     c1[24]   -> R w3 c3      z_train   -3.26  z_test   +0.06
+     k[16]    -> R w4 c4      z_train   +3.08  z_test   -0.33
+     Y4[29]   -> R w4 c4      z_train   +3.08  z_test   -0.33
+     k[2]     -> R w3 c5      z_train   -3.05  z_test   +0.08
+     Y4[4]    -> R w3 c5      z_train   -3.05  z_test   +0.08
+     k[4]     -> R w1 c7      z_train   -3.00  z_test   -1.96
+   confirmed (|z|>5 both halves, same sign): 0
+
+== 10. Where the ideals break: valuation of the XOR differences through E1 and E3, set rand ==
+   uniform: P(v=0)=0.5, P(v>=2)=0.25, P(v>=4)=0.0625, mean 1.  XOR and rotations keep v; only the 4 additions per half-G move it.
+   dY11 (E1 c in)   distinct(first 2e5)       1  P(v=0) 1.0000  P(v>=2) 0.0000  P(v>=4) 0.00000  mean 0.0000
+   dw5 (E1 my)      distinct(first 2e5)      18  P(v=0) 0.6673  P(v>=2) 0.0665  P(v>=4) 0.00388  mean 0.4814
+   dY3 (E3 a in)    distinct(first 2e5)       1  P(v=0) 1.0000  P(v>=2) 0.0000  P(v>=4) 0.00000  mean 0.0000
+   E1 da1 (mid)     distinct(first 2e5)       1  P(v=0) 0.0000  P(v>=2) 1.0000  P(v>=4) 1.00000  mean 32.0000
+   E1 db1 (mid)     distinct(first 2e5)       1  P(v=0) 1.0000  P(v>=2) 0.0000  P(v>=4) 0.00000  mean 0.0000
+   E1 dc1 (mid)     distinct(first 2e5)       1  P(v=0) 1.0000  P(v>=2) 0.0000  P(v>=4) 0.00000  mean 0.0000
+   E1 dd1 (mid)     distinct(first 2e5)       1  P(v=0) 0.0000  P(v>=2) 1.0000  P(v>=4) 1.00000  mean 32.0000
+   E3 de1 (mid)     distinct(first 2e5)       1  P(v=0) 1.0000  P(v>=2) 0.0000  P(v>=4) 0.00000  mean 0.0000
+   E3 df1 (mid)     distinct(first 2e5)   65268  P(v=0) 0.5001  P(v>=2) 0.2500  P(v>=4) 0.06231  mean 0.9876
+   E3 dg1 (mid)     distinct(first 2e5)   65268  P(v=0) 0.5001  P(v>=2) 0.2500  P(v>=4) 0.06231  mean 0.9876
+   E3 dh1 (mid)     distinct(first 2e5)       1  P(v=0) 1.0000  P(v>=2) 0.0000  P(v>=4) 0.00000  mean 0.0000
+   E1 da2 (out)     distinct(first 2e5)   68758  P(v=0) 0.5005  P(v>=2) 0.2495  P(v>=4) 0.06236  mean 0.9836
+   E1 db2 (out)     distinct(first 2e5)  197364  P(v=0) 0.4998  P(v>=2) 0.2500  P(v>=4) 0.06228  mean 1.0003
+   E1 dc2 (out)     distinct(first 2e5)  197364  P(v=0) 0.5002  P(v>=2) 0.2497  P(v>=4) 0.06265  mean 1.0015
+   E1 dd2 (out)     distinct(first 2e5)   68758  P(v=0) 0.5005  P(v>=2) 0.2495  P(v>=4) 0.06236  mean 0.9836
+   E3 de2 (out)     distinct(first 2e5)  199252  P(v=0) 0.5002  P(v>=2) 0.2500  P(v>=4) 0.06256  mean 0.9998
+   E3 df2 (out)     distinct(first 2e5)  199993  P(v=0) 0.4994  P(v>=2) 0.2502  P(v>=4) 0.06256  mean 1.0007
+   E3 dg2 (out)     distinct(first 2e5)  199995  P(v=0) 0.5007  P(v>=2) 0.2502  P(v>=4) 0.06242  mean 0.9988
+   E3 dh2 (out)     distinct(first 2e5)  199252  P(v=0) 0.4998  P(v>=2) 0.2502  P(v>=4) 0.06260  mean 1.0001
+
+== 11. D4 partial records (1,577; one solved diagonal each): valuations of D0..D3 and of the 8-word digest XOR ==
+   D0..D3                 N=    6308 mean_v=1.0179 (z  +1.01)  chi2=     7.5/df8 p=0.487  P(v=0)=0.4878 P(v>=4)=0.06230  worst bin 0 z=-1.94
+     per word mean v: 1.004 0.987 1.054 1.027
+   digest XOR w0..7       N=   12616 mean_v=1.0043 (z  +0.34)  chi2=     5.7/df8 p=0.684  P(v=0)=0.5006 P(v>=4)=0.06516  worst bin 2 z=-1.83
+     per word mean v: 1.006 0.951 1.022 1.016 1.049 1.032 0.984 0.975
+   CONTROL                N=    6308 mean_v=0.9772 (z  -1.28)  chi2=    11.8/df8 p=0.16  P(v=0)=0.5111 P(v>=4)=0.06183  worst bin 6 z=-2.04
+     per word mean v: 0.978 0.973 1.005 0.952
+
+== 12. Ring form of R = 0 (DERIVED), each identity checked on every row of set rand (COMPUTED) ==
+   Last half of G: d2 = x^-8(d1 + a2), b2 = x^-7(b1 + c2) (ROR r = x^-r, + = XOR).  With R1=da2+dg2, R3=dc2+de2,
+   R4=dd2+df2, R6=db2+dh2 this gives, for ANY pair:
+     U = x^-8 R1 + R4 = x^-8 [ (1+x) dg2 + dd1(E1) + x df1(E3) ]
+     V = x^-8 R3 + R6 = x^-8 [ (1+x) dc2 + x db1(E1) + dh1(E3) ]
+   (R1,R3,U,V) is an invertible linear image of R, so R = 0  <=>  da2 = dg2 =: tau,  dc2 = de2 =: eps,
+     (1+x) tau = dd1 + x df1   and   (1+x) eps = x db1 + dh1.   (1+x)y always has even parity, so a pair can only
+   collide if parity(dd1) = parity(df1) and parity(db1) = parity(dh1); each equation then has exactly 2 solutions (y, ~y).
+   U identity holds on all rows: True;  V identity holds on all rows: True
+   parity(R3)+parity(R6) == parity(db1)+parity(dh1) on all rows: True;  values taken: [0]
+   parity(R1)+parity(R4) == parity(dd1)+parity(df1) on all rows: True;  P(=1) = 0.5001
+   E1 da1: 1 distinct = 00000000, parity 0
+   E1 db1: 1 distinct = 18b0e098, parity 1
+   E1 dc1: 1 distinct = 0e09818b, parity 1
+   E1 dd1: 1 distinct = 00000000, parity 0
+   E3 de1: 1 distinct = 03cf8303, parity 1
+   E3 dh1: 1 distinct = 830303cf, parity 1
+   E3 df1: 140466 distinct, P(parity odd) = 0.5001  -> on that half of the E3 instances the U-equation has no solution (DERIVED, E3-only abort after half a G)
+   front line: db1 = beta = 18b0e098, dh1 = eta = 830303cf, dd1 = 0.  x beta + eta = b262c2ff (parity 0)
+   => eps in {c*, ~c*} = {6e21be55, 91de41aa}; c* = 6e21be55 is the eps of every outcome in the pkgCG proof (Section 10.1),
+      and the U-equation with dd1 = 0 reads df1 = x^-1 (1+x) tau = tau XOR ROR(tau,1), the proof's E3 b1 condition.
+   v(V) == 1 + v(dc2 + c*) on all rows: True
+   V digit chain near 7/8, train: P(v>=7|v>=6) 0.4979 (z -0.5)  P(v>=8|v>=7) 0.4716 (z -5.1)  P(v>=9|v>=8) 0.5189 (z +2.3)  P(v>=10|v>=9) 0.5066 (z +0.6)  | P(v>=9)*2^8 = 0.967
+   V digit chain near 7/8, test: P(v>=7|v>=6) 0.4974 (z -0.7)  P(v>=8|v>=7) 0.4750 (z -4.5)  P(v>=9|v>=8) 0.5338 (z +4.2)  P(v>=10|v>=9) 0.4919 (z -0.7)  | P(v>=9)*2^8 = 1.021
+
+== 12. Ring form of R = 0 (DERIVED), each identity checked on every row of set ctx (COMPUTED) ==
+   Last half of G: d2 = x^-8(d1 + a2), b2 = x^-7(b1 + c2) (ROR r = x^-r, + = XOR).  With R1=da2+dg2, R3=dc2+de2,
+   R4=dd2+df2, R6=db2+dh2 this gives, for ANY pair:
+     U = x^-8 R1 + R4 = x^-8 [ (1+x) dg2 + dd1(E1) + x df1(E3) ]
+     V = x^-8 R3 + R6 = x^-8 [ (1+x) dc2 + x db1(E1) + dh1(E3) ]
+   (R1,R3,U,V) is an invertible linear image of R, so R = 0  <=>  da2 = dg2 =: tau,  dc2 = de2 =: eps,
+     (1+x) tau = dd1 + x df1   and   (1+x) eps = x db1 + dh1.   (1+x)y always has even parity, so a pair can only
+   collide if parity(dd1) = parity(df1) and parity(db1) = parity(dh1); each equation then has exactly 2 solutions (y, ~y).
+   U identity holds on all rows: True;  V identity holds on all rows: True
+   parity(R3)+parity(R6) == parity(db1)+parity(dh1) on all rows: True;  values taken: [0]
+   parity(R1)+parity(R4) == parity(dd1)+parity(df1) on all rows: True;  P(=1) = 0.5005
+   E1 da1: 1 distinct = 00000000, parity 0
+   E1 db1: 1 distinct = 18b0e098, parity 1
+   E1 dc1: 1 distinct = 0e09818b, parity 1
+   E1 dd1: 1 distinct = 00000000, parity 0
+   E3 de1: 1 distinct = 03cf8303, parity 1
+   E3 dh1: 1 distinct = 830303cf, parity 1
+   E3 df1: 53864 distinct, P(parity odd) = 0.5005  -> on that half of the E3 instances the U-equation has no solution (DERIVED, E3-only abort after half a G)
+   front line: db1 = beta = 18b0e098, dh1 = eta = 830303cf, dd1 = 0.  x beta + eta = b262c2ff (parity 0)
+   => eps in {c*, ~c*} = {6e21be55, 91de41aa}; c* = 6e21be55 is the eps of every outcome in the pkgCG proof (Section 10.1),
+      and the U-equation with dd1 = 0 reads df1 = x^-1 (1+x) tau = tau XOR ROR(tau,1), the proof's E3 b1 condition.
+   v(V) == 1 + v(dc2 + c*) on all rows: True
+   V digit chain near 7/8, train: P(v>=7|v>=6) 0.4884 (z -1.5)  P(v>=8|v>=7) 0.4805 (z -1.7)  P(v>=9|v>=8) 0.5130 (z +0.8)  P(v>=10|v>=9) 0.5061 (z +0.3)  | P(v>=9)*2^8 = 0.965
+   V digit chain near 7/8, test: P(v>=7|v>=6) 0.5094 (z +1.2)  P(v>=8|v>=7) 0.4728 (z -2.5)  P(v>=9|v>=8) 0.5217 (z +1.4)  P(v>=10|v>=9) 0.5068 (z +0.3)  | P(v>=9)*2^8 = 1.010
+
+elapsed 205.3 s

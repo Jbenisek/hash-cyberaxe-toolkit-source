@@ -1,0 +1,16 @@
+w=32 dh0 (word 0)               N=262144 r0eq=262144  msg: C2.y                   dY: ..x...x...x...x. | C2 A=0 B=0 | hA=0 hB=0
+w=32 dh1                        N=262144 r0eq=262144  msg: C0.x                   dY: x...x...x...x... | C0 A=0 B=0 | hA=0 hB=0
+w=32 dh2                        N=262144 r0eq=262144  msg: C3.x                   dY: ...x...x...x...x | C3 A=0 B=0 | hA=0 hB=0
+w=32 dh3                        N=262144 r0eq=262144  msg: C0.y                   dY: x...x...x...x... | C0 A=0 B=0 | hA=0 hB=0
+w=32 dh1+dh3                    N=262144 r0eq=262144  msg: C0.x.y                 dY: x...x...x...x... | C0 A=0 B=0 | hA=0 hB=0
+w=32 dh1+dh2                    N=262144 r0eq=262144  msg: C0.x C3.x              dY: x..xx..xx..xx..x | C0 A=0 B=0 C3 A=0 B=0 | hA=0 hB=0
+w=32 dh1+dh2+dh3                N=262144 r0eq=262144  msg: C0.x.y C3.x            dY: x..xx..xx..xx..x | C0 A=0 B=0 C3 A=0 B=0 | hA=0 hB=0
+w=32 CHUNK_START h4..7=IV planted N=262144 r0eq=262144  msg: C0.x.y C2.x.y C3.x     dY: x.xxx.xxx.xxx.xx | C0 A=0 B=0 C2 A=0 B=0 C3 A=0 B=0 | hA=0 hB=0
+w= 8 dh0 (word 0)               N=8388608 r0eq=8388608  msg: C2.y                   dY: ..x...x...x...x. | C2 A=0 B=0 | hA=0 hB=0
+w= 8 dh1                        N=8388608 r0eq=8388608  msg: C0.x                   dY: p...p...p...p... | C0 A=79 B=55 | hA=79 hB=55
+w= 8 dh2                        N=8388608 r0eq=8388608  msg: C3.x                   dY: ...p...p...p...p | C3 A=57 B=65 | hA=57 hB=65
+w= 8 dh3                        N=8388608 r0eq=8388608  msg: C0.y                   dY: x...x...x...x... | C0 A=0 B=0 | hA=0 hB=0
+w= 8 dh1+dh3                    N=8388608 r0eq=8388608  msg: C0.x.y                 dY: p...p...p...p... | C0 A=97 B=107 | hA=97 hB=107
+w= 8 dh1+dh2                    N=8388608 r0eq=8388608  msg: C0.x C3.x              dY: p..pp..pp..pp..p | C0 A=44 B=46 C3 A=75 B=76 | hA=0 hB=0
+w= 8 dh1+dh2+dh3                N=8388608 r0eq=8388608  msg: C0.x.y C3.x            dY: p..pp..pp..pp..p | C0 A=103 B=108 C3 A=71 B=61 | hA=0 hB=0
+w= 8 CHUNK_START h4..7=IV planted N=8388608 r0eq=8388608  msg: C0.x.y C2.x.y C3.x     dY: p.ppp.ppp.ppp.pp | C0 A=220 B=219 C2 A=2 B=2 C3 A=32897 B=32902 | hA=0 hB=0

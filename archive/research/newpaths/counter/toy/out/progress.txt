@@ -1,0 +1,334 @@
+13:47:33 worker 0 done out/ctrH
+_set0_r0.txt
+13:47:34 worker 1 FAILED out/ctrH
+_set0_r0.txt
+13:47:57 worker 2 done out/ctrH
+_set1_r0.txt
+13:47:57 worker 3 done out/ctrH
+_set2_r0.txt
+13:48:08 worker 0 done out/ctrH
+_set3_r0.txt
+13:48:16 worker 3 done out/ctrH
+_set6_r0.txt
+13:48:24 worker 2 done out/ctrH
+_set5_r0.txt
+13:48:28 worker 0 done out/ctrH
+_set7_r0.txt
+13:48:36 worker 3 done out/ctrH
+_set0_r4.txt
+13:49:13 worker 2 done out/ctrH
+_set1_r4.txt
+13:49:17 worker 0 done out/ctrH
+_set2_r4.txt
+13:49:17 worker 3 done out/ctrH
+_set3_r4.txt
+13:49:39 worker 3 done out/ctrH
+_set6_r4.txt
+13:49:49 worker 0 done out/ctrH
+_set5_r4.txt
+13:50:02 worker 3 done out/ctrH
+_set7_r4.txt
+13:50:10 worker 0 done out/ctrH
+_set0_r8.txt
+13:50:16 worker 1 done out/ctrH
+_set4_r0.txt
+13:50:46 worker 3 done out/ctrH
+_set1_r8.txt
+13:50:52 worker 1 done out/ctrH
+_set3_r8.txt
+13:50:54 worker 0 done out/ctrH
+_set2_r8.txt
+13:51:14 worker 0 done out/ctrH
+_set6_r8.txt
+13:51:20 worker 1 done out/ctrH
+_set5_r8.txt
+13:51:33 worker 0 done out/ctrH
+_set7_r8.txt
+13:51:39 worker 1 done out/ctrH
+_set0_r12.txt
+13:51:51 worker 2 done out/ctrH
+_set4_r4.txt
+13:52:16 worker 0 done out/ctrH
+_set1_r12.txt
+13:52:23 worker 1 done out/ctrH
+_set2_r12.txt
+13:52:28 worker 2 done out/ctrH
+_set3_r12.txt
+13:52:49 worker 2 done out/ctrH
+_set6_r12.txt
+13:52:52 worker 1 done out/ctrH
+_set5_r12.txt
+13:53:08 worker 2 done out/ctrH
+_set7_r12.txt
+13:53:12 worker 1 done out/ctrH
+_set0_r16.txt
+13:53:19 worker 3 done out/ctrH
+_set4_r8.txt
+13:53:53 worker 2 done out/ctrH
+_set1_r16.txt
+13:53:56 worker 3 done out/ctrH
+_set3_r16.txt
+13:53:57 worker 1 done out/ctrH
+_set2_r16.txt
+13:54:17 worker 1 done out/ctrH
+_set6_r16.txt
+13:54:26 worker 3 done out/ctrH
+_set5_r16.txt
+13:54:38 worker 1 done out/ctrH
+_set7_r16.txt
+13:54:46 worker 3 done out/ctrH
+_set0_r20.txt
+13:54:54 worker 0 done out/ctrH
+_set4_r12.txt
+13:55:22 worker 1 done out/ctrH
+_set1_r20.txt
+13:55:30 worker 3 done out/ctrH
+_set2_r20.txt
+13:55:31 worker 0 done out/ctrH
+_set3_r20.txt
+13:55:50 worker 0 done out/ctrH
+_set6_r20.txt
+13:55:58 worker 3 done out/ctrH
+_set5_r20.txt
+13:56:09 worker 0 done out/ctrH
+_set7_r20.txt
+13:56:17 worker 3 done out/ctrH
+_set0_r24.txt
+13:56:27 worker 2 done out/ctrH
+_set4_r16.txt
+13:56:52 worker 0 done out/ctrH
+_set1_r24.txt
+13:56:59 worker 3 done out/ctrH
+_set2_r24.txt
+13:57:02 worker 2 done out/ctrH
+_set3_r24.txt
+13:57:20 worker 2 done out/ctrH
+_set6_r24.txt
+13:57:26 worker 3 done out/ctrH
+_set5_r24.txt
+13:57:38 worker 2 done out/ctrH
+_set7_r24.txt
+13:57:44 worker 3 done out/ctrH
+_set0_r28.txt
+13:57:49 worker 1 done out/ctrH
+_set4_r20.txt
+13:58:18 worker 2 done out/ctrH
+_set1_r28.txt
+13:58:22 worker 1 done out/ctrH
+_set3_r28.txt
+13:58:24 worker 3 done out/ctrH
+_set2_r28.txt
+13:58:41 worker 3 done out/ctrH
+_set6_r28.txt
+13:58:47 worker 1 done out/ctrH
+_set5_r28.txt
+13:58:59 worker 3 done out/ctrH
+_set7_r28.txt
+13:59:14 worker 0 done out/ctrH
+_set4_r24.txt
+14:00:38 worker 2 done out/ctrH
+_set4_r28.txt
+14:01:08 worker 1 done out/filed
+_set0_r0.txt
+14:01:19 worker 3 done out/ctrAll
+_set0_r1000.txt
+14:01:32 worker 0 done out/filed
+_set1_r0.txt
+14:02:53 worker 2 done out/ctrAll
+_set1_r1000.txt
+14:02:54 worker 1 done out/filed
+_set2_r0.txt
+14:03:00 worker 0 done out/filed
+_set3_r0.txt
+14:03:04 worker 3 done out/ctrAll
+_set2_r1000.txt
+14:04:18 worker 2 done out/ctrAll
+_set3_r1000.txt
+14:04:34 worker 3 done out/filed
+_set5_r0.txt
+14:05:08 worker 1 done out/filed
+_set4_r0.txt
+14:05:10 worker 0 done out/ctrAll
+_set4_r1000.txt
+14:05:43 worker 2 done out/ctrAll
+_set5_r1000.txt
+14:06:46 worker 3 done out/filed
+_set6_r0.txt
+14:07:13 worker 0 done out/filed
+_set7_r0.txt
+14:07:18 worker 1 done out/ctrAll
+_set6_r1000.txt
+14:07:42 worker 2 done out/ctrAll
+_set7_r1000.txt
+14:08:49 worker 3 done out/filed
+_set0_r1.txt
+14:09:08 worker 0 done out/ctrAll
+_set0_r1001.txt
+14:09:12 worker 1 done out/filed
+_set1_r1.txt
+14:09:32 worker 2 done out/ctrAll
+_set1_r1001.txt
+14:10:16 worker 3 done out/filed
+_set2_r1.txt
+14:10:25 worker 1 done out/filed
+_set3_r1.txt
+14:10:37 worker 0 done out/ctrAll
+_set2_r1001.txt
+14:10:46 worker 2 done out/ctrAll
+_set3_r1001.txt
+14:12:02 worker 0 done out/filed
+_set5_r1.txt
+14:12:12 worker 2 done out/ctrAll
+_set5_r1001.txt
+14:12:25 worker 3 done out/filed
+_set4_r1.txt
+14:12:30 worker 1 done out/ctrAll
+_set4_r1001.txt
+14:14:13 worker 0 done out/filed
+_set6_r1.txt
+14:14:20 worker 2 done out/ctrAll
+_set6_r1001.txt
+14:14:24 worker 3 done out/filed
+_set7_r1.txt
+14:14:27 worker 1 done out/ctrAll
+_set7_r1001.txt
+14:16:15 worker 0 done out/filed
+_set0_r2.txt
+14:16:18 worker 2 done out/ctrAll
+_set0_r1002.txt
+14:16:22 worker 1 done out/ctrAll
+_set1_r1002.txt
+14:16:23 worker 3 done out/filed
+_set1_r2.txt
+14:17:42 worker 3 done out/ctrAll
+_set3_r1002.txt
+14:17:43 worker 1 done out/filed
+_set3_r2.txt
+14:17:52 worker 0 done out/filed
+_set2_r2.txt
+14:17:53 worker 2 done out/ctrAll
+_set2_r1002.txt
+14:19:18 worker 2 done out/ctrAll
+_set5_r1002.txt
+14:19:19 worker 0 done out/filed
+_set5_r2.txt
+14:19:48 worker 1 done out/ctrAll
+_set4_r1002.txt
+14:19:51 worker 3 done out/filed
+_set4_r2.txt
+14:21:30 worker 0 done out/ctrAll
+_set6_r1002.txt
+14:21:31 worker 2 done out/filed
+_set6_r2.txt
+14:21:51 worker 1 done out/filed
+_set7_r2.txt
+14:21:52 worker 3 done out/ctrAll
+_set7_r1002.txt
+14:23:13 worker 3 done out/filed
+_set3_r3.txt
+14:23:30 worker 1 done out/filed
+_set2_r3.txt
+14:23:36 worker 2 done out/filed
+_set1_r3.txt
+14:23:38 worker 0 done out/filed
+_set0_r3.txt
+14:24:54 worker 1 done out/filed
+_set5_r3.txt
+14:25:20 worker 3 done out/filed
+_set4_r3.txt
+14:25:37 worker 0 done out/filed
+_set7_r3.txt
+14:25:46 worker 2 done out/filed
+_set6_r3.txt
+14:27:13 worker 1 done out/filed
+_set0_r4.txt
+14:27:16 worker 2 done out/filed
+_set3_r4.txt
+14:27:27 worker 0 done out/filed
+_set2_r4.txt
+14:27:38 worker 3 done out/filed
+_set1_r4.txt
+14:28:53 worker 2 done out/filed
+_set5_r4.txt
+14:29:37 worker 1 done out/filed
+_set4_r4.txt
+14:29:52 worker 0 done out/filed
+_set6_r4.txt
+14:29:53 worker 3 done out/filed
+_set7_r4.txt
+14:31:16 worker 2 done out/filed
+_set0_r5.txt
+14:31:23 worker 3 done out/filed
+_set3_r5.txt
+14:31:42 worker 0 done out/filed
+_set2_r5.txt
+14:31:55 worker 1 done out/filed
+_set1_r5.txt
+14:32:56 worker 3 done out/filed
+_set5_r5.txt
+14:33:36 worker 2 done out/filed
+_set4_r5.txt
+14:34:03 worker 0 done out/filed
+_set6_r5.txt
+14:34:06 worker 1 done out/filed
+_set7_r5.txt
+14:35:16 worker 3 done out/filed
+_set0_r6.txt
+14:35:34 worker 1 done out/filed
+_set3_r6.txt
+14:35:50 worker 0 done out/filed
+_set2_r6.txt
+14:35:52 worker 2 done out/filed
+_set1_r6.txt
+14:37:00 worker 1 done out/filed
+_set5_r6.txt
+14:37:25 worker 3 done out/filed
+_set4_r6.txt
+14:37:49 worker 2 done out/filed
+_set7_r6.txt
+14:37:58 worker 0 done out/filed
+_set6_r6.txt
+14:39:03 worker 1 done out/filed
+_set0_r7.txt
+14:39:16 worker 0 done out/filed
+_set3_r7.txt
+14:39:24 worker 2 done out/filed
+_set2_r7.txt
+14:39:25 worker 3 done out/filed
+_set1_r7.txt
+14:40:36 worker 0 done out/filed
+_set5_r7.txt
+14:41:03 worker 1 done out/filed
+_set4_r7.txt
+14:41:17 worker 3 done out/filed
+_set7_r7.txt
+14:41:27 worker 2 done out/filed
+_set6_r7.txt
+14:42:34 worker 0 done out/ctrAll_set0_r1003.txt
+14:42:43 worker 2 done out/ctrAll_set3_r1003.txt
+14:42:47 worker 3 done out/ctrAll_set2_r1003.txt
+14:43:00 worker 1 done out/ctrAll_set1_r1003.txt
+14:44:01 worker 2 done out/ctrAll_set5_r1003.txt
+14:44:31 worker 0 done out/ctrAll_set4_r1003.txt
+14:44:46 worker 3 done out/ctrAll_set6_r1003.txt
+14:44:49 worker 1 done out/ctrAll_set7_r1003.txt
+14:45:59 worker 2 done out/ctrAll_set0_r1004.txt
+14:46:04 worker 1 done out/ctrAll_set3_r1004.txt
+14:46:17 worker 3 done out/ctrAll_set2_r1004.txt
+14:46:27 worker 0 done out/ctrAll_set1_r1004.txt
+14:47:24 worker 1 done out/ctrAll_set5_r1004.txt
+14:47:55 worker 2 done out/ctrAll_set4_r1004.txt
+14:48:15 worker 3 done out/ctrAll_set6_r1004.txt
+14:48:16 worker 0 done out/ctrAll_set7_r1004.txt
+14:49:21 worker 1 done out/ctrAll_set0_r1005.txt
+14:49:31 worker 0 done out/ctrAll_set3_r1005.txt
+14:49:47 worker 3 done out/ctrAll_set2_r1005.txt
+14:49:51 worker 2 done out/ctrAll_set1_r1005.txt
+14:50:49 worker 0 done out/ctrAll_set5_r1005.txt
+14:50:49 worker 0 finished
+14:51:17 worker 1 done out/ctrAll_set4_r1005.txt
+14:51:17 worker 1 finished
+14:51:39 worker 2 done out/ctrAll_set7_r1005.txt
+14:51:39 worker 2 finished
+14:51:44 worker 3 done out/ctrAll_set6_r1005.txt
+14:51:44 worker 3 finished

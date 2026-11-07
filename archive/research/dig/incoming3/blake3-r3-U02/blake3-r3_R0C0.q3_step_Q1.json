@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R0C0.q3 (a2,d2): 3-round BLAKE3 generic-birthday circuit, round 0 column call C0, quarter-step 3",
+ "question": "Q1 value/count as used: operations this quarter-step costs in the filed 595-op circuit, and the value it carries.",
+ "labels": [
+  "0"
+ ],
+ "status": "COMPUTED",
+ "number": "0 operations (of 595) in the filed circuit; 0 measured. All inputs are build-time constants (IV, counter 0, length 64, flags 11, message word m1 = 0), so the step folds into immediates. Carried constants (a,d) = eb2778d5, cdd3c1c3; equal to the scalar reference state after this step (20 random x, zero prefix). Round 0 as a whole costs 116 ops, all in D0..D3 (29 each).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work/b3steps.py; research/dig/incoming3/work/scan.py; research/dig/incoming3/work/scan_out.json; research/dig/incoming3/work/validate_out.txt; research/blake3_r3/candidate_blake3/experiments/rho.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R0C0.q3|step|Q1. Validation first (research/dig/incoming3/work/validate_out.txt): scalar 7-round digest equals the organizer verifier on 50 random 64-byte blocks and the official empty-input vector; the packed circuit equals scalar and verifier at 7 rounds (1532 ops) and at 3 rounds (595 ops = the filed count). Final round-0 value of word(s) v0,v12, read as an immediate by diagonal call(s) D0,D1.",
+ "held_fixed": "blake3-r3 filed circuit: 7 lanes x 36 bits, 595 ops/batch, prefix 0^32, m8..m15 free; zero prefix; pitch 36",
+ "reopen_if": "a different target prefix is not possible (0^32 fixed by blake3-r3-prefix-v1); reopen only if the circuit or the cost model changes",
+ "topic": "blake3-r3 R0C0.q3 step op count"
+}

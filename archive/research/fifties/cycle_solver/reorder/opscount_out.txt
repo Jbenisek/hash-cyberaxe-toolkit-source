@@ -1,0 +1,27 @@
+designs 3227
+ops per candidate histogram (lowest 12): [(43, 408), (46, 42), (63, 130), (70, 108), (71, 149), (72, 154), (74, 44), (75, 21), (76, 268), (77, 56), (78, 91), (79, 64)]
+front design (('Y4', 'Y9', 'w8'), ('D2.b1', 'D3.a1', 'K0.b1', 'K3.d1', 'S14', 'S15'), 'C0.b1') ops 43
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.b1', 'K3.d1', 'S14', 'S15') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.b1', 'S3', 'S6', 'w6') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.d1', 'K3.d1', 'S3', 'S6') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.d1', 'S11', 'w5', 'w6') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'S14', 'S7', 'S8', 'w6') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.b1', 'K0.b1', 'K3.d1', 'S2', 'w7') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.b1', 'K3.b1', 'S10', 'S7', 'S8') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'K0.c1', 'K3.a1', 'S2', 'S4', 'X14') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'K0.d1', 'K3.d1', 'S11', 'S12', 'S2') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.c1', 'D3.b1', 'K0.c1', 'K3.c1', 'S10', 'S3') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.c1', 'D3.b1', 'K0.d1', 'K3.d1', 'S2', 'w7') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.c1', 'D3.b1', 'S10', 'S8', 'w6', 'w7') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.c1', 'D3.d1', 'K0.c1', 'K3.c1', 'S2', 'w7') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.c1', 'K0.b1', 'K3.d1', 'S10', 'S15', 'S4') mappable-from-front=True
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.c1', 'K0.c1', 'S4', 'S6', 'S7', 'w6') mappable-from-front=True
+lowest-ops designs whose B is computable from a front-design instance:
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.b1', 'K3.d1', 'S14', 'S15')
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.b1', 'S3', 'S6', 'w6')
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.d1', 'K3.d1', 'S3', 'S6')
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'K0.d1', 'S11', 'w5', 'w6')
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.a1', 'S14', 'S7', 'S8', 'w6')
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.b1', 'K0.b1', 'K3.d1', 'S2', 'w7')
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'D3.b1', 'K3.b1', 'S10', 'S7', 'S8')
+ops=43 loop=21 params=14 g=C0.b1 B=('D2.b1', 'K0.c1', 'K3.a1', 'S2', 'S4', 'X14')

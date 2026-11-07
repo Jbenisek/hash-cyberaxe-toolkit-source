@@ -1,0 +1,21 @@
+r=2 ncentres=1 seed=201003 m=195312
+INIT arith=66509 other=595918 total=662427
+lean-pow breakdown: newton total=377843160 arith=99688065 | prefix+scale total=3906435 | loop steps=236 total=54256880909 arith=16031889220 per-step total=229902037 arith=67931733
+CENTRE 0 j=0 degG=2 success=1 arith=19308728691 all=73796135417 sec=663.3
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=2097152
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=2097152
+  build g                                  arith=     6421153 other=   115051923 total=   121473076     4.4s peak=14638624
+  S^((p-1)/2) mod g                        arith= 16131772597 other= 38506857907 total= 54638630504   559.0s peak=37624320
+  gcd(g, S^h-1) (half-gcd)                 arith=  3170520192 other= 15865409998 total= 19035930190    99.8s peak=40741792
+  root finding                             arith=       10761 other=       51427 total=       62188     0.0s peak=2097600
+  sqrt + map back                          arith=        3081 other=       29796 total=       32877     0.0s peak=2097152
+  verification (2 reference hashes)        arith=         516 other=        2064 total=        2580     0.0s peak=2097152
+COLLISION nk1  0x2fb26a3600f3f7e415c039036571f74dd7d74d829152a8dc235ccfc5ebf2490d
+COLLISION rho1 0x278219ad709ce45b49eadea81f07f338d3659b94ca040276e2351d5787b0f0d5
+COLLISION nk2  0x193dbd28293f0599fb5815ac713b74dd65d0395f3f72db62688832fe32d2abc1
+COLLISION rho2 0x1b948ea51a5aaf53a6defe49fd44aeb3e3c2539aa4b681accd1f93285b1449f4
+COLLISION digest 0x2cd71eae737a2cb8cd0386310a3f18cc9ce133986dac8b8a3b998d72722aa642
+COLLISION centre 0x1e5841ddf3d553098eca2d10b9bd126d7446a38ed5108ff20000c5c419703dc9
+SUMMARY r=2 centres=1 success=1 total_all=73796797844 total_arith=19308795200 units=286034100.2 log2_units=28.0916 heap_peak=40741792 secs=663.3
+GAPS gcd=16747965 root=51060
+TYPES add=6717665920 sub=6311272241 mul=6137437848 sqr=142419191 ld=7698293866 st=4328369301 ctl=42359889745 rnd=4 perm=101449728

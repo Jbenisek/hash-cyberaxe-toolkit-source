@@ -1,0 +1,29 @@
+TEST C, exact GF(2) ranks (COMPUTED by step1_exact.py). zero-dim = dimension of the subspace of
+collision (or half-collision) characteristics with NO non-MSB difference on any addition input in
+the named set (= probability one there, in the XOR-linear model).  selfcheck: linear model ==
+concrete XOR-linearised BLAKE3 on 50 random (M, dM, dlen) per width: passed.
+
+w= 8 full       equal_len dimK=  64  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w= 8 full       len_diff  dimK=  71  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w= 8 halfA_0257 equal_len dimK=  96  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w= 8 halfA_0257 len_diff  dimK= 103  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w= 8 halfB_1346 equal_len dimK=  96  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w= 8 halfB_1346 len_diff  dimK= 103  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=12 full       equal_len dimK=  96  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=12 full       len_diff  dimK= 103  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=12 halfA_0257 equal_len dimK= 144  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=12 halfA_0257 len_diff  dimK= 151  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=12 halfB_1346 equal_len dimK= 144  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=12 halfB_1346 len_diff  dimK= 151  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=16 full       equal_len dimK= 128  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=16 full       len_diff  dimK= 135  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=16 halfA_0257 equal_len dimK= 192  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=16 halfA_0257 len_diff  dimK= 199  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=16 halfB_1346 equal_len dimK= 192  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=16 halfB_1346 len_diff  dimK= 199  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=32 full       equal_len dimK= 256  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=32 full       len_diff  dimK= 263  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=32 halfA_0257 equal_len dimK= 384  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=32 halfA_0257 len_diff  dimK= 391  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=32 halfB_1346 equal_len dimK= 384  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0
+w=32 halfB_1346 len_diff  dimK= 391  all:zero-dim=0  round1:zero-dim=0  E:zero-dim=0  C:zero-dim=0  round0:zero-dim=0

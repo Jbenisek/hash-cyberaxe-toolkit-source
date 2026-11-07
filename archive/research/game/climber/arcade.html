@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Round Climber</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4 L29 27 H3 Z' fill='%237a3dff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/arcade.css">
+</head>
+<body data-screen="start"><aside id="publication-snapshot-notice" style="padding:12px 20px;background:#13251d;color:#e5f3e9;border-bottom:1px solid #426254;font:14px/1.6 system-ui;position:relative;z-index:1000">Archived research snapshot, not a live leaderboard. Historical scores and closure labels may have later corrections. <a style="color:#a1f2b9" href="../../../../corrections.html" target="_top">Read the correction register</a>.</aside>
+<div class="bg" aria-hidden="true"><div class="bg__nebula"></div><div class="bg__stars"></div><div class="bg__grid"></div></div>
+
+<!-- ============ START SCREEN ============ -->
+<section class="start" data-view="start">
+  <div class="start__inner">
+    <div class="start__mark" aria-hidden="true">▲</div>
+    <h1 class="start__title">ROUND<br>CLIMBER</h1>
+    <p class="start__tag">Pick a difference. Climb the steps of SHA-256. See how high the math lets you go.</p>
+    <div class="start__best" data-start-best></div>
+    <div class="start__menu">
+      <button type="button" class="play play--go play--xl" data-go="game"><span>PLAY</span></button>
+      <button type="button" class="play" data-go="help"><span>HOW TO PLAY</span></button>
+      <button type="button" class="play" data-go="settings"><span>SETTINGS</span></button>
+    </div>
+    <p class="start__foot" data-controls-foot>checking the instrument…</p>
+  </div>
+</section>
+
+<!-- ============ GAME SCREEN ============ -->
+<div class="game" data-view="game" hidden>
+  <header class="hud">
+    <button type="button" class="hud__icon" data-go="start" title="Menu">☰</button>
+    <div class="hud__brand"><span class="hud__logo" aria-hidden="true">▲</span><div><h2 class="hud__title">ROUND CLIMBER</h2><p class="hud__sub">SHA-256 · climb the steps</p></div></div>
+    <div class="hud__sensor"><span class="hud__dot" data-sensor-dot></span><span data-controls-status>…</span></div>
+    <div class="hud__icons">
+      <button type="button" class="hud__icon" data-go="help" title="How to play">?</button>
+      <button type="button" class="hud__icon" data-go="settings" title="Settings">⚙</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <!-- controls -->
+    <section class="console" aria-label="Controls">
+      <div class="console__step"><span class="console__num">1</span><h3>Choose the difference</h3></div>
+      <p class="console__hint">The message words that carry a difference. The one creative choice that decides how high you climb.</p>
+      <div class="words" data-words></div>
+      <div class="presets">
+        <button type="button" class="chip" data-preset="paper38">Paper 38</button>
+        <button type="button" class="chip" data-preset="board39">Board 39</button>
+        <button type="button" class="chip" data-preset="random">🎲 Random</button>
+        <button type="button" class="chip chip--ghost" data-preset="clear">Clear</button>
+      </div>
+      <div class="console__step"><span class="console__num">2</span><h3>Climb</h3></div>
+      <div class="actions">
+        <button type="button" class="play play--go" data-climb><span>CLIMB</span><small>until it fails</small></button>
+        <button type="button" class="play" data-step><span>STEP</span><small>one row</small></button>
+        <button type="button" class="play play--ghost" data-reset title="Back to the bottom">⟲</button>
+      </div>
+      <div class="gauges">
+        <div class="gauge"><span class="gauge__k">height</span><b class="gauge__v" data-height>—</b></div>
+        <div class="gauge"><span class="gauge__k">shape</span><b class="gauge__v gauge__v--sm" data-objective>—</b></div>
+        <div class="gauge"><span class="gauge__k">freedom</span><b class="gauge__v" data-freedom>—</b></div>
+        <div class="gauge gauge--best"><span class="gauge__k">best</span><b class="gauge__v" data-best>—</b></div>
+      </div>
+      <p class="ticker" data-msg aria-live="polite">Pick some message words, then press CLIMB.</p>
+      <div data-send-slot></div>
+    </section>
+
+    <!-- the tower -->
+    <section class="tower-wrap" aria-label="The tower">
+      <div class="tower__frontier"><span>FRONTIER · ROW 40</span></div>
+      <div class="tower" data-ladder></div>
+      <div class="tower__base">BASE · ROW 17</div>
+    </section>
+
+    <!-- log drawer -->
+    <aside class="log" aria-label="Your record">
+      <div class="log__tabs" role="tablist">
+        <button type="button" class="log__tab is-active" role="tab" data-tab="finds">Finds</button>
+        <button type="button" class="log__tab" role="tab" data-tab="scores">Scores</button>
+        <button type="button" class="log__tab" role="tab" data-tab="ach">Badges</button>
+      </div>
+      <div class="log__body" data-tabpanel></div>
+    </aside>
+  </main>
+</div>
+
+<!-- ============ OVERLAYS ============ -->
+<div class="overlay" data-overlay hidden>
+  <!-- HELP -->
+  <div class="sheet" data-sheet="help" hidden>
+    <button type="button" class="sheet__x" data-close>×</button>
+    <h2 class="sheet__h">How to play</h2>
+    <ol class="help">
+      <li><b>Pick the difference.</b> Toggle the message words (W0–W15) that carry a difference. That set is your shape.</li>
+      <li><b>Climb.</b> Each row is one more step of SHA-256. A row passes when a nonzero difference can still keep every expanded word you left <i>off</i> at zero. CLIMB runs up until a row fails; STEP goes one row at a time.</li>
+      <li><b>Active words.</b> On a row you can let its new word stay <i>active</i> (it tiles on, costs you nothing in this check but marks the route) or leave it off to demand it be zero.</li>
+      <li><b>Reach the frontier.</b> Row 40 is where no one has a real path. Reach it — or reach 38/39 a way the team does not already know — and the game saves it to your <b>Finds</b> and offers a line to send it for the real test.</li>
+    </ol>
+    <p class="help__honest"><b>Honest:</b> passing a row is <i>necessary</i> for a real collision path, never proof of one. The real test is the signed characteristic plus a solver — the team's hours-long job. This is reduced-round research math (37–40 of 64 steps), the kind studied openly in papers; a pass is nowhere near a real collision.</p>
+    <p class="help__honest"><b>Trust:</b> the instrument runs five controls before it lets you climb. The two settled shapes must stop exactly where the research says, and a recorded rank must match. If a control fails, climbing is switched off.</p>
+    <button type="button" class="play play--go" data-close><span>GOT IT</span></button>
+  </div>
+  <!-- SETTINGS -->
+  <div class="sheet" data-sheet="settings" hidden>
+    <button type="button" class="sheet__x" data-close>×</button>
+    <h2 class="sheet__h">Settings</h2>
+    <label class="opt"><span>Starfield & motion</span><input type="checkbox" data-opt="motion" checked><i></i></label>
+    <label class="opt"><span>Climb animation</span><input type="checkbox" data-opt="anim" checked><i></i></label>
+    <label class="opt"><span>Scanlines</span><input type="checkbox" data-opt="scan"><i></i></label>
+    <div class="opt opt--danger">
+      <span>Your record</span>
+      <button type="button" class="chip chip--ghost" data-wipe>Erase finds, scores & badges</button>
+    </div>
+    <p class="sheet__note" data-sensor-note></p>
+    <button type="button" class="play play--go" data-close><span>DONE</span></button>
+  </div>
+</div>
+
+<div class="toasts" data-toasts aria-live="polite"></div>
+
+<script src="assets/arcade.js"></script>
+</body>
+</html>

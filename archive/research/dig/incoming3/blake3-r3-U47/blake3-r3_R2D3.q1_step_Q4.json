@@ -1,0 +1,22 @@
+{
+ "object": "step R2D3.q1",
+ "question": "Q4: round 2, call D3 = G(3,4,9,14), quarter-step q1: a = a + b + x; d = ror16(d ^ a), x = m8 (a chain word) - alternatives: the same step in other lane layouts, counted exactly.",
+ "status": "COMPUTED",
+ "number": "Shipped pitch36 x7: this step 8 ops, circuit 595 (85.00 per evaluation, time_log2 125.1086). Alternatives (exact tracer counts): pitch35 x7 (guard 3): this step 9 ops, circuit 603 ops (86.14 per evaluation, time_log2 125.1277); pitch34 x7 (guard 2): this step 8 ops, circuit 622 ops (88.86 per evaluation, time_log2 125.1721); pitch36 x7 no internal masks (policy none): this step 8 ops, circuit 592 ops (84.57 per evaluation, time_log2 125.1013); pitch42 x6: this step 8 ops, circuit 592 ops (98.67 per evaluation, time_log2 125.3222); SWAR pitch32 x8 (6-op masked add): this step 18 ops, circuit 1080 ops (135.00 per evaluation, time_log2 125.7720). Only 'no internal masks' is cheaper than shipped, by 3 ops per batch (0.0072 bit); see the Q3 cells of D2.q3 and D3.q3. Fewer lanes cost more per evaluation (5 lanes 118.4, 4 lanes 148); fewer guard bits add masks (pitch 35: 603 ops, pitch 34: 622).",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_steps.py; research/dig/incoming3/blake3-r3-U46/work/steps_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. time_log2 for layouts uses the ledger of rho.py with PH = ops*7/lanes (per-evaluation cost scaled; batch counts and stage overheads approximated). Pitch 33 or less cannot add two 32-bit values without a mask under the tracer rules, so it is not counted. Duplicated-lane 4-op rotation forms were not built (adds corrupt the duplicate). Layout variants were counted, not run in numpy, except the no-mask one.",
+ "held_fixed": "spec 3-round function, op model (add, and, or, xor, shl, shr, immediates), 256-bit words, constants folded",
+ "reopen_if": "a layout with more lanes per word or a rotation form under 5 ops is found; or the register width in the cost model changes",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|R2D3.q1|step|Q4",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

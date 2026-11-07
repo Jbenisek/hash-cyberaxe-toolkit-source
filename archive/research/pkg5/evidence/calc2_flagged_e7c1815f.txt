@@ -1,0 +1,79 @@
+BINARY night_pair_calc2 sha256 aa02c98936ffeb253d6ac13d4372babe6795025444837888f4c94c0a729c8661, executed as it is (tools/recount_calc2.sh flagged)
+PAIR e7c1815f c81cd8b3 wt_eta 16 wt_beta 14 cap 31 taus 3686400 passing 2688 positive 39 sampled 5  E1 probability of passing 2^-37.8  class-rate part 0.2 (log2 -2.15)  largest share 0.10
+EXACT-E1 e7c1815f c81cd8b3 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^0.0  class-rate part 0.0 (log2 0.00)  largest share 0.00  formula fallbacks 0
+DONE c81cd8b3 exit 0
+OUT c81cd8b3 48142951 2d57efe8 log2P1 -999.00 log2N3 36.00
+OUT c81cd8b3 48152951 2d57efe8 log2P1 -999.00 log2N3 33.00
+OUT c81cd8b3 48146951 2d57efe8 log2P1 -999.00 log2N3 35.00
+OUT c81cd8b3 48156951 2d57efe8 log2P1 -999.00 log2N3 32.32
+OUT c81cd8b3 4814e951 2d57efe8 log2P1 -999.00 log2N3 34.58
+OUT c81cd8b3 48147951 2d57efe8 log2P1 -999.00 log2N3 37.00
+OUT c81cd8b3 48157951 2d57efe8 log2P1 -999.00 log2N3 35.00
+OUT c81cd8b3 4814f951 2d57efe8 log2P1 -999.00 log2N3 36.58
+OUT c81cd8b3 48153751 2d57efe8 log2P1 -999.00 log2N3 36.00
+OUT c81cd8b3 481d3751 2d57efe8 log2P1 -999.00 log2N3 37.32
+OUT c81cd8b3 481b3751 2d57efe8 log2P1 -999.00 log2N3 40.00
+OUT c81cd8b3 48157751 2d57efe8 log2P1 -999.00 log2N3 36.64
+OUT c81cd8b3 481d7751 2d57efe8 log2P1 -999.00 log2N3 37.91
+OUT c81cd8b3 481b7751 2d57efe8 log2P1 -999.00 log2N3 40.58
+OUT c81cd8b3 4814f751 2d57efe8 log2P1 -999.00 log2N3 37.58
+OUT c81cd8b3 481cf751 2d57efe8 log2P1 -999.00 log2N3 38.58
+OUT c81cd8b3 5814f7d1 2d57efe8 log2P1 -999.00 log2N3 39.58
+OUT c81cd8b3 581cf7d1 2d57efe8 log2P1 -999.00 log2N3 39.58
+OUT c81cd8b3 481437b1 2d57efe8 log2P1 -999.00 log2N3 40.00
+OUT c81cd8b3 481c37b1 2d57efe8 log2P1 -999.00 log2N3 40.00
+OUT c81cd8b3 481537b1 2d57efe8 log2P1 -999.00 log2N3 37.00
+OUT c81cd8b3 481d37b1 2d57efe8 log2P1 -999.00 log2N3 37.32
+OUT c81cd8b3 481b37b1 2d57efe8 log2P1 -999.00 log2N3 40.00
+OUT c81cd8b3 581b37b1 2d57efe8 log2P1 -999.00 log2N3 40.00
+OUT c81cd8b3 481477b1 2d57efe8 log2P1 -999.00 log2N3 40.58
+OUT c81cd8b3 581477b1 2d57efe8 log2P1 -999.00 log2N3 40.58
+OUT c81cd8b3 481c77b1 2d57efe8 log2P1 -999.00 log2N3 40.58
+OUT c81cd8b3 581c77b1 2d57efe8 log2P1 -999.00 log2N3 40.58
+OUT c81cd8b3 481577b1 2d57efe8 log2P1 -999.00 log2N3 37.58
+OUT c81cd8b3 481d77b1 2d57efe8 log2P1 -999.00 log2N3 37.91
+OUT c81cd8b3 481b77b1 2d57efe8 log2P1 -999.00 log2N3 40.58
+OUT c81cd8b3 581b77b1 2d57efe8 log2P1 -999.00 log2N3 40.58
+OUT c81cd8b3 4813f7b1 2d57efe8 log2P1 -999.00 log2N3 39.58
+OUT c81cd8b3 481bf7b1 2d57efe8 log2P1 -999.00 log2N3 42.39
+OUT c81cd8b3 48142955 2d57efe8 log2P1 -999.00 log2N3 33.58
+OUT c81cd8b3 48152955 2d57efe8 log2P1 -999.00 log2N3 30.91
+OUT c81cd8b3 48146955 2d57efe8 log2P1 -999.00 log2N3 32.58
+OUT c81cd8b3 48156955 2d57efe8 log2P1 -999.00 log2N3 29.58
+OUT c81cd8b3 4814e955 2d57efe8 log2P1 -999.00 log2N3 32.17
+PAIR e7c1815f f81c2873 wt_eta 16 wt_beta 14 cap 31 taus 2211840 passing 540 positive 12 sampled 1  E1 probability of passing 2^-39.7  class-rate part 3.1 (log2 1.62)  largest share 0.24
+EXACT-E1 e7c1815f f81c2873 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^0.0  class-rate part 0.0 (log2 0.00)  largest share 0.00  formula fallbacks 0
+DONE f81c2873 exit 0
+OUT f81c2873 582437b1 0d574f68 log2P1 -999.00 log2N3 44.58
+OUT f81c2873 58e437b1 0d574f68 log2P1 -999.00 log2N3 45.58
+OUT f81c2873 581437b1 0d574f68 log2P1 -999.00 log2N3 43.58
+OUT f81c2873 582c37b1 0d574f68 log2P1 -999.00 log2N3 44.58
+OUT f81c2873 58ec37b1 0d574f68 log2P1 -999.00 log2N3 45.58
+OUT f81c2873 581c37b1 0d574f68 log2P1 -999.00 log2N3 43.58
+OUT f81c2873 5823f7b1 0d574f68 log2P1 -999.00 log2N3 42.00
+OUT f81c2873 58e3f7b1 0d574f68 log2P1 -999.00 log2N3 43.00
+OUT f81c2873 5813f7b1 0d574f68 log2P1 -999.00 log2N3 41.00
+OUT f81c2873 582bf7b1 0d574f68 log2P1 -999.00 log2N3 44.81
+OUT f81c2873 58ebf7b1 0d574f68 log2P1 -999.00 log2N3 45.81
+OUT f81c2873 581bf7b1 0d574f68 log2P1 -999.00 log2N3 43.81
+PAIR e7c1815f f81c28b3 wt_eta 16 wt_beta 14 cap 31 taus 2764800 passing 1320 positive 18 sampled 1  E1 probability of passing 2^-35.8  class-rate part 3.4 (log2 1.77)  largest share 0.22
+EXACT-E1 e7c1815f f81c28b3 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^0.0  class-rate part 0.0 (log2 0.00)  largest share 0.00  formula fallbacks 0
+DONE f81c28b3 exit 0
+OUT f81c28b3 582437b1 0d574fe8 log2P1 -999.00 log2N3 43.58
+OUT f81c28b3 58e437b1 0d574fe8 log2P1 -999.00 log2N3 44.58
+OUT f81c28b3 581437b1 0d574fe8 log2P1 -999.00 log2N3 42.58
+OUT f81c28b3 582c37b1 0d574fe8 log2P1 -999.00 log2N3 43.58
+OUT f81c28b3 58ec37b1 0d574fe8 log2P1 -999.00 log2N3 44.58
+OUT f81c28b3 581c37b1 0d574fe8 log2P1 -999.00 log2N3 42.58
+OUT f81c28b3 5823f7b1 0d574fe8 log2P1 -999.00 log2N3 41.00
+OUT f81c28b3 58e3f7b1 0d574fe8 log2P1 -999.00 log2N3 42.00
+OUT f81c28b3 5813f7b1 0d574fe8 log2P1 -999.00 log2N3 40.00
+OUT f81c28b3 582bf7b1 0d574fe8 log2P1 -999.00 log2N3 43.81
+OUT f81c28b3 58ebf7b1 0d574fe8 log2P1 -999.00 log2N3 44.81
+OUT f81c28b3 581bf7b1 0d574fe8 log2P1 -999.00 log2N3 42.81
+OUT f81c28b3 5be42955 0d574fe8 log2P1 -999.00 log2N3 37.00
+OUT f81c28b3 5bec2955 0d574fe8 log2P1 -999.00 log2N3 38.00
+OUT f81c28b3 582417b5 0d574fe8 log2P1 -999.00 log2N3 42.58
+OUT f81c28b3 581417b5 0d574fe8 log2P1 -999.00 log2N3 41.58
+OUT f81c28b3 582c17b5 0d574fe8 log2P1 -999.00 log2N3 42.58
+OUT f81c28b3 581c17b5 0d574fe8 log2P1 -999.00 log2N3 41.58

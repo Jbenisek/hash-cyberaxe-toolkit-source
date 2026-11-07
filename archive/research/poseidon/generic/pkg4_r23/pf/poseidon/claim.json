@@ -1,0 +1,41 @@
+{
+ "schema_version": 3,
+ "target_profile": "poseidon-orchard-r23-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 23,
+ "claim": {
+  "time_log2": 127.02,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 20,
+  "preprocessing_log2": 0,
+  "success_probability": 0.39,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Two distinct inputs (x, rho0) and (y, rho0), x != y, for the Orchard hash with 23 partial rounds (poseidon-orchard-r23-prefix-v1), with rho0 a random 254-bit coin of the attempt: found as a collision F(x) = F(y) of the walk F(x) = digest(x, rho0), whose output is again a canonical input. Plain birthday search, one trail with distinguished points, one table; no property of the rounds is used.",
+  "Cost model orchard-field-ram-v2: one call of the reference permutation = 1 unit (C = 699), every other word operation 1/699. A trail step is 1 call + 9 operations (2 state assignments + 7 loop operations), a recovery evaluation at most 1 call + 10; table scan, insertion, bisection and setup are a deterministic 1,441,827,698 operations (proof.md Section 5, instruction listings). time_log2 is the full budget with every halt charged at its limit: S = n + d trail steps and 3 gmax recovery evaluations, log2 T = 127.019377, rounded up. One attempt; no restart, amplification, advice or preprocessing.",
+  "Memory: one array of at most 15,502 entries of 64 bytes (two aligned 256-bit words: value and index; linear-scan lookup, no hash table): 992,128 bytes, plus code at most 21,600, constants 6,464 and registers 512 bytes: 1,020,704 bytes, below 2^20 (proof.md Section 6).",
+  "Success probability at least 0.39: Lemma 2 (proof.md Section 4) proves 0.390000002301729877 for a uniformly random function, with explicit terms for the trail, detection, table and gaps. H1 (the only premise, score-critical, an assumption, no proof is known) transfers it to the real map with the random coin rho0; measurements of the real map at r = 23 on truncated outputs are in proof.md Section 7.",
+  "The program is printed in full in proof.md Appendix B (standard library only). No experiments are declared: the organizer runner calls the digest on the empty message, which the Orchard target rejects. The measurement program and its data are in proof.md Appendices C and D. No full collision is produced or claimed; the claim is the cost of the search."
+ ],
+ "baseline_improved": "poseidon-orchard-r23-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "heuristics": [
+  {
+   "id": "H1-random-function-model",
+   "role": "score-critical",
+   "statement": "For the attempt's coins rho0 and x_0 (uniform 254-bit words), the search of proof.md Section 2 on the real map F(x) = digest(x, rho0) succeeds with probability at least P_F, the success probability of the same search on a uniformly random function on the Pallas field, which Lemma 2 (proof.md Section 4) bounds by P_F >= 0.390000002. This is an assumption; no proof is known.",
+   "scope": "Target poseidon-orchard-r23-prefix-v1, inputs (x, rho0), one trail with the parameters of proof.md Section 2 (S = 1.70e38 evaluations). Not claimed for other round counts or budgets. Only the success probability rests on it; the recovery, the ledger and the memory are proved (proof.md Sections 3, 5, 6).",
+   "extrapolation": "Measured on the real map at r = 23 with outputs truncated to w = 16..40 bits (F_w(v) = low w bits of digest(v, rho), a fresh rho and start per trial, as in the attempt), two independent runs per width, 13744 walks: the hazard multiplier (collision rate relative to a random function) is 1.004, 95% interval [0.987, 1.020], with slope +0.0016 per bit (standard error 0.0019) across widths; the full search succeeded in 2356/5744 = 0.410 runs at widths 24..40 against a mean Lemma 2 bound of 0.3900; DP gaps follow the geometric law and stayed below gmax. Extrapolation from these widths to 254 bits and 2^127 steps is by this premise. Sensitivity: a collision rate (1 - e) / N costs 0.5 log2(1/(1 - e)) bit: 0.0072 for e = 0.01, 0.0370 for e = 0.05, 0.076 for e = 0.10; 0.0097 bit at the lower end of the measured interval.",
+   "evidence_ids": [
+    "proof:23-36",
+    "proof:66-94",
+    "proof:432-556",
+    "proof:558-625"
+   ],
+   "limitations": "The measurements reach outputs of at most 40 bits and trails of at most 4,013,103 steps; they show the random-function collision law of the real round function at these widths and do not bound the collision rate at 254 bits. On a single fixed map the success over starts varies with that map's longest cycle; the attempt therefore draws rho0, and H1 concerns the average over rho0."
+  }
+ ],
+ "submission_state": "draft",
+ "lane": "exploratory"
+}

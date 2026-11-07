@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "word width (bits per register operation)",
+ "question": "Q2 necessity: change the machine word width, recount the exact operations per chain step with the filed tracer",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Filed: W=256, 7 lanes of 36 bits, 595 ops per batch = 85.00 per step. Recount at other widths (best lane pitch each, every variant checked against the scalar digest on 40 x lanes inputs): W=32 one lane, native wrap-around add, 3-op rotate: 428 per step (+2.33 bit if every op costs 1/638); W=64 2 lanes of 32 with lane-isolated adds (6 ops per add): 1,080 per batch = 540 per step (+2.67); W=128 3 lanes of 37: 592 = 197.3 per step (+1.22); W=256: 85.00; W=512 15 lanes of 34: 622 per batch = 41.47 per step (-1.0355 bit if one 512-bit op is priced like any op; 0 if priced as two); W=1024 30 lanes: 20.73 (-2.04). The 256-bit width is the model's stated machine; 512 is not offered, so the gain is a pricing question, not a result.",
+ "evidence": "research/dig/incoming3/blake3-r3-U80/work/width.py, research/dig/incoming3/blake3-r3-U80/work/width.out",
+ "notes": "universe cell blake3-r3|MACHINE.WIDTH|MACHINE|Q2. Rounds 3, key m0..m7 = 0 folded. The 7-lane packing itself is an OPEN-by-silence reading of the cost model (H3).",
+ "held_fixed": "3-round circuit, constants folded, greedy mask insertion, rotation 5 ops with 2 masks",
+ "reopen_if": "organizer text that prices or allows wider words (then 512 gives -1.04 bit)",
+ "gain_basis": "T"
+}

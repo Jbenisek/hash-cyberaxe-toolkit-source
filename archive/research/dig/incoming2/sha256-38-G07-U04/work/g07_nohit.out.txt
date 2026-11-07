@@ -1,0 +1,1 @@
+no-hit fb: metered total minus (sum of w7 tests + 4/class): {35: 1500} (ledger fixed = 35 incl. br)

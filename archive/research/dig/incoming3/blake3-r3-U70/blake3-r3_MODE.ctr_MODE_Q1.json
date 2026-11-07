@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "chunk index t >= 1 (counter state words)",
+ "question": "Q1: value/count as used",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Not used. A chunk index t >= 1 reaches only non-root chunk compressions: cost of the counter-bearing compression 595 (flags 3, counter 1; any counter gives 595); with the parent root above it one step is 1206 ops (time_log2 126.1223).",
+ "topic": "b3r3.MODE.ctr.Q1",
+ "notes": "universe cell blake3-r3|MODE.ctr|MODE|Q1. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Two-chunk tree.",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "a legal value or layout that gives fewer than 595 ops per 7-lane batch, or a ledger line that charges a different count"
+}

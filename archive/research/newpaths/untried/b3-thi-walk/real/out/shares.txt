@@ -1,0 +1,9 @@
+HEAD shares seed 2026101002 G 65536 steps/group 458752
+STEPS 30064771072 bad 0 blocks 458752 live_blocks 49737 (share 0.108418; exact live low halves 7072/65536 = 0.107910)
+E share 0.05467387 (exact pi_E 0.05441612) ratio 1.004737 clustered SE 0.010167
+PASS share 0.0009958337 (exact pi 0.0009914573) ratio 1.004414 clustered SE 0.010166 ; passes 29939511
+PASS given E 0.018214 (independent model pi/pi_E 0.018220)
+(1) alone share 0.02768256 (exact 118897152/2^32 = 0.02768290)
+per-group E: mean 25081.7 (7*2^16*pi_E 24963.5), var/mean 168329.3 ; per-group passes: mean 456.841 var/mean 3067.298
+live blocks per group histogram: 0:55524 1:796 2:992 3:1082 4:1024 5:1051 6:1109 7:3958
+SECONDS 0.3

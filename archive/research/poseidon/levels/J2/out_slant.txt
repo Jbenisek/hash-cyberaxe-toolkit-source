@@ -1,0 +1,6 @@
+slant 0: nfac 3 deg4 0 roots 0 | 449 114 61 (4s)
+slant 1: nfac 7 deg4 0 roots 1 | 536 30 23 20 12 2 1 (5s)
+slant 2: nfac 4 deg4 1 roots 0 | 388 229 4 3 (5s)
+slant 3: nfac 6 deg4 0 roots 0 | 365 162 51 26 15 5 (4s)
+slant 4: nfac 8 deg4 0 roots 1 | 308 174 82 22 17 15 5 1 (4s)
+slant 5: nfac 6 deg4 0 roots 0 | 302 144 126 24 15 13 (4s)

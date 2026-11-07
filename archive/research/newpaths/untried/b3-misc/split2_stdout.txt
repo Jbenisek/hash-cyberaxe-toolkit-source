@@ -1,0 +1,25 @@
+TOY 1 (separable, expect dU=dV=dS=1): PASS {'status': 0, 'dU': 1, 'dV': 1, 'dS': 1}
+TOY 2 (chain, expect infeasible): PASS {'status': 2, 'dU': None, 'dV': None, 'dS': None}
+
+== variant root (dim 8 words)
+  max q = min(dU,dV) - c = 0  [dU=0 dV=0 dS=8 crossed=0] optimal=True dual_bound=0.0
+  V words (0): 
+  S words (8): w1, w8, w12, K2.a2(S2), C0.b2(Y4), C1.d2(Y13), C1.c2(Y9), C2.d2(Y14)
+  cost floor >= 2^129 list entries per 128-bit match (DERIVED from q)
+  profile (c<=k: q, dU, dV, dS, c): [(0, 0, 0, 0, 8, 0), (1, 0, 1, 1, 7, 1), (2, 0, 2, 2, 6, 2), (4, 0, 2, 2, 6, 2), (8, 0, 2, 4, 4, 2)]
+
+== variant ctr (dim 9 words)
+  max q = min(dU,dV) - c = 0  [dU=0 dV=0 dS=9 crossed=0] optimal=True dual_bound=-3.339550858072471e-13
+  V words (0): 
+  S words (91): v12, w0, w1, w2, w3, w5, w6, w7, w8, w10, w11, w12, K0.a1, K0.d1, K0.c1, K0.b1, K0.a2(S0), K0.d2(S12), K0.c2(S8), K0.b2(S4), K1.a1, K1.d1, K1.c1, K1.b1, K1.a2(S1), K1.d2(S13), K1.c2(S9), K1.b2(S5), K2.a2(S2), K2.d2(S14), K2.c2(S10), K2.b2(S6), K3.a1, K3.d1, K3.c1, K3.b1, K3.a2(S3), K3.d2(S15), K3.c2(S11), K3.b2(S7), D0.a1, D0.d1, D0.c1, D0.b1, D0.a2(X0), D0.c2(X10), D0.b2(X5), D1.a1, D1.d1, D1.c1, D1.b1, D1.a2(X1), D1.d2(X12), D1.b2(X6), D2.a1, D2.d1, D2.c1, D2.b1, D2.a2(X2), D2.d2(X13), D2.c2(X8), D3.a1, D3.d1, D3.c1, D3.b1, D3.d2(X14), D3.c2(X9), D3.b2(X4), C0.a1, C0.d1, C0.c1, C0.b1, C0.a2(Y0), C0.d2(Y12), C0.c2(Y8), C0.b2(Y4), C1.a1, C1.d1, C1.c1, C1.b1, C1.a2(Y1), C1.d2(Y13), C1.c2(Y9), C2.a1, C2.d1, C2.c1, C2.b1, C2.a2(Y2), C2.d2(Y14), C2.c2(Y10), C2.b2(Y6)
+  cost floor >= 2^129 list entries per 128-bit match (DERIVED from q)
+  profile (c<=k: q, dU, dV, dS, c): []
+
+== variant ctr2 (dim 10 words)
+  max q = min(dU,dV) - c = 0  [dU=2 dV=2 dS=8 crossed=2] optimal=True dual_bound=-1.8829382497642655e-12
+  V words (10): v12, w0, w1, w8, K0.a1, C0.b2(Y4), C2.b1, C2.a2(Y2), C2.d2(Y14), C2.c2(Y10)
+  S words (16): K0.d1, K0.c1, K0.b1, K0.a2(S0), K0.d2(S12), K0.c2(S8), D0.c1, D0.c2(X10), D1.b2(X6), D3.d1, D3.d2(X14), C1.c2(Y9), C2.a1, C2.d1, C2.c1, C2.b2(Y6)
+  cost floor >= 2^129 list entries per 128-bit match (DERIVED from q)
+  profile (c<=k: q, dU, dV, dS, c): []
+
+elapsed 39.5 s

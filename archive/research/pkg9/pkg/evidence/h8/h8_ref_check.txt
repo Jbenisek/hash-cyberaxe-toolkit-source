@@ -1,0 +1,21 @@
+hash2 vs frozen 2-round test vectors (len<=64): 4 checked, all_equal=True
+hash2 vs organizer verifier.blake3(.,2) on 20000 random msgs (len 0..64): all_equal=True
+hash2 vs pkg5 compress2 on 5000 random msgs (len 0..64): all_equal=True
+class eta=830303cf: e1 = Y3 + Y4, mask=03cf8303 value=030c0303 (e1 & mask == value); 19 free bits -> 524288 = 2^19 members
+class_member spot-check: 5406 distinct Y4 over 5406 sampled k, all in_class=True
+
+triples: 4000 contexts x 50 members = 200000 total, middle word = X14
+  lenA   = 200000 / 200000
+  lenB   = 200000 / 200000
+  zbyte  = 200000 / 200000
+  zword  = 200000 / 200000
+  wonly  = 200000 / 200000
+  r0eq   = 200000 / 200000
+  pin    = 200000 / 200000
+  y4A    = 200000 / 200000
+  y4B    = 200000 / 200000
+  half   = 200000 / 200000
+  eta    = 200000 / 200000
+  residual digest words (1,3,4,6) equal singly: [0, 0, 0, 0] / 200000  (sanity figure only)
+  full 128-bit residual zero (full collision): 0 / 200000  (expected ~0 at this sample size)
+elapsed 28.5s, python 3.14.4

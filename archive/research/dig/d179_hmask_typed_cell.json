@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-HMASK-TYPED",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 typed-domain h-dependent XOR-mask family",
+  "question": "Does the expanded seven-mask h-XOR witness map cover residual toggles when E is restricted to typed(E,t)?",
+  "labels": ["K"],
+  "status": "COMPUTED",
+  "number": "Exact QF_BV CEGIS is UNSAT for t=0 at 9/8/10 witnesses and t=1 at 4/6/6 witnesses for deltas 00002000/00001000/00000400.",
+  "source": "our exact typed-domain QF_BV CEGIS: D179 h-mask",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/SYNTH_HMASK_TYPED.md; research/retest/b3_omega_coupled/exact/synth_hmask_typed.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.witness_map",
+  "notes": "Typed(E,t) is encoded exactly by an independent f_t satisfying J2 and the two type parity pins. This is family-negative for the stated seven-mask map only; the arbitrary nonlinear witness map and universal class-invariance theorem remain OPEN. No saving is credited."
+}

@@ -1,0 +1,25 @@
+R0 full: lane0 n=11 deg=5 degx=5 degy=5 fullTriangle=False (tri=21); lane1 n=11 deg=5 degx=5 degy=5 fullTriangle=False (tri=21); lane2 n=11 deg=5 degx=5 degy=5 fullTriangle=False (tri=21)  (0.1s)
+   law ceil(i/5)+ceil(j/5)<=1 : predicted count 11, lane 0 actual 11, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=1 : predicted count 11, lane 1 actual 11, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=1 : predicted count 11, lane 2 actual 11, symmetric difference 0
+   verify against poseidon_ref at random point:  MATCH
+R1 full: lane0 n=301 deg=25 degx=25 degy=25 fullTriangle=False (tri=351); lane1 n=301 deg=25 degx=25 degy=25 fullTriangle=False (tri=351); lane2 n=301 deg=25 degx=25 degy=25 fullTriangle=False (tri=351)  (0.4s)
+   law ceil(i/5)+ceil(j/5)<=5 : predicted count 301, lane 0 actual 301, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=5 : predicted count 301, lane 1 actual 301, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=5 : predicted count 301, lane 2 actual 301, symmetric difference 0
+   verify against poseidon_ref at random point:  MATCH
+R2 full: lane0 n=7751 deg=125 degx=125 degy=125 fullTriangle=False (tri=8001); lane1 n=7751 deg=125 degx=125 degy=125 fullTriangle=False (tri=8001); lane2 n=7751 deg=125 degx=125 degy=125 fullTriangle=False (tri=8001)  (1.7s)
+   law ceil(i/5)+ceil(j/5)<=25 : predicted count 7751, lane 0 actual 7751, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=25 : predicted count 7751, lane 1 actual 7751, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=25 : predicted count 7751, lane 2 actual 7751, symmetric difference 0
+   verify against poseidon_ref at random point:  MATCH
+R3 full: lane0 n=195001 deg=625 degx=625 degy=625 fullTriangle=False (tri=196251); lane1 n=195001 deg=625 degx=625 degy=625 fullTriangle=False (tri=196251); lane2 n=195001 deg=625 degx=625 degy=625 fullTriangle=False (tri=196251)  (11.4s)
+   law ceil(i/5)+ceil(j/5)<=125 : predicted count 195001, lane 0 actual 195001, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=125 : predicted count 195001, lane 1 actual 195001, symmetric difference 0
+   law ceil(i/5)+ceil(j/5)<=125 : predicted count 195001, lane 2 actual 195001, symmetric difference 0
+   verify against poseidon_ref at random point:  MATCH
+total 17.5s
+
+real	0m19.486s
+user	0m0.015s
+sys	0m0.015s

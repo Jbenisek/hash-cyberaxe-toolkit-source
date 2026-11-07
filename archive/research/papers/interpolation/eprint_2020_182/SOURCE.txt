@@ -1,0 +1,1 @@
+2020/182	An Algebraic Attack on Ciphers with Low-Degree Round Functions: Application to Full MiMC	s2	https://orbilu.uni.lu/bitstream/10993/44163/1/mimc_analysis.pdf

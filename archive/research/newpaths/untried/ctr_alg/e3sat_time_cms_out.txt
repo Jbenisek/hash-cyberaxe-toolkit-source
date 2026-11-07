@@ -1,0 +1,48 @@
+Sat Oct 10 00:16:46 MDT 2026
+trivial-formula CPU (s), no printing: cms 0.00216
+rec11_s000_t4      cms solve 2^21.48 parse 2^20.81
+rec11_s001_t0      cms solve 2^21.88 parse 2^20.89
+rec11_s002_t4      cms solve 2^20.73 parse 2^21.35
+rec11_s003_t1      cms solve 2^21.84 parse 2^22.16
+rec11_s004_t4      cms solve 2^21.47 parse 2^21.06
+rec11_s005_t1      cms solve 2^21.70 parse 2^19.99
+rec11_s005_t4      cms solve 2^21.71 parse 2^20.61
+rec11_s006_t0      cms solve 2^22.84 parse 2^20.98
+rec11_s007_t1      cms solve 2^22.01 parse 2^21.37
+rec11_s007_t4      cms solve 2^21.98 parse 2^21.30
+rec11_s008_t1      cms solve 2^22.40 parse 2^19.93
+rec11_s009_t1      cms solve 2^22.66 parse 2^21.33
+rec11_s009_t4      cms solve 2^22.23 parse 2^21.58
+rec11_s010_t1      cms solve 2^21.41 parse 2^21.07
+rec11_s011_t6      cms solve 2^23.25 parse 2^21.34
+rec11_s012_t4      cms solve 2^22.45 parse 2^21.77
+rec11_s013_t4      cms solve 2^22.31 parse 2^21.88
+rec11_s014_t1      cms solve 2^22.49 parse 2^21.58
+rec11_s015_t1      cms solve 2^22.11 parse 2^21.27
+rec11_s016_t6      cms solve 2^21.83 parse 2^20.54
+rec11_s017_t1      cms solve 2^22.18 parse 2^20.90
+rec11_s018_t5      cms solve 2^22.52 parse 2^20.88
+rec11_s019_t0      cms solve 2^22.60 parse 2^20.36
+rplant_s000_tx     cms solve 2^24.11 parse 2^22.68
+rplant_s001_tx     cms solve 2^23.96 parse 2^21.60
+rplant_s002_tx     cms solve 2^24.65 parse 2^-inf
+rplant_s003_tx     cms solve 2^24.42 parse 2^20.99
+rplant_s004_tx     cms solve 2^23.60 parse 2^20.61
+bplant_s000_t0     cms solve 2^23.68 parse 2^20.73
+bplant_s001_t1     cms solve 2^23.48 parse 2^18.66
+bplant_s002_t2     cms solve 2^23.92 parse 2^20.66
+bplant_s003_t3     cms solve 2^24.07 parse 2^20.35
+bplant_s004_t4     cms solve 2^23.79 parse 2^17.24
+bplant_s005_t5     cms solve 2^23.83 parse 2^21.90
+bplant_s006_t6     cms solve 2^23.87 parse 2^21.52
+
+rec11: 120 passing steps; per passing step (mean; median):
+  cms       solve 2^22.59; 2^22.40 | parse+setup 2^21.66 | literals 2^11.92 | status mismatches 0
+
+rec7: 150 passing steps; per passing step (mean; median):
+  cms       solve 2^22.57; 2^22.32 | parse+setup 2^21.80 | literals 2^11.88 | status mismatches 0
+
+rec11+rec7: 270 passing steps; per passing step (mean; median):
+  cms       solve 2^22.58; 2^22.33 | parse+setup 2^21.74 | literals 2^11.90 | status mismatches 0
+exit True
+Sat Oct 10 00:17:04 MDT 2026

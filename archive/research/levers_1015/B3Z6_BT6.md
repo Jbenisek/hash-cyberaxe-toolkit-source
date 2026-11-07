@@ -1,0 +1,8 @@
+# B3Z6 x BT six-lane-copy cut (lever transfer test, blake3-r2) - 2026-10-15
+**Verdict: ALREADY-IN (superseded). Gain on B3Z6 = 0.000 bit. Nothing to build.**
+
+1. What it is. BT = the broadcast table, BT[w] = w replicated across the seven 36-bit lanes (a pure function of w, 7*2^32 words = 2^38.8 B, "0 bits", memcomp/blake3-B3Z/ANATOMY.md line 21). C3 in DESIGN.md: BT plus its six lane copies -> one BT (AND w/o marker, SHR 36i, OR 2^252, load): 962,072,674,304 -> 137,438,953,472 B for +2 ops per read (+0.0174 log2 T). The six extra lane copies are redundant because lane i can be read from lane 0 by a shift.
+2. B3Z6 state. The B3Z6 memory ledger (tools/build_pkg/scratch/b3z6_build/make_b3z6.py lines 68-80) holds only R1, L1, R2, L2, PXR in 7 lanes (4,895,744 words), misc 499,530 words and code <= 3.3M instr words: SEARCH_B = 278,248,768 B = 2^28.0518. The package text says "the gate, the rotations and the broadcasts need no table". So BT is not held at all: it went past C3 to C8 (computed broadcast), and the 962 GB / 137 GB terms are gone. Output is streamed (Tier B), so the peak is the search phase.
+3. Arithmetic. Score = 62.67324 + (28.05180 - 20) = 70.72504 (filed 70.72505). The BT6/C3 cut would save 0 B and add ops: no change possible. Remaining bytes: tables 156.7 MB, code 105.6 MB, misc 16 MB; no BT bytes left to cut.
+4. Verdict: ALREADY-IN. The fleet figure (S 83.124 from B3Z2) is a stale-base number; B3Z6 is already at 70.725 with the BT term fully removed. Residual lever space on B3Z6 is code bytes (105.6 MB = 38% of the peak) and the R2/L2 tables (132 MB), not BT.
+Ledger arithmetic only; nothing run beyond one log2; no submission.

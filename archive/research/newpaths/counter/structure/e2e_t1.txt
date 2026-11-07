@@ -1,0 +1,14 @@
+outer steps scanned 4580, t range 1..1: outer steps with a hit (t with c1 in the cube) 2; (hits per outer step expected 0.00 on average); 0s
+t = 1: |P||A| = 1079, |P||B| = 1087; organizer digest = root(stack, CV_t) True; CV words 0,2,5,7 equal True; Y4/E1.d1/cube/beta/X True; organizer CV = own True; digests equal False (expected False)
+   last chunk A: ea21f9c6528a70b0a38051ac4d05107138564797368717b813a3ea6f7a26a67e5c39d2af7bfaaa763c629ac8fed02c7e72cea0f506c007
+   last chunk B: ea21f9c6528a70b0a38051ac4d051071405647972e8717b813a3ea6f7a26a67e5c39d2af7bfaaa763c629ac8fed02c7e72cea0f506c0070000000000000000
+   chunk (P = 1 copies): efcca38a07c2b4762931fc1d71ff0dcee74964fb07041847665b1049e5216a9a...
+   CV_t(A) = 068c3934 636cda2e f3100843 5d1afdc0 adfbb295 ae9b57d8 e54deb00 109a8610
+   CV_t(B) = 068c3934 ed4d7063 f3100843 05856243 56317085 ae9b57d8 6239e66b 109a8610
+t = 1: |P||A| = 1079, |P||B| = 1087; organizer digest = root(stack, CV_t) True; CV words 0,2,5,7 equal True; Y4/E1.d1/cube/beta/X True; organizer CV = own True; digests equal False (expected False)
+   last chunk A: f74c2cc90f18cc27f678e4c38eda271c38564797502769bbd3bbb9f54ad5724cfde2f217d51e4e8818bb24e60a37987d9b84b84d06c007
+   last chunk B: f74c2cc90f18cc27f678e4c38eda271c40564797482769bbd3bbb9f54ad5724cfde2f217d51e4e8818bb24e60a37987d9b84b84d06c0070000000000000000
+   chunk (P = 1 copies): 42254dbc85df87d3e7b755f639bbacaaa13559f34fb096db1aa7bdeb7290897a...
+   CV_t(A) = 676dfe36 cfa8a789 0d8262be a1f30144 c1e9e41d 3d7dd097 0eba7b9a 22f242e6
+   CV_t(B) = 676dfe36 a207852e 0d8262be be1cbd4e 9e23fa9e 3d7dd097 9b3c07d6 22f242e6
+complete-message checks passed: 2/2

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.ZEROSUM zero-sum structure",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "P3.14: real r=1 centred lane-0 sum over 2^21 inputs is zero but all digests distinct",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_14.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Luna 3, not retested. | universe cell poseidon-r1|ALT.ZEROSUM|ALT|Q3",
+ "held_fixed": "r=1",
+ "reopen_if": "rerun"
+}

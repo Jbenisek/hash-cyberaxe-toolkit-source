@@ -1,0 +1,8 @@
+DY3 fdb77cfd; 65536 sampled c = e1 + w8
+tau 285020a0: phi 3c7830f0; E[P2] = 2^-24.105; max sampled 2^-16.000 (x275.4); top 2^-4: x16.00; top 2^-8: x171.52; top 2^-12: x275.42; share with P2 = 0: 0.990
+tau 385020a0: phi 247830f0; E[P2] = 2^-22.995; max sampled 2^-16.000 (x127.6); top 2^-4: x16.00; top 2^-8: x84.24; top 2^-12: x127.58; share with P2 = 0: 0.968
+tau 185020a0: phi 147830f0; E[P2] = 2^-24.012; max sampled 2^-18.000 (x64.5); top 2^-4: x16.00; top 2^-8: x61.01; top 2^-12: x64.54; share with P2 = 0: 0.956
+tau 175020a0: phi 1cf830f0; E[P2] = 2^-25.085; max sampled 2^-18.000 (x135.7); top 2^-4: x16.00; top 2^-8: x104.97; top 2^-12: x135.74; share with P2 = 0: 0.981
+tau 685020a0: phi 5c7830f0; E[P2] = 2^-24.005; max sampled 2^-16.000 (x256.9); top 2^-4: x16.00; top 2^-8: x163.26; top 2^-12: x256.85; share with P2 = 0: 0.989
+tau 275020a0: phi 34f830f0; E[P2] = 2^-24.988; max sampled 2^-18.000 (x126.9); top 2^-4: x16.00; top 2^-8: x106.68; top 2^-12: x126.92; share with P2 = 0: 0.980
+tau 675020a0: phi 54f830f0; E[P2] = 2^-25.044; max sampled 2^-18.000 (x131.9); top 2^-4: x16.00; top 2^-8: x105.80; top 2^-12: x131.93; share with P2 = 0: 0.981

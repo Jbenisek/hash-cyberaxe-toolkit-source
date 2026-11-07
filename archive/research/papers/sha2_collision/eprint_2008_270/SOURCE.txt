@@ -1,0 +1,1 @@
+2008/270	New Collision attacks Against Up To 24-step SHA-2	owner_download	https://eprint.iacr.org/2008/270.pdf

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.ZEROSUM (ALT)",
+ "question": "Q4: alternatives: pair the coset by x -> -x",
+ "labels": [
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "On H (which contains -1) pair W with -W: F(W) - F(-W) is the odd part, and the zero-sum says nothing about individual odd-part zeros. This is the odd-part route we already use (collision W, -W around the centre).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.ZEROSUM|ALT|Q4. Structural remark.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "never"
+}

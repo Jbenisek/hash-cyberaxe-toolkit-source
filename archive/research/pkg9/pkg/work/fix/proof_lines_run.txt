@@ -1,0 +1,4 @@
+displays: 96 lines {'O': 29, 'M': 21, 'Y': 10, 'T': 12, 'R': 24}; Table C cells checked 88; display sha256 0d56c0bedde9c74f
+20000 tuples (2000 extreme, 10000 with y in the sub-class): names 20000, program 20000, words 20000, half 20000, y4 20000, eta 10000, back 20000, in_sub 10000
+RESULT: everything holds
+exit 0

@@ -1,0 +1,22 @@
+{
+  "id": "D256-SHA256-R38-CHECK2-PREFIX-GATE-20261013",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 18,
+  "object": "archived check2 dense-prefix gate replay",
+  "question": "Do additional valid check2-1 r38 prefixes reach the published row16/17/18 gate?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Six reconstructed witnesses pass Python rows 0--15 with W0..W6 equal, dW16=0x20000000,dW17=0; independent C replay state_collision=0 for all six; feed-forward hash match=0.",
+  "source": "our workflow: D256 check2 prefix gate replay",
+  "own_test": true,
+  "evidence": "research/sol_answer_D256_r38_check2_prefix_gate.md; row_interactions/r38_prefix_profiles/gate_results_check2.txt; research/sha256grid/check2-1/r38core.py; row_interactions/row16_gate.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Four additional distinct dense prefixes plus two duplicates; bounded negative replay only; no valid row16--18 continuation counts and no universality claim.",
+  "potential_bits": 0.3,
+  "prior": 0.1,
+  "gain_basis": "C",
+  "reopen_if": "full valid-prefix generator or a valid check2 profile with state coalescence"
+}

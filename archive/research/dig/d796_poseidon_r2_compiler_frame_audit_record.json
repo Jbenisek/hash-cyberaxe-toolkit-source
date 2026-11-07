@@ -1,0 +1,22 @@
+{
+  "id": "D796-POSEIDON-R2-COMPILER-FRAME-AUDIT-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "owned Poseidon-r2 NTT compiler stack-frame and spill audit",
+  "question": "Does the checked-in compiler output prove the claimed register budget or absence of spills?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "GCC 15.2.0 -O3 -march=native reports 672/672/480 B for stageA_fwd/inv/row, 1088/1152 B for pass_fwd/inv, and 912 B bounded for pass_fused; test_ntt exits 0. The residual frame is not classified as spills, so MACHINE.REGS and MACHINE.ADDR remain OPEN.",
+  "source": "owned research/poseidon/orchard/lean_r2/ntt.c and test_ntt",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/d796_compiler_frame_audit.py; research/sol_answer_D796_poseidon_r2_compiler_frame_audit.md; research/poseidon/orchard/lean_r2/ntt.c",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "WSL GCC 15.2.0, -O3 -march=native, current source and existing test_ntt binary",
+  "notes": "Compiler-specific frame evidence only; no target-register or organizer spill proof and no score/package/stage/filing/submission.",
+  "reopen_if": "Organizer target/compiler is specified or a register-aware rebuilt kernel and exact charge are available.",
+  "peak_mem": "21.2167458582 MEASURED /usr/bin/time -v test_ntt peak RSS 2437120 B"
+}

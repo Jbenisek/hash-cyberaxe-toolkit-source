@@ -1,0 +1,2 @@
+p_li39tab23s1_luna mean_lin -75.2474  lcb99 -75.3903  lcb999 -75.4601  lcb_log -75.3885  parity01_99 -75.4602  -> QDECL -75.48
+p_nb2wonly16newchar39s1_luna mean_lin -75.3662  lcb99 -75.4767  lcb999 -75.5298  lcb_log -75.4825  parity01_99 -75.3840  -> QDECL -75.54

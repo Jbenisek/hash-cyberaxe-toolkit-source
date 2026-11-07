@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.SHRINK smaller-memory variants",
+ "question": "bytes held",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "bytes held: filed 8,468,640 B heap (8,638,495 total); lean_r1_mem 7,944,256 B heap (-524,384 B); Luna 3 P3.13 logical 7,944,800 B at r=1 (r=2 35,527,776 B vs 56,374,176 B)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_mem_seed1001.txt research/poseidon/orchard/lean_r1_mem/logs/mem_ledger.txt 3rd_openai_workspace/luna3/P3_13_lowmem_routes.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Heap number from my own rerun; P3.13 values quoted. | universe cell poseidon-r1|MEM.SHRINK|MEM|M1",
+ "held_fixed": "r = 1",
+ "reopen_if": "a variant below 7.5 MB measured"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "D327-POSEIDON-R1-SCHEDULE-RSS-20261014",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "owned lean_r1_mem one-centre schedule RSS",
+  "question": "What whole-process peak RSS does the owned Poseidon-r1 lean schedule use for one centre?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "11,546,624 bytes (11,276 KiB, log2 23.46097) whole-process max RSS; internal heap_peak 7,944,256 bytes; one centre completed in 76.5 s",
+  "source": "our workflow: D327 Poseidon r1 schedule RSS",
+  "own_test": true,
+  "evidence": "research/sol_answer_D327_poseidon_r1_schedule_rss.md; research/poseidon/orchard/lean_r1_mem/lean_attack",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "23.461 MEASURED /usr/bin/time -v Maximum RSS for one WSL nice-10 lean_attack process; includes loader/libc/runtime",
+  "notes": "Owned lean_r1_mem schedule only. Internal heap peak is lower; no byte-identity or layout transfer to POSR1E7 has been proved, so no package score change.",
+  "held_fixed": "lean_r1_mem source/binary; one centre (r=1, ncentres=2, seed=1001, line=0); one process; nice 10",
+  "reopen_if": "A byte-identity/layout audit ties this binary to a filed package or a full multi-centre preprocessing run is measured"
+}

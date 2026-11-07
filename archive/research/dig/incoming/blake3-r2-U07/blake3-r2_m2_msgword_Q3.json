@@ -1,0 +1,19 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m2, degrees of freedom",
+ "question": "Degrees of freedom of m2: exact count over carries",
+ "labels": [
+  "I"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "(m2,m3) is onto all 2^64 pairs for every t_hi: constructive inverse (K1 backwards, then S13 via X13/S7/S11, S9 via X9) hit 20000/20000 random (w2,w3,t_hi) targets exactly (surj_out.txt); each step is an add, XOR or rotate so there is no carry ambiguity: (w2,w3) <-> (K1.c1,S13) is a bijection at fixed t_hi. Not free one parameter at a time: S13 over all 2^32 values of D2.a1 alone (others fixed) reaches only 79,460,208 values (1.85%%)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U07/work/b3ctr.py; research/dig/incoming/blake3-r2-U07/work/validate.py; research/dig/incoming/blake3-r2-U07/work/exp.py; research/dig/incoming/blake3-r2-U07/work/exp_out.json; research/dig/incoming/blake3-r2-U07/work/img.c; research/dig/incoming/blake3-r2-U07/work/img_out.txt; research/dig/incoming/blake3-r2-U07/work/surj.py; research/dig/incoming/blake3-r2-U07/work/surj_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m2|msgword|Q3. validated first: counter-construction (pkgB3U Sec 8 steps CO+CT) transcribed in b3ctr.py; 2000/2000 random free-word sets give pinned X3,X7,X11,X15, equal round-0 state for A/B, and equal digest words 0,2,5,7 (known answer reproduced). m2 alone: 32 bits, all reached. Of the 280 free bits (7x32 outer, y 19, t_hi 16, c1 21) 64 go to (m2,m3) and 216 stay free; m2,m3 depend on 7 of the 10 free words. LOCAL_ONLY: surjectivity shown by sampled exact solves plus the step-by-step bijection, with the constants of the counter construction; the E1/E3 class conditions on y and c1 are untouched (m2,m3 do not depend on them). The one-parameter image was run for 1 fixing only (stopped after S13; S9 trials skipped, S9 is a visible bijection in X9)."
+}

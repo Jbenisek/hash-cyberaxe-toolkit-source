@@ -1,0 +1,4 @@
+r=1 N=100000 top byte (y>>248, 64 bins 0..63) chi2(63 df)=61.2 min bin 1464 max bin 1697; expected bin 1562
+ quarters of 0..63 range: [25113, 25142, 24824, 24921]
+r=2 N=30000 top byte (y>>248, 64 bins 0..63) chi2(63 df)=80.9 min bin 419 max bin 529; expected bin 469
+ quarters of 0..63 range: [7380, 7597, 7588, 7435]

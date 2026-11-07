@@ -1,0 +1,19 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "labels": [
+  "P"
+ ],
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "C3.q4 (c2,b2) pinned constants (Fact P)",
+ "question": "Q2 necessity of the C3 pin (w4 advice; a,c differ by DY3,DY11)",
+ "status": "COMPUTED",
+ "number": "NECESSARY. q4 (c2,b2): b2 equal iff b1^b1' = c2^c2' = v; Y7=b2 feeds E2 and Y15=d2 feeds E0; E0 and E2 outputs make up all four of digest words 0,2,5,7 (o0=Z0^Z8, o2=Z2^Z10, o5=Z5^Z13, o7=Z7^Z15), so one unequal b or d output spoils them (over 160 single-bit flips of the five coordinates only the 2 bit-31 symmetry flips of c1 and b1 keep Fact P, and only those keep words 0,2,5,7). Without the pin the half-collision costs extra conditions on E0/E2 (doors 22,24).",
+ "evidence": "research/dig/incoming/blake3-r2-U02/work/factp.py; research/dig/incoming/blake3-r2-U02/work/necessity.py; research/dig/incoming/blake3-r2-U02/work/necessity.json; research/dig/incoming/blake3-r2-U02/work/axis.c; research/dig/incoming/blake3-r2-U02/work/axis_out.txt",
+ "notes": "Universe cell blake3-r2|C3.q4|step|Q2. Own tests: necessity.py (C3 and the 2-round E half re-implemented, validated: record pin -> equal d2/b2, words 0,2,5,7 equal in 64/64 trials) and axis.c (exhaustive 2^32 scan per pin coordinate, others at the record value; (a1,d1,c1,b1) is a bijection with (X3,X7,X11,X15) given w4). 'Necessary' = equal b/d outputs are not a property of random constants (random replacement 0/2000) and the pin is exactly the cube above; a single-coordinate scan is a local test around the record, not the global solution count (global: 64 pins per realizable cell, 8 cells, record profile; see the Q4 rows). Quarter attribution is by which equality the quarter carries; all four rows come from the same tests."
+}

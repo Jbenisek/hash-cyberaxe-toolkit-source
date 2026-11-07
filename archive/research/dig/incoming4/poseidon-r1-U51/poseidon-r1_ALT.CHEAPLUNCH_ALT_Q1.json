@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH CheapLunch",
+ "question": "exact value or degree as used",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "CheapLunch ideal degree D_I <= d^(k RF + RP): k=1 -> 5^9 = 1,953,125; with s = floor(t/k) - 2 = 1 skipped variable 5^8 = 390,625; the paper has no memory figure and says FGLM dominates",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "From our reading of the paper (cl.txt, Wayback copy) and arithmetic. | universe cell poseidon-r1|ALT.CHEAPLUNCH|ALT|Q1",
+ "held_fixed": "k=1, RF=8, RP=1",
+ "reopen_if": "a collision-mode analysis in the paper (A.3 only says CICO-(c,c))"
+}

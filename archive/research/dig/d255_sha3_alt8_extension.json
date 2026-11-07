@@ -1,0 +1,22 @@
+{
+  "id": "D255-SHA3-R6-ALT8-EXTENSION-20261013",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "mixed-lane/mixed-slice rank-8 predicate extension",
+  "question": "Do fixed-seed extension masks show nonzero degree-8 and zero degree-9 on sampled W40 cubes?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "seed 0xD255; 8 sets x 32 cubes; rank8 8/8; all 64 eighth forms witnessed; witness range 10..24; all 2048 ninth derivatives zero; KAT True",
+  "source": "our workflow: D255 preregistered alt8 extension",
+  "own_test": true,
+  "evidence": "research/retest/sha3_r6_alt8/PREREG_EXTENSION_D255.md; research/retest/sha3_r6_alt8/D255_run_output.txt; research/retest/sha3_r6_alt8/alt8.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Finite sample only; no universal degree, uniformity, kernel, or package credit.",
+  "potential_bits": 0.5,
+  "prior": 0.05,
+  "gain_basis": "S",
+  "reopen_if": "broader preregistered family or a counted cheaper kernel"
+}

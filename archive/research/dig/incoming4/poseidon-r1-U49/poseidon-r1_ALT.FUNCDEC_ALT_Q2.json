@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FUNCDEC functional decomposition of the digest polynomial",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "necessity: only inner degrees dividing 5^7 matter (5, 25, 125, 625, 3125, 15625 = every proper one); a decomposition would give collisions for free on B(W) = B(W'); none exists",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/decomp/RESULT.md research/poseidon/math/decomp_625_3125.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Arithmetic: divisors of 5^7. | universe cell poseidon-r1|ALT.FUNCDEC|ALT|Q2",
+ "held_fixed": "r=1",
+ "reopen_if": "a decomposition over an extension field (tame case rules it out for p > n)"
+}

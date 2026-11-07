@@ -1,0 +1,23 @@
+{
+  "id": "D373-POSR2-ADDRESS-SCHEDULE-AUDIT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.ADDR (MACHINE)",
+  "question": "What stride and loop choices are actually available in the shipped r2 transform schedule?",
+  "labels": ["N", "Z"],
+  "status": "COMPUTED",
+  "number": "For rows=3,a=17 the forced pass table is k=[1,4,4,4,4], s=[65536,4096,256,16,1]. Passes 0-3 are variable-stride and pass 4 is constant-stride. Each non-final pass has exactly 2n=262144 direct load/store address-update charges per row; conv_core's three rows therefore have 6291456 such updates in each forward+fused+inverse call. No plan-level stride degree of freedom exists for fixed (rows,a).",
+  "source": "our read-only source audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D373_poseidon_r2_address_schedule_audit.md; research/poseidon/orchard/lean_r2/ntt.c; research/poseidon/orchard/lean_r2/ntt_body.c; research/poseidon/orchard/lean_r2/pkg_stage_r2/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "S",
+  "notes": "Supersedes C1916. C1917 remains OPEN for a newly built and charged unrolled/constant-stride alternative; no score or package credit is claimed.",
+  "held_fixed": "checked-in lean_r2 source and pkg_stage_r2 proof path; rows=3,a=17 r2 transform plan",
+  "reopen_if": "the r2 plan is rebuilt with a different (rows,a) or a new kernel changes the pass partition",
+  "supersedes": ["C1916"],
+  "peak_mem": "UNKNOWN"
+}

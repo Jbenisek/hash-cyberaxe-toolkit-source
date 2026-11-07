@@ -1,0 +1,23 @@
+{
+  "id": "D529-SHA3-R6-S6J-T1T3-EQUIVALENCE-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6j_t1 candidate-major T1+T3 equivalence tool",
+  "question": "Does the candidate-major T1+T3 development path preserve the T3 reference's keys, pairs, and verification results on all supplied reduced requests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Fresh three-request run reports RESULT EQUIVALENT. 131072 layout-mapped key words, beside-run key, all returned pairs, and verification tuples match T3; only cost counters differ. T1+T3 source is 59626 B, SHA-256 6CD0CF6BCC5CB6B6EF4048EE2824F3EBC6337D2DF02A5DB72A57692C59F59E2E. No score credit; development tool only.",
+  "source": "our workflow: D529 read-only S6j T1+T3 equivalence run",
+  "own_test": true,
+  "evidence": "research/sol_answer_D529_s6j_t1_equivalence.md; research/tools/build_pkg/scratch/pkgS6j_t1/equiv_t1.py; research/tools/build_pkg/scratch/pkgS6j_t1/fes_t1t3.py; research/tools/build_pkg/scratch/pkgS6j_t1/ref_t3only.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Development-tool equivalence and cost-counter audit only; no score/package/stage/filing/submission.",
+  "held_fixed": "three supplied request files; T3/S6i references; one-thread Python run",
+  "reopen_if": "compiled/shipped T1+T3 source, complete charge ledger, or owner/organizer acceptance ruling arrives"
+}

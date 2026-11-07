@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "neutral bits: degrees of freedom for a round-1 state condition",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "condition: top 8 bits of one round-1 state word (v0,v1,v4,v5,v10,v15 tested) equal 0 (P=2^-8; about 4000 satisfying messages of 2^20): 211 to 229 of 256 free bits keep it with P >= 0.9 (199-216 with P exactly 1: 192 bits of the 6 words that do not reach the state word, structural, plus low bits of the two that do)",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_neutral.py; research/blake3_r3/alt/exp_neutral.log; research/blake3_r3/alt/exp_neutral.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Message modification buys freedom for round-1 conditions only; each condition word depends on only 2 of the 8 free words. A round-2 condition was not tested.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); condition on one state word after round 1",
+ "reopen_if": "a condition on round-2 state with more than 100 neutral bits",
+ "topic": "blake3-r3|ALT.NEUTRAL|ALT|Q3"
+}

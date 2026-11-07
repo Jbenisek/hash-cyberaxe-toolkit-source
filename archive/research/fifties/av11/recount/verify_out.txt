@@ -1,0 +1,54 @@
+pins(seed 918273645): X7=57bb1a40 X11=eb378384 IV3=7511a829 IV7=4a8ee108 C3=fd6a945d W13=14def6b1
+special K=u=0 V=00800080 roots: 00800080 017f0180
+frame  0 q=00000000 class  y=2e049996 inC=1 brute=2 inverse=2 MATCH
+frame  1 q=80000000 class  y=06148da6 inC=1 brute=1 inverse=1 MATCH
+frame  2 q=00000000 class  y=1e048586 inC=1 brute=1 inverse=1 MATCH
+frame  3 q=80000000 class  y=921459ce inC=1 brute=1 inverse=1 MATCH
+frame  4 q=00000000 class  y=d9e44e5e inC=1 brute=2 inverse=2 MATCH
+frame  5 q=80000000 class  y=f1e44222 inC=1 brute=0 inverse=0 MATCH
+frame  6 q=00000000 class  y=fa14459a inC=1 brute=1 inverse=1 MATCH
+frame  7 q=80000000 class  y=e1e4761a inC=1 brute=1 inverse=1 MATCH
+frame  8 q=00000000 class  y=15f4798e inC=1 brute=0 inverse=0 MATCH
+frame  9 q=80000000 class  y=8df4b9a2 inC=1 brute=1 inverse=1 MATCH
+frame 10 q=00000000 class  y=aa04b5b6 inC=1 brute=2 inverse=2 MATCH
+frame 11 q=80000000 class  y=0df4665a inC=1 brute=1 inverse=1 MATCH
+frame 12 q=00000000 class  y=7604ba72 inC=1 brute=0 inverse=0 MATCH
+frame 13 q=80000000 class  y=ae14bdfa inC=1 brute=2 inverse=2 MATCH
+frame 14 q=00000000 class  y=0a044a02 inC=1 brute=0 inverse=0 MATCH
+frame 15 q=80000000 class  y=8204721e inC=1 brute=2 inverse=2 MATCH
+frame 16 q=00000000 class  y=f6146d92 inC=1 brute=2 inverse=2 MATCH
+frame 17 q=80000000 class  y=0204a21a inC=1 brute=2 inverse=2 MATCH
+frame 18 q=00000000 class  y=adf45e22 inC=1 brute=2 inverse=2 MATCH
+frame 19 q=80000000 class  y=29e485ba inC=1 brute=2 inverse=2 MATCH
+frame 20 q=00000000 class  y=06049e2e inC=1 brute=2 inverse=2 MATCH
+frame 21 q=80000000 class  y=adf469c2 inC=1 brute=1 inverse=1 MATCH
+frame 22 q=00000000 class  y=ae04ae6a inC=1 brute=1 inverse=1 MATCH
+frame 23 q=80000000 class  y=7df45272 inC=1 brute=0 inverse=0 MATCH
+frame 24 q=00000000 class  y=160465fe inC=1 brute=1 inverse=1 MATCH
+frame 25 q=80000000 planted y=ee2eb7fd inC=0 brute=2 inverse=2 MATCH
+frame 26 q=00000000 planted y=5d66d1e5 inC=0 brute=1 inverse=1 MATCH
+frame 27 q=80000000 planted y=e83c1d2e inC=0 brute=1 inverse=1 MATCH
+frame 28 q=00000000 planted y=5f2cb164 inC=0 brute=2 inverse=2 MATCH
+frame 29 q=80000000 planted y=6b6bc447 inC=0 brute=1 inverse=1 MATCH
+frame 30 q=00000000 planted y=0ec98a56 inC=0 brute=1 inverse=1 MATCH
+frame 31 q=80000000 planted y=ee8ab06e inC=0 brute=2 inverse=2 MATCH
+frame 32 q=00000000 planted y=48f84723 inC=0 brute=1 inverse=1 MATCH
+frame 33 q=80000000 planted y=d7003800 inC=0 brute=1 inverse=1 MATCH
+frame 34 q=00000000 planted y=da087182 inC=0 brute=1 inverse=1 MATCH
+frame 35 q=80000000 planted y=6925ba2d inC=0 brute=1 inverse=1 MATCH
+frame 36 q=00000000 planted y=ae101a7a inC=0 brute=1 inverse=1 MATCH
+frame 37 q=80000000 planted y=d061b324 inC=0 brute=3 inverse=3 MATCH
+frame 38 q=00000000 planted y=bf879d86 inC=0 brute=2 inverse=2 MATCH
+frame 39 q=80000000 planted y=09181e6a inC=0 brute=2 inverse=2 MATCH
+frame 40 q=00000000 planted y=c5e10fb3 inC=0 brute=2 inverse=2 MATCH
+frame 41 q=80000000 planted y=b54a6d17 inC=0 brute=1 inverse=1 MATCH
+frame 42 q=00000000 planted y=7f8e8aac inC=0 brute=1 inverse=1 MATCH
+frame 43 q=80000000 planted y=e651714b inC=0 brute=1 inverse=1 MATCH
+frame 44 q=00000000 planted y=c146dcde inC=0 brute=1 inverse=1 MATCH
+frame 45 q=80000000 planted y=2437dbfb inC=0 brute=2 inverse=2 MATCH
+frame 46 q=00000000 planted y=92a0ab2d inC=0 brute=3 inverse=3 MATCH
+frame 47 q=80000000 planted y=34302674 inC=0 brute=2 inverse=2 MATCH
+frame 48 q=00000000 planted y=14453a66 inC=0 brute=1 inverse=1 MATCH
+frame 49 q=80000000 planted y=a745b406 inC=0 brute=1 inverse=1 MATCH
+VERIFY: 0 bad frames of 50; total roots 67; R hist: 5 25 18 2 0 0 0 0
+verify exit 0

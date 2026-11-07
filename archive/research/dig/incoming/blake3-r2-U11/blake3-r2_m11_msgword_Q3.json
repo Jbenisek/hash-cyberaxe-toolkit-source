@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U11/work/b3lib.py; research/dig/incoming/blake3-r2-U11/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U11/work/scan_m1011.py (+scan_m1011.out.json, scan.log)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m11|msgword|Q3",
+ "object": "pkgB3U message word m11 (w11)",
+ "question": "What is the local freedom of this word given the other rows (exact count)?",
+ "labels": [
+  "I"
+ ],
+ "status": "COMPUTED",
+ "number": "(w10,w11) given a context (six outer words + X2): exactly 2^32 pairs, parametrised by y. w10 is a bijection of y (inverse w10 -> y round-trips 33554432/33554432 on 2^25 consecutive and 2^25 random y; 2^25 distinct w10 each) and w11 is a function of w10 (distinct pairs 2^25 of 2^25 both sweeps; distinct w11 33430973 of 2^25 consecutive = a random function, not injective alone). The pair is free per context only to 32 bits, not 64: the pin X11 fixes one 32-bit relation. Over contexts: 150000 random 8-word builds give 150000 distinct w10, 149998 distinct w11, 150000 distinct pairs. Dependence on the 8 free params: all of C0c1, C0d1, D3d1, S15, S9, w5, X2, y change both w10 and w11 (1500/1500 each)",
+ "notes": "Universe cell blake3-r2|m11|msgword|Q3. Sweeps are 2^25 of 2^32 y values for one random context (checked equal to build() on 2000 y), the bijection w10<->y is exact by composition of invertible lines (a1 = S1+S6+w10, d1 = ROR(S12^a1,16), c1 = S11+d1, X12 = X11-c1, C0 chain back to y). NOT done: whether every pair (w10t,w11t) of 2^64 is reachable over all contexts (surjectivity onto 64 bits) was not tested; the per-context count of 2^32 is what we know. Class: FREE trial word (step T of the pkgB3U root construction, one of w8..w11; not pinned w4, not cancelling w5, not a forced constant X3/X7/X11/X15). w10 is the first and w11 the second message word of D1 = G(1,6,11,12) in round 0; in round 1 w10 is the second word of C1 (slot 3, enters Y1) and w11 the second word of E0 (slot 9). Solved lines: w10 = D1.a1 - S1 - S6, w11 = X1 - D1.a1 - D1.b1. Construction validated first on our b3lib.py (3000/3000: X3/X7/X11/X15, Y4=y, S and X equal A vs B, digest words 0,2,5,7 equal). Method as blake3-r2-U06 (scan_m01.py) applied to words 10,11. Tested the pkgB3U root construction only, 2 rounds, A (len 55) vs B (len 63).",
+ "topic": "b3r2.m11.msgword.Q3"
+}

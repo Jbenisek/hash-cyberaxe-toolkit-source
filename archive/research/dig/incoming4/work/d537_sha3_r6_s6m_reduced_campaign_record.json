@@ -1,0 +1,23 @@
+{
+  "id": "D537-SHA3-R6-S6M-REDUCED-CAMPAIGN-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6m prefile and three supplied reduced campaign requests",
+  "question": "What is verified for pkgS6m despite its missing ledger and note/registry defects?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6m claims time_log2=122.15557; prefile SOME FAIL for no executable ledger appendix, note labels D107/D20/D83/audit, and the known-good registry gap. Three 256-trial requests complete with zero key mismatches and zero key matches: reduced 0 pairs; within16 224 partial pairs with counts 513/131526/500; cross16 165 partial pairs with counts 485/130615/519; fixed fes_ops=845059, chi_transpose_ops=4641160, table_ops=786432, in_range_mismatches=0.",
+  "source": "our workflow: D537 read-only pkgS6m reduced-campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D537_s6m_audit.md; research/tools/build_pkg/scratch/pkgS6m/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6m/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6m/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6i/work/req_fes-campaign-reduced.json; research/tools/build_pkg/scratch/pkgS6i/work/req_hcoset-within16.json; research/tools/build_pkg/scratch/pkgS6i/work/req_hcoset-cross16.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Reduced-width finite mechanics only; no exact N, score, or premise credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS6m package bytes and supplied request specifications as found; one process; no file writes",
+  "reopen_if": "ledger/note/registry repair or owner/organizer acceptance ruling arrives"
+}

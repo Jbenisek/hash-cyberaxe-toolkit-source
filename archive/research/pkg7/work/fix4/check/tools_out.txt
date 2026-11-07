@@ -1,0 +1,34 @@
+== build_pkg7.py --check
+unchanged  blake3-r2/proof.md  (147348 bytes)
+unchanged  blake3-r2/claim.json  (16748 bytes)
+unchanged  blake3-r2/experiments/manifest.json  (5235 bytes)
+unchanged  submission-note-r2.md  (12829 bytes)
+ranges: constr 245-545, trials 549-621, early 640-777, algo 779-906, batch 908-1223, s7 1225-1313, h2 1250-1258, h3 1260-1274, s10 1464-2077
+claim: state draft, time_log2 95.7 (bound 2^95.6499), factor 49,400,000, 2^101.442 trials, charge 7.7, count for H1 185,355,453.45 (with rule A 185,358,111.47, all 185,377,197.55), sub-class 07ef8303/030c0303 (131,072 members), margin 3.75; note 12829 bytes
+exit 0
+== build_pkg7.py --program
+rule 4: stage A 29+8, stage 2 101+27; Lemma A patterns 16 of 16
+rule 6: stage A 32+9, stage 2 105+30; Lemma A patterns 512 of 512
+rule 8: stage A 37+10, stage 2 105+30; Lemma A patterns 65536 of 65536
+experiments/halfsearch.py has the pin, lengths 55 and 63, eta 830303cf, the sub-class 07ef8303/030c0303 (131072 members), the three rules, RULE_CONDITIONS = 8, FACTOR = 49400000, the stage-2 budget and the counts of pkg7_data.py
+exit 0
+== fmt_pkg7.py
+  longest restriction 994 of 1024, longest heuristic field 3249 of 4096 (H1-residual-hit-rate.limitations), manifest fields [843, 274, 1626, 1618] of 2000
+  lemmas stated ['A', 'H', 'L', 'N', 'Q', 'Q2', 'T', 'T2', 'T3', 'T4']; named from entry c66f230d without being restated ['E', 'F', 'S', 'Y']
+  scalar 95.7: with the trials of the ranges 2^95.64989, with 2^127 / f 2^95.64989, short form 95.6504; printed bounds 2^95.6499 and 2^95.65
+  Section 11: 27 quoted passages, 27 found word for word in the filed proof, claim or note
+proof 2389 lines, 147348 bytes; claim 16748 bytes; note 12829 bytes; cited ranges 9
+RESULT: nothing wrong
+exit 0
+== text_scan_pkg7.py
+clean  blake3-r2/certificates/manifest.json  (48 bytes)
+clean  blake3-r2/claim.json  (16748 bytes)
+clean  blake3-r2/experiments/halfsearch.py  (63738 bytes)
+clean  blake3-r2/experiments/manifest.json  (5235 bytes)
+clean  blake3-r2/proof.md  (147348 bytes)
+clean  submission-note-r2.md  (12829 bytes)
+NOTE: 2 line(s) are reported by the word test only because of a constant of the pin written in hexadecimal digits, and are not counted: blake3-r2/experiments/halfsearch.py:94, blake3-r2/proof.md:202
+files 6, account names looked for 2, word list read, findings 0
+exit 0
+== pycache in package
+0

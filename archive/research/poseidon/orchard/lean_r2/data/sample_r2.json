@@ -1,0 +1,19 @@
+{
+ "by_j": {
+  "0": [
+   0,
+   3
+  ],
+  "1": [
+   0,
+   0
+  ],
+  "2": [
+   0,
+   0
+  ]
+ },
+ "desc": "Samples: 3 executions of this build (one centre each, seeds in the logs, line j given by the seed; only the first centre of an execution is counted). Every counted success was verified by a big-integer reference of the hash and by the organizer's hash implementation.",
+ "n_own": 3,
+ "n_extra": 0
+}

@@ -1,0 +1,6 @@
+W 32; screen2 bases=2 draws=6 (seed 4040 stream); cross test 8 bases x 32 draws (seed 5151)
+mode C0: screen2 candidates 8, candidate bits 8, refuted by a cross move 8, unrefuted 0 (2s)
+mode T0: screen2 candidates 23, candidate bits 24, refuted by a cross move 24, unrefuted 0 (7s)
+mode T0T1: screen2 candidates 66, candidate bits 68, refuted by a cross move 68, unrefuted 0 (22s)
+mode E1d1: screen2 candidates 46, candidate bits 47, refuted by a cross move 47, unrefuted 0 (11s)
+mode E3h1: screen2 candidates 58, candidate bits 58, refuted by a cross move 58, unrefuted 0 (11s)

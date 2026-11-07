@@ -1,0 +1,20 @@
+{
+  "id": "S37-D177B-LSTAR-SPARSE-R16",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": 17,
+  "object": "Procedure C L* W15 sparse row-16 path",
+  "question": "Does varying the exact 32-value L* W15 degree of freedom produce row-16 survivors and onward row-17 paths?",
+  "labels": ["D", "X", "Z"],
+  "status": "SAMPLED",
+  "number": "candidate 8, W15=fdb43680: 2/65,536 row-16 hits (2^-15), 0/2 row-17; 20x32x256 sweep found one row-16 hit",
+  "source": "our workflow: d177b L* W15 follow-up",
+  "own_test": true,
+  "evidence": "research/retest/d177b_procedure_c/LSTAR_ONE_L.md; research/retest/d177b_procedure_c/LSTAR_ONE_L.txt; research/retest/d177b_procedure_c/LSTAR_SIGNATURE_SLICE.txt; research/retest/d177b_procedure_c/LSTAR_HIT_DETAIL.txt",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "r37.d177b.lstar_row16",
+  "notes": "Sparse sampled row-16 cell/x2 path under free-CV construction; batch counter omitted adjacent plus links. The exact bit-vector/replay continuation separately supplies a plus-link-conditioned witness through row 19. No row-17 or late success in the batch; not a held-out P1-vs-P0 result and no family-wide rate or package credit."
+}

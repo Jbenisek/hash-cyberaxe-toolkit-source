@@ -1,0 +1,23 @@
+{
+  "id": "D731-SHA256-R38-C2-FULL-LATE-BINARY-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 37,
+  "object": "SHA-256-r38 corrected C2 full-late executable audit",
+  "question": "Does the current zd38c2lateall executable rebuild rows 16..37 after a changed row-14/E15 prefix?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Binary audit proves main calls tl_build_from with start row 16 and end M.nr-1 after row-15 checks, then tl_rowsok checks 16..37 and tl_state_eq checks the final state. The stale fixed-prefix caveat is closed; split transfer/global rate remain open.",
+  "source": "our workflow: D731 SHA256-r38 full-late binary audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D731_sha256_r38_c2_full_late_binary_audit.md; research/tools/traillab/digs/zoneD38/zd38c2lateall; research/sol_answer_D243-zoneD38-c2-full-late-spec.md; research/sol_answer_D729_sha256_r38_c2_aggregate_refresh.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "notes": "Implementation audit only. It corrects the stale D243 description of zd38c2lateall; it does not prove production split transfer, global late rate, charged score, package, staging, filing, or submission.",
+  "held_fixed": "current zd38c2lateall executable and its disassembled main/tl_build_from path",
+  "reopen_if": "binary replacement, source rebuild mismatch, or a production-law split-transfer proof"
+}

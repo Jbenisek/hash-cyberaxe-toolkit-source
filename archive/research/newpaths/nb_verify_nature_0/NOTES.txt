@@ -1,0 +1,85 @@
+nb_verify_nature_0 - skeptic check of NATURE.md row 11 / section 3.8
+Claim: "Kinetic proofreading (staged discrimination, cheap early-abort stages before expensive ones):
+already the leaders' stage A / stage 2 with rule A; cost factor only; at most 0.77 bit left
+(END_OF_LINE 3.1); projected exponent 90.8."
+Research only. Nothing submitted, no yukon, no trace. Tags: COMPUTED / DERIVED / GUESS.
+
+VERDICT: the "projected exponent 90.8" is REFUTED as a projection for this idea. The qualitative part
+("already used, cost factor only, nothing new") STANDS.
+
+1. "Already in the path" - CONFIRMED (read from the files).
+   - Filed 92.53 package (pkg10 proof.md 6.5, 6.7, section 8): gate H4 (4 of 8 conditions) -> rule A
+     (stage A, 47 units) -> stage 2 with the 32-bit E1 test (135 units) -> full R. That is four stages.
+   - Leader 93.5891 (rivals\since_2100Z\93.5891_Subflatus3_ef81f589.md): three counted stages,
+     19 / 66 / 119 operations.
+   NATURE.md has no toy run for this row (it is marked DERIVED), so there was no toy to rerun; what
+   was rerun is the arithmetic and the cheap-test rate that the only remaining staging step rests on.
+
+2. "Cost factor only" - CONFIRMED (DERIVED). A stage is a filter on the same trials: it can only keep
+   or drop collision mass, never add it. Rule A keeps 185,358,111.47 of 185,377,197.55; the c1 test
+   keeps 185,351,809 of that (files). Staging lowers cost per trial-equivalent and lowers the rate a
+   little.
+
+3. "At most 0.77 bit left" - true as a bound, but the reason given is wrong and the number is stale.
+   - 0.77 = log2(1.71), the old pkg8 charge. The filed pkg10 charge is 1.65 -> 0.7225 bit
+     (COMPUTED, stage_math.out D).
+   - "Hard floor of 1 op per trial" is a convention, not a law of the cost model: a packed op covers
+     7 lanes, and the representative's stage A alone is 0.167 units per trial-equivalent (COMPUTED).
+   - The real ceiling for STAGING in this layout: staging can only shrink the work done after the
+     first stage. The ledger rows paid before any later stage (stage A of the representatives and
+     neighbours, gate, routing, group) are 44.886 of 67.585 per representative = 1.0942 per TE
+     (COMPUTED from the section 8 rows, which I reproduced to 67.585273 vs filed 67.585260).
+     Even if every later stage were free: 0.590 bit (COMPUTED). That is below 0.77, so "at most
+     0.77" holds, with 1.094 as the floor and not 1.00.
+   - Within stage A, an extra early-abort stage does not pay in packed form: a word can stop early
+     only if all 7 lanes fail. A pre-test passing 1/2 of lanes stops 0.8% of words, 1/4 stops 13%
+     (COMPUTED, Monte Carlo + exact formula, stage_math.out G). Rule A (lane rate 0.00446, word rate
+     0.0308) is already the cheap stage that stops 96.9% of words.
+   - Same check on the leader: fixed work 2.718 of 3.485 ops/trial, so their staging ceiling is
+     0.358 bit (COMPUTED from their published ledger).
+
+4. "Projected exponent 90.8" - REFUTED.
+   - 90.798 (reproduced, stage_math.out E) is the path floor at discount 1 AND 1.00 op per TE.
+   - The discount step 2 -> 1 is worth exactly 1.000 bit and has nothing to do with staging; the
+     filed 92.53 and every leading entry use discount 2, and END_OF_LINE 5 says "do not take discount
+     1.0". At the filed discount, 1.00 op/TE gives 91.80.
+   - 1.00 op/TE is not reachable by staging here: the first-stage floor is 1.0942 per TE.
+   - So for this idea, applied to the filed package (discount 2, upper-bound ledger):
+       ceiling, every stage after stage A free ........ charge 1.0942 -> 91.94   (COMPUTED)
+       the one concrete step left: split stage 2 at the c1 cheap test (81 before, 12 the test,
+       57 after, word passes w.p. 0.0440075) ............. charge 1.486 -> 1.49 -> 92.37-92.38
+       (gain 0.149 bit; 0.147 bit if the 57-unit row gets a 1.2x budget as the other rows do)
+     The split is already item 2 of END_OF_LINE section 5 ("about 0.16 bit"); my recount on the
+     filed ledger gives 0.149. The 12 units of the test are still unreplayed on the program's own
+     counting machine (proof.md 2291-2292), so 92.38 carries that caveat.
+   - Corrected exponent for this idea: about 92.38 (realistic), never below 91.94 in this layout;
+     90.93 even at discount 1.
+
+5. The c1 cheap test, rerun on real E1 arithmetic (c1test.c, run_c1.sh -> c1test.out)
+   - Exact over all 2^32 c1, x = c1 ^ (c1 + Y11' - Y11), pass = (x & cbfffff9) == 0a098189:
+     27,525,120 passing c1 = 105/16384 * 2^32, 18 distinct passing x. Both MATCH O.md O3 and the
+     proof (COMPUTED). So the word rate 0.0440075 behind the 0.149-bit split is right.
+   - E1 test n = 0 (Lemma N), free words d1, Y6, a1 + w5 uniform: 1 hit in 2^32 uniform samples
+     (rate about 2^-32; too few to estimate), 20 hits in 2^32 samples with c1 drawn from the passing
+     set, i.e. P(n=0 and pass) = 2^-34.96 (COMPUTED). If P(n=0) is about 2^-32, only about 13% of
+     uniform-weight E1-test hits pass the cheap test (enrichment 20x, against 156x if all of them sat
+     on passing c1). This does NOT contradict the claimed retention 0.99997 of the collision mass R:
+     the retention is weighted by R under model M (only 7 of the 18 passing x carry R), and n = 0 is
+     only one necessary condition of R = 0. INCONCLUSIVE on retention: it is Sol's exact count and was
+     not rerun here. It does say the cheap test also thins stage-3 work, which is negligible in cost.
+
+6. Not established / GUESS
+   - A cheaper first stage (the leader's 19-op stage A against our 47) would be a coding gain, not a
+     staging gain; whether their folded block constant fits the cluster layout was not checked (GUESS:
+     it is worth up to about 0.6 bit if it did, which would also lower the staging floor above).
+   - A pre-test between the gate and the neighbours' stage A (the largest row, 31.7 of 67.6 per
+     representative) would need a predictor of a neighbour's rule A cheaper than computing its z; none
+     is known (GUESS: none exists, since z is 17 of stage A's 37 operations and rule A reads z).
+
+Files: stage_math.py -> stage_math.out (Windows python, exact rationals + numpy MC);
+c1test.c + run_c1.sh -> c1test.out (WSL gcc). No process of mine is left running.
+Sources: research\pkg10\pkg\blake3-r2\proof.md (6.5 part table lines 1055-1072, 6.7, section 8
+ledger lines 1381-1485, c1 split lines 2302-2317); research\END_OF_LINE.md 3.1 and 5;
+research\grok\work\job24_charge\O.md O3 (c1 test, 105/16384); research\rivals\since_2100Z\
+93.5891_Subflatus3_ef81f589.md (leader ledger). Hopfield 1974, PNAS 71:4135,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC434344 (as cited in NATURE.md).

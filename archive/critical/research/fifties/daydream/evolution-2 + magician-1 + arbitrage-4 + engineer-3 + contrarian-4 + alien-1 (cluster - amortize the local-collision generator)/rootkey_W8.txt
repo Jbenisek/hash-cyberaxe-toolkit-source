@@ -1,0 +1,1 @@
+W=8: 11133 T0-solvable seeds / 523497; mean log2 tuples 3.41; mean log2 distinct (X15 xor-diff) 1.06; tuples breaking S0: 0

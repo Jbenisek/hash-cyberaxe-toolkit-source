@@ -1,0 +1,6 @@
+{'t': 1, 'extra_blocks': 0, 'calls_B1': [(1, 55, 3, 'cv=IV')], 'calls_B2': [(1, 63, 3, 'cv=IV')], 'natural_equal': False, 'forced_equal': True, 'hA_is_h1': True}
+{'t': 2, 'extra_blocks': 0, 'calls_B1': [(2, 55, 3, 'cv=IV')], 'calls_B2': [(2, 63, 3, 'cv=IV')], 'natural_equal': False, 'forced_equal': True, 'hA_is_h1': True}
+{'t': 3, 'extra_blocks': 0, 'calls_B1': [(3, 55, 3, 'cv=IV')], 'calls_B2': [(3, 63, 3, 'cv=IV')], 'natural_equal': False, 'forced_equal': True, 'hA_is_h1': True}
+{'t': 5, 'extra_blocks': 0, 'calls_B1': [(5, 55, 3, 'cv=IV')], 'calls_B2': [(5, 63, 3, 'cv=IV')], 'natural_equal': False, 'forced_equal': True, 'hA_is_h1': True}
+{'t': 1, 'extra_blocks': 1, 'calls_B1': [(1, 55, 2, 'cv=chained')], 'calls_B2': [(1, 63, 2, 'cv=chained')], 'natural_equal': False, 'forced_equal': True, 'hA_is_h1': True}
+{'t': 3, 'extra_blocks': 2, 'calls_B1': [(3, 55, 2, 'cv=chained')], 'calls_B2': [(3, 63, 2, 'cv=chained')], 'natural_equal': False, 'forced_equal': True, 'hA_is_h1': True}

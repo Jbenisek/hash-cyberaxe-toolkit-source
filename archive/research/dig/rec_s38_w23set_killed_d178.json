@@ -1,0 +1,22 @@
+{
+  "id": "S38-W23set-killed-D178",
+  "hash": "sha256-38",
+  "row_i": 23,
+  "row_j": 25,
+  "object": "r38 exact event with W23 over its proposed full exact set",
+  "question": "Does the exact event gain more if W23 is drawn from its full exact set instead of the printed pattern?",
+  "labels": ["E", "B"],
+  "status": "KILLED",
+  "number": "COMPUTED: real message re-expansion leaves only the published W23 pattern; seven other bit-(13,17,26) patterns fail first at W25. Model ceilings 75/32 (1.2288186905 bits) and 2625/1024 (1.3581017074 bits) are not legal-family gains.",
+  "source": "our workflow: expansion_audit exhaustive re-expansion",
+  "own_test": true,
+  "evidence": "research/luna/item1363_r38_w23_fullset_audit.md; research/retest/expansion_audit/why/RESULT.md; research/sol_answer_D178_r38_w23_fullset.md",
+  "date": "2026-10-18",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Supersedes S38-W23set. Held-fixed full-set counts are an inconsistent-message artifact; legal D165 printed-W23 multiplier 889/795 remains the applicable result.",
+  "potential_bits": 1.2,
+  "prior": 0.3,
+  "gain_basis": "q3",
+  "supersedes": ["S38-W23set"]
+}

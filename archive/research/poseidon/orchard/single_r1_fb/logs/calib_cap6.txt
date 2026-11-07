@@ -1,0 +1,8 @@
+LEVEL d=3 shift=5767 pow=74807 shift_abs_peak=524768 pow_abs_peak=524704 live_before=524512 secs 0.0 0.0
+LEVEL d=4 shift=5928 pow=133897 shift_abs_peak=524896 pow_abs_peak=524832 live_before=524576 secs 0.0 0.0
+LEVEL d=5 shift=6114 pow=210697 shift_abs_peak=525024 pow_abs_peak=524960 live_before=524640 secs 0.0 0.0
+LEVEL d=6 shift=6323 pow=305207 shift_abs_peak=525152 pow_abs_peak=525088 live_before=524704 secs 0.0 0.0
+LEVEL d=7 shift=6557 pow=417427 shift_abs_peak=525280 pow_abs_peak=525216 live_before=524768 secs 0.0 0.0
+LEVEL d=8 shift=6813 pow=547357 shift_abs_peak=525408 pow_abs_peak=525344 live_before=524832 secs 0.0 0.0
+LEVEL d=9 shift=7095 pow=694997 shift_abs_peak=525536 pow_abs_peak=525472 live_before=524896 secs 0.0 0.0
+EXIT 0

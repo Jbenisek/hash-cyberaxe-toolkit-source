@@ -1,0 +1,20 @@
+{
+ "2": {
+  "pair_pass_mean": 0.7862903225806451,
+  "pair_pass_min": 0.0,
+  "pair_pass_max": 1.0,
+  "clique_hist": {
+   "9": 8
+  },
+  "bases": 512
+ },
+ "3": {
+  "pair_pass_mean": 0.0,
+  "pair_pass_min": 0.0,
+  "pair_pass_max": 0.0,
+  "clique_hist": {
+   "1": 512
+  },
+  "bases": 512
+ }
+}

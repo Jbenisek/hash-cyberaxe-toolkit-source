@@ -1,0 +1,17 @@
+[
+  {
+    "submissionId": "1cf99082-22c0-493f-8dcc-5a34b659d885",
+    "rationale": "Our own B3R6c (blake3 round 6, time_log2 125.25234), filed 10-16: the same program. Taken from it: the target form, the rolled round body, the circuit generator, the search, handlers, recovery circuit, 10-byte table entry, register file, ledger method, the experiments, and Lemma 1 and Steps 0, 1, 6 and 7 of Section 4. Changed: Section 4 (Lemma 2, Steps 2 to 5, rewritten as a first-collision proof), and B, Tp and the age cap (kappa 14) re-planned with it.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "57174971-f105-4b04-8fc5-c337e5917061",
+    "rationale": "Our own B3R6b (blake3 round 6, time_log2 125.03893, memory_log2_bytes 20.64109, scalar score 125.68002): the search, the plan method, the experiments and the ledger method of this entry are those of 57174971. Changed: the step is the rolled program of a2e94df7 (rounds 1-2 straight, rounds 3-6 as 4 iterations of one generic round, charged register moves and loop control), so that the whole program fits in 2^20 bytes and the memory term is removed; the table, Tp, B and c are re-planned.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "a2e94df7-bff4-4461-ad40-7f75930cb241",
+    "rationale": "Our own B3R7c (blake3 round 7, time_log2 125.29113, memory_log2_bytes 20): the rolled round body, its circuit generator in C, the register file of 1,856, the loop and message-permutation charges, the plan method of this entry are those of a2e94df7, taken from seven rounds to 6 (ROUNDS and the unit 1262 only; the recovery circuit, Tp, B, c and the table follow).",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  }
+]

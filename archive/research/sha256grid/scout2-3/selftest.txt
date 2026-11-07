@@ -1,0 +1,16 @@
+VS invalid: 0 of 512
+published variant valid: 1
+G words failing row 16: 0 of 32
+VS A1 outside the a1_start window: 0
+row 17 imposed bits f = 10
+row 18 imposed bits f = 11
+row 19 imposed bits f = 12
+row 20 imposed bits f = 6
+row 21 imposed bits f = 6
+row 22 imposed bits f = 1
+tail weight log2 2^(32-f)/|F7| = -2.098032 (f = 6)
+SFS 0: check_pair 1, messages equal to the stored (M1 = x, M1' = y) 1
+SFS 1: check_pair 1, messages equal to the stored (M1 = x, M1' = y) 1
+SFS 2: check_pair 1, messages equal to the stored (M1 = x, M1' = y) 1
+SFS 3: check_pair 1, messages equal to the stored (M1 = x, M1' = y) 1
+|F7| = 287309824 (F7N 287309824)

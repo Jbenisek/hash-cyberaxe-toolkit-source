@@ -1,0 +1,22 @@
+{
+  "id": "D457-BLAKE3-R3-LITERATURE-TRANSFER-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 literature-transfer symmetry audit",
+  "question": "Do the scanned reduced-round BLAKE/BLAKE2/ChaCha ideas transfer to a message-only 3-round BLAKE3 collision?",
+  "labels": ["N", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Local structure run tested all 40320 x-word permutations, the tested per-word complement family, and 31 uniform rotations with zero digest-word equalities; every free x word reaches every digest word by round 2 and no neutral/linear bias was found. This kills transfer of those symmetry ideas, but not literature completeness or 256-bit differential tails.",
+  "source": "our workflow: D457 BLAKE3-r3 literature-transfer audit",
+  "own_test": true,
+  "evidence": "research/blake3_r3/wave1/structure.md; research/blake3_r3/wave1/lit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "The local literature scan is not a proof of universal publication absence. No package/stage/filing/submission; connector/rebound paths remain open.",
+  "peak_mem": "not measured separately; structure run under 1 minute, single process",
+  "held_fixed": "3-round root mode, fixed IV/flags/length, 256-bit digest, local structure experiment",
+  "reopen_if": "A specific published message-only full collision or a new 256-bit differential result appears",
+  "supersedes": ["B3R3W1-lit"]
+}

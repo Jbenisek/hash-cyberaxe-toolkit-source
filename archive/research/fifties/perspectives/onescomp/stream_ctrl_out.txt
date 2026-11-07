@@ -1,0 +1,2 @@
+mode ctrl N 268435456 seed 4f4e45534354524c threads 4 skipped_t0 0 total_cells 3537105 time 110.4 s
+ctrl exit 0

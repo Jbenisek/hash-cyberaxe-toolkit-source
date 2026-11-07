@@ -1,0 +1,22 @@
+{
+  "id": "B3R3-b3r3lc-prefile-selftest-current",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 b3r3lc package prefile and self-test",
+  "question": "Does the b3r3lc artifact pass package gates and its shipped finite self-test?",
+  "labels": ["C", "D"],
+  "status": "LOCAL_ONLY",
+  "number": "prefile ALL PASS; exact N=28995720170841641432943050668947030055311; time_log2=125.09556; peak memory 1048564 B; selftest exit 0",
+  "source": "our workflow: current-package-audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D315_b3r3lc_prefile_selftest.md; research/blake3_r3/b3r3lc/pkg/blake3/claim.json; research/blake3_r3/b3r3lc/pkg/blake3/proof.md; research/blake3_r3/b3r3lc/pkg/blake3/experiments/rho.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "count",
+  "topic": "blake3-r3.package-prefile-selftest",
+  "held_fixed": "The shipped b3r3lc package and its declared premises; only read-only checker and self-test execution were added.",
+  "reopen_if": "A changed b3r3lc artifact or judge ruling appears.",
+  "notes": "Superseded by newer bitslice packages; finite audit only, no staging/submission."
+}

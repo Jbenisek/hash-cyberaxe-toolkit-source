@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.ROT rotation cost",
+ "question": "Score-optimal lane pitch (degrees of freedom of the rotation layout).",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Pitch 36 is the optimum for 7 lanes: ops/instance 85.0 (595/7) against 86.1 (603/7, pitch 35), 88.9 (622/7, pitch 34), 97.7 (684/7, pitch 33). Guard bits 4 is the minimum that avoids extra overflow masks (3 internal masks remain). Score difference pitch 35 vs 36: +0.0108 bit.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.ROT|MACHINE|Q3. Same result as the ATLAS-style hand count in levers_step_count.md (595); this adds the other pitches as exact counts. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "7 lanes; digest feed identity; same loop overhead.",
+ "reopen_if": "A proof of tighter lane bounds that removes the 3 internal masks (-3 ops = -0.0072 bit), not shown."
+}

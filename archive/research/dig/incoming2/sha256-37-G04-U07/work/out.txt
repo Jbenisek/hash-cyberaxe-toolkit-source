@@ -1,0 +1,3 @@
+pub: CV2 equal, digests equal after padding, validated vs verifier digest
+scan dW=0: A14 pass 0, row14 pass 0 of 2^32
+scan published diff: A14 pass 67108864, row14 pass 8

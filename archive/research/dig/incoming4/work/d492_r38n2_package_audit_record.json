@@ -1,0 +1,23 @@
+{
+  "id": "D492-SHA256-R38-R38N2-PACKAGE-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "read-only audit of R38N2 scratch package",
+  "question": "Does the R38N2 SHA-256-r38 package pass its arithmetic/package checks and bounded manifest tests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R38N2 prefile ALL PASS with N=3928929389108937408856149 and time_log2=70.28679; vt38 selftest passes all six sections; one q3 request returns a distinct semi-free-start pair with failed_rebuilds=0 and program_found=2.",
+  "source": "our workflow: D492 read-only R38N2 package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D492_r38n2_package_audit.md; research/launch/prefile_check.py; research/tools/build_pkg/scratch/pkgR38N2/pkg/sha256-r38/experiments/vt38.py; research/tools/build_pkg/scratch/pkgR38N2/pkg/sha256-r38/experiments/manifest.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured in this audit",
+  "notes": "Finite selftest, replay, RAM, and q3-estimator evidence only; no full IV-to-IV collision or score-critical premise is proved. No score/package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; existing claim ledger; one-thread read-only commands",
+  "reopen_if": "package contents or organizer premises change, or a full IV-to-IV proof/test is released"
+}

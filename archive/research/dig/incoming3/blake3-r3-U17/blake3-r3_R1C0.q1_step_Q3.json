@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R1C0.q1 (a1,d1): 3-round circuit quarter-step, round 1 column call 0 (0,4,8,12), a = a + b + mx; d = ror(d ^ a, 16), rotation 16",
+ "question": "Q3 degrees of freedom or score-optimal value: which free inputs reach this step, is it injective on them, and is its op count the minimum over the alternatives?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "support computed exactly by taint over the traced circuit: its inputs depend on free message words m8,m9,m10,m11,m14,m15 (192 bits in total) through the round-0 state. Its 64-bit output pair is injective on the 65,536 distinct sampled inputs over that support (65536 distinct outputs, 0 repeats; expected repeats for a random 64-bit map: 0). Op count 7 is the minimum of every alternative tried in Q4 (add orders, pitch 34/35, single-AND rotation): no tunable value, score-optimal value = the filed one.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U10/work/b3step.py; research/dig/incoming3/blake3-r3-U10/work/scan_nb100.json; research/dig/incoming3/blake3-r3-U10/work/mkrecs.py; research/blake3_r3/candidate_blake3/experiments/rho.py (definition only)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R1C0.q1|step|Q3. The support is exact (data flow); injectivity is a sample, not a proof. A generic birthday step has no free parameter, so the score-optimal value is the op count itself. validated first: scalar code reproduces BLAKE3('') at 7 rounds (af1349b9...3262) and equals verifier/blake3.py on 200 random 64-byte blocks at 7 and at 3 rounds; the traced 7-lane circuit has 0 mismatches on 2100 lanes at 7 rounds and at 3 rounds, and totals 595 ops at 3 rounds (add 100, xor 88, shr 80, and 167, shl 80, or 80).",
+ "held_fixed": "filed 3-round circuit: 7 lanes x 36 bits in a 256-bit word, message 0^32 || x (m0..m7 = 0, m8..m15 free), flags 11, block length 64, counter 0, unkeyed; rotation = shr, and, shl, and, or; op set add/and/or/xor/shl/shr",
+ "reopen_if": "a use of the step's free words that is cheaper than recomputing it per trial (a structure of the 3 rounds), shown by a counted saving"
+}

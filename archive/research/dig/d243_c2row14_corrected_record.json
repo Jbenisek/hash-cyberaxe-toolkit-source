@@ -1,0 +1,21 @@
+{
+  "id": "D243-S38-C2ROW14-CORRECTED",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 14,
+  "object": "Zone D 38 row-14 C2 fixed-split enumeration corrected",
+  "question": "Does the corrected row-14 C2 subtest have E15 passers on the fixed splits?",
+  "labels": ["C", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Exact corrected C2 counts over 2^32 E15 values: published=1, seed1=1, seed2=1, seed3=1",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-c2row14-splits.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Corrects the earlier record: M.dl[16] was out of bounds; row-16 E-driven fixed difference is M.dl[0]. One passer per fixed split. Full row-14 C2 family and global transfer remain OPEN.",
+  "held_fixed": "one published or seeded W6/W7/E16..E21 split; E15 varied over all 2^32 values; corrected dW16=M.dl[0]",
+  "topic": "sha256-38 zoneD38 residual C2 row14",
+  "supersedes": ["D243-S38-C2ROW14-SPLITS"]
+}

@@ -1,0 +1,11 @@
+origin of round-1 S-box input space lies on plane P only if 3rd comp of -M^-1 RC1 equals K: False
+  (3rd comp, K) = 0x28a26c8f4a241f2f3e28a633fe1763f03d0f1f3f2f26baf797bb9d5db4fe95d 0x1bb8b6550fd0a299151ec6e764ce7a0e7639053ef68202d771242177f32f108c
+e_0 in direction space of P? False
+e_1 in direction space of P? False
+e_2 in direction space of P? False
+j 0 dim span{1,x_k(tau)^5} (round 1) = 2 (<=2 means round-1 skip works)
+j 0 dim span{1,l_k(W)^5} (round 2) = 4 (<=2 would allow a round-2 skip)
+j 1 dim span{1,x_k(tau)^5} (round 1) = 2 (<=2 means round-1 skip works)
+j 1 dim span{1,l_k(W)^5} (round 2) = 4 (<=2 would allow a round-2 skip)
+j 2 dim span{1,x_k(tau)^5} (round 1) = 2 (<=2 means round-1 skip works)
+j 2 dim span{1,l_k(W)^5} (round 2) = 4 (<=2 would allow a round-2 skip)

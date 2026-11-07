@@ -1,0 +1,79 @@
+# claim.json: field-level
+
+Source: `research/pkg9/pkg/work/fix3/check/words.py`
+
+Public SHA-256: `b6c92738f226acaaee1c42b1d6ce48da2fae49e56b44d3155c6cde2a51eb76f0`
+
+## Purpose recorded in the source
+
+claim.json: field-level
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "difflib",
+  "fractions",
+  "json",
+  "math",
+  "os",
+  "re"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "words_diff",
+    "line": 8,
+    "arguments": [
+      "name"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "walk",
+    "line": 23,
+    "arguments": [
+      "x",
+      "y",
+      "path"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "ids",
+    "line": 47,
+    "arguments": [
+      "c"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "cost",
+    "line": 76,
+    "arguments": [
+      "share"
+    ],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+Companion documents are not listed here. Use the linked source for interfaces and prerequisites.
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

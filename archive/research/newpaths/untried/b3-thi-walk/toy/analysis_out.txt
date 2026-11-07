@@ -1,0 +1,20 @@
+ARM C: trials 808928861421, bad 0, GPU coll 10279, listed 10279, FOUND 10279 (bogus 0), PREDICTED 10200.16, ratio 1.00773 +- 0.00994, 97.7% lower bound 0.98799 (>= 10/11 = 0.90909: True); complete-message tree hashes 10279/10279
+   per set found/pred: 0:1235/1275.0=0.969  1:1251/1274.7=0.981  2:1245/1274.7=0.977  3:1354/1275.3=1.062  4:1243/1275.0=0.975  5:1274/1275.5=0.999  6:1350/1275.0=1.059  7:1327/1275.0=1.041
+   chi-square over 8 sets 14.58 on 8 df
+   hits per run: dispersion sum((N-lam)^2/lam)/runs = 0.9786 (Poisson 1; 10240 runs)
+   groups (set,run,g,member) with >= 2 hits: 0 (Poisson expectation 0.001); (set,run,g) with >= 2 hits: 0 (expectation 0.014)
+ARM W32: trials 813260148431, bad 0, GPU coll 10179, listed 10179, FOUND 10179 (bogus 0), PREDICTED 10248.75, ratio 0.99319 +- 0.00984, 97.7% lower bound 0.97365 (>= 10/11 = 0.90909: True); complete-message tree hashes 800/800
+   per set found/pred: 0:1317/1279.8=1.029  1:1303/1294.8=1.006  2:1276/1294.8=0.985  3:1232/1274.8=0.966  4:1277/1279.8=0.998  5:1226/1264.8=0.969  6:1318/1279.8=1.030  7:1230/1279.8=0.961
+   chi-square over 8 sets 7.12 on 8 df
+   hits per run: dispersion sum((N-lam)^2/lam)/runs = 1.0161 (Poisson 1; 10240 runs)
+   groups (set,run,g,member) with >= 2 hits: 0 (Poisson expectation 0.030); (set,run,g) with >= 2 hits: 0 (expectation 0.464)
+   hits by thi: chi-square 33.9 on 31 df (uniform); thi = 0 hits 308; max t 8191
+ARM W256: trials 837505841296, bad 0, GPU coll 10635, listed 10635, FOUND 10635 (bogus 0), PREDICTED 10599.84, ratio 1.00332 +- 0.00973, 97.7% lower bound 0.98400 (>= 10/11 = 0.90909: True); complete-message tree hashes 160/160
+   per set found/pred: 0:1211/1280.0=0.946  1:1409/1400.0=1.006  2:1351/1400.0=0.965  3:1314/1360.0=0.966  4:1291/1280.0=1.009  5:1401/1320.0=1.061  6:1356/1280.0=1.059  7:1302/1280.0=1.017
+   chi-square over 8 sets 17.01 on 8 df
+   hits per run: dispersion sum((N-lam)^2/lam)/runs = 1.0920 (Poisson 1; 10240 runs)
+   groups (set,run,g,member) with >= 2 hits: 2 (Poisson expectation 0.252); (set,run,g) with >= 2 hits: 6 (expectation 3.882)
+   hits by thi: chi-square 263.4 on 255 df (uniform); thi = 0 hits 47; max t 65527
+walk/control W32: 0.9856 +- 0.0138 (z = -1.05)
+walk/control W256: 0.9956 +- 0.0138 (z = -0.32)
+walk arms pooled: FOUND 20814 PREDICTED 20848.59 ratio 0.99834 +- 0.00692, 97.7% lower bound 0.98458

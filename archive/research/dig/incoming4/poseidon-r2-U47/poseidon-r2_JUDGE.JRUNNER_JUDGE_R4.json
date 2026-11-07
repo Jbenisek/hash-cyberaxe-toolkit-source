@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JRUNNER (JUDGE)",
+ "question": "R4: score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "No score term. The missing experiment was listed as a non-fatal material in the r1 ruling.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "HANDOFF.md (lines 414-431); research/dig/incoming4/work/ledger_numbers.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JRUNNER|JUDGE|R4. From HANDOFF 10-12 18:20 (\"Materials (not fatal)\").",
+ "held_fixed": "rulings of the r1 filings as recorded in HANDOFF.md 10-12 18:20 .. 20:25; no r2 entry has been filed",
+ "reopen_if": "an r2 entry is filed or a new ruling on r1 appears"
+}

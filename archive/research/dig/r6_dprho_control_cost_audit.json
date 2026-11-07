@@ -1,0 +1,20 @@
+{
+  "id": "R6-DPrho-control-cost-audit",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "DP-rho restart and counter controls",
+  "question": "How sensitive is the cap-64 packed row to explicit lane-control and counter layouts?",
+  "labels": ["D", "X", "B", "E"],
+  "status": "COMPUTED",
+  "number": "64-plane conditional time_log2 127.813390487432024 (aggregate mask) through 127.820419139158618 (scalar lane test plus counter)",
+  "source": "our workflow: control cost audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-DPrho-control-cost-audit.md; research/retest/t1/control_cost_audit.py; research/retest/t1/control_cost_audit.json",
+  "date": "2026-10-13",
+  "lever": true,
+  "gain_bits": 0.211009845351,
+  "gain_basis": "T",
+  "notes": "Exact arithmetic for declared control models with 120-bit counters and U=10000 endpoint cap. The actual restart kernel and organizer primitive interpretation are unproved; values are conditional and no filing-safe gain is claimed.",
+  "reopen_if": "A production packed restart/counter implementation and organizer ruling on its primitive accounting."
+}

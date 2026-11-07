@@ -1,0 +1,8 @@
+layout run 1: early test passes: 48191 (2^-24.444)   E1 requires the eta of Y4: 386 (2^-31.408)   contradictions (must be 0): 0   rule on h1 passes 68718487599 (2^-4.000021)
+layout run 2: early test passes: 48710 (2^-24.428)   E1 requires the eta of Y4: 409 (2^-31.324)   contradictions (must be 0): 0   rule on h1 passes 68717746945 (2^-4.000036)
+layout run 3: early test passes: 48091 (2^-24.447)   E1 requires the eta of Y4: 406 (2^-31.335)   contradictions (must be 0): 0   rule on h1 passes 68720524529 (2^-3.999978)
+layout run 4: early test passes: 48589 (2^-24.432)   E1 requires the eta of Y4: 414 (2^-31.307)   contradictions (must be 0): 0   rule on h1 passes 68716970743 (2^-4.000053)
+layout run 5: early test passes: 48558 (2^-24.433)   E1 requires the eta of Y4: 419 (2^-31.289)   contradictions (must be 0): 0   rule on h1 passes 68717893663 (2^-4.000033)
+layout run 6: early test passes: 49068 (2^-24.418)   E1 requires the eta of Y4: 383 (2^-31.419)   contradictions (must be 0): 0   rule on h1 passes 68719001332 (2^-4.000010)
+layout run 7: early test passes: 48781 (2^-24.426)   E1 requires the eta of Y4: 409 (2^-31.324)   contradictions (must be 0): 0   rule on h1 passes 68716064340 (2^-4.000072)
+layout run 8: early test passes: 48284 (2^-24.441)   E1 requires the eta of Y4: 412 (2^-31.313)   contradictions (must be 0): 0   rule on h1 passes 68720569447 (2^-3.999977)

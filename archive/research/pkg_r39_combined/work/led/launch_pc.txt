@@ -1,0 +1,13 @@
+launched S=1 pid 242839
+launched S=2 pid 242840
+launched S=3 pid 242841
+launched S=4 pid 242842
+launched S=5 pid 242843
+launched S=6 pid 242844
+launched S=7 pid 242845
+launched S=8 pid 242846
+launched S=9 pid 242847
+launched S=10 pid 242848
+launched S=11 pid 242849
+launched S=12 pid 242850
+ALL DONE Mon Oct 26 23:35:37 MDT 2026

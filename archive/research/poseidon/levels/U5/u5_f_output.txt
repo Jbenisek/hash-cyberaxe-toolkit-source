@@ -1,0 +1,15 @@
+Y M^-1 + M^-1 X == +(M^-1 1)(1^T M^-1) (displacement rank 1 inherited by the inverse): True
+cross(row0,row2) constant = -detM ?: True
+--- special powers of M (generator => every power M^k is a_0+a_1 M+a_2 M^2) ---
+  M^(n/2): scalar=True; scalar value = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000000 (-1)
+  M^(n/3): scalar=True; scalar value = 0x12ccca834acdba712caad5dc57aab1b01d1f8bd237ad31491dad5ebdfdfe4ab9 (other)
+  M^(n/463): scalar=True; scalar value = 0x2ba1451ca2d3e3ee83540437c4bc42d96299ecc6dfb6ce8c01cfaa421863224 (other)
+  M^(n/73): scalar=False; non-scalar, MDS=True, then M^(n/q)^q == I: True
+  M^(n/5839): scalar=False; non-scalar, MDS=True, then M^(n/q)^q == I: True
+  M^(n/12221196943): scalar=False; non-scalar, MDS=True, then M^(n/q)^q == I: True
+  M^(n/5187662682403): scalar=False; non-scalar, MDS=True, then M^(n/q)^q == I: True
+  M^(n/539204044132271846773): scalar=True; scalar value = 0x193786968815b9a3a7df207c66d288727111a950721eba8248781a5a88b23055 (other)
+  M^(n/487887715480415483992657): scalar=False; non-scalar, MDS=True, then M^(n/q)^q == I: True
+M^((p^3-1)/2) == -I: True
+M^(p^2+p+1) == detM * I: True
+M^(p-1) is MDS: True  ; M^(p+1) MDS: True  ; M^p (Frobenius-twist matrix, similar to M) MDS: True

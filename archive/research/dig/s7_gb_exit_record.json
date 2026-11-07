@@ -1,0 +1,22 @@
+{
+  "id": "S7-GB-EXIT-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "GB buffer-0 exit-set selection",
+  "question": "Can changing the 975-plane GB exit set reduce the S7LS step charge?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "Baseline GA-first-use exit set: 44,925 operations; four deterministic alternatives and 32 shuffled subsets all >=45,816 when valid; reverse order allocator-invalid; all valid candidates pass scalar and allocated KATs.",
+  "source": "research/r7/s7ls/s0_exit_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_GB_exit_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.004,
+  "prior": 0.2,
+  "gain_basis": "T",
+  "peak_mem": "allocator model; no package build",
+  "notes": "Negative finite search only; exhaustive subset optimization and a rebuilt package remain open. No package/stage/filing/submission."
+}

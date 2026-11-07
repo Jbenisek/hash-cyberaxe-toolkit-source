@@ -1,0 +1,6 @@
+validate: z3 encoding vs brute force over all bases, 247 random systems x 3 modes: 0 mismatches; brute-force positives split/U/V = [125, 159, 161] (7s)
+control counter=0 basis filed8+-: z3 sat; propagate triangular True; classes C0.c1:both C0.d1:both D3.d1:both S15:both S9:both X2:both Y4:both w5:both
+control counter=1 basis filed8+T0: z3 sat; propagate triangular True; classes C0.c1:both C0.d1:both D3.d1:both S15:both S9:both T0:both X2:both Y4:both w5:both
+control counter=1 basis filed8+E1.d1: z3 sat; propagate triangular True; classes C0.c1:both C0.d1:both D3.d1:both E1.d1:both S15:both S9:both X2:both Y4:both w5:both
+control counter=1 basis filed8+E3.h1: z3 sat; propagate triangular True; classes C0.c1:both C0.d1:both D3.d1:both E3.h1:both S15:both S9:both X2:both Y4:both w5:both
+control counter=2 basis filed8+T0+T1: z3 sat; propagate triangular True; classes C0.c1:both C0.d1:both D3.d1:both S15:both S9:both T0:both T1:both X2:both Y4:both w5:both

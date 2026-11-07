@@ -1,0 +1,22 @@
+{
+  "id": "D378-SHA256-R38-LATE-GROUP-MARGINALS-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "Table-4 late-group marginal and joint probe",
+  "question": "What are the W23 and W25 marginal rates and their joint rate in the actual late proposal, and do they factor?",
+  "labels": ["C", "E"],
+  "status": "SAMPLED",
+  "number": "Eight one-thread seeds, N=8,388,608 final proposals: W23=2,932 (p=0.0003495216369628906), W25=630 (p=0.0000751018524169922), conjunction=384 (p=0.0000457763671875), exact output=358. Product p23*p25=2.6249722395732533e-8; joint/product=1743.8800494=2^10.7680851. Zero prefix/replay inconsistencies. This is late-group evidence only; prefix-group marginals and the full Table-4 independence comparison remain OPEN.",
+  "source": "our controlled traillab marginal probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D378_r38_late_group_marginals.md; research/retest/r38_stack/RESULT.md; research/tools/traillab/src/smc.c; research/tools/traillab/src/main.c; research/tools/traillab/chi/chi38.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Finite sampled late W23/W25 predicates on the actual rows-6..21-conditioned proposal. Strong dependence means marginal products cannot replace the joint law. No score or package credit.",
+  "held_fixed": "chi38; rows 22..37 event out; carrier none; np=128,m=64,mt2=256,mw=64,mt=8192; seeds 6001..6008; one thread",
+  "reopen_if": "Per-group marginals for prefix groups under the staged attack proposal and a full product-vs-joint comparison are measured, or a proved factorization is supplied.",
+  "peak_mem": "21.9758479680 MEASURED /usr/bin/time -v maximum RSS; 1-thread eight-seed probe"
+}

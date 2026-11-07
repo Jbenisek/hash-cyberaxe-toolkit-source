@@ -1,0 +1,21 @@
+{
+ "object": "R1C2.q4 q4 = (c2,b2): c=c+d; b=ror7(b^c) in the shipped 7-lane SWAR circuit (G call state words v2,v6,v10,v14)",
+ "question": "Q1 value/count as used: how many operations does the shipped 3-round circuit charge for this step?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "7 ops charged for this step of 595 (1 add, 1 xor, 1 shr, 2 and, 1 shl, 1 or); no message word in this step",
+ "notes": "cell blake3-r3|R1C2.q4|step|Q1. Own re-trace (pitch 36, 7 lanes, free words m8..m15) reproduces 595 ops and the shipped source text; value of one chain-step op = 0.00240 bit of time_log2 (levers_step_count.md formula). Lines: t195=t181+t194; t196=t187^t195; t197=t196>>7; t198=t197&3533694024295899006493948740335286842712112424412851556238516791308976127; t199=t196<<25; t200=t199&448779154460240215926121134350971024502347857843488785987079766209239973888; t201=t198|t200",
+ "held_fixed": "pitch 36, 7 lanes, K=0^32 so m0..m7 are constants, flags 11, counter 0, length 64, 3 rounds, shipped add/xor/ror emit rules",
+ "reopen_if": "the machine model changes (rotation primitive, more lanes, different op prices) or the step is moved to a different round or lane layout",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "evidence": "research/blake3_r3/step_profile_r1.py (tracer; validate: empty-input 7-round vector, 64-byte msgs vs verifier blake3.py at 7 and 3 rounds, packed circuit 0 wrong of 371 lanes, 595 ops, source identical to candidate_blake3/experiments/rho.py); research/blake3_r3/step_scan_r1.py; research/blake3_r3/step_scan_r1.json"
+}

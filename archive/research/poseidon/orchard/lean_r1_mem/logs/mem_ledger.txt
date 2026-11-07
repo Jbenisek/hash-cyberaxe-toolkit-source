@@ -1,0 +1,22 @@
+r=1 ncentres=2 seed=1001 m=39062
+INIT arith=17359 other=20480 total=37839
+lean-pow breakdown: newton total=41931942 arith=22068966 | prefix+scale total=175813 | loop steps=238 total=6431087931 arith=3560531520 per-step total=27021377 arith=14960216
+CENTRE 0 j=0 degG=1 success=1 arith=3939850405 all=7289506941 sec=108.0
+  line_setup                               arith=         391 other=        1564 total=        1955     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  build g                                  arith=     1436260 other=    24567311 total=    26003571     0.9s peak=3347168
+  S^((p-1)/2) mod g                        arith=  3582639548 other=  2890556138 total=  6473195686    97.2s peak=7944256
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770535 other=   434516834 total=   790287369     9.9s peak=7833280
+  root finding                             arith=           1 other=           6 total=           7     0.0s peak=524352
+  sqrt + map back                          arith=        3196 other=       12784 total=       15980     0.0s peak=524288
+  verification (2 reference hashes)        arith=         474 other=        1896 total=        2370     0.0s peak=524288
+COLLISION nk1  0x2ba6173e1d939e5dcbaadc95ed0db1d1280e080cdab3ba0dbac087b5e9463f8a
+COLLISION rho1 0x36db3d0102c798ec9afd9f9afd1b8505337576a09cdacfdf7a8d6c5cd6e62a84
+COLLISION nk2  0x2cb73a213723168de6a356d257709f404da62f1a2eac054eddd8e518409f5091
+COLLISION rho2 0x292c22d26faeb8f87c8dd5fe4d97876f2d99755cf55954c5609b80c644ff56c6
+COLLISION digest 0x290ad5fa23bde680baf6fbe9f0bb1c97e122f07915226578af01a011d23ab04b
+COLLISION centre 0x2a81e8ba2acc4e2bf994c657fd558abe90fa267ad43e319d000000fbb321d9ae
+SUMMARY r=1 centres=1 success=1 total_all=7289544780 total_arith=3939867764 units=30757572.9 log2_units=24.8744 heap_peak=7944256 secs=108.0
+GAPS gcd=21617620 root=7
+TYPES add=1378620735 sub=1267418948 mul=1260501718 sqr=33326363 ld=1566606159 st=831610194 ctl=928162614 rnd=1 perm=23298048
+exit=0

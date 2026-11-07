@@ -1,0 +1,22 @@
+{
+  "id": "D410-SHA3-R6-141BIT-ROUTE-KERNEL-KAT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 141-bit derivative route and generated-kernel KAT",
+  "question": "Do the existing 141-bit derivative route, extraction path, identifier decoder, and generated kernel pass exact local consistency checks?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "The route checks select the exact zero-bit rows for z=0 and z=1; the eight-form filter agrees with the digest-bit test on 40,960 messages; extraction and identifier decoding pass their finite checks. A 12-list/48-batch generated-kernel KAT produced 12,288 survivors with zero wrong table words, zero zero-test probes, and exact execution-count matches. K_batch was 37463..37630 (mean 37551.0); generation was 5519119..5543255 (mean 5531959).",
+  "source": "Local audit of the existing pkgS6K141 derivative",
+  "own_test": true,
+  "evidence": "research/sol_answer_D410_s6k141_route_kernel_kat.md; research/tools/build_pkg/scratch/pkgS6K141/work/d410_route_check.txt; research/tools/build_pkg/scratch/pkgS6K141/work/d410_kernel_report_k.txt; research/tools/build_pkg/scratch/pkgS6K141/work/prefile_out.txt; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/claim.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.01256,
+  "prior": 0.3,
+  "gain_basis": "C",
+  "notes": "This narrows implementation risk only. H_coset, the full H_K tail, wider-key organizer acceptance, preprocessing-inclusive memory, and full-scale collision remain open. No package edit, staging, filing, or submission.",
+  "reopen_if": "The checked-in derivative source, route, kernel, or package claim changes, or organizer/full-scale evidence closes the remaining wider-key gates."
+}

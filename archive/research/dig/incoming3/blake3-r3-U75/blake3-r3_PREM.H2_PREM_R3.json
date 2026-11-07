@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "H2-loss-terms: losses of Section 4 (unfinished and cut trails, repeats, key false matches, aborts)",
+ "question": "R3 control: Monte Carlo of the three loss laws against the closed forms (control thresholds), and the shipped program metered at n = 22 and 32",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Laws (3e8 draws, numpy): Gamma(7) > 28: observed 166 vs expected 174.7 (z -0.66); controls Gamma(7) > 14: 284,534 vs 284,558 (z -0.05), > 10: 2,601,992 vs 2,602,828 (z -0.56). Cut-trail count Binomial(16,365, e^-12), 1e8 draws: P(K=0,1,2,3) = 0.90433 0.09094 0.00458 0.00015 vs Poisson law 0.90434 0.09093 0.00457 0.00015. Shipped program (rho.py search/recover unchanged, real 3-round target), n = 32 (d = 8, Q = 72,527, the T3 setting): 747 attempts, DP-rate control finished trails x L / evaluations = 1.0010 (176,815 trails over 45,221,358 evaluations; law 1), 0 cut trails, success 0.423 (316 of 747), halts 3 (0.4 percent); n = 22: 4,000 attempts, success 0.465, halts 272 (6.8 percent, small-width regime where the budgets are tight). Observed success at n = 32 sits below the pure-birthday value 0.458 by the in-flight and cut losses as planned (T3: 0.443 on the target); our 0.423 is -1.9 sigma of 0.458 and -1.1 sigma of the T3 value.",
+ "evidence": "research/dig/incoming3/blake3-r3-U75/work/mc_h2.py, research/dig/incoming3/blake3-r3-U75/work/mc_h2.out, research/dig/incoming3/blake3-r3-U76/work/ctrl.py, research/dig/incoming3/blake3-r3-U76/work/ctrl22.out, research/dig/incoming3/blake3-r3-U76/work/ctrl32.out",
+ "notes": "universe cell blake3-r3|PREM.H2|PREM|R3. Monte Carlo checks the arithmetic of the laws, not H1; the metered runs check the DP-rate law (c) of H1 at n = 32 on the real target at 1 percent precision and nothing at 2^114. Cut trails are too rare to observe at small n (cap 12 L).",
+ "held_fixed": "laws of proof.md Lemma 2; shipped rho.py at n = 22 and 32, fresh seeds ctrl-r3-a, ctrl-r3-b",
+ "reopen_if": "a DP-rate ratio away from 1 by more than 2 percent at n >= 32, or a success rate at n = 32 below 0.40 over 2,000 attempts",
+ "gain_basis": "count"
+}

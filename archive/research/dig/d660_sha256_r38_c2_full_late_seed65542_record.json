@@ -1,0 +1,23 @@
+{
+  "id": "D660-SHA256-R38-C2-FULL-LATE-SEED65542-20261014",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 37,
+  "object": "SHA-256 r38 Zone-D C2 full-late fixed split seed 65542",
+  "question": "Does the paired row-14 split yield a full-late continuation?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Exact c2all14late seed 65542: row14 base/expansion=160/160, strict-row15=1, total-C2=1 at E14x=0x21966471, full-late rows16..37=0, state-equal=0; runtime 73.57 s, RSS 7992 KiB.",
+  "source": "our workflow: D660 exact Zone-D r38 C2 full-late paired control",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/c2all14late_seed65542.out; research/tools/traillab/digs/zoneD38/zd38c2lateall",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "current zd38c2late full-late program and fixed split seed 65542",
+  "notes": "Finite fixed-split late-family evidence. It does not prove production split transfer, global completion, charged score, package, stage, filing, or submission.",
+  "reopen_if": "A production-law split-transfer proof or complete multi-split late-family campaign becomes available"
+}

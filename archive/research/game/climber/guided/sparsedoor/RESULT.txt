@@ -1,0 +1,25 @@
+sparsedoor r39-way price of the door-paid tail (subagent, 10-28)
+inputs: historical-sources/FROM_KEPLER_1024/SPARSE_DOOR_2026-10-28.md, doors40/SPARSE7_* SPARSE6_*
+pricer: price.py (exact pkg_r39_combined/work/time_calc.py formula + r39 led/win_*.json windows)
+
+basis: the sparse 40/41 door-paid tail (rows>=16, one state local collision door-paid at
+E21/E22) is the same object as the published r39 door-paid tail; Kepler measured it ~= published
+(rows>=16 v1 digits 95 vs 92). So its r39-way price = the published door-paid tail priced through
+the r39 pipeline. Both members share the same tail object -> same tail price; they differ only in
+HEAD cost (rows 4..15) and filing row (40 vs 41). Head is NOT in this number.
+
+door-paid tail board score (r39-way):
+  best (q=-74.4242, best r39 tail lcb999 pf_013) : 116.79854
+  shipped (q=-75.49, r39 declared QDECL)         : 117.86434
+
+reference leaders (floors_1028.txt): r39 116.707 | r40 123.90836 (sraiw) | r41 123.9247 (Jbenisek)
+vs r40 leader: -7.10982 (best) / -6.04402 (shipped)
+vs r41 leader: -7.12616 (best) / -6.06036 (shipped)   [for the 41 door {2,4,10,11,12,13}]
+
+CAVEATS
+- door-paid TAIL only. Head rows 4..15 carry excess (~420 v1 digits over published) that is NOT
+  priced here; full-pair board score will be higher once the head is priced.
+- not a pair until valued: v2 (exact Sigma/Ch/Maj) + real-circuit valuations undecided at 540 s,
+  uncapped night run (Kepler note). v1 state rows have misled on dense doors.
+- tail q is the published r39 tail's (measured-equal per the note), not an independent re-measure
+  of each sparse member's tail (that is the night pricing).

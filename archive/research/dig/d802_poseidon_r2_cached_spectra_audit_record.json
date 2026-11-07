@@ -1,0 +1,22 @@
+{
+  "id": "D802-POSEIDON-R2-CACHED-SPECTRA-AUDIT-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "owned exec_r2d optional CACHED_POW spectra branch",
+  "question": "What is the exact cached-spectra allocation and does measuring the optional branch improve the charged r2d row?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "At m=195312, N=Np=393216 and fp=32 B, CACHED_POW allocates MUH and GH of 12,582,912 B each and frees compact MU and tmp. The temporary one-trial run exits 0 with N=40,377,383,609, time_log2=27.22161, heap=56,652,480 B, counted memory=57,761,829 B, memory_log2=25.784, score=33.00561. Ordinary exec_r2d is N=49,887,124,164, time_log2=27.52673, memory_log2=25.399, score=32.92573; cache is 0.07988 bits worse.",
+  "source": "owned research/poseidon/orchard/exec_r2d source; temporary -DCACHED_POW build",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/d802_cached_spectra_run.txt; research/retest/poseidon_r2/d802_cached_spectra_audit.py; research/sol_answer_D802_poseidon_r2_cached_spectra_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "held_fixed": "same exec_r2d source and one centre-1 trial; only CACHED_POW compile-time branch enabled",
+  "notes": "Temporary binary only; source/package untouched. CACHED_POW is measured, but no score credit or filing action is taken.",
+  "reopen_if": "A different organizer-approved cache layout or charge rule changes the memory price, or a full independent package audit is requested.",
+  "peak_mem": "25.7836130894 MEASURED CACHED_POW stage-C counted total 57761829 B"
+}

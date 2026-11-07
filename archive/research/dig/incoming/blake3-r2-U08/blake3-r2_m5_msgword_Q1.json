@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m5 = w5: cancelling word, w5p = w5 + W4 - W4p = w5 - 8",
+ "question": "Q1: difference/condition count as used at this word",
+ "labels": [
+  "N",
+  "I"
+ ],
+ "status": "COMPUTED",
+ "number": "w5 FREE: 0 conditions on its 32 bits (2^32 values); relation only to w4: w5p-w5 = -8 additive. XOR difference w5^(w5-8) over all 2^32 w5 is exactly 00000008 (2^31), 00000018 (2^30), 00000038 (2^29) ... fffffff8 (16): 29 patterns, pattern with lowest set bit k>=3 has count 2^(31-(k-3)) ",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/e1_delta.py; research/dig/incoming/blake3-r2-U08/work/e1_delta_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m5|msgword|Q1. Layout from proof.md 3.1 (cancelling) and Step O (w5 is one of the six outer words). Lemma L checked exhaustively: all 2^32 w5 with w4=W4: K2(n=55,w4,w5) and K2(n=63,w4p,w5p) agree in all four outputs (0 mismatches). Exhaustive xor-pattern histogram in w4scan_out.txt (E lines)."
+}

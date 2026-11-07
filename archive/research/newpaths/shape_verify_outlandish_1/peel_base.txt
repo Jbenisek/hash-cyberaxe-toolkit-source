@@ -1,0 +1,17 @@
+held          vars eqs freedom | plain-core eqs | table-peel: min eqs left over restarts
+-                      128 112  16 |   0 | 0
+out0                   128 113  15 | 102 | 102
+out2                   128 113  15 | 102 | 102
+out5                   128 113  15 | 104 | 104
+out7                   128 113  15 | 104 | 104
+out0,out2              128 114  14 | 105 | 105
+out0,out5              128 114  14 | 106 | 106
+out0,out7              128 114  14 | 105 | 105
+out2,out5              128 114  14 | 105 | 105
+out2,out7              128 114  14 | 106 | 106
+out5,out7              128 114  14 | 107 | 107
+out0,out2,out5         128 115  13 | 107 | 107
+out0,out2,out7         128 115  13 | 107 | 107
+out0,out5,out7         128 115  13 | 108 | 108
+out2,out5,out7         128 115  13 | 108 | 108
+out0,out2,out5,out7    128 116  12 | 109 | 109

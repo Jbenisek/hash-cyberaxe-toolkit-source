@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JRUNNER experiment runner cannot size the digest",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "the note says the runner sizes digest(b\"\") and the Orchard digest rejects the empty message; not retested here (organizer runner not run)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/orchard/lean_r1/submission-note.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Statement from the filed note; I did not run the organizer runner. | universe cell poseidon-r1|JUDGE.JRUNNER|JUDGE|R2",
+ "held_fixed": "filed note",
+ "reopen_if": "a runner change or a Python experiment that fits the runner"
+}

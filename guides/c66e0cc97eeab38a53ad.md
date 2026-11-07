@@ -1,0 +1,30 @@
+# budgets
+
+Source: `research/poseidon/orchard/lean_r2/budgets.h`
+
+Public SHA-256: `3eeae84cb15dbcea0f75341b3331756dcb1bd42916773bd379e88d87e4e88f2c`
+
+## Purpose recorded in the source
+
+define BUDGET_R1_GCD 2680000000ULL
+define BUDGET_R1_ROOT 187665120ULL
+define BUDGET_R2_GCD 21108000000ULL
+define BUDGET_R2_ROOT 187665120ULL
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/poseidon/orchard/lean_r2/proof_template.md
+- research/poseidon/d189_gpu_results.jsonl
+- research/poseidon/d192_r2_results.jsonl
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

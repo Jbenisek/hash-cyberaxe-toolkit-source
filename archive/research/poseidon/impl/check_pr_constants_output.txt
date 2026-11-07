@@ -1,0 +1,3 @@
+round constants equal: True | MDS equal: True
+modulus equal: True
+CAPACITY text: CAPACITY_ELEMENT = MESSAGE_LENGTH << 64

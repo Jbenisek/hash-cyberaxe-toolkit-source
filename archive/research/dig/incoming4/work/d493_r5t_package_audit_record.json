@@ -1,0 +1,23 @@
+{
+  "id": "D493-SHA3-R5-R5T-PACKAGE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "read-only audit of R5T scratch package",
+  "question": "Does the R5T SHA3-256-r5 package pass its arithmetic/package checks and exact-count manifest tests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R5T prefile ALL PASS with N=10377085310562 and time_log2=32.83439; r5-trail-0 reproduces 692664 nodes, 1023 cores, C1=974737408, kept=204, C2=608900651514, half_vectors=21466134; r5-count-2 trials 8-11 all pass their exact counters.",
+  "source": "our workflow: D493 read-only R5T package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D493_r5t_package_audit.md; research/launch/prefile_check.py; research/tools/build_pkg/scratch/pkgR5T/pkg/sha3-256-r5/experiments/r5.py; research/tools/build_pkg/scratch/pkgR5T/pkg/sha3-256-r5/experiments/manifest.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured in this audit",
+  "notes": "Exact structural/count tests use fixed sentinels; no new collision or sampled-premise credit. No score/package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; existing claim ledger; one-thread read-only commands",
+  "reopen_if": "package contents or organizer prefile/charging rules change"
+}

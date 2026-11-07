@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.MEMTRAF memory traffic (loads / stores)",
+ "question": "Alternatives: keep constants in registers, preserve group inputs, table accesses.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Constants pinned in registers: needs R>=48 for zero traffic. Grouped filter (MACHINE.CMPBR Q4) adds 9 live values: with immediates 34 registers; with constants pinned plus the 2 filter constants R=56 gives 0 spills, R=48 gives 4 stores (+0.0096 bit), R=40 gives 11 stores + 1 load (+0.0286). Table/recovery traffic is charged in the filed ledger (events 700 ops each, 18,432 events: 1.03e9 ops, negligible against 2.9e40).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/d_regs.json (d_regs.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.MEMTRAF|MACHINE|Q4. Third row of d_regs.json (const_regs False) counts every constant use as a load and is not a meaningful scenario; ignore it. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "same DAG plus permanent extra values.",
+ "reopen_if": "Fewer than 56 registers together with no immediates and the grouped filter."
+}

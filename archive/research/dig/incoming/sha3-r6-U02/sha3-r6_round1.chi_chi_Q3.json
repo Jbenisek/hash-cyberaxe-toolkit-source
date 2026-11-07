@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "log2 freedom left under the leader's prefix conditions at the chi2 patch",
+ "question": "Q3 log2 degrees of freedom (exact GF(2) rank) left after the conditions that make the z-flip sparse.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "1080 message bits - rank 312 = 768 free bits (log2 = 768; free lanes 0,1,2,3,4,6,7,9,10,11,13,14); 32 of them are the z counter (XORed into lane4 and lane14 low 32 bits, column parity cancels), leaving 736 prefix bits; a 2^128 birthday needs 128, slack 640 (608 after z). With only the 128 equations the z-flips need, 952 bits would be free (+184). chi2 itself adds no condition on the free bits: its change is computed from the state (AND-free), so no freedom is spent at chi2.",
+ "evidence": "research/dig/incoming/sha3-r6-U02/work/t2_conditions.py; research/dig/incoming/sha3-r6-U02/work/t2_conditions_out.json; research/dig/incoming/sha3-r6-U02/work/kk6.py",
+ "notes": "Universe cell sha3-r6|round1.chi|chi|Q3. Rank by explicit GF(2) elimination of the 312 condition forms over the 1080 message variables (padding byte 0x86 as constant), consistent with the proof's 768. Freedom is not binding (128 bits needed, 2^768 available), so the slack carries no gain. Prefix-of-path result.",
+ "topic": "sha3-r6 leader route freedom"
+}

@@ -1,0 +1,27 @@
+MASS W 8 set 27 eta b9 n 16 sumper 2752512 ref 2752512 EQUAL e1model_bad 0
+BETA 6f nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA 71 nd1 32 mass 0 share 0.00000 gain 0.0000
+BETA 73 nd1 16 mass 262144 share 0.09524 gain 1.5238
+BETA 77 nd1 8 mass 0 share 0.00000 gain 0.0000
+BETA 7f nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA ae nd1 8 mass 524288 share 0.19048 gain 6.0952
+BETA af nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA b1 nd1 32 mass 0 share 0.00000 gain 0.0000
+BETA b2 nd1 32 mass 0 share 0.00000 gain 0.0000
+BETA b3 nd1 16 mass 1572864 share 0.57143 gain 9.1429
+BETA b6 nd1 16 mass 0 share 0.00000 gain 0.0000
+BETA b7 nd1 8 mass 0 share 0.00000 gain 0.0000
+BETA be nd1 8 mass 0 share 0.00000 gain 0.0000
+BETA bf nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA ee nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA ef nd1 2 mass 0 share 0.00000 gain 0.0000
+BETA f1 nd1 16 mass 0 share 0.00000 gain 0.0000
+BETA f2 nd1 16 mass 0 share 0.00000 gain 0.0000
+BETA f3 nd1 8 mass 0 share 0.00000 gain 0.0000
+BETA f6 nd1 8 mass 0 share 0.00000 gain 0.0000
+BETA f7 nd1 4 mass 393216 share 0.14286 gain 9.1429
+BETA fe nd1 4 mass 0 share 0.00000 gain 0.0000
+BETA ff nd1 2 mass 0 share 0.00000 gain 0.0000
+HEAVIEST beta b3 nd1 16 mass 1572864 share 0.57143 gain 9.1429
+BESTGAIN beta b3 nd1 16 mass 1572864 gain 9.1429
+D1LIST beta b3: b d 2b 2d 4b 4d 6b 6d 8b 8d ab ad cb cd eb ed

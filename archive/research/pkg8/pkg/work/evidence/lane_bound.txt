@@ -1,0 +1,4 @@
+rule 4: largest bound of a sum 9 * 2^32 - 9 (< 2^36: True); flag words < 2^32: True; stage A word <= ALL: True; stored < 2^32: True; shifted words misused: 0; observed within bounds: True; all bounds hold
+rule 6: largest bound of a sum 9 * 2^32 - 9 (< 2^36: True); flag words < 2^32: True; stage A word <= ALL: True; stored < 2^32: True; shifted words misused: 0; observed within bounds: True; all bounds hold
+rule 8: largest bound of a sum 9 * 2^32 - 9 (< 2^36: True); flag words < 2^32: True; stage A word <= ALL: True; stored < 2^32: True; shifted words misused: 0; observed within bounds: True; all bounds hold
+RESULT: all bounds hold  (detail in work/evidence/lane_bound.txt)

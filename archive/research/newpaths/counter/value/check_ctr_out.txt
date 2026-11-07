@@ -1,0 +1,1 @@
+3000 trials: word mismatches 0; half-collision 0/2/5/7 failures 0; cube/beta failures 0; nonzero tail bytes 0

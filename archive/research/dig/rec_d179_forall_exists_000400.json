@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-FORALL-EXISTS-400",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 quantified J1/J3-only residual split for delta 00000400",
+  "question": "Does the 00000400 residual toggle preserve the coupled J1/J3 witness relation for every g,e2,h?",
+  "labels": ["K"],
+  "status": "COMPUTED",
+  "number": "Exact quantified QF_BV query is SAT for both epsilon rows: 2046a511/f6c2e842/049c3925 (eps=0) and 09490462/40d18888/5d6f3856 (eps=1); for each witness no hp satisfies the toggled J1/J3 pair.",
+  "source": "our exact quantified QF_BV probe",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/forall_exists_h.py; research/retest/b3_omega_coupled/exact/verify_forall_exists_h_000400.py; research/retest/b3_omega_coupled/exact/FORALL_EXISTS_H_000400.md",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.forall_exists.j1j3",
+  "notes": "The query omits J2, so this refutes only the stronger J1/J3-only universal symmetry. It does not establish an aliveness split or close D179; the full J1/J2/J3 class-invariance claim remains OPEN and no saving is credited."
+}

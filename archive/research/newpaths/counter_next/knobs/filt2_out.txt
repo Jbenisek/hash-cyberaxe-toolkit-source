@@ -1,0 +1,11 @@
+beta* outcomes 7; Y9 sampled 20000, c sampled 65536
+  Y9 feasible for some t: 0.02970 (2^-5.073);  c feasible for some t: 0.05464 (2^-4.194)
+  outer step feasible for some t on BOTH (kept share): 0.001057 = 2^-9.885
+  gain for the cube program (success mass / kept share): 2^9.885
+  tau 285020a0: A 0.00385, B 0.01131, both 4.35e-05
+  tau 385020a0: A 0.01190, B 0.03439, both 4.09e-04
+  tau 185020a0: A 0.01250, B 0.04491, both 5.61e-04
+  tau 175020a0: A 0.00265, B 0.02013, both 5.33e-05
+  tau 685020a0: A 0.00655, B 0.01070, both 7.01e-05
+  tau 275020a0: A 0.00305, B 0.02045, both 6.24e-05
+  tau 675020a0: A 0.00575, B 0.02025, both 1.16e-04

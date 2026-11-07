@@ -1,0 +1,22 @@
+{
+  "id": "D266-SHA3-R6-DPRHO-CAPACITY-SWEEP",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "dense DP-rho tighter plane-capacity spill sweep",
+  "question": "Does the exact expanded no-ANDN DAG remain correct below the previous 16-plane capacity, and what finite conditional scores result?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "D266 exact free-order sweep: 40,444 nodes/38,908 ops, KAT bad bits 0. Capacities 4/8/12/16 planes give body words 484,908/476,956/472,692/468,684 and conditional S 126.2252935569/126.2014386828/126.1884829497/126.1761980462; RAM events 82,062/80,074/79,008/78,006.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/t1/d266_capacity_sweep.py; research/retest/t1/d266_capacity_sweep.json; research/sol_answer_D266_sha3_dprho_capacity_sweep.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite expanded DAG/Belady model only. Capacities below 16 planes are sensitivity rows below the established 64-word budget; production emission, endpoint extraction, restart state, allocator and organizer charging remain open. No filing credit.",
+  "held_fixed": "SHA3-r6 expanded no-ANDN DAG, free topological order, four 64-bit words per plane, E_max and D253 restart term",
+  "reopen_if": "An emitted production kernel and organizer-accepted register/spill/endpoint/restart ledger are supplied",
+  "topic": "sha3-r6 DP-rho packed charge"
+}

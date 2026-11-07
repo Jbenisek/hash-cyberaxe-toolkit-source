@@ -1,0 +1,139 @@
+separable/ - does idea 1 (sampler for the out0,2,5,7-constant family) work through a two-list join?
+Owner of this folder: the "separable" research agent.  Plain text, newest results at the bottom.
+
+FILES
+  export_sys.py   exports gd_order.build() + gd_sat.table_macros() to sys_<variant>_<plain|tables>.txt
+  split.c         closure statistics and the strict split search (X1 | X2 = all)
+  fullsets.c      exhaustive search (no depth bound) for guess sets whose closure is everything
+  *.sh            runners (WSL)
+
+MODEL (DERIVED)
+  Words W (unknowns), equations E (each primitive G equation, solvable for any one unknown), optional table
+  macros of gd_sat.py.  cl(T) = propagation closure.  delta(X) = |X| - Ein(X), Ein(X) = equations with all
+  words in X: the generic dimension of region X (each equation one 32-bit condition, assumed independent).
+  F = |W| - |E| = family dimension in words (fixed: 4, outhalf: 12).
+
+  Two-list structure.  Core C (enumerated outside, n values), side A, side B (guess words).
+  X1 = cl(C+A), X2 = cl(C+B).  Lists: LA = 2^x entries of side A (x <= 32a), LB = 2^y.
+  Join key = the independent conditions linking X1 and X2:
+      kX = delta(X1) + delta(X2) - |C| - delta(X1 u X2)
+  After the join, propagate from X1 u X2; post-join checks p = delta(X1 u X2) - F (needs cl(X1 u X2) = all).
+  Internal checks of a side: iA = |C+A| - delta(X1) (filter on the list, costs 2^(32 iA) per kept entry).
+  Total checks |S| - F = kX + p + iA + iB, S = C+A+B.   [DERIVED, generic counting]
+  If X1 u X2 = all (strict split) then p = 0 and kX = delta(X1)+delta(X2)-|C|-F.
+
+  Cost (log2, unit = one batch of word ops per list entry, one compression per member):
+      joined pairs J = nu + x + y - 32 kX, members = J - 32 p, need members = 64.
+      cost = 1 + max(nu + x + 32 iA, nu + y + 32 iB, J, 64).
+  Lower bound: cost >= 32 + 16 kX + 32 p (balanced lists), so
+      kX = 2, p = 0 -> 2^65 ;  kX = 3, p = 0 -> 2^81 ;  kX + p = 4 -> >= 2^97.
+
+  NECESSARY CONDITIONS FOR COST < 2^85 (DERIVED from the formula above, F = 4):
+      p = 0, kX <= 3, and either
+        kX = 3: iA = iB = 0, a, b >= 3, |C| <= 1, |S| = 7, side guess sets |C+A|, |C+B| <= 4;
+        kX = 2: |S| = 6 + iA + iB with iA + iB <= 1, |S| <= 7, side guess sets <= 4.
+      In every case cl(S) = all with |S| <= 7.
+  The same holds for any target up to 2^96: lists <= 2^95 give kX + p <= 3, so |S| <= 7.  With |S| = 8
+  (4 checks) even a perfect split costs >= 2^97, worse than the board (92.2-94).
+
+INCIDENT (2026-10-08 ~12:20, COMPUTED from run_many.log): while stopping my own fullsets k=8 run I used
+  "pkill -x timeout", which also sent SIGTERM to the main session's background kissat runs started by
+  run_many.sh.  run_many.log shows exit=143 for gd_fixed_len64_k6_T50, gd_fixedT_len64_k6_T50,
+  gd_fixedT_len64_k5_T100.  Their questions are answered exactly by fullsets.c below (no full-closure set of
+  <= 7 guesses, plain and tables), so no result is lost, but the runs were not mine to stop.
+  From now on I stop only my own processes by PID.
+
+RESULTS, FIXED VARIANT (F = 4, 100 words, 96 equations)
+  R1 COMPUTED (split.c stats): largest closure of any k-set of guesses, plain / tables:
+        k=1: 9/9   k=2: 14/14   k=3: 20/20   k=4: 25/25   k=5: 33/33   (out of 100 words)
+     So two closures of <= 4 guesses each cover at most 50 < 100 words: no strict split (X1 u X2 = all)
+     with side guess sets <= 4 exists.  Files: stats_fixed_*_k4.out, stats_fixed_*_k5.out.
+  R2 COMPUTED (fullsets.c, exhaustive, no depth bound, guesses in index order, already-derived words skipped):
+        no guess set of <= 7 words has full closure, plain model and gd_sat table model.
+        Files full_fixed_plain_k7_p*.out (1.17e10 search nodes), full_fixed_tables_k7_p*.out (1.09e10).
+     So the minimum guess basis is exactly 8 words (greedy and lsearch find 8) = 4 checks, in both models.
+     This settles the background SAT questions plain k=6,7 and tables k=5,6 (all UNSAT).
+  R3 DERIVED (R2 + the necessary conditions above): no two-list structure (strict or join-then-propagate)
+     with projected cost below 2^85 exists in either model.  With |S| = 8 every two-list structure costs
+     >= 2^97 (kX + p = 4).
+  R4 DERIVED (structural): in this model a join key between two closed regions R1, R2 can only come from
+     (i) a 4-unknown modular-add equation (a1 = a+b+x or a2 = a1+b1+y) with two unknowns in R1-R2 and two in
+     R2-R1, or (ii) a word lying in both regions that the core alone does not give.  A 2- or 3-word equation
+     with two words in one closed region already has its third word in that region.
+  R5 COMPUTED (kdiag.c, jtree.c on 2000 full-closure 8-sets from the exhaustive k=8 listing): for every pair of
+     subsets U1, U2 of S (any overlap used as core) the join key is 0, i.e. closures of parts of S never share
+     a condition; all 4 checks appear only in the final cascade.  The best join tree (jtree.c, cores <= 2,
+     multi-level trees) for every one of these sets is the trivial one: guess all 8, cost 2^193 for 2^64
+     members.
+  R6 DERIVED: jtree = 2^193 for a set S means no proper subset U of S (with any core of <= 2 of its words)
+     carries a check (otherwise an early filter beats 2^193), and kdiag = 0 means no pair of subsets has a
+     join key.  So in these sets the 4 checks exist only for the complete set: they are "global".  Every
+     join tree over such an S costs 2^193 for 2^64 members (one-sided: 2^128 per member).
+
+EXTENSION: TABLES UP TO 2^64 ENTRIES (model "t2", t2_macros.py; legal in the cost model: memory free,
+  preprocessing 2^64 is far below 2^88).  For each G call, every subset Q of its 8 equations with solution
+  dimension <= 2 that plain propagation inside Q can enumerate from <= 2 words gives a rule
+  "any <= 2 known words P of Q with a perfect matching Q <-> (words of Q - P) -> all words of Q".
+  fixed: 48 trigger sets (K0..K3 any two words -> whole call; C0..C3 pairs such as (C0.a1, D2.c2) -> C0.c1,
+  C0.d1, C0.d2, D1.d2).  outhalf: 28 trigger sets (K0..K3 only).
+  T1 COMPUTED (toy_t2_check.py, exhaustive at w = 8 and 12): the key -> unknowns maps behave like random
+     functions (image fraction 0.57-0.69; 0.632 for a random function), so the table rules are generic:
+     about one solution per key, no hidden degeneracy.
+  R7 COMPUTED (fullsets.c, exhaustive, t2 model, 1.08e10 nodes, full_fixed_t2_k7_p*.out): no guess set of
+     <= 7 words has full closure even with all 2^64-table rules; lsearch finds 8 (ls_fx_fixed_t2.out).
+     So the 2^64 tables do not lower the minimum basis: still 8 guesses = 4 checks, and R3 holds for t2 too.
+  R8 COMPUTED (jtree.c, cores <= 2, all multi-level trees over the set): 200,000 random full-closure 8-sets
+     drawn from the partial exhaustive k=8 listing (2,081,056 sets listed before I stopped it; the listing
+     covers sets whose smallest word index is 0..4): cost 2^193 for every one (jt_fixed_plain_k8s_0[0-7].out).
+  R9 COMPUTED (local-search sets, more diverse than the k=8 listing): 1,684 plain 8-sets -> jtree 2^193 for all
+     (plain and tables model), kdiag max key 0 for all; 992 t2 8-sets -> jtree 2^193, key 0 for all.
+     (jt_fixed_plain_ls8.out, jt_fixed_tables_ls8plain.out, jt_fixed_t2_ls8.out, kd_fixed_*_ls8.out)
+  R10 COMPUTED: parallel propagation depth of 300 full 8-sets is 29..47 layers (mean 36), so the SAT depth
+     bound T=50 used for some background runs is probably but not provably enough; T=100 is safe.
+
+RESULTS, OUTHALF VARIANT (F = 12, 128 words, 116 equations)
+  O1 COMPUTED (lsearch.c, heuristic): smallest full-closure set found = 16 guesses (4 checks) in plain,
+     tables and t2 models (hundreds of restarts each, every one ends at 16 or 17).  Not exhaustive:
+     C(128,15) sets is out of reach; the background SAT runs (k=12,13,14, T=128) left empty outputs
+     10 minutes apart, i.e. they hit their 600 s timeout (DERIVED from file times).
+  O2 DERIVED: for outhalf a two-list structure below 2^85 needs a full-closure set of <= F+3 = 15 words
+     (same argument as for fixed).  None was found (O1), so GUESS: none exists.
+  O3 COMPUTED (kdiag2.c, every top-level split U1 u U2 = S with any core U1 n U2): 24 outhalf 16-sets
+     (8 per model): join key 0 for every split, best two-list cost 2^193.  (kd2_outhalf_*.out)
+
+EXTENSION: SMALL SQUARE SUBSYSTEMS ACROSS G CALLS ("rigid", rigid.h)
+  Any 2 equations with the same 2 unknowns, or 3 equations with 3 common unknowns (perfect matching), are
+  solved by a table when they contain <= 2 known words (2^64 entries).  Applied on top of t2.
+  X1 COMPUTED (lsearch_r, heuristic): fixed still 8 (635 restarts), outhalf still 16 (184 restarts).
+     (lsr_*.out)  Whether the rule fires at all was not counted.
+
+ANSWER (decisive question: does idea 1 work through a list join?)
+  No, not in the guess-and-determine model, and not by a small margin.
+  - Fixed variant: the minimum guess basis is exactly 8 words (4 checks of 32 bits), proven by exhaustive
+    search with no depth bound in the plain model, the gd_sat table model and the 2^64-table model.  A
+    two-list join below 2^85 (indeed below 2^96) needs a basis of <= 7 words.  So none exists.
+  - Beyond the count: in 200,000 + 2,676 sampled minimal bases the 4 checks are global.  No part of a basis
+    produces a check and no two parts share a join key, so joins and multi-level trees give nothing: the best
+    cost in the model is 2^193 for 2^64 members (2^128 per member), far above generic birthday 2^128.
+  - Outhalf variant: the smallest basis found is 16 words (4 checks) in all models (heuristic local search,
+    not exhaustive); a join below 2^85 needs <= 15; every top-level split of 24 found bases has join key 0,
+    and the full multi-level DP on one basis per model gives 2^193.
+  WHAT IT WOULD TAKE: a basis with one guess fewer (7 for fixed, 15 for outhalf) whose 3 checks are all
+  join keys between two sides of >= 3 free words each (|C| <= 1): cost ~2^81.  Two keys and 6 guesses:
+  ~2^65.  Today: 8 guesses and 0 keys.  The missing ingredient is a solving technique outside this model
+  (something that makes the final-cascade checks computable from one side), not a better search.
+  Step 3 (toy end-to-end attack) was not run because no structure below 2^85 exists in the model.
+
+DATA FILES
+  fixed_plain_k8_partial_all.txt  2,081,056 full-closure 8-sets (word indices of sys_fixed_plain.txt) from the
+                                  stopped exhaustive k=8 run (smallest index 0..4 only).
+  k8_sample200k.txt               200,000 random lines of it; jt_fixed_plain_k8s_0N.out = slice N of 8.
+  ls8_plain.txt, ls8_t2.txt       diverse 8-sets from local search; oh16_*.txt outhalf 16-sets.
+  Word index -> name: line (index+2) of sys_<variant>_<model>.txt.
+
+POSITIVE CONTROL (COMPUTED): sys_control.txt, a 5-word system with one 2/2-split 4-word equation and one word
+  derivable on both sides (F = 2, guesses A1 A2 B1 B2): jtree and kdiag2 both find the two-list join with
+  2 keys, cost 2^65.  So the all-2^193 results above are not an artifact of the tools.
+  O4 COMPUTED (jtree.c, all multi-level trees, cores of 4..10 words, one 16-set per model; the second set per
+     model was stopped unfinished): cost 2^193 in plain, tables and t2 (jt_outhalf_*.out).  Same picture as
+     fixed: the 4 checks of an outhalf basis are global.

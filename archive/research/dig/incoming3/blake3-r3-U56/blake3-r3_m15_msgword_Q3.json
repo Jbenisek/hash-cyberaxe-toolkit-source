@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m15",
+ "question": "Q3 degrees of freedom (exact count) and score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "32 bits: m15 is a free chain word, all 2^32 values occur as digest word 7 (identity embedding of a 256-bit chain, 8 words = 256 bits of freedom in total; counted by construction, bias sample in Q1 shows no gap). Score-optimal value: none, the word is a lane variable so the circuit has 595 ops for every value (a constant would be 576..595 ops but costs 2^16 in time, Q2). Freedom beyond the 8 chain words is not needed: widening to all 16 words variable gives 730 ops (+135, +0.295 bits).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U55/work/words.py; research/dig/incoming3/blake3-r3-U55/work/words.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|m15|msgword|Q3. validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "target 0^32||x (m0..m7 = 0, m8..m15 chain words, identity embedding), standard IV/counter 0/length 64/flags 11, 3 rounds, filed circuit rules (7 lanes x 36-bit pitch, filed Tracer rules, 595 ops per batch of 7); all other reads unchanged",
+ "reopen_if": "a cheaper way to use extra freedom (m0..m7) than +135 ops, e.g. a chain that makes the 8 round-0 column calls cheaper rather than costlier",
+ "topic": "blake3-r3|m15|msgword|Q3"
+}

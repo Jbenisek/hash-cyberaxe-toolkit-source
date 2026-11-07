@@ -1,0 +1,2 @@
+R4 (AB): lane 1 - (M_10/M_00)*lane 0: 8001 monomials, max total degree 125, min total degree 0 (DERIVED: <= 125)
+R4 (AB): lane 2 - (M_20/M_00)*lane 0: 8001 monomials, max total degree 125, min total degree 0 (DERIVED: <= 125)

@@ -1,0 +1,47 @@
+front-line basis B0 is a basis: True
+Y4                           FREE  basis=Y4,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,w0
+Y9                           not found (depth 1)
+Y14                          FREE  basis=Y14,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,Y4
+w8                           FREE  basis=w8,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,w0
+Y1                           not found (depth 1)
+Y6                           FREE  basis=Y6,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,Y4
+Y12                          FREE  basis=Y12,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,w0
+w12                          FREE  basis=w12,C0.d1,D2.a1,D2.b1,S11,S4,w6,Y4,w0
+w5                           FREE  basis=w5,C0.d1,D2.a1,D2.b1,S11,S4,w6,Y4,w0
+Y4,Y9                        not found (depth 1)
+Y4,Y14                       FREE  basis=Y4,Y14,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+Y4,w8                        not found (depth 1)
+Y4,Y1                        not found (depth 1)
+Y4,Y6                        FREE  basis=Y4,Y6,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+Y4,Y12                       FREE  basis=Y4,Y12,C0.d1,D2.a1,D2.b1,S11,S4,w6,w0
+Y4,w12                       FREE  basis=Y4,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6,w0
+Y4,w5                        FREE  basis=Y4,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6,w0
+Y9,Y14                       not found (depth 1)
+Y9,w8                        not found (depth 1)
+Y9,Y1                        not found (depth 1)
+Y9,Y6                        not found (depth 1)
+Y9,Y12                       not found (depth 1)
+Y9,w12                       not found (depth 1)
+Y9,w5                        not found (depth 1)
+Y14,w8                       FREE  basis=Y14,w8,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+Y14,Y1                       not found (depth 1)
+Y14,Y6                       FREE  basis=Y14,Y6,D2.a1,D2.b1,S11,S4,X9,w6,C2.c1
+Y14,Y12                      FREE  basis=Y14,Y12,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+Y14,w12                      FREE  basis=Y14,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6,Y4
+Y14,w5                       FREE  basis=Y14,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6,Y4
+w8,Y1                        not found (depth 1)
+w8,Y6                        FREE  basis=w8,Y6,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+w8,Y12                       not found (depth 1)
+w8,w12                       FREE  basis=w8,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6,w0
+w8,w5                        FREE  basis=w8,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6,w0
+Y1,Y6                        not found (depth 1)
+Y1,Y12                       not found (depth 1)
+Y1,w12                       not found (depth 1)
+Y1,w5                        not found (depth 1)
+Y6,Y12                       FREE  basis=Y6,Y12,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+Y6,w12                       FREE  basis=Y6,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6,Y4
+Y6,w5                        FREE  basis=Y6,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6,Y4
+Y12,w12                      FREE  basis=Y12,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6,w0
+Y12,w5                       FREE  basis=Y12,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6,w0
+w12,w5                       FREE  basis=w12,w5,C0.d1,D2.a1,D2.b1,S11,S4,Y4,w0
+time 2.7s

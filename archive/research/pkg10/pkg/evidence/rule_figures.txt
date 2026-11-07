@@ -1,0 +1,37 @@
+PROGRAM sha256 d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb
+class eta 830303cf, pin H8, lengths 55 and 63; the package uses the rule with 5 conditions, factor 2^25, charge 19.1 (provisional), PREP_OPS 1024 (a bound; evidence/prep_count.txt has the count of that work)
+
+RULE WITH 4 CONDITIONS
+  machine (one batch counted here): stage A 52 operations + 31 loads = 83; stage 2 115 + 48 = 163; registers 12 of 16
+  long self-test evidence/selftest_1000000_rule4_61.json: 1,000,000 batches, 7,000,000 of 7,000,000 lanes right against the complete digests; stage A 52 + 31, stage 2 115 + 48, registers 12, largest lane of a sum 11.592 * 2^32, same counts in every case True
+  stage-2 budget: a share 1/2 of the batches; budgeted cost per trial (74,899 * 83 + 74,899 * 163 / 2 + 1024) / 524,288 = 23.5022
+  measured (evidence/rule_share_h8_2048_1.txt, 1,073,741,824 real trials): trials that satisfy the rule 2^-4.0030; 7 times that share 0.436579 (below the budget 0.5000, which is larger by a factor of 1.145); batches that enter stage 2 0.240145 (per context between 0.1440 and 0.3283); cost per trial at that measured share 17.4512 (information; the package budgets the larger share)
+  conservative count (evidence/conservative_h8.txt, rule with 4 conditions; all betas counted in full): 162,241,316.4 (321 outcomes left out)
+  factor 2^24 (16,777,216): count / factor = 9.670; trials 2^103; charge 24.3 (margin 3.4%): total below 2^98.87, time_log2 98.9; charge 24.4 (margin 3.8%): total below 2^98.88, time_log2 98.9; charge 24.6 (margin 4.7%): total below 2^98.89, time_log2 98.9
+  factor 2^25 (33,554,432): count / factor = 4.835; trials 2^102; charge 24.3 (margin 3.4%): total below 2^97.87, time_log2 97.9; charge 24.4 (margin 3.8%): total below 2^97.88, time_log2 97.9; charge 24.6 (margin 4.7%): total below 2^97.89, time_log2 97.9
+  factor 2^26 (67,108,864): count / factor = 2.418; trials 2^101; charge 24.3 (margin 3.4%): total below 2^96.87, time_log2 96.9; charge 24.4 (margin 3.8%): total below 2^96.88, time_log2 96.9; charge 24.6 (margin 4.7%): total below 2^96.89, time_log2 96.9
+
+RULE WITH 5 CONDITIONS
+  machine (one batch counted here): stage A 55 operations + 32 loads = 87; stage 2 115 + 48 = 163; registers 12 of 16
+  long self-test evidence/selftest_1000000_rule5_61.json: 1,000,000 batches, 7,000,000 of 7,000,000 lanes right against the complete digests; stage A 55 + 32, stage 2 115 + 48, registers 12, largest lane of a sum 11.592 * 2^32, same counts in every case True
+  stage-2 budget: a share 1/4 of the batches; budgeted cost per trial (74,899 * 87 + 74,899 * 163 / 4 + 1024) / 524,288 = 18.2521
+  measured (evidence/rule_share_h8_2048_1.txt, 1,073,741,824 real trials): trials that satisfy the rule 2^-5.0030; 7 times that share 0.218299 (below the budget 0.2500, which is larger by a factor of 1.145); batches that enter stage 2 0.121591 (per context between 0.0731 and 0.1654); cost per trial at that measured share 15.2620 (information; the package budgets the larger share)
+  conservative count (evidence/conservative_h8.txt, rule with 5 conditions; all betas counted in full): 126,003,600.8 (399 outcomes left out)
+  factor 2^24 (16,777,216): count / factor = 7.510; trials 2^103; charge 18.8 (margin 3.0%): total below 2^98.50, time_log2 98.5; charge 19.0 (margin 4.1%): total below 2^98.52, time_log2 98.6; charge 19.1 (margin 4.6%): total below 2^98.52, time_log2 98.6
+  factor 2^25 (33,554,432): count / factor = 3.755; trials 2^102; charge 18.8 (margin 3.0%): total below 2^97.50, time_log2 97.5; charge 19.0 (margin 4.1%): total below 2^97.52, time_log2 97.6; charge 19.1 (margin 4.6%): total below 2^97.52, time_log2 97.6
+  factor 2^26 (67,108,864): count / factor = 1.878; trials 2^101; charge 18.8 (margin 3.0%): total below 2^96.50, time_log2 96.5; charge 19.0 (margin 4.1%): total below 2^96.52, time_log2 96.6; charge 19.1 (margin 4.6%): total below 2^96.52, time_log2 96.6
+  as the data module has it now: factor 2^25, charge 19.1 (margin 4.6%): total below 2^97.52, time_log2 97.6
+  constants loaded more than once in a batch (stage A, stage 2): mask of rotation 12, low part (2, 4); mask of rotation 12, high part (2, 4); mask of rotation 16, low part (1, 3); mask of rotation 16, high part (1, 3); bit 32 (2, 2); M (1, 3); mask of rotation 8, low part (0, 3); mask of rotation 8, high part (0, 3); mask of rotation 7, low part (1, 2); mask of rotation 7, high part (1, 2); list word or counter limit (2, 1); mask of rotation 24, low part (1, 1); mask of rotation 24, high part (1, 1)
+
+RULE WITH 6 CONDITIONS
+  machine (one batch counted here): stage A 58 operations + 33 loads = 91; stage 2 115 + 48 = 163; registers 12 of 16
+  long self-test evidence/selftest_1000000_rule6_61.json: 1,000,000 batches, 7,000,000 of 7,000,000 lanes right against the complete digests; stage A 58 + 33, stage 2 115 + 48, registers 12, largest lane of a sum 11.592 * 2^32, same counts in every case True
+  stage-2 budget: a share 1/8 of the batches; budgeted cost per trial (74,899 * 91 + 74,899 * 163 / 8 + 1024) / 524,288 = 15.9128
+  measured (evidence/rule_share_h8_2048_1.txt, 1,073,741,824 real trials): trials that satisfy the rule 2^-6.0031; 7 times that share 0.109140 (below the budget 0.1250, which is larger by a factor of 1.145); batches that enter stage 2 0.080634 (per context between 0.0557 and 0.1084); cost per trial at that measured share 14.8797 (information; the package budgets the larger share)
+  conservative count (evidence/conservative_h8.txt, rule with 6 conditions; all betas counted in full): 91,072,901.5 (418 outcomes left out)
+  factor 2^24 (16,777,216): count / factor = 5.428; trials 2^103; charge 16.4 (margin 3.1%): total below 2^98.30, time_log2 98.3; charge 16.6 (margin 4.3%): total below 2^98.32, time_log2 98.4; charge 16.7 (margin 4.9%): total below 2^98.33, time_log2 98.4
+  factor 2^25 (33,554,432): count / factor = 2.714; trials 2^102; charge 16.4 (margin 3.1%): total below 2^97.30, time_log2 97.3; charge 16.6 (margin 4.3%): total below 2^97.32, time_log2 97.4; charge 16.7 (margin 4.9%): total below 2^97.33, time_log2 97.4
+  factor 2^26 (67,108,864): count / factor = 1.357; trials 2^101; charge 16.4 (margin 3.1%): total below 2^96.30, time_log2 96.3; charge 16.6 (margin 4.3%): total below 2^96.32, time_log2 96.4; charge 16.7 (margin 4.9%): total below 2^96.33, time_log2 96.4
+
+Charges are rounded up to one decimal from the budgeted cost times 1.030, 1.038 and 1.044 (the filed package has a margin of 3.7%).
+The margin count / factor of the earlier packages was 3.4 to 3.6.

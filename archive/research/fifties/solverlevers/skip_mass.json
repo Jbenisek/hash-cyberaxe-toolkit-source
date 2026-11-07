@@ -1,0 +1,128 @@
+{
+ "pc_steps": 136649,
+ "root_steps": 81001,
+ "roots": 88896,
+ "hot14": {
+  "pc_zero_share": 0.0,
+  "rootstep_zero_share": 0.0,
+  "1/4": {
+   "threshold": 80740352,
+   "tie_frac": 0.1276,
+   "s_count": 0.25,
+   "s_cap": 0.26275,
+   "m_rootsteps": 0.69862,
+   "m_se": 0.00161,
+   "m_roots": 0.71052,
+   "breakeven": 0.82145,
+   "gain_x": 2.794,
+   "dbit": 0.2337
+  },
+  "1/16": {
+   "threshold": 169623552,
+   "tie_frac": 0.1406,
+   "s_count": 0.0625,
+   "s_cap": 0.06367,
+   "m_rootsteps": 0.36576,
+   "m_se": 0.00169,
+   "m_roots": 0.37471,
+   "breakeven": 0.77338,
+   "gain_x": 5.852,
+   "dbit": 1.0803
+  },
+  "1/64": {
+   "threshold": 271319040,
+   "tie_frac": 0.0234,
+   "s_count": 0.015625,
+   "s_cap": 0.01523,
+   "m_rootsteps": 0.1471,
+   "m_se": 0.00124,
+   "m_roots": 0.14913,
+   "breakeven": 0.76168,
+   "gain_x": 9.414,
+   "dbit": 2.3724
+  },
+  "mean_root_over_mean_pc": 2.5389
+ },
+ "S6": {
+  "pc_zero_share": 0.0,
+  "rootstep_zero_share": 0.0,
+  "1/4": {
+   "threshold": 63700992,
+   "tie_frac": 0.2185,
+   "s_count": 0.25,
+   "s_cap": 0.26253,
+   "m_rootsteps": 0.71561,
+   "m_se": 0.00159,
+   "m_roots": 0.72536,
+   "breakeven": 0.8214,
+   "gain_x": 2.862,
+   "dbit": 0.1989
+  },
+  "1/16": {
+   "threshold": 146538496,
+   "tie_frac": 0.1875,
+   "s_count": 0.0625,
+   "s_cap": 0.06592,
+   "m_rootsteps": 0.35981,
+   "m_se": 0.00169,
+   "m_roots": 0.36738,
+   "breakeven": 0.77392,
+   "gain_x": 5.757,
+   "dbit": 1.105
+  },
+  "1/64": {
+   "threshold": 245366784,
+   "tie_frac": 0.1575,
+   "s_count": 0.015625,
+   "s_cap": 0.01569,
+   "m_rootsteps": 0.14195,
+   "m_se": 0.00123,
+   "m_roots": 0.14294,
+   "breakeven": 0.76179,
+   "gain_x": 9.085,
+   "dbit": 2.424
+  },
+  "mean_root_over_mean_pc": 2.8001
+ },
+ "T_rows": {
+  "pc_zero_share": 0.0,
+  "rootstep_zero_share": 0.0,
+  "1/4": {
+   "threshold": 44826624,
+   "tie_frac": 0.7419,
+   "s_count": 0.25,
+   "s_cap": 0.26955,
+   "m_rootsteps": 0.76207,
+   "m_se": 0.0015,
+   "m_roots": 0.77273,
+   "breakeven": 0.8231,
+   "gain_x": 3.048,
+   "dbit": 0.1111
+  },
+  "1/16": {
+   "threshold": 113770496,
+   "tie_frac": 0.7397,
+   "s_count": 0.0625,
+   "s_cap": 0.06922,
+   "m_rootsteps": 0.41187,
+   "m_se": 0.00173,
+   "m_roots": 0.4212,
+   "breakeven": 0.77472,
+   "gain_x": 6.59,
+   "dbit": 0.9115
+  },
+  "1/64": {
+   "threshold": 218103808,
+   "tie_frac": 0.3385,
+   "s_count": 0.015625,
+   "s_cap": 0.01573,
+   "m_rootsteps": 0.17139,
+   "m_se": 0.00132,
+   "m_roots": 0.1735,
+   "breakeven": 0.7618,
+   "gain_x": 10.969,
+   "dbit": 2.1522
+  },
+  "mean_root_over_mean_pc": 3.407
+ }
+}

@@ -1,0 +1,3 @@
+exact mean cost (20 bits) 12.640625 pass prob 0.06689453125 pass*2^32 287309824.0
+random 32-bit w: mean 12.6488875 se 0.009631433890177482 z vs exact 0.857868111250512 pass freq 0.0674225 exp 0.06689453125
+real cv, 90 classes: mean per fb w7 term 1497.48575

@@ -1,0 +1,29 @@
+# The third formula on all outcomes (tools/rule_formula3_h8.py), DRAT proofs for the kept outcomes with their check
+
+Source: `research/pkg10/pkg/tools/rule_drat_all.sh`
+
+Public SHA-256: `43d7afbfd7b30f2c61d1d5de6aa27c6e29cb7118e32076b36e9543980cfeae35`
+
+## Purpose recorded in the source
+
+The third formula on all outcomes (tools/rule_formula3_h8.py), DRAT proofs for the kept outcomes with their check
+(tools/rule_drat_h8.py) and the controls of the checker (tools/rule_drat_control_h8.py). Two workers, CPU only.
+Run after tools/rule_a_sat_all.sh and a build (the first program reads the table of kept outcomes in proof.md).
+Log: evidence/rule_drat_all.log. Research helper, not submitted.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/pkg10/pkg/tools/proof_lines_check.py
+- research/pkg10/pkg/tools/proof_lines_pkg7.py
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

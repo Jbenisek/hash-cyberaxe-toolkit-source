@@ -1,0 +1,20 @@
+M^1 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^2 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^3 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^4 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^5 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^6 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^7 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^8 is MDS (all 1x1,2x2,3x3 minors nonzero): True
+M^-1 is MDS: True
+det of [e0; e0 M; e0 M^2] (partial-round observability, nonzero => no invariant subspace trail of dim>0 for r>=3): 0xebe164ab9dff92f6f90c296e3b831a7221b9f7429d21e01d7dc2ebf46e8a8ba
+det of [M e0, M^2 e0, M^3 e0] (does the S-box of lane 0 reach all directions in 3 rounds?): 0x28c468b28fe4f3cc0e7084b4b985f29d95c9f6ce925b42beedd75b7b45fefb54
+1/M_ij bit lengths: [[251, 253, 252], [250, 253, 252], [250, 253, 252]]
+signed small? min(|N|,p-|N|) bit lengths: [[251, 253, 252], [250, 253, 252], [250, 253, 252]]
+differences N_i1-N_i0 are the same for all i (Cauchy y-differences): True True
+det(M) quadratic residue? False
+
+--- plane P0 (state after round 0) versus partial-round difference spaces ---
+P0-direction vectors with d0=0 (the S-box of R4 sees no difference): span of ['0x0', '0xd0c2efd6472f12a3c26fa4b7d25b1e487a7435d30f8be81adc8933c6f3c72ee', '0x2138c8da8b0c7ae44b222b4b29badda95c6202ee95282be4223d85aa2b0456f6']  (1-dim: the plane meets {d0=0} in a line)
+r=2 trail vector d2v . n2 = 0x2f5958a117f69f870e149744fedf1b39013334e099b159f84960dcf037cf0e1f (nonzero => d2v is not a difference between two round-0 outputs)
+M d2v has lane 0 = 0: True ; lane 1,2 = 0x1b1c7e8f4e 0x14e50e8855

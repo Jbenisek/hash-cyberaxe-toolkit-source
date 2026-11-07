@@ -1,0 +1,20 @@
+=== q=257, 30 seeds ===
+  |Z_R1,lane0|: min 257 mean 257.00 max 257   (q = 257)
+  |Z_R1,lane1|: min 257 mean 257.00 max 257   (q = 257)
+  |Z_R1,lane2|: min 257 mean 257.00 max 257   (q = 257)
+  |Z_R2,lane0|: min 227 mean 257.13 max 292   (q = 257)
+  |Z_R2,lane1|: min 228 mean 255.60 max 293   (q = 257)
+  |Z_R2,lane2|: min 217 mean 253.23 max 285   (q = 257)
+  |Z_R3,lane0|: min 217 mean 253.43 max 291   (q = 257)
+  |Z_R3,lane1|: min 216 mean 256.90 max 284   (q = 257)
+  |Z_R3,lane2|: min 219 mean 256.27 max 296   (q = 257)
+  pair intersections round1 x round1: n=90 min 1 mean 1.000 max 1 ; histogram {1: 90}
+  pair intersections round1 x round2: n=270 min 0 mean 0.941 max 3 ; histogram {0: 110, 1: 88, 2: 50, 3: 22}
+  pair intersections round1 x round3: n=270 min 0 mean 0.993 max 4 ; histogram {0: 102, 1: 96, 2: 50, 3: 16, 4: 6}
+  pair intersections round2 x round2: n=90 min 0 mean 0.778 max 4 ; histogram {0: 46, 1: 24, 2: 15, 3: 4, 4: 1}
+  pair intersections round2 x round3: n=270 min 0 mean 1.133 max 7 ; histogram {0: 85, 1: 106, 2: 50, 3: 22, 4: 4, 5: 1, 6: 1, 7: 1}
+  pair intersections round3 x round3: n=90 min 0 mean 0.911 max 6 ; histogram {0: 34, 1: 39, 2: 11, 3: 5, 6: 1}
+  triple (all 3 lanes of round 1 zero at once): number of seeds with >=1 point: 0/30 ; mean points 0.0000
+  triple (all 3 lanes of round 2 zero at once): number of seeds with >=1 point: 0/30 ; mean points 0.0000
+  triple (all 3 lanes of round 3 zero at once): number of seeds with >=1 point: 0/30 ; mean points 0.0000
+  triples among all 9 curves with a common point: 8 (over 30 seeds, 84 triples each)

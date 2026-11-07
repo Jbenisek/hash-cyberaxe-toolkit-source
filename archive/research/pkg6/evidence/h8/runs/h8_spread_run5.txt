@@ -1,0 +1,47 @@
+real: pin 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006  eta 830303cf  class of 2^19 values of Y4  D3 fdb77cfd
+  lengths 55/63  w4' 97475640  delta fffffff8  Y3 8127c181 Y3' 7edf3e7e  Y11 7af77f38 Y11' 850000c3 D11 0a08818b  class mask 03cf8303 value 030c0303
+STAT real trials 2^40.00  bad 0
+STAT real layout run 5: outer words C0.c1 27d5d6e9 C0.d1 a304a4c5 S11 2ae46489 S4 d50d3dcf X13 3185b0c1 w0 a4c76895, X14 from a645d403, 2097152 values of X14, each with all 524288 members once
+STAT real layout diagnostic: X14 in steps of 9e3779b1 instead of 1
+STAT real early test passes: 48737 (2^-24.427)   E1 requires the eta of Y4: 375 (2^-31.449)   contradictions (must be 0): 0
+STAT real E1 deep: trials with a listed beta 4429186090 (2^-7.956)   trials with a listed E1 outcome 1
+STAT real E3 deep: trials with a listed partial E3 event 226 (2^-32.180)
+STAT real word zero:              265 (2^-31.950)       1286 (2^-29.671)        261 (2^-31.972)        180 (2^-32.508)
+STAT real low 16 zero:       16580967 (2^-16.017)   42911741 (2^-14.645)   26269670 (2^-15.353)   12835211 (2^-16.386)
+STAT real low 16 of two:   01:739 02:1743 03:276 12:1097 13:118 23:497
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 189   weight <= 16/24/32/40: 0 60 190325 89928015   lowest weight seen 20
+STAT real trailing zero bits >= 24..48: 24:68368 28:4515 32:265 36:14 40:3 44:0 48:0
+STAT real trailing zero bits exactly 0..23: 730093740858 184709146809 92354312288 46177359599 23088621332 11544253731 5772158705 2886042378 1442965071 721530619 360728403 97412697 131541239 65896928 32959057 16377095 8289903 4147951 2071386 1034053 517000 260702 130650 60954
+STAT real rule on h1 (bits 0=0, 1=1, 16=0, 17=0): passes 68717591899 (2^-4.000040)   listed partial E3 events that pass it: 134
+STAT real E1 beta 18b0e098: trials 536862361   with a listed tau 323228   with a listed outcome 0
+STAT real E1 beta 18d0e098: trials 536841329   with a listed tau 772470   with a listed outcome 0
+STAT real E1 beta 18b1a098: trials 536923897   with a listed tau 331770   with a listed outcome 1
+STAT real E1 beta 18d1a098: trials 536875387   with a listed tau 613997   with a listed outcome 0
+STAT real E1 beta 18b3e098: trials 134227157   with a listed tau 18560   with a listed outcome 0
+STAT real E1 beta 18d3e098: trials 134241404   with a listed tau 43175   with a listed outcome 0
+STAT real E1 beta 18d1a398: trials 134214987   with a listed tau 20675   with a listed outcome 0
+STAT real E1 beta 19f1a098: trials 134204681   with a listed tau 15398   with a listed outcome 0
+STAT real E1 beta 18d16398: trials 134228151   with a listed tau 10090   with a listed outcome 0
+STAT real E1 beta 18f1e098: trials 134209650   with a listed tau 27976   with a listed outcome 0
+STAT real E1 beta 19f0e098: trials 134216205   with a listed tau 7075   with a listed outcome 0
+STAT real E1 beta 19b1e098: trials 134210326   with a listed tau 33240   with a listed outcome 0
+STAT real E1 beta 19d1e098: trials 134193108   with a listed tau 15325   with a listed outcome 0
+STAT real E1 beta 19b0a098: trials 536870816   with a listed tau 37871   with a listed outcome 0
+STAT real E1 beta 19d0a098: trials 536866631   with a listed tau 6205   with a listed outcome 0
+STAT real E3 eps 6e61be55: listed partial events 68
+STAT real E3 eps 6e21be55: listed partial events 54
+STAT real E3 eps 6e203e55: listed partial events 38
+STAT real E3 eps 6e603e55: listed partial events 28
+STAT real E3 eps 6e23be55: listed partial events 19
+STAT real E3 eps 6e63be55: listed partial events 10
+STAT real E3 eps 6e5fbe55: listed partial events 4
+STAT real E3 eps 6fdfbe55: listed partial events 3
+STAT real E3 eps 6fa03e55: listed partial events 2
+STAT real E3 eps 6fa1be55: listed partial events 0
+STAT real E3 eps 6e603c55: listed partial events 0
+STAT real E3 eps 6e60bc55: listed partial events 0
+STAT real E3 eps 6fde3e55: listed partial events 0
+STAT real E3 eps 6f9fbe55: listed partial events 0
+STAT real E3 eps 6f9e3e55: listed partial events 0
+RUN h8_spread_run5: h8_class_gpu real 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006 830303cf 18 12 1024 9805 5 9e3779b1 ; exit 0 ; 40 s ; finished 2026-10-06 15:02:25

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.DPFRAC distinguished-point fraction",
+ "question": "Alternatives to distinguished points (cycle finding) and to the 32-bit prefilter.",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "Random mappings n=18, 300 runs: 39 percent quantile of evaluations over sqrt(2N): Floyd (3 evals per step) 1.611, Brent detection only 1.094 (recovery of the pair excluded), exact rho length mu+lambda 0.678, filed DP search q = 0.705 sqrt(2N). Floyd costs +1.19 bit, Brent at least +0.63 bit against DP. Prefilter width: s1=32 is the only value with no extra AND; s1=31 +0.00239 bit, s1=16 +0.00255 bit.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.DPFRAC|GENERIC|Q4. 300 runs: quantile standard error about 0.04 on the Floyd/Brent figures; the DP figure is the filed formula. Sign and size of the gap are far outside that. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "plain random mappings (numpy), not the BLAKE3 chain; time unit = evaluations, same cost per evaluation.",
+ "reopen_if": "A cycle-finding variant that finds the pair in under 0.75 sqrt(2N) evaluations at 39 percent."
+}

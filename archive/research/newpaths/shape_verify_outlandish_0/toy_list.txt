@@ -1,0 +1,8 @@
+toy_r1_out0_k14.cnf words 80 eqs 65 F 15 core_eqs 0 lemma_c 0 guesses<= 14 lemma_says UNSAT
+toy_r1_out0_k15.cnf words 80 eqs 65 F 15 core_eqs 0 lemma_c 0 guesses<= 15 lemma_says SAT
+toy_r1_out2_k14.cnf words 80 eqs 65 F 15 core_eqs 0 lemma_c 0 guesses<= 14 lemma_says UNSAT
+toy_r1_out2_k15.cnf words 80 eqs 65 F 15 core_eqs 0 lemma_c 0 guesses<= 15 lemma_says SAT
+toy_r1_out0_out2_out5_k12.cnf words 80 eqs 67 F 13 core_eqs 0 lemma_c 0 guesses<= 12 lemma_says UNSAT
+toy_r1_out0_out2_out5_k13.cnf words 80 eqs 67 F 13 core_eqs 0 lemma_c 0 guesses<= 13 lemma_says SAT
+toy_r1_out0_out1_out2_out3_k11.cnf words 80 eqs 68 F 12 core_eqs 0 lemma_c 0 guesses<= 11 lemma_says UNSAT
+toy_r1_out0_out1_out2_out3_k12.cnf words 80 eqs 68 F 12 core_eqs 0 lemma_c 0 guesses<= 12 lemma_says SAT

@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH CheapLunch",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "FGLM cost D_I^omega with D_I = 390,625: 2^37.2 at omega = 2 (2^52 at 2.8) vs our 2^28.78: 8.4 bit worse even if a collision cost one CICO solve",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "log2(390625^2) = 37.24; computed here. | universe cell poseidon-r1|ALT.CHEAPLUNCH|ALT|Q2",
+ "held_fixed": "omega = 2",
+ "reopen_if": "FGLM with a sparse multiplication matrix for this system"
+}

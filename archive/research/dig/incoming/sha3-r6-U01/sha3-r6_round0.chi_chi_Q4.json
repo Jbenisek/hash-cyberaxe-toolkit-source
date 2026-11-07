@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "round-1 chi: non-identity transitions and theta2 kernel membership, per message direction",
+ "question": "Q4 do non-identity chi transitions give another route (theta kernel membership too)?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "No, at the single-direction level. All 1,320 CP-kernel pair directions of the 135-byte rate (the leader's 32 z-directions included) touch two chi1 rows; for each, all 1,024 row-value assignments are feasible (any transition type costs the same 2 conditions per varying bit) and 0 of 1,320 directions has any chi1 output difference in the theta2 kernel (identity or not). The best footprint after theta2 is 22 words (identity) for 1,264 directions and 21 words (one non-identity weight-3 transition) for 56 directions (e.g. message bits 384/1024); other non-identity transitions cost at least 31. The two varying bits sit in different z-slices, so no choice of the neighbour bits can cancel a column parity.",
+ "evidence": "research/dig/incoming/sha3-r6-U01/work/q4.py; research/dig/incoming/sha3-r6-U01/work/q4_out.json",
+ "notes": "Universe cell sha3-r6|round0.chi|chi|Q4. LOCAL_ONLY: one direction at a time, round 1 only; joint families (sums of directions sharing a row or column) and chi2/chi3 transitions are not covered (SHA3R6_MAP section 4 lead stays open at those depths). The 22 for the leader directions reproduces the known footprint. The 21-word cases are weight-3 transitions on lane6/lane16 pairs; an upper bound for their worth is one word of the 22 in the 7.30 ops/message chi2 patch block, about 0.3 op/message (about 0.004 bit), not validated against a full path.",
+ "topic": "sha3-r6 non-identity chi transitions"
+}

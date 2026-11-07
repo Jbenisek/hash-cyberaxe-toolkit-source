@@ -1,0 +1,1 @@
+tested 1406 random hypergraphs (545 with a non-empty 2-core): agree 1406, disagree 0

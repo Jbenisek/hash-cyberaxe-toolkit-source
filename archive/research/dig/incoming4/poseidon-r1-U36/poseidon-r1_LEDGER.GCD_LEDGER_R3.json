@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.GCD half-gcd",
+ "question": "control (known-answer or independent check)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "control: the gcd returns deg G = 1 with the root that rehashes to a collision (fresh run); the old build gives 355,770,535 arith for the same seed, identical to this run",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_seed100001.txt research/poseidon/orchard/lean_r1/logs/final_ledger.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Known-answer: the extracted root is verified by the reference hash. | universe cell poseidon-r1|LEDGER.GCD|LEDGER|R3",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

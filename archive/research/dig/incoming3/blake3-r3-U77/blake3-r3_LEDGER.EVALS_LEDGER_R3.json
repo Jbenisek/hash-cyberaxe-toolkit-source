@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "evaluations: 0.99885 * 2^128 points",
+ "question": "R3 control: recount Q from the plan and a Monte Carlo of the birthday law that fixes it",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Recount: sqrt(2 N lambda) = 0.996995486 x 2^128 (lambda 0.497, success 0.39165), plus 28 L in flight (0.001709), over (1 - 1.5e-4): Q = 7B = 0.998854299 x 2^128, equal to the ledger. The plain-birthday value in B3R3-G1, 0.9943, is the same law at success exactly 0.39 (lambda 0.4943). Monte Carlo control, N = 2^32, 3,000 trials each: U = 0.9970 sqrtN: observed 0.3967 against the law 0.3916 (z 0.56); U = 0.8973 sqrtN: 0.3170 vs 0.3314 (z -1.67); U = 1.0967 sqrtN: 0.4383 vs 0.4519 (z -1.50).",
+ "evidence": "research/dig/incoming3/blake3-r3-U77/work/evals_mc.py, research/dig/incoming3/blake3-r3-U77/work/evals_mc.out",
+ "notes": "universe cell blake3-r3|LEDGER.EVALS|LEDGER|R3. The Monte Carlo is of independent uniform draws (the premise), not of the 3-round function; the function-level checks are T1-T3 and the metered runs in LEDGER.CTRL R3 / PREM.H2 R3. Two of three z values are near -1.6: no evidence of a bias in the law, but not a tight test either.",
+ "held_fixed": "lambda 0.497; 28 L in flight; 1.5e-4 cut allowance; N = 2^256",
+ "reopen_if": "success below 0.39 at the filed Q on an ideal function at n = 32 over 4,000 attempts",
+ "gain_basis": "count"
+}

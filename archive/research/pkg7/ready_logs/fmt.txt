@@ -1,0 +1,66 @@
+blake3-r2\proof.md: 126999 bytes, 2059 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+   lines over 79 characters: []
+blake3-r2\claim.json: 17599 bytes, 56 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+submission-note-r2.md: 31999 bytes, 502 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+   lines over 79 characters: [(1, 88), (64, 145), (65, 199), (66, 110), (68, 127), (69, 190), (70, 81)]
+blake3-r2\experiments\halfsearch.py: 39623 bytes, 804 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+blake3-r2\experiments\manifest.json: 5161 bytes, 29 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+blake3-r2\certificates\manifest.json: 48 bytes, 4 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+check_pkg6.py: 39465 bytes, 709 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+validate_pkg6.sh: 9159 bytes, 167 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+src\proof_head.md: 60309 bytes, 1048 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+src\proof_evidence.md: 24467 bytes, 428 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+src\claim.json: 13864 bytes, 56 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+src\manifest.json: 4595 bytes, 29 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+src\note.md: 25457 bytes, 413 LF, 0 CR, ends with LF True, non-ASCII lines [], trailing-space lines [], tab lines []
+Sections 4 and 5, steps S1 and T, Lemmas S, F, Y and the theorem: proof:227-433
+     first: ## 4. Construction: the message from eight words
+     last:  pairs.
+6.1, trials and Lemmas Q, T: proof:437-488
+     first: **6.1 Trials.** A *context* is seven words (vc, vd, S11, S4, X13, X14,
+     last:  is eta by the definition of the class. QED.
+6.3 with Lemmas E, N and A: proof:507-608
+     first: **6.3 Three tests of a trial.** The algorithm uses two tests: rule A, 
+     last:  says how these answers were checked and by whom.
+6.4, the algorithm: proof:610-640
+     first: **6.4 Algorithm.**
+     last:  Y4, and each of these is a function of the message A.
+6.5, the batch and its count: proof:642-862
+     first: **6.5 Seven trials in one word.** A packed word holds seven lanes of 3
+     last:  the cost.
+Section 7 to 'None of the three heuristics is proved': proof:864-943
+     first: ## 7. Success probability
+     last:  None of the three heuristics is proved. Section 10 lists the evidence.
+H2 paragraph: proof:885-891
+     first: **Heuristic H2 (supporting).** With probability at least 0.9995 over t
+     last:  of passes of one run stays near this mean is part of the assumption.)
+H3 paragraph: proof:893-911
+     first: **Heuristic H3 (supporting).** With probability at least 0.9995 over t
+     last:  stays that close to this mean is the assumption.)
+Section 10 to the line before Scope: proof:1048-1998
+     first: ## 10. Evidence, scope and field meanings
+     last:    the runs and were not measured by a tool.
+proof line count: 2059
+H1-residual-hit-rate ['experiment:residual-search', 'experiment:half-collision', 'proof:227-433', 'proof:437-488', 'proof:507-608', 'proof:610-640', 'proof:864-943', 'proof:1048-1998'] | extrapolation 3127 chars | limitations 3674 chars
+H2-e1-test-passes ['proof:507-608', 'proof:610-640', 'proof:885-891', 'proof:1048-1998'] | extrapolation 418 chars | limitations 592 chars
+H3-stage-2-entries ['proof:507-608', 'proof:610-640', 'proof:642-862', 'proof:893-911', 'proof:1048-1998'] | extrapolation 1442 chars | limitations 1060 chars
+claim.json proof ranges that match no range above: none
+names or placeholders left in the rendered files:
+  none
+field lengths (limits: restrictions 1024, heuristic fields 4096, manifest scope/hypothesis 2000, note >= 5120 bytes):
+  restrictions: [295, 166, 669, 881, 372, 850]
+  H1-residual-hit-rate: {'statement': 384, 'scope': 423, 'extrapolation': 3127, 'limitations': 3674}
+  H2-e1-test-passes: {'statement': 156, 'scope': 414, 'extrapolation': 418, 'limitations': 592}
+  H3-stage-2-entries: {'statement': 189, 'scope': 944, 'extrapolation': 1442, 'limitations': 1060}
+  manifest: [('half-collision', 832, 270), ('residual-search', 1409, 1776)]
+  note bytes: 31999
+  claim: {'time_log2': 97.6, 'time_unit': 'target-compressions', 'memory_log2_bytes': 35, 'preprocessing_log2': 63, 'success_probability': 0.39, 'nonuniform_advice_log2_bytes': 6} | state ready
+arithmetic of the claim, recomputed from tools/pkg6_data.py:
+  pin 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006; W4' 97475640; delta fffffff8; Y3 8127c181 Y3' 7edf3e7e DY3 fdb77cfd; Y11 7af77f38 Y11' 850000c3 DY11 0a08818b
+  class eta 830303cf: x 03cf8303 (bit 31 clear), DY3 + x 01870000, mask 03cf8303, value 030c0303, 13 fixed and 19 free bits, 524,288 members; lists of 74,899 words (74,898 full batches and 2 members in the last)
+  factor 2^25; trials 2^102 = 2^51 pairs (vc any word, vd < 2^19) * 2^32 values of X14 * 2^19 members; pass budget 2^86
+  per X14, budgeted: 74,899 * 87 + 74,899 * 163 / 4 + 1024 = 9,569,371.25 < 19.1 * 524,288 = 10,013,900.8 (18.2521 per trial budgeted, 17.5244 expected at 7 * 2^-5)
+  main term 2^97.50731; terms after the first 2^96.00000 < 2^99.256; total as written 2^97.50849 < stated 2^97.5186 < 2^97.52 <= time_log2 97.6
+  smallest factor for 0.39: 33,502,523 <= 33,554,432; success at the assumed factor 0.39047; search memory 2,949,120 bytes < 2^22
+rendered files against the templates: as rendered
+RESULT: nothing wrong

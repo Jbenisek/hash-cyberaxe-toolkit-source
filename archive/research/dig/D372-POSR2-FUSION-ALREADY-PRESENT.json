@@ -1,0 +1,23 @@
+{
+  "id": "D372-POSR2-FUSION-ALREADY-PRESENT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.LDST pointwise-pass fusion",
+  "question": "Is the proposed pointwise multiply fusion an unbuilt r2 lever?",
+  "labels": ["E", "Z"],
+  "status": "KILLED",
+  "number": "The checked-in lean_r2 ntt.c already uses pass_fused for conv_core, conv_mulc, and conv_mulc_otf: final forward, pointwise square/multiply, first inverse, then one store. pkg_stage_r2/proof.md contains the same path. No incremental saving is available from C1913.",
+  "source": "our read-only source/proof audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D372_poseidon_r2_fusion_already_present.md; research/poseidon/orchard/lean_r2/ntt.c; research/poseidon/orchard/lean_r2/pkg_stage_r2/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "S",
+  "notes": "Supersedes stale C1913. Any further fusion requires a distinct transform/buffer kernel with fresh KAT, ledger, and peak evidence. No package, staging, filing, or submission.",
+  "held_fixed": "checked-in lean_r2 source and pkg_stage_r2 proof path",
+  "reopen_if": "a distinct surrounding-buffer fusion is built and charged",
+  "supersedes": ["C1913"],
+  "peak_mem": "UNKNOWN"
+}

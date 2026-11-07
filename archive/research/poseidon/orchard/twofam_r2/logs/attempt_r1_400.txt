@@ -1,0 +1,30 @@
+r=1 seed=400 D=78125
+  init (twiddle table)                         arith=        132044 other=        929236 total=       1061280     0.0s peak=4194304
+  two line setups + intersection               arith=          1131 other=         12489 total=         13620     0.0s peak=4194304
+  sample x, y = H(x)                           arith=             0 other=           336 total=           336     0.0s peak=4194304
+x: family 0
+  family 0: build F (evaluations + NTT)        arith=       2525873 other=      61471246 total=      63997119     0.5s peak=9840064
+  family 0: W^p mod F                          arith=    7533028466 other=   85123176368 total=   92656204834   158.6s peak=20082912
+  family 0: gcd(F, W^p - W)                    arith=   12232812500 other=   61222187482 total=   73454999982   308.7s peak=16694432
+    gcd degree 1, charged 73454999982, derived bound 73664065176 (within)
+  family 0: remove the roots of x              arith=             2 other=            39 total=            41     0.0s peak=6694400
+    remaining roots: 0
+  family 1: build F (evaluations + NTT)        arith=       2525543 other=      61468495 total=      63994038     0.6s peak=9840064
+  family 1: W^p mod F                          arith=    7533023846 other=   85123138589 total=   92656162435   170.6s peak=20082912
+  family 1: gcd(F, W^p - W)                    arith=   12232812500 other=   61222187482 total=   73454999982   309.5s peak=16694432
+    gcd degree 1, charged 73454999982, derived bound 73664065176 (within)
+  family 1: remove the roots of x              arith=             0 other=            22 total=            22     0.0s peak=6694400
+    remaining roots: 1
+  family 1: isolate one root                   arith=             2 other=            11 total=            13     0.0s peak=4194368
+  map back (two inputs)                        arith=          2274 other=         20466 total=         22740     0.0s peak=4194304
+  verification (2 reference hashes)            arith=           474 other=          4266 total=          4740     0.0s peak=4194304
+RESULT found=1 success=1 split_levels=0 split_tries=0
+COLLISION nk1  0x39ba82ec08e03cea7bb62c2dcca92d63a6a6fd940590179119d821e441c42572
+COLLISION rho1 0x26c8e5702fea4953b1c6b8ef06dab8efb5eecdd15ca0e57f3aaa4261b4eaf233
+COLLISION nk2  0x3147e9f92a182716049fe1d26d4e7fede7213146cff35bcb4defce672bc62112
+COLLISION rho2 0x1e91a8bb6ea724caeb2174bd811f419266823a21b2c15db721eacda4831fb2fb
+COLLISION digest 0x1850c3dbacd3fdf86ea325a817aa4ec3fbb823d34b274aa9d8d3f28214961e5b
+SUMMARY total_all=332351461273 units=1402326840.8 log2_units=30.3852 heap_peak=20082912
+DRIVER ops_outside_stages=91
+SPLIT shift=0 pow=0 gcd=0 div=0
+EXIT 0

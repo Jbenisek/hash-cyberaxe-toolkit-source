@@ -1,0 +1,23 @@
+{
+  "id": "D439-B3M-FEATURE-USE-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "unique feature-use audit of compact B3M selector",
+  "question": "How many of the 256 raw/carry feature bits are actually read by the fixed D437 8-tree forest?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "The fixed D437 8-tree forest has 109 split occurrences but only 62 unique split features: 28 raw-word bits and 34 carry/borrow bits, out of 224 retained and 256 generated features. A compiled selector may extract only those 62, but exact feature charge and judge acceptance are open; safe gain 0.",
+  "source": "our workflow: D439 preregistered feature-use audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D439_b3m_feature_use_audit.md; research/retest/t2/PREREG_D439_FEATURE_USE_AUDIT.md; research/retest/t2/D439_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic single-worker static audit",
+  "notes": "Feature extraction implementation, compiled charge, selection protocol, judge acceptance, and rate-to-success linkage remain open. No package/stage/filing/submission.",
+  "held_fixed": "D437 model/feature numbering and PR858 no-transfer rule",
+  "reopen_if": "Compiled 62-feature selector and charged operation ledger are available"
+}

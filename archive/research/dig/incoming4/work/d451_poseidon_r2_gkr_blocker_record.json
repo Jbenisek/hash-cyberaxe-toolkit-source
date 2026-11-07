@@ -1,0 +1,22 @@
+{
+  "id": "D451-POSEIDON-R2-GKR-BLOCKER-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "ALT.GKR concrete collision route blocker",
+  "question": "Does a concrete GKR/subspace-trail collision algorithm beat random for Poseidon-r2?",
+  "labels": ["N", "Z"],
+  "status": "OPEN",
+  "number": "The one-dimensional partial-round trail is proved and the four tail full rounds have minimum eight active S-box positions. Toy census gives 266/26146=0.01017 versus random 1/103=0.00971 (z=0.77), so no gain. GKR is only a verification label here; no collision-finding algorithm exists in the workspace. Safe gain zero.",
+  "source": "our workflow: D451 exact Poseidon-r2 GKR blocker consolidation",
+  "own_test": true,
+  "evidence": "research/dig/CELLS.jsonl records C1938-C1940; research/poseidon/levels/LEVELS.md; research/dig/incoming4/work/testE.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "No package/stage/filing/submission. A concrete above-random attack and full charged ledger are required.",
+  "peak_mem": "not measured; no real-field collision route",
+  "held_fixed": "Poseidon-r2 pinned MDS and existing subspace-trail evidence",
+  "reopen_if": "Concrete GKR/trail collision finder with above-random rate and full charge",
+  "supersedes": ["C1941"]
+}

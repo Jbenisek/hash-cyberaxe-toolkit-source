@@ -1,0 +1,19 @@
+{
+  "id": "R6-DPrho-packed-walk-kat",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "DP-rho packed repeated-walk KAT",
+  "question": "Does repeated cap-64 packed DAG iteration agree with scalar six-round SHA3 and real 115-bit control?",
+  "labels": ["D", "X", "B", "E"],
+  "status": "COMPUTED",
+  "number": "256 lanes x 24 iterations: 0 bad output words, 0 control mismatches, 0 DP hits, 256 cap restarts",
+  "source": "our workflow: packed-walk KAT",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-DPrho-packed-walk-kat.md; research/retest/t1/packed_walk_kat.py; research/retest/t1/packed_walk_kat.json",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Finite repeated packed execution only; no long-run DP rate, random-start/gather charge, or organizer width/spill ruling is inferred.",
+  "reopen_if": "A long-run production packed walk with charged extraction, restart, and organizer validation."
+}

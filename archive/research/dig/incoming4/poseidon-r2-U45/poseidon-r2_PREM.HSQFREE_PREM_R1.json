@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQFREE (PREM)",
+ "question": "R1: value charged",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "g squarefree is assumed in the stage D budget (the half-gcd tree and the root splitter treat g as squarefree); no probability term is charged for it.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/d192_r2_results.jsonl; research/poseidon/d189_gpu_results.jsonl",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HSQFREE|PREM|R1. It is a supporting premise.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a repeated factor in any r2 centre"
+}

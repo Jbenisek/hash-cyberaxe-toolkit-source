@@ -1,0 +1,22 @@
+MAXPRE 0 leaves 2 fold-consistent trails cost<=7: 2
+  cost 7 pre 0 : 2
+cost 7 pre 0 msg EEEXEEEEEXXEXCXE final EEEEEEEEEEEEEEEE r0Gmask 0b10010010
+     step 1 ECEEECEEECEEECEE ('', '', 'Xforce', 'ctl') cost 0
+     step 4 ECEEEEEEECEEECEC ('ctl', 'ctl', 'Xforce', 'ctl') cost 0
+     step 5 EEEEEEEEECEEECEC ('Xforce', '', '', '') cost 0
+     step 6 EEEEEEEEECEEEEEC ('Xforce', '', 'ctl', '') cost 0
+     step 7 EEECEEEEEEEEEEEC ('Xforce', 'ctl', 'ctl', '') cost 0
+     step 9 EEECEEEEEEEEEEEC ('Xr1', '', 'Xr1', '') cost 2
+     step 11 EEEEEEEEEEEEEEEE ('r1', '', 'r1', '') cost 2
+     step 13 EEEEEEEEEEEEEEEE ('Xr1', '', '', '') cost 1
+     step 14 EEEEEEEEEEEEEEEE ('Xr1', '', 'Xr1', '') cost 2
+cost 7 pre 0 msg EEEXEEEEEXXEXXXE final EEEEEEEEEEEEEEEE r0Gmask 0b10010010
+     step 1 ECEEECEEECEEECEE ('', '', 'Xforce', 'ctl') cost 0
+     step 4 ECEEEEEEECEEECEC ('ctl', 'ctl', 'Xforce', 'ctl') cost 0
+     step 5 EEEEEEEEECEEECEC ('Xforce', '', '', '') cost 0
+     step 6 EEEEEEEEECEEEEEC ('Xforce', '', 'Xforce', '') cost 0
+     step 7 EEECEEEEEEEEEEEC ('Xforce', 'ctl', 'ctl', '') cost 0
+     step 9 EEECEEEEEEEEEEEC ('Xr1', '', 'Xr1', '') cost 2
+     step 11 EEEEEEEEEEEEEEEE ('r1', '', 'Xr1', '') cost 2
+     step 13 EEEEEEEEEEEEEEEE ('Xr1', '', '', '') cost 1
+     step 14 EEEEEEEEEEEEEEEE ('Xr1', '', 'Xr1', '') cost 2

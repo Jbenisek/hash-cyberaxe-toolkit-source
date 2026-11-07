@@ -1,0 +1,8 @@
+tag v W=19: proposals 768, reference roots (all T1) 782, relation failures 0
+  expected roots with T1 in [1,2^19): 8 ; solver returned 8 ; missing 0 ; extra 0
+  planted (T1 in [1,2^19)) present in reference: 8 ; planted returned by solver: 8 ; T1=0 controls in reference: 8 (solver must not return)
+  T1=0 controls returned by solver (must be 0): 0
+  non-planted expected roots in range: 0 (uniform-T1 expectation 0.09)
+  candidates per proposal: mean 2^19.0000 (=524281) min 523677 max 524671 (2^19 = 524288)
+  counted ops per proposal (candidates*17 + 9 + 2 per search step): mean 8912878 = 2^23.0875, max 8919512 = 2^23.0885
+  compress2 verification of returned roots: 0/8 pass

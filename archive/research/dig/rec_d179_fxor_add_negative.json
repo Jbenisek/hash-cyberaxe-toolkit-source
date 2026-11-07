@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-fxor-add-negative",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 f-XOR plus modular-h-map audit",
+  "question": "Can any constant f'=f^q with h'=h+r modulo 2^32 close one of the three remaining class toggles?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact QF_BV CEGIS is UNSAT over q,r for deltas 00002000, 00001000, 00000400 after 4, 3, and 4 witnesses respectively.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/synth_fxor_addmap.py; research/retest/b3_omega_coupled/exact/synth_fxor_addmap.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Negative only for this constant-f-XOR/modular-h family. Nonlinear maps and universal class invariance for the three remaining toggles remain OPEN; no saving credited."
+}

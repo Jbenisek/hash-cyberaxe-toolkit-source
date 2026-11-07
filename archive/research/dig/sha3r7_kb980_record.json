@@ -1,0 +1,21 @@
+{
+  "id": "S7-KB980-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "GB/GA boundary size KB",
+  "question": "Does changing the resident GB/GA boundary size beat the current KB=975 r7 program?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "KB=980: counted step 44895 vs 44940; 2-step 256-lane reference check PASS; time gain 0.001360819052066044 bit",
+  "source": "research/r7/s7ls/kb_boundary_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_KB980_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.001360819052066044,
+  "peak_mem": "1,038,624 B (log2 19.986242037317684)",
+  "notes": "Conditional local generator/ledger result. K constants and Q/GB exit-set selection unchanged; no package/stage/filing/submission.",
+  "potential_bits": 0.02,
+  "prior": 0.2
+}

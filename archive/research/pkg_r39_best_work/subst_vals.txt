@@ -1,0 +1,13 @@
+claws_total 1418347 groups_total 1416335 ratio_pool 0.998581
+ops_mean 491639962 ops_sd 8993652 ops_max 505842814 ops_min 476866765
+claws_mean 59097.79 claws_sd 243.14 claws_min 58588 claws_max 59627
+groups_mean 59013.96 groups_sd 241.30 groups_min 58497 groups_max 59534
+ratio_mean 0.998582 ratio_sd 0.000134
+opc_min 8102.8 opc_max 8633.9
+kernel_min 685 kernel_max 755 nreg_max 134
+qmax 3332 idc_max 526557 idc_min 522360
+opc_pooled 8319.1
+tail_hits 6326 proposals 45875200 classes [1628, 1526, 1556, 1616] chi 4.48
+tail_mean_lin -74.3399 sd_log2 0.1022
+class_mean -74.3942 class_hits 1526 class_sd_log2 0.1642
+t_decl_vs_-74.52 6.2110

@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "round-1 freedom on the leader route and the linstruct 24/35-dim spaces",
+ "question": "Q3 log2 freedom (1,080 free message bits; 24/35-dim spaces of linstruct).",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Leader route (32 z-dims, 128 conditions): 2^352 groups in the 64-byte format (512 bits), 2^920 groups in the 135-byte format (1,080 bits); 2^96 groups x 2^32 are needed for N=2^128, so headroom 256 / 824 bits. Leader's 256-equation prefix: at most 2^224 groups (2^256 prefixes less the L0/L5 z overlap), still 128 bits of headroom. linstruct re-measured with our Keccak: the listed 31-direction set has GF(2) rank 24, 82 conditions rank 82, outer freedom 1080-24-82 = 2^974, second-difference test on the real 2-round function 0/300 fails (controls: conditions ignored 200/200 fail; conditions met but 3 rounds 200/200 fail); SOLCLOUD_16 35-dim space: rank 35, 2^320 source, outer 2^285, 0/300 fails. The other listed 24-direction run has rank 19, 67 conditions, outer 2^994.",
+ "evidence": "research/dig/incoming/sha3-r6-U01/work/q3.py; research/dig/incoming/sha3-r6-U01/work/q3_out.json; research/dig/incoming/sha3-r6-U01/work/controls.txt; research/dig/incoming/sha3-r6-U01/work/q12_out.json",
+ "notes": "Universe cell sha3-r6|round0.chi|chi|Q3. Reproduces the known numbers (rank 24 / 82 / 974 and 35 / 285) from the stored direction and condition files; the directions themselves were not regenerated. The 35-dim check lifts the Appendix-B vectors into lanes 0-4 and 10-14; the sponge match is verify_sol16.py's, not redone. Freedom is not the constraint on this route.",
+ "topic": "sha3-r6 leader route freedom"
+}

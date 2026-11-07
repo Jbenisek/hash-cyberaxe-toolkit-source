@@ -1,0 +1,5 @@
+{"r": 2, "j": 0, "c_mode": "0", "c": "0x0", "degree": 390625, "expected": 390625, "nonzero": 390626, "lead": "0x13f08536819885e275e9b4b9c9c3aaaf453220a766fbe69710da897c392caa6f", "reconstruct_ok": true, "ref_hash_ok": true, "nonzero_by_parity": [195313, 195313], "nonzero_by_mod5": [78126, 78125, 78125, 78125, 78125], "sec_eval": 31.7, "sec_ntt": 5.7, "n_points": 524288}
+
+real	0m38.758s
+user	0m0.000s
+sys	0m0.061s

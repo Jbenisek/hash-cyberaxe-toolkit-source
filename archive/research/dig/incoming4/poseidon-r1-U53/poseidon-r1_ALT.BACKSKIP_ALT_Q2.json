@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.BACKSKIP backward skip",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "necessity: the forward line already skips 2 rounds; one inverse S-box x^e costs 253 sq + 124 mul = 377 field mults vs 3 for x^5 (125x), and e has 254 bits, so backward polynomials have degree ~2^254",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Counts from proof.md rule text (x^e: 253 squarings, 124 multiplications). | universe cell poseidon-r1|ALT.BACKSKIP|ALT|Q2",
+ "held_fixed": "r=1",
+ "reopen_if": "an affine backward line (P3.12 found none on the real constants)"
+}

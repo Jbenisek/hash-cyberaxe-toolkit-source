@@ -1,0 +1,28 @@
+outcomes top2: 23 rows, 23 distinct tau, 23 distinct (tau, eps); mass sum R = 119,083,008.00
+(1) Q with some tau solvable: 675802624 of 2^32 = 2^-2.668   (53 patterns, DP width 293)
+(2) E with some (tau,eps) solvable: 946459904 of 2^32 = 2^-2.182   (188 patterns, DP width 563)
+   tau 175020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 185020a0: P(1 solvable) = 2^-6.250 | eps 6e21be55: P(2 solvable) = 2^-4.495
+   tau 185060a0: P(1 solvable) = 2^-5.250 | eps 6e203e55: P(2 solvable) = 2^-3.449
+   tau 189060a0: P(1 solvable) = 2^-5.250 | eps 6e203e55: P(2 solvable) = 2^-2.882
+   tau 18d060a0: P(1 solvable) = 2^-5.250 | eps 6e203e55: P(2 solvable) = 2^-3.516
+   tau 195060a0: P(1 solvable) = 2^-6.472 | eps 6e203e55: P(2 solvable) = 2^-3.908
+   tau 275020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 285020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-6.495
+   tau 285060a0: P(1 solvable) = 2^-7.250 | eps 6e203e55: P(2 solvable) = 2^-5.449
+   tau 289060a0: P(1 solvable) = 2^-7.250 | eps 6e203e55: P(2 solvable) = 2^-4.882
+   tau 28d060a0: P(1 solvable) = 2^-7.250 | eps 6e203e55: P(2 solvable) = 2^-5.516
+   tau 295060a0: P(1 solvable) = 2^-8.472 | eps 6e203e55: P(2 solvable) = 2^-5.908
+   tau 385020a0: P(1 solvable) = 2^-6.250 | eps 6e21be55: P(2 solvable) = 2^-4.910
+   tau 385060a0: P(1 solvable) = 2^-5.250 | eps 6e203e55: P(2 solvable) = 2^-3.864
+   tau 389060a0: P(1 solvable) = 2^-5.250 | eps 6e203e55: P(2 solvable) = 2^-3.297
+   tau 38d060a0: P(1 solvable) = 2^-5.250 | eps 6e203e55: P(2 solvable) = 2^-3.931
+   tau 395060a0: P(1 solvable) = 2^-6.472 | eps 6e203e55: P(2 solvable) = 2^-4.323
+   tau 675020a0: P(1 solvable) = 2^-7.261 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 685020a0: P(1 solvable) = 2^-7.261 | eps 6e21be55: P(2 solvable) = 2^-6.495
+   tau 685060a0: P(1 solvable) = 2^-6.261 | eps 6e203e55: P(2 solvable) = 2^-5.449
+   tau 689060a0: P(1 solvable) = 2^-6.261 | eps 6e203e55: P(2 solvable) = 2^-4.882
+   tau 68d060a0: P(1 solvable) = 2^-6.261 | eps 6e203e55: P(2 solvable) = 2^-5.516
+   tau 695060a0: P(1 solvable) = 2^-7.484 | eps 6e203e55: P(2 solvable) = 2^-5.908
+P(pass) = 267129199873163264 / 2^64 = 1.448110e-02 = 2^-6.1097  (exact)
+mass per passing outer step is 1/P(pass) = 2^6.110 times the average (skipped steps carry none)

@@ -1,0 +1,86 @@
+--- ./research/pkg4/validate_pkg4.sh	2026-10-06 05:22:20.899868700 -0600
++++ ./research/pkg5/validate_pkg5.sh	2026-10-06 08:08:45.445759700 -0600
+@@ -1,34 +1,36 @@
+ #!/usr/bin/env bash
+-# Put the FOURTH blake3-r2 package (research/pkg4/blake3-r2, a draft) into the
++# Put the FIFTH blake3-r2 package (research/pkg5/blake3-r2, a draft) into the
+ # WSL-native clone, in the place of the live candidate, and run the repo's
+ # mechanical checks there. Research helper, not part of any submission.
+ # Nothing is submitted and no yukon command is run.
+ #
+ # Same as research/validate_track.sh except for where the candidate comes from.
++# The mirror is the validation clone ~/hashsmash/hash-smash, not the Yukon checkout; ".yukon/setup.sh" below is the
++# test script of the organizer's repository (three unittest runs), not the yukon client.
+ # The mirror copy of the live candidate is overwritten; the normal script
+ # restores it the next time it runs. The live folder and the Yukon checkout
+ # are not touched.
+ #
+-#   wsl -d Ubuntu -- bash './research/pkg4/validate_pkg4.sh' [check|tests|intake-ready]...
++#   wsl -d Ubuntu -- bash './research/pkg5/validate_pkg5.sh' [check|tests|intake-ready]...
+ #
+-# Everything this script prints is also kept: in research/pkg4/evidence/validation_log.txt when all three steps
+-# are asked for (tools/pkg4_data.py reads that file for the note's "Checks performed", and uses it only while the
++# Everything this script prints is also kept: in research/pkg5/evidence/validation_log.txt when all three steps
++# are asked for (tools/pkg5_data.py reads that file for the note's "Checks performed", and uses it only while the
+ # candidate files have the SHA-256 listed in it), else in evidence/validation_partial_log.txt.
+ set -euo pipefail
+ 
+-if [ -z "${PKG4_VALIDATE_LOGGED:-}" ]; then
+-  EVID='./research/pkg4/evidence'
++if [ -z "${PKG5_VALIDATE_LOGGED:-}" ]; then
++  EVID='./research/pkg5/evidence'
+   mkdir -p "$EVID"
+   case " $* " in *" check "*) c=1;; *) c=0;; esac
+   case " $* " in *" tests "*) t=1;; *) t=0;; esac
+   case " $* " in *" intake-ready "*) i=1;; *) i=0;; esac
+   if [ "$c$t$i" = 111 ]; then LOG="$EVID/validation_log.txt"; else LOG="$EVID/validation_partial_log.txt"; fi
+-  { echo "validate_pkg4.sh $* ($(date '+%Y-%m-%d %H:%M'))"; PKG4_VALIDATE_LOGGED=1 bash "$0" "$@" 2>&1; echo "exit status $?"; } | tee "$LOG"
++  { echo "validate_pkg5.sh $* ($(date '+%Y-%m-%d %H:%M'))"; PKG5_VALIDATE_LOGGED=1 bash "$0" "$@" 2>&1; echo "exit status $?"; } | tee "$LOG"
+   exit "$(tail -1 "$LOG" | sed 's/^exit status //')"
+ fi
+ 
+ SRC='./hash-smash'
+-PKG='./research/pkg4/blake3-r2'
++PKG='./research/pkg5/blake3-r2'
+ DST="$HOME/hashsmash/hash-smash"
+ TARGET=blake3-r2
+ TRACK="$TARGET-exploratory"
+@@ -39,9 +41,9 @@
+   git clone --quiet "$SRC" "$DST"
+ fi
+ cd "$DST"
+-# Every experiment report of a pkg4 run is kept, named by its own hash, so that
++# Every experiment report of a pkg5 run is kept, named by its own hash, so that
+ # the pairs of a changed program (another pin or class) can be compared below.
+-ARCHIVE="$HOME/hashsmash/pkg4-reports"
++ARCHIVE="$HOME/hashsmash/pkg5-reports"
+ REPORT="lanes/exploratory/.yukon/work/tracks/$TRACK/experiment-report.json"
+ mkdir -p "$ARCHIVE"
+ git fetch --quiet origin
+@@ -53,7 +55,7 @@
+ (cd "$PKG" && find . -type f -not -path '*/__pycache__/*' -not -name '*.pyc' -print0) | while IFS= read -r -d '' f; do
+   install -D -m 0644 "$PKG/$f" "$CAND/$f"
+ done
+-echo "--- candidate files (mirror, from research/pkg4)"
++echo "--- candidate files (mirror, from research/pkg5)"
+ find "$CAND" -type f -printf '%m %6s %p\n' | sort -k3
+ (cd "$CAND" && find . -type f | sed 's|^\./||' | sort | xargs sha256sum | sed 's/^/sha256 /')
+ if grep -rlI $'\r' "$CAND" >/dev/null; then
+@@ -114,7 +116,7 @@
+     print(line)
+     for key in sorted({k for o in seen for k in o} - {"tries"}):
+         values = [o[key] for o in seen if key in o]
+-        print(f"    observation {key}: {len(values)} rows, values {sorted(set(values))[:8]}")
++        print(f"    observation {key}: {len(values)} rows, values {sorted(set(values))[:8]}, sum {sum(values)}")
+ # the same organizer request answered by an earlier program: are the pairs the same?
+ done = set()
+ for path in sorted(glob.glob(os.path.join(sys.argv[2], "*.json"))):
+@@ -131,7 +133,7 @@
+                       f"same request {entry.get('request_sha256') == other.get('request_sha256')}, "
+                       f"pairs identical in {sum(x == y for x, y in zip(a, b))} of {len(a)} trials")
+ # The program as it was before the self-test was added (a copy kept by
+-# a selftest tool; pkg4 has none, so this part is skipped), run here on exactly the organizer's request, which is
++# a selftest tool; pkg5 has none, so this part is skipped), run here on exactly the organizer's request, which is
+ # rebuilt from the report and recognised by its hash.
+ before = sys.argv[3]
+ if execution and os.path.exists(before):

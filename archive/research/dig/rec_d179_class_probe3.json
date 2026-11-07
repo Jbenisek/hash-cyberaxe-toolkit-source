@@ -1,0 +1,20 @@
+{
+  "id": "B3-D179-class-probe3",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "coupled omega eight-word-per-class probes",
+  "question": "Do eight fresh typed words per class remain all-or-none over every member under alive2c?",
+  "labels": ["I"],
+  "status": "SAMPLED",
+  "number": "128 complete class checks, 4,194,304 member evaluations; 0 mixed counts",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_omega_class.md; research/retest/b3_omega_coupled/firm/run_many_fresh_per_class.sh; research/retest/b3_omega_coupled/firm/alive2c.c",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Seeds are deterministic (12000+class_id). Every allmem count was 0 or 32768. This remains finite sampled evidence, not an algebraic proof.",
+  "topic": "b3.omega.class_invariance"
+}

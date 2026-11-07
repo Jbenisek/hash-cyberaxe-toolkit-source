@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U11/work/b3lib.py; research/dig/incoming/blake3-r2-U11/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U11/work/scan_m1011.py (+scan_m1011.out.json, scan.log)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m10|msgword|Q1",
+ "object": "pkgB3U message word m10 (w10)",
+ "question": "How many difference/condition constraints does this word carry (own count over the printed definitions)?",
+ "labels": [
+  "I",
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "w10: difference between A and B = 0 (structural: B copies A except w4,w5; 0/20000 builds differ). Direct conditions on the word alone: 0. It enters one pinned condition through D1: X11 (D1's c output) = 44036000, 32 bits, carried by the PAIR (w10,w11) jointly (X11 = pin in 20000/20000 builds; D1 forward from S1,S6,S11,S12 with (w10,w11) reproduces X1,X6,X11,X12 in 20000/20000). Both words together: 64 bits of words, 32 bits spent on the pin, 32 bits left as the y link. Bit balance over 20000 contexts: max bias 0.0097 (no fixed bit); counts per bit in [9805,10139]",
+ "notes": "Universe cell blake3-r2|m10|msgword|Q1. Class: FREE trial word (step T of the pkgB3U root construction, one of w8..w11; not pinned w4, not cancelling w5, not a forced constant X3/X7/X11/X15). w10 is the first and w11 the second message word of D1 = G(1,6,11,12) in round 0; in round 1 w10 is the second word of C1 (slot 3, enters Y1) and w11 the second word of E0 (slot 9). Solved lines: w10 = D1.a1 - S1 - S6, w11 = X1 - D1.a1 - D1.b1. Construction validated first on our b3lib.py (3000/3000: X3/X7/X11/X15, Y4=y, S and X equal A vs B, digest words 0,2,5,7 equal). Method as blake3-r2-U06 (scan_m01.py) applied to words 10,11. Tested the pkgB3U root construction only, 2 rounds, A (len 55) vs B (len 63).",
+ "topic": "b3r2.m10.msgword.Q1"
+}

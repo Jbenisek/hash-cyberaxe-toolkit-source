@@ -1,0 +1,20 @@
+{
+  "id": "S39-UNALIGNED-OFF23-20261014-SUP",
+  "hash": "sha256-39",
+  "row_i": null,
+  "row_j": null,
+  "object": "unaligned layout offset 23 bytes (free bytes 23..54)",
+  "question": "Supersede the inferred unaligned-layout pointer after the exact local probe.",
+  "labels": ["B"],
+  "status": "COMPUTED",
+  "number": "Superseded by exact 53249-gate / 871-plane / 0-mismatch probe",
+  "source": "research/sol_answer_S39_unaligned_offset23_1014.md",
+  "own_test": true,
+  "evidence": "research/dig/sha256r39_unaligned_offset23_record.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Bookkeeping only; the conditional implementation and judge premises remain open.",
+  "supersedes": ["S39-D09"],
+  "kind": "supersession"
+}

@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m4 = w4: alternative carry patterns (sign of the +/-8) and outcomes",
+ "question": "Q4: alternative outcomes / carry patterns (75/32 effect) and whether they reach the same later differences",
+ "labels": [
+  "C",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "Carry pattern of the 8-step: bit3 of K+w4 = 0 gives +8, =1 gives -8: 2^31 w4 each (exact). Only one w4 in each class passes the b2,d2 equality (W4 with +8; its swap W4p with -8). The swap has the same XOR differences (dY3 xor fff8ffff, dY11 xor fff77ffb) and negated additive ones (-fdb77cfd, -0a08818b): same later xor differences, mirrored A/B",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/w4_solutions.txt; research/dig/incoming/blake3-r2-U08/work/w4prime_solutions.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m4|msgword|Q4. There is no 75/32-type extra pattern at w4: the xor pattern of the difference is 00000078 for W4 and the exhaustive scan finds no second solution class. Later differences reached: the same ones (swap of roles of the two messages, i.e. relabelling, not a new outcome). Other constants held as printed (X3,X7,X11,X15,W13; proof.md 3.2); controls reproduce Fact P exactly."
+}

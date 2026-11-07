@@ -1,0 +1,230 @@
+q=257 seed=1 r=1 (toy, 66049 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     7 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 0 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:     9 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 7 ; previous set contained in this: True
+R4  partial rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 3 | none 9 ; previous set contained in this: True
+R60 full    rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 12 ; previous set contained in this: True
+R61 full    rank<=1:    22 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 3 | none 18 ; previous set contained in this: True
+R62 full    rank<=1:    29 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 6 | none 20 ; previous set contained in this: True
+R63 full    rank<=1:    34 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 7 | none 27 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 3 points of 66049 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 34 ; in nk coords add the axes (2q-1 = 513 points)
+q=257 seed=1 r=2 (toy, 66049 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     7 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 0 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:     9 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 7 ; previous set contained in this: True
+R4  partial rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 3 | none 9 ; previous set contained in this: True
+R5  partial rank<=1:    15 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 3 | none 12 ; previous set contained in this: True
+R60 full    rank<=1:    21 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 15 ; previous set contained in this: True
+R61 full    rank<=1:    22 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 0 | none 21 ; previous set contained in this: True
+R62 full    rank<=1:    26 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 21 ; previous set contained in this: True
+R63 full    rank<=1:    32 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 26 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 2 points of 66049 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 32 ; in nk coords add the axes (2q-1 = 513 points)
+q=257 seed=2 r=1 (toy, 66049 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    15 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 7 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    21 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 15 ; previous set contained in this: True
+R4  partial rank<=1:    21 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 21 ; previous set contained in this: True
+R60 full    rank<=1:    27 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 21 ; previous set contained in this: True
+R61 full    rank<=1:    33 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 2 | none 27 ; previous set contained in this: True
+R62 full    rank<=1:    39 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 33 ; previous set contained in this: True
+R63 full    rank<=1:    47 (rank0: 0)  cause: >=2 S-inputs zero 6 | exactly 1 zero (rows dependent) 3 | none 38 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 3 points of 66049 ; of those, state-Jacobian rank<=1: 1
+rank<=1 points of the final state Jacobian: 47 ; in nk coords add the axes (2q-1 = 513 points)
+q=257 seed=2 r=2 (toy, 66049 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    15 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 7 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    21 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 15 ; previous set contained in this: True
+R4  partial rank<=1:    21 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 21 ; previous set contained in this: True
+R5  partial rank<=1:    21 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 21 ; previous set contained in this: True
+R60 full    rank<=1:    26 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 21 ; previous set contained in this: True
+R61 full    rank<=1:    34 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 7 | none 26 ; previous set contained in this: True
+R62 full    rank<=1:    43 (rank0: 0)  cause: >=2 S-inputs zero 6 | exactly 1 zero (rows dependent) 3 | none 34 ; previous set contained in this: True
+R63 full    rank<=1:    50 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 2 | none 43 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 3 points of 66049 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 50 ; in nk coords add the axes (2q-1 = 513 points)
+q=257 seed=3 r=1 (toy, 66049 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:     8 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R4  partial rank<=1:     9 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 8 ; previous set contained in this: True
+R60 full    rank<=1:    13 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 2 | none 9 ; previous set contained in this: True
+R61 full    rank<=1:    20 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 5 | none 13 ; previous set contained in this: True
+R62 full    rank<=1:    29 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 4 | none 20 ; previous set contained in this: True
+R63 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 3 | none 28 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 2 points of 66049 ; of those, state-Jacobian rank<=1: 1
+rank<=1 points of the final state Jacobian: 36 ; in nk coords add the axes (2q-1 = 513 points)
+q=257 seed=3 r=2 (toy, 66049 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:     8 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R4  partial rank<=1:     9 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 8 ; previous set contained in this: True
+R5  partial rank<=1:    11 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 9 ; previous set contained in this: True
+R60 full    rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 6 | none 11 ; previous set contained in this: True
+R61 full    rank<=1:    24 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 3 | none 19 ; previous set contained in this: True
+R62 full    rank<=1:    30 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 24 ; previous set contained in this: True
+R63 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 4 | none 29 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 2 points of 66049 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 36 ; in nk coords add the axes (2q-1 = 513 points)
+q=769 seed=1 r=1 (toy, 591361 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 4 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 12 ; previous set contained in this: True
+R4  partial rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 18 ; previous set contained in this: True
+R60 full    rank<=1:    24 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 19 ; previous set contained in this: True
+R61 full    rank<=1:    27 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 2 | none 24 ; previous set contained in this: True
+R62 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 4 | none 27 ; previous set contained in this: True
+R63 full    rank<=1:    40 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 1 | none 36 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 3 points of 591361 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 40 ; in nk coords add the axes (2q-1 = 1537 points)
+q=769 seed=1 r=2 (toy, 591361 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 4 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 12 ; previous set contained in this: True
+R4  partial rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 18 ; previous set contained in this: True
+R5  partial rank<=1:    21 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 19 ; previous set contained in this: True
+R60 full    rank<=1:    24 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 2 | none 21 ; previous set contained in this: True
+R61 full    rank<=1:    32 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 4 | none 24 ; previous set contained in this: True
+R62 full    rank<=1:    39 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 3 | none 32 ; previous set contained in this: True
+R63 full    rank<=1:    44 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 3 | none 39 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 1 points of 591361 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 44 ; in nk coords add the axes (2q-1 = 1537 points)
+q=769 seed=2 r=1 (toy, 591361 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     8 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    13 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 8 ; previous set contained in this: True
+R4  partial rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 5 | none 13 ; previous set contained in this: True
+R60 full    rank<=1:    23 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 18 ; previous set contained in this: True
+R61 full    rank<=1:    30 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 4 | none 23 ; previous set contained in this: True
+R62 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 30 ; previous set contained in this: True
+R63 full    rank<=1:    39 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 1 | none 36 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 0 points of 591361 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 39 ; in nk coords add the axes (2q-1 = 1537 points)
+q=769 seed=2 r=2 (toy, 591361 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     8 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    13 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 8 ; previous set contained in this: True
+R4  partial rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 5 | none 13 ; previous set contained in this: True
+R5  partial rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 18 ; previous set contained in this: True
+R60 full    rank<=1:    25 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 19 ; previous set contained in this: True
+R61 full    rank<=1:    30 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 2 | none 24 ; previous set contained in this: True
+R62 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 30 ; previous set contained in this: True
+R63 full    rank<=1:    43 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 7 | none 35 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 0 points of 591361 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 43 ; in nk coords add the axes (2q-1 = 1537 points)
+q=769 seed=3 r=1 (toy, 591361 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 7 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    14 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 0 | none 12 ; previous set contained in this: True
+R4  partial rank<=1:    16 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 14 ; previous set contained in this: True
+R60 full    rank<=1:    22 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 1 | none 16 ; previous set contained in this: True
+R61 full    rank<=1:    26 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 1 | none 22 ; previous set contained in this: True
+R62 full    rank<=1:    32 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 26 ; previous set contained in this: True
+R63 full    rank<=1:    39 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 5 | none 32 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 1 points of 591361 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 39 ; in nk coords add the axes (2q-1 = 1537 points)
+q=769 seed=3 r=2 (toy, 591361 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 7 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    14 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 0 | none 12 ; previous set contained in this: True
+R4  partial rank<=1:    16 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 14 ; previous set contained in this: True
+R5  partial rank<=1:    17 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 16 ; previous set contained in this: True
+R60 full    rank<=1:    20 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 17 ; previous set contained in this: True
+R61 full    rank<=1:    25 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 20 ; previous set contained in this: True
+R62 full    rank<=1:    30 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 25 ; previous set contained in this: True
+R63 full    rank<=1:    38 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 3 | none 30 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 2 points of 591361 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 38 ; in nk coords add the axes (2q-1 = 1537 points)
+q=1009 seed=1 r=1 (toy, 1018081 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     9 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    17 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 4 | none 9 ; previous set contained in this: True
+R4  partial rank<=1:    17 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 17 ; previous set contained in this: True
+R60 full    rank<=1:    27 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 8 | none 16 ; previous set contained in this: True
+R61 full    rank<=1:    31 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 4 | none 27 ; previous set contained in this: True
+R62 full    rank<=1:    37 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 31 ; previous set contained in this: True
+R63 full    rank<=1:    41 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 2 | none 37 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 0 points of 1018081 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 41 ; in nk coords add the axes (2q-1 = 2017 points)
+q=1009 seed=1 r=2 (toy, 1018081 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     9 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    17 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 4 | none 9 ; previous set contained in this: True
+R4  partial rank<=1:    17 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 17 ; previous set contained in this: True
+R5  partial rank<=1:    17 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 17 ; previous set contained in this: True
+R60 full    rank<=1:    26 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 5 | none 17 ; previous set contained in this: True
+R61 full    rank<=1:    33 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 3 | none 26 ; previous set contained in this: True
+R62 full    rank<=1:    39 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 33 ; previous set contained in this: True
+R63 full    rank<=1:    42 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 1 | none 39 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 2 points of 1018081 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 42 ; in nk coords add the axes (2q-1 = 2017 points)
+q=1009 seed=2 r=1 (toy, 1018081 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    10 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 5 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    16 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 10 ; previous set contained in this: True
+R4  partial rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 16 ; previous set contained in this: True
+R60 full    rank<=1:    25 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 4 | none 18 ; previous set contained in this: True
+R61 full    rank<=1:    29 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 24 ; previous set contained in this: True
+R62 full    rank<=1:    35 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 29 ; previous set contained in this: True
+R63 full    rank<=1:    40 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 3 | none 35 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 2 points of 1018081 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 40 ; in nk coords add the axes (2q-1 = 2017 points)
+q=1009 seed=2 r=2 (toy, 1018081 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    10 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 5 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    16 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 10 ; previous set contained in this: True
+R4  partial rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 16 ; previous set contained in this: True
+R5  partial rank<=1:    20 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 2 | none 18 ; previous set contained in this: True
+R60 full    rank<=1:    24 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 4 | none 20 ; previous set contained in this: True
+R61 full    rank<=1:    31 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 5 | none 24 ; previous set contained in this: True
+R62 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 3 | none 30 ; previous set contained in this: True
+R63 full    rank<=1:    43 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 3 | none 36 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 0 points of 1018081 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 43 ; in nk coords add the axes (2q-1 = 2017 points)
+q=1009 seed=3 r=1 (toy, 1018081 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    10 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 4 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 4 | none 10 ; previous set contained in this: True
+R4  partial rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 18 ; previous set contained in this: True
+R60 full    rank<=1:    26 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 7 | none 19 ; previous set contained in this: True
+R61 full    rank<=1:    30 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 3 | none 26 ; previous set contained in this: True
+R62 full    rank<=1:    35 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 30 ; previous set contained in this: True
+R63 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 0 | none 35 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 1 points of 1018081 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 36 ; in nk coords add the axes (2q-1 = 2017 points)
+q=1009 seed=3 r=2 (toy, 1018081 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:    10 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 4 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    18 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 4 | none 10 ; previous set contained in this: True
+R4  partial rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 18 ; previous set contained in this: True
+R5  partial rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 19 ; previous set contained in this: True
+R60 full    rank<=1:    23 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 3 | none 19 ; previous set contained in this: True
+R61 full    rank<=1:    29 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 23 ; previous set contained in this: True
+R62 full    rank<=1:    36 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 4 | none 29 ; previous set contained in this: True
+R63 full    rank<=1:    41 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 2 | none 36 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 3 points of 1018081 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 41 ; in nk coords add the axes (2q-1 = 2017 points)
+q=4099 seed=1 r=1 (toy, 16801801 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     7 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 7 ; previous set contained in this: True
+R4  partial rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 12 ; previous set contained in this: True
+R60 full    rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 3 | none 12 ; previous set contained in this: True
+R61 full    rank<=1:    24 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 19 ; previous set contained in this: True
+R62 full    rank<=1:    30 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 4 | none 24 ; previous set contained in this: True
+R63 full    rank<=1:    38 (rank0: 0)  cause: >=2 S-inputs zero 6 | exactly 1 zero (rows dependent) 2 | none 30 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 0 points of 16801801 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 38 ; in nk coords add the axes (2q-1 = 8197 points)
+q=4099 seed=1 r=2 (toy, 16801801 points)
+R1  full    rank<=1:     3 (rank0: 0)  cause: >=2 S-inputs zero 3 | exactly 1 zero (rows dependent) 0 | none 0 ; previous set contained in this: True
+R2  full    rank<=1:     7 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 2 | none 3 ; previous set contained in this: True
+R3  full    rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 1 | exactly 1 zero (rows dependent) 4 | none 7 ; previous set contained in this: True
+R4  partial rank<=1:    12 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 0 | none 12 ; previous set contained in this: True
+R5  partial rank<=1:    13 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 1 | none 12 ; previous set contained in this: True
+R60 full    rank<=1:    19 (rank0: 0)  cause: >=2 S-inputs zero 4 | exactly 1 zero (rows dependent) 2 | none 13 ; previous set contained in this: True
+R61 full    rank<=1:    24 (rank0: 0)  cause: >=2 S-inputs zero 2 | exactly 1 zero (rows dependent) 3 | none 19 ; previous set contained in this: True
+R62 full    rank<=1:    30 (rank0: 0)  cause: >=2 S-inputs zero 5 | exactly 1 zero (rows dependent) 1 | none 24 ; previous set contained in this: True
+R63 full    rank<=1:    33 (rank0: 0)  cause: >=2 S-inputs zero 0 | exactly 1 zero (rows dependent) 3 | none 30 ; previous set contained in this: True
+final lane-0 gradient (dy/dA, dy/dB) = (0,0) at 0 points of 16801801 ; of those, state-Jacobian rank<=1: 0
+rank<=1 points of the final state Jacobian: 33 ; in nk coords add the axes (2q-1 = 8197 points)

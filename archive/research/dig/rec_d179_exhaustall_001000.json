@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-exhaustall-001000",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 full-class exhaustive audit for delta 00001000",
+  "question": "Does the residual 00001000 class toggle preserve aliveness for every typed word in every class?",
+  "labels": ["I", "K"],
+  "status": "SAMPLED",
+  "number": "All 16 classes and both complete typed lists were compared: 462,791,680 representative/toggle pairs, zero splits, and equal alive counts in every class.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/exhaustall_00001000_summary.md; research/retest/b3_omega_coupled/exact/exhaustall_00001000.out; research/retest/b3_omega_coupled/exact/exhaustall_00001000.err; research/retest/b3_omega_coupled/exact/alive_exhaustpair",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Exhaustive finite evidence for one residual direction, not a symbolic proof and not a closure of the final direction. Universal class invariance remains OPEN; no saving credited."
+}

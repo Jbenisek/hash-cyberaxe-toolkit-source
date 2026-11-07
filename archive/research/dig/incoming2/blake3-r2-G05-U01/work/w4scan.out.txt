@@ -1,0 +1,6 @@
+8 1 first=97475638 contains_W4=1
+-8 1 first=97475640 contains_W4=0
+16 0 first=00000000 contains_W4=0
+-16 0 first=00000000 contains_W4=0
+1 0 first=00000000 contains_W4=0
+-1 0 first=00000000 contains_W4=0

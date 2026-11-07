@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.TOTAL total units and time_log2",
+ "question": "score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "worst-case vs as-run two-centre total: 109.25e9 vs 102.91e9 = 0.087 bit; every factor 2 in ops = 1 bit; types: control 87.86%, arith 7.57%, loads 2.91%, stores 1.62%, unit charges 0.05%",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json arith_share etc. | universe cell poseidon-r1|LEDGER.TOTAL|LEDGER|R4",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

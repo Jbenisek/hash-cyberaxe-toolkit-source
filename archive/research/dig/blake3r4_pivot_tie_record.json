@@ -1,0 +1,21 @@
+{
+  "id": "B3R4-PIVOT-TIE-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "step circuit pivot tie order",
+  "question": "Can the legal all-equal-polarity pivot tie order or rotation renaming cut the 24422-gate step?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "all 3 tie orders: 24422 gates, 771 peak/registers, 0 hits/dead, 0/512 KAT mismatches",
+  "source": "research/dig_new/blake3-r4/pivot_tie_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_pivot_tie_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "peak_mem": "771 live planes; package ledger not rebuilt",
+  "notes": "Negative result for legal pivot tie choices and free rotation renamings. A different full-adder identity remains open; no package/stage/filing/submission.",
+  "potential_bits": 0.1,
+  "prior": 0.15
+}

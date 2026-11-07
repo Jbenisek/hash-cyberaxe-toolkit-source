@@ -1,0 +1,23 @@
+{
+  "id": "B3R4-PIVOT-SEARCH-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "step circuit pivot and rotation rewrite search",
+  "question": "After all tested pivot identities/orders and the exact ROR-XOR rewrite, what circuit lever remains?",
+  "labels": ["N", "C", "S"],
+  "status": "OPEN",
+  "number": "all tested pivot/tie/order/rotation variants remain 24422 gates and 771 registers; KAT PASS; arbitrary Boolean rewrites remain untested",
+  "source": "research/sol_answer_B3R4_pivot_full_1014.md; research/sol_answer_B3R4_rotation_merge_1014.md",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_pivot_full_1014.md; research/sol_answer_B3R4_rotation_merge_1014.md; research/sol_answer_B3R4_schedule_probe_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "potential_bits": 0.1,
+  "prior": 0.15,
+  "peak_mem": "771 live/register planes",
+  "notes": "Finite negative evidence only; a general Boolean circuit search or new adder architecture remains open. No package/stage/filing/submission.",
+  "reopen_if": "a new Boolean identity or adder architecture is specified"
+}

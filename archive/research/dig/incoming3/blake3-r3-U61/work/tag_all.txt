@@ -1,0 +1,14 @@
+tag n=32 word=0 rounds=3 runs=1000 idx=-1 val=0x00000000 mean=83659.1 pred=82137.2 ratio=1.0185 se=0.0160 pairs=1000 also_collide_under_standard_state=1000
+tag n=32 word=0 rounds=3 runs=1000 idx=0 val=0xdcc99396 mean=84079.1 pred=82137.2 ratio=1.0236 se=0.0167 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=1 rounds=3 runs=1000 idx=1 val=0xf2ed66ff mean=82946.6 pred=82137.2 ratio=1.0099 se=0.0163 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=2 rounds=3 runs=1000 idx=2 val=0x6a6ae768 mean=81580.2 pred=82137.2 ratio=0.9932 se=0.0167 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=3 rounds=3 runs=1000 idx=3 val=0x21bade02 mean=81252.7 pred=82137.2 ratio=0.9892 se=0.0161 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=4 rounds=3 runs=1000 idx=4 val=0x07489671 mean=84013.3 pred=82137.2 ratio=1.0228 se=0.0167 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=5 rounds=3 runs=1000 idx=5 val=0x9dd8904f mean=81719.1 pred=82137.2 ratio=0.9949 se=0.0161 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=6 rounds=3 runs=1000 idx=6 val=0x63e8540e mean=82124.8 pred=82137.2 ratio=0.9998 se=0.0174 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=7 rounds=3 runs=1000 idx=7 val=0x6102dd70 mean=81247.0 pred=82137.2 ratio=0.9892 se=0.0164 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=0 rounds=3 runs=1000 idx=8 val=0x522c4f8d mean=81871.8 pred=82137.2 ratio=0.9968 se=0.0162 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=1 rounds=3 runs=1000 idx=9 val=0x466de486 mean=82836.3 pred=82137.2 ratio=1.0085 se=0.0162 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=2 rounds=3 runs=1000 idx=10 val=0x2f564652 mean=83691.1 pred=82137.2 ratio=1.0189 se=0.0172 pairs=1000 also_collide_under_standard_state=0
+tag n=32 word=3 rounds=3 runs=1000 idx=11 val=0x83faac57 mean=81276.9 pred=82137.2 ratio=0.9895 se=0.0161 pairs=1000 also_collide_under_standard_state=0
+finished

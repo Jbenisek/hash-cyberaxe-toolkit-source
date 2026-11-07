@@ -1,0 +1,157 @@
+ones'-complement lens, analyze.py 2026-10-09 20:00:44
+COMPUTED: digest word = E1part ^ E3part and R = dA ^ dB hold on every stored row (rand 1048576, ctx 262144)
+COMPUTED streamer check: oc_stream real (gen.c seed, 1 thread; row 0 is its warm-up) vs numpy on data/rand rows 1..65536: 0 of 312 D/R/E count blocks differ
+
+== 1. Family: 516 two-sample tests vs the CONTROL STREAM (2^28) on D, R, E: per-word residues mod 3,5,15,17,51,85,255,257,771,1285,3855,4369,13107,21845,65535,65537; cell 0 of each; period-4/period-8 subgroup membership; divisibility pattern by 3,5,17,257,65537; cosets of <2> and <16> in (Z/p)* for p=17,257,65537; joint 4-word residue vectors mod 3,5,15,17 (+ their zero cell). Bonferroni p < 1.94e-05
+  TRAIN  N=    524288  below Bonferroni:  20  below 0.01:   32 (null ~5.2)  min p 0.00e+00 | surrogate S: below Bonf 2, min p 3.64e-25
+  TEST   N=    524288  below Bonferroni:  22  below 0.01:   48 (null ~5.2)  min p 0.00e+00 | surrogate S: below Bonf 3, min p 7.43e-28
+  CTX    N=    262144  below Bonferroni:  14  below 0.01:   26 (null ~5.2)  min p 4.58e-271 | surrogate S: below Bonf 2, min p 1.45e-10
+  STREAM N= 268435456  below Bonferroni:  96  below 0.01:  112 (null ~5.2)  min p 0.00e+00 | surrogate S: below Bonf 8, min p 0.00e+00
+  CTRLPY N=    524288  below Bonferroni:   1  below 0.01:    6 (null ~5.2)  min p 6.37e-06 | surrogate S: below Bonf 0, min p 5.20e-03
+
+== 2. Flagged on TRAIN: 20. Re-tests (pass = p < 0.01 and, for cell-0 tests, the same sign). eff = KL bits/row for chi tests, log2 advantage of cell 0 for zero tests; S eff = the surrogate's effect on the same test.
+  test                     TRAIN p    TEST p     CTX p  STREAM p | TRAIN eff  TEST eff  STRM eff |    S TEST  S STREAM | verdict
+  E.w0.m65535.chi         0.00e+00  0.00e+00 2.33e-203  0.00e+00 |    0.0322    0.0328    0.0307 |       n/a       n/a | CONFIRMED
+  E.w0.m65537.chi         0.00e+00  0.00e+00 9.59e-226  0.00e+00 |    0.0331    0.0324    0.0306 |       n/a       n/a | CONFIRMED
+  E.w0.cos65537_2         0.00e+00  0.00e+00 7.30e-216  0.00e+00 |    0.0077   0.00749   0.00741 |       n/a       n/a | CONFIRMED
+  E.w0.cos65537_16        0.00e+00  0.00e+00 1.50e-183  0.00e+00 |    0.0121    0.0123    0.0118 |       n/a       n/a | CONFIRMED
+  E.w1.m65535.chi         0.00e+00  0.00e+00 4.58e-271  0.00e+00 |    0.0324    0.0327    0.0327 |       n/a       n/a | CONFIRMED
+  E.w1.m65537.chi         0.00e+00  0.00e+00 8.02e-238  0.00e+00 |    0.0325     0.034    0.0331 |       n/a       n/a | CONFIRMED
+  E.w2.m65535.chi         0.00e+00  0.00e+00 8.57e-126  0.00e+00 |    0.0244    0.0255    0.0245 |       n/a       n/a | CONFIRMED
+  E.w2.m65537.chi         0.00e+00  0.00e+00 8.12e-134  0.00e+00 |    0.0254    0.0245    0.0245 |       n/a       n/a | CONFIRMED
+  E.w2.cos65537_2         0.00e+00  0.00e+00 1.35e-166  0.00e+00 |    0.0063   0.00631   0.00601 |       n/a       n/a | CONFIRMED
+  E.w2.cos65537_16        0.00e+00  0.00e+00 2.78e-121  0.00e+00 |   0.00851   0.00874   0.00858 |       n/a       n/a | CONFIRMED
+  R.w1.m65535.chi         7.57e-45  8.45e-32  2.77e-14  0.00e+00 |   0.00717   0.00595   0.00671 |       n/a       n/a | CONFIRMED
+  R.w1.m65537.chi         3.54e-44  7.08e-40  2.28e-13  0.00e+00 |   0.00711   0.00673   0.00667 |       n/a       n/a | CONFIRMED
+  D.w1.m65537.chi         7.58e-21  3.30e-29  9.49e-09  0.00e+00 |   0.00472   0.00568   0.00499 |   0.00488   0.00479 | CONFIRMED
+  D.w1.m65535.chi         1.37e-15  3.56e-20  1.37e-08  0.00e+00 |     0.004   0.00463   0.00498 |   0.00554   0.00479 | CONFIRMED
+  R.w1.cos65537_16        1.44e-15  3.45e-14  3.78e-04  0.00e+00 |   0.00145   0.00137    0.0014 |       n/a       n/a | CONFIRMED
+  E.w3.m65537.chi         6.02e-10  9.66e-12  1.73e-03  0.00e+00 |   0.00307   0.00339   0.00311 |       n/a       n/a | CONFIRMED
+  E.w1.cos65537_16        2.96e-09  1.45e-12  4.38e-02  0.00e+00 |   0.00106   0.00128   0.00121 |       n/a       n/a | not confirmed (CTX)
+  E.w3.m65535.chi         6.18e-07  2.09e-10  9.61e-05  0.00e+00 |   0.00244   0.00315   0.00313 |       n/a       n/a | CONFIRMED
+  R.w3.m65535.chi         6.84e-07  1.37e-03  3.81e-02  0.00e+00 |   0.00243    0.0015   0.00213 |       n/a       n/a | not confirmed (CTX)
+  R.w3.m65537.chi         1.41e-06  1.38e-04  1.93e-03  0.00e+00 |   0.00236   0.00183   0.00214 |       n/a       n/a | CONFIRMED
+  Tests significant on STREAM (Bonferroni) that were NOT flagged on TRAIN (descriptive only, not confirmations):
+    D.w1.cos65537_2        STREAM p 0.00e+00 eff 0.000113 | TRAIN p 9.37e-02 | S STREAM eff 0.000104 p 0.00e+00
+    D.w1.cos65537_16       STREAM p 0.00e+00 eff 0.000979 | TRAIN p 2.31e-05 | S STREAM eff 0.000994 p 0.00e+00
+    R.w1.m13107.chi        STREAM p 0.00e+00 eff 5.97e-05 | TRAIN p 2.56e-01
+    R.w1.m21845.chi        STREAM p 0.00e+00 eff 0.000179 | TRAIN p 1.95e-01
+    R.w1.cos65537_2        STREAM p 0.00e+00 eff 0.000177 | TRAIN p 7.51e-02
+    R.w3.m21845.chi        STREAM p 0.00e+00 eff 4.91e-05 | TRAIN p 1.76e-02
+    R.w3.cos65537_16       STREAM p 0.00e+00 eff 3.64e-05 | TRAIN p 2.00e-01
+    E.w0.m255.chi          STREAM p 0.00e+00 eff 9.08e-05 | TRAIN p 1.90e-04
+    E.w0.m257.chi          STREAM p 0.00e+00 eff 9.38e-05 | TRAIN p 3.71e-02
+    E.w0.m771.chi          STREAM p 0.00e+00 eff 9.39e-05 | TRAIN p 1.04e-01
+    E.w0.m1285.chi         STREAM p 0.00e+00 eff 9.39e-05 | TRAIN p 1.45e-01
+    E.w0.m3855.chi         STREAM p 0.00e+00 eff 0.000137 | TRAIN p 4.79e-02
+    E.w0.m4369.chi         STREAM p 0.00e+00 eff 0.000156 | TRAIN p 2.77e-02
+    E.w0.m13107.chi        STREAM p 0.00e+00 eff 0.000318 | TRAIN p 4.13e-01
+    E.w0.m21845.chi        STREAM p 0.00e+00 eff 0.00122 | TRAIN p 2.82e-05
+    E.w0.div               STREAM p 0.00e+00 eff 1.84e-05 | TRAIN p 2.89e-01
+    E.w0.cos257_2          STREAM p 0.00e+00 eff 1.67e-05 | TRAIN p 5.34e-01
+    E.w0.cos257_16         STREAM p 0.00e+00 eff 5e-05 | TRAIN p 3.02e-02
+    E.w1.m255.chi          STREAM p 0.00e+00 eff 2.47e-05 | TRAIN p 1.66e-01
+    E.w1.m257.chi          STREAM p 0.00e+00 eff 1.86e-05 | TRAIN p 6.77e-01
+    E.w1.m771.chi          STREAM p 0.00e+00 eff 1.87e-05 | TRAIN p 5.58e-02
+    E.w1.m1285.chi         STREAM p 0.00e+00 eff 1.81e-05 | TRAIN p 8.77e-01
+    E.w1.m3855.chi         STREAM p 0.00e+00 eff 5.47e-05 | TRAIN p 3.25e-01
+    E.w1.m4369.chi         STREAM p 0.00e+00 eff 6.54e-05 | TRAIN p 8.01e-01
+    E.w1.m13107.chi        STREAM p 0.00e+00 eff 0.00015 | TRAIN p 1.73e-01
+    E.w1.m21845.chi        STREAM p 0.00e+00 eff 0.000723 | TRAIN p 4.23e-01
+    E.w1.cos257_16         STREAM p 0.00e+00 eff 9.08e-06 | TRAIN p 3.95e-01
+    E.w1.cos65537_2        STREAM p 0.00e+00 eff 0.00016 | TRAIN p 3.67e-04
+    E.w2.m255.chi          STREAM p 0.00e+00 eff 4.72e-05 | TRAIN p 4.61e-03
+    E.w2.m257.chi          STREAM p 0.00e+00 eff 4.96e-05 | TRAIN p 8.30e-03
+    ... 46 more
+
+== 3. Does the residual lean toward 0 in ones'-complement coordinates? Cell-0 advantage log2(P_real/P_ctrl) +- 1 s.e., STREAM (2^28) vs CONTROL STREAM (2^28)
+  D (oc(dA)-oc(dB))
+    word 1: m3 -0.0004+-0.0002  m5 -0.0003+-0.0003  m15 -0.0012+-0.0005  m17 +0.0003+-0.0005  m255 -0.0016+-0.0020  m257 +0.0014+-0.0020  m65535 -0.0053+-0.0319  m65537 +0.0024+-0.0316
+    word 3: m3 +0.0001+-0.0002  m5 +0.0002+-0.0003  m15 +0.0003+-0.0005  m17 +0.0003+-0.0005  m255 +0.0003+-0.0020  m257 -0.0026+-0.0020  m65535 +0.1288+-0.0313  m65537 +0.0642+-0.0316
+    word 4: m3 +0.0004+-0.0002  m5 -0.0004+-0.0003  m15 +0.0007+-0.0005  m17 -0.0003+-0.0005  m255 +0.0023+-0.0020  m257 +0.0008+-0.0020  m65535 -0.0142+-0.0320  m65537 -0.0028+-0.0320
+    word 6: m3 +0.0002+-0.0002  m5 +0.0001+-0.0003  m15 +0.0004+-0.0005  m17 +0.0006+-0.0005  m255 +0.0012+-0.0020  m257 -0.0012+-0.0020  m65535 +0.0045+-0.0315  m65537 -0.0144+-0.0319
+    joint 4-word zero cell: m3 -0.0003+-0.0011 (c0 3315431)  m5 -0.0034+-0.0031 (c0 428574)  m15 +0.0483+-0.0282 (c0 5341)  m17 +0.1054+-0.0362 (c0 3306)
+  S (surrogate)
+    word 1: m3 +0.0000+-0.0002  m5 -0.0002+-0.0003  m15 +0.0002+-0.0005  m17 -0.0005+-0.0005  m255 -0.0000+-0.0020  m257 +0.0001+-0.0020  m65535 -0.0261+-0.0317  m65537 -0.0426+-0.0317
+    word 3: m3 -0.0001+-0.0002  m5 +0.0001+-0.0003  m15 -0.0008+-0.0005  m17 -0.0001+-0.0005  m255 -0.0001+-0.0020  m257 -0.0018+-0.0020  m65535 +0.0893+-0.0313  m65537 +0.1541+-0.0315
+    word 4: m3 -0.0003+-0.0002  m5 +0.0002+-0.0003  m15 +0.0000+-0.0005  m17 +0.0006+-0.0005  m255 +0.0003+-0.0020  m257 +0.0003+-0.0020  m65535 -0.0300+-0.0319  m65537 -0.0503+-0.0320
+    word 6: m3 -0.0002+-0.0002  m5 -0.0001+-0.0003  m15 -0.0006+-0.0005  m17 -0.0010+-0.0005  m255 -0.0006+-0.0020  m257 -0.0011+-0.0020  m65535 +0.0326+-0.0315  m65537 -0.0565+-0.0318
+    joint 4-word zero cell: m3 -0.0012+-0.0011 (c0 3311136)  m5 +0.0017+-0.0031 (c0 429801)  m15 -0.0153+-0.0281 (c0 5262)  m17 -0.0145+-0.0357 (c0 3258)
+  R (XOR residual read in Z/M)
+    word 1: m3 -0.0001+-0.0002  m5 -0.0001+-0.0003  m15 -0.0002+-0.0005  m17 +0.0002+-0.0005  m255 -0.0006+-0.0020  m257 +0.0006+-0.0020  m65535 +0.0307+-0.0317  m65537 +0.0325+-0.0318
+    word 3: m3 +0.0002+-0.0002  m5 +0.0001+-0.0003  m15 +0.0007+-0.0005  m17 -0.0002+-0.0005  m255 -0.0001+-0.0020  m257 +0.0004+-0.0020  m65535 -0.0243+-0.0321  m65537 +0.1110+-0.0313
+    word 4: m3 -0.0003+-0.0002  m5 -0.0001+-0.0003  m15 -0.0003+-0.0005  m17 -0.0005+-0.0005  m255 +0.0037+-0.0020  m257 -0.0010+-0.0020  m65535 -0.0288+-0.0321  m65537 +0.0033+-0.0323
+    word 6: m3 +0.0003+-0.0002  m5 +0.0001+-0.0003  m15 +0.0008+-0.0005  m17 -0.0002+-0.0005  m255 -0.0007+-0.0020  m257 +0.0017+-0.0020  m65535 -0.1453+-0.0330  m65537 -0.0215+-0.0319
+    joint 4-word zero cell: m3 -0.0007+-0.0011 (c0 3314743)  m5 -0.0003+-0.0031 (c0 429558)  m15 -0.0095+-0.0280 (c0 5290)  m17 -0.0344+-0.0361 (c0 3150)
+  D joint cell 0 mod 15 and mod 17 (independent CRT components, 15.6 + 16.3 = 31.9 bits of condition): total advantage +0.154 bits
+  XOR baseline (same data): the 16 bits of R with largest P(0) on TRAIN (word.bit): 3.19,6.11,3.12,3.18,4.4,1.11,3.25,3.4,6.17,3.2,6.10,3.11,1.23,3.17,6.27,6.2
+    TRAIN  P(all 16 = 0): 2413 rows vs 8.0 uniform -> advantage +8.237 bits on a 16-bit condition
+    TEST   P(all 16 = 0): 2427 rows vs 8.0 uniform -> advantage +8.245 bits on a 16-bit condition
+    CTX    P(all 16 = 0): 1313 rows vs 4.0 uniform -> advantage +8.359 bits on a 16-bit condition
+    CTRLPY P(all 16 = 0): 8 rows vs 8.0 uniform -> advantage +0.000 bits on a 16-bit condition
+  Metric view: bit length of |D| = min(D, M-D) (ones'-complement distance from 0); chi-square vs CTRLPY and P(|D| < 2^24) advantage
+    TRAIN w1 chi p 0.014, P(|D|<2^24) 4024 vs 4004 (adv +0.01); w3 chi p 0, P(|D|<2^24) 3246 vs 4194 (adv -0.37); w4 chi p 5e-30, P(|D|<2^24) 3264 vs 4068 (adv -0.32); w6 chi p 8.9e-11, P(|D|<2^24) 3889 vs 4165 (adv -0.10)
+    TEST  w1 chi p 0.014, P(|D|<2^24) 4097 vs 4004 (adv +0.03); w3 chi p 0, P(|D|<2^24) 3181 vs 4194 (adv -0.40); w4 chi p 3.5e-30, P(|D|<2^24) 3382 vs 4068 (adv -0.27); w6 chi p 1.7e-08, P(|D|<2^24) 4035 vs 4165 (adv -0.05)
+
+== 4. Renyi-2 entropy (bits, from collisions) of A-B differences in three views: XOR a^b | mod 2^32 a-b | ones' a-b mod 2^32-1.  N = 524288 per part; reliable up to ~32 bits; 'top' = most common value and its frequency
+  [TRAIN]
+    half-G  E1 a1: xor  const (     1 distinct, top 00000000 1.0000) | mod  const (     1 distinct, top 00000000 1.0000) | ones  const (     1 distinct, top 00000000 1.0000)
+    half-G  E1 b1: xor  const (     1 distinct, top 18b0e098 1.0000) | mod  11.00 (  2048 distinct, top e7505f88 0.0006) | ones  11.00 (  2048 distinct, top e7505f87 0.0006)
+    half-G  E1 c1: xor  const (     1 distinct, top 0e09818b 1.0000) | mod  const (     1 distinct, top f5f77e75 1.0000) | ones  const (     1 distinct, top f5f77e74 1.0000)
+    half-G  E1 d1: xor  const (     1 distinct, top 00000000 1.0000) | mod  const (     1 distinct, top 00000000 1.0000) | ones  const (     1 distinct, top 00000000 1.0000)
+    half-G  E3 e1: xor  const (     1 distinct, top 03cf8303 1.0000) | mod  const (     1 distinct, top 02488303 1.0000) | ones  const (     1 distinct, top 02488303 1.0000)
+    half-G  E3 f1: xor  14.29 (105033 distinct, top 0c983010 0.0003) | mod  16.86 (274986 distinct, top 03e81010 0.0001) | ones  16.94 (284711 distinct, top 03e81010 0.0001)
+    half-G  E3 g1: xor  14.29 (105033 distinct, top 830100c9 0.0003) | mod  12.00 (  4096 distinct, top 7eff0235 0.0003) | ones  13.00 (  8192 distinct, top 7cfcfc47 0.0002)
+    half-G  E3 h1: xor  const (     1 distinct, top 830303cf 1.0000) | mod  12.00 (  4096 distinct, top 7eff0235 0.0003) | ones  13.00 (  8192 distinct, top 8302fcba 0.0002)
+    output  E1 a2: xor  14.24 (110097 distinct, top 1890e090 0.0005) | mod  11.00 (  2048 distinct, top e7505f90 0.0006) | ones  11.18 (  4096 distinct, top f850a06f 0.0006)
+    output  E1 b2: xor  22.77 (507261 distinct, top 9b2561e5 0.0000) | mod  26.56 (522911 distinct, top 2724df64 0.0000) | ones  26.60 (522942 distinct, top 3b233f63 0.0000)
+    output  E1 c2: xor  22.77 (507261 distinct, top 8a001255 0.0000) | mod  15.79 (234034 distinct, top 75ef0e95 0.0003) | ones  16.15 (253544 distinct, top 75ef0e95 0.0002)
+    output  E1 d2: xor  14.24 (110097 distinct, top 901890e0 0.0005) | mod  15.79 (234034 distinct, top 7ff79020 0.0003) | ones  16.52 (258669 distinct, top 7ff7901f 0.0001)
+    output  E3 e2: xor  24.65 (519194 distinct, top 09e1b515 0.0000) | mod  16.86 (274986 distinct, top 06309313 0.0001) | ones  17.12 (297124 distinct, top 06309313 0.0001)
+    output  E3 f2: xor  31.71 (524249 distinct, top 037960fe 0.0000) | mod  31.61 (524246 distinct, top 05214761 0.0000) | ones  31.51 (524243 distinct, top 05214761 0.0000)
+    output  E3 g2: xor  31.17 (524231 distinct, top 0484f057 0.0000) | mod  31.14 (524230 distinct, top 06921239 0.0000) | ones  31.36 (524238 distinct, top 06921239 0.0000)
+    output  E3 h2: xor  24.65 (519194 distinct, top da8ae2b6 0.0000) | mod  29.39 (524093 distinct, top 00686e6d 0.0000) | ones  29.72 (524133 distinct, top 00686e6d 0.0000)
+    residual word 1: xor 31.51 | mod 31.87 | ones 31.96 | eps 27.98
+    residual word 3: xor 29.55 | mod 30.22 | ones 30.18 | eps 28.33
+    residual word 4: xor 32.19 | mod 31.87 | ones 31.87 | eps 28.16
+    residual word 6: xor 30.54 | mod 31.51 | ones 31.57 | eps 29.52
+  [TEST]
+    half-G  E1 a1: xor  const (     1 distinct, top 00000000 1.0000) | mod  const (     1 distinct, top 00000000 1.0000) | ones  const (     1 distinct, top 00000000 1.0000)
+    half-G  E1 b1: xor  const (     1 distinct, top 18b0e098 1.0000) | mod  11.00 (  2048 distinct, top 176f1f98 0.0006) | ones  11.00 (  2048 distinct, top 176f1f98 0.0006)
+    half-G  E1 c1: xor  const (     1 distinct, top 0e09818b 1.0000) | mod  const (     1 distinct, top f5f77e75 1.0000) | ones  const (     1 distinct, top f5f77e74 1.0000)
+    half-G  E1 d1: xor  const (     1 distinct, top 00000000 1.0000) | mod  const (     1 distinct, top 00000000 1.0000) | ones  const (     1 distinct, top 00000000 1.0000)
+    half-G  E3 e1: xor  const (     1 distinct, top 03cf8303 1.0000) | mod  const (     1 distinct, top 02488303 1.0000) | ones  const (     1 distinct, top 02488303 1.0000)
+    half-G  E3 f1: xor  14.30 (104736 distinct, top 0c781010 0.0003) | mod  16.86 (275035 distinct, top 04080ff0 0.0001) | ones  16.95 (284583 distinct, top 04080ff0 0.0001)
+    half-G  E3 g1: xor  14.30 (104736 distinct, top 810100c7 0.0003) | mod  12.00 (  4096 distinct, top 8303014f 0.0003) | ones  13.00 (  8192 distinct, top 7d00fdc7 0.0002)
+    half-G  E3 h1: xor  const (     1 distinct, top 830303cf 1.0000) | mod  12.00 (  4096 distinct, top 8303014f 0.0003) | ones  13.00 (  8192 distinct, top 8100fc39 0.0002)
+    output  E1 a2: xor  14.24 (109710 distinct, top 18b0a090 0.0006) | mod  11.00 (  2048 distinct, top 176f1fa0 0.0006) | ones  11.18 (  4096 distinct, top f8af9f9f 0.0006)
+    output  E1 b2: xor  22.76 (507163 distinct, top 9b2541e2 0.0000) | mod  26.56 (522912 distinct, top 66fd00e4 0.0000) | ones  26.62 (522961 distinct, top 0322c164 0.0000)
+    output  E1 c2: xor  22.76 (507163 distinct, top 8a0011f5 0.0000) | mod  15.78 (234169 distinct, top 75ef0e95 0.0003) | ones  16.14 (253483 distinct, top 75ef0e94 0.0002)
+    output  E1 d2: xor  14.24 (109710 distinct, top 9018b0a0 0.0006) | mod  15.78 (234169 distinct, top 7ff79020 0.0003) | ones  16.51 (258764 distinct, top 8008701f 0.0001)
+    output  E3 e2: xor  24.62 (519094 distinct, top 22909513 0.0000) | mod  16.86 (275035 distinct, top 065092f3 0.0001) | ones  17.11 (297219 distinct, top 065092f3 0.0001)
+    output  E3 f2: xor  31.91 (524254 distinct, top 064b68e1 0.0000) | mod  32.05 (524257 distinct, top 005f6aa0 0.0000) | ones  31.79 (524251 distinct, top 005f6aa0 0.0000)
+    output  E3 g2: xor  31.22 (524233 distinct, top 0752b245 0.0000) | mod  30.59 (524203 distinct, top 0318d39d 0.0000) | ones  30.77 (524213 distinct, top 0318d39d 0.0000)
+    output  E3 h2: xor  24.62 (519094 distinct, top dca19396 0.0000) | mod  29.64 (524124 distinct, top 0476a333 0.0000) | ones  29.96 (524156 distinct, top 0476a333 0.0000)
+    residual word 1: xor 31.33 | mod 31.96 | ones 31.75 | eps 27.97
+    residual word 3: xor 29.59 | mod 30.18 | ones 30.22 | eps 28.20
+    residual word 4: xor 31.57 | mod 32.68 | ones 32.36 | eps 28.17
+    residual word 6: xor 30.40 | mod 31.45 | ones 31.68 | eps 29.45
+  [CTRLPY] uniform words, residual word 1: xor 32.30 | mod 32.14 | ones 31.71 | eps 30.31
+
+== 5. Split test: D = oc_diff(E1 part) + oc_diff(E3 part) + eps (mod 2^32-1). DERIVED identity eps = -2[(x&y) - (x'&y')] since x^y = x + y - 2(x&y).
+  COMPUTED identity on TRAIN: True
+  TRAIN  eps residues vs control eps: w1: m3 p 0.93  m5 p 0.087  m15 p 0.3  m17 p 0.65  m255 p 0.00019 || w3: m3 p 1  m5 p 0.48  m15 p 0.53  m17 p 0.77  m255 p 0.17 || w4: m3 p 0.59  m5 p 0.49  m15 p 0.48  m17 p 0.49  m255 p 0.0046 || w6: m3 p 0.29  m5 p 0.97  m15 p 0.98  m17 p 0.031  m255 p 0.69
+  TEST   eps residues vs control eps: w1: m3 p 0.32  m5 p 0.008  m15 p 0.064  m17 p 0.7  m255 p 0.003 || w3: m3 p 0.31  m5 p 0.83  m15 p 0.97  m17 p 0.67  m255 p 0.65 || w4: m3 p 0.085  m5 p 0.09  m15 p 0.28  m17 p 0.036  m255 p 0.38 || w6: m3 p 0.53  m5 p 0.27  m15 p 0.42  m17 p 0.69  m255 p 0.029
+  STREAM eps residues vs control eps: w1: m3 p 0.22  m5 p 0.62  m15 p 0.28  m17 p 0.011  m255 p 0 || w3: m3 p 0.69  m5 p 0.023  m15 p 0.24  m17 p 0.55  m255 p 0 || w4: m3 p 0.96  m5 p 0.58  m15 p 0.65  m17 p 0.38  m255 p 0 || w6: m3 p 0.21  m5 p 0.55  m15 p 0.78  m17 p 0.019  m255 p 2.5e-05
+  TRAIN  P(eps = 0) per word: 0.00e+00 1.91e-06 1.91e-06 0.00e+00   (eps = 0 would make D = E1 part + E3 part exactly)
+  TEST   P(eps = 0) per word: 0.00e+00 0.00e+00 1.91e-06 0.00e+00   (eps = 0 would make D = E1 part + E3 part exactly)
+
+== 6. Multiplicative relations between residual words. In Z/(2^32-1), x -> 2x is rotate-left-1, so the orbit {+-2^r x} is the word's rotations and complements ('spiral' orbit). Test 1: rows where D_j = +-2^r D_i for some r (uniform rate ~2^-26 per pair). Test 2: coset of the ratio D_j/D_i in (Z/p)*/<2> and /<16>, two-sample vs CTRLPY.
+  TRAIN  rows with D_j = +-2^r D_i: 1-3:0 1-4:0 1-6:0 3-4:0 3-6:0 4-6:0
+  TEST   rows with D_j = +-2^r D_i: 1-3:0 1-4:0 1-6:0 3-4:0 3-6:0 4-6:0
+  CTRLPY rows with D_j = +-2^r D_i: 1-3:0 1-4:0 1-6:0 3-4:0 3-6:0 4-6:0
+  positive control (E1 a2 vs d2 ones' differences, TRAIN): exact d2 = 2^-8 a2 in 329 rows, same +-orbit in 622 rows of 524288
+  TRAIN  ratio-coset tests: 36, below Bonferroni 2.8e-04: 0; smallest p 4.76e-02 (words 1/3 mod 17 coset of <2>)
+  TEST   ratio-coset tests: 36, below Bonferroni 2.8e-04: 0; smallest p 7.06e-03 (words 1/3 mod 17 coset of <2>)
+
+done in 58.6 s

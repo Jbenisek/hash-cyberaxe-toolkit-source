@@ -1,0 +1,22 @@
+{
+  "id": "D803-SHA256-R38-SEED65555-CONTROLS-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 37,
+  "object": "Zone-D row-4 signature and C2 full-late fixed-split controls at seed 65555",
+  "question": "Do the independent seed-65555 row-4 signature and C2 full-late scans reproduce the existing fixed-split control law?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "row4hits: cell domain 2^29, G rebuilds 2^26, rows5..15 base pass 2^26, signature candidates 2^20, final state-equal 0; c2all14late: row14 base/expansion 160/160, strict-row15 1, total C2 1, full-late rows16..37 0, state-equal 0. Both exit 0. Fixed-split evidence only; no split-transfer or score credit.",
+  "source": "owned zoneD38 executables zd38 and zd38c2lateall",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/PREREG_D803_SEED65555.md; research/retest/zoneD38/row4hits_seed65555.out; research/retest/zoneD38/c2all14late_seed65555.out; research/sol_answer_D803_sha256_r38_seed65555_controls.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "checked-in executables and fixed seed 65555; no source changes",
+  "notes": "Exact selected-split controls. They cannot prove production split transfer, global late law, or charged score.",
+  "reopen_if": "A production-law transfer experiment or full charged end-to-end package becomes available.",
+  "peak_mem": "12.9369 MEASURED maximum of 7840 KiB C2 and 7708 KiB row4 RSS"
+}

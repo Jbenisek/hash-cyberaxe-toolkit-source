@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.FMUL mul/sqr charge",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "alternatives (Karatsuba is irrelevant at 1 op per field product; Montgomery vs plain counted the same) cannot change a 2.47% share by more than 0.036 bit",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Upper bound bits_if(mul+sqr). | universe cell poseidon-r1|MACHINE.FMUL|MACHINE|Q4",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "a non-unit charge for field products"
+}

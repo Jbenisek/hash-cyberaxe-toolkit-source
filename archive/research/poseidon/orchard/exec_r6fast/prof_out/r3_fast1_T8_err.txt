@@ -1,0 +1,109 @@
+PROF after-D threads=8 tsc_mhz=5047 wall_ms=1092763
+PROF cols: region a ser_ms disp_ms busy_ms capw_ms ndisp
+PROFROW outside|0|0|0|0|0|0
+PROFROW init|0|39|0|0|0|0
+PROFROW line|0|0|0|0|0|0
+PROFROW B points|0|0|5098|39243|40784|1
+PROFROW B ntt_inv|0|0|0|0|0|0
+PROFROW B ntt_inv|19|6|351|2414|2808|10
+PROFROW B rest|0|0|20|145|165|1
+PROFROW C newton|0|21|47|196|320|8
+PROFROW C newton|2|0|0|0|0|0
+PROFROW C newton|3|0|0|0|0|0
+PROFROW C newton|4|0|0|0|0|0
+PROFROW C newton|5|0|0|0|0|0
+PROFROW C newton|6|0|0|0|0|0
+PROFROW C newton|7|0|0|0|0|0
+PROFROW C newton|8|1|0|0|0|0
+PROFROW C newton|9|2|0|0|0|0
+PROFROW C newton|10|5|0|0|0|0
+PROFROW C newton|11|0|10|13|25|2
+PROFROW C newton|12|2|24|48|57|2
+PROFROW C newton|13|3|54|112|144|2
+PROFROW C newton|14|13|112|169|224|55
+PROFROW C newton|15|30|169|429|677|40
+PROFROW C newton|16|33|308|1140|2342|44
+PROFROW C newton|17|0|573|2715|4277|64
+PROFROW C newton|18|0|1232|6997|9688|64
+PROFROW C newton|19|12|2006|13867|16050|50
+PROFROW C prefix|0|3|16|102|128|1
+PROFROW C conv_sq|0|0|0|0|0|0
+PROFROW C conv_sq|20|8|257828|1883212|2055961|3276
+PROFROW C fold/copy/shift|0|0|1807|6184|14035|702
+PROFROW C otf mu (N)|0|0|0|0|0|0
+PROFROW C otf mu (N)|20|15|374768|2727931|2997178|5382
+PROFROW C otf g (N')|0|0|0|0|0|0
+PROFROW C otf g (N')|19|16|193439|1319382|1527152|5616
+PROFROW C sub|0|0|944|3452|7557|234
+PROFROW C mulx|0|0|881|5374|7055|45
+PROFROW C rest|0|0|14|103|117|1
+PROFROW D top (gcd loop)|0|3|0|0|0|0
+PROFROW D hgcd own|0|138|0|0|0|0
+PROFROW D base case|0|69484|0|0|0|0
+PROFROW D apply_inv|0|3204|778|2580|4275|226
+PROFROW D apply_inv|7|4355|0|0|0|0
+PROFROW D apply_inv|8|6790|0|0|0|0
+PROFROW D apply_inv|9|9476|0|0|0|0
+PROFROW D apply_inv|10|12728|0|0|0|0
+PROFROW D apply_inv|11|601|5949|16236|29560|1792
+PROFROW D apply_inv|12|648|6417|21808|43406|1024
+PROFROW D apply_inv|13|723|7642|32027|51924|576
+PROFROW D apply_inv|14|694|9357|46115|63613|320
+PROFROW D apply_inv|15|1961|13928|38570|55712|4800
+PROFROW D apply_inv|16|2104|10864|45863|86919|2592
+PROFROW D apply_inv|17|639|13507|62730|103957|2216
+PROFROW D apply_inv|18|337|13966|80567|109859|1234
+PROFROW D apply_inv|19|0|1924|12882|15234|76
+PROFROW D mat_mul|0|1894|57|140|223|20
+PROFROW D mat_mul|6|3471|0|0|0|0
+PROFROW D mat_mul|7|3920|0|0|0|0
+PROFROW D mat_mul|8|4230|0|0|0|0
+PROFROW D mat_mul|9|4663|0|0|0|0
+PROFROW D mat_mul|10|5321|0|0|0|0
+PROFROW D mat_mul|11|255|1925|5893|11723|494
+PROFROW D mat_mul|12|259|1894|7478|15152|240
+PROFROW D mat_mul|13|217|1852|8771|14820|114
+PROFROW D mat_mul|14|201|1850|11089|14802|52
+PROFROW D mat_mul|15|464|2264|6491|9057|792
+PROFROW D mat_mul|16|343|1296|5429|10371|288
+PROFROW D mat_mul|17|9|742|3346|5566|116
+PROFROW D mat_mulQ|0|9633|0|0|0|0
+PROFROW D divrem|0|6788|19|66|114|6
+PROFROW D divrem|5|0|0|0|0|0
+PROFROW D divrem|6|0|0|0|0|0
+PROFROW D divrem|7|0|0|0|0|0
+PROFROW D divrem|8|1|0|0|0|0
+PROFROW D divrem|9|2|0|0|0|0
+PROFROW D divrem|10|5|0|0|0|0
+PROFROW D divrem|11|4|4|8|12|2
+PROFROW D divrem|12|1|12|31|51|4
+PROFROW D divrem|13|2|35|75|148|4
+PROFROW D divrem|14|3|90|219|327|4
+PROFROW D divrem|15|27|167|383|671|45
+PROFROW D divrem|16|51|227|859|1817|45
+PROFROW D divrem|17|2|207|918|1547|29
+PROFROW D divrem|18|3|347|1960|2677|33
+PROFROW E-I|0|0|0|0|0|0
+	Command being timed: "nice -n 10 ./single 1 8"
+	User time (seconds): 3660.24
+	System time (seconds): 101.78
+	Percent of CPU this job got: 320%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 19:34.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 235536
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 59708
+	Voluntary context switches: 199286
+	Involuntary context switches: 4500484
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

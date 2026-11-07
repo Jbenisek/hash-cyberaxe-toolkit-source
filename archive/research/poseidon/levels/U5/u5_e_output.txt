@@ -1,0 +1,21 @@
+q=257 (q mod 4=1, gcd(5,q-1)=1): alpha primitive in F_q^3 (ord q^3-1): True. projective points 66307
+   non-MDS projective points: 4043 (0.06097); 18/q = 0.07004
+   non-MDS powers M^k among k=1..66307 (one projective period; note M^m = scalar True): 4043 ; first 8 bad k: [11, 43, 44, 126, 134, 138, 145, 177]
+   minors-zero <=> entry of M^-k zero (and M^k entry zero) agree for all k: mismatches=0
+   longest run of consecutive MDS powers within one period: 141; mean gap 16.4 (q/18 = 14.3)
+   smallest k with M^k not MDS: 11
+   leg(det)==-1 ; product of leg(entries) * leg of Vandermonde diffs = -1
+q=769 (q mod 4=1, gcd(5,q-1)=1): alpha primitive in F_q^3 (ord q^3-1): True. projective points 592131
+   non-MDS projective points: 13749 (0.02322); 18/q = 0.02341
+   non-MDS powers M^k among k=1..592131 (one projective period; note M^m = scalar True): 13749 ; first 8 bad k: [110, 158, 163, 166, 290, 302, 330, 416]
+   minors-zero <=> entry of M^-k zero (and M^k entry zero) agree for all k: mismatches=0
+   longest run of consecutive MDS powers within one period: 377; mean gap 43.1 (q/18 = 42.7)
+   smallest k with M^k not MDS: 110
+   leg(det)==-1 ; product of leg(entries) * leg of Vandermonde diffs = -1
+q=1009 (q mod 4=1, gcd(5,q-1)=1): alpha primitive in F_q^3 (ord q^3-1): True. projective points 1019091
+   non-MDS projective points: 18067 (0.01773); 18/q = 0.01784
+   non-MDS powers M^k among k=1..1019091 (one projective period; note M^m = scalar True): 18067 ; first 8 bad k: [37, 116, 135, 141, 143, 241, 421, 471]
+   minors-zero <=> entry of M^-k zero (and M^k entry zero) agree for all k: mismatches=0
+   longest run of consecutive MDS powers within one period: 475; mean gap 56.4 (q/18 = 56.1)
+   smallest k with M^k not MDS: 37
+   leg(det)==-1 ; product of leg(entries) * leg of Vandermonde diffs = -1

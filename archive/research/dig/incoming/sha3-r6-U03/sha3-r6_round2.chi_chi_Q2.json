@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "1-indexed round 3 chi + theta4 parities (leader chi3 block, 53.30 ops/message); 140-bit key = digest lanes 0..3 at z in KEEP (35 planes)",
+ "question": "Which chi3 rows and bits are necessary?",
+ "labels": [
+  "N",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "all 320 rows / 1600 outputs / 320 parities necessary (cone = 1600 of 1600); sampled flip test: 1600 of 1600 chi3-output bits and 1600 of 1600 theta4-applied bits changed the key in 64 of 64 random family states; 0 rows removable",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/sha3-r6-U03/work/ (kk.py validated 24r vs hashlib and 6r vs organizer verifier; cone.py, fam.py, fp.py, q.py; cone.json, footprint.json, q_results.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell round2.chi|Q2. Family = leader's 128-byte prefix family rebuilt by us (L8=0, L5=L15=D0, C2=NOT rotl(C4,1); z XORed into lanes 4 and 14): A2 affine in z checked 30x256, z-flip support 22 words (matches Lemma 3). Structural cone says every chi3 output is needed (theta4 spreads each into the chi4 cone which is full). Own flip test (q.py): S3 bits and T4 bits, 64 states each, min hits 64/64. So no chi3 row can be dropped; the only saving possibility is skipping recomputation of the 47 rows whose inputs did not change in a step (see Q1).",
+ "topic": "sha3r6 round2.chi Q2"
+}

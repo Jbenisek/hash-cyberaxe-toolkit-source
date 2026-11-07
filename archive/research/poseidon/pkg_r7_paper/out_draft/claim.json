@@ -1,0 +1,52 @@
+{
+ "schema_version": 3,
+ "submission_state": "draft",
+ "target_profile": "poseidon-orchard-r7-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 7,
+ "claim": {
+  "time_log2": 40.85457,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 37.219,
+  "preprocessing_log2": 0,
+  "success_probability": 0.63203,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r7-prefix-v1 only (seven partial rounds 4, 5, 6, 7, 8, 9 and 10 plus the eight fixed full rounds); the construction uses the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "Algorithm paper, not executed: the program was not run at r = 7. time_log2 is a worst-case operation count of the shipped source (at most K = 2 centres, every trial charged in full, one thread), memory_log2_bytes its footprint. success_probability 0.63203 is a probability over the algorithm's own coins (the centres and the isolation shifts, charged) for the fixed target, derived from the one score-critical premise H_root (an assumption, no proof) as 1 - (1 - q)^K - K(eps_coin + eps_iso) with q = 0.3934.",
+  "Evidence is separate from the bound: our executed full-scale runs at r = 3, 4, 5 used the fixed centres 1, 2, ... (no coins) and are reported in proof.md section 10 as evidence only. No collision at r = 7 is claimed or shown, and no test reaches the claimed degree."
+ ],
+ "baseline_improved": "poseidon-orchard-r7-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "experiment_manifest": "experiments/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H_root",
+   "statement": "For the fixed polynomial F of proof.md section 2.3 at r = 7 (degree 5^13), let G_c = gcd(g_c, S^((p-1)/2) - 1) for the odd part g_c about the centre c (proof.md section 3), and let E_c be the event 1 <= deg G_c <= 16 (g_c has between 1 and 16 distinct roots in F_p that are nonzero squares). Then the fraction rho of centres c in F_p with E_c satisfies rho >= q = 0.3934. For a uniformly random polynomial of degree m the number of its roots in F_p is asymptotically Poisson with mean 1 (a root exists with probability 1 - 1/e = 0.632), each root is a nonzero square with probability one half, so the number of usable roots is Poisson with mean 1/2, giving 1 - exp(-1/2) = 0.3935 minus a negligible tail beyond 16; the premise is that the fixed F behaves this way over uniform centres. The algorithm draws its centres from its own coins, so the events for its K = 2 centres are independent with parameter rho by construction, and P[success] >= 1 - (1 - q)^K - K(eps_coin + eps_iso) = 0.632036440 (proof.md section 9.2).",
+   "role": "score-critical",
+   "scope": "The fixed Poseidon target poseidon-orchard-r7-prefix-v1, this line construction (the line j = 0 of the first two rounds, the odd part about a centre, proof.md sections 2-3), the event E_c above, centres uniform on F_p. Nothing else in the claim is heuristic apart from the supporting charging rules H1-charging-rules: the isolation lemma (section 9.3), the independence of the centres (from the coins) and the operation counts are proved or counted in proof.md.",
+   "extrapolation": "From the random-polynomial value to the fixed F at degree 5^13, a degree that no test reaches. Support (not proof): the executed full-scale outcomes at r = 3, 4, 5 (proof.md section 10.1) and a toy measurement at degree 125 and 625 over a 13-bit field (experiment toy-root-fraction); the sensitivity of the bound to a smaller q is in the table of proof.md section 9.2.",
+   "evidence_ids": [
+    "proof:162-169",
+    "proof:209-243",
+    "experiment:replay-r3-r6-pairs",
+    "experiment:toy-root-fraction"
+   ],
+   "limitations": "An assumption with no proof known to us. Nothing in the algebra forces the fraction of good centres of the fixed F to equal the random-polynomial value; the odd parts g_c for different c all come from one F and are not independent polynomials. The executed outcomes at r = 3 to 5 are single deterministic runs with the fixed centres 1, 2, ... that stop at their first success: they are evidence, not a sample, and give no lower bound on rho. The toy experiment uses other functions over another field. The organizer experiment kind infers no probability. No test reaches the claimed degree: one trial at r = 7 needs about 136 GB of memory and was not run."
+  },
+  {
+   "id": "H1-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 describe the program of proof.md section 11 under the stated rules: 1 per field operation (a Montgomery conversion is one multiplication), 1 per element load or store plus 1 address operation, 3 per loop iteration plus 2 per loop exit (loops written with the macro FOR8 are unrolled eight times in the source and charged 3 per pass of eight; the generated kernels are straight-line), 1 per other executed index or control operation, 363 per reduced permutation evaluation, DRAFT-PENDING COIN_WORD_COST per 64-bit coin word, the allocator charged per executed operation, and a register file of 18 words of 256 bits per transform block as the only register assumption. The program runs on one thread; there is no dispatch.",
+   "scope": "All stages of the program of proof.md section 4 at the target dimensions (m = 610,351,562, 1,610,612,736 evaluations of the line and transforms of 805,306,368 points), at their worst case over coins and data (proof.md section 6).",
+   "extrapolation": "The worst-case counts are derived from the source by formula (proof.md section 6) and validated against the counters of the executed runs at smaller r (proof.md section 6.1); the r = 7 ledger itself is not a measured run.",
+   "evidence_ids": [
+    "proof:134-146",
+    "proof:259-261"
+   ],
+   "limitations": "The counts are produced by formula from the source, which is part of the proof text and was not run at r = 7 by us or by the organizer. Word-level costs outside the stated rules (cache, bandwidth) are not part of the model."
+  }
+ ]
+}

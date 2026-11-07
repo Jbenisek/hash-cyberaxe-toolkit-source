@@ -1,0 +1,23 @@
+{
+  "id": "D520-BLAKE3-R2-PKGCA-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgCA halfsearch prefile and self-test",
+  "question": "Does the pkgCA 65.0407 halfsearch draft pass its declared finite self-test, and what prefile defects remain?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgCA executable SHA-256 710040147D4099E202353526372D30BAE7717F788053F54C27AAE0D8C64C7BD0 (shared by CB/CD/CE); claim time_log2=65.0407; prefile SOME FAIL only for missing executable ledger block and note internal label audit; halfsearch.py selftest 256 exits 0 with 256/256 cases right, 1792/1792 lanes right, zero test-word mismatches, stage A 37 ops/10 loads, stage 2 105 ops/30 loads, 16 registers at limit, largest lane 35 bits, all bounds and count tables passing.",
+  "source": "our workflow: D520 read-only pkgCA audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D520_b3m_pkgca_audit.md; research/tools/build_pkg/scratch/pkgCA/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgCA/pkg/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgCA/pkg/blake3-r2/experiments/halfsearch.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; current 65.0407 draft row and charging premises are not promoted. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgCA package bytes as found; one-thread selftest 256; no file writes",
+  "reopen_if": "ledger appendix repair, authoritative staging check, or owner/organizer acceptance ruling arrives"
+}

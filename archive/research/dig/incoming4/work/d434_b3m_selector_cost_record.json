@@ -1,0 +1,23 @@
+{
+  "id": "D434-B3M-SELECTOR-COST-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "fixed D431 ExtraTrees selector structural cost",
+  "question": "What is the exact tree-path lower bound of the nonlinear B3M predictor before feature extraction and judge charging?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "The fixed 256-tree depth-6 D431 forest has 25,604 total nodes and 25,348 non-root structural nodes. Across 60 fresh D432/D433 rows it visits 1,394..1,536 non-root nodes per prediction (mean 1,495.3166666667), plus 256 accumulator updates and 256 feature bits whose extraction is separate. This is an exact structural lower bound only; safe score gain remains 0.",
+  "source": "our workflow: D434 preregistered selector cost audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D434_b3m_selector_cost_audit.md; research/retest/t2/PREREG_D434_SELECTOR_COST.md; research/retest/t2/D434_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic single-worker model audit",
+  "notes": "Selection charge, feature extraction implementation, and judge acceptance remain open. No package/stage/filing/submission.",
+  "held_fixed": "D431 model and PR858 no-transfer rule",
+  "reopen_if": "Compact fixed predicate or charged compiled selector is supplied"
+}

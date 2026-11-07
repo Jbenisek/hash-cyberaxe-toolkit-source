@@ -1,0 +1,23 @@
+{
+  "id": "D425-GRID-COMBOS-1014-UPDATE",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "PR858 grid-combination inventory update",
+  "question": "Which current live lever pairs and triples remain untested, and do any have a claimable score under T + max(0,M-20)?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "The 10-14 inventory covers the nontrivial untested pairs/triples for all eight boards. No pair receives claimable gain: R37/R38 lack a common-base shipped generator, SHA3 generated kernels and restart ledgers are open, and B3M stream/replica/one-message combinations require organizer output and liveness rulings. The only new owned run in this phase is D424 BLAKE3-r3 rho self-test RSS, a component measurement rather than a combination.",
+  "source": "our workflow: D425 grid combinations update",
+  "own_test": true,
+  "evidence": "research/sol_answer_GRID_COMBOS_1014.md; research/LEVERS.md; research/memtriage/SUMMARY.md; research/sol_answer_D424_blake3_r3_rho_selftest_rss.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "UNKNOWN (arithmetic/read-only inventory; no new process)",
+  "notes": "Exact arithmetic and source/blocker reconciliation only. Conditional proxies are labelled in the answer and are not filing scores. No package, staging, filing, or submission.",
+  "held_fixed": "PR858 memory rule, current board ledgers, D321/D342/D346/D405/D424 evidence",
+  "reopen_if": "A common-base shipped implementation, generated kernel, or organizer memory/output ruling becomes available"
+}

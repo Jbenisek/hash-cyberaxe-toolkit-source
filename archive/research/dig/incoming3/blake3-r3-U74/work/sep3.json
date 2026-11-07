@@ -1,0 +1,44 @@
+{
+ "logN": 22,
+ "seed": 777,
+ "selfcheck": "50/50",
+ "selfcheck_r7": true,
+ "T1 xor": {
+  "max_bias": 0.0007064342498779297,
+  "bit": 15,
+  "below_0.45": 0,
+  "sigma": 0.000244140625
+ },
+ "T2 add": {
+  "max_bias": 0.0006098747253417969,
+  "bit": 8,
+  "below_0.45": 0,
+  "sigma": 0.000244140625
+ },
+ "T2 add word==0 max frac": 0.0,
+ "T3 word-pairs": {
+  "n_per_cell": 65536,
+  "worst": [
+   0.0077056884765625,
+   "Lw6xRw5",
+   82
+  ],
+  "flagged": 0,
+  "confirmed": [],
+  "zthr": 5.883020140604877
+ },
+ "T4 bit-pairs": {
+  "n_per_cell": 16384,
+  "worst": [
+   0.01776123046875,
+   "L2.7xR2.7",
+   239
+  ],
+  "flagged": 0,
+  "confirmed_count": 0,
+  "cells_with_confirmed": 0,
+  "max_confirmed_bits_in_one_cell": 0,
+  "examples": [],
+  "zthr": 6.336805458528942
+ }
+}

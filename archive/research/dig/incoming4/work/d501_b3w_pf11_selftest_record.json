@@ -1,0 +1,23 @@
+{
+  "id": "D501-B3M-B3W-PF11-PREFILE-SELFTEST-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "distinct B3W-pf11 package prefile and shipped self-test",
+  "question": "Does the distinct pkgB3W_pf11 package pass its exact ledger and shipped self-test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Prefile ALL PASS; N=53233506092972185742; time_log2=56.7808; shipped frontline.py selftest exits 0 with ok=true, zero mismatches and zero halts in both full contexts.",
+  "source": "our workflow: D501 read-only pkgB3W_pf11 audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D501_b3w_pf11_selftest.md; research/tools/build_pkg/scratch/pkgB3W_pf11/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgB3W_pf11/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package-specific mechanics/ledger confirmation only; heuristic rate and dependence premises remain. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgB3W_pf11 package bytes as found; one-thread prefile and selftest; no file writes",
+  "reopen_if": "package/source changes or a new ledger/self-test artifact arrives"
+}

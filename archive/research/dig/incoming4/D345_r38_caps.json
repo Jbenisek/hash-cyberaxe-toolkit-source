@@ -1,0 +1,20 @@
+{
+  "id": "D345-R38-SOLVER-CAP-PHASE1",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "solver-cap phase-1 RSS",
+  "question": "Do the completed r38 CaDiCaL/Kissat cap runs establish a lower preprocessing memory bound?",
+  "labels": ["N", "Z"],
+  "status": "SAMPLED",
+  "number": "capC 2^27.29059, capCA 2^26.92049, capK 2^27.46614; all capped solves timed out",
+  "source": "our workflow: r38 solver-cap sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D345_r38_solver_cap_phase1.md; research/memcomp/sha256-r38/capC.err; research/memcomp/sha256-r38/capCA.err; research/memcomp/sha256-r38/capK.err",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Finite RSS measurements only. Exit 10 means timeout; capCP and the later caps3 phase remain live/incomplete. No score transfer.",
+  "peak_mem": "27.46614 MEASURED max of completed solver runs"
+}

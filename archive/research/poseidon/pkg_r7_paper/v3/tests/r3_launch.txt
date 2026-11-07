@@ -1,0 +1,4 @@
+build rc=0 warning_lines=0
+   text	   data	    bss	    dec	    hex	filename
+ 398756	     24	604856380	605255160	241375f8	single_r3
+bc156914b75d65065769d300ffdbac501b1fe97b78989a437518035128b3fd87  single_r3

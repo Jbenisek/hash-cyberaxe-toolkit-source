@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.ADDR addressing arithmetic",
+ "question": "exact value or degree as used",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "rule: 1 address op per load/store -> 4,660,652,984 ops (4.53%); inside the inner butterfly loop 2 of the 9 control ops are the addresses of x[t], x[t+half]; layout_index shifts/masks counted inside control",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "ld+st from the types line (each charged one address op). | universe cell poseidon-r1|MACHINE.ADDR|MACHINE|Q1",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "itemised instrumentation of control by cause"
+}

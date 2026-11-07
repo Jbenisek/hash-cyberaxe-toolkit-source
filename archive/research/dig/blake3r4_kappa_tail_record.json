@@ -1,0 +1,21 @@
+{
+  "id": "B3R4-KAPPA-TAIL-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "kappa / tail",
+  "question": "What do the exact kappa sweep and a relaxed 3e-3 table-tail premise cost?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "kappa 10: time_log2 125.34461, P_lower 0.39015; tail=3e-3 conditional: Tp19, 125.3079816261, P_lower 0.3904443",
+  "source": "research/blake3_r4/b4/pkg/blake3/experiments/bsrho.py --sweep and local TAIL_LOG2 override",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_kappa_tail_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.00886,
+  "peak_mem": "ledger unchanged; tail row conditional",
+  "notes": "Kappa sweep is exact local arithmetic. Tail=3e-3 row is conditional on a relaxed premise and not a filing claim; no package/stage/filing/submission.",
+  "potential_bits": 0.027,
+  "prior": 0.5
+}

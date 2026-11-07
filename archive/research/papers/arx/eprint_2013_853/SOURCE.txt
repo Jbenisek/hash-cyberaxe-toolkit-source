@@ -1,0 +1,1 @@
+2013/853	Automatic Search for Differential Trails in ARX Ciphers	s2	https://orbilu.uni.lu/bitstream/10993/17183/1/automatic-search-arx-trails.pdf

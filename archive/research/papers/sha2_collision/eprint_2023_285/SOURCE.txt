@@ -1,0 +1,1 @@
+2023/285	New Records in Collision Attacks on RIPEMD-160 and SHA-256	owner_download	https://eprint.iacr.org/2023/285.pdf

@@ -1,0 +1,121 @@
+backward analysis, chi38, rows 19..19. Words' modular differences are the characteristic's signed cells.
+Model for X = dSigma + dBool: the free bits of the three input words are uniform; bits fixed by cells (values, signs) are used; two-bit and '+' conditions are not applied.
+
+== row 19 ==
+  chi: dE19 01808000 dA19 00000000 dW19 00000000 dE15 fffff880 dA15 01808000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E18) + dCH(E18,E17,E16): 18 values over 6 free bits (EXACT enumeration)
+      X = 00000780  Pr 0.125   <- needed by the characteristic
+      X = 00000880  Pr 0.125
+      X = 00000770  Pr 0.0625
+      X = 00000790  Pr 0.0625
+      X = 00000870  Pr 0.0625
+      X = 00000890  Pr 0.0625
+      X = 00040780  Pr 0.0625
+      X = 00040880  Pr 0.0625
+    needed X = 00000780 : Pr 0.125 (PROVED under the model)
+  words of row 19 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00000780 (Pr 0.125):
+    W19 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+    E15 needs modular difference fffff880
+    signed patterns of fffff880 with weight <= 6: 15 (probability mass 0.9375000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ====================u===n=======  xor 00000880  w  2  Pr 2^-2   <- characteristic
+      ====================u==nu=======  xor 00000980  w  3  Pr 2^-3
+      ===================un===n=======  xor 00001880  w  3  Pr 2^-3
+      =====================uuuu=======  xor 00000780  w  4  Pr 2^-4
+      ====================u=nuu=======  xor 00000b80  w  4  Pr 2^-4
+      ===================un==nu=======  xor 00001980  w  4  Pr 2^-4
+      ==================unn===n=======  xor 00003880  w  4  Pr 2^-4
+      ====================unuuu=======  xor 00000f80  w  5  Pr 2^-5
+      ===================un=nuu=======  xor 00001b80  w  5  Pr 2^-5
+      ==================unn==nu=======  xor 00003980  w  5  Pr 2^-5
+      =================unnn===n=======  xor 00007880  w  5  Pr 2^-5
+      ===================unnuuu=======  xor 00001f80  w  6  Pr 2^-6
+      ... 3 more
+   X = 00000880 (Pr 0.125):
+    W19 needs modular difference ffffff00
+    signed patterns of ffffff00 with weight <= 6: 6 (probability mass 0.9843750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =======================u========  xor 00000100  w  1  Pr 2^-1
+      ======================un========  xor 00000300  w  2  Pr 2^-2
+      =====================unn========  xor 00000700  w  3  Pr 2^-3
+      ====================unnn========  xor 00000f00  w  4  Pr 2^-4
+      ===================unnnn========  xor 00001f00  w  5  Pr 2^-5
+      ==================unnnnn========  xor 00003f00  w  6  Pr 2^-6
+    E15 needs modular difference fffff780
+    signed patterns of fffff780 with weight <= 6: 16 (probability mass 0.9218750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ====================u===u=======  xor 00000880  w  2  Pr 2^-2
+      ====================u==un=======  xor 00000980  w  3  Pr 2^-3
+      ===================un===u=======  xor 00001880  w  3  Pr 2^-3
+      ====================u=unn=======  xor 00000b80  w  4  Pr 2^-4
+      ===================un==un=======  xor 00001980  w  4  Pr 2^-4
+      ==================unn===u=======  xor 00003880  w  4  Pr 2^-4
+      ====================uunnn=======  xor 00000f80  w  5  Pr 2^-5
+      ===================u=nnnn=======  xor 00001780  w  5  Pr 2^-5
+      ===================un=unn=======  xor 00001b80  w  5  Pr 2^-5
+      ==================unn==un=======  xor 00003980  w  5  Pr 2^-5
+      =================unnn===u=======  xor 00007880  w  5  Pr 2^-5
+      ===================ununnn=======  xor 00001f80  w  6  Pr 2^-6
+      ... 4 more
+   X = 00000770 (Pr 0.0625):
+    W19 needs modular difference 00000010
+    signed patterns of 00000010 with weight <= 6: 6 (probability mass 0.9843750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ===========================n====  xor 00000010  w  1  Pr 2^-1
+      ==========================nu====  xor 00000030  w  2  Pr 2^-2
+      =========================nuu====  xor 00000070  w  3  Pr 2^-3
+      ========================nuuu====  xor 000000f0  w  4  Pr 2^-4
+      =======================nuuuu====  xor 000001f0  w  5  Pr 2^-5
+      ======================nuuuuu====  xor 000003f0  w  6  Pr 2^-6
+    E15 needs modular difference fffff890
+    signed patterns of fffff890 with weight <= 6: 25 (probability mass 0.7656250000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ====================u===n==n====  xor 00000890  w  3  Pr 2^-3
+      ====================u===n=nu====  xor 000008b0  w  4  Pr 2^-4
+      ====================u==nu==n====  xor 00000990  w  4  Pr 2^-4
+      ===================un===n==n====  xor 00001890  w  4  Pr 2^-4
+      =====================uuuu==n====  xor 00000790  w  5  Pr 2^-5
+      ====================u===nnuu====  xor 000008f0  w  5  Pr 2^-5
+      ====================u==n=uuu====  xor 00000970  w  5  Pr 2^-5
+      ====================u==nu=nu====  xor 000009b0  w  5  Pr 2^-5
+      ====================u=nuu==n====  xor 00000b90  w  5  Pr 2^-5
+      ===================un===n=nu====  xor 000018b0  w  5  Pr 2^-5
+      ===================un==nu==n====  xor 00001990  w  5  Pr 2^-5
+      ==================unn===n==n====  xor 00003890  w  5  Pr 2^-5
+      ... 13 more
+    alternative signings of E_{t-4} (same XOR 00000880, 4 signings):
+      ====================u===u=======  mod fffff780  Pr[row holds] 0.125
+      ====================u===n=======  mod fffff880  Pr[row holds] 0.125   <- characteristic
+      ====================n===u=======  mod 00000780  Pr[row holds] 0
+      ====================n===n=======  mod 00000880  Pr[row holds] 0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A18) + dMAJ(A18,A17,A16): 2 values over 2 free bits (EXACT enumeration)
+      X = 00000000  Pr 0.5   <- needed by the characteristic
+      X = e0000000  Pr 0.5
+    needed X = 00000000 : Pr 0.5 (PROVED under the model)
+
+== message schedule: dW_t = ds1(W_{t-2}) + dW_{t-7} + ds0(W_{t-15}) + dW_{t-16} ==
+  base words W0..W15: modular difference = published y - x (held by construction); sigma terms constant when the word is fixed, or in an F-set of that sigma
+  W16: dW = e0000000 PROVED +dW9(e0000000); characteristic e0000000 (agrees)
+  W17: dW = 00000000 PROVED +ds1(W15)=fcfeed6a[fixed] +dW10(03011296); characteristic 00000000 (agrees)
+  W18: characteristic 00000000 = +ds1(W16)[value-dependent, dW16=e0000000] +dW11(fff7ec00) ; requires s1(W16 + e0000000) - s1(W16) = 00081400
+  W19: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W20: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W21: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W22: dW = 00000000 PROVED +dW15(fc400800) +ds0(W7)=03bff800[F-set]; characteristic 00000000 (agrees)
+  W23: characteristic fe7f8000 = +dW16(e0000000) +ds0(W8)[value-dependent, dW8=fbc00800] +dW7(20000000) ; requires s0(W8 + fbc00800) - s0(W8) = fe7f8000
+  W24: dW = 00000000 PROVED +ds0(W9)=043ff800[fixed] +dW8(fbc00800); characteristic 00000000 (agrees)
+  W25: characteristic 20000000 = +ds1(W23)[value-dependent, dW23=fe7f8000] +ds0(W10)=efffa0d0[fixed] +dW9(e0000000) ; requires s1(W23 + fe7f8000) - s1(W23) = 50005f30
+  W26: dW = 00000000 PROVED +ds0(W11)=fcfeed6a[fixed] +dW10(03011296); characteristic 00000000 (agrees)
+  W27: characteristic 00000000 = +ds1(W25)[value-dependent, dW25=20000000] +dW11(fff7ec00) ; requires s1(W25 + 20000000) - s1(W25) = 00081400
+  W28: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W29: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W30: dW = 00000000 PROVED +dW23(fe7f8000) +ds0(W15)=01808000[fixed]; characteristic 00000000 (agrees)
+  W31: characteristic 00000000 = +ds0(W16)[value-dependent, dW16=e0000000] +dW15(fc400800) ; requires s0(W16 + e0000000) - s0(W16) = 03bff800
+  W32: dW = 00000000 PROVED +dW25(20000000) +dW16(e0000000); characteristic 00000000 (agrees)
+  W33: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W34: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W35: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W36: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W37: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+
+real	0m0.108s
+user	0m0.003s
+sys	0m0.009s

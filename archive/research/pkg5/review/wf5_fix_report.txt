@@ -1,0 +1,54 @@
+**pkg5 after review round 1: all 27 findings applied; the claim stays at 99.4.** Nothing was staged or submitted, no yukon command was run, and `review\`, pkg4 and `backups\` are untouched.
+
+**Findings (in the order given)**
+1. applied: now "0.0402% of it", and it adds up with 0.999598.
+2. applied: `tools\rule_share.c` + `rule_share.sh` → `evidence\rule_share_20261006.txt`. My rerun gives the reviewer's lines exactly. It is now in H3 (Section 7), Section 10, H3's extrapolation and the note, without the "differences" qualifier. The "20 standard deviations" is not quoted, because I could not reproduce it.
+3. applied: "five conditions that keep 1.000000 … to six decimals. Two of them hold for every counted solution; the other three are violated"; "all" is now taken from the RULE_A_ALL line only.
+4. applied: H3 cites 6.5 (proof:598-811); H1 cites 6.3 and 6.4.
+5. applied: "about 2^0.97" and "about 0.97 bits"; the build stops if the two differ.
+6. same as 1.
+7. applied: 4.121015 and 8.748193; the build checks that they reproduce 99.37282.
+8. applied: "the total of Section 8 is below 2^(122.39 - log2 f)" for f from 1 to 2^23; both ends are checked in `derive()`.
+9. applied, with different wording. The suggested "whose first-call count is zero" is not established for sampled outcomes whose estimate is zero, so it now says "wherever its value there is not zero the first-call count is zero".
+10. applied: abstract, 6.3, restriction 3 and the note now say a batch is dropped, not a trial.
+11. applied: "of rule A" added in the field meaning and the restriction.
+12. applied: both columns come from the exact products (10.25 / 10.25; 5,138.0625 / 27.5625).
+13. applied: empty line before "## 10."; the build now always inserts it.
+14. applied in the program's opening comment and the manifest. The owner's confirmation is still open; `HEURISTIC_EXPERIMENTS.md` asks only for the standard library and determinism.
+15. applied: `VERSION_REVIEW` and a new proof paragraph say who reviewed what, and that the text after this round is unreviewed.
+16. applied: about 0.104 of the seeds, about 27 of 256 with a standard deviation of about 5, "no test of H3".
+17. same as 14.
+18. applied in Section 10, Limits and the note: 0.036% in the 30 betas the rule was read from, 1.25% in the nine added later. It is not in `claim.json`, because H1's extrapolation is at 4,094 of 4,096 characters.
+19. applied: "a solver found", "if these answers are right".
+20. applied: `tools\rule_a_sat2.py`, rerun by me rather than the main session. cadical and cryptominisat5 each give 247 without and 40 with a violating solution, equal to kissat for all 287. The text says three solvers, two formulas, no certificate.
+21. applied: `tools\rule_share_seeds.py`, rerun by me with 4 workers. 8,192 sets, per-set share 0.9308 to 1.0746 times 2^-6, batches at most 0.1112, 33,504 lanes compared with 0 wrong. The reviewer's check of the three extreme sets was not rerun and is not quoted.
+22. applied: the heaviest-beta sentence (47% of the count) and a table of the 40 dropped outcomes.
+23. applied: evidence ids as in 4, and "No measurement tests rule A together with R = 0." (limitations at 4,089 characters).
+24. same as 1 and 5.
+25. same as 13.
+26. same as 11.
+27. applied: "the compiled calculator in its present form, which was run and not built again"; the hash is dropped.
+
+**Final figures**
+- time_log2 99.4, total below 2^99.39, factor 2^23, 2^104 trials, charge 17.4.
+- Count with rule A 29,965,882; all solutions 29,977,922; 12,039.8125 left out.
+- Layout of 6.4, 24 samples of 2^30 trials: trial share 0.999565 to 1.000452 times 2^-6; batch share 0.103535 to 0.104059 against the budget 0.125 (factor 1.201).
+- The 24 batch counts vary more than binomial counts would (chi-square 1,073 on 23; largest 0.50% above smallest). This is stated in the proof and in H3's limitations.
+- Long self-test rerun for the new program hash: 16,800,000 of 16,800,000 lanes right, 261,798 lanes pass rule A.
+
+**Validation (final state)**
+- `selftest_pkg5.py`: all steps hold; `check_pkg5.py` 83 ok; `fmt_pkg5.py` nothing wrong; text scan 0 findings; `--check` shows no drift.
+- `validate_pkg5.sh check tests intake-ready`: mechanically_valid, 176 tests OK (5 skipped), both experiments 256 of 256 with identical replay, exit status 0. Judge evidence is 244,946 bytes.
+- SHA-256 `proof.md`: 9d1faa4128302e361232ba60596556d24dd10d44be82b769fcf219edebf163ff
+- SHA-256 `claim.json`: 745d060a09787bd9663054872b1c0e57b22dadd550a9a607584aa0e790c8fe57
+- SHA-256 `halfsearch.py`: a07cf2692118690fdee98288b91151a34e40012f8055b5a8cfc7dafeea25edc1
+
+**Not established**
+- The text after this round has not been reviewed, and the main session has not itself rerun the three reviewer programs.
+- The owner has not confirmed that the organizer allows `compress2` in the experiment program.
+- No certificate exists for the 247 "no solution" answers, and both formulas come from the same model.
+- H3: only samples of runs were measured, not whole runs; seed sets rarer than about 3.6 * 10^-4 are not excluded; the cause of the batch-count spread was not examined.
+- Rule A together with R = 0 on real messages; the model below about 2^-32; betas with k above 14.
+- The WSL mirror `~/hashsmash/hash-smash` now holds the pkg5 candidate; `research\validate_track.sh blake3-r2 check` restores the live one.
+
+Everything is in `./research/pkg5`; `FILE_STEPS.md` there has a new section for this round.

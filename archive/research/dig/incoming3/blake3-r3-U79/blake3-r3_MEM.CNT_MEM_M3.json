@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "counters and working words",
+ "question": "M3 score-optimal point for the counters",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Memory term is 0 for any total up to 2^20; the counters (2,048 B) are 0.2 percent of the budget, so their size has no score-optimal interior point. Their only effect is on the headroom: 544 B saved would let 15 more instructions fit, i.e. nothing.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out",
+ "notes": "universe cell blake3-r3|MEM.CNT|MEM|M3. Ledger arithmetic.",
+ "held_fixed": "table and code as filed",
+ "reopen_if": "none",
+ "gain_basis": "S"
+}

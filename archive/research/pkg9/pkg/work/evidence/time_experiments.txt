@@ -1,0 +1,3 @@
+PROGRAM sha256 da24853f53b3be12b0c8e343a2b39e4f4e135a6cf5fe992c2a569be2ed8d3324; python -B work/tools/time_experiments.py; source 64470 bytes of 65536 allowed
+half-collision: 256 seeds, 0.0 s (limit 20 s in the organizer's container, one processor), 73651 bytes of output (limit 2097152)
+residual-search: 256 seeds, 1.4 s (limit 20 s in the organizer's container, one processor), 121750 bytes of output (limit 2097152)

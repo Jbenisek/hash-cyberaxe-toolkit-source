@@ -1,0 +1,23 @@
+{
+  "id": "D370-SHA3R5-CONNECTOR-KILL",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "E stage 1 affine connector separability",
+  "question": "Does the constant-aware affine connector retain DF >= 33 on the best Keccak[800] trails?",
+  "labels": ["C", "Z"],
+  "status": "KILLED",
+  "number": "Own finite audit: real SHA3 control 10/400 consistent (DF 45-60); six best Keccak[800] trails 0/3600 consistent (600 attempts each for cores 224,2359,310,3166,437,760). Rank-only DF is 0-9; no DF>=33 survivor in the tested connector model.",
+  "source": "our owned SHA3-r5 pre_sha3_1 connector sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D370_sha3r5_connector_kill.md; research/retest/pre_sha3_1/RESULT.md; research/retest/pre_sha3_1/df2_224.txt; research/retest/pre_sha3_1/df2_2359.txt; research/retest/pre_sha3_1/df2_310.txt; research/retest/pre_sha3_1/df2_3166.txt; research/retest/pre_sha3_1/df2_437.txt; research/retest/pre_sha3_1/df2_760.txt; research/retest/pre_sha3_1/c_df.py; research/retest/pre_sha3_1/c_df2.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0,
+  "gain_basis": "T",
+  "notes": "Kills only the tested affine/constant-aware separable connector model. Nonlinear degree-2, SAT/SMT, lower-touch beta1, non-minimal w1, and other round constants remain open. No package, staging, filing, or submission.",
+  "held_fixed": "Keccak[800] r5 connector setup, six best unrestricted-backward trails, RC0=1, 600 attempts per trail",
+  "reopen_if": "a new connector model changes the linearisation, touched-row set, or constant treatment",
+  "supersedes": ["R5-E1"],
+  "peak_mem": "UNKNOWN"
+}

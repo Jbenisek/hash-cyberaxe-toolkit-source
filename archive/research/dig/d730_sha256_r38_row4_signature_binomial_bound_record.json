@@ -1,0 +1,23 @@
+{
+  "id": "D730-SHA256-R38-ROW4-SIGNATURE-CONDITIONAL-BOUND-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 15,
+  "object": "SHA-256-r38 row-4 signature conditional zero-success bound",
+  "question": "What finite conditional upper bound follows from the three independent zero-success signature controls?",
+  "labels": ["D", "X", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "Under an explicitly hypothetical iid common-split law, 3*2^20 independent signature candidates with zero successes give exact one-sided 95% upper p=9.523171892178439e-7, i.e. 20.00205449078831 bits; seed0's 4604 successes are excluded.",
+  "source": "our workflow: D730 conditional binomial audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D730_sha256_r38_row4_signature_binomial_bound.md; research/sol_answer_D727_sha256_r38_row4_signature_aggregate.md; research/sol_answer_D729_sha256_r38_c2_aggregate_refresh.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.1,
+  "gain_basis": "D",
+  "notes": "Conditional statistical bound only; fixed split controls are not proved iid under the production law, so no split transfer, global rate, charged score, package, staging, filing, or submission credit.",
+  "held_fixed": "three independent row4 signature controls and their exact zero-success counts",
+  "reopen_if": "a production-law split-transfer or random-split independence proof"
+}

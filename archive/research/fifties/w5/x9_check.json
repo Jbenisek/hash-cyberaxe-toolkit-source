@@ -1,0 +1,29 @@
+{
+ "trials": 2000,
+ "w5_hit": 2000,
+ "outer_words_changed": [
+  "ow[5]=X9 only"
+ ],
+ "derived_values_changed": [
+  "v_C0_b1",
+  "v_D3_d1",
+  "v_K1_a1",
+  "v_K1_b1",
+  "v_K1_c1",
+  "v_K1_d1",
+  "v_S1",
+  "v_S10",
+  "v_S14",
+  "v_S2",
+  "v_S5",
+  "v_S6",
+  "v_S9",
+  "v_X14",
+  "v_X4",
+  "v_X9",
+  "v_w12",
+  "v_w2",
+  "v_w3",
+  "v_w5"
+ ]
+}

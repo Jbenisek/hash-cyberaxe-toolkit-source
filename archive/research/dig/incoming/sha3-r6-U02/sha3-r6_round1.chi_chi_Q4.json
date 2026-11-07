@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "alternatives to the leader's chi2 patch: z-subspaces affine through chi2/chi3, other lane pairs carrying z",
+ "question": "Q4 alternatives: largest subspace of the leader's 32 z-directions affine through chi2 and through chi3 (rank<=2 of linstruct3), and the other aligned lane pairs.",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "Through chi2 (exact, state-independent): 106 of 496 z-coordinate pairs conflict (adjacent in a chi2 row); exact maximum coordinate clique = 9 (j=0,2,...,16); random-greedy general subspaces (2,160 restarts) never beat dimension 9; check: 0.7863 = 390/496 pair-pass at 2 rounds on 512 bases, matches. Through chi3: 0 of 496 coordinate pairs pass on any of 512 bases (max clique 1 on all 512), and 0 of 809,024 (12,641 random z-space pairs x 64 bases) general pairs pass; 95% upper bound on a pass rate 3.7e-6. So the leader's z-space holds no rank-2 3-round structure (linstruct3's rank 2 lives in other directions). All 21 aligned same-column lane pairs are feasible with the same 128-equation recipe (cond rank 128; (11,16) 107), A2 footprint 22, O2P patch 499 for (4,14) vs 508-610 for the others.",
+ "evidence": "research/dig/incoming/sha3-r6-U02/work/t4_chi2_affine.py; research/dig/incoming/sha3-r6-U02/work/t4_chi2_affine_out.json; research/dig/incoming/sha3-r6-U02/work/t5_3round.py; research/dig/incoming/sha3-r6-U02/work/t5_out.txt; research/dig/incoming/sha3-r6-U02/work/t5b_general_pairs.py; research/dig/incoming/sha3-r6-U02/work/t5b_out.json; research/dig/incoming/sha3-r6-U02/work/t6_alt_pairs.py; research/dig/incoming/sha3-r6-U02/work/t6_alt_pairs_out.json",
+ "notes": "Universe cell sha3-r6|round1.chi|chi|Q4. Own Keccak (validated). The 9-dim chi2-affine z-subspace is a measured structure, not a priced saving: it would replace the state-dependent patch by fixed NOT patterns for those Gray bits only, and the leader's K=13 views already cheapen low bits (unpriced). Dimension 9 is a lower bound for general subspaces (greedy), exact for coordinate subsets. The 3-round result is for the leader's z-space only, not a proof about all 3-round structures; linstruct3 (research/sha3r6/linstruct3/RESULT.md) is the earlier agent run on other directions and was not re-run.",
+ "topic": "sha3-r6 chi2/chi3 affine alternatives"
+}

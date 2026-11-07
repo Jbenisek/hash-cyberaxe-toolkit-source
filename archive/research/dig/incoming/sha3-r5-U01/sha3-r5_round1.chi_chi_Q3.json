@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r5",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "row_i": 1,
+ "row_j": 1,
+ "object": "r5 round-1 chi connector freedom (final DF)",
+ "question": "What DF is left after M4, against the needed 33?",
+ "labels": [
+  "C"
+ ],
+ "status": "SAMPLED",
+ "number": "final DF = 1600 - rank(E_M after M4) = 33-53 (mean 42.9) over 158 accepted attempts; min 33 = the threshold (2 attempts at 33), none below; DF drop M3->M4 = 117-125 (mean 121.4). The atlas's 45-60 'typical' is not what this sample shows: 49 of 158 accepted attempts have DF >= 45.",
+ "evidence": "research/dig/incoming/sha3-r5-U01/work/conn_count.py; work/conn_k1,2,5,6,8,9,11 .json/.log; work/summ.txt",
+ "notes": "Universe cell sha3-r5|round1.chi|chi|Q3. Scope: 7 advice runs of the shipped constructor (R7 labels k=1,2,5,6,8,9,11; bprime candidate 0, its (c,j,DF) matches the proof table), up to 40 connector attempts each, 158 accepted attempts; instrumented copy of r5.py _attempt that only adds rank counters. Not the 50 historical R7 spaces (not persisted); a sample, not the full population. DF depends on the advice (per advice runs: 36-37, 41-44, 49-53). Not binding for cost: only 32 window dimensions are used.",
+ "topic": "sha3.r5.conn.r1.df"
+}

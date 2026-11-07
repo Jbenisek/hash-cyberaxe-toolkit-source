@@ -1,0 +1,44 @@
+r=2 line=0 m=195312
+trial 1 centre 1: gcd degree 0, charged 9007669888
+trial 2 centre 2: gcd degree 0, charged 9007669888
+trial 3 centre 3: gcd degree 0, charged 9007669888
+trial 4 centre 4: gcd degree 0, charged 9007669888
+trial 5 centre 5: gcd degree 0, charged 9007669888
+trial 6 centre 6: gcd degree 0, charged 9007669888
+trial 7 centre 7: gcd degree 1, charged 9007666666
+TRIALS 7
+  init (twiddle table)                     arith=       66511 other=      475873 total=      542384 peak=2097216
+  line setup                               arith=         391 other=        4519 total=        4910 peak=2097216
+  A: centre from coins                     arith=         105 other=        8407 total=        8512 peak=8347328
+  B: build g                               arith=    44948071 other=   963211788 total=  1008159859 peak=14638848
+  C: S^((p-1)/2) mod g                     arith=112922376522 other=177001592068 total=289923968590 peak=37624768
+  D: gcd(g, S^h - 1) (half-gcd)            arith= 18048856866 other= 45004836846 total= 63053693712 peak=37625152
+  E: root isolation                        arith=           2 other=        1111 total=        1113 peak=2097408
+  F: sqrt + map back                       arith=        3158 other=       41424 total=       44582 peak=2097216
+  G: verification (2 reference hashes)     arith=         516 other=        5676 total=        6192 peak=2097216
+  H: canonical encoding of the output      arith=           6 other=        5638 total=        5644 peak=2097216
+  I: report formatting, single write, exit arith=           0 other=     3384436 total=     3384436 peak=2097216
+TRIALROW 1 centre 1 degG 0 gcd 9007669888 total 50569446404
+TRIALROW 2 centre 2 degG 0 gcd 9007669888 total 50569397932
+TRIALROW 3 centre 3 degG 0 gcd 9007669888 total 50569397932
+TRIALROW 4 centre 4 degG 0 gcd 9007669888 total 50569397932
+TRIALROW 5 centre 5 degG 0 gcd 9007669888 total 50569397932
+TRIALROW 6 centre 6 degG 0 gcd 9007669888 total 50569397932
+TRIALROW 7 centre 7 degG 1 gcd 9007666666 total 50569446496
+TRIALROW 0 outside the trials (init, line setup, output encoding, report and write) total 3937374
+RECONCILE stages=353989819934 trials=353989819934 counters=353989819934 ok=1
+RESULT found=1 success=1 roots_degree=1
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=353989819934 total_arith=131016252148 heap_peak=37625152
+ARENA size=200000000 extent=200000000
+THREADS n=1 dispatches=0 chunks=0 woken=0 thread_control=0 split_extra=0 algorithmic_total=353989819934
+THREADMEM n=1 stack=16384 block=512 used=16896 image=1622016
+PEAKLIVE allocations=11 payload=37624448 headers=704
+TYPES add=45011092607 sub=43030965607 mul=41977318227 sqr=996875707 ld=54292000631 st=28152869458 ctl=139818549566 rnd=35 perm=710148096
+COLLISION nk1  0x2fb2b80624cd8c6aa12101f5de7978a156bb683af01221ce7517d16f0c73d31f
+COLLISION rho1 0x282368d948ee58f39e33a77de916f6e2ae74d11f007e3acf6f02565c4f792b8f
+COLLISION nk2  0x16a85b64e9558aafc17d84f880f5e8bbe677ce302d7c71c3fba47ed15cbda6c2
+COLLISION rho2 0x2e87bc1b8cab75727f36f0b476ecb50ca7fb944853bb83facb23c7baccbc10b3
+COLLISION digest 0x288b5d20155a56fc033023bee0ee7389c56565084d33ba52a41776c136a463ae
+COLLISION centre 0x3c6e7499477bf51bcb71b71988bdad467d73121d3dcabfdb6ff02af19aaa703c
+EXIT 0

@@ -1,0 +1,23 @@
+{
+  "id": "D521-BLAKE3-R2-HALFSEARCH-COPY-SWEEP-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgCA/pkgCB/pkgCD/pkgCE halfsearch copy identity and prefile sweep",
+  "question": "Are the CA/CB/CD/CE halfsearch variants distinct executables, and what current prefile defects remain?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "All four halfsearch.py files share SHA-256 710040147D4099E202353526372D30BAE7717F788053F54C27AAE0D8C64C7BD0; current claims are CA 65.0407, CB 64.8672, CD 64.7627, CE 64.4034. Every copy prefile is SOME FAIL only for missing executable ledger block and note internal label audit; all other listed checks pass. D520 selftest covers the shared executable, so no duplicate run was needed.",
+  "source": "our workflow: D521 read-only halfsearch copy/prefile sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D521_b3m_halfsearch_copy_sweep.md; research/sol_answer_D520_b3m_pkgca_audit.md; research/tools/build_pkg/scratch/pkgCA/pkg/blake3-r2/experiments/halfsearch.py; research/tools/build_pkg/scratch/pkgCB/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgCD/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgCE/pkg/blake3-r2/claim.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this sweep",
+  "notes": "Copy/claim identity only; D520 supplies the shared executable self-test. No score/package/stage/filing/submission.",
+  "held_fixed": "four current scratch package copies; byte identity by SHA-256; D520 selftest result",
+  "reopen_if": "a changed halfsearch.py or repaired ledger/note arrives"
+}

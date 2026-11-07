@@ -1,0 +1,22 @@
+{
+  "id": "D359-POSR1-TWOLEVEL-FETCH-AUDIT",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "two-level twiddle dynamic fetch audit",
+  "question": "How many shipped twiddle-table accesses occur in build_g plus the low-memory Newton/powering paths?",
+  "labels": ["N", "D", "S"],
+  "status": "COMPUTED",
+  "number": "Source-level count: 417307279 tw[] loads per recorded one-centre r1 schedule (build_g 161995; Newton 2352696; 238 powering steps 417145284)",
+  "source": "our research-only source audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D359_poseidon_r1_twiddle_fetch_audit.md; research/poseidon/count_twolevel_fetches.py; research/poseidon/orchard/lean_r1_mem/ntt.c; research/poseidon/orchard/lean_r1_mem/lean.c; research/poseidon/orchard/lean_r1_mem/line.c",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Exact under the stated source-loop model and recorded 238-step schedule. Does not price replacement multiplies/index/control/registers, compiler allocation, or rebuilt peak; no score or package credit.",
+  "held_fixed": "m=39062, amax=15, rows=3 plans, source loop bounds, build_g debug path disabled, 238 powering steps",
+  "reopen_if": "A rebuilt two-level implementation reports exact ledger, KAT, peak memory, and register/control accounting",
+  "peak_mem": "0 FREE arithmetic-only source model"
+}

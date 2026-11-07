@@ -1,0 +1,9 @@
+{"gpu_vs_cpu_cube_sums_equal": "13/13", "sec": 12.0}
+{"space": "U32", "round": 6, "dim": 30, "mode": "basis", "cubes": 4, "nonzero_digest_sums": 4, "nonzero_delta_sums": 4, "mean_delta_sum_bits": 134.0, "sec": 0.8}
+{"space": "U32", "round": 6, "dim": 30, "mode": "span", "cubes": 4, "nonzero_digest_sums": 4, "nonzero_delta_sums": 4, "mean_delta_sum_bits": 113.0, "sec": 0.8}
+{"space": "U32", "round": 6, "dim": 31, "mode": "basis", "cubes": 4, "nonzero_digest_sums": 4, "nonzero_delta_sums": 4, "mean_delta_sum_bits": 131.5, "sec": 1.2}
+{"space": "U32", "round": 6, "dim": 31, "mode": "span", "cubes": 4, "nonzero_digest_sums": 4, "nonzero_delta_sums": 4, "mean_delta_sum_bits": 131.0, "sec": 1.2}
+{"space": "U32", "round": 6, "dim": 32, "mode": "basis", "cubes": 4, "nonzero_digest_sums": 4, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 2.0}
+{"space": "U32", "round": 6, "dim": 32, "mode": "span", "cubes": 4, "nonzero_digest_sums": 4, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 2.0}
+{"space": "U32", "round": 6, "dim": 33, "mode": "basis", "cubes": 4, "nonzero_digest_sums": 0, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 3.7}
+{"space": "U32", "round": 6, "dim": 33, "mode": "span", "cubes": 4, "nonzero_digest_sums": 0, "nonzero_delta_sums": 0, "mean_delta_sum_bits": 0.0, "sec": 3.6}

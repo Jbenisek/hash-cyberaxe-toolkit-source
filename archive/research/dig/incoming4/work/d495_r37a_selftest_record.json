@@ -1,0 +1,23 @@
+{
+  "id": "D495-SHA256-R37-R37A-SELFTEST-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "bounded xtab self-test for R37a",
+  "question": "Do the R37a shipped xtab fibre, packed-address, presence, and direct-mask checks pass?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R37a xtab selftest exits 0: zero F7 violations, zero mismatches on 9556 fibre lanes/5882 good pairs and 8000 packed-u lanes, zero presence false negatives over 3000 random inputs, and zero direct-mask mismatches with lookup ops [5,6,6,6].",
+  "source": "our workflow: D495 read-only R37a xtab self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D495_r37a_selftest.md; research/tools/build_pkg/scratch/pkgR37a/pkg/sha256-r37/experiments/xtab.py; research/sol_answer_D307_r37a_prefile_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; D307's missing ledger recognition and internal D68 label remain. No score/package/stage/filing/submission.",
+  "held_fixed": "R37a scratch package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package is repaired or the experiment source changes"
+}

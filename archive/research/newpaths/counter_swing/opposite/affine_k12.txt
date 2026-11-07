@@ -1,0 +1,7 @@
+affine-guided enumeration, k = 12 (t < 2^12), 20000 outer steps
+  outer steps actually holding small-t cube members: 310 (0.0155); flagged by the affine solve: 270 (0.0135); both: 43
+  true hits 39855 (mean 1.993 per outer step, uniform prediction 2.000); found by enumeration 867 (recall 0.022)
+  null-space dimension when flagged: mean 6.79, min 5, max 8
+  exact evaluations of F (candidates) per found hit: 38.27; per outer step: 1.66; plus 22 evaluations + a 21-unknown GF(2) solve per outer step
+  cost per kept trial with 400 ops per outer step (GUESS), 14 ops per F evaluation, 200 ops for the solve (GUESS): 21488 ops -> time_log2 about 96.65 (rate loss from recall 5.52 bit is not a rate loss: missed hits are simply not used)
+  cost per kept trial with 700 ops per outer step (GUESS), 14 ops per F evaluation, 200 ops for the solve (GUESS): 28409 ops -> time_log2 about 97.05 (rate loss from recall 5.52 bit is not a rate loss: missed hits are simply not used)

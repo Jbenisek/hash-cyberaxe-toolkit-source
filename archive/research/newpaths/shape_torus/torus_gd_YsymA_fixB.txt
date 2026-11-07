@@ -1,0 +1,4 @@
+YsymA_fixB: 100 unknown words, 102 equations, freedom -2 words
+  guess-count histogram {6: 5, 7: 131, 8: 202, 9: 103, 10: 54, 11: 4, 12: 1}
+  best 6 guesses -> 8 checks; guesses ['C2.c2', 'C1.d2', 'K0.b2', 'K2.c1', 'C2.a2', 'D2.c1']
+  check equations ['D3:d2', 'C3:a2', 'D0:d1', 'D0:d2', 'K1:a2', 'K1:c2', 'D2:d1', 'K1:b1']

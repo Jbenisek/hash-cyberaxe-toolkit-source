@@ -1,0 +1,23 @@
+{
+  "id": "D565-BLAKE3-R2-PKG21S-HALFSEARCH-SELFTEST-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkg21s halfsearch selftest",
+  "question": "What finite executable evidence is available for pkg21s?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkg21s claim time_log2=71.7481; halfsearch.py SHA-256 C74E1738A501244800CADBA7085220D9038F73045E4940A96D4169B3D0750028. One-process selftest 256 exits 0: 256/256 automata, 16380 packed lanes with zero fail/bound_fail, 18 passes, max lane bound 36, 424 batch units, all 256/256 mask, CT, inverse-IP, J/E3, t0/c1, and counter0/flags11 checks true. Prefile SOME FAIL for absent ledger and non-known-good executable; no exact N or score credit.",
+  "source": "our workflow: D565 read-only pkg21s selftest audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D565_pkg21s_selftest.md; research/tools/build_pkg/scratch/pkg21s/pkg/blake3-r2/experiments/halfsearch.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; executable ledger and known-good registry defects remain. No package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; one process; no package writes",
+  "reopen_if": "executable ledger appendix, known-good registration, or organizer ruling"
+}

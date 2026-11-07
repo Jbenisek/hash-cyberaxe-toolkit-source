@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "algebraic degree alternatives: two-word cubes; algebraic solving not run",
+ "question": "Alternatives?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "12-bit cubes made of 6 low bits of each of two words ((8,9),(8,10),(8,12)), 6 bases (chance level 4): 1 round 234-256 always-zero, 2 rounds 2-6, 3 rounds 1-3. A direct algebraic collision attack (SAT / Groebner / linearisation) was NOT run",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_deg.py; research/blake3_r3/alt/exp_deg.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Only the cube-sum alternative is tested; the algebraic-solving alternative is untested (not closed).",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "a SAT/ANF solver run showing the 3-round collision system solvable below 2^125 operations",
+ "topic": "blake3-r3|ALT.ALGDEG|ALT|Q4"
+}

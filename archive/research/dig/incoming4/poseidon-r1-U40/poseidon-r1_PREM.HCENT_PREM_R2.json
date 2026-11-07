@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HCENT number of centres",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "two centres: 28.78006 bit, P >= 0.534 on the sampled bound (claim 0.53); one centre 27.78023; three 29.36497",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json c1..c3. | universe cell poseidon-r1|PREM.HCENT|PREM|R2",
+ "held_fixed": "fix ledger",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

@@ -1,0 +1,26 @@
+== empty (len 0, chunks 1)
+  #0   cv=IV        v12=0    v13=0 v14=0  v15=11
+== 1 byte (len 1, chunks 1)
+  #0   cv=IV        v12=0    v13=0 v14=1  v15=11
+== 64 bytes (len 64, chunks 1)
+  #0   cv=IV        v12=0    v13=0 v14=64 v15=11
+== 65 bytes (len 65, chunks 1)
+  #0   cv=IV        v12=0    v13=0 v14=64 v15=1 
+  #1   cv=chain#0   v12=0    v13=0 v14=1  v15=10
+== 1024 bytes (len 1024): distinct contexts [('IV', 0, 0, 64, 1), ('chain', 0, 0, 64, 0), ('chain', 0, 0, 64, 10)]
+== 1025 bytes (last chunk 1 byte) (len 1025): distinct contexts [('IV', 0, 0, 64, 1), ('chain', 0, 0, 64, 0), ('chain', 0, 0, 64, 2), ('IV', 1, 0, 1, 3), ('IV', 0, 0, 64, 12)]
+== 3 chunks, last chunk 64 bytes (len 2112): distinct contexts [('IV', 0, 0, 64, 1), ('chain', 0, 0, 64, 0), ('chain', 0, 0, 64, 2), ('IV', 1, 0, 64, 1), ('chain', 1, 0, 64, 0), ('chain', 1, 0, 64, 2), ('IV', 0, 0, 64, 4), ('IV', 2, 0, 64, 3), ('IV', 0, 0, 64, 12)]
+== 4 chunks, last chunk 700 bytes (len 3772): distinct contexts [('IV', 0, 0, 64, 1), ('chain', 0, 0, 64, 0), ('chain', 0, 0, 64, 2), ('IV', 1, 0, 64, 1), ('chain', 1, 0, 64, 0), ('chain', 1, 0, 64, 2), ('IV', 0, 0, 64, 4), ('IV', 2, 0, 64, 1), ('chain', 2, 0, 64, 0), ('chain', 2, 0, 64, 2), ('IV', 3, 0, 64, 1), ('chain', 3, 0, 64, 0), ('chain', 3, 0, 60, 2), ('IV', 0, 0, 64, 12)]
+== A (len 2098): distinct contexts [('IV', 0, 0, 64, 1), ('chain', 0, 0, 64, 0), ('chain', 0, 0, 64, 2), ('IV', 1, 0, 64, 1), ('chain', 1, 0, 64, 0), ('chain', 1, 0, 64, 2), ('IV', 0, 0, 64, 4), ('IV', 2, 0, 50, 3), ('IV', 0, 0, 64, 12)]
+== B (len 4096): distinct contexts [('IV', 0, 0, 64, 1), ('chain', 0, 0, 64, 0), ('chain', 0, 0, 64, 2), ('IV', 1, 0, 64, 1), ('chain', 1, 0, 64, 0), ('chain', 1, 0, 64, 2), ('IV', 0, 0, 64, 4), ('IV', 2, 0, 64, 1), ('chain', 2, 0, 64, 0), ('chain', 2, 0, 64, 2), ('IV', 3, 0, 64, 1), ('chain', 3, 0, 64, 0), ('chain', 3, 0, 64, 2), ('IV', 0, 0, 64, 12)]
+A root: cv=IV v14=64 v15=12 ; B root: cv=IV v14=64 v15=12
+root left halves equal: True
+A root right half == A chunk-2 CV (v12=2,v14=50,v15=3): True
+B root right half == B parent(2,3) CV (v12=0,v14=64,v15=4): True
+=> roots identical iff CV_leaf(A,t=2) == CV_parent(B,P23): inputs equal otherwise: True
+max chunk index 2251799813685247 = 2^51-1: True  v13 max 524287 = 2^19-1: True
+multi-block chunk: chained cv into last block depends on t: True  last-block (v12,v14,v15): 1 8 2
+single-block chunk at t=7: cv is IV: True  (v12,v14,v15): 7 40 3
+leaf: START bit set <=> cv is IV; parent: cv is IV  (all calls, 9 lengths): True
+block-shift (root chunk): A deciding call (0, 0, 64, 1) vs B deciding call (0, 0, 64, 0); later params equal: True
+block-shift (final chunk t=1): A deciding call (1, 0, 64, 1) vs B deciding call (1, 0, 64, 0); later params equal: True

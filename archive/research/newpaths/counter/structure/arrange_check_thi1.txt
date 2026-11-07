@@ -1,0 +1,18 @@
+part 2c: 30 outer steps x 40 trials = 1200 trials, seed 12, 0s
+  organizer last-chunk descriptor (IV, words, counter t, len 55/63, flags 3): 1200/1200
+  lengths 55 and 63: 1200/1200
+  B's bytes 55..63 zero (w14 = w15 = 0, top byte w13 = 0): 1200/1200
+  CV words 0,2,5,7 equal (organizer _compress, counter t, flags 3): 1200/1200
+  Y4 = prescribed member (both messages): 1200/1200
+  Y4 in the sub-class (Lemma Q2): 1200/1200
+  E1.d1 = prescribed value (both messages): 1200/1200
+  c1 in the T1 cube: 1200/1200
+  beta = b1 ^ b1' = 18b0e098 (forward): 1200/1200
+  eta = h1 ^ h1' = 830303cf (forward): 1200/1200
+  equal round-0 state X for A and B: 1200/1200
+  round-0 states S, X equal to the first trial of the same outer step: 1200/1200
+  message words w2..w15 equal to the first trial of the same outer step: 1200/1200
+  internal-word mismatches, construction vs forward trace (about 75 words per trial): 0
+  own compress vs organizer CV mismatches: 0
+  full CV equal (a full collision; expected 0): 0
+  counter t: zero 0, min 4299699459, max 8574393618, mean log2 32.54, fraction < 2^20 0.00000, < 2^31 0.000; v13 = 1 in all

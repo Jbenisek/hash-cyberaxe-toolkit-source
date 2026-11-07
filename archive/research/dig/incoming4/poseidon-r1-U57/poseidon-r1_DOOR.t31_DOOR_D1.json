@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t31 meet in the middle at a level boundary",
+ "question": "RELABEL re-ask of the door at r = 1",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "r=1: the R3-R4 pair set (equal lane 0 after R3) is a curve and the first partial round keeps equality on a hinge subset (LEVELS 4.6); P3.12: two-sided intersections capture only a small fraction of toy collisions",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/LEVELS.md 3rd_openai_workspace/luna3/P3_12_outsider.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "No own run at r=1. | universe cell poseidon-r1|DOOR.t31|DOOR|D1",
+ "held_fixed": "r=1",
+ "reopen_if": "a measured fraction"
+}

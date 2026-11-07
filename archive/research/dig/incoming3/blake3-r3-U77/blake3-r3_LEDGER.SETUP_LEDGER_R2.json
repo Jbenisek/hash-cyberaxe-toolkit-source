@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "setup, halt budgets (B batches, E2 events, 18,432 keys)",
+ "question": "R2 own recount of setup, slices, stage-2 and event terms",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Recounted from plan(256): slices ceil(B/2^48) x 100 = 1.7251e25 (B = 4.8556e37); stage 2: E2max x 300 = 1.5827e29 x 300 = 4.7482e31; events 18,432 x (700 + 3 x 18,432) = 1,032,118,272; init 2,000 charged (proof 3.3 itemises 1 + 287 + 25 + 336 = 649, which the entry rounds to below 800 and then charges 2,000). The four terms together are under 1e-8 of the ledger.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|LEDGER.SETUP|LEDGER|R2. Recount of the exact integers printed by rho.py --ledger.",
+ "held_fixed": "plan(256)",
+ "reopen_if": "a halt budget larger than the formula",
+ "gain_basis": "count"
+}

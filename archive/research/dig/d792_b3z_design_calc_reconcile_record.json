@@ -1,0 +1,22 @@
+{
+  "id": "D792-B3Z-DESIGN-CALC-RECONCILIATION-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3Z memory-cut design calculator",
+  "question": "Does the current owned design calculator reproduce the exact baseline and memory-cut ledger rows?",
+  "labels": ["C", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "Rerun reproduces T0 log2=62.43470984228273, C0 score=84.88595, C0+C1 score=84.43472, C4 delta=125010673699248026879 units and 0.065765 bits, and the arithmetic-only C9a+C9b row score=71.74916.",
+  "source": "owned B3Z design_calc.py",
+  "own_test": true,
+  "evidence": "research/memcomp/blake3-B3Z/design_calc.py; research/sol_answer_D792_b3z_design_calc_reconcile.md; research/sol_answer_D767_b3z_stream_replica_ledger.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "checked-in design calculator and exact integer event counts",
+  "notes": "Arithmetic only. Formula gate remains unpriced; streaming, replica cuts, organizer ruling, package/KAT, rulecheck and memory proof remain open. No package/stage/filing/submission.",
+  "reopen_if": "A full B3Z3 implementation or organizer ruling changes the design rows.",
+  "peak_mem": "UNKNOWN for any full-scale implementation"
+}

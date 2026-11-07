@@ -1,0 +1,7 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563
+per seed: 16 values of C0.d1 (0..7 and 1424461..1424468) x 8 of w5 (0..3, 2^32-4..2^32-1) x 16 of X2 (0..7, 2^32-8..2^32-1) = 2048 contexts, 268435456 trials; budget 1/32 = 0.031250; independent 0.026990
+seed 0: contexts 2048; trials with rule A share 2^-8.0024; batches entering 0.026211; outer steps min 0.025107 max 0.027296; contexts min 0.020881 max 0.031455; contexts above 1/32: 2; C0.d1 low 0.026138 high 0.026285
+seed 1: contexts 2048; trials with rule A share 2^-8.0001; batches entering 0.026256; outer steps min 0.025444 max 0.027186; contexts min 0.022430 max 0.031989; contexts above 1/32: 2; C0.d1 low 0.026103 high 0.026409
+seed 2: contexts 2048; trials with rule A share 2^-8.0019; batches entering 0.026093; outer steps min 0.024756 max 0.027397; contexts min 0.021308 max 0.031669; contexts above 1/32: 1; C0.d1 low 0.025918 high 0.026269
+seed 3: contexts 2048; trials with rule A share 2^-8.0023; batches entering 0.026122; outer steps min 0.024947 max 0.027126; contexts min 0.020454 max 0.031135; contexts above 1/32: 0; C0.d1 low 0.026086 high 0.026158
+ALL: seeds 4, contexts 8192, trials 1073741824 (2^30.00); rule A share of trials 2^-8.0017; batches entering 0.026171 against budget 0.031250; anchors 16384 of 16384 equal; 43 s

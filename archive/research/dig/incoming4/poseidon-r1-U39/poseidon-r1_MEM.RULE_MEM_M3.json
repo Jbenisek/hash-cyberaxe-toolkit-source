@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.RULE memory term max(0, log2 bytes - 20)",
+ "question": "time cost of shrinking",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "to reach the floor term 0.253 bit from 3.043 (gain 2.79 bit) the transform buffer (3,145,728 B) and tmp row must shrink ~7x: constant-memory scans are priced about 253 bits (P3.9, recomputed 589.3 log2 ops / 398.6 log2 bytes for the Macaulay route)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc3.py research/dig/incoming4/_scan_poseidon/calc3a.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Recomputed P3.9 Macaulay numbers in calc3.py (r=1: log2 N 194.655, log2 ops 589.296, log2 bytes 398.641 as in the report); this is a routing bound, not a schedule. | universe cell poseidon-r1|MEM.RULE|MEM|M3",
+ "held_fixed": "score rule as stated",
+ "reopen_if": "a smaller-transform schedule with measured time"
+}

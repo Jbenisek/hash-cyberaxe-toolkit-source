@@ -1,0 +1,22 @@
+{
+  "id": "S7-REGFILE-FINE-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "r7 fine register-file surface",
+  "question": "Does a finer register-pool scan improve the conditional r7 allocator point?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "KR=1188 plus six loop-state registers: BSTEP=44585, N=66625625964433671148101498949919536323538, upward time_log2=124.72370, 1038432 B, allocated KAT PASS.",
+  "source": "research/r7/s7ls/regfile_fine_scan.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_regfile_fine_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.01077,
+  "potential_bits": 0.12,
+  "prior": 0.3,
+  "gain_basis": "T",
+  "peak_mem": "1038432 B = 2^19.985975",
+  "notes": "Supersedes the coarse register-surface point; conditional allocator arithmetic only. Generated package, prefile and organizer register convention remain open. No package/stage/filing/submission."
+}

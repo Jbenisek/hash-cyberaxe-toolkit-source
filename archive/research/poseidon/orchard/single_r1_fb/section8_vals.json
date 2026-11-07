@@ -1,0 +1,6 @@
+{
+ "V5_DESC": "6,600 s (110 min) measured: x^p mod g 114 s, 22 compositions at about 300 s each, two gcds and the reductions modulo f about 10 s; peak memory 2.8 GB",
+ "TOTAL_DESC": "6,635 s (about 111 min, 1.9 h) measured, one core, pure Python with flint (BelowNormal priority on a shared machine)",
+ "VERIFY_SHORT": "two hours on one core in pure Python with flint",
+ "RUN_STATUS": "The complete run of the shipped verifier on the final data finished with all PASS lines in 6,635 s: deg gcd(g, x^(p^l) - x) = 20271 and deg gcd(g, x^p - x) = 2 (so the degree-l part has degree 20269), and the printed SHA-256 of f, u and R_0..R_14 mod f equal the tables of sec. 8.6.3. The team's compiled engine (C/CUDA, not part of the package) did the equivalent chain modulo f in 6.7 s on one RTX 3090; the referee time is therefore about two hours in pure Python, not minutes."
+}

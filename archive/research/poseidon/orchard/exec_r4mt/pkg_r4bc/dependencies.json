@@ -1,0 +1,12 @@
+[
+  {
+    "submissionId": "52120fad-9475-495c-9e21-46abfccba724",
+    "rationale": "0xshikhar's filed Orchard r=4 entry (40.49661). This entry adopts its single-trial single-thread (T=1) precommitted-centre schedule (proof.md section 10.1) and its pre-transformed in-place ring folding plus full static .bss memory placement (proof.md section 10.4, total footprint 245,382,600 bytes, log2 27.87046), applied to our own program and ledger.",
+    "evidence": "proof.md section 10.1 and section 10.4; submission-note paragraphs 1 and on memory."
+  },
+  {
+    "submissionId": "716c3818-9495-48a5-9798-d48bc218a155",
+    "rationale": "0xshikhar's filed Orchard r=5 entry. This entry adopts its stage-D degree-1-certifying truncated half-gcd (drop the Bezout cofactor accumulation and terminal transition matrix on the executed deg G = 1 trial), applied to our stage D as one half of the executed trial-2 half-gcd (199,114,398,130 operations).",
+    "evidence": "proof.md section 10.3; submission-note change 3."
+  }
+]

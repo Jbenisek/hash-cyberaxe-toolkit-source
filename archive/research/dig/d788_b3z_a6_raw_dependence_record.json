@@ -1,0 +1,22 @@
+{
+  "id": "D788-B3Z2-RAW-GATE-DEPENDENCE-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3Z2 A6 raw gate dependence",
+  "question": "Is the 30-bit xg_entry address a direct 9-bit function as claimed by A6?",
+  "labels": ["C", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact witnesses show dependence on bits 0..6 and 8..29 (29 of 30 bits); bit 7 alone is ignored. The raw 9-bit-function claim is false. D787's derived-key factorization does not remove the cost of computing equality and selected-bit fields.",
+  "source": "our workflow: D788 exact raw-gate witness correction",
+  "own_test": true,
+  "evidence": "research/retest/b3z_gate9/d788_raw_bit_dependence.py; research/sol_answer_D788_b3z_a6_correction.md; research/day_1014/b3z-gate/STATUS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "peak_mem": "not applicable; exact finite source audit",
+  "held_fixed": "frontline.py source by value; exact xg_entry precedence; all 30 raw index bits",
+  "notes": "Corrects the actionable interpretation of D787/A6. No package, score, stage, filing, or submission credit.",
+  "reopen_if": "A packed-lane implementation proves a charged formula schedule below the table-load baseline and passes same-output KATs."
+}

@@ -1,0 +1,428 @@
+######################################################################
+# FILE_STEPS.md
+# bytes 25013 -> 37181; CRLF 0 -> 0; trailing-newline True -> True; BOM False -> False
+--- prev/FILE_STEPS.md
++++ now/FILE_STEPS.md
+@@ -3,2 +3,2 @@
+-**NEWEST STATE: the section "Step FIX" at the end (after the three reviews, 23:50). The SHA-256 values just below
+-are those of the step TEXT and are void.**
++**NEWEST STATE: the section "Step FIX3" at the end (2026-10-07, the corrections of the Grok review and the text
++review). The SHA-256 values just below, and those in "Step FIX", are superseded by the ones in "Step FIX3".**
+@@ -151,0 +152,7 @@
++Items 1 to 5 are DISCHARGED in Step FIX3 (2026-10-07); see that section at the end for detail. Item 6 stands.
++CAUTION: the runs that discharge items 2 to 4 are NEW and are NOT yet cited in the package text. Section 10
++("What does not exist") and the limitations still say there is no graphics-card run for the sub-class or for
++rule A and no scaled-down run with a sub-class or a first-stage rule. Reconciling the package text with this new
++evidence was out of scope for Step FIX3 (which applied only the listed review corrections) and is left for the
++owner / a later step.
++
+@@ -153 +160,3 @@
+-   but their author.
++   but their author. -> DISCHARGED: `research\pkg7_evidence\textreview\REVIEW.md` and
++   `research\grok\work\job23_pkg7_review\ANSWER.md` reviewed the assembled text (the exact part incl. Lemmas Q, Q2,
++   L, A and parts of T2; the count; the cost; the whole text). Their findings are applied in Step FIX3.
+@@ -155,4 +164,12 @@
+-   with an E3 event); none exists.
+-3. A scaled-down end-to-end run with a sub-class and a first-stage rule; none exists.
+-4. A layout run in the ranges of the text (C0.d1 small and consecutive, w5 and X2 from 0).
+-5. The larger scaled-down job (task 5) and the returned server files were not evaluated for this text.
++   with an E3 event). -> DISCHARGED: `research\pkg7_evidence\gpu-subclass\GPU_SUBCLASS.md` (24 outer tuples of
++   2^40 real trials on sub-cube C15, mask 07ef8303 value 030c0303; the early test, E1 beta/tau/outcome and partial
++   E3 events, and the rule on h1 recorded per run, plus a model run).
++3. A scaled-down end-to-end run with a sub-class and a first-stage rule. -> DISCHARGED:
++   `research\pkg7_evidence\small\SMALL.md` (sets 34 and 41; collisions among the trials that passed the rule
++   against the exact prediction for exactly those trials; VOID TEST bad/bogus/lost 0).
++4. A layout run in the ranges of the text (C0.d1 small and consecutive, w5 and X2 from 0). -> DISCHARGED:
++   `research\pkg7_evidence\gpu-subclass\GPU_SUBCLASS.md` (the same runs enumerate X2 consecutively from a base
++   with every member in list order, in the two-level layout).
++5. The larger scaled-down job (task 5) and the returned server files were not evaluated for this text. ->
++   DISCHARGED: `research\pkg7_evidence\servereval\SERVER_EVAL.md` (task 4 and task 5 recomputed from the raw
++   files; every figure the text quotes reproduced).
+@@ -309,0 +327,117 @@
++
++## Step FIX3 (2026-10-07): the corrections of the Grok review and the text review, applied at the source
++
++State: DRAFT (`SUBMISSION_STATE = "draft"`, `claim.json` "draft"). Nothing staged, synced, filed or posted; no
++`yukon` command; no network; the GPU was not used by this step; `.key` not read; `tools\stage_pkg7.sh` was not
++run. The program is UNCHANGED (`cde9b827...5563`). The scalar 95.7, the factor 49,400,000, the counts and the
++program are unchanged by this step. The previous state (blake3-r2, the note, the two FROZEN files, `src\`,
++`tools\pkg7_text.py`, this file, and the step-FIX validation log) is kept in `work\fix3\prev\`.
++
++Sources: `research\grok\work\job23_pkg7_review\ANSWER.md` ("What to correct before filing" items 1 to 4) and
++`research\pkg7_evidence\textreview\REVIEW.md` (STYLE findings F2, F3, F4). Each figure was checked against Grok
++sections 2 and 3 before it was changed; none of Grok's figures was found wrong. All corrections were made at the
++source (`src\` templates and `tools\pkg7_text.py`), never in the built files, which were then rebuilt.
++
++### Changes (file -> rendered line -> old wording -> new wording)
++
++Grok item 1 (the factor and the absence of clustering are assumptions):
++- `src\claim.json`, H1 `extrapolation` (claim.json line 31), last sentence. OLD: "The extrapolation is from these
++  to the rate of the event over the real trials of a run." NEW: "The factor and the absence of clustering are
++  assumptions; the count is what the factor is set against, not a measurement of the trials, and none of these
++  measurements reaches the joint event (R = 0 and rule A) over the real trials of a run that H1 asks about."
++- `src\note.md`, "What is assumed" bullet (note line 138). OLD: "H1, H2 and H3 are assumptions. The factor
++  {{factor}} is not measured by any experiment." NEW: "H1, H2 and H3 are assumptions. Both parts of H1, the factor
++  {{factor}} and the absence of clustering of the good trials, are assumed; no experiment measures the factor, and
++  the count it is set against is not a measurement of the trials."
++
++Grok item 2 (four figures):
++- 2.6 -> 2.67 per batch. `tools\pkg7_text.py` token `charge_room`: `dn(..., 1)` -> `dn(..., 2)`. Exact slack
++  2.6728. proof.md line 1343: "...a reader may find uncounted, 2.67 per batch of seven trials."
++- the 0.0270 share with its cost. `tools\pkg7_text.py`: new token `indep_share_6` = 0.027025 (the unrounded
++  independent share); `src\proof_cost.md` main-loop sentence (proof.md ~line 1355). OLD: "a share of {{indep_share}}
++  of the batches would run stage 2 and a trial would cost {{expected}} operations on average". NEW: "a share of
++  {{indep_share_6}} of the batches, which rounds to {{indep_share}}, would run stage 2 and a trial would cost
++  {{expected}} operations on average". Renders "a share of 0.027025 ..., which rounds to 0.0270, ... cost 7.2367";
++  7.2367 is the cost at the unrounded share, as Grok section 3 states (at the rounded 0.0270 it is 7.2362).
++- 2^70.04 -> 2^70.03. `tools\pkg7_text.py` token `pass_expected`: `up(..., 2)` -> `near(..., 2)`. lN - 31.41 =
++  70.03199; nearest is 70.03 (Section 10 says counts with decimals are rounded to the nearest). proof.md line 1249;
++  the gap "more than 2^13.9" is unchanged.
++- clustering m 3.75 -> 3.74. `tools\pkg7_text.py` token `cluster_m`: computed from the unrounded expectation 1.876
++  -> computed from the printed, rounded expectation `dn(expected_good, 2)` = 1.87, so m is consistent with the
++  "1 - exp(-1.87 / m)" that the text prints. proof.md line 1301: "...the bound 0.39 would hold for m up to 3.74."
++  (At m = 3.74, 1 - exp(-1.87/3.74) - 0.003 = 0.3905 >= 0.39; at 3.75 it is 0.3896.)
++
++Grok item 3 (the register convention). `src\proof_search.md` (proof.md ~lines 1046-1052). OLD: "With that, the
++batch uses all 16 registers; a register file of 15 does not run it." NEW: "With that, the batch uses all 16
++registers, and 15 do not run it, under the program's convention that the result of an instruction may reuse a
++register whose source value is used for the last time on that same instruction; if instead every source stays live
++until its instruction finishes, the batch peaks at 17 registers, and the one extra word, spilled and loaded again
++inside the batch, costs far less than the margin already left between the budget and the charge."
++
++Grok item 4 (truncations and 1.1429):
++- opening paragraph. `src\proof_head.md` (proof.md line 52). OLD: "it is {{r_sub_int}} times 2^-128 for Y4 in the
++  sub-class ({{r_class_int}} for the whole class)." NEW: "it is {{r_sub}} times 2^-128 for Y4 in the sub-class
++  ({{r_class}} for the whole class)." Renders 185,377,197.55 and 162,266,763.66 for the truncated 185,377,197 and
++  162,266,763.
++- 18725/16384 -> 1.1429. `tools\pkg7_text.py` token `trial_share`: `dn(..., 4)` -> `near(..., 4)`. 18725/16384 =
++  1.142883; nearest is 1.1429. proof.md line 1261 and claim.json H3 scope: "a share of 1.1429 times 2^-8 of the
++  trials." NOTE on Grok section 3: Grok says 1.1428 (rounded down) keeps a paraphrased sufficient condition
++  ("share below 1.1428 x 2^-8") valid and that 1.1429 is the nearest four-decimal figure. The proof's actual
++  wording is a DESCRIPTION of the exact batch budget E ("fewer than E trials ..., a share of 1.1429 x 2^-8"); E is
++  exact, so the nearest value is accurate and does not weaken the condition. 1.1429 is therefore both what the task
++  directs and correct here; Grok is not wrong, its caution is about a paraphrase, not the proof text.
++- Section 11 item 12 (the same slip for the old ratio). `src\proof_evidence.md` (proof.md line 2077). OLD:
++  "...is 74,899 / 65,536 = 1.14287 rounded down; 1.1428 is the figure to four decimals." NEW: "...is
++  74,899 / 65,536 = 1.142868; to four decimals that rounds down to 1.1428, and the nearest four-decimal figure is
++  1.1429." The quoted passage "1.142 times 2^-5" is unchanged; fmt still finds all 27 Section-11 quotations.
++
++Text review F2/F3/F4:
++- F2. `src\proof_head.md` Lemma T2 (a) (proof.md line 410). OLD: "and it reads only constants, the eight words and
++  names of earlier lines." NEW: "and it reads only constants, the eight words (the eighth under the name Y4 in the
++  lines of round 1) and names of earlier lines." (REVIEW gives the clause set off with "--"; the document uses no
++  "--", so it is set in parentheses, the house style, with the reviewer's words unchanged.)
++- F3. `src\proof_search.md` Lemma A (c) (proof.md line 700). OLD: "...the shifts being shifts of the whole packed
++  word. Write y[i]..." NEW: "...the shifts being shifts of the whole packed word and each mask word holding the
++  printed value in every lane (6.5). Write y[i]..."
++- F4. `src\proof_head.md` "What Lemma T2 does not say" (proof.md line 508). OLD: "Eleven of the trial lines are
++  among those on which E3.h1 depends (the lines for X0, D0.d1, D0.c1, X10, C2.a1, C2.d1, C2.c1, C2.b1, Y2, Y14 and
++  E3.h1)." NEW: "Eleven of the trial lines are the line for E3.h1 and the ten it depends on (X0, D0.d1, D0.c1, X10,
++  C2.a1, C2.d1, C2.c1, C2.b1, Y2, Y14)."
++
++Task item 3 (credit sentence). `src\note.md` "Credit first" (note lines 8-9), one sentence added: "winglock,
++Th0rgal, 5kyguy and tekkac are named in the co-author field of this submission, for the contributions this note
++credits to them; no co-author is represented as having reviewed or endorsed the package."
++
++### Nothing else was changed, and what was NOT applied
++The scalar 95.7, the factor 49,400,000, the counts and the experiment program are untouched. `indep_share` (0.0270,
++still used in Section 10 against the measured shares) and the integer tokens `r_sub_int`/`r_class_int` (used in
++Section 7 and Section 12, where "times the factor" wants whole numbers) were left as they are. NOT applied, and why:
++(a) Grok section-3/section-5 STYLE points that are NOT in its items 1-4 (the note's early "Only one batch in 32",
++the "far inside the margin of 3.75" line, the opening-summary and claim-tension STYLE notes) and the SERVER_EVAL /
++textreview style suggestions (F1-F4 of SERVER_EVAL) -- out of scope, the task lists only Grok items 1-4 and
++textreview F2/F3/F4. (b) No change to Section 10's "What does not exist" or the limitations to reflect the new
++sub-class/rule/in-range runs (gpu-subclass, small) -- out of scope and flagged in the owed list above for the
++owner / a later step.
++
++### Checks run (this step)
++
++| check | result |
++| --- | --- |
++| `python -B tools\build_pkg7.py` (twice: build, then after validation) | written, then unchanged on re-run; time_log2 95.7, bound 2^95.6499 < 2^95.65 |
++| harness, own mirror `hash-smash-pkg7fix` (`wsl ... tools\validate_pkg7_fix.sh tests`) | `mechanically_valid`; unit tests 23 + 84 + 176 OK (5 skipped); intake with the mirror copy marked ready: both experiments passed, 256 of 256 each, replay identical; tries mean 382.1, max 1721; stage 2 entered 9 of 256; stage A 37+10, stage 2 105+30; `work\text\validation_log.txt` names the new proof.md (177436...) |
++| `python -B tools\fmt_pkg7.py` | RESULT: nothing wrong; longest restriction 994/1024, longest heuristic field 3006/4096 (H1 limitations); Section 11 27 of 27 quotations found; scalar 95.7 follows |
++| `python -B tools\text_scan_pkg7.py` | findings 0 (two pin-constant lines excepted, as before) |
++
++Not rerun (unchanged since Step FIX): the long self-test (program unchanged), the counts, any GPU run,
++`research\public_text_scan.py`. The Section-4 displays and Table C are unchanged (the edits are in prose), so
++`proof_lines_pkg7.py` and `lemma_a_text_pkg7.py` were not rerun; their `work\text\*.json` still match the program
++and the displays, and the build accepted them.
++
++### SHA-256 of the final files (also in FROZEN_fix.sha256 and FROZEN_fix_note.sha256, regenerated this step)
++
++    blake3-r2\proof.md                   177436221877ec724ac733392561c1a77e1ff7bc004add67138c146b655c22d6  (2,257 lines)
++    blake3-r2\claim.json                 bfbc61d8a80fe655a43d987fed2e91e25c28a97209a824c9cc231b82d55432cd
++    blake3-r2\experiments\manifest.json  3ba8bc765bcb2bbe3835ad78dac25f46f58875f90d647e7285c99d1edc5acff8  (unchanged)
++    blake3-r2\experiments\halfsearch.py  cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563  (unchanged)
++    blake3-r2\certificates\manifest.json a3c78779269ab224b0a36cc0cc075aaebdfb496a3a695bce1e743cf7bd45c4c8  (unchanged)
++    submission-note-r2.md                ef173f0e3ec28907f0d7070190c5103f690201469c621776959a4fa0c458e950
+######################################################################
+# FROZEN_fix.sha256
+# bytes 439 -> 439; CRLF 0 -> 0; trailing-newline True -> True; BOM False -> False
+--- prev/FROZEN_fix.sha256
++++ now/FROZEN_fix.sha256
+@@ -2 +2 @@
+-ee1141341e58d8a3528226ea0c1ded8d725554563c1a0f523c82d33aaf1a1921  ./claim.json
++bfbc61d8a80fe655a43d987fed2e91e25c28a97209a824c9cc231b82d55432cd  ./claim.json
+@@ -5 +5 @@
+-24d26f90f2ed282a47c94c256dccebad508a675457dedc06ec72d17c3f6a0d45  ./proof.md
++177436221877ec724ac733392561c1a77e1ff7bc004add67138c146b655c22d6  ./proof.md
+######################################################################
+# FROZEN_fix_note.sha256
+# bytes 88 -> 88; CRLF 0 -> 0; trailing-newline True -> True; BOM False -> False
+--- prev/FROZEN_fix_note.sha256
++++ now/FROZEN_fix_note.sha256
+@@ -1 +1 @@
+-b6961c7aae4d6c5aed6a3bd39a3cb174e574201c7514bfe978a96dcc1575ee7a *submission-note-r2.md
++ef173f0e3ec28907f0d7070190c5103f690201469c621776959a4fa0c458e950 *submission-note-r2.md
+######################################################################
+# blake3-r2\claim.json
+# bytes 16188 -> 16360; CRLF 0 -> 0; trailing-newline True -> True; BOM False -> False
+--- prev/blake3-r2\claim.json
++++ now/blake3-r2\claim.json
+@@ -31,2 +31,2 @@
+-      "extrapolation": "From a participant count, in integer arithmetic, of the rate of the sub-class under the seven-word model, that is of the number of solutions with Y4 in the sub-class of the seven-word system that determines R: for each value beta of an auxiliary difference of one of the two calls, every outcome of that call is enumerated, the other call is counted exactly for it, split by rule A, and the probability of the outcome is counted exactly. Over the 60 values of beta that have a part for the whole class the count is 185,377,197.55 times the uniform expectation (53 values and 317 outcomes with a part); 185,358,111.47 of it satisfies rule A; the claim uses 185,355,453.45, the sum over the 99 outcomes in which every solution satisfies rule A. The sub-class and the rule were proposed by another AI model (GPT Sol 6.1) with a counter of its own; its exact fractions for the totals, the rule masses, every value of beta and 3,243 integers on 1,081 outcomes (three per outcome) are equal to the participant's; the recount was made with its figures at hand, and the figure that the claim uses is the participant's alone. From checks of the counter: complete enumeration with 8-bit words including sub-classes and three-bit parities (6,805,032 integers, none different); two functions for the split by the rule that agree on 687 outcomes. From comparisons of the model with real trials at 32 bits in the loop order of this package, for the whole class and other rules: averaged over outer tuples, events of one call down to a probability of about 2^-40 agree with the model (listed E1 outcomes: 138 against 152.0 expected); in the order of entry c66f230d, 24 runs of 2^45 real trials on another machine: 692 against 690.78. From scaled-down end-to-end runs with 8-bit and 10-bit words in this loop order, without sub-class and rule: 470 collisions against 467.6 predicted in 436 runs (the first 92 runs were low, 56 against 74.8, and the later ones were made because of that), and in a larger job of 8,448 runs with expectations written down beforehand 8,108 against 8,313.6 (-2.25 standard deviations: 3.3 percent low with 8-bit words, level with 10-bit words); and in the order of entry c66f230d: 345 against 335.76 in a plan fixed beforehand. All in proof.md Section 10. The extrapolation is from these to the rate of the event over the real trials of a run.",
+-      "evidence_ids": ["experiment:residual-search", "experiment:half-collision", "proof:240-540", "proof:544-616", "proof:635-772", "proof:774-901", "proof:1215-1303", "proof:1454-1940"],
++      "extrapolation": "From a participant count, in integer arithmetic, of the rate of the sub-class under the seven-word model, that is of the number of solutions with Y4 in the sub-class of the seven-word system that determines R: for each value beta of an auxiliary difference of one of the two calls, every outcome of that call is enumerated, the other call is counted exactly for it, split by rule A, and the probability of the outcome is counted exactly. Over the 60 values of beta that have a part for the whole class the count is 185,377,197.55 times the uniform expectation (53 values and 317 outcomes with a part); 185,358,111.47 of it satisfies rule A; the claim uses 185,355,453.45, the sum over the 99 outcomes in which every solution satisfies rule A. The sub-class and the rule were proposed by another AI model (GPT Sol 6.1) with a counter of its own; its exact fractions for the totals, the rule masses, every value of beta and 3,243 integers on 1,081 outcomes (three per outcome) are equal to the participant's; the recount was made with its figures at hand, and the figure that the claim uses is the participant's alone. From checks of the counter: complete enumeration with 8-bit words including sub-classes and three-bit parities (6,805,032 integers, none different); two functions for the split by the rule that agree on 687 outcomes. From comparisons of the model with real trials at 32 bits in the loop order of this package, for the whole class and other rules: averaged over outer tuples, events of one call down to a probability of about 2^-40 agree with the model (listed E1 outcomes: 138 against 152.0 expected); in the order of entry c66f230d, 24 runs of 2^45 real trials on another machine: 692 against 690.78. From scaled-down end-to-end runs with 8-bit and 10-bit words in this loop order, without sub-class and rule: 470 collisions against 467.6 predicted in 436 runs (the first 92 runs were low, 56 against 74.8, and the later ones were made because of that), and in a larger job of 8,448 runs with expectations written down beforehand 8,108 against 8,313.6 (-2.25 standard deviations: 3.3 percent low with 8-bit words, level with 10-bit words); and in the order of entry c66f230d: 345 against 335.76 in a plan fixed beforehand. All in proof.md Section 10. The factor and the absence of clustering are assumptions; the count is what the factor is set against, not a measurement of the trials, and none of these measurements reaches the joint event (R = 0 and rule A) over the real trials of a run that H1 asks about.",
++      "evidence_ids": ["experiment:residual-search", "experiment:half-collision", "proof:240-540", "proof:544-616", "proof:635-772", "proof:774-901", "proof:1220-1308", "proof:1459-1945"],
+@@ -39 +39 @@
+-      "scope": "The E1 test of Section 6.3 on all trials of Section 6.4, whether or not their batch runs stage 2; the algorithm processes only the passes in batches that run stage 2, which are fewer. A pass rate of 2^-31.41 would give 2^70.04 passes; the budget corresponds to a pass rate of 2^-17.44 and is larger by a factor of more than 2^13.9, and processing 2^84 passes is charged in the time bound (2^94 operations).",
++      "scope": "The E1 test of Section 6.3 on all trials of Section 6.4, whether or not their batch runs stage 2; the algorithm processes only the passes in batches that run stage 2, which are fewer. A pass rate of 2^-31.41 would give 2^70.03 passes; the budget corresponds to a pass rate of 2^-17.44 and is larger by a factor of more than 2^13.9, and processing 2^84 passes is charged in the time bound (2^94 operations).",
+@@ -41 +41 @@
+-      "evidence_ids": ["proof:635-772", "proof:774-901", "proof:1240-1248", "proof:1454-1940"],
++      "evidence_ids": ["proof:635-772", "proof:774-901", "proof:1245-1253", "proof:1459-1945"],
+@@ -48 +48 @@
+-      "scope": "Rule A (Lemma A) on the trials of Section 6.4, in the seven-lane batches of Section 6.5. A batch runs stage 2 exactly when one of its seven trials satisfies rule A. The budget E is 18,725 * J / 32 rounded down, with J = 2^110 / 49,400,000 rounded up; a run has at least J pairs of an outer step and a value of X2 and 18,725 batches per pair. The time bound charges stage 2 for that many batches, and the algorithm halts with failure when the budget is reached. The statement is about the total over a run; it is not claimed context by context and is false for single contexts. It holds whenever fewer than E trials of the run satisfy rule A, a share of 1.1428 times 2^-8 of the trials.",
++      "scope": "Rule A (Lemma A) on the trials of Section 6.4, in the seven-lane batches of Section 6.5. A batch runs stage 2 exactly when one of its seven trials satisfies rule A. The budget E is 18,725 * J / 32 rounded down, with J = 2^110 / 49,400,000 rounded up; a run has at least J pairs of an outer step and a value of X2 and 18,725 batches per pair. The time bound charges stage 2 for that many batches, and the algorithm halts with failure when the budget is reached. The statement is about the total over a run; it is not claimed context by context and is false for single contexts. It holds whenever fewer than E trials of the run satisfy rule A, a share of 1.1429 times 2^-8 of the trials.",
+@@ -50 +50 @@
+-      "evidence_ids": ["proof:635-772", "proof:774-901", "proof:903-1213", "proof:1250-1264", "proof:1454-1940"],
++      "evidence_ids": ["proof:635-772", "proof:774-901", "proof:903-1218", "proof:1255-1269", "proof:1459-1945"],
+######################################################################
+# blake3-r2\proof.md
+# bytes 137441 -> 138012; CRLF 0 -> 0; trailing-newline True -> True; BOM False -> False
+--- prev/blake3-r2\proof.md
++++ now/blake3-r2\proof.md
+@@ -51,9 +51,9 @@
+-equations, and that number is counted in integer arithmetic: it is 185,377,197
+-times 2^-128 for Y4 in the sub-class (162,266,763 for the whole class). Rule A
+-is not implied by a collision: some solutions violate it and are lost. Of the
+-count, 185,358,111 satisfy rule A; the figure that the claim uses is the
+-smaller 185,355,453, which leaves out in full every part of the count in which
+-some solution violates rule A. H1 assumes 49,400,000 times, 3.75 times less.
+-The rates with and without rule A are equal, to the last digit of every
+-fraction, to those of another AI model (GPT Sol 6.1), which proposed the
+-sub-class and the rule; the figure 185,355,453 that the claim uses is the
++equations, and that number is counted in integer arithmetic: it is
++185,377,197.55 times 2^-128 for Y4 in the sub-class (162,266,763.66 for the
++whole class). Rule A is not implied by a collision: some solutions violate it
++and are lost. Of the count, 185,358,111 satisfy rule A; the figure that the
++claim uses is the smaller 185,355,453, which leaves out in full every part of
++the count in which some solution violates rule A. H1 assumes 49,400,000 times,
++3.75 times less. The rates with and without rule A are equal, to the last digit
++of every fraction, to those of another AI model (GPT Sol 6.1), which proposed
++the sub-class and the rule; the figure 185,355,453 that the claim uses is the
+@@ -410,13 +410,14 @@
+-constant, and it reads only constants, the eight words and names of earlier
+-lines. A line of step O reads no word other than the six of the outer step, a
+-line of step M reads neither y nor a name of step Y, and a line of step Y reads
+-neither X2 nor a name of step M. Every line is one assignment of one call,
+-solved for the name on its left; the two exceptions are the lines for E1.b1 and
+-for E3.h1, each of which is two assignments with the first substituted into the
+-second (c1 = Y11 + E1.d1 and e1 = Y3 + Y4 + w15), and the line for E3.e2 uses
+-the same e1. By Table C the 96 lines are, each exactly once: the eight
+-assignments of each of the eleven calls K0, K1, K2, K3, D0, D1, D2, D3, C0, C1,
+-C2, with the inputs and the message words of Section 1 for block length 55,
+-with w4 = W4, w13 = W13, w14 = w15 = 0, and with the constants X3, X7, X11, X15
+-as the a output of D3, the b output of D2, the c output of D1 and the d output
+-of D0; and the first five assignments of E1 and of E3 for message A.
++constant, and it reads only constants, the eight words (the eighth under the
++name Y4 in the lines of round 1) and names of earlier lines. A line of step O
++reads no word other than the six of the outer step, a line of step M reads
++neither y nor a name of step Y, and a line of step Y reads neither X2 nor a
++name of step M. Every line is one assignment of one call, solved for the name
++on its left; the two exceptions are the lines for E1.b1 and for E3.h1, each of
++which is two assignments with the first substituted into the second (c1 = Y11 +
++E1.d1 and e1 = Y3 + Y4 + w15), and the line for E3.e2 uses the same e1. By
++Table C the 96 lines are, each exactly once: the eight assignments of each of
++the eleven calls K0, K1, K2, K3, D0, D1, D2, D3, C0, C1, C2, with the inputs
++and the message words of Section 1 for block length 55, with w4 = W4, w13 =
++W13, w14 = w15 = 0, and with the constants X3, X7, X11, X15 as the a output of
++D3, the b output of D2, the c output of D1 and the d output of D0; and the
++first five assignments of E1 and of E3 for message A.
+@@ -506,5 +507,4 @@
+-*What Lemma T2 does not say.* Eleven of the trial lines are among those on
+-which E3.h1 depends (the lines for X0, D0.d1, D0.c1, X10, C2.a1, C2.d1, C2.c1,
+-C2.b1, Y2, Y14 and E3.h1). That no order with fewer exists was the answer of a
+-solver in the search that produced the order; it is not used here and not
+-claimed.
++*What Lemma T2 does not say.* Eleven of the trial lines are the line for E3.h1
++and the ten it depends on (X0, D0.d1, D0.c1, X10, C2.a1, C2.d1, C2.c1, C2.b1,
++Y2, Y14). That no order with fewer exists was the answer of a solver in the
++search that produced the order; it is not used here and not claimed.
+@@ -700,2 +700,2 @@
+-the shifts being shifts of the whole packed word. Write y[i] for bit i of the
+-lane. Then
++the shifts being shifts of the whole packed word and each mask word holding the
++printed value in every lane (6.5). Write y[i] for bit i of the lane. Then
+@@ -1046,2 +1046,7 @@
+-search. With that, the batch uses all 16 registers; a register file of 15 does
+-not run it. The idea of keeping masks in registers across a loop is credited in
++search. With that, the batch uses all 16 registers, and 15 do not run it, under
++the program's convention that the result of an instruction may reuse a register
++whose source value is used for the last time on that same instruction; if
++instead every source stays live until its instruction finishes, the batch peaks
++at 17 registers, and the one extra word, spilled and loaded again inside the
++batch, costs far less than the margin already left between the budget and the
++charge. The idea of keeping masks in registers across a loop is credited in
+@@ -1244 +1249 @@
+-package is 2^-31.41, which would give 2^70.04 passes, below the budget by a
++package is 2^-31.41, which would give 2^70.03 passes, below the budget by a
+@@ -1256 +1261 @@
+-1.1428 times 2^-8 of the trials, where a uniform h1 satisfies the rule with
++1.1429 times 2^-8 of the trials, where a uniform h1 satisfies the rule with
+@@ -1296 +1301 @@
+-about 1 - exp(-1.87 / m), and the bound 0.39 would hold for m up to 3.75. So if
++about 1 - exp(-1.87 / m), and the bound 0.39 would hold for m up to 3.74. So if
+@@ -1338 +1343 @@
+-a reader may find uncounted, 2.6 per batch of seven trials.
++a reader may find uncounted, 2.67 per batch of seven trials.
+@@ -1350,3 +1355,3 @@
+-  rule A independently with probability 2^-8, a share of 0.0270 of the batches
+-  would run stage 2 and a trial would cost 7.2367 operations on average; the
+-  measured share is lower still (H3).
++  rule A independently with probability 2^-8, a share of 0.027025 of the
++  batches, which rounds to 0.0270, would run stage 2 and a trial would cost
++  7.2367 operations on average; the measured share is lower still (H3).
+@@ -2072,2 +2077,3 @@
+-    1.14287 rounded down; 1.1428 is the figure to four decimals. It understates
+-    the room of H3. (Audit and GPT Sol 6.1.)
++    1.142868; to four decimals that rounds down to 1.1428, and the nearest
++    four-decimal figure is 1.1429. It understates the room of H3. (Audit and
++    GPT Sol 6.1.)
+######################################################################
+# src\claim.json
+# bytes 16382 -> 16554; CRLF 56 -> 56; trailing-newline True -> True; BOM False -> False
+--- prev/src\claim.json
++++ now/src\claim.json
+@@ -31 +31 @@
+-      "extrapolation": "From a participant count, in integer arithmetic, of the rate of the sub-class under the seven-word model, that is of the number of solutions with Y4 in the sub-class of the seven-word system that determines R: for each value beta of an auxiliary difference of one of the two calls, every outcome of that call is enumerated, the other call is counted exactly for it, split by rule A, and the probability of the outcome is counted exactly. Over the 60 values of beta that have a part for the whole class the count is {{r_sub}} times the uniform expectation (53 values and 317 outcomes with a part); {{kept_exact}} of it satisfies rule A; the claim uses {{kept_cons}}, the sum over the 99 outcomes in which every solution satisfies rule A. The sub-class and the rule were proposed by another AI model (GPT Sol 6.1) with a counter of its own; its exact fractions for the totals, the rule masses, every value of beta and 3,243 integers on 1,081 outcomes (three per outcome) are equal to the participant's; the recount was made with its figures at hand, and the figure that the claim uses is the participant's alone. From checks of the counter: complete enumeration with 8-bit words including sub-classes and three-bit parities (6,805,032 integers, none different); two functions for the split by the rule that agree on 687 outcomes. From comparisons of the model with real trials at 32 bits in the loop order of this package, for the whole class and other rules: averaged over outer tuples, events of one call down to a probability of about 2^-40 agree with the model (listed E1 outcomes: 138 against 152.0 expected); in the order of entry c66f230d, 24 runs of 2^45 real trials on another machine: 692 against 690.78. From scaled-down end-to-end runs with 8-bit and 10-bit words in this loop order, without sub-class and rule: 470 collisions against 467.6 predicted in 436 runs (the first 92 runs were low, 56 against 74.8, and the later ones were made because of that), and in a larger job of 8,448 runs with expectations written down beforehand 8,108 against 8,313.6 (-2.25 standard deviations: 3.3 percent low with 8-bit words, level with 10-bit words); and in the order of entry c66f230d: 345 against 335.76 in a plan fixed beforehand. All in proof.md Section 10. The extrapolation is from these to the rate of the event over the real trials of a run.",
+
++      "extrapolation": "From a participant count, in integer arithmetic, of the rate of the sub-class under the seven-word model, that is of the number of solutions with Y4 in the sub-class of the seven-word system that determines R: for each value beta of an auxiliary difference of one of the two calls, every outcome of that call is enumerated, the other call is counted exactly for it, split by rule A, and the probability of the outcome is counted exactly. Over the 60 values of beta that have a part for the whole class the count is {{r_sub}} times the uniform expectation (53 values and 317 outcomes with a part); {{kept_exact}} of it satisfies rule A; the claim uses {{kept_cons}}, the sum over the 99 outcomes in which every solution satisfies rule A. The sub-class and the rule were proposed by another AI model (GPT Sol 6.1) with a counter of its own; its exact fractions for the totals, the rule masses, every value of beta and 3,243 integers on 1,081 outcomes (three per outcome) are equal to the participant's; the recount was made with its figures at hand, and the figure that the claim uses is the participant's alone. From checks of the counter: complete enumeration with 8-bit words including sub-classes and three-bit parities (6,805,032 integers, none different); two functions for the split by the rule that agree on 687 outcomes. From comparisons of the model with real trials at 32 bits in the loop order of this package, for the whole class and other rules: averaged over outer tuples, events of one call down to a probability of about 2^-40 agree with the model (listed E1 outcomes: 138 against 152.0 expected); in the order of entry c66f230d, 24 runs of 2^45 real trials on another machine: 692 against 690.78. From scaled-down end-to-end runs with 8-bit and 10-bit words in this loop order, without sub-class and rule: 470 collisions against 467.6 predicted in 436 runs (the first 92 runs were low, 56 against 74.8, and the later ones were made because of that), and in a larger job of 8,448 runs with expectations written down beforehand 8,108 against 8,313.6 (-2.25 standard deviations: 3.3 percent low with 8-bit words, level with 10-bit words); and in the order of entry c66f230d: 345 against 335.76 in a plan fixed beforehand. All in proof.md Section 10. The factor and the absence of clustering are assumptions; the count is what the factor is set against, not a measurement of the trials, and none of these measurements reaches the joint event (R = 0 and rule A) over the real trials of a run that H1 asks about.",
+
+######################################################################
+# src\note.md
+# bytes 10740 -> 11100; CRLF 82 -> 82; trailing-newline True -> True; BOM False -> False
+--- prev/src\note.md
++++ now/src\note.md
+@@ -5 +5 @@
+-This package continues my entry `c66f230d` (97.6) and uses ideas of others. Each is named for what they did; apart from my helper agents, nobody named here has reviewed this package.
+
++This package continues my entry `c66f230d` (97.6) and uses ideas of others. Each is named for what they did; apart from my helper agents, nobody named here has reviewed this package. winglock, Th0rgal, 5kyguy and tekkac are named in the co-author field of this submission, for the contributions this note credits to them; no co-author is represented as having reviewed or endorsed the package.
+
+@@ -61 +61 @@
+-- H1, H2 and H3 are assumptions. The factor {{factor}} is not measured by any experiment.
+
++- H1, H2 and H3 are assumptions. Both parts of H1, the factor {{factor}} and the absence of clustering of the good trials, are assumed; no experiment measures the factor, and the count it is set against is not a measurement of the trials.
+
+######################################################################
+# src\proof_cost.md
+# bytes 15832 -> 15868; CRLF 70 -> 70; trailing-newline True -> True; BOM False -> False
+--- prev/src\proof_cost.md
++++ now/src\proof_cost.md
+@@ -45 +45 @@
+-- **Main loop.** For one value of X2 the {{members}} members take {{list_words}} batches: {{full_words}} full ones and one that holds the last four members and is charged in full. A run has {{nd}} * 2^64 values of X2 in {{nd}} * 2^32 outer steps, and so {{list_words}} * {{nd}} * 2^64 batches. Every batch runs stage A, {{a_total}} primitive operations by 6.5, memory loads included. By step 4 fewer than one batch in {{share_inv}} runs stage 2, {{s2_total}} operations each. On every run the main loop therefore costs at most {{nd}} * 2^64 * P operations with P = {{p_x2}}, which is less than {{budgeted_up}} per trial. It is charged {{charge}} per trial, that is {{charge}} * N operations. This is the budgeted cost, a bound for every run. The expected cost is lower: if the trials of a batch satisfied rule A independently with probability 2^-8, a share of {{indep_share}} of the batches would run stage 2 and a trial would cost {{expected}} operations on average; the measured share is lower still (H3).
+
++- **Main loop.** For one value of X2 the {{members}} members take {{list_words}} batches: {{full_words}} full ones and one that holds the last four members and is charged in full. A run has {{nd}} * 2^64 values of X2 in {{nd}} * 2^32 outer steps, and so {{list_words}} * {{nd}} * 2^64 batches. Every batch runs stage A, {{a_total}} primitive operations by 6.5, memory loads included. By step 4 fewer than one batch in {{share_inv}} runs stage 2, {{s2_total}} operations each. On every run the main loop therefore costs at most {{nd}} * 2^64 * P operations with P = {{p_x2}}, which is less than {{budgeted_up}} per trial. It is charged {{charge}} per trial, that is {{charge}} * N operations. This is the budgeted cost, a bound for every run. The expected cost is lower: if the trials of a batch satisfied rule A independently with probability 2^-8, a share of {{indep_share_6}} of the batches, which rounds to {{indep_share}}, would run stage 2 and a trial would cost {{expected}} operations on average; the measured share is lower still (H3).
+
+######################################################################
+# src\proof_evidence.md
+# bytes 47988 -> 48029; CRLF 212 -> 212; trailing-newline True -> True; BOM False -> False
+--- prev/src\proof_evidence.md
++++ now/src\proof_evidence.md
+@@ -151 +151 @@
+-12. Sections 7 and 10 and the claim. "1.142 times 2^-5" is 74,899 / 65,536 = 1.14287 rounded down; 1.1428 is the figure to four decimals. It understates the room of H3. (Audit and GPT Sol 6.1.)
+
++12. Sections 7 and 10 and the claim. "1.142 times 2^-5" is 74,899 / 65,536 = 1.142868; to four decimals that rounds down to 1.1428, and the nearest four-decimal figure is 1.1429. It understates the room of H3. (Audit and GPT Sol 6.1.)
+
+######################################################################
+# src\proof_head.md
+# bytes 23475 -> 23508; CRLF 163 -> 163; trailing-newline True -> True; BOM False -> False
+--- prev/src\proof_head.md
++++ now/src\proof_head.md
+@@ -11 +11 @@
+-The rate in H1 is an assumption: {{factor}} times the rate of a uniform 128-bit value. It is not read off single digest words. Section 10 describes what it is set against. The remaining half of the digest depends on seven words, one of which is Y4. Under the model that the other six behave like independent uniform words over the trials, the rate is the number of solutions of a fixed system of equations, and that number is counted in integer arithmetic: it is {{r_sub_int}} times 2^-128 for Y4 in the sub-class ({{r_class_int}} for the whole class). Rule A is not implied by a collision: some solutions violate it and are lost. Of the count, {{kept_exact_int}} satisfy rule A; the figure that the claim uses is the smaller {{kept_cons_int}}, which leaves out in full every part of the count in which some solution violates rule A. H1 assumes {{factor}} times, {{margin}} times less. The rates with and without rule A are equal, to the last digit of every fraction, to those of another AI model (GPT Sol 6.1), which proposed the sub-class and the rule; the figure {{kept_cons_int}} that the claim uses is the participant's alone. The counting programs are not part of the package, and they and all their checks are the participant's or that model's. The model was compared with real messages only on events of probability about 2^-40 and above. In the arrangement of this package those comparisons show that the model does not hold inside one outer step, neither for rule A nor for the call E1: only averages over outer steps have the model's values (Section 10). No measurement exists for the sub-class with rule A beyond samples of at most 2^30 real trials on a processor, and the organizer-run experiments measure neither the model nor the factor. With the uniform rate, and not {{factor}} times it, the same search needs 2^127 trials and gives time_log2 = {{uniform_claim}}.
+
++The rate in H1 is an assumption: {{factor}} times the rate of a uniform 128-bit value. It is not read off single digest words. Section 10 describes what it is set against. The remaining half of the digest depends on seven words, one of which is Y4. Under the model that the other six behave like independent uniform words over the trials, the rate is the number of solutions of a fixed system of equations, and that number is counted in integer arithmetic: it is {{r_sub}} times 2^-128 for Y4 in the sub-class ({{r_class}} for the whole class). Rule A is not implied by a collision: some solutions violate it and are lost. Of the count, {{kept_exact_int}} satisfy rule A; the figure that the claim uses is the smaller {{kept_cons_int}}, which leaves out in full every part of the count in which some solution violates rule A. H1 assumes {{factor}} times, {{margin}} times less. The rates with and without rule A are equal, to the last digit of every fraction, to those of another AI model (GPT Sol 6.1), which proposed the sub-class and the rule; the figure {{kept_cons_int}} that the claim uses is the participant's alone. The counting programs are not part of the package, and they and all their checks are the participant's or that model's. The model was compared with real messages only on events of probability about 2^-40 and above. In the arrangement of this package those comparisons show that the model does not hold inside one outer step, neither for rule A nor for the call E1: only averages over outer steps have the model's values (Section 10). No measurement exists for the sub-class with rule A beyond samples of at most 2^30 real trials on a processor, and the organizer-run experiments measure neither the model nor the factor. With the uniform rate, and not {{factor}} times it, the same search needs 2^127 trials and gives time_log2 = {{uniform_claim}}.
+
+@@ -137 +137 @@
+-**Lemma T2.** (a) *Triangular.* In the printed order every line assigns a name that no earlier line assigns and that is neither one of the eight words nor a constant, and it reads only constants, the eight words and names of earlier lines. A line of step O reads no word other than the six of the outer step, a line of step M reads neither y nor a name of step Y, and a line of step Y reads neither X2 nor a name of step M. Every line is one assignment of one call, solved for the name on its left; the two exceptions are the lines for E1.b1 and for E3.h1, each of which is two assignments with the first substituted into the second (c1 = Y11 + E1.d1 and e1 = Y3 + Y4 + w15), and the line for E3.e2 uses the same e1. By Table C the 96 lines are, each exactly once: the eight assignments of each of the eleven calls K0, K1, K2, K3, D0, D1, D2, D3, C0, C1, C2, with the inputs and the message words of Section 1 for block length 55, with w4 = W4, w13 = W13, w14 = w15 = 0, and with the constants X3, X7, X11, X15 as the a output of D3, the b output of D2, the c output of D1 and the d output of D0; and the first five assignments of E1 and of E3 for message A.
+
++**Lemma T2.** (a) *Triangular.* In the printed order every line assigns a name that no earlier line assigns and that is neither one of the eight words nor a constant, and it reads only constants, the eight words (the eighth under the name Y4 in the lines of round 1) and names of earlier lines. A line of step O reads no word other than the six of the outer step, a line of step M reads neither y nor a name of step Y, and a line of step Y reads neither X2 nor a name of step M. Every line is one assignment of one call, solved for the name on its left; the two exceptions are the lines for E1.b1 and for E3.h1, each of which is two assignments with the first substituted into the second (c1 = Y11 + E1.d1 and e1 = Y3 + Y4 + w15), and the line for E3.e2 uses the same e1. By Table C the 96 lines are, each exactly once: the eight assignments of each of the eleven calls K0, K1, K2, K3, D0, D1, D2, D3, C0, C1, C2, with the inputs and the message words of Section 1 for block length 55, with w4 = W4, w13 = W13, w14 = w15 = 0, and with the constants X3, X7, X11, X15 as the a output of D3, the b output of D2, the c output of D1 and the d output of D0; and the first five assignments of E1 and of E3 for message A.
+
+@@ -155 +155 @@
+-*What Lemma T2 does not say.* Eleven of the trial lines are among those on which E3.h1 depends (the lines for X0, D0.d1, D0.c1, X10, C2.a1, C2.d1, C2.c1, C2.b1, Y2, Y14 and E3.h1). That no order with fewer exists was the answer of a solver in the search that produced the order; it is not used here and not claimed.
+
++*What Lemma T2 does not say.* Eleven of the trial lines are the line for E3.h1 and the ten it depends on (X0, D0.d1, D0.c1, X10, C2.a1, C2.d1, C2.c1, C2.b1, Y2, Y14). That no order with fewer exists was the answer of a solver in the search that produced the order; it is not used here and not claimed.
+
+######################################################################
+# src\proof_search.md
+# bytes 34210 -> 34661; CRLF 195 -> 195; trailing-newline True -> True; BOM False -> False
+--- prev/src\proof_search.md
++++ now/src\proof_search.md
+@@ -53 +53 @@
+-the shifts being shifts of the whole packed word. Write y[i] for bit i of the lane. Then
+
++the shifts being shifts of the whole packed word and each mask word holding the printed value in every lane (6.5). Write y[i] for bit i of the lane. Then
+
+@@ -169 +169 @@
+-*The machine, and which words are kept in registers.* The pieces run on a load/store machine with 16 registers. One operation is charged for every addition, XOR, AND, OR and shift of 256-bit words, for every comparison and for every branch, so PROR = 5. One load is charged every time a word is fetched from memory, from a list or from the table into a register, and one store every time a register is written to memory or to the table. Shift distances are fixed in the instruction. A register may hold a memory word across several operations, and that is the one place where this text counts differently from entry c66f230d, which charged a load for every use of a constant. Here nine words are loaded once per value of X2, in the last part of the middle step ("class loop entry", 9 loads), and stay in their registers for all {{list_words}} batches of that value: the two masks of the rotation by 16, the two masks of the rotation by 12, the two masks of Lemma A (c), ALL, 2^32 - ALL, and the word that has every bit of the seven lanes except bit 32. A batch reads them without a load. Stage 2 needs the registers of the last four of them for its own values and loads these four words again at its end (the part "restore", 4 loads, charged to stage 2). Stage A does not keep z and the third value of C2 in registers; stage 2 forms both again (5 operations and 3 loads, charged to stage 2). Two registers hold the list position and the entry count for the whole search. With that, the batch uses all 16 registers; a register file of 15 does not run it. The idea of keeping masks in registers across a loop is credited in Section 13. Under the convention of entry c66f230d, with every read of a memory word charged as a load, the same program counts {{kept0_a}} and {{kept0_2}} for the two stages (its line `KEPT = 0`), and the claim would be {{kept0_claim}}; no address arithmetic is charged for the list and table loads, as in that entry, and with one operation for each such load the stages would be {{addr_a}} and {{addr_2}} and the claim {{addr_claim}}.
+
++*The machine, and which words are kept in registers.* The pieces run on a load/store machine with 16 registers. One operation is charged for every addition, XOR, AND, OR and shift of 256-bit words, for every comparison and for every branch, so PROR = 5. One load is charged every time a word is fetched from memory, from a list or from the table into a register, and one store every time a register is written to memory or to the table. Shift distances are fixed in the instruction. A register may hold a memory word across several operations, and that is the one place where this text counts differently from entry c66f230d, which charged a load for every use of a constant. Here nine words are loaded once per value of X2, in the last part of the middle step ("class loop entry", 9 loads), and stay in their registers for all {{list_words}} batches of that value: the two masks of the rotation by 16, the two masks of the rotation by 12, the two masks of Lemma A (c), ALL, 2^32 - ALL, and the word that has every bit of the seven lanes except bit 32. A batch reads them without a load. Stage 2 needs the registers of the last four of them for its own values and loads these four words again at its end (the part "restore", 4 loads, charged to stage 2). Stage A does not keep z and the third value of C2 in registers; stage 2 forms both again (5 operations and 3 loads, charged to stage 2). Two registers hold the list position and the entry count for the whole search. With that, the batch uses all 16 registers, and 15 do not run it, under the program's convention that the result of an instruction may reuse a register whose source value is used for the last time on that same instruction; if instead every source stays live until its instruction finishes, the batch peaks at 17 registers, and the one extra word, spilled and loaded again inside the batch, costs far less than the margin already left between the budget and the charge. The idea of keeping masks in registers across a loop is credited in Section 13. Under the convention of entry c66f230d, with every read of a memory word charged as a load, the same program counts {{kept0_a}} and {{kept0_2}} for the two stages (its line `KEPT = 0`), and the claim would be {{kept0_claim}}; no address arithmetic is charged for the list and table loads, as in that entry, and with one operation for each such load the stages would be {{addr_a}} and {{addr_2}} and the claim {{addr_claim}}.
+
+######################################################################
+# submission-note-r2.md
+# bytes 12159 -> 12523; CRLF 0 -> 0; trailing-newline True -> True; BOM False -> False
+--- prev/submission-note-r2.md
++++ now/submission-note-r2.md
+@@ -7 +7,4 @@
+-has reviewed this package.
++has reviewed this package. winglock, Th0rgal, 5kyguy and tekkac are named in
++the co-author field of this submission, for the contributions this note credits
++to them; no co-author is represented as having reviewed or endorsed the
++package.
+@@ -135,2 +138,4 @@
+-- H1, H2 and H3 are assumptions. The factor 49,400,000 is not measured by any
+-  experiment.
++- H1, H2 and H3 are assumptions. Both parts of H1, the factor 49,400,000 and
++  the absence of clustering of the good trials, are assumed; no experiment
++  measures the factor, and the count it is set against is not a measurement of
++  the trials.
+######################################################################
+# tools\pkg7_text.py
+# bytes 24987 -> 25035; CRLF 385 -> 385; trailing-newline True -> True; BOM False -> False
+--- prev/tools\pkg7_text.py
++++ now/tools\pkg7_text.py
+@@ -201 +201 @@
+-             charge_room=str(float(dn((charge - budgeted) * MEM / W, 1))), main_log2=f"{float(up(main, 6)):.6f}", l430=f"{float(l430):.6f}",
+
++             charge_room=str(float(dn((charge - budgeted) * MEM / W, 2))), main_log2=f"{float(up(main, 6)):.6f}", l430=f"{float(l430):.6f}",
+
+@@ -207 +207 @@
+-             pass_expected=str(float(up(Fraction(lN) - E1_RATE_LOG2, 2))),
+
++             pass_expected=str(float(near(Fraction(lN) - E1_RATE_LOG2, 2))),
+
+@@ -216 +216 @@
+-    t.update(indep_share=f"{float(indep):.4f}",
+
++    t.update(indep_share=f"{float(indep):.4f}", indep_share_6=f"{float(indep):.6f}",
+
+@@ -265,2 +265,2 @@
+-             cluster_m=str(float(dn(float(expected_good) / -math.log(0.607), 2))),
+
+-             trial_share=str(float(dn(Fraction(W * 2 ** rule, share * MEM), 4))),
+
++             cluster_m=str(float(dn(float(dn(expected_good, 2)) / -math.log(0.607), 2))),
+
++             trial_share=str(float(near(Fraction(W * 2 ** rule, share * MEM), 4))),
+

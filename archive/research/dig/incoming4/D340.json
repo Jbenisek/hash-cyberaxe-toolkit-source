@@ -1,0 +1,21 @@
+{
+  "id": "D340-SHA256-R37-GROK112-PAIR-INDEPENDENT-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "Grok-112 saved 37-step collision-pair independent audit",
+  "question": "Do the two saved Grok-112 r37 pairs reproduce their stated digests under an independent compressor?",
+  "labels": ["C", "S", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "Both pairs pass; published control passes; messages are distinct. Maximum RSS 18231296 bytes, log2=24.119914.",
+  "source": "our workflow: standalone r37 audit",
+  "own_test": true,
+  "evidence": "research/retest/r37_pair_audit.py; research/sol_answer_D340_r37_pair_independent_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Finite read-only audit of saved external artifact text. Confirms pair consistency only; does not prove transfer, independence, search rate, or the A_C floor. No external participant code was executed.",
+  "held_fixed": "37 steps; standalone SHA-256 compressor; parsed ANSWER.md pair blocks; published digest control",
+  "reopen_if": "A class-wide transfer or independence claim is made without an independently auditable proof",
+  "peak_mem": "24.119914 MEASURED /usr/bin/time -v maximum RSS; standalone parser/compressor"
+}

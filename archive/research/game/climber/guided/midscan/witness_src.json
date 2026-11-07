@@ -1,0 +1,13 @@
+{
+ "_comment": "paths are relative to the workspace root; PUBFILE: = published pair, derived once from the char's own base",
+ "hyb38_pin38_to_pin38b_s17g5": "research/outside/kepler_in/angle_hyb38_s17g5_WITNESS.json",
+ "zh37": "research/outside/kepler_in/angle_zh37_char_w32_WITNESS.json",
+ "mns38": "research/outside/kepler_in/angle_mns38_char_w32_WITNESS.json",
+ "pin38b": "research/outside/kepler_in/angle_pin38b_class1_WITNESS.json",
+ "llw39": "research/outside/kepler_in/angle_llw39_char_w32_WITNESS.json",
+ "nb2_wonly16": "research/outside/kepler_in/angle_nb2_wonly16_newchar39_WITNESS.json",
+ "nb3_row20": "research/outside/kepler_in/angle_nb3_row20_newchar39_WITNESS.json",
+ "pin39b": "research/outside/kepler_in/angle_pub39_char_w32_WITNESS.json",
+ "pin38": "PUBFILE:research/tools/nldtool_src/examples/sha2/eurocryptMendelNS13/38_256_semi_msg.xml",
+ "zh36": "research/game/climber/guided/edge2/zh36_WITNESS.json"
+}

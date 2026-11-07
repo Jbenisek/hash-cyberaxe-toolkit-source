@@ -1,0 +1,92 @@
+=== 1. message_a_hex spellings (message_b_hex = '00') ===
+ACCEPT  baseline 'ab'                                a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+ACCEPT  empty string                                 a='' b='00' success=False repeated=False pair=b602a18436
+REJECT  odd 'a'                                      ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  odd 'abc'                                    ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  uppercase 'AB'                               ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  mixed 'aB'                                   ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  leading space                                ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  trailing space                               ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  inner space                                  ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  trailing \n (JSON escape)                    ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  leading \t                                   ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  0x prefix                                    ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  0X prefix                                    ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  '-1'                                         ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  '+ab'                                        ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  underscore 'a_b0'                            ExperimentError: Python messages require bounded lowercase hex or two nulls
+ACCEPT  JSON \u escapes for 'ab'                     a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+REJECT  fullwidth 'ａｂ'                               ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  fullwidth digits '１２'                        ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  Arabic-Indic '١٢'                            ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  Devanagari '१२'                              ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  Chinese numerals '一二'                        ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  superscript '¹²'                             ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  math bold '𝟏𝟐'                               ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  NUL inside                                   ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  zero-width space                             ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  BOM inside string                            ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  lone surrogate                               ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  number 171                                   ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  list ['ab']                                  ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  true                                         ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  object                                       ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  a=null, b='00' (one-sided null)              ExperimentError: Python messages require bounded lowercase hex or two nulls
+ACCEPT  max length 8192 chars                        a='00000000000000000000' b='00' success=False repeated=False pair=8ef91abbd6
+REJECT  8194 chars (over)                            ExperimentError: Python messages require bounded lowercase hex or two nulls
+REJECT  odd 8193 chars                               ExperimentError: Python messages require bounded lowercase hex or two nulls
+ACCEPT  both null                                    a='-' b='-' success=False repeated=None pair=-
+ACCEPT  a == b == 'ab'                               a='ab' b='ab' success=False repeated=False pair=1dd6baa03f
+
+=== 2. stdout envelope ===
+ACCEPT  UTF-8 BOM prefix                             a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+ACCEPT  UTF-16-LE with BOM                           a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+ACCEPT  UTF-16-BE no BOM                             a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+ACCEPT  UTF-32                                       a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+ACCEPT  leading/trailing whitespace                  a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+REJECT  two documents                                ExperimentError: Python output must be one bounded strict JSON document
+REJECT  trailing garbage                             ExperimentError: Python output must be one bounded strict JSON document
+REJECT  trailing comma                               ExperimentError: Python output must be one bounded strict JSON document
+REJECT  duplicate key message_a_hex                  ExperimentError: Python output must be one bounded strict JSON document
+ACCEPT  key spelled message\u005fa_hex               a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+REJECT  extra unknown key                            ExperimentError: experiment object contains missing or unexpected fields
+REJECT  trial '0' (string)                           ExperimentError: Python trials must appear exactly once in organizer order
+REJECT  trial true                                   ExperimentError: Python trials must appear exactly once in organizer order
+REJECT  trial 0.0                                    ExperimentError: Python trials must appear exactly once in organizer order
+ACCEPT  trial -0                                     a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+REJECT  trial 0e0                                    ExperimentError: Python trials must appear exactly once in organizer order
+REJECT  trial 00 (leading zero)                      ExperimentError: Python output must be one bounded strict JSON document
+REJECT  schema_version 1.0                           ExperimentError: Python output must report exactly every organizer trial
+REJECT  schema_version true                          ExperimentError: Python output must report exactly every organizer trial
+REJECT  obs 1e400 (inf)                              ExperimentError: observations must have simple ids and finite bounded numeric values
+REJECT  obs NaN                                      ExperimentError: Python output must be one bounded strict JSON document
+ACCEPT  obs true                                     a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+ACCEPT  obs 10**100+1 int                            a='ab' b='00' success=False repeated=False pair=8812dc0ed4
+REJECT  obs huge int 5000 digits                     ExperimentError: Python output must be one bounded strict JSON document
+REJECT  obs key fullwidth 'ｘ'                        ExperimentError: observations must have simple ids and finite bounded numeric values
+REJECT  obs nested 100000 deep                       ExperimentError: Python output must be one bounded strict JSON document
+
+=== 3. same bytes, different spelling / order -> distinct pair ids? ===
+ACCEPT  (ab,cd) then (cd, \u0061b)                   a='ab' b='cd' success=False repeated=False pair=e8eda248cb; a='cd' b='ab' success=False repeated=True pair=e8eda248cb
+ACCEPT  replayed pair x2, then cd00                  a='ab' b='cd' success=False repeated=False pair=e8eda248cb; a='ab' b='cd' success=False repeated=True pair=e8eda248cb; a='ab' b='cd00' success=False repeated=False pair=28179446c1
+
+=== 4. what bytes.fromhex alone would accept (the regex is the only guard) ===
+bytes.fromhex('AB') -> 'ab'   _HEX.fullmatch: False
+bytes.fromhex(' ab ') -> 'ab'   _HEX.fullmatch: False
+bytes.fromhex('a b') -> ValueError   _HEX.fullmatch: False
+bytes.fromhex('ab\n') -> 'ab'   _HEX.fullmatch: False
+bytes.fromhex('0xab') -> ValueError   _HEX.fullmatch: False
+bytes.fromhex('ａｂ') -> ValueError   _HEX.fullmatch: False
+bytes.fromhex('１２') -> ValueError   _HEX.fullmatch: False
+bytes.fromhex('a') -> ValueError   _HEX.fullmatch: False
+int('１２',16) -> 18   _HEX.fullmatch: False
+int('ＦＦ',16) -> ValueError   _HEX.fullmatch: False
+int('f_f',16) -> 255   _HEX.fullmatch: False
+int(' 0xff ',16) -> 255   _HEX.fullmatch: False
+int('-1',16) -> -1   _HEX.fullmatch: False
+int('١٢',16) -> 18   _HEX.fullmatch: False
+(int(...,16) is only applied to mask_hex/expected_hex, which validate_manifest regex-gates first)
+
+=== 5. replayed pair under a stub digest where every distinct pair 'collides' ===
+ACCEPT [(True, False), (True, True), (True, False)]
+python 3.14.3

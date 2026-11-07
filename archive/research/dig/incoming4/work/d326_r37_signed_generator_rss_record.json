@@ -1,0 +1,22 @@
+{
+  "id": "D326-R37-SIGNED-GENERATOR-RSS-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "r37 owned signed-model generator RSS",
+  "question": "What peak resident working set does the owned r37 signed-difference generator use when producing its published model and self-test variants?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "53,514,240 bytes peak WorkingSet64, log2 25.67342, one BelowNormal single-process run of gen_selftest.py; exit 0",
+  "source": "our workflow: D326 r37 signed generator RSS",
+  "own_test": true,
+  "evidence": "research/sol_answer_D326_r37_signed_generator_rss.md; research/dense_dig/signed/gen_selftest.py; research/dense_dig/signed/sigmodel.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "25.674 MEASURED single-process Windows WorkingSet64 sampled every 100 ms during owned gen_selftest.py",
+  "notes": "Owned signed-difference model generation/self-test only. It is not the full unpublished characteristic search, SAT selection, Step-1 solve, or complete preprocessing peak; no score credit and no OPEN-cell closure.",
+  "held_fixed": "research/dense_dig/signed source; one child process; BelowNormal priority; no external participant code",
+  "reopen_if": "An owned full characteristic-search executable or a measured SAT/Step-1 preprocessing run becomes available"
+}

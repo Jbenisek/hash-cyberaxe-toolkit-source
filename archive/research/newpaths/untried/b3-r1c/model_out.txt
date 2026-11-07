@@ -1,0 +1,3 @@
+C3 outputs A: Y3=8127c181 Y7=76f7aefd Y11=7af77f38 Y15=bbfbdffe
+C3 outputs B: Y3=7edf3e7e Y7=76f7aefd Y11=850000c3 Y15=bbfbdffe
+pairs=2000  half-collision(words 0,2,5,7)=2000  X equal+pins+Y4=y: 2000  residual=E1key^E3key: 2000

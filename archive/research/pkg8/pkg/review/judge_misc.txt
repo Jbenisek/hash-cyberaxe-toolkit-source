@@ -1,0 +1,8 @@
+Fact P: K 5bf2cd1d K+W4 f33a2355 W4' 97475640 W4-W4' fffffff8; the two displayed executions equal mine: True; same d and b outputs: True; top byte of W13 zero: True
+Y3 8127c181 Y3' 7edf3e7e DY3 fdb77cfd Y11 7af77f38 Y11' 850000c3 DY11 0a08818b delta fffffff8
+Lemma Q: definition and mask test agree on 400000 of 400000 random Y4; all members give eta: 524288 of 524288; DY3 + x = 01870000
+Lemma A (a), (b), (c): disagreements in 200000 random (z, member): 0
+printed solution 1 (R = 0, printed beta tau eps h1 right, Y4 in the class, satisfies rule A): (True, True, True, True)
+printed solution 2 (R = 0, printed beta tau eps h1 right, Y4 in the class, satisfies rule A): (True, True, True, False)
+table of the heaviest beta: rows 14, Adds = N1 * N3 / 2^83 in 14; sum 71,698,432.0
+table of the kept outcomes: rows 54, sum of the printed column 126,003,600.7598

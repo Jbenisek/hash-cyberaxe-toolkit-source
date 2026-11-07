@@ -1,0 +1,23 @@
+{
+  "id": "D513-BLAKE3-R2-PKGCH-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgCH frontline prefile and self-test",
+  "question": "Does the pkgCH executable pass its finite self-test, and what defects remain in the current draft?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgCH executable SHA-256 518D0B706977D77043B654072B3059386CF4F119D9B798C2EBC09E0F56161E1B; prefile SOME FAIL (no ledger appendix/exact N, internal note label audit); current claim time_log2=63.874; selftest exits 0 with 256 automata cases, 512 T1/T2 cases, S7 partition, and all halt/gate drills passing.",
+  "source": "our workflow: D513 read-only pkgCH audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D513_b3m_pkgch_audit.md; research/tools/build_pkg/scratch/pkgCH/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; current draft lacks an exact ledger N and has an internal-label note defect. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgCH package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package ledger/note repair or a new owner artifact arrives"
+}

@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "1-indexed round 4 chi + theta5-at-store (leader 'round-4 cone', 46.11 ops/message, 1363 of 1600 words)",
+ "question": "How many rows, bits and conditions does the round-4 cone use?",
+ "labels": [
+  "N",
+  "B"
+ ],
+ "status": "COMPUTED",
+ "number": "chi4: 320 of 320 rows, 1600 outputs, 320 theta5 parities all needed; stores 1363 of 1600 theta5-applied words (237 skipped); next round reads those 1363 words in 290 rows (1450 row-level); chi5 computes 1161 outputs; conditions at this block: 0",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/sha3-r6-U03/work/ (kk.py validated 24r vs hashlib and 6r vs organizer verifier; cone.py, fam.py, fp.py, q.py; cone.json, footprint.json, q_results.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell round3.chi|Q1. Family = leader's 128-byte prefix family rebuilt by us (L8=0, L5=L15=D0, C2=NOT rotl(C4,1); z XORed into lanes 4 and 14): A2 affine in z checked 30x256, z-flip support 22 words (matches Lemma 3). Exact backward cone (cone.json): chi6 140 out/35 rows/175 words; chi5 1161 out/290 rows/1363 words; chi4 1600/320. Matches the leader dossier numbers (1,161 chi outputs, 1,363 words read, 175 words) with our own code. Step footprint: all 1600 words after chi4 change on every z-flip (T4/S4/T5 = 1600 of 1600 in the union over 256 groups), 320 of 320 chi4 rows touched. Naming: this reads 4867f093 'round-4 cone' as stored words of 1-indexed round 4.",
+ "topic": "sha3r6 round3.chi Q1"
+}

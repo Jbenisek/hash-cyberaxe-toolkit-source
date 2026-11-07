@@ -1,0 +1,11 @@
+Part 1: organizer last-chunk descriptor (cv, words, counter, len, flags) of P1||A equals that of P2||A for random different prefixes of equal length: 200/200
+
+Part 2 (2000 real half-colliding last-chunk CV pairs as the right child; random chunk-0 CVs as the left)
+  message difference sits in parent words m9, m11, m12, m14 (right CV words 1, 3, 4, 6)
+  differing state words after round-0 columns: 0: 2000
+  differing state words after round 0: 16: 2000
+  differing state words after round-1 columns: 16: 2000
+  root digest words equal (per word, of 2000): [0, 0, 0, 0, 0, 0, 0, 0]; any digest word equal: 0/2000 (random: about 3.7e-06)
+  non-root parent CV words equal (per word): [0, 0, 0, 0, 0, 0, 0, 0]
+
+Part 3: G with equal state and one differing message word: W=8 exhaustive over x (or y) for 200 random states each: 400/400 injective; W=32 random: equal outputs 0 of 4000

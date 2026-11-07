@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JFILED rulings on the r=1 filings",
+ "question": "value charged",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "filed values: 651c0ca6 time 25.837 + mem 3.042 = 28.879 (refuted, F-COST-1 control charges); 142889b7 28.781 + 3.043 = 31.824 (not_evaluable, note under 5 KiB); 56ddf2d0 27.954 + 3.047 = 31.001, P 0.53 (refuted, uncharged NTT switch dispatch +0.005 bit)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "HANDOFF.md research/dossiers/56ddf2d0 research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Read from HANDOFF.md bullets and the 56ddf2d0 claim in the dossier; not a test of mine. | universe cell poseidon-r1|JUDGE.JFILED|JUDGE|R1",
+ "held_fixed": "the three filings",
+ "reopen_if": "a new ruling"
+}

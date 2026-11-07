@@ -1,0 +1,23 @@
+{
+  "id": "D514-BLAKE3-R2-PKGCP-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgCP frontline prefile and self-test",
+  "question": "Does the pkgCP executable pass its finite self-test, and what defects remain in the current draft?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgCP executable SHA-256 C6D50C4C0F5AEE2BB2317C72E938F37F43C4FD781AB17843CE5BDC0464BD7D9E; prefile SOME FAIL (no ledger appendix/exact N; internal labels D27,D48,D49,D54 in note/claim/proof header); claim time_log2=61.408; selftest exits 0 with 256 automata cases, 512 T1/T2 cases, S7/precheck/replica/level16 checks, two full contexts with zero mismatches/halts, and W/C/R/WB halt drills passing.",
+  "source": "our workflow: D514 read-only pkgCP audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D514_b3m_pkgcp_audit.md; research/tools/build_pkg/scratch/pkgCP/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; current draft lacks an exact ledger N and has internal-label defects. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgCP package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package ledger/label repair or a new owner artifact arrives"
+}

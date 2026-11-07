@@ -1,0 +1,31 @@
+rows 1048576 (train 524288, test 524288); 16 aligned bytes per coordinate system
+
+[raw]
+  sum of byte entropies: train 125.242  test 125.235 bits
+  Chow-Liu bound (tree from train): train 109.900  TEST 109.877 bits
+  strongest tree edges (test MI): R4b0-R1b1 2.646, R1b0-R4b3 2.309, R3b3-R6b2 1.970, R1b2-R4b1 1.860, R6b3-R3b0 1.851, R3b2-R6b1 1.682
+  H2 per 32-bit word (all rows): R1 31.39, R3 29.59, R4 31.60, R6 30.43  ; sum 123.01 (GUESS: joint H2 if the words were independent)
+
+[spiral8]
+  sum of byte entropies: train 121.463  test 121.457 bits
+  Chow-Liu bound (tree from train): train 109.580  TEST 109.559 bits
+  strongest tree edges (test MI): U3b0-R1b1 2.706, R1b0-U3b3 2.378, R1b2-U3b1 1.860, U1b3-R3b0 1.402, U1b0-R3b1 0.865, R3b2-U1b1 0.691
+  H2 per 32-bit word (all rows): R1 31.39, R3 29.59, U3 31.85, U1 22.76  ; sum 115.59 (GUESS: joint H2 if the words were independent)
+
+[spiral7]
+  sum of byte entropies: train 115.088  test 115.072 bits
+  Chow-Liu bound (tree from train): train 106.043  TEST 106.014 bits
+  strongest tree edges (test MI): R3b3-Q7b2 1.499, Q7b1-R3b2 0.960, Q7b0-R3b1 0.873, Q7b1-R1b1 0.850, Q7b3-R3b0 0.803, Q7b3-Z7b3 0.782
+  H2 per 32-bit word (all rows): R1 31.39, R3 29.59, Z7 22.03, Q7 24.63  ; sum 107.65 (GUESS: joint H2 if the words were independent)
+
+[mixed]
+  sum of byte entropies: train 113.744  test 113.729 bits
+  Chow-Liu bound (tree from train): train 107.166  TEST 107.137 bits
+  strongest tree edges (test MI): U1b3-R3b0 1.402, U1b0-R3b1 0.865, U1b3-Z7b0 0.785, U1b1-R3b2 0.691, Z7b3-U1b2 0.631, U1b0-Z7b1 0.517
+  H2 per 32-bit word (all rows): R1 31.39, R3 29.59, Z7 22.03, U1 22.76  ; sum 105.77 (GUESS: joint H2 if the words were independent)
+
+[UNIFORM control]
+  sum of byte entropies: train 128.000  test 128.000 bits
+  Chow-Liu bound (tree from train): train 127.952  TEST 127.962 bits
+  strongest tree edges (test MI): u2b3-u0b2 0.003, u1b1-u2b0 0.003, u1b3-u1b1 0.003, u1b3-u3b1 0.003, u3b2-u3b3 0.003, u1b3-u1b2 0.003
+  H2 per 32-bit word (all rows): u0 31.90, u1 32.18, u2 31.99, u3 31.89  ; sum 127.96 (GUESS: joint H2 if the words were independent)

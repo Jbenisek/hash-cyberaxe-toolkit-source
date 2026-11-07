@@ -1,0 +1,230 @@
+# Section 3.2
+
+Source: `research/pkg10/pkg/review/construction_impl.py`
+
+Public SHA-256: `c4c3c67f2afbfbd1ecebeedceb91d6d2633ee26d30671d6fbfef798f1053ecc9`
+
+## Purpose recorded in the source
+
+construction_impl.py -- independent reviewer, lens "construction" (pkg6 draft).
+
+Steps S1, T, S2, S3, the compression of Section 1, Fact P, Lemmas L, Q, T, E, N, A are typed here from the TEXT of
+blake3-r2/proof.md (Sections 1 to 6) alone. The organizer's reference hash (hash-smash/verifier/blake3.py) supplies
+every digest and, through its own _g, the state after round 0. The package's program is imported only in the last
+part, for a word-by-word comparison with what the text gives.
+
+Usage: python -B construction_impl.py [contexts=4000] [members=25] [seed=20261006]
+Writes review/construction_impl_out.txt; prints a short summary.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "halfsearch",
+  "numpy",
+  "os",
+  "random",
+  "struct",
+  "sys",
+  "time",
+  "verifier.blake3"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "chk",
+    "line": 44,
+    "arguments": [
+      "name",
+      "ok"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "ror",
+    "line": 52,
+    "arguments": [
+      "v",
+      "n"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "rol",
+    "line": 56,
+    "arguments": [
+      "v",
+      "n"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "g8",
+    "line": 60,
+    "arguments": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "x",
+      "y"
+    ],
+    "doc": "The eight assignments of Section 2, in the order a1, d1, c1, b1, a2, d2, c2, b2."
+  },
+  {
+    "name": "trace",
+    "line": 73,
+    "arguments": [
+      "w",
+      "n"
+    ],
+    "doc": "Section 1, with every call's inputs, words and eight values, and the states S, X, Y, Z."
+  },
+  {
+    "name": "org_round0",
+    "line": 94,
+    "arguments": [
+      "words",
+      "n"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "step_S1",
+    "line": 105,
+    "arguments": [
+      "vc",
+      "vd",
+      "S11",
+      "S4",
+      "X13",
+      "X14",
+      "w0"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "step_T",
+    "line": 141,
+    "arguments": [
+      "c",
+      "y"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "member",
+    "line": 158,
+    "arguments": [
+      "k"
+    ],
+    "doc": "Member number k (text after Lemma Q): the bits of k at the free positions of e1, increasing position."
+  },
+  {
+    "name": "in_class_def",
+    "line": 166,
+    "arguments": [
+      "y4"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "in_class_q",
+    "line": 171,
+    "arguments": [
+      "y4"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "rule_a_h1",
+    "line": 175,
+    "arguments": [
+      "h1"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "rule_a_z",
+    "line": 180,
+    "arguments": [
+      "z"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "rule_a_word",
+    "line": 185,
+    "arguments": [
+      "z"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "check_trial",
+    "line": 193,
+    "arguments": [
+      "c",
+      "ctx",
+      "y"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "fact_p",
+    "line": 293,
+    "arguments": [],
+    "doc": ""
+  },
+  {
+    "name": "lemma_l",
+    "line": 313,
+    "arguments": [
+      "rng",
+      "count"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "lemma_q_exhaustive",
+    "line": 326,
+    "arguments": [],
+    "doc": ""
+  },
+  {
+    "name": "program_compare",
+    "line": 355,
+    "arguments": [
+      "rng",
+      "samples"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "main",
+    "line": 387,
+    "arguments": [],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/pkg10/pkg/review/judge_common_proof.txt
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

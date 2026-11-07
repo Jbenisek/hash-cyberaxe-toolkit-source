@@ -1,0 +1,40 @@
+real: pin d5d881ca aa277e35 1f208000 123f2142 7fffffff fffd6e01  eta e7c1815f  class of 2^16 values of Y4  D3 815924bf
+STAT real trials 2^38.00  bad 0
+STAT real early test passes: 2879 (2^-26.509)   E1 requires the eta of Y4: 333 (2^-29.621)   contradictions (must be 0): 0
+STAT real pass A6: 4294916967 (2^-6.0000)  pass B: 57224539088 (2^-2.2641)  pass both: 894141341 (2^-8.2641; product of the two rates 2^-8.2641)  both and the E1-only test: 3
+STAT real word zero:               55 (2^-32.219)        625 (2^-28.712)         49 (2^-32.385)         97 (2^-31.400)
+STAT real low 16 zero:        3297672 (2^-16.347)   21790393 (2^-13.623)    4194209 (2^-16.000)    5286936 (2^-15.666)
+STAT real low 16 of two:   01:340 02:211 03:34 12:336 13:1088 23:73
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 259   weight <= 16/24/32/40: 0 5 26075 16306102   lowest weight seen 23
+STAT real trailing zero bits >= 24..48: 24:14448 28:927 32:55 36:13 40:1 44:0 48:0
+real: pin d5d881ca aa277e35 1f208000 123f2142 7fffffff fffd6e01  eta e7c1815f  class of 2^16 values of Y4  D3 815924bf
+STAT real trials 2^38.00  bad 0
+STAT real early test passes: 2906 (2^-26.495)   E1 requires the eta of Y4: 336 (2^-29.608)   contradictions (must be 0): 0
+STAT real pass A6: 4294925479 (2^-6.0000)  pass B: 57225005962 (2^-2.2641)  pass both: 894110420 (2^-8.2641; product of the two rates 2^-8.2641)  both and the E1-only test: 2
+STAT real word zero:               50 (2^-32.356)        574 (2^-28.835)         46 (2^-32.476)        105 (2^-31.286)
+STAT real low 16 zero:        3297361 (2^-16.347)   21787322 (2^-13.623)    4195587 (2^-16.000)    5287675 (2^-15.666)
+STAT real low 16 of two:   01:337 02:223 03:22 12:297 13:1079 23:74
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 252   weight <= 16/24/32/40: 0 10 26272 16299460   lowest weight seen 23
+STAT real trailing zero bits >= 24..48: 24:14664 28:945 32:50 36:7 40:0 44:0 48:0
+real: pin d5d881ca aa277e35 1f208000 123f2142 7fffffff fffd6e01  eta e7c1815f  class of 2^16 values of Y4  D3 815924bf
+STAT real trials 2^38.00  bad 0
+STAT real early test passes: 2728 (2^-26.586)   E1 requires the eta of Y4: 347 (2^-29.561)   contradictions (must be 0): 0
+STAT real pass A6: 4295022265 (2^-6.0000)  pass B: 57224600470 (2^-2.2641)  pass both: 894102449 (2^-8.2641; product of the two rates 2^-8.2641)  both and the E1-only test: 2
+STAT real word zero:               52 (2^-32.300)        628 (2^-28.705)         42 (2^-32.608)         98 (2^-31.385)
+STAT real low 16 zero:        3296201 (2^-16.348)   21790796 (2^-13.623)    4196972 (2^-15.999)    5288205 (2^-15.666)
+STAT real low 16 of two:   01:307 02:201 03:40 12:332 13:1081 23:83
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 257   weight <= 16/24/32/40: 0 5 26042 16302163   lowest weight seen 22
+STAT real trailing zero bits >= 24..48: 24:14551 28:870 32:52 36:13 40:0 44:0 48:0
+real: pin d5d881ca aa277e35 1f208000 123f2142 7fffffff fffd6e01  eta e7c1815f  class of 2^16 values of Y4  D3 815924bf
+STAT real trials 2^38.00  bad 0
+STAT real early test passes: 2894 (2^-26.501)   E1 requires the eta of Y4: 374 (2^-29.453)   contradictions (must be 0): 0
+STAT real pass A6: 4294920099 (2^-6.0000)  pass B: 57224427154 (2^-2.2641)  pass both: 894104935 (2^-8.2641; product of the two rates 2^-8.2641)  both and the E1-only test: 5
+STAT real word zero:               56 (2^-32.193)        618 (2^-28.729)         47 (2^-32.445)         87 (2^-31.557)
+STAT real low 16 zero:        3294305 (2^-16.348)   21787225 (2^-13.623)    4195042 (2^-16.000)    5290770 (2^-15.665)
+STAT real low 16 of two:   01:311 02:205 03:45 12:308 13:1039 23:61
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 250   weight <= 16/24/32/40: 0 10 26246 16296059   lowest weight seen 22
+STAT real trailing zero bits >= 24..48: 24:14595 28:925 32:56 36:7 40:1 44:0 48:0

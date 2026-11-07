@@ -1,0 +1,1 @@
+2011/387	Analysis of the Parallel Distinguished Point Tradeoff	owner_download	https://eprint.iacr.org/2011/387.pdf

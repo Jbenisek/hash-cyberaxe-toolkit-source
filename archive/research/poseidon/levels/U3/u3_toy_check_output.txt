@@ -1,0 +1,6 @@
+23 1 det[e0;e0M;e0M^2] mod q = 0
+23 2 det[e0;e0M;e0M^2] mod q = 13
+17 1 det[e0;e0M;e0M^2] mod q = 2
+17 2 det[e0;e0M;e0M^2] mod q = 8
+37 1 det[e0;e0M;e0M^2] mod q = 36
+37 2 det[e0;e0M;e0M^2] mod q = 2

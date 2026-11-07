@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.GCD (LEDGER)",
+ "question": "R4: score sensitivity (slack and stage)",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "Charging the observation instead of the 10 percent budget: slack 8,288,259,824 ops over 4 centres = 0.0399 bit; free stage 0.470 bit. The tightening pass can win about 0.04 bit only if the stage is made halt-free (data independent).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|LEDGER.GCD|LEDGER|R4. Candidate tightening (owner rule: exact counts); not applied here.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "the half-gcd recursion tree is proved data independent so no budget margin is needed",
+ "gain_basis": "T"
+}

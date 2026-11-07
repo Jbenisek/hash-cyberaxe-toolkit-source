@@ -1,0 +1,22 @@
+calibrate s 10.3
+N_FB = 5840904760525073226269327 (2^82.27247); vbar = 132300.1864 (w7 tests 1497.66, hit list 12.041, per-first-block scalars and planes 278.94, classes 128796.72, lanes 1714.3396, row 16 0.48729);
+P_cap = 3.285e-31; V_MAX = 772764579970529091929220381051; class max = 12113647; fixed per first block = 35
+N 789779068018615953003308365799 claim 4395187/50000 log2(N/C) 87.90373595441501
+fixed_ops_per_fb +1                      +0.000011 bit
+step3b_ops +100                          +0.000000 bit
+fb_scalars +10                           +0.000032 bit
+planes +10                               +0.000032 bit
+every plane program +1 instruction       +0.000963 bit
+lane_max +10 (all 3 masks)               +0.000602 bit
+w7 test +1 op                            +0.000960 bit
+A_C 2^84 (+6 bits)                       +0.091894 bit
+A_C 2^78 -> 2^74                         -0.001413 bit
+q3 -1 bit                                +0.999200 bit
+success 0.39->0.40                       +0.047403 bit
+cap margin eps 2^-16 -> 2^-14            +0.000065 bit
+mask 2448118929 {'max': 296, 'min': 142, 'mean': 219.375, 'mean_frac': Fraction(1755, 8)}
+mask 2448118993 {'max': 308, 'min': 146, 'mean': 227.375, 'mean_frac': Fraction(1819, 8)}
+mask 2448119249 {'max': 320, 'min': 150, 'mean': 235.375, 'mean_frac': Fraction(1883, 8)}
+lane scan s 0.1
+lanes term charged 1714.3396, with mean lane cost 1270.828857421875 time 87.89899601215065 gain bits 0.004739942264365027
+done 0

@@ -1,0 +1,22 @@
+{
+  "id": "D342-BLAKE3-R2-REPLICA-CUT-ARITHMETIC-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M six-lane direct-table replica cut",
+  "question": "What exact memory and conditional score follow from removing the six direct-table lane replicas after STREAM?",
+  "labels": ["C", "D"],
+  "status": "LOCAL_ONLY",
+  "number": "Replica saving = 109521666048 words = 3504693313536 bytes; search bound becomes 2508342946112 bytes, log2=41.1898717487; conditional S=83.62459 + delta_time_bits under accepted STREAM and zero added memory.",
+  "source": "our workflow: B3M proof/ledger arithmetic audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D342_b3m_replica_cut_arithmetic.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/proof.md section 12; research/retest/interaction_grid/wave2_blake3.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Exact subtraction from declared strict bounds only. Address/shift replacement cost, register/code effects, and organizer STREAM interpretation remain open; no gain credited and no package/submission action.",
+  "held_fixed": "32-byte words; six replicas 6(2^34+2^30); all non-replica tables, code, and small objects; declared time 62.4347098423",
+  "reopen_if": "A lossless non-replicated lane-addressing implementation with complete operation/memory ledger and an accepted STREAM rule",
+  "peak_mem": "UNKNOWN / arithmetic-only audit; no executable run"
+}

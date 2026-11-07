@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-g13-pair",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 decoupled G13 paired-language invariance",
+  "question": "Which affine class toggles preserve the exact decoupled G13 finite-state language?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Base count 50331648 for each mu; 13 of 15 class-basis toggles have paired count 50331648; deltas 00000380 and 00000040 have paired count 33554432",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/g13_pair_invariance.py; research/retest/b3_omega_coupled/exact/g13_pair_invariance.out; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Exact finite statement for the decoupled G13 automaton only. It does not prove invariance of the real coupled alive(E,y) predicate because h2=ROR(h^(E+f),8) is omitted."
+}

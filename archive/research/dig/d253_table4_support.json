@@ -1,0 +1,21 @@
+{
+  "id": "D253-SHA256-R38-TABLE4-SUPPORT-GRAPH-20261013",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 37,
+  "object": "Table-4 word-level support graph",
+  "question": "Do the Table-4 A/E/W groups separate into disjoint message-word domains?",
+  "labels": ["D", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact word-support propagation: every A16-A19, E16-E19 and E21 group supports all 16 message words; W7 supports {7}, W8 {8}, W16 {0,1,9,14}, W23 14 words, W25 15 words. All 14 groups form one connected support component.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/s38_table4_dependency_graph.py; research/sol_answer_S38-table4-support-graph.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "notes": "Word-level support is exact and rules out a naive disjoint-domain product split. It does not prove carry-aware probabilistic independence or replace the paper's 102-condition attack model; effective Table-4 cost remains OPEN.",
+  "held_fixed": "Standard SHA-256 schedule/state wiring for 38 steps; support sets ignore carry coincidences.",
+  "reopen_if": "A carry-aware attack-law measurement or proof establishes an effective independence/rank result beyond word support."
+}

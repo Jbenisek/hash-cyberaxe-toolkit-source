@@ -1,0 +1,17 @@
+permutation vectors 11/11, hash vectors 11/11
+hash vector 0: in=(0,1) out=0x062ff1c32bb0ef109d6a1bc9399a083eed83c2a7fb54cdbe389d32a011d75883
+hash vector 0 out (LE bytes) = 8358d711a0329d38becd54fba7c283ed3e089a39c91b6a9d10efb02bc3f12f06
+negative controls (capacity 3<<64, 63 rounds) differ: ok
+instrumented counts == analytic counts
+optimized / digest_only evaluation == faithful for r in 1,2,3,5,64
+
+r | faithful | digest_only | opt (const-fold + row0) | opt one-time precompute
+1 | adds=9 sqr=6 mul=12 | mults=18 total=27 | adds=5 sqr=6 mul=6 | mults=12 total=17 | adds=4 sqr=4 mul=4 | mults=8 total=12 | adds=1 sqr=2 mul=4 | mults=6 total=7
+2 | adds=18 sqr=12 mul=24 | mults=36 total=54 | adds=14 sqr=12 mul=18 | mults=30 total=44 | adds=10 sqr=10 mul=14 | mults=24 total=34 | adds=4 sqr=2 mul=4 | mults=6 total=10
+3 | adds=27 sqr=18 mul=36 | mults=54 total=81 | adds=23 sqr=18 mul=30 | mults=48 total=71 | adds=19 sqr=16 mul=26 | mults=42 total=61 | adds=4 sqr=2 mul=4 | mults=6 total=10
+4 | adds=36 sqr=24 mul=48 | mults=72 total=108 | adds=32 sqr=24 mul=42 | mults=66 total=98 | adds=28 sqr=22 mul=38 | mults=60 total=88 | adds=4 sqr=2 mul=4 | mults=6 total=10
+64 | adds=576 sqr=160 mul=656 | mults=816 total=1392 | adds=572 sqr=160 mul=650 | mults=810 total=1382 | adds=568 sqr=158 mul=646 | mults=804 total=1372 | adds=4 sqr=2 mul=4 | mults=6 total=10
+
+per full round   : adds=9 sqr=6 mul=12 | mults=18 total=27
+per partial round: adds=9 sqr=2 mul=10 | mults=12 total=21
+64 rounds        : adds=576 sqr=160 mul=656 | mults=816 total=1392 (PR claims 816 mult + 576 add)

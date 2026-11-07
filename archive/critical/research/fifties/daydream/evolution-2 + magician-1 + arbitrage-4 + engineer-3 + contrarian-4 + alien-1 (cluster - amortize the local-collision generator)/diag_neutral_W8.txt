@@ -1,0 +1,28 @@
+W=8: 400 T0-solved seeds from 18800 tries
+m0  AB: T0 survives 0.0003
+m1  AB: T0 survives 0.0006
+m2  A : T0 survives 0.0009
+m2  AB: T0 survives 0.0000
+m2  B : T0 survives 0.0000
+m3  A : T0 survives 0.0000
+m3  AB: T0 survives 0.0000
+m3  B : T0 survives 0.0000
+m4  AB: T0 survives 0.0037
+m5  AB: T0 survives 0.0347
+m6  AB: T0 survives 0.0003
+m7  A : T0 survives 0.0000
+m7  AB: T0 survives 0.0050
+m7  B : T0 survives 0.0000
+m8  AB: T0 survives 0.0006
+m9  AB: T0 survives 0.1481
+m10 A : T0 survives 1.0000
+m10 AB: T0 survives 1.0000
+m10 B : T0 survives 1.0000
+m11 AB: T0 survives 1.0000
+m12 AB: T0 survives 1.0000
+m13 A : T0 survives 1.0000
+m13 AB: T0 survives 1.0000
+m13 B : T0 survives 1.0000
+m14 AB: T0 survives 1.0000
+m15 AB: T0 survives 1.0000
+all moves on words that feed T0 (m0..m9): survival 0.0121

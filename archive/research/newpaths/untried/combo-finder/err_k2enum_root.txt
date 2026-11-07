@@ -1,0 +1,8 @@
+bucket 0: n=536870913 ordered coll so far 691255688, (b) passes 69640672, 80.4 s
+bucket 1: n=536870910 ordered coll so far 1365373642, (b) passes 135124244, 149.6 s
+bucket 2: n=536870913 ordered coll so far 2036945370, (b) passes 208889124, 244.0 s
+bucket 3: n=536870913 ordered coll so far 2683514046, (b) passes 281216594, 316.9 s
+bucket 4: n=536870911 ordered coll so far 3341055306, (b) passes 361355448, 399.0 s
+bucket 5: n=536870912 ordered coll so far 4008516046, (b) passes 431320884, 474.0 s
+bucket 6: n=536870913 ordered coll so far 4696496100, (b) passes 504519544, 552.3 s
+bucket 7: n=536870911 ordered coll so far 5380950122, (b) passes 570922486, 626.8 s

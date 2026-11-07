@@ -1,0 +1,89 @@
+{
+ "seconds": 14.367411851882935,
+ "CHK16": true,
+ "Y11": "7af77f38",
+ "pc": {
+  "steps": 136649,
+  "same_as_solver": 136649,
+  "j1ok": 136649,
+  "units": 1120074388,
+  "fixed": 1107528448,
+  "node_units": 10871636,
+  "node_units_ge24": 2039428,
+  "leaf_units": 1674304,
+  "saved": {
+   "Q16": 1867972,
+   "Q19": 1535408,
+   "HA": 1253392,
+   "Q16+Q19": 2623988,
+   "all": 2933860
+  },
+  "saved_leaves": {
+   "Q16": 9134,
+   "Q19": 9224,
+   "HA": 9172,
+   "Q16+Q19": 13686,
+   "all": 15962
+  },
+  "vc": {
+   "leaves": 18182,
+   "path_vs_full_mismatch": 0,
+   "c1_vs_search_mismatch": 0,
+   "leaves_keep_required": 1048,
+   "keep_required_but_killed": 0,
+   "leaves_qstar_ha": 1,
+   "qstar_ha_killed": 0,
+   "roots": 763,
+   "roots_killed_all": 684,
+   "roots_killed_Q": 588,
+   "roots_qstar": 0,
+   "roots_qstar_ha": 0,
+   "roots_qstar_ha_killed": 0
+  },
+  "cap": 2279690592,
+  "roots": 763,
+  "steps_with_root": 692
+ },
+ "rootsteps": {
+  "steps": 81001,
+  "same_as_solver": 81001,
+  "j1ok": 81001,
+  "units": 870196924,
+  "fixed": 658558208,
+  "node_units": 142716828,
+  "node_units_ge24": 56315792,
+  "leaf_units": 68921888,
+  "saved": {
+   "Q16": 62896096,
+   "Q19": 54472340,
+   "HA": 46482760,
+   "Q16+Q19": 89928768,
+   "all": 101503152
+  },
+  "saved_leaves": {
+   "Q16": 271996,
+   "Q19": 270722,
+   "HA": 271318,
+   "Q16+Q19": 406332,
+   "all": 473928
+  },
+  "vc": {
+   "leaves": 541498,
+   "path_vs_full_mismatch": 0,
+   "c1_vs_search_mismatch": 0,
+   "leaves_keep_required": 33521,
+   "keep_required_but_killed": 0,
+   "leaves_qstar_ha": 68,
+   "qstar_ha_killed": 0,
+   "roots": 88896,
+   "roots_killed_all": 77730,
+   "roots_killed_Q": 66645,
+   "roots_qstar": 53,
+   "roots_qstar_ha": 15,
+   "roots_qstar_ha_killed": 0
+  },
+  "cap": 1424405472,
+  "roots": 88896,
+  "steps_with_root": 81001
+ }
+}

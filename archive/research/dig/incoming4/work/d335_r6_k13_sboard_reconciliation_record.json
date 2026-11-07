@@ -1,0 +1,23 @@
+{
+  "id": "D335-R6-K13-SBOARD-RECONCILIATION-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "memory-rule K=13 Gray-body lever",
+  "question": "Does the quoted K=13 Gray-body time figure beat the live memory-rule S score?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "No: quoted time 124.0456467415 is time-only; body envelope 2^32.7127 to 2^33.7143 bytes gives S >= 136.76 before other objects, while generic S6R is 128.03143",
+  "source": "our workflow: D335 K13 S-board reconciliation",
+  "own_test": true,
+  "evidence": "research/dig/CELLS.jsonl record D248-SHA3-K13-SBOARD-RECHECK; research/dig/GRID_SHA3.md; research/retest/interaction_grid/wave2_sha3.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "UNKNOWN",
+  "notes": "Own exact arithmetic closes the claimed K=13 memory-rule gain, but does not run/import the other participant's K=13 program. A future own K<=3 under-cap implementation would be a different question, not evidence for this K=13 lever.",
+  "held_fixed": "Quoted K=13 time/body envelopes, collision-frontier memory rule S=time+max(0,log2(bytes)-20), generic S6R=128.03143",
+  "reopen_if": "An own complete Gray-body program under 2^20 bytes demonstrates a score below 128.03143",
+  "supersedes": ["R6-K13"]
+}

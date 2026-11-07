@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-twist-symmetry",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 y20 twisted witness map",
+  "question": "Does delta 00100000 preserve the coupled equations with h twisted by 10000000?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact bit-vector UNSAT for J1 and both J3 epsilon values under maps (delta,r)=(00100000,10000000) and (20000000,00000020)",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/twist_symmetry_smt.py; research/retest/b3_omega_coupled/exact/twist_symmetry_smt.out; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Together with the other exact witness maps, this raises the coupled direction count to 11/15; four class directions remain OPEN. Output SHA-256 124b1bae559425f9e7c1cf4307753a13c24f387959d22f75f663b7c881c4cf8d."
+}

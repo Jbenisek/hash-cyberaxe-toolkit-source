@@ -1,0 +1,43 @@
+arm len N 200000 seed 101
+complete_with_retry 0 frac 0.000000 ; complete_single_try 0 frac 0.000000 ; dumped 0
+diag D0: FIRST zero 0.998595 mean 1.4084 max 22528 | SECOND(first-tried) zero 0.996441 mean 0.3416 max 96 | diag ok single 0.000005 retry 0.000035
+  hist FIRST 0..8: 199719 0 0 0 1 0 0 0 4 >8:276
+  hist SECOND 0..8: 280 0 0 0 0 0 0 0 0 >8:1
+  over all samples: mean FIRST roots tried 1.408, mean FIRST roots with SECOND root 0.0020, mean (x,y) pairs 1.7632 (max 276480); given FIRST solvable: P(diag solvable) 0.0249
+diag D1: FIRST zero 0.998675 mean 1.2522 max 12288 | SECOND(first-tried) zero 1.000000 mean 0.0000 max 0 | diag ok single 0.000000 retry 0.000010
+  hist FIRST 0..8: 199735 0 0 0 0 0 0 0 2 >8:263
+  hist SECOND 0..8: 265 0 0 0 0 0 0 0 0 >8:0
+  over all samples: mean FIRST roots tried 1.252, mean FIRST roots with SECOND root 0.0000, mean (x,y) pairs 0.0134 (max 2496); given FIRST solvable: P(diag solvable) 0.0075
+diag D2: FIRST zero 0.998715 mean 0.9385 max 12288 | SECOND(first-tried) zero 1.000000 mean 0.0000 max 0 | diag ok single 0.000000 retry 0.000000
+  hist FIRST 0..8: 199743 0 0 0 0 0 0 0 8 >8:249
+  hist SECOND 0..8: 257 0 0 0 0 0 0 0 0 >8:0
+  over all samples: mean FIRST roots tried 0.939, mean FIRST roots with SECOND root 0.0000, mean (x,y) pairs 0.0000 (max 0); given FIRST solvable: P(diag solvable) 0.0000
+diag D3: FIRST zero 0.998655 mean 0.8019 max 13440 | SECOND(first-tried) zero 0.996283 mean 0.4758 max 128 | diag ok single 0.000005 retry 0.000015
+  hist FIRST 0..8: 199731 0 0 1 0 0 0 0 5 >8:263
+  hist SECOND 0..8: 268 0 0 0 0 0 0 0 0 >8:1
+  over all samples: mean FIRST roots tried 0.802, mean FIRST roots with SECOND root 0.0004, mean (x,y) pairs 0.6989 (max 110592); given FIRST solvable: P(diag solvable) 0.0112
+RETRY_CAP 1000000 COUNT_ALL 1
+joint diag-solvable pairs (01 02 03 12 13 23): 0 0 0 0 0 0
+time 3.751 s ; ns/sample 18754.0 ; ns/complete 0.0
+ops: word 56604384 dp_transitions 1776868160 solves 1680209 ; per complete: word 0.0 dp 0.0 solves 0.000
+D full-width pass counts: 0 0 0 0
+k  1 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  2 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  3 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  4 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  5 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  6 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  7 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  8 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  9 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 10 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 11 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 12 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 13 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 14 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 15 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 16 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+bitfreq e0: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+bitfreq e1: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+bitfreq e2: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+bitfreq e3: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000

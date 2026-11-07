@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m12 (w12; read by D2.a1 in round 0 and E1.a1 in round 1; free, solved from X2)",
+ "question": "Q1 difference/condition count at this word",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Difference A vs B: 0 (w12 identical in the 55- and 63-byte block; 0 of 20000 builds differ). Conditions on the word itself: 0 bits (w12 = D2.a1 - S2 - S7 is solved, not tested; every one of 2^32 values is reached, see Q3). The calls that read it are difference-free: D2 outputs (X2,X7,X8,X13) equal in A and B and E1.a1 = Y1+Y6+w12 equal, 3000/3000.",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U12/work/scan_m1213.out.json; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m12|msgword|Q1. Structure: free word, bytes 0-54 of the message are unconstrained (proof.md 3.1). Bit bias of w12 over 20000 builds <= 0.0077 (sampling noise).",
+ "topic": "blake3-r2 m12 word"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "D395-SHA3-R5-PHASEB-PEAK-WORKINGSET-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r5 phase-B peak WorkingSet64",
+  "question": "What peak child WorkingSet does the fixed phase-B driver exhibit across its four valid groups?",
+  "labels": ["S", "I"],
+  "status": "LOCAL_ONLY",
+  "number": "Trials 0..3 all exit 0; conservative peaks 34320384, 35270656, 33718272, 27222016 B; maximum 35270656 B = 2^25.0719650730.",
+  "source": "our workflow: owned r5_phaseB_peak_workingset.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_D395_r5_phaseB_peak_workingset.md; research/retest/r5_phaseB_peak_workingset.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 6.96,
+  "prior": 0.1,
+  "peak_mem": 35270656,
+  "notes": "Finite phase component only. PeakWorkingSetSize is stronger than sampled current WorkingSet, but this does not prove the full preprocessing/advice peak or justify replacing the declared 130149253 B bound. No package/staging/submission action."
+}

@@ -1,0 +1,39 @@
+BASELINE trace over 300 random constructed pairs (frontline CO/CT/CS, words 0,2,5,7 equal in all): fraction of pairs with a nonzero A^B at each quarter-step (non-listed = 0 of 300)
+  K0 q1..q4 nonzero counts: [0, 0, 0, 0]
+  K1 q1..q4 nonzero counts: [0, 0, 0, 0]
+  K2 q1..q4 nonzero counts: [300, 0, 0, 0]
+  K3 q1..q4 nonzero counts: [0, 0, 0, 0]
+  D0 q1..q4 nonzero counts: [0, 0, 0, 0]
+  D1 q1..q4 nonzero counts: [0, 0, 0, 0]
+  D2 q1..q4 nonzero counts: [0, 0, 0, 0]
+  D3 q1..q4 nonzero counts: [0, 0, 0, 0]
+  C0 q1..q4 nonzero counts: [0, 0, 0, 0]
+  C1 q1..q4 nonzero counts: [0, 0, 0, 0]
+  C2 q1..q4 nonzero counts: [0, 0, 0, 0]
+  C3 q1..q4 nonzero counts: [600, 600, 300, 300]
+  E0 q1..q4 nonzero counts: [0, 0, 0, 0]
+  E1 q1..q4 nonzero counts: [0, 600, 600, 600]
+  E2 q1..q4 nonzero counts: [0, 0, 0, 0]
+  E3 q1..q4 nonzero counts: [600, 600, 600, 600]
+E1 q1 (a1,d1) nonzero count over 300 pairs: 0  -> structurally zero in every constructed pair
+G dependence (outputs a,b,c,d vs inputs a,b,c,d) all 16 true: True
+  => E1.a1/d1 input words v1,v6,v12 are outputs of C1,C2,C0, each depending on all four of its round-2-start words; nonzero Delta(a1,d1) needs a nonzero difference in round-2-start state outside C3 inputs, i.e. leaving the Lemma L cancellation / pinned D-outputs
+message words that differ A vs B: [4, 5] (w4 diff and w5 = w5-8); initial v14 = block length 55/63
+state words differing after round 1 (before C): [] (none expected: Lemma L cancellation + pinned constants)
+INJECTION of a one-bit difference into round-2-start word k of B (120 trials per word; baseline active calls in round 2 are C3 and E1,E3 per the construction):
+  v0 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C0': 120}
+  v1 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'C1': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}
+  v2 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C2': 120}
+  v3 : mean #round-2 calls with nonzero output diff = 5.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}
+  v4 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C0': 120}
+  v5 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'C1': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}
+  v6 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C2': 120}
+  v7 : mean #round-2 calls with nonzero output diff = 5.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}
+  v8 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C0': 120}
+  v9 : mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'C1': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}
+  v10: mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C2': 120}
+  v11: mean #round-2 calls with nonzero output diff = 5.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}
+  v12: mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C0': 120}
+  v13: mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'C1': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}
+  v14: mean #round-2 calls with nonzero output diff = 6.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120, 'C2': 120}
+  v15: mean #round-2 calls with nonzero output diff = 5.00 ; words 0,2,5,7 still equal in 0/120 ; calls hit: {'E0': 120, 'E2': 120, 'E1': 120, 'C3': 120, 'E3': 120}

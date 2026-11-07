@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 306564	     32	250014048	250320644	eeb9704	single

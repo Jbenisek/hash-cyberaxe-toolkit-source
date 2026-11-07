@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "C1.q4 (c2 = Y9 = C1.c1 + Y13): filter (1) on Y9 and exact prefilter PF",
+ "question": "Q2 necessity: relax filter (1) on Y9 and the exact prefilter PF (accept more Y9 values), recount outcome mass through E1/E3 (rows_dp/typed_check), loss or gain per filter word.",
+ "labels": [
+  "E",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Filter (1) on Y9: necessary, relaxing adds 0 outcome mass. Relax all of (1): 2^32 words (x304.39 of 14,110,208), SHARE 14,110,208*63,633,856 -> 2^32*63,633,856, mass added 0. Relax PF-style prefix (bits>=n ignored): n=8 234,881,024 (x16.65); n=10 exact 14 prefixes 58,720,256 (x4.16); n=20 29,130,752 (x2.06); n>=28 14,110,208 (x1.00, bits 28..31 of (1) add nothing). PF as shipped (Y9&0x3c7 in {0x004,0x3c4}) accepts 67,108,864 = 1/64 (x4.76 the exact 1/304.4; lane pass measured 0.01558 vs 0.015625). Relax one theta bit: bits 1,2,8,9 x3.00; 3 x1.50; 7 x2.14; 10,17,26 x~2.0; 25 x2.03; 19 x1.016; the other 21 bits (0,4-6,11-16,18,20-24,27-31) x1.000 = implied, relaxing costs nothing and gains nothing. Outcome mass loss from the exact (1) and PF: 0 (3000 sampled J1 solutions: 0 rejected by the automaton, 0 by PF; brute force over h at widths 4..14 equals the automaton). Cost (estimate from printed units, WB 83.1%): dropping PF = word 67.0 vs 52.5 units, +0.298 bit on log2 N; PF loosened to 6 bits +0.116 bit. Controls: (1)=14,110,208, E_COUNT=63,633,856, SHARE=897,886,944,002,048 reproduced.",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U01/work/relax1.py; research/dig/incoming/blake3-r2-U01/work/relax1_out.json; research/dig/incoming/blake3-r2-U01/work/relax2.py; research/dig/incoming/blake3-r2-U01/work/relax2_out.json; research/tools/traillab/b3atlas/rows_dp.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|C1.q4|step|Q2. Y9 is the C1 output c2 (proof.md round 1 listing: Y9 = C1.c1 + Y13), so q4 is where the filter reads. Counts exact over all 32 bits (own subset DP, validated on 11 widths against brute force over h; PF 14 prefixes of Lemma PF reproduced with the one-bit lookahead). The 'no loss' side is Lemma F (proof, necessity of (1)) plus our sampling of J1 solutions (3000, 0 rejects); the full R=0 path was not re-run, so the claim that relaxed words add zero real outcomes rests on Lemma F. Cost bits use printed units (50 per word incl. PF 7, +24 per kept word, WB share 83.1%): estimate, not a ledger run. Tighter-than-PF filters give a ceiling only (see relax2_out.json): exact 14-prefix PF -0.0069 bit, 20-bit prefix -0.032, exact free -0.045, each before the extra ops; ATLAS_BLAKE3 lists PF under 'not gaps'.",
+ "gain_basis": "T",
+ "topic": "blake3-r2 C1 filter (1)/PF necessity"
+}

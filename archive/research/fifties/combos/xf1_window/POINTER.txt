@@ -1,0 +1,1 @@
+XF1 (label crossline-XF1) outputs are in ..\crossline-XF1\ (RESULT.md there). Verdict GAIN: 63.313775 (delta -0.288865), LOST 0, fills dominated pointwise.

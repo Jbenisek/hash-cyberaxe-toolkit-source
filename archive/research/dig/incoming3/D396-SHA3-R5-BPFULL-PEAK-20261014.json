@@ -1,0 +1,21 @@
+{
+  "id": "D396-SHA3-R5-BPFULL-PEAK-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r5 full B-prime preprocessing peak",
+  "question": "What peak WorkingSet does the owned full r5-bpfull B-prime path exhibit?",
+  "labels": ["S", "I"],
+  "status": "LOCAL_ONLY",
+  "number": "Unchanged r5-bpfull source exits 0 in 8.189 s; 48 runs/39 successes; conservative PeakWorkingSetSize 43855872 B = 2^25.3862666868.",
+  "source": "our workflow: owned r5_bpfull_peak_workingset.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_D396_r5_bpfull_peak.md; research/retest/r5_bpfull_peak_workingset.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 6.96,
+  "prior": 0.15,
+  "peak_mem": 43855872,
+  "notes": "Full B-prime path completed, but this is one fixed seed/process and not a worst-case or complete production memory proof. Retain declared 130149253 B board bound. No package/staging/submission action."
+}

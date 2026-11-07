@@ -1,0 +1,9 @@
+C1 half-collision + cons + E1.c1 + beta* on the reference, t = thi*2^32 + t_lo: 512 ok, 0 bad (max t 2251799739717328 = 2^51.000000)
+C2 C0 and D1 values constant along the walk: 0 mismatches over 64 x 8 x 17 names
+C3 omega closed form, X0 and w2 lines: 0 mismatches
+C6 names that change along the walk (24): C1_a1 C1_b1 C1_c1 C1_d1 C2_b1 C2_c1 D0_a1 D0_b1 D0_c1 D0_d1 K1_a1 X0 X10 X5 Y1 Y13 Y5 Y9 omega thi w2 w3 w8 w9
+C4 group 0: X0 interval span 524287 (= 2^19 - 1: True), 9 blocks of X0>>16, omega mod 2^16 values per block [1, 1, 1, 1, 1, 1, 1, 1, 1]
+C4 group 1: X0 interval span 524287 (= 2^19 - 1: True), 9 blocks of X0>>16, omega mod 2^16 values per block [1, 1, 1, 1, 1, 1, 1, 1, 1]
+C4 group 2: X0 interval span 524287 (= 2^19 - 1: True), 9 blocks of X0>>16, omega mod 2^16 values per block [1, 1, 1, 1, 1, 1, 1, 1, 1]
+C5 list method = enumeration on 27 blocks: 0 mismatches; (2)-passing steps 0 of 1572864 = 0.000000 (pi_E 0.054416)
+seconds 3.0

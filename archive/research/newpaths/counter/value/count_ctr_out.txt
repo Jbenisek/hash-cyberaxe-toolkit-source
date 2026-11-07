@@ -1,0 +1,12 @@
+lanes right 2100 of 2100 (rule-A flag, E1 test word, beta) over 300 packed words
+  part loop                 ops   3 loads  1 stores 0
+  part cube word to Y14     ops   9 loads  1 stores 0
+  part z                    ops   5 loads  1 stores 0
+  part rule A               ops  14 loads  7 stores 0
+  part entry count          ops   3 loads  1 stores 0
+  part E1, A and B          ops  34 loads 14 stores 0
+  part E1 test              ops  13 loads  7 stores 0
+stage A: 31 operations + 10 loads + 0 stores = 41 units per word of 7 trials
+stage 2: 50 operations + 22 loads + 0 stores = 72 units per entered word
+register peak (machine.registers()): 16 (limit 16); resident 7: ['Y12', '-Y1-w12', 'A25', 'B25', 'C2.b1', '-C2.c1', 'A24']
+filed program (halfsearch.py TABLES, KEPT=9): stage A 37 ops + 10 loads = 47; stage 2 = 135 per entered word

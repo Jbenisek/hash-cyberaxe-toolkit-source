@@ -1,0 +1,2 @@
+part2 preimage counts histogram: {1: 144, 2: 144, 3: 79, 4: 19, 5: 7, 6: 7}  E[1/n] = image fraction ~ 0.6241
+part2 preimage counts histogram: {1: 136, 2: 149, 3: 83, 4: 23, 5: 8, 6: 1}  E[1/n] = image fraction ~ 0.6142

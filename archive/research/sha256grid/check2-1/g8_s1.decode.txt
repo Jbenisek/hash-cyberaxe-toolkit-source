@@ -1,0 +1,9 @@
+status SATISFIABLE
+CNF words consistent with recomputation: True
+independent dense_checks failures: []
+end-to-end (published CV): rows0..15 True W0..W6 equal True dW16 20000000 dW17 00000000
+A3..A13 equal to published: False  rows where A differs from published: [0, 1, 2, 3, 4, 5, 6]
+Ax 4493f513 f5ab3979 0c7897cd 837074f8 50748c96 9fe5f173 ffd9cecb 3e016e83 b6a6b5f9 3ec0b304 bcc85d8c 25d3cc99 4846f2d8 c2dc0441 c84cdcb9 91c40603
+ W16 copies: 8 distinct 8
+ main copy: W14 528e48a0 W15 9f1f65bb; solution valid: True
+appended to c_g8.sols.json

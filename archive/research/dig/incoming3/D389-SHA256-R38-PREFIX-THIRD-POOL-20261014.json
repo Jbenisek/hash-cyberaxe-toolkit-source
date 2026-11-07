@@ -1,0 +1,22 @@
+{
+  "id": "D389-SHA256-R38-PREFIX-THIRD-POOL-20261014",
+  "hash": "sha256-38",
+  "row_i": 6,
+  "row_j": 37,
+  "object": "third-seed prefix marginals and three-run pool",
+  "question": "Does an independent third seed batch reproduce the r38 prefix marginals and the pooled late ratio?",
+  "labels": ["C", "S"],
+  "status": "SAMPLED",
+  "number": "D389: 8,388,608 proposals, 117 cells, 321 exact, EXACT/cells=2.74359, RSS 2^22.9351650496. D379+D386+D389 pool: 25,165,824 proposals, 397 cells, 1,041 exact, rate 2^-15.9519673036, EXACT/cells=2.6221662469; pooled prefix A17=-6.032293403, A18=-1.002629372, A19=-1.038414652, E17=-2.003408822, E18=-3.003349981, E19=-2.006648783, E21=-1.002923455.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D389_r38_prefix_third_seed_pool.md; research/retest/r38_prefix_8001_8008.out; research/retest/r38_prefix_8001_8008.time",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Finite one-thread sample only. W7/W8 and A16/E16/W16 are unit-rate under the checked-in proposal. The full Table-4 independence comparison, common-law proof, and filing transfer remain OPEN.",
+  "held_fixed": "chi38, rows 22..37 event out, np=128, m=64, mt2=256, mw=64, mt=8192, one thread; seeds 8001..8008",
+  "reopen_if": "A schedule-consistent proof or full-path test of the 47-condition versus 102-condition law is still required.",
+  "peak_mem": "22.9351650496 MEASURED /usr/bin/time -v maximum RSS, one-thread owned traillab run"
+}

@@ -1,0 +1,21 @@
+r=2 ncentres=1 seed=201004 m=195312
+INIT arith=66509 other=595918 total=662427
+lean-pow breakdown: newton total=377843160 arith=99688065 | prefix+scale total=3906435 | loop steps=236 total=54256880909 arith=16031889220 per-step total=229902037 arith=67931733
+CENTRE 0 j=0 degG=1 success=1 arith=19308718361 all=73796076603 sec=575.2
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=2097152
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=2097152
+  build g                                  arith=     6421153 other=   115051923 total=   121473076     3.8s peak=14638624
+  S^((p-1)/2) mod g                        arith= 16131772597 other= 38506857907 total= 54638630504   493.4s peak=37624320
+  gcd(g, S^h-1) (half-gcd)                 arith=  3170520527 other= 15865412108 total= 19035932635    78.0s peak=40741792
+  root finding                             arith=           1 other=           6 total=           7     0.0s peak=2097216
+  sqrt + map back                          arith=        3176 other=       30623 total=       33799     0.0s peak=2097152
+  verification (2 reference hashes)        arith=         516 other=        2064 total=        2580     0.0s peak=2097152
+COLLISION nk1  0x1ca498bd676d9ad7a926df57ebd5dca2b26e3613c07e2d8496b681d0642e6cc3
+COLLISION rho1 0x32ebdd9cc60ed9fe74ad754ce46b62288b2559c0e01e6fcd354cc3ce8cb16037
+COLLISION nk2  0x1200b03913bc50a2dc317ac85aae58ee89f5885fc8c40a4d8696a49e4980ab40
+COLLISION rho2 0x0a3c6a58c57fe1bc7f72df2b1d9a4b712080840d04614a7323394af41970a01e
+COLLISION digest 0x3b8e8e89d2dd9e89af27870ea9f1aa76c335dee998605c7e99095d37e95454b9
+COLLISION centre 0x26efd2b3354083ea4f9232d0a8298c720447649cf111e2360000c5c5dafedc0e
+SUMMARY r=2 centres=1 success=1 total_all=73796739030 total_arith=19308784870 units=286033872.2 log2_units=28.0916 heap_peak=40741792 secs=575.2
+GAPS gcd=16747965 root=7
+TYPES add=6717662614 sub=6311270452 mul=6137434806 sqr=142416998 ld=7698272514 st=4328358622 ctl=42359873295 rnd=1 perm=101449728

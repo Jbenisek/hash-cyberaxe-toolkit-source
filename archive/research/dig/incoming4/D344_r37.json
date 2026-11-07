@@ -1,0 +1,19 @@
+{
+  "id": "D344-R37-INVENTORY-DELTA",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "post-D250 filing inventory delta",
+  "question": "Did later filing-log rows change the accepted SHA-256-r37 comparison line?",
+  "labels": ["N"],
+  "status": "LOCAL_ONLY",
+  "number": "0 accepted-line changes; R37R 60.11997 remains awaiting review",
+  "source": "our workflow: filing-inventory-delta",
+  "own_test": true,
+  "evidence": "research/sol_answer_D344_current_inventory_delta.md; research/FILINGS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "R37Z 60.99099 is worse than the baseline and does not alter the inventory.",
+  "peak_mem": "0 FREE"
+}

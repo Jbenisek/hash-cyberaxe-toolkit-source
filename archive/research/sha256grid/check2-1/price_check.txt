@@ -1,0 +1,12 @@
+base (A_S 2^70)            72.633442  (package proof.md line 4: 2^72.633442)
+A_S 2^50                   72.379911  ceil5 72.37992  vs base -0.2535  vs board 72.64 -0.2601  vs ours 72.61489 -0.2350
+A_S 2^50, N_G pad 50/51    72.357760  ceil5 72.35777  vs board -0.2822  vs ours -0.2571
+share of A_S=2^70 in the base total: 0.1612
+units per CPU-second at 10^10 word ops / C: 2^21.8057
+     21.66 CPU-s -> 2^26.243 units; 2^50 is 2^23.76 above
+    331.67 CPU-s -> 2^30.179 units; 2^50 is 2^19.82 above
+     51.25 CPU-s -> 2^27.485 units; 2^50 is 2^22.51 above
+    570.72 CPU-s -> 2^30.962 units; 2^50 is 2^19.04 above
+    658.08 CPU-s -> 2^31.168 units; 2^50 is 2^18.83 above
+   3520.00 CPU-s -> 2^33.587 units; 2^50 is 2^16.41 above
+paper 2^38.3 units -> 92319 CPU-s at this rate

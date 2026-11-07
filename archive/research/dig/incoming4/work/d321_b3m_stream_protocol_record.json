@@ -1,0 +1,22 @@
+{
+  "id": "D321-B3M-STREAM-PROTOCOL-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M explicit sequential output-stream protocol",
+  "question": "Can the current B3M one-message schedule be expressed as a sequential consuming stream with A released before B, while retaining the shipped compression outputs?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "256 root + 256 nonzero-counter trials: zero CV/length mismatches, 256/256 distinct root payload hashes, and 256/256 A-before-B event-order checks; symbolic prefix chunks are counted, not materialized.",
+  "source": "our workflow: D321 B3M stream protocol",
+  "own_test": true,
+  "evidence": "research/sol_answer_D321_b3m_stream_protocol.md; research/retest/b3m_one_message_stream/stream_protocol.py; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "UNKNOWN",
+  "notes": "Finite local protocol evidence only. It does not settle python-message-pairs-v1 organizer acceptance, allocator behavior, or the merged preprocessing-memory rule; no score or filing credit.",
+  "held_fixed": "unchanged current pkgB3S2 frontline.py; 256 deterministic root seeds and 256 deterministic nonzero-counter offsets",
+  "reopen_if": "Organizer accepts the explicit consuming stream and its memory accounting, or a production stream implementation is audited"
+}

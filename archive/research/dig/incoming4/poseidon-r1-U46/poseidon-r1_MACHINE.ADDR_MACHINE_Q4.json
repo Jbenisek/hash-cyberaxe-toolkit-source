@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.ADDR addressing arithmetic",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "alternative: constant-stride specialised passes (each charged by a derived per-pass formula) - the judges refused coarse per-block charges, so every executed op must still be counted",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "chatlog-backup/claude-project/memory/poseidon-judge-expectations.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "From the rulings. | universe cell poseidon-r1|MACHINE.ADDR|MACHINE|Q4",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "judge guidance"
+}

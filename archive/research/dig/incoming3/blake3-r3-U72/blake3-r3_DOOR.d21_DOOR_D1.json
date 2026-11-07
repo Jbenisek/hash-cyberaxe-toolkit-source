@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp_d1.py, exp_d1_out.json, exp_d1b.py, exp_d1b_out.json, exp_d1c.py, exp_d1c_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "door 21: flag-word cancellation (delta 7 for flags 11 vs 12) (3-round test)",
+ "question": "D1: RELABEL test of the r2 door at 3 rounds",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "Relabel at 3 rounds (flags 11 vs 12, delta 7). (a) Conservative word-level activity simulation (a call is active if any input differs; all four outputs then differ): without absorption 5, 8, 8 active G calls in rounds 0, 1, 2 and 8 of 8 digest words active, i.e. 8 conditions = 256 bits (the claim holds at 3 rounds). Delta 7 touches column 3 and all four diagonals. (b) With the exact in-call cancellation by m6/m7 (a1' = a1 ^ 7, m6' = m6 + e, m7' = m7 - e): round-0 state equal, 0, 6, 8 active calls, 8 of 8 digest words active at 3 rounds (8 equal at 1 round). (c) Exact digest pairs, 1500 random messages: 0 equal digest words at rounds 1 (uncancelled), 2 and 3; cancelled: 8 equal at 1 round, 0 at 2 and 3. (d) Bias of the 256 digest difference bits, 6000 pairs: uncancelled r1 63 biased bits, r2 and r3 none; cancelled r1 256, r2 17 biased bits in 4 words (max deviation 0.14), r3 none (max deviation 0.018, below the 0.05 threshold). At 3 rounds the flag door leaves no usable structure: 256-bit residual against 128 for birthday.",
+ "topic": "b3r3.DOOR.d21.D1",
+ "notes": "universe cell blake3-r3|DOOR.d21|DOOR|D1. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Test: own pairs (m, flags 11) vs (m', flags 12), m' = m except m6/m7 (cancelled variant); other state words as the target; deviation threshold 0.05 = 7.7 sigma at 6000 pairs. Statistical power: a structure with a digest-bit bias below 0.05 would not show.",
+ "held_fixed": "target blake3-r3-prefix-v1 compression at 1, 2 and 3 rounds; IV chaining value; counter 0; all 16 message words random 32-bit (not K = 0); pair = same words except the absorbing words; 1500 pairs (digest equality), 6000 pairs (bias); legal flag pair is single-block (11) vs parent root (12); parent words are CVs, so the shared-message pair is a model, not a legal pair",
+ "reopen_if": "a bias above 0.05 in any digest difference bit at 3 rounds for a legal pair, or a pair of legal messages realizing the absorption with ledger cost below 2^-128 per attempt"
+}

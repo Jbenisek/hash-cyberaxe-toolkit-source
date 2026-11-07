@@ -1,0 +1,22 @@
+{
+  "id": "D341-BLAKE3-R2-STEP-RATE-LINEAR-PREDICTOR-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "preregistered bit-level predictor for step-rate multiplier",
+  "question": "Does the declared cheap linear predictor recover high-rate BLAKE3-r2 steps on the held-out split?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "120-train/40-test fixed split; alpha=1000; test r=-0.141; top-quarter ratio=0.917; permutation p=0.811; preregistered screen FAIL.",
+  "source": "our workflow: retest t2",
+  "own_test": true,
+  "evidence": "research/retest/t2/pred_linear_screen.py; research/retest/t2/rem0.json; research/retest/t2/rem1.json; research/sol_answer_D341_b3m_step_rate_predictor_screen.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite preregistered linear screen only. It does not rule out a nonlinear predictor, but no cheap predictor gain is found and the oracle 0.55-bit row remains conditional. WSL timing attempt lacked NumPy; peak_mem UNKNOWN for the successful Windows run. No package or submission action.",
+  "held_fixed": "uG/v 44 raw bit features; ridge alpha five-fold CV; train 120, held-out test 40; top-quarter criterion r>=0.39 and ratio>=1.10",
+  "reopen_if": "A preregistered nonlinear or structured predictor with a measured held-out gain and charged selection cost",
+  "peak_mem": "UNKNOWN / successful Windows-Python run not sampled; WSL /usr/bin/time control failed before execution because NumPy is unavailable"
+}

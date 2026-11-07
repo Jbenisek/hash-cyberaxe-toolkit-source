@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JRUNNER (JUDGE)",
+ "question": "R2: own recount",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Run today: poseidon_ref.digest_bytes raises ValueError(\"need exactly 64 bytes\") for lengths 0 and 63, accepts 64, and raises ValueError(\"non-canonical field element\") for 0xff x 64 (work/test_digest_empty.txt). The organizer module is called with 64-byte messages in verify_collision.py (collision verified).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/test_digest_empty.txt; research/poseidon/orchard/lean_r2/poseidon_ref.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JRUNNER|JUDGE|R2. Local call of our mirror, not the organizer runner (not run: yukon is off limits).",
+ "held_fixed": "poseidon_ref mirror",
+ "reopen_if": "the runner is found to call a different entry point"
+}

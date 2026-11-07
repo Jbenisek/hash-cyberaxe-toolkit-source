@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.NEWTON (ROOT)",
+ "question": "Q2: necessity: drop the reciprocal (schoolbook division per step) and recount",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Schoolbook division of degree 2m by m costs about m^2 = 38,146,777,344 multiplies, 101.0 times the whole Newton cost, and would be needed at each of 236 steps unless a reciprocal exists. Newton is necessary.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ROOT.NEWTON|ROOT|Q2. Order-of-magnitude comparison with m = 195,312 only; not a full ledger of the schoolbook alternative.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "a division-free power schedule is found"
+}

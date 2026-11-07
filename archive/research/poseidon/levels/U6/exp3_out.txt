@@ -1,0 +1,73 @@
+=== 3. top byte / bit length (192 constants)
+max top byte 0x3f min 0x0  any value >=2^254? False (p-2^254)/p = 2^-128.9
+ bins 64 (width 1): chi2=72.67 df=63 p=0.190 
+ bins 16 (width 4): chi2=16.00 df=15 p=0.382 [16, 8, 8, 12, 14, 19, 14, 10, 13, 15, 7, 14, 14, 12, 10, 6]
+ bins 8 (width 8): chi2=7.92 df=7 p=0.340 [24, 20, 33, 24, 28, 21, 26, 16]
+ bins 4 (width 16): chi2=2.79 df=3 p=0.425 [44, 57, 49, 42]
+ bins 2 (width 32): chi2=0.52 df=1 p=0.470 [101, 91]
+bit-length counts [(243, 1), (247, 1), (248, 1), (249, 1), (250, 12), (251, 8), (252, 20), (253, 57), (254, 91)]
+ bitlen expected [96.0, 48.0, 24.0, 12.0, 6.0, 3.0, 1.5, 1.5] obs [91, 57, 20, 8, 12, 1, 1, 2] chi2 p=0.114
+ min bitlen 243
+ Hamming weight mean 127.23 (expect ~127 over 254 bits; se=0.58)
+ low byte, 8 bins: [22, 20, 14, 26, 28, 30, 30, 22] p=0.253
+ used30 top byte (8 bins of 8): [3, 3, 5, 4, 4, 8, 2, 1]
+ parity: odd count 94 of 192
+=== 5. Legendre symbols
+QR count among 192: 90  two-sided binomial p~0.427
+ lane 0 QR count over 64 rounds 28
+ lane 1 QR count over 64 rounds 34
+ lane 2 QR count over 64 rounds 28
+ per-round Legendre pattern (+ QR / - NR) for used rounds:
+  R0 +++
+  R1 --+
+  R2 ---
+  R3 ++-
+  R4 ---
+  R5 --+
+  R60 ++-
+  R61 -+-
+  R62 --+
+  R63 -+-
+ runs in 192-sequence: 92 expected ~96 +-6.9
+ Legendre X=2^65+c02: 1  K=X^5: 1 (same, 5 odd)
+ Legendre MDS entries [[-1, -1, 1], [-1, 1, 1], [1, -1, 1]]
+ det 0x9729bde00d1e0d80a9ebc3ef5c053f8664f4b7b04c9a6fb6eef310a2567ad8f leg -1
+ effective r=1: R60eff ['0x2b6546a276988b200287bdc6e5eb62cca85c9b200e5e53ab30481739aac76811', '0xa57eba61a1e654396f0dc000b4c8b39876f172ffd961a43a85bfd6d8ce968f9', '0x9659017378a38081689ef91f63e8d504fe259cd7f4629b17e308ffb2d360161'] legendre [-1, -1, -1]
+ effective r=2: R5eff ['0x39dce27cdb109e337d6bac3c569fcf95265c4c444535cce6bbdc7a7b456637ee', '0x11e554adb4ff3c947d655ded27b8f56b80e28c143c00f9b4ec8aa8cdfcdf20f1', '0xc3d82f13a67e8da6ad8b9d6f1c7c79dc5be3aceefccb9bfe880b0d9a609b7c6'] leg [1, -1, -1]
+                R60eff ['0x316d25f0263092263d1c9e04071a611cddccf0d56b607d929cccd2d4284a4d0e', '0x2c284cc1f8f406ab208b1212f8cbaaeff069dff93101cfa5ea00fd7b10b54c83', '0x36c5e7535db072e176f482f4fd58ed8ec38c57cb53d205adb1c12a242ec26831'] leg [-1, 1, -1]
+ bitlens eff [254, 252, 252] [254, 253, 252] [254, 254, 254]
+=== 4. relations among effective constants
+ eff r=1 (X,R1-3,c4_0,R60eff,R61-63): k=23 shortest 2^11.46 GH 2^11.26 ratio 1.15 coefs (generic)
+ eff r=1 +1+MDS: k=33 shortest 2^8.37 GH 2^8.17 ratio 1.15 coefs (generic)
+ eff r=2 (X,R1-3,c4_0,R5eff0,R60eff,R61-63): k=24 shortest 2^10.99 GH 2^10.83 ratio 1.12 coefs (generic)
+ eff r=2 +1+MDS: k=34 shortest 2^8.13 GH 2^7.97 ratio 1.12 coefs (generic)
+ R60eff r1 + R60 raw + m4: k=10 shortest 2^0.79 GH 2^25.01 ratio 0.00 coefs [-1, 0, 0, 1, 0, 0, 1, 0, 0, 0]
+ R60eff r2 + R60 raw + m5: k=10 shortest 2^0.79 GH 2^25.01 ratio 0.00 coefs [-1, 0, 0, 1, 0, 0, 1, 0, 0, 0]
+ carried lanes (m4,m5) and constants of R4,R5: k=13 shortest 2^19.40 GH 2^19.34 ratio 1.04 coefs (generic)
+ PLANTED eff: eff1[3]=5*eff1[4]-2*eff1[9]: k=23 shortest 2^2.45 GH 2^11.26 ratio 0.00 coefs [0, 0, 0, -1, 5, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+=== 5b. X = 2^65+c02 special properties
+ X = 0x150c93fef652fb1c2bf03e1a29aa871fef77e7d736766c5f0939d92753cc5dc8 bits 253  K=X^5= 0x1bb8b6550fd0a299151ec6e764ce7a0e7639053ef68202d771242177f32f108c
+ X mod small primes: {2: 0, 3: 0, 5: 0, 7: 2, 11: 5, 13: 7, 17: 11, 19: 2, 23: 9, 29: 5, 31: 16, 37: 25, 41: 35, 43: 10, 47: 18}
+ trailing zero bits of X: 3  of c02: 3
+  |X-(0)| = 2^252.40
+  |X-(1)| = 2^252.40
+  |X-(-1)| = 2^252.40
+  |X-(i)| = 2^252.92
+  |X-(-i)| = 2^251.56
+  |X-(p/2)| = 2^251.45
+  |X-(p/3)| = 2^246.18
+  |X-(2^254)| = 2^252.40
+  |X-(2^64)| = 2^252.40
+  |X-(2^65)| = 2^252.40
+ smooth part of ord(X) (2^a 3^b 463^c): {2: 31, 3: 1, 463: 1}  ord(K) smooth: {2: 31, 3: 1, 463: 1}
+ x->x^5 returns X within 3000 steps? None
+ v2(smooth ord) distribution over 192 constants [(26, 1), (27, 3), (28, 6), (29, 12), (30, 23), (31, 45), (32, 102)] (expected counts 96,48,24,...: P(v2=k)=2^-(k+1) for k<32, 0 -> 96)
+ cubes: 72 of 192 (exp 64);  463rd powers: 1 (exp 0.41); 4th powers: 45 (exp 48)
+ X cube? False  X 4th power? False  X 463rd power? False
+=== 6. pair relations over all 64*63 ordered round pairs
+ tested 68544 (ordered pair, k in -8..8) cases; exact 0; collinear 0
+ c_s in plane span(c_r, M^+-1 c_r)-type tests: 12096, hits 0
+ det[c_a,c_b,c_c]=0 triples: 0 of 41664
+ smallest "c_a/c_b = n/m" lattice vector over all 192*191 ordered lane pairs: 2^118.58 (typical shortest 2^127.5; expected minimum over ~18k unordered pairs ~2^120.4) pair(lane idx=3*round+lane) (115, 129)
+ median shortest-vector 2^126.53
+ smallest signed constant: 2^242.55

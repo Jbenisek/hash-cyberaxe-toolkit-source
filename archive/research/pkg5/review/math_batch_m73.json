@@ -1,0 +1,130 @@
+{
+ "seed": "m73",
+ "cases": 40000,
+ "last_batches": 4445,
+ "lanes": 280000,
+ "lanes_right": 280000,
+ "failures": {},
+ "lanes_rule_a": 4325,
+ "batches_entering_stage_2": 3799,
+ "zero_stage2_words": 0,
+ "distinct_count_shapes": 1,
+ "by_kind": {
+  "2 add": [
+   18
+  ],
+  "2 and": [
+   24
+  ],
+  "2 branch": [
+   2
+  ],
+  "2 compare": [
+   2
+  ],
+  "2 counter": [
+   1
+  ],
+  "2 load": [
+   42
+  ],
+  "2 or": [
+   11
+  ],
+  "2 shift": [
+   22
+  ],
+  "2 xor": [
+   16
+  ],
+  "A add": [
+   12
+  ],
+  "A and": [
+   15
+  ],
+  "A branch": [
+   2
+  ],
+  "A compare": [
+   2
+  ],
+  "A counter": [
+   1
+  ],
+  "A load": [
+   36
+  ],
+  "A or": [
+   6
+  ],
+  "A shift": [
+   13
+  ],
+  "A xor": [
+   13
+  ]
+ },
+ "largest_lane_over_2^32": 9.121,
+ "stage_A_operations_by_my_tally": 64,
+ "stage_A_loads_by_my_tally": 36,
+ "stage_2_operations_by_my_tally": 96,
+ "stage_2_loads_by_my_tally": 42,
+ "package_parts": [
+  [
+   "loop",
+   3,
+   1
+  ],
+  [
+   "C0 backwards",
+   9,
+   7
+  ],
+  [
+   "K3",
+   27,
+   14
+  ],
+  [
+   "C2 to z",
+   16,
+   8
+  ],
+  [
+   "rule A",
+   9,
+   6
+  ],
+  [
+   "entry count",
+   3,
+   1
+  ],
+  [
+   "C2, rest",
+   12,
+   4
+  ],
+  [
+   "D1",
+   9,
+   6
+  ],
+  [
+   "C1 to Y1",
+   17,
+   9
+  ],
+  [
+   "E1, A and B",
+   40,
+   15
+  ],
+  [
+   "E1 test",
+   15,
+   7
+  ]
+ ]
+}

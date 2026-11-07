@@ -1,0 +1,11 @@
+N log2 73.1113  time_log2 64.3631
+reps           log2 67.87 share 0.0264
+opened         log2 71.85 share 0.4178
+ctx            log2 59.69 share 0.0001
+qpath          log2 71.35 share 0.2955
+passl          log2 68.43 share 0.0389
+solver_credit  log2 70.93 share 0.2205
+other          log2 62.95 share 0.0009
+units per outer step 12.52 ; solver credit per passing lane 2620.8 ; cap per call 17504
+p(S) = 2^-90.989  p(all 14 outcomes) = 2^-90.905
+free test dropping 0.5625 of solver calls saves 0.191 bits (solver share 0.2205)

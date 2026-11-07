@@ -1,0 +1,4 @@
+grind: CV word 2 top 16 bits = 0000 after 20665 first blocks (0s); cv[2] = 0000c74d
+complete messages 119/127 bytes on the ground CV: organizer digest words 0,2,5,7 equal, messages and digests distinct 3/3
+score, margin 2.0: rate change 0 per chosen word -> k=0: 94.75 k=1: 94.75 k=2: 94.75 k=3: 96.51
+score, margin 1.4: rate change 0 per chosen word -> k=0: 94.24 k=1: 94.24 k=2: 94.24 k=3: 96.37

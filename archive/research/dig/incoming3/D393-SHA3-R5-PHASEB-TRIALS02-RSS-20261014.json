@@ -1,0 +1,22 @@
+{
+  "id": "D393-SHA3-R5-PHASEB-TRIALS02-RSS-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "r5-trail-0..3 phase RSS spread",
+  "question": "What finite RSS spread appears across four owned phase-B trail trials?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Trials 0..3 all exit 0. Peak WorkingSet64 bytes/log2: trial0 34107392/25.02358, trial1 35213312/25.0696175910, trial2 32231424/24.9419645930, trial3 27332608/24.7041197885. Maximum is 35213312 B = 2^25.0696175910. Exact per-trial observations are in the answer and JSON artifacts.",
+  "source": "our workflow: D393 r5 phase-B four-trial RSS audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D393_r5_phaseB_trials02_rss.md; research/retest/r5_phaseB_probe.py; research/retest/r5_phaseB_probe_trial1.json; research/retest/r5_phaseB_probe_trial2.json; research/retest/r5_phaseB_probe_trial3.json; research/tools/build_pkg/scratch/pkgR5M2/pkg/sha3-256-r5/experiments/r5.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Finite data-dependent phase component only; not a worst-case bound and not full preprocessing/advice/D15 RSS. No score or filing credit.",
+  "held_fixed": "pkgR5M2 experiments/r5.py; trials 0..3 sequential; one BelowNormal child per trial; 50-ms WorkingSet64 sampling",
+  "reopen_if": "Full phase-B campaign, D15/advice, and allocator-inclusive preprocessing RSS are measured",
+  "peak_mem": "25.0696175910 MEASURED maximum across four one-trial WorkingSet64 probes"
+}

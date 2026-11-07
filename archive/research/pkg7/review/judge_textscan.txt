@@ -1,0 +1,60 @@
+== proof.md: 1853 lines
+   link: 0
+   html comment: 0
+   addresses a reader or a model: 0
+   private: 0
+   word: 0
+   word only inside a pinned constant: 1: 184
+== claim.json: 56 lines
+   link: 0
+   html comment: 0
+   addresses a reader or a model: 0
+   private: 0
+   word: 0
+   word only inside a pinned constant: 0
+== submission-note-r2.md: 474 lines
+   link: 0
+   html comment: 0
+   addresses a reader or a model: 0
+   private: 0
+   word: 0
+   word only inside a pinned constant: 0
+== halfsearch.py: 804 lines
+   link: 0
+   html comment: 0
+   addresses a reader or a model: 0
+   private: 0
+   word: 0
+   word only inside a pinned constant: 1: 77
+== manifest.json: 29 lines
+   link: 0
+   html comment: 0
+   addresses a reader or a model: 0
+   private: 0
+   word: 0
+   word only inside a pinned constant: 0
+== manifest.json: 4 lines
+   link: 0
+   html comment: 0
+   addresses a reader or a model: 0
+   private: 0
+   word: 0
+   word only inside a pinned constant: 0
+== credits in the note
+   Claude Opus 5.5: yes
+   Claude Code: yes
+   Helper agents: yes
+   Grok 4.7: yes
+   single-bit differences: yes
+   GPT in pro mode: yes
+   GPT-6 Luna: yes
+   Venice.ai: yes
+   GPT Sol 6.1: yes
+   Public notes of other teams: yes
+   2bf40fb: yes
+== GPT Sol 6.1 named where its figure is quoted: proof True  claim True
+== words that would be wrong here
+   proof: /60 and 62/ at lines [1673, 1815]
+   claim: /60 and 62/ at lines [31]
+   note: /60 and 62/ at lines [15, 79]
+   note: /reviewed by/ at lines [420]

@@ -1,0 +1,3 @@
+HITS arr ctr: 305 of 305 confirmed (full messages P||A, P||B hashed with the W=8 tree mode; equal digests = printed digest)
+HITS arr filed: 67 of 67 confirmed (full messages P||A, P||B hashed with the W=8 tree mode; equal digests = printed digest)
+HITS all: 372 of 372 confirmed

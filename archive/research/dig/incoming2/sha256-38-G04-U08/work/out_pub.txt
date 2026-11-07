@@ -1,0 +1,7 @@
+CV2 x: 5d9ca5f4 59ace3a3 26c9c26c 4252c585 4c0803b7 1b4d5ccd 25c3ccc0 90645c4d
+CV2 y: 5d9ca5f4 59ace3a3 26c9c26c 4252c585 4c0803b7 1b4d5ccd 25c3ccc0 90645c4d
+CV2 equal: 1
+digests equal after padding block: 1
+MX[14]=d28e48a0 MY[14]=d28e48a0 dW14(xor)=00000000 ; MX[15]=9f1f65bb MY[15]=9b5f6dbb dW15(xor)=04400800 dW15(mod y-x)=fc400800
+W14 cells: n=0 u=0 0=0 1=0 '='=32 '+'=0
+W15 cells: n=2 u=1 0=0 1=0 '='=29 '+'=0

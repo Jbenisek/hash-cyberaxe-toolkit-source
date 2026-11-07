@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.IMM immediates",
+ "question": "Degrees of freedom / score-optimal value of the immediate set.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Distinct 256-bit constants = 25 (8 rotation masks pairs 4x2 plus the lane-clean mask REP*0xFFFFFFFF plus 16 folded add/xor immediates of round 0); shift counts 7. Minimum count is fixed by the 4 BLAKE3 rotation amounts and the round-0 constant folding; score-optimal value = 25 constants, 0 extra ops (every one is a single op with an immediate). Nothing to tune; score sensitivity 0.002409 bit per op per batch.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.IMM|MACHINE|Q3. Counted from the emitted lines by regex; the number 25 includes the two add and xor round-0 immediates (K+m8 etc.) that differ per G call. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "same circuit and pitch as Q2.",
+ "reopen_if": "A layout with fewer distinct masks (another pitch) that also keeps 595 ops; none found (pitch sweep in MACHINE.ROT)."
+}

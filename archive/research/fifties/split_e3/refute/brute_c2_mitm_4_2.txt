@@ -1,0 +1,6 @@
+mitm |A|=4 |P|=|Q|=2: 1088430 sets A
+mitm |A|=4 |P|=|Q|=2: non-redundant A 792798, covering (A,P,Q) 0
+
+real	5m40.767s
+user	11m21.230s
+sys	0m0.225s

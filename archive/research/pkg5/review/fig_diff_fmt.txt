@@ -1,0 +1,99 @@
+--- ./research/pkg4/tools/fmt_pkg4.py	2026-10-06 03:38:37.761062200 -0600
++++ ./research/pkg5/tools/fmt_pkg5.py	2026-10-06 07:57:28.323519900 -0600
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+-"""Format checks for the pkg4 files, the line ranges that claim.json cites, and the arithmetic of the claim.
++"""Format checks for the pkg5 files, the line ranges that claim.json cites, and the arithmetic of the claim.
+ 
+-    python -B tools/fmt_pkg4.py [--write-ranges] [--fix-eol]
++    python -B tools/fmt_pkg5.py [--write-ranges] [--fix-eol]
+ 
+---write-ranges  first renders the package from src/ and tools/pkg4_data.py (tools/build_pkg4.py); the evidence
++--write-ranges  first renders the package from src/ and tools/pkg5_data.py (tools/build_pkg5.py); the evidence
+                 ranges of claim.json are part of that rendering, because claim.json is a rendered file.
+ --fix-eol       rewrites CRLF as LF in the checked files.
+ Without options nothing is written: the files on disk are checked as they are, and the tool says whether they
+@@ -20,18 +20,18 @@
+ sys.dont_write_bytecode = True
+ TOOLS = Path(__file__).resolve().parent
+ sys.path.insert(0, str(TOOLS))
+-import build_pkg4 as build  # noqa: E402
+-import pkg4_data as data  # noqa: E402
++import build_pkg5 as build  # noqa: E402
++import pkg5_data as data  # noqa: E402
+ 
+ PKG, CAND = data.PKG, data.CAND
+ PROOF, CLAIM, NOTE = build.PROOF, build.CLAIM, build.NOTE
+-FILES = [PROOF, CLAIM, NOTE, build.PROGRAM, build.MANIFEST, CAND / "certificates" / "manifest.json", PKG / "check_pkg4.py",
+-         PKG / "validate_pkg4.sh", PKG / "src" / "proof_head.md", PKG / "src" / "proof_evidence.md", PKG / "src" / "claim.json",
++FILES = [PROOF, CLAIM, NOTE, build.PROGRAM, build.MANIFEST, CAND / "certificates" / "manifest.json", PKG / "check_pkg5.py",
++         PKG / "validate_pkg5.sh", PKG / "src" / "proof_head.md", PKG / "src" / "proof_evidence.md", PKG / "src" / "claim.json",
+          PKG / "src" / "manifest.json", PKG / "src" / "note.md"]
+ wrong = []
+ 
+ if "--write-ranges" in sys.argv:
+-    done = subprocess.run([sys.executable, "-B", str(TOOLS / "build_pkg4.py")], capture_output=True)
++    done = subprocess.run([sys.executable, "-B", str(TOOLS / "build_pkg5.py")], capture_output=True)
+     print(done.stdout.decode("utf-8", "replace").rstrip())
+     if done.returncode != 0:
+         print(done.stderr.decode("utf-8", "replace").rstrip())
+@@ -66,9 +66,9 @@
+ proof = PROOF.read_text(encoding="ascii")
+ ranges = build.proof_ranges(proof)
+ plines = proof.split("\n")
+-for key, label in (("trials", "6.1, trials and Lemmas Q, F, Y, K, T"), ("early", "6.3 with Lemma E"),
+-                   ("s7", "Section 7 to 'Neither heuristic is proved'"), ("h2", "H2 paragraph to 'Neither heuristic is proved'"),
+-                   ("s10", "Section 10 to the line before Scope")):
++for key, label in (("trials", "6.1, trials and Lemmas Q, F, Y, K, T"), ("early", "6.3 with Lemmas E, N and A"),
++                   ("algo", "6.4, the algorithm"), ("s7", "Section 7 to 'None of the three heuristics is proved'"),
++                   ("h2", "H2 paragraph"), ("h3", "H3 paragraph"), ("s10", "Section 10 to the line before Scope")):
+     a, b = [int(x) for x in ranges[key].split(":")[1].split("-")]
+     print(f"{label}: {ranges[key]}\n     first: {plines[a - 1][:70]}\n     last:  {plines[b - 1][:70]}")
+ print("proof line count:", len(plines) - 1)
+@@ -78,7 +78,7 @@
+ for h in claim["heuristics"]:
+     print(h["id"], h["evidence_ids"], "| extrapolation", len(h["extrapolation"]), "chars | limitations", len(h["limitations"]), "chars")
+     used.update(e for e in h["evidence_ids"] if e.startswith("proof:"))
+-missing = sorted(used - {ranges[k] for k in ("trials", "early", "s7", "h2", "s10")})
++missing = sorted(used - {ranges[k] for k in ("trials", "early", "algo", "s7", "h2", "h3", "s10")})
+ print("claim.json proof ranges that match no range above:", missing if missing else "none")
+ if missing:
+     wrong.append("claim.json cites ranges that the proof does not have: run with --write-ranges")
+@@ -104,7 +104,7 @@
+ print("  claim:", claim["claim"], "| state", claim["submission_state"])
+ 
+ d = data.derive()
+-print("arithmetic of the claim, recomputed from tools/pkg4_data.py:")
++print("arithmetic of the claim, recomputed from tools/pkg5_data.py:")
+ print(f"  pin {' '.join(data.hx(v) for v in data.PIN.values())}; W4' {data.hx(d['W4B'])}; delta {data.hx(d['delta'])}; "
+       f"Y3 {data.hx(d['Y3'])} Y3' {data.hx(d['Y3B'])} DY3 {data.hx(d['DY3'])}; Y11 {data.hx(d['Y11'])} Y11' {data.hx(d['Y11B'])} "
+       f"DY11 {data.hx(d['DY11'])}")
+@@ -113,22 +113,23 @@
+       f"lists of {d['list_words']:,} words ({d['full_batches']:,} full batches and {d['rest']} members in the last)")
+ print(f"  factor 2^{data.LOG2_FACTOR}; trials 2^{d['T']} = 2^{d['ctx']} contexts (X12 < 2^{data.LOG2_X12}, X13 < 2^{d['x13']}, X14 any) "
+       f"* 2^32 * 2^{d['free']}; pass budget 2^{d['pass_budget']}")
+-print(f"  per alpha: {d['list_words']:,} * {d['batch_total']} + 256 = {d['alpha_ops']:,} < {data.CHARGE} * {d['members']:,} = "
+-      f"{d['alpha_charged']:,} ({d['alpha_ops'] / d['members']:.4f} per trial)")
++print(f"  per alpha, budgeted: {d['list_words']:,} * {d['stage_a']} + {d['list_words']:,} * {d['stage_2']} / {2 ** data.STAGE_2_LOG2_SHARE} + 256 = "
++      f"{float(d['alpha_ops']):,.2f} < {data.CHARGE} * {d['members']:,} = {float(d['alpha_charged']):,.1f} "
++      f"({float(d['alpha_ops'] / d['members']):.4f} per trial budgeted, {float(d['alpha_expected'] / d['members']):.4f} expected at 7 * 2^-{d['rule_conditions']})")
+ print(f"  main term 2^{d['main_exp']:.5f}; terms after the first 2^{d['rest_exp']:.5f} < 2^{d['seventh']:.3f}; total as written "
+       f"2^{d['true_total']:.5f} < stated 2^{d['total_exp']:.4f} < 2^{d['total_bound']:.2f} <= time_log2 {d['time_log2']:.1f}")
+ print(f"  smallest factor for 0.39: {d['f_min']:,} <= {2 ** data.LOG2_FACTOR:,}; success at the assumed factor "
+       f"{1 - math.exp(-0.5) - 0.003:.5f}; search memory {d['online_bytes']:,} bytes < 2^{d['online_log2']}")
+ if claim["claim"]["time_log2"] != d["time_log2"]:
+-    wrong.append("claim.json time_log2 is not the bound of pkg4_data.py")
++    wrong.append("claim.json time_log2 is not the bound of pkg5_data.py")
+ 
+-check = subprocess.run([sys.executable, "-B", str(TOOLS / "build_pkg4.py"), "--check"], capture_output=True)
++check = subprocess.run([sys.executable, "-B", str(TOOLS / "build_pkg5.py"), "--check"], capture_output=True)
+ drift = [l for l in check.stdout.decode("utf-8", "replace").split("\n") if l.startswith("DRIFT")]
+ print("rendered files against the templates:", "as rendered" if check.returncode == 0 and not drift else "")
+ for l in drift:
+     print("  " + l)
+ if check.returncode != 0:
+     print("  " + (check.stderr.decode("utf-8", "replace").strip().split("\n") or [""])[-1][:300])
+-    wrong.append("the rendered files are not what the templates give (python -B tools/build_pkg4.py)")
++    wrong.append("the rendered files are not what the templates give (python -B tools/build_pkg5.py)")
+ print("RESULT:", "nothing wrong" if not wrong else "WRONG: " + "; ".join(wrong))
+ sys.exit(1 if wrong else 0)

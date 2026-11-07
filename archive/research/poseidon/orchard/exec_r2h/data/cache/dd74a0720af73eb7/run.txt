@@ -1,0 +1,29 @@
+r=2 line=0 m=195312
+lean-pow breakdown: newton total=287016759 arith=99982993 | prefix+scale total=2539833 | loop steps=236 total=46656600406 arith=16147887941 per-step total=197697459 arith=68423253
+trial 1 centre 1: gcd degree 1, charged 8952092487
+TRIALS 1
+  init (twiddle table)                     arith=       33744 other=      241340 total=      275084     0.0s peak=1188544
+  line setup                               arith=         391 other=        3519 total=        3910     0.0s peak=1188544
+  A: centre c_i = i                        arith=           1 other=           5 total=           6     0.0s peak=7439040
+  B: build g                               arith=     6421153 other=   137637813 total=   144058966     2.6s peak=13734592
+  C: S^((p-1)/2) mod g                     arith= 16248066246 other= 30698396934 total= 46946463180   342.2s peak=36725440
+  D: gcd(g, S^h - 1) (half-gcd)            arith=  2578407840 other=  6373684661 total=  8952092501    57.4s peak=42074816
+  E: root isolation                        arith=           2 other=           7 total=           9     0.0s peak=22438592
+  F: sqrt + map back                       arith=        3066 other=       39596 total=       42662     0.0s peak=22438592
+  G: verification (2 reference hashes)     arith=         516 other=        4676 total=        5192     0.0s peak=22438592
+  H: canonical encoding of the output      arith=           6 other=        4638 total=        4644     0.0s peak=22438592
+TRIALROW 1 centre 1 degG 1 gcd 8952092487 total 56042662516
+TRIALROW 0 outside the trials (init, line setup, output encoding) total 283638
+RECONCILE stages=56042946154 trials=56042946154 counters=56042946154 ok=1
+RESULT found=1 success=1 roots_degree=1
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=56042946154 total_arith=18832932965 units=217220721.5 log2_units=27.6946 heap_peak=42074816 secs=402.1
+PEAKLIVE allocations=11 payload=36575776 headers=704
+TYPES add=6430156255 sub=6147280813 mul=6113079000 sqr=142416897 ld=7797372773 st=4016123610 ctl=25295067078 rnd=0 perm=101449728
+COLLISION nk1  0x1e9184a9a5a1539378059e3b69f23b79673cdb74d72b6f5a84ee38db72abfda5
+COLLISION rho1 0x01919ee9056d2c96f89a12c78f41a2e1cf177323a1eca609bc9b2cd5583a85fd
+COLLISION nk2  0x13e388f2207d5702ae743d0e00eac6fe7128fadfdb84607df58235957e60d88f
+COLLISION rho2 0x20d04e9f04eda131112868489d41071de943fe9bff92b168a2c60f77a3ad28b5
+COLLISION digest 0x3ab2143957ab5cfff46c586d178bda5719070a9795fdbf25272f32cd82cf3451
+COLLISION centre 0x0000000000000000000000000000000000000000000000000000000000000001
+EXIT 0

@@ -1,0 +1,161 @@
+base outhalf.sys: N=128 E=116 F=12; start |P|=10 width 6
+it 166: width 6 F'=2 |P|=20 P=D0.a1,D0.a2,K0.a1,K1.c2,K1.d1,K1.d2,K2.a2,K2.b2,K3.b1,K3.d1,K3.d2,m1,m2,m3,m4,m5,m6,m7,m8,m9,
+it 382: width 6 F'=2 |P|=28 P=D0.a1,D0.a2,D0.b2,D0.c2,D0.d1,K0.a1,K0.b2,K0.c1,K0.d2,K1.a2,K1.b1,K1.c2,K1.d1,K1.d2,K2.a2,K2.c2,K3.a2,K3.b1,K3.c1,m0,m1,m2,m4,m5,m6,m7,m8,m9,
+it 810: width 6 F'=2 |P|=28 P=D0.b2,D0.c2,K0.a2,K0.b2,K0.c1,K0.c2,K0.d1,K1.a2,K1.b1,K2.a1,K2.a2,K2.b2,K2.c2,K2.d1,K2.d2,K3.a1,K3.b2,K3.c1,K3.c2,K3.d1,m0,m1,m2,m3,m5,m6,m7,m9,
+it 849: width 6 F'=2 |P|=28 P=D0.a1,D0.b2,D0.c1,D0.c2,K0.a2,K0.b2,K0.d1,K1.a2,K1.b1,K2.a1,K2.a2,K2.c1,K2.c2,K2.d2,K3.a1,K3.b1,K3.b2,K3.c2,K3.d1,K3.d2,m0,m1,m2,m3,m5,m6,m7,m9,
+it 1206: width 6 F'=2 |P|=26 P=D0.a1,D0.b2,D0.c1,D0.c2,D0.d2,K0.a2,K0.b1,K0.b2,K0.d2,K1.a1,K1.d1,K1.d2,K2.a1,K2.c1,K2.c2,K2.d2,K3.a1,K3.a2,K3.d1,K3.d2,m0,m1,m2,m6,m7,m8,
+it 1282: width 6 F'=2 |P|=23 P=D0.a1,D0.b2,D0.c1,D0.d1,K0.a2,K0.b1,K0.b2,K0.d1,K1.a1,K1.b2,K1.d1,K1.d2,K2.c2,K2.d1,K2.d2,K3.a1,K3.a2,K3.d1,m0,m2,m3,m6,m7,
+BEST width 6  F'=2  |P|=23  derived constants 27  remaining N=78 E=76
+P=D0.a1,D0.b2,D0.c1,D0.d1,K0.a2,K0.b1,K0.b2,K0.d1,K1.a1,K1.b2,K1.d1,K1.d2,K2.c2,K2.d1,K2.d2,K3.a1,K3.a2,K3.d1,m0,m2,m3,m6,m7,
+tree width 6, join-width histogram: J2:29 J3:21 J4:18 J5:5 J6:2
++ J=2 list=0 |A|=76 |B|=0  [D18 D28 D38 C08 C18 C28 C38 E08 E28 out01 out21 out51 out71]
+  + J=3 list=3 |A|=75 |B|=3  [D18 D28 D38 C08 C18 C28 C38 E08 E27 out01 out21 out51 out71]
+    + J=4 list=4 |A|=74 |B|=6  [D18 D28 D38 C08 C18 C28 C38 E08 E26 out01 out21 out51 out71]
+      + J=4 list=4 |A|=8 |B|=6  [C27 E21]
+        + J=4 list=4 |A|=7 |B|=7  [C26 E21]
+          + J=4 list=4 |A|=6 |B|=7  [C25 E21]
+            + J=4 list=4 |A|=5 |B|=7  [C24 E21]
+              + J=3 list=3 |A|=4 |B|=5  [C24]
+                + J=3 list=3 |A|=3 |B|=5  [C23]
+                  + J=2 list=2 |A|=2 |B|=4  [C22]
+                    - C2:d2
+                    - C2:c1
+                  - C2:d1
+                - C2:c2
+              - E2:a1
+            - C2:a2
+          - C2:b2
+        - C2:b1
+      + J=5 list=5 |A|=66 |B|=10  [D18 D28 D38 C08 C18 C21 C38 E08 E25 out01 out21 out51 out71]
+        + J=6 list=6 |A|=25 |B|=11  [C08 E08 E25 out01 out21 out51 out71]
+          + J=5 list=5 |A|=16 |B|=10  [E07 E25 out01 out21 out51 out71]
+            + J=5 list=5 |A|=15 |B|=10  [E06 E25 out01 out21 out51 out71]
+              + J=4 list=4 |A|=14 |B|=10  [E05 E25 out01 out21 out51 out71]
+                + J=4 list=4 |A|=13 |B|=10  [E05 E24 out01 out21 out51 out71]
+                  + J=4 list=4 |A|=12 |B|=9  [E05 E23 out01 out21 out51 out71]
+                    + J=4 list=4 |A|=11 |B|=9  [E05 E22 out01 out21 out51 out71]
+                      + J=3 list=3 |A|=5 |B|=6  [E01 E22 out01 out71]
+                        + J=3 list=3 |A|=4 |B|=5  [E22 out01 out71]
+                          + J=2 list=2 |A|=3 |B|=4  [E21 out01 out71]
+                            + J=2 list=2 |A|=2 |B|=3  [E21 out71]
+                              - out7
+                              - E2:b2
+                            - out0
+                          - E2:c2
+                        - E0:d2
+                      + J=4 list=4 |A|=6 |B|=7  [E04 out21 out51]
+                        + J=3 list=3 |A|=5 |B|=6  [E03 out21 out51]
+                          + J=3 list=3 |A|=4 |B|=5  [E02 out21 out51]
+                            + J=2 list=2 |A|=3 |B|=4  [E01 out21 out51]
+                              + J=2 list=2 |A|=2 |B|=3  [E01 out51]
+                                - out5
+                                - E0:b2
+                              - out2
+                            - E0:c2
+                          - E0:b1
+                        - E0:c1
+                    - E2:d2
+                  - E2:b1
+                - E2:c1
+              - E0:a2
+            - E0:d1
+          + J=4 list=4 |A|=9 |B|=6  [C08 E01]
+            + J=3 list=3 |A|=8 |B|=5  [C08]
+              + J=3 list=3 |A|=7 |B|=6  [C07]
+                + J=3 list=3 |A|=3 |B|=5  [C03]
+                  + J=3 list=3 |A|=2 |B|=5  [C02]
+                    - C0:a2
+                    - C0:d1
+                  - C0:a1
+                + J=4 list=4 |A|=4 |B|=6  [C04]
+                  + J=4 list=4 |A|=3 |B|=6  [C03]
+                    + J=3 list=3 |A|=2 |B|=4  [C02]
+                      - C0:c2
+                      - C0:d2
+                    - C0:b1
+                  - C0:c1
+              - C0:b2
+            - E0:a1
+        + J=6 list=6 |A|=41 |B|=12  [D18 D28 D38 C18 C21 C38]
+          + J=5 list=5 |A|=16 |B|=9  [D38 C38]
+            + J=4 list=4 |A|=7 |B|=6  [C37]
+              + J=4 list=4 |A|=6 |B|=7  [C36]
+                + J=3 list=3 |A|=3 |B|=5  [C33]
+                  + J=3 list=3 |A|=2 |B|=4  [C32]
+                    - C3:b2
+                    - C3:c2
+                  - C3:b1
+                + J=3 list=3 |A|=3 |B|=5  [C33]
+                  + J=3 list=3 |A|=2 |B|=5  [C32]
+                    - C3:d2
+                    - C3:c1
+                  - C3:d1
+              - C3:a2
+            + J=3 list=3 |A|=9 |B|=6  [D38 C31]
+              + J=2 list=2 |A|=8 |B|=5  [D38]
+                + J=2 list=2 |A|=7 |B|=5  [D37]
+                  + J=2 list=2 |A|=6 |B|=6  [D36]
+                    + J=2 list=2 |A|=5 |B|=5  [D35]
+                      + J=2 list=2 |A|=4 |B|=5  [D34]
+                        + J=2 list=2 |A|=3 |B|=4  [D33]
+                          + J=2 list=2 |A|=2 |B|=4  [D32]
+                            - D3:c2
+                            - D3:b1
+                          - D3:c1
+                        - D3:d2
+                      - D3:d1
+                    - D3:b2
+                  - D3:a2
+                - D3:a1
+              - C3:a1
+          + J=5 list=5 |A|=25 |B|=11  [D18 D28 C18 C21]
+            + J=4 list=4 |A|=10 |B|=7  [D28 C11 C21]
+              + J=3 list=3 |A|=9 |B|=6  [D28 C11]
+                + J=2 list=2 |A|=8 |B|=5  [D28]
+                  + J=2 list=2 |A|=7 |B|=5  [D27]
+                    + J=2 list=2 |A|=6 |B|=6  [D26]
+                      + J=2 list=2 |A|=5 |B|=5  [D25]
+                        + J=2 list=2 |A|=2 |B|=4  [D22]
+                          - D2:c2
+                          - D2:b1
+                        + J=2 list=2 |A|=3 |B|=4  [D23]
+                          + J=2 list=2 |A|=2 |B|=4  [D22]
+                            - D2:d2
+                            - D2:c1
+                          - D2:d1
+                      - D2:a2
+                    - D2:a1
+                  - D2:b2
+                - C1:d1
+              - C2:a1
+            + J=4 list=4 |A|=15 |B|=9  [D18 C17]
+              + J=4 list=4 |A|=11 |B|=8  [D18 C13]
+                + J=3 list=3 |A|=10 |B|=7  [D18 C12]
+                  + J=2 list=2 |A|=9 |B|=6  [D18 C11]
+                    + J=2 list=2 |A|=8 |B|=6  [D17 C11]
+                      + J=2 list=2 |A|=7 |B|=6  [D16 C11]
+                        + J=2 list=2 |A|=6 |B|=6  [D15 C11]
+                          + J=2 list=2 |A|=5 |B|=5  [D15]
+                            + J=2 list=2 |A|=4 |B|=5  [D14]
+                              + J=2 list=2 |A|=3 |B|=4  [D13]
+                                + J=2 list=2 |A|=2 |B|=4  [D12]
+                                  - D1:c2
+                                  - D1:b1
+                                - D1:c1
+                              - D1:d2
+                            - D1:d1
+                          - C1:a1
+                        - D1:a2
+                      - D1:a1
+                    - D1:b2
+                  - C1:a2
+                - C1:d2
+              + J=3 list=3 |A|=4 |B|=5  [C14]
+                + J=3 list=3 |A|=3 |B|=5  [C13]
+                  + J=2 list=2 |A|=2 |B|=4  [C12]
+                    - C1:c2
+                    - C1:b1
+                  - C1:c1
+                - C1:b2
+    - E2:a2
+  - E2:d1

@@ -1,0 +1,42 @@
+GPU real-message evidence for pin H8, class 830303cf (agent report of 2026-10-06 about 15:50, shortened by the
+main session; replaces r1.txt, which said the GPU part was not done). All files: research\h8\gpu\ (sources,
+scripts s02..s09) and research\h8\gpu\out\ ; comparison table out\H8_gpu_compare.txt ; exact expectations
+out\h8_deep_expected.txt ; run log out\h8_runs.log.
+
+Built: r2_resid_gpu.cu, r2_class_gpu.cu (copies of the old programs with lengths 55/63, the DESIGN.txt context and
+trial, class mask 03cf8303 / value 030c0303; binary ~/hashsmash/h8/bin/h8_class_gpu), deep counters h8_deep.inc
+(from the 183 outcomes of counts\H8_recount_k14.txt), e3partial_h8.c, h8_compare.py, h8_ctx.cu.
+Checks (out\h8_check.txt): 2000 of 2000 reference vectors on host and GPU; check 16,384 of 16,384 trials as real
+55- and 63-byte strings hashed completely; member order 524,288 of 524,288. Rebuilt binary repeats three runs with
+0 different STAT lines (out\h8_regress.txt). Partial-E3 counter against brute force at 8 bits: 0 different.
+
+Runs (early test / E1 needs eta / listed E1 outcomes / partial E3):
+  h8_real40   2^40   48,264 / 403 / 2 / 238        h8_model40  2^40   48,615 / 413 / 2 / 200
+  h8_real42   2^42  193,411 / 1,547 / 3 / 892      h8_model42  2^42  195,161 / 1,557 / 2 / 912
+  h8_real45   2^45  1,551,878 / 12,489 / 38 / 7,103   h8_model44  2^44  777,175 / 6,272 / 18 / 3,547
+  h8_layout_run1..8 (2^40 each): early test 48191 48710 48091 48589 48558 49068 48781 48284;
+                                 partial E3 225 223 241 203 245 238 240 255
+  h8_spread_run1..8 (same outer words, X14 in steps of 9e3779b1): 48545 48321 48787 48540 48737 48512 48307 48703
+Pooled real trials (2^45.49) against exact expectations:
+  listed beta 199,313,602,081 vs 199,313,326,080 (+0.62); beta with a listed tau 102,535,999 vs 102,539,520 (-0.35);
+  listed E1 outcome 47 vs 40.48 (Poisson p 0.31); listed partial E3 event 10,103 vs 10,038.07 (+0.65).
+  Per beta, listed E1 outcomes observed / exact: 18b0e098 8 / 6.99, 18d0e098 15 / 10.20, 18b1a098 10 / 12.08,
+  18d1a098 12 / 9.49, 18b3e098 2 / 0.53, 18d3e098 0 / 0.62.
+Real against model: 1880 tests, 11 beyond 3 standard deviations (5.1 expected by chance); at 2^40 none; at 2^42
+one (residual word 0 zero, 990 vs 1130, -3.04) that does not repeat at 2^45 / 2^44 (+0.43).
+Eight layout runs, variance over mean (chi-square on 7): early test 2.23 (15.6, p 0.029); listed beta 0.68;
+beta with tau 1.10; partial E3 1.12; word 0 zero 1.25; rule on h1 36.9 (275.8).
+
+DOES NOT AGREE WITH THE SIMPLE MODEL: the 4-bit rule on h1 is not binomial in the layout. Pooled layout passes
+549,747,258,598 vs 549,755,813,888 exact (-11.92 sd, -1.6e-5 relative). Per context (out\h8_ctx_independent.txt,
+4096 contexts with all members): mean 32,788 passes, variance 4,230,272 against 30,738 binomial; a single context
+passes between about 0.66 and 1.38 times 2^-4 (range 21,660 to 45,271). Averaged over contexts the rate is 2^-4
+(independent contexts: 2,542,620,890,031 vs 2,542,620,639,232, +0.16). Listed beta is binomial per context.
+So every statement about the rule's pass rate and the stage-2 budget must be about the average over contexts.
+
+Notes: the listed E1 outcomes have probability 2^-40.15 per trial (the "2^-31.7" of an earlier brief is conditional
+on the beta). Deep tables cover the 15 betas with k <= 14. No exact expectation exists for early test, word-zero
+and trailing-zero statistics (real against model only). A layout run covers 2^21 of the 2^32 X14 values.
+Sixteen further layout runs (9..24) were started by the main session at about 15:55: research\h8\gpu_more\out\.
+
+ADDED 15:55 by the main session: layout runs 9..24 are done (research\h8\gpu_more\out\h8_layout_more.txt, same binary and arguments). Early-test counts, sixteen new runs alone: sum 776,286, mean 48,517.88, variance over mean 0.925, chi-square 13.87 on 15, largest deviation run 11 with 48,960 (+2.01 sd). All 24 runs: sum 1,164,558, mean 48,523.25, variance over mean 1.283, chi-square 29.50 on 23, largest deviation run 6 with 49,068 (+2.47 sd). (Statistics by research\night\main\layout_stats.py; the first eight alone had 2.23.) The model run of 2^40 draws gave 48,615.

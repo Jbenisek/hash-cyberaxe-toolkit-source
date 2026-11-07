@@ -1,0 +1,23 @@
+{
+  "id": "D429-MEMORY-UNKNOWN-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "PR858 memory UNKNOWN ownership audit",
+  "question": "Which remaining high-priority memory UNKNOWNs have an owned runnable program, and which are blocked by absent/non-owned artifacts or organizer semantics?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Read-only audit separates r37/r38 characteristic-search and Step-1 components (participant/incomplete), sha3-r5 xor-cap/contig.c and corrected S5Z (absent), B3M stream/full-search (organizer output/liveness missing), B3-r3 rho self-test (D424 measured component only), and Poseidon QN1/alternative schedules (artifact absent; owned probes already measured). No remaining high-priority UNKNOWN has an owned safe production program for a new sub-30-minute run.",
+  "source": "our workflow: D429 memory UNKNOWN audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D429_memory_unknown_audit.md; research/dig/MEMORY.jsonl; research/memtriage/SUMMARY.md; research/memtriage/sha3-r5-r6.md; research/memtriage/sha256-r37-r38.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "UNKNOWN (read-only ownership audit; no new process)",
+  "notes": "No participant code run. Component measurements are not promoted to whole-line peaks. No package/stage/filing/submission.",
+  "held_fixed": "PR858 preprocessing-inclusive memory rule and no-participant-code queue rule",
+  "reopen_if": "Missing owner artifact, organizer ruling, or newly built owned production kernel arrives"
+}

@@ -1,0 +1,19 @@
+conv rows=3 a=8 N=768 len=600: ok
+NTT TESTS PASSED
+powx m=600 rows3=1: ok
+LOOP TESTS PASSED
+lean m=601: ok   lean arith=16564071 total=35152012 peak(extra)=84736 0.4s | cached arith=13059426 total=26958560 0.4s
+lean m=3000: ok   lean arith=80332708 total=146151991 peak(extra)=358112 2.0s | cached arith=63006607 total=110733804 1.6s
+LEAN TESTS PASSED
+hgcd: deg gcd = 5 (planted 5) arith=11436546 total=27302040 extra peak=597408 bytes, 0.3s
+naive: deg gcd = 5 arith=18988635 total=58424233 0.6s
+mem_cur after gcd (leak check): 0
+HGCD OK
+naive: deg gcd = 0 arith=73980330 total=231601842 2.3s
+mem_cur after gcd (leak check): 0
+HGCD OK
+d=8 sample cost 361594
+runs=320 fails=0 mean=170576 worst=761102
+--- halt test: gcd budget armed at 300,000,000 (planted n=39062)
+BUDGET HALT in stage test-gcd: charged work 301804228 exceeded 300000000
+exit code 77

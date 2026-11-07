@@ -1,0 +1,22 @@
+{
+  "id": "D386-SHA256-R38-PREFIX-MARGINALS-SEED-DIVERSITY-20261014",
+  "hash": "sha256-38",
+  "row_i": 6,
+  "row_j": 37,
+  "object": "independent r38 prefix and late-group marginals",
+  "question": "Do independent seeds reproduce the late/prefix group rates, and what peak RSS does the owned diagnostic use?",
+  "labels": ["C", "S"],
+  "status": "SAMPLED",
+  "number": "Seeds 7001..7008, N=8,388,608 final proposals: A17 997/65536, A18 32671/65536, A19 32445/65536, E17 16274/65536, E18 8111/65536, E19 16283/65536, E21 32652/65536; A16/E16/W16/W7/W8 unit-rate. cells=147, EXACT=362, pooled EXACT/cells=2.46259, mean log2 cell probability=-101.0591. Peak RSS 7,992 KiB = 8,183,808 B = 2^22.9643408678.",
+  "source": "our controlled traillab seed-diversity probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D386_r38_prefix_marginals_seed_diversity.md; research/retest/r38_stack/D386_prefix_marginals.out; research/retest/r38_stack/D386_prefix_marginals.time",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Finite independent-seed evidence only. It does not prove Table-4 independence, the 102-condition model, transfer through rows 22..37, or a judge-usable score; no package/staging/submission action.",
+  "held_fixed": "chi38; rows 22..37 event out; carrier none; np=128,m=64,mt2=256,mw=64,mt=8192; seeds 7001..7008; one thread; --prefix-marginals",
+  "reopen_if": "A complete common-proposal joint law or a proof of independence/transfer is still required.",
+  "peak_mem": "22.9643408678 MEASURED /usr/bin/time -v maximum RSS; one-thread eight-seed owned traillab diagnostic"
+}

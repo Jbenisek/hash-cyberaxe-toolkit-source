@@ -1,0 +1,49 @@
+{
+ "Q1": {
+  "N": 20000,
+  "A_nonzero": {
+   "14": 0,
+   "15": 0
+  },
+  "AB_differ": {
+   "14": 0,
+   "15": 0
+  },
+  "consts_hold": 2000,
+  "consts_trials": 2000
+ },
+ "Q2": {
+  "w14": {
+   "trials_B_only": 6000,
+   "lemmaH_kept": 0,
+   "mean_digest_words_differ": 8.0,
+   "min_digest_words_differ": 8,
+   "same_nonzero_both_blocks_consts_kept": 0,
+   "same_nonzero_both_lemmaH_kept": 0,
+   "trials_both": 3000
+  },
+  "w15": {
+   "trials_B_only": 6000,
+   "lemmaH_kept": 0,
+   "mean_digest_words_differ": 8.0,
+   "min_digest_words_differ": 8,
+   "same_nonzero_both_blocks_consts_kept": 0,
+   "same_nonzero_both_lemmaH_kept": 0,
+   "trials_both": 3000
+  }
+ },
+ "Q3_values_over_50000_builds": {
+  "w14": [
+   0
+  ],
+  "w15": [
+   0
+  ]
+ },
+ "Q4_alt": {
+  "trials": 3000,
+  "lemmaH": 0,
+  "mean_words_differ": 8.0,
+  "min_words_differ": 8
+ }
+}

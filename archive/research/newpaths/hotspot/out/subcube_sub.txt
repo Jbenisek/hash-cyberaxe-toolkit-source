@@ -1,0 +1,6 @@
+E1 outcome over c1 high free bits 23,24,28-31 (64 cells), within the two parities: chi2 2972 on 63; held-out: keep 32/64 cells: fraction 0.505, events 0.742, gain x1.47; keep 16/64 cells: fraction 0.251, events 0.416, gain x1.66; keep 8/64 cells: fraction 0.126, events 0.228, gain x1.81
+E1 outcome over c1 low free bits 2,4,5,6,9,10 (64 cells), within the two parities: chi2 1154 on 63; held-out: keep 32/64 cells: fraction 0.497, events 0.675, gain x1.36; keep 16/64 cells: fraction 0.247, events 0.328, gain x1.33; keep 8/64 cells: fraction 0.121, events 0.168, gain x1.38
+E1 outcome over c1 mid free bits 13,14,17,18,21 (32 cells), within the two parities: chi2 69 on 31; held-out: keep 16/32 cells: fraction 0.503, events 0.502, gain x1.00; keep 8/32 cells: fraction 0.251, events 0.258, gain x1.03; keep 4/32 cells: fraction 0.126, events 0.132, gain x1.05
+eps-only exact probability over the cube: mean 2^-17.608; zero for 0.516 of members; all zero members have c1[11]=c1[12]: False
+   keep best q of cube members by eps-only probability -> gain on the eps condition: 1/2:x2.00 1/4:x3.17 1/8:x4.15 1/16:x5.06 1/64:x6.29
+   real listed E1 outcomes (all data) kept by the eps-only score: q 1.000: x1.00; q 0.251: x3.17; q 0.127: x4.22; q 0.063: x5.24

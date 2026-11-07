@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "count",
+ "object": "E1 q1 (a1,d1) zero-difference requirement, necessity",
+ "question": "Is the equal (a1,d1) of E1 needed by the XOR event, and what does relaxing it activate?",
+ "labels": [
+  "0",
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "baseline: 0/300 constructed pairs have nonzero diff at E1 q1; to get nonzero diff, inject 1-bit diff in a round-2-start word: v1/v6/v12 path needs a diff in one of the 12 non-C3 words, activating 6 round-2 calls vs 3 baseline (+C0|C1|C2, +E0, +E2), words 0,2,5,7 stay equal in 0/1920 injections",
+ "evidence": "research/dig/incoming/blake3-r2-U04/work/q1relax.py; research/dig/incoming/blake3-r2-U04/work/q1relax_out.txt",
+ "topic": "b3.r2.E1.q1.relax",
+ "notes": "Universe cell blake3-r2|E1.q1|step|Q2. Not needed by the event (E1 outputs only enter o1,o3,o4,o6 = residual R), but Delta(a1,d1) = f(v1,v6,v12) and those come from C1.a,C2.b,C0.d, each depending on all 4 of its inputs (16/16 dependence checked). The only difference sources in the pair are message words w4 (enters C3) and w5/length (cancelled in round 1: state after round 1 has 0 differing words in the sample), so a nonzero E1 q1 diff means breaking the round-1 cancellation or pinned D outputs. Window test only: single-bit injections on B state at round-2 start, 40 contexts x 16 words x 3 bits; no compensated multi-word search. Same relaxation as E0; no gain."
+}

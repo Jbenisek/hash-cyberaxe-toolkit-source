@@ -1,0 +1,4 @@
+six-bit words 120 word pairs 7140 relaxed word pairs 1042 relaxed variant pairs 77796 64.0
+exact pair checks 6397 of 77796 {'unsat': 6351, 'sat': 46} exact word pairs 16 exact variant pairs 46 352.5
+word triangles in exact-pair graph 0 variant triangles 0 352.5
+{"six_words": 120, "word_pairs": 7140, "relaxed_word_pairs": 1042, "relaxed_variant_pairs": 77796, "exact_pair_checks_done": 6397, "exact_pair_outcomes": {"unsat": 6351, "sat": 46}, "exact_word_pairs": 16, "exact_variant_pairs": 46, "max_exact_word_degree": 3, "variant_triangles": 0, "triangle_checks_done": 0, "triangle_outcomes": {}, "rank3_found": [], "complete": false, "secs": 352.5}

@@ -1,0 +1,63 @@
+X2 ledger: SOLVE 2^18.51 -> T 70.990; SOLVE 0 -> T 70.024 (ceiling 0.966 bit)
+
+rec7: 150 passing steps, 185 systems
+  measure (per passing step)                           mean   median   T on X2   change vs 70.990
+  DFS simple (e3solve.py weights)                  2^18.51  2^18.03    70.988   +0.002
+  DFS joint (e3solve2.py weights)                  2^19.16  2^16.80    71.347   -0.356
+  kissat: LB = literals + propagations             2^13.05  2^12.74    70.055   +0.935
+  kissat-nc: LB = literals + propagations          2^13.26  2^12.97    70.060   +0.931
+  cadical: LB = literals + propagations            2^13.42  2^13.10    70.064   +0.926
+  cms: LB = literals + propagations                2^12.81  2^12.60    70.050   +0.940
+  kissat: process CPU - start-up (cycles)          2^23.36  2^23.10    74.854   -3.864
+  kissat-nc: process CPU - start-up (cycles)       2^24.02  2^23.82    75.497   -4.507
+  cadical: process CPU - start-up (cycles)         2^23.31  2^23.09    74.814   -3.823
+  cms: process CPU - start-up (cycles)             2^23.68  2^23.49    75.165   -4.175
+  kissat: solve phase F - F_bot (cycles)           2^22.59  2^22.39    74.120   -3.130
+  kissat-nc: solve phase F - F_bot (cycles)        2^23.62  2^23.44    75.110   -4.119
+  cadical: solve phase F - F_bot (cycles)          2^21.17  2^20.91    72.838   -1.847
+  cms: solve phase F - F_bot (cycles)              2^22.57  2^22.32    74.105   -3.114
+  cms in-process, fresh solver (cycles)            2^22.25  2^22.07    73.807   -2.817
+  cms in-process, incremental template (cycles)    2^18.77  2^18.55    71.124   -0.134
+  oracle min(DFS simple, cms incremental)          2^18.08  2^17.95    70.798   +0.192
+
+rec11: 120 passing steps, 152 systems
+  measure (per passing step)                           mean   median   T on X2   change vs 70.990
+  DFS simple (e3solve.py weights)                  2^18.87  2^18.39    71.177   -0.186
+  DFS joint (e3solve2.py weights)                  2^19.26  2^16.80    71.403   -0.413
+  kissat: LB = literals + propagations             2^13.10  2^12.77    70.056   +0.934
+  kissat-nc: LB = literals + propagations          2^13.31  2^12.97    70.061   +0.930
+  cadical: LB = literals + propagations            2^13.44  2^13.17    70.065   +0.926
+  cms: LB = literals + propagations                2^12.83  2^12.56    70.051   +0.940
+  kissat: process CPU - start-up (cycles)          2^23.51  2^23.28    75.001   -4.011
+  kissat-nc: process CPU - start-up (cycles)       2^24.06  2^23.91    75.536   -4.545
+  cadical: process CPU - start-up (cycles)         2^23.43  2^23.27    74.924   -3.934
+  cms: process CPU - start-up (cycles)             2^23.77  2^23.57    75.252   -4.262
+  kissat: solve phase F - F_bot (cycles)           2^22.64  2^22.37    74.174   -3.183
+  kissat-nc: solve phase F - F_bot (cycles)        2^23.59  2^23.51    75.082   -4.091
+  cadical: solve phase F - F_bot (cycles)          2^21.07  2^20.91    72.752   -1.762
+  cms: solve phase F - F_bot (cycles)              2^22.59  2^22.40    74.124   -3.133
+  cms in-process, fresh solver (cycles)            2^22.09  2^21.88    73.660   -2.669
+  cms in-process, incremental template (cycles)    2^19.18  2^18.71    71.357   -0.367
+  oracle min(DFS simple, cms incremental)          2^18.40  2^18.27    70.939   +0.052
+
+rec7+rec11: 270 passing steps, 337 systems
+  measure (per passing step)                           mean   median   T on X2   change vs 70.990
+  DFS simple (e3solve.py weights)                  2^18.68  2^18.27    71.075   -0.085
+  DFS joint (e3solve2.py weights)                  2^19.21  2^16.80    71.372   -0.382
+  kissat: LB = literals + propagations             2^13.08  2^12.75    70.056   +0.935
+  kissat-nc: LB = literals + propagations          2^13.28  2^12.97    70.060   +0.930
+  cadical: LB = literals + propagations            2^13.43  2^13.15    70.064   +0.926
+  cms: LB = literals + propagations                2^12.82  2^12.56    70.050   +0.940
+  kissat: process CPU - start-up (cycles)          2^23.43  2^23.17    74.921   -3.931
+  kissat-nc: process CPU - start-up (cycles)       2^24.04  2^23.89    75.515   -4.524
+  cadical: process CPU - start-up (cycles)         2^23.37  2^23.17    74.864   -3.873
+  cms: process CPU - start-up (cycles)             2^23.72  2^23.52    75.205   -4.214
+  kissat: solve phase F - F_bot (cycles)           2^22.61  2^22.38    74.144   -3.154
+  kissat-nc: solve phase F - F_bot (cycles)        2^23.61  2^23.48    75.098   -4.107
+  cadical: solve phase F - F_bot (cycles)          2^21.13  2^20.91    72.800   -1.810
+  cms: solve phase F - F_bot (cycles)              2^22.58  2^22.33    74.113   -3.123
+  cms in-process, fresh solver (cycles)            2^22.18  2^21.93    73.744   -2.753
+  cms in-process, incremental template (cycles)    2^18.97  2^18.63    71.232   -0.242
+  oracle min(DFS simple, cms incremental)          2^18.23  2^18.03    70.862   +0.128
+
+packed-outer variant (stack_calc V4p, c = 81 + 2^-9.8132 * SOLVE): DFS simple 2^18.51 -> T 70.213 (V4p 70.213); V4s GUESS solver 2^15 -> T 68.135 (V4s 68.135); measured best off-the-shelf (cms in-process incremental, pooled 2^18.97) -> T 70.606

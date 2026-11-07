@@ -1,0 +1,3 @@
+published {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 160, 'W14 cell': 160, 'E15 cand': 5242880, 'plus15': 2621440, 'A15 cell': 16384, 'W15 cell': 6656, 's1W15': 40, 's0W15': 8, 'P (dE16)': 2, 'R (dA16)': 1}
+selftest_fix.sols.json[0] {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 160, 'W14 cell': 160, 'E15 cand': 5242880, 'plus15': 2621440, 'A15 cell': 16384, 'W15 cell': 6656, 's1W15': 40, 's0W15': 8, 'P (dE16)': 2, 'R (dA16)': 1}
+selftest_fix16.sols.json[0] {'E14 cand': 1024, 'plus14': 512, 'A14 cell': 160, 'W14 cell': 160, 'E15 cand': 5242880, 'plus15': 2621440, 'A15 cell': 16384, 'W15 cell': 6656, 's1W15': 40, 's0W15': 8, 'P (dE16)': 2, 'R (dA16)': 1}

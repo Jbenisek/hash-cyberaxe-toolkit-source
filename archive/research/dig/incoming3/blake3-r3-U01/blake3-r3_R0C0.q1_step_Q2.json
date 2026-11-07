@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R0C0.q1 (a1,d1): 3-round BLAKE3 generic-birthday circuit, round 0 column call C0, quarter-step 1",
+ "question": "Q2 necessity: change it (no build-time folding / other prefix constants / prefix words free), recount the exact op total.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Demoting this step's constant inputs to run-time registers (no build-time folding from here on): circuit 625 ops (+30), this step itself 7 ops (add 1, xor 1, shr 1, and 2, shl 1, or 1). Folding is therefore worth 30 ops per batch. Other prefix constants: step stays [0] ops for 300 random nonzero prefixes, but the circuit total is [611, 612] instead of 595 (rounds 1-2 reuse m0..m7; one nonzero word costs +2, all eight +16/17; zero words are skipped). Prefix words free (all 16 variable): circuit 730, this step 6 ops.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work/b3steps.py; research/dig/incoming3/work/scan.py; research/dig/incoming3/work/scan_out.json; research/dig/incoming3/work/validate_out.txt; research/blake3_r3/candidate_blake3/experiments/rho.py; research/dig/incoming3/work/scan2.py; research/dig/incoming3/work/scan2_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R0C0.q1|step|Q2. Recount by the same tracer with the change applied; the circuit with the change is not run when words are demoted (count only). The prefix is fixed to 0^32 by the target, so the nonzero-prefix and free-prefix rows are what-ifs, not options.",
+ "held_fixed": "blake3-r3 filed circuit: 7 lanes x 36 bits, 595 ops/batch, prefix 0^32, m8..m15 free",
+ "reopen_if": "a counting rule that charges build-time folding differently (e.g. an organizer rule that charges precomputed immediates)",
+ "topic": "blake3-r3 R0C0.q1 step op count"
+}

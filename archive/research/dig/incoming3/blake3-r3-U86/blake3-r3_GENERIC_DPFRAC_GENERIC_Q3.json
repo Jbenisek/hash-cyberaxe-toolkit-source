@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.DPFRAC distinguished-point fraction",
+ "question": "Score-optimal DP density; is the density free to be non-integer?",
+ "labels": [
+  "N",
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "The memory term pins d at the boundary: use the whole 2^20 budget. Table room: (2^20 - 374,400 - 2,048)/32 = 21,004 keys. Non-integer density 2^-113.70 (DP = low 113 bits zero plus a comparison of the next bits, done only in stage 2, 0 extra main-loop ops) gives mean 20,147 finished trails and P(table full) below 1e-9: delta -0.001982 bit (1e-6 tail: d=113.688, -0.002057; 1e-12: d=113.711, -0.001920). With 25 B entries (key 8 + t 2 + length 15 B) 26,885 keys fit: d=113.34, delta -0.003894 bit.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.00198,
+ "notes": "universe cell blake3-r3|GENERIC.DPFRAC|GENERIC|Q3. Requires restating proof Lemma 2 for density 2^-113.7 (trail count 20.1k instead of 16.4k) and the memory ledger. Entry width of 25 B follows from length < 12 x 2^114 (15 bytes) and t < 2^16 (2 bytes) plus an 8 B key; unbuilt. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed ledger; INFLIGHT=28 L, cutloss 1.5e-4, kappa 12 as filed (their units shrink with L, which is part of the gain); entry layouts per note (32 B) or compressed (25 B, not built).",
+ "reopen_if": "Judge rejects non-integer density or the compressed entry; or a lower table bound enters via the proof's Lemma 2.",
+ "gain_basis": "T"
+}

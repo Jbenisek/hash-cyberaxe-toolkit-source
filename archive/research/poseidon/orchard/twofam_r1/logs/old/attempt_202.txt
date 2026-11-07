@@ -1,0 +1,20 @@
+r=1 seed=202 D=78125
+  init (twiddle table)                         arith=         33742 other=        240926 total=        274668     0.0s peak=1048576
+  two line setups + intersection               arith=          1131 other=         12489 total=         13620     0.0s peak=1048576
+  sample x, y = H(x)                           arith=             0 other=           303 total=           303     0.0s peak=1048576
+x: family 1
+  family 0: build F (evaluations + NTT)        arith=       2525873 other=      61471240 total=      63997113     1.0s peak=6694336
+  family 0: W^p mod F                          arith=    7533028466 other=   85108460654 total=   92641489120   269.6s peak=16937184
+  family 0: gcd(F, W^p - W)                    arith=   12232812831 other=   61222189854 total=   73455002685   493.5s peak=13548704
+    gcd degree 0, charged 73455002685, derived bound 73664065176 (within)
+  family 0: remove the roots of x              arith=             0 other=            17 total=            17     0.0s peak=3548640
+    remaining roots: 0
+  family 1: build F (evaluations + NTT)        arith=       2525543 other=      61468489 total=      63994032     0.6s peak=6694336
+  family 1: W^p mod F                          arith=    7533023846 other=   85108422875 total=   92641446721   163.5s peak=16937184
+  family 1: gcd(F, W^p - W)                    arith=   12232812500 other=   61222187482 total=   73454999982   346.8s peak=13548704
+    gcd degree 1, charged 73454999982, derived bound 73664065176 (within)
+  family 1: remove the roots of x              arith=             2 other=            38 total=            40     0.0s peak=3548672
+    remaining roots: 0
+RESULT found=0 success=0 split_levels=0 split_tries=0
+SUMMARY total_all=332321218301 units=1402199233.3 log2_units=30.3850 heap_peak=16937184
+SPLIT shift=0 pow=0 gcd=0 div=0

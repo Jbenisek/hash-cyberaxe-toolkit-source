@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.FMUL mul/sqr charge",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "KILLED",
+ "number": "mul+sqr = 2,537,599,388 ops = 2.466% of the run: free multiplications would gain at most 0.0360 bit, half price 0.0179 bit",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "KILLED as a lever by the bound: any multiplication saving is below 0.04 bit. Source: types line of proof.md and calc.py. | universe cell poseidon-r1|MACHINE.FMUL|MACHINE|Q2",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "a charging rule that prices a multiplication far above 1 op"
+}

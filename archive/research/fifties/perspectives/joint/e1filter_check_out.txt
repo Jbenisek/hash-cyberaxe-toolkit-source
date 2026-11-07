@@ -1,0 +1,1 @@
+check: 1048576 rows, 0 mismatches of (da2, dc2, c1) against keys.u32

@@ -1,0 +1,18 @@
+{
+  "id": "S39-BITSLICE-W5W12-20261014",
+  "hash": "sha256-39",
+  "row_i": 0,
+  "row_j": 39,
+  "object": "bit-sliced gates with layout W5..W12",
+  "question": "How many gates and live planes does the aligned 52-byte W5..W12 layout require?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "53551 gates; 209.18359375/lane; interleaved peak 872 planes; 0/256 KAT mismatches",
+  "source": "research/dig_new/sha256-39/bitslice_layout_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S39_bitslice_layout_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.73369,
+  "notes": "Exact local gate/KAT result for five zero prefix words. Conditional 5-byte-code arithmetic only; 1024-register premise, full ledger, setup, and organizer gates remain open."
+}

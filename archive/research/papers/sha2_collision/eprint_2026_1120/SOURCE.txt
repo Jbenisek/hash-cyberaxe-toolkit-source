@@ -1,0 +1,1 @@
+2026_1120	Pushing Collision Attacks on SHA-2 to 39 Steps	local copy research/grok/in/job103_lowmem/2026-1120.pdf

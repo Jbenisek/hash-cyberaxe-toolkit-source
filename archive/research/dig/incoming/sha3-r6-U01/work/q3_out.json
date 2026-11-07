@@ -1,0 +1,67 @@
+{
+ "F64": {
+  "nvars": 512,
+  "cond_rank": 128,
+  "z_dim": 32,
+  "log2_solutions": 384,
+  "log2_groups": 352,
+  "need_log2_groups_for_N128": 96,
+  "headroom_bits": 256
+ },
+ "F135": {
+  "nvars": 1080,
+  "cond_rank": 128,
+  "z_dim": 32,
+  "log2_solutions": 952,
+  "log2_groups": 920,
+  "need_log2_groups_for_N128": 96,
+  "headroom_bits": 824
+ },
+ "F64_leader_prefix": {
+  "cond_bits": 256,
+  "log2_prefixes": 256,
+  "note": "4867f093 draws 256 random bits for L0,L1,L2,L5 and sets L3,L4,L6,L7 affinely; z lives in L0,L5 low 32 bits, so distinct groups <= 2^256 (minus the 2^32 z overlap = 2^224)"
+ },
+ "linstruct_best_1": {
+  "listed": 24,
+  "gf2_rank": 19,
+  "cond_bits": 68,
+  "cond_rank": 67,
+  "cond_stat": {
+   "new": 67,
+   "dep": 1,
+   "incons": 0
+  },
+  "dirs_in_free_bits": true,
+  "cond_dep_on_dirs": 0,
+  "outer_freedom": 994,
+  "dadb_fails": 0,
+  "dadb_checks": 300
+ },
+ "linstruct_best_5": {
+  "listed": 31,
+  "gf2_rank": 24,
+  "cond_bits": 82,
+  "cond_rank": 82,
+  "cond_stat": {
+   "new": 82,
+   "dep": 0,
+   "incons": 0
+  },
+  "dirs_in_free_bits": true,
+  "cond_dep_on_dirs": 0,
+  "outer_freedom": 974,
+  "dadb_fails": 0,
+  "dadb_checks": 300
+ },
+ "sol16_35": {
+  "listed": 35,
+  "gf2_rank": 35,
+  "source_free_bits": 320,
+  "fixed_bits": 760,
+  "outer_freedom": 285,
+  "dadb_fails": 0,
+  "dadb_checks": 300,
+  "note": "message lifted so lanes 0-4 and 10-14 carry u0..u4; sponge match not rechecked here (done in verify_sol16.py)"
+ }
+}

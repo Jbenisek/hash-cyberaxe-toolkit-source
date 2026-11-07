@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t34 forcing S-box inputs by root-finding",
+ "question": "RELABEL re-ask of the door at r = 1",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "r=1: forcing two round-1 S-box inputs to zero is a 2x2 solve (the line point Q); a third forced S-box needs a root of a degree >= 5 polynomial in W: the affine third-free-round template is closed on Pallas (P3.11/P3.16, not redone)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/_scan_poseidon/r2var.py research/dig/incoming4/_scan_poseidon/r2var.json 3rd_openai_workspace/luna3/P3_11_toylab.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Wall recorded as evidence, per task. | universe cell poseidon-r1|DOOR.t34|DOOR|D1",
+ "held_fixed": "r=1",
+ "reopen_if": "a closed form for the third round"
+}

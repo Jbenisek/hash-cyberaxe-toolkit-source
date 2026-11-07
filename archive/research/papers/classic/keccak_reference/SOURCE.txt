@@ -1,0 +1,3 @@
+original_filename: keccak-team_Keccak-Reference-3.0.pdf
+source_url: https://keccak.team/files/Keccak-reference-3.0.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

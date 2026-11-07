@@ -1,0 +1,19 @@
+{
+  "id": "S7-LS1R7-BOUNDARY-20261015",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "ls1r7 register boundary-transfer reconciliation",
+  "question": "Are spill.py's 256+256 transfers a per-step charge under the persistent chain state?",
+  "labels": ["C", "I", "N"],
+  "status": "COMPUTED",
+  "number": "No: the 512 transfers are isolated-call boundaries; the persistent step overwrites digest planes in-place. Setup/final 704000 term remains not decomposed.",
+  "source": "research/r7/ls1r7/spill.py and pkg/sha3-256/proof.md sections 3.3, 3.5, 4",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_ls1r7_boundary_transfer_1015.md",
+  "date": "2026-10-15",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "No package/stage/filing/submission; initial/final setup charge decomposition remains open."
+}

@@ -1,0 +1,8 @@
+q=65537 v2=16 r=1 cauchy=True: l0: pairs 3051746460 expected 3051711094.5 ratio 1.000 | l0l1: pairs 93257 expected 46564.7 ratio 2.003 | full: pairs 46765 expected 0.7 ratio 65818.903 [32s]
+q=65537 v2=16 r=1 cauchy=False: l0: pairs 3051772510 expected 3051711094.5 ratio 1.000 | l0l1: pairs 92614 expected 46564.7 ratio 1.989 | full: pairs 46474 expected 0.7 ratio 65409.338 [58s]
+q=65537 v2=16 r=2 cauchy=True: l0: pairs 3051721216 expected 3051711094.5 ratio 1.000 | l0l1: pairs 93429 expected 46564.7 ratio 2.006 | full: pairs 46592 expected 0.7 ratio 65575.416 [77s]
+q=65537 v2=16 r=2 cauchy=False: l0: pairs 3051669258 expected 3051711094.5 ratio 1.000 | l0l1: pairs 92831 expected 46564.7 ratio 1.994 | full: pairs 46455 expected 0.7 ratio 65382.596 [97s]
+q=1000003 v2=1 r=1 cauchy=True: l0: pairs 199988341 expected 199999390.0 ratio 1.000 | l0l1: pairs 353 expected 200.0 ratio 1.765 | full: pairs 197 expected 0.0 ratio 985008.914 [116s]
+q=1000003 v2=1 r=1 cauchy=False: l0: pairs 199989261 expected 199999390.0 ratio 1.000 | l0l1: pairs 423 expected 200.0 ratio 2.115 | full: pairs 198 expected 0.0 ratio 990008.960 [146s]
+q=1000003 v2=1 r=2 cauchy=True: l0: pairs 199996795 expected 199999390.0 ratio 1.000 | l0l1: pairs 397 expected 200.0 ratio 1.985 | full: pairs 189 expected 0.0 ratio 945008.552 [179s]
+q=1000003 v2=1 r=2 cauchy=False: l0: pairs 199994361 expected 199999390.0 ratio 1.000 | l0l1: pairs 429 expected 200.0 ratio 2.145 | full: pairs 231 expected 0.0 ratio 1155010.453 [210s]

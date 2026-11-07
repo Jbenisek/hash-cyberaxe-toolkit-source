@@ -1,0 +1,23 @@
+{
+  "id": "D482-BLAKE3-R3-PH-REPLAY-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "independent tuned-CV PH replay",
+  "question": "Does a second bound-only implementation reproduce the tuned-CV operation count and IV control?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Second one-thread implementation gives tuned h flags 10 = 589 and IV flags 11 = 595; peak working set 11091968 B = 2^23.4030120236; exit 0. Confirms D481 and leaves stale PH=590 unreconciled.",
+  "source": "our workflow: D482 independent PH replay",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d482_ph_replay.py; research/retest/blake3_r3/D482_PREREG.md; research/retest/blake3_r3/D482_run.txt; research/sol_answer_D482_blake3_r3_ph_replay.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "11091968 B = 2^23.4030120236 maximum working set; one thread",
+  "notes": "Independent source-level replay only. No package/stage/submit and no score/ledger change.",
+  "held_fixed": "standard three-round G schedule; stored h_tuned.json; flags 10; IV control flags 11; constant/variable bound model",
+  "reopen_if": "A source-equivalent legacy tracer identifies why its PH=590 line differs; reconcile before any claim refresh"
+}

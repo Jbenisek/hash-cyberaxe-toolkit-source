@@ -1,0 +1,12 @@
+outer 0: hgcd+division cost 10903464536
+outer 1: hgcd+division cost 4761166360
+outer 2: hgcd+division cost 2053529722
+outer 3: hgcd+division cost 872217270
+outer 4: hgcd+division cost 359418064
+outer 5: hgcd+division cost 145764364
+outer 6: hgcd+division cost 57678246
+outer 7: hgcd+division cost 22119380
+outer 8: hgcd+division cost 7900226
+outer 9: hgcd+division cost 2750567
+outer 10: hgcd+division cost 865205
+BOUND_D r=2 m=195312 derived_total=19187264087 extra=1076565 maxgap=16747988

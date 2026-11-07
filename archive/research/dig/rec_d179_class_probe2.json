@@ -1,0 +1,20 @@
+{
+  "id": "B3-D179-class-probe2",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "coupled omega exact all-member probes",
+  "question": "Do fresh typed words remain all-or-none over every member of their fixed class under alive2c?",
+  "labels": ["I"],
+  "status": "SAMPLED",
+  "number": "32 complete class checks (16 fresh one-per-class plus 8 class-0 and 8 class-15 supplemental checks); 0 mixed counts",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_omega_class.md; research/retest/b3_omega_coupled/firm/run_one_fresh_per_class.sh; research/retest/b3_omega_coupled/firm/alive2c.c",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Each allmem count is over all 32768 members and is either 0 or 32768. This strengthens but does not prove class invariance; the representative claim remains open.",
+  "topic": "b3.omega.class_invariance"
+}

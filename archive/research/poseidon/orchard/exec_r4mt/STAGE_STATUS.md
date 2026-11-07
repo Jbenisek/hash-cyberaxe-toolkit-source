@@ -1,0 +1,11 @@
+# POSR4M staged (2026-10-15 ~09:00Z). NOT submitted.
+
+Claim: poseidon-orchard-r4-prefix-v1, time_log2 = 33.63159 (N = 3,992,419,235,666 incl. thread_control 15,129,788,786; algorithmic 3,977,289,295,772), memory_log2_bytes = 30.198 (1,231,371,140 B = static image 1,231,305,604 + 65,536 stack; arena extent 1,227,182,400; memmeter peak 1,216,389,120 B, claim >= both), score = 33.63159 + (30.198 - 20) = **43.82959** (POSR3F, the r3 entry, scored 38.739).
+Run: cloud 108.61.192.253 /root/hs/mt/run_r4_T6, 6 threads, 05:02:36Z-08:39:46Z (wall 13,030 s), 2 trials (centre 1 failed, centre 2 deg G 1), RECONCILE ok. Copies: exec_r4mt/cloud_run/{run.tmp,mem.tmp,end.txt}, data/cloud_T6/.
+sha256: binary 01f80a4d2c7dff8a5ec82053e43d10d0746020aad274ec52fb54b6c0883be279 (cloud /root/hs/mt/final_r4/single = the run's ./single); sources: cloud_run/SOURCES.sha256 (cloud src_final_r4 == local exec_r4mt, checked equal).
+Checks: verify_collision.py ok (reference + organizer digest, Orchard Poseidon r=4); prefile_check ALL PASS; rulecheck: mem-gate PASS (4 stage peaks <= 2^30.198), 12 PASS / 3 EXPOSED (R03, R05, R12 - same three text-match flags as the POSR3F package, false positives on words in the code/prose); note 13,131 B (>= 5 KiB); proof prints all 21 shipped source files verbatim (checked); proof states threads, thread_control, total_all as the charged total.
+Fixes made (minimal): FINISH_r4r5.sh cloud-finish pgrep test (self-matching, and CRLF); build_package.py stage-D reconciliation assertion for multi-trial runs (failed trial also executes xfree(G): 101 ops, derived from the counters: D_EXTRA 2,129 = 2*1003 + 2*11 + 101; text says so). Note: added "rented 32-vCPU machine" sentence. The 101 is inferred from the counter equation, not separately measured.
+Dependencies: none (POSR3F is the r3 target; submit script uses no dependency flag, same as POSR3F's).
+Slot: ~/hashsmash/yukon/pos_posr4m (WSL), package sha256 1afcd901...; admission open: acceptedRoundCounts [3,4,5].
+Submit script (NOT run): research/launch/submit_pareto_posr4m.sh (guards staged-file sha256, appends a FILINGS.md line).
+Other runs of the r4 program: local r4b (single-thread, RSS ~1.18 GB < claim) still running, not part of this entry; r5 16-thread run on the cloud untouched.

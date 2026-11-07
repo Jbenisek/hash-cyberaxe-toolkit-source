@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.SPLIT (ROOT)",
+ "question": "Q2: is the splitter necessary: drop it (abandon the centre when deg G != 1) and recount",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Splitting is used in 1 of the 8 observed successes (CPU seed 201003, deg 2). Dropping it loses 1/8 of successes = 0.1926 bit of expected time; its whole charged budget is 187,665,120 + 1,172,907 ops = 0.00090 bit. Keep it.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/d192_r2_results.jsonl; research/poseidon/orchard/lean_r2/logs/",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ROOT.SPLIT|ROOT|Q2. Success set pooled over CPU r2 first centres (4) and GPU d192 centres with a nonzero square root (4); only the CPU deg-2 case needs a split. Bound is a ratio of two counts, small sample.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "a larger sample shows deg G >= 2 in under 1 percent of successes"
+}

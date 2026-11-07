@@ -1,0 +1,22 @@
+{
+  "id": "D412-SHA3-R6-141-LEDGER-RECONCILIATION-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 141-bit exact-ledger versus proof-narrative reconciliation",
+  "question": "Does the corrected BKEY=141 ledger agree with the package's claim and human-readable proof sections?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "The corrected ledger gives BKEY=141, G=19262931545893435657738815, exact N=7069170787089782366932836729369691803876, and upward time_log2=121.70963. Proof Sections 9-10 still contain the old G=19293989054611038904195207, N=7130987948964708514105233747792018123176, time_log2=121.72219, R140/140-bit/132-bit wording, and 2^140 table wording; claim.json still says 140-bit key projection. The wider-key proof is not textually filing-ready.",
+  "source": "Local exact import and comparison of ledger_r6.py, proof.md, and claim.json",
+  "own_test": true,
+  "evidence": "research/sol_answer_D412_sha3r6_141_ledger_reconciliation.md; research/retest/lens_t3/d412_141_ledger_reconcile.py; research/retest/lens_t3/D412_run.json; research/tools/build_pkg/scratch/pkgS6K141/work/ledger_r6.py; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/claim.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.01,
+  "prior": 0.9,
+  "gain_basis": "C",
+  "notes": "This is a proof/metadata blocker, not a score claim. No package edit, staging, filing, or submission.",
+  "reopen_if": "The proof/claim are regenerated from BKEY=141 and organizer acceptance is obtained, or the source/ledger changes."
+}

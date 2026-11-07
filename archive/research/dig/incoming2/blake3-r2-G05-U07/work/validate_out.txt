@@ -1,0 +1,2 @@
+empty 7r af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262 True
+organizer verifier _compress cross-check (WSL org_cmp.py): match 200 of 200 (random h, m, t, b, flags; rounds 1, 2, 7; both 16-word outputs)

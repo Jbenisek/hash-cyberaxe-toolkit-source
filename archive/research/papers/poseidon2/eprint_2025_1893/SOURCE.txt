@@ -1,0 +1,1 @@
+2025/1893	Poseidon(2)b: Binary Field Versions of Poseidon/Poseidon2	s2	https://cic.iacr.org/p/2/4/15/pdf

@@ -1,0 +1,20 @@
+{
+  "id": "DENSE-SIGNED-R38-R0-16-PRICE-20261014",
+  "hash": "sha256-38",
+  "row_i": 0,
+  "row_j": 16,
+  "object": "Dense signed characteristic rows 0..16 price audit",
+  "question": "Can the dense signed characteristic rows 0..16 replace the filed r38 A_C allowance?",
+  "labels": ["K", "E"],
+  "status": "OPEN",
+  "number": "No complete public-input search is closed. Corrected-model partial run stopped UNKNOWN at 506,000,000 propagations = 185,483.87096774194 CE = 2^17.50093421499; no characteristic and no trustworthy peak RSS recorded.",
+  "source": "research/dense_dig/llw24/dense_found.txt",
+  "own_test": true,
+  "evidence": "research/sol_answer_dense_signed_r0_16_price.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "sha256-r38.dense-signed.rows0-16.price",
+  "peak_mem": null,
+  "notes": "Partial UNKNOWN only; memory charge is OPEN. Filed A_C=2^70 unchanged; no package/stage/filing/submission."
+}

@@ -1,0 +1,7 @@
+{
+ "written": "2026-10-09 ~20:00 MDT, before stream 2 (seeds 0x4F4E45535332524C real, 0x4F4E455353324354 ctrl) was run",
+ "source": "hypotheses read off STREAM 1 (2^28) descriptive extras in analyze_out.txt section 3; not flagged on TRAIN",
+ "one_sided_positive_advantage": ["D.joint.m17.zero", "D.joint.m15.zero", "D.w3.m65535.zero", "D.w3.m65537.zero"],
+ "chi_replication": ["D.w1.cos65537_2", "D.w1.cos65537_16", "D.w1.m65535.chi", "D.w1.m65537.chi"],
+ "also": "every test significant (Bonferroni) on STREAM 1 is re-tested on STREAM 2 and the replication count is reported"
+}

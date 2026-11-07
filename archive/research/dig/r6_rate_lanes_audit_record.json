@@ -1,0 +1,20 @@
+{
+  "id": "R6-RATE-CONSTANT-FOLDED-AUDIT-20261013",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "rate-constant lanes: shipped S6K exact charge audit",
+  "question": "Is the 0.0049-bit rate-constant-lane row an uncharged operation in the shipped S6K layout?",
+  "labels": ["Z", "C"],
+  "status": "KILLED",
+  "number": "Exact static audit: additional charge is 0 word operations and 0 bits. Fourteen zero lanes and lane 16=0x86<<56 are constants; setup folding, generator charge, and 1108-op verification already include their effects.",
+  "source": "our workflow: S6K source/proof audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-rate-constant-lanes-audit-20261013.md; research/tools/build_pkg/scratch/pkgS6K/work/k/kgen.py; research/tools/build_pkg/scratch/pkgS6K/work/k/kernel2.py; research/tools/build_pkg/scratch/pkgS6K/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6K/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "The append-only R6-RATE OPEN cell is superseded for the shipped S6K source/layout. Static exact closure; no package, staging, or submission.",
+  "supersedes": ["R6-RATE-open-input"]
+}

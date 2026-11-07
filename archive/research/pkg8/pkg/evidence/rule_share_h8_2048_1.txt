@@ -1,0 +1,9 @@
+PROGRAM sha256 d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb TOOL rule_share_h8.py sha256 bd8e5b343cd32e4eab4b54e228fd833dec8f654d3a917dffccf7dba2ea43697c
+contexts 2048 (seed text 1), members 524288, trials 1073741824, batches 153393152 (74899 per context, the last with two members); anchors against the complete compression of message A: 16384 of 16384 equal; 74 s
+rule: conditions | trials that satisfy it | share of the trials | as a power of two | batches with such a trial | share of the batches | 7 * share of the trials | budget of the program | largest and smallest share of the batches of one context | largest share of the trials of one context
+RULE 4 | 66967626 | 0.06236846 | 2^-4.0030 | 36836613 | 0.240145 | 0.436579 | 1/2 = 0.500000 | 0.328269 (context 1032) 0.144021 (context 184) | 0.08231163
+RULE 5 | 33485196 | 0.03118552 | 2^-5.0030 | 18651177 | 0.121591 | 0.218299 | 1/4 = 0.250000 | 0.165436 (context 1032) 0.073085 (context 184) | 0.04107475
+RULE 6 | 16741124 | 0.01559139 | 2^-6.0031 | 12368677 | 0.080634 | 0.109140 | 1/8 = 0.125000 | 0.108373 (context 1826) 0.055715 (context 184) | 0.02056122
+SPREAD 4 | share of the trials of one context over 2^-4: mean 0.99790 | standard deviation between contexts 0.05938 | smallest 0.7202 largest 1.3170 | standard error of the mean 0.00131
+SPREAD 5 | share of the trials of one context over 2^-5: mean 0.99794 | standard deviation between contexts 0.05940 | smallest 0.7204 largest 1.3144 | standard error of the mean 0.00131
+SPREAD 6 | share of the trials of one context over 2^-6: mean 0.99785 | standard deviation between contexts 0.05974 | smallest 0.7238 largest 1.3159 | standard error of the mean 0.00132

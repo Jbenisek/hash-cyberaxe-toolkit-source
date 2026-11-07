@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.CENTRES independent centres charged",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "time_log2 by centres: 1 -> 27.78023, 2 -> 28.78006, 3 -> 29.36497 (same ledger); success with Poisson per-centre 0.3935: 0.3935, 0.6321, 0.7769; sampled per-centre 0.4308: 0.431, 0.676, 0.816; claim used 0.318 (Wilson low) -> 0.534",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json c1..c3, meas_c*. | universe cell poseidon-r1|LEDGER.CENTRES|LEDGER|R2",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

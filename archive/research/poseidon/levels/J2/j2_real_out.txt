@@ -1,0 +1,17 @@
+degree 625 built in 0.0s
+VALUE CHECK vs poseidon_ref.round_full: ok (3 points)
+trial 0: deg 624 factors 16 roots 3 degs(sorted desc) [228, 60, 60, 57, 52, 52, 40, 30, 26, 4, 4, 4, 4, 1, 1, 1]  (9.7s)
+trial 1: deg 624 factors 10 roots 0 degs(sorted desc) [396, 99, 60, 40, 12, 4, 4, 4, 3, 2]  (24.4s)
+trial 2: deg 624 factors 15 roots 0 degs(sorted desc) [380, 60, 60, 40, 30, 12, 12, 6, 4, 4, 4, 4, 4, 2, 2]  (17.1s)
+trial 3: deg 624 factors 11 roots 1 degs(sorted desc) [444, 111, 20, 20, 10, 4, 4, 4, 4, 2, 1]  (20.9s)
+trial 4: deg 624 factors 14 roots 0 degs(sorted desc) [196, 196, 98, 28, 20, 12, 12, 12, 12, 12, 12, 7, 4, 3]  (8.1s)
+trial 5: deg 624 factors 3 roots 0 degs(sorted desc) [600, 20, 4]  (26.8s)
+trial 6: deg 624 factors 14 roots 2 degs(sorted desc) [188, 180, 80, 47, 45, 44, 12, 11, 4, 4, 4, 3, 1, 1]  (25.9s)
+trial 7: deg 624 factors 15 roots 0 degs(sorted desc) [268, 140, 67, 28, 20, 20, 12, 12, 12, 12, 10, 7, 6, 6, 4]  (9.2s)
+trial 8: deg 624 factors 11 roots 0 degs(sorted desc) [340, 85, 36, 36, 28, 28, 28, 18, 14, 7, 4]  (12.1s)
+trial 9: deg 624 factors 11 roots 0 degs(sorted desc) [428, 107, 20, 12, 12, 12, 12, 6, 6, 5, 4]  (15.9s)
+--- control random degree-624 polys
+rand 0: factors 6 roots 1 degs [569, 24, 11, 11, 8, 1] (78.5s)
+rand 1: factors 10 roots 1 degs [494, 46, 28, 17, 14, 9, 6, 5, 4, 1] (68.4s)
+rand 2: factors 4 roots 0 degs [371, 207, 35, 11] (32.1s)
+rand 3: factors 5 roots 1 degs [599, 11, 9, 4, 1] (23.7s)

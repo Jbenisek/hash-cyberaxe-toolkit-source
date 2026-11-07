@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r5",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "row_i": 4,
+ "row_j": 4,
+ "object": "r5 round-4 theta kernel membership and alternatives",
+ "question": "Is alpha4 in the column-parity kernel, and do alternatives keep the zero-digest condition?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "alpha4 in kernel in 12 of 16 pairs (the other 4 have exactly 1 nonzero parity column); alpha4 has 9 active rows, weight 14-17; beta4 12-24 rows. Digest condition (plane-0 rows q with DDT[q][0] or DDT[q][16] nonzero): base ok; single-bit flips keeping it: 0/4/0 of 1600; same-column pairs keeping it: 2176/2184/2176 of 3200 (first 3 pairs).",
+ "evidence": "research/dig/incoming/sha3-r5-U01/work/theta_scan.py; work/theta_scan.log; work/theta_scan.json",
+ "notes": "Universe cell sha3-r5|round4.theta|theta|Q4. Method: own Keccak (tools/traillab/sha3_atlas/kk.py) on the 16 collision pairs of the pkgR5L certificates (all 16 reproduce the equal 4-lane digest, beta2 = trail BETA2 and alpha3 = trail alpha3 in the CP kernel, validated first); alternatives tested on the first 3 pairs: every single-bit flip of the round input (non-kernel) and every same-column bit pair (kernel-preserving), counting active chi rows of L(.) and reachability of the required next difference. Window only (16 pairs, local flips), not all kernel alternatives. Kernel membership at round 4 is common but not required (pairs with one parity column collide too); consistent with the atlas statement that round 4 is event-exact.",
+ "topic": "sha3.r5.theta.r4.kernel"
+}

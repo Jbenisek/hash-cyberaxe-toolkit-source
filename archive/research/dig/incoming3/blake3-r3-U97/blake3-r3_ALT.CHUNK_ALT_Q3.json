@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "tree: freedom in the left subtree cv",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "left cv L is free (a 1 KiB chunk, preimage cost 2^32 per zero word); every zero word of L saves at most 2 operations in the parent, but the second compression stays: total >= 1190 operations (+1.0 bit) whatever L",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Bound from the operation count with L=0.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "none",
+ "topic": "blake3-r3|ALT.CHUNK|ALT|Q3"
+}

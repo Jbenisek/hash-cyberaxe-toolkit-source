@@ -1,0 +1,39 @@
+baseline N 6022417582191478187278  time_log2 63.602640  (A = A_BUDGET+1 = 9189056937678035782, K = 1220926580812448, A/K = 7526.30 opened per context)
+charges: U_OPEN_new worst 236 (was 368); per context: table max 34484 + carry index 44479 (19 x 2341 rep batches) + fallback 19456 (128 x (388 - 236)) = 98419; once 2^20 code reserve
+DECISION ROW (worst case): n = 4929624439574958930761  time_log2 = 63.313775  delta = -0.288865
+  check, no masked-batch surcharge (X_CHUNK = 0): time_log2 63.270092
+  stress, +40 units per opened cluster and +50000 per context: time_log2 63.434054 (delta -0.168585)
+  largest U_OPEN_new that still meets time_log2 <= 63.50 at this per-context charge: 309
+
+SWEEP: 200 contexts (sweep_000_100.json, sweep_100_200.json)
+  opened               1468672
+  closed               1808128
+  fired_all            12928
+  fallback             5778
+  fallback_exact       114
+  fired_exact_all      256
+  exact_not_cheap      0
+  lost                 0
+  mismatch             0
+  prefix_split         0
+  pack_bad             0
+  coref_checked        735712
+  coref_bad            0
+  fallback_wouldlose   0
+  fallback_wouldmis    1
+  alive9_dead_opened   137472
+  e_lanes              5662877
+  fill_dom_viol        0
+  fired_all per context values: [0, 128]
+  chunks per masked cluster, max: 2; table ops max 33940 (bound 34484)
+  opened per context 7343.4; fallback share of opened 0.00393; guard-fired clusters per context 64.64
+  units per opened cluster: old 368.00; new mean 203.32 (fallback included); new worst charge 236
+  survivors per masked cluster: {'9': 638064, '0': 136946, '8': 687884}; partner survivors: {'8': 697202, '0': 136946, '7': 150466, '9': 478280}
+  T2-positive members per opened cluster: {'9': 299682, '0': 756987, '8': 333793, '5': 14041, '4': 6035, '3': 17687, '7': 9271, '6': 8238, '2': 10726, '1': 12212}
+  Y9 fills per context: old layout mean 12273.10 (min 392, max 28758); masked layout mean 6789.22 (min 392, max 13331)
+  premise H_G_cluster 12466 (CM sample mean 208495306067/16777216 = 12427.29); masked/premise = 0.5446
+  contexts with masked fills > old fills: 0
+  information row at the measured mean U_OPEN 203.32: time_log2 63.223092
+  INFO (not booked): masked range J = 35493; Hoeffding e^-7 upper at n = 200: 11484.5
+    with H_G_mask <= 11485: time_log2 63.292588 (needs its own preregistered sample)
+    with H_G_mask <= 7000: time_log2 63.191556 (needs its own preregistered sample; 7000 is a GUESS target)

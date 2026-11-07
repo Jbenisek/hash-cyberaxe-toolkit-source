@@ -1,0 +1,24 @@
+Mhat = lower-right 2x2 block of M; det = 0x34f8311eded4d26cdc2f35524832ecc311da18f39f5f4f0f8a4da43977507e8d nonzero: True (this is an MDS 2x2 minor)
+sparse equivalent partial block r=1: mismatches 0/300 (random states after R3)
+  full hash through sparse block r=1: mismatches 0/100
+sparse equivalent partial block r=2: mismatches 0/300 (random states after R3)
+  full hash through sparse block r=2: mismatches 0/100
+sparse equivalent partial block r=3: mismatches 0/300 (random states after R3)
+  full hash through sparse block r=3: mismatches 0/100
+sparse equivalent partial block r=4: mismatches 0/300 (random states after R3)
+  full hash through sparse block r=4: mismatches 0/100
+r=1 sparse matrix of partial round 1: m=0xab5e5b874a68de7b3d59fbdc8c9ead497d7a0ab23850b56323f2486d7e11b63 row=(0x28ff96a89dabfa57ea2fbb2d90027dec2bed1b71a56ec45d8ff0785642b7462c, 0x1cb94c8ae214cf3eb6107e88dc60744dcab7a651add60e406e3fd47e94936ea8) col=(0x233162630ebf9ed7f8e24f66822c2d9f3a0a464048bd770ad049cdc8d085167c, 0x2e29dd59c64b1037f333aa91c383346421680eabc56bc15dfee7a9944f84dbe4)
+   special? any entry in {0,1,-1}: False ; col0==col1: False ; row0==row1: False
+   col ratio col1/col0 = 0xb151ef404c9c751a2215b39ce469e006524eeb9af3492002d250f9b41753273
+r=2 sparse matrix of partial round 1: m=0xab5e5b874a68de7b3d59fbdc8c9ead497d7a0ab23850b56323f2486d7e11b63 row=(0x2ac3d82a11e805d686991767f5dbac654e58d7fbb173ac1346f4d44f6252086, 0x2fe9545755d310b51bff49be09f38604ffde3f224e8063a9b89a45ab0465a962) col=(0x1087eca296a17aea763ac586b44e0459a9bc623768e085c9b9e69f8ea82c96de, 0xf2928fd61da4540cedd010e7b4ab90df83c56b4a9a9223d3f3d03c2eb70bc5c)
+   special? any entry in {0,1,-1}: False ; col0==col1: False ; row0==row1: False
+   col ratio col1/col0 = 0xa6363bdb9be1f3e646157d8a6ba1b444310868e3728fc7957fa312b40d81621
+r=2 sparse matrix of partial round 2: m=0xab5e5b874a68de7b3d59fbdc8c9ead497d7a0ab23850b56323f2486d7e11b63 row=(0x28ff96a89dabfa57ea2fbb2d90027dec2bed1b71a56ec45d8ff0785642b7462c, 0x1cb94c8ae214cf3eb6107e88dc60744dcab7a651add60e406e3fd47e94936ea8) col=(0x233162630ebf9ed7f8e24f66822c2d9f3a0a464048bd770ad049cdc8d085167c, 0x2e29dd59c64b1037f333aa91c383346421680eabc56bc15dfee7a9944f84dbe4)
+   special? any entry in {0,1,-1}: False ; col0==col1: False ; row0==row1: False
+   col ratio col1/col0 = 0xb151ef404c9c751a2215b39ce469e006524eeb9af3492002d250f9b41753273
+w = M[1:,0] = 0x233162630ebf9ed7f8e24f66822c2d9f3a0a464048bd770ad049cdc8d085167c 0x2e29dd59c64b1037f333aa91c383346421680eabc56bc15dfee7a9944f84dbe4
+collinear(w, Mhat w) (w would be an eigenvector of Mhat): False
+Mhat trace^2-4det is a square in Fp (eigenvalues of Mhat in Fp): True
+M == diag(1,Mhat) * [[m00,v],[Mhat^-1 w, I]] : True
+mult count per partial round (excluding constants additions): S-box 3 + dense M 9 = 12 ; sparse M: row0 3 + lanes1,2 2 = 5 -> 3+5 = 8 ; saved 4 per partial round
+r=1: dense 12 -> 8 (save 4) ; r=2: 24 -> 16 (save 8); front matrix Q1^-1*M(R3) stays dense 9 (no extra cost)

@@ -1,0 +1,2 @@
+q=103: distinct final states 1092727 of 1092727 (bijection=True); y-fibre sizes min 10609 max 10609 (q^2=10609); states with some t_j=0 at R63.S: 31519 (3q^2-3q+1=31519); states with all t_j fixed points: 27 (=3^3=27); fixed points of x^5: 3
+q=257: distinct final states 16974593 of 16974593 (bijection=True); y-fibre sizes min 66049 max 66049 (q^2=66049); states with some t_j=0 at R63.S: 197377 (3q^2-3q+1=197377); states with all t_j fixed points: 125 (=5^3=125); fixed points of x^5: 5

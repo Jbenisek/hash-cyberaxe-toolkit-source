@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH (ALT)",
+ "question": "Q1: CheapLunch ideal degree at r=2",
+ "labels": [
+  "K"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "Paper bound D_I <= d^(k*RF + RP) with k=1: 5^(8+2) = 9,765,625; with its first-variable skip s = 1: 5^9 = 1,953,125. Ours: 5^8 = 390,625, i.e. smaller by 5 times (and 25 times).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.CHEAPLUNCH|ALT|Q1. Formula from the paper (Sect. 4.2, read by the scout from the Wayback PDF); evaluation by me. The paper bound is conjectured tight, not proved.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a CheapLunch Poseidon table with RP = 2 and k = 1 shows D_I < 5^8"
+}

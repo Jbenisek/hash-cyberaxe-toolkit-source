@@ -1,0 +1,63 @@
+{
+ "permute_vectors_ok": "11/11",
+ "mds_zero_minors": {
+  "order1": 0,
+  "order2": 0,
+  "order3": 0
+ },
+ "tail": {
+  "total_chain_space": 2401,
+  "mds_ok": 403,
+  "with_lane0_zero_output": 337,
+  "weight_patterns": 25,
+  "min_total_active": 8
+ },
+ "zero_rc_entries_in_r2_schedule": 0,
+ "p_mod_4": 1,
+ "i_exists": true,
+ "e5inv_over_pm1": 0.8,
+ "e5inv_form": true,
+ "plane_degree_trace_r2": [
+  [
+   0,
+   5
+  ],
+  [
+   1,
+   25
+  ],
+  [
+   2,
+   125
+  ],
+  [
+   3,
+   625
+  ],
+  [
+   4,
+   3125
+  ],
+  [
+   5,
+   15625
+  ],
+  [
+   60,
+   78125
+  ],
+  [
+   61,
+   390625
+  ],
+  [
+   62,
+   1953125
+  ],
+  [
+   63,
+   9765625
+  ]
+ ],
+ "plane_total_degree_r2_log5": 10.0
+}

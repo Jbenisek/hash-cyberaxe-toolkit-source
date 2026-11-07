@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 402104	     32	6403721212	6404123348	17db72ad4	./research/poseidon/orchard/exec_r5mt/data/cloud_run/single

@@ -1,0 +1,2 @@
+definition vs vt38.inF7 on 200,000 random words: 0 disagreements (13178 in F7)
+D7 0x20000000 T7 0x03bff800  |F7| = 287309824  (proof.md / q3gpu F7N 287309824: True)  p2 = |F7|/2^32 = 2^-3.901968

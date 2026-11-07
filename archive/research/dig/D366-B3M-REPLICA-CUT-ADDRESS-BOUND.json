@@ -1,0 +1,22 @@
+{
+  "id": "D366-B3M-REPLICA-CUT-ADDRESS-BOUND",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M lane-replica cut address bound",
+  "question": "What is the exact charged overhead of replacing T2', T1, and gate-table lane replicas by one indexed base table under the cheapest lossless layout?",
+  "labels": ["N", "D", "S", "I"],
+  "status": "COMPUTED",
+  "number": "Under fixed-base indexed loads, one extra shift/mask per affected read and no spills/code growth gives ΔN=124985990620230620207, N_cut=2805319825635059562163, time_log2=62.50047 upward; with STREAM and post-cut peak 2^41.1898717487, conditional S=83.69034 upward. Doubling ΔN for a separately charged address op gives S<83.75323.",
+  "source": "our workflow: dig b3m-replica-cut",
+  "own_test": true,
+  "evidence": "research/sol_answer_D366_b3m_replica_cut_address_bound.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/proof.md §§9.8-9.9,11-12; research/sol_answer_D342_b3m_replica_cut_arithmetic.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 1.19561,
+  "gain_basis": "S",
+  "notes": "Conditional arithmetic bound only. It assumes the fixed-base indexed-load convention, unchanged 64-register no-spill schedule and no code-size charge; STREAM acceptance and organizer effective-address/liveness rules remain open.",
+  "held_fixed": "Shipped budgets, 64-register schedule, table semantics, D342 post-cut static memory bound, and one extra extraction operation per affected replica read",
+  "reopen_if": "A compiled lossless cut changes extraction/address cost, spills, code size, table layout, or organizer stream/memory treatment",
+  "peak_mem": "41.18987 ESTIMATED post-cut static search bound under STREAM"
+}

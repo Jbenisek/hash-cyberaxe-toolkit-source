@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 991381	  23792	  28448	1043621	  feca5	single

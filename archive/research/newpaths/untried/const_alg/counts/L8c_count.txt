@@ -1,0 +1,72 @@
+PIN L8c, CLASS eta = 8eb5f9c8: COUNT OF THE CLASS RATE (research/paths; nothing here is filed)
+pin (X3,X7,X11,X15,W4,W13) = (c5ea58f9, ba15a70e, ffff4001, c83afe20, 7ffffff8, 00138009), found for length XOR 8, delta = fffffff8; Y3 = 0c9f3cc5, D3 = e6c88675, Y11 = 01ebb7d1, D11 = fc489075
+class: (Y3 + Y4) AND 79c88eb5 = 09800420, 17 fixed bits, 2^15 members. Unit: collision probability per trial in units of 2^-128;
+part(beta) = sum over its outcomes of E1 * N3 / 2^79 (the printed integers of the calculator, added as fractions).
+
+1. BETAS: valid x in all 182508, lightest k 9; k <= 14: 4161 betas, share of c1 0.470642
+   by k (count): 9:3 10:24 11:115 12:398 13:1098 14:2523 15:4964 16:8512 17:12906 18:17503 19:21390 20:23624 21:23590 22:21254 23:17211 24:12429 25:7883 26:4285 27:1923 28:674 29:170 30:27 31:2
+
+2. CALCULATOR ALONE, EVERY BETA WITH k <= 14 (no solver, no filter): listed 4161, finished 0  -- NOT COMPLETE (not run to the end for this pin), no eps 0, enumerated completely 0, with a part 0, sum of their parts 0.0000
+
+3. FILTER, EVERY VALID BETA (h8_pair_list in list-only mode: outcomes that pass the calculator's necessary conditions)
+   answered 48046 of 182508; no eps 19920, no passing outcome 18367, with a passing outcome 9759 (passing outcomes in all 6283587); by k: 10:11 12:135 14:784 15:20 16:2654 17:233 18:5922
+
+4. SOLVER (h8_sat.py sys, kissat) ON EVERY BETA WITH A PASSING OUTCOME
+   asked 9759 of 9759: SAT 86, UNSAT 9673, undecided or not asked 0; SAT models that are solutions in plain arithmetic 86 of 86
+   check of the filter, random sample of 300 betas without an eps or without a passing outcome: SAT 0, UNSAT 300, undecided 0
+   calculator against solver and filter, betas with both answers: 61; agree (part > 0 exactly for the SAT betas) 61; part > 0 but not SAT 0; SAT but part 0 0
+
+5. CALCULATOR ON THE SAT BETAS (complete enumeration of the outcomes of each): SAT betas 86, counted 61, not finished 25
+   beta      k  outcomes  part                          share     remark
+   08b04c89 10        18        34,630,854.00000009  0.936260  
+   08b07c89 12         4           786,432.00000000  0.021262  
+   0bb04c89 12        14           524,552.00000000  0.014181  
+   08b0dc89 12        16           412,340.00000000  0.011148  
+   08b3dc89 14         8           330,016.00000000  0.008922  
+   08d07c89 12         4           122,880.00000000  0.003322  
+   08d0dc89 12         4            81,920.00000000  0.002215  
+   08d04c89 10        12            41,763.75000000  0.001129  
+   08d3dc89 14         2            32,768.00000000  0.000886  
+   09504c89 10        24            12,303.98437500  0.000333  
+   1fb04c89 14         4            12,298.09375000  0.000332  
+   08b04cb9 12         6               102.50000000  0.000003  
+   08b3cd89 14        23                51.38281250  0.000001  
+   08d04cb9 12         4                49.50000000  0.000001  
+   0bd04c89 12         4                30.00000000  0.000001  
+   08b0cd89 12        10                24.95312500  0.000001  
+   08b0df8f 16         5                20.25000000  0.000001  
+   07d0dc89 14         1                16.00000000  0.000000  
+   0bb3cd89 16        21                14.44857788  0.000000  
+   09504cb9 12         6                13.68750000  0.000000  
+   07d04c89 12         1                12.00000000  0.000000  
+   07b04c89 12         1                12.00000000  0.000000  
+   38b0cd89 14        22                 9.64160156  0.000000  
+   1fb0cd89 16        12                 7.61352539  0.000000  
+   0bb0cd89 14         6                 6.27343750  0.000000  
+   38b0df89 16         4                 5.31250000  0.000000  
+   18b0df8b 16         4                 1.87500000  0.000000  
+   38b3cd89 16        13                 1.25781250  0.000000  
+   1fb0dc89 16         1                 1.00000000  0.000000  
+   07b0df8f 18         1                 1.00000000  0.000000  
+   18d0df8b 16         6                 0.93750000  0.000000  
+   08d0cd89 12         4                 0.66406250  0.000000  
+   08d3cd89 14         8                 0.51757812  0.000000  
+   0f504c89 12         3                 0.48339844  0.000000  
+   1950df8b 16         7                 0.29589844  0.000000  
+   38d03d97 16         4                 0.27783203  0.000000  
+   38d0cd89 14        10                 0.23291016  0.000000  
+   0950fd8f 16        48                 0.17718506  0.000000  
+   19d0cd89 14         7                 0.16101074  0.000000  
+   08b3fd8f 18        18                 0.12500000  0.000000  
+   ... 21 more betas, together 0.57779071
+   NOT FINISHED within the time limit (SAT, so each has a part that is missing from R): 0b53df8b(k18) 0b57dd8b(k18) 0fb0df8b(k18) 0fd0df8b(k18) 18b3df8b(k18) 18d3df8b(k18) 1953df8b(k18) 19b0df8f(k18) 19b0fd8f(k18) 19d0df8f(k18) 19d0fd8f(k18) 1fb0df89(k18) 1fb3cd89(k18) 38b0df8f(k18) 38b0fd8f(k18) 38d0df8f(k18) 38d0fd8f(k18) 3950fd8f(k18) 39b07cf9(k18) 39d07cf9(k18) 3b50df8b(k18) 3bd03d97(k18) f9b04cf9(k18) f9b04f99(k18) f9d04cf9(k18)
+
+6. TOTAL
+   R = 36,988,512.9742 = 2^25.1406  (k <= 14: 36,988,458.0293; k > 14: 54.9449)
+   status: NOT FULL: filter run only for the betas with k <= 18 (48046 of 182508 valid betas); 25 SAT betas not finished by the calculator (R is a lower bound)
+   betas with a part: 61; heaviest beta 08b04c89: 0.9363 of the count; the four heaviest 0.9829
+   NOT exact inside R: 1 betas with a remark, their parts (estimates) add up to 0.020581; betas with a remark and part zero: 0
+   calculator complete for every beta with k <= 9: all 0 betas with a passing outcome and k <= 9 are enumerated completely (the other betas with k <= 9 have no eps or no passing outcome); beyond that the calculator finished 61 betas
+   settled for every beta with k <= 17: each is counted by the calculator, or has no eps or no passing outcome, or is UNSAT by the solver
+   the calculator-only enumeration of k <= 14 (section 2) is NOT complete: for the betas it did not reach, part 0 rests on the solver's UNSAT answer or on the filter
+   trust: one solver (kissat), one encoding (h8_sat.py), no proof certificates kept; calculator in double precision (see H8_count.txt section 8)

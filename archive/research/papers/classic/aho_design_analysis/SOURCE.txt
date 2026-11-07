@@ -1,0 +1,3 @@
+original_filename: aho-hopcroft-ullman_Design-Analysis-of-Computer-Algorithms.pdf
+source_url: https://static.aminer.org/pdf/PDF/000/000/073/the_design_and_analysis_of_computer_algorithms.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

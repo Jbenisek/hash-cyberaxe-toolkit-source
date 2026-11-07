@@ -1,0 +1,23 @@
+{
+  "id": "D503-KECCAK800-R6-DENSE-KAT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "Keccak-800 r6 dense Boolean successor KAT",
+  "question": "Does the distinct pkgK8L6 dense-check program reproduce its six-round successor circuit and exact ledger?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Prefile internally consistent except known-good registry; N=22877982460937500000000000000001230000000; time_log2=123.40398; dense_check exits 0 with mismatches=0, nodes=16800, circuit_ops=16666, batch_ops=16783, and memory bound 762112 B.",
+  "source": "our workflow: D503 read-only Keccak-800 r6 KAT",
+  "own_test": true,
+  "evidence": "research/sol_answer_D503_keccak800_r6_kat.md; research/tools/build_pkg/scratch/pkgK8L6/pkg/keccak800-r6/claim.json; research/tools/build_pkg/scratch/pkgK8L6/pkg/keccak800-r6/experiments/dense_check.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "762112 B circuit bound (not a process RSS measurement)",
+  "notes": "Finite dense-circuit KAT only; known-good registry failure and draft status remain. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgK8L6 package bytes as found; one-thread dense_check; no file writes",
+  "reopen_if": "package/source changes or a known-good registration/organizer ruling arrives"
+}

@@ -1,0 +1,3 @@
+{"kind": "real", "r": 2, "j": 0, "inner": 625, "nonconst": 624, "digits": 626, "decomposes": false, "secs": 16}
+{"kind": "real", "r": 2, "j": 0, "inner": 3125, "nonconst": 124, "digits": 126, "decomposes": false, "secs": 16}
+{"kind": "real", "r": 2, "j": 0, "inner": 15625, "nonconst": 24, "digits": 26, "decomposes": false, "secs": 104}

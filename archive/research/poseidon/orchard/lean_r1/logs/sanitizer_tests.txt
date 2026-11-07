@@ -1,0 +1,128 @@
+lean m=601: ok   lean arith=16564071 total=35152012 peak(extra)=84736 7.5s | cached arith=13059426 total=26958560 5.9s
+lean m=3000: ok   lean arith=80332708 total=146151991 peak(extra)=358112 36.3s | cached arith=63006607 total=110733804 26.7s
+LEAN TESTS PASSED
+
+=================================================================
+==1170876==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 48096 byte(s) in 1 object(s) allocated from:
+    #0 0x79ca09b2ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x6242eeb0c8c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x6242eeb0af08 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:21
+    #3 0x79ca08e2a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x79ca08e2a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x6242eeb0a624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 48096 byte(s) in 1 object(s) allocated from:
+    #0 0x79ca09b2ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x6242eeb0c8c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x6242eeb0afb8 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:26
+    #3 0x79ca08e2a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x79ca08e2a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x6242eeb0a624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 48096 byte(s) in 1 object(s) allocated from:
+    #0 0x79ca09b2ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x6242eeb0c8c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x6242eeb0afad in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:26
+    #3 0x79ca08e2a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x79ca08e2a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x6242eeb0a624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 48064 byte(s) in 1 object(s) allocated from:
+    #0 0x79ca09b2ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x6242eeb0c8c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x6242eeb0af22 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:21
+    #3 0x79ca08e2a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x79ca08e2a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x6242eeb0a624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 48000 byte(s) in 1 object(s) allocated from:
+    #0 0x79ca09b2ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x6242eeb0c8c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x6242eeb0b75c in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:17
+    #3 0x79ca08e2a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x79ca08e2a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x6242eeb0a624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 47968 byte(s) in 1 object(s) allocated from:
+    #0 0x79ca09b2ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x6242eeb0c8c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x6242eeb0b76b in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:17
+    #3 0x79ca08e2a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x79ca08e2a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x6242eeb0a624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 192 byte(s) in 1 object(s) allocated from:
+    #0 0x79ca09b2ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x6242eeb0c8c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x6242eeb0b731 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:17
+    #3 0x79ca08e2a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x79ca08e2a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x6242eeb0a624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+SUMMARY: AddressSanitizer: 288512 byte(s) leaked in 7 allocation(s).
+
+=================================================================
+==1170880==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 22496 byte(s) in 1 object(s) allocated from:
+    #0 0x7c236932ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x58cd7cf638c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x58cd7cf61fb8 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:26
+    #3 0x7c236862a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x7c236862a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x58cd7cf61624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 22496 byte(s) in 1 object(s) allocated from:
+    #0 0x7c236932ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x58cd7cf638c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x58cd7cf61fad in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:26
+    #3 0x7c236862a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x7c236862a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x58cd7cf61624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 22496 byte(s) in 1 object(s) allocated from:
+    #0 0x7c236932ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x58cd7cf638c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x58cd7cf61f08 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:21
+    #3 0x7c236862a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x7c236862a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x58cd7cf61624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 22496 byte(s) in 1 object(s) allocated from:
+    #0 0x7c236932ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x58cd7cf638c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x58cd7cf6275c in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:17
+    #3 0x7c236862a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x7c236862a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x58cd7cf61624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 22464 byte(s) in 1 object(s) allocated from:
+    #0 0x7c236932ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x58cd7cf638c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x58cd7cf6276b in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:17
+    #3 0x7c236862a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x7c236862a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x58cd7cf61624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 22464 byte(s) in 1 object(s) allocated from:
+    #0 0x7c236932ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x58cd7cf638c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x58cd7cf61f22 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:21
+    #3 0x7c236862a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x7c236862a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x58cd7cf61624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+Direct leak of 96 byte(s) in 1 object(s) allocated from:
+    #0 0x7c236932ae8f in posix_memalign ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:139
+    #1 0x58cd7cf638c0 in xalloc ./research/poseidon/orchard/lean_r1/common.c:23
+    #2 0x58cd7cf62731 in main ./research/poseidon/orchard/lean_r1/test_hgcd.c:17
+    #3 0x7c236862a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #4 0x7c236862a717 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717) (BuildId: 066527e430a32768d82741e00b81eebb1a872294)
+    #5 0x58cd7cf61624 in _start (./research/poseidon/orchard/lean_r1/test_hgcd_san+0x2e624) (BuildId: 1cb015845eb650fd248f96acf713da52de82d8b3)
+
+SUMMARY: AddressSanitizer: 135008 byte(s) leaked in 7 allocation(s).
+d=8 sample cost 361594
+runs=320 fails=0 mean=170576 worst=761102
+--- asan/ubsan run of the unit tests: no AddressSanitizer errors, no UBSan runtime errors; leak reports are the test programs' own arrays

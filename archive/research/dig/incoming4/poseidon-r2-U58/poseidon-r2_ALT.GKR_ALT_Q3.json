@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GKR (ALT)",
+ "question": "Q3: degrees of freedom: do trail pairs collide more often than random pairs",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "Toy F_103, r=2, 5 random Cauchy MDS/constant seeds, exhaustive: pairs of inputs whose states after R3 differ by t*u (u = (0, M02, -M01), t != 0): 26,146 pairs, 266 digest collisions = 0.01017; random-direction controls (15 directions): 79,402 pairs, 719 collisions = 0.00906; random rate 1/103 = 0.00971 (expected 254 +- 16, z = +0.77). Trail property confirmed on every seed ((M u)_0 = 0). The trail gives pairs with equal lane-0 S-box input in both partial rounds, but the digest collides at the random rate.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testE.json; research/poseidon/levels/LEVELS.md (OQ-W-1)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.GKR|ALT|Q3. Toy only; the real field cannot be enumerated. Matches LEVELS OQ-W-1 note that toys show only the random collision rate.",
+ "held_fixed": "toy F_103, r=2 schedule (4 full, 2 partial, 4 full), random Cauchy MDS, random constants, seeds 1-5, trail direction u = (0, M02, -M01) after R3.M",
+ "reopen_if": "a toy or real-field test shows a collision rate on trail pairs above random"
+}

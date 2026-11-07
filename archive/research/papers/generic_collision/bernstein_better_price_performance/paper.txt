@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+Text extraction beside an external PDF: citation only, not a distributable paper payload.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/papers/generic_collision/bernstein_better_price_performance/paper.txt
+Canonical public URL: not yet established.

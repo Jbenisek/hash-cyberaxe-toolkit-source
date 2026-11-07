@@ -1,0 +1,4 @@
+HEAD e1 seed 2026101003 G 128 S 256 arm walk trials 68719476736
+TRIALS 68719476736 beta_bad 0 tau7 20617388 (rate 2^-11.7026) EVENT7 12 rate 2^-32.4150 model 2^-32.2721 ratio 0.9057 +- 0.2614 (Poisson) +- 0.2708 (clustered by group)
+per tau: 175020a0:2 185020a0:4 275020a0:1 285020a0:3 385020a0:0 675020a0:0 685020a0:2
+SECONDS 0.3

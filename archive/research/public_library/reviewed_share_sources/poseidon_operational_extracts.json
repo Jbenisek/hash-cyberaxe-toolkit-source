@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "title": "Poseidon engineering evidence extracted from operational notes",
+  "review_date": "2026-10-29",
+  "scope": {
+    "originals_read": 3,
+    "total_source_bytes": 28301,
+    "review": "Complete source reads with connection/credential/transfer lines withheld from tool display. All scientific sections inspected. This is an editorial review, not a new experiment.",
+    "no_execution": "No source program, build, transfer, launch, solver or server command executed."
+  },
+  "publication_boundary": "All three originals mix scientific evidence with private infrastructure and operational directions. Do not admit the original files as full text. This replacement contains newly paraphrased science only: no hostnames, network addresses, credential paths, launch or transfer instructions, queues, allocation requests or ordinary coordination.",
+  "sources": [
+    {
+      "path": "research/poseidon/orchard/exec_r6mt/R6_PLAN.md",
+      "bytes": 9884,
+      "sha256": "416e5959116fb411d75c66b64173cadd151fdbdb1a9bebac6d17ffddeccd9c28",
+      "line_count": 76,
+      "disposition": "withhold-original-publish-curated-extract",
+      "scientific_line_ranges": [
+        "5-18",
+        "21-33",
+        "35-60",
+        "72-76"
+      ],
+      "excluded_content": "Connection details and all operational coordination are omitted, including material embedded within otherwise scientific sections."
+    },
+    {
+      "path": "research/poseidon/orchard/exec_r5mt/CLOUD_RUN.md",
+      "bytes": 8182,
+      "sha256": "1721653d7d72a40d23596b0c78627e055d9399b93d4657014d87a2e067f34b79",
+      "line_count": 56,
+      "disposition": "withhold-original-publish-curated-extract",
+      "scientific_line_ranges": [
+        "5-10",
+        "12-16"
+      ],
+      "excluded_content": "Connection details and all operational coordination are omitted, including material embedded within otherwise scientific sections."
+    },
+    {
+      "path": "research/poseidon/orchard/exec_r3t21/RESULT.md",
+      "bytes": 10235,
+      "sha256": "843f1fadb12c718ab073a63a8b0762e88740eb8fa7a24b6987ab08442c43305b",
+      "line_count": 73,
+      "disposition": "withhold-original-publish-curated-extract",
+      "scientific_line_ranges": [
+        "1-57"
+      ],
+      "excluded_content": "Connection details and all operational coordination are omitted, including material embedded within otherwise scientific sections."
+    }
+  ],
+  "findings": [
+    {
+      "id": "two-row-radix2-convolution-layout",
+      "source_path": "research/poseidon/orchard/exec_r3t21/RESULT.md",
+      "line_ranges": [
+        "22-36",
+        "38-50"
+      ],
+      "status": "Source-reported exact plan argument and kernel tests; full r3 result projected",
+      "mechanism": [
+        "The variant lets the plan chooser select the smallest sufficient transform from powers of two and three-times-powers-of-two. At r3, m=976562, so a degree-(m-1) square requires length 2m-1=1953123. A transform of 2^21=2097152 suffices; the former 3*2^20=3145728 is larger.",
+        "Simply using one full-size radix-2 row would enlarge the temporary spectrum buffer and erase the storage advantage. The new rows==2 plan pulls out the first DIF layer: one row uses c[i]+c[i+n], and the other uses (c[i]-c[i+n])*w^i with w^n=-1. Both remaining row transforms have size 2^20.",
+        "This leaves the main transform array at 2^21 and the row buffer at 2^20 rather than requiring two arrays of size 2^21. Each caller still supplies its required product length; the plan must fit that contract.",
+        "The recorded Barrett final product needs only N'>=m+1 for the low coefficients it consumes, permitting 2^20 instead of 3*2^19. Some Newton steps retain a radix-3 plan because it remains smaller for their particular lengths."
+      ],
+      "evidence": [
+        "Lines 42-45 report 688 small tests over row-2/row-3 plans, offsets and product variants, with zero failures; complete r1 runs preserve the collision, including a run forcing the row-2 path.",
+        "Lines 46-47 report real-r3-size tests using random monic inputs, with matching powering output checksum 438038e6a8589c7e and matching gcd degree.",
+        "Lines 12-18 report one loop-step cost falling from 1674997838 to 1117430417 operations; Newton from 1482633071 to 1239584458; random-input stage D from 70834957621 to 56461085936; heap peak from 236357184 to 202802752 bytes.",
+        "The approximately 317.06-billion-operation full-r3 total, compared with 462143854728 baseline operations, is a projection from kernel deltas and random-input gcd work, not an executed complete r3 variant."
+      ],
+      "limitations": [
+        "No full counted r3 run was performed in this source.",
+        "Random-input gcd timing and counts need not equal the actual collision run's exact stage-D history.",
+        "Logical heap peak is not allocator capacity or total resident memory: line 48 reports failure with a 215000000-byte arena and success with 250000000 bytes for the tested stage D.",
+        "The source's proposed further split into four or more rows was not implemented or analyzed across all peak stages."
+      ]
+    },
+    {
+      "id": "transform-size-benefit-is-round-dependent",
+      "source_path": "research/poseidon/orchard/exec_r3t21/RESULT.md",
+      "line_ranges": [
+        "20",
+        "52-57"
+      ],
+      "status": "Source-supported size comparison; larger-round runtime effects unmeasured",
+      "facts": [
+        "The main transform shrinks by one third at r3, but it is only one of several large arrays. The source reports whole heap reduction around 0.221 bit, not the approximately 0.58-bit reduction inferred from that array alone.",
+        "At r4, required length 9765623 fits 3*2^22=12582912; forcing a power-of-two main transform would require 2^24=16777216. At r5, required length 48828123 fits 3*2^24=50331648 rather than 2^26=67108864.",
+        "The mixed chooser therefore keeps the old large-stage plans at r4/r5. Only selected intermediate lengths can benefit; the note did not measure their complete r4/r5 effect."
+      ],
+      "limitations": [
+        "This is a configuration-specific comparison, not a general claim that radix two beats radix three.",
+        "The complete-program memory and operation reductions must include every surviving array, stage and allocator peak."
+      ]
+    },
+    {
+      "id": "parallel-results-and-control-charges",
+      "source_path": "research/poseidon/orchard/exec_r5mt/CLOUD_RUN.md",
+      "line_ranges": [
+        "5-10",
+        "12-16"
+      ],
+      "status": "Source-reported lower-round validation and binary provenance; not a completed r5 result",
+      "facts": [
+        "The r1 comparison reports identical collision records and algorithmic_total=10077233799 for both its multithreaded and same-lineage single-threaded programs.",
+        "The note reports the same algorithmic total across requested thread settings 4,6,28,32 and 40. Actual thread counts must be checked from run metadata because implementations can clamp requests; the source does not justify treating requested counts as proof of that many active workers.",
+        "Thread-control work varies with scheduling, chunk boundaries and wakeups. The total charged work of a parallel execution is therefore not made deterministic merely by a deterministic arithmetic path and collision.",
+        "The r3 comparison preserves collision records, but compares different implementation revisions. Matching results does not establish matching exact work.",
+        "The r5 build has recorded binary SHA-256 4ca18cf9925936818972c6e80892700c37723744d72be3632b855d63ceeb50a3 and a 430288-byte file. The source reports matching hashes across 20 source files. Provenance checks are not a substitute for a completed target-dimension run."
+      ],
+      "limitations": [
+        "No completed r5 counted result is supplied by this preparation/launch note.",
+        "Single-versus-multithread equality at r5 itself was not tested in this record.",
+        "The final launch-status update is operational history, not scientific completion evidence."
+      ]
+    },
+    {
+      "id": "r6-memory-discontinuity-and-validation-boundary",
+      "source_path": "research/poseidon/orchard/exec_r6mt/R6_PLAN.md",
+      "line_ranges": [
+        "5-18",
+        "21-33",
+        "72-76"
+      ],
+      "status": "Analytical prediction with lower-round validation; r6 binary built only",
+      "facts": [
+        "At r6, m=122070312 and the required square length is 244140623. The existing three-row kernels choose 3*2^27=402653184 because 3*2^26 is too short. Thus workspace and time do not scale smoothly by the polynomial-degree factor between adjacent rows.",
+        "The predicted live payload is 31046102784 bytes before roughly 900 bytes of headers. The prediction separately accounts for twiddles, the main transform, temporary row, reciprocal, modulus and result buffers. A proposed 36500000000-byte arena was based on an extrapolated fragmentation ratio, not a demonstrated fit.",
+        "The same buffer formula reproduces r5's recorded 4759669056-byte payload plus 896 header bytes, and the r3 validation reports 244744896 bytes plus 896 headers. Agreement at these lower sizes supports the accounting formula but does not prove r6's allocator or half-gcd peak.",
+        "The r3 validation using the r6-source lineage reports algorithmic_total=409369056359, thread_control=2678351361 and total_all=412047449296, with additional bookkeeping included in the total. It retains the baseline collision record.",
+        "The preparation audit also identifies a chunk-list capacity hazard: above its stored chunk limit, a linear loop could silently fall back to one thread. Increasing the bound is an implementation change requiring validation, not evidence that arbitrary thread counts scale.",
+        "The source states there was no r6 runtime test. Large transforms at exponent 27, the large static arena at runtime, more than 32 workers, allocator fragmentation and the r6 half-gcd peak were not validated by its r3 test."
+      ],
+      "limitations": [
+        "Do not label the arena, RSS estimate or r6 score as measured.",
+        "The static image linked successfully, but successful linking does not prove runtime memory fit.",
+        "The proposed plain 2^28 alternative would need a different supported row layout; it was not implemented by this record."
+      ]
+    },
+    {
+      "id": "parallel-scaling-forecast-not-a-measurement",
+      "source_path": "research/poseidon/orchard/exec_r6mt/R6_PLAN.md",
+      "line_ranges": [
+        "35-60",
+        "72-75"
+      ],
+      "status": "Source-reported calibration and conditional projection",
+      "facts": [
+        "The source reports effective speedups about 4.28 at six threads for r4 and 6.20 at sixteen threads for r5. It fits serial fractions approximately 0.080 and 0.105 using S(T)=1/(s+(1-s)/T).",
+        "Using transform work proportional to N*a and those calibrations, it projects roughly 8.3e13–8.6e13 primitive operations per r6 trial and a substantial saturation of parallel speedup. No r6 runtime result supports the forecast.",
+        "Its multi-trial forecasts additionally assume a usable-centre probability near 0.39 and a geometric trial law. Those estimates must not be presented as a proved r6 success distribution or as a completed attack cost."
+      ],
+      "limitations": [
+        "Memory bandwidth and high-thread-count scaling were not modeled or measured at the r6 working set.",
+        "The projection is historically useful for explaining non-smooth scaling, not a current resource forecast.",
+        "No host specifications, availability, schedule or operating instruction are retained."
+      ]
+    }
+  ],
+  "coverage": {
+    "already_represented": [
+      {
+        "slug": "poseidon-two-free-rounds",
+        "explanation": "The special-line construction and the historical r3/r4/r5 algorithmic totals are already introduced."
+      },
+      {
+        "slug": "poseidon-transform-lever-stack",
+        "explanation": "Explains transform selection and full-ledger composition generally, but not this two-row DIF implementation."
+      },
+      {
+        "slug": "poseidon-r7-three-lever-memory-layout",
+        "explanation": "Explains a later, distinct middle-product/batching optimization; it must not stand in for the earlier r3 experiment."
+      }
+    ],
+    "new_consequential_content": [
+      "The concrete two-row radix-2 layout, its 688-test suite and real-size kernel evidence, including the lack of a complete r3 run.",
+      "Per-round transform-plan discontinuities and why the large r3 substitution does not transfer to r4/r5.",
+      "Parallel arithmetic-path invariance versus schedule-dependent thread-control charges.",
+      "The r6 memory forecast's lower-round validation and explicit untested runtime/allocator boundaries."
+    ],
+    "teaching_boundary": "These extracts preserve missing scientific context without implying an additional accepted row, new collision, exhaustive runtime verification or novelty of classical FFT/Amdahl methods."
+  },
+  "rights": "New paraphrase of project engineering notes with source hashes and line references. No external paper or inherited proof text copied. Original operational documents remain withheld.",
+  "review_limitations": [
+    "Evidence is source-reported; no kernel, counter, collision or binary was replayed in this review.",
+    "Dates and scope belong to the original October 15 records; later work is not inferred from them.",
+    "Source line references and SHA-256 digests identify the inspected versions."
+  ]
+}

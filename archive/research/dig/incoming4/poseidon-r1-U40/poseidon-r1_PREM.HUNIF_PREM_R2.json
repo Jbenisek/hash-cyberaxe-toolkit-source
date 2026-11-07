@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HUNIF uniform-coefficient model",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "toy F_10007, 3000 random monic degree-120 g: nonzero-square root counts {0:1796, 1:932, 2:224, 3:36, 4:11, 5:1}; P(>=1)=0.4013 (model 0.3935), P(exactly 1)=0.3107 (model 0.3033)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.py toy block (numpy, nice 10). | universe cell poseidon-r1|PREM.HUNIF|PREM|R2",
+ "held_fixed": "uniform random coefficients; real g not used",
+ "reopen_if": "a real-F centre sample with rate outside 0.30-0.50 over >= 300 centres"
+}

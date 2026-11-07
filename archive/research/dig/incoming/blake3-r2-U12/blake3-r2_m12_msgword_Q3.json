@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m12 (w12; read by D2.a1 in round 0 and E1.a1 in round 1; free, solved from X2)",
+ "question": "Q3 degrees of freedom (exact count)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "32 bits: w12 = X2 + c (affine, c fixed by the other seven words) is a bijection of the free outer word X2; verified: w12 - X2 takes 1 value in 40 contexts x 50 X2 values, 2^24 consecutive X2 give 2^24 distinct w12, and 3000/3000 built blocks are admissible with Lemma H holding. No carry restriction (a1 = S2+S7+w12 is a plain addition). Residual spread over X2 (4096 values, others fixed): 4096 distinct residuals, mean weight 63.6/128, min 41, none zero.",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U12/work/scan_m1213.out.json; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m12|msgword|Q3. Exact count of w12 values = 2^32 (all reached) for fixed other parameters; one of the eight outer words of the construction.",
+ "topic": "blake3-r2 m12 word"
+}

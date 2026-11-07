@@ -1,0 +1,4 @@
+COUNTER=0 PIN_EXTRA=w14 Y4+E3.h1: targets ['Y4', 'E3.h1'] not []: NO basis (proved)
+COUNTER=0 PIN_EXTRA=w14 Y4+E1.d1: targets ['Y4', 'E1.d1'] not []: NO basis (proved)
+COUNTER=1 PIN_EXTRA=w14 Y4+E3.h1: targets ['Y4', 'E3.h1'] not []: basis = C0.d1 D3.a1 E3.h1 K3.c1 S13 S9 X13 X2 Y4
+COUNTER=1 PIN_EXTRA=w14 Y4+E1.d1: targets ['Y4', 'E1.d1'] not []: basis = C0.a1 D1.c1 D2.b1 D2.d1 E1.d1 S13 X4 X9 Y4

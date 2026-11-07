@@ -1,0 +1,108 @@
+1. self-test: python3 experiments/halfsearch.py --selftest 2000 1
+  exit status 0, 4.5 s, 1 line(s) of output
+  {"selftest":"two-stage packed batch of proof.md Section 6.5","seed":"1","cases":2000,"last_batches":500,"extreme_cases":400,"message_bytes":[55,63],"rule_conditions":5,"stage_2_log2_share":2,"lanes_checked":14000,"lanes_right":14000,"lanes_passing_rule_a":456,"batches_entering_stage_2":205,"zero_test_words":0,"parts":{"loop":{"operations":3,"loads":1},"C0 backwards":{"operations":10,"loads":8,"lar ...
+  [ok] self-test exit status 0 and exactly one line
+  [ok] every lane right against the complete digests of its two messages of 55 and 63 bytes (14000 of 14000)
+  [ok] rule A with 5 conditions: stage A 55 operations and 32 loads, stage 2 115 and 48, per part as in the table, in every case
+  [ok] every sum below the bound of its part: C0 backwards 1.967 < 2, D0 and D1 3.942 < 4, C2 to z 4.777 < 5, rule A 1.027 < 2, C2, rest 5.75 < 6, D0 and D1, rest 4.689 < 5, C1 to Y1 7.994 < 9, E1, A and B 10.777 < 13, E1 test 1.999 < 2
+  [ok] flags right on all 128 patterns of zero lanes and on all 64 words of rule A patterns
+  [ok] registers 12 of 16; the list holds 524288 members in 74899 words; constants per context 8, per X14 13
+    lanes that satisfy rule A: 456 of 14000; batches that enter stage 2: 205 of 2000
+  [ok] a second seed text (500 cases) also ends with exit status 0
+  [ok] the self-test prints the same bytes when repeated
+  [ok] wrong arguments end with a usage message and no output on stdout
+2. cross-checks of the program
+  experiments/halfsearch.py has the pin, lengths 55 and 63, eta 830303cf, the three rules, RULE_CONDITIONS = 5, the stage-2 budget and the stage counts of pkg6_data.py: stage A 55 operations and 32 loads, stage 2 115 and 48
+  [ok] the program has the pin, the lengths, eta, the rules, the stage-2 budget and the stage counts of the data module
+  [ok] all 524288 class members equal those of r2_class_ref.py, in order
+  1. constants, class mask 03cf8303, value 030c0303, 524288 members: equal; members equal 59802 of 59802
+  2. context and trial against h8_ref.py: words, messages and state equal in 50000 of 50000 trials (2000 contexts, every fifth with extreme words)
+  3. test vectors ref_vectors.txt: words of the trial and both digests equal in 2000 of 2000 vectors
+  4. batch with RULE_CONDITIONS = 4 against h8_batch.py (its rule): stage-2 words, their flags, the final branch, the stage-A flags and the stage-A branch equal in 400 of 400 batches (line found 1 time)
+  RESULT: all equal
+  [ok] ref_compare.py: constants, class, context, trial and messages equal h8_ref.py and the test vectors
+  [ok] stage-2 words, their flags and the final branch equal those of h8_batch.py in 300 of 300 batches
+    (stage A is not compared: h8_batch.py has the rule with four conditions, the package the one with 5)
+  [ok] reference values of the program (Y4, h1, the word of Lemma N, the word from the digests) equal those from check_pkg6's forward compression of both messages in 3000 of 3000 trials (zero words: 0; trials that satisfy rule A: 108)
+  [ok] one complete class loop: 74899 batches, 524293 of 524293 lanes right, stage counts [(55, 32, 115, 48)], 524288 different members (106 s)
+    in that loop 9314 of 74899 batches enter stage 2 (0.1244; budget 0.250); lanes that satisfy rule A: 16003 of 524293 (the five spare lanes of the last batch repeat the last member)
+  class eta 830303cf, rule A with 5 conditions: bounds of the sums for all inputs (units of 2^32)
+    C0 backwards     largest bound of a sum   2 * 2^32 - 2   bound of TABLE 2 * 2^32   below
+    D0 and D1        largest bound of a sum   4 * 2^32 - 2   bound of TABLE 4 * 2^32   below
+    C2 to z          largest bound of a sum   5 * 2^32 - 3   bound of TABLE 5 * 2^32   below
+    rule A           largest bound of a sum   2 * 2^32 - 2   bound of TABLE 2 * 2^32   below
+    C2, rest         largest bound of a sum   6 * 2^32 - 4   bound of TABLE 6 * 2^32   below
+    D0 and D1, rest  largest bound of a sum   5 * 2^32 - 3   bound of TABLE 5 * 2^32   below
+    C1 to Y1         largest bound of a sum   9 * 2^32 - 6   bound of TABLE 9 * 2^32   below
+    E1, A and B      largest bound of a sum 13 * 2^32 - 10   bound of TABLE 13 * 2^32   below
+    E1 test          largest bound of a sum   2 * 2^32 - 2   bound of TABLE 2 * 2^32   below
+  largest bound of a sum: 13 * 2^32 - 10 = 55834574838 < 2^36 = 68719476736: True; largest bound of a word that enters the flags: 4294967295 (2^32 - 1 = 4294967295)
+  operations and loads per part on the second machine equal TABLE: True
+  2000 random batches on the program's machine: every sum at most the bound of its part: True; largest sum seen 10.522 * 2^32
+  RESULT: all bounds hold
+  [ok] lane_bound.py: every sum below the bound of its part for all inputs
+3. check_pkg6.py --program
+  (a) formulas of the family against a forward 2-round compression, 20000 random trials
+      constants: Y3 8127c181 Y3' 7edf3e7e Y11 7af77f38 Y11' 850000c3 D3 fdb77cfd W4' 97475640 delta fffffff8
+      class eta 830303cf: ROL(eta,16) 03cf8303, D3 + ROL(eta,16) 01870000, mask 03cf8303, value 030c0303, 19 free bits, 524288 members
+      Y4 values inside the class among the 200000 sampled: 58947
+      trials that satisfy rule A: 653 of 20000 (a share of 2^-5 is 625.0)
+      of the 19 values that read X14, changed by a new X14 in 4000 trials: fewest 4000 (D3.d1), most 4000
+      organizer reference cross-check: used
+  (b) halfsearch.py of pkg6 through its stdin/stdout contract, 256 seeds per experiment
+      half-collision: pairs 256 of 256, full collisions 0, 73651 bytes of output
+      residual-search: pairs 256 of 256, full collisions 0, 121724 bytes of output, members tried: mean 368.0, max 2011; counted batches in which a lane satisfies rule A: 29 of 256
+  RESULT (a), (b): all checks of the program passed
+  RESULT: part (c), the text of proof.md, was left out
+  lines marked ok: 61; exit status 0; 28 s
+  [ok] check_pkg6.py: all checks of the program passed
+4. tools/text_scan_pkg6.py --program
+  clean  blake3-r2/experiments/halfsearch.py  (39623 bytes)
+  clean  blake3-r2/experiments/manifest.json  (5161 bytes)
+  NOTE: 1 line(s) are reported by the word test only because of a constant of the pin written in hexadecimal digits, and are not counted: blake3-r2/experiments/halfsearch.py:77
+  files 2, account names looked for 2, word list read, findings 0
+  [ok] text scan of the program file: nothing found
+RESULT, program (steps 1 to 4): all steps hold
+5. text: tools/proof_lines_check.py, tools/fmt_pkg6.py (nothing written), check_pkg6.py --text, tools/text_scan_pkg6.py
+  steps S1 and T typed from the displays of Section 4, 20000 trials (every fourth with extreme context words, every second with y outside the class at random):
+  RESULT: all hold
+  [ok] proof_lines_check.py: steps S1 and T as displayed in Section 4 hold on 20000 trials
+     lines over 79 characters: []
+     lines over 79 characters: [(1, 88), (64, 145), (65, 199), (66, 110), (68, 127), (69, 190), (70, 81)]
+  Sections 4 and 5, steps S1 and T, Lemmas S, F, Y and the theorem: proof:227-433
+  6.1, trials and Lemmas Q, T: proof:437-488
+  6.3 with Lemmas E, N and A: proof:507-608
+  6.4, the algorithm: proof:610-640
+  6.5, the batch and its count: proof:642-862
+  Section 7 to 'None of the three heuristics is proved': proof:864-943
+  H2 paragraph: proof:885-891
+  H3 paragraph: proof:893-911
+  Section 10 to the line before Scope: proof:1048-1998
+  proof line count: 2059
+  H1-residual-hit-rate ['experiment:residual-search', 'experiment:half-collision', 'proof:227-433', 'proof:437-488', 'proof:507-608', 'proof:610-640', 'proof:864-943', 'proof:1048-1998'] | extrapolation 3127 chars | limitations 3674
+  H2-e1-test-passes ['proof:507-608', 'proof:610-640', 'proof:885-891', 'proof:1048-1998'] | extrapolation 418 chars | limitations 592 chars
+  H3-stage-2-entries ['proof:507-608', 'proof:610-640', 'proof:642-862', 'proof:893-911', 'proof:1048-1998'] | extrapolation 1442 chars | limitations 1060 chars
+  claim.json proof ranges that match no range above: none
+    note bytes: 31999
+    claim: {'time_log2': 97.6, 'time_unit': 'target-compressions', 'memory_log2_bytes': 35, 'preprocessing_log2': 63, 'success_probability': 0.39, 'nonuniform_advice_log2_bytes': 6} | state ready
+    class eta 830303cf: x 03cf8303 (bit 31 clear), DY3 + x 01870000, mask 03cf8303, value 030c0303, 13 fixed and 19 free bits, 524,288 members; lists of 74,899 words (74,898 full batches and 2 members in the last)
+    factor 2^25; trials 2^102 = 2^51 pairs (vc any word, vd < 2^19) * 2^32 values of X14 * 2^19 members; pass budget 2^86
+    per X14, budgeted: 74,899 * 87 + 74,899 * 163 / 4 + 1024 = 9,569,371.25 < 19.1 * 524,288 = 10,013,900.8 (18.2521 per trial budgeted, 17.5244 expected at 7 * 2^-5)
+    main term 2^97.50731; terms after the first 2^96.00000 < 2^99.256; total as written 2^97.50849 < stated 2^97.5186 < 2^97.52 <= time_log2 97.6
+  rendered files against the templates: as rendered
+  RESULT: nothing wrong
+  [ok] fmt_pkg6.py exit status 0
+  (c) proof.md against what this script computes
+      solutions of the seven-word system found in the text and evaluated: 2
+  RESULT (c): the proof prints what this script computes
+  [ok] check_pkg6.py --text: proof.md prints what the check computes
+  clean  blake3-r2/certificates/manifest.json  (48 bytes)
+  clean  blake3-r2/claim.json  (17599 bytes)
+  clean  blake3-r2/experiments/halfsearch.py  (39623 bytes)
+  clean  blake3-r2/experiments/manifest.json  (5161 bytes)
+  clean  blake3-r2/proof.md  (126999 bytes)
+  clean  submission-note-r2.md  (31999 bytes)
+  NOTE: 2 line(s) are reported by the word test only because of a constant of the pin written in hexadecimal digits, and are not counted: blake3-r2/experiments/halfsearch.py:77, blake3-r2/proof.md:184
+  files 6, account names looked for 2, word list read, findings 0
+  [ok] text scan of all public files: nothing found
+RESULT, text (step 5): all steps hold

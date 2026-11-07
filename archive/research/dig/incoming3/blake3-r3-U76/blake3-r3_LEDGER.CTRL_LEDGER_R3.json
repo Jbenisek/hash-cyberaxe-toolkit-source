@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "loop control (3 operations per 16 batches)",
+ "question": "R3 control: the metered batch count against the budget",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Shipped program metered at n = 22 (4,000 attempts) and n = 32 (747 attempts): batches never exceed B (max 357 of 357 and 10,361 of 10,361: the loop stops exactly at the budget, never past it); the largest metered attempt total at the ledger prices is 0.3355 and 0.6136 of the ledger total of plan(n) (must be at most 1).",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/ctrl.py, research/dig/incoming3/blake3-r3-U76/work/ctrl22.out, research/dig/incoming3/blake3-r3-U76/work/ctrl32.out",
+ "notes": "universe cell blake3-r3|LEDGER.CTRL|LEDGER|R3. Control is on the Python search loop, which halts at B by construction; it checks that the bound is not exceeded, not the machine code (not built).",
+ "held_fixed": "rho.py search at n = 22, 32, fresh seeds",
+ "reopen_if": "a metered attempt above its ledger",
+ "gain_basis": "count"
+}

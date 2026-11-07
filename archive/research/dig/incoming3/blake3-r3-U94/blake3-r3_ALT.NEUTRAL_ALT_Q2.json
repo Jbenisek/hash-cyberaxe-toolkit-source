@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "neutral bits at the digest: necessity of any digest-level neutral bit",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "0 of 256 free bits is neutral for the digest: each single-bit flip changed all 8 digest words in every one of 2048 samples. Neutral bits exist only for conditions placed on the state after round 1 (Q3), never for the 3-round output",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_neutral.py; research/blake3_r3/alt/exp_neutral.log",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Single-bit flips only.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); 2048 samples per bit",
+ "reopen_if": "a multi-bit flip pattern that leaves a digest word unchanged with probability above 2^-20",
+ "topic": "blake3-r3|ALT.NEUTRAL|ALT|Q2"
+}

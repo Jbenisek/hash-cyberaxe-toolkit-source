@@ -1,0 +1,46 @@
+# BLAKE3, 4 rounds: bit-sliced 256-lane search with pivot full adders and a mask walk
+
+Credit: Claude Opus 5.5 (Claude Code) for the base entries and the direction; Claude Sonnet 5.5 (Claude Code) built this entry's program, proof and ledger.
+
+## What this entry is
+
+The first entry for BLAKE3 reduced to 4 rounds (blake3-r4-prefix-v1). It is a plain birthday collision search on the complete 256-bit digest, run as cheaply as the cost model allows; it uses no differential and no structure of the rounds.
+It is the program of our round-3 entry 62cfd777-5613-463f-b561-e2340e00e528 ({TL3}) taken to four rounds. That entry is a credited derivative of our own 0a9640ed-558a-4f0a-aba8-45e89ffcfd7c (124.96822) and 3356413f-cd60-410c-8847-2266d6444ac5 (124.95448), bit-sliced 256-lane searches with a declared register file, and of jungjipdo's 6ae36351-5836-4a46-ad34-227688264123 (124.91252), from whose proof text (3.3, 3.4) we took the pivot full adder and the mask walk g = f XOR q and re-implemented both in our own generator. We did not use or run any file of that entry. Our program is also derived from cf8b0e92-4302-4813-907a-3c970c102646 and Jbenisek's e479cbbf-8aca-4fc6-bdc4-31b38d55c7ca.
+The target is the plain one: 64-byte messages 0^32 || x, one block, flags 11, standard IV, unkeyed, the complete digest. Against the three-round entry, four things change:
+
+1. Four rounds: the straight line has {PH} gates for 256 trails (17,238 at three rounds), the organizer's reference count is C(r4) = 846 operations (638 at three rounds), and the recovery circuit has {PH7} operations.
+2. The program is larger ({instr} instructions of 36 bytes, {codebytes} bytes), so the table that fits under 2^20 bytes is small ({tmax} entries): the trails are long (L = 2^{log2L:.2f}) and the unfinished trails at the halt cost a larger share of the time than at three rounds. This is where the gap between this entry and the three-round figure comes from.
+3. A table entry is 26 bytes: a trail length needs 16 bytes at this trail length.
+4. The circuit generator was rewritten as two passes without a node table (the network has no shared and no unused gate), so that it fits next to the larger program; its code is charged at its compiled size and its memory was measured (below).
+
+## Numbers
+
+| quantity | value |
+| --- | --- |
+| time_log2 (target-compressions, upper bound) | {TL} |
+| operations per batch of 256 trails | {body} (step {PH}, stage-1 test {filt}, loop 3) |
+| total N | {N} operations = 2^{log2N:.6f} units of 846 |
+| memory | {mem} bytes including code ({instr} instructions of 36 bytes), the table ({tmax} entries of 26 bytes), counters and the 1,024-register file; claimed as 2^20 ({spare} bytes to spare); setup phase {ph1} bytes |
+| success probability | at least 0.39, single attempt, no amplification (the proof bounds {Pl:.4f} under H1 and H2) |
+| preprocessing | none offline; setup and generator 2^{log2setup:.2f} units are in the time bound (claimed {preclaim}) |
+| nonuniform advice | none |
+
+Against the round-3 entry 62cfd777 ({TL3}) the extra round and the smaller table cost {dr3:.4f} bit. The main loop is {pmain:.2f} percent of the total, recovery {prec:.2f} percent.
+
+## Premises, and what was checked
+
+H1 (score-critical, model premise): success of the attempt on the fixed target is at least the success of the same procedure against a uniformly random function. It cannot be tested at width 256 and is declared, not proved; a deficit eps in the pair-collision rate costs 0.5 * log2(1/(1-eps)) bits, and eps up to {eps:.4f} is absorbed by the margin. H2 (supporting): the named approximations of Lemma 2. H3 (score-critical): the 1,024-register machine convention, the 36-byte instruction charge, and the charge of the generator's code at 36 bytes per compiled instruction.
+Two organizer experiments run this program (bsrho-n18: one attempt of the 256-lane search at width 18 per trial; proj-k0-w256: 2048 points at width 256 per trial, a pair when two digests agree in 21 bits); the organizer recomputes every returned pair. They are program checks only; no number of the claim is estimated from their counts. The program's own counts (`python3 bsrho.py --stats`, untrusted, descriptive): {stats1}; {stats2}.
+Outside the shipped experiments, the program's scalar digest was compared with the organizer's reference `blake3(M, r)` at 3 rounds, at 4 rounds and at the full 7 rounds ({nchk} random messages each), and at 7 rounds also with the `blake3` library (2,000 messages): no differences. The bit-sliced step was compared with `blake3(M, 4)` on 8,192 messages and on 4,096 lanes chained for 4 steps, the packed recovery circuit on 448 messages: no differences. The selftest compares the step with the scalar compression on 4,096 lanes and on 4,096 lanes chained for 4 steps.
+
+## Generator memory
+
+The straight line is generated at setup. Model (proof 3.6): the generator is a freestanding C program of {gencode} compiled instructions ({gencodebytes} bytes at 36 bytes each) with {scratch} bytes of scratch ({nodes} nodes, 4-bit use counts), held in the region that the table and the register file occupy once the search runs (setup phase {ph1} bytes, search phase {mem}). Measured: the C program compiled to WebAssembly in a sandbox whose guest memory is capped at 1,048,576 bytes emits the identical program (instruction text equal line by line, same q), and as a static x86-64 binary without libc it does the same under `prlimit --data=1048576`; its static arrays total {cpst} bytes including the final code region and the counters. The Python reference generator's own resident set belongs to the interpreter and is not charged.
+
+## Limits
+
+- The full 256-bit functional graph, iterations beyond 2^40 and other keys were not tested; H1 is not proved.
+- The 1,024-register file is this entry's declaration; the profile fixes no register count. Smaller files are discussed in proof 3.5: with 512 registers the table is too small for this plan to reach 0.39, with 256 no table fits.
+- The overlay of the generator's code and scratch on the table region is an assumption of the layout; the generator itself was run under the 1 MiB caps, but the machine of the cost model is not executed by any organizer check.
+- The generator's code is charged by the number of WebAssembly instructions of the compiled C program ({gencode}), one instruction each; the machine of the model has no instruction set, so this count is a stated convention.
+- Handler, key-scan and entry charges are stated upper bounds (proof 3.3); the generator is charged 200 operations per primitive call and per emitted line (its measured work in the sandbox is {genfuel} wasm operations against {genops} charged). Together they are below 1e-7 of the ledger.

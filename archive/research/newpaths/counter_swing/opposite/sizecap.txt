@@ -1,0 +1,28 @@
+Part 1: 64 random outer steps; whole T1 cube (2^21 values of c1) each
+  k   mean count of t < 2^k   predicted 2^(k-11)   ratio   outer steps with 0   max in one outer step
+  12            0.00                2.00   0.000            64           0
+  16            8.05               32.00   0.251            63         515
+  20          240.00              512.00   0.469            62        8192
+  24         6004.61             8192.00   0.733            51       65536
+  26        28071.23            32768.00   0.857            38      131072
+  28       119433.38           131072.00   0.911            24      262144
+  30       468659.12           524288.00   0.894             8     1048576
+  32      2097152.00          2097152.00   1.000             0     2097152
+  inversion of all t < 2^12 per outer step: mean 0.00 cube hits (pred 2.00); equal to the forward count in 64/64 outer steps
+
+Part 2: time_log2 under a message-length cap (DERIVED; op counts GUESS)
+  cap (bytes)          t < 2^k    F: filter cube trials   I: invert small t   best   vs filed 92.53
+  4096 (harness default)      2.00       115.72                100.09         100.09    +7.56
+  65,536 (harness max)        6.00       111.72                 97.60          97.60    +5.07
+  1 MiB                      10.00       107.72                 97.11          97.11    +4.58
+  64 MiB                     16.00       101.72                 97.07          97.07    +4.54
+  1 GiB                      20.00        97.72                 97.07          97.07    +4.54
+  16 GiB                     24.00        93.72                 97.07          93.72    +1.19
+  64 GiB                     26.00        91.73                 97.07          91.73    -0.80
+  256 GiB                    28.00        89.77                 97.07          89.77    -2.76
+  1 TiB                      30.00        87.92                 97.07          87.92    -4.61
+  4 TiB (no cap, v13 = 0)    32.00        84.96                 97.07          84.96    -7.57
+  break-even with the filed 92.53 (filter F): t < 2^25.20, messages up to about 2^35.2 bytes (37 GiB)
+
+Part 3: organizer Python _compress (2 rounds): 18.6 us per call on this machine
+  a pair with t = 2^31 needs about 3.65e+10 compressions per message: about 7.9 days per message in the reference code, and blake3() takes the whole message as one bytes object (2^41 bytes = 2 TiB of memory)

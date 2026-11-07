@@ -1,0 +1,31 @@
+verify_literature_0 - skeptic check of the claim "Dong et al. 2021 eq. 9 gives 2^64 at w=32, h=8, t=4
+when DoF+, DoF-, m >= 4 words".  VERDICT: REFUTED as an attainable cost.  Corrected exponent at t=4: 96.
+
+1. COMPUTED (read 2021_427.txt lines 1321-1443): eq. 9 is transcribed correctly:
+   (2^w)^lam+ + (2^w)^lam- + (2^w)^(h/2 - min{DoF+ - t/2, DoF- - t/2, m - t/2, t/2}), and m <= t (line 1323).
+   Plugging w=32, h=8, t=4: min <= t/2 = 2, so the third term is >= 2^64, equal only at DoF+-,m >= 4.
+   The arithmetic of the claim is right.  The conclusion is not.
+2. DERIVED: eq. 9 is (episodes) x (cost per episode), with episodes = (2^w)^((h-t)/2 - (DoF+ + DoF- - t))
+   (line 1338) and per-episode cost (2^w)^DoF+ + (2^w)^DoF- + ... (eq. 8).  This needs episodes >= 1, i.e.
+   DoF+ + DoF- <= (h+t)/2 = 6 words.  At DoF+ = DoF- = 4 the "number of episodes" is 2^-64: the formula is
+   extrapolated outside its domain.  One real episode with DoF = 4 costs (2^32)^4 = 2^128 for the forward list.
+   Inside the domain min(DoF+,DoF-) <= 3, min{...} <= 1, cost >= (2^32)^3 = 2^96.
+   Same from the paper's own conditions (lines 1431-1442): lam+- < h/2 = 4 and DoF <= lam, so DoF <= 3 words;
+   and eq. 9's own first terms (2^w)^lam+- are >= 2^128 if lam >= 4.
+   Every worked example in the paper (SKINNY 2^60, Groestl-256 2^124, Whirlpool/Groestl-512 2^248) satisfies
+   DoF+ + DoF- <= (h+t)/2, so none exercises the region the claim relies on (COMPUTED, lines 1618-1630, 2110-2118,
+   2585-2647).
+3. DERIVED general bound (pair-filter MITM): each partial-target preimage is a (forward, backward) pair passing a
+   t-word filter, so 2^(w(h+t)/2) pairs are needed in total; lists cost >= sum 2*sqrt(pairs_i) >= 2*2^(w(h+t)/4).
+   t=4: 2^97 list elements (2^96 per side).  Best over t: t = h/3 -> 2^(256/3) = 2^85.3 (needs DoF >= 85.3 bits
+   per side and m = t).  dong_formula_check.py/.out (COMPUTED): paper formula vs constrained optimum; they agree
+   up to T = 85 bits and diverge after; at T = 256 the paper formula gives 0 (absurd), the constrained one 128.
+4. COMPUTED toy (toy_mitm.py, toy_mitm_seed1.out): w=4, h=8, t=m=4, DoF+-=4 cells.  Eq. 9 predicts 2^8 work.
+   Measured mean cost to first collision (40/20 trials per list size L): L=2^8: 2^17.2, 2^10: 2^15.5, 2^11: 2^14.6,
+   2^12: 2^13.6, 2^13: 2^13.4, 2^14: 2^14.1, 2^16 (full DoF): 2^16.0.  Best ~2^13.4, matching the bound 2^13,
+   not 2^8.  Scaled to w=32: 64 (claim) vs 96-97 (bound).
+5. Mapping to our model (DERIVED): in IDEA 1 "fixed" the 4 target words hold by construction; the pair filter is
+   the c checks.  Then lists >= 2^(32+16c) per side: c=2 -> 2^65 (plus 2^64 compressions, plus ~0.5 bit for the
+   birthday success constant, so ~65-66 even then); c=3 -> 81; c=4 -> 97.  variants\RESULTS.txt (another agent,
+   COMPUTED exhaustive) reports k_min = 8, c = 4 for the base case, i.e. the c = t = 4 case where our model and
+   Dong's coincide at ~2^96-97.  The 2^64 figure is a floor (2^64 compressions), never attained by this route.

@@ -1,0 +1,20 @@
+{
+  "id": "DENSE-SIGNED-R37-R0-16-PRICE-20261014",
+  "hash": "sha256-37",
+  "row_i": 0,
+  "row_j": 16,
+  "object": "Dense signed characteristic rows 0..16 price audit",
+  "question": "Can the dense signed characteristic rows 0..16 replace the filed r37 A_C allowance?",
+  "labels": ["K", "E"],
+  "status": "OPEN",
+  "number": "No complete public-input search is closed. Exact partial meters: job116 1,138,622,457 word-ops = 430,643.894 CE = 2^18.716; sound signed relaxation 4,727,728,564 word-ops = 1,788,097.0363 CE = 2^20.7699936000. These are non-additive lower bounds, not an A_C upper bound.",
+  "source": "research/grok/work/job116_dense_char2/ANSWER.md and research/dense_dig/signed/SIGNED.md",
+  "own_test": true,
+  "evidence": "research/sol_answer_dense_signed_r0_16_price.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "sha256-r37.dense-signed.rows0-16.price",
+  "peak_mem": 208519168,
+  "notes": "Component RSS only (2^27.6356 B); full development-run envelope, public-input completeness, replay, H4 premise, and judge acceptance remain open. Filed A_C=2^60 unchanged; no package/stage/filing/submission."
+}

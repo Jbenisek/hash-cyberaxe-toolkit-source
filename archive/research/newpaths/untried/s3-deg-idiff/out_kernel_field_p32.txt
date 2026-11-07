@@ -1,0 +1,14 @@
+{"p": 32, "U_dim": 160, "delta2_nonaffine_2nd_diffs": 0, "K2_dim": 138}
+{"Vprime_dim": 16, "runs": 2115, "pairs_in_K2": 736, "failing_pairs": 0}
+{"delta3_nonaffine_on_Vprime": 0, "K3_dim": 0}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 1, "cubes": 16, "nonzero_state_sums": {"1": 16, "2": 16, "3": 16, "4": 16, "5": 16, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 16, "4": 16, "5": 16, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 2, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 16, "4": 16, "5": 16, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 16, "5": 16, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 3, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 16, "5": 16, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 16, "5": 16, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 4, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 16, "5": 16, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 16, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 5, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 16, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 16, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 7, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 16, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 16, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 8, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 16, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 9, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 14, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 15, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}}
+{"space": "V'32 (2-round-affine, delta2 const)", "dim": 16, "cubes": 16, "nonzero_state_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 16}, "nonzero_delta_sums": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0}}

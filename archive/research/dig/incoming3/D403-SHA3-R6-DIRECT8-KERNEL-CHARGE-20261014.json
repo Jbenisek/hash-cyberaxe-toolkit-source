@@ -1,0 +1,22 @@
+{
+  "id": "D403-SHA3-R6-DIRECT8-KERNEL-CHARGE-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "direct8 key-row and generated-kernel charge screen",
+  "question": "What kernel cost follows when the direct8 filter fixes its five digest bits and the remaining 135 key bits are packed?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Paired source-level generation on twelve identical list bases: filed 132-bit K mean 37574.5833; full 140-bit mean 37850.5 (+275.9167); compact direct8 135-bit noncontiguous packing mean 37726.6667 (+152.0833), with generation mean 5,551,771.5 versus baseline 5,535,770 (+16,001.5). Compact max K=37843, full max K=37971. No generated program execution or route proof.",
+  "source": "our workflow: paired in-memory kgen charge screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D403_sha3r6_direct8_kernel_charge.md; research/retest/sha3_r6_alt8/direct8_kernel_charge.py; research/retest/sha3_r6_alt8/direct8_kernel_charge.txt; research/tools/build_pkg/scratch/pkgS6K/work/k/kgen.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.35,
+  "prior": 0.05,
+  "gain_basis": "C",
+  "notes": "Conditional finite generator arithmetic only. Direct8 list distribution, noncontiguous key KAT, spill/memory charge, and H_K tail evidence are missing. No score or package credit.",
+  "reopen_if": "A full direct8 route with generated 135-row kernel, reference KAT, exact charge, memory/register bounds, and survivor/pair evidence is available."
+}

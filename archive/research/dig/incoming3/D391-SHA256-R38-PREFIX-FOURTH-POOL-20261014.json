@@ -1,0 +1,23 @@
+{
+  "id": "D391-SHA256-R38-PREFIX-FOURTH-POOL-20261014",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 37,
+  "object": "Table-4 prefix-group fourth independent marginal batch",
+  "question": "Does a fourth independent prefix batch reproduce the r38 staged marginals and late-cell/exact ratio?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Eight fixed seeds 9001..9008, 8,388,608 final proposals, zero prefix-redraw/y-anchor/replay inconsistencies. Prefix hits per 65,536: A17=1045 (log2 -5.970712773), A18=32784 (-0.999295731), A19=32818 (-0.997800300), E17=16546 (-1.985805133), E18=8197 (-2.999119717), E19=16380 (-2.000352263), E21=32628 (-1.006177063); A16/E16/W16 unit. W7/W8 unit on all final proposals. Fourth batch 110 cells, 296 exact, EXACT/cells=2.69091; D379+D386+D389+D391 pool 507 cells, 1337 exact, ratio 2.6370808679.",
+  "source": "our workflow: D253 OPEN scan / r38 prefix fourth pool",
+  "own_test": true,
+  "evidence": "research/sol_answer_D391_r38_prefix_fourth_pool.md; research/retest/r38_stack/D391_prefix_marginals.out; research/retest/r38_stack/D391_prefix_marginals.time; research/tools/traillab/src/smc.c; research/tools/traillab/src/main.c",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.2,
+  "prior": 0.1,
+  "gain_basis": "S",
+  "peak_mem": "22.9388444575 MEASURED log2(bytes), /usr/bin/time -v, one-thread traillab batch",
+  "notes": "Finite sampled prefix evidence only. Full Table-4 independence, rows 22..37 transfer, attack-weighted distribution, and a charged rebuilt path remain OPEN; no score or filing credit.",
+  "reopen_if": "A full-path carry-aware experiment or proof addresses the Table-4 47-versus-102-condition gap."
+}

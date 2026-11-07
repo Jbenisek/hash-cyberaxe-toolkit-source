@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-fxor03e",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 exact f-XOR coupled involution delta 03e00000",
+  "question": "Does the unresolved class toggle y -> y xor 03e00000 preserve the full coupled J1/J2/J3 aliveness predicate?",
+  "labels": ["I", "0"],
+  "status": "BEDROCK",
+  "number": "Exact universal map: f'=f xor 00003000, g'=g xor 00e00000, h'=h xor 00007000, E unchanged, for y'=y xor 03e00000; QF_BV implication is UNSAT for both epsilon rows over all 32-bit E,f,g,h.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/verify_fxor_03e.py; research/retest/b3_omega_coupled/exact/verify_fxor_03e.out; research/retest/b3_omega_coupled/exact/synth_fxor_map.py; research/retest/b3_omega_coupled/exact/synth_fxor_map.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Because g'=ROL(f',12) xor (y xor delta), the stated g map is induced exactly; h2 and all three equations are preserved by the universal UNSAT implication. The XOR map is an involution, so this proves aliveness/list invariance for this class direction. Three other basis toggles remain OPEN; no saving is credited yet."
+}

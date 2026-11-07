@@ -1,0 +1,6 @@
+delta +-2: E1 exact count against brute force at 8-bit words: 30 cases, 43539 outcomes with solutions: 43539 equal, 0 different; zero outcomes sampled: 30055 agree, 0 disagree
+delta +-4: E1 exact count against brute force at 8-bit words: 30 cases, 43991 outcomes with solutions: 43991 equal, 0 different; zero outcomes sampled: 30077 agree, 0 disagree
+delta +-8: E1 exact count against brute force at 8-bit words: 30 cases, 36826 outcomes with solutions: 36826 equal, 0 different; zero outcomes sampled: 30448 agree, 0 disagree
+delta +-16: E1 exact count against brute force at 8-bit words: 30 cases, 48325 outcomes with solutions: 48325 equal, 0 different; zero outcomes sampled: 29615 agree, 0 disagree
+delta +-8, seed 808, 60 cases: E1 exact count against brute force at 8-bit words: 60 cases, 85708 outcomes with solutions: 85708 equal, 0 different; zero outcomes sampled: 60311 agree, 0 disagree
+E3 count n3x against brute force at 8-bit words: 6 cases, outcomes with solutions 62639: 62639 equal, 0 different (solutions in all 94255088); empty outcomes sampled: 1572897 agree, 0 disagree; outcomes through the random-subset branch 0

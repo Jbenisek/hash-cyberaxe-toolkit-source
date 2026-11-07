@@ -1,0 +1,76 @@
+rows 1048576 (train 524288, test 524288)
+
+## Part A0: single words (collision pairs; uniform expectation 32.0)
+  R1: pairs train     45 test     51  H2 31.51 / 31.33   | UNIF pairs  40  26
+  R3: pairs train    175 test    170  H2 29.55 / 29.59   | UNIF pairs  32  37
+  R4: pairs train     28 test     43  H2 32.19 / 31.57   | UNIF pairs  32  27
+  R6: pairs train     88 test     97  H2 30.54 / 30.40   | UNIF pairs  37  28
+
+## Part A: spiral scan Z = R_i op ROR(R_j, r)
+  768 (op, i, j, r) combinations scanned on each half; time 157 s
+  UNIF control: max collision pairs over 96 (op, r) = 45 (expectation 32.0)
+  top 30 by train z (data vs SHUF):
+  op  i  j   r | train pairs  SHUF   H2     z | test pairs  SHUF   H2     z
+  xor R1 R4 25 |      31988     32  22.03  5562.8 |      32151     33  22.03  5508.2
+  xor R3 R6 24 |      19233     45  22.77  2829.1 |      19371     38  22.76  3095.8
+  sub R1 R4 25 |       9158     33  23.84  1564.9 |       9461     41  23.79  1453.5
+  sub R4 R1  7 |       9221     35  23.83  1531.0 |       9530     27  23.78  1795.9
+  xor R3 R6 25 |       5232     30  24.65   934.3 |       5340     33  24.62   910.1
+  sub R3 R6 24 |        493     34  28.05    77.6 |        530     46  27.95    70.6
+  sub R6 R3  8 |        516     45  27.99    69.4 |        536     35  27.93    83.5
+  sub R6 R3  7 |        198     38  29.37    25.6 |        216     37  29.25    29.0
+  sub R3 R6 25 |        173     36  29.57    22.5 |        163     33  29.65    22.3
+  xor R1 R4  9 |        126     22  30.02    21.7 |        132     25  29.96    21.0
+  add R3 R6 24 |        163     36  29.65    20.9 |        152     46  29.75    15.5
+  add R3 R6 25 |        134     27  29.93    20.2 |        126     35  30.02    15.2
+  xor R3 R6 23 |         94     25  30.45    13.5 |        111     32  30.21    13.8
+  add R1 R4 25 |         98     27  30.39    13.4 |         99     39  30.37     9.5
+  xor R3 R6  3 |         91     26  30.49    12.5 |         62     39  31.05     3.6
+  xor R3 R6  8 |         84     27  30.61    10.8 |         76     32  30.75     7.7
+  xor R3 R6 22 |         87     29  30.56    10.6 |         60     29  31.09     5.7
+  xor R3 R6 26 |         87     32  30.56     9.6 |         89     32  30.52     9.9
+  xor R3 R6 18 |         74     26  30.79     9.2 |         56     29  31.19     4.9
+  xor R3 R6  2 |         70     24  30.87     9.2 |         70     40  30.87     4.7
+  sub R1 R4  9 |         68     23  30.91     9.2 |         70     27  30.87     8.1
+  add R1 R4  9 |         79     29  30.70     9.1 |         63     33  31.02     5.1
+  xor R3 R6  4 |         65     23  30.98     8.6 |         65     23  30.98     8.6
+  xor R3 R6  9 |         77     30  30.73     8.4 |         87     42  30.56     6.9
+  xor R3 R6 14 |         71     29  30.85     7.7 |         74     32  30.79     7.3
+  xor R3 R6 27 |         84     38  30.61     7.4 |         71     35  30.85     6.0
+  xor R3 R6 16 |         74     32  30.79     7.3 |         71     33  30.85     6.5
+  xor R3 R6  6 |         72     31  30.83     7.2 |         65     26  30.98     7.5
+  xor R3 R6 12 |         65     27  30.98     7.2 |         65     37  30.98     4.5
+  xor R3 R6  7 |         78     37  30.71     6.7 |         76     30  30.75     8.3
+  combinations with train z > 6: 37 ; confirmed on test (z > 3): 36
+  SHUF-vs-SHUF null: max train z over all combos with the partner shuffled twice is not run; the UNIF line above is the null for raw pairs.
+  combos outside the pairs (R1,R4) and (R3,R6) with train z > 4: 9
+    sub R1 R3  4 | train     37 vs     16 z   5.1 | test     39 vs     32 z   1.2
+    xor R1 R6  0 | train     61 vs     32 z   5.0 | test     44 vs     31 z   2.3
+    xor R1 R3 28 | train     38 vs     17 z   4.9 | test     33 vs     34 z  -0.2
+    sub R1 R6  3 | train     47 vs     24 z   4.6 | test     31 vs     31 z   0.0
+    add R1 R6 10 | train     41 vs     21 z   4.3 | test     29 vs     42 z  -2.0
+    sub R4 R6 24 | train     38 vs     19 z   4.2 | test     31 vs     32 z  -0.2
+    add R1 R6  7 | train     33 vs     16 z   4.1 | test     34 vs     29 z   0.9
+    xor R4 R6 10 | train     50 vs     28 z   4.1 | test     28 vs     25 z   0.6
+    add R1 R6  0 | train     54 vs     31 z   4.1 | test     50 vs     32 z   3.1
+  time 157 s
+
+## Part B: windowed MI (8-bit windows), excess over SHUF
+  half 0 done, time 307 s
+  half 1 done, time 442 s
+  sd of the SHUF MI (noise scale of one window's excess) = 0.00050 bits; mean SHUF MI (plug-in bias) = 0.09318 bits
+  per pair: max excess (train) and its window, test excess there; windows with train excess > 10 sd and test > 5 sd
+    R1-R3: max 0.0494 bits at p=16 q=25 (lag  9), test 0.0483 ; strong windows  278 of 1024, confirmed  278
+    R1-R4: max 2.8325 bits at p= 6 q=31 (lag 25), test 2.8361 ; strong windows  412 of 1024, confirmed  412
+    R1-R6: max 0.4128 bits at p= 5 q= 5 (lag  0), test 0.4150 ; strong windows  270 of 1024, confirmed  270
+    R3-R4: max 0.0628 bits at p=20 q= 5 (lag 17), test 0.0610 ; strong windows  169 of 1024, confirmed  169
+    R3-R6: max 2.4661 bits at p=18 q=10 (lag 24), test 2.4678 ; strong windows  487 of 1024, confirmed  487
+    R4-R6: max 0.4407 bits at p= 2 q=10 (lag  8), test 0.4442 ; strong windows  189 of 1024, confirmed  189
+  lag profile: mean excess MI over p (train | test), lags with train mean > 5 sd/sqrt(32) listed
+    R1-R3: lag 8: 0.0213|0.0213, lag 9: 0.0198|0.0196, lag 7: 0.0194|0.0193, lag 10: 0.0169|0.0165, lag 6: 0.0165|0.0162, lag 11: 0.0137|0.0137, lag 5: 0.0136|0.0132, lag 12: 0.0107|0.0107
+    R1-R4: lag 25: 1.8762|1.8791, lag 24: 1.6369|1.6394, lag 26: 1.6366|1.6392, lag 27: 1.3964|1.3986, lag 23: 1.3960|1.3980, lag 28: 1.1566|1.1584, lag 22: 1.1558|1.1574, lag 29: 0.9174|0.9188
+    R1-R6: lag 0: 0.1232|0.1240, lag 1: 0.1114|0.1120, lag 31: 0.1095|0.1102, lag 2: 0.0946|0.0951, lag 30: 0.0929|0.0934, lag 3: 0.0776|0.0781, lag 29: 0.0760|0.0764, lag 4: 0.0606|0.0609
+    R3-R4: lag 17: 0.0184|0.0180, lag 18: 0.0167|0.0163, lag 16: 0.0166|0.0161, lag 19: 0.0142|0.0138, lag 15: 0.0139|0.0135, lag 20: 0.0115|0.0113, lag 14: 0.0112|0.0112, lag 21: 0.0091|0.0090
+    R3-R6: lag 24: 1.7100|1.7111, lag 25: 1.6715|1.6724, lag 23: 1.4610|1.4619, lag 26: 1.4142|1.4149, lag 22: 1.1966|1.1973, lag 27: 1.1501|1.1506, lag 21: 0.9405|0.9409, lag 28: 0.8989|0.8992
+    R4-R6: lag 7: 0.1027|0.1029, lag 8: 0.0925|0.0926, lag 6: 0.0914|0.0916, lag 9: 0.0788|0.0787, lag 5: 0.0780|0.0780, lag 10: 0.0648|0.0648, lag 4: 0.0644|0.0643, lag 3: 0.0508|0.0506
+  time 442 s

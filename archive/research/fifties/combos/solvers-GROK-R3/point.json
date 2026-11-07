@@ -1,0 +1,33 @@
+{
+ "seed": 99,
+ "index": 0,
+ "coords": {
+  "Y12": "5f5412fd",
+  "K": "b45143ae",
+  "w5": "d156601d",
+  "Y4": "a1f4a182",
+  "Y9": "691e144d",
+  "w8": "bd30e545",
+  "C2.b1": "83c694a3",
+  "C2.c1": "437cf42d"
+ },
+ "true_guess": {
+  "C0.a1": "ffe295f1",
+  "C0.b1": "f3fe1e57",
+  "C1.a1": "5307a8e8",
+  "D3.a1": "44a91573"
+ },
+ "derived_words": 74,
+ "checks": [
+  "C1.a1",
+  "Y1",
+  "C2.c1",
+  "w8"
+ ],
+ "selftest": {
+  "terms_reproduce_all_derived_words": true,
+  "four_checks_hold": true,
+  "ctr_outer_roundtrip": true,
+  "flipped_guess_failing_checks": 4
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "S37-D177B-FREECV-SLICE65536",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": 16,
+  "object": "Procedure C targeted common-CV E0 slice",
+  "question": "Does a full 16-bit low-E0 slice produce any row-16 survivors for a fixed accepted E5/E6 candidate?",
+  "labels": ["D", "X", "Z"],
+  "status": "SAMPLED",
+  "number": "65,536 contexts; prefix rows 0..15 pass 65,536/65,536; complete row-16 pass 0/65,536",
+  "source": "our workflow: d177b targeted common-CV slice",
+  "own_test": true,
+  "evidence": "research/retest/d177b_procedure_c/FREE_CV_TARGETED_SLICE.md; research/retest/d177b_procedure_c/FREE_CV_TARGETED_SLICE.txt; research/retest/d177b_procedure_c/free_cv_targeted_slice.py",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "r37.d177b.free_cv_targeted_slice",
+  "notes": "Bounded negative for one (E5,E6) candidate and one 16-bit E0 slice; not a family-wide impossibility and no late rows tested."
+}

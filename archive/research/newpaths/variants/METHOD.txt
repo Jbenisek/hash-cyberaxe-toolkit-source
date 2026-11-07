@@ -1,0 +1,59 @@
+METHOD (folder research\newpaths\variants)
+
+Model: same word-level model as ..\gd_order.py (every G call = 8 primitive equations, each solvable for any one word).
+gd_var.py rebuilds it with options (half 02/13, mode fixed/outhalf/partial, length 64/55, CV words as unknowns);
+for half 02 / mode fixed / outhalf it reproduces gd_order.build exactly (same equations and constants: checked in
+quick_counts.py).  checks c = k - F (k guesses, F = unknown words - equations).
+
+Exact minimum k (COMPUTED): gdx.c, exhaustive depth-first search over guess sets in canonical increasing order over
+class representatives (words with identical single-guess closure are interchangeable).  For the minimum k every
+guess is outside the closure of the others, so the canonical search misses nothing; k = 1, 2, ... is run in turn.
+Speed ~75M nodes/s per core.  Cross-checks: agrees with the main session's SAT (fixed half 02: k=4,5 none; tables
+k=4 none); solutions verified independently in Python (check_sol.py: closure of the 8 guesses = all 100 words).
+
+Table rules: t0 = plain propagation.  t1 = sub-systems inside one G call with one free word over family constants
+(2^32 tables; this includes the main model's K0 rule and the C0/C2, C1/C3 rules) plus the main model's
+K1..K3 (y, a2) -> x rule.  t2 = sub-systems inside one G call with up to two free words (2^64-entry tables, built
+in ~2^64 word operations: preprocessing, negligible next to 2^88 under the contest rule; memory is not scored).
+
+Upper bounds for big models (COMPUTED, not proofs of optimality): ls.c, randomized greedy + "drop two, add one"
+improvement + plateau swaps.  On the fixed models it finds the exact optimum (8 and 9) within seconds.
+
+Lower bounds by implicit hitting sets (ihs2.py + libgd.c): every guess set must hit the complement of every maximal
+proper closed set; kissat finds minimum hitting sets of the complements collected so far.  Slow beyond ~100 words.
+
+Split (meet-in-the-middle) analysis, split.c (COMPUTED per solution; cost formula DERIVED):
+For each solution and each labelling of its guesses as core Z / side A / side B:
+  PA = cl(Z u A), PB = cl(Z u B), S = PA u PB, dim(X) = |X| - #equations inside X.
+  Every equation inside S that is in neither PA nor PB, and every word in both PA and PB but not in cl(Z), is a
+  separable condition f(A) = g(B) (all primitives are sums or xor-rotations), so a hash join applies.
+  Per core value: side lists from 2^(32|A|), 2^(32|B|) guesses; join output 2^(32 s'), s' = dim S - dim cl(Z);
+  members 2^(32 f'), f' = F - dim cl(Z); the core costs 2^(32 cZ) guesses per surviving value, cZ = |Z| - dim cl(Z).
+  log2 cost for N = 2^logN members (max-of-terms, up to ~2 bits):
+     K0 = logN - 32 f'; if K0 >= 0: K0 + 32*max(cZ, |A|, |B|, s')
+     else (one core value already has too many members, lists are cut): max(32 cZ, K0 + 32 s', balanced list term)
+  Checks: 2 checks with 3+3 guesses -> 64; 3 checks -> 80; 4 checks -> 96 (matches the BACKGROUND figures).
+  Members needed N: 2^64 when the four held output words are constant; 2^(64+16f) when f of the 12 held input words
+  are released (their output words then take 2^(32f) values, birthday on 128+32f bits).
+
+Two-block, CV varying inside the family (gdcv.c): out0..out7 = v_i ^ v_{i+8} have no chaining-value feed-forward, so
+family members may have different chaining values; the CV then comes from a list of L first blocks (1 unit each).
+Phase 1: guesses B (block-2 words) propagate without any equation that contains a CV word.  Keys: CV equations
+(K_j:a1 gives v_j + v_{j+4}, K_j:b1 gives v_{j+4}) whose other words are all known: J lookups of 32 bits in the list.
+Phase 2: all CV words known, propagation must reach everything.  c = |B| - F (F of the fixed-CV model); post checks
+c - J.  Cost for N members: N*2^(32c)/L + N*2^(32(c-J)) + L.  Since B plus the CV words is a guess set of the
+fixed-CV model, |B| >= k_min, so c >= c_min (DERIVED): the list can only make the checks separable, not fewer.
+
+Combined two-block system (gd_two.py): block 1 (all 16 words free) feeds its CV into block 2; family freedom 16 + F.
+
+Larger (non-minimum) guess sets - which shapes could still split below 2^92 (DERIVED from the cost formula above)
+  Write f' = F - dim cl(Z), cZ = |Z| - dim cl(Z), G = Z + A + B.  cost >= 32 cZ, and
+    if K0 = logN - 32 f' >= 0: cost = K0 + 32 max(cZ, |A|, |B|, s')
+    else cost >= (K0 + 32(|A| + |B|)) / 2   (the balanced list term)
+  Base case (F = 4, N = 2^64), cost <= 92: either |G| <= 8 (only minimum sets, all analysed), or |G| = 9 with a
+  3-word core of dimension 1 (2 internal checks) and 6 more words.  core.c lists such cores (10 of them) and
+  corex.c extends each by 6 words: no full set exists, so no core/side split of any guess set reaches 2^92.
+  One release (F = 5, N = 2^80), cost <= 92 leaves these shapes besides the minimum sets:
+    2-word core dim 1 + 7 words; 3-word core dim 1 + 6 or 7; 3-word core dim 2 + 6; 4-word core dim 2 + 5 or 6;
+    5-word core dim 3 + 4.  corex.c / corexp.c enumerate them (core = first words of each SOL line) and splitz.c
+    (split.c with the core held fixed) analyses every side assignment of the extra words.

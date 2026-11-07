@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+Text extraction beside an external PDF: citation only, not a distributable paper payload.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/newpaths/literature/papers/2014_1012.txt
+Publisher/preprint locator (derived from the source identifier): https://eprint.iacr.org/2014/1012

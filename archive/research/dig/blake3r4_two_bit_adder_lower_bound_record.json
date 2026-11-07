@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-TWO-BIT-ADDER-LOWER-BOUND-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "two-bit shared-adder finite lower bound",
+  "question": "Can a two-bit x+y adder with carry-in zero expose both sums and final carry in six or fewer free-polarity XOR/AND/OR gates?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "Exact prefix/tail enumeration: 1, 30, 735, 18037 states at depths 0..3; 16788 zero-target and 1249 one-target prefixes; 0 six-gate completions; seven-gate pivot PASS",
+  "source": "research/dig_new/blake3-r4/two_bit_adder_tail_bfs.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_two_bit_adder_lower_bound_1014.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "small finite truth-table enumeration",
+  "notes": "Exact lower bound only for two input bits, carry-in zero, and the stated Boolean gate model; does not close 32-bit/cross-bit/non-Boolean architectures. No package/stage/filing/submission."
+}

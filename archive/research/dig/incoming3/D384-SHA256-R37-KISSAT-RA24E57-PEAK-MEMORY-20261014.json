@@ -1,0 +1,22 @@
+{
+  "id": "D384-SHA256-R37-KISSAT-RA24E57-PEAK-MEMORY-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "owned r37 r_a24e57 Kissat solver-instance peak RSS",
+  "question": "What peak RSS does a bounded one-process run of the owned r_a24e57 SAT instance use?",
+  "labels": ["C", "S"],
+  "status": "SAMPLED",
+  "number": "Maximum RSS 76,224 KiB = 78,053,376 bytes = 2^26.2179576979 under /usr/bin/time -v; 30-second cap, no SAT/UNSAT result, normal exit 0.",
+  "source": "our controlled dense_dig signed Kissat probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D384_r37_kissat_ra24e57_peak_memory.md; research/retest/r37_kissat_ra24e57_30s.out; research/retest/r37_kissat_ra24e57_30s.time; research/dense_dig/signed/cnf/r_a24e57.cnf",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Measured bounded one-process solver residency only. The cap produced no SAT/UNSAT result and cannot bound the complete characteristic search, longer runs, development/advice, libc/allocator, or multithread campaign; no filing score transfer.",
+  "held_fixed": "owned r_a24e57.cnf, 47,297 variables, 299,903 clauses, Kissat 4.0.3, --time=30, one WSL process, nice 10",
+  "reopen_if": "A complete uncapped or explicitly bounded characteristic-search campaign with preprocessing/development/advice memory is required for LOW37/A_C scoring.",
+  "peak_mem": "26.2179576979 MEASURED /usr/bin/time -v maximum RSS; one-process 30-second owned Kissat run"
+}

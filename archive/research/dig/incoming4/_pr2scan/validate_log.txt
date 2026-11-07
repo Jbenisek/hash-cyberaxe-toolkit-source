@@ -1,0 +1,4 @@
+validate.py (tracker vs independent NTT degree of reference-evaluated F(W) at 2^17 points), r=1, j=0, 2026-10-12:
+base 78125 MATCH; sbox R60.L0 toggled 78125 MATCH; sbox R4.L1 added 78125 MATCH; mds R61 row1 identity 78125 MATCH; arc R2.L0 zero 78125 MATCH;
+sbox R4.L0 removed 15625 MATCH; sbox R63 all lanes removed 15625 MATCH; mds R62 all rows identity 78125 MATCH; sbox R2 all lanes removed 15625 MATCH.
+9 of 9 MATCH, 3 of them degree-changing.  poseidon_ref known answers: 9/9 reduced-hash vectors reproduced (t1.py).

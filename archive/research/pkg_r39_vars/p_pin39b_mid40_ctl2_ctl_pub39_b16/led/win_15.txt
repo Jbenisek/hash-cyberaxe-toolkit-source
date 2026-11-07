@@ -1,0 +1,1 @@
+window 0: 58878 distinct claws, 489999574 operations, 8322.3 per claw

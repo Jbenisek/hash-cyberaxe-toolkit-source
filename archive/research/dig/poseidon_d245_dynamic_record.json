@@ -1,0 +1,22 @@
+{
+  "id": "POSEIDON-R2-D245-DYNAMIC-20261013",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D245 dynamic integer-operation site frequencies",
+  "question": "How many times do the remaining non-power-of-two index/control sites execute on the recorded exec_r2d path?",
+  "labels": ["D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "One reconciled r=2 run: limbs_div3=1; plan_for_len candidates/allow3=15/15 with one rows3 success; plan3_for_len candidates=28201; layout_index=196608 (all rows3); radix3 drivers=198697, nonempty/(hi-i)/3=197362; stageA c0%3=99201; hgcd=4082, nonbase=2036. The exact declared k*50 rewrite delta is +8144; divider replacement prices remain OPEN.",
+  "source": "our workflow: D245 dynamic-counter probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D245_dynamic_probe_20261013.md; research/retest/d245_exec_r2_probe/run_first.txt; research/retest/d245_exec_r2_probe/ntt.c; research/retest/d245_exec_r2_probe/hgcd.c; research/retest/d245_exec_r2_probe/single.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "poseidon-r2.MACHINE.D245.dynamic",
+  "held_fixed": "The checked-in exec_r2d source semantics, deterministic one-trial path, and existing charging macros; instrumentation only counts site executions.",
+  "reopen_if": "A rebuilt exec7/exec2e declares exact primitive schedules for /3, %3, /100 and instruments make_plan candidate iterations across all paths.",
+  "notes": "Run-level dynamic frequencies; no package, staged source, score, or submission change. A second rerun was not performed because an owner-side exec7 process appeared and the two-thread limit was retained."
+}

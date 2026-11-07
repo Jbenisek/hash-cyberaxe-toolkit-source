@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "setup, halt budgets (B batches, E2 events, 18,432 keys)",
+ "question": "R3 control: metered events against the budgets",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Shipped program metered: finished trails max 362 of tmax 1,196 (n = 32) and 196 of 688 (n = 22); stage-2 events max 356 of 630 and 156 of 376; batches never above B; the programmed aborts (halts) were 3 of 747 at n = 32 and 272 of 4,000 at n = 22, counted as failures. DP-rate control finished x L / evaluations = 1.0010 at n = 32.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/ctrl.py, research/dig/incoming3/blake3-r3-U76/work/ctrl22.out, research/dig/incoming3/blake3-r3-U76/work/ctrl32.out",
+ "notes": "universe cell blake3-r3|LEDGER.SETUP|LEDGER|R3. n = 22, 32 only. The cause of the 272 halts at n = 22 was not broken down by type.",
+ "held_fixed": "rho.py at n = 22, 32",
+ "reopen_if": "a metered count above its budget",
+ "gain_basis": "count"
+}

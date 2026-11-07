@@ -1,0 +1,23 @@
+{
+  "id": "D440-B3M-FEATURE-DEPENDENCY-CLOSURE-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "dependency closure of compact selector features",
+  "question": "Do the 62 tree-read features reduce the raw/carry feature-generation work?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "D439's selected add-side features reach carry position 31, so all 64 raw u/v bits and add intermediates 0..31 are required; subtract features reach position 27, requiring raw bits 0..27 and borrow intermediates 0..27. The union raw closure is all 64 input bits. Feature outputs can be pruned, but the input/carry chain cannot; safe gain 0.",
+  "source": "our workflow: D440 preregistered feature dependency closure",
+  "own_test": true,
+  "evidence": "research/sol_answer_D440_b3m_feature_dependency_closure.md; research/retest/t2/PREREG_D440_FEATURE_DEPENDENCY_CLOSURE.md; research/retest/t2/D440_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic static audit",
+  "notes": "Exact machine operation count, selection protocol, judge acceptance, and rate-to-success linkage remain open. No package/stage/filing/submission.",
+  "held_fixed": "D437/D439 feature numbering and PR858 no-transfer rule",
+  "reopen_if": "Compiled carry-aware selector ledger is available"
+}

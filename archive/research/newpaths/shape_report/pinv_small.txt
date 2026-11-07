@@ -1,0 +1,37 @@
+# P-invariant family, w=6, cv_xor=0x0, members 2^12; per 4-word group: colliding pairs (expected 0.500)
+group (0,1,3,7): 1 pairs
+group (0,2,5,7): 1 pairs
+group (1,3,4,6): 0 pairs
+w=6 cv_xor=0x0: total pairs over 70 groups 40 (expected 35.0); max group (0,1,2,7) 2
+# P-invariant family, w=8, cv_xor=0x0, members 2^16; per 4-word group: colliding pairs (expected 0.500)
+   (0,1,3,7) member a=17 b=08
+   (0,1,3,7) member a=68 b=12
+   (0,1,3,7) member a=f7 b=4f
+   (0,1,3,7) member a=60 b=ad
+   (0,1,3,7) member a=1d b=bd
+   (0,1,3,7) member a=c0 b=c3
+   (0,1,3,7) member a=31 b=50
+   (0,1,3,7) member a=28 b=f0
+   (0,1,3,7) member a=fd b=50
+   (0,1,3,7) member a=b1 b=fa
+group (0,1,3,7): 5 pairs
+group (0,2,5,7): 0 pairs
+group (1,3,4,6): 2 pairs
+w=8 cv_xor=0x0: total pairs over 70 groups 37 (expected 35.0); max group (0,1,3,7) 5
+# P-invariant family, w=10, cv_xor=0x0, members 2^20; per 4-word group: colliding pairs (expected 0.500)
+group (0,1,3,7): 0 pairs
+group (0,2,5,7): 0 pairs
+group (1,3,4,6): 1 pairs
+w=10 cv_xor=0x0: total pairs over 70 groups 38 (expected 35.0); max group (0,1,2,5) 3
+# P-invariant family, w=8, cv_xor=0x5a, members 2^16; per 4-word group: colliding pairs (expected 0.500)
+   (0,1,3,7) member a=8b b=2d
+   (0,1,3,7) member a=58 b=97
+group (0,1,3,7): 1 pairs
+group (0,2,5,7): 1 pairs
+group (1,3,4,6): 1 pairs
+w=8 cv_xor=0x5a: total pairs over 70 groups 35 (expected 35.0); max group (1,2,5,6) 3
+# P-invariant family, w=8, cv_xor=0x1, members 2^16; per 4-word group: colliding pairs (expected 0.500)
+group (0,1,3,7): 0 pairs
+group (0,2,5,7): 0 pairs
+group (1,3,4,6): 1 pairs
+w=8 cv_xor=0x1: total pairs over 70 groups 25 (expected 35.0); max group (0,1,2,3) 3

@@ -1,0 +1,4 @@
+rule 4: stage A 29+8, stage 2 101+27, smallest file for the batch 16 (15 refused: True), middle step 13; equal to TABLES True; ok
+rule 6: stage A 32+9, stage 2 105+30, smallest file for the batch 16 (15 refused: True), middle step 13; equal to TABLES True; ok
+rule 8: stage A 37+10, stage 2 105+30, smallest file for the batch 16 (15 refused: True), middle step 13; equal to TABLES True; ok
+RESULT: the tracer confirms the counts and the registers

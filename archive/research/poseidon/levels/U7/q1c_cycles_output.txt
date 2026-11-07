@@ -1,0 +1,40 @@
+ord of 5 mod prime-power parts:
+  2 [(0, 1), (1, 1), (2, 1), (3, 2), (4, 4), (5, 8), (6, 16), (32, 1073741824)]
+  3 [(0, 1), (1, 2)]
+  463 [(0, 1), (1, 462)]
+  mod q1: 539204044132271846772 mod q2: 8999194758858563409123804352480028797519452
+total nonzero elements True
+distinct cycle lengths: 235
+number of cycles on F_p^*:  15683600 (plus the fixed point 0)
+longest cycle length: 28141659245774691079001654546646862068247397390777234750164557367345152  elements on cycles of that length: 14442749791479503856800913139811915963217656299305129309540453473839409528832 fraction 0.49892008639308855
+Cycle lengths <= 1000 (length: #elements, #cycles):
+  1 4 4
+  2 20 10
+  4 24 6
+  8 48 6
+  16 96 6
+  32 192 6
+  64 384 6
+  128 768 6
+  256 1536 6
+  462 11088 24
+  512 3072 6
+  924 11088 12
+fraction of elements on cycles longer than 1e6: 1.0
+fraction on cycles longer than 2^20 = 1.0
+shortest cycle lengths>1: [1, 2, 4, 8, 16, 32, 64, 128, 256, 462, 512, 924]
+points with x^(5^1)=x (incl 0): 5
+points with x^(5^2)=x (incl 0): 25
+points with x^(5^3)=x (incl 0): 5
+points with x^(5^4)=x (incl 0): 49
+points with x^(5^5)=x (incl 0): 5
+points with x^(5^6)=x (incl 0): 25
+points with x^(5^8)=x (incl 0): 97
+points with x^(5^10)=x (incl 0): 25
+points with x^(5^12)=x (incl 0): 49
+points with x^(5^16)=x (incl 0): 193
+points with x^(5^24)=x (incl 0): 97
+points with x^(5^32)=x (incl 0): 385
+elements with period <= 1024: fraction 1.191e-72
+elements with period <= 1048576: fraction 1.219e-69
+elements with period <= 1073741824: fraction 1.248e-66

@@ -1,0 +1,20 @@
+{
+  "id": "D351-POSR2-CTL-OVERCOUNT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon r2 exponentiation-control overcount",
+  "question": "Does the D245 Poseidon r2 ledger overcharge exponentiation control calls in ntt_init?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "exact subtraction 4620 operations/run: N=49887119544 for r=2, upward time_log2=27.52673; r=1 N=10063140521, time_log2=25.33962",
+  "source": "D251 charged overcount audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D251.md; research/retest/d245_exec_r2_probe/ntt.c; research/retest/d245_exec_r2_probe",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0000006623,
+  "gain_basis": "S",
+  "notes": "Lossless source-level correction from five exponentiation-control bounds to the three actual fp_pow calls. Below 1e-6 bit and does not change rounded filing rows. Other apparent overcharges remain open; no package change.",
+  "peak_mem": "0 FREE"
+}

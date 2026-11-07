@@ -1,0 +1,22 @@
+{
+  "id": "D415-SHA3-R6-141-PROOF-REFRESH-DRAFT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 141-bit scratch proof refresh",
+  "question": "Can the stale active proof sections be regenerated consistently from the exact BKEY=141 ledger without changing the package?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Generated work/proof_141_refresh_draft.md from proof.md and ledger_r6.py. The active Sections 9-10 now carry the corrected G, cap, survivor-scale 2^382 bad-triple term, exact N=7069170787089782366932836729369691803876, and time_log2=121.70963. Static checks found no active R140, 140-bit-key, 132-bit, 2^405, old N, or old G references; only the historical baseline 121.72219 remains.",
+  "source": "Local scratch proof regeneration and static audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D415_sha3r6_141_proof_refresh_draft.md; research/retest/lens_t3/d415_build_proof_refresh_draft.py; research/tools/build_pkg/scratch/pkgS6K141/work/proof_141_refresh_draft.md; research/retest/lens_t3/D413_run.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 1.0,
+  "gain_basis": "C",
+  "notes": "Scratch-only draft. claim.json refresh, prefile validation, organizer acceptance, and H_coset remain open. No package edit, staging, filing, or submission.",
+  "reopen_if": "Any source/ledger/proof change, or when the owner authorizes a package refresh and prefile run."
+}

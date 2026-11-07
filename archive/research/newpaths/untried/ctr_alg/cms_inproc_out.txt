@@ -1,0 +1,10 @@
+Sat Oct 10 00:17:20 MDT 2026
+systems 349; answer mismatches vs DFS: fresh 0, incremental 0; template 1072 vars, 1737 clauses, 541 XOR clauses
+  rec11 fresh      : per passing step cycles mean 2^22.09 median 2^21.88 max 2^24.10 (120 steps)
+  rec11 incremental: per passing step cycles mean 2^19.18 median 2^18.71 max 2^22.29 (120 steps)
+  rec7 fresh      : per passing step cycles mean 2^22.25 median 2^22.07 max 2^23.81 (150 steps)
+  rec7 incremental: per passing step cycles mean 2^18.77 median 2^18.55 max 2^20.61 (150 steps)
+  incremental per system, first half median 78.0 us, second half 71.3 us; fresh median 752.0 us
+  plants: fresh median 2199.4 us, incremental median 388.1 us
+rc=$?
+Sat Oct 10 00:17:22 MDT 2026

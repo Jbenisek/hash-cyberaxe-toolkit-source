@@ -1,0 +1,28 @@
+# ntt
+
+Source: `research/poseidon/orchard/twofam_r1/ntt.c`
+
+Public SHA-256: `94b3c62f188cecf54009351794e5ec30f890e7dee84922fdb1539bed10cf05c9`
+
+## Purpose recorded in the source
+
+include "common.h"
+include "pallas_consts.h"
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/poseidon/orchard/twofam_r1/proof_template.md
+- research/poseidon/d189_gpu_results.jsonl
+- research/poseidon/d192_r2_results.jsonl
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

@@ -1,0 +1,4 @@
+BLAKE3('') 7 rounds: af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262 OK
+wiring check (200 random messages, all 8 out words, 2 rounds): mismatches = 0
+outhalf: mine 116 eqs, gd_order 116 eqs, identical equation sets: True, same constants: True
+fixed: mine 96 eqs, gd_order 96 eqs, identical equation sets: True, same constants: True

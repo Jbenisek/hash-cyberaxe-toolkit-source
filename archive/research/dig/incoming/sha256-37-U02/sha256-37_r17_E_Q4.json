@@ -1,0 +1,19 @@
+{
+ "hash": "sha256-37",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "row_i": 17,
+ "row_j": 18,
+ "object": "row17 E17 signed cells u at bits 4 and 18 (dE17=fffbfff0)",
+ "question": "Q4: other signed patterns with the same modular difference of E17: do they propagate to the same later differences?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "traillab sdiff: 15 signed patterns of fffbfff0 with weight <= 6 (mass 0.8906): the printed one (u at 18, u at 4, weight 2) plus 14 alternatives (weights 3..6). Each alternative used as the E17 cell (sym E17, other cells and rows as printed): rows 16 and 17 pass (row 17 accepted about 65.5k of 1,048,576 per seed, with 1 to 3 more forced bits), row 18 accepted 0 of 1,048,576 for all 14 on both seeds (printed pattern: 131,780), EXACT 0. None reaches the same later differences. Control (printed pattern via sym) reproduces prefix -58.9863 and EXACT 323.",
+ "evidence": "research/dig/incoming/sha256-37-U02/work/sdiff_dE17.txt; research/dig/incoming/sha256-37-U02/work/alts.txt; research/dig/incoming/sha256-37-U02/work/q4.sh; research/dig/incoming/sha256-37-U02/work/out_q4ctl.txt; research/dig/incoming/sha256-37-U02/work/out_q4_a1.txt (a1..a14 likewise); research/dig/incoming/sha256-37-U02/work/backward_15_17.txt",
+ "notes": "Universe cell sha256-37|r17|E|Q4. Prefix-only (the SMC stops at row 18, so no alternative was run to the output event); rows 18..21 cells stay as printed, so this answers whether the printed later differences are reached, not whether a different characteristic could exist. np 4096, mt 1024, seeds 1,2. Bits where the alternative has a sign override the printed value condition; bits where it has none keep the printed condition. backward also lists signings of E13 for row 17 (22 patterns up to weight 6; only the printed one has Pr 1 under that model)."
+}

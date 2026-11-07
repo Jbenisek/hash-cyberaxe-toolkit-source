@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t31 (DOOR)",
+ "question": "D1: meet in the middle at a level boundary, r=2",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Front surface (inputs mapped to the state after R3, after R5 or at R60 entry) is 2-dimensional and injective (every round is a bijection of F^3, x^5 permutes F_p). The backward family from a digest y is a 2-parameter family (lane 0 = y). The join is the digest fibre: about p inputs per y (p^2 inputs / p values); any two points of it collide, but finding even one is the original problem. Nothing depends on r except one more partial round inside the front.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/LEVELS.md (T31, T39, OQ-B-3)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|DOOR.t31|DOOR|D1. Counting argument (exact); the door is closed by the T39 statement \"no independent inputs\". No new run.",
+ "held_fixed": "r=2 target, 4 full + 2 partial + 4 full rounds, Pallas MDS and constants pinned; toy tests use random Cauchy MDS and random constants over F_103",
+ "reopen_if": "a join test cheaper than one root-find on the line is found"
+}

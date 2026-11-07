@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.ATT attempts / restarts / amplification",
+ "question": "Score-optimal attempt count and success target.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "a=1 with lambda at the floor of P=0.39 is optimal; see GENERIC.SUCC Q3 for the margin (up to -0.0036 bit). Time vs target P: 0.30 -0.237, 0.39 -0.0039 (exact floor), 0.45 +0.132, 0.5 +0.238, 0.63 +0.497.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.ATT|GENERIC|Q3. Same arithmetic as GENERIC.SUCC. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "minimum_success_probability 0.39 of the cost model.",
+ "reopen_if": "The organizer lowers the minimum success probability."
+}

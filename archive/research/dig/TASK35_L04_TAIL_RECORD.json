@@ -1,0 +1,22 @@
+{
+  "id": "S256-R40-L04-TAIL-REPLAY-20261021",
+  "hash": "sha256-r40",
+  "row_i": null,
+  "row_j": null,
+  "object": "Task35 L04 exact tail-window replay",
+  "question": "Do the supplied G_river exact tail vectors reproduce their N=40..42 allowed-window sizes and weights?",
+  "labels": ["X", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "18/18 supplied (s,N) cases match; allowed/weight: (17,40)=21/217, (18,40/41)=22/230, (19,41/42)=23/247, (20,41)=24/44, (20,42)=24/258, (21,41/42)=25/51, (22,41/42)=26/64, (23,41/42)=27/75, (24,41/42)=28/86, (25,41/42)=29/100, (26,42)=30/115; all forced_nonzero=0",
+  "source": "our workflow: Task35 L04 tail windows",
+  "own_test": true,
+  "evidence": "research/luna_dig/task35_l04_tail_windows.py; research/luna_dig/TASK35_L04_TAIL_WINDOWS_20261021.md; research/dig/GRID_R40.md; research/grok/work/G_river_7/ANSWER.md",
+  "date": "2026-10-21",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Exact finite XOR-linear schedule replay of supplied vectors and published windows. Density is a bit-popcount density diagnostic, not a probability. Source exactness/bound labels are preserved. This does not establish signed/modular carries, compression state, global success, release/neighbor transfer, charged ledger, or score.",
+  "peak_mem": "0 FREE self-contained 16-word Python replay",
+  "held_fixed": "Supplied G_river vectors, SHA-256 XOR sigma0/sigma1, N=40..42 tail rule, and W39/W40/W41 forced-zero window constraints",
+  "reopen_if": "A permitted signed/modular state characteristic, full charged ledger, or global tail-transfer proof is available."
+}

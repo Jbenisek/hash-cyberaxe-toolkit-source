@@ -1,0 +1,20 @@
+{
+  "id": "D243-S38-ROW4-FIXED-SPLIT",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 14,
+  "object": "Zone D 38 row-4 W8 G fixed-split signature",
+  "question": "What full-path count does the row-4 W8 G family give on the published fixed split?",
+  "labels": ["S", "B", "E", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Exact fixed split: G=2^26=67,108,864; rows 5..15 pass 2^26; final state-equal 4,604; rate 1151/2^24; log2(rate)=-13.8313278818678",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-row4full.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Exhaustive W8 enumeration on M.pubc only. This is one fixed split and does not close D243-S38-ROW4; transfer over W6/W7/E16..E21 and charged global rate remain OPEN.",
+  "held_fixed": "published non-W8 coordinates and published E-driven values; W8 varied over all G members",
+  "topic": "sha256-38 zoneD38 residual row4"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D540-SHA3-R6-S6F-REDUCED-CAMPAIGN-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6f prefile and four supplied reduced campaign requests",
+  "question": "What is verified for pkgS6f on its reduced and filter8 campaign requests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6f prefile passes all checks except fes_campaign.py known-good registry entry; exact N=9477295610158093305909371588499261591706, time_log2=122.13256 (ledger 122.13255960). Four 256-trial requests complete with zero key mismatches/matches: reduced 0 pairs, within16 224, cross16 165, filter8 256; within/cross counts 513/131526/500 and 485/130615/519; filter8 survivors8=521 and pairs8_survivors=533; fixed fes_ops=845059, chi_transpose_ops=4772232, table_ops=786432, verify_check_ops=2758, in_range_mismatches=0.",
+  "source": "our workflow: D540 read-only pkgS6f reduced-campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D540_s6f_audit.md; research/tools/build_pkg/scratch/pkgS6f/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6f/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6f/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6f/work/req/req_fes-campaign-reduced.json; research/tools/build_pkg/scratch/pkgS6f/work/req/req_hcoset-within16.json; research/tools/build_pkg/scratch/pkgS6f/work/req/req_hcoset-cross16.json; research/tools/build_pkg/scratch/pkgS6f/work/req/req_hcoset-filter8.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Reduced-width finite mechanics only; no score or premise credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS6f package bytes and supplied request specifications as found; one process; no file writes",
+  "reopen_if": "known-good registry update or owner/organizer acceptance ruling arrives"
+}

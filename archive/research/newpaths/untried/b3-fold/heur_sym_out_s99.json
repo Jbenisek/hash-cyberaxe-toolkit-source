@@ -1,0 +1,85 @@
+{
+ "H1": {
+  "M": 262144,
+  "mean_hd_R": 63.82225036621094,
+  "sd_hd_R": 5.851911776275918,
+  "min_hd_R": 36,
+  "frac_hd_le_48": 0.00434112548828125,
+  "frac_hd_le_32": 0.0,
+  "mean_hd_w4p": 15.986915588378906,
+  "mean_hd_w6p": 15.843734741210938,
+  "per_free_word_mean_hd": [
+   63.870149562340615,
+   63.84272875816993,
+   63.87945723119203,
+   63.811387900355875,
+   63.82408618434639,
+   63.84949432827661,
+   63.80808321964529,
+   63.739103362391035,
+   63.77475230374836
+  ],
+  "per_free_word_min_hd": [
+   39,
+   40,
+   43,
+   41,
+   42,
+   42,
+   38,
+   40,
+   36
+  ],
+  "mean_hw_R": 63.49364471435547
+ },
+ "H2": {
+  "starts": 1024,
+  "steps": 20,
+  "evals_per_start": 5760,
+  "greedy_final_hw_mean": 45.0986328125,
+  "greedy_final_hw_min": 36,
+  "greedy_start_hw_mean": 63.2978515625,
+  "greedy_mean_improving_steps": 1.5673828125,
+  "random_min_hw_mean": 41.7978515625,
+  "random_min_hw_min": 32
+ },
+ "S1": {
+  "E0": [
+   "a->E2.c",
+   "b->E2.d",
+   "c->E2.a",
+   "d->E2.b"
+  ],
+  "E1": [
+   "a->E3.c",
+   "b->E3.d",
+   "c->E3.a",
+   "d->E3.b"
+  ],
+  "E2": [
+   "a->E0.c",
+   "b->E0.d",
+   "c->E0.a",
+   "d->E0.b"
+  ],
+  "E3": [
+   "a->E1.c",
+   "b->E1.d",
+   "c->E1.a",
+   "d->E1.b"
+  ]
+ },
+ "S2": {
+  "n": 1048576,
+  "frac_equal_bits": 0.49999936670064926,
+  "words_equal_total": 0,
+  "frac_equal_bits_xy0": 0.49997299909591675
+ },
+ "S3": {
+  "n": 4194304,
+  "pairs_with_any_word_swapped": 0,
+  "low8_swap_events_summed_over_4_words": 181,
+  "low8_expected_if_random": 256.0
+ },
+ "seconds": 12.6
+}

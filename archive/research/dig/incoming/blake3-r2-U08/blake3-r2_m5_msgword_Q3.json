@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m5 = w5: degrees of freedom and carries in E1.a2 = a1+b1+w5",
+ "question": "Q3: degrees of freedom here (exact count over carries)",
+ "labels": [
+  "X",
+  "C"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "w5 contributes 32 free bits; inside outcome (beta*, tau 285020a0): s=b1&beta compatible for 16 of 2^11 submasks (2^-7), and for a compatible s exactly 2^25 of the 2^32 values of a2 (hence of w5 given the rest) give tau (pc(tau)=7): 25 free bits remain, P=2^-7; a-side factor 2^-14",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/e1_delta.py; research/dig/incoming/blake3-r2-U08/work/e1_delta_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m5|msgword|Q3. a2 = a1+b1+w5 so w5 is a direct tap on a2 (label X). Carry count is exact for the printed criterion (counts 2^(32-popcount tau) per compatible s) but only the a2 factor of L is covered. Delta shift measured on E1 a2 only (a-side of the L count); b1/c1/eps parts of L and the E3 side are not recomputed."
+}

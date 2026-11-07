@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.SHRINK (MEM)",
+ "question": "M1: bytes held by the smaller-memory variants at r=2",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "No r=2 variant built. Components: streamed shift saves F-type vector 6,249,984 B (0.2390 bit); in-place Euclid targets the 3,117,472 B by which the gcd stage exceeds the power stage (0.1143 bit); tableless NTT 2,097,152 B (0.0759 bit). All three together would reach about 29,469,563 B = 2^24.813, a gain of 0.474 bit if free.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r1_mem/",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.SHRINK|MEM|M1. Arithmetic on the item table; time costs unknown (MEM.SHRINK M3).",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "any of the three is built and counted"
+}

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.LDST loads and stores",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "with a 32-word register block (5 radix-2 stages per pass instead of 4) a 15-stage transform takes 3 passes instead of 4: ld+st+addr (9.32e9 ops) x 3/4 saves 2.33e9 = 0.0330 bit (estimate)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Estimate from pass counts; the 16-word register file is the model assumption of the filed proof and is not mine to enlarge. | universe cell poseidon-r1|MACHINE.LDST|MACHINE|Q3",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops, 16-word register file",
+ "reopen_if": "a judge-accepted larger register block"
+}

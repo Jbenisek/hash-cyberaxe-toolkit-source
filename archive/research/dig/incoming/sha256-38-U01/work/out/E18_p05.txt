@@ -1,0 +1,28 @@
+model chi38: 38 steps, anchor row 13 (x and y rows 10..13 held), E-driven rows 16..21, lowest conditioned row 6
+  conditions: 47 two-bit/linear (printed), 44 in the attack model; 'except' words: W7
+  free word W6 (late): W6 rand late
+  free word W7 (late): W7 fset s0 03bff800 late
+  free word W8 (late): W8 cell late
+  relaxation E19coset
+  relaxation W23free
+WINDOW rows 22..37 event=out np 4096 m 256 mt2 1024 mw 256 mt 8192 threads 3 prefix-conditions cells
+-- seed 9301
+  init: 4096 particles, acceptance 1.000000 (rows 14..15)
+  E16 set under the prefix conditions: 32 values (enumerated 2^22 candidates)
+  stage 16 (E-driven, list of 32): accepted 1048576 of 1048576, log2 est -27.0000
+  stage 17 (E-driven): forced  8 bits, accepted 2058 of 1048576, log2 est -43.9930
+  stage 18 (E-driven): forced 11 bits, accepted 65392 of 1048576, log2 est -58.9961
+  stage 19: dead
+  seed 9301: no samples
+-- seed 9302
+  init: 4096 particles, acceptance 1.000000 (rows 14..15)
+  stage 16 (E-driven, list of 32): accepted 1048576 of 1048576, log2 est -27.0000
+  stage 17 (E-driven): forced  8 bits, accepted 1932 of 1048576, log2 est -44.0841
+  stage 18 (E-driven): forced 11 bits, accepted 65568 of 1048576, log2 est -59.0834
+  stage 19: dead
+  seed 9302: no samples
+== pooled over 2 seeds: samples 0
+   cells          0 (with exact 0)
+   EXACT          0
+   EXACT/cells pooled -nan ; per-seed mean -nan, seed-to-seed sd 0.00000, 95% of the mean +- nan
+exit 0

@@ -1,0 +1,7 @@
+within-group covariance of (K1 bit, K3 bit) per group: mean over groups with group-level SE; by context half and by context
+  R3 bit 20 contexts 0-7: mean -0.0425  group SD 0.3213  SE 0.0284  t -1.5
+  R3 bit 20 contexts 8-15: mean -0.0241  group SD 0.3298  SE 0.0292  t -0.8
+    per-context means: -0.027 -0.087 -0.137 -0.039 +0.058 -0.064 -0.031 -0.015 +0.061 -0.050 -0.043 -0.089 +0.118 -0.007 -0.029 -0.155  | t over 16 contexts -1.9
+  R6 bit 13 contexts 0-7: mean +0.0203  group SD 0.2148  SE 0.0190  t 1.1
+  R6 bit 13 contexts 8-15: mean +0.0336  group SD 0.2214  SE 0.0196  t 1.7
+    per-context means: -0.041 +0.045 -0.032 -0.005 +0.042 +0.064 +0.054 +0.035 +0.043 +0.022 -0.023 +0.078 +0.102 +0.055 -0.020 +0.013  | t over 16 contexts 2.6

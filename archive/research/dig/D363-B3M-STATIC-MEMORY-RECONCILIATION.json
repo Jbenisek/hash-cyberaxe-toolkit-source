@@ -1,0 +1,22 @@
+{
+  "id": "D363-B3M-STATIC-MEMORY-RECONCILIATION",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M static table and search-memory bound",
+  "question": "Do the proof's fixed table, replica, code, and auxiliary-data counts reconcile to the declared 6,013,036,259,648-byte search peak?",
+  "labels": ["N", "D", "S", "I"],
+  "status": "COMPUTED",
+  "number": "Large tables sum to 183,609,851,904 256-bit words = 5,875,515,260,928 B; auxiliary data are <82,045,248 B and code <137,438,953,472 B, giving the exact integer upper sum 6,013,036,259,648 B (<2^42.45124). Output is separately bounded by 8,796,093,155,510 B, so the 43.00001 row is consistent if phases are not co-live.",
+  "source": "our read-only arithmetic reconciliation of the shipped proof",
+  "own_test": true,
+  "evidence": "research/sol_answer_D363_b3m_static_memory_reconciliation.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/proof.md §§11-12",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Closes only static table-size arithmetic. Organizer output-sink liveness, allocator accounting, and release semantics remain the D339 ruling; no score or memory credit is transferred.",
+  "held_fixed": "Proof's 32-byte machine word, six lane replicas, PXF'/rotation/BT counts, auxiliary-data bound, and phase separation",
+  "reopen_if": "Organizer rules on streamed output, allocator/code liveness, or a byte-identified implementation changes the declared layout",
+  "peak_mem": "search <6013036259648 B; output <8796093155510 B"
+}

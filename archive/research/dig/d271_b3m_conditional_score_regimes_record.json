@@ -1,0 +1,21 @@
+{
+  "id": "D271-B3M-CONDITIONAL-SCORE-REGIMES",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M shipped versus streamed and replica-free score regimes",
+  "question": "Which B3M scores are unconditional, and which require the streamed-output and replica-free premises?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Ledger regime audit: shipped RELEASE T=62.43471, output peak log2=23.00001, S=85.43472. Conditional STREAM S=84.88594. Conditional STREAM plus all three replica cuts T=62.49209, search peak log2=21.18987, S=83.68196; conservative code-x2 bound S=83.75892. No conditional row receives filing credit.",
+  "source": "our workflow: D271 B3M conditional score-regime audit",
+  "evidence": "research/sol_answer_D271_b3m_conditional_score_regimes.md; research/dig/d248_b3_replica_record.json; research/sol_answer_D267_b3m_one_message_source.md; research/sol_answer_D268_b3m_output_protocol_audit.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/proof.md",
+  "date": "2026-10-13",
+  "own_test": true,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Read-only arithmetic consolidation. The one-message source KAT and replica ledger do not change the shipped protocol or establish an organizer memory ruling. No package, staging, submission, or process change.",
+  "held_fixed": "pkgB3S2 ledger constants, 430 reference operations, D248 replica counts, D267/D268 protocol findings",
+  "reopen_if": "Organizer accepts streamed/incremental output or a production lossless replica-free rewrite supplies an exact charged ledger"
+}

@@ -1,0 +1,31 @@
+system outhalf_kmsg.sys: N=78 E=76 F=2  rho(all,{})=0  covered words=78
+group D1    |eqs|=8  inner width 2  list 2
+group D2    |eqs|=8  inner width 2  list 2
+group D3    |eqs|=8  inner width 2  list 2
+group C0    |eqs|=8  inner width 3  list 3
+group C1    |eqs|=8  inner width 4  list 4
+group C2    |eqs|=8  inner width 3  list 3
+group C3    |eqs|=8  inner width 4  list 4
+group E0    |eqs|=8  inner width 5  list 5
+group E2    |eqs|=8  inner width 5  list 5
+group out   |eqs|=4  inner width 4  list 4
+EXACT brick-level optimum (10 groups): width 6
+JOIN J=2 list=0 : D1 D2 D3 C0 C1 C2 C3 E0 E2 out
+  JOIN J=5 list=5 : D1 D3 C0 C1 C2 C3 E0 E2 out
+    JOIN J=6 list=6 : D1 D3 C1 C2 C3 E0 E2 out
+      JOIN J=6 list=6 : D1 D3 C1 C2 E0 E2 out
+        JOIN J=6 list=6 : E0 E2 out
+          JOIN J=5 list=5 : E2 out
+            [out] inner 4
+            [E2] inner 5
+          [E0] inner 5
+        JOIN J=6 list=6 : D1 D3 C1 C2
+          JOIN J=6 list=6 : D1 C1 C2
+            JOIN J=4 list=4 : D1 C2
+              [C2] inner 3
+              [D1] inner 2
+            [C1] inner 4
+          [D3] inner 2
+      [C3] inner 4
+    [C0] inner 3
+  [D2] inner 2

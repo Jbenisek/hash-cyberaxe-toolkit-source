@@ -1,0 +1,5 @@
+class size 2^17; outer steps 20, middle steps per outer 8, members per step 256
+  Y9: distinct per middle step min 254 mean 255.7 of 256; per outer step min 2032 mean 2045.6 of 2048
+  w8: distinct per middle step min 254 mean 255.7 of 256; per outer step min 2032 mean 2045.6 of 2048
+  E: distinct per middle step min 254 mean 255.7 of 256; per outer step min 2032 mean 2045.6 of 2048
+  member held, X2 varied (256): distinct (Y9,w8) 256; X2 held, member varied (256): distinct 256

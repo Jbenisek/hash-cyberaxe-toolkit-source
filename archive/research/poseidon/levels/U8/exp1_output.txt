@@ -1,0 +1,81 @@
+smallest quadratic non-residue z = 5
+ORDER 2: -1 = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000000
+ORDER 2^2 (2 elements):
+    0x9423384f0d74a20ce8bb048dcd97d6222ae78c1c3540d2ab8e53c6467324926
+    0x36bdcc7b0f28b5df31744fb72326829dff98203a45f8ebf0e047f48898cdb6db
+ORDER 2^3 (4 elements):
+    0x70e339f39258d62d9cfeedc219a1265b0a9daaed5ad56f7c18299e8f753a53
+    0x28c44eab3b34e97394eaa8c25744fba55a775171d92b0fe098a524e6b9c52d1
+    0x3d73bb154c4cb168c6b15573da8bb045cc9f23e4ebba481d8fa2de9e9463ad30
+    0x3f8f1cc60c6da729d26301123de65ed9c73bfb511bf223ac1d15074e708ac5ae
+ORDER 2^4 (8 elements):
+    0x175af5850c48b5312811458ce6b91ca32d6cfe591513b4e62e362a21d6f8f15
+    0x4c91781ddd6cdc625e01428223d2df8327d16ad2328761aa9f1e6c1c384b800
+    0x17e6c570737897f385e789dcbc7a09bd4f82ab3e1182aecd80ec9d0beefa6c6d
+    0x1ff2863fd35bfc59e51f3693bf37e2d841d1b5fbed4138f755a638bec8750abd
+    0x200d79c02ca403a61ae0c96c40c81d27e074e3001c0bc0244386f82e378af544
+    0x28193a8f8c87680c7a1876234385f642d2c3edbdf7ca4a4e184093e111059394
+    0x3b36e87e22293239da1febd7ddc2d207efc9824ee6248300ef3b4a2b3c7b4801
+    0x3e8a50a7af3b74aced7eeba731946e35ef6fc91677fbbdcd3649ce4ae29070ec
+ORDER 2^5 (16 elements):
+    (listed in tower.json)
+i^2=-1 for both order-4 elements: True
+sqrt(2) = 0x2fd2824a745a76d66eba979e78df0e0b0b212c20aed866d85a27becfb118d24 = (1+i)/zeta8, zeta8 = 0x28c44eab3b34e97394eaa8c25744fba55a775171d92b0fe098a524e6b9c52d1 i = 0x9423384f0d74a20ce8bb048dcd97d6222ae78c1c3540d2ab8e53c6467324926
+2-depth (c is a 2^d-th power, max d, cap 32): i: 30  -1: 31  zeta8: 29  zeta16: 28  zeta2^32: 0  2: 2  3: 3  5: 0  7: 0
+omega (cube root of 1) = 0x2d33357cb532458ed3552a23a8554e5005270d29d19fc7d27b7fd22f0201b547 ; omega^2 = 0x12ccca834acdba712caad5dc57aab1b01d1f8bd237ad31491dad5ebdfdfe4ab9
+
+CAUCHY gauge x0=0: x = ['0x0', '0x3b959c880a97b198c023dd469213c42fe7143ea2a76535542eede466de4024be', '0x3b3028510f30238929d1ab69b00fed3d07cc86bdc2ad684504ec9b3f44bca846']  y = ['0x6e655e8f74d3b4e3609aab228fe86bcb3b489640777939665409e1683bc9d8e', '0x18d573a014940ab00f5258ba9fd95e1dacdbce898d6d26059713ebb8e43b1173', '0xf728c0677680084433923b9b639d9ab026a60e5bd9678aec8cf82aadb6ee035']
+name | 2-depth | quartic exp e (c^((p-1)/4)=i^e) | octic exp (zeta8^e) | cube class | Legendre
+M00       d2= 0  q4=1  q8=7  cub=1  leg=-
+M01       d2= 0  q4=1  q8=3  cub=0  leg=-
+M02       d2= 1  q4=2  q8=2  cub=2  leg=+
+M10       d2= 0  q4=1  q8=7  cub=2  leg=-
+M11       d2= 3  q4=0  q8=0  cub=0  leg=+
+M12       d2= 8  q4=0  q8=0  cub=1  leg=+
+M20       d2= 1  q4=2  q8=6  cub=2  leg=+
+M21       d2= 0  q4=3  q8=1  cub=2  leg=-
+M22       d2= 2  q4=0  q8=4  cub=2  leg=+
+detM      d2= 0  q4=3  q8=5  cub=2  leg=-
+x1-x0     d2= 0  q4=3  q8=1  cub=2  leg=-
+x2-x0     d2= 1  q4=2  q8=6  cub=0  leg=+
+x2-x1     d2= 5  q4=0  q8=0  cub=0  leg=+
+y1-y0     d2= 0  q4=3  q8=5  cub=0  leg=-
+y2-y0     d2= 0  q4=3  q8=5  cub=0  leg=-
+y2-y1     d2= 1  q4=2  q8=6  cub=0  leg=+
+N00=1/M   d2= 0  q4=3  q8=1  cub=2  leg=-
+N01=1/M   d2= 0  q4=3  q8=5  cub=0  leg=-
+N02=1/M   d2= 1  q4=2  q8=6  cub=1  leg=+
+N10=1/M   d2= 0  q4=3  q8=1  cub=1  leg=-
+N11=1/M   d2= 3  q4=0  q8=0  cub=0  leg=+
+N12=1/M   d2= 8  q4=0  q8=0  cub=2  leg=+
+N20=1/M   d2= 1  q4=2  q8=2  cub=1  leg=+
+N21=1/M   d2= 0  q4=1  q8=7  cub=1  leg=-
+N22=1/M   d2= 2  q4=0  q8=4  cub=1  leg=+
+Cauchy det formula prod(dx)prod(dy)/prod(x_i+y_j) == det M: False (prod(x_i+y_j)=prod N, so det = prod dx prod dy * prod(M_ij))
+
+constants (192): 2-depth histogram [(0, 102), (1, 45), (2, 23), (3, 12), (4, 6), (5, 3), (6, 1)] ; expected 192/2^(d+1): [96.0, 48.0, 24.0, 12.0, 6.0, 3.0, 1.5, 0.8]
+quartic exps [(0, 45), (1, 44), (2, 45), (3, 58)] (expected 48 each)
+octic exps [(0, 22), (1, 28), (2, 15), (3, 27), (4, 23), (5, 30), (6, 30), (7, 17)] (expected 24 each)
+cube classes [(0, 72), (1, 63), (2, 57)] (expected 64 each)
+Legendre grid (1=residue, lanes 0,1,2) rows R0-5,R60-63: ['111', '001', '000', '110', '000', '001', '110', '010', '001', '010']
+residues per lane over 64 rounds: [28, 34, 28] (expected 32 each)
+residues in the 10 used rows (30 values): 12 (expected 15)
+rows with all three lanes same Legendre: 17 of 64 (expected 16)
+adjacent-round same-Legendre lane-wise: 99 of 189 (expected 94.5)
+S-box x^5: quadratic and quartic character preserved on 2000 random x (asserted); octic exponent e -> 5e mod 8 on 2000 of 2000
+
+x^5-c over F_p, 300 random c != 0: factor degree patterns {((1, 1), (4, 1)): 300}
+x^5-c for the 192 round constants c: {((1, 1), (4, 1)): 192}
+x^5-1 factor degrees: [1, 4]
+p mod 5 = 2 ; ord_5(p) = 4 ; (p^2+1) mod 5 = 0  => zeta5 in F_{p^4}, not in F_{p^2}
+Legendre(5/p) = -1 (Q(sqrt5) inside Q(zeta5) is inert at p iff 5 is a non-residue)
+Phi5 irreducible over F_p: True
+
+smallest a>=2 with x^3-a irreducible over F_p: a = 2
+theta^p = theta*a^((p-1)/3) = theta * 0x2d33357cb532458ed3552a23a8554e5005270d29d19fc7d27b7fd22f0201b547 = omega
+x^p mod (x^3-a) = ['0x2d33357cb532458ed3552a23a8554e5005270d29d19fc7d27b7fd22f0201b547', '0x0']
+charpoly(M) = x^3 - T x^2 + S x - D irreducible: True
+in F_p[x]/charpoly(M): x^p = ['0xa5df257584b7c4711f67d9ac67b28b867de93b3320698dab54eba905c0f521', '0x2c13efacb01aedd793daf852bd3f94b19d9b7fb6153d434b22222c16c71ecf97', '0x37a74b12d391164eb1233c5cac9b0c0f7068a09135fcb2d4d13bfb5685d2643'] 
+    x^(p^2) = ['0x3f5a20da8a7b483b8ee0982653984d749bc8afc0d62c8f8dedd84543fa3f0ae0', '0x13ec10534fe512286c2507ad42c06b4e84ab1945f40fb5d0770b04d638e13069', '0x28fdb6694a18b897ce0a9c3761b5e64a6d09e03c422e240aa184380ba470ce3e']
+x^(p^3) = x: True
+det M cube class: 2 ; det M 2-depth 0

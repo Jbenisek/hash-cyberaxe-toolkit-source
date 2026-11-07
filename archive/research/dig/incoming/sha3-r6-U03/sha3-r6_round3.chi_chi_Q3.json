@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "1-indexed round 4 chi + theta5-at-store (leader 'round-4 cone', 46.11 ops/message, 1363 of 1600 words)",
+ "question": "How many bits of freedom (log2) are left through the round-4 cone?",
+ "labels": [
+  "N",
+  "I"
+ ],
+ "status": "SAMPLED",
+ "number": "32.0 bits per group survive into the 1363-word cone and into the 140-bit key (2^18 sample: 262,137 distinct z -> 262,137 distinct 1363-bit cone images and 262,137 distinct keys); key space 140 bits vs 128 needed = 12 bits slack; across the 768-bit family the key is the bottleneck at 140",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/sha3-r6-U03/work/ (kk.py validated 24r vs hashlib and 6r vs organizer verifier; cone.py, fam.py, fp.py, q.py; cone.json, footprint.json, q_results.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell round3.chi|Q3. Family = leader's 128-byte prefix family rebuilt by us (L8=0, L5=L15=D0, C2=NOT rotl(C4,1); z XORed into lanes 4 and 14): A2 affine in z checked 30x256, z-flip support 22 words (matches Lemma 3). Round 4 is a bijection, so its output keeps all 32 bits exactly; the 1363-word projection and the 140-bit key are lossy in principle but showed no collision in 2^18 samples (expected random-collision count about 0). Sample only; no exhaustive 2^32 check.",
+ "topic": "sha3r6 round3.chi Q3"
+}

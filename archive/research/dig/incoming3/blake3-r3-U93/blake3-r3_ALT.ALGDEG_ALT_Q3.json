@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "algebraic degree: best word and bit placement for a 12-bit cube",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "12-bit cube, 4 bases (chance level 16 always-zero bits of 256): rounds 2 and 3, low or top bits, words m8..m15: counts 9 to 24, no word or placement stands out",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_deg.py; research/blake3_r3/alt/exp_deg.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Chance-level spread; a word with a count far above 16 would have been a lead.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "a word/placement with a count above 60 at 3 rounds",
+ "topic": "blake3-r3|ALT.ALGDEG|ALT|Q3"
+}

@@ -1,0 +1,241 @@
+--- ./research/pkg4/check_pkg4.py	2026-10-06 05:18:21.102973900 -0600
++++ ./research/pkg5/check_pkg5.py	2026-10-06 08:16:42.848547900 -0600
+@@ -1,16 +1,18 @@
+ #!/usr/bin/env python3
+-"""Numerical check of the fourth blake3-r2 package (new constants, new class). Research helper, not submitted.
++"""Numerical check of the fifth blake3-r2 package (new constants, new class, two-stage batch). Research helper, not submitted.
+ 
+-Part (a) writes the formulas of pkg4 proof.md (step S1, Section 6.1) a second time, straight from the
++Part (a) writes the formulas of pkg5 proof.md (step S1, Section 6.1) a second time, straight from the
+ text, and compares them on random trials with a plain forward 2-round BLAKE3 compression that is also
+ written here. Nothing of the package's experiment program is used in part (a). The six constants and eta
+-are taken from tools/pkg4_data.py, the one place that holds them; everything else is computed here, and the
+-constants that the rendered proof prints (Fact P, Lemma Q) are read back from proof.md and compared.
++are taken from tools/pkg5_data.py, the one place that holds them, and so are the conditions of rule A; everything
++else is computed here, and the constants that the rendered proof prints (Fact P, Lemma Q, Lemma A) are read back from
++proof.md and compared. Lemma N and Lemma A are checked on every random trial against the forward compression, and
++the solution that violates rule A, which Section 10 prints, is evaluated with the G of this script.
+ 
+-Part (b) runs pkg4/blake3-r2/experiments/halfsearch.py through its stdin/stdout contract and checks
++Part (b) runs pkg5/blake3-r2/experiments/halfsearch.py through its stdin/stdout contract and checks
+ the returned message pairs with the same forward compression.
+ 
+-    python -B check_pkg4.py [trials, default 20000] [experiment trials, default 256]
++    python -B check_pkg5.py [trials, default 20000] [experiment trials, default 256]
+ 
+ Exit status 0 only if every check holds.
+ """
+@@ -29,13 +31,13 @@
+ MANIFEST = HERE / "blake3-r2" / "experiments" / "manifest.json"
+ PROOF = HERE / "blake3-r2" / "proof.md"
+ sys.path.insert(0, str(HERE / "tools"))
+-import pkg4_data  # noqa: E402  (only PIN, ETA and LOG2_X12 are taken from it)
++import pkg5_data  # noqa: E402  (only PIN, ETA, LOG2_X12, RULE_A and, for part (b), the stage counts are taken from it)
+ 
+ M32 = 0xFFFFFFFF
+ IV = (0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A, 0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19)
+ PERM = (2, 6, 3, 10, 7, 0, 4, 13, 1, 11, 12, 5, 9, 14, 15, 8)
+-X3, X7, X11, X15, W4, W13 = (pkg4_data.PIN[k] for k in ("X3", "X7", "X11", "X15", "W4", "W13"))
+-ETA = pkg4_data.ETA
++X3, X7, X11, X15, W4, W13 = (pkg5_data.PIN[k] for k in ("X3", "X7", "X11", "X15", "W4", "W13"))
++ETA = pkg5_data.ETA
+ ETA_HEX = f"{ETA:08x}"
+ FAILS = []
+ 
+@@ -100,6 +102,11 @@
+     return a1, d1, c1, b1, a2, d2, c2, b2
+ 
+ 
++def qa_steps(a, b, c, d, y):
++    """The second value (first-half d) of a G call with first word 0: used for h1 of E3."""
++    return g_steps(a, b, c, d, 0, y)[1]
++
++
+ def col(j, sb, sc, d0):
+     b1 = rol(sb, 7) ^ sc; c1 = rol(b1, 12) ^ IV[4 + j]; sd = (sc - c1) & M32
+     d1 = (c1 - IV[j]) & M32; a1 = rol(d1, 16) ^ d0
+@@ -146,8 +153,36 @@
+ 
+ CMASK, CVALUE = class_of_eta()
+ CFREE = [i for i in range(32) if not CMASK >> i & 1]
++RULE = pkg5_data.RULE_A[ETA]
++
++
++def rule_on_h1(h1):
++    """Rule A as proof.md 6.3 states it: for every condition, the XOR of the named bits of h1 has the stated value."""
++    return all(bin(h1 & mask).count("1") & 1 == value for mask, value in RULE)
++
++
++def rule_on_z():
++    """Lemma A (b), (c), derived here: [(bits of z, wanted XOR)] and the constants S, ALL, V."""
++    conditions, s, everything, v = [], 0, 0, 0
++    for mask, value in RULE:
++        hbits = [i for i in range(32) if mask >> i & 1]
++        for i in hbits:                                # bit i of h1 = bit (i + 24) of z XOR bit (i + 16) of e1
++            e = (i + 16) % 32
++            assert CMASK >> e & 1, "rule A meets a free bit of e1"
++            value ^= CVALUE >> e & 1
++        zbits = sorted((i + 24) % 32 for i in hbits)
++        conditions.append((zbits, value))
++        assert len(zbits) == 1 or (len(zbits) == 2 and zbits[1] == zbits[0] + 1)
++        if len(zbits) == 2:
++            s |= 1 << zbits[0]
++        everything |= 1 << zbits[0]
++        v |= value << zbits[0]
++    return conditions, s, everything, v
++
++
++Z_CONDITIONS, A_S, A_ALL, A_V = rule_on_z()
+ # the ranges of the algorithm (6.4): 2^(127 - F) trials = contexts * 2^32 alphas * members; X12 and X14 as stated
+-X13_BITS = 127 - pkg4_data.LOG2_FACTOR - 32 - len(CFREE) - pkg4_data.LOG2_X12 - 32
++X13_BITS = 127 - pkg5_data.LOG2_FACTOR - 32 - len(CFREE) - pkg5_data.LOG2_X12 - 32
+ 
+ 
+ def member(k):
+@@ -269,6 +304,15 @@
+         "Lemma Q proof: x and m": f"Put x = ROL(eta,16) = {hx(rol(ETA, 16))} and m = x AND 7fffffff = {hx(CMASK)}.",
+         "Lemma Q proof: the sum and its half": f"{hx(s)} >> 1 = {hx(s >> 1)}.",
+         "eta": f"Fix eta = {ETA_HEX}.",
++        "Lemma A (c): the constants S, ALL and V": f"Put S = {hx(A_S)}, ALL = {hx(A_ALL)} and V = {hx(A_V)}.",
++        "Lemma A (b): the conditions on z": " ".join(
++            (f"bit {zb[0]} of z is {v}" if len(zb) == 1 else f"bits {zb[0]} and {zb[1]} of z {'differ' if v else 'are equal'}")
++            + (";" if n + 1 < len(Z_CONDITIONS) else ".") for n, (zb, v) in enumerate(Z_CONDITIONS)),
++        "rule A as stated on h1": " ".join(
++            (f"bit {hb[0]} of h1 is {v}" if len(hb) == 1 else f"bits {hb[0]} and {hb[1]} of h1 {'differ' if v else 'are equal'}")
++            + (";" if n + 1 < len(RULE) else ".")
++            for n, (hb, v) in enumerate(sorted((([i for i in range(32) if m >> i & 1], v) for m, v in RULE),
++                                               key=lambda c: (len(c[0]) != 1, c[1], c[0])))),
+         "the member count": f"It has {size:,} members: the {len(CFREE)} bits",
+     }
+     flat = re.sub(r"\s+", " ", proof)
+@@ -277,7 +321,7 @@
+     # The solution of the seven-word system that Section 10 prints inside the class, evaluated with the G of this
+     # script: E1 = G(Y1, Y6, Y11, Y12; w12, w5) and E3 = G(Y3, Y4, Y9, Y14; 0, w8) for A, and for B with Y11', Y3'
+     # and w5 + (W4 - W4'). Digest words 1, 3, 4, 6 are E1.a ^ E3.c, E3.a ^ E1.c, E3.b ^ E1.d, E1.b ^ E3.d.
+-    sol = re.search(r"A complete solution of the seven-word system with Y4 in the class.{0,80}?Y1 = ([0-9a-f]{8}), Y6 = "
++    sol = re.search(r"A complete solution of the seven-word system with Y4 in the class, which.{0,80}?Y1 = ([0-9a-f]{8}), Y6 = "
+                     r"([0-9a-f]{8}), Y12 = ([0-9a-f]{8}), w12 = ([0-9a-f]{8}), w5 = ([0-9a-f]{8}), Y4 = ([0-9a-f]{8}), Y9 = "
+                     r"([0-9a-f]{8}), Y14 = ([0-9a-f]{8}), w15 = 0, w8 = ([0-9a-f]{8})\. .{0,200}?beta = ([0-9a-f]{8}), and the XOR "
+                     r"differences of its a and c outputs are tau = ([0-9a-f]{8}) and eps = ([0-9a-f]{8})", flat)
+@@ -298,6 +342,26 @@
+         t.check("the outcome of the printed solution is a row of the table of outcomes", row is not None)
+     else:
+         print("    (no solution inside the class is printed in Section 10)")
++    # The solution that violates rule A, printed in Section 10, evaluated with the G of this script.
++    bad = re.search(r"A complete solution of the seven-word system with Y4 in the class that violates rule A.{0,80}?Y1 = "
++                    r"([0-9a-f]{8}), Y6 = ([0-9a-f]{8}), Y12 = ([0-9a-f]{8}), w12 = ([0-9a-f]{8}), w5 = ([0-9a-f]{8}), Y4 = "
++                    r"([0-9a-f]{8}), Y9 = ([0-9a-f]{8}), Y14 = ([0-9a-f]{8}), w15 = 0, w8 = ([0-9a-f]{8})\. .{0,120}?h1 = ([0-9a-f]{8}) "
++                    r"does not satisfy rule A.{0,200}?Its outcome is tau = ([0-9a-f]{8}), eps = ([0-9a-f]{8}) with beta = ([0-9a-f]{8})", flat)
++    if bad:
++        y1, y6, y12, w12, w5, y4, y9, y14, w8, h1_p, tau_p, eps_p, beta_p = (int(v, 16) for v in bad.groups())
++        ea, eb = G(y1, y6, Y11, y12, w12, w5), G(y1, y6, Y11B, y12, w12, (w5 + DELTA) & M32)
++        fa, fb = G(Y3, y4, y9, y14, 0, w8), G(Y3B, y4, y9, y14, 0, w8)
++        t.check("the solution that violates rule A, printed in Section 10: digest words 1, 3, 4, 6 equal for A and B",
++                (ea[0] ^ fa[2], fa[0] ^ ea[2], fa[1] ^ ea[3], ea[1] ^ fa[3]) == (eb[0] ^ fb[2], fb[0] ^ eb[2], fb[1] ^ eb[3], eb[1] ^ fb[3]))
++        h1 = ror(y14 ^ ((Y3 + y4) & M32), 16)
++        t.check("that solution has Y4 in the class, the h1 that the proof prints, and h1 violates rule A",
++                ((Y3 + y4) & M32) & CMASK == CVALUE and eta_of(y4) == ETA and h1 == h1_p and not rule_on_h1(h1))
++        b1a = ror(y6 ^ ((Y11 + ror(y12 ^ ((y1 + y6 + w12) & M32), 16)) & M32), 12)
++        b1b = ror(y6 ^ ((Y11B + ror(y12 ^ ((y1 + y6 + w12) & M32), 16)) & M32), 12)
++        t.check("that solution has the beta, tau and eps that the proof states for it",
++                (b1a ^ b1b, ea[0] ^ eb[0], ea[2] ^ eb[2]) == (beta_p, tau_p, eps_p))
++    else:
++        print("    (no solution that violates rule A is printed in Section 10)")
+     t.check("Fact P: the two executions agree in b and d and differ in a and c",
+             sa[5] == sb[5] and sa[7] == sb[7] and sa[4] != sb[4] and sa[6] != sb[6])
+     t.check("W4 - W4' is +2 or -2 modulo 2^32, and DELTA is the word the proof prints",
+@@ -319,11 +383,12 @@
+     changed_all = 0
+     changed_sets = {}
+     first = None
++    rule_passes = 0
+     for n in range(trials):
+         nine = [rng.getrandbits(32) for _ in range(9)]
+         if n % 16 == 0:                               # a context of the algorithm: X1 = X10 = 0, X12 and X13 in their ranges
+             nine[0] = nine[5] = 0
+-            nine[6] = rng.randrange(1 << pkg4_data.LOG2_X12)
++            nine[6] = rng.randrange(1 << pkg5_data.LOG2_X12)
+             nine[7] = rng.randrange(1 << X13_BITS)
+         alpha = rng.getrandbits(32)
+         k = rng.randrange(size)
+@@ -418,6 +483,21 @@
+         early = f1 ^ f1b ^ tt ^ ror(tt, 1)
+         t.check("Lemma E: residual words 1 and 3 both zero implies a zero early-test word (vacuous unless that occurs)",
+                 not (R[0] == 0 and R[2] == 0) or early == 0)
++        # Lemma N: n = eps XOR ROL(beta XOR eps, 1) XOR eta from E1 alone equals D3 XOR ROL(D6, 8) of the two digests
++        beta, eps = b1 ^ b1b, pa[2] ^ pb[2]
++        word_n = eps ^ rol(beta ^ eps, 1) ^ ETA
++        t.check("Lemma N: n from E1 alone equals D3 XOR ROL(D6, 8) of the two complete digests",
++                word_n == (da[3] ^ db[3]) ^ rol(da[6] ^ db[6], 8) == R[1] ^ rol(R[3], 8))
++        # Lemma A: z = a2 XOR d1 of C2 = G(X2, X6, X10, X14; w7, w0), evaluated forwards on the trial's state and words
++        c2s = g_steps(X_t[2], X_t[6], X_t[10], X_t[14], words[7], words[0])
++        z = c2s[4] ^ c2s[1]
++        t.check("Lemma A (a): Y14 = ROR(z, 8) and ROL(h1, 24) = z XOR ROL(e1, 8)",
++                Y_t[14] == ror(z, 8) == c2s[5] and rol(h1, 24) == z ^ rol(e1, 8) and h1 == qa_steps(Y3, y4, y9, y14, w8))
++        on_h1 = rule_on_h1(h1)
++        on_z = all((sum(z >> b & 1 for b in zb) & 1) == v for zb, v in Z_CONDITIONS)
++        t.check("Lemma A (b), (c): rule A on h1, the conditions on z and the zero word of (c) say the same",
++                on_h1 == on_z == ((((z ^ ((z >> 1) & A_S)) & A_ALL) ^ A_V) == 0))
++        rule_passes += on_h1
+ 
+         # the trial is the output of step S1 for its own nine words
+         nine_t = [X_t[i] for i in (1, 2, 5, 6, 9, 10, 12, 13, 14)]
+@@ -468,6 +548,7 @@
+ 
+     ok = t.report()
+     print(f"    Y4 values inside the class among the 200000 sampled: {inside}")
++    print(f"    trials that satisfy rule A: {rule_passes} of {trials} (a share of 2^-{len(RULE)} is {trials / 2 ** len(RULE):.1f})")
+     print(f"    trials in which all of w6..w11, w14 differ from the context with the D0 family applied: {changed_all} of {trials}")
+     for s, c in sorted(changed_sets.items(), key=lambda kv: -kv[1])[:4]:
+         print(f"      changed words {sorted(s)}: {c} trials")
+@@ -480,7 +561,7 @@
+ 
+ 
+ def part_b(count, ref):
+-    print(f"(b) {PROGRAM.name} of pkg4 through its stdin/stdout contract, {count} seeds per experiment")
++    print(f"(b) {PROGRAM.name} of pkg5 through its stdin/stdout contract, {count} seeds per experiment")
+     manifest = json.loads(MANIFEST.read_text())
+     t = Tally()
+     notes = []
+@@ -489,7 +570,7 @@
+         name, event = entry["id"], entry["event"]
+         request = {"schema_version": 1, "experiment_id": name, "target_profile": "blake3-r2-prefix-v1",
+                    "event": event, "max_message_bytes": 4096,
+-                   "trials": [{"trial": i, "seed": hashlib.sha256(b"pkg4-host-%s-%d" % (name.encode(), i)).hexdigest()}
++                   "trials": [{"trial": i, "seed": hashlib.sha256(b"pkg5-host-%s-%d" % (name.encode(), i)).hexdigest()}
+                               for i in range(count)]}
+         payload = json.dumps(request, sort_keys=True, separators=(",", ":")).encode() + b"\n"
+         outs = [subprocess.run([sys.executable, "-B", "-s", str(PROGRAM)], input=payload, capture_output=True, check=True).stdout
+@@ -497,7 +578,7 @@
+         t.check(f"{name}: output byte-identical on a second run", outs[0] == outs[1])
+         result = json.loads(outs[0])
+         mask, expected = int(event["mask_hex"], 16), int(event["expected_hex"], 16)
+-        tries, missing, full, seen = [], 0, 0, set()
++        tries, missing, full, seen, entered = [], 0, 0, set(), 0
+         t.check(f"{name}: one row per requested trial, in order", [r["trial"] for r in result["trials"]] == list(range(count)))
+         for row in result["trials"]:
+             if row["message_a_hex"] is None:
+@@ -525,14 +606,21 @@
+                 t.check(f"{name}: digests equal the organizer reference blake3(m, 2)", ref(A, 2) == digest_a and ref(B, 2) == digest_b)
+             if name == "residual-search":
+                 t.check(f"{name}: low byte of digest word 1 agrees", (da[1] ^ db[1]) & 0xFF == 0)
+-                tries.append(row["observations"]["tries"])
++                obs = row["observations"]
++                tries.append(obs["tries"])
++                t.check(f"{name}: the counted batch reports the stage counts of the data module and 7 right lanes",
++                        (obs["batch_stage_a_operations"], obs["batch_stage_a_loads"], obs["batch_stage_2_operations"],
++                         obs["batch_stage_2_loads"], obs["batch_lanes_right"]) ==
++                        (pkg5_data.STAGE_A_OPS, pkg5_data.STAGE_A_LOADS, pkg5_data.STAGE_2_OPS, pkg5_data.STAGE_2_LOADS, 7))
++                entered += obs["batch_stage_2_entered"]
+             full += da == db
+             seen.add(A)
+         t.check(f"{name}: every seed returned a pair", missing == 0)
+         t.check(f"{name}: all returned messages A are different", len(seen) == count - missing)
+         line = f"    {name}: pairs {count - missing} of {count}, full collisions {full}, {len(outs[0])} bytes of output"
+         if tries:
+-            line += f", members tried: mean {sum(tries) / len(tries):.1f}, max {max(tries)}"
++            line += (f", members tried: mean {sum(tries) / len(tries):.1f}, max {max(tries)}; counted batches in which a lane "
++                     f"satisfies rule A: {entered} of {len(tries)}")
+         notes.append(line)
+     ok = t.report()
+     for line in notes:

@@ -1,0 +1,22 @@
+{
+  "id": "D401-SHA3-R6-DIRECT8-PREDICATE-SCREEN-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "fixed direct-plane eight-bit predicate screen",
+  "question": "Does fixing eight direct pre-chi planes give a viable alternative eight-bit filter with the expected survivor rate and degree?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "One-thread seed-0xD401 screen over 4,096 affine 9-cubes: KAT PASS, rank 8, all 32,768 form/cube cases had nonzero eighth derivatives and zero ninth derivatives; 8,204 survivors in 2,097,152 points, mean 2.0029296875 and range 0..9. Finite evidence only.",
+  "source": "our workflow: bounded direct-plane predicate screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D401_sha3r6_direct8_predicate_screen.md; research/retest/sha3_r6_alt8/direct8.py; research/retest/sha3_r6_alt8/direct8_run.txt; research/tools/build_pkg/scratch/pkgS6K/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.5,
+  "prior": 0.05,
+  "gain_basis": "C",
+  "notes": "Direct eight forms have an arithmetic 12-operation lower bound relative to the filed 44-operation form/source portion, but exact upstream liveness, FES/cache, register, list-kernel, and organizer evidence are missing. No score or package credit.",
+  "reopen_if": "A generated direct-form setup/FES/list route is KAT-clean, fully charged, and passes the required survivor and pair-rate checks."
+}

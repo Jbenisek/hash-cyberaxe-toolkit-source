@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.CTL loop control and branches",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "inner butterfly loop costs 9 ctl per butterfly; butterflies per squaring step = 5 transforms x 3 x 15 x 2^14 + 3 x 3 x 14 x 2^13 = 4718592, x 238 steps = 1123024896 per centre -> 10107224064 ctl = 19.64% of the 51,453,520,952-op centre; unrolling only that loop removes up to 0.316 bit (estimate, other control not itemised)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md research/dig/incoming4/_fresh_run_seed100001.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Butterfly counts from the transform formulas of proof.md section 6 (a = 15, a = 14 rows); the control split by cause is not instrumented, so this is an estimate. The later filing 56ddf2d0 (27.954) may already contain part of it. | universe cell poseidon-r1|MACHINE.CTL|MACHINE|Q3",
+ "held_fixed": "fix program and rules",
+ "reopen_if": "instrument the C source with a per-cause control counter and rebuild with unrolled kernels"
+}

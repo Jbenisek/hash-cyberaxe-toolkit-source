@@ -1,0 +1,1 @@
+2015/095	Rotational Cryptanalysis of ARX Revisited	owner_download	https://eprint.iacr.org/2015/095.pdf

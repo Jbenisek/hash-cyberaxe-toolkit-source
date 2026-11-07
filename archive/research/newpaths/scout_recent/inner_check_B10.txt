@@ -1,0 +1,12 @@
+cone4_E1b1_B10.txt: basis ['C0.d1', 'D2.a1', 'D2.b1', 'E1.d1', 'S11', 'S4', 'X9', 'Y4', 'w6'], inner E1.d1, 300 inner values
+  real-compression mismatches 0; half-collision failures 0; E1.c1 in the T1 cube 300/300
+  words that change with the inner word (17): E1.a1 E1.a2 E1.b1 E1.c1 E1.d1 E3.e2 E3.f1 E3.g1 E3.h1 K0.a1 T0 Y10 Y14 Y2 Y6 w0 w1
+  Y4: fixed
+  Y12: fixed
+  Y1: fixed
+  w12: fixed
+  C2.b1: fixed
+  C2.c1: fixed
+  Y9: fixed
+  w8: fixed
+  w5: fixed

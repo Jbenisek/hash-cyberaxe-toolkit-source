@@ -1,0 +1,40 @@
+verify_separable_1 - skeptic check of the "separable" claim (cost accounting, wiring, 32-bit extrapolation)
+Claim: 7-word basis (fixed) / 15 (outhalf) with 3 checks all join keys, sides >= 3 free words, core <= 1 -> ~2^81;
+       6-word basis with 2 keys -> ~2^65; today 8 words and 0 keys.  Projected exponent 81.
+
+FILES  mysys.py (independent rebuild of the model + numeric check), vs.c (my exhaustive search, stats, random bases
+       with key scan), cost.py (literal accounting), ctrl8.txt (synthetic positive control), *.out / *.log results.
+
+CHECKS THAT HOLD
+ W1 COMPUTED (mysys.log): my own build of the fixed/outhalf systems (no gd_order import) is identical to
+    separable/sys_*_plain.txt (fixed N=100 E=96 F=4; outhalf N=128 E=116 F=12).  All primitive equations hold on 200
+    random messages evaluated at 32 bits; out0,2,5,7 from the E0/E2 words equal a straight 2-round compression.
+ W2 COMPUTED (vs stats 4): max closure of 4 guesses = 25 words; histogram identical to separable stats_fixed_plain_k4.
+ W3 COMPUTED (full7_p*.out, my code, guesses in DECREASING index order, 1.254e10 nodes over 6 parts): no guess set of
+    <= 7 words has full closure in the plain fixed model.  Positive control (pc8.out): the same search restricted to
+    the first pair (80,72) finds the known 8-set 0 21 23 32 34 60 72 80 (24,084 sets for that pair).
+    So the claim's 7-word basis does not exist (plain model; tables/t2 not rechecked by me).
+ W4 COMPUTED (rand_s1.out): 20,000 random minimal bases, smallest 8 (388 sets).  For all 388, every core <= 2 words
+    and every pair of disjoint subsets: join key 0; no proper subset has an internal check.  "0 keys" holds on this
+    independent sample (separable's own evidence is also a sample: 202,676 sets; not exhaustive).
+ W5 COMPUTED (rand_oh_s2.out): outhalf random minimal bases, smallest 16 (670 of 3,000).  Heuristic only.
+ W6 DERIVED: two-list arithmetic is right in the claim's own convention (1 unit per list entry): kX=3 -> lists 2^80,
+    total 2^81.0; kX=2 -> lists 2^64, ~2^65 (2^65.8 if members are charged 1.46 units).
+
+WHAT FAILS
+ F1 COMPUTED (cost.out) literal cost model: a list entry is word ops only (4 guesses, <= 21 solves x 2 ops, 3 keys,
+    hash: 56 ops = 0.13 unit).  kX=3 structure: 2^78.06 (2^78.31 with 2^64.5 members for P(collision)=0.63;
+    2^64 members give only P=0.39).  The claim's 81 is ~3 bits pessimistic.  kX=2: 2^64.8 literal.
+ F2 DERIVED + COMPUTED: "what it would take" is not a necessary condition.  An 8-word basis whose 4 checks are local
+    or layered reaches ~2^65: 3 lists with keys (2,2) -> 2^64.95, 4 lists (1,1,2) -> 2^64.96 (cost.out); separable's
+    own jtree gives cost 65 on a synthetic 8-guess F=4 system with local checks (ctrl8.out).  Separable's ">= 2^97 for
+    |S|=8" covers two lists only.  The real blocker is that the checks are global, shown only on samples.
+ F3 DERIVED: for outhalf, "core <= 1 word" does not follow (|S|=15, sides >= 3 -> core <= 9); minor.
+ F4 No toy run backs the 81 (separable step 3 not run; the structure does not exist).  32-bit extrapolation itself
+    is sound: every primitive equation is a bijection in each unknown at any width, so each check is a full w-bit
+    condition and costs scale as w*(1 + kX/2) + 1.
+
+VERDICT  Partly refuted.  The hypothetical 2-list figure is ~78.3 by the literal model (not 81), and a 7-word basis is
+ not what it would take (layered keys on an 8-word basis would give ~65).  The bottom line stands and is strengthened:
+ no <= 7 basis exists (fixed, exhaustive, independently rechecked) and every sampled 8-basis has 0 keys, so the path
+ gives nothing below generic 2^128 today (in-model best 2^193 per separable jtree).

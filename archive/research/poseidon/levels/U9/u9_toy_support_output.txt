@@ -1,0 +1,108 @@
+toy q=1000003 seed=1 r=2
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.20
+AB R5 : lane0 n=4887498 tri=4887501 missing=3; lane1 n=4887497 tri=4887501 missing=4; lane2 n=4887498 tri=4887501 missing=3  expected missing per lane ~ tri/q = 4.89
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.20
+toy q=1000003 seed=1 r=1
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.20
+AB R60: lane0 n=4887498 tri=4887501 missing=3; lane1 n=4887496 tri=4887501 missing=5; lane2 n=4887499 tri=4887501 missing=2  expected missing per lane ~ tri/q = 4.89
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.20
+toy q=1000003 seed=2 r=2
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196250 tri=196251 missing=1; lane1 n=196250 tri=196251 missing=1; lane2 n=196250 tri=196251 missing=1  expected missing per lane ~ tri/q = 0.20
+AB R5 : lane0 n=4887495 tri=4887501 missing=6; lane1 n=4887494 tri=4887501 missing=7; lane2 n=4887494 tri=4887501 missing=7  expected missing per lane ~ tri/q = 4.89
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.20
+toy q=1000003 seed=2 r=1
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196250 tri=196251 missing=1; lane1 n=196250 tri=196251 missing=1; lane2 n=196250 tri=196251 missing=1  expected missing per lane ~ tri/q = 0.20
+AB R60: lane0 n=4887494 tri=4887501 missing=7; lane1 n=4887499 tri=4887501 missing=2; lane2 n=4887495 tri=4887501 missing=6  expected missing per lane ~ tri/q = 4.89
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.20
+toy q=1000003 seed=3 r=2
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8000 tri=8001 missing=1; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196250 tri=196251 missing=1; lane1 n=196250 tri=196251 missing=1; lane2 n=196250 tri=196251 missing=1  expected missing per lane ~ tri/q = 0.20
+AB R5 : lane0 n=4887497 tri=4887501 missing=4; lane1 n=4887497 tri=4887501 missing=4; lane2 n=4887497 tri=4887501 missing=4  expected missing per lane ~ tri/q = 4.89
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195000, 195001, 0, 1), (195001, 195001, 0, 0)] ; expected missing ~ 0.20
+toy q=1000003 seed=3 r=1
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8000 tri=8001 missing=1; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196250 tri=196251 missing=1; lane1 n=196250 tri=196251 missing=1; lane2 n=196250 tri=196251 missing=1  expected missing per lane ~ tri/q = 0.20
+AB R60: lane0 n=4887498 tri=4887501 missing=3; lane1 n=4887495 tri=4887501 missing=6; lane2 n=4887496 tri=4887501 missing=5  expected missing per lane ~ tri/q = 4.89
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195000, 195001, 0, 1), (195001, 195001, 0, 0)] ; expected missing ~ 0.20
+toy q=786433 seed=1 r=2
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.25
+AB R5 : lane0 n=4887494 tri=4887501 missing=7; lane1 n=4887493 tri=4887501 missing=8; lane2 n=4887494 tri=4887501 missing=7  expected missing per lane ~ tri/q = 6.21
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.25
+toy q=786433 seed=1 r=1
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.25
+AB R60: lane0 n=4887493 tri=4887501 missing=8; lane1 n=4887495 tri=4887501 missing=6; lane2 n=4887491 tri=4887501 missing=10  expected missing per lane ~ tri/q = 6.21
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.25
+toy q=786433 seed=2 r=2
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.25
+AB R5 : lane0 n=4887492 tri=4887501 missing=9; lane1 n=4887492 tri=4887501 missing=9; lane2 n=4887492 tri=4887501 missing=9  expected missing per lane ~ tri/q = 6.21
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195000, 195001, 0, 1), (195001, 195001, 0, 0)] ; expected missing ~ 0.25
+toy q=786433 seed=2 r=1
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.25
+AB R60: lane0 n=4887492 tri=4887501 missing=9; lane1 n=4887496 tri=4887501 missing=5; lane2 n=4887495 tri=4887501 missing=6  expected missing per lane ~ tri/q = 6.21
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195000, 195001, 0, 1), (195001, 195001, 0, 0)] ; expected missing ~ 0.25
+toy q=786433 seed=3 r=2
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.25
+AB R5 : lane0 n=4887495 tri=4887501 missing=6; lane1 n=4887496 tri=4887501 missing=5; lane2 n=4887496 tri=4887501 missing=5  expected missing per lane ~ tri/q = 6.21
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.25
+toy q=786433 seed=3 r=1
+AB R1 : lane0 n=21 tri=21 missing=0; lane1 n=21 tri=21 missing=0; lane2 n=21 tri=21 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R2 : lane0 n=351 tri=351 missing=0; lane1 n=351 tri=351 missing=0; lane2 n=351 tri=351 missing=0  expected missing per lane ~ tri/q = 0.00
+AB R3 : lane0 n=8001 tri=8001 missing=0; lane1 n=8001 tri=8001 missing=0; lane2 n=8001 tri=8001 missing=0  expected missing per lane ~ tri/q = 0.01
+AB R4 : lane0 n=196251 tri=196251 missing=0; lane1 n=196251 tri=196251 missing=0; lane2 n=196251 tri=196251 missing=0  expected missing per lane ~ tri/q = 0.25
+AB R60: lane0 n=4887489 tri=4887501 missing=12; lane1 n=4887495 tri=4887501 missing=6; lane2 n=4887490 tri=4887501 missing=11  expected missing per lane ~ tri/q = 6.21
+nk R1: law N=5 predicted 301; per lane (actual, predicted, outside-law, missing-from-law)=[(301, 301, 0, 0), (301, 301, 0, 0), (301, 301, 0, 0)] ; expected missing ~ 0.00
+nk R2: law N=25 predicted 7751; per lane (actual, predicted, outside-law, missing-from-law)=[(7751, 7751, 0, 0), (7751, 7751, 0, 0), (7751, 7751, 0, 0)] ; expected missing ~ 0.01
+nk R3: law N=125 predicted 195001; per lane (actual, predicted, outside-law, missing-from-law)=[(195001, 195001, 0, 0), (195001, 195001, 0, 0), (195001, 195001, 0, 0)] ; expected missing ~ 0.25

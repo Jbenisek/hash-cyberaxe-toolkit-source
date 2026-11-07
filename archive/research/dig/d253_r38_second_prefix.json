@@ -1,0 +1,22 @@
+{
+  "id": "D253-SHA256-R38-SECOND-PREFIX-GATE-20261013",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 18,
+  "object": "row-16/17/18 gate on a second valid semi-free-start prefix",
+  "question": "Do the exact local row-16/17/18 counts and ablation dispositions repeat on a distinct valid pair?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Second-pair replay: 2^22 row-16 assignments -> 32 complete states; row-17/18 DP and brute both 524288; all 13 DP/brute checks agree. The six W16 omissions have row-17 counts 786432, 1048576, 524288, 1572864, 524288, 1049600 and survive row 18; A/E dispositions match the first prefix.",
+  "source": "our workflow: D253 second-prefix gate recheck",
+  "own_test": true,
+  "evidence": "research/sol_answer_D253_r38-second-prefix.md; row_interactions/row16_gate.c; row_interactions/r38_second_pair_profile.txt; research/grok/work/job115_r38_pair/ANSWER.md",
+  "date": "2026-10-13",
+  "lever": true,
+  "gain_bits": 0.0,
+  "notes": "Distinct CV/message and changed upstream rows, but the row-16 anchor E16/A16/W16 coincides with the published pair. This is local evidence only; universal prefix generality and Table-4 independence remain OPEN.",
+  "potential_bits": 1.0,
+  "prior": 0.3,
+  "gain_basis": "S",
+  "reopen_if": "A family of valid prefixes with genuinely varying row-16 anchors or an algebraic invariance proof"
+}

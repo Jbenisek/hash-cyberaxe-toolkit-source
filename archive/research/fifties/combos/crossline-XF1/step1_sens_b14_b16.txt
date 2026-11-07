@@ -1,0 +1,8 @@
+b=14 alive share in alive9 domain 0.53125
+  bit: sensitivity count (flip changes alive_b, both in domain)
+  0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0 8:416 9:1248 10:1248 11:5408 12:6240 13:0
+  distinct alive patterns over the high window, across alive 9-bit prefixes: 2 [(104, 37), (104, 293)]
+b=16 alive share in alive9 domain 0.26562
+  bit: sensitivity count (flip changes alive_b, both in domain)
+  0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0 8:832 9:2496 10:2496 11:10816 12:14144 13:14144 14:0 15:0
+  distinct alive patterns over the high window, across alive 9-bit prefixes: 2 [(104, 37), (104, 293)]

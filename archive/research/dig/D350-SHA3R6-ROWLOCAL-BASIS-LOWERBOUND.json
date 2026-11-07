@@ -1,0 +1,20 @@
+{
+  "id": "D350-SHA3R6-ROWLOCAL-BASIS-LOWERBOUND",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "row-local linear basis XOR lower bound",
+  "question": "Can an exact row-local affine/XOR re-basis of the shipped eight-form filter use fewer than six XOR nodes?",
+  "labels": ["K"],
+  "status": "KILLED",
+  "number": "z=0 exact rank-4 annihilator needs >=4 XORs; z=1 needs >=2; total exact minimum 6, attained by shipped basis",
+  "source": "our exact row-local basis audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D350_sha3r6_rowlocal_basis_lowerbound.md; research/sol_answer_SHA3-r6-chi-ROW-open-audit.md; research/tools/build_pkg/scratch/pkgS6K/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Exact proof only for affine/XOR forms within the two five-bit selected slices. It does not close mixed/nonlinear/event-implied alternatives or change the global SHA3-r6 open cells. No score credit.",
+  "peak_mem": "0 FREE"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "B3R4-PIVOT-FULL-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "full-adder pivot tie orders",
+  "question": "Can any legal all-equal-polarity pivot order or signal-ID order reduce the 24422-gate step?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "All six fixed permutations and signal-ID ascending/descending: 24422 gates, 771 peak/registers, 0 hits/dead, all 512-lane and allocated KATs PASS.",
+  "source": "research/dig_new/blake3-r4/pivot_tie_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_pivot_full_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.1,
+  "prior": 0.15,
+  "gain_basis": "T",
+  "peak_mem": "771 live planes; package ledger not rebuilt",
+  "notes": "Negative result for all tested legal pivot-order variants. Arbitrary Boolean identities and rotation scheduling remain open; no package/stage/filing/submission."
+}

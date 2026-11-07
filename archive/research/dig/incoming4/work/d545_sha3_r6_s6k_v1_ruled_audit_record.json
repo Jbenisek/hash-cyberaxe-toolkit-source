@@ -1,0 +1,23 @@
+{
+  "id": "D545-SHA3-R6-S6K-V1-RULED-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6K_v1_ruled prefile and supplied filter8 request",
+  "question": "Does pkgS6K_v1_ruled remain internally consistent under the current prefile and filter8 campaign?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6K_v1_ruled exact ledger N=7102624740584288513899655010969051904988, time_log2=121.71644 (ledger 121.71643642); prefile SOME FAIL only because fes_campaign.py is not registry-known. Supplied 256-trial filter8 request completes with zero key mismatches/matches, 252 returned partial pairs, survivors8=461 and pairs8_survivors=396 on the first trial, fixed fes_ops=845059, chi_transpose_ops=4772232, table_ops=786432, verify_check_ops=2432, in_range_mismatches=0. The executable SHA-256 is 9D5C9548....",
+  "source": "our workflow: D545 read-only pkgS6K_v1_ruled audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D545_s6k_v1_ruled_audit.md; research/tools/build_pkg/scratch/pkgS6K_v1_ruled/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6K_v1_ruled/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6K_v1_ruled/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6K_v1_ruled/work/req_f8.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package mechanics and exact-ledger confirmation only; registry gap remains. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgS6K_v1_ruled package bytes and supplied request specification as found; one process; no file writes",
+  "reopen_if": "known-good registry update or owner/organizer acceptance ruling arrives"
+}

@@ -1,0 +1,17 @@
+{
+ "seed64": "304d0e3ea26088a5",
+ "n": 4294967296,
+ "opens": 1925090990,
+ "mean": 0.4482201742939651,
+ "se": 7.5883731435082305e-06,
+ "eb_upper": 0.44824917497784483,
+ "kl_upper": 0.4482477603031171,
+ "bound": 0.52171875,
+ "eb_margin": 0.07346957502215518,
+ "kl_margin": 0.07347098969688293,
+ "verdict": "SUPPORTED",
+ "prereg_sha256_recorded": "97d01e784b44372f2c27374c76336de62c62fbac0dac809948877c7b381eb047",
+ "prereg_sha256_now": "97d01e784b44372f2c27374c76336de62c62fbac0dac809948877c7b381eb047",
+ "hash_match": true,
+ "seed64_expected": "304d0e3ea26088a5"
+}

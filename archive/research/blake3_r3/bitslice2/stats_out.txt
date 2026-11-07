@@ -1,0 +1,6 @@
+T3 n=18: target 163/256 (0.637) ideal 182/256 (0.711) two-proportion z -1.79
+T1 n=12 fresh K: 256 runs, mean first-repeat 80.05, ratio to sqrt(pi N/2) 0.9979 (z -0.06), E[T^2]/2N 0.997
+T2 width 256, K=0: 2048 points, 21-bit projections, expected equal pairs per trial 0.9995, P(>=1) 0.6319
+  source uniform (86 trials): returned pairs 56 (expected 54.3); w0 77/86.0 z -0.97; w3 90/86.0 z 0.44; w7 85/86.0 z -0.10; xor8 78/86.0 z -0.86; sum8 94/86.0 z 0.87; p01 93/86.0 z 0.76; p23 92/86.0 z 0.65
+  source counter (85 trials): returned pairs 54 (expected 53.7); w0 83/85.0 z -0.21; w3 77/85.0 z -0.86; w7 72/85.0 z -1.41; xor8 95/85.0 z 1.09; sum8 83/85.0 z -0.21; p01 75/85.0 z -1.08; p23 76/85.0 z -0.97
+  source iterates (85 trials): returned pairs 60 (expected 53.7); w0 93/85.0 z 0.87; w3 70/85.0 z -1.62; w7 76/85.0 z -0.97; xor8 85/85.0 z 0.00; sum8 85/85.0 z 0.00; p01 90/85.0 z 0.55; p23 74/85.0 z -1.19

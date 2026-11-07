@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "pkgB3U message word m1 (w1)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U06/work/b3lib.py; research/dig/incoming/blake3-r2-U06/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U06/work/scan_m01.py (+scan_m01.out.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m1|msgword|Q3",
+ "question": "How many degrees of freedom does this word carry (exact)?",
+ "status": "COMPUTED",
+ "labels": [
+  "I"
+ ],
+ "number": "w1 carries 32 bits marginally but is determined by w0 in a context and by (S4,S8) globally: w1 as a function of X2 is not injective in a context (16,740,360 distinct of 2^24 consecutive X2; 16,744,446 for random), pair injective. Pair (w0,w1) <-> (S4,S8) exact bijection of 2^64 (200000/200000 both ways); fibre per pair 2^192 (6 free words), see the w0 cell for the 20000/20000 constructive targets. Counter instance: w1 = S0 - K0.a1 - K0.b1 follows from w0 (100000/100000 forward checks), 0 extra bits.",
+ "notes": "Universe cell blake3-r2|m1|msgword|Q3 (unit blake3-r2-U06). Class: FREE (not pinned w4, not cancelling w5, not forced constant X3/X7/X11/X15). w1 = K0 second message word; a middle line in the root instance, in the counter instance w1 = S0 - K0.a1 - K0.b1 follows from w0. Read again only by E0 (message word of the first assignment). Exact accounting as for m0: w1 adds no dof beyond (w0,w1) = 64 bits of the 256; given w0 and the context, w1 is a function (it is the second inverse line of K0, Fact 1).",
+ "topic": "b3r2.m1.msgword.Q3"
+}

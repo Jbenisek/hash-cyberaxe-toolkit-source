@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH (ALT)",
+ "question": "Q3: degrees of freedom",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "Variables k + RP = 3 at r=2 (one y per partial round plus x). Weighted degree of regularity <= d*k*(d^RF - 1) + 1 = 5 * (5^8 - 1) + 1 = 1,953,121 (paper formula; my arithmetic).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.CHEAPLUNCH|ALT|Q3. Formula arithmetic only.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "experiment at RP=2 in a 64-bit field contradicts the bound"
+}

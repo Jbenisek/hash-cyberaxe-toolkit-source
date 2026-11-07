@@ -1,0 +1,13 @@
+#pair	band	mode	verdict	wall_s	conflicts	cpu_s	indep	fresh_words
+llw39	b1619	ctl	SAT	701	3301833	640.53	INDEP_VERIFIED	copy1fresh-words(vssrcM1):[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];copy2fresh-words(vssrcM2):[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+pub39	b1619	ctl	SAT	754	3222804	687.81	INDEP_VERIFIED	copy1fresh-words(vssrcM1):[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];copy2fresh-words(vssrcM2):[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+llw39	b1215	ctl	UNDECIDED	1317	4559807	1195.31	-	-
+pub39	b1215	ctl	UNDECIDED	1323	4015320	1194.75	-	-
+pub39	b1215	real	UNDECIDED	1311	5181376	1195.68	-	-
+llw39	b1215	real	UNDECIDED	1316	3601085	1195.91	-	-
+pub39	b1619	real	UNDECIDED	1268	4561191	1194.61	-	-
+llw39	b1619	real	UNDECIDED	1269	5616937	1195.18	-	-
+pub39	b1215	ctl_orphan	UNDECIDED	-	?	1200(killed)	-	-
+pub39	b1215	real_orphan	UNDECIDED	-	?	1200(killed)	-	-
+llw39	b1215	ctl_orphan	UNDECIDED	-	1055081	202.85	-	-
+llw39	b1215	real_orphan	UNDECIDED	-	1167619	200.62	-	-

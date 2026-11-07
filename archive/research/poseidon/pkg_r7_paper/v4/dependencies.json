@@ -1,0 +1,7 @@
+[
+  {
+    "submissionId": "eed8c9e1-7297-485d-ac4a-9644b8287129",
+    "rationale": "Our own r = 7 algebraic entry (58.07357), ruled not_evaluable. This entry keeps its algorithm, ledger and premise and changes: the coins are the cost model's uniform 256-bit words reduced modulo p, with the statistical distance and the coin charge recomputed; the organizer experiment lowbits-birthday is declared and the exact generic-line computations for H-GEOM-w2 are added as evidence; Appendix E expands the stage C and stage D totals from the transform sizes, Newton levels and half-gcd levels.",
+    "evidence": "proof.md Sections 4.1.1, 4.2, 9.2, 9.4, 10.2, 10.3 and Appendices D and E; experiments/manifest.json."
+  }
+]

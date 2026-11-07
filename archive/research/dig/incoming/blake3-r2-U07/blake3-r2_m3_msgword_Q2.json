@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m3, necessity of its condition groups",
+ "question": "Necessity of each condition group at m3: relax and recount",
+ "labels": [
+  "N",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "m3 has no condition group of its own (0 groups). Relaxation test the other way round: flipping any single bit of m3 in both messages (no re-solve), 9600 trials (300 samples x 32 bits): pins X3,X7,X11,X15 kept 0/9600, half-collision (digest words 0,2,5,7 equal) kept 0/9600",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U07/work/b3ctr.py; research/dig/incoming/blake3-r2-U07/work/validate.py; research/dig/incoming/blake3-r2-U07/work/exp.py; research/dig/incoming/blake3-r2-U07/work/exp_out.json; research/dig/incoming/blake3-r2-U07/work/img.c; research/dig/incoming/blake3-r2-U07/work/img_out.txt; research/dig/incoming/blake3-r2-U07/work/surj.py; research/dig/incoming/blake3-r2-U07/work/surj_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m3|msgword|Q2. validated first: counter-construction (pkgB3U Sec 8 steps CO+CT) transcribed in b3ctr.py; 2000/2000 random free-word sets give pinned X3,X7,X11,X15, equal round-0 state for A/B, and equal digest words 0,2,5,7 (known answer reproduced). So m3 is not free to perturb: it is fixed through the pinned round-0 outputs; its only role is as a function of the construction words. Structurally trivial for conditions; the perturbation count is a sample over 300 free-word sets."
+}

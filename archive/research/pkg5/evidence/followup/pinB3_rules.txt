@@ -1,0 +1,26 @@
+class e7c1815f: 242 outcomes with E1 probability > 0, 30 betas, 904 h1 patterns with mass; keys whose D lines do not add up to N3: 0
+sum of rate contributions 29830237.7; calculator's exact sum 29862848.1; largest relative difference per beta 0.0034 (P1 is read with two decimals)
+h1 bits on eta below bit 31: 0 1 2 3 4 6 8 15 16 22 23 24 25 26 29 30 (16 bits; a uniform h1 has each pattern with probability 2^-16)
+largest pattern share 0.0514; patterns needed for 0.5 / 0.9 / 0.99 / all of the mass: 16 / 82 / 228 / 904
+affine hull of the patterns: dimension 14 of 16, so 2 independent XOR conditions hold for all the mass; found with at most three bits each: 2
+RULE_A_ALL 0000000c:0,00000018:1
+   h1 bits 2+3: XOR = 0
+   h1 bits 3+4: XOR = 1
+patterns inside the rule: 16384, with mass: 904; a uniform h1 passes with probability 2^-2
+further conditions that keep only part of the mass (best six): 1+3=0 keeps 1.0000; 1+2=0 keeps 1.0000; 1+4=1 keeps 1.0000; 16=1 keeps 1.0000; 0+4=1 keeps 1.0000; 0+3=0 keeps 1.0000
+greedy chain of further conditions: 1+2=0: 3 conditions keep 1.000000; 16=1: 4 conditions keep 0.999999; 0+1=0: 5 conditions keep 0.999999; 23+24=1: 6 conditions keep 0.999839; 6+8=0: 7 conditions keep 0.988197; 29+30=0: 8 conditions keep 0.968841; 25+26=1: 9 conditions keep 0.917273; 15=1: 10 conditions keep 0.862961
+RULE_CHAIN 0000000c:0,00000018:1,00000006:0,00010000:1,00000003:0,01800000:1,00000140:0,60000000:0,06000000:1,00008000:1
+rule B (bits of c1 shared by the heaviest betas):
+   heaviest  1 betas: share 0.470048, common bits 10, PM:PV 46852481:42000001
+   heaviest  2 betas: share 0.602687, common bits  8, PM:PV 06852401:02000001
+   heaviest  4 betas: share 0.821011, common bits  6, PM:PV 04052401:00000001
+   heaviest  7 betas: share 0.956270, common bits  4, PM:PV 00052400:00000000
+   heaviest  8 betas: share 0.967566, common bits  4, PM:PV 00052400:00000000
+   heaviest 11 betas: share 0.989084, common bits  3, PM:PV 00052000:00000000
+   heaviest 15 betas: share 0.996414, common bits  3, PM:PV 00052000:00000000
+   heaviest 30 betas: share 1.000000, common bits  1, PM:PV 00002000:00000000
+rule B on x = c1 XOR c1' (= ROL(beta,12)): (x AND F) == FV with F:FV 70f1e4f1:40812481 (17 bits fixed, 15 free); betas that pass: 2880, of which listed 30; a uniform c1 passes with probability 2^-2.2641; keeps every listed beta
+RULE_B_DIFF 70f1e4f1:40812481
+RULE A5: 5 conditions, keeps 0.99999884 of the mass (loses 1.164e-06), 680 of 904 patterns with mass
+BETAS_BY_MASS 481c6852,58146852,481c5852,58145852,481c3852,48346852,58143852,48345852,f8145852,781c6852,48343852,58745852,78346852,781c3852,781c5852,58746852,78345852,f8143852,78343852,481cf852,f8342852,58743852,48f45852,48f46852,4834f852,48f43852,5814f852,d81428d3,d81428b3,d8142873
+beta shares: 481c6852 0.4700 58146852 0.1326 481c5852 0.1203 58145852 0.0980 481c3852 0.0951 48346852 0.0239 58143852 0.0163 48345852 0.0113

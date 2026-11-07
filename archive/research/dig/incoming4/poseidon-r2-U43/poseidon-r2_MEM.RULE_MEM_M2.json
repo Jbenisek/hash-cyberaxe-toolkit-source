@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.RULE (MEM)",
+ "question": "M2: necessity: is the 2^20 floor reachable",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "To zero the term the program would hold at most 1,048,576 B; the three 6.25 MB vectors alone are 18.7 MB. Each halving of the heap is -1 bit of score and its time price is unmeasured; the 40.9 MB peak is 39.0 times the floor.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.RULE|MEM|M2. Counting.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "an algorithm with a streaming dense-vector schedule is found"
+}

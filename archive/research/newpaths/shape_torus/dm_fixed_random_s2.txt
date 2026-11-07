@@ -1,0 +1,36 @@
+fixed mode=random candidates=30000 freedom=4
+non-trivial block-size profiles (count):
+   singular: 3422
+   (85,): 2153
+   (81,): 1658
+   (82,): 1649
+   (86,): 1589
+   (89,): 1291
+   (84,): 1151
+   (80,): 1083
+   (78,): 990
+   (88,): 959
+   (77,): 948
+   (83,): 935
+   (79,): 755
+   (87,): 673
+   (82, 3): 582
+   (76,): 532
+   (90,): 428
+   (78, 3): 427
+   (86, 3): 410
+   (74,): 396
+   (75,): 309
+   (73,): 271
+   (81, 3): 271
+   (83, 3): 268
+   (79, 3): 245
+best index sets (smallest largest block), with tearing numbers:
+   index ['K0.c2', 'm7', 'K3.d2', 'K2.b1']: blocks ["5w/t1['K3.d1']", "6w/t1['K0.c1']", "68w/t4['C3.c2', 'D1.d1', 'C0.d2', 'D1.d2']"]
+   index ['K3.a1', 'K1.a1', 'K3.b2', 'D3.a1']: blocks ["7w/t1['K0.c1']", "68w/t5['D1.c1', 'C3.b1', 'D2.b1', 'D1.a2', 'C3.a1']"]
+   index ['m0', 'm7', 'K2.a1', 'K3.a2']: blocks ["4w/t1['K3.b1']", "68w/t4['C3.d1', 'D1.d1', 'D1.d2', 'C0.d2']"]
+   index ['K2.c1', 'K3.c1', 'K3.b2', 'D3.a1']: blocks ["7w/t1['K0.c2']", "68w/t4['C0.b1', 'D1.a1', 'D1.d2', 'C3.c2']"]
+   index ['K3.c1', 'K3.c2', 'K0.b2', 'K2.c1']: blocks ["7w/t1['K0.c1']", "68w/t4['K2.d2', 'D1.d1', 'C0.d2', 'C3.c1']"]
+   index ['K3.c2', 'K3.b1', 'K2.a1', 'K0.a2']: blocks ["4w/t1['K0.b1']", "68w/t4['C3.c2', 'C0.d2', 'C0.b1', 'D1.c1']"]
+   index ['K2.c1', 'm7', 'K3.b2', 'm0']: blocks ["7w/t1['K3.a1']", "68w/t4['D1.d1', 'C0.d2', 'K2.c2', 'C3.c2']"]
+   index ['D3.a1', 'K0.c1', 'K3.c2', 'K1.a1']: blocks ["3w/t1['K3.d1']", "68w/t5['D1.d1', 'C0.b1', 'C3.c2', 'C3.d1', 'K1.d2']"]

@@ -1,0 +1,81 @@
+rand train 524288 / test 524288, ctx 262144; control uniform (seed 0x4D4F44554C415202), n = test size
+
+====================================================================================================
+A. single word, low 20 bits: modular characters of Rm (FFT) vs XOR characters of R (Walsh)
+====================================================================================================
+  w1 low20 Rm mod                    ctrl max 0.0049 | c=524288 tr 0.4074 te 0.4063 ctx 0.3756 ; c=1048320 tr 0.2220 te 0.2227 ctx 0.2270 ; c=256 tr 0.2220 te 0.2227 ctx 0.2270 | #test coefs > 2*ctrl max: 11
+  w1 low20 R xor                     ctrl max 0.0067 | c=1 tr 0.4074 te 0.4063 ctx 0.3756 ; c=3072 tr 0.2675 te 0.2679 ctx 0.2700 ; c=2048 tr 0.2662 te 0.2674 ctx 0.2744 | #test coefs > 2*ctrl max: 9
+  w3 low20 Rm mod                    ctrl max 0.0049 | c=1048575 tr 0.5671 te 0.5688 ctx 0.5735 ; c=1 tr 0.5671 te 0.5688 ctx 0.5735 ; c=1048448 tr 0.3656 te 0.3651 ctx 0.3698 | #test coefs > 2*ctrl max: 372
+  w3 low20 R xor                     ctrl max 0.0065 | c=786432 tr 0.6623 te 0.6618 ctx 0.6656 ; c=524288 tr 0.6599 te 0.6616 ctx 0.6668 ; c=6144 tr 0.4577 te 0.4570 ctx 0.4775 | #test coefs > 2*ctrl max: 359
+  w4 low20 Rm mod                    ctrl max 0.0051 | c=1015808 tr 0.2338 te 0.2343 ctx 0.2340 ; c=32768 tr 0.2338 te 0.2343 ctx 0.2340 ; c=950272 tr 0.0549 te 0.0538 ctx 0.0541 | #test coefs > 2*ctrl max: 6
+  w4 low20 R xor                     ctrl max 0.0077 | c=16 tr 0.2789 te 0.2792 ctx 0.2820 ; c=24 tr 0.2777 te 0.2787 ctx 0.2811 ; c=28 tr 0.0523 te 0.0505 ctx 0.0490 | #test coefs > 2*ctrl max: 4
+  w6 low20 Rm mod                    ctrl max 0.0049 | c=1048320 tr 0.3959 te 0.3964 ctx 0.4002 ; c=256 tr 0.3959 te 0.3964 ctx 0.4002 ; c=1015808 tr 0.2694 te 0.2692 ctx 0.2697 | #test coefs > 2*ctrl max: 50
+  w6 low20 R xor                     ctrl max 0.0068 | c=2048 tr 0.5013 te 0.5023 ctx 0.5063 ; c=3072 tr 0.4999 te 0.5010 ctx 0.5064 ; c=24 tr 0.3311 te 0.3306 ctx 0.3429 | #test coefs > 2*ctrl max: 100
+
+====================================================================================================
+B. single word, top 20 bits: low-frequency modular characters of Rm (size/sign structure), exact re-check
+====================================================================================================
+  w1 top20 Rm mod                    ctrl max 0.0050 | c=1048320 tr 0.0947 te 0.0956 ctx 0.0878 ; c=256 tr 0.0947 te 0.0956 ctx 0.0878 ; c=768 tr 0.0075 te 0.0114 ctx 0.0098 | #test coefs > 2*ctrl max: 4
+      exact |E chi_c| at signed c=-256 (full 32-bit character) on test: 0.0956
+  w3 top20 Rm mod                    ctrl max 0.0052 | c=1044480 tr 0.5671 te 0.5687 ctx 0.5735 ; c=4096 tr 0.5671 te 0.5687 ctx 0.5735 ; c=1040384 tr 0.3347 te 0.3346 ctx 0.3431 | #test coefs > 2*ctrl max: 118
+      exact |E chi_c| at signed c=-4096 (full 32-bit character) on test: 0.5688
+  w4 top20 Rm mod                    ctrl max 0.0055 | c=1048512 tr 0.1397 te 0.1423 ctx 0.1288 ; c=64 tr 0.1397 te 0.1423 ctx 0.1288 ; c=1048384 tr 0.0123 te 0.0147 ctx 0.0122 | #test coefs > 2*ctrl max: 4
+      exact |E chi_c| at signed c=-64 (full 32-bit character) on test: 0.1423
+  w6 top20 Rm mod                    ctrl max 0.0048 | c=16384 tr 0.1710 te 0.1722 ctx 0.1899 ; c=1032192 tr 0.1710 te 0.1722 ctx 0.1899 ; c=1048448 tr 0.0846 te 0.0835 ctx 0.0814 | #test coefs > 2*ctrl max: 18
+      exact |E chi_c| at signed c=16384 (full 32-bit character) on test: 0.1724
+
+====================================================================================================
+C. pairs of words, low 10 bits and top 10 bits each: (Z/1024)^2 modular vs Walsh on the same 20 bits
+====================================================================================================
+  w1,w3 low10 Rm mod                 ctrl max 0.0048 | c=524288 tr 0.4074 te 0.4063 ctx 0.3756 ; c=992 tr 0.1787 te 0.1781 ctx 0.1854 | #test coefs > 2*ctrl max: 45
+  w1,w3 low10 R  xor                 ctrl max 0.0066 | c=1024 tr 0.4074 te 0.4063 ctx 0.3756 ; c=16 tr 0.2140 te 0.2117 ctx 0.2143 | #test coefs > 2*ctrl max: 29
+  w1,w3 top10 Rm mod                 ctrl max 0.0053 | c=960 tr 0.2067 te 0.2079 ctx 0.2291 ; c=64 tr 0.2067 te 0.2079 ctx 0.2291 | #test coefs > 2*ctrl max: 34
+  w1,w3 top10 R  xor                 ctrl max 0.0063 | c=12 tr 0.2511 te 0.2518 ctx 0.2816 ; c=8 tr 0.2510 te 0.2533 ctx 0.2805 | #test coefs > 2*ctrl max: 34
+  w1,w4 low10 Rm mod                 ctrl max 0.0055 | c=524288 tr 0.4074 te 0.4063 ctx 0.3756 ; c=32 tr 0.2338 te 0.2343 ctx 0.2340 | #test coefs > 2*ctrl max: 85
+  w1,w4 low10 R  xor                 ctrl max 0.0066 | c=524292 tr 0.6551 te 0.6560 ctx 0.6508 ; c=1024 tr 0.4074 te 0.4063 ctx 0.3756 | #test coefs > 2*ctrl max: 60
+  w1,w4 top10 Rm mod                 ctrl max 0.0056 | c=64 tr 0.1385 te 0.1413 ctx 0.1279 ; c=960 tr 0.1385 te 0.1413 ctx 0.1279 | #test coefs > 2*ctrl max: 30
+  w1,w4 top10 R  xor                 ctrl max 0.0066 | c=524292 tr 0.3739 te 0.3780 ctx 0.3617 ; c=8 tr 0.3051 te 0.3045 ctx 0.2820 | #test coefs > 2*ctrl max: 35
+  w1,w6 low10 Rm mod                 ctrl max 0.0052 | c=524288 tr 0.4074 te 0.4063 ctx 0.3756 ; c=992 tr 0.2694 te 0.2692 ctx 0.2697 | #test coefs > 2*ctrl max: 13
+  w1,w6 low10 R  xor                 ctrl max 0.0068 | c=1024 tr 0.4074 te 0.4063 ctx 0.3756 ; c=24 tr 0.3311 te 0.3306 ctx 0.3429 | #test coefs > 2*ctrl max: 19
+  w1,w6 top10 Rm mod                 ctrl max 0.0051 | c=262144 tr 0.0843 te 0.0837 ctx 0.0773 ; c=786432 tr 0.0843 te 0.0837 ctx 0.0773 | #test coefs > 2*ctrl max: 18
+  w1,w6 top10 R  xor                 ctrl max 0.0074 | c=4 tr 0.3920 te 0.3904 ctx 0.3836 ; c=6 tr 0.1749 te 0.1745 ctx 0.1773 | #test coefs > 2*ctrl max: 73
+  w3,w4 low10 Rm mod                 ctrl max 0.0051 | c=32 tr 0.2338 te 0.2343 ctx 0.2340 ; c=992 tr 0.2338 te 0.2343 ctx 0.2340 | #test coefs > 2*ctrl max: 62
+  w3,w4 low10 R  xor                 ctrl max 0.0065 | c=16 tr 0.2789 te 0.2792 ctx 0.2820 ; c=24 tr 0.2777 te 0.2787 ctx 0.2811 | #test coefs > 2*ctrl max: 39
+  w3,w4 top10 Rm mod                 ctrl max 0.0054 | c=65536 tr 0.2067 te 0.2079 ctx 0.2291 ; c=983040 tr 0.2067 te 0.2079 ctx 0.2291 | #test coefs > 2*ctrl max: 24
+  w3,w4 top10 R  xor                 ctrl max 0.0070 | c=8 tr 0.3051 te 0.3045 ctx 0.2820 ; c=12288 tr 0.2511 te 0.2518 ctx 0.2816 | #test coefs > 2*ctrl max: 22
+  w3,w6 low10 Rm mod                 ctrl max 0.0050 | c=32 tr 0.2694 te 0.2692 ctx 0.2697 ; c=992 tr 0.2694 te 0.2692 ctx 0.2697 | #test coefs > 2*ctrl max: 138
+  w3,w6 low10 R  xor                 ctrl max 0.0072 | c=524292 tr 0.4680 te 0.4681 ctx 0.4664 ; c=131073 tr 0.4056 te 0.4062 ctx 0.3766 | #test coefs > 2*ctrl max: 166
+  w3,w6 top10 Rm mod                 ctrl max 0.0053 | c=65536 tr 0.2067 te 0.2079 ctx 0.2291 ; c=983040 tr 0.2067 te 0.2079 ctx 0.2291 | #test coefs > 2*ctrl max: 62
+  w3,w6 top10 R  xor                 ctrl max 0.0066 | c=524290 tr 0.5228 te 0.5243 ctx 0.5202 ; c=4 tr 0.3920 te 0.3904 ctx 0.3836 | #test coefs > 2*ctrl max: 184
+  w4,w6 low10 Rm mod                 ctrl max 0.0050 | c=32 tr 0.2694 te 0.2692 ctx 0.2697 ; c=992 tr 0.2694 te 0.2692 ctx 0.2697 | #test coefs > 2*ctrl max: 22
+  w4,w6 low10 R  xor                 ctrl max 0.0072 | c=24 tr 0.3311 te 0.3306 ctx 0.3429 ; c=16 tr 0.3288 te 0.3274 ctx 0.3167 | #test coefs > 2*ctrl max: 25
+  w4,w6 top10 Rm mod                 ctrl max 0.0051 | c=65536 tr 0.1385 te 0.1413 ctx 0.1279 ; c=983040 tr 0.1385 te 0.1413 ctx 0.1279 | #test coefs > 2*ctrl max: 16
+  w4,w6 top10 R  xor                 ctrl max 0.0069 | c=4 tr 0.3920 te 0.3904 ctx 0.3836 ; c=8192 tr 0.3051 te 0.3045 ctx 0.2820 | #test coefs > 2*ctrl max: 51
+
+====================================================================================================
+D. all four words, low 5 / top 5 bits each: (Z/32)^4 modular vs Walsh
+====================================================================================================
+  4 words low5 Rm mod                ctrl max 0.0048 | c=524288 tr 0.4074 te 0.4063 ctx 0.3756 ; c=31 tr 0.2694 te 0.2692 ctx 0.2697 ; c=1 tr 0.2694 te 0.2692 ctx 0.2697 | #test coefs > 2*ctrl max: 169
+  4 words low5 R  xor                ctrl max 0.0066 | c=32768 tr 0.4074 te 0.4063 ctx 0.3756 ; c=24 tr 0.3311 te 0.3306 ctx 0.3429 ; c=16 tr 0.3288 te 0.3274 ctx 0.3167 | #test coefs > 2*ctrl max: 149
+  4 words top5 Rm mod                ctrl max 0.0050 | c=1024 tr 0.1422 te 0.1429 ctx 0.1320 ; c=31744 tr 0.1422 te 0.1429 ctx 0.1320 ; c=3072 tr 0.0226 te 0.0231 ctx 0.0175 | #test coefs > 2*ctrl max: 4
+  4 words top5 R  xor                ctrl max 0.0066 | c=16384 tr 0.1735 te 0.1737 ctx 0.1653 ; c=24576 tr 0.1726 te 0.1741 ctx 0.1560 ; c=3 tr 0.1335 te 0.1328 ctx 0.1320 | #test coefs > 2*ctrl max: 25
+
+====================================================================================================
+E. sum of squared coefficients (= 2^n * collision prob of the n bits; coordinate-specific) on TEST, low 20 bits per word
+====================================================================================================
+  word 1: R H2(low20) 19.578 | Rm H2(low20) 19.637 | ctrl H2(low20) 20.005
+  word 3: R H2(low20) 17.949 | Rm H2(low20) 18.420 | ctrl H2(low20) 20.001
+  word 4: R H2(low20) 19.784 | Rm H2(low20) 19.836 | ctrl H2(low20) 19.995
+  word 6: R H2(low20) 18.891 | Rm H2(low20) 19.319 | ctrl H2(low20) 19.996
+
+====================================================================================================
+F. exact Z/2^32-module spanned by (affine) differences of rows: pivot exponents e_j (module index = sum e_j bits)
+====================================================================================================
+  Rm (4 words)                             cols  4 rows used     5  pivot exponents [0, 0, 0, 0]  index 0 bits  FULL (no affine Z/2^32 relation)
+  CONTROL uniform (4 words)                cols  4 rows used     5  pivot exponents [0, 0, 0, 0]  index 0 bits  FULL (no affine Z/2^32 relation)
+  M1 (4 words)                             cols  4 rows used  4095  pivot exponents [4, 0, 32, 0]  index 36 bits  PROPER submodule/coset
+  M3 (4 words)                             cols  4 rows used  4095  pivot exponents [0, 0, 0, 1]  index 1 bits  PROPER submodule/coset
+  M1 | M3 (8 words)                        cols  8 rows used  4095  pivot exponents [4, 0, 32, 0, 0, 0, 0, 1]  index 37 bits  PROPER submodule/coset
+  Rm | M1 | M3 (12 words)                  cols 12 rows used  4095  pivot exponents [0, 0, 0, 0, 4, 0, 32, 1, 1, 1, 1, 1]  index 41 bits  PROPER submodule/coset
+  Rm on ctx (4 words)                      cols  4 rows used     4  pivot exponents [0, 0, 0, 0]  index 0 bits  FULL (no affine Z/2^32 relation)
+  M1 | M3 on ctx (8 words)                 cols  8 rows used  4095  pivot exponents [4, 0, 32, 0, 0, 0, 0, 1]  index 37 bits  PROPER submodule/coset

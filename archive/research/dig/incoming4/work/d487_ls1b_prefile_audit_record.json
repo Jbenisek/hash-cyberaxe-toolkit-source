@@ -1,0 +1,23 @@
+{
+  "id": "D487-SHA3-R6-LS1B-PACKAGE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "read-only audit of LS1b scratch package",
+  "question": "Does the LS1b scratch package pass its arithmetic/package checks and finite rho test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "LS1b prefile ALL PASS with N=39623246885746059599222323362107280213464 and time_log2=124.19636; one rho-w22 trial returned distinct messages with a valid 22-bit partial match (steps 12, trails 433, stored 177, replay_evals 16).",
+  "source": "our workflow: D487 read-only LS1b package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D487_ls1b_prefile_audit.md; research/launch/prefile_check.py; research/tools/build_pkg/scratch/pkgLS1b/pkg/sha3-256-r6/experiments/ls1.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite reduced-width evidence only; no full-width collision or H_rand proof. No package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; existing claim ledger; one-thread read-only commands",
+  "reopen_if": "package contents change or an organizer prefile ruling requires a new audit"
+}

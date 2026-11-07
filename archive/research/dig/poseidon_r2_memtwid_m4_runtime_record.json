@@ -1,0 +1,22 @@
+{
+  "id": "POSEIDON-R2-MEMTWID-M4-RUNCOUNT-20261013",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MEM.TWID (MEM) runtime term for smaller-transform alternative",
+  "question": "M4: alternatives: smaller field-size transform (2^16 -> radix-3 combined)",
+  "labels": ["D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "On the recorded r=2 stage-D trial, exact dynamic twiddle-table loads are forward 207278124 plus inverse 72931212 plus fused 0 = 280209336, with 194064 forward and 81432 inverse calls; this term is already included in stage-D 8338576745 and whole-run 49887124164.",
+  "source": "our workflow: research-only NTT load probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_poseidon_r2_twiddle_stageD_20261013.md; research/retest/poseidon_twiddle_probe/run.txt; research/retest/poseidon_twiddle_probe/ntt.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "poseidon-r2.MEM.TWID.M4.runtime",
+  "held_fixed": "The checked-in r=2 source, deterministic seed, one successful stage-D half-gcd trial, and existing charging macros.",
+  "reopen_if": "A rebuilt smaller-transform or half-table variant with a complete ledger and memory peak is required; this run does not establish the alternative's cost or benefit.",
+  "notes": "Partial runtime evidence only. It supplies the missing recorded-trace twiddle term but does not build or price the proposed smaller transform; no score credit, package, staging, or submission."
+}

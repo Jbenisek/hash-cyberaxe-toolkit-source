@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQFREE g squarefree",
+ "question": "score sensitivity",
+ "labels": [
+  "N",
+  "0"
+ ],
+ "status": "BEDROCK",
+ "number": "sensitivity is zero: gcd(g, S^((p-1)/2) - 1) divides the squarefree S^((p-1)/2) - 1, so repeated roots of g only merge in the gcd; a non-squarefree g cannot lose a root (its root set is unchanged)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc2.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Proof by divisibility; toy control in PREM.HSQFREE R3. | universe cell poseidon-r1|PREM.HSQFREE|PREM|R4",
+ "held_fixed": "method as filed",
+ "reopen_if": "never (it is a divisibility fact); but a judge could ask for a squarefreeness argument in the proof text"
+}

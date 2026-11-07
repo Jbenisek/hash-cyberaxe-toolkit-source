@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.NEWTON (ROOT)",
+ "question": "Q3: degrees of freedom: how much score can this stage ever move",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "If the reciprocal were free: 0.0072 bit of time_log2 (4 centres charged). Precision doubles 1 -> 195,312 in 18 steps; the modulus changes with the centre, so no amortisation across centres.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ROOT.NEWTON|ROOT|Q3. Upper bound on any improvement of this stage.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "never for this stage alone (bound 0.0072 bit)"
+}

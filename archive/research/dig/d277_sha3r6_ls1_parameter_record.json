@@ -1,0 +1,21 @@
+{
+  "id": "D277-SHA3-R6-LS1-PARAMETER-SWEEP",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "LS1 alternate H/U/kappa parameter sweep",
+  "question": "Does the H=117/118 alternate parameter family improve the completed H=114 LS1 certificate?",
+  "labels": ["C"],
+  "status": "LOCAL_ONLY",
+  "number": "Owner sweep H={117,118}, U={3600,5000}, kappa={15..18}: best 124.5576382069 at (117,3600,15), versus H=114 certificate 124.19487; all alternatives are worse. No filing gain.",
+  "source": "owner artifact audited by our workflow: D277 LS1 parameter sweep",
+  "evidence": "research/sol_answer_D277_sha3r6_ls1_parameter_sweep.md; research/sha3r6_gap/ls1/alt_out.txt; research/sha3r6_gap/ls1/opt_params_alt.py",
+  "date": "2026-10-13",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite owner parameter scan; no semantic or organizer validation and no package/filing change.",
+  "held_fixed": "LS1 success-bound model and ledger parameter formulas",
+  "reopen_if": "A different parameter family or corrected cost model changes the comparison"
+}

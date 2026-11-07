@@ -1,0 +1,22 @@
+{
+  "id": "D379-SHA256-R38-PREFIX-GROUP-MARGINALS-20261014",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 21,
+  "object": "Table-4 prefix-group marginal probe",
+  "question": "What are the staged prefix marginal rates of the named A16-A19, E16-E19/E21, and W16 Table-4 groups under the actual chi38 proposal?",
+  "labels": ["C", "E"],
+  "status": "SAMPLED",
+  "number": "Eight one-thread seeds, 65,536 prefix-stage proposals per named group. Rates: A16=1; A17=1041/65536=0.0158843994141; A18=32772/65536=0.500061035156; A19=31253/65536=0.476882934570; E16=1; E17=16385/65536=0.250015258789; E18=8121/65536=0.123916625977; E19=16263/65536=0.248153686523; E21=32816/65536=0.500732421875; W16=1. Final proposal count N=8,388,608; zero prefix-redraw, y-anchor, and replay inconsistencies.",
+  "source": "our controlled traillab prefix-marginal probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D379_r38_prefix_group_marginals.md; research/retest/r38_stack/D379_prefix_marginals.out; research/tools/traillab/src/smc.c; research/tools/traillab/src/smc.h; research/tools/traillab/src/main.c; research/tools/traillab/chi/chi38.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Finite staged prefix marginals only. Unit-rate A16/E16/W16 groups are forced under the checked-in proposal; the remaining rates are conditional on prior survivor stages. This supplies prefix observations but does not close the full 47-vs-102 independence comparison or claim score.",
+  "held_fixed": "chi38; rows 22..37 event out; carrier none; np=128,m=64,mt2=256,mw=64,mt=8192; seeds 6001..6008; one thread; --prefix-marginals",
+  "reopen_if": "A common staged proposal and complete group definitions including W7/W8 and W23/W25 are combined into a full product-vs-joint comparison, or a proved factorization is supplied.",
+  "peak_mem": "22.9556499075 MEASURED /usr/bin/time -v maximum RSS; one-thread eight-seed prefix diagnostic"
+}

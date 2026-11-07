@@ -1,0 +1,23 @@
+{
+  "id": "D485-BLAKE3-R3-TUNED-CV-PROVENANCE-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "tuned-CV provenance and two-block legality",
+  "question": "Is the stored h_tuned a legal prefix-derived chaining value, or only a synthetic CV used for the PH count?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "construct.py/construct2.py solve and write h_tuned directly from G-column joins; no prefix P or first-block compression is produced. verify.py explicitly says real-P checking is impossible because h is not a real CV. mech.py tests random P-derived CVs but not h_tuned. The ~2^96 prefix search remains unrun, so PH=589 is synthetic-CV conditional only.",
+  "source": "our workflow: D485 tuned-CV provenance audit",
+  "own_test": true,
+  "evidence": "research/blake3_r3/lastblock/construct.py; research/blake3_r3/lastblock/construct2.py; research/blake3_r3/lastblock/verify.py; research/blake3_r3/lastblock/mech.py; research/blake3_r3/wave1/dig_cells.md; research/sol_answer_D485_blake3_r3_tuned_cv_provenance.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "N/A (read-only source audit)",
+  "notes": "No score, package, staging, filing, or submission credit. Actual prefix search/reachability proof, advice charge, and organizer acceptance remain required.",
+  "held_fixed": "stored h_tuned.json; checked-in construction, verifier, mechanics, and wave-1 notes",
+  "reopen_if": "A real prefix P yielding h_tuned or a charged reachability search/proof is supplied"
+}

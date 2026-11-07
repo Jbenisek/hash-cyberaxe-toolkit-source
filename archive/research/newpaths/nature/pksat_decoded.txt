@@ -1,0 +1,1 @@
+K=4 decoded: W0=429 W1=314 W=743; message patterns 8 0 1 1 9 9 9 9 9 0 0 0 9 0 0 1

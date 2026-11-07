@@ -1,0 +1,23 @@
+{
+  "id": "D435-B3M-COMPACT-SELECTOR-SCREEN-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "compact nonlinear B3M step-rate selector",
+  "question": "Can a substantially smaller ExtraTrees selector retain the D431 rate signal on original and fresh campaigns?",
+  "labels": ["B", "D", "Z"],
+  "status": "SAMPLED",
+  "number": "Preregistered 96-model CV search selected 32 trees, depth 4, leaf 4, max_features 0.5. Fixed-model scores were original n=40 r=0.6306032037 ratio=1.2761523200 p=.0005; D432 n=20 r=0.6224397249 ratio=1.1022684705 p=.128; D433 n=40 r=0.6423610284 ratio=1.2654074491 p=.003. The model has 882 nodes and at most 128 comparisons plus 32 accumulators per candidate before feature extraction. Finite LOCAL_ONLY; safe gain 0.",
+  "source": "our workflow: D435 preregistered compact selector search",
+  "own_test": true,
+  "evidence": "research/sol_answer_D435_b3m_compact_selector.md; research/retest/t2/PREREG_D435_COMPACT_SELECTOR.md; research/retest/t2/D435_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic single-worker screen",
+  "notes": "Feature extraction, compiled charge, selection protocol, judge acceptance, and rate-to-success linkage remain open. No package/stage/filing/submission.",
+  "held_fixed": "D431 feature map, fixed split/fresh campaigns, and PR858 no-transfer rule",
+  "reopen_if": "A charged compiled selector and accepted exact-rate transfer are available"
+}

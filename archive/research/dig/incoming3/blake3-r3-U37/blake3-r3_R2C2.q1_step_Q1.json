@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R2C2.q1 (a1,d1)",
+ "question": "Q1 value/count as used: operations, bounds and message word of this quarter-step in the shipped 3-round circuit",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "8 ops (add 2, and 2, or 1, shl 1, shr 1, xor 1); rotation ror16 is 5 of them (shr, and, shl, and, or); a bound 9.807 units (1 unit = 2^32) + b 1 + message word m13 (variable, one more add) -> out 11.807 (lane limit 16, headroom 4.193); step cost 8/638 = 0.01254 compression; round 2 column call R2C2, circuit ops 406..413",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/_b3r3_work/b3core.py; research/dig/incoming3/_b3r3_work/validate_core.py; research/dig/incoming3/_b3r3_work/q1_counts.py; research/dig/incoming3/_b3r3_work/q1_counts.json; research/dig/incoming3/_b3r3_work/stepinfo.py; research/dig/incoming3/_b3r3_work/stepinfo.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Counted by our own tracer per quarter-step tag; totals checked: 595 ops = add 100, xor 88, shr 80, shl 80, and 167, or 80.",
+ "held_fixed": "Held fixed: the shipped 595-op circuit (research/blake3_r3/candidate_blake3/experiments/rho.py: 7 lanes x 36 bits, ops add/and/or/xor/shl/shr, constants folded) re-derived by our own tracer b3core.py (595 ops; equals the scalar 3-round digest on 300+ batches; scalar core equals verifier/blake3.py on 3 and 7 rounds and the official 7-round fixture).",
+ "reopen_if": "a recount of this step differs on another lane layout or on the organizer-run harness"
+}

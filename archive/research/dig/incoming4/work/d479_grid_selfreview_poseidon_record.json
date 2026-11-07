@@ -1,0 +1,23 @@
+{
+  "id": "D479-GRID-SELFREVIEW-POSEIDON-R2-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 grid and PR858 self-review refresh",
+  "question": "Do D477-D478 change any claimable Poseidon-r2 row or cross-lever combination?",
+  "labels": ["S", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "No. D477 is a source-level half-table integration boundary and D478 is finite density evidence over 16 centres; neither supplies a production implementation, full KAT/ledger, or measured production peak. The plain Poseidon-r2 row remains T=27.52673, M=25.28680, S=32.81353; no pair/triple score changes.",
+  "source": "our workflow: D479 grid and self-review refresh",
+  "own_test": true,
+  "evidence": "research/sol_answer_D477_poseidon_r2_half_table_integration_audit.md; research/sol_answer_D478_poseidon_r2_g_density_more.md; research/sol_answer_GRID_COMBOS_1014.md; research/sol_answer_SELFREVIEW_1014.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "N/A (audit only; D478 component RSS is not a production peak)",
+  "notes": "No new machine or organizer premise. No package/stage/submit.",
+  "held_fixed": "PR858 seven-rule review, current grid score convention, D477-D478 evidence",
+  "reopen_if": "A rebuilt half-table/streaming kernel with full KAT, ledger, spill proof, and production peak lands"
+}

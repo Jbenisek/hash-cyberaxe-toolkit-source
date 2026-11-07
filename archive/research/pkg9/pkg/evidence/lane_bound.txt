@@ -1,0 +1,16 @@
+PROGRAM sha256 d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb; python -B tools/lane_bound.py 2000
+class eta 830303cf, rule A with 5 conditions: bounds of the sums for all inputs (units of 2^32)
+  C0 backwards     largest bound of a sum   2 * 2^32 - 2   bound of TABLE 2 * 2^32   below
+  D0 and D1        largest bound of a sum   4 * 2^32 - 2   bound of TABLE 4 * 2^32   below
+  C2 to z          largest bound of a sum   5 * 2^32 - 3   bound of TABLE 5 * 2^32   below
+  rule A           largest bound of a sum   2 * 2^32 - 2   bound of TABLE 2 * 2^32   below
+  C2, rest         largest bound of a sum   6 * 2^32 - 4   bound of TABLE 6 * 2^32   below
+  D0 and D1, rest  largest bound of a sum   5 * 2^32 - 3   bound of TABLE 5 * 2^32   below
+  C1 to Y1         largest bound of a sum   9 * 2^32 - 6   bound of TABLE 9 * 2^32   below
+  E1, A and B      largest bound of a sum 13 * 2^32 - 10   bound of TABLE 13 * 2^32   below
+  E1 test          largest bound of a sum   2 * 2^32 - 2   bound of TABLE 2 * 2^32   below
+largest bound of a sum: 13 * 2^32 - 10 = 55834574838 < 2^36 = 68719476736: True; largest bound of a word that enters the flags: 4294967295 (2^32 - 1 = 4294967295)
+operations and loads per part on the second machine equal TABLE: True
+2000 random batches on the program's machine: every sum at most the bound of its part: True; largest sum seen 10.522 * 2^32
+RESULT: all bounds hold
+exit status 0

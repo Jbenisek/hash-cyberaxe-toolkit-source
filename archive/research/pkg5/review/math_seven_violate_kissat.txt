@@ -1,0 +1,42 @@
+VIOLATE 481c3852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 481c5852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 481c6852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 481cf852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 48343852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 48345852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 48346852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 4834f852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 48f43852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 48f45852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 48f46852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 58143852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 58145852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 58146852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 5814f852 UNSAT vars 2709 clauses 11184 sec 1
+VIOLATE 58743852 SAT vars 2709 clauses 11184 sec 0 tau a8ac5830 eps 32e750a9 h1 23b3c610 solution 1 rule_A 0
+VIOLATE 58745852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 58746852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 58fc3852 SAT vars 2709 clauses 11184 sec 0 tau a8ac5830 eps 321750a9 h1 c445800f solution 1 rule_A 0
+VIOLATE 781c3852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 781c5852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 781c6852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE 78343852 SAT vars 2709 clauses 11184 sec 0 tau a85c18b0 eps 0d6750a9 h1 7c7fc110 solution 1 rule_A 0
+VIOLATE 78345852 SAT vars 2709 clauses 11184 sec 1 tau 585c58b0 eps 0d6710a9 h1 8c77c190 solution 1 rule_A 0
+VIOLATE 78346852 SAT vars 2709 clauses 11184 sec 0 tau 585c18b0 eps 0d6730a9 h1 fc77a130 solution 1 rule_A 0
+VIOLATE 787c3852 SAT vars 2709 clauses 11184 sec 0 tau a85c58b0 eps 0d1750a9 h1 7459bd8f solution 1 rule_A 0
+VIOLATE 787c5852 SAT vars 2709 clauses 11184 sec 1 tau a85c58b0 eps 0d1710a9 h1 75b7f66f solution 1 rule_A 0
+VIOLATE 787c6852 SAT vars 2709 clauses 11184 sec 1 tau a85c58b0 eps 0d1730a9 h1 63a788cf solution 1 rule_A 0
+VIOLATE c81c39b3 SAT vars 2709 clauses 11184 sec 0 tau 481c37b1 eps 2d5751e8 h1 0aa0742f solution 1 rule_A 0
+VIOLATE c81cd8b3 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE d8142873 SAT vars 2709 clauses 11184 sec 0 tau 582c27b1 eps 32a74f68 h1 3a79a570 solution 1 rule_A 0
+VIOLATE d81428b3 SAT vars 2709 clauses 11184 sec 0 tau 586c27b1 eps 32a74fe8 h1 cb55fe0e solution 1 rule_A 0
+VIOLATE d81428d3 SAT vars 2709 clauses 11184 sec 0 tau 582c27b1 eps 32a74fa8 h1 34758fee solution 1 rule_A 0
+VIOLATE f8143852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE f8145852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE f81c2873 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE f81c28b3 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE f8342852 SAT vars 2709 clauses 11184 sec 0 tau 17d4e830 eps f298b0a9 h1 8fc39970 solution 1 rule_A 0
+VIOLATE f83c3852 UNSAT vars 2709 clauses 11184 sec 0
+VIOLATE f83c5852 UNSAT vars 2709 clauses 11184 sec 1
+VIOLATE f83c6852 UNSAT vars 2709 clauses 11184 sec 1
+VIOLATE f87c2852 SAT vars 2709 clauses 11184 sec 0 tau 17dce830 eps f2e8b0a9 h1 f8419ed0 solution 1 rule_A 0

@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "target_profile": "blake3-r3-prefix-v1",
+  "attack_class": "ordinary-collision",
+  "rounds": 3,
+  "claim": {
+    "time_log2": 125.10041,
+    "time_unit": "target-compressions",
+    "memory_log2_bytes": 20,
+    "preprocessing_log2": 2,
+    "success_probability": 0.39,
+    "nonuniform_advice_log2_bytes": 0
+  },
+  "restrictions": [
+    "Two distinct 64-byte messages 0^32 || x and 0^32 || y (x != y, 256-bit little-endian integers): one chunk, one block, flags 11, counter 0, block length 64, standard IV, unkeyed, the complete 256-bit digest of the 3-round hash (blake3-r3-prefix-v1), found as a collision f(x) = f(y) of f(x) = digest(0^32 || x). Plain birthday attack; no differential or structural property of the 3 rounds is used.",
+    "Machine: a classical load/store machine with 256-bit words, 256-bit immediates and R registers under collision-frontier-v5 (the profile fixes the word size and charges loads and stores, not a register count); 638 operations (C of blake3-r3) to the unit. Charged: every add, AND, OR, XOR, shift, compare, branch, register move, load, store and the random word. The main loop (seven packed 36-bit lanes, 595 operations per batch; per 16 batches a grouped filter of 34 operations, 3 loop operations and 1 register move) has no loads or stores; the tracer reports 34 live words, so R >= 34 suffices. A group whose filter fires is replayed batch by batch and charged in full. Smaller register files are priced in proof.md 3.5 (+0.0132 bit at R = 24, +0.097 at R = 16).",
+    "time_log2 is an upper bound: every term of proof.md Section 3.4 is enforced by a halt of the program (B batches, e2max stage-2 events, 26,791 table keys, a recovery of at most 12 L + 2^48 batches, one recovery), and the bound charges each at its limit. The attempt is single: one fresh uniform 256-bit word r, no restart, no amplification, no stored collision, no advice (m0..m7 = 0). Distinguished points: low 32 bits zero and the next 90 bits below 400 (density 400 / 2^122).",
+    "Memory: 26,791 table entries of 25 bytes (669,775 bytes) plus 374,688 bytes of code (10,408 instructions of 36 bytes) plus 2,048 bytes of counters plus 2,048 bytes for 64 registers: 1,048,559 bytes <= 2^20; claimed as 2^20, so the memory term of the score is 0.",
+    "Success probability at least 0.39 holds under H1 (proof.md Section 5) with the losses of Section 4 (about 2.96e-4 spent of 1.65e-3 available). If the pair-collision rate of the evaluated inputs were (1 - eps) of the random-mapping rate, the success probability stays at least 0.39 for eps <= 0.0044, and at most 0.5 * log2(1/(1-eps)) more bits (0.0072 for eps = 0.01) restore it beyond.",
+    "The declared experiment rho-n22 runs the same program at width n = 22 (mixed DP: low 4 bits zero and the next 4 bits below 12; groups of 2 batches) and returns pairs whose complete 3-round digests agree in the low 22 bits. It checks the circuit, grouped filter and replay, bookkeeping and recovery on the real target, not the cost or success probability at width 256. No outside code or library is used."
+  ],
+  "baseline_improved": "blake3-r3-nominal-v2",
+  "certificate_manifest": "certificates/manifest.json",
+  "experiment_manifest": "experiments/manifest.json",
+  "submission_state": "ready",
+  "lane": "exploratory",
+  "heuristics": [
+    {
+      "id": "H1-random-mapping",
+      "statement": "Score-critical. f(x) = digest(0^32 || x), the 3-round complete hash of a 64-byte message, behaves as a random mapping on N = 2^256 points for everything the search evaluates: (a) for the inputs the search evaluates, the 256-bit outputs behave as uniform and independent values, so that two distinct evaluated inputs collide with probability 2^-256 (this entry uses no input difference and does not claim that none exists); (b) the iterates of f from the starts r + t (r a fresh uniform 256-bit word, t < 2^15) have the first-collision law of a random mapping (trails of length near 2^113 merge as independent random paths); (c) whether an iterate is a distinguished point (low 32 bits zero and the next 90 bits below 400) is independent of (a) and (b) and has probability 400 / 2^122. Under H1 the success probability of the single attempt is at least 0.39 (proof.md Section 4).",
+      "role": "score-critical",
+      "scope": "The fixed target blake3-r3-prefix-v1, the fixed key m0..m7 = 0, the 2^128-scale evaluation of f along about 2.6e4 trails of mean length 2^113.36 started from r + t. Not claimed for other keys, other round counts, or evaluations beyond this scale.",
+      "extrapolation": "Declared and not proved. The full 256-bit functional graph, trails longer than 2^40 and 2^128 evaluations cannot be observed. The participant tests T1 to T3 (proof.md Section 5) were run on the base entry's program; they show no deviation at widths 32 and 40 and at 2^26 sampled points of the fixed function. T3 is repeated on this entry's own program by the organizer experiments rho-n32-a to rho-n32-c (72 attempts) and rho-n40-a to rho-n40-d (8 attempts), which check the pairs the shipped search returns on the real target; their power is stated in proof.md Section 6 (a deficit of the collision rate is visible only above about 27 percent); T1 and T2 are not repeated. The experiment rho-n22 checks the construction. A deficit eps in the pair-collision rate costs 0.5 * log2(1/(1-eps)) bits (0.0072 for eps = 0.01), listed in Limits.",
+      "evidence_ids": [
+        "experiment:rho-n22",
+        "experiment:rho-n32-a",
+        "experiment:rho-n32-b",
+        "experiment:rho-n32-c",
+        "experiment:rho-n40-a",
+        "experiment:rho-n40-b",
+        "experiment:rho-n40-c",
+        "experiment:rho-n40-d",
+        "proof:114-126",
+        "proof:95-113",
+        "proof:134-136"
+      ],
+      "limitations": "The full 256-bit functional graph, iterations above 2^40, and other keys are untested. T1 and T2 were not repeated for this entry; T3 was repeated by the organizer experiments at widths 32 and 40 with low power (proof.md Section 6). The experiments show correctness of the program and no deviation at the sizes run; they do not measure collision structure at 2^128 evaluations. A rate deficit eps of H1 (a) above 0.0044 lowers the success probability below 0.39 and is repaired by at most 0.5 * log2(1/(1-eps)) more bits of time."
+    },
+    {
+      "id": "H2-loss-terms",
+      "statement": "Supporting. Under H1, the points lost at the halt and the events outside the birthday count are bounded as in proof.md Section 4: the sum of the ages of the 7 unfinished trails is at most 28 L except with probability 5.8e-7 (exponential ages, mean L = 2^113.36); the number of cut trails is Poisson with mean 0.157, charged as 2.56e-4 of probability; the expected number of colliding pairs inside one trail is at most 2^-14.65; a key false match has probability below 2.5e-11; the table-capacity abort has probability below 2^-42.5. The sum of these probabilities is below 2.96e-4.",
+      "role": "supporting",
+      "scope": "The parameters of plan(256) in experiments/rho.py: 7 lanes, DP density 400 / 2^122, age cap 12 L, table of 26,791 keys.",
+      "extrapolation": "Computations under H1 only (geometric trail lengths, memoryless DP events); the same formulas are implemented in plan(n) and loss(p) and exercised at n = 22, 32, 40 in the experiment and in the base entry's T3.",
+      "evidence_ids": [
+        "proof:95-113",
+        "experiment:rho-n22"
+      ],
+      "limitations": "The cut-trail loss is bounded as a probability over the number of cut trails (Poisson, mean 0.157) in proof.md Section 4 and costs 2.56e-4, inside the 1.65e-3 slack."
+    },
+    {
+      "id": "H3-machine-convention",
+      "statement": "Supporting. Operation counts follow the machine model declared in proof.md 3.1: charged are all data-path operations, comparisons, branches, register moves, the random word, and every load and store; the main loop has none because its 34 live words fit in the declared registers. The organizer's reference count C(r3) = 638 is used only as the unit; it is not claimed to define the register file.",
+      "role": "supporting",
+      "scope": "The unrolled body of 16 batches of 595 operations with its grouped filter, and the replay of a group whose filter fires; table accesses, recovery and events are charged at the stated bounds including loads and stores of their words.",
+      "extrapolation": "A machine with fewer than 28 registers would add loads and stores to every batch; proof.md 3.5 gives the cost (+0.0132 bit at R = 24, +0.044 at R = 20, +0.097 at R = 16). The claim assumes R >= 34.",
+      "evidence_ids": [
+        "proof:41-59",
+        "proof:91-94",
+        "proof:138-143",
+        "proof:145-147"
+      ],
+      "limitations": "The benchmark profile does not fix a register count. Cost for a smaller register file is given in proof.md 3.5. The count 595 is produced by the tracer in the program and cross-checked by the per-round totals 116 + 232 + 235 + 12 in proof.md Section 3.2."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "S37-D177B-W14W15-OBSTRUCTION",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": 16,
+  "object": "Procedure C fixed-W14 row-16 diagnostic",
+  "question": "What does the fixed-W14 transition imply for row-16 differences, with the MSB-first characteristic indexing corrected?",
+  "labels": ["D", "X", "Z"],
+  "status": "SAMPLED",
+  "number": "dA16=e0000000 satisfies the required bit-29 u; corrected 200-model failures are A16 bits 29/30/31 in 97/97/45 cases and E16 bits 7/9/11/12/17/18/22/23/30",
+  "source": "our workflow: d177b fixed-suffix transition audit",
+  "own_test": true,
+  "evidence": "research/retest/d177b_procedure_c/ROW16_OBSTRUCTION.md; research/retest/d177b_procedure_c/W15_LSTAR_CHECK.txt; research/sol_answer_D177b_procedure_c.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "r37.d177b.fixed_suffix_row16_obstruction",
+  "notes": "The former obstruction claim was invalidated by MSB-first bit indexing. This remains a bounded diagnostic, not a family-wide rate or kill; the P1 signature test and S13/S9 variants remain OPEN."
+}

@@ -1,0 +1,118 @@
+shape_verify_outlandish_0 - skeptic check of shape (c) SPHERE, "conditional door at k=3 with 0 checks (2^80)"
+Research only: no yukon, no submit, no trace.  Labels: COMPUTED / DERIVED / GUESS.
+
+CLAIM UNDER TEST (shape_odd/NOTES.txt (c)): hold 3 of out0,2,5,7 with 0 checks -> h = 32 -> 2^80.
+  Evidence given: kissat runs (1 word / 15 guesses, two triples / 13 guesses) undecided after 600 s.
+
+VERDICT: REFUTED.  In the word-level GD model the exact check count is c(k) = k for every held subset
+  (c(3) = 3 for all four triples), so the k = 3 level costs (128+32)/2 + 32*3 = 2^176, not 2^80.  Tables
+  (any per-call table, incl. the gd_promote macros) and promoted constants do not change this.
+
+1. MODEL REBUILT INDEPENDENTLY (build.py, build_check.txt) COMPUTED
+   - own BLAKE3 compress reproduces the official BLAKE3("") hash at 7 rounds;
+   - own named-word system reproduces all 8 output words of 2-round BLAKE3 on 200 random messages;
+   - its equation sets equal ../gd_order.build exactly (outhalf 116 eqs, fixed 96 eqs, same constants).
+
+2. LEMMA (DERIVED, checked by brute force in lemma.py)
+   min checks of the GD process = min number of equations whose deletion leaves an EMPTY 2-core
+   (2-core: repeatedly remove a word lying in exactly one remaining equation, with that equation).
+   Why: with 0 checks every equation solves a word that occurs in no earlier equation; the last core
+   equation in the order cannot, since each of its words lies in another, earlier core equation.  The
+   guesses play no role - no choice of guesses can open a non-empty core.  Conversely an empty core
+   (after deleting D) gives an order with |D| checks (reverse peeling).
+   Brute force (lemma.txt) COMPUTED: 26,000 random hypergraphs (3-9 words, and 3,000 with 3-12 words),
+   exhaustive guess sets vs exhaustive deletions: 26,000 agree, 0 disagree (10,539 had a non-empty core;
+   exact check counts 0..4 all occur).
+
+3. EXACT CHECK COUNTS (cores.py, cores.txt) COMPUTED (exhaustive deletion search; lemma)
+   held subset        words eqs F | 2-core eqs | exact min checks
+   none               128   112 16 |   0        | 0
+   any single word    128   113 15 | 102-104    | 1
+   any pair           128   114 14 | 105-107    | 2   (no single deletion empties the core)
+   any triple         128   115 13 | 107-108    | 3   (no deletion of <= 2 equations empties it)
+   all four           128   116 12 | 109        | 4   (no deletion of <= 3 equations empties it)
+   fixed variant      100    96  4 |  89        | 4   (matches separable/ "4 exact" and the main session's
+                                                       SAT k4, k5 UNSAT)
+   So the greedy values of shape_odd (checks = k) were optimal, and the main session's undecided outhalf SAT
+   k = 12, 13, 14 (0, 1, 2 checks) are all UNSAT: the whole half needs 16 guesses.
+   The shape_odd inequality c(3) >= c(4) - 1 holds (3 >= 3); the door needed c(4) = 1, but c(4) = 4.
+
+4. TABLES AND PROMOTED CONSTANTS (cores.py table_core; DERIVED + COMPUTED)
+   Permissive table rule: any subset of ONE G call's equations (plus its held out-equation) may be removed
+   when it has a perfect matching onto words used nowhere else (every call treated as table-able, any size).
+   A real 0-check table step needs such a matching (Hall: otherwise part of the block over-determines its
+   words = a check).  COMPUTED: the permissive core equals the plain core in all 17 cases -> tables give no
+   0-check order either.
+   Promotion (fix words P per sub-family; equations inside P become one-time setup constraints): a core
+   minus P stays closed, so a 0-check sub-family needs the WHOLE core inside the setup constraints; then its
+   freedom is <= F - deficiency(core) = 0 in every case (deficiency = F, cores.txt).  So a 0-check
+   sub-family has at most one member: promotion cannot open the door.
+   Sanity (promo_check.py, promo_check.txt) COMPUTED: 4 x 3001 random promotions (random and connected
+   equation sets, plus "promote the whole core"); in 779 the remaining core was empty, and in every one of
+   them the setup constraints contained the whole core and the sub-family freedom F' was <= 0 (max 0).
+   Table model, deletion search (cores_tables.py, cores_tables.txt) COMPUTED: for every triple, no deletion
+   of <= 2 equations empties the permissive table core, so even with per-call tables c(3) >= 3 (and = 3).
+
+5. SAT CROSS-CHECKS (sat_toy.py, run_sat.sh, sat.log; kissat, own layered encoder like ../gd_sat.py) COMPUTED
+   - 1-round toys (calls K0..K3, D0..D3; held out0 / out0,2,5): the lemma says 0 checks (empty core; one
+     round is a permutation, Sol).  guesses <= F: SAT in 0 s (positive control: the encoder finds 0-check
+     orders when they exist).
+   - same toys with guesses <= F - 1 (UNSAT by plain counting, fewer guesses than freedom): kissat UNDECIDED
+     after 120 s.  So this encoding cannot even prove a trivial counting bound quickly: the 600 s
+     "undecided" runs of shape_odd carry no evidence for a 0-check order.
+   - real 2-round held=out0, guesses <= 16: SAT in 1 s (= c(1) = 1, the trivial order).
+   - decode.py replays the models (decode.txt): real k16 = the 16 message words, 1 check (out0); 1-round
+     out0 = 15 message words (all but m13, recovered backwards through D2), 0 checks; 1-round out0,2,5 = 13
+     D-call words, 0 checks.  Replay by plain propagation confirms each.
+   - rerun of the main session's ../gd_fixed_len64_k5_T100.cnf (fixed variant, 1 check, non-empty core):
+     UNSAT in 405 s, as before and as the lemma says (c = 4 there).
+   - real held=out0, guesses <= 15 (lemma: UNSAT, non-empty core of 102 equations): UNDECIDED after 600 s,
+     the same as shape_odd's run - expected from an encoding that cannot prove even the counting case.
+   - rerun of shape_odd's numeric sphere toy (../shape_odd/shapes.py families, w = 8, 2^20, new seed 7;
+     fam_w8_seed7.txt) COMPUTED: Hamming balls r3 half-digest 14 and 16 pairs vs 12.3 expected, uniform
+     family 0.95 / 1.06, all other families within noise - reproduces shape_odd (no lumpiness).
+     Aside (GUESS, outside this claim): P_invariant (2^16 members, the same family for every seed) shows
+     5 pairs on 4-group (0,1,3,7) vs 0.5 expected, in both seeds because the family is deterministic;
+     one hit among 70 groups at p ~ 1e-4 each is ~1% by chance.  Not followed up.
+
+6. WHAT IS NOT COVERED (stated plainly)
+   - bit-level GD (carries as separate bits): the lemma is word-level.  The main session's bit_gd greedy found
+     128 check bits for the fixed variant (= 4 words), no gain; no exact bit-level bound here.
+   - tables spanning several G calls after heavy promotion: only covered through the join-tree bound below.
+   - non-GD methods (differential, algebraic): out of scope of this claim.
+
+7. BEYOND 0 CHECKS: JOIN TREES AT k = 3 (ksplit method, rerun for k = 3) COMPUTED + DERIVED
+   ksplit section 3: to output 2^80 members (h = 32) below 2^92, every node of any join tree (any k-list,
+   MITM, clamping, per-call tables) needs delta <= 13 = F, and the lowest node whose closure is everything
+   joins two proper closed regions A, B with delta(A), delta(B), delta(A u B) <= 13 covering the 2-core
+   (the alternative, one leaf of 13 guesses with full closure, is a 0-check order: impossible, section 3).
+   My export of the k = 4 system equals ksplit/sys_outhalf_plain.txt exactly (export_sys.py).
+   ../ksplit/rootcore.py (read only) on my k = 3 exports, D = 13 (rc.log):
+     out0,2,5  UNSAT 35 s   out0,2,7  UNSAT 37 s   out0,5,7  UNSAT 43 s   out2,5,7  UNSAT 34 s
+     sanity: out0,2,5 with D = 20 SAT in 1 s, D = 16 SAT in 7 s (the encoding can say yes);
+     out0,2,5 with D = 14 also UNSAT (42 s): for that triple some node needs delta >= 15 (>= 2^144).
+   DERIVED: every join tree for the k = 3 sphere has a node with delta >= 14, i.e. >= 2^(80+32) = 2^112
+   joined pairs for 2^80 members.  So k = 3 is dead below 2^112 even with lists / MITM / clamping, not just
+   for direct samplers.  (Relies on ksplit's section-3 argument, which I re-read but did not re-derive.)
+   Side result for k = 4: ksplit R11 left open "a 12-guess basis (0 checks)"; c(4) = 4 closes it, so every
+   join tree for the whole half (outhalf) costs >= 2^96.  Reproduced ksplit's k = 4 root test on my own
+   export: rc_k4_D12 UNSAT in 32 s.
+
+8. SUMMARY OF RUNS (for the record)
+   COMPUTED  build_check.txt   model = gd_order.build exactly; BLAKE3 test vector and 2-round wiring OK
+   COMPUTED  lemma.txt         26,000 random hypergraphs: exact GD checks == min deletions to empty the core
+   COMPUTED  cores.txt         c(k) = k exactly for every held subset (k = 1..4); fixed variant c = 4
+   COMPUTED  cores_tables.txt  per-call tables: for all four triples no deletion of <= 2 equations empties
+                               the permissive table core => >= 3 checks with any per-call tables (= 3)
+   COMPUTED  promo_check.txt   promotions: empty core only with F' <= 0
+   COMPUTED  rc.log            k = 3 join-tree root test D = 13 UNSAT for all four triples; D = 20 SAT
+   COMPUTED  sat.log, decode.txt  SAT cross-checks (section 5)
+   Corrected exponent of the k = 3 sphere level: (128 + 32)/2 + 32 * 3 = 176 (direct sampler);
+   >= 112 for any join tree; every sphere level k >= 1 is 128 + 16k >= 144 as a direct sampler.
+   Best sphere level stays k = 0 = generic 128.  Nothing here beats the board (~92).
+
+BLOCKED: one foreground "Start-Sleep 45" wait was refused by the harness no-sleep rule; not retried, used
+   Monitor watches instead.
+FILES: CNFs and large solver outputs were deleted after the runs (regenerate: python sat_toy.py [real];
+   python export_sys.py <held> <sysfile>; python ../ksplit/rootcore.py <sysfile> <D> <cnf>).  Compute used:
+   <= 4 processes, no GPU (nothing here needed it).

@@ -1,0 +1,19 @@
+0dd9fefdf33510739be6874ab349ff8c55d9fa5ad1419293f628327a086308ab  rotscan.c
+Fri Oct  9 20:15:36 MDT 2026
+[rand] dropped 0 repeated input rows, 1048576 remain
+[rand] N=1048576 n/half=524288 planted 68 51 77 303
+jobs 50000
+done
+rand: 95.25 s, 626852 KB
+rand exit 0
+[ctx] dropped 52 repeated input rows, 262092 remain
+[ctx] N=262092 n/half=131046 planted 20 13 11 71
+jobs 50000
+done
+ctx: 19.85 s, 240284 KB
+ctx exit 0
+Fri Oct  9 20:17:31 MDT 2026
+-rwxrwxrwx 1 root root   323624 Oct  9 20:17 out_ctx_joint.tsv
+-rwxrwxrwx 1 root root 21553892 Oct  9 20:17 out_ctx_scan.tsv
+-rwxrwxrwx 1 root root   349904 Oct  9 20:17 out_rand_joint.tsv
+-rwxrwxrwx 1 root root 24199526 Oct  9 20:16 out_rand_scan.tsv

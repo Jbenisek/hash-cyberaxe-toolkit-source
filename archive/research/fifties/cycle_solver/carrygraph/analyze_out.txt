@@ -1,0 +1,15 @@
+(a) addition graph: 10 nodes, 20 rotation edges, 11 independent cycles
+    cycle closed by g     -> Y12   (rot 12): net rotation 12 (lookahead >= 12 bits on this cycle)
+    cycle closed by d1    -> a1    (rot  0): net rotation  4 (lookahead >= 4 bits on this cycle)
+    cycle closed by g     -> a1    (rot  0): net rotation 24 (lookahead >= 8 bits on this cycle)
+    cycle closed by a1    -> Dd1   (rot  0): net rotation 12 (lookahead >= 12 bits on this cycle)
+    cycle closed by a1    -> C1a1  (rot  8): net rotation 12 (lookahead >= 12 bits on this cycle)
+    cycle closed by Dd1   -> C1a1  (rot  0): net rotation 24 (lookahead >= 8 bits on this cycle)
+    cycle closed by a1    -> C1a1  (rot  0): net rotation  4 (lookahead >= 4 bits on this cycle)
+    cycle closed by C1c1  -> Y1    (rot 20): net rotation  4 (lookahead >= 4 bits on this cycle)
+    cycle closed by w10   -> Y1    (rot  0): net rotation  8 (lookahead >= 8 bits on this cycle)
+    cycle closed by C1a1  -> chk   (rot  8): net rotation 24 (lookahead >= 8 bits on this cycle)
+    cycle closed by Y1    -> chk   (rot 24): net rotation  8 (lookahead >= 8 bits on this cycle)
+(b) best sweep frames {'Y12': 8, 'd1': 0, 'a1': 0, 'Dd1': 16, 'w10': 0, 'C1a1': 8, 'C1c1': 20, 'Y1': 0, 'chk': 20} peak level 75.75
+    bits guessed ahead per word: {'a1': 16, 'Dd1': 24, 'C1a1': 28, 'Y1': 12}  max simultaneously in flight per word: {'a1': 16, 'Dd1': 8, 'C1a1': 12, 'Y1': 12}  sum 48
+(c) replay on 16392 real instances: GPU roots 16491, schedule path passes for 16491; random non-roots 32784, rejected 32784; failures []

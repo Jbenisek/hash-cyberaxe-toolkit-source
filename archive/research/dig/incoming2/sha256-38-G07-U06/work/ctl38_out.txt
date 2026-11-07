@@ -1,0 +1,3 @@
+timeout 1.0 RAISED ExperimentError Python experiment exceeded organizer timeout 1.76 s
+timeout 20.0 RAISED ExperimentError Python experiment exceeded organizer timeout 21.63 s
+size rule: shipped L 65314 N 65478

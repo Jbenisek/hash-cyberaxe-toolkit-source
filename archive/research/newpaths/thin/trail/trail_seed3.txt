@@ -1,0 +1,30 @@
+SEED 3 W 8 y11 cf y11b 15 delta 2d y3 3c y3b 2e
+CLASS e1^e1b 12 eta 21 n 64 rate/trial filed 2^-inf ctrH(beta df, |D| 4) 2^-inf
+CLASS e1^e1b 0e eta e0 n 32 rate/trial filed 2^-inf ctrH(beta df, |D| 4) 2^-inf
+CLASS e1^e1b 16 eta 61 n 32 rate/trial filed 2^-inf ctrH(beta df, |D| 4) 2^-inf
+CLASS e1^e1b 32 eta 23 n 32 rate/trial filed 2^-inf ctrH(beta df, |D| 4) 2^-inf
+CLASS e1^e1b 1e eta e1 n 16 rate/trial filed 2^-37.00 ctrH(beta 5f, |D| 8) 2^-32.00
+CLASS e1^e1b 36 eta 63 n 16 rate/trial filed 2^-37.00 ctrH(beta 59, |D| 32) 2^-34.00
+CHOSEN class 1e n 16 beta* 5f D ['0xb', '0xc', '0xf', '0x10', '0x8b', '0x8c', '0x8f', '0x90']  (176s)
+BASE rate0 (ctrH exact) 2^-32.000 (check 2^-32.000); E1 outputs reachable 2406, matched 1
+CHAR0 tau b6 eps 35 db2 35: p(E1|D) 2^-15.00 p(E3) 2^-17.00 own p/trial 2^-32.00 = 1.000 of rate0
+CHAR1 tau ff eps ff db2 ff: p(E1|D) 2^-inf p(E3) 2^-inf own p/trial 2^-inf = 0.000 of rate0
+CHAR2 tau ff eps ff db2 fe: p(E1|D) 2^-inf p(E3) 2^-inf own p/trial 2^-inf = 0.000 of rate0
+CHAR3 tau ff eps ff db2 fd: p(E1|D) 2^-inf p(E3) 2^-inf own p/trial 2^-inf = 0.000 of rate0
+CHAR4 tau ff eps ff db2 fc: p(E1|D) 2^-inf p(E3) 2^-inf own p/trial 2^-inf = 0.000 of rate0
+E3FIRST rate per uniform trial 2^-37.00 (filed rate); steps with S3 nonempty 2^-9.00, mean |S3| there 1.00 (max 1) vs |D| 8
+E3FIRST hits per step: E3-first 1.863e-09  D-loop 1.863e-09  ratio 2^0.00 (formula 2^W*rate_all/(|D|*rate_D) = 2^0.00); E1 runs per hit: E3-first 2^20.00  D-loop all steps 2^32.00  D-loop on rate3>0 steps 2^23.00
+E3SIDE necessary filter (rate3>0): pass 2^-9.00, gain 2^9.00; max rate3/rate0 2^9.00
+E3SIDE top-q gain over rate0: q 2^-9.0: 2^9.00  q 2^-11.0: 2^9.00  q 2^-13.0: 2^9.00  q 2^-15.0: 2^9.00  q 2^-17.0: 2^9.00
+E3SIDE chi: share of configs with F3(chi)>0 2^-9.00, mean F3 2^-17.00, max 2^-8.00, mean|>0 2^-8.00
+E3SIDE existing-style filter (1)&(2): pass 2^-4.83 keeps 1.0000 of mass, gain 2^4.83; exact joint filter (rate3>0) pass 2^-9.00: extra 2^4.17
+E1SIDE mean rate1/rate0 1.0371; share rate1>0 real 2^-11.95 shuffled 2^-11.95
+E1SIDE top-q gain real/shuffled: q 2^-1: 2^1.00/2^1.00  q 2^-2: 2^2.00/2^2.00  q 2^-4: 2^4.00/2^4.00  q 2^-6: 2^6.00/2^6.00  q 2^-8: 2^8.00/2^8.00  q 2^-10: 2^10.00/2^10.00
+E1SIDE chi count per step (real vs binomial): 0: 1/1  1: 0.000253/0.000244  2: 0/2.61e-08  3: 0/1.59e-12  4: 0/6.07e-17  5: 0/1.48e-21  6: 0/2.26e-26
+E1SIDE variance share: J 0.000  P 0.000  K 0.000  (K,J low nibbles) 0.001  [shuffled J 0.000]
+JCHOICE control (no structure): top 1/256: 2^7.00  top 16/256: 2^4.00  top 64/256: 2^2.00
+JCHOICE gain if J picked per (P,K): top 1/256 of J: 2^7.00  top 16/256 of J: 2^4.00  top 64/256 of J: 2^2.00
+JOINT sel1 all (q1 2^0.0) | all: q3 2^0.0 r/r0 2^0.05 | nec: q3 2^-9.0 r/r0 2^9.05 | nec/2^2: q3 2^-9.0 r/r0 2^9.05 | nec/2^4: q3 2^-9.0 r/r0 2^9.05 | nec/2^6: q3 2^-9.0 r/r0 2^9.05 | chi>0: q3 2^-9.0 r/r0 2^9.05 | exist12: q3 2^-4.8 r/r0 2^4.88
+JOINT sel1 r1>0 (q1 2^-11.9) | all: q3 2^0.0 r/r0 2^12.00 | nec: q3 2^-9.0 r/r0 2^21.00 | nec/2^2: q3 2^-9.0 r/r0 2^21.00 | nec/2^4: q3 2^-9.0 r/r0 2^21.00 | nec/2^6: q3 2^-9.0 r/r0 2^21.00 | chi>0: q3 2^-9.0 r/r0 2^21.00 | exist12: q3 2^-4.8 r/r0 2^16.83
+JOINT sel1 chi>=1 (q1 2^-11.9) | all: q3 2^0.0 r/r0 2^12.00 | nec: q3 2^-9.0 r/r0 2^21.00 | nec/2^2: q3 2^-9.0 r/r0 2^21.00 | nec/2^4: q3 2^-9.0 r/r0 2^21.00 | nec/2^6: q3 2^-9.0 r/r0 2^21.00 | chi>0: q3 2^-9.0 r/r0 2^21.00 | exist12: q3 2^-4.8 r/r0 2^16.83
+DONE 206s

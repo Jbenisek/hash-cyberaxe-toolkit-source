@@ -1,0 +1,6 @@
+real 0: nfac 8 deg4 1 roots 0 | 500 36 36 18 12 12 6 4 (10s)
+real 1: nfac 10 deg4 1 roots 0 | 212 172 53 43 28 28 28 28 28 4 (5s)
+real 2: nfac 9 deg4 1 roots 0 | 180 180 90 80 44 28 11 7 4 (9s)
+real 3: nfac 9 deg4 4 roots 1 | 300 244 61 4 4 4 4 2 1 (9s)
+real 4: nfac 18 deg4 1 roots 0 | 160 132 108 33 28 28 27 20 20 14 12 12 12 5 4 3 3 3 (5s)
+real 5: nfac 27 deg4 5 roots 4 | 124 100 80 60 31 25 20 20 20 20 20 20 15 12 12 12 6 4 4 4 4 4 3 1 1 1 1 (6s)

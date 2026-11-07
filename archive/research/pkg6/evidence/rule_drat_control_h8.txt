@@ -1,0 +1,4 @@
+18b0e098 285020a0 6e21be55: proof against its formula: VERIFIED (2928 clauses); last clause of the formula is '335 319 320 -336 1237 0'; formula without it is SAT and the same proof against it: NOT VERIFIED (a clause is not RUP); first half of the proof: NOT VERIFIED (no empty clause)
+18b0e098 385020a0 6e21be55: proof against its formula: VERIFIED (2818 clauses); last clause of the formula is '335 319 320 -336 1237 0'; formula without it is SAT and the same proof against it: NOT VERIFIED (a clause is not RUP); first half of the proof: NOT VERIFIED (no empty clause)
+18d0e098 285020a0 6e61be55: proof against its formula: VERIFIED (3455 clauses); last clause of the formula is '335 319 320 -336 1237 0'; formula without it is SAT and the same proof against it: NOT VERIFIED (a clause is not RUP); first half of the proof: NOT VERIFIED (no empty clause)
+CONTROLS: checker accepts the right proof and rejects both wrong ones in all cases

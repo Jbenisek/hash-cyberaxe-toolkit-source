@@ -1,0 +1,23 @@
+{
+  "id": "D550-SHA3-R5P-L-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR5P-L prefile and available historical timing artifacts",
+  "question": "What is currently creditable for pkgR5P-L without a fresh organizer request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR5P-L claims time_log2=32.92063, memory_log2=30, preprocessing_log2=32.82706, success_probability=0.4. Prefile SOME FAIL: ledger runner prints N=None; labels D20/D21/D22/D23/D24 in claim, D20/D22/D23/D24 in note, D20/D23 in proof header. Other intake checks pass. No fresh request is supplied; historical timing logs are not new evidence and no exact-N/score/premise credit is taken.",
+  "source": "our workflow: D550 read-only pkgR5P-L prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D550_r5p_l_prefile.md; research/tools/build_pkg/scratch/pkgR5P-L/pkg/sha3-256-r5/claim.json; research/tools/build_pkg/scratch/pkgR5P-L/pkg/sha3-256-r5/proof.md; research/tools/build_pkg/scratch/pkgR5P-L/pkg/sha3-256-r5/experiments/r5.py; research/tools/build_pkg/scratch/pkgR5P-L/work/timing_L.out.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "historical logs only; not remeasured",
+  "notes": "No fresh organizer request in scratch directory; no package/stage/filing/submission.",
+  "held_fixed": "pkgR5P-L package bytes and historical artifacts as found; no file writes to package",
+  "reopen_if": "ledger repair, label cleanup, or a supplied public organizer request"
+}

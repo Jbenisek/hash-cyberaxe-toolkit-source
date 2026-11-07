@@ -1,0 +1,47 @@
+V1 compress vs verifier (rounds=2, single block root): 2000/2000 equal
+V2 G inverse round trip: 100000/100000
+V3 Fact P: C3 out A (a,b,c,d)=8127c181 76f7aefd 7af77f38 bbfbdffe
+V3 Fact P: C3 out B (a,b,c,d)=7edf3e7e 76f7aefd 850000c3 bbfbdffe
+V3 matches documented Y3 8127c181/7edf3e7e, Y11 7af77f38/850000c3, b,d equal (76f7aefd, bbfbdffe): True
+V4 Lemma L (round 0 identical for 55 vs 63 with w4,w5 recipe): 2000/2000
+validation time 1.1s
+B1 baseline (pins) 20000 trials: digest equal exactly on words {0,2,5,7}: 20000 ; calls with zero difference in all four quarter-steps: {'C0': 20000, 'C1': 20000, 'C2': 20000, 'C3': 0, 'E0': 20000, 'E1': 0, 'E2': 20000, 'E3': 0}
+Q2 E2.q1 state words only (messages equal): nonzero difference injected at quarter-step inputs (a,b,d): 150000 trials, event (all E2 outputs equal, so digest words 0,2,5,7 equal) held in 0
+Q2 E2.q1 WITH message word allowed: nonzero difference injected at quarter-step inputs (a,b,d,mx): 150000 trials, event (all E2 outputs equal, so digest words 0,2,5,7 equal) held in 6320
+Q2 E2.q2 state words only (messages equal): nonzero difference injected at quarter-step inputs (c,d1,b): 150000 trials, event (all E2 outputs equal, so digest words 0,2,5,7 equal) held in 0
+Q2 E2.q3 state words only (messages equal): nonzero difference injected at quarter-step inputs (a1,b1,d1): 150000 trials, event (all E2 outputs equal, so digest words 0,2,5,7 equal) held in 0
+Q2 E2.q3 WITH message word allowed: nonzero difference injected at quarter-step inputs (a1,b1,d1,my): 150000 trials, event (all E2 outputs equal, so digest words 0,2,5,7 equal) held in 6232
+Q2 E2.q4 state words only (messages equal): nonzero difference injected at quarter-step inputs (c1,d2,b1): 150000 trials, event (all E2 outputs equal, so digest words 0,2,5,7 equal) held in 0
+Q2 time 40.7s
+Q2 toy width 3: G is a bijection on 4096 states: True
+Q2 toy width 4: G is a bijection on 65536 states: True
+Q4a positive control by inversion: digest words 0,2,5,7 equal in 20000/20000 with E2 inputs AND E0 inputs both different in 20000
+Q4b random E0/E2 pairs: mean agreeing bits per digest word [15.999, 15.998, 16.003, 15.986] of 32 (expect 16.0; no bias => generic cost 4x32 = 128 bits)
+Q4c outputs equal, messages differ (msg-diff set -> input-diff support), counts of 200000:
+    ('', '') 39806
+    ('mx', 'a') 40138
+    ('mxmy', 'ad') 39559
+    ('mxmy', 'd') 40252
+    ('my', 'ad') 40245
+Q4c clean state (equal inputs), message differences nonzero: equal outputs in 0 / 500000
+Q4c clean state, structured (dx,-dx): equal outputs in 0 / 500000
+Q4d source baseline: active calls (>50% trials): K2,C3,E1,E3 ; E0 q-active [0, 0, 0, 0] ; E2 q-active [0, 0, 0, 0] ; digest words equal (of 600 trials) [600, 0, 600, 0, 0, 600, 0, 600]
+Q4d source dm0: active calls (>50% trials): K0,K2,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm1: active calls (>50% trials): K0,K2,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm2: active calls (>50% trials): K1,K2,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm3: active calls (>50% trials): K1,K2,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm4: active calls (>50% trials): K2,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm5: active calls (>50% trials): K2,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm6: active calls (>50% trials): K2,K3,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm7: active calls (>50% trials): K2,K3,D0,D1,D2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm8: active calls (>50% trials): K2,D0,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm9: active calls (>50% trials): K2,D0,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm10: active calls (>50% trials): K2,D1,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm11: active calls (>50% trials): K2,D1,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm12: active calls (>50% trials): K2,D2,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm13: active calls (>50% trials): K2,D2,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm14: active calls (>50% trials): K2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d source dm15: active calls (>50% trials): K2,D3,C0,C1,C2,C3,E0,E1,E2,E3 ; E0 q-active [600, 600, 600, 600] ; E2 q-active [600, 600, 600, 600] ; digest words equal (of 600 trials) [0, 0, 0, 0, 0, 0, 0, 0]
+Q4d time 54.5s
+Q4d unpinned Lemma-L baseline active-call counts of 600: {'K2': 600, 'C3': 600, 'E0': 600, 'E1': 600, 'E2': 600, 'E3': 600}
+TOTAL time 54.6s

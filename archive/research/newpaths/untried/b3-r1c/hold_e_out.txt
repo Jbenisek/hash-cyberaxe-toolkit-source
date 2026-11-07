@@ -1,0 +1,30 @@
+t_hi = 0: dof=9; front-line basis is a basis: True
+   Y4,E1.c1                 FREE  basis=Y4,E1.c1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+   Y4,E3.c1                 FREE  basis=Y4,E3.c1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+   Y4,E3.d1                 FREE  basis=Y4,E3.d1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+   Y4,E1.b1                 not found
+   Y4,E3.b1                 FREE  basis=Y4,E3.b1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+   Y4,E1.c1,E3.c1           not found
+   Y4,E1.c1,E3.d1           not found
+   Y4,E1.c1,w8              not found
+   Y4,E1.c1,Y9              not found
+   Y4,E1.c1,Y1              not found
+   Y4,E1.c1,E1.b1           not found
+   Y4,E3.c1,E3.b1           not found
+   Y4,E3.c1,Y1              not found
+   time 60.1s
+t_hi FREE (V13 unknown): dof=10; front-line basis+V13 is a basis: True
+   Y4,E1.c1                 FREE  basis=Y4,E1.c1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,V13
+   Y4,E3.c1                 FREE  basis=Y4,E3.c1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,V13
+   Y4,E3.d1                 FREE  basis=Y4,E3.d1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,w0
+   Y4,E1.b1                 not found
+   Y4,E3.b1                 FREE  basis=Y4,E3.b1,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6,V13
+   Y4,E1.c1,E3.c1           not found
+   Y4,E1.c1,E3.d1           not found
+   Y4,E1.c1,w8              FREE  basis=Y4,E1.c1,w8,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6
+   Y4,E1.c1,Y9              not found
+   Y4,E1.c1,Y1              not found
+   Y4,E1.c1,E1.b1           not found
+   Y4,E3.c1,E3.b1           not found
+   Y4,E3.c1,Y1              not found
+   time 1.3s

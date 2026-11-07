@@ -1,0 +1,673 @@
+{
+ "known_vectors": 16,
+ "dep": {
+  "0": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5"
+  ],
+  "1": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5"
+  ],
+  "2": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5"
+  ],
+  "3": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5"
+  ],
+  "4": [],
+  "5": [
+   "w5"
+  ],
+  "6": [
+   "D3d1",
+   "S15",
+   "S9",
+   "w5"
+  ],
+  "7": [
+   "D3d1",
+   "S15",
+   "S9",
+   "w5"
+  ],
+  "8": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5",
+   "y"
+  ],
+  "9": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5",
+   "y"
+  ],
+  "10": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5",
+   "y"
+  ],
+  "11": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5",
+   "y"
+  ],
+  "12": [
+   "C0c1",
+   "C0d1",
+   "D3d1",
+   "S15",
+   "S9",
+   "X2",
+   "w5"
+  ],
+  "13": [],
+  "14": [],
+  "15": []
+ },
+ "C2.x": {
+  "word": 7,
+  "A_B_differ": 0,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.030000000000000027,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "K3",
+   "pos": "y",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "C2.y": {
+  "word": 0,
+  "A_B_differ": 0,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.019500000000000017,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "K0",
+   "pos": "x",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "C3.x": {
+  "word": 4,
+  "A_B_differ": 2000,
+  "distinct_values": 1,
+  "const_value": "97475638",
+  "maxbias": 0.5,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   0,
+   600,
+   0,
+   600
+  ],
+  "xy_equal_AB": [
+   0,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 0,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "K2",
+   "pos": "x",
+   "n": 600,
+   "X_after_round0_equal_AB": 261,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "C3.y": {
+  "word": 13,
+  "A_B_differ": 0,
+  "distinct_values": 1,
+  "const_value": "0007c006",
+  "maxbias": 0.5,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   0,
+   600,
+   0,
+   600
+  ],
+  "xy_equal_AB": [
+   0,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 0,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "D2",
+   "pos": "y",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E0.x": {
+  "word": 1,
+  "A_B_differ": 0,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.017000000000000015,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    0,
+    600,
+    0,
+    0,
+    600,
+    0,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "K0",
+   "pos": "y",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E0.y": {
+  "word": 11,
+  "A_B_differ": 0,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.029000000000000026,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    0,
+    600,
+    0,
+    0,
+    600,
+    0,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "D1",
+   "pos": "y",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E1.x": {
+  "word": 12,
+  "A_B_differ": 0,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.026000000000000023,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   0,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "xy_equal_AB": [
+   600,
+   0
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    0,
+    600,
+    0,
+    600,
+    600,
+    0,
+    600,
+    0
+   ]
+  },
+  "r0_use": {
+   "call": "D2",
+   "pos": "x",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E1.y": {
+  "word": 5,
+  "A_B_differ": 2000,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.02949999999999997,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   0,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "xy_equal_AB": [
+   600,
+   0
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    0,
+    600,
+    0,
+    600,
+    600,
+    0,
+    600,
+    0
+   ]
+  },
+  "r0_use": {
+   "call": "K2",
+   "pos": "y",
+   "n": 600,
+   "X_after_round0_equal_AB": 365,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E2.x": {
+  "word": 9,
+  "A_B_differ": 0,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.027000000000000024,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    0,
+    600,
+    0,
+    0,
+    600,
+    0,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "D0",
+   "pos": "y",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E2.y": {
+  "word": 14,
+  "A_B_differ": 0,
+  "distinct_values": 1,
+  "const_value": "00000000",
+  "maxbias": 0.5,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   600,
+   600,
+   600,
+   600
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    600,
+    0,
+    600,
+    0,
+    0,
+    600,
+    0,
+    600
+   ]
+  },
+  "r0_use": {
+   "call": "D3",
+   "pos": "x",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E3.x": {
+  "word": 15,
+  "A_B_differ": 0,
+  "distinct_values": 1,
+  "const_value": "00000000",
+  "maxbias": 0.5,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   0,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    0,
+    600,
+    0,
+    600,
+    600,
+    0,
+    600,
+    0
+   ]
+  },
+  "r0_use": {
+   "call": "D3",
+   "pos": "y",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ },
+ "E3.y": {
+  "word": 8,
+  "A_B_differ": 0,
+  "distinct_values": 2000,
+  "const_value": null,
+  "maxbias": 0.02250000000000002,
+  "call_inputs_equal_AB(a,b,c,d)": [
+   0,
+   600,
+   600,
+   600
+  ],
+  "call_outputs_equal_AB(a,b,c,d)": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "xy_equal_AB": [
+   600,
+   600
+  ],
+  "nb": 600,
+  "r1_use_perturb": {
+   "n": 600,
+   "H_halfcollision_kept": 600,
+   "residual_words_equal": 0,
+   "A_digest_word_changed_counts": [
+    0,
+    600,
+    0,
+    600,
+    600,
+    0,
+    600,
+    0
+   ]
+  },
+  "r0_use": {
+   "call": "D0",
+   "pos": "x",
+   "n": 600,
+   "X_after_round0_equal_AB": 600,
+   "X3_7_11_15_pins_kept": 0,
+   "H_kept": 0
+  }
+ }
+}

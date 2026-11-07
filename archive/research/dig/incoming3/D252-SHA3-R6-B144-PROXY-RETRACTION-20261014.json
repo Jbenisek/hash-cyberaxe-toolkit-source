@@ -1,0 +1,23 @@
+{
+  "id": "D252-SHA3-R6-B144-PROXY-RETRACTION-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "invalid NZ=36 b=144 budget proxy",
+  "question": "Does the NZ=36 monkey-patch constitute the required b=144 K/G resample?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "RETRACTED: no. The run extended the 140-bit research generator without a frozen 144-bit key cone, 180-plane kernel, verifier/KAT, address map, or charged ledger. It sampled the wrong law and supplies no D252 evidence or score credit.",
+  "source": "our workflow: D252 correction audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D252_b144_proxy_retraction.md; research/sol_answer_D252.md; research/sol_answer_D252_sha3r6_b144_budget_resample.md; research/retest/sha3_r6_b144_budget/",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.02107,
+  "prior": 0.0,
+  "gain_basis": "S",
+  "notes": "Supersedes the mistaken proxy record D252-SHA3-R6-B144-BUDGET-RESAMPLE-20261014. The actual D252 remains OPEN/BLOCKED pending the required implementation and valid samples; no package, staging, filing, or submission.",
+  "supersedes": ["D252-SHA3-R6-B144-BUDGET-RESAMPLE-20261014"],
+  "peak_mem": "25.2761244053 MEASURED log2(bytes) for the one-list proxy only; not evidence for the valid b=144 implementation"
+}

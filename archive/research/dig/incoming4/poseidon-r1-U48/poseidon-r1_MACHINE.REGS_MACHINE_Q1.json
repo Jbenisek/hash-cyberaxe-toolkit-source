@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.REGS register budget and spills",
+ "question": "exact value or degree as used",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "the filed rule: one 16-word array (512 B) per transform block as the register file; selection of an element of x by a computed index charged 1; no other register assumption",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "proof.md rule text (H2). | universe cell poseidon-r1|MACHINE.REGS|MACHINE|Q1",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "a change of the register assumption"
+}

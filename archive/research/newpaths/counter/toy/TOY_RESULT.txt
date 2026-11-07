@@ -1,0 +1,94 @@
+TOY_RESULT.txt: scaled-down end-to-end test of the chunk-counter lever (W = 8). Research only.
+Folder research\newpaths\counter\toy. Written 2026-10-08. Tags: COMPUTED = run here (file named); DERIVED = argued
+from stated facts; GUESS = judgement. Nothing submitted, nothing run on Yukon, nothing outside this folder modified.
+
+0. BOTTOM LINE
+1. COMPUTED. The counter arrangement works end to end at W = 8: 305 real full-hash collisions of messages
+   P||A (t*1024 + 55 toy bytes) and P||B (t*1024 + 63), t = 1..255 prefix chunks, every one confirmed by two
+   independent toy tree hashes (C and Python; the Python one equals verifier/blake3.py at W = 32). 0 bad trials.
+2. COMPUTED. Both arrangements hit their exact predictions:
+     filed (counter 0, flags 11, root)        67 found / 64.0 predicted  (z +0.37), 8.82e8 trials per collision
+     counter, heaviest-beta d1 set (ctrH)    251 found / 255.0 predicted (z -0.25), 8.09e7 trials per collision
+     counter, all d1 (control, no cube)       54 found / 47.8 predicted  (z +0.89), 8.21e8 trials per collision
+3. COMPUTED. Measured gain at toy size (sets 0..7 pooled, equal predicted collisions per set): trials per
+   collision filed / ctrH = 10.91 (3.45 bits) against 11.60 predicted (3.54 bits). Realised fraction of the
+   predicted gain = (251/255.0) / (67/64.0) = 0.94 +- 0.13 (Poisson), i.e. -0.09 +- 0.20 bit: no loss detected.
+   CPU per collision (both arrangements hash two full compressions per trial): 109.8 s against 11.5 s.
+4. COMPUTED (control). The counter by itself changes nothing: with E1.d1 left uniform the counter arrangement has
+   the filed per-trial rate (54/47.8, 1.13 +- 0.15). So both scouts are right about what they measured:
+   SCOUT_CROSS (t as a constant buys nothing) and SCOUT_RECENT (t absorbing w0 makes E1.d1 prescribable; the gain
+   is entirely the conditional factor of the prescribed d1 set).
+5. Consistency with the 32-bit claim. DERIVED: the toy confirms the MECHANISM (forcing E1.d1 into the
+   heaviest-beta set realises the exact conditional factor, with no correlation loss inside the inner loop, and
+   only w0, w1, t move with d1). It cannot confirm the MAGNITUDE: the toy factor is share x 2^(fixed bits) =
+   0.29..1.00 x 2^(2..6) (3.9x..31.8x for sets 0..7, geomean 15.0x = 3.9 bits; 2.3x..64x over 48 sets, median
+   10.6x); the 32-bit claim is the same form with share 0.44 x 2^11 = 905x (9.8 bits), not re-derived here.
+   GUESS: net 32-bit gain about 8 bits (+-3), conditional on the 905x and on items in section 5.
+
+1. WHAT WAS RUN (all COMPUTED)
+Toy hash: task5_small_h8\toy.h unchanged (2-round BLAKE3, 8-bit words, IV = top 8 bits, rotations 4/3/2/1,
+2-bit toy bytes, 64-byte blocks, 1024-byte chunks); constant sets = task5's sets_w8.txt, sets 0..7 (the first
+eight in file order; fixed before any counted run). Trial = task5's two-level H8 trial (tl_lines.inc unchanged).
+ FILED : single-chunk messages A (55 toy bytes), B (63); the colliding compression is the root: counter 0, flags 11.
+         Trial = (context, X2, class member Y4). Same enumeration as task5 small_h8.cu.
+ CTR   : messages P||A, P||B, P = t all-zero full chunks. The last chunk is one block: counter t, flags 3.
+         Outer step = (context, X2, member Y4) built with flags 3. Inner word E1.d1 over a set D:
+           E1.a1 = ROL(d1,4) ^ Y12; Y6 = E1.a1 - Y1 - w12; C2 second half inverted: Y10, Y14, Y2, w0;
+           K0.a1 = IV0 + IV4 + w0; t = ROL(K0.d1,4) ^ K0.a1 (the counter absorbs w0); w1 = S0 - K0.a1 - K0.b1.
+         t = 0 is skipped (it would make the last chunk the root): 79.3M of 20.3G trials, 1/256 as expected.
+         ctrH: D = the d1 values of the heaviest beta (largest exact mass; a tie goes to the smaller set) = the toy
+         analogue of T1 "c1 in the heaviest beta's cube". ctrAll (control): D = all 256 d1 values.
+Every trial hashes both last-chunk compressions in full (2 rounds) and compares all 8 output words; every
+collision is rebuilt as two full byte strings (prefix chunks included) and hashed with a toy tree mode written
+after hash-smash\verifier\blake3.py (C, in ctr_toy.c) and again with an independent Python tree hash
+(verify_tree.py -> verify_hits.txt: 372 of 372). Predictions are exact model counts (mass_set<i>.txt): filed and
+ctrAll P = sumper/(n 2^48), ctrH P = mass_D/(n |D| 2^40) per trial; my exact counter equals task5's brute-force
+sumper in 48 of 48 sets. Runs: filed 8 per set, ctrH 32 per set, ctrAll 6 per set, each sized for 1 predicted
+collision (ctrAll runs 1003..1005 were added after the first 24 control runs showed dispersion 1.84; with 48
+runs it is 1.34, about +1.4 sd: not significant).
+
+2. CHECKS (COMPUTED)
+- verify_tree.py selftest: Python tree hash at W = 32 equals verifier/blake3.py (rounds = 2) on 30 of 30 messages
+  of 0..10,319 bytes (multi-chunk). treetest: Python = C toy tree hash on 40 of 40 random toy messages (0..5 chunks).
+- check_w8.txt, sets 0..7, 3,000 trials each: FILED 88 solved words = forward, digest words 0,2,5,7 equal, Y4 =
+  member, no cut bits, tree hash = root CV: 24,000 of 24,000. CTR (counter t, flags 3): the same plus E1.d1 = the
+  drawn d1, only w0, w1 move with d1, tree hash of P||A = tree over (prefix CVs, last-chunk outputs): 23,916 of
+  23,916; t = 0 occurred 84 times in 24,000 (1/256 expected: 93.8).
+- In the runs: bad 0 and bogus 0 in all 368 runs (bad = half digest unequal, Y4 not the member, E1.d1 not the
+  drawn d1, or cut bits). No two collisions share an outer step. Hit t values 1..255, mean 121.8.
+
+3. RESULTS PER SET (summary.txt; COMPUTED)
+set |D|  predicted gain  filed found/pred  ctrH found/pred  ctrAll found/pred  trials/coll filed  ctrH
+ 0    4      31.75            5/8.0           33/31.9           10/6.0           1.70e9         3.25e7
+ 1   16      13.58            6/8.0           27/31.9            5/6.0           1.39e9         9.09e7
+ 2   16      10.67           10/8.0           29/31.9            8/6.0           6.55e8         8.46e7
+ 3   16      10.67            4/8.0           26/31.9            2/6.0           1.35e9         7.78e7
+ 4   32       3.88           11/8.0           41/31.9            8/6.0           7.57e8         2.10e8
+ 5   16      14.37           12/8.0           36/31.9            9/6.0           4.68e8         4.34e7
+ 6    4      31.75            9/8.0           30/31.9            6/6.0           9.47e8         3.58e7
+ 7    4      29.26           10/8.0           29/31.9            6/6.0           7.85e8         3.70e7
+all                          67/64.0         251/255.0          54/47.8          8.82e8         8.09e7
+Per-set measured gains have wide ranges (4..12 filed collisions per set); the pooled figure is section 0 item 3.
+Every arrangement's z is within -1.6..+1.7 per set and within +-0.9 overall.
+
+4. WORK PER TRIAL (DERIVED, G-call lines; work_lines.txt)
+filed (two-level, member innermost): member 10 + trial 28 + E1/E3 first halves 8 + middle 21/n = 47.3 per trial.
+ctr: E1.a1, Y6, Y10, Y14, Y2 (5) + E1.b1, E1.a2 (2) + E3.h1, g1, f1, e2 (4) + (10 + 28)/|D| + 21/(n |D|) =
+20.8 (|D| = 4), 13.5 (16), 12.3 (32); w0, K0.a1, t, w1 only for survivors. Residual check common to both.
+So at toy size the work per collision in lines improves by 45x (5.5 bits, geomean sets 0..7) against 15x in
+trials. This line ratio does NOT transfer: the filed 32-bit trial already costs about 11-12 charged operations
+with early abort on h1; the trial ratio (the conditional factor) is the transferable number (GUESS: per-trial
+cost at 32 bits comparable, |D| = 2^21 makes the outer step free).
+
+5. NOT COVERED BY THIS TOY (open items for the 32-bit value)
+- The 905x itself (32-bit exact count of the heaviest-beta share of H8's R); not re-derived. GUESS +-1.5 bits.
+- Composition with the filed path's h1 rule (stage A, about 2^6 worth) and e1-cubes/cluster lever (pkg10's
+  H4-H6 premises): the toy has no rule. The filed path already TESTS c1 cheaply (stage-2 test on c1 xor c1',
+  HANDOFF 21:15 bullet); forcing c1 multiplies the per-trial rate instead, so there is no double count (DERIVED),
+  but whether T1 multiplies with the rule's kept mass is a 32-bit count (GUESS: nearly, since the heavy betas
+  keep most of the rule-passing mass per HANDOFF 17:23).
+- SCOUT_CROSS's X2 co-pass point concerns pkg10's batch at fixed t; in this arrangement t is a per-trial byproduct
+  (uniform 32-bit), so a re-design of the batch is needed and its co-pass numbers do not carry over (DERIVED).
+- Messages at 32 bits: t uniform up to 2^32 chunks (~4 TiB), v13 = 0 assumed; the toy needs only t < 256. Judge
+  and verifier practicality are a risk (GUESS), not a cost-model issue.
+- W = 10 not run (exact counter would need 2^30-entry tables; CPU end-to-end too slow at 4 cores).

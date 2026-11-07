@@ -1,0 +1,5 @@
+t_hi free, hold Y9                 FREE basis=Y9,D2.a1,D2.b1,S11,S4,X9,w6,w0,D0.a1,C1.a1  (10s)
+t_hi free, hold Y1                 FREE basis=Y1,D2.a1,D2.b1,S11,S4,X9,w6,w0,D0.a1,C1.a1  (10s)
+t_hi free, hold Y4,Y9              not found (depth 2)  (10s)
+t_hi free, hold Y4,Y1              not found (depth 2)  (10s)
+t_hi free, hold Y4,E1.c1,w8,Y9     not found (depth 2)  (14s)

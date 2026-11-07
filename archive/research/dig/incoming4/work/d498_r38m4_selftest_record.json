@@ -1,0 +1,23 @@
+{
+  "id": "D498-SHA256-R38-R38M4-SELFTEST-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "package-specific a0lean38 self-test for R38M4",
+  "question": "Does the R38M4 shipped a0lean38 program pass its complete self-test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R38M4 a0lean38 selftest exits 0: all published-pair, class/plane, row-16, W7, step-3b, row-19/20, online, and variant checks pass; q3 gives 11 verified semi-free-start pairs, 0 failures, 4 alternate patterns.",
+  "source": "our workflow: D498 read-only R38M4 self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D498_r38m4_selftest.md; research/tools/build_pkg/scratch/pkgR38M4/pkg/sha256-r38/experiments/a0lean38.py; research/sol_answer_D279_r38m4_prefile_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package-specific self-test only; M5 executable is byte-identical. No score/package/stage/filing/submission.",
+  "held_fixed": "R38M4 scratch package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package/source changes or a new independent implementation arrives"
+}

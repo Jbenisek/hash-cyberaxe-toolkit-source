@@ -1,0 +1,23 @@
+{
+  "id": "D560-SHA3-R6-S6Q-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6Q prefile audit",
+  "question": "What is creditable for pkgS6Q without a supplied public request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6Q prefile SOME FAIL only because fes_campaign.py is not known-good. Exact N=7900847406278869830434603297407830878472, time_log2=121.8701, log2(N/1626)=121.87009156. Other intake checks pass. No supplied public request; no new campaign, score, or premise credit.",
+  "source": "our workflow: D560 read-only pkgS6Q prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D560_s6q_prefile.md; research/tools/build_pkg/scratch/pkgS6Q/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6Q/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6Q/pkg/sha3-256-r6/experiments/fes_campaign.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No supplied public request; no package/stage/filing/submission.",
+  "held_fixed": "pkgS6Q package bytes as found; no package writes",
+  "reopen_if": "registry acceptance, supplied public request, or owner/organizer ruling"
+}

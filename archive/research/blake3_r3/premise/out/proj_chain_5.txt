@@ -1,0 +1,1 @@
+PROJ src=chain k=5 name=W5 bits=32 observed=523045 expected=524288.0 ratio=0.9976 z=-1.72

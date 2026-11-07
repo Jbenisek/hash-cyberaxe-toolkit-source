@@ -1,0 +1,3 @@
+j=0 r=1 expected deg 5^7=78125  N=2^17  found deg=78125  coeffs above expected: 0  fresh-point Horner check: True  lc=0x1c66a426cd2d..  zero coefs below deg: 0  evalT=10s nttT=1s
+j=1 r=1 expected deg 5^7=78125  N=2^17  found deg=78125  coeffs above expected: 0  fresh-point Horner check: True  lc=0x23f4f4090b60..  zero coefs below deg: 0  evalT=10s nttT=2s
+j=2 r=1 expected deg 5^7=78125  N=2^17  found deg=78125  coeffs above expected: 0  fresh-point Horner check: True  lc=0x191734549b1d..  zero coefs below deg: 0  evalT=10s nttT=1s

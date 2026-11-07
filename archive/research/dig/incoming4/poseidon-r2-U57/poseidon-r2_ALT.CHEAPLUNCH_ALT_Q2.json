@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH (ALT)",
+ "question": "Q2: necessity: does the method need CICO-(t-k, k)",
+ "labels": [
+  "K"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "Yes: it is built for k >= 1 outputs constrained; our collision compares one lane (k = 1) and leaves two lanes free, which turns the system underdetermined and returns us to the fixed-free-variable trick already used.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.CHEAPLUNCH|ALT|Q2. Scout reading, no code.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a collision (not CICO) variant is published"
+}

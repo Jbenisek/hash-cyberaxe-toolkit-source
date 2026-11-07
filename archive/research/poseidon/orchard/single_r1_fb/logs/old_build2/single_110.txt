@@ -1,0 +1,22 @@
+r=1 seed=110 line=0 m=39062
+gcd degree 1, charged 6392270690, derived bound 11942345981 (within)
+  init (twiddle table)                     arith=       17359 other=      126642 total=      144001     0.0s peak=524288
+  line setup                               arith=         391 other=        3519 total=        3910     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  B: build g                               arith=     1436260 other=    41901935 total=    43338195     0.5s peak=3347168
+  C: S^((p-1)/2) mod g                     arith=  3536772927 other= 42030109940 total= 45566882867    74.3s peak=8468544
+  D: gcd(g, S^h - 1) (half-gcd)            arith=   389577467 other=  6002693235 total=  6392270702     8.2s peak=9103968
+  E: root isolation                        arith=           2 other=           5 total=           7     0.0s peak=524416
+  F: sqrt + map back                       arith=        3132 other=       40188 total=       43320     0.0s peak=524288
+  G: verification (2 reference hashes)     arith=         474 other=        4266 total=        4740     0.0s peak=524288
+RESULT found=1 success=1 roots_degree=1
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=52002687745 total_arith=3927808012 units=219420623.4 log2_units=27.7091 heap_peak=9103968 secs=83.1
+TYPES add=1368825116 sub=1279204609 mul=1246451982 sqr=33326305 ld=1513188826 st=841035553 ctl=45697357305 rnd=1 perm=23298048
+COLLISION nk1  0x1473f0d35ca46acc2e0b8895044ea7d07e8845c6058e57f9e1f6ff838bed9576
+COLLISION rho1 0x0a34c440bfb7d3e501e81a7d1ae9d34943a7a109a72703e3056cee7f4478002e
+COLLISION nk2  0x00e3f36a16574297828b3df5621666821d19bde6dc4f59af2a75dcb6ef3027d7
+COLLISION rho2 0x0a7bcec488612a818a98e95364631625ce9b109752c90aeff84b92c8ae7da386
+COLLISION digest 0x1aa4745061dcf69c2719488abbe6bea4a8e5fedad40269dd3052474192ef8ca4
+COLLISION centre 0x2745882695a19da82cd90073da009b1ee01bef66c80743d90000001bb7d1dbee
+EXIT 0

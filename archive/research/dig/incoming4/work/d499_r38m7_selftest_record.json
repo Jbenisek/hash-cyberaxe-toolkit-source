@@ -1,0 +1,23 @@
+{
+  "id": "D499-SHA256-R38-R38M7-SELFTEST-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "package-specific a0lean38 self-test for R38M7",
+  "question": "Does the distinct R38M7 a0lean38 program pass its full self-test including the corrected cap test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R38M7 selftest exits 0: all construction, class/plane, row, online, and variant checks pass; q3 returns 11 verified semi-free-start pairs with 0 failures and 4 alternate patterns; corrected per-block V>V_MAX cap test passes.",
+  "source": "our workflow: D499 read-only R38M7 self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D499_r38m7_selftest.md; research/tools/build_pkg/scratch/pkgR38M7/pkg/sha256-r38/experiments/a0lean38.py; research/sol_answer_D486_new_scratch_package_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package-specific self-test only; no score/package/stage/filing/submission.",
+  "held_fixed": "R38M7 scratch package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package/source changes or independent law evidence arrives"
+}

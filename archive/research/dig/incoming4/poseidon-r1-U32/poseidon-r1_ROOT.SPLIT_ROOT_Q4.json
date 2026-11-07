@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.SPLIT root splitting of gcd (degree 1,2,3 fibres)",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N",
+  "B"
+ ],
+ "status": "COMPUTED",
+ "number": "alternative A: abandon the centre when deg G >= 2 -> per-centre 0.3077 sampled vs 0.4308; to keep the same 2-centre probability a third centre is needed: +0.585 bit (28.780 -> 29.365). alternative B (fixed-value fibre, Luna 3 P3.5/P3.15): bound 0.632 uniform-coefficient, sampled 3 of 4",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json 3rd_openai_workspace/luna3/P3_5_prob.md 3rd_openai_workspace/luna3/P3_15.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "A: recount own (c=3 time 29.36497 from calc.json). B: number from Luna 3, not retested here. Splitting remains the cheapest way to turn a fibre of size d into one root. | universe cell poseidon-r1|ROOT.SPLIT|ROOT|Q4",
+ "held_fixed": "filed single-line version, 8.8e9 D budget, Poisson/campaign probabilities",
+ "reopen_if": "a method that makes every centre yield a root without a gcd of degree > 1, or a measured splitting cost far above 1.5e6"
+}

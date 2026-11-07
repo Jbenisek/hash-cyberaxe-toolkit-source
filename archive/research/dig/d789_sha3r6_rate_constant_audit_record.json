@@ -1,0 +1,22 @@
+{
+  "id": "D789-SHA3-R6-RATE-CONSTANT-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 rate and padding constant folding",
+  "question": "Does the checked-in generator leave an actionable rate-constant-lane load or state to remove?",
+  "labels": ["C", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "All seven source checks pass. Lane 16 has only bits 57,58,63 set; all other padding lanes are zero; constant forms use Zv; round constants are immediates. No additional rate-constant-lane saving remains.",
+  "source": "owned read-only source audit",
+  "own_test": true,
+  "evidence": "research/retest/tail_sha3/rate_constant_audit.py; research/sol_answer_D789_sha3r6_rate_constant_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "peak_mem": "not applicable; exact finite source audit",
+  "held_fixed": "checked-in ref.py, kern.py, kernel2.py, and kgen.py source hashes",
+  "notes": "Closes the earlier untested rate-constant-lanes row. No package, score, stage, filing, or submission credit.",
+  "reopen_if": "A changed generator or a concrete charged schedule identifies a non-compile-time constant lane absent from this audit."
+}

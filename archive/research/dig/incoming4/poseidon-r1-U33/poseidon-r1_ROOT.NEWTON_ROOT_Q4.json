@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.NEWTON Newton inverse (reciprocal of the modulus)",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "alternative: the quadratic reciprocal recurrence (Luna 3 P3.7) costs s(s+1)/2 = 762,900,391 multiplications at s = 39,061, i.e. > 2.5x the whole 302,883,363-op Newton stage; Newton is the cheaper of the two; best case any alternative gains <= 0.008 bit",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json 3rd_openai_workspace/luna3/P3_7_variants.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Recount of the quadratic recurrence count (s(s+1)/2) and comparison with the fresh-run Newton stage; the P3.7 formula itself is Luna 3 text. | universe cell poseidon-r1|ROOT.NEWTON|ROOT|Q4",
+ "held_fixed": "MU length 39,061, the charging of proof.md",
+ "reopen_if": "a division-free reduction scheme that removes the 238 reductions"
+}

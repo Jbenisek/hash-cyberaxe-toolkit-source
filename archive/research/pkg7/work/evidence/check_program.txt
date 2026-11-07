@@ -1,0 +1,53 @@
+TIER strict; PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; python -B work/tools/check_program.py 20000 256
+(a) context() and trial() of the program against a forward 2-round compression, 20000 random trials
+  [ok] 1 of 1  the 131072 members of the class are distinct
+  [ok] 20000 of 20000  trial: lengths 55 and 63, B ends in eight zero bytes, A and B differ only in w4, w5 (w5' = w5 + delta)
+  [ok] 20000 of 20000  trial: pinned words and state (w4, w4', w13, w14, w15, X3, X7, X11, X15), top byte of w13 zero
+  [ok] 20000 of 20000  trial: length cancellation: A and B have the same state S and the same state X after round 0
+  [ok] 20000 of 20000  trial: Y of A and B differ only in Y3, Y11, with the values of the pin; Y4 is a member of the class
+  [ok] 20000 of 20000  trial: digest words 0, 2, 5, 7 of A and B are equal
+  [ok] 20000 of 20000  trial: Lemma N: n from E1 alone equals D3 XOR ROL(D6, 8) of the two complete digests
+  [ok] 20000 of 20000  trial: Lemma A: Y14 = ROR(z, 8), ROL(h1, 24) = z XOR ROL(e1, 8), and the rule on h1 and the test of the program on z (steps, word of the list V, mask) say the same (rule of the program: 8 conditions)
+  [ok] 20000 of 20000  trial: round trip: context() and trial() on the pair's own seven words and Y4, read off its forward computation, return the pair's words
+  [ok] 20000 of 20000  trial: every S and X of the context and the six X of the trial are those of the forward computation
+  [ok] 2000 of 2000  trial: both digests equal the organizer reference blake3(m, 2)
+  [ok] 4000 of 4000  loop structure: a context that differs only in X2 has the same values of outer() (4000 trials)
+  [ok] 4000 of 4000  loop structure: two members of one context differ in no message word outside w8..w11 (4000 trials)
+  [ok] 4000 of 4000  loop structure: the row of the table (member(), table_row()) is the same for another X2 (4000 trials)
+    trials that satisfy rule A: 77 of 20000 (a share of 2^-8 is 78.1); organizer reference: used for the first 2000 trials
+(b) the program through its stdin/stdout contract, 256 seeds per experiment (manifest: work copy, unchanged)
+    half-collision: pairs 256 of 256, full collisions 0, 73651 bytes of output
+    residual-search: pairs 256 of 256, full collisions 0, 121750 bytes of output, members tried: mean 451.9, max 2686; counted batches in which a lane satisfies rule A: 11 of 256
+  [ok] 1 of 1  half-collision: output byte-identical on a second run
+  [ok] 1 of 1  half-collision: one row per requested trial, in order
+  [ok] 256 of 256  half-collision: lengths 55 and 63, B ends in eight zero bytes, A and B differ only in w4, w5 (w5' = w5 + delta)
+  [ok] 256 of 256  half-collision: pinned words and state (w4, w4', w13, w14, w15, X3, X7, X11, X15), top byte of w13 zero
+  [ok] 256 of 256  half-collision: length cancellation: A and B have the same state S and the same state X after round 0
+  [ok] 256 of 256  half-collision: Y of A and B differ only in Y3, Y11, with the values of the pin; Y4 is a member of the class
+  [ok] 256 of 256  half-collision: digest words 0, 2, 5, 7 of A and B are equal
+  [ok] 256 of 256  half-collision: Lemma N: n from E1 alone equals D3 XOR ROL(D6, 8) of the two complete digests
+  [ok] 256 of 256  half-collision: Lemma A: Y14 = ROR(z, 8), ROL(h1, 24) = z XOR ROL(e1, 8), and the rule on h1 and the test of the program on z (steps, word of the list V, mask) say the same (rule of the program: 8 conditions)
+  [ok] 256 of 256  half-collision: round trip: context() and trial() on the pair's own seven words and Y4, read off its forward computation, return the pair's words
+  [ok] 256 of 256  half-collision: every S and X of the context and the six X of the trial are those of the forward computation
+  [ok] 256 of 256  half-collision: both digests equal the organizer reference blake3(m, 2)
+  [ok] 256 of 256  half-collision: the organizer's mask event holds
+  [ok] 1 of 1  half-collision: every seed returned a pair
+  [ok] 1 of 1  half-collision: all returned messages A are different
+  [ok] 1 of 1  residual-search: output byte-identical on a second run
+  [ok] 1 of 1  residual-search: one row per requested trial, in order
+  [ok] 256 of 256  residual-search: lengths 55 and 63, B ends in eight zero bytes, A and B differ only in w4, w5 (w5' = w5 + delta)
+  [ok] 256 of 256  residual-search: pinned words and state (w4, w4', w13, w14, w15, X3, X7, X11, X15), top byte of w13 zero
+  [ok] 256 of 256  residual-search: length cancellation: A and B have the same state S and the same state X after round 0
+  [ok] 256 of 256  residual-search: Y of A and B differ only in Y3, Y11, with the values of the pin; Y4 is a member of the class
+  [ok] 256 of 256  residual-search: digest words 0, 2, 5, 7 of A and B are equal
+  [ok] 256 of 256  residual-search: Lemma N: n from E1 alone equals D3 XOR ROL(D6, 8) of the two complete digests
+  [ok] 256 of 256  residual-search: Lemma A: Y14 = ROR(z, 8), ROL(h1, 24) = z XOR ROL(e1, 8), and the rule on h1 and the test of the program on z (steps, word of the list V, mask) say the same (rule of the program: 8 conditions)
+  [ok] 256 of 256  residual-search: round trip: context() and trial() on the pair's own seven words and Y4, read off its forward computation, return the pair's words
+  [ok] 256 of 256  residual-search: every S and X of the context and the six X of the trial are those of the forward computation
+  [ok] 256 of 256  residual-search: both digests equal the organizer reference blake3(m, 2)
+  [ok] 256 of 256  residual-search: the organizer's mask event holds
+  [ok] 256 of 256  residual-search: low byte of digest word 1 agrees
+  [ok] 256 of 256  residual-search: the counted batch reports stage A 37 + 10, stage 2 105 + 30 (TABLES of the program) and 7 right lanes
+  [ok] 1 of 1  residual-search: every seed returned a pair
+  [ok] 1 of 1  residual-search: all returned messages A are different
+RESULT (a), (b): all checks of the program passed

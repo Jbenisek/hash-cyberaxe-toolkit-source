@@ -1,0 +1,104 @@
+=== A. SHA3-256 r6 ===
+  N_A rebuilt = 17161635548395357935654921407869734482854  matches filed: True
+  log2(N_A/1626) = 122.989199305390  claim 122.98920
+
+--- A1 plane-major FES, 61 cached records ---
+  Sc61 = 18760331006174  (enumerated over all 496 exclusion choices; closed form agrees)
+  FES_PM per group = 3475472460951933
+  dN per group = 1056699393748017  = 961.0625 per Gray point, 3.7542 per candidate
+  A1 (61 records, counters spilled +8/group)
+    dN       = 1271192445721851486235335022924060763037
+    N_new    = 15890443102673506449419586384945673719817
+    bits     = 0.111027697383  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.878171608006  -> claim alone 122.87818  (frac above floor 0.1608)
+  A1 variant (58 records, no spill)
+    dN       = 1249491982888451605860686235027746708375
+    N_new    = 15912143565506906329794235172841987774479
+    bits     = 0.109058854075  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.880140451315  -> claim alone 122.88015  (frac above floor 0.0451)
+  A1 variant (58 records, +8 spill kept anyway)
+    dN       = 1249491982888441981988820742253560291887
+    N_new    = 15912143565506915953666100665616174190967
+    bits     = 0.109058854075  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.880140451315  -> claim alone 122.88015  (frac above floor 0.0451)
+
+--- A2 dense index = identifier, insert on every probe ---
+  paths {'bound fail': 8, 'dense fail': 12, 'hit': 12}  max 12
+  A2 (15Q -> 12Q)
+    dN       = 1015829665952218547526987531759856386048
+    N_new    = 16145805882443139388127933876109878096806
+    bits     = 0.088027600266  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.901171705123  -> claim alone 122.90118  (frac above floor 0.1705)
+
+--- A3 DENSE at address 0 ---
+  paths {'bound fail': 10, 'dense fail': 13, 'hit': 9}  max 13
+  A3 (15Q -> 13Q)
+    dN       = 677219777301479031684658354506570924032
+    N_new    = 16484415771093878903970263053363163558822
+    bits     = 0.058084295024  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.931115010365  -> claim alone 122.93112  (frac above floor 0.5010)
+
+--- A4 constant padding row folds the sparse base ---
+  paths {'bound fail': 10, 'dense fail': 14, 'hit': 9}  max 14
+  A4 (table 15 -> 14, chi 4656 -> 4664)
+    dN       = 328028329630403905972256390464120291328
+    N_new    = 16833607218764954029682665017405614191526
+    bits     = 0.027842691761  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.961356613628  -> claim alone 122.96136  (frac above floor 0.6614)
+  A4 alt: plain SPARSE at base 0, no padding change (conflicts with A3)
+    dN       = 338609888650739515842329177253285462016
+    N_new    = 16823025659744618419812592230616449020838
+    bits     = 0.028749851029  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.960449454360  -> claim alone 122.96045  (frac above floor 0.9454)
+
+--- A stacks (information only, not one change) ---
+  A2+A3 (10Q)
+    dN       = 1693049443253697579211645886266427310080
+    N_new    = 15468586105141660356443275521603307172774
+    bits     = 0.149845717647  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.839353587742  -> claim alone 122.83936  (frac above floor 0.3588)
+  A2+A3+A4 (9Q, chi 4664)
+    dN       = 2021077772884101485183902276730547601408
+    N_new    = 15140557775511256450471019131139186881446
+    bits     = 0.180768697034  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.808430608356  -> claim alone 122.80844  (frac above floor 0.0608)
+  A1+A2+A3+A4
+    dN       = 3292270218605952971419237299654608364445
+    N_new    = 13869365329789404964235684108215126118409
+    bits     = 0.307285281361  (log2 N_old/N_new)
+    log2(N_new/1626) = 122.681914024029  -> claim alone 122.68192  (frac above floor 0.4024)
+
+=== B. BLAKE3 r2 ===
+  N_B rebuilt = 3436742575482187376270  matches filed: True
+  log2(N_B/430) = 62.793338935697  claim 62.7934
+  chunk pair bound old 77 new 70; partner batch 50 -> 45; 3-lane 31 -> 29
+  U_OPEN 144 -> 137; fallback 261 -> 239; premium 117 -> 102; context 112519 -> 110599
+  rep batch 59 -> 54; tail 45 -> 42; REP_ROW 138105 -> 126402
+  B5 all three replica sets
+    dN       = 108184303745795991339
+    N_new    = 3328558271736391384931
+    bits     = 0.046144367490  (log2 N_old/N_new)
+    log2(N_new/430) = 62.747194568207  -> claim alone 62.7472  (frac above floor 0.9457)
+  B5 T1 replicas only (u_E 7 -> 6)
+    dN       = 34776155525615473310
+    N_new    = 3401966419956571902960
+    bits     = 0.014672892098  (log2 N_old/N_new)
+    log2(N_new/430) = 62.778666043599  -> claim alone 62.7787  (frac above floor 0.6604)
+  B5 T2' replicas only (chunks + fallback)
+    dN       = 59143230497015520140
+    N_new    = 3377599344985171856130
+    bits     = 0.025043588635  (log2 N_old/N_new)
+    log2(N_new/430) = 62.768295347062  -> claim alone 62.7683  (frac above floor 0.9535)
+  B5 gate replicas only (rep 59 -> 54, tail 45 -> 42)
+    dN       = 14264917723164997889
+    N_new    = 3422477657759022378381
+    bits     = 0.006000669180  (log2 N_old/N_new)
+    log2(N_new/430) = 62.787338266516  -> claim alone 62.7874  (frac above floor 0.3827)
+  B5 T2' incl. representative probe 5 -> 4 (overlaps D25; not claimed)
+    dN       = 67257933652662289568
+    N_new    = 3369484641829525086702
+    bits     = 0.028513842649  (log2 N_old/N_new)
+    log2(N_new/430) = 62.764825093048  -> claim alone 62.7649  (frac above floor 0.2509)
+  memory if replicas are counted as cells: search 2^42.4095 B, held at once 2^43.7365 B
+  memory if counted by highest word address (pkgCM Section 12 style): top replica word < 2^252 -> about 2^257.00 B
+ALL_OK

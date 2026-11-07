@@ -1,0 +1,22 @@
+{
+  "id": "D330-B3M-MEMBER-LIST-RSS-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M per-member list residency",
+  "question": "What peak residency is required to enumerate or retain all 2^19 class members?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Formula-only owned probe: on-demand 19,726,336 B (log2 24.23362); packed two uint32 arrays 26,517,504 B (log2 24.66044); exact count 524,288 and checksum 201850880",
+  "source": "our workflow: D330 B3M member-list RSS",
+  "own_test": true,
+  "evidence": "research/sol_answer_D330_b3m_member_list_rss.md; research/retest/b3m_member_list_probe.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "24.660 MEASURED formula-only single-process Windows WorkingSet64; packed two uint32 arrays retained",
+  "notes": "Does not measure participant implementations, Python-object tuple/list fallback, transient batch lists, or the full B3M search/preprocessing peak; no score transfer.",
+  "held_fixed": "CLASS_VALUE=0x030C0303, FREE_MASK=0xFC307CFC, Y3=0x8127C181; one process; no parallel workers",
+  "reopen_if": "Measure the production Z0/Y9/J3 batch layout and full-search peak under the organizer memory rule"
+}

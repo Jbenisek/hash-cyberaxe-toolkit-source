@@ -1,0 +1,170 @@
+=== TOY SETUP ===
+ q=257 prime=True gcd(5,q-1)=1 q mod 4=1 2-adicity=8
+ q=769 prime=True gcd(5,q-1)=1 q mod 4=1 2-adicity=8
+ q=1009 prime=True gcd(5,q-1)=1 q mod 4=1 2-adicity=4
+ q=4099 prime=True gcd(5,q-1)=1 q mod 4=3 2-adicity=1
+ q=12289 prime=True gcd(5,q-1)=1 q mod 4=1 2-adicity=12
+ q=65537 prime=True gcd(5,q-1)=1 q mod 4=1 2-adicity=16
+ q=1000003 prime=True gcd(5,q-1)=1 q mod 4=3 2-adicity=1
+
+=== T1 (Q1): X2 exhaustively: (nk,rho)->(A,B) bijection and H(A,B) == hash ===
+ q=257 seed=0 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=257 seed=0 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=257 seed=1 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=257 seed=1 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=257 seed=2 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=257 seed=2 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=257 seed=3 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=257 seed=3 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 66049 inputs: 0
+ q=769 seed=0 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 591361 inputs: 0
+ q=769 seed=0 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 591361 inputs: 0
+ q=769 seed=1 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 591361 inputs: 0
+ q=769 seed=1 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 591361 inputs: 0
+ q=769 seed=2 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 591361 inputs: 0
+ q=769 seed=2 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 591361 inputs: 0
+ q=1009 seed=0 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 1018081 inputs: 0
+ q=1009 seed=0 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 1018081 inputs: 0
+ q=1009 seed=1 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 1018081 inputs: 0
+ q=1009 seed=1 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 1018081 inputs: 0
+ q=1009 seed=2 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 1018081 inputs: 0
+ q=1009 seed=2 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 1018081 inputs: 0
+ q=4099 seed=0 r=1: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 16801801 inputs: 0
+ q=4099 seed=0 r=2: x->(x+c)^5 bijective on both axes: True ; mismatches H(A,B) vs hash over all 16801801 inputs: 0
+ q=257 r=1: distinct full 3-lane outputs 66049 of 66049 (X1: bijection of the state)
+ q=257 r=2: distinct full 3-lane outputs 66049 of 66049 (X1: bijection of the state)
+ q=12289 sampled 2000 inputs x r=1,2: mismatches 0
+ q=65537 sampled 2000 inputs x r=1,2: mismatches 0
+ q=1000003 sampled 2000 inputs x r=1,2: mismatches 0
+
+=== T2 (Q3): do c00,c01 matter? complete fibre (count-per-output) arrays after changing them ===
+ q=257 seed=0 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=257 seed=0 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=257 seed=1 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=257 seed=1 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=257 seed=2 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=257 seed=2 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=769 seed=0 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=769 seed=0 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=769 seed=1 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=769 seed=1 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=769 seed=2 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=769 seed=2 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=1009 seed=0 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=1009 seed=0 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=1009 seed=1 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=1009 seed=1 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=1009 seed=2 r=1: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+ q=1009 seed=2 r=2: per-output counts identical after changing (c00,c01): True ; after c00 only: True ; pointwise H1(x)=H0(x+d): True | controls: change c02 -> identical False (sorted-multiset identical False); change c10 -> identical False | cap+d & c02-d gives the same function: True
+
+=== T3 (Q2 toy): capacity scan. K = (cap+c02)^5 runs over all of F_q; fibre statistics of H_K(A,B) ===
+ q=257 seed=0 r=1: 257 K values; collision ratio min 0.9990 max 1.0008 mean 1.0000; var/mean min 0.750 max 1.214; image covers all q for every K: True
+     special K: K=0 ratio 1.0007, K=1 ratio 0.9998, K=-1 ratio 0.9998, K=i-ish16 ratio 0.9997, K=i-ish241 ratio 1.0003
+     most deviating K=43 ratio 0.9990 (spread of the ratio over K is within a few sigma of a random function)
+ q=257 seed=0 r=2: 257 K values; collision ratio min 0.9992 max 1.0007 mean 1.0000; var/mean min 0.779 max 1.183; image covers all q for every K: True
+     special K: K=0 ratio 1.0000, K=1 ratio 1.0002, K=-1 ratio 0.9999, K=i-ish16 ratio 1.0002, K=i-ish241 ratio 0.9999
+     most deviating K=71 ratio 0.9992 (spread of the ratio over K is within a few sigma of a random function)
+ q=257 seed=1 r=1: 257 K values; collision ratio min 0.9988 max 1.0009 mean 1.0000; var/mean min 0.698 max 1.233; image covers all q for every K: True
+     special K: K=0 ratio 0.9998, K=1 ratio 0.9996, K=-1 ratio 1.0000, K=i-ish16 ratio 1.0004, K=i-ish241 ratio 0.9997
+     most deviating K=47 ratio 0.9988 (spread of the ratio over K is within a few sigma of a random function)
+ q=257 seed=1 r=2: 257 K values; collision ratio min 0.9991 max 1.0012 mean 1.0000; var/mean min 0.756 max 1.298; image covers all q for every K: True
+     special K: K=0 ratio 1.0007, K=1 ratio 1.0001, K=-1 ratio 1.0001, K=i-ish16 ratio 0.9993, K=i-ish241 ratio 1.0005
+     most deviating K=242 ratio 1.0012 (spread of the ratio over K is within a few sigma of a random function)
+ q=257 seed=2 r=1: 257 K values; collision ratio min 0.9992 max 1.0007 mean 0.9999; var/mean min 0.784 max 1.185; image covers all q for every K: True
+     special K: K=0 ratio 0.9998, K=1 ratio 0.9998, K=-1 ratio 0.9996, K=i-ish16 ratio 1.0007, K=i-ish241 ratio 0.9994
+     most deviating K=11 ratio 0.9992 (spread of the ratio over K is within a few sigma of a random function)
+ q=257 seed=2 r=2: 257 K values; collision ratio min 0.9991 max 1.0014 mean 1.0000; var/mean min 0.759 max 1.352; image covers all q for every K: True
+     special K: K=0 ratio 1.0003, K=1 ratio 0.9998, K=-1 ratio 0.9999, K=i-ish16 ratio 0.9996, K=i-ish241 ratio 0.9998
+     most deviating K=59 ratio 1.0014 (spread of the ratio over K is within a few sigma of a random function)
+ q=769 seed=0 r=1: 16 K values; collision ratio min 0.9999 max 1.0001 mean 1.0000; var/mean min 0.905 max 1.090; image covers all q for every K: True
+     special K: K=0 ratio 0.9999, K=1 ratio 1.0000, K=-1 ratio 1.0000, K=i-ish62 ratio 1.0000, K=i-ish707 ratio 1.0001
+     most deviating K=255 ratio 0.9999 (spread of the ratio over K is within a few sigma of a random function)
+ q=769 seed=0 r=2: 16 K values; collision ratio min 0.9999 max 1.0001 mean 1.0000; var/mean min 0.939 max 1.075; image covers all q for every K: True
+     special K: K=0 ratio 1.0001, K=1 ratio 1.0000, K=-1 ratio 1.0001, K=i-ish62 ratio 1.0000, K=i-ish707 ratio 1.0000
+     most deviating K=255 ratio 1.0001 (spread of the ratio over K is within a few sigma of a random function)
+ q=769 seed=1 r=1: 16 K values; collision ratio min 0.9999 max 1.0001 mean 1.0000; var/mean min 0.935 max 1.106; image covers all q for every K: True
+     special K: K=0 ratio 0.9999, K=1 ratio 0.9999, K=-1 ratio 1.0000, K=i-ish62 ratio 1.0001, K=i-ish707 ratio 1.0000
+     most deviating K=664 ratio 1.0001 (spread of the ratio over K is within a few sigma of a random function)
+ q=769 seed=1 r=2: 16 K values; collision ratio min 0.9999 max 1.0001 mean 1.0000; var/mean min 0.909 max 1.074; image covers all q for every K: True
+     special K: K=0 ratio 1.0000, K=1 ratio 1.0000, K=-1 ratio 1.0001, K=i-ish62 ratio 1.0000, K=i-ish707 ratio 1.0000
+     most deviating K=29 ratio 0.9999 (spread of the ratio over K is within a few sigma of a random function)
+
+=== T4 (Q5): degree-drop directions: brute force over all q+1 directions (u:v) ===
+ q=257 seed=0 random: drop directions per lane [[((1, 163), 4)], [((1, 13), 4)], [((1, 221), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[41], [178], [207]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=257 seed=0 cauchy: drop directions per lane [[((1, 123), 4)], [((1, 163), 4)], [((1, 204), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[140], [41], [160]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=257 seed=1 random: drop directions per lane [[((1, 182), 4)], [((1, 16), 4)], [((1, 218), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[233], [241], [112]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=257 seed=1 cauchy: drop directions per lane [[((1, 102), 4)], [((1, 251), 4)], [((1, 119), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[63], [214], [54]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=257 seed=2 random: drop directions per lane [[((1, 36), 4)], [((1, 115), 4)], [((1, 243), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[50], [38], [55]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=257 seed=3 random: drop directions per lane [[((1, 74), 4)], [((1, 127), 4)], [((1, 57), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[66], [85], [248]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=257 seed=4 random: drop directions per lane [[((1, 241), 4)], [((1, 212), 4)], [((1, 9), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[16], [217], [200]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=769 seed=0 random: drop directions per lane [[((1, 645), 4)], [((1, 101), 4)], [((1, 518), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[31], [434], [625]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=769 seed=0 cauchy: drop directions per lane [[((1, 617), 4)], [((1, 528), 4)], [((1, 95), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[86], [418], [170]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=769 seed=1 random: drop directions per lane [[((1, 185), 4)], [((1, 143), 4)], [((1, 222), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[212], [242], [433]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=769 seed=1 cauchy: drop directions per lane [[((1, 191), 4)], [((1, 170), 4)], [((1, 107), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[153], [95], [115]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=769 seed=2 random: drop directions per lane [[((1, 671), 4)], [((1, 507), 4)], [((1, 506), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[102], [226], [269]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=769 seed=3 random: drop directions per lane [[((1, 677), 4)], [((1, 248), 4)], [((1, 143), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[443], [369], [242]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=769 seed=4 random: drop directions per lane [[((1, 380), 4)], [((1, 24), 4)], [((1, 152), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[427], [737], [683]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=1009 seed=0 random: drop directions per lane [[((1, 393), 4)], [((1, 557), 4)], [((1, 908), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[552], [788], [999]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=1009 seed=0 cauchy: drop directions per lane [[((1, 577), 4)], [((1, 423), 4)], [((1, 375), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[675], [749], [635]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=1009 seed=1 random: drop directions per lane [[((1, 212), 4)], [((1, 21), 4)], [((1, 576), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[376], [961], [755]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=1009 seed=1 cauchy: drop directions per lane [[((1, 335), 4)], [((1, 355), 4)], [((1, 545), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[756], [955], [872]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=1009 seed=2 random: drop directions per lane [[((1, 396), 4)], [((1, 608), 4)], [((1, 636), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[823], [78], [798]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=1009 seed=3 random: drop directions per lane [[((1, 24), 4)], [((1, 529), 4)], [((1, 259), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[967], [103], [187]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=1009 seed=4 random: drop directions per lane [[((1, 174), 4)], [((1, 179), 4)], [((1, 852), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[29], [947], [482]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=4099 seed=0 random: drop directions per lane [[((1, 4098), 4)], [((1, 92), 4)], [((1, 1191), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[4098], [401], [1504]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=4099 seed=0 cauchy: drop directions per lane [[((1, 3926), 4)], [((1, 540), 4)], [((1, 599), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[1469], [2133], [2224]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=4099 seed=1 random: drop directions per lane [[((1, 2444), 4)], [((1, 69), 4)], [((1, 2211), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[3886], [1901], [1066]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=4099 seed=1 cauchy: drop directions per lane [[((1, 2194), 4)], [((1, 3563), 4)], [((1, 1674), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[2397], [2776], [2407]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=4099 seed=2 random: drop directions per lane [[((1, 622), 4)], [((1, 1067), 4)], [((1, 3343), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[1720], [1237], [3161]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=4099 seed=3 random: drop directions per lane [[((1, 2032), 4)], [((1, 3895), 4)], [((1, 2249), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[2108], [864], [3986]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=4099 seed=4 random: drop directions per lane [[((1, 2681), 4)], [((1, 3863), 4)], [((1, 2004), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[714], [330], [2072]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=12289 seed=0 random: drop directions per lane [[((1, 31), 4)], [((1, 11262), 4)], [((1, 9002), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[7532], [1053], [1402]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=12289 seed=0 cauchy: drop directions per lane [[((1, 8217), 4)], [((1, 7917), 4)], [((1, 5811), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[5387], [9852], [1216]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=12289 seed=1 random: drop directions per lane [[((1, 11946), 4)], [((1, 5347), 4)], [((1, 9471), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[3332], [2296], [3903]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=12289 seed=1 cauchy: drop directions per lane [[((1, 10328), 4)], [((1, 3074), 4)], [((1, 2544), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[94], [10534], [5560]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=12289 seed=2 random: drop directions per lane [[((1, 2115), 4)], [((1, 8271), 4)], [((1, 3744), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[3463], [7478], [10080]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=12289 seed=3 random: drop directions per lane [[((1, 1938), 4)], [((1, 1726), 4)], [((1, 2507), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[4369], [8252], [7843]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ q=12289 seed=4 random: drop directions per lane [[((1, 6796), 4)], [((1, 4458), 4)], [((1, 4368), 4)]] (u:v, degree after R0.M) ; directions shared by two lanes: 0 ; predicted u=(-M_i1/M_i0)^(1/5): [[6385], [8019], [8640]] match=True ; degrees after R1.M on drop lines [[25, 25, 25], [25, 25, 25], [25, 25, 25]]
+ (total configurations: 35)
+ control with gcd(5,q-1)=5 (x^5 NOT a bijection): number of drop directions per lane = number of 5th roots of -M_i1/M_i0 in F_q (0 or 5):
+   q=11 seed=0: directions with u/v at which lane i drops (v=1) counts [5, 0, 0]
+   q=11 seed=1: directions with u/v at which lane i drops (v=1) counts [0, 0, 5]
+   q=11 seed=2: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=31 seed=0: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=31 seed=1: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=31 seed=2: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=41 seed=0: directions with u/v at which lane i drops (v=1) counts [5, 0, 0]
+   q=41 seed=1: directions with u/v at which lane i drops (v=1) counts [0, 5, 0]
+   q=41 seed=2: directions with u/v at which lane i drops (v=1) counts [0, 5, 0]
+   q=61 seed=0: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=61 seed=1: directions with u/v at which lane i drops (v=1) counts [5, 0, 0]
+   q=61 seed=2: directions with u/v at which lane i drops (v=1) counts [5, 0, 0]
+   q=71 seed=0: directions with u/v at which lane i drops (v=1) counts [5, 5, 0]
+   q=71 seed=1: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=71 seed=2: directions with u/v at which lane i drops (v=1) counts [0, 0, 5]
+   q=101 seed=0: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=101 seed=1: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+   q=101 seed=2: directions with u/v at which lane i drops (v=1) counts [0, 0, 0]
+
+=== T5 (Q8 toy): R1.C-zero loci on P0, exhaustive ===
+ q=257 seed=0: #(A,B) with exactly one zero lane 765 (expect 3q=771 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [257, 257, 257] (expect q each)
+ q=257 seed=1: #(A,B) with exactly one zero lane 765 (expect 3q=771 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [257, 257, 257] (expect q each)
+ q=257 seed=2: #(A,B) with exactly one zero lane 765 (expect 3q=771 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [257, 257, 257] (expect q each)
+ q=769 seed=0: #(A,B) with exactly one zero lane 2301 (expect 3q=2307 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [769, 769, 769] (expect q each)
+ q=769 seed=1: #(A,B) with exactly one zero lane 2301 (expect 3q=2307 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [769, 769, 769] (expect q each)
+ q=769 seed=2: #(A,B) with exactly one zero lane 2301 (expect 3q=2307 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [769, 769, 769] (expect q each)
+ q=1009 seed=0: #(A,B) with exactly one zero lane 3021 (expect 3q=3027 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [1009, 1009, 1009] (expect q each)
+ q=1009 seed=1: #(A,B) with exactly one zero lane 3021 (expect 3q=3027 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [1009, 1009, 1009] (expect q each)
+ q=1009 seed=2: #(A,B) with exactly one zero lane 3021 (expect 3q=3027 minus overlaps), exactly two zero lanes 3 (expect 3), three 0; per-lane zero locus size [1009, 1009, 1009] (expect q each)
+
+=== T6 (Q7 toy): the 25 fixed-point pairs, q=257 (5 fixed points) ===
+ seed=0: fixed points [0, 1, 16, 241, 256] ; lanes of R0.M-out in the fixed set: 0 of 75 (random expectation 75*5/257=1.5) ; R1.C-in lanes in the fixed set 1 ; zero 0 ; hash collisions among the 25: 4 ; repeated lane values among the 25 states: 0
+ seed=1: fixed points [0, 1, 16, 241, 256] ; lanes of R0.M-out in the fixed set: 1 of 75 (random expectation 75*5/257=1.5) ; R1.C-in lanes in the fixed set 1 ; zero 1 ; hash collisions among the 25: 1 ; repeated lane values among the 25 states: 12
+ seed=2: fixed points [0, 1, 16, 241, 256] ; lanes of R0.M-out in the fixed set: 3 of 75 (random expectation 75*5/257=1.5) ; R1.C-in lanes in the fixed set 4 ; zero 2 ; hash collisions among the 25: 0 ; repeated lane values among the 25 states: 0
+
+=== T7: gcd(5,q-1)=5 control: round-0 reparametrisation stops being a bijection ===
+ q=11: |image of x->(x+c)^5| = 3 of 11 (expected (q-1)/5+1 = 3) -> (nk,rho)->(A,B) is 5-to-1 away from 0
+ q=31: |image of x->(x+c)^5| = 7 of 31 (expected (q-1)/5+1 = 7) -> (nk,rho)->(A,B) is 5-to-1 away from 0
+ q=41: |image of x->(x+c)^5| = 9 of 41 (expected (q-1)/5+1 = 9) -> (nk,rho)->(A,B) is 5-to-1 away from 0
+ q=61: |image of x->(x+c)^5| = 13 of 61 (expected (q-1)/5+1 = 13) -> (nk,rho)->(A,B) is 5-to-1 away from 0
+
+total time 1005.9 s

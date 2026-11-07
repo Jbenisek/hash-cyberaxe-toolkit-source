@@ -1,0 +1,12 @@
+samples per call: 2^22
+  r0c3: LM weight   6   measured log2 P =   -3.00  (524807 hits)
+  r1c0: LM weight   2   measured log2 P =   -2.00  (1048236 hits)
+  r1c2: LM weight   9   measured log2 P =   -7.98  (16563 hits)
+samples per call: 2^22
+  r0c0: LM weight   0   measured log2 P =    0.00  (4194304 hits)
+  r0c3: LM weight   6   measured log2 P =   -3.00  (524225 hits)
+  r1c0: LM weight   2   measured log2 P =   -2.00  (1049473 hits)
+  r1c2: LM weight  10   measured log2 P =   -9.04  (7979 hits)
+samples per call: 2^22
+  r0c0: LM weight   0   measured log2 P =    0.00  (4194304 hits)
+  r1c2: LM weight   1   measured log2 P =   -1.00  (2098131 hits)

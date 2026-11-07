@@ -1,0 +1,23 @@
+{
+  "id": "D538-SHA3-R6-S6P-REDUCED-CAMPAIGN-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6P prefile and three supplied reduced campaign requests",
+  "question": "What is verified for pkgS6P when its ledger prints N=None and its program is not registry-known?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6P claims time_log2=122.18876; prefile SOME FAIL for ledger N=None and the known-good registry gap, while note/claim labels and remaining structural checks pass. Three 256-trial requests complete with zero key mismatches and zero key matches: reduced 0 pairs; within16 224 partial pairs with counts 513/131526/500; cross16 165 partial pairs with counts 485/130615/519; fixed fes_ops=845059, chi_transpose_ops=4772232, table_ops=720896, verify_check_ops=4082, in_range_mismatches=0.",
+  "source": "our workflow: D538 read-only pkgS6P reduced-campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D538_s6p_audit.md; research/tools/build_pkg/scratch/pkgS6P/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6P/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6P/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6i/work/req_fes-campaign-reduced.json; research/tools/build_pkg/scratch/pkgS6i/work/req_hcoset-within16.json; research/tools/build_pkg/scratch/pkgS6i/work/req_hcoset-cross16.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Reduced-width finite mechanics only; ledger N=None and registry gap prevent exact score credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS6P package bytes and supplied request specifications as found; one process; no file writes",
+  "reopen_if": "ledger repair, known-good registry update, or owner/organizer acceptance ruling arrives"
+}

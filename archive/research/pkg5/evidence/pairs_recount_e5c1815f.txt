@@ -1,0 +1,48 @@
+PAIR e5c1815f 581c6852 wt_eta 15 wt_beta 11 cap 31 taus 829440 passing 315 positive 24 sampled 0  E1 probability of passing 2^-27.5  class-rate part 2219520.0 (log2 21.08)  largest share 0.24
+EXACT-E1 e5c1815f 581c6852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-29.6  class-rate part 2129920.0 (log2 21.02)  largest share 0.25  formula fallbacks 0
+DONE 581c6852 exit 0 seconds 4
+PAIR e5c1815f 581c5852 wt_eta 15 wt_beta 11 cap 31 taus 829440 passing 252 positive 24 sampled 0  E1 probability of passing 2^-28.1  class-rate part 1880064.0 (log2 20.84)  largest share 0.14
+EXACT-E1 e5c1815f 581c5852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-30.0  class-rate part 1907712.0 (log2 20.86)  largest share 0.14  formula fallbacks 0
+DONE 581c5852 exit 0 seconds 1
+PAIR e5c1815f 58345852 wt_eta 15 wt_beta 12 cap 31 taus 1088640 passing 396 positive 27 sampled 0  E1 probability of passing 2^-29.2  class-rate part 408576.0 (log2 18.64)  largest share 0.16
+EXACT-E1 e5c1815f 58345852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-31.4  class-rate part 399360.0 (log2 18.61)  largest share 0.16  formula fallbacks 0
+DONE 58345852 exit 0 seconds 7
+PAIR e5c1815f 58346852 wt_eta 15 wt_beta 12 cap 31 taus 1088640 passing 495 positive 31 sampled 0  E1 probability of passing 2^-28.5  class-rate part 428868.0 (log2 18.71)  largest share 0.31
+EXACT-E1 e5c1815f 58346852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-31.5  class-rate part 388224.0 (log2 18.57)  largest share 0.34  formula fallbacks 0
+DONE 58346852 exit 0 seconds 14
+PAIR e5c1815f c81c6852 wt_eta 15 wt_beta 11 cap 31 taus 552960 passing 150 positive 12 sampled 0  E1 probability of passing 2^-28.3  class-rate part 555648.0 (log2 19.08)  largest share 0.47
+EXACT-E1 e5c1815f c81c6852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-31.1  class-rate part 344064.0 (log2 18.39)  largest share 0.38  formula fallbacks 0
+DONE c81c6852 exit 0 seconds 2
+PAIR e5c1815f 581c3852 wt_eta 15 wt_beta 11 cap 31 taus 663552 passing 315 positive 6 sampled 0  E1 probability of passing 2^-28.6  class-rate part 313344.0 (log2 18.26)  largest share 0.42
+EXACT-E1 e5c1815f 581c3852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-32.2  class-rate part 322560.0 (log2 18.30)  largest share 0.41  formula fallbacks 0
+DONE 581c3852 exit 0 seconds 2
+PAIR e5c1815f c81c5852 wt_eta 15 wt_beta 11 cap 31 taus 552960 passing 120 positive 8 sampled 0  E1 probability of passing 2^-28.9  class-rate part 368640.0 (log2 18.49)  largest share 0.36
+EXACT-E1 e5c1815f c81c5852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-31.5  class-rate part 307200.0 (log2 18.23)  largest share 0.32  formula fallbacks 0
+DONE c81c5852 exit 0 seconds 0
+PAIR e5c1815f 58343852 wt_eta 15 wt_beta 12 cap 31 taus 870912 passing 495 positive 11 sampled 0  E1 probability of passing 2^-29.4  class-rate part 66432.0 (log2 16.02)  largest share 0.49
+EXACT-E1 e5c1815f 58343852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-33.8  class-rate part 65280.0 (log2 15.99)  largest share 0.50  formula fallbacks 0
+DONE 58343852 exit 0 seconds 10
+PAIR e5c1815f c81c3852 wt_eta 15 wt_beta 11 cap 31 taus 442368 passing 150 positive 8 sampled 0  E1 probability of passing 2^-29.4  class-rate part 124608.0 (log2 16.93)  largest share 0.53
+EXACT-E1 e5c1815f c81c3852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-32.8  class-rate part 61440.0 (log2 15.91)  largest share 0.53  formula fallbacks 0
+DONE c81c3852 exit 0 seconds 1
+PAIR e5c1815f c8345852 wt_eta 15 wt_beta 12 cap 31 taus 725760 passing 168 positive 6 sampled 0  E1 probability of passing 2^-31.4  class-rate part 38016.0 (log2 15.21)  largest share 0.43
+EXACT-E1 e5c1815f c8345852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-33.9  class-rate part 47520.0 (log2 15.54)  largest share 0.39  formula fallbacks 0
+DONE c8345852 exit 0 seconds 3
+PAIR e5c1815f c8346852 wt_eta 15 wt_beta 12 cap 31 taus 725760 passing 210 positive 12 sampled 0  E1 probability of passing 2^-30.8  class-rate part 53797.2 (log2 15.72)  largest share 0.61
+EXACT-E1 e5c1815f c8346852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-33.8  class-rate part 45024.0 (log2 15.46)  largest share 0.55  formula fallbacks 0
+DONE c8346852 exit 0 seconds 11
+PAIR e5c1815f f81c5852 wt_eta 15 wt_beta 13 cap 31 taus 1105920 passing 348 positive 18 sampled 0  E1 probability of passing 2^-28.5  class-rate part 26256.0 (log2 14.68)  largest share 0.16
+EXACT-E1 e5c1815f f81c5852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-33.6  class-rate part 13056.0 (log2 13.67)  largest share 0.31  formula fallbacks 0
+DONE f81c5852 exit 0 seconds 1
+PAIR e5c1815f c8343852 wt_eta 15 wt_beta 12 cap 31 taus 580608 passing 210 positive 9 sampled 0  E1 probability of passing 2^-31.6  class-rate part 13491.5 (log2 13.72)  largest share 0.61
+EXACT-E1 e5c1815f c8343852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-35.1  class-rate part 9792.0 (log2 13.26)  largest share 0.63  formula fallbacks 0
+DONE c8343852 exit 0 seconds 10
+PAIR e5c1815f f81c3852 wt_eta 15 wt_beta 13 cap 31 taus 884736 passing 435 positive 6 sampled 0  E1 probability of passing 2^-28.9  class-rate part 4640.0 (log2 12.18)  largest share 0.44
+EXACT-E1 e5c1815f f81c3852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-34.2  class-rate part 4352.0 (log2 12.09)  largest share 0.47  formula fallbacks 0
+DONE f81c3852 exit 0 seconds 1
+PAIR e5c1815f 587c3852 wt_eta 15 wt_beta 13 cap 31 taus 1990656 passing 270 positive 3 sampled 0  E1 probability of passing 2^-32.0  class-rate part 24.0 (log2 4.58)  largest share 0.67
+EXACT-E1 e5c1815f 587c3852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-39.5  class-rate part 12.0 (log2 3.58)  largest share 0.67  formula fallbacks 0
+DONE 587c3852 exit 0 seconds 9
+PAIR e5c1815f f8345852 wt_eta 15 wt_beta 14 cap 31 taus 1451520 passing 792 positive 50 sampled 0  E1 probability of passing 2^-28.4  class-rate part 78738.0 (log2 16.26)  largest share 0.16
+EXACT-E1 e5c1815f f8345852 Y11 5ebf5bc0: E1 probability of the positive outcomes 2^-30.9  class-rate part 103968.0 (log2 16.67)  largest share 0.16  formula fallbacks 0
+DONE f8345852 exit 0 seconds 12

@@ -1,0 +1,13 @@
+PREREG sha256-37-G07-U04, written before the run (date read below). Own code: lowm.py of pkgR37M3 (sha256 b-copy 63c14c31...).
+Seeds: Shake('scanonce-wave2|G07U04|main|<k>') one stream, fresh (no earlier use of the string 'scanonce-wave2').
+Unit: one real first block (30+16 ops first block + process_cv, all 222 classes, no checks, no early stop). Metered ops per block = shipped program's own meter.
+Rows (ledger label: charged expectation per block from lowm.expected()/ledger): class scans 6*classes (21.14); passing classes = cprep+sweep+w6+spill+runs+scan+member-pad (24,666.75);
+ groups = group+probe+PAD_OPS if padded (16,269.77); survivors = surv (4,879.12); row-16 hits = rare (233.31); total variable 46,070.09; fixed 615.
+Estimators: raw block mean with 99% CI (normal, blocks independent); control-variate adjusted mean using the exact moments E[classes]=222*P7 and E[pairs]=g=830.988 (regression on both, fitted on the same blocks; this tests the ledger arithmetic given H1 moments).
+Rule R2: row COVERED if charged lies in the 99% CI of the CV-adjusted mean; UNDER if charged < lower end; OVER if charged > upper end (slack = charged - mean). Fixed: every block's non-variable part must equal 615 exactly (block with no passing class has total 615).
+ The groups row is a stated upper bound (ceil, <=0.75 group-padding); OVER up to 60 ops on that row is expected by design.
+Rule H1 (judge cause): z = (mean - exact)/se for passing classes and good pairs, |z| < 2.576 passes; also report variance-to-mean ratio of pairs.
+Rule H3(b) row-16 factor: F = [sum r(r-1)/sum N(N-1)] / [sum r / sum N]^2 where N=good pairs of the block, r=row-16 hit lanes of the block; independence gives 1; 99% CI by batch (20 batches); proof states measured 0.98 and 1.00 and carries a margin 2^35.
+Control R3: (a) negative control: same pipeline with GROUP_BODY patched 31->32 on the first 4000 blocks of the same seeds must make the groups row UNDER (rule flags); (b) positive control: untouched meter on the same 4000 blocks must be COVERED/not UNDER.
+Sensitivity R4: bits per +1 op in FIXED and per +1 op per group (and per scaling of vbar) from lowm.ledger() with patched constants; slack bits for any OVER row.
+Mon Oct 12 13:14:53 MDT 2026

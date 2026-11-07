@@ -1,0 +1,22 @@
+{
+ "object": "message word m6",
+ "question": "Q2: necessity of m6 - change it and recount the exact outcome (ops, time_log2, digest).",
+ "status": "COMPUTED",
+ "number": "Change m6: to a nonzero constant (0x9e3779b9, 1 and 0xffffffff all give the same): 597 ops, +2 (+0.0048 bit); to a variable word (as if the prefix were free): 627 ops, +32 (+0.0750 bit). Diffusion test (flip each of the 32 bits of m6, 48 random inputs each, 3 rounds): mean 128.1 of 256 digest bits change (per-bit means 125.2 to 130.8), and all 8 digest words change in every flip tested (8 flips per bit class sampled), so the word fully reaches the digest. m6 is fixed to 0 by the target, so the change is not allowed; the numbers show what the zero is worth.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_words.py; research/dig/incoming3/blake3-r3-U46/work/words_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. Variants traced and compared with the scalar function on 60 inputs (0 mismatches).",
+ "held_fixed": "all other words as in the target; same layout; ledger rho.py with PH replaced",
+ "reopen_if": "the target prefix is ever not zero",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|m6|msgword|Q2",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

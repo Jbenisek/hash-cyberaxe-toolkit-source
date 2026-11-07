@@ -1,0 +1,5 @@
+opened clusters 16140
+alive16 per cluster: {8: 7774, 9: 8366} mean 8.518 max 9
+alive24 per cluster: {0: 5563, 1: 74, 2: 110, 3: 210, 4: 105, 5: 243, 6: 162, 7: 131, 8: 4709, 9: 4833} mean 5.305 max 9
+T2!=0 per cluster: {0: 7216, 1: 66, 2: 96, 3: 178, 4: 92, 5: 204, 6: 147, 7: 112, 8: 3955, 9: 4074} mean 4.470 max 9
+distinct 9-bit prefixes per opened cluster: {1: 16140}

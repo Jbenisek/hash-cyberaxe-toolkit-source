@@ -1,0 +1,80 @@
+filed 112.4: f 2,048, 34 per trial, pass budget 2^-12: time_log2 112.350 -> 112.4
+pin B draft (research/pkg4): f 2^21, 34 per trial, pass budget 2^-12: time_log2 102.350 -> 102.4
+
+filed pin, class e96d6d6b, sub-class S2, rule A6s: pin a6c3b8c5 eta e96d6d6b, e1 mask:value 6d7bf96d:00096120, 1024 members, rule A with 6 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 53 + 28 = 81, C 46 + 18 = 64 (operations + loads); 300000 batches = 2100000 lanes, all checks pass: True
+   lanes passing A 2^-5.9909 (rule: 2^-6), B 2^-10.0197, both 2^-16.2471
+   batches entering B: independent lanes 0.10438 (self-test 0.08592), budget 0.115;  entering C: 0.00070 (self-test 0.00056), budget 0.005
+   per trial: expected 15.869, budgeted 16.032, charged 16.7;  gain against 34: 1.026 bits
+   f 4096 (2^12.000), pass budget 2^-12: time_log2 110.335 -> 110.4
+   f 4096 (2^12.000), pass budget 2^-16: time_log2 110.315 -> 110.4
+   f 8192 (2^13.000), pass budget 2^-12: time_log2 109.335 -> 109.4
+   f 8192 (2^13.000), pass budget 2^-16: time_log2 109.315 -> 109.4
+
+pin B, class e5c1815f, whole class, rule A5: pin d5d881ca eta e5c1815f, e1 mask:value 015fe5c1:00036081, 131072 members, rule A with 5 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 55 + 29 = 84, C 45 + 17 = 62 (operations + loads); 300000 batches = 2100000 lanes, all checks pass: True
+   lanes passing A 2^-4.9917 (rule: 2^-5), B 2^-4.3386, both 2^-9.3653
+   batches entering B: independent lanes 0.19928 (self-test 0.17890), budget 0.220;  entering C: 0.05953 (self-test 0.04978), budget 0.075
+   per trial: expected 17.207, budgeted 17.593, charged 18.3;  gain against 34: 0.894 bits
+   f 2^21 (2^21.000), pass budget 2^-12: time_log2 101.465 -> 101.5
+   f 2^21 (2^21.000), pass budget 2^-16: time_log2 101.447 -> 101.5
+
+pin B, class e5c1815f, whole class in two halves, rule A7: pin d5d881ca eta e5c1815f, e1 mask:value 815fe5c1:00036081, 65536 members (one of two half-lists), rule A with 7 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 55 + 29 = 84, C 45 + 17 = 62 (operations + loads); 1200000 batches = 8400000 lanes, all checks pass: True
+   lanes passing A 2^-7.0126 (rule: 2^-7), B 2^-4.3465, both 2^-11.3163
+   batches entering B: independent lanes 0.05342 (self-test 0.04334), budget 0.060;  entering C: 0.01588 (self-test 0.01225), budget 0.020
+   per trial: expected 15.071, budgeted 15.186, charged 15.8;  gain against 34: 1.106 bits
+   f 2^21 (2^21.000), pass budget 2^-12: time_log2 101.256 -> 101.3
+   f 2^21 (2^21.000), pass budget 2^-16: time_log2 101.235 -> 101.3
+
+pin B, class e5c1815f, sub-class S4 in two halves, rule A8s: pin d5d881ca eta e5c1815f, e1 mask:value 83fff5c1:00036081, 4096 members (one of two half-lists), rule A with 8 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 55 + 29 = 84, C 45 + 17 = 62 (operations + loads); 1200000 batches = 8400000 lanes, all checks pass: True
+   lanes passing A 2^-7.9990 (rule: 2^-8), B 2^-4.3421, both 2^-12.3260
+   batches entering B: independent lanes 0.02703 (self-test 0.02115), budget 0.030;  entering C: 0.00806 (self-test 0.00613), budget 0.015
+   per trial: expected 14.739, budgeted 14.837, charged 15.5;  gain against 34: 1.133 bits
+   f 2^22 (2^22.000), pass budget 2^-12: time_log2 100.229 -> 100.3
+   f 2^22 (2^22.000), pass budget 2^-16: time_log2 100.207 -> 100.3
+   f 3879209 (2^21.887), pass budget 2^-12: time_log2 100.342 -> 100.4
+   f 3879209 (2^21.887), pass budget 2^-16: time_log2 100.320 -> 100.4
+   f 2^21 (2^21.000), pass budget 2^-12: time_log2 101.229 -> 101.3
+   f 2^21 (2^21.000), pass budget 2^-16: time_log2 101.207 -> 101.3
+
+pin B, class e741835e, sub-class S4', rule A5c: pin d5d881ca eta e741835e, e1 mask:value 03fee7e1:0182e1c1, 8192 members, rule A with 5 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 55 + 29 = 84, C 45 + 17 = 62 (operations + loads); 1200000 batches = 8400000 lanes, all checks pass: True
+   lanes passing A 2^-4.9996 (rule: 2^-5), B 2^-5.6920, both 2^-10.6806
+   batches entering B: independent lanes 0.19928 (self-test 0.16432), budget 0.220;  entering C: 0.02547 (self-test 0.01959), budget 0.035
+   per trial: expected 16.950, budgeted 17.283, charged 18.0;  gain against 34: 0.918 bits
+   f 2^23 (2^23.000), pass budget 2^-12: time_log2 99.442 -> 99.5
+   f 2^23 (2^23.000), pass budget 2^-16: time_log2 99.423 -> 99.5
+
+pin B, class e7c1815f (leading at 03:44), whole class, rule A6: pin d5d881ca eta e7c1815f, e1 mask:value 015fe7c1:00036181, 65536 members, rule A with 6 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 55 + 29 = 84, C 45 + 17 = 62 (operations + loads); 2400000 batches = 16800000 lanes, all checks pass: True
+   lanes passing A 2^-5.9991 (rule: 2^-6), B 2^-2.2641, both 2^-8.2520
+   batches entering B: independent lanes 0.10438 (self-test 0.08551), budget 0.115;  entering C: 0.08401 (self-test 0.06506), budget 0.110
+   per trial: expected 16.288, budgeted 16.646, charged 17.4;  gain against 34: 0.966 bits
+   f 2^23 (2^23.000), pass budget 2^-12: time_log2 99.393 -> 99.4
+   f 2^23 (2^23.000), pass budget 2^-16: time_log2 99.374 -> 99.4
+
+pin B, class e7c1815f, sub-class S2c in two halves, rule A7c: pin d5d881ca eta e7c1815f, e1 mask:value 815ff7e1:00036181, 8192 members (one of two half-lists), rule A with 7 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 55 + 29 = 84, C 45 + 17 = 62 (operations + loads); 1200000 batches = 8400000 lanes, all checks pass: True
+   lanes passing A 2^-6.9989 (rule: 2^-7), B 2^-2.2629, both 2^-9.2591
+   batches entering B: independent lanes 0.05342 (self-test 0.04368), budget 0.060;  entering C: 0.04301 (self-test 0.03342), budget 0.055
+   per trial: expected 15.335, budgeted 15.521, charged 16.2;  gain against 34: 1.070 bits
+   f 2^23 (2^23.000), pass budget 2^-12: time_log2 99.292 -> 99.3
+   f 2^23 (2^23.000), pass budget 2^-16: time_log2 99.271 -> 99.3
+
+pin B, class e7c1815f, whole class, rule A6, TWO-stage batch (no test B): pin d5d881ca eta e7c1815f, e1 mask:value 015fe7c1:00036181, 65536 members, rule A with 6 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 48 + 24 = 72, C 45 + 17 = 62 (operations + loads); 1200000 batches = 8400000 lanes, all checks pass: True
+   lanes passing A 2^-6.0035 (rule: 2^-6), B 2^0.0000, both 2^-6.0035
+   batches entering B: independent lanes 0.10438 (self-test 0.08532), budget 0.115;  entering C: 0.10438 (self-test 0.08532), budget 0.115
+   per trial: expected 16.290, budgeted 16.493, charged 17.2;  gain against 34: 0.983 bits
+   f 2^23 (2^23.000), pass budget 2^-12: time_log2 99.377 -> 99.4
+   f 2^23 (2^23.000), pass budget 2^-16: time_log2 99.357 -> 99.4
+
+pin B, class e7c1815f, sub-class S2c in two halves, rule A7c, TWO-stage batch (no test B): pin d5d881ca eta e7c1815f, e1 mask:value 815ff7e1:00036181, 8192 members (one of two half-lists), rule A with 7 conditions, filed conventions
+   machine count: stage A 64 + 36 = 100, B 48 + 24 = 72, C 45 + 17 = 62 (operations + loads); 600000 batches = 4200000 lanes, all checks pass: True
+   lanes passing A 2^-7.0096 (rule: 2^-7), B 2^0.0000, both 2^-7.0096
+   batches entering B: independent lanes 0.05342 (self-test 0.04360), budget 0.060;  entering C: 0.05342 (self-test 0.04360), budget 0.060
+   per trial: expected 15.336, budgeted 15.462, charged 16.1;  gain against 34: 1.078 bits
+   f 2^23 (2^23.000), pass budget 2^-12: time_log2 99.283 -> 99.3
+   f 2^23 (2^23.000), pass budget 2^-16: time_log2 99.262 -> 99.3

@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m8 (w8): free, pairs with m9 under X0/X15 pin",
+ "question": "Q4 alternative outcomes / carry patterns and whether they reach the same later differences",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Alternative: B-side w8+dl with w9 re-solved to keep X0: X0 kept 3000/3000 but X15 kept 0/3000 (bijection), X5 and X10 kept 0, lemma-H kept 0, digest words differing mean 8.0/8. No carry alternative for w8: A and B must share it exactly; the 75/32 carry effect lives in w4,w5 only.",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U10/work/scan_m89.py; research/dig/incoming/blake3-r2-U10/work/scan_m89.out.json; research/dig/incoming/blake3-r2-U10/work/b3lib.py; research/dig/incoming/blake3-r2-U10/work/validate_b3.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|m8|msgword|Q4. Own b3lib construction (pkgB3U Sec 4) validated 3000/3000 first. Sampled, window of 8-parameter construction, all words recomputed from the parameters; no gain seen.",
+ "topic": "blake3-r2 msgword m8"
+}

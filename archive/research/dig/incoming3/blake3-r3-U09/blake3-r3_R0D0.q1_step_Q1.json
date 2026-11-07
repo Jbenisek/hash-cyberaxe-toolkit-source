@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R0D0.q1 (a1,d1): 3-round BLAKE3 generic-birthday circuit, round 0 diagonal call D0, quarter-step 1",
+ "question": "Q1 value/count as used: operations this quarter-step costs in the filed 595-op circuit, and the value it carries.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "7 operations per 7-lane batch (add 1, xor 1, shr 1, and 2, shl 1, or 1) = 1.18 percent of the 595; D0 total 29 (7+7+8+7). add: (v0+v5 merged into one immediate K = 43be4679) + m8, xor: v15 immediate ^ a1, ror16 = shr, and, shl, and, or. Outputs are variable (depend on m8); lane bound after the step 2^32 (masked by the rotation). Immediates after the columns: v0 eb2778d5, v5 5896cda4, v10 edd208cd, v15 f67a3c87.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work/b3steps.py; research/dig/incoming3/work/scan.py; research/dig/incoming3/work/scan_out.json; research/dig/incoming3/work/validate_out.txt; research/blake3_r3/candidate_blake3/experiments/rho.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R0D0.q1|step|Q1. Validation first (research/dig/incoming3/work/validate_out.txt): scalar 7-round digest equals the organizer verifier on 50 random 64-byte blocks and the official empty-input vector; the packed circuit equals scalar and verifier at 7 rounds (1532 ops) and at 3 rounds (595 ops = the filed count). Counts from the per-quarter-step accounting of the same Tracer; the immediates equal the scalar state after the four column calls.",
+ "held_fixed": "blake3-r3 filed circuit: 7 lanes x 36 bits, 595 ops/batch, prefix 0^32, m8..m15 free",
+ "reopen_if": "the cost model charges immediates or rotations differently",
+ "topic": "blake3-r3 R0D0.q1 step op count"
+}

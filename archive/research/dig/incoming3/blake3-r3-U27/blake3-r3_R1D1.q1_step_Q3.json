@@ -1,0 +1,21 @@
+{
+ "object": "R1D1.q1 q1 = (a1,d1): a=a+b+x; d=ror16(d^a): free choices in the step",
+ "question": "Q3 degrees of freedom / score-optimal value: add operand order (3 variable terms), which free words feed it.",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "6 operand orders of the add built and run: total ops {595}, wrong lanes {0} -> score-optimal value is the shipped 595 (no order saves); free chain words reaching the step inputs: a<-8 words, b<-8 words, c<-8 words, d<-8 words; step inputs depend on 8 of 8 free words",
+ "notes": "cell blake3-r3|R1D1.q1|step|Q3. All 6 orders cost the same because the lane bound never reaches 2^36 inside round 1 (the 3 internal masks of the circuit are in round 2, ops 507/538/568 per levers_step_count.md).",
+ "held_fixed": "pitch 36, one step changed at a time, other steps shipped",
+ "reopen_if": "a lane layout with fewer guard bits or a proof of bounds that moves an internal mask out of round 2",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "evidence": "research/blake3_r3/step_profile_r1.py (tracer; validate: empty-input 7-round vector, 64-byte msgs vs verifier blake3.py at 7 and 3 rounds, packed circuit 0 wrong of 371 lanes, 595 ops, source identical to candidate_blake3/experiments/rho.py); research/blake3_r3/step_scan_r1.py; research/blake3_r3/step_scan_r1.json"
+}

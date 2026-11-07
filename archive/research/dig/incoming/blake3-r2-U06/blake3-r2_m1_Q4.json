@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "pkgB3U message word m1 (w1)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U06/work/b3lib.py; research/dig/incoming/blake3-r2-U06/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U06/work/scan_m01.py (+scan_m01.out.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m1|msgword|Q4",
+ "question": "Are there alternative treatments of this word (other differences, counter-absorbed difference, other values)?",
+ "status": "SAMPLED",
+ "labels": [
+  "I",
+  "Z"
+ ],
+ "number": "alternatives for (w0,w1) with the same K0 output (S4,S8): exactly 1 (K0 inverse, 200000/200000). Counter-absorbed difference (t_B = t_A ^ a1_A ^ a1_B, w1' compensated so K0 outputs S0,S4,S8,S12 are equal): K0 states equal 2000/2000 but Lemma H kept 0/2000, all 8 of 8 digest words differ (min 8)",
+ "notes": "Universe cell blake3-r2|m1|msgword|Q4 (unit blake3-r2-U06). Class: FREE (not pinned w4, not cancelling w5, not forced constant X3/X7/X11/X15). w1 = K0 second message word; a middle line in the root instance, in the counter instance w1 = S0 - K0.a1 - K0.b1 follows from w0. Read again only by E0 (message word of the first assignment). Alternatives tested: (a) other values of the pair: none (bijection); (b) a w1 difference absorbed by differing chunk counters in A and B (different prefixes F): K0 is neutralised but the difference reappears in E0 (message word), so the 4 equal digest words are lost: Z (no gain), sample of 2000 contexts, flags 3, counters random. (c) only open degree of freedom is the choice of context X2 / c1 (2^32 choices, same event, a free search variable, already used). Not tested: differences in both w0 and w1 jointly with a hand-designed cancellation inside C2/E0/E2.",
+ "topic": "b3r2.m1.msgword.Q4"
+}

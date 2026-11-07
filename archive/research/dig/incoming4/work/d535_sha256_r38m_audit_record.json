@@ -1,0 +1,23 @@
+{
+  "id": "D535-SHA256-R38-R38M-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR38M prefile and shipped self-test",
+  "question": "Does pkgR38M remain internally clean under the current prefile and finite self-test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR38M prefile ALL PASS; exact N=7791546105143499576182020253076, time_log2=91.20613 (ledger 91.20612455); a0lean38.py selftest exits 0 with the published 38-step pair, 64 classes of 3840, row-16/affine/prefilter/W7/step-3b checks, zero lane mismatches, 7 verified semi-free-start pairs, zero failed rebuilds, and all 512 embedded variants selected.",
+  "source": "our workflow: D535 read-only pkgR38M audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D535_r38m_audit.md; research/tools/build_pkg/scratch/pkgR38M/pkg/sha256-r38/claim.json; research/tools/build_pkg/scratch/pkgR38M/pkg/sha256-r38/proof.md; research/tools/build_pkg/scratch/pkgR38M/pkg/sha256-r38/experiments/a0lean38.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package mechanics and ledger confirmation only. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgR38M package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "owner/organizer acceptance ruling or a changed package artifact arrives"
+}

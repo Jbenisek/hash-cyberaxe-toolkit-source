@@ -1,0 +1,7 @@
+[
+  {
+    "submissionId": "3b99dfad-5110-494e-9f07-340b89d54b27",
+    "rationale": "Our own entry for poseidon round 3 (POSR3F, 30.62543 with a 290,356,404-byte memory claim, single deterministic run, in review). This entry keeps its algorithm, target, centre order, program, allocator, charging rules and ledger method, and changes only the transform plan of the big products: a 2^21-point transform built from one pulled-out radix-2 layer and two rows of 2^20 where POSR3F used 3 * 2^20 points, with the arena set to 250,000,000 bytes.",
+    "evidence": "proof.md Sections 4.2 and 4.3 (the radix-2 twisted stage and the plan choice), 6 (ledger) and 7 (memory); the note paragraph 'What changed against POSR3F'."
+  }
+]

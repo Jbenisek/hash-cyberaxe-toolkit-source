@@ -1,0 +1,3 @@
+T1=0e09818b T2=0e09818d
+beta* count=2097152 (2^21=2097152) mismatch_vs_cube=0
+beta2 count=2097152 mismatch_vs_cube=0

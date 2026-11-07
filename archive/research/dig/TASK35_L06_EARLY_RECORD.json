@@ -1,0 +1,22 @@
+{
+  "id": "S256-R40-L06-EARLY-REPLAY-20261021",
+  "hash": "sha256-r40",
+  "row_i": null,
+  "row_j": null,
+  "object": "Task35 L06 early-word freedom replay",
+  "question": "What finite XOR and modular late-word changes result from a controlled nonzero W0 or W8 assignment against the established later-start tail?",
+  "labels": ["X", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "baseline rank5: XOR late=00000000/00000000/00000000/00000000, modular late=1cf7d717/d6749855/5bdf4d2e/7abcfda5, weight329; W0^1: XOR late=a8ea2014/3bbee2bb/130001c9/db4a1b2c, modular=71f4d533/afd16a26/fab49ac5/7b38f051, weight372; W8^1: XOR late=b846ec18/298aa111/fb2991aa/1b50f6c3, modular=4d40abcf/dff5d09e/5388480a/6bf43d73, weight391",
+  "source": "our workflow: Task35 L06 early-word replay",
+  "own_test": true,
+  "evidence": "research/luna_dig/task35_l06_early_word.py; research/luna_dig/TASK35_L06_EARLY_WORD_20261021.md; research/grok/work/G_river_6/ANSWER.md; research/dig/GRID_R40.md",
+  "date": "2026-10-21",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Exact finite schedule replay. W0/W8 one-bit perturbations break the supplied XOR late-zero tail and increase finite W0..W40 popcount; ordinary modulo-2^32 late values are nonzero even for the baseline XOR-zero vector. This is not a full signed characteristic, compression-state test, success rate, charged ledger, recovery, or score result.",
+  "peak_mem": "0 FREE self-contained 16-word Python replay",
+  "held_fixed": "Published G_river_6 rank-5 vector, SHA-256 sigma maps, XOR and modulo-2^32 schedule recurrences, and only W0 or W8 one-bit perturbation",
+  "reopen_if": "A permitted full signed/modular state characteristic, global early-prefix search, or charged ledger/recovery comparison is available."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D563-BLAKE3-R2-B3U-PREFILE-SELFTEST-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgB3U prefile and frontline selftest",
+  "question": "What is verified for pkgB3U?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgB3U exact N=70643517498710778735, time_log2=57.189, log2(N/430)=57.18899813. Prefile SOME FAIL only because frontline.py is not known-good; other checks pass. One-process selftest 256 exits 0 with ok=true, 256 automata, 512 T1/T2, zero mismatches/halts in two contexts, and W/C/R/WB halt drills true.",
+  "source": "our workflow: D563 read-only pkgB3U prefile/selftest audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D563_b3u_audit.md; research/tools/build_pkg/scratch/pkgB3U/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgB3U/pkg/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgB3U/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; registry gap prevents clean package credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgB3U package bytes as found; one process; no package writes",
+  "reopen_if": "registry acceptance or organizer ruling"
+}

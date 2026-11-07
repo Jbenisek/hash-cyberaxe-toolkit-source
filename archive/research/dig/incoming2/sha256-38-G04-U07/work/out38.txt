@@ -1,0 +1,33 @@
+loaded G 67108864 variants 102696 classes; 90-class list: 90 of 90 found in G
+ref_words(published CV, published a0) reproduces W0..W13 of x: 1 ; c7 closed W7=c2450045 pub W7=c2450045
+published a0=b75dae71 in G: 1 ; its W7 in F7: 1 ; E16x(pub)=482326fd r16ok=1
+closed form W7=c7-A_-1 vs ref_words on 2000000 random (cv,a0 in G): mismatches 0 ; sampled a0 not in G: 0
+redraw CV words 2..7 (A_-1,A_-2 kept): W7 changed in 0 of 200000 ; W6 changed 0 ; E16x changed 200000
+redraw A_-2 only: W7 changed in 0 of 200000 ; W6 changed in 200000
+sizes: nG=67108864 nCls=102696, mean class size 653.47
+90-class set: 90 classes, 345600 variants
+loaded G 67108864 variants 102696 classes; 90-class list: 90 of 90 found in G
+g(IV): A_-1=6a09e667 g_all=4771488 (4376 classes) g_90=122880 (32 of 90 classes) ; expected at a random CV: g_all=4489216.00 classes=6869.80
+loaded G 67108864 variants 102696 classes; 90-class list: 90 of 90 found in G
+kind 0 (0=real F38(IV,M0) 1=extra free block F38(F38(IV,M0*),X) 2=uniform A_-1) seed 101 2^18 CVs, 903s
+g_all (all G variants): N=262144 mean=4489467.70 (se 459.12) sd=235070.88 cv=0.0524 min=4034560 max=5160688 P(g=0)=0.00000 q05=4175232 q25=4255072 q50=4476864 q75=4723264 q95=4811672
+g_90 (variants of the 90 filed classes): N=262144 mean=23188.89 (se 79.52) sd=40711.72 cv=1.7557 min=0 max=149760 P(g=0)=0.69644 q05=0 q25=0 q50=0 q75=46080 q95=122880
+classes passing F7: N=262144 mean=6870.20 (se 4.40) sd=2254.79 cv=0.3282 min=3904 max=14504 P(g=0)=0.00000 q05=4316 q25=5308 q50=6305 q75=8180 q95=11136
+of the 90 classes passing F7: N=262144 mean=6.04 (se 0.02) sd=10.60 cv=1.7557 min=0 max=39 P(g=0)=0.69644 q05=0 q25=0 q50=0 q75=12 q95=32
+exact E[g_all]=4489216.000  E[classes passing]=6869.801 (|F7|/2^32=0.066895)
+loaded G 67108864 variants 102696 classes; 90-class list: 90 of 90 found in G
+kind 1 (0=real F38(IV,M0) 1=extra free block F38(F38(IV,M0*),X) 2=uniform A_-1) seed 101 2^18 CVs, 945s
+g_all (all G variants): N=262144 mean=4489226.38 (se 458.66) sd=234831.83 cv=0.0523 min=4037056 max=5140752 P(g=0)=0.00000 q05=4175104 q25=4255072 q50=4475984 q75=4722624 q95=4811880
+g_90 (variants of the 90 filed classes): N=262144 mean=23107.29 (se 79.37) sd=40638.70 cv=1.7587 min=0 max=138240 P(g=0)=0.69693 q05=0 q25=0 q50=0 q75=46080 q95=122880
+classes passing F7: N=262144 mean=6876.75 (se 4.41) sd=2256.80 cv=0.3282 min=3904 max=14544 P(g=0)=0.00000 q05=4316 q25=5327 q50=6304 q75=8192 q95=11154
+of the 90 classes passing F7: N=262144 mean=6.02 (se 0.02) sd=10.58 cv=1.7587 min=0 max=36 P(g=0)=0.69693 q05=0 q25=0 q50=0 q75=12 q95=32
+exact E[g_all]=4489216.000  E[classes passing]=6869.801 (|F7|/2^32=0.066895)
+loaded G 67108864 variants 102696 classes; 90-class list: 90 of 90 found in G
+kind 2 (0=real F38(IV,M0) 1=extra free block F38(F38(IV,M0*),X) 2=uniform A_-1) seed 101 2^18 CVs, 628s
+g_all (all G variants): N=262144 mean=4488988.51 (se 458.12) sd=234555.24 cv=0.0523 min=4042752 max=5181856 P(g=0)=0.00000 q05=4175104 q25=4255072 q50=4475344 q75=4722624 q95=4811168
+g_90 (variants of the 90 filed classes): N=262144 mean=23147.27 (se 79.48) sd=40693.43 cv=1.7580 min=0 max=149760 P(g=0)=0.69722 q05=0 q25=0 q50=0 q75=46080 q95=122880
+classes passing F7: N=262144 mean=6868.05 (se 4.39) sd=2249.91 cv=0.3276 min=3904 max=14544 P(g=0)=0.00000 q05=4318 q25=5316 q50=6289 q75=8179 q95=11128
+of the 90 classes passing F7: N=262144 mean=6.03 (se 0.02) sd=10.60 cv=1.7580 min=0 max=39 P(g=0)=0.69722 q05=0 q25=0 q50=0 q75=12 q95=32
+exact E[g_all]=4489216.000  E[classes passing]=6869.801 (|F7|/2^32=0.066895)
+
+[exited with code 0]

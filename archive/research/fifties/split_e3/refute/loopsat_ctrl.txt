@@ -1,0 +1,2 @@
+instance  8418: GPU roots 2, kissat SAT in 0.02 s (cnf 2117 vars, 10193 clauses), g=2c912a13 is a GPU root
+instance  8418: GPU roots 2, kissat UNSAT in 0.02 s (cnf 2117 vars, 10193 clauses)

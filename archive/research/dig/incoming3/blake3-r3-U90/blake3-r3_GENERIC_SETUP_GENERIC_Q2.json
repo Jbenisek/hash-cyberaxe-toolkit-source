@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.SETUP setup / table build",
+ "question": "Is the setup charge (2,000 ops) necessary? Change it and recount.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Setup 2000 ops = 3.135 units = 2^1.65 of preprocessing (claim 2^2). Replacing 2000 by 0 or by 1e9 ops moves time_log2 by under 1e-31 bit (ledger total 2.9258e40). The setup is irrelevant to the score; only its itemisation matters to the judge (1 random word, 7 starts, counters, folded constants = 287+25+336 +1 per the filed comment).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.SETUP|GENERIC|Q2. Calculation: log2(2000/638)=1.65. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed ledger.",
+ "reopen_if": "A judge finding that setup is itemised wrongly by more than the 2^2 preprocessing claim allows (2^2 = 4 units = 2552 ops)."
+}

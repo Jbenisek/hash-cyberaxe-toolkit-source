@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.BACKSKIP backward skip",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "alternative: two-sided intersections capture only a small fraction of toy collisions (P3.12)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_12_outsider.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Luna 3 claim, not retested. | universe cell poseidon-r1|ALT.BACKSKIP|ALT|Q4",
+ "held_fixed": "toy",
+ "reopen_if": "a measured fraction near 1 on a real-like toy"
+}

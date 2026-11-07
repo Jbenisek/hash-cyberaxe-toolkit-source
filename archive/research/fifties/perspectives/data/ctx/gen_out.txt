@@ -1,0 +1,12 @@
+samples 262144 skipped_t0 0
+constants Y3 8127c181 Y3' 7edf3e7e Y11 7af77f38 Y11' 850000c3 W4' 97475640 DELTA5 fffffff8
+fail Y state A              0
+fail Y state B              0
+fail words 0,2,5,7          0
+fail E1/E3 vs final state   0
+fail c1/h1/dh1=eta          0
+fail R = K1^K3              0
+fail t>>32 or byte tail     0
+internal_failures_total 0
+ctx: 10.10 s
+ctx exit 0

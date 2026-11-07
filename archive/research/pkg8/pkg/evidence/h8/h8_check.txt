@@ -1,0 +1,14 @@
+vectors: pin 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006  eta 830303cf  class of 2^19 values of Y4  D3 fdb77cfd
+  lengths 55/63  w4' 97475640  delta fffffff8  Y3 8127c181 Y3' 7edf3e7e  Y11 7af77f38 Y11' 850000c3 D11 0a08818b  class mask 03cf8303 value 030c0303
+VECTORS 2000 lines of out/ref_vectors.txt
+VECTORS host: message words equal 2000, digest of A (55 bytes) equal 2000, digest of B (63 bytes) equal 2000, full check 2000
+VECTORS GPU: trial equal to the host's (w8..w11, residual, h1, beta, tau, eps, psi, eps3, Y12) 2000, w8..w11 and residual equal to the file's words and digests 2000
+VECTORS all agree
+exit 0
+check: pin 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006  eta 830303cf  class of 2^19 values of Y4  D3 fdb77cfd
+  lengths 55/63  w4' 97475640  delta fffffff8  Y3 8127c181 Y3' 7edf3e7e  Y11 7af77f38 Y11' 850000c3 D11 0a08818b  class mask 03cf8303 value 030c0303
+  example A words: 86696d6f 298e3f52 f9eab4f0 deade57f 97475638 3298b15b 36cd4e68 b63fb9fb 4d880ff4 d0f5461c 6e72e15d c49cf541 f9fa569f 0007c006 00000000 00000000
+  example digest xor: 00000000 f215595b 00000000 ad76e786 a6596835 00000000 074f6ada 00000000
+CHECK 16384 of 16384 class-search trials: messages of 55 and 63 bytes, full digests agree on words 0,2,5,7, residual as computed, Y4 in class, pinned words kept, zero fill, state and inner words as the forward computation gives them
+CHECK member order: 524288 of 524288 steps give member k at step k, back at member 0 after the last: yes
+exit 0

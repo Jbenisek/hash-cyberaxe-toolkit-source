@@ -1,0 +1,23 @@
+{
+  "id": "D553-SHA3-R5L2-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR5L2 prefile audit",
+  "question": "What is creditable for pkgR5L2 without a fresh organizer request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR5L2 prefile ALL PASS. Exact N=10546101431373; claim/ledger time_log2=32.8577; log2(N/1355)=32.85769787. No fresh request; no score or premise transfer.",
+  "source": "our workflow: D553 read-only pkgR5L2 prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D553_r5l2_prefile.md; research/tools/build_pkg/scratch/pkgR5L2/pkg/sha3-256-r5/claim.json; research/tools/build_pkg/scratch/pkgR5L2/pkg/sha3-256-r5/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No fresh organizer request; no package/stage/filing/submission.",
+  "held_fixed": "pkgR5L2 package bytes as found; no package writes",
+  "reopen_if": "supplied public organizer request"
+}

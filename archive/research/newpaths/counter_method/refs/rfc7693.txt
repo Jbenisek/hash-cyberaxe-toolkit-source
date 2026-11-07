@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+External standards text: link to the publisher instead of distributing a local full-text copy.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/newpaths/counter_method/refs/rfc7693.txt
+Publisher/preprint locator (derived from the source identifier): https://www.rfc-editor.org/info/rfc7693

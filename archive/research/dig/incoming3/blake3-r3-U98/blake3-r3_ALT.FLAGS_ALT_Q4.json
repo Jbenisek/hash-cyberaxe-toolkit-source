@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "flags alternatives: illegal flags, short blocks",
+ "question": "Alternatives?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "illegal flag words (values 0..15, KEYED etc.) also give 595; block length below 64 gives 595 but fewer than 256 free bits (a chain needs 256), so no gain; keyed hashing is out of scope for the target",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_ops.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "The chain-width point is a counting argument, not run.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "none",
+ "topic": "blake3-r3|ALT.FLAGS|ALT|Q4"
+}

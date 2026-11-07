@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "setup, halt budgets (B batches, E2 events, 18,432 keys)",
+ "question": "R4 score sensitivity of setup and budgets",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Setup, slices, stage-2 and events together are 0 bit at double precision: multiplying the 2,000-operation setup by 1e20 still changes the time by under 1e-9 bit. The only parts above 1e-9 are the main loop (99.439 percent) and recovery (0.561 percent). Nothing in the setup row can move the score.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|LEDGER.SETUP|LEDGER|R4. Exact ledger.",
+ "held_fixed": "ledger of the filed entry",
+ "reopen_if": "none",
+ "gain_basis": "T"
+}

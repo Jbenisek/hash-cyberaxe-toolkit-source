@@ -1,0 +1,72 @@
+w=8 ivoff=0: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=3: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 2 (mean 1); solutions = 512 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 512, c8 (m5=m8) holds 512 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 131072 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 521
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=5: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 3 (mean 1); solutions = 768 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 768, c8 (m5=m8) holds 768 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 196608 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 810
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=8: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 1 (mean 1); solutions = 256 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 256, c8 (m5=m8) holds 256 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 65536 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 247
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=11: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=13: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=16: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=19: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=21: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=24: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=1: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 2 (mean 1); solutions = 512 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 512, c8 (m5=m8) holds 512 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 131072 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 541
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=2: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 1 (mean 1); solutions = 256 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 256, c8 (m5=m8) holds 256 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 65536 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 247
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=4: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 2 (mean 1); solutions = 512 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 512, c8 (m5=m8) holds 512 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 131072 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 517
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=6: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 1 (mean 1); solutions = 256 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 256, c8 (m5=m8) holds 256 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 65536 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 278
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=7: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 2 (mean 1); solutions = 512 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 512, c8 (m5=m8) holds 512 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 131072 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 558
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=9: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 1 (mean 1); solutions = 256 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 256, c8 (m5=m8) holds 256 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 65536 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 280
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=10: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0
+w=8 ivoff=12: stage 1 (c1,c2,c3): (R,S) passing c1 = 256 (expect 2^8); (R,S) hitting the (m0,m4) curve = 0 (mean 1); solutions = 0 (mean 2^8)
+  among fam6: c7 (m12=m15) holds 0, c8 (m5=m8) holds 0 (expect fam6*2^-8 each)
+  fam6 members (c1..c6) = 0 (expect 2^16 per full run); forward-check failures 0; of them out1=out3 by chance 0
+  fam8 members (c1..c8) = 0 (expect ~1); forward-check failures 0

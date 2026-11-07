@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m8 (w8): free, pairs with m9 under X0/X15 pin",
+ "question": "Q1 difference/condition count at this word",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Difference: 0 bits (A and B equal in w8; 0 of 20000 sampled blocks differ). Free word, no difference condition. Pinned conditions: w8 is one of the pair (w8,w9) fixed by the 64 bits X0,X15 of column G(0,5,10,15) (X15 = pinned constant); constants X3/X7/X11/X15 held in 2000/2000 builds. Max bit bias over 20000 blocks 0.0073 (uniform).",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U10/work/scan_m89.py; research/dig/incoming/blake3-r2-U10/work/scan_m89.out.json; research/dig/incoming/blake3-r2-U10/work/b3lib.py; research/dig/incoming/blake3-r2-U10/work/validate_b3.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|m8|msgword|Q1. Own b3lib construction (pkgB3U Sec 4) validated 3000/3000 first. Sampled, window of 8-parameter construction, all words recomputed from the parameters; no gain seen.",
+ "topic": "blake3-r2 msgword m8"
+}

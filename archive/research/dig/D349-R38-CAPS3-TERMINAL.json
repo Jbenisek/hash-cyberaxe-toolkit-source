@@ -1,0 +1,20 @@
+{
+  "id": "D349-R38-CAPS3-TERMINAL",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "r38 caps3 terminal solver audit",
+  "question": "Do the completed caps3 runs establish a claimable r38 preprocessing or pair-search memory bound?",
+  "labels": ["C", "S", "Z"],
+  "status": "SAMPLED",
+  "number": "capS SAT 2^26.47592338 RSS; capCW SAT 2^26.91699905 RSS; capCP UNKNOWN at 2^26.92958205 RSS; simplifier 2^27.21082352 RSS",
+  "source": "our workflow: r38 solver-cap sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D349_r38_caps3_final.md; research/memcomp/sha256-r38/caps3.done; research/memcomp/sha256-r38/capS.err; research/memcomp/sha256-r38/capCW.err; research/memcomp/sha256-r38/capCP.err; research/memcomp/sha256-r38/simp.err",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Terminal finite observations only. SAT witnesses do not prove a characteristic-search bound; capCP has no verdict; preprocessing/development and organizer memory accounting remain open. No score transfer.",
+  "peak_mem": "27.21082352 MEASURED simplifier RSS; capS 26.47592338; capCW 26.91699905; capCP 26.92958205"
+}

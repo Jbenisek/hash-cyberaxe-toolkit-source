@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "differential alternatives: additive and sparse bit differences",
+ "question": "Alternatives?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "additive +1, -1, +2^31, +2^16 and xor bits 7, 12 on every set |D|<=2 of m8..m15 (36 sets x 16384 pairs = 589,824 pairs per kind): max equal digest words 0 for all six kinds; min digest-difference weight 87 to 91 of 256 (random-pair minimum 86-89)",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_diff.py; research/blake3_r3/alt/exp_diff.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Complements spider_diff (single-bit and bit-pair xor, additive +-2^b sampled there; not redone). No backward (inverse round 3) form re-run.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); random messages with m0..m7=0",
+ "reopen_if": "additive or sparse difference with a measured round-3 collision probability above 2^-20 after a conditioned round 1-2 trail",
+ "topic": "blake3-r3|ALT.DIFF|ALT|Q4"
+}

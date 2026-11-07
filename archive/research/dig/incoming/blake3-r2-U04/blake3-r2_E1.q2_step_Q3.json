@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "count",
+ "object": "E1 q2 cube Q* dimension",
+ "question": "What is the exact dimension of the set of c1 giving beta* (and beta2), counted over all carries?",
+ "labels": [
+  "I",
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "|Q*| = |Q_2| = 2^21 exactly of 2^32 c1 (11 fixed bits, affine cube dimension 21), rate x2^11; beta values over all 2^32 c1: 162,507 distinct, 187 with cube dimension 21",
+ "evidence": "research/dig/incoming/blake3-r2-U04/work/cube.c; research/dig/incoming/blake3-r2-U04/work/cube_out.txt; research/dig/incoming/blake3-r2-U04/work/q2cube.py; research/dig/incoming/blake3-r2-U04/work/q2cube_out.txt",
+ "topic": "b3.r2.E1.q2.cube_dim",
+ "notes": "Universe cell blake3-r2|E1.q2|step|Q3. Two independent exact counts: C brute force over all 2^32 c1 (count 2097152 each, 0 mismatches against the cube masks 0e09818b/02008000 and 0e09818d/02008001) and a carry-path DP (sum of cubes = 2^32 check). Real pairs from frontline step_ct: c1 in Q* gives E1 b1 diff beta* 40/40, c1 in Q_2 gives beta2 40/40. Confirms the proof statement; no gain."
+}

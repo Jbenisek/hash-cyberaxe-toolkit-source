@@ -1,0 +1,1 @@
+{"h6_valid_residues": [6, 7, 8, 9, 10, 11, 12, 13], "h6_invalid": [0, 1, 2, 3, 4, 5, 14, 15], "h6_mixed": [], "rest": {"h4": {"samples": 2400, "x_bad": 0, "half_fail": 0}, "h5": {"samples": 2400, "x_bad": 0, "half_fail": 0}, "h7": {"samples": 2400, "x_bad": 0, "half_fail": 0}}}

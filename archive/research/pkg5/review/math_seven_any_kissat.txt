@@ -1,0 +1,42 @@
+ANY 481c3852 SAT vars 2709 clauses 11183 sec 1 tau 581c1830 eps 2d5750a9 h1 1341eb4f solution 1 rule_A 1
+ANY 481c5852 SAT vars 2709 clauses 11183 sec 1 tau 481c2830 eps 2d5710a9 h1 94cf920f solution 1 rule_A 1
+ANY 481c6852 SAT vars 2709 clauses 11183 sec 0 tau 481c6850 eps 2d5730a9 h1 6d6fb6af solution 1 rule_A 1
+ANY 481cf852 SAT vars 2709 clauses 11183 sec 0 tau 481be8b0 eps 2d57d0a9 h1 831badcf solution 1 rule_A 1
+ANY 48343852 SAT vars 2709 clauses 11183 sec 0 tau 581be8b0 eps 2d6750a9 h1 c4a1f090 solution 1 rule_A 1
+ANY 48345852 SAT vars 2709 clauses 11183 sec 0 tau 581bd8b0 eps 2d6710a9 h1 a367fbf0 solution 1 rule_A 1
+ANY 48346852 SAT vars 2709 clauses 11183 sec 0 tau 581c1830 eps 2d6730a9 h1 84a1ca10 solution 1 rule_A 1
+ANY 4834f852 SAT vars 2709 clauses 11183 sec 0 tau 581be8b0 eps 2d67d0a9 h1 0363ce90 solution 1 rule_A 1
+ANY 48f43852 SAT vars 2709 clauses 11183 sec 0 tau 581c58b0 eps 2de750a9 h1 97679550 solution 1 rule_A 1
+ANY 48f45852 SAT vars 2709 clauses 11183 sec 0 tau 581c5830 eps 2de710a9 h1 116fb950 solution 1 rule_A 1
+ANY 48f46852 SAT vars 2709 clauses 11183 sec 0 tau 581bd850 eps 2de730a9 h1 b2af4ff0 solution 1 rule_A 1
+ANY 58143852 SAT vars 2709 clauses 11183 sec 0 tau 582c1830 eps 32a750a9 h1 336b9e30 solution 1 rule_A 1
+ANY 58145852 SAT vars 2709 clauses 11183 sec 0 tau 581c5830 eps 32a710a9 h1 7f7fdd70 solution 1 rule_A 1
+ANY 58146852 SAT vars 2709 clauses 11183 sec 0 tau 581c5830 eps 32a730a9 h1 ff77a570 solution 1 rule_A 1
+ANY 5814f852 SAT vars 2709 clauses 11183 sec 1 tau 581b58b0 eps 32a7d0a9 h1 c6918010 solution 1 rule_A 1
+ANY 58743852 SAT vars 2709 clauses 11183 sec 1 tau 582ce830 eps 32e750a9 h1 4093b550 solution 1 rule_A 1
+ANY 58745852 SAT vars 2709 clauses 11183 sec 1 tau 582c5850 eps 32e710a9 h1 aebd1170 solution 1 rule_A 1
+ANY 58746852 SAT vars 2709 clauses 11183 sec 1 tau 581c6830 eps 32e730a9 h1 6d578d70 solution 1 rule_A 1
+ANY 58fc3852 SAT vars 2709 clauses 11183 sec 0 tau a8ac5830 eps 321750a9 h1 227de5cf solution 1 rule_A 0
+ANY 781c3852 SAT vars 2709 clauses 11183 sec 0 tau 581c28b0 eps 0d5750a9 h1 84efaa4f solution 1 rule_A 1
+ANY 781c5852 SAT vars 2709 clauses 11183 sec 0 tau a81c68b0 eps 0d5710a9 h1 7559ed2f solution 1 rule_A 1
+ANY 781c6852 SAT vars 2709 clauses 11183 sec 0 tau a81c18b0 eps 0d5730a9 h1 7341a18f solution 1 rule_A 1
+ANY 78343852 SAT vars 2709 clauses 11183 sec 0 tau 585c58b0 eps 0d6750a9 h1 00518250 solution 1 rule_A 0
+ANY 78345852 SAT vars 2709 clauses 11183 sec 0 tau 581c68b0 eps 0d6710a9 h1 1911b4d0 solution 1 rule_A 1
+ANY 78346852 SAT vars 2709 clauses 11183 sec 0 tau 585c58b0 eps 0d6730a9 h1 1597ef10 solution 1 rule_A 0
+ANY 787c3852 SAT vars 2709 clauses 11183 sec 0 tau a85c58b0 eps 0d1750a9 h1 66819390 solution 1 rule_A 1
+ANY 787c5852 SAT vars 2709 clauses 11183 sec 0 tau a85c58b0 eps 0d1710a9 h1 6347964f solution 1 rule_A 1
+ANY 787c6852 SAT vars 2709 clauses 11183 sec 0 tau a85c58b0 eps 0d1730a9 h1 fc99878f solution 1 rule_A 1
+ANY c81c39b3 SAT vars 2709 clauses 11183 sec 0 tau 481437b1 eps 2d5751e8 h1 bada528f solution 1 rule_A 0
+ANY c81cd8b3 UNSAT vars 2709 clauses 11183 sec 0
+ANY d8142873 SAT vars 2709 clauses 11183 sec 0 tau 582c27b1 eps 32a74f68 h1 22a1af6e solution 1 rule_A 0
+ANY d81428b3 SAT vars 2709 clauses 11183 sec 0 tau 586c27b1 eps 32a74fe8 h1 a46806d2 solution 1 rule_A 0
+ANY d81428d3 SAT vars 2709 clauses 11183 sec 0 tau 582c27b1 eps 32a74fa8 h1 24a59570 solution 1 rule_A 1
+ANY f8143852 SAT vars 2709 clauses 11183 sec 0 tau 282ce830 eps f2a750a9 h1 38c3c890 solution 1 rule_A 1
+ANY f8145852 SAT vars 2709 clauses 11183 sec 0 tau 182c2830 eps f2a710a9 h1 54ed8770 solution 1 rule_A 1
+ANY f81c2873 UNSAT vars 2709 clauses 11183 sec 0
+ANY f81c28b3 UNSAT vars 2709 clauses 11183 sec 0
+ANY f8342852 SAT vars 2709 clauses 11183 sec 0 tau 27dce830 eps f298b0a9 h1 ef63e9b0 solution 1 rule_A 1
+ANY f83c3852 SAT vars 2709 clauses 11183 sec 0 tau 185c2830 eps f29750a9 h1 82e780af solution 1 rule_A 1
+ANY f83c5852 SAT vars 2709 clauses 11183 sec 0 tau 182c2830 eps f29710a9 h1 4525b0af solution 1 rule_A 1
+ANY f83c6852 SAT vars 2709 clauses 11183 sec 0 tau 185c6830 eps f29730a9 h1 0ac1d1f0 solution 1 rule_A 1
+ANY f87c2852 SAT vars 2709 clauses 11183 sec 0 tau 17d4e830 eps f2e8b0a9 h1 cf79c670 solution 1 rule_A 1

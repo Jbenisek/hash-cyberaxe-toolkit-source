@@ -1,0 +1,22 @@
+{
+  "id": "D360-POSR1-TWOLEVEL-CHARGE-SENSITIVITY",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "two-level twiddle ledger sensitivity",
+  "question": "What exact operation-count delta follows if each direct twiddle load becomes two table loads and one field multiply?",
+  "labels": ["N", "D", "S"],
+  "status": "COMPUTED",
+  "number": "For F=417307279 source-counted accesses: +F ld +F mul = +834614558 ops; time +0.15638981 bits on old N, +0.02321382 bits on fixed N. If two extra control/address ops per fetch are charged: +4F, +0.29747257 / +0.04606003 bits.",
+  "source": "our arithmetic audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D360_poseidon_r1_twolevel_charge_sensitivity.md; research/poseidon/count_twolevel_fetches.py; research/sol_answer_D358_poseidon_r1_twolevel_charge_bound.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Conditional ledger arithmetic only. Address/control convention, compiler registers, code size, KAT, and rebuilt peak remain open; no score or package credit.",
+  "held_fixed": "D359 F=417307279; old N=7289544780; fixed N=51453520952; direct replacement has exactly two loads and one multiply per access",
+  "reopen_if": "A rebuilt factorized implementation supplies exact dynamic ledger and memory evidence",
+  "peak_mem": "0 FREE arithmetic-only audit"
+}

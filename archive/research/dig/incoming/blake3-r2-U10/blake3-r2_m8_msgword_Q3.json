@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m8 (w8): free, pairs with m9 under X0/X15 pin",
+ "question": "Q3 degrees of freedom (exact over carries)",
+ "labels": [
+  "N",
+  "I"
+ ],
+ "status": "COMPUTED",
+ "number": "Degrees of freedom: 0 left in the pair (w8,w9) given the half-state and pinned X0,X15: map (w8,w9)->(X0,X15) is a bijection (inverse recovered 20000/20000). Whole block: 8 free 32-bit parameters (256 bits) = 12 free words 384 bits minus 128 bits of X3/X7/X11/X15. Sweeps over each of the 8 parameters, 65536 values: pair distinct 65536 each; C0c1:65536; C0d1:65536; D3d1:65534; S15:65536; S9:65536; w5:65535; X2:65534; y:65536 distinct w8; 100000 random builds give 100000 distinct (w8,w9).",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U10/work/scan_m89.py; research/dig/incoming/blake3-r2-U10/work/scan_m89.out.json; research/dig/incoming/blake3-r2-U10/work/b3lib.py; research/dig/incoming/blake3-r2-U10/work/validate_b3.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|m8|msgword|Q3. Own b3lib construction (pkgB3U Sec 4) validated 3000/3000 first. Sampled, window of 8-parameter construction, all words recomputed from the parameters; no gain seen.",
+ "topic": "blake3-r2 msgword m8"
+}

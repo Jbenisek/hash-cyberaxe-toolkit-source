@@ -1,0 +1,31 @@
+"""Stage 1 of the rolled r6/r5 ports of B3R7c (b8v2): program + generator constants only.
+usage: python3 -B mkroll8_prog.py R CODE_BYTES     (R = 6 or 5; CODE_BYTES from `bsrho.py --ledger`: code bytes)
+Edits research/blake3_rR/b8rR/pkg/blake3/experiments/bsrho.py (ROUNDS, UNIT, wording) and gen_c/gen.c (CODE_BYTES); then run embed_gen.py there."""
+import sys, os, re
+R = int(sys.argv[1]); CB = int(sys.argv[2]); U = 14 + 208 * R
+HERE = os.path.dirname(os.path.abspath(__file__))
+D = os.path.abspath(os.path.join(HERE, "..", "blake3_r%d" % R, "b8r%d" % R))
+def rd(p): return open(p, encoding="utf-8", newline="").read()
+def wr(p, t): open(p, "w", encoding="utf-8", newline="").write(t)
+def rep(t, a, b, n=1):
+    assert t.count(a) == n, (a, t.count(a))
+    return t.replace(a, b)
+p = os.path.join(D, "pkg", "blake3", "experiments", "bsrho.py")
+s = rd(p)
+s = rep(s, "ROUNDS = 7  ", "ROUNDS = %d  " % R)
+s = rep(s, "UNIT = 1470  ", "UNIT = %d  " % U)
+s = rep(s, "search on 7-round BLAKE3-256 (blake3-r7, one block)", "search on %d-round BLAKE3-256 (blake3-r%d, one block)" % (R, R))
+s = rep(s, "7 rounds with the message permutation", "%d rounds with the message permutation" % R)
+s = rep(s, "rounds 3-7 a loop of one generic round", "rounds 3-%d a loop of one generic round" % R)
+s = rep(s, "plain 7-round compression", "plain %d-round compression" % R)
+s = rep(s, "none at the 7-round target", "none at the %d-round target" % R)
+s = rep(s, "operations / 1470 (C of blake3-r7)", "operations / %d (C of blake3-r%d)" % (U, R))
+s = rep(s, "scalar 7-round compression", "scalar %d-round compression" % R)
+s = rep(s, "of the rolled 7-round program", "of the rolled %d-round program" % R)
+wr(p, s)
+g = os.path.join(D, "gen_c", "gen.c")
+t = rd(g)
+t = rep(t, "#define CODE_BYTES 812844", "#define CODE_BYTES %d" % CB)
+t = rep(t, "of the rolled 7-round program", "of the rolled %d-round program" % R)
+wr(g, t)
+print("ok", R, U, CB, len(s.encode()))

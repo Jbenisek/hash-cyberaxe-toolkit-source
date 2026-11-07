@@ -1,0 +1,10 @@
+run: guesses 8 ['C3.b1', 'm6', 'C0.d2', 'K0.c1', 'K2.d1', 'D2.c1', 'K2.d2', 'D1.c1']; index ['C3.b1', 'm6', 'C0.d2', 'K0.c1']
+   block cuts ['K2.d2', 'D2.c1', 'K2.d1', 'D1.c1'] checks ['D0:b1', 'C1:b1', 'C1:c2', 'D3:b2']: 70 words, 70 eqs, side words 16, side ancestry guesses 4, bit seeds s = 128 plan {'K2.d2': 32, 'D2.c1': 32, 'K2.d1': 32, 'D1.c1': 32}
+   max s 128  sum-cost log2 ~ 128
+run: guesses 8 ['K2.a1', 'K3.d1', 'C3.c2', 'C0.d2', 'K0.c1', 'K3.a2', 'C0.b1', 'D1.d1']; index ['K2.a1', 'K3.d1', 'C3.c2', 'C0.d2']
+   block cuts ['C0.b1', 'K3.a2', 'K0.c1', 'D1.d1'] checks ['D0:b1', 'C1:b1', 'C1:c2', 'D3:b2']: 74 words, 74 eqs, side words 15, side ancestry guesses 4, bit seeds s = 128 plan {'C0.b1': 32, 'K3.a2': 32, 'K0.c1': 32, 'D1.d1': 32}
+   max s 128  sum-cost log2 ~ 128
+run: guesses 9 ['K3.d1', 'K0.d1', 'K2.d1', 'K3.d2', 'D1.d1', 'K2.d2', 'C3.c2', 'D2.b1', 'C0.d1']; index ['K3.d1', 'K0.d1', 'C3.c2', 'D2.b1']
+   block cuts ['C0.d1'] checks ['C0:c2']: 3 words, 3 eqs, side words 1, side ancestry guesses 2, bit seeds s = 8 plan [('C0.d1', 0, 8)]
+   block cuts ['D1.d1', 'K3.d2', 'K2.d1', 'K2.d2'] checks ['D3:b2', 'C1:b1', 'C1:c2', 'K1:b2']: 70 words, 70 eqs, side words 16, side ancestry guesses 5, bit seeds s = 128 plan {'D1.d1': 32, 'K3.d2': 32, 'K2.d1': 32, 'K2.d2': 32}
+   max s 128  sum-cost log2 ~ 129

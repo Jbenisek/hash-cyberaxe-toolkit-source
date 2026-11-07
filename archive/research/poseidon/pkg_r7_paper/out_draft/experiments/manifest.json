@@ -1,0 +1,25 @@
+{
+ "schema_version": 1,
+ "experiments": [
+  {
+   "id": "replay-r3-r6-pairs",
+   "kind": "python-message-pairs-v1",
+   "scope": "The recorded collision pairs of our executed full-scale runs at r = 3, 4, 5 (and r = 6 when recorded), each recomputed at its own round count with an independent copy of the organizer permutation. Returns no pair for the selected target; the verdict is in untrusted observations.",
+   "hypothesis": "Each recorded pair is two distinct canonical (nk, rho) messages with equal Orchard digests at its own round count. This checks recorded outputs only; it says nothing about the success premise, the cost, or any round count above 6.",
+   "program": "experiments/replay_pairs.py",
+   "event": {
+    "kind": "full-collision"
+   }
+  },
+  {
+   "id": "toy-root-fraction",
+   "kind": "python-message-pairs-v1",
+   "scope": "The same line construction on a toy Poseidon-like permutation over a prime near 8000 (L = 3 and L = 4 layers, degree 125 and 625, seeded random constants): the exact fraction of ALL centres whose odd part has a nonzero-square root, against a uniformly random table. Returns no pair for the selected target; the counts are untrusted observations.",
+   "hypothesis": "On these toy instances the fraction of centres with a usable root is near 1 - exp(-1/2) = 0.3935, as for a random function. A measurement on two fixed toy functions over a 13-bit field, not a bound or an estimate for the deployed target.",
+   "program": "experiments/toy_root_fraction.py",
+   "event": {
+    "kind": "full-collision"
+   }
+  }
+ ]
+}

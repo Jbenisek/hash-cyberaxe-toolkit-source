@@ -1,0 +1,47 @@
+{
+ "perl_consts_recompute": {
+  "name": "perl_consts_recompute",
+  "B": 603648,
+  "time_log2": 61.02533,
+  "dT": 0.03433582490468012,
+  "S": 61.02533,
+  "EX_OPS": 57
+ },
+ "perl_SLstar_recompute": {
+  "name": "perl_SLstar_recompute",
+  "B": 569088,
+  "time_log2": 60.99609,
+  "dT": 0.005094860192123463,
+  "S": 60.99609,
+  "common": 792,
+  "per_l": 67
+ },
+ "perl_both": {
+  "name": "perl_both",
+  "B": 564992,
+  "time_log2": 61.03031,
+  "dT": 0.0393110088438533,
+  "S": 61.03031
+ },
+ "scal_planes_direct_all": {
+  "name": "scal_planes_direct_all",
+  "B": 604672,
+  "time_log2": 60.97775,
+  "dT": -0.01324225466814255,
+  "S": 60.97775
+ },
+ "scal_planes_direct_classonly": {
+  "name": "scal_planes_direct_classonly",
+  "B": 605216,
+  "time_log2": 60.97756,
+  "dT": -0.013429845459477008,
+  "S": 60.97756
+ },
+ "scal_cvpre_per_group": {
+  "name": "scal_cvpre_per_group",
+  "B": 605696,
+  "time_log2": 61.21702,
+  "dT": 0.22602656793294074,
+  "S": 61.21702
+ }
+}

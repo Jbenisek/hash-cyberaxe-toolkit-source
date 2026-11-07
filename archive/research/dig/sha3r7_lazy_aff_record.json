@@ -1,0 +1,21 @@
+{
+  "id": "S7-LAZY-AFF-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "lazy-AFF round-1 boundary schedule",
+  "question": "Does demand-driven AFF lower the r7 step enough to survive its separate-body memory cost?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "abstract lower bound 43223 -> 42169 (1054 units, 0.0356164 bit); exact emitter/extra-body price OPEN",
+  "source": "research/dig_new/sha3-r7/lazy_aff_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_lazy_aff_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.03561639971199705,
+  "peak_mem": "current 1,040,064 B; known r6 analogue adds ~218 KB",
+  "notes": "Lower-bound scheduler only; extra moves and duplicate-body code are unpriced. Conditional net is expected loss under current memory rule; no package/stage/filing/submission.",
+  "potential_bits": 0.04,
+  "prior": 0.1
+}

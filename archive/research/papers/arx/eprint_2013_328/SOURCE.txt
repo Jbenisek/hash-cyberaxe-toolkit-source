@@ -1,0 +1,1 @@
+2013_328	Towards Finding Optimal Differential Characteristics for ARX: Application to Salsa20	https://cosicdatabase.esat.kuleuven.be/backend/publications/files/journal/2406

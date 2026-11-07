@@ -1,0 +1,8 @@
+clean  blake3-r2/certificates/manifest.json  (48 bytes)
+clean  blake3-r2/claim.json  (17599 bytes)
+clean  blake3-r2/experiments/halfsearch.py  (39623 bytes)
+clean  blake3-r2/experiments/manifest.json  (5161 bytes)
+clean  blake3-r2/proof.md  (126999 bytes)
+clean  submission-note-r2.md  (31999 bytes)
+NOTE: 2 line(s) are reported by the word test only because of a constant of the pin written in hexadecimal digits, and are not counted: blake3-r2/experiments/halfsearch.py:77, blake3-r2/proof.md:184
+files 6, account names looked for 2, word list read, findings 0

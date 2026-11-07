@@ -1,0 +1,18 @@
+CONSERVATIVE COUNT PER RULE, class eta 830303cf (pin H8); tools/conservative_h8.py; unit 2^-128 per trial
+outcomes 453 in 60 betas, sum 162,266,763.657854; betas with estimates 7 (61 outcomes, 0.282041), left out of every figure below; outcomes of the betas counted in full 392, sum 162,266,763.375813
+RULE 4 | outcomes 453 | no violating solution 132 | violating solution 321 (in the betas counted in full: 260 of 392) | conservative count 174205287047626759 / 1073741824 = 162,241,316.4448 | left out 25,446.9310 (0.0157%) | betas without a violable outcome 12
+RULE 4 margins: count / 2^24 = 9.6703; / 2^25 = 4.8352; / 2^26 = 2.4176
+RULE 4 second formula: cadical: base satisfiable 453 of 453, answers to the second question equal 453 of 453; cryptominisat5: base satisfiable 453 of 453, answers to the second question equal 453 of 453
+RULE 4 on the groundwork's list (99 outcomes of its 8 betas): violable 15, kept 159,827,284.6; H8_conservative.txt has 15 and 159,827,284.6 (its script takes the products from logarithms printed with two decimals and rescales them per beta); the same violable outcomes as research/h8/batch/H8_sat.txt: True
+RULE 4 heaviest outcomes left out: 18d1a398 1852a0a0 6e603c55 6,144.0; 18d1a398 18d2a0a0 6e603c55 4,096.0; 18d16398 18d2a0a0 6e60bc55 3,072.0
+RULE 5 | outcomes 453 | no violating solution 54 | violating solution 399 (in the betas counted in full: 338 of 392) | conservative count 135295336110358535 / 1073741824 = 126,003,600.7598 | left out 36,263,162.6160 (22.3479%) | betas without a violable outcome 0
+RULE 5 margins: count / 2^24 = 7.5104; / 2^25 = 3.7552; / 2^26 = 1.8776
+RULE 5 second formula: cadical: base satisfiable 453 of 453, answers to the second question equal 453 of 453; cryptominisat5: base satisfiable 453 of 453, answers to the second question equal 453 of 453
+RULE 5 on the groundwork's list (99 outcomes of its 8 betas): violable 61, kept 123,864,206.2; H8_conservative.txt has 61 and 123,876,511.8 (its script takes the products from logarithms printed with two decimals and rescales them per beta); the same violable outcomes as research/h8/batch/H8_sat.txt: True
+RULE 5 heaviest outcomes left out: 18b1a098 189060a0 6e203e55 8,388,608.0; 18b0e098 175020a0 6e21be55 6,291,456.0; 18b1a098 389060a0 6e203e55 4,194,304.0
+RULE 6 | outcomes 453 | no violating solution 35 | violating solution 418 (in the betas counted in full: 357 of 392) | conservative count 182145803 / 2 = 91,072,901.5000 | left out 71,193,861.8758 (43.8746%) | betas without a violable outcome 0
+RULE 6 margins: count / 2^24 = 5.4284; / 2^25 = 2.7142; / 2^26 = 1.3571
+RULE 6 second formula: cadical: base satisfiable 453 of 453, answers to the second question equal 453 of 453; cryptominisat5: base satisfiable 453 of 453, answers to the second question equal 453 of 453
+RULE 6 on the groundwork's list (99 outcomes of its 8 betas): violable 73, kept 90,637,443.0; H8_conservative.txt has 73 and 90,601,354.4 (its script takes the products from logarithms printed with two decimals and rescales them per beta); the same violable outcomes as research/h8/batch/H8_sat.txt: True
+RULE 6 heaviest outcomes left out: 18b0e098 185020a0 6e21be55 16,777,216.0; 18d0e098 185020a0 6e61be55 8,388,608.0; 18b1a098 189060a0 6e203e55 8,388,608.0
+RESULT: all comparisons hold

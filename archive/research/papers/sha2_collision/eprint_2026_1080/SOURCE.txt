@@ -1,0 +1,1 @@
+2026/1080	Pushing the Limit of Memory-efficient Collision Attack Framework for SHA-2	owner_download	https://eprint.iacr.org/2026/1080.pdf

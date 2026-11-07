@@ -1,0 +1,22 @@
+{
+  "id": "D791-SHA256-R37-STACK-CURRENT-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": 36,
+  "object": "pkgR37X current source self-test, memory, and ledger audit",
+  "question": "Does the current staged R37X source still reproduce its functional checks, memory bound, and exact 60.97003 ledger?",
+  "labels": ["C", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "222 classes/782800 variants, all listed self-tests zero mismatches; memory 983480 B=2^19.9075; exact T_num=5971293942808353212645, T_den=2644, log2_T=60.97002711966891, rounded time_log2=60.97003, preprocessing_log2=60.00140956904102, success lower bound=0.3900000029603258.",
+  "source": "owned pkgR37X source, read-only modes selftest/memory/ledger",
+  "own_test": true,
+  "evidence": "research/day_1014/r37-stack/build/pkg/sha256-r37/experiments/lowm.py; research/sol_answer_D791_r37_stack_current_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "staged pkgR37X source and declared collision-frontier-v5 accounting model",
+  "notes": "Confirms source and ledger consistency only. Static inversion pricing, register/no-spill premise, A_C allowance, owner go, and organizer acceptance remain open. No package/stage/filing/submission.",
+  "reopen_if": "Any source or judge ruling changes the plane-algebra, register, memory, or preprocessing charge.",
+  "peak_mem": "memory mode model total 983480 B; process RSS not used for the claim"
+}

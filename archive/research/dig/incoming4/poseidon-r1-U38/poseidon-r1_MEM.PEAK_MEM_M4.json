@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.PEAK peak of the pipeline",
+ "question": "alternatives for the memory",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "Luna 3 P3.13 schedule: sequential tableless in-place NTT + two-vector Euclid peak 7,944,800 B (r=1) logical; P3.7 full-attack streamed shift 8,089,888 B; own lean_r1_mem heap 7,944,256 B measured (MEM.TWID)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_13_lowmem_routes.md 3rd_openai_workspace/luna3/P3_7_variants.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Luna 3 numbers not retested; the lean_r1_mem number is tested under MEM.TWID. | universe cell poseidon-r1|MEM.PEAK|MEM|M4",
+ "held_fixed": "r = 1",
+ "reopen_if": "peak below 7 MB at equal time"
+}

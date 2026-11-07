@@ -1,0 +1,22 @@
+{
+  "id": "D794-SHA3-R5-BSTREAM-CHARGE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "candidate-B bstream source event count and 41-price audit",
+  "question": "Does the streamed source prove the per-vector event count and the declared 41-primitive charged price?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "For L=127 levels, source formulas predict exactly L*A queries and L*(A+B) Gray/key steps; all four existing logs match. The 41 primitive conversion is not annotated in the Rust source and remains OPEN. Conditional arithmetic reproduces delta_B=490149763488 primitives and time_log2=32.86500.",
+  "source": "owned SHA3-r5 bstream Rust source, core descriptions and logs",
+  "own_test": true,
+  "evidence": "research/retest/sha3_r5_memcomp/d794_bstream_charge_audit.py; research/sol_answer_D794_sha3r5_bstream_charge_audit.md; research/memcomp/sha3-r5/B__P_half_tables_streamed_per_block__Gra/src/main.rs; research/memcomp/sha3-r5/B__P_half_tables_streamed_per_block__Gra/core*.txt; research/memcomp/sha3-r5/B__P_half_tables_streamed_per_block__Gra/out_core*_stream.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "existing prototype source, four recorded core inputs/logs, filed HV and ledger arithmetic",
+  "notes": "Exact event-count reconciliation only. The 41-primitives mapping, production 48-run charge, A/B rewrite, memory proof and organizer acceptance remain open. No package/stage/filing/submission.",
+  "reopen_if": "An annotated counted replacement or a production ledger supplies a source-level mapping from streamed events to contest primitives.",
+  "peak_mem": "MEASURED per-run in D793: stream maximum 3305472 B"
+}

@@ -1,0 +1,48 @@
+pkgCM (shipped): rows sum 2^71.5392 machine units; per outer step 5.36922
+   context                                   137150669488596985144  2^ 66.894  share   4.00%  per step 0.21461
+   representative batch                      168337731491771799375  2^ 67.190  share   4.91%  per step 0.26341
+   opened cluster                           1168517254413134797632  2^ 69.985  share  34.06%  per step 1.82849
+   E lane                                    243433090603453661778  2^ 67.722  share   7.09%  per step 0.38092
+   fill                                      850917555121445528808  2^ 69.528  share  24.80%  per step 1.33151
+   passing lane                               33589842598613164283  2^ 64.865  share   0.98%  per step 0.05256
+   solver credit                             829308674569081960042  2^ 69.490  share  24.17%  per step 1.29770
+   once                                           1128752545267752  2^ 50.004  share   0.00%  per step 0.00000
+   N = 3436742575482187376270, time_log2 = log2(N / 430) = 62.79334
+
+final step: messages of up to 1024*(2^51-1)+63 = 2305843009213692991 bytes (< 2^61 = 2305843009213693952: True); two complete evaluations = 76561193665298400 compressions = 2^56.0875; writing 2^62 bytes = 2^57 stores = 2^48.252 units; sum 2^56.0938 units
+
+walk, premise factors as pkgCM (1.000026, 1.000176), conservative final step: rows sum 2^70.2054 machine units; per outer step 2.13004
+   walk context (1,024)                        1426474366171283456  2^ 60.307  share   0.10%  per step 0.00223
+   blocks (7 x 2,048)                         19970641126397954048  2^ 64.115  share   1.47%  per step 0.03125
+   walk-lane words (96 per 7)                476930085422256209568  2^ 68.692  share  35.04%  per step 0.74630
+   passing lane (53)                          33589644460558134896  2^ 64.865  share   2.47%  per step 0.05256
+   solver credit                             829308674569082045087  2^ 69.490  share  60.92%  per step 1.29770
+   once (+2^26 walk lists)                        1128752612376616  2^ 50.004  share   0.00%  per step 0.00000
+   N = 1399921808280670031287, time_log2 = log2(N / 430) = 61.49764
+   SEL 5486510246044225536 (unchanged); final step 3.321e+19 machine units (2^56.100 units of time)
+   time_log2 61.4976 vs pkgCM 62.7933: saving 1.2957 bit
+
+walk, E factor 1.03 (3 SE above this scout's 1.0047 +- 0.0102), conservative: rows sum 2^70.2215 machine units; per outer step 2.15398
+   walk context (1,024)                        1426474366171283456  2^ 60.307  share   0.10%  per step 0.00223
+   blocks (7 x 2,048)                         19970641126397954048  2^ 64.115  share   1.45%  per step 0.03125
+   walk-lane words (96 per 7)                491225193872306498592  2^ 68.735  share  35.69%  per step 0.76867
+   passing lane (53)                          34591160164380286608  2^ 64.907  share   2.51%  per step 0.05413
+   solver credit                             829308674569082045087  2^ 69.490  share  60.25%  per step 1.29770
+   once (+2^26 walk lists)                        1128752612376616  2^ 50.004  share   0.00%  per step 0.00000
+   N = 1415218432434542472023, time_log2 = log2(N / 430) = 61.51332
+   SEL 5486510246044225536 (unchanged); final step 3.321e+19 machine units (2^56.100 units of time)
+   time_log2 61.5133 vs pkgCM 62.7933: saving 1.2800 bit
+
+walk, premise factors as pkgCM, lean final step (writing only): rows sum 2^70.2054 machine units; per outer step 2.13004
+   walk context (1,024)                        1426474366171283456  2^ 60.307  share   0.10%  per step 0.00223
+   blocks (7 x 2,048)                         19970641126397954048  2^ 64.115  share   1.47%  per step 0.03125
+   walk-lane words (96 per 7)                476930085422256209568  2^ 68.692  share  35.04%  per step 0.74630
+   passing lane (53)                          33589644460558134896  2^ 64.865  share   2.47%  per step 0.05256
+   solver credit                             829308674569082045087  2^ 69.490  share  60.92%  per step 1.29770
+   once (+2^26 walk lists)                        1128752612376616  2^ 50.004  share   0.00%  per step 0.00000
+   N = 1366857274131198085079, time_log2 = log2(N / 430) = 61.46316
+   SEL 5486510246044225536 (unchanged); final step 1.441e+17 machine units (2^48.252 units of time)
+   time_log2 61.4632 vs pkgCM 62.7933: saving 1.3302 bit
+
+walk geometry: contexts 1393041373214143 = 2^50.3072 (pkgCM 1218911201562375 = 2^50.1145), outer steps 639060516044734529536 = 2^69.1145 (pkgCM 2^69.1145, ratio 1.000000000)
+pkgCM rows removed by the walk: representative batch, opened cluster, E lane, fill (= 70.85% of the rows); context replaced

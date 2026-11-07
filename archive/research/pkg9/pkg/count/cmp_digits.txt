@@ -1,0 +1,18 @@
+a15  R    task text                printed 185377197.55 | ours 185377197.55 | same to the last digit
+a15  S8   task text                printed 185358111.47 | ours 185358111.47 | same to the last digit
+a15  S6   task text                printed 185367007.60 | ours 185367007.60 | same to the last digit
+a15  S7   task text                printed 185366948.10 | ours 185366948.10 | same to the last digit
+full R    task text                printed 162266763.66 | ours 162266763.66 | same to the last digit
+full old6 task text                printed 162243592.98 | ours 162243592.98 | same to the last digit
+a15  S6   M, kept R_6              printed 185367007.603330314 | ours 185367007.603330314 | same to the last digit
+a15  S7   M, kept R_7              printed 185366948.099803299 | ours 185366948.099803299 | same to the last digit
+a15  S8   M, kept R_8              printed 185358111.467592090 | ours 185358111.467592090 | same to the last digit
+a17  S6   M, kept R_6              printed 186151462.104162633 | ours 186151462.104162633 | same to the last digit
+a17  S7   M, kept R_7              printed 186151422.058318824 | ours 186151422.058318824 | same to the last digit
+a17  S8   M, kept R_8              printed 186142708.926058024 | ours 186142708.926058024 | same to the last digit
+full R    K, R_total               printed 162266763.658769608 | ours 162266763.658769608 | same to the last digit
+full F5   K, k = 5                 printed 162255060.247764766 | ours 162255060.247764766 | same to the last digit
+full old6 K, k = 6                 printed 162243592.984480470 | ours 162243592.984480470 | same to the last digit
+full K7   K, k = 7                 printed 144123440.887789249 | ours 144123440.887789249 | same to the last digit
+full K8   K, k = 8                 printed 125953518.490220308 | ours 125953518.490220308 | same to the last digit
+RESULT: 17 printed decimals compared, 0 different

@@ -1,0 +1,1 @@
+2022/184	Exploring SAT for Cryptanalysis: (Quantum) Collision Attacks against 6-Round SHA-3	owner_download	https://eprint.iacr.org/2022/184.pdf

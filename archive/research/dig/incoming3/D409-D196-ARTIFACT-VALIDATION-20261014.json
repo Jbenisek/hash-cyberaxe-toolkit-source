@@ -1,0 +1,22 @@
+{
+  "id": "D409-D196-ARTIFACT-VALIDATION-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "D196 completed-answer and 141-bit derivative validation",
+  "question": "Is the completed D196 answer present and is its concrete 141-bit derivative mechanically valid locally?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "D196 answer is present. The current 141-bit/178-plane derivative has exact N=7069170787089782366932836729369691803876 and upward time_log2=121.70963; its local prefile reports ALL PASS. The older 121.70384 benefit-only number is explicitly superseded by the current-ledger 121.70963 row.",
+  "source": "Luna local D196 artifact validation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D196.md; research/sol_answer_D409_D196_validation.md; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6K141/work/prefile_out.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 1.0,
+  "gain_basis": "C",
+  "notes": "Validation only; no package edit, staging, filing, or submission. The wider-key route remains subject to the missing full generated-kernel, memory, and organizer gates already recorded by D388/D407.",
+  "reopen_if": "The D196 answer, derivative proof, or local prefile changes, or a full wider-key route closes the remaining gates."
+}

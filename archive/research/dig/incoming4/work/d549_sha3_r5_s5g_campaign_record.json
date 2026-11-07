@@ -1,0 +1,23 @@
+{
+  "id": "D549-SHA3-R5-S5G-CAMPAIGN-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS5G prefile and supplied organizer reduced campaign request",
+  "question": "What is verified for pkgS5G when the campaign runner is unregistered and the ledger is absent?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS5G claims time_log2=87.0814; prefile SOME FAIL for absent executable ledger, note labels D106/D110, claim label D110, CRLF/non-known-good combined.py. Supplied 256-trial campaign-reduced request completes with zero returned pairs; totals visits=24576, downset_points=24576, survivors=384, records=384, planted=384, invalid=0, column_draws=209874, rounds=75648, word_steps=10752, step_ops=6963712, radix_passes=2048, comparisons=320, verify_calls=0, fes_mismatch=0, record_mismatch=0, prefix_calls=1.",
+  "source": "our workflow: D549 read-only pkgS5G campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D549_s5g_audit.md; research/tools/build_pkg/scratch/pkgS5G/pkg/sha3-256-r5/claim.json; research/tools/build_pkg/scratch/pkgS5G/pkg/sha3-256-r5/proof.md; research/tools/build_pkg/scratch/pkgS5G/pkg/sha3-256-r5/experiments/combined.py; research/tools/build_pkg/scratch/pkgS5G/work/request_organizer.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite reduced mechanics only; htrail-holdout not run; missing ledger and intake defects prevent exact score credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS5G package bytes and supplied organizer request specification as found; one process; no file writes",
+  "reopen_if": "ledger/line-ending/label/registry repair or owner/organizer acceptance ruling arrives"
+}

@@ -1,0 +1,12 @@
+joint(>=2 zero outputs)=0 mode 0 col 0 zero counts a'=1 b'=1 c'=1 d'=1 witnesses b4d2fb90 201b8e14 41e5f136 ec448e39
+joint(>=2 zero outputs)=0 mode 0 col 1 zero counts a'=1 b'=0 c'=0 d'=0 witnesses b5fded32 00000000 00000000 00000000
+joint(>=2 zero outputs)=0 mode 0 col 2 zero counts a'=1 b'=1 c'=1 d'=0 witnesses ab8b5d23 9effdf77 c248160c 00000000
+joint(>=2 zero outputs)=0 mode 0 col 3 zero counts a'=1 b'=0 c'=0 d'=0 witnesses 1c8bc0b9 00000000 00000000 00000000
+joint(>=2 zero outputs)=0 mode 1 col 0 zero counts a'=2 b'=1 c'=1 d'=2 witnesses aa57ada9 41205f82 02a4b340 6302551f
+joint(>=2 zero outputs)=0 mode 1 col 1 zero counts a'=1 b'=0 c'=0 d'=0 witnesses 1b7b13db 00000000 00000000 00000000
+joint(>=2 zero outputs)=0 mode 1 col 2 zero counts a'=2 b'=0 c'=1 d'=0 witnesses c4f558d7 00000000 3596f993 00000000
+joint(>=2 zero outputs)=0 mode 1 col 3 zero counts a'=1 b'=0 c'=3 d'=0 witnesses 6f8333d3 00000000 232e8d34 00000000
+joint(>=2 zero outputs)=0 mode 2 col 0 zero counts a'=2 b'=1 c'=1 d'=2 witnesses c572ff67 ab2a45e9 6cae99a7 cd0c3b86
+joint(>=2 zero outputs)=0 mode 2 col 1 zero counts a'=1 b'=0 c'=0 d'=0 witnesses d6e2c260 00000000 00000000 00000000
+joint(>=2 zero outputs)=0 mode 2 col 2 zero counts a'=2 b'=0 c'=1 d'=0 witnesses 01644c49 00000000 7205ed05 00000000
+joint(>=2 zero outputs)=0 mode 2 col 3 zero counts a'=1 b'=0 c'=3 d'=0 witnesses 14d3290d 00000000 c87e826e 00000000

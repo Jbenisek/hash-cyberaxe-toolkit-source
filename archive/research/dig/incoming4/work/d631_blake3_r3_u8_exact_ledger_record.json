@@ -1,0 +1,23 @@
+{
+  "id": "D631-BLAKE3-R3-U8-EXACT-LEDGER-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 U=8 unroll exact current-source ledger",
+  "question": "Does changing the current b3r3s ledger from U=16 to U=8 improve the exact integer planned score under the real table-tail bound?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Current-source exact ledger: U=16 time_log2=125.10040466555591, N=29093431801591888499697033443257678941569; U=8 time_log2=125.09988476161548, N=29082949291918577554209093382717416737939; delta=-0.00051990394043 bit. U=8 planner tail_log2=-40.14856308902712 and memory=1048573 B.",
+  "source": "our workflow: D631 isolated current-source U=8 ledger rerun",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d631_u8_ledger.py; research/blake3_r3/b3r3s/pkg/blake3/experiments/rho.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.00051990394043,
+  "potential_bits": 0.0014,
+  "prior": 0.3,
+  "gain_basis": "T",
+  "held_fixed": "current b3r3s rho.py, PH=595, exact integer planner, exact Chernoff table-tail test, all other constants unchanged",
+  "notes": "Arithmetic/ledger result only. The U=8 mixed-DP implementation, lemma restatement, organizer acceptance, package, stage, filing, and submission remain open.",
+  "reopen_if": "U=8 implementation or proof changes the table-tail, replay, memory, or charged operation terms"
+}

@@ -1,0 +1,48 @@
+{
+ "p39_r1": {
+  "m": 58,
+  "q": 50,
+  "d": 201,
+  "logN": 194.654991840827,
+  "logR": 198.98594916342162,
+  "logops": 589.2959328450756,
+  "logbytes": 398.6409410042486
+ },
+ "p39_r2": {
+  "m": 64,
+  "q": 52,
+  "d": 209,
+  "logN": 210.34957845810345,
+  "logR": 214.85465318577226,
+  "logops": 636.5538101019791,
+  "logbytes": 430.2042316438757
+ },
+ "mu4": [
+  [
+   false,
+   false
+  ],
+  [
+   false,
+   false
+  ],
+  [
+   false,
+   false
+  ],
+  [
+   false,
+   false
+  ],
+  [
+   false,
+   false
+  ]
+ ],
+ "sbox_mu4_equivariant": true,
+ "mds": {
+  "entries_nonzero": true,
+  "minors2_nonzero": true,
+  "det_nonzero": true
+ }
+}

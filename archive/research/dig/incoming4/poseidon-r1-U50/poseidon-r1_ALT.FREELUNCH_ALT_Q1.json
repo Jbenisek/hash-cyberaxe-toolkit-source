@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FREELUNCH algebraic Groebner attack",
+ "question": "exact value or degree as used",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "FreeLunch needs an inverse-power S-box variable (x^(1/d)); Poseidon is not in the paper; forward x^5 has none; ideal degree bound for CICO-1 is d^(RF+RP) = 5^9 = 1,953,125 here (5^8 = 390,625 with one skip)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/freelunch/FREELUNCH.md research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Reading of our learning notes plus the bound formula; no run. | universe cell poseidon-r1|ALT.FREELUNCH|ALT|Q1",
+ "held_fixed": "CICO-1 model of the paper",
+ "reopen_if": "a Poseidon-specific FreeLunch table"
+}

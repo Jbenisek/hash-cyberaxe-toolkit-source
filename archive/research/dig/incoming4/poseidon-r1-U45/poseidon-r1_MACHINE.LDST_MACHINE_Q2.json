@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.LDST loads and stores",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "KILLED",
+ "number": "loads 2,997,348,202 (2.91%), stores 1,663,304,782 (1.62%); both free would gain 0.0669 bit, both with their address ops free 0.1370 bit",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "KILLED as a lever by the bound (< 0.14 bit); the control column carries the address ops. | universe cell poseidon-r1|MACHINE.LDST|MACHINE|Q2",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "registers that hold a whole pass"
+}

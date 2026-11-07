@@ -1,0 +1,119 @@
+RESULTS - variants of the guess-and-determine family question (2-round BLAKE3, track blake3-r2-exploratory)
+Folder research\newpaths\variants.  Method and cost formulas: METHOD.txt.  Raw outputs: res\.  Index: README.txt.
+F = family freedom in words, k = minimum number of guessed words, c = k - F checks (each a 32-bit filter).
+Members needed N = 2^64 when four output words are held; 2^(64+16f) when f held input words are released.
+Direct cost (no split) = log2 N + 32c.  Generic birthday = 128.  A perfect two-list split costs about
+max(log2 N, 1 + log2(N)/2 + 16c): 2 checks -> 65, 3 -> 81, 4 -> 97 at N = 2^64 (DERIVED).
+
+HEADLINE
+1. Base case (fixed, half 02, 64 bytes): exact minimum k = 8, c = 4, with plain propagation, with 2^32 tables and
+   with 2^64 tables.  No guess set of 7 or fewer words exists.  (COMPUTED, exhaustive; agrees with the separable
+   agent's own k <= 7 search.)  So the main session's open SAT runs k = 6 and k = 7 are UNSAT.
+2. Every variant asked for keeps c >= 4 while the four output words stay constant (exact where marked).  With
+   c = 4 even a perfect two-list split costs >= 2^96-97, above the board (92.2).  (DERIVED)
+3. No core/side split was found on any minimum guess set of any variant (all 19316 base sets and every labelling;
+   samples of 60000 for the table models; 40 of 5616 local-search sets for outhalf).  The structure is "all at
+   once": in the sampled solutions (check_sol.py, struct_sol.py: 30 sets) every proper subset of the 8 guesses has
+   zero checks in its closure, any 7 of them close at most 56 of 100 words, and the 8th cascades through the rest;
+   the four checks are C1:b2, C1:d2, D0:a2, D3:b2 in the solving orders printed.  (COMPUTED)
+   For the base case no split of a larger guess set can reach 2^92 either (DERIVED from the cost formula plus
+   COMPUTED facts: it would need a 9-word set with a 3-word core carrying 2 internal checks, and none of the 10
+   such cores extends to a full 9-word set: res\core.txt, res\corex_fixed02_r3e6.log).
+4. Two-block messages: same word model; conditions on the chaining value change nothing at word level.  Letting
+   the chaining value vary inside the family (legal: out0..7 have no CV feed-forward) makes the CV a free list
+   side, but on all 4.3M class-expanded minimum guess sets the block-2 guesses give zero lookup keys.  (COMPUTED)
+5. All variants rank above the generic 128-bit birthday at word level.  The cheapest are the "mixed" releases of
+   Y5, Y13, m9 (the held words inside the check equations): 176 / 160 / 144 for one / two / three released.
+
+TABLE (EXACT = exhaustive over all guess sets; LS = best found by local search, an upper bound only)
+
+variant                                   F   k_min          c     direct  split / CV list            files (res\)
+base: fixed, half 02, 64 B, plain         4   8 EXACT        4     192     none (19316) / 0 keys     fixed_02_64_t0_k8.out, split_fixed_02_64_t0_k8.txt, stage_fixed02.out
+base, 2^32 tables (t1)                    4   8 EXACT        4     192     none (60000 sampled)      fixed_02_64_t1_k8.out, split_fixed_02_64_t1_k8.txt
+base, 2^64 tables (t2)                    4   8 EXACT        4     192     none (60000 sampled)      fixed_02_64_t2_k8.out, split_fixed_02_64_t2_k8.txt
+(a) fixed, half 13, 64 B, plain           4   9 EXACT (1)    5     224     none (15000 sampled)      fixed_13_64_t0_k9.out, split_fixed_13_64_t0_k9.txt
+(a) half 13, t1 and t2                    4   9 EXACT (2)    5     224                                kmin.log
+(b) 55 B, half 02, t0 / t1 / t2           3   8 EXACT        5     224(+8) none (72926, t0)          fixed_02_55_t*_k8.out, split_fixed_02_55_t0_k8.txt
+(b) 55 B, half 13, t0 / t1 / t2           3   8 EXACT        5     224(+8)                            fixed_13_55_t*_k8.out
+(b') 52 B, half 02                        2   8 EXACT        6     256                                len_02_52_t0_k8.out
+(b') 52 B and 48 B, half 13               2   7 EXACT        5     224 (family only 2^64)  none     len_13_52_t0_k7.out, split_len_13_52_t0_k7.txt
+(c) release one of Y5, Y13, m9            5   8 EXACT        3     176     none (19316 each)         part_02_t0_{Y5,Y13,m9}_k8.out, split_part_02_t0_*
+(c) release one of the other 9            5   9 (8: none)    4     208                                kmin.log
+(c) release two of Y5, Y13, m9            6   8 EXACT        2     160     none (Y5+Y13)             part_02_t0_Y5-Y13_k8.out ...
+(c) release Y5, Y13 and m9                7   8 EXACT        1     144     none                      part_02_t0_Y5-Y13-m9_k8.out
+(c) release f >= 4 words                  -   -              >=0   >=128   (DERIVED, see (c))
+(c) half 13, release one                  5   >= 9 DERIVED   >=4   >=208
+(d) outhalf, half 02 and 13, 64 B         12  16 LS          <=4   <=192   none (40 sets each)       ls_outhalf_*.out, lsall_*, split_outhalf_*
+    (t0, t1 = 2^32 tables, t2 = 2^64)         16 LS for all; lower bound only k >= 12 (IHS, 20 min)  ihs_outhalf02.log
+(d) outhalf, 55 B, t0 / t2                10  14 LS          <=4   <=192
+(d') E0 inputs + E2 outputs held          6   10 LS          <=4   <=192                              ls_cust_*.out
+(d') E0 and E2 outputs held (8 words)     8   12 LS          <=4   <=192
+(e) two-block, block 2 with fixed CV      same word model as one block -> same k, c (DERIVED)
+(e) two-block, CV varying (CV list)       c unchanged (DERIVED); 0 keys on every minimum set           stage_*.out
+(e) two-block combined, block 1 free      20  24 LS (02), 25 LS (13)   <=4 / <=5                     ls_two_fixed_*.out
+(e) block-1 partial preimage of J CV words 16-J  16 LS, J = 1..4  c <= J (no better than brute force) ls_b1_*.out
+(1) k <= 8 exhaustively none; the k = 9 run printed 1,263,486 canonical 9-word solutions before it was stopped by
+    SIGTERM at 351 s (another agent's "pkill -x timeout", see separable\NOTES.txt), so k_min = 9 exactly.
+(2) k <= 8 exhaustively none; the plain 9-word sets still work with extra table rules, so k_min = 9.
+
+DETAILS
+(a) The other half.  Holding E1/E3 inputs pins m12, m5, m15, m8 - the four words used only in round 0 - and leaves
+    the other round-0-only words m1, m9, m11, m14 free.  Exact k = 9, c = 5; tables do not help.  Worse than half 02.
+(b) 55-byte messages.  F = 3 (m14, m15 zero); k stays 8 for half 02 and drops 9 -> 8 for half 13: c = 5 both.
+    m13's zero top byte costs 8 bits if m13 is derived, nothing if guessed (24 bits).  Other lengths: 60/56 B half
+    02 = the 55 B model; 60 B half 13 = the 64 B model (m15 held anyway); 52 B half 02: c = 6; 52/48 B half 13: c = 5
+    with a family of only 2^64.  Shorter messages never helped.  (COMPUTED; length equivalences DERIVED)
+(c) Mixed targets.  Releasing a held word adds 16 bits to the birthday and removes at most one check (DERIVED: a
+    guess set of the released model is a guess set of the held one, so k cannot drop).  Exactly three of the
+    twelve releases remove a check: Y5 (= C1.b2), Y13 (= C1.d2) and m9 (in D0:a2) - the held words inside the base
+    case's check equations; the fourth check D3:b2 contains no held word.  The same 19316 guess sets then work.
+    Trade-off: 16 bits paid, 32 saved, so direct cost 192 -> 176 -> 160 -> 144, never below 128 (c >= 4 - f).
+    A perfect split would put the one-release point at ~88 (lists 2^88, members 2^80).  None exists: best 176 on
+    all minimum sets of the Y5, Y13 and m9 releases, and for the Y13 release also on every larger guess set that
+    could split below 2^92 by the cost formula (METHOD.txt lists the shapes): 2-word core + 7 (154244 sets),
+    3-word core dim 1 + 6 (none) / + 7 (193160 sets), 3-word core dim 2 + 6 (1150456 sets), 4-word core dim 2 + 5
+    (none) / + 6 (1603979 sets), 5-word core dim 3 + 4 (none).  Every one: best 176.  (COMPUTED: res\corex*.log,
+    res\cx_*.log, res\split_cx_*.txt, res\split_corex_*.txt)  Two releases: >= 96 even with a perfect split;
+    three: >= 112.
+(d) XOR-fold relaxation.  Best found 16 guesses (F = 12, c = 4) for both halves with t0/t1/t2 and 14 (F = 10,
+    c = 4) at 55 B; 5616 (half 02) and 6147 (half 13) distinct 16-word sets were found, none of 15.  Not proven:
+    the exhaustive search is out of reach at 128 words, and the hitting-set lower bound only reached k >= 12 in
+    20 minutes.  Local search hits the exact optimum within seconds on every model where it is known.  Even if a
+    15-word set existed (c = 3) the best possible would be a perfect split at ~81; with c = 4, >= 97.
+(e) Two-block messages.
+    1. Block 2 is the same word model (CV, IV, counter, length, flags are all constants); every count applies.
+    2. CV conditions paid in preprocessing (up to 2^85): no effect on any word-level count - counts depend only on
+       which words are constant, and every primitive stays a bijection in each argument for every constant value.
+       Bit-level effects are not modelled.  (DERIVED; "no bit-level gain" is a GUESS)
+    3. Structural change that does exist: members may have different chaining values (DERIVED), so the CV can be
+       a list side of a meet-in-the-middle.  Since block-2 guesses plus the CV form a guess set of the fixed-CV
+       model, c cannot drop (DERIVED).  Exact staging check (block-2 guesses propagate without the CV equations;
+       known CV equations become 32-bit lookup keys): 0 keys on every one of 4.3M expanded minimum sets for the base
+       case and for the Y5 and Y13 releases (the cascade runs through the K columns, which need the CV).  No gain.
+    4. Block 1 as a solver for the CV (combined 252-word system, F = 20): best found 24 guesses (c = 4) for half 02
+       and 25 (c = 5) for half 13, the same as one block.  Block-1 partial preimages of 1..4 CV words need all 16
+       message words by local search.  (LS)
+
+RANKING by projected total cost (log2 units; generic birthday 128; board best ~92.2)
+   1. (c) release Y5, Y13, m9 (half 02)                    144   direct, exact k, no split
+   2. (c) release two of Y5 / Y13 / m9                     160
+   3. (c) release one of Y5 / Y13 / m9                     176
+   4. base half 02 (plain or tables); outhalf (LS); other exact holdings (LS); two-block in every form   192
+   5. (c) any other single release                         208
+   6. (a) half 13; (b) 55 B both halves; 52/48 B half 13   224
+   7. 52 B half 02                                          256
+   Nothing here beats the generic birthday; at word level, idea 1 is not competitive in these variants.
+
+WHAT WAS NOT TESTED / LIMITS
+- Exact optimum for outhalf and the other large models (local search only; lower bound trivial).
+- Splits other than core/side partitions of one guess set: equation-level partitions, three or more lists,
+  nested joins.  The larger-set shapes were run for the Y13 release only (Y5 and m9: minimum sets only).
+- The cost formula is a max-of-terms estimate with generic dimension counting (equations assumed independent).
+- Anything at bit level: the m13 byte condition, carries, solving the last checks instead of filtering them.
+
+NOTES ON THE MAIN MODEL (for the main session)
+- gd_sat.py with a depth bound T below (unknown words - k) can answer UNSAT for a satisfiable instance, because the
+  last cascade can be long; the T = 50 runs (k = 6) were therefore not exact.  T = 100 for the fixed model and
+  T = 128 for outhalf are exact.  The question is settled anyway by the exhaustive search here.  (DERIVED)
+- The k = 9 run for half 13 and the main session's kissat runs were stopped at ~12:20 by another agent's
+  "pkill -x timeout" (recorded in separable\NOTES.txt).  Nothing here depends on those runs.

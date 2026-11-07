@@ -1,0 +1,37 @@
+K=5bf2cd1d (expect 5bf2cd1d)
+W4'=97475640 (expect 97475640)
+control W4 : a2=8127c181 d2=bbfbdffe c2=7af77f38 b2=76f7aefd
+control W4': a2=7edf3e7e d2=bbfbdffe c2=850000c3 b2=76f7aefd
+A: over all 2^32 w4 (w4' by rule): d2 equal 4, b2 equal 2, both 2; delta=+8 count 2147483648, -8 count 2147483648; both&+8 1 both&-8 1
+B: w4=W4 fixed, w4' over 2^32: d2 equal 3, b2 equal 2, both 2
+C: K2 Lemma L, w4=W4, all 2^32 w5: mismatches 0
+D: K2 state equal for 1 of 2^32 w5' (of which the rule value: 1)
+E: topbit  3  xor-diff 00000008 pattern count 2147483648
+E: topbit  4  xor-diff 00000018 pattern count 1073741824
+E: topbit  5  xor-diff 00000038 pattern count 536870912
+E: topbit  6  xor-diff 00000078 pattern count 268435456
+E: topbit  7  xor-diff 000000f8 pattern count 134217728
+E: topbit  8  xor-diff 000001f8 pattern count 67108864
+E: topbit  9  xor-diff 000003f8 pattern count 33554432
+E: topbit 10  xor-diff 000007f8 pattern count 16777216
+E: topbit 11  xor-diff 00000ff8 pattern count 8388608
+E: topbit 12  xor-diff 00001ff8 pattern count 4194304
+E: topbit 13  xor-diff 00003ff8 pattern count 2097152
+E: topbit 14  xor-diff 00007ff8 pattern count 1048576
+E: topbit 15  xor-diff 0000fff8 pattern count 524288
+E: topbit 16  xor-diff 0001fff8 pattern count 262144
+E: topbit 17  xor-diff 0003fff8 pattern count 131072
+E: topbit 18  xor-diff 0007fff8 pattern count 65536
+E: topbit 19  xor-diff 000ffff8 pattern count 32768
+E: topbit 20  xor-diff 001ffff8 pattern count 16384
+E: topbit 21  xor-diff 003ffff8 pattern count 8192
+E: topbit 22  xor-diff 007ffff8 pattern count 4096
+E: topbit 23  xor-diff 00fffff8 pattern count 2048
+E: topbit 24  xor-diff 01fffff8 pattern count 1024
+E: topbit 25  xor-diff 03fffff8 pattern count 512
+E: topbit 26  xor-diff 07fffff8 pattern count 256
+E: topbit 27  xor-diff 0ffffff8 pattern count 128
+E: topbit 28  xor-diff 1ffffff8 pattern count 64
+E: topbit 29  xor-diff 3ffffff8 pattern count 32
+E: topbit 30  xor-diff 7ffffff8 pattern count 16
+E: topbit 31  xor-diff fffffff8 pattern count 16

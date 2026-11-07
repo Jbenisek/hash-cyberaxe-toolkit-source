@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "state word v5 = h[5]",
+ "question": "Q4 alternatives to the value (multi-block chunk CV)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Alternative to h[5] = IV[5]: the first block of a longer chunk, h = chaining value of an earlier block (colliding messages P||0^32||x and P||0^32||y share the first block P: 128 bytes, last-block flags CHUNK_END|ROOT = 10, counter 0, length 64; same circuit, v15 = 10 instead of 11). A random CV leaves the circuit at 595 ops (Q2). A CV for which a post-column constant is 0 saves 1 or 2 ops per zero site (Q3); each zero site is a 32-bit event of a random CV, so it costs about 2^32 first-block compressions (3 rounds, 1 unit each) and k sites about 2^(32k), found by random trying (upper bound: any of the 16 sites would do). Exact Tracer counts for real per-word solutions of the scans combined in different columns (all other words standard): at most 1 site 593 ops, 2 sites 591 ops, 3 sites 590 ops (a 4th site is not available in different columns in the found pool). Gain on the filed 125.1087 (main loop 99.44 percent of the total, 599.19 ops per batch with filter and loop control): 1 site -0.00480, 2 sites -0.00961, 3 sites -0.01202 bits; pre-search 2^32 / 2^64 / 2^96 units = +2.5e-09 bits at 3 sites (2^96 against 2^125.11); 4 sites would need 2^128 units (net +3.06 bits). v5 takes part in 3 of the 16 sites (sum p0+p5 (x-add D0), xor p5 (D0), add p9 (D3)).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U61/work/site_scan.c; research/dig/incoming3/blake3-r3-U61/work/scan_all.txt; research/dig/incoming3/blake3-r3-U61/work/lever_demo.py; research/dig/incoming3/blake3-r3-U61/work/lever_demo.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py; research/dig/incoming3/blake3-r3-U61/work/lever_demo_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|INIT.v5|INIT|Q4. same lever as the one recorded on INIT.v0 Q4 (about one zero site per 2^32 first-block tries, up to 3 sites); this cell holds the per-word solution counts.  validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "all other initial-state words standard (h = IV, v8..v11 = IV[0..3], counter 0, length 64, flags 11), m0..m7 = 0, 3 rounds, filed circuit rules (595 ops), chain m8..m15 free; word v5 varied alone; v15 = 11 in the scan",
+ "reopen_if": "a cheaper way to produce a CV with a given post-column constant at 0 than 2^32 tries per site (a structured first block), more sites at once from words of one column, or a ruling that accepts the two-block message",
+ "topic": "blake3-r3|INIT.v5|INIT|Q4"
+}

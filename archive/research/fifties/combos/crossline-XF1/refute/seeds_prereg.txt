@@ -1,0 +1,9 @@
+Refutation check of crossline-XF1, preregistered 2026-10-09 ~19:27 MDT before any run of xf1_check.py.
+Seeds: s = b"xf1-refute-%04d" % i, context words = struct.unpack("<7I", shake_256(b"frontline context" + s).digest(160)[:28])
+(the rule of frontline_full.walk). Disjoint from XF1's xf1-0000..0199.
+Runs: i = 0..499 in process 1 and i = 500..999 in process 2, every context of the range reported, no dropping.
+Each context: all 16384 clusters, all 2^19 members, omega by an independent numpy chain (spot-checked against F.co_ref),
+T2 on every member, alive16 by an exact live-state test on F2 (not window14.alive), carry index by scalar carries
+(not XF1's packed ix_word), the gate by a vectorised formula (spot-checked against F.gate), XF1's build_table masks.
+Refute criteria: any T2 != 0 member outside the mask in a guard-quiet opened cluster; any guard-fired count not in {0,128};
+any cluster with > 2 chunks or masked fills > old fills; key reprice number not reproducing 63.313775 to 1e-6.

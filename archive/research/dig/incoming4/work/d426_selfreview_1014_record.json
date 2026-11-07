@@ -1,0 +1,23 @@
+{
+  "id": "D426-SELFREVIEW-1014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "PR858 judge-style self-review refresh",
+  "question": "Do the current live, staged, and Pareto claim/proof pairs meet the seven PR858 rules, and what is the minimum repair for each exposed row?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Read-only recheck covers S6RR, LS1b, R37P, R38M6/M7, B3Z2, B3L, S6K141 and the corrected-S5Z status. Exposures are recorded for unmeasured preprocessing residency, unshipped generators, undeclared machine conventions, and the missing corrected S5Z artifact; no package or score state changed.",
+  "source": "our workflow: D426 judge-style self-review",
+  "own_test": true,
+  "evidence": "research/sol_answer_SELFREVIEW_1014.md; selected local claim.json and proof.md pairs under research/tools/build_pkg/scratch",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "D",
+  "peak_mem": "UNKNOWN (read-only source audit; no new process)",
+  "notes": "Read-only audit. No participant/cloud program, package edit, staging, filing, or submission.",
+  "held_fixed": "PR858 seven-rule review block and local claim/proof artifacts",
+  "reopen_if": "Measured preprocessing RSS, shipped generator hashes, organizer machine ruling, or corrected S5Z artifact arrives"
+}

@@ -1,0 +1,75 @@
+N = 2^20 = 1048576 real pinned pairs, seed 2026, 2.2 s
+checks: {'lemmaL_bad': 0, 'pins_bad': 0, 'c3_bad': 0, 'half_bad': 0, 'half_bothzero': 1048576, 'ident_bad': 0, 'e1_out_zero': 0, 'e3_out_zero': 0, 'resid_all_bothzero': 0, 'resid_fold_full': 0}
+
+per word: log2 rates on the low k bits (same pair = real event; cross = independence prediction)
+ w  pair          k   fold(same) fold(cross)  both0(same) both0(cross)  P(dp=0)  P(dq=0)   both0/fold
+ 1  E1.a~E3.c   4    -4.17     -4.17       -4.33       -4.33      -0.15    -4.18   0.8949
+ 1  E1.a~E3.c   8    -8.10     -8.10      -15.54      -15.07      -7.14    -7.94   0.0058
+ 1  E1.a~E3.c  12   -12.15    -12.05        -inf      -21.40      -9.60   -11.80   0.0000
+ 1  E1.a~E3.c  16   -17.68    -16.34        -inf        -inf       -inf   -16.19   0.0000
+ 1  E1.a~E3.c  20   -20.00    -20.27        -inf        -inf       -inf   -20.00   0.0000
+ 1  E1.a~E3.c  24     -inf    -24.33        -inf        -inf       -inf     -inf   nan
+ 1  E1.a~E3.c  32     -inf    -32.14        -inf        -inf       -inf     -inf   nan
+
+ 3  E3.a~E1.c   4    -3.87     -3.88      -10.42      -10.43      -5.22    -5.20   0.0107
+ 3  E3.a~E1.c   8    -7.40     -7.38        -inf      -22.07     -11.67   -10.40   0.0000
+ 3  E3.a~E1.c  12   -11.32    -11.29        -inf      -32.17     -18.42   -13.75   0.0000
+ 3  E3.a~E1.c  16   -14.51    -14.64        -inf        -inf       -inf   -19.00   0.0000
+ 3  E3.a~E1.c  20   -17.00    -17.59        -inf        -inf       -inf   -20.00   0.0000
+ 3  E3.a~E1.c  24     -inf    -21.72        -inf        -inf       -inf     -inf   nan
+ 3  E3.a~E1.c  32     -inf    -29.79        -inf        -inf       -inf     -inf   nan
+
+ 4  E3.b~E1.d   4    -3.98     -3.98       -5.60       -5.61      -3.97    -1.64   0.3250
+ 4  E3.b~E1.d   8    -7.99     -7.97      -20.00      -22.33      -7.75   -14.57   0.0002
+ 4  E3.b~E1.d  12   -11.84    -11.96        -inf      -30.19     -11.77   -18.42   0.0000
+ 4  E3.b~E1.d  16   -16.30    -15.90        -inf        -inf     -15.48     -inf   0.0000
+ 4  E3.b~E1.d  20   -20.00    -19.87        -inf        -inf     -19.00     -inf   0.0000
+ 4  E3.b~E1.d  24     -inf    -23.89        -inf        -inf       -inf     -inf   nan
+ 4  E3.b~E1.d  32     -inf    -31.96        -inf        -inf       -inf     -inf   nan
+
+ 6  E1.b~E3.d   4    -3.96     -3.97       -7.72       -7.74      -4.08    -3.66   0.0739
+ 6  E1.b~E3.d   8    -8.40     -8.39        -inf      -20.47     -10.06   -10.42   0.0000
+ 6  E1.b~E3.d  12   -12.57    -12.33        -inf      -29.05     -14.22   -14.83   0.0000
+ 6  E1.b~E3.d  16   -17.68    -16.34        -inf      -37.42     -17.42   -20.00   0.0000
+ 6  E1.b~E3.d  20     -inf    -20.32        -inf        -inf       -inf     -inf   nan
+ 6  E1.b~E3.d  24     -inf    -24.25        -inf        -inf       -inf     -inf   nan
+ 6  E1.b~E3.d  32     -inf    -32.13        -inf        -inf       -inf     -inf   nan
+
+joint fold event, all four words, low k bits each (4k bits in all): count, log2 rate, log2 product of per-word same-pair rates
+  k=1 ( 4 bits):     65558    -4.00     n/a
+  k=2 ( 8 bits):      4135    -7.99     n/a
+  k=3 (12 bits):       353   -11.54     n/a
+  k=4 (16 bits):        11   -16.54   -15.99
+  k=5 (20 bits):         2   -19.00     n/a
+  k=6 (24 bits):         0     -inf     n/a
+  k=8 (32 bits):         0     -inf   -31.89
+
+top full-width common differences delta (dp = dq = delta) by cross-pair mass: delta, n_p, n_q, share
+  w=1: distinct dp 739829, dq 1048397; max count dp 85, dq 2
+     ('2890a170', 9, 1, 0.03862660944206009)
+     ('08dfa080', 6, 1, 0.02575107296137339)
+     ('38d02370', 6, 1, 0.02575107296137339)
+     ('2b51a680', 5, 1, 0.02145922746781116)
+     ('e850a070', 5, 1, 0.02145922746781116)
+     ('28512280', 4, 1, 0.017167381974248927)
+  w=3: distinct dp 1041447, dq 1042344; max count dp 4, dq 4
+     ('8a30535e', 1, 3, 0.002529510961214165)
+     ('2ac05355', 3, 1, 0.002529510961214165)
+     ('e6e0d335', 1, 2, 0.0016863406408094434)
+     ('fa3095f5', 2, 1, 0.0016863406408094434)
+     ('e6c055d6', 2, 1, 0.0016863406408094434)
+     ('e640535d', 2, 1, 0.0016863406408094434)
+  w=4: distinct dp 1048449, dq 739829; max count dp 2, dq 85
+     ('b068f0a1', 1, 6, 0.022813688212927757)
+     ('b019ffe0', 1, 6, 0.022813688212927757)
+     ('70ebb0a3', 1, 5, 0.019011406844106463)
+     ('b03953e3', 1, 5, 0.019011406844106463)
+     ('90f8cca0', 1, 4, 0.015209125475285171)
+     ('907851a1', 1, 4, 0.015209125475285171)
+  w=6: distinct dp 1047583, dq 1047906; max count dp 3, dq 3
+     ('042565f3', 1, 1, 0.004273504273504274)
+     ('0427f8da', 1, 1, 0.004273504273504274)
+     ('052dcfbd', 1, 1, 0.004273504273504274)
+     ('067b25e9', 1, 1, 0.004273504273504274)
+     ('076ac0f7', 1, 1, 0.004273504273504274)
+     ('092123d3', 1, 1, 0.004273504273504274)

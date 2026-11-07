@@ -1,0 +1,10 @@
+front line set: {'resolved': True, 'member_lines': 34, 'member_r0': 16, 'trial_lines': 10, 'trial_r0': 3, 't_from_trial': True, 'w8_dep': ['C0.d1', 'D2.a1', 'D2.b1', 'S11', 'S4', 'X9', 'w6', 'y'], 'E3_trial': ['Y14'], 'E3_member': ['Y4', 'Y9', 'Y14', 'w8']}
+candidate words: 108
+swap C0.d1  -> w8: {'resolved': False, 'unresolved': 36}
+swap D2.a1  -> w8: {'resolved': False, 'unresolved': 50}
+swap D2.b1  -> w8: {'resolved': False, 'unresolved': 65}
+swap S11    -> w8: {'resolved': False, 'unresolved': 79}
+swap S4     -> w8: {'resolved': False, 'unresolved': 70}
+swap X9     -> w8: {'resolved': False, 'unresolved': 62}
+swap w6     -> w8: {'resolved': False, 'unresolved': 83}
+double swaps (two outer words out, w8 + one other word in) that resolve: 0

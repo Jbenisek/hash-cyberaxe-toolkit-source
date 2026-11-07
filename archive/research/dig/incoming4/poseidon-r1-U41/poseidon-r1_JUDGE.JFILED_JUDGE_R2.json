@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JFILED rulings on the r=1 filings",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "own recount of what the ruling cost: free-address charging 14,202,616,031 ops (25.837) -> per-element control charging 109,247,370,875 ops (28.780) = x7.69 = +2.943 bit; 87.86% of the ops in the as-run ledger are control",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json t_old, t_fix, share_ctl. | universe cell poseidon-r1|JUDGE.JFILED|JUDGE|R2",
+ "held_fixed": "fix and old ledgers",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

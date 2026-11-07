@@ -1,0 +1,18 @@
+{
+  "id": "R38M5-memory-revision-current",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "R38M5 current memory revision 31 to 28",
+  "question": "Does current pkgR38M5 materially replace the earlier R38M4 duplicate?",
+  "labels": ["C"],
+  "status": "LOCAL_ONLY",
+  "number": "current prefile ALL PASS; exact N=789779068018615953003308365799; time_log2=87.90374; memory_log2_bytes=28; conditional memory-rule score 95.90374; no unconditional credit",
+  "source": "our workflow: current-package-audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D310_r38m5_memory_revision_audit.md; research/tools/build_pkg/scratch/pkgR38M5/pkg/sha256-r38/claim.json; research/tools/build_pkg/scratch/pkgR38M5/pkg/sha256-r38/proof.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0,
+  "notes": "Current package differs from R38M4 only in the note/claim/proof memory revision and remains conditional: the 2^28 preprocessing envelope includes an explicit unmeasured assumption for Step-1/development. Selftest exits 0; no staging/submission."
+}

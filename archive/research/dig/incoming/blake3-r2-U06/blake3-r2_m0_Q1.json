@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "pkgB3U message word m0 (w0)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U06/work/b3lib.py; research/dig/incoming/blake3-r2-U06/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U06/work/scan_m01.py (+scan_m01.out.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m0|msgword|Q1",
+ "question": "Difference and condition count on this message word of pkgB3U (A vs B; conditions on the word value)?",
+ "status": "BEDROCK",
+ "labels": [
+  "0",
+  "I"
+ ],
+ "number": "difference 0 bits (XOR diff of w0 between A and B = 0); conditions on the word 0 bits (all 32 bits unconstrained); 0/20000 random 8-word inputs with A[w0] != B[w0]; per-bit one-frequency in [0.4923, 0.5093] over 20000 (max bias 0.0093 w0 / 0.0076 w1, 3-sigma is 0.0106)",
+ "notes": "Universe cell blake3-r2|m0|msgword|Q1 (unit blake3-r2-U06). Class: FREE (not pinned w4, not cancelling w5, not forced constant X3/X7/X11/X15). w0 = K0 first message word; a middle line in the root instance (function of the six outer words and X2, Section 4), in the claim's counter instance (Section 8) the free trial word fixed by c1 with the counter t solved from K0's second assignment. Read again only by C2 (fifth assignment, Y2). Structural: A and B differ only in w4, w5 (Lemma L), so the word is shared, difference zero, and no condition is placed on the word itself; the only link to the event is that it is the inverse of K0 on (S4,S8). Own re-implementation of Sections 1-4 (Steps O,M,Y,T,S2) validated on a known answer first: 3000/3000 random inputs give X3,X7,X11,X15 = constants, Y4 = y, equal S and X for A and B, equal digest words 0,2,5,7, different words in the other four, and A,B differ only in w4,w5. Row has no condition, so BEDROCK by structure; the numeric check is own_test.",
+ "topic": "b3r2.m0.msgword.Q1"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "S256-R40-L07-SIGN-REPLAY-20261021",
+  "hash": "sha256-r40",
+  "row_i": null,
+  "row_j": null,
+  "object": "Task35 L07 XOR versus signed/modular orientations",
+  "question": "Do positive and wordwise modular-negative orientations of published R40 vectors produce a modular late-zero lift?",
+  "labels": ["X", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "support-zero weight30 +: XOR late=00000000/00000000/00000000/96dd0c59, modular=8c5b0864/00f0e3ba/f29a808c/64dabf65; -: XOR=897db384/8f6e15a1/f79e3450/4fb6c2c3, modular=8027b7bb/5a386da1/206c6469/d9510ddc; later-start rank5 +: XOR late all zero, modular=1cf7d717/d6749855/5bdf4d2e/7abcfda5; -: XOR=44843da5/e8ec21a6/d7719d99/047909ea, modular=5eab4644/35a7be0c/5f1db026/36fe08c8; no tested modular late-zero orientation",
+  "source": "our workflow: Task35 L07 sign-choice replay",
+  "own_test": true,
+  "evidence": "research/luna_dig/task35_l07_sign_choices.py; research/luna_dig/TASK35_L07_SIGN_CHOICES_20261021.md; research/grok/work/G_r40_support_zero/ANSWER.md; research/grok/work/G_river_6/ANSWER.md; research/dig/GRID_R40.md",
+  "date": "2026-10-21",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Exact finite XOR and modulo-2^32 schedule replay in positive and wordwise-negative orientations. No tested orientation has all four modular late words zero. This does not rule out other sign assignments or establish compression-state, carry, probability, ledger, recovery, or score behavior.",
+  "peak_mem": "0 FREE self-contained 16-word Python replay",
+  "held_fixed": "Published support-zero weight-30 and later-start rank-5 vectors; XOR sigma maps; ordinary modulo-2^32 recurrence; wordwise negative orientation",
+  "reopen_if": "A permitted signed bit assignment/carry search, full compression-state characteristic, or charged ledger/recovery comparison is available."
+}

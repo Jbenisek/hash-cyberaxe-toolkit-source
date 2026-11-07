@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "state word v2 = h[2]",
+ "question": "Q3 degrees of freedom and score-optimal value",
+ "labels": [
+  "0"
+ ],
+ "status": "COMPUTED",
+ "number": "0 bits at the target: v2 = 0x3c6ef372 is fixed by the specification (h = IV for the first block of a chunk) (1 admissible value of 2^32). Score-optimal value, exhaustive over all 2^32 values of v2 with the rest standard: the circuit skips an operation exactly when a post-column constant p (round-0 column calls read the zero key words, so they fold) is 0 at one of 16 sites (4 per diagonal call); v2 (column 2) reaches 5 of them. Zero-site histogram over 2^32 values {\"1\": 4, \"0\": 4294967292}; per site: add p10 (D0): 1 value (first 0x7205ed05); sum p2+p7 (x-add D2): 3 values (first 0x1f1dc5ea). best value 0x1f1dc5ea (sum p2+p7 (x-add D2)) has 1 zero site and 593 circuit ops with it plugged into the Tracer (exact trace); the value with the fewest ops over all listed solutions is 593 ops. A zero site saves 1 op (add and xor sites, and the D0 sum) or 2 ops (the x-add sums of D1, D2, D3: the smaller lane bound also drops a later mask), i.e. 0.0024 or 0.0048 bits of time (filed loop share 99.44 percent), checked on every listed solution with the Tracer. The standard value has no zero site (595 ops).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U61/work/site_scan.c; research/dig/incoming3/blake3-r3-U61/work/scan_all.txt; research/dig/incoming3/blake3-r3-U61/work/lever_demo.py; research/dig/incoming3/blake3-r3-U61/work/lever_demo.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|INIT.v2|INIT|Q3. exhaustive scan of 2^32 values (one core, nice 10, about 41 s); the formulas for the 16 sites were checked against the Tracer log on 200 states (site_check.py); every listed solution was plugged into the Tracer and gave 593 or 594 ops. validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "all other initial-state words standard (h = IV, v8..v11 = IV[0..3], counter 0, length 64, flags 11), m0..m7 = 0, 3 rounds, filed circuit rules (595 ops), chain m8..m15 free; word v2 varied alone; flags 11 (single-block message)",
+ "reopen_if": "a target that lets the chaining value be chosen (multi-block chunk, Q4) - then these values are reachable at a price of 2^32 first-block compressions per zero site",
+ "topic": "blake3-r3|INIT.v2|INIT|Q3"
+}

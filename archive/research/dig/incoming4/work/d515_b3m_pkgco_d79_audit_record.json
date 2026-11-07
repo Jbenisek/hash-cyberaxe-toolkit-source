@@ -1,0 +1,23 @@
+{
+  "id": "D515-BLAKE3-R2-PKGCO-D79-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgCO_D79 frontline prefile and self-test",
+  "question": "Does the pkgCO_D79 executable pass its finite self-test, and what defects remain in the current draft?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgCO_D79 executable SHA-256 637D65547C3C9D4BC11B2242A2C3389CA4251BCA2AC1D041A967B7999FA1EEF9; prefile SOME FAIL (no ledger appendix/exact N, internal labels D25,D27,D33,D41,D42,D45,D47,D48,D49,D54, and frontline.py not known-good); claim time_log2=61.8857; selftest exits 0 with 256 automata cases, 512 T1/T2 cases, S7/precheck/replica/level16 checks, two full contexts with zero mismatches/halts, and W/C/R/WB halt drills passing.",
+  "source": "our workflow: D515 read-only pkgCO_D79 audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D515_b3m_pkgco_d79_audit.md; research/tools/build_pkg/scratch/pkgCO_D79/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; current draft lacks an exact ledger N, has internal-label defects, and is not in the known-good registry. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgCO_D79 package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package ledger/label repair, known-good registration, or a new owner artifact arrives"
+}

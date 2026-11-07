@@ -1,0 +1,5 @@
+evaluated 390627 points in 164s
+r=1 coords=AB predicted degree 390625: Delta^(d+1) == 0: True ; Delta^d != 0: True ; total 166s
+evaluated 1953127 points in 874s
+evaluated 1953127 points in 216s
+r=1 coords=nkrho predicted degree 1953125: Delta^(d+1) == 0: True ; Delta^d != 0: True ; total 231s

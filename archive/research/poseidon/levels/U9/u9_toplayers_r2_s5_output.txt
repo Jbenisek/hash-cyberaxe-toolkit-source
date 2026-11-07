@@ -1,0 +1,7 @@
+step 0: exact R4 lane 0 top 6 layers == M_00 * (R3 lane-0 top layers)^5 : True
+r=2 output (A,B) layer k=0 (total degree 1953125): 1953126 coefficients, zero coefficients 0, polynomial degree 1953125 (full layer would have degree 1953125)
+r=2 output (A,B) layer k=1 (total degree 1953124): 1953125 coefficients, zero coefficients 0, polynomial degree 1953124 (full layer would have degree 1953124)
+r=2 output (A,B) layer k=2 (total degree 1953123): 1953124 coefficients, zero coefficients 0, polynomial degree 1953123 (full layer would have degree 1953123)
+r=2 output (A,B) layer k=3 (total degree 1953122): 1953123 coefficients, zero coefficients 0, polynomial degree 1953122 (full layer would have degree 1953122)
+r=2 output (A,B) layer k=4 (total degree 1953121): 1953122 coefficients, zero coefficients 0, polynomial degree 1953121 (full layer would have degree 1953121)
+r=2 output (A,B) layer k=5 (total degree 1953120): 1953121 coefficients, zero coefficients 0, polynomial degree 1953120 (full layer would have degree 1953120)

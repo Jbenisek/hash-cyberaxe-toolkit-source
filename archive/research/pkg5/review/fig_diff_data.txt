@@ -1,0 +1,1169 @@
+--- ./research/pkg4/tools/pkg4_data.py	2026-10-06 06:43:21.673739800 -0600
++++ ./research/pkg5/tools/pkg5_data.py	2026-10-06 08:18:57.006192500 -0600
+@@ -1,10 +1,10 @@
+ #!/usr/bin/env python3
+-"""Every figure of the fourth package that depends on the pinned call, the class or the rate. ONE place.
++"""Every figure of the fifth package that depends on the pinned call, the class or the rate. ONE place.
+ 
+ To swap the class or the pin, edit PART A below and nothing else, then run
+ 
+-    python -B tools/build_pkg4.py            (renders src/* into the package files and the note)
+-    python -B tools/fmt_pkg4.py              (format checks, ranges, field lengths, drift)
++    python -B tools/build_pkg5.py            (renders src/* into the package files and the note)
++    python -B tools/fmt_pkg5.py              (format checks, ranges, field lengths, drift)
+ 
+ PART A  the pin, the class, the assumed factor, and the names of the result files that hold the
+         measured figures (the figures themselves are read from those files, not typed here).
+@@ -13,13 +13,14 @@
+ PART D  the tokens {{name}} that the templates in src/ use, and the paragraphs and tables that are
+         written from the result files (so that a missing file gives a true sentence, not a gap).
+ 
+-    python -B tools/pkg4_data.py             prints every token
+-    python -B tools/pkg4_data.py --recount-env   shell variables for tools/recount_exact.sh
++    python -B tools/pkg5_data.py             prints every token
++    python -B tools/pkg5_data.py --recount-env   shell variables for tools/recount_exact.sh
+ Research helper, not submitted.
+ """
+ import json
+ import math
+ import re
++from fractions import Fraction
+ import subprocess
+ import sys
+ from pathlib import Path
+@@ -40,7 +41,7 @@
+ PIN_NAME = "pinB"                 # prefix of the night's result files for this pin
+ 
+ # THE CLASS OF THE PACKAGE: one of the keys of CLASSES below. Changing this one line and running
+-# tools/build_pkg4.py moves proof, claim, note, manifest and experiment program to that class.
++# tools/build_pkg5.py moves proof, claim, note, manifest and experiment program to that class.
+ ETA = 0xE7C1815F
+ 
+ # What is known about each class of this pin that has been counted. log2_factor: H1 assumes a rate of
+@@ -98,16 +99,25 @@
+     0xE7C1815F: dict(Y1=0x00000000, Y6=0x7E1401E5, Y12=0x5A538AB4, w12=0x00000000, w5=0x234E3245, Y4=0x0AD073E5,
+                      Y9=0x61E4852D, Y14=0xDDCC82F4, w8=0xA2EE086C),          # review/judge.md, section 1
+ }
++# RULE A of the two-stage batch (proof 6.3, Lemma A): conditions on h1, the first-half d value of E3 on message A.
++# Each entry (mask, value) says: the XOR of the bits of h1 in mask equals value. The rule belongs to the class: it
++# was read off the E3 counts of the class, split by the bits of h1 (research/night/cheaper, files pinB3_rules.txt),
++# and it is NOT a consequence of R = 0 (tools/rule_a_sat.py says for which outcomes it can be violated).
++RULE_A = {
++    0xE7C1815F: ((0x00010000, 1), (0x00000003, 0), (0x00000006, 0), (0x0000000C, 0), (0x00000018, 1), (0x01800000, 1)),
++}
+ LOG2_FACTOR = CLASSES[ETA]["log2_factor"]
+ # "draft" until the owner says go for this package; then "ready" (see FILE_STEPS.md). It goes into claim.json.
+ SUBMISSION_STATE = "draft"
+ LOG2_X12 = 8                      # contexts: X12 < 2^LOG2_X12, X14 arbitrary, X13 gets the remaining bits
+-CHARGE = 34                       # primitive operations charged per trial
+-PASS_SHIFT = 12                   # budget on early-test passes: trials * 2^-PASS_SHIFT
++CHARGE = 17.4                     # primitive operations charged per trial: the budgeted cost of derive() plus a margin
++PASS_SHIFT = 16                   # budget on passes of the E1 test (Lemma N): trials * 2^-PASS_SHIFT
++STAGE_2_LOG2_SHARE = 3            # budget on stage-2 entries: a share 2^-STAGE_2_LOG2_SHARE of the batches of a run
+ PASS_OPS_LOG2 = 10                # a passing trial is recomputed in below 2^10 operations
+ MEMORY_LOG2 = 35                  # declared: preprocessing (host below 2^34 bytes, graphics card below 10 GB) and search
+ PREPROCESSING_LOG2 = 63
+-ADVICE_LOG2 = 5
++ADVICE_LOG2 = 6                   # 28 bytes of constants and eta, 12 bytes of the three constants of rule A
++ADVICE_BYTES = 28 + 12
+ SELECTION_OPS_LOG2 = 60           # bound stated for all preprocessing computations (participant estimate)
+ SELFTEST = ("2000", "1")          # cases and seed of the self-test quoted in the text
+ 
+@@ -137,9 +147,17 @@
+      [(119740.4, 7337.5, "seed 8101"), (91882.3, 6147.2, "seed 8102")]),
+ ]
+ SUBMISSIONS = (("17bba2ae", "123.5"), ("5ceb1802", "121.5"), ("04638ed8", "112.4"))
+-PREVIOUS_LOG2_FACTOR = 11         # the factor that H1 of the last of them assumes (2,048), at the same charge per trial
++PREVIOUS_LOG2_FACTOR = 11         # the factor that H1 of the last of them assumes (2,048)
++PREVIOUS_CHARGE = 34              # what the filed packages charge per trial (one-stage batch, 154 operations + 74 loads)
++PREVIOUS_BATCH = (154, 74)
++# What has been reviewed of THIS version (the two-stage batch, rule A, the count with rule A). Change the sentence
++# when a review of this version exists; until then it says that there is none.
++VERSION_REVIEW = "No reviewing agent has seen this version of the package."
++# The unfiled draft that this package extends (research/pkg4): its claim, its charge per trial and its count, read
++# from its own data module when that folder is there (None otherwise; the text then names no figure of it).
++DRAFT_BEFORE = "pkg4"
+ SAMPLER_SEEDS = "8301 to 8316"    # confirm_b3.sh: seed 8300 + i for run i, the same for every beta and every class
+-# The local dry run of the intake is not typed here: validate_pkg4.sh writes evidence/validation_log.txt, and the
++# The local dry run of the intake is not typed here: validate_pkg5.sh writes evidence/validation_log.txt, and the
+ # note quotes it only while proof.md, claim.json, the manifest and the program have the sizes listed in that log.
+ 
+ # =====================================================================================================
+@@ -148,7 +166,38 @@
+ M32 = 0xFFFFFFFF
+ IV = (0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A, 0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19)
+ C_UNIT = 430
+-BATCH_OPS, BATCH_LOADS = 154, 74
++STAGE_A_OPS, STAGE_A_LOADS = 64, 36       # stage A of a batch (proof 6.5); the build compares them with the program's table
++STAGE_2_OPS, STAGE_2_LOADS = 96, 42       # stage 2, the count of its own entry (3 operations, 1 load) included
++RULE_A_PROBES = tuple((0x9E3779B9 * (i + 1) ^ (i << 13)) & 0xFFFFFFFF for i in range(4096))
++
++
++def rule_a(h1, eta=None):
++    """Rule A on the word h1 (PART A)."""
++    return all(bin(h1 & mask).count("1") & 1 == value for mask, value in RULE_A[ETA if eta is None else eta])
++
++
++def rule_a_on_z(qmask, qvalue):
++    """Lemma A (b), (c): rule A as conditions on z for the class, and the three constants of the stage-A word.
++
++    Returns (conditions, S, ALL, V); a condition is (lower bit of z, upper bit of z or None, wanted XOR, the bits of
++    h1 it comes from, the bits of e1 that were inserted)."""
++    conditions, shift, everything, wanted = [], 0, 0, 0
++    for mask, value in RULE_A[ETA]:
++        hbits = [i for i in range(32) if mask >> i & 1]
++        ebits = [(i + 16) % 32 for i in hbits]
++        if any(not qmask >> e & 1 for e in ebits):
++            raise SystemExit("rule A reads a bit of h1 that meets a free bit of e1: the batch would need a second list")
++        for e in ebits:
++            value ^= qvalue >> e & 1
++        low = sorted((i + 24) % 32 for i in hbits)
++        if not (len(low) == 1 or (len(low) == 2 and low[1] == low[0] + 1)) or everything >> low[0] & 1:
++            raise SystemExit("rule A: a condition is neither one bit nor two neighbouring bits of z, or two share a position")
++        if len(low) == 2:
++            shift |= 1 << low[0]
++        everything |= 1 << low[0]
++        wanted |= value << low[0]
++        conditions.append((low[0], low[1] if len(low) == 2 else None, value, tuple(hbits), tuple(ebits)))
++    return conditions, shift, everything, wanted
+ WORDS = ("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve")
+ 
+ 
+@@ -213,6 +262,14 @@
+     if not 0 <= d["x13"] <= 32:
+         raise SystemExit("the context ranges do not fit: change LOG2_X12")
+     d["pass_budget"] = T - PASS_SHIFT
++    d["alphas_exp"] = d["ctx"] + 32                              # pairs of a context and an alpha: 2^alphas_exp
++    d["stage2_shift"] = d["alphas_exp"] - STAGE_2_LOG2_SHARE     # stage-2 budget: list_words * 2^stage2_shift batches
++    d["z_conditions"], d["a_shift"], d["a_all"], d["a_value"] = rule_a_on_z(d["qmask"], d["qvalue"])
++    d["rule_conditions"] = len(RULE_A[ETA])
++    if d["a_all"] >> 31 or d["a_shift"] >> 31:
++        raise SystemExit("rule A reads bit 31 of z: the text of 6.5 on the word of Lemma A (c) says it does not")
++    if ADVICE_BYTES > 2 ** ADVICE_LOG2:
++        raise SystemExit("the stored constants do not fit the declared advice")
+     d["pass_ops"] = d["pass_budget"] + PASS_OPS_LOG2
+     d["ctx_ops"] = d["ctx"] + 11
+     d["lists_ops"] = d["free"] + 6
+@@ -236,15 +293,24 @@
+     if not d["f_min"] <= 2 ** LOG2_FACTOR:
+         raise SystemExit("the assumed factor does not give 0.39")
+     d["uniform_exp"] = 127 + l_charge - l_unit
+-    # per alpha
+-    d["batch_total"] = BATCH_OPS + BATCH_LOADS
+-    d["alpha_batches"] = d["list_words"] * d["batch_total"]
+-    d["alpha_ops"] = d["alpha_batches"] + 256
+-    d["alpha_charged"] = CHARGE * d["members"]
++    # per alpha, on average over a run: stage A of every batch, stage 2 of the budgeted share of the batches, and the
++    # work before the batches (below 256 operations). Exact fractions.
++    from fractions import Fraction
++    d["stage_a"], d["stage_2"] = STAGE_A_OPS + STAGE_A_LOADS, STAGE_2_OPS + STAGE_2_LOADS
++    d["alpha_stage_a"] = d["list_words"] * d["stage_a"]
++    d["alpha_stage_2"] = Fraction(d["list_words"] * d["stage_2"], 2 ** STAGE_2_LOG2_SHARE)
++    d["alpha_ops"] = d["alpha_stage_a"] + d["alpha_stage_2"] + 256
++    d["alpha_charged"] = Fraction(str(CHARGE)) * d["members"]
+     if d["alpha_ops"] >= d["alpha_charged"]:
+-        raise SystemExit("the charge per trial does not cover the batches")
++        raise SystemExit("the charge per trial does not cover the budgeted batches")
++    # what a trial costs when a trial satisfies rule A with probability 2^-conditions: at most 7 times that share of
++    # the batches enter stage 2 (expected cost; the claim uses the budgeted cost above)
++    d["rule_share"] = Fraction(7, 2 ** d["rule_conditions"])
++    if not d["rule_share"] < Fraction(1, 2 ** STAGE_2_LOG2_SHARE):
++        raise SystemExit("the stage-2 budget is not above seven times the pass rate of rule A")
++    d["alpha_expected"] = d["alpha_stage_a"] + d["list_words"] * d["stage_2"] * d["rule_share"] + 256
+     # memory of the search
+-    d["data_words"] = -(-(2 * d["list_words"] + 256) // 1024) * 1024
++    d["data_words"] = -(-(d["list_words"] + 256) // 1024) * 1024
+     d["data_bytes"] = 32 * d["data_words"]
+     d["online_bytes"] = 2 ** 19 + d["data_bytes"]
+     d["online_log2"] = math.ceil(math.log2(d["online_bytes"]))
+@@ -552,7 +618,6 @@
+     t["fixed_bits"], t["free_bits"] = str(d["fixed"]), str(d["free"])
+     t["members"], t["members_plain"] = num(d["members"]), str(d["members"])
+     t["list_words"], t["full_batches"], t["rest"] = num(d["list_words"]), num(d["full_batches"]), str(d["rest"])
+-    t["two_lists_words"] = num(2 * d["list_words"])
+     t["spare_words"] = WORDS[d["spare"]]
+     t["last_batch"] = ("one that holds the last member" if d["rest"] == 1 else f"one that holds the last {WORDS[d['rest']]} members")
+     t["last_word_spare"] = (f"the {WORDS[d['spare']]} spare lanes of the last word repeat its last member" if d["spare"] != 1 else
+@@ -575,11 +640,26 @@
+              alt_factor=num(2 ** (F - 1)),
+              memory_log2=str(MEMORY_LOG2), online_log2=str(d["online_log2"]), preprocessing_log2=str(PREPROCESSING_LOG2),
+              advice_log2=str(ADVICE_LOG2), data_words=num(d["data_words"]), data_bytes=num(d["data_bytes"]),
+-             batch_ops=str(BATCH_OPS), batch_loads=str(BATCH_LOADS), batch_total=str(d["batch_total"]),
+-             alpha_batches=num(d["alpha_batches"]), alpha_ops=num(d["alpha_ops"]), alpha_charged=num(d["alpha_charged"]),
+-             per_trial=f"{up(d['alpha_ops'] / d['members'], 3):.3f}",
+-             alpha_margin=num(round(d["alpha_charged"] - d["alpha_ops"], -2)),
+-             alpha_margin_pct=f"{100 * (d['alpha_charged'] / d['alpha_ops'] - 1):.1f}",
++             stage_a_ops=str(STAGE_A_OPS), stage_a_loads=str(STAGE_A_LOADS), stage_a_total=str(d["stage_a"]),
++             stage_2_ops=str(STAGE_2_OPS), stage_2_loads=str(STAGE_2_LOADS), stage_2_total=str(d["stage_2"]),
++             stage_2_lanes_total=str(d["stage_2"] - 4), both_stages_total=str(d["stage_a"] + d["stage_2"]),
++             alphas_exp=str(d["alphas_exp"]), stage2_den=str(2 ** STAGE_2_LOG2_SHARE), stage2_log=str(STAGE_2_LOG2_SHARE),
++             stage2_share_words={1: "one half", 2: "one quarter", 3: "one eighth", 4: "one sixteenth"}[STAGE_2_LOG2_SHARE],
++             stage2_share=f"{1 / 2 ** STAGE_2_LOG2_SHARE:.3f}",
++             stage2_budget=f"{num(d['list_words'])} * 2^{d['stage2_shift']}", batches_total=f"{num(d['list_words'])} * 2^{d['alphas_exp']}",
++             stage2_trial_share=f"{math.floor((math.log2(d['list_words']) + d['stage2_shift'] - T) * 100) / 100:.2f}",
++             alpha_stage_a=num(d["alpha_stage_a"]), alpha_stage_2=f"{float(d['alpha_stage_2']):,.2f}",
++             alpha_ops=f"{float(d['alpha_ops']):,.2f}", alpha_charged=f"{float(d['alpha_charged']):,.1f}",
++             per_trial=f"{up(float(d['alpha_ops'] / d['members']), 3):.3f}",
++             per_trial_expected=f"{up(float(d['alpha_expected'] / d['members']), 3):.3f}",
++             alpha_margin=num(math.floor(float(d["alpha_charged"] - d["alpha_ops"]) / 100) * 100),
++             alpha_margin_pct=f"{math.floor(1000 * float(d['alpha_charged'] / d['alpha_ops'] - 1)) / 10:.1f}",
++             rule_conditions=WORDS[d["rule_conditions"]], rule_pass_exp=str(d["rule_conditions"]),
++             rule_share=f"{float(d['rule_share']):.6f}".rstrip("0"),
++             budget_over_rule=f"{math.floor(1000 * float(Fraction(1, 2 ** STAGE_2_LOG2_SHARE) / d['rule_share'])) / 1000:.3f}",
++             a_shift=hx(d["a_shift"]), a_all=hx(d["a_all"]), a_value=hx(d["a_value"]),
++             advice_bytes=str(ADVICE_BYTES), advice_limit=str(2 ** ADVICE_LOG2),
++             previous_charge=str(PREVIOUS_CHARGE), charge_gain=f"{math.floor(math.log2(PREVIOUS_CHARGE / CHARGE) * 100) / 100:.2f}",
+              sol_exp=str(192 + d["free"] - 128), space_exp=str(192 + d["free"]),
+              share_exp=str(d["fixed"]), draws_exp=str(96), draws_ratio_exp=str(d["fixed"]))
+     ranges = [f"X12 < 2^{LOG2_X12}"] + ([f"X13 < 2^{d['x13']}"] if d["x13"] < 32 else [])
+@@ -597,24 +677,32 @@
+             "- Organizer intake run locally with the pinned Docker image: both experiments `passed`, "
+             f"{li['pairs']} of {li['pairs']} mask events each, stdout byte-identical on replay; the toy search tried "
+             f"{li['tries']} class members on average, more than the 256 that independent uniform low bytes would give, "
+-            f"and for its counted batch it returned {BATCH_OPS} operations, "
+-            f"{BATCH_LOADS} loads and 7 of 7 equal lanes on every one of the {li['pairs']} seeds (observations of the "
++            f"and for its counted batch it returned {STAGE_A_OPS} operations and {STAGE_A_LOADS} loads for stage A, "
++            f"{STAGE_2_OPS} and {STAGE_2_LOADS} for stage 2 and 7 of 7 lanes right on every one of the {li['pairs']} seeds; "
++            f"a lane passed rule A in {li['entered']} of these {li['pairs']} batches (observations of the "
+             "program, not checked by the runner).")
+     else:
+         t["local_checks"] = ("- The organizer intake has not been run locally on this state of the package.")
+ 
+     # ---- the self-test of the program in the package
+     st = selftest()
+-    order = ("C0 backwards", "K3", "D1", "C1", "C2", "E1, A and B", "E3, A and B")
++    order = ("C0 backwards", "K3", "C2 to z", "rule A", "C2, rest", "D1", "C1 to Y1", "E1, A and B", "E1 test")
+     sums = [f"{st['parts'][p]['largest_sum']:.3f}" for p in order]
+-    if not (st["operations"] == BATCH_OPS and st["loads"] == BATCH_LOADS and st["lanes_equal"] == st["lanes_checked"]
+-            and st["members_in_lists"] == d["members"] and st["list_words"] == d["list_words"] and st["zero_test_words"] == 0
+-            and st["zero_lane_patterns_right"] == 128 and st["sums_below_bounds"]):
++    if not ((st["stage_a"]["operations"], st["stage_a"]["loads"]) == (STAGE_A_OPS, STAGE_A_LOADS)
++            and (st["stage_2"]["operations"], st["stage_2"]["loads"]) == (STAGE_2_OPS, STAGE_2_LOADS)
++            and [st["parts"][p]["bound"] for p in order] == [2, 6, 8, 2, 3, 2, 6, 10, 2]
++            and st["lanes_right"] == st["lanes_checked"] and st["counts_equal_table"] and st["same_counts_in_every_case"]
++            and st["members_in_list"] == d["members"] and st["list_words"] == d["list_words"] and st["zero_test_words"] == 0
++            and st["zero_lane_patterns_right"] == 128 and st["rule_a_patterns_right"] == st["rule_a_patterns"] == 256
++            and st["sums_below_bounds"] and st["per_context_constants"] == 14 and st["per_alpha_constants"] == 7
++            and st["rule_a_on_z"] == {"shift_mask": hx(d["a_shift"]), "all": hx(d["a_all"]), "value": hx(d["a_value"])}):
+         raise SystemExit("the self-test does not report what the text states; read its JSON line")
+     t.update(st_cases=num(st["cases"]), st_seed=str(st["seed"]), st_lanes=num(st["lanes_checked"]),
+              st_sums=", ".join(sums[:-1]) + " and " + sums[-1], st_registers=str(st["registers"]),
+              st_ctx_constants=str(st["per_context_constants"]), st_alpha_constants=str(st["per_alpha_constants"]),
+-             st_largest=f"{st['largest_lane'] / 2 ** 32:.3f}")
++             st_largest=f"{st['largest_lane'] / 2 ** 32:.3f}", st_pass_a=num(st["lanes_passing_rule_a"]),
++             st_entered=num(st["batches_entering_stage_2"]), st_a_satisfied=str(st["rule_a_patterns_satisfied"]),
++             st_a_patterns=str(st["rule_a_patterns"]))
+ 
+     # ---- the exact count
+     rows, listed, extra, sampler, recount = exact_table(d)
+@@ -640,6 +728,11 @@
+              exact_log2=f"{math.log2(total):.2f}",
+              hit_exp=f"{128 - math.log2(total):.2f}",
+              heaviest_beta=heaviest[1], heaviest_part=num(heaviest[0]), heaviest_share=f"{100 * heaviest[0] / total:.0f}")
++    # Rule A: the count that the claim uses. From here on exact_over_factor, exact_over_alt, per_run and cluster_max are
++    # those of the count with rule A (rule_count); exact_total, exact_log2 and hit_exp stay those of the count of all
++    # solutions, and full_over_factor is its ratio to the assumed factor.
++    t.update(rule_tokens(d, counted, total, rows))
++    t.update(followup_tokens(d, st))
+     top2 = sorted(counted, reverse=True)[:2]
+     t["top2_share"] = f"{100 * sum(p for p, *_ in top2) / total:.0f}"
+     # The .total file gives, per beta, the outcomes with a nonzero E3 count; the exact E1 count of some of them is
+@@ -865,6 +958,11 @@
+             "It is one of the classes of the table above, where the choice among them is described.",
+             "How it was chosen among the classes counted is said under \"The choice of the class\" above.")
+         t["solution_paragraph"], sol_outcome = class_solution_paragraph(d, info)
++        if ETA in CLASS_SOLUTION and "with Y4 in the class" in t["solution_paragraph"]:
++            cs = CLASS_SOLUTION[ETA]
++            sol_h1 = ror(cs["Y14"] ^ ((d["Y3"] + cs["Y4"]) & M32), 16)
++            t["solution_paragraph"] += (f" For the solution printed here h1 = {hx(sol_h1)}, which "
++                                        f"{'satisfies' if rule_a(sol_h1) else 'does not satisfy'} rule A.")
+         t.update(outcome_tokens(d, heaviest[1], heaviest[0], heaviest[2], sol_outcome))
+         t["solver_beta_sentence"] = (
+             f"The beta of the solver's solution need not be a heavy one: here it carries {num(by_beta[info['beta']])} of the count."
+@@ -928,7 +1026,7 @@
+         t["host_check_sentence"] = "A host check of trials of 6.1 with these constants was not available for this text."
+         t["host_check_note"] = "A host check on real messages was not available for this text."
+     t.update(real_tokens(real, deep, layout, d, other, layout_from))
+-    t.update(toyalg_tokens(total / 2 ** (F + 1)))
++    t.update(toyalg_tokens(float(t["per_run"])))
+     t.update(e1deep_tokens())
+     t.update(e3deep_tokens(t["e1deep_runs"] == "2" and E3DEEP_REAL == E1DEEP_RUNS[-1]))
+     t["submission_state"] = SUBMISSION_STATE
+@@ -954,14 +1052,21 @@
+         if t.get("class_spread_item"):
+             items.append(t["class_spread_item"])
+         items.append(f"the remark at the end of Section 7: under M the count gives {t['per_run']} expected trials with R = 0 "
+-                     f"per run, so the bound 0.39 would survive a clustering of them by a factor of up to {t['cluster_max']}")
++                     f"and rule A per run, so the bound 0.39 would survive a clustering of them by a factor of up to "
++                     f"{t['cluster_max']}")
+         ordinal = ("First", "Second", "Third", "Fourth", "Fifth")
+         t["dispersion_paragraph"] = (
+-            f"What this means for the two heuristics. H2 is not at risk: its budget is 2^{t['layout_margin']} above the "
+-            f"mean number of passes of these runs, and the runs differ by a percent or two. For H1 it is a warning. H1 "
++            f"What this means for the three heuristics. The count that differs between runs is that of the early test of "
++            f"Lemma E, which the algorithm of this package does not use. H2 is about the E1 test of Lemma N. Its passes "
++            f"are the trials in which E1 requires the class; "
++            + ("their counts in these runs show no such spread, and" if t["layout_e1_quiet"] == "yes" else
++               "their counts in these runs are given above, and")
++            + f" the budget of H2 is 2^{t['layout_margin']} above their mean. H3 is about rule A, which these runs did not "
++            f"record; {t['a_runs']} other runs in the same layout did, and each has a share of trials that satisfy rule A "
++            f"within {t['a_rel']} of 2^-{t['rule_pass_exp']}, relatively (reported below). For H1 it is a warning. H1 "
+             f"treats the trials of a "
+-            f"run as independent with respect to R = 0, and here another event of the same trials, at a depth of about "
+-            f"2^{t['pass_rate']}, is seen to depend on the seed words that all trials of a run share. "
++            f"run as independent with respect to its event, and here another event of the same trials, at a depth of about "
++            f"2^{t['early_rate']}, is seen to depend on the seed words that all trials of a run share. "
+             + t["layout_e1_clause"]
+             + f" {word(len(items), True)} thing{'s' if len(items) != 1 else ''} bear{'' if len(items) != 1 else 's'} on the "
+               f"question; none settles it for 32-bit words. "
+@@ -980,8 +1085,19 @@
+                          "whole count against a brute force of the seven-word system at 8-bit words, and Monte Carlo "
+                          "estimates of both calls at 32 bits"
+                          if t["review_present"] == "yes" else "")
+-    t["h2_limit_claim"] = (f"; {t['layout_runs_text']} with shared seed words differ from each other by more than "
+-                           f"chance" if dispersed else "")
++    t["layout_e1_note"] += (f"; {t['a_runs']} further runs of 2^{t['a_run_trials']} trials in the same layout gave "
++                            f"{t['a_e1_passes']} passes in all")
++    t["h3_spread_claim"] = (
++        f" The count of another test of the same trials, the early test of Lemma E, varies between runs with shared seed "
++        f"words by more than chance, by about {t['layout_rel']}% of its value; that is far below the margin of this budget, "
++        f"but it shows that such a count can depend on the seed words." if dispersed and t.get("layout_rel") else "")
++    t["h2_limit_claim"] = (
++        (f"; in {t['layout_runs_text']} with shared seed words the counts of this event show no spread beyond chance"
++         if t["layout_e1_quiet"] == "yes" else "")
++        + (", while the counts of another test of the same trials, the early test of Lemma E that the algorithm does not "
++           "use, differ between these runs by more than chance" if dispersed and t["layout_e1_quiet"] == "yes" else
++           f"; {t['layout_runs_text']} with shared seed words differ from each other by more than chance in another test "
++           f"of the same trials" if dispersed else ""))
+     t["review_note_sentence"] = (t["review_note"] + ". They are helper agents of mine, not independent parties."
+                                  if t["review_present"] == "yes" else "None is reported here.")
+     t["real_notes_claim"] = "; ".join(x for x in (t["real_model_claim"], t["deep_claim"], t["e1deep_claim"],
+@@ -1010,14 +1126,16 @@
+     t["e1deep_note_sentence"] = cap(t["e1deep_note"]) + "." if t["e1deep_note"] else ""
+     spread_words = re.search(r"the ratio of their variance to their mean is ([\d.]+)", t["layout_note"])
+     t["layout_claim_limit"] = (
+-        f"{cap(t['layout_runs_text'])} with shared seed words differ in their number of early-test passes by more than chance "
+-        f"(variance over mean {spread_words.group(1)}); that is unexplained, and it is a dependence on the shared words of "
+-        f"the kind that the independence assumed here excludes for the event R = 0." if dispersed and spread_words else "")
++        f"{cap(t['layout_runs_text'])} with shared seed words differ by more than chance in their passes of the "
++        f"early test of Lemma E "
++        f"(variance over mean {spread_words.group(1)}); that is unexplained and is a dependence on shared words of "
++        f"the kind that the independence assumed here excludes for the event of H1." if dispersed and spread_words else "")
+     t["layout_spread_note"] = ("The number of trials in which E1 requires the class shows no such excess. The spread bears on "
+                                "the independence that H1 assumes; the proof says what was measured on it."
+                                if dispersed else "")
+-    t["layout_spread_limit"] = ("On real messages the number of early-test passes of a run varies between runs by more than "
+-                                "chance, which I have not explained." if dispersed else "")
++    t["layout_spread_limit"] = ("On real messages the number of passes of the early test of Lemma E, which this package's "
++                                "algorithm does not use, varies between runs by more than chance, which I have not explained."
++                                if dispersed else "")
+     toy_now = t["toyalg_present"] == "yes"
+     t["run_distribution_claim"] = (
+         f"Scaled-down runs in the algorithm's own layout count the runs with at least one collision, but for words of "
+@@ -1086,11 +1204,42 @@
+         f"The six constants were found by a solver search and chosen by this count. The class is the {t['class_rank']} by "
+         f"this count among the {t['classes_counted']} classes of these constants that were counted; Section 10 says why it "
+         f"is used.")
+-    t["h2_limit_sentence"] = ("The runs with shared seed words differ from each other by more than chance; the "
+-                              f"budget is 2^{t['layout_margin']} above their mean." if t["layout_dispersed"] == "yes" else "")
++    t["h2_limit_sentence"] = (
++        (f"In the {t['layout_runs_text']} with shared seed words the counts of this event are {t['layout_e1_counts']}"
++         + (", with no spread beyond chance" if t["layout_e1_quiet"] == "yes" else "")
++         + f"; the budget is 2^{t['layout_margin']} above their mean.") if t["layout_runs"] != "0" else "")
+     step = float(SUBMISSIONS[-1][1]) - d["time_log2"]
+     t["previous_F"], t["previous_factor"] = str(PREVIOUS_LOG2_FACTOR), num(2 ** PREVIOUS_LOG2_FACTOR)
+-    if abs(step - (LOG2_FACTOR - PREVIOUS_LOG2_FACTOR)) < 1e-9:
++    t.update(draft_tokens(d, t))
++    if t["draft_present"] != "yes":
++        t["draft_note"] = "The earlier version of this package is not at hand, so no comparison with it is made here."
++    t["previous_batch"] = f"{PREVIOUS_BATCH[0]} operations and {PREVIOUS_BATCH[1]} loads for every batch"
++    t["a_runs_cap"] = cap(t["a_runs"])
++    t["rule_amc_note_sentence"] = (cap(t["rule_amc_note"]) + " (a check of the E3 count for this class, made by the thread "
++                                   "that found rule A)." if t["rule_amc_note"] else "")
++    t["toystage_note_sentence"] = (
++        cap(t["toystage_note"]) + ". The rule on h1 in these runs is of the kind that every solution satisfies, found by "
++        "brute force; every collision found passed it and the second test, and the test word of every trial equalled the "
++        "word of the residual that the proof's Lemma N names. They test the logic of dropping trials early and the second "
++        "test, not rule A of this package, which loses solutions." if t["toystage_note"] else "No such runs are reported here.")
++    t["rule_example_note"] = ("The proof prints one complete solution of the system that violates rule A."
++                              if t["rule_example_state"] == "yes" else "")
++    t["big_note_sentence"] = (f"Longer runs of the same self-test: {t['big_lanes']} lanes, all right."
++                              if t["big_runs"] != "0" else "")
++    t["version_review_sentence"] = VERSION_REVIEW
++    gain = math.log2(PREVIOUS_CHARGE / CHARGE)
++    if CHARGE != PREVIOUS_CHARGE:
++        t["step_sentence"] = (
++            f"The claimed scalar is {step:.1f} below that of submission {SUBMISSIONS[-1][0]}. Of that difference, "
++            f"{LOG2_FACTOR - PREVIOUS_LOG2_FACTOR} bits are the factor that H1 assumes, 2^{LOG2_FACTOR} here against "
++            f"2^{PREVIOUS_LOG2_FACTOR} there, and {gain:.2f} bits are the cost charged per trial, {CHARGE} operations here "
++            f"against {PREVIOUS_CHARGE} there; the rest is rounding of the two bounds.")
++        t["step_note"] = (
++            f"The claim is {step:.1f} bits below that of `{SUBMISSIONS[-1][0]}`: {LOG2_FACTOR - PREVIOUS_LOG2_FACTOR} bits "
++            f"are the factor that H1 assumes, 2^{LOG2_FACTOR} = {num(2 ** LOG2_FACTOR)} here and 2^{PREVIOUS_LOG2_FACTOR} = "
++            f"{num(2 ** PREVIOUS_LOG2_FACTOR)} there, and {gain:.2f} bits are the cost of a trial, {CHARGE} charged operations "
++            f"here and {PREVIOUS_CHARGE} there; the rest is rounding.")
++    elif abs(step - (LOG2_FACTOR - PREVIOUS_LOG2_FACTOR)) < 1e-9:
+         t["step_sentence"] = (
+             f"The claimed scalar is {step:.0f} below that of submission {SUBMISSIONS[-1][0]}. All of that difference is "
+             f"the factor that H1 assumes, 2^{LOG2_FACTOR} here against 2^{PREVIOUS_LOG2_FACTOR} there; the cost charged "
+@@ -1165,13 +1314,16 @@
+     t["real_class"] = of
+     t["pass_measured_short"] = short
+     lt = round(r["trials"][1])
+-    rate = math.log2(r["early"][1]) - lt
+-    t["pass_rate"] = f"{rate:.2f}"
+-    t["pass_expected"] = f"{T + rate:.2f}"
+-    t["pass_margin"] = f"{d['pass_budget'] - (T + rate):.2f}"
+-    t["pass_count"], t["pass_trials"] = num(r["early"][1]), str(lt)
++    # H2 is about the E1 test of Lemma N. The programs print its passes as "E1 requires the eta of Y4" (key "eta"):
++    # the trials in which E1 alone requires the class of the trial's Y4, that is eps XOR ROL(beta XOR eps, 1) = eta.
++    rate = math.log2(r["eta"][1]) - lt
++    t["pass_rate"] = f"{up(rate, 2):.2f}"
++    t["pass_expected"] = f"{up(T + rate, 2):.2f}"
++    t["pass_margin"] = f"{math.floor((d['pass_budget'] - (T + rate)) * 100) / 100:.2f}"
++    t["pass_count"], t["pass_trials"] = num(r["eta"][1]), str(lt)
++    t["early_rate"] = f"{math.log2(r['early'][1]) - lt:.2f}"       # the early test of Lemma E, which the algorithm does not use
+     if d["pass_budget"] - (T + rate) < 8:
+-        raise SystemExit("the budget on early-test passes is less than 2^8 above the expected number: raise it (PASS_SHIFT)")
++        raise SystemExit("the budget on passes of the E1 test is less than 2^8 above the expected number: raise it (PASS_SHIFT)")
+ 
+     def quad(s):
+         return ", ".join(num(s[f"wz{i}"][1]) for i in range(4))
+@@ -1287,6 +1439,8 @@
+         if n >= 4:
+             _, ratio, chi, p_chi = spread(passes)
+             _, _, chi1, p1 = spread(e1s)
++            t["layout_e1_chi"] = (f", with no spread beyond chance (chi-square {chi1:.1f} on {n - 1} degrees of freedom)"
++                                  if p1 >= 0.05 else f", with a spread beyond chance (chi-square {chi1:.1f} on {n - 1} degrees of freedom)")
+ 
+             def away(j):
+                 rest = [x for i, x in enumerate(passes) if i != j]
+@@ -1300,6 +1454,7 @@
+             if p_chi < 0.05:
+                 dispersed = True
+                 rel = 100 * math.sqrt(max(ratio - 1, 0) / mean)
++                t["layout_rel"] = f"{rel:.1f}"
+                 text += (f" Run {layout[j][0]} is {abs(away(j)):.1f} standard deviations "
+                          f"{'above' if away(j) > 0 else 'below'} the mean of the other {word(n - 1)}. So the number of "
+                          f"early-test passes of a run differs between runs by more than chance: it depends on the seed "
+@@ -1325,16 +1480,24 @@
+         t["layout_dispersed"] = "yes" if dispersed else "no"
+         text += (f" {'These runs record' if n != 1 else 'This run records'} these two counts and nothing else; in "
+                  f"particular no residual words and no pair statistics.")
+-        t["layout_margin"] = f"{d['pass_budget'] - (T + math.log2(mean) - lt):.2f}"
++        t["layout_e1_note"] = (f"{note_prefix}{runs_text} of 2^{lt} real trials with shared seed words gave "
++                               + join(num(e) for e in e1s) + " passes" + t.get("layout_e1_chi", ""))
++        mean_e1 = sum(e1s) / len(e1s)                # H2: passes of the E1 test in the layout runs
++        t["layout_margin"] = f"{math.floor((d['pass_budget'] - (T + math.log2(mean_e1) - lt)) * 100) / 100:.2f}"
++        t["layout_e1_counts"] = join(num(e) for e in e1s)
++        t["layout_e1_rate"] = f"{math.log2(mean_e1) - lt:.2f}"
+         planned = CLASSES[ETA if (layout_from is None and other is None) else (layout_from[0] if layout_from else other)].get("layout_planned")
+         if planned and n < planned:
+             text += " More runs of this kind were under way when this text was written."
+         t["layout_paragraph"] = text
+         t["layout_runs"] = str(n)
+         t["layout_runs_text"] = runs_text
++        e1_quiet = n >= 4 and spread(e1s)[3] >= 0.05
+         t["h2_support"] = (f"; Section 10 reports {runs_text} of 2^{lt} trials in the layout of the algorithm"
+                            + (", made for another class of the same constants," if layout_from is not None else "")
+-                           + (disp_h2 if dispersed else " in support"))
++                           + (f", with between {num(min(e1s))} and {num(max(e1s))} passes of the E1 test each"
++                              + (" and no spread beyond chance" if e1_quiet else "")))
++        t["layout_e1_quiet"] = "yes" if e1_quiet else "no"
+         t["layout_note"] = (f"{note_prefix}{runs_text} of 2^{lt} real trials with shared seed words gave "
+                             + join(num(p) for p in passes) + f" early-test passes ({num(ref)} with independent contexts)"
+                             + disp_note)
+@@ -1357,6 +1520,8 @@
+         t["layout_runs"], t["h2_support"] = "0", ""
+         t["layout_runs_text"] = "no runs"
+         t["layout_margin"] = ""
++        t["layout_e1_counts"], t["layout_e1_rate"], t["layout_e1_quiet"] = "", "", "no"
++        t["layout_e1_note"] = "runs with shared seed words were not finished for these constants"
+         t["layout_dispersed"], t["layout_e1_clause"] = "no", ""
+         t["layout_note"] = "runs with shared seed words were not finished for these constants"
+         t["layout_note_short"] = t["layout_note"]
+@@ -1636,10 +1801,13 @@
+                 + (f"It lacks {join(missing)}, which the class of the package has. " if missing else
+                    "Every check made for the class of the package exists for it as well. ")
+                 + (f"So the other class has the larger count and nearly the same checks. " if len(missing) <= 1 else "")
+-                + f"The claim is the same for both. The two counts are "
+-                f"{both[0] / 2 ** LOG2_FACTOR:.2f} and {both[1] / 2 ** LOG2_FACTOR:.2f} times the assumed 2^{LOG2_FACTOR}; "
+-                f"against the next power of two, 2^{LOG2_FACTOR + 1}, they would leave factors of only "
+-                f"{both[0] / 2 ** (LOG2_FACTOR + 1):.2f} and {both[1] / 2 ** (LOG2_FACTOR + 1):.2f}.")
++                + other_rule_sentence(best_eta)
++                + f"The two counts are "
++                f"{math.floor(both[0] / 2 ** LOG2_FACTOR * 100) / 100:.2f} and {math.floor(both[1] / 2 ** LOG2_FACTOR * 100) / 100:.2f} "
++                f"times the assumed 2^{LOG2_FACTOR} (rounded down; for the class of the package this is the count of all "
++                f"solutions, before rule A); against the next power of two, 2^{LOG2_FACTOR + 1}, they would leave factors of only "
++                f"{math.floor(both[0] / 2 ** (LOG2_FACTOR + 1) * 100) / 100:.2f} and "
++                f"{math.floor(both[1] / 2 ** (LOG2_FACTOR + 1) * 100) / 100:.2f}.")
+         t["class_choice_paragraph"] = text
+         t["class_choice_short"] = (
+             f"it is the {t['class_rank']} of the {word(n)} classes counted: eta = {hx(best_eta)} has {num(best_count)} "
+@@ -1648,7 +1816,8 @@
+                f", and checks of its own ({there_short})" if there_short else "")
+             + (f"; it lacks {join(missing)}" if missing else "")
+             + ". The class used is kept because this note, the proof, the run on partial E3 events and the reviews were "
+-              "made for it; with either class the assumed factor and the claim are the same")
++              "made for it, and because rule A and the two-stage batch are worked out for it alone; with a batch of one "
++              "stage the assumed factor and the claim would be the same for either class")
+         same_list = e and len(own_rows) == e[0]
+         t["class_choice_claim"] = (
+             f"the class used is the {t['class_rank']} of {n} classes of these constants that were counted; the largest, eta "
+@@ -1656,7 +1825,7 @@
+             + ("the same values of beta" if same_list else f"the {num(common)} lightest values of beta, where the class used has "
+                f"{num(own_common)},")
+             + (" and nearly the same checks" if len(missing) <= 1 else " and fewer checks")
+-            + ", and the claim would be the same with it")
++            + ", but no rule A or two-stage count exists for it")
+         t["class_choice_restr"] = (f"by that count the class used is the {t['class_rank']} of {n} classes of these "
+                                    f"constants that were counted")
+     others = []
+@@ -2261,7 +2430,7 @@
+     return t
+ 
+ 
+-# ---- the log of the local validation (validate_pkg4.sh writes it)
++# ---- the log of the local validation (validate_pkg5.sh writes it)
+ VALIDATION_LOG = EVID / "validation_log.txt"
+ 
+ 
+@@ -2289,11 +2458,18 @@
+     if any(a != b or ident != "True" for _, a, b, ident, _, _ in exps):
+         return None
+     tries = [e[4] for e in exps if e[4]]
+-    return {"tests": int(tests.group(1)), "pairs": int(exps[0][1]), "tries": tries[0] if tries else "an unrecorded number of"}
++    obs = dict(re.findall(r"^\s+observation (batch_\w+): \d+ rows, values (\[[^\]]*\])", text, re.M))
++    entered = re.search(r"^\s+observation batch_stage_2_entered: (\d+) rows, values \[[^\]]*\], sum (\d+)", text, re.M)
++    want = {"batch_stage_a_operations": f"[{STAGE_A_OPS}]", "batch_stage_a_loads": f"[{STAGE_A_LOADS}]",
++            "batch_stage_2_operations": f"[{STAGE_2_OPS}]", "batch_stage_2_loads": f"[{STAGE_2_LOADS}]", "batch_lanes_right": "[7]"}
++    if not entered or any(obs.get(k) != v for k, v in want.items()) or int(entered.group(1)) != int(exps[0][1]):
++        return None
++    return {"tests": int(tests.group(1)), "pairs": int(exps[0][1]), "tries": tries[0] if tries else "an unrecorded number of",
++            "entered": int(entered.group(2))}
+ 
+ 
+ # ---- what the reviewing helper agents computed: quoted from their reports, which must still hold these words
+-REVIEW = PKG / "review"
++REVIEW = RESEARCH / DRAFT_BEFORE / "review"      # the reports are on the earlier version of this package
+ REVIEW_QUOTES = (
+     ("evidence.md", "60 random constant sets, 1,019 classes (459 with solutions"),
+     ("evidence.md", "17,258 (class, beta) pairs, 874 with solutions, 694,652,928 solutions: no pair differs"),
+@@ -2331,8 +2507,10 @@
+     t["review_present"] = "yes"
+     t["review_checks_paragraph"] = (
+         "**Checks by reviewing helper agents (participant computations).** Three helper agents, further instances of "
+-        "the AI model that wrote this package, reviewed it before it was finished and wrote programs of their own from "
+-        "the text of this proof. They are not independent parties, and what follows is quoted from their reports. One "
++        "the AI model that wrote this package, reviewed an earlier version of it, which had the same constants, the same "
++        "class and the same count and a batch of one stage, and wrote programs of their own from the text of that proof. "
++        "They are not independent parties, and what follows is quoted from their reports. Rule A, the two-stage batch "
++        "and the count with rule A did not exist then and were not in front of them. One "
+         "compared the whole calculation at "
+         "8-bit words, that is the enumeration of outcomes, the E1 count, the E3 count, the weights and the sum over "
+         "betas, with a brute force of the seven-word system written from 6.2 alone: 60 random constant sets, 1,019 "
+@@ -2357,7 +2535,9 @@
+         "heavy betas when delta = +2 is put in place of -2. So the count does not check the sign of delta; that is "
+         "checked by the hash tests of the trial, not by the count.")
+     t["review_note"] = (
+-        "Three reviewing helper agents wrote programs of their own from the proof. Two of them compared the whole "
++        "Three reviewing helper agents wrote programs of their own from the proof of an earlier version of this "
++        "package (same constants, class and count; rule A and the two-stage batch came later and were not in front of "
++        "them). Two of them compared the whole "
+         "calculation at 8-bit words with a brute force of the seven-word system (in one case 60 constant sets, 17,258 "
+         "pairs of a class and a beta, 694,652,928 solutions, no pair differs). They made Monte Carlo estimates at 32 "
+         "bits of the E1 probabilities (sums of P1 * N3 between 0.980 and 1.012 of the calculator's on the four sampled "
+@@ -2375,6 +2555,593 @@
+     return t
+ 
+ 
++# =====================================================================================================
++# PART F: rule A and the two-stage batch (fifth package): the SAT answers per outcome, the count that the
++#         claim uses, the recount with the calculator as it is, and the result files of the thread that
++#         found the rule (copies in evidence/followup/)
++# =====================================================================================================
++FOLLOWUP = EVID / "followup"
++
++
++def read_outx():
++    """{(beta, tau, eps): (E1, N3)}: both factors of every outcome with a nonzero product, as the recount prints them."""
++    text = read(EVID / f"pairs_recount_{ETA:08x}.txt")
++    if text is None:
++        raise SystemExit("evidence/pairs_recount_<eta>.txt is missing: the count per outcome is not known (tools/recount_exact.sh)")
++    out = {}
++    for m in re.finditer(r"^OUTX ([0-9a-f]{8}) ([0-9a-f]{8}) ([0-9a-f]{8}) ([0-9a-f]{8}) E1 (\d+) N3 (\d+)$", text, re.M):
++        if int(m.group(1), 16) == ETA:
++            out[(m.group(2), m.group(3), m.group(4))] = (int(m.group(5)), int(m.group(6)))
++    return out
++
++
++def read_rule_sat():
++    """({(beta, tau, eps): {"ALL" / "VIOLATE": (answer, model is a solution, model satisfies rule A)}}, example or None)
++    from tools/rule_a_sat.py. The file must have been made for the rule of PART A."""
++    path = EVID / f"rule_a_sat_{ETA:08x}.txt"
++    text = read(path)
++    if text is None:
++        raise SystemExit(f"missing evidence/{path.name}: run tools/rule_a_sat.py (without it rule A has no count)")
++    want = "# rule A on h1 (mask:value, XOR of the masked bits): " + ",".join(f"{m:08x}:{v}" for m, v in RULE_A[ETA])
++    if want not in text.split("\n"):
++        raise SystemExit(f"evidence/{path.name} was made for another rule A: run tools/rule_a_sat.py again")
++    res = {}
++    for m in re.finditer(r"^(ALL|VIOLATE) ([0-9a-f]{8}) ([0-9a-f]{8}) ([0-9a-f]{8}) (SAT|UNSAT|\?)(?: .* solution (\d) rule_A (\d))?$", text, re.M):
++        res.setdefault((m.group(2), m.group(3), m.group(4)), {})[m.group(1)] = (m.group(5), m.group(6), m.group(7))
++    ex = re.search(r"^EXAMPLE ([0-9a-f]{8}) ([0-9a-f]{8}) ([0-9a-f]{8}) Y1 ([0-9a-f]{8}) Y6 ([0-9a-f]{8}) Y12 ([0-9a-f]{8}) w12 ([0-9a-f]{8}) "
++                   r"w5 ([0-9a-f]{8}) Y4 ([0-9a-f]{8}) Y9 ([0-9a-f]{8}) Y14 ([0-9a-f]{8}) w8 ([0-9a-f]{8}) h1 ([0-9a-f]{8}) residual_zero 1 "
++                   r"rule_A 0 checked 1$", text, re.M)
++    return res, (ex.groups() if ex else None)
++
++
++def read_calc2():
++    """The recount with the calculator as it is (tools/recount_calc2.sh mass), or None: (SHA-256 of the binary,
++    {beta: part}, {(beta, tau, eps): (log2 P1, log2 N3)} for the outcomes with a nonzero E3 count, number of lines
++    that report a fallback or a failed run)."""
++    text = read(EVID / f"calc2_recount_{ETA:08x}.txt")
++    if text is None:
++        return None
++    sha = re.search(r"^BINARY night_pair_calc2 sha256 ([0-9a-f]{64})", text, re.M)
++    parts = {m.group(1): float(m.group(2)) for m in re.finditer(
++        rf"^EXACT-E1 {ETA:08x} ([0-9a-f]{{8}}) .*class-rate part ([\d.]+) ", text, re.M)}
++    outs = {(m.group(1), m.group(2), m.group(3)): (float(m.group(4)), float(m.group(5))) for m in re.finditer(
++        r"^OUT ([0-9a-f]{8}) ([0-9a-f]{8}) ([0-9a-f]{8}) log2P1 (-?[\d.]+) log2N3 (-?[\d.]+)$", text, re.M)}
++    bad = len(re.findall(r"sampled [1-9]|formula fallbacks [1-9]|^DONE \S+ exit [1-9]", text, re.M))
++    return (sha.group(1) if sha else None), parts, outs, bad
++
++
++def read_calc2_total(rows):
++    """The recount of every beta of the list with the calculator as it is (tools/recount_calc2.sh all), or None:
++    (betas recounted, betas of the list, betas whose line differs from the list's, sum of the recounted parts)."""
++    text = read(EVID / f"calc2_total_{ETA:08x}.txt")
++    if text is None:
++        return None
++    got = {}
++    for line in text.split("\n"):
++        f = line.split()
++        if len(f) >= 4:
++            got[f[0]] = (float(f[3]), len(f) > 4)
++        elif f:
++            got[f[0]] = (None, len(f) != 2)
++    listed = {beta: part for beta, _, _, part in rows}
++    differ = [b for b, (part, flag) in got.items() if b not in listed or (part is None) != (listed[b] is None)
++              or (part is not None and abs(part - listed[b]) > 0.06) or (flag and part)]
++    # betas whose line carries a remark of the calculator (an outcome through the random-subset branch of the E3 count
++    # or an E1 count by the product formula); a remark on a beta with a nonzero part counts as a difference above
++    flagged = sorted(b for b, (part, flag) in got.items() if flag)
++    remarks = re.findall(r"(sampled|fallbacks)=(\d+)", " ".join(l for l in text.split("\n") if len(l.split()) > 4))
++    detail = read(EVID / f"calc2_flagged_{ETA:08x}.txt") or ""
++    outs = re.findall(r"^OUT ([0-9a-f]{8}) [0-9a-f]{8} [0-9a-f]{8} log2P1 (-?[\d.]+) ", detail, re.M)
++    known = {b for b, _ in outs} == set(flagged) and len(re.findall(r"^DONE \S+ exit 0$", detail, re.M)) == len(flagged)
++    return (len(got), len(listed), differ, sum(part for part, _ in got.values() if part), flagged,
++            sum(int(n) for kind, n in remarks if kind == "sampled"), sum(int(n) for kind, n in remarks if kind == "fallbacks"),
++            (len(outs), sum(float(lp) < -900 for _, lp in outs)) if known else None)
++
++
++def rule_text():
++    """Rule A in words, from PART A: the lines of the display in 6.3, and one sentence."""
++    single, equal, differ = [], [], []
++    for mask, value in RULE_A[ETA]:
++        bits = [i for i in range(32) if mask >> i & 1]
++        if len(bits) == 1:
++            single.append(f"bit {bits[0]} of h1 is {value}")
++        elif len(bits) == 2:
++            (differ if value else equal).append(f"{bits[0]} and {bits[1]}")
++        else:
++            raise SystemExit("rule A: a condition on more than two bits has no wording here")
++    lines = single + [f"bits {p} of h1 are equal" for p in equal] + [f"bits {p} of h1 differ" for p in differ]
++    return lines
++
++
++def rule_tokens(d, counted, total, rows):
++    """Lemma A, the count that the claim uses, and the paragraphs of Section 10 on rule A."""
++    F, t = LOG2_FACTOR, {}
++    lines = rule_text()
++    t["rule_a_block"] = "\n".join("    " + l + (";" if i + 1 < len(lines) else ".") for i, l in enumerate(lines))
++    t["rule_a_inline"] = join(lines)
++    zl = []
++    for low, high, value, _, _ in d["z_conditions"]:
++        zl.append(f"bit {low} of z is {value}" if high is None else
++                  f"bits {low} and {high} of z {'differ' if value else 'are equal'}")
++    t["rule_z_block"] = "\n".join("    " + l + (";" if i + 1 < len(zl) else ".") for i, l in enumerate(zl))
++    hbits = sorted({b for c in d["z_conditions"] for b in c[3]})
++    ebits = sorted({b for c in d["z_conditions"] for b in c[4]})
++    t["rule_h_bits"], t["rule_e_bits"] = join(str(b) for b in hbits), join(str(b) for b in ebits)
++    t["rule_e_values"] = join(f"bit {b} is {d['qvalue'] >> b & 1}" for b in ebits)
++    t["rule_z_bits_count"] = WORDS[len({b for c in d["z_conditions"] for b in c[:2] if b is not None})]
++    t["rule_pairs"] = WORDS[sum(1 for c in d["z_conditions"] if c[1] is not None)]
++    t["rule_singles"] = WORDS[sum(1 for c in d["z_conditions"] if c[1] is None)]
++
++    # ---- the count with rule A
++    outx, (sat, example), calc2 = read_outx(), read_rule_sat(), read_calc2()
++    if set(sat) != set(outx):
++        raise SystemExit("the SAT answers are not for the outcomes of the count: run tools/rule_a_sat.py again")
++    for key, v in sat.items():
++        a, w = v.get("ALL", ("?", None, None)), v.get("VIOLATE", ("?", None, None))
++        if a[0] != "SAT" or a[1] != "1" or w[0] not in ("SAT", "UNSAT") or (w[0] == "SAT" and w[1:] != ("1", "0")):
++            raise SystemExit(f"a SAT answer is missing or a model failed its check for outcome {key}: read evidence/rule_a_sat_<eta>.txt")
++    scale = 2 ** (96 - d["fixed"])
++    prod = {k: Fraction(e * n, scale) for k, (e, n) in outx.items()}
++    by_beta = {}
++    for (beta, _, _), v in prod.items():
++        by_beta[beta] = by_beta.get(beta, 0) + v
++    parts = {b: p for p, b, _, _ in counted}
++    kof = {b: k for _, b, k, _ in counted}
++    if set(by_beta) != set(parts) or any(abs(float(by_beta[b]) - parts[b]) > 0.06 for b in parts):
++        raise SystemExit("the outcomes with their two factors in full do not add up to the parts of the count")
++    full = sum(prod.values())
++    bad = sorted(k for k, v in sat.items() if v["VIOLATE"][0] == "SAT")
++    lost = sum(prod[k] for k in bad)
++    used = int(round(total)) - math.ceil(lost)          # as printed: the count, minus the dropped part rounded up
++    if not used <= full - lost:
++        raise SystemExit("rule A: the printed difference is above the count without the dropped outcomes")
++    if used < 2.9 * 2 ** F:
++        raise SystemExit("the count with rule A is less than 2.9 times the assumed factor: lower log2_factor")
++    kept_by_witness = sum(1 for v in sat.values() if v["ALL"][2] == "1")
++    t.update(rule_outcomes=str(len(outx)), rule_ok=str(len(outx) - len(bad)), rule_bad=str(len(bad)),
++             rule_bad_betas=WORDS[len({k[0] for k in bad})] if len({k[0] for k in bad}) < len(WORDS) else str(len({k[0] for k in bad})),
++             rule_lost=num(math.ceil(lost)), rule_count=num(used), rule_count_plain=str(used),
++             rule_lost_pct=f"{up(100 * float(lost / full), 3):.3f}",
++             rule_kept=f"{math.floor(1e6 * float(1 - lost / full)) / 1e6:.6f}",
++             rule_models_passing=str(kept_by_witness),
++             full_over_factor=f"{math.floor(total / 2 ** F * 100) / 100:.2f}",
++             exact_over_factor=f"{math.floor(used / 2 ** F * 100) / 100:.2f}",
++             exact_over_alt=f"{math.floor(used / 2 ** (F - 1) * 10) / 10:.1f}",
++             per_run=f"{math.floor(used / 2 ** (F + 1) * 100) / 100:.2f}",
++             cluster_max=f"{math.floor(used / d['f_min'] * 100) / 100:.2f}",
++             rule_log2=f"{math.floor(math.log2(used) * 100) / 100:.2f}",
++             rule_hit_exp=f"{up(128 - math.log2(used), 2):.2f}")
++    head = "| beta | k | Outcomes | Dropped | Part of the beta | Part dropped |\n| --- | ---: | ---: | ---: | ---: | ---: |\n"
++    body = []
++    for beta in sorted({k[0] for k in bad}, key=lambda b: (-sum(prod[k] for k in bad if k[0] == b), b)):
++        drop = [k for k in bad if k[0] == beta]
++        body.append(f"| {beta} | {kof[beta]} | {sum(1 for k in outx if k[0] == beta)} | {len(drop)} | {num(parts[beta])} | "
++                    f"{float(sum(prod[k] for k in drop)):,.1f} |")
++    body.append(f"| sum | | | {len(bad)} | | {float(lost):,.1f} |")
++    t["rule_table"] = head + "\n".join(body)
++    worst = max(bad, key=lambda k: (prod[k], k))
++    t["rule_worst"] = (f"The largest of them is the outcome tau = {worst[1]}, eps = {worst[2]} of beta {worst[0]}, with "
++                       f"{float(prod[worst]):,.1f}.")
++
++    # ---- the recount with the calculator as it is
++    if calc2 is None:
++        t["calc2_sentence"] = ("The parts were not recounted with the calculator in its present form for this package.")
++        t["calc2_state"] = "none"
++    else:
++        sha, cparts, couts, cbad = calc2
++        nonzero = {k: v for k, v in couts.items() if v[0] > -900}
++        if set(cparts) != set(parts) or any(abs(cparts[b] - parts[b]) > 0.06 for b in parts) or cbad:
++            raise SystemExit("the recount with night_pair_calc2 does not give the parts of the count (evidence/calc2_recount_<eta>.txt)")
++        if set(nonzero) != set(outx):
++            raise SystemExit("the recount with night_pair_calc2 has other outcomes with a nonzero product than the count")
++        gap = max(max(abs(math.log2(outx[k][0]) - (96 - kof[k[0]]) - nonzero[k][0]), abs(math.log2(outx[k][1]) - nonzero[k][1]))
++                  for k in outx)
++        if gap > 0.0051:
++            raise SystemExit("an outcome's factors in full do not agree with the logarithms that night_pair_calc2 prints")
++        t["calc2_sentence"] = (
++            f"For this package the {len(parts)} betas with a nonzero part were counted once more with the calculator as it "
++            f"is now, a binary that was only executed (SHA-256 {sha[:16]}...): it returns the same {len(parts)} parts, "
++            f"{num(sum(cparts.values()))} in all, no outcome through either fallback, and the same {len(outx)} outcomes with a "
++            f"nonzero product. The products P1 * N3 of the single outcomes are taken from the recount that prints both "
++            f"factors in full; their logarithms agree with the two decimals that the calculator prints for every outcome.")
++        t["calc2_state"] = "done"
++    ct = read_calc2_total(rows)
++    t["calc2_flag_note"] = ""
++    t["enumerated_caveat"] = ""
++    if ct is not None and ct[4] and not ct[2]:
++        nb = len(ct[4])
++        t["enumerated_caveat"] = (f" (for {WORDS[nb] if nb < len(WORDS) else nb} of them, {'all' if nb != 1 else 'which is'} "
++                                  f"without a part, not without sampling: see the second count below)")
++    if ct is None:
++        t["calc2_total_sentence"] = ("The betas without a part were not counted again for this package; that they have none is "
++                                     "taken from the count described above.")
++        t["calc2_total_state"] = "none"
++    else:
++        done, listed, differ, csum, flagged, n_sampled, n_formula, detail = ct
++        if differ:
++            raise SystemExit(f"the recount of the whole list differs from the list for {differ[:6]} (evidence/calc2_total_<eta>.txt)")
++        if n_formula:
++            raise SystemExit("the recount of the whole list reports E1 counts by the product formula: the text has no words for that")
++        remark = ""
++        if flagged:
++            nb = len(flagged)
++            remark = (
++                f" For {WORDS[nb] if nb < len(WORDS) else nb} beta{'s' if nb != 1 else ''} of the list, {join(flagged)}, "
++                f"{'all' if nb != 1 else 'which is'} without a part, that run reports what the per-beta file of the first "
++                f"count does not record: the E3 count of {WORDS[n_sampled] if n_sampled < len(WORDS) else n_sampled} "
++                f"outcome{'s' if n_sampled != 1 else ''} went through the random-subset branch, so "
++                f"{'these values are estimates' if n_sampled != 1 else 'this value is an estimate'}. "
++                + (f"The {detail[0]} outcomes of these betas with a nonzero E3 value all have an exact E1 count of zero, so "
++                   f"their product is zero whatever N3 is. " if detail and detail[0] == detail[1] else
++                   "Their parts are zero to the one decimal that the calculator prints. ")
++                + "An outcome whose E3 value that branch estimated as zero would be missing from the sum; that can only make "
++                  "the figure smaller. So for these betas the E3 side was not counted without sampling.")
++        if done == listed:
++            t["calc2_total_sentence"] = (
++                f"The whole list was also counted once more with that binary, all {num(listed)} betas: the same betas have "
++                f"no eps, the same {len(parts)} have a part, every part is the same, and the sum is {num(csum)}." + remark)
++            t["calc2_total_state"] = "done" + (f", {len(flagged)} betas without a part with a sampled E3 count" if flagged else "")
++            t["calc2_flag_note"] = (
++                f" In {len(flagged)} betas without a part the E3 count of {n_sampled} outcomes was an estimate from a random "
++                f"subset; their exact E1 count is zero." if flagged and detail and detail[0] == detail[1] else
++                f" In {len(flagged)} betas without a part the E3 count of {n_sampled} outcomes was an estimate from a random "
++                f"subset." if flagged else "")
++        else:
++            t["calc2_total_sentence"] = (
++                f"A second count of the whole list with that binary was not finished when this text was written: "
++                f"{num(done)} of the {num(listed)} betas were done, and none of them differs from the list. For the other "
++                f"betas, that they have no part is taken from the count described above.")
++            t["calc2_total_state"] = f"{done} of {listed}"
++
++    # ---- one complete solution that violates rule A
++    if example:
++        beta, tau, eps, y1, y6, y12, w12, w5, y4, y9, y14, w8, h1 = example
++        v = [int(x, 16) for x in (y1, y6, y12, w12, w5, y4, y9, y14, w8, h1)]
++        ea, eb = g_steps(v[0], v[1], d["Y11"], v[2], v[3], v[4]), g_steps(v[0], v[1], d["Y11B"], v[2], v[3], (v[4] + d["delta"]) & M32)
++        fa, fb = g_steps(d["Y3"], v[5], v[6], v[7], 0, v[8]), g_steps(d["Y3B"], v[5], v[6], v[7], 0, v[8])
++        residual = (ea["a2"] ^ fa["c2"] ^ eb["a2"] ^ fb["c2"], fa["a2"] ^ ea["c2"] ^ fb["a2"] ^ eb["c2"],
++                    fa["b2"] ^ ea["d2"] ^ fb["b2"] ^ eb["d2"], ea["b2"] ^ fa["d2"] ^ eb["b2"] ^ fb["d2"])
++        if any(residual) or fa["d1"] != v[9] or rule_a(v[9]) or ((d["Y3"] + v[5]) & d["qmask"]) != d["qvalue"]:
++            raise SystemExit("the example of a solution that violates rule A does not check (evidence/rule_a_sat_<eta>.txt)")
++        fails = [l for l, (mask, value) in zip(rule_text_all(), RULE_A[ETA]) if bin(v[9] & mask).count("1") & 1 != value]
++        t["rule_example_paragraph"] = (
++            f"A complete solution of the seven-word system with Y4 in the class that violates rule A, which can be checked "
++            f"by hand from 6.2: Y1 = {y1}, Y6 = {y6}, Y12 = {y12}, w12 = {w12}, w5 = {w5}, Y4 = {y4}, Y9 = {y9}, "
++            f"Y14 = {y14}, w15 = 0, w8 = {w8}. For these values the four residual words of 6.2 are zero, and h1 = {h1} "
++            f"does not satisfy rule A: {join(fails)} fail{'s' if len(fails) == 1 else ''}. Its outcome is tau = {tau}, "
++            f"eps = {eps} with beta = {beta}, one of the outcomes that the count leaves out. The E3 values are the solver's "
++            f"model for that outcome and the E1 values come from a second solver call. It shows that a collision need not "
++            f"satisfy rule A; it does not show that a message reaches such values.")
++        t["rule_example_state"] = "yes"
++    else:
++        t["rule_example_paragraph"] = (
++            "The solver's models that violate rule A are solutions of the E3 system of their outcomes, and each of these "
++            "outcomes has P1 > 0. No complete solution of the seven-word system that violates rule A is printed here.")
++        t["rule_example_state"] = "no"
++    return t
++
++
++def other_rule_sentence(best_eta):
++    """What is known about a rule A for the class with the largest count, from the thread that found rule A
++    (evidence/followup/pinB4_rules.txt); says so when nothing is."""
++    lead = ("With a batch of one stage the claim would be the same for both classes. Rule A and the two-stage batch of "
++            "this package were worked out, counted and checked for the class of the package only, and that is a second "
++            "reason why the other class is not used. ")
++    text = read(FOLLOWUP / "pinB4_rules.txt") or ""
++    greedy = re.search(r"greedy chain of further conditions: (.*)", text)
++    if not text.startswith(f"class {best_eta:08x}:") or not greedy:
++        return lead + f"For {hx(best_eta)} no rule of this kind is reported here. "
++    keeps = [(int(n), float(k)) for n, k in re.findall(r": (\d+) conditions keep ([\d.]+)", greedy.group(1))]
++    full = max((n for n, k in keeps if k >= 0.9999995), default=None)
++    nxt = dict(keeps).get(full + 1) if full else None
++    if not full or nxt is None:
++        return lead + f"For {hx(best_eta)} no rule of this kind is reported here. "
++    return (lead + f"For {hx(best_eta)} the thread that found rule A reports, from the same split of the E3 counts by the "
++            f"bits of h1, {WORDS[full]} conditions that keep all of the counted solutions of its list; the best further "
++            f"condition that it found keeps {math.floor(nxt * 1000) / 1000:.3f} of them. With {WORDS[full]} "
++            f"conditions a trial passes with probability 2^-{full}, so that more batches would run stage 2 than here; no "
++            f"batch was written or counted for that class, and no claim is derived for it. ")
++
++
++def draft_tokens(d, t):
++    """What changed against the unfiled draft that this package extends (DRAFT_BEFORE), from that draft's claim.json."""
++    text = read(RESEARCH / DRAFT_BEFORE / "blake3-r2" / "claim.json")
++    out = {"draft_present": "no", "draft_note": ""}
++    if not text:
++        return out
++    c = json.loads(text)
++    flat = " ".join(c["restrictions"]) + " " + " ".join(h["statement"] + " " + h["scope"] + " " + h["extrapolation"]
++                                                        for h in c["heuristics"])
++    charge = re.search(r"a batch is (\d+) operations .*? plus (\d+) loads and is charged, .*?, as (\d+) per trial", flat)
++    count = re.search(r"the count is ([\d,]+) times the uniform expectation", flat)
++    factor = re.search(r"\(2\^(\d+) = [\d,]+ times the rate of a uniform 128-bit value\)", flat)
++    same = (charge and count and factor and int(charge.group(3)) == PREVIOUS_CHARGE and count.group(1) == t["exact_total"]
++            and int(factor.group(1)) == LOG2_FACTOR and c["submission_state"] == "draft"
++            and f"eta = {hx(ETA)}" in flat)
++    if not same:
++        return out
++    before = c["claim"]["time_log2"]
++    out["draft_present"] = "yes"
++    out["draft_time"] = f"{before:.1f}"
++    out["draft_note"] = (
++        f"An earlier version of this package was prepared and not filed. It has the same constants, the same class "
++        f"(eta = {hx(ETA)}), the same count of {t['exact_total']} and the same assumed factor 2^{LOG2_FACTOR}, a batch of one "
++        f"stage with {charge.group(1)} operations and {charge.group(2)} loads, {PREVIOUS_CHARGE} charged operations per trial, "
++        f"and time_log2 {before:.1f}. Against it, four things are new here. (1) The batch has two stages: stage A, "
++        f"{t['stage_a_total']} operations with its loads, tests rule A, {t['rule_conditions']} bit conditions on one "
++        f"internal word; only a batch in which a trial passes runs stage 2, {t['stage_2_total']} operations. A trial is "
++        f"charged {t['charge']} operations, which lowers the claim by {before - d['time_log2']:.1f} to {t['time_log2']}. "
++        f"(2) The test of the second stage is another necessary condition, on one of the two calls alone (Lemma N), in "
++        f"place of the early test of Lemma E. (3) Rule A is not implied by a collision, so the figure that H1 is set "
++        f"against is smaller: {t['rule_count']}, the count without every outcome for which the solver found a solution "
++        f"that violates rule A ({t['rule_bad']} of {t['rule_outcomes']} outcomes, {t['rule_lost']} of the count). "
++        f"(4) A third heuristic, H3, is declared: at most {t['stage2_share_words']} of the batches enter stage 2, with a "
++        f"budget that the algorithm enforces. The budget on the passes of the second test is now 2^-{PASS_SHIFT} of the "
++        f"trials, and H2 and H3 are each allowed a failure probability of 0.0005. The declared advice is "
++        f"2^{ADVICE_LOG2} bytes, because the three constants of rule A are stored with the six constants and eta.")
++    return out
++
++
++def rule_text_all():
++    """One wording per condition of rule A, in the order of PART A (for naming the conditions that fail)."""
++    out = []
++    for mask, value in RULE_A[ETA]:
++        bits = [i for i in range(32) if mask >> i & 1]
++        out.append(f"\"bit {bits[0]} is {value}\"" if len(bits) == 1 else
++                   f"\"bits {bits[0]} and {bits[1]} {'differ' if value else 'are equal'}\"")
++    return out
++
++
++def read_followup_real():
++    """The follow-up's real trials in the layout of the algorithm, for the class and the rule of the package:
++    [(log2 trials, trials that satisfy rule A, trials that pass the E1 test, early-test passes)] per run, or []."""
++    text = read(FOLLOWUP / "real32_pinB3.txt") or ""
++    pin = " ".join(hx(PIN[k]) for k in ("X3", "X7", "X11", "X15", "W4", "W13"))
++    runs = []
++    for block in text.split("real: pin ")[1:]:
++        if not block.startswith(f"{pin}  eta {ETA:08x}"):
++            continue
++        m = re.search(r"STAT real trials 2\^([\d.]+)  bad 0\nSTAT real early test passes: (\d+) .*?E1 requires the eta of Y4: (\d+) .*?"
++                      r"contradictions \(must be 0\): 0\nSTAT real pass A6: (\d+) ", block)
++        if m:
++            runs.append((float(m.group(1)), int(m.group(4)), int(m.group(3)), int(m.group(2))))
++    return runs
++
++
++def read_followup_rules():
++    """From the follow-up's split of the E3 counts by the bits of h1 (pinB3_rules.txt): (outcomes, betas, rate over
++    its list, share of that rate kept by the rule of PART A), or None if the file is not for this class and rule."""
++    text = read(FOLLOWUP / "pinB3_rules.txt") or ""
++    m = re.search(rf"class {ETA:08x}: (\d+) outcomes with E1 probability > 0, (\d+) betas", text)
++    s = re.search(r"calculator's exact sum ([\d.]+)", text)
++    chain = re.search(r"^RULE_CHAIN (\S+)", text, re.M)
++    greedy = re.search(r"greedy chain of further conditions: (.*)", text)
++    if not (m and s and chain and greedy):
++        return None
++    conds = [(int(p.split(":")[0], 16), int(p.split(":")[1])) for p in chain.group(1).split(",")]
++    n = len(RULE_A[ETA])
++    if set(conds[:n]) != set(RULE_A[ETA]):
++        return None
++    k = re.search(rf": {n} conditions keep ([\d.]+)", greedy.group(1))
++    return k and (int(m.group(1)), int(m.group(2)), float(s.group(1)), k.group(1))
++
++
++def read_followup_sat():
++    """From the follow-up's solver file (pinB3_sat.txt): ({(beta, tau, eps): answer} for its rule A6, (outcomes
++    compared with ApproxMC, share of its rate they carry, mean, largest difference) or None)."""
++    text = read(FOLLOWUP / "pinB3_sat.txt") or ""
++    have = re.search(r"^# rule A6: (\S+)$", text, re.M)
++    if not have or set(have.group(1).split(",")) != {f"{m:08x}:{v}" for m, v in RULE_A[ETA]}:
++        return {}, None
++    ans = {(m.group(3), m.group(1), m.group(2)): m.group(4) for m in re.finditer(
++        r"^A6 ([0-9a-f]{8}) ([0-9a-f]{8}) ([0-9a-f]{8}) (SAT|UNSAT)", text, re.M)}
++    sel = re.search(r"AMC selection: the (\d+) outcomes with the largest contribution; they carry ([\d.]+) of the rate", text)
++    amc = re.search(r"SUMMARY approxmc: (\d+) outcomes with the largest contribution, (\d+) answered; log2\(exact / approxmc\): mean "
++                    r"([-+\d.]+), largest \|difference\| ([\d.]+)", text)
++    return ans, (sel and amc and (int(amc.group(2)), sel.group(2), amc.group(3), amc.group(4)))
++
++
++def read_followup_toy():
++    """The follow-up's scaled-down runs with staged tests: per word size (series, predicted, observed, series in which
++    every check line is clean, largest |deviation| of a series in Poisson standard deviations)."""
++    out = {}
++    for bits, name in ((8, "toy2_8.txt"), (10, "toy2_10.txt")):
++        text = read(FOLLOWUP / name)
++        if text is None:
++            continue
++        res = [(float(a), int(b)) for a, b in re.findall(r"with A and B: predicted ([\d.]+) observed (\d+)", text)]
++        plain = [(float(a), int(b)) for a, b in re.findall(r"no rejection: predicted ([\d.]+) observed (\d+)", text)]
++        clean = len(re.findall(r"Y4 wrong 0; .*collisions failing C 0; failing the old test 0; trials where a test word differs from "
++                               r"its residual identity 0; hits failing the full-hash check 0", text))
++        every = all(a == b for pair in re.findall(r"collisions per seed \(all / passing A and B\): (.*)", text)
++                    for a, b in (x.split("/") for x in pair.split()))
++        conds = [int(v) for v in re.findall(r"A2: (\d+) XOR conditions hold for all the class mass", text)]
++        subs = re.findall(r"RESULT W=\d+ T=(\d+)/(\d+) ka=-1 useb=2 ", text)
++        pins = set(re.findall(rf"{bits}-bit words; pin ([0-9a-f ]+);", text))
++        if res and res == plain and every and len(conds) == len(subs) == len(res):
++            out[bits] = (len(res), sum(p for p, _ in res), sum(o for _, o in res), clean,
++                         max(abs(o - p) / math.sqrt(p) for p, o in res), conds, sum(a != b for a, b in subs), len(pins))
++    return out
++
++
++def read_followup_batch():
++    """The follow-up's run of its own two-stage batch for this class (JSON line of night_batch4.py), or None."""
++    text = read(FOLLOWUP / "batch4_two_class_filed_1200000_s51.json")
++    if text is None:
++        return None
++    r = json.loads(text)
++    same = (r["eta"] == hx(ETA) and r["pin"] == [hx(PIN[k]) for k in ("X3", "X7", "X11", "X15", "W4", "W13")]
++            and sorted(r["A_rule_on_h1"]) == sorted(f"{m:08x}:{v}" for m, v in RULE_A[ETA]) and r["all_checks_pass"]
++            and r["B_test"].startswith("none") and r["convention"] == "filed")
++    return r if same else None
++
++
++def read_big_selftests():
++    """[(cases, seed, JSON)] of tools/selftest_big.sh for the program as it is now (same SHA-256, exit status 0)."""
++    import hashlib
++    now = hashlib.sha256(PROGRAM.read_bytes()).hexdigest()
++    out = []
++    for path in sorted(EVID.glob("selftest_*_*.json")):
++        lines = path.read_text(encoding="ascii", errors="replace").split("\n")
++        m = re.match(r"PROGRAM sha256 ([0-9a-f]{64}) exit (\d+) seconds (\d+)", lines[0])
++        if m and m.group(1) == now and m.group(2) == "0" and len(lines) > 1 and lines[1].startswith("{"):
++            r = json.loads(lines[1])
++            out.append((r["cases"], str(r["seed"]), r))
++    return out
++
++
++def followup_tokens(d, st):
++    """Section 10 on the two-stage batch: lanes checked, pass rates of rule A on real trials, the checks of the
++    rule by the thread that found it, and the scaled-down runs with staged tests. Every figure is read from a file."""
++    t = {}
++    # ---- lanes checked
++    big = read_big_selftests()
++    for cases, seed, r in big:
++        if not (r["lanes_right"] == r["lanes_checked"] == 7 * cases and r["counts_equal_table"] and r["same_counts_in_every_case"]
++                and r["sums_below_bounds"] and r["zero_lane_patterns_right"] == 128 and r["rule_a_patterns_right"] == 256
++                and (r["stage_a"], r["stage_2"]) == (st["stage_a"], st["stage_2"])):
++            raise SystemExit(f"a long self-test run does not report what the text states: evidence/selftest_{cases}_{seed}.json")
++    if big:
++        lanes = sum(7 * c for c, _, _ in big)
++        passing = sum(r["lanes_passing_rule_a"] for _, _, r in big)
++        entered = sum(r["batches_entering_stage_2"] for _, _, r in big)
++        cases = sum(c for c, _, _ in big)
++        zero = sum(r["zero_test_words"] for _, _, r in big)
++        top = max(r["largest_lane"] for _, _, r in big)
++        t["big_selftest_sentence"] = (
++            f"Longer runs of the same self-test, {join(f'N = {num(c)} with seed {s}' for c, s, _ in big)}, report "
++            f"{num(lanes)} of {num(lanes)} lanes right and the same counts in every batch; {num(passing)} lanes pass rule "
++            f"A, which is a share of 2^{math.log2(passing / lanes):.3f}, in {num(entered)} of the {num(cases)} batches, "
++            f"a share of {entered / cases:.4f} (every fourth batch of the self-test is the last batch of the class, whose "
++            f"seven lanes hold only {WORDS[d['rest']] if d['rest'] else 'seven'} different members, so this share is below that of a run); "
++            f"{'no' if zero == 0 else num(zero)} stage-2 test word is zero; the largest lane of a sum is {top / 2 ** 32:.3f} "
++            f"times 2^32, and at most {max(r['registers'] for _, _, r in big)} registers are in use.")
++        t["big_lanes"], t["big_runs"] = num(lanes), str(len(big))
++        t["big_note"] = f"{num(lanes)} lanes in longer runs of the program's self-test"
++        t["big_claim"] = f", and {num(passing)} of {num(lanes)} in longer runs"
++    else:
++        t["big_selftest_sentence"] = "No longer run of the self-test of this program is reported here."
++        t["big_lanes"], t["big_runs"], t["big_note"], t["big_claim"] = "0", "0", "", ""
++    fb = read_followup_batch()
++    if fb:
++        t["research_batch_sentence"] = (
++            f"The batch was first written and counted in the research program in which rule A was found, with the same "
++            f"machine and the same primitives: {num(fb['lanes_checked'])} lanes of this class, each compared with the "
++            f"complete digests of its two messages, all right; {fb['stage_A']['operations']} operations and "
++            f"{fb['stage_A']['loads']} loads for stage A and {fb['stage_B']['operations'] + fb['stage_C']['operations']} and "
++            f"{fb['stage_B']['loads'] + fb['stage_C']['loads']} for the rest, which is the stage 2 of this package without "
++            f"the count of its own entry; {num(fb['lanes_passing']['A'])} lanes passed rule A, in "
++            f"{num(fb['batches_entering']['stage_B'])} of {num(fb['cases'])} batches.")
++        t["research_lanes"] = num(fb["lanes_checked"])
++    else:
++        t["research_batch_sentence"] = ""
++        t["research_lanes"] = "0"
++
++    # ---- rule A on real trials
++    runs = read_followup_real()
++    if not runs:
++        raise SystemExit("no real-trial run with the pass rate of rule A for this class: H3 has no measured rate "
++                         "(evidence/followup/real32_pinB3.txt)")
++    lg = {r[0] for r in runs}
++    if len(lg) != 1:
++        raise SystemExit("the real-trial runs of rule A do not have one size")
++    per = 2.0 ** lg.pop()
++    n = len(runs)
++    total_trials = n * per
++    count = sum(r[1] for r in runs)
++    p = 2.0 ** -d["rule_conditions"]
++    sd = math.sqrt(per * p * (1 - p))
++    devs = [(r[1] - per * p) / sd for r in runs]
++    rate = math.log2(count / total_trials)
++    share = Fraction(1, 2 ** STAGE_2_LOG2_SHARE)
++    measured_share = 7 * count / total_trials
++    t.update(a_runs=WORDS[n] if n < len(WORDS) else str(n), a_run_trials=f"{math.log2(per):.0f}",
++             a_trials=f"{math.log2(total_trials):.0f}", a_count=num(count), a_rate=f"{rate:.4f}",
++             a_counts=join(num(r[1]) for r in runs), a_expected=num(per * p),
++             a_devs=join(z_text(z) for z in devs), a_dev_sum=z_text((count - total_trials * p) / math.sqrt(total_trials * p * (1 - p))),
++             a_rel=f"{max(abs(r[1] / (per * p) - 1) for r in runs):.1e}",
++             a_share=f"{up(measured_share, 5):.5f}",
++             a_margin=f"{math.floor(1000 * float(share) / measured_share) / 1000:.3f}",
++             a_e1_passes=num(sum(r[2] for r in runs)), a_e1_rate=f"{math.log2(sum(r[2] for r in runs) / total_trials):.2f}",
++             a_early_passes=num(sum(r[3] for r in runs)))
++    if float(share) / measured_share < 1.05:
++        raise SystemExit("the stage-2 budget is less than 5% above seven times the measured pass rate of rule A")
++
++    # ---- what rule A keeps, counted exactly for a shorter list; ApproxMC; the solver answers of the other thread
++    fr = read_followup_rules()
++    # the shorter list of that thread: the night's own per-beta file (the snapshot), if its sum is the sum of that thread
++    short_rows = read_total(ETA, longest=False)
++    short_sum = sum(r[3] for r in short_rows if r[3])
++    short_list = (f"the {num(len(short_rows))} lightest" if fr and abs(short_sum - fr[2]) < 1.0 else "a shorter list of")
++    t["rule_split_sentence"] = (
++        f"How much of the rate rule A really keeps was counted for a shorter list. The thread that found the rule split "
++        f"the E3 count of every outcome by the bits of h1, with a program of its own, for the {fr[0]} outcomes of the "
++        f"{fr[1]} betas with a part among {short_list} betas, whose parts add up to {num(fr[2])}: rule A keeps {fr[3]} of "
++        f"that sum. The figure that the claim uses keeps less, because it gives up every outcome with a violating "
++        f"solution in full." if fr else
++        "How much of the rate rule A really keeps, outcome by outcome, was not counted for this class and rule.")
++    t["rule_split_kept"] = fr[3] if fr else "not counted"
++    ans, amc = read_followup_sat()
++    mine = {k: v["VIOLATE"][0] for k, v in read_rule_sat()[0].items()}
++    if ans:
++        if any(mine.get(k) != v for k, v in ans.items()):
++            raise SystemExit("the solver answers of the follow-up thread and of tools/rule_a_sat.py differ for an outcome")
++        t["rule_sat_other"] = (
++            f"The same question had been put to the solver before, by the thread that found the rule, for the {len(ans)} "
++            f"outcomes of that shorter list: its answers, {sum(v == 'UNSAT' for v in ans.values())} without and "
++            f"{sum(v == 'SAT' for v in ans.values())} with a violating solution, are the same as those above for every one "
++            f"of these outcomes.")
++    else:
++        t["rule_sat_other"] = ""
++    t["rule_amc_sentence"] = (
++        f"That thread also compared the E3 count N3 with the approximate model counter ApproxMC (tolerance 0.4, "
++        f"confidence 0.9) on the CNF of the same E3 system, for the {amc[0]} outcomes with the largest products of its "
++        f"list, which carry {amc[1]} of its sum: the mean of log2(N3 / ApproxMC) is {amc[2]} and the largest difference "
++        f"{amc[3]} bits." if amc else "")
++    t["rule_amc_note"] = (f"ApproxMC agrees with the E3 counts of the {amc[0]} heaviest outcomes within {amc[3]} bit" if amc else "")
++
++    # ---- scaled-down runs with staged tests
++    toy = read_followup_toy()
++    if toy:
++        bits = sorted(toy)
++        desc = []
++        conds = [c for b in bits for c in toy[b][5]]
++        halves, series_all = sum(toy[b][6] for b in bits), sum(toy[b][0] for b in bits)
++        for b in bits:
++            series, pred, obs, clean, worst = toy[b][:5]
++            if clean != series:
++                raise SystemExit("a scaled-down run with staged tests reports a failed check (evidence/followup/toy2_*.txt)")
++            desc.append(f"with {b}-bit words, {series} series: {num(obs)} collisions against {pred:,.1f} predicted, "
++                        f"{z_text((obs - pred) / math.sqrt(pred))} standard deviations of a Poisson count"
++                        + (f" (single series up to {worst:.1f})" if series > 1 else ""))
++        t["toystage_paragraph"] = (
++            "**Scaled-down runs with staged tests (participant computation, other constants).** The thread that found "
++            "rule A repeated the scaled-down class search of the kind described above with tests placed in front of the "
++            "residual computation: a rule on the bits of h1, a rule on beta, and the E1 test of Lemma N, on the toy hash "
++            "described above, with " + join(f"{WORDS[toy[b][7]]} constant set{'s' if toy[b][7] != 1 else ''} at {b} bits" for b in bits)
++            + ". The rule on h1 used there is not rule A. It is made of the XOR "
++            "conditions on bits of h1 that every solution of the class satisfies, found by brute force for each constant "
++            f"set; there are between {WORDS[min(conds)]} and {WORDS[max(conds)]} of them, and such a rule loses nothing. "
++            f"{WORDS[halves].capitalize()} of the {WORDS[series_all] if series_all < len(WORDS) else series_all} series also "
++            "restrict Y4 to half of the class, and all use the rule on beta; this package does neither. A trial "
++            "that fails a test is dropped, and the prediction is the brute-force count of the solutions that pass. "
++            "Results: " + "; ".join(desc) + ". In every series every collision found passed the rules and the E1 test, "
++            "the E1 test word of every trial was equal to the word D3 XOR ROL(D6, r) of its residual, where r is the toy's "
++            "third rotation (Lemma N for the toy hash), no "
++            "trial had a Y4 outside its class, and no collision failed the full re-hash. These runs test the logic of "
++            "dropping trials early and Lemma N, end to end and down to collisions, at small word sizes. They do not test "
++            "rule A of this package, which has six conditions and loses solutions, and they are not evidence about its "
++            "constants.")
++        t["toystage_note"] = ("scaled-down runs with staged tests of the lossless kind: "
++                              + "; ".join(f"{num(toy[b][2])} collisions against {toy[b][1]:,.1f} predicted at {b} bits" for b in bits))
++        t["toystage_claim"] = (" Scaled-down runs with tests in front of the residual, a lossless rule on h1 and the "
++                               "E1 test, found " + " and ".join(f"{num(toy[b][2])} collisions against {toy[b][1]:,.1f} predicted at {b} bits"
++                                                              for b in bits) + "; they do not test rule A itself.")
++    else:
++        t["toystage_paragraph"], t["toystage_note"], t["toystage_claim"] = "", "", ""
++    return t
++
++
+ def main():
+     if "--recount-env" in sys.argv:
+         d = derive()

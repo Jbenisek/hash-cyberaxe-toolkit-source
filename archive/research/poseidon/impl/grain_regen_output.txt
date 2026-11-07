@@ -1,0 +1,2 @@
+regenerated round constants match deployed: True | first-row match count: 192
+regenerated MDS (Cauchy 1/(x_i+y_j), draws mod p) matches deployed: True

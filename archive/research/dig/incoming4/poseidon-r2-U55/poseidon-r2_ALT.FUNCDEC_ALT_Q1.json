@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FUNCDEC (ALT)",
+ "question": "Q1: is F_j at r=2 functionally decomposable: inner degrees tested",
+ "labels": [
+  "N"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "No decomposition. Earlier runs: inner 5, 25, 125 at r=2 for j=0,1,2 (levels/decomp/RESULT.md). New today, j=0, validated tool: inner 625: 624 of 626 digits nonconstant (16 s); inner 3125: 124 of 126 digits nonconstant (16 s); inner 15625: 24 of 26 digits nonconstant (104 s). 78125 was started and stopped by me after the 3-minute limit (no result, OPEN). Remaining proper inner degrees of 5^8 not yet run: 78125; j=1,2 at those degrees OPEN.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testD_real_j0.txt; research/poseidon/levels/decomp/RESULT.md; research/poseidon/math/decomp_625_3125.md; research/poseidon/levels/decomp/decomp.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FUNCDEC|ALT|Q1. Kozen-Landau test on the real F (flint), tame case so one candidate per degree is exhaustive; tool validated by planted decompositions at r=1 (math/decomp_625_3125.md) and by the earlier controls. Planted control at r=2 degree: see Q3.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated; j=0 for the new degrees",
+ "reopen_if": "any inner degree of 5^8 returns zero nonconstant digits",
+ "topic": "poseidon-r2 FUNCDEC"
+}

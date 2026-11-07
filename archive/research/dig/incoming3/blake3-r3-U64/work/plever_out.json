@@ -1,0 +1,47 @@
+[
+ {
+  "t": 887398322,
+  "site": 100,
+  "ops": 594,
+  "ok_trace": true,
+  "end_to_end_vs_verifier_r3": true,
+  "tl2": 125.10615521403395,
+  "gain": 0.00240853485516368
+ },
+ {
+  "t": 214938249,
+  "site": 12,
+  "ops": 594,
+  "ok_trace": true,
+  "end_to_end_vs_verifier_r3": true,
+  "tl2": 125.10615521403395,
+  "gain": 0.00240853485516368
+ },
+ {
+  "t": 639130335,
+  "site": 14,
+  "ops": 594,
+  "ok_trace": true,
+  "end_to_end_vs_verifier_r3": true,
+  "tl2": 125.10615521403395,
+  "gain": 0.00240853485516368
+ },
+ {
+  "t": 939343106,
+  "site": 100,
+  "ops": 594,
+  "ok_trace": true,
+  "end_to_end_vs_verifier_r3": true,
+  "tl2": 125.10615521403395,
+  "gain": 0.00240853485516368
+ },
+ {
+  "t": 508565131,
+  "site": 13,
+  "ops": 594,
+  "ok_trace": true,
+  "end_to_end_vs_verifier_r3": true,
+  "tl2": 125.10615521403395,
+  "gain": 0.00240853485516368
+ }
+]

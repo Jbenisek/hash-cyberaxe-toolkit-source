@@ -1,0 +1,23 @@
+{
+  "id": "D477-POSEIDON-R2-HALF-TABLE-INTEGRATION-AUDIT-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 MEM.TWID half-table source integration boundary",
+  "question": "Can D462's half twiddle table replace the checked-in table without a kernel rewrite?",
+  "labels": ["N", "D", "S"],
+  "status": "COMPUTED",
+  "number": "The checked-in ntt_kern.h has 16 inline kernels, 30 direct nonzero twiddle address loads, 10 zero-index base loads, and 64 pointer walks. Raw const fp* twiddle pointers are passed to BF/IB, so a half table either must be fully materialized or requires rewriting all generated kernels to reconstruct odd entries.",
+  "source": "Own read-only source audit of the checked-in lean_r2 generated NTT kernels",
+  "own_test": true,
+  "evidence": "research/poseidon/orchard/lean_r2/ntt_kern.h; research/retest/poseidon_r2/D462_half_table_kat.py; research/sol_answer_D459_poseidon_r2_twiddle_alternatives.md; research/sol_answer_D477_poseidon_r2_half_table_integration_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "UNKNOWN (read-only source audit; no process launched)",
+  "notes": "D462's 1,048,576-byte arithmetic saving remains conditional. A rebuilt accessor/rewrite needs full-attack KAT, exact operation ledger, register/spill proof, and peak measurement. No package/stage/submit.",
+  "held_fixed": "Exact checked-in ntt_kern.h generated kernel structure and D462 half-table identity",
+  "reopen_if": "A rewritten half-table kernel and full charged KAT are built"
+}

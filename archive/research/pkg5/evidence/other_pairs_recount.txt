@@ -1,0 +1,20 @@
+CASE filed-e96d6d6b-953908d0: D3 6d59272d D11 708af931 delta 00000002 Y3 c952ec69 Y11 31fc40b2 eta e96d6d6b beta 953908d0
+PAIR e96d6d6b 953908d0 wt_eta 20 wt_beta 11 cap 31 taus 1658880 passing 1152 positive 61 sampled 0  E1 probability of passing 2^-31.8  class-rate part 1572.6 (log2 10.62)  largest share 0.33
+EXACT-E1 e96d6d6b 953908d0 Y11 31fc40b2: E1 probability of the positive outcomes 2^-33.1  class-rate part 6164.7 (log2 12.59)  largest share 0.33  formula fallbacks 0
+DONE filed-e96d6d6b-953908d0 exit 0 seconds 21
+CASE filed-e96d6d6b-953f08d0: D3 6d59272d D11 708af931 delta 00000002 Y3 c952ec69 Y11 31fc40b2 eta e96d6d6b beta 953f08d0
+PAIR e96d6d6b 953f08d0 wt_eta 20 wt_beta 13 cap 31 taus 3317760 passing 3648 positive 173 sampled 7  E1 probability of passing 2^-30.3  class-rate part 209.8 (log2 7.71)  largest share 0.15
+EXACT-E1 e96d6d6b 953f08d0 Y11 31fc40b2: E1 probability of the positive outcomes 2^-33.3  class-rate part 945.7 (log2 9.89)  largest share 0.54  formula fallbacks 0
+DONE filed-e96d6d6b-953f08d0 exit 0 seconds 91
+CASE filed-e96d6d6b-95390bd0: D3 6d59272d D11 708af931 delta 00000002 Y3 c952ec69 Y11 31fc40b2 eta e96d6d6b beta 95390bd0
+PAIR e96d6d6b 95390bd0 wt_eta 20 wt_beta 13 cap 31 taus 3981312 passing 6984 positive 61 sampled 1  E1 probability of passing 2^-30.5  class-rate part 54.1 (log2 5.76)  largest share 0.30
+EXACT-E1 e96d6d6b 95390bd0 Y11 31fc40b2: E1 probability of the positive outcomes 2^-37.3  class-rate part 15.4 (log2 3.95)  largest share 0.52  formula fallbacks 0
+DONE filed-e96d6d6b-95390bd0 exit 0 seconds 141
+CASE filed-e96d7579-953908d0: D3 6d59272d D11 708af931 delta 00000002 Y3 c952ec69 Y11 31fc40b2 eta e96d7579 beta 953908d0
+PAIR e96d7579 953908d0 wt_eta 20 wt_beta 11 cap 31 taus 1658880 passing 680 positive 100 sampled 0  E1 probability of passing 2^-30.7  class-rate part 590.7 (log2 9.21)  largest share 0.11
+EXACT-E1 e96d7579 953908d0 Y11 31fc40b2: E1 probability of the positive outcomes 2^-31.9  class-rate part 2549.9 (log2 11.32)  largest share 0.30  formula fallbacks 0
+DONE filed-e96d7579-953908d0 exit 0 seconds 9
+CASE pinA-31b13fea-c93210a5: D3 3ae5f151 D11 1ef63391 delta 00000002 Y3 628da757 Y11 d0b4e857 eta 31b13fea beta c93210a5
+PAIR 31b13fea c93210a5 wt_eta 18 wt_beta 12 cap 31 taus 1769472 passing 300 positive 72 sampled 0  E1 probability of passing 2^-31.9  class-rate part 128493.0 (log2 16.97)  largest share 0.17
+EXACT-E1 31b13fea c93210a5 Y11 d0b4e857: E1 probability of the positive outcomes 2^-32.4  class-rate part 106520.0 (log2 16.70)  largest share 0.20  formula fallbacks 0
+DONE pinA-31b13fea-c93210a5 exit 0 seconds 29

@@ -1,0 +1,22 @@
+{
+  "id": "D787-B3Z2-GATE9-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3Z2 30-bit xg gate factorization",
+  "question": "Does the checked-in xg_entry gate factor exactly through a 9-bit key and a 512-entry LUT?",
+  "labels": ["C", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact projection audit covers all 512 keys with valid 30-bit witnesses. Scalar and LUT agree on 2,097,160 deterministic addresses with zero mismatches; source selftest n=128 has identical JSON, gate drills, return code 0, and ok=true.",
+  "source": "our workflow: D787 preregistered B3Z2 gate9 audit",
+  "own_test": true,
+  "evidence": "research/prereg_D787_b3z_gate9.md; research/retest/b3z_gate9/d787_gate9_audit.py; research/sol_answer_D787_b3z_gate9_audit.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "memory/function factorization only; charged ledger not retallied",
+  "peak_mem": "not separately metered; one Python process; 512-entry LUT",
+  "held_fixed": "frontline.py source by value; S7; xg_entry AST precedence; selftest n=128; scalar gate as reference",
+  "notes": "The exact key is r=i&127, eq=(((i>>8)&255)==(i>>22)), sel=(i>>(16+((i>>20)&3)))&1. No package modification or score credit.",
+  "reopen_if": "An independently charged ledger re-tally, source-level drop-in build, or organizer ruling is available."
+}

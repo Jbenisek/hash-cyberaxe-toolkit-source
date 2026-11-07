@@ -1,0 +1,21 @@
+{
+  "id": "D394-OPEN-QUEUE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "D253 live OPEN-queue audit",
+  "question": "Which newest-value-first OPEN cells are runnable locally without duplicating owner work or relying on missing organizer inputs?",
+  "labels": ["I", "S"],
+  "status": "OPEN",
+  "number": "No new score; top actionable cells remain blocked or owner-assigned. D393 maximum observed component RSS is 35213312 bytes.",
+  "source": "our workflow: D253 queue audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D394_open_queue_audit.md; research/dig/OPEN.md; research/memtriage/SUMMARY.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": null,
+  "prior": null,
+  "peak_mem": 35213312,
+  "notes": "B3M items need organizer output/memory rulings; r38 Table-4 needs Luna cloud input; r37 characteristic-search items lack the owner driver; SHA3-r6 alternatives are D180-owned. Participant Grok artifacts were not run. No package/staging/submission action."
+}

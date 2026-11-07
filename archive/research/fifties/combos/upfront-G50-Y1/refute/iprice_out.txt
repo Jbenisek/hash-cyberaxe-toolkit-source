@@ -1,0 +1,44 @@
+checks 5501 {'scalar_n': 16384, 'scalar_mm': 0, 't_n': 16384, 't_mm': 0, 'fl_n': 16384, 'fl_mm': 0} |  6602 {'scalar_n': 16384, 'scalar_mm': 0, 't_n': 16384, 't_mm': 0, 'fl_n': 16384, 'fl_mm': 0}
+N check 6022417582191478187278 score 63.6026 per-context 4925386 once share 0.00148
+shares {'rep': 0.0352, 'ctx': 0.0001, 'open': 0.5623, 'E': 0.0579, 'fill': 0.1519, 'pass': 0.0494, 'solver': 0.1432}
+per-context implied: openings 7526.3  E 28530.5  fills 12466.0  passes 519.95  credit 705291
+--- seed 5501 n 2048
+opened mean 7346.9 sd 452.5 CV 0.0616 | passes mean 515.9 CV 0.3966 | CV ratio 0.155
+corr(opened, pilot) +0.0190  corr(opened, passes) +0.0069  corr(pilot, passes) 0.9303
+closed-cluster hits (must be 0): 0  passes outside opened (must be 0): 0
+mean fills 12352.4 (H_G_cluster 12466)  mean e_lanes 28392.9  mean calls 129.26  opened share 0.44842
+--- seed 6602 n 2048
+opened mean 7339.2 sd 458.5 CV 0.0625 | passes mean 517.2 CV 0.3895 | CV ratio 0.160
+corr(opened, pilot) -0.0335  corr(opened, passes) -0.0366  corr(pilot, passes) 0.9179
+closed-cluster hits (must be 0): 0  passes outside opened (must be 0): 0
+mean fills 12400.5 (H_G_cluster 12466)  mean e_lanes 28427.9  mean calls 129.08  opened share 0.44795
+--- pooled n 4096
+opened mean 7343.0 sd 455.5 CV 0.0620 | passes mean 516.5 CV 0.3930 | CV ratio 0.158
+corr(opened, pilot) -0.0074  corr(opened, passes) -0.0149  corr(pilot, passes) 0.9241
+closed-cluster hits (must be 0): 0  passes outside opened (must be 0): 0
+mean fills 12376.4 (H_G_cluster 12466)  mean e_lanes 28410.4  mean calls 129.17  opened share 0.44818
+=== keep top half by pilot within each seed (rank rule, as the claim) ===
+u 11: q 0.500 R 1.3019 gain 0.2102 bit (open flat 0.2104)  63.6026 -> 63.3924
+u 25: q 0.500 R 1.3019 gain 0.2028 bit (open flat 0.2029)  63.6026 -> 63.3998
+u 40: q 0.500 R 1.3019 gain 0.1949 bit (open flat 0.1950)  63.6026 -> 63.4078
+  kept/all opened       1.0002
+  kept/all e_lanes      1.2986
+  kept/all fills        1.2922
+  kept/all passes_open  1.3019
+  kept/all calls_open   1.3035
+=== preregistered threshold: t = median pilot of one seed, applied to the other seed ===
+train 5501 t=54 -> test 6602: q 0.517 R 1.2861 gain(u=11) 0.2012
+train 5501 t=54 -> test 6602: q 0.517 R 1.2861 gain(u=25) 0.1939
+train 6602 t=55 -> test 5501: q 0.499 R 1.3083 gain(u=11) 0.2132
+train 6602 t=55 -> test 5501: q 0.499 R 1.3083 gain(u=25) 0.2057
+bootstrap gain(u=11) mean 0.2100 se 0.0029
+=== T mix per call (kept vs rejected half) ===
+calls kept 344829 rejected 184263
+  tau 0 (175020a0): kept 0.0674 rejected 0.0674  diff +0.0000 (0.0 se)
+  tau 1 (185020a0): kept 0.5883 rejected 0.5869  diff +0.0014 (1.0 se)
+  tau 2 (275020a0): kept 0.0663 rejected 0.0660  diff +0.0003 (0.4 se)
+  tau 3 (285020a0): kept 0.0364 rejected 0.0371  diff -0.0007 (-1.2 se)
+  tau 4 (385020a0): kept 0.4412 rejected 0.4389  diff +0.0022 (1.6 se)
+  tau 6 (685020a0): kept 0.0724 rejected 0.0720  diff +0.0004 (0.5 se)
+mean CT[T] per call kept 8667.4 rejected 8647.8 ratio 1.0023
+calls per pass kept 0.25037 rejected 0.24951 ratio 1.0034

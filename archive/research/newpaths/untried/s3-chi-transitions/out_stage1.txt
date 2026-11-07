@@ -1,0 +1,8 @@
+words 1157 weights {6: 120, 8: 1037}
+0 {'w': 0, 'wt': 8, 'k_chi1_gens': 16, 'chi1_rows': 8, 'chi1_multi_rows': 0, 'w3_stop': 88, 'n_kp': 256, 'kp_minK': 80, 'kp_maxK': 179, 'kp_minA2': 8, 'n_enum': 4096, 'nonkp_minK': 109, 'nonkp_medK': 197.0, 'nonkp_minA2': 17} 0.0
+200 {'w': 200, 'wt': 8, 'k_chi1_gens': 16, 'chi1_rows': 8, 'chi1_multi_rows': 0, 'w3_stop': 68, 'n_kp': 256, 'kp_minK': 60, 'kp_maxK': 143, 'kp_minA2': 8, 'n_enum': 4096, 'nonkp_minK': 95, 'nonkp_medK': 182.0, 'nonkp_minA2': 17} 4.7
+400 {'w': 400, 'wt': 8, 'k_chi1_gens': 16, 'chi1_rows': 8, 'chi1_multi_rows': 0, 'w3_stop': 78, 'n_kp': 256, 'kp_minK': 70, 'kp_maxK': 163, 'kp_minA2': 8, 'n_enum': 4096, 'nonkp_minK': 99, 'nonkp_medK': 189.0, 'nonkp_minA2': 17} 10.4
+600 {'w': 600, 'wt': 8, 'k_chi1_gens': 16, 'chi1_rows': 8, 'chi1_multi_rows': 0, 'w3_stop': 78, 'n_kp': 256, 'kp_minK': 70, 'kp_maxK': 152, 'kp_minA2': 8, 'n_enum': 4096, 'nonkp_minK': 111, 'nonkp_medK': 184.0, 'nonkp_minA2': 15} 15.9
+800 {'w': 800, 'wt': 8, 'k_chi1_gens': 16, 'chi1_rows': 8, 'chi1_multi_rows': 0, 'w3_stop': 88, 'n_kp': 256, 'kp_minK': 69, 'kp_maxK': 159, 'kp_minA2': 8, 'n_enum': 4096, 'nonkp_minK': 124, 'nonkp_medK': 206.0, 'nonkp_minA2': 15} 21.4
+1000 {'w': 1000, 'wt': 6, 'k_chi1_gens': 12, 'chi1_rows': 6, 'chi1_multi_rows': 0, 'w3_stop': 56, 'n_kp': 64, 'kp_minK': 50, 'kp_maxK': 118, 'kp_minA2': 6, 'n_enum': 4096, 'nonkp_minK': 89, 'nonkp_medK': 190.0, 'nonkp_minA2': 13} 26.9
+{"words": 1157, "kp_variants_total": 273152, "w3_stop_min": 56, "kp_minK_min": 50, "kp_minK_hist": [50, 54, 55, 58, 59, 60, 64, 68, 69, 70, 74, 75], "nonkp_minK_min": 67, "nonkp_medK_median": 189.0, "n_kp_hist": {"64": 120, "256": 1037}, "multi_row_words": 0, "secs": 30.9}

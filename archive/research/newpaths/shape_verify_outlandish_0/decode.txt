@@ -1,0 +1,6 @@
+real_out0_k16.kout: 16 guesses ['m0', 'm1', 'm10', 'm11', 'm12', 'm13', 'm14', 'm15', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9']
+  all 128 words determined: True; F = 15; checks = 1; check equations: ['out0']
+toy_r1_out0_k15.kout: 15 guesses ['m0', 'm1', 'm10', 'm11', 'm12', 'm14', 'm15', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9']
+  all 80 words determined: True; F = 15; checks = 0; check equations: []
+toy_r1_out0_out2_out5_k13.kout: 13 guesses ['D0.a1', 'D0.a2', 'D0.b1', 'D0.b2', 'D0.c1', 'D1.a1', 'D1.a2', 'D1.b1', 'D1.b2', 'D1.c1', 'D3.a1', 'D3.a2', 'D3.b1']
+  all 80 words determined: True; F = 13; checks = 0; check equations: []

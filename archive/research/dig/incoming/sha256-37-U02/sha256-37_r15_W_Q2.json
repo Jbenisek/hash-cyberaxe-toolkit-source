@@ -1,0 +1,20 @@
+{
+ "hash": "sha256-37",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "row_i": 15,
+ "row_j": 15,
+ "object": "row15 W15 cell u at bit 29 (==u...)",
+ "question": "Q2: drop W15[29] singly: row-15 local count over all 2^32 W15 and the next necessary conditions",
+ "labels": [
+  "D",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Dropping the u at W15[29] while keeping the = at bits 30,31 and dW15=e0000000: L0 131,072 / L1 4,096 / L2 32, identical to the printed cell (131,072 / 4,096 / 32). Implied: x bit 29 = 0 makes y = x + e0000000 differ in bits 29,30,31, so the = at bits 30,31 already force bit 29 = 1. Dropping the whole W15 cell (all of bits 29..31) doubles L0 to 262,144 but L1 stays 4,096 and L2 32.",
+ "evidence": "research/dig/incoming/sha256-37-U02/work/row15.c; research/dig/incoming/sha256-37-U02/work/row15_full.txt",
+ "notes": "Universe cell sha256-37|r15|W|Q2. Same enumeration and validation as the E record; W15 is a base word with no expansion equation; the 32 l are reproduced at L2. Row-local model with rows 11..14 held."
+}

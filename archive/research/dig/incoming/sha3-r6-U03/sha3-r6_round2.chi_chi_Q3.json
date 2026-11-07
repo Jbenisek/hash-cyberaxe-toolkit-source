@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "1-indexed round 3 chi + theta4 parities (leader chi3 block, 53.30 ops/message); 140-bit key = digest lanes 0..3 at z in KEEP (35 planes)",
+ "question": "How many bits of freedom (log2) are left through the chi3 block?",
+ "labels": [
+  "N",
+  "I"
+ ],
+ "status": "SAMPLED",
+ "number": "32.0 bits per group (z), no loss at chi3: 262,137 distinct z gave 262,137 distinct chi3 outputs (2^18 sample); family total 1024-256 = 768 bits before the key (140-bit key keeps 140; 12 bits above the 128 needed)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/sha3-r6-U03/work/ (kk.py validated 24r vs hashlib and 6r vs organizer verifier; cone.py, fam.py, fp.py, q.py; cone.json, footprint.json, q_results.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell round2.chi|Q3. Family = leader's 128-byte prefix family rebuilt by us (L8=0, L5=L15=D0, C2=NOT rotl(C4,1); z XORed into lanes 4 and 14): A2 affine in z checked 30x256, z-flip support 22 words (matches Lemma 3). chi3 and the whole 3-round prefix is a bijection of the 1600-bit state, so the 2^32 z values per group stay distinct exactly (BEDROCK argument); sample confirms. A2 is affine with 32 independent directions (E_j have disjoint supports). 256 = four lane equations (64 each). Exact count over all 2^32 z not enumerated; the bijection argument covers it.",
+ "topic": "sha3r6 round2.chi Q3"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "submissionId": "0a9640ed-558a-4f0a-aba8-45e89ffcfd7c",
+    "rationale": "Our own entry for blake3 round 3 (124.96822, bit-sliced 256-lane chain step with a declared register file). This entry keeps its program, relation, trail-and-table search, handlers, recovery walk, ledger method, restated Lemma 2 and premise experiments, and changes the message to a two-block message with a fixed first block P whose chaining value removes one addition from the circuit (generator constants, recovery circuit, ledger, scan).",
+    "evidence": "proof.md first paragraph, Sections 1, 2, 3.2, 3.3, 3.4, 8 and Appendix A."
+  },
+  {
+    "submissionId": "fc39027a-518f-464f-b88b-71675941ffdc",
+    "rationale": "Our own entry for blake3 round 3 with a fixed first block P (125.09556, still in review when this entry was prepared): the two-block message mode (H4), the prefix condition (A1 + B2) mod 2^32 = 0, the scan for P and its charging as preprocessing and nonuniform advice are taken from it.",
+    "evidence": "proof.md Sections 1 and 8 and the H4 heuristic of claim.json."
+  }
+]

@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R2D1.q3 (a2,d2)",
+ "question": "Q2 necessity: delete or bypass each op of this quarter-step (pass operand A, pass operand B, or zero) and recount whether the digest is still right",
+ "labels": [
+  "C"
+ ],
+ "status": "BEDROCK",
+ "number": "7 of 8 ops are individually necessary on 350 random and adversarial batches (every deletion variant gives a wrong digest on the first batch). The exception under that test is the internal mask (op 507): removing it passes all 350 batches (random inputs never reach the lane limit). A hill climb then found message words [3515313895, 4199922139, 4268841014, 4157659510, 4261819250, 559413089, 2883805668, 812809495] whose pre-mask sum a+b is 16.097 units >= 16; with the mask removed the packed circuit gives a wrong digest in the neighbouring lane for that witness placed in lane 1, 3 and 5 (wrong lanes 2, 4, 6), and the shipped circuit is right in all three. So all 8 ops are necessary; the mask is necessary by an explicit witness.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/_b3r3_work/q2_mutate.py; research/dig/incoming3/_b3r3_work/q2_mutate.json; research/dig/incoming3/_b3r3_work/hc.py; research/dig/incoming3/_b3r3_work/hc_507.json; research/dig/incoming3/_b3r3_work/verify_witness.py; research/dig/incoming3/_b3r3_work/verify_witness_507.json; research/dig/incoming3/_b3r3_work/smt_mask.py; research/dig/incoming3/_b3r3_work/smt_mask_507.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "z3 on the same question (some add >= 2^36 with the mask removed) returned unknown after 122 s; the witness came from the numpy hill climb (3594 generations, population 32768, 150 s) and is checked on the real packed circuit.",
+ "held_fixed": "Held fixed: the shipped 595-op circuit (research/blake3_r3/candidate_blake3/experiments/rho.py: 7 lanes x 36 bits, ops add/and/or/xor/shl/shr, constants folded) re-derived by our own tracer b3core.py (595 ops; equals the scalar 3-round digest on 300+ batches; scalar core equals verifier/blake3.py on 3 and 7 rounds and the official 7-round fixture). Single deletion of one op at a time; three replacement variants; 350 batches (300 random, 50 adversarial: all-ones, alternating, 0x7fffffff, 0x80000000 words).",
+ "reopen_if": "none for this mask (the witness is a proof); only a different circuit with a tighter lane-bound proof could remove it"
+}

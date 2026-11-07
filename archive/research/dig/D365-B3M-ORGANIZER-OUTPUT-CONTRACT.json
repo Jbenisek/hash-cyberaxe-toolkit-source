@@ -1,0 +1,22 @@
+{
+  "id": "D365-B3M-ORGANIZER-OUTPUT-CONTRACT",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M organizer message-pair output contract",
+  "question": "Does the checked-in organizer protocol accept a partial/streamed message response, and what does it actually buffer?",
+  "labels": ["N", "D", "S", "I"],
+  "status": "COMPUTED",
+  "number": "python-message-pairs-v1 requires one strict JSON document with every trial and complete message_a_hex/message_b_hex fields (or two nulls); runner buffers stdout, counts combined stdout/stderr against max_output_bytes, then validates and reruns byte-identically. Defaults: 4096-byte messages, 2 MiB output, 20 s, 128 MiB.",
+  "source": "our workflow: dig b3m-organizer-contract",
+  "own_test": true,
+  "evidence": "research/sol_answer_D365_b3m_organizer_output_contract.md; hash-smash/experiments/runner.py; hash-smash/docs/HEURISTIC_EXPERIMENTS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Source-level protocol result only. It narrows the experiment response contract but does not rule on production sink acceptance, participant RSS, emitted-byte liveness, allocator pages, or output/search phase overlap; D339 remains OPEN.",
+  "held_fixed": "Checked-in runner, manifest schema, strict JSON validator, and default ExperimentLimits",
+  "reopen_if": "Organizer protocol or production memory-accounting rules change, or a byte-identified production sink KAT is supplied",
+  "peak_mem": "UNKNOWN"
+}

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "REFUTED: lane_cost/F1-recovery-undercharge (ruling 77715f8b, blake3-pareto, exploratory lane, policy paired-lanes-v1)",
+ "question": "R2 own recount: what the recovery step needs per batch, and the time at each price",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Needed per two-lane recovery batch: 595 + 26 (lane-equality test) + 3 (loop) = 624 operations; the ruling's quote says the entry budgeted 595 + 24 + 1 = 620, which is 4 below the need: the finding is correct on the counts. Ledger at each price (capr batches, +600): 620 -> 125.10808 (the claim 125.1081 reproduced); 624 -> 125.10813; 659 (filed, 595 + 64) -> 125.10856, claimed as 125.1087 with 1.3e-4 slack. The fix cost +0.00048 bit.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|JUDGE.JRECOV|JUDGE|R2. Recount of the ruling's quoted proof lines against rho.py; ruling files under research/blake3_r3/ruling_77715f8b were read only for the finding text (reasons list lane_cost/F1-recovery-undercharge).",
+ "held_fixed": "ledger of the filed entry; ruling 77715f8b",
+ "reopen_if": "a further ruling on recovery cost (the one-lane phase priced at the two-lane figure is already inside 659)",
+ "gain_basis": "T"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "D282-SHA256-R38-SECOND-PAIR-AUDIT",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 37,
+  "object": "second full 38-step collision profile and local row-16/17/18 replay",
+  "question": "Does the second archived profile satisfy the full corrected characteristic and state collision, and does its local row-16/17/18 count match the published profile?",
+  "labels": ["C", "S", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "Independent replay: Table-3 cells 0 failures; 13/13 plus links; corrected Table-4 47/47 for each member; support {7,8,9,10,11,15,16,23,25}; distinct messages; state equality rows 34-37; feed-forward equal to 614d0b44 0d272005 713bab9e 4fc8e2a1 126b7229 bbb45050 0d592f10 cf2f96a9. Fresh row16 C replay has 32 complete states and the same finite drop counts as the published profile.",
+  "source": "research/retest/r38_second_pair_audit.py; row_interactions/row16_gate.c",
+  "own_test": true,
+  "evidence": "research/sol_answer_D282_r38_second_pair_audit.md; row_interactions/r38_second_pair_profile.txt; row_interactions/r38_second_pair_gate.out",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "notes": "One additional valid full collision witness with a different CV. Finite local evidence only; it does not prove an attack-weighted prefix law, Table-4 independence, or rows-19-37 transfer. No package/stage/submission.",
+  "held_fixed": "corrected W25[4]=W25[6] reading and the published 38-step characteristic predicates",
+  "reopen_if": "A distributional prefix generator or full late-row replay changes the effective cost law"
+}

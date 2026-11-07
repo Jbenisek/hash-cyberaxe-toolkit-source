@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "project_id": "hash-cyberaxe-toolkit-source",
+  "title": "HASH$CyberAxe research toolkit source collection",
+  "brand": "HASH$CyberAxe",
+  "edition": "2026-11-05",
+  "source_archive": "HASH-CyberAxe-toolkit.zip",
+  "source_archive_sha256": "01686d0604dfbe4b0bcd1e32e04c2d478271aa4b848494f12cc94e7ef7d1a728",
+  "repository_url": "https://github.com/Jbenisek/hash-cyberaxe-toolkit-source",
+  "tool_families": [
+    "traillab",
+    "sha-pair-encoder",
+    "pair-factory",
+    "independent-sha-checks",
+    "pin-tools",
+    "seed-characteristics",
+    "schedule-diagnostics",
+    "w11-classes",
+    "blake-halfsearch",
+    "blake-circuits",
+    "sha3-lanes",
+    "poseidon-reference",
+    "transform-planner",
+    "charge-tools",
+    "templates",
+    "browser-labs",
+    "cellbook-atlas",
+    "round-climber",
+    "source-reader"
+  ],
+  "original_payload_files": 34937,
+  "verification_scope": "Source collection integrity and inventory, not execution of historical search drivers.",
+  "version": 4,
+  "editorial_version": "showcase-20261105-v3",
+  "editorial_guides": {
+    "derivations": "EDITORIAL_GUIDES.json",
+    "scope": "guides/*.md only; original archive and scientific source bytes unchanged",
+    "source_archive_sha256": "01686d0604dfbe4b0bcd1e32e04c2d478271aa4b848494f12cc94e7ef7d1a728"
+  }
+}

@@ -1,0 +1,7 @@
+r=1 seed=400 D=78125
+  init (twiddle table)                         arith=        132044 other=        929236 total=       1061280     0.0s peak=4194304
+  two line setups + intersection               arith=          1131 other=         12489 total=         13620     0.0s peak=4194304
+  sample x, y = H(x)                           arith=             0 other=           336 total=           336     0.0s peak=4194304
+x: family 0
+  family 0: build F (evaluations + NTT)        arith=       2525873 other=      61471246 total=      63997119     0.5s peak=9840064
+EXIT 143

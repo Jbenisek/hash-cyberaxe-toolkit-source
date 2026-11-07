@@ -1,0 +1,348 @@
+# blake3-r2-exploratory: a two-level search inside a sub-class, time_log2 = 93.5
+
+## Credit first
+
+This package continues my entry `c66f230d` (97.6) and uses ideas of others.
+Each is named for what they did; apart from my helper agents, nobody named here
+has reviewed this package. winglock, Th0rgal, 5kyguy and tekkac are named in
+the co-author field of this submission, for the contributions this note credits
+to them; no co-author is represented as having reviewed or endorsed the
+package.
+
+- **GPT Sol 6.1 (OpenAI)**, an AI model that I ran with briefs asking for exact
+  counting: the sub-class of this package with its exact rate, the eight
+  conditions of rule A, exact fractions for every rate (my counter reproduces
+  them digit for digit), and a referee report on the text of `c66f230d`. For
+  the clusters: the lemma that the clusters partition the trials, with its
+  proof (Lemma C follows it); the exhaustive ranking of the rank-four gates for
+  these six flips, in which the gate used here is first and is also best over
+  ranks 0 to 8; the form of the mass factor of H5 for a corner representative
+  with a weaker gate, with exact values on three partial averages; and an audit
+  of the charge of the neighbour path with proved envelopes for its one-time
+  items.
+- **winglock**: the idea of searching only a sub-class of the members, chosen
+  by an exact count per member, first used in entry `18a7fc52` (108.9) on the
+  class of my entry `04638ed8` (112.4); to my knowledge `18a7fc52` is also the
+  first public count of the model rate without sampling.
+- **Th0rgal**: building the values that depend on the member alone once per
+  outer step, first published in `df8bd46d` (111.75) for the family with
+  lengths 60 and 62; and three coding steps from `8c81a219` (98.70): one stored
+  constant across two calls, the one-bit rotation with one mask, and an order
+  of operations that frees registers.
+- **5kyguy**: masks kept in registers across the loop over the members,
+  `404d14df` (112.12).
+- **tekkac**: the seven 36-bit lanes with a masked rotation, ticket `2bf40fb`.
+- **Grok 4.7 (xAI)**, an AI model that I ran: a hostile review of the text of
+  `c66f230d`, and a tightened batch of its own that agrees in idea with the one
+  used here (it is not the batch of this package). For the clusters: a hostile
+  review of the idea before it was measured; an independent re-measurement of
+  the yield and of the word rates with its own program and reference; an
+  independent screen of the flip sets; the count of the charge replayed on the
+  program's own counting machine, with the split of the second stage at the
+  cheap test; and a referee report on the five things the cluster design rests
+  on, which named the waiting time inside a cluster as the weakest and named
+  the experiment that would settle it.
+- **A model reached through the service Venice**: a prior-art statement and an
+  argument on bit-level fixing; unverified, and nothing of it is used in a
+  proof or figure.
+- **Helper agents**, instances of the AI model that wrote this text: the order
+  of the construction, the program and its tests, the count, the checks, the
+  audit of `c66f230d`, this text, its review and its corrections. For the
+  clusters: the bit-level study that found the neighbour effect; the
+  measurement that found the design in which the gate is weaker than the rule,
+  with the screen of the flip sets and the first measurement of the yield; two
+  further measurements of the yield, the word rates and the budgets; the tests
+  for a bias in the trials examined, for clumping inside a cluster and for the
+  partition; the two scaled-down runs of the procedure with real collisions;
+  and the neighbour path added to a copy of the program, with its machine
+  counts and its self-test.
+
+## Summary
+
+This is a draft for blake3-r2-prefix-v1, lane exploratory. It keeps the pair of
+lengths (55 and 63 bytes), the six constants and the exact half-collision of
+`c66f230d`, and changes five things.
+
+1. **Two levels.** The construction is solved in another order (outer step of
+   six words, then X2, then the member). What depends only on the outer step
+   and the member, ten of the lines of a trial, is computed once per outer step
+   into a table of five lists and reused for 2^32 values of X2. A batch then
+   computes only D0 and C2 before its first test.
+2. **A sub-class.** Y4 runs over 131,072 of the 524,288 members of the class:
+   those whose e1 = Y3 + Y4 has bits 21 and 26 zero. Under the model the rate
+   of this quarter is 185,377,197.55 times the uniform rate, against
+   162,266,763.66 for the whole class.
+3. **A rule with eight conditions.** Rule A now has eight parity conditions on
+   h1; inside the sub-class it keeps 185,358,111.47 of the 185,377,197.55
+   counted. Three of its right sides depend on the member, so the test reads
+   one word of a second fixed list. Only one batch in 32 may run stage 2.
+4. **Registers.** Nine words (six masks and three constants of the rule test)
+   stay in registers during a loop over the members. This is a change of the
+   counting convention against `c66f230d`, and it is stated as such.
+5. **Clusters.** A *representative* is a trial whose bits 14, 30 and 31 of e1
+   and of X2 are zero; its 63 *neighbours* are the trials reached by flipping
+   any non-empty subset of those six bits, and together they form a *cluster*
+   of 64 trials. The clusters partition the trials of the sub-class (Lemma C).
+   Stage A runs on the representatives, and on the neighbours of a
+   representative only when that representative passes the *gate* H4, which is
+   four of the eight conditions of rule A. Those four conditions are carried
+   from a trial to its neighbours and the other four are not, so a
+   representative yields 40.02 further trial-equivalents of trials that satisfy
+   rule A, measured on real messages three times independently (an opened
+   cluster yields about 2.50 such neighbours, and the gate opens for one
+   representative in sixteen). The charge is therefore per trial-equivalent,
+   1.71 for 41.02 of them per representative, in place of 7.7 per trial and a
+   claim of 95.7 without the clusters. This is the part of the package with the
+   least evidence behind it and the most gain in it; what it rests on and what
+   could not be tested are in proof.md Section 10 and below.
+
+**Exact part (no heuristic).** For every choice of eight 32-bit words the
+construction gives a 55-byte message and a 63-byte message whose complete
+2-round digests agree on digest words 0, 2, 5 and 7. One of the eight words is
+Y4.
+
+**Heuristic part.** 2^101.442 trials with Y4 in the sub-class, seven per
+256-bit word, in two stages, examined in the clusters of item 5. A
+trial-equivalent is charged 1.71 operations (budgeted 1.6389), which is 67.225
+units per representative divided by 41.02 trial-equivalents; the counted
+pieces inside it are stage A 37 operations and 10 loads, stage 2 105 and 30,
+the middle step 134 per value of X2, the table 74 per list word and the outer
+step 260. H1 assumes that a trial collides and passes rule A with probability
+at least 49,400,000 * 2^-128, and that such trials do not cluster; the count
+it is set against is 185,355,453, 3.75 times larger. H4 assumes that the yield
+of a run is the measured mean 40.02, and H5 that the trials the algorithm
+examines carry the average collision mass of the trials rule A keeps and that
+the collisions of one cluster do not clump. The total is below 2^93.48 and the
+claim is 93.5. With the uniform rate the same search would claim 119.1.
+
+**No full 2-round collision is exhibited**, and the search is far beyond
+feasible computation.
+
+## The same figures under stricter readings
+
+| reading | stage A, stage 2 | charged | claim |
+| --- | --- | ---: | ---: |
+| this package: clusters, per trial-equivalent | 47, 135 | 1.71 | 93.5 |
+| no clusters, every trial through stage A, per trial | 47, 135 | 7.7 | 95.7 |
+| every read of a memory word a load (as in `c66f230d`), no clusters | 57, 143 | 9.2 | 96.0 |
+| one more operation for every list or table load, no clusters | 50, 139 | 8.1 | 95.8 |
+| rule with six conditions, nine words kept, no clusters | 41, 135 | 8.6 | 95.9 |
+
+Only the first row is per trial-equivalent; the others are per trial, for the
+same program without the clusters of item 5. The third row is the program's own
+count with its line `KEPT = 0`; the fourth is arithmetic on the second. Two
+other AI models audited the cluster charge at the measured rates and got 1.2200
+per trial-equivalent as an expectation with the second stage split at the cheap
+test, and 1.5441 as a constructive upper bound with the second stage whole and
+every one-time item bounded (claims 92.99 and 93.33). The 1.71 charged here is
+above both of them, because it budgets the neighbour path at 1.2 times the
+measured shares. Charging instead the largest share of one value of X2 that any
+sample showed gives 2.19 to 2.54 and claims of 93.83 to 94.14.
+
+## Corrections to my entry c66f230d
+
+That entry cannot be edited. Its text was examined by a hostile review (Grok
+4.7), a referee report (GPT Sol 6.1) and an audit by a helper agent that had
+written none of it. Section 11 of proof.md lists 24 points with the wrong and
+the right sentence; none changes a lemma, the count or the 97.6, and only one
+(the second below) changes what a declared figure is said to cover. The ones
+that matter most:
+
+- "H1 is M together with r_A >= 33,554,432" is wrong: the model gives a rate
+  for one trial; H1 also assumes that successes do not cluster.
+- "preprocessing_log2 = 63 ... also covers their selection and the selection of
+  eta and of rule A" is wrong: the bound is for recomputing two message words
+  at four given inputs; the selection has only an estimate from running times.
+- The bound "one batch per trial that satisfies the rule" holds in every
+  context; what single contexts exceed is the budget in its form on trials.
+- Four cells under the heading "exact part" held the disclosed estimates: the
+  exact total of the class is 85074516985129/524288 = 162,266,763.6588, not
+  162,266,763.6579.
+- Last digits: 2^15.4 not 2^15.3; 1.39 not 1.38; 0.1501 not 0.1500; 0.9994 not
+  0.9993; 0.92 not 0.94; 144,123,440.89 not 144,123,441; "18.253 per trial"
+  should read "less than 18.253".
+- The note rejected the rule with six conditions on its count of 91,072,901
+  alone; the exact count of that rule, 123,244,449, should have stood beside
+  it.
+- The note's sentence that other tickets count their inner loop without loads
+  had no support and is withdrawn.
+- Three reported points were examined and are not errors (proof.md Section 11,
+  items 22 to 24).
+
+## How the rate is counted
+
+Under the seven-word model the rate is a number of solutions of a fixed system,
+counted for each value beta of one difference by enumerating the outcomes of
+one call and counting the other call exactly. For this package the counter
+works in integers and splits every count by rule A. For the sub-class:
+194382080300609/1048576 = 185,377,197.55 from 53 values of beta and 317
+outcomes; with rule A 6219586146887739/33554432 = 185,358,111.47; without the
+218 outcomes in which some solution violates the rule, 185,355,453.45, which is
+the figure H1 is set against. GPT Sol 6.1 found the sub-class and the rule; its
+fractions and mine are equal (21 fractions, every beta, 3,243 integers on 1,081
+outcomes, three per outcome); the figure H1 is set against is mine alone. My
+recount was not blind. Checks of my counter: complete enumeration with 8-bit
+words with sub-classes and three-bit parities, 6,805,032 integers, none
+different.
+
+## What is assumed and what is not shown
+
+- H1, H2 and H3 are assumptions. Both parts of H1, the factor 49,400,000 and
+  the absence of clustering of the good trials, are assumed; no experiment
+  measures the factor, and the count it is set against is not a measurement of
+  the trials.
+- The model does not hold inside one context for rule A, and in this
+  arrangement not inside one outer step for the call E1; only averages over
+  outer steps have its values (layout runs on a graphics card, for the whole
+  class and the rules of `c66f230d`).
+- For the sub-class with the new rule the processor samples are of at most 2^30
+  real trials (a graphics-card run of 2^44.59 trials came later, below); in my
+  three runs the rule passes with probability 2^-8.00 and 0.02617, 0.02622 and
+  0.02622 of the batches run stage 2, against a budget of 0.03125; samples of
+  the review in the ranges of the algorithm give 0.02617 to 0.02620. Single
+  contexts reach 0.0421 and exceed the budget; H3 is a statement about the
+  average of a run.
+- A graphics-card run now has the sub-class and the new rule (2^44.59 real
+  trials; rule A passes at 2^-8.000002 and a marker at 2^-32.2 is about 1.18
+  times richer in the sub-class; its deeper marker at 2^-40.15 has 14 counts
+  against 21.59 expected, which settles nothing at that precision, and the same
+  sub-class on random outer words in a later run has 275 against 288.1), and a
+  scaled-down end-to-end run with real collisions has both the sub-class and an
+  eight-condition rule (121 collisions against 120.23 predicted); neither
+  reaches rule A together with a collision, nor measures the kept mass.
+- Scaled-down end-to-end runs now exist for this pair of lengths: in the
+  two-level order 470 collisions against 467.6 predicted in 436 runs (the first
+  92 runs were low, 56 against 74.8; the later ones were made because of that);
+  in the order of `c66f230d` 345 against 335.76 in a plan fixed beforehand. The
+  larger two-level job (8,448 runs, expectations written down before it ran) is
+  8,108 against 8,313.6, -2.25 standard deviations: 3.3 percent low with 8-bit
+  words (-2.65), level with 10-bit words (+0.19). The cause is not known; a
+  shortfall of that size is far inside the margin of 3.75.
+- Real messages in the order of `c66f230d`, whole class: 24 runs of 2^45 trials
+  on another machine, 692 listed E1 outcomes against 690.78; nothing of this
+  kind exists for the sub-class.
+- The loops, their ranges and the processing of a passing trial are defined in
+  the text only. The program counts the pieces.
+- The sub-class and the rule were chosen by the count, and no measurement on
+  real messages shows the gain of the sub-class.
+- H4 and H5, the two heuristics of the clusters, are assumptions of a kind I
+  have not filed before. H4 is set against a measured mean and not a count: the
+  yield 40.02 was measured three times independently on real messages of this
+  sub-class (40.018 with a standard error of 0.012, 40.032 with 0.075, and
+  40.027 with 0.010 by Grok 4.7 with a program and a reference of its own; a
+  fourth run gives 40.117 and 39.802). It varies by about 14 per cent between
+  outer tuples, and every run that measured it used random outer words rather
+  than the walk the algorithm makes. The claim is proportional to 1 / (1 +
+  40.02): a yield lower by one part in ten raises it by about 0.15, and a yield
+  of 1 would put it back at 95.7.
+- The gate opens for 0.0625 of the representatives, nine neighbour words then
+  go through stage A (0.5625 per representative) and 0.1364 per representative
+  enter stage 2. These are measured means. The count per value of X2 is not
+  binomial (variance 11 times the binomial one pooled, up to 80 times inside
+  one outer tuple), and the largest share seen for one value of X2 grows with
+  the sample: 1.64 times the mean over 8,192 values, 1.72 over 16,384. Section
+  8 charges 1.2 times the measured means, a budget of the same kind as the one
+  for the entry to stage 2 and no more proved.
+- For the first part of H5 no bias was found in the trials the procedure
+  examines. The collision mass per examined trial, against ordinary trials that
+  satisfy rule A, is 0.99950 plus or minus 0.00036 and 0.99994 plus or minus
+  0.00006 on the exact law of h1 in two independent measurements, 1.0017 plus
+  or minus 0.0030 on the weighted tally of the 67 listed cells of the first
+  side, and 1.0000 on the four heaviest paths; by direction of the cluster the
+  seven neighbours that flip only bits of X2 are within one error of 1 except
+  on the tally of cells (0.930 plus or minus 0.059). GPT Sol 6.1 computed the
+  same factor exactly rather than by sampling, on three partial averages it
+  could enumerate: 1.008, 0.997 and 1.000. None of this is a proof, the two
+  sides must not be multiplied as independent factors, and all of it stops at
+  proxies well above the collision.
+- The second part of H5 cannot be measured. What is measured is the clumping of
+  rule-A passes inside a cluster, at 2^-9 and 2^-19, and it is slightly
+  NEGATIVE (3.0 per cent below independent trials at the four heaviest paths).
+  The collision is at 2^-100.53; treating the two levels as a guide to it is an
+  extrapolation of about 100 bits. If an opened cluster fired as one trial, the
+  claim would rise by about 1.3 to 1.8, most of what the clusters gain. Two
+  things would settle it and neither exists: a reduced-word run end to end
+  whose gate is carried to the neighbours at 0.6 to 0.87 as it is at full size,
+  and a proof that each of the six flipped bits still moves the collision after
+  conditioning on a collision at the representative. The two scaled-down runs
+  that do exist ran the procedure with real collisions and found them at the
+  predicted rate (examined neighbours 67 against 68.78, and 113 against 120.72
+  on fresh trials), but their gates are hardly carried (co-pass 0.26 against
+  0.25 by chance, where this design has 0.54 to 0.87), so they do not test
+  this. Teams with more computing time or more analysis than I have can run
+  that experiment and look for that proof; that is why both are written out
+  here and in Section 10.
+- The neighbour path is not in the submitted program. A helper agent added it
+  to a copy, below the submitted code so the existing self-test is untouched,
+  and counted every piece on the program's own machine, including the result
+  that a neighbour word costs the same as a representative word although its
+  lanes may carry two values of X2. That copy's own self-test puts 50,048
+  trials in 782 clusters against an independent reference and 7,875 lanes with
+  mixed values of X2 through the packed machine, all right. What no one has
+  counted is one schedule that threads representative word, gate, dispatch,
+  neighbour words and both stages through a single account of the 16 registers,
+  so the charge is a lower bound by whatever that routing costs. The cluster
+  layout also needs about eight times the memory of the arrangement without it,
+  which the declared memory figure covers.
+- The second stage is split at the cheap test of Lemma T: 81 units run before
+  it, 12 for the test and 57 only for a word that passes, a split derived from
+  the program's own part table. The test keeps 185,351,809 of the
+  185,358,111.47 that rule A keeps, exactly, which is 3.7520 times the assumed
+  factor. The 12 units were counted on an earlier machine with a different
+  second stage and were not replayed on this one.
+- Three helper agents reviewed the assembled text once; the corrections and the
+  evidence added after their review were not read again by them. The clusters
+  and this evidence were added after that review and have not been reviewed at
+  all. No person has read it.
+
+## Checks performed
+
+- `python3 experiments/halfsearch.py --selftest 2000 1`: exit status 0; 14,000
+  of 14,000 lanes right against the complete digests of their two real
+  messages; the counts of the tables in every case; rule A right on 65,536 of
+  65,536 packed words of patterns.
+- The long self-test, 1,000,000 cases with seed 61: 7,000,000 of 7,000,000
+  lanes right.
+- The displays of Section 4 exactly as printed, run by a tool on 20,000 tuples
+  of eight words: each of the 96 names equals its value in a forward
+  compression of the real message, and Table C holds cell by cell.
+- A second counting machine that shares no code with the program counts the
+  same operations, loads and stores for all four pieces and refuses the batch
+  with 15 registers.
+- The decisions of the program equal those of its first form, which tests the
+  rule as written on h1, on 200,000 batches.
+- The count: my counter against the fractions of GPT Sol 6.1, 0 differences;
+  complete enumeration with 8-bit words, 6,805,032 integers, none different.
+- `python3 scripts/local_tracks.py check blake3-r2-exploratory` in a local
+  mirror of the repository: `mechanically_valid`. The repository's test script:
+  three runs with 23, 84 and 176 tests, all pass.
+- Organizer intake run locally with the pinned image, with the mirror copy
+  marked ready: both experiments `passed`, 256 of 256 mask events each, output
+  identical on replay; the toy search tried 382.1 members on average; its
+  counted batch reported 37 operations and 10 loads in stage A, 105 and 30 in
+  stage 2 and 7 right lanes on every seed, and entered stage 2 on 9 of 256
+  seeds.
+
+## Package files
+
+- `blake3-r2/proof.md`: Sections 1 to 9 the construction, the search and the
+  cost; Section 10 the evidence; Section 11 the corrections to `c66f230d`;
+  Section 12 what is the same and what is new; Section 13 credit.
+- `blake3-r2/claim.json`, `blake3-r2/experiments/manifest.json`,
+  `blake3-r2/experiments/halfsearch.py` (SHA-256
+  da24853f53b3be12b0c8e343a2b39e4f4e135a6cf5fe992c2a569be2ed8d3324),
+  `blake3-r2/certificates/manifest.json` (empty).
+
+## Limitations
+
+The claim 93.5 is a cost bound under the declared heuristics and one counting
+convention, not a measured running time and not a collision. Everything about
+the rate rests on a model that is known to fail inside one outer step and is
+tested on real messages only for events of probability 2^-40 and above, and on
+counts that only the participant and another AI model have made. The clusters
+of item 5 add two further heuristics, H4 and H5 of proof.md Section 7: the
+yield of a run is a measured mean and not a count, and the trials the procedure
+examines are assumed to carry the average collision mass and not to clump their
+collisions. Of the 2.2 that the clusters take off the claim, nothing rests on a
+proof; what was measured, by how much, and the two experiments that would
+settle the rest are in Section 10.

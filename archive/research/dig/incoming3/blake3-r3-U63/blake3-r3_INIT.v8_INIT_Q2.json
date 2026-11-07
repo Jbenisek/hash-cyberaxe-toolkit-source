@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "state word v8 = IV[0]",
+ "question": "Q2 necessity: replace the value, recount the exact outcome",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Not necessary for the attack, necessary for the target. Replacing v8 = 0x6a09e667 by the random constant 0x522c4f8d: (a) circuit: 2000 random replacement values give 595..595 ops (595 for all; an op is saved only if a derived constant hits 0, probability about 2^-32 per site); (b) tag collision test on the real 3-round chain, n=32, 1000 runs: mean/pred = 0.997 +- 0.016 (standard state 1.018 +- 0.016), random-mapping law kept; (c) the 1000 colliding pairs found under the modified state also collide in the 32-bit tag under the standard state in 0 of 1000 cases (expected 2^-32 each). So the cost of the search does not depend on the value, but the pair only collides for the specified function: the target fixes v8 = 0x6a09e667 (IV[0], a constant of every compression, also in keyed mode).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U61/work/tagtest.c; research/dig/incoming3/blake3-r3-U61/work/tag_run.sh; research/dig/incoming3/blake3-r3-U61/work/tag_all.txt; research/dig/incoming3/blake3-r3-U61/work/init_ops.py; research/dig/incoming3/blake3-r3-U61/work/init_ops.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|INIT.v8|INIT|Q2. n=32 tag from digest word 0 (and 1); 3 rounds; fixed seed; pair check uses the standard-state function on the same two inputs. validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "all other initial-state words standard (h = IV, v8..v11 = IV[0..3], counter 0, length 64, flags 11), m0..m7 = 0, 3 rounds, filed circuit rules (595 ops), chain m8..m15 free; word v8 varied alone",
+ "reopen_if": "a pair that collides under both the standard and a modified state more often than 2^-32, or a value of v8 that changes the 595-op count by a non-zero-hit mechanism",
+ "topic": "blake3-r3|INIT.v8|INIT|Q2"
+}

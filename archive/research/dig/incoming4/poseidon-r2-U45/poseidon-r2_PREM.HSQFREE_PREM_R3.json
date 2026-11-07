@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQFREE (PREM)",
+ "question": "R3: control",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "random polynomial of degree n over F_p is non-squarefree with probability about 1/p: n/p = 195,312 / 2^254 = 2^-236.4; no mechanism making g non-squarefree on this family is known (the odd part of F(c+s)-F(c-s) is a bivariate resultant-type object, indecomposable F at all inner degrees tested, see ALT.FUNCDEC).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/d192_r2_results.jsonl; research/poseidon/d189_gpu_results.jsonl",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HSQFREE|PREM|R3. Heuristic bound; the tested squarefree rate is 12/12.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a repeated factor in any r2 centre"
+}

@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "C1.q1 (a1,d1): no condition of its own; feeds Y9",
+ "question": "Q2 necessity: relax filter (1) on Y9 and the exact prefilter PF; recount outcome mass.",
+ "labels": [
+  "N"
+ ],
+ "status": "BEDROCK",
+ "number": "No condition on this quarter-step's words; nothing to relax here. The filter reads only Y9 (C1.c2, quarter-step q4): relaxing it adds 0 outcome mass, see the q4 record (all four relaxation counts there).",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U01/work/relax1.py; research/dig/incoming/blake3-r2-U01/work/relax1_out.json; research/dig/incoming/blake3-r2-U01/work/relax2.py; research/dig/incoming/blake3-r2-U01/work/relax2_out.json; research/tools/traillab/b3atlas/rows_dp.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|C1.q1|step|Q2. Structural: C1 is a difference-free call (A and B share its inputs, Lemma F proof), the only condition is a witness-existence test on the value Y9 = C1.c1 + Y13, which depends on this step's words only through Y9. Same boundary the earlier Q1/Q3 cells use ('other quarter-steps of C1 carry no condition').",
+ "topic": "blake3-r2 C1 filter (1)/PF necessity"
+}

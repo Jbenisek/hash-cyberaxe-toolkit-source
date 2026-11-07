@@ -1,0 +1,21 @@
+{
+  "id": "D319-SHA3R6-DPRHO-CHARGE-REFRESH",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "refreshed packed and 64-bit DP-rho charge audit",
+  "question": "Do the current packed-charge and 64-bit lockstep audits reproduce the exact finite DP-rho rows?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Packed audit exits 0 with E_max=341476420935623421560566117864968815495, R=1231837864, and score_without_Q 127.8133429869 at 64 planes. ANDN-free and no-ANDN lockstep reruns exit 0; no-ANDN kat_bad_bits=0. Four-word normalized 64-plane rows remain S=126.1321547970 (ANDN-free) and 126.2341561569 (no-ANDN). Endpoint, restart, allocator, and organizer word-width rules remain open.",
+  "source": "our workflow: D319 finite charge refresh",
+  "own_test": true,
+  "evidence": "research/sol_answer_D319_sha3_dprho_charge_refresh.md; research/retest/t1/packed_charge_audit.py; research/retest/t1/packed_charge_audit.json; research/retest/t1/audit_64bit_lockstep.py; research/retest/t1/audit_64bit_noandn_lockstep.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite arithmetic/KAT refresh only. Symbolic Q and production semantics remain unpriced; no package, staging, filing, or submission.",
+  "held_fixed": "current emitted packed trace, E_max, restart term, and four-word normalization",
+  "reopen_if": "A production allocator/endpoint ledger and organizer word-width rule make the finite rows claimable"
+}

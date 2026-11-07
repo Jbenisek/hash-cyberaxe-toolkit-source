@@ -1,0 +1,1 @@
+2017/128	New Collision Attacks on Round-Reduced Keccak	owner_download	https://eprint.iacr.org/2017/128.pdf

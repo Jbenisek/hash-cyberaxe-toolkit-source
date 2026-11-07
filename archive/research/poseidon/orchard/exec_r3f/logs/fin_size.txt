@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 276852	     32	290013984	290290868	114d7cb4	./research/poseidon/orchard/exec_r3f/single

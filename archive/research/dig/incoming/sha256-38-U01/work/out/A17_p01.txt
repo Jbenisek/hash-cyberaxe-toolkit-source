@@ -1,0 +1,48 @@
+model chi38: 38 steps, anchor row 13 (x and y rows 10..13 held), E-driven rows 16..21, lowest conditioned row 6
+  conditions: 47 two-bit/linear (printed), 44 in the attack model; 'except' words: W7
+  free word W6 (late): W6 rand late
+  free word W7 (late): W7 fset s0 03bff800 late
+  free word W8 (late): W8 cell late
+  relaxation E19coset
+  relaxation W23free
+WINDOW rows 22..37 event=out np 4096 m 256 mt2 1024 mw 256 mt 8192 threads 3 prefix-conditions cells
+-- seed 9301
+  init: 4096 particles, acceptance 1.000000 (rows 14..15)
+  E16 set under the prefix conditions: 32 values (enumerated 2^22 candidates)
+  stage 16 (E-driven, list of 32): accepted 1048576 of 1048576, log2 est -27.0000
+  stage 17 (E-driven): forced  8 bits, accepted 999 of 1048576, log2 est -45.0357
+  stage 18 (E-driven): forced  9 bits, accepted 13078 of 1048576, log2 est -60.3608
+  stage 19 (E-driven): forced 12 bits, accepted 67027 of 1048576, log2 est -76.3284
+  stage 20 (E-driven): forced  6 bits, accepted 517120 of 1048576, log2 est -83.3482
+  stage 21 (E-driven): forced  6 bits, accepted 524368 of 1048576, log2 est -90.3480
+[s9301] prefix log2 P(rows 6..21) = -90.3480
+[s9301] samples 33554432 (late words redrawn per sample), prefix broken by redraw 0, y-anchor inconsistent 0, replay mismatches 0
+[s9301]   cells          rows 22..37:          529  rate 1.576543e-05 (log2 -15.9529) 95% [1.4478e-05, 1.7167e-05]  with exact 529
+[s9301]   EXACT          zero output difference after the last step:         1322  rate 3.939867e-05 (log2 -14.6315) 95% [3.7331e-05, 4.1580e-05]
+[s9301]   ratios to 'cells' (95% cluster-robust over particles; halves = particles split in two):
+[s9301]     EXACT/cells = 2.49905 +- 0.16785  (log2 +1.3214)  halves 2.54023 +- 0.24764 | 2.45896 +- 0.22759
+[s9301]   log2 P(rows 6..37, model cells) = prefix + log2 rate(cells) = -106.3009
+[s9301]   time 25.4 s
+-- seed 9302
+  init: 4096 particles, acceptance 1.000000 (rows 14..15)
+  stage 16 (E-driven, list of 32): accepted 1048576 of 1048576, log2 est -27.0000
+  stage 17 (E-driven): forced  8 bits, accepted 965 of 1048576, log2 est -45.0856
+  stage 18 (E-driven): forced  9 bits, accepted 11761 of 1048576, log2 est -60.5639
+  stage 19 (E-driven): forced 12 bits, accepted 56848 of 1048576, log2 est -76.7691
+  stage 20 (E-driven): forced  6 bits, accepted 517376 of 1048576, log2 est -83.7882
+  stage 21 (E-driven): forced  6 bits, accepted 524420 of 1048576, log2 est -90.7879
+[s9302] prefix log2 P(rows 6..21) = -90.7879
+[s9302] samples 33554432 (late words redrawn per sample), prefix broken by redraw 0, y-anchor inconsistent 0, replay mismatches 0
+[s9302]   cells          rows 22..37:          528  rate 1.573563e-05 (log2 -15.9556) 95% [1.4449e-05, 1.7136e-05]  with exact 528
+[s9302]   EXACT          zero output difference after the last step:         1311  rate 3.907084e-05 (log2 -14.6435) 95% [3.7012e-05, 4.1244e-05]
+[s9302]   ratios to 'cells' (95% cluster-robust over particles; halves = particles split in two):
+[s9302]     EXACT/cells = 2.48295 +- 0.16758  (log2 +1.3121)  halves 2.49446 +- 0.23258 | 2.47082 +- 0.24164
+[s9302]   log2 P(rows 6..37, model cells) = prefix + log2 rate(cells) = -106.7435
+[s9302]   time 25.8 s
+== summary over 2 seed(s): EXACT/cells 2.49101 +- 0.11859
+== summary: log2 P(rows 6..37, model cells) mean -106.5222, seed sd 0.3130 (seeds: -106.3009 -106.7435)
+== pooled over 2 seeds: samples 67108864
+   cells          1057 (with exact 1057)
+   EXACT          2633
+   EXACT/cells pooled 2.49101 ; per-seed mean 2.49100, seed-to-seed sd 0.01138, 95% of the mean +- 0.01578
+exit 0

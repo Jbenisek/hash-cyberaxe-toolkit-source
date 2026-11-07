@@ -1,0 +1,41 @@
+# Put the candidate of research/pkg7 (blake3-r2: claim.json, proof.md, certificates/manifest.json,
+
+Source: `research/pkg10/pkg/work/validate_pkg7.sh`
+
+Public SHA-256: `6c8b6ae6f99949cd5cc0ea449d3113ed148b0093bbb531272e997996fa1632b7`
+
+## Purpose recorded in the source
+
+Put the candidate of research/pkg7 (blake3-r2: claim.json, proof.md, certificates/manifest.json,
+experiments/manifest.json and the experiment program experiments/halfsearch.py) into a WSL-native clone of the
+organizer's repository, in the place of the live candidate, and run the repository's mechanical checks there.
+Research helper, not part of any submission. Nothing is submitted, no yukon command is run, nothing is pulled from
+the network: the clone and its fetch read the local checkout, and the experiment image is not pulled (the script
+only asks the local Docker whether the pinned image is there).
+
+On 2026-10-06 (step PROGRAM) the text files of the candidate are still those of the filed research/pkg6; only the
+program is new. The state in claim.json is "draft"; only the throwaway copy in the mirror is marked ready, because
+a draft skips the execution of the experiments.
+
+Its own mirror: ~/hashsmash/hash-smash-pkg7run (the mirrors of the other jobs are not touched).
+
+  wsl -d Ubuntu -- bash "./research/pkg7/work/validate_pkg7.sh" [tests]
+
+With the word tests the unit tests of the repository (.yukon/setup.sh) are run as well. Everything is kept in
+work/evidence/validation_log.txt; the screen gets the lines that matter.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+Companion documents are not listed here. Use the linked source for interfaces and prerequisites.
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

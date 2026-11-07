@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.ZEROSUM (ALT)",
+ "question": "Q3: degrees of freedom",
+ "labels": [
+  "P"
+ ],
+ "status": "COMPUTED",
+ "number": "2^254 coset parameters a, 3 lines j, subgroup orders 2^19 .. 2^32 (2-adicity of p-1 is 32). It is one linear relation on 524,288 outputs: no collision follows (P3.14: all 2,097,152 digests on an r=1 coset were distinct).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_14.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.ZEROSUM|ALT|Q3. Cited P3.14 plus own identity check.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a relation among outputs that forces two equal values"
+}

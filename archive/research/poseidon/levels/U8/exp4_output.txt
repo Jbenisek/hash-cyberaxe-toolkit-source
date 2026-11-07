@@ -1,0 +1,31 @@
+p^2+p+1 known prime factors: [3, 73, 5839, 12221196943, 5187662682403, 487887715480415483992657]
+p^2+p+1 cofactor after dividing known primes: 334 bits, is prime: True
+M^(p^3-1) = I: True
+
+prime r | known part of p^3-1 : v_r(p^3-1) -> v_r(ord M) (exact, by testing M^(N/r^j))
+  r=2 (2 bits): v_r(N)=32  v_r(ord M)=32
+  r=3 (2 bits): v_r(N)=2  v_r(ord M)=2
+  r=463 (9 bits): v_r(N)=1  v_r(ord M)=1
+  r=539204044132271846773 (69 bits): v_r(N)=1  v_r(ord M)=1
+  r=8999194758858563409123804352480028797519453 (143 bits): v_r(N)=1  v_r(ord M)=1
+  r=73 (7 bits): v_r(N)=1  v_r(ord M)=1
+  r=5839 (13 bits): v_r(N)=1  v_r(ord M)=1
+  r=12221196943 (34 bits): v_r(N)=1  v_r(ord M)=1
+  r=5187662682403 (43 bits): v_r(N)=1  v_r(ord M)=1
+  r=487887715480415483992657 (79 bits): v_r(N)=1  v_r(ord M)=1
+  r=21186043132281546156793608169660962271252226488966104018788253841360240111557635227669180162173314659 (334 bits): v_r(N)=1  v_r(ord M)=1
+known-prime part of ord(M): 24258095192198577111702804507226602426003381009924545050026383646766400798504688961297800264755995511337177956428757959309138259547242303164966461362047960942039898929715936651604127157955950043582545190970891201368674307252682752 bits 763
+ord(M) exact if cofactor prime: True
+M^(N/cofactor) == I (cofactor part trivial)?: False  ; is M^(N/rest) of order exactly rest-part?
+ord(M) divides N/2: False
+ord(M) divides N/3: False
+ord(M) divides N/463: False
+M^(p^2+p+1) is the scalar det M * I: True
+M^((p^2+p+1)/3) scalar? False
+M^((p^2+p+1)/3) scalar? False
+M^((p^2+p+1)/73) scalar? False
+M^((p^2+p+1)/5839) scalar? False
+M^((p^2+p+1)/12221196943) scalar? False
+M^((p^2+p+1)/5187662682403) scalar? False
+M^((p^2+p+1)/487887715480415483992657) scalar? False
+M^((p^2+p+1)/21186043132281546156793608169660962271252226488966104018788253841360240111557635227669180162173314659) scalar? False

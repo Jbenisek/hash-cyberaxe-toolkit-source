@@ -1,0 +1,59 @@
+Part A/B: 4 random contexts of the counter arrangement, N = 2^18 values of p = K0.a1 each
+
+== 2 rounds: symbolic labels (F fixed, C chain = closed-form prescribable, X mixed) ==
+  C0    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  C1    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  C2    a1:F d1:F c1:F b1:F a2:C d2:C c2:C b2:C
+  C3    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  E0    a1:C d1:C c1:X b1:X a2:X d2:X c2:X b2:X
+  E1    a1:C d1:C c1:C b1:X a2:X d2:X c2:X b2:X
+  E2    a1:C d1:C c1:C b1:C a2:X d2:X c2:X b2:X
+  E3    a1:F d1:C c1:C b1:C a2:C d2:X c2:X b2:X
+  digest (CV) words 0..7: 0:X 1:X 2:X 3:X 4:X 5:X 6:X 7:X
+  chain words: 17; chain words in the LAST step (E...): ['E0.a1', 'E0.d1', 'E1.a1', 'E1.d1', 'E1.c1', 'E2.a1', 'E2.d1', 'E2.c1', 'E2.b1', 'E3.d1', 'E3.c1', 'E3.b1', 'E3.a2']
+
+== 2.5 rounds (rounds 0, 1 + round-2 columns): symbolic labels (F fixed, C chain = closed-form prescribable, X mixed) ==
+  C0    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  C1    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  C2    a1:F d1:F c1:F b1:F a2:C d2:C c2:C b2:C
+  C3    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  E0    a1:C d1:C c1:X b1:X a2:X d2:X c2:X b2:X
+  E1    a1:C d1:C c1:C b1:X a2:X d2:X c2:X b2:X
+  E2    a1:C d1:C c1:C b1:C a2:X d2:X c2:X b2:X
+  E3    a1:F d1:C c1:C b1:C a2:C d2:X c2:X b2:X
+  R2c0  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2c1  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2c2  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2c3  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  digest (CV) words 0..7: 0:X 1:X 2:X 3:X 4:X 5:X 6:X 7:X
+  chain words: 17; chain words in the LAST step (R2c...): none
+
+== 3 rounds: symbolic labels (F fixed, C chain = closed-form prescribable, X mixed) ==
+  C0    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  C1    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  C2    a1:F d1:F c1:F b1:F a2:C d2:C c2:C b2:C
+  C3    a1:F d1:F c1:F b1:F a2:F d2:F c2:F b2:F
+  E0    a1:C d1:C c1:X b1:X a2:X d2:X c2:X b2:X
+  E1    a1:C d1:C c1:C b1:X a2:X d2:X c2:X b2:X
+  E2    a1:C d1:C c1:C b1:C a2:X d2:X c2:X b2:X
+  E3    a1:F d1:C c1:C b1:C a2:C d2:X c2:X b2:X
+  R2c0  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2c1  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2c2  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2c3  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2d0  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2d1  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2d2  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  R2d3  a1:X d1:X c1:X b1:X a2:X d2:X c2:X b2:X
+  digest (CV) words 0..7: 0:X 1:X 2:X 3:X 4:X 5:X 6:X 7:X
+  chain words: 17; chain words in the LAST step (R2d...): none
+
+numeric: round-0 output state constant along the curve in 4/4 contexts
+numeric: label consistency (F -> 1 value, C -> injective on N, X -> more than 1 value): 0 inconsistencies over 4 contexts x 128 intermediates
+numeric: X-labelled intermediates that were nevertheless injective on N in some context: none
+numeric: X-labelled intermediates, mean number of lost values (N - distinct) 16.4; a random map would lose about 8.0
+
+Part C: own step-wise compression == organizer _compress: 2 rounds 50/50, 3 rounds 50/50
+  2 rounds: CV words equal (word: count of 400) 0:400 1:0 2:400 3:0 4:0 5:400 6:0 7:400; words 0,2,5,7 all equal 400/400
+  2.5 rounds: CV words equal (word: count of 400) 0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0; words 0,2,5,7 all equal 0/400
+  3 rounds: CV words equal (word: count of 400) 0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0; words 0,2,5,7 all equal 0/400

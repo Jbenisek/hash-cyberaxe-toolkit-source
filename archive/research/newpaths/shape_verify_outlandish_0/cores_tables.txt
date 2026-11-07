@@ -1,0 +1,4 @@
+held=out0,out2,out5     table core 107 eqs | no deletion of <= 2 equations empties the table core => checks >= 3 | core evaluations 5825
+held=out0,out2,out7     table core 107 eqs | no deletion of <= 2 equations empties the table core => checks >= 3 | core evaluations 5827
+held=out0,out5,out7     table core 108 eqs | no deletion of <= 2 equations empties the table core => checks >= 3 | core evaluations 5933
+held=out2,out5,out7     table core 108 eqs | no deletion of <= 2 equations empties the table core => checks >= 3 | core evaluations 5935

@@ -1,0 +1,2 @@
+B=8: targets ['Y4', 'E1.d1'] not [] outer ['Y4', 'E1.d1'] inner-dep []: NO basis (proved)
+B=16: targets ['Y4', 'E1.d1'] not [] outer ['Y4', 'E1.d1'] inner-dep []: NO basis (proved)

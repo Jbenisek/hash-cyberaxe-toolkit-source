@@ -1,0 +1,23 @@
+{
+  "id": "D738-SHA256-R38-C2-AGGREGATE-20261014",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 37,
+  "object": "Zone-D r38 corrected row-14 C2 full-late aggregate refresh",
+  "question": "What does the published split plus nineteen independent corrected C2 controls show in aggregate?",
+  "labels": ["C", "B", "Z"],
+  "status": "COMPUTED",
+  "number": "Twenty exact c2all14late scans now cover seed 0 plus 19 independent controls: 3,200/3,200 row14 base/expansion passers, 20 strict-row15 and total-C2 candidates, and zero full-late rows16..37 and zero final state-equalities.",
+  "source": "our workflow: D738 corrected C2 aggregate refresh",
+  "own_test": true,
+  "evidence": "research/sol_answer_D738_sha256_r38_c2_aggregate_refresh.md; research/sol_answer_D729_sha256_r38_c2_aggregate_refresh.md; research/sol_answer_D737_sha256_r38_c2_seed65551.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "same corrected C2 family and full-late predicates across all twenty deterministic fixed splits",
+  "notes": "Finite split-local aggregate only; production transfer, global late rate, charged score, package, stage, filing, and submission remain open.",
+  "reopen_if": "A production-law split sampler or accepted split-transfer argument is available"
+}

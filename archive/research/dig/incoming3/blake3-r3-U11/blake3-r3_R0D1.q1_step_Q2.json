@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R0D1.q1 (a1,d1): 3-round circuit quarter-step, round 0 diagonal call 1 (1,6,11,12), a = a + b + mx; d = ror(d ^ a, 16), rotation 16",
+ "question": "Q2 necessity: change it (bypass the step; delete each of its ops one at a time), recount the exact outcome.",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Bypass the whole quarter-step (state left unchanged): digest changed in 100.0% of 1500 random inputs, mean 128.17 of 256 digest bits flip (random would be 128). Delete each of its 7 circuit ops in turn (output := first operand), 7-lane circuit against scalar over 700 lanes: wrong-digest lanes per op = [700, 700, 700, 640, 700, 590, 700]; all 7 ops are essential (every deletion fails at least 590 of 700 lanes).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U10/work/b3step.py; research/dig/incoming3/blake3-r3-U10/work/scan_nb100.json; research/dig/incoming3/blake3-r3-U10/work/mkrecs.py; research/blake3_r3/candidate_blake3/experiments/rho.py (definition only)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R0D1.q1|step|Q2. Essentiality of each op is shown by counterexample (a failing lane exists); the failure rates are samples of 700 lanes, seed 20261012. Deleting either AND of the rotation fails about as often as deleting the add, so no mask here is only a bound guard. validated first: scalar code reproduces BLAKE3('') at 7 rounds (af1349b9...3262) and equals verifier/blake3.py on 200 random 64-byte blocks at 7 and at 3 rounds; the traced 7-lane circuit has 0 mismatches on 2100 lanes at 7 rounds and at 3 rounds, and totals 595 ops at 3 rounds (add 100, xor 88, shr 80, and 167, shl 80, or 80).",
+ "held_fixed": "filed 3-round circuit: 7 lanes x 36 bits in a 256-bit word, message 0^32 || x (m0..m7 = 0, m8..m15 free), flags 11, block length 64, counter 0, unkeyed; rotation = shr, and, shl, and, or; op set add/and/or/xor/shl/shr",
+ "reopen_if": "an op of this step whose deletion gives 0 wrong digests in a large sample plus a proof that it never matters (none found: smallest failure count was 590 of 700)"
+}

@@ -1,0 +1,27 @@
+r=2 seed=504 D=390625
+  init (twiddle table)                         arith=        132044 other=        929236 total=       1061280     0.0s peak=4194304
+  two line setups + intersection               arith=          1131 other=         12489 total=         13620     0.0s peak=4194304
+  sample x, y = H(x)                           arith=             0 other=           357 total=           357     0.0s peak=4194304
+x: family 0
+  family 0: build F (evaluations + NTT)        arith=      11463423 other=     268227364 total=     279690787     2.9s peak=29277248
+  family 0: W^p mod F                          arith=   34086292492 other=  384765364145 total=  418851656637   838.1s peak=75248736
+    fault detected, rollback 1
+    fault detected, rollback 2
+    fault detected, rollback 3
+  family 0: gcd(F, W^p - W)                    arith=  307285372295 other=             0 total=  307285372295  8612.6s peak=91694496
+    gcd degree 4, charged 307285372295, derived bound 1833164065176 (within)
+  family 0: remove the roots of x              arith=             8 other=            87 total=            95     0.0s peak=16694496
+    remaining roots: 3
+  family 0: isolate one root                   arith=          8844 other=         80033 total=         88877     0.0s peak=4194912
+  map back (two inputs)                        arith=          2274 other=         20466 total=         22740     0.0s peak=4194304
+  verification (2 reference hashes)            arith=           516 other=          4644 total=          5160     0.0s peak=4194304
+RESULT found=1 success=1 split_levels=1 split_tries=1
+COLLISION nk1  0x145f4fb9f589b23627dff9bc0a705022b8895f40651d649d2034f398e5112a69
+COLLISION rho1 0x0eb0a41edb28a2ef53081b61254890313fbf55225c04e2a7aa90c325ea4697c7
+COLLISION nk2  0x02255714a0867409ca53f4fcf020d3bfcb5fa288b23b69d5f39c9d431729066b
+COLLISION rho2 0x07bf798c3a6ccb130027c48d7e628f033b77a97452beb6e3773e93ddeb048120
+COLLISION digest 0x226bb292d51e94ccc37aa1bd222d79cb36e5f28003cc5eda2d653209de4c6d9b
+SUMMARY total_all=726419474422 units=2815579358.2 log2_units=31.3908 heap_peak=91694496
+DRIVER ops_outside_stages=1562574
+SPLIT shift=5702 pow=74807 gcd=5540 div=2785
+EXIT 0

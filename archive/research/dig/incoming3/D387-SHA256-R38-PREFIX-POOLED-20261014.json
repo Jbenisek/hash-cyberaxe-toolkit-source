@@ -1,0 +1,22 @@
+{
+  "id": "D387-SHA256-R38-PREFIX-POOLED-20261014",
+  "hash": "sha256-38",
+  "row_i": 6,
+  "row_j": 37,
+  "object": "pooled r38 prefix marginals",
+  "question": "What are the pooled prefix-group rates across the independent D379 and D386 runs?",
+  "labels": ["C", "S"],
+  "status": "COMPUTED",
+  "number": "Pooled denominator 131072 per group: A17=2038 (-6.007061664), A18=65443 (-1.002048735), A19=63698 (-1.041039545), E17=32659 (-2.004807003), E18=16232 (-3.013446850), E19=32546 (-2.009807378), E21=65468 (-1.001497714); A16/E16/W16 unit-rate. Conditional pooled cells=280/16777216=2^-15.8707169831; exact=720; EXACT/cells=2.5714285714.",
+  "source": "arithmetic pooling of our D379 and D386 runs",
+  "own_test": true,
+  "evidence": "research/sol_answer_D387_r38_prefix_pooled.md; research/sol_answer_D379_r38_prefix_group_marginals.md; research/sol_answer_D386_r38_prefix_marginals_seed_diversity.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Derived pooled finite evidence only; no new execution. It does not prove Table-4 independence, the 102-condition law, or full-path transfer, and earns no score or package credit.",
+  "held_fixed": "D379 and D386 same chi38 staged proposal parameters; independent seeds 6001..6008 and 7001..7008",
+  "reopen_if": "A common-proposal joint law/proof and full schedule-consistent transfer are still required.",
+  "peak_mem": "22.9643408678 MEASURED maximum of source runs; one-thread owned traillab diagnostics"
+}

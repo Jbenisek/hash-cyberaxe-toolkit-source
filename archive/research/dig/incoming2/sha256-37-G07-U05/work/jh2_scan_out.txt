@@ -1,0 +1,33 @@
+organizer-observed a0-sfs-r37: 124 of 128 trials returned a pair (measured from experiment-report.json)
+
+== FAIL b74a016c (not_evaluable)
+ (premise-statement, organizer-scope) H2/H3/H9: {'H2': (True, True), 'H3': (True, True), 'H9': (False, True)}
+ provenance missing: ['H9']
+  N of 128 -> 127 org - | 37-step semi-free-start collisions built with variants of the 222 classes verify under the repository verifier (organizer experiment a0-sfs-r37: 127 of 128 local trials).
+  N of 128 -> 127 - - | 127 of 128 37-step semi-free-start constructions with variants, 16 of 16 found by the counted program.
+ organizer-attributed count mismatch (no replay wording): 1  ambiguous (organizer + own-replay wording): 0
+ CHECK FIRES: True
+
+== PASS c22f86a2 (retry, D109 text)
+ (premise-statement, organizer-scope) H2/H3/H9: {'H2': (True, True), 'H3': (True, True), 'H9': (True, True)}
+ provenance missing: []
+  N of 128 -> 127 org - | 37-step semi-free-start collisions built with variants of the 222 classes verify under the repository verifier (organizer experiment a0-sfs-r37: 127 of 128 local trials).
+  N of 128 -> 127 - - | 127 of 128 37-step semi-free-start constructions with variants, 16 of 16 found by the counted program.
+ organizer-attributed count mismatch (no replay wording): 1  ambiguous (organizer + own-replay wording): 0
+ CHECK FIRES: True
+
+== CUR   fcbc9c83 pkgR37X2 (passed)
+ (premise-statement, organizer-scope) H2/H3/H9: {'H2': (True, True), 'H3': (True, True), 'H9': (False, True)}
+ provenance missing: ['H9']
+  N of 128 -> 85 org - | The organizer experiment a0-sfs-r37 accepts its constructions by equal outputs: 85 of 128 local collisions lie outside the printed cells of rows 22..36 and the counted pr
+  N of 128 -> 128 org replay | the organizer experiment `a0-sfs-r37` accepts by equal outputs (128 of 128 trials in our replay, 85 outside the printed cells of rows 22..36, 16 of 16 found by the counte
+  N of 128 -> 127 - replay | in ffbe30bb's replay 127 of 128 trials built a verified collision, 16 of 16 found again by the counted program), and the SMC stage counts (Appendix B.3).
+  N of 128 -> 85 - - | new observation `cells_22_36` | 85 of 128 collisions outside the printed cells;
+ organizer-attributed count mismatch (no replay wording): 0  ambiguous (organizer + own-replay wording): 1
+ CHECK FIRES: True
+
+== STAGED pkgR37M3
+ (premise-statement, organizer-scope) H2/H3/H9: {'H2': (True, True), 'H3': (True, False)}
+ provenance missing: ['H3']
+ organizer-attributed count mismatch (no replay wording): 0  ambiguous (organizer + own-replay wording): 0
+ CHECK FIRES: True

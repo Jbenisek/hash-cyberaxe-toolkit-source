@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GROEBNER Groebner / resultant elimination",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "degrees of freedom: m = 52 + 6r variables, q = 48 + 2r quintics, d_reg = 1 + 4q = 201 (r=1) / 209 (r=2); r=2 recomputed log2 ops 636.554, log2 bytes 430.204",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc3.py research/dig/incoming4/_scan_poseidon/calc3a.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Same script. | universe cell poseidon-r1|ALT.GROEBNER|ALT|Q3",
+ "held_fixed": "regularity assumed",
+ "reopen_if": "smaller system"
+}

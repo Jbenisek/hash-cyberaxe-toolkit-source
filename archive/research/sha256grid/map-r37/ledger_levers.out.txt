@@ -1,0 +1,28 @@
+log2 T            = 61.714723
+A_C share         = 0.3047   log2 T without A_C = 61.19051
+first-block share = 0.0966   (compressions alone 0.0948)
+V_MAX share       = 0.5881   V_MAX/NFB = 16401.75 ops
+residual (tables, caps, final) = 2^55.113 units
+
+--- one-lever rows (DERIVED: ledger shape held fixed, only the named term moved) ---
+A_C 2^60 -> 2^56                          : 61.22949 (note prints 61.22949)
+A_C 2^60 -> 2^46 (r32 35-step scale)      : 61.19055
+first block 1 unit -> 230 ops (bit-sliced): 61.58411
+first block 1 unit -> 300 ops (bit-sliced): 61.58807
+first block 1 unit -> 400 ops (bit-sliced): 61.59370
+data-dependent work x0.90                : 61.62728
+data-dependent work x0.75                : 61.48529
+data-dependent work x0.50                : 61.21235
+row-16 stage ~14000 of 16402 ops -> half    : 61.29777
+success per first block x2 (N_FB x0.50) : 61.11006
+success per first block x4 (N_FB x0.25) : 60.67506
+bit-sliced FB (300 ops) + A_C 2^56        : 61.04891
+
+--- r38 side check (DERIVED from printed exponents of c99df2dc / 0ae69bcb) ---
+0ae69bcb shape A_C=A_S=2^70           : 72.63344 (board 72.64)
+same with A_S -> 2^50 (paper Step-1 2^38.3 published): 72.37991
+no allowances                          : 72.06675 (c99df2dc prints 72.06675)
+
+--- stacked r37 rows (DERIVED) ---
+bit-sliced FB 300 ops + data x0.90 (7-lane u, cb table) : 61.49233
+bit-sliced FB 300 ops + data x0.90 + success x2        : 60.94418

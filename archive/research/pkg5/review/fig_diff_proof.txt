@@ -1,0 +1,1301 @@
+--- ./research/pkg4/blake3-r2/proof.md	2026-10-06 06:43:23.485503800 -0600
++++ ./research/pkg5/blake3-r2/proof.md	2026-10-06 08:19:21.713728500 -0600
+@@ -18,14 +18,19 @@
+ well. The algorithm searches 2^104 such pairs, all with Y4 in the class, for
+ one where they do. The search has no table that grows with the number of trials
+ and does no sorting or lookup. Seven trials are evaluated in one 256-bit word,
+-and a trial is charged 34 primitive operations, memory loads included. Two
+-heuristics are declared: H1, that a trial completes the collision with
+-probability at least 2^-105, and H2, that a budget on early-test passes
+-suffices. Under both the search succeeds with probability at least 0.39. Total
+-charged time is below 2^100.36 target-compression units, so the claimed scalar
+-is 100.4. The search needs less than 2^21 bytes of memory; the declared 2^35
+-bytes also cover the computations by which the constants and the class were
+-selected (Sections 6 to 9).
++in two stages. Every batch runs stage A, which tests six bit conditions on one
++internal word of every trial (rule A). Only a batch in which a trial satisfies
++rule A runs stage 2, which tests a 32-bit condition that every collision
++satisfies. A trial that fails rule A is dropped. A trial is charged 17.4
++primitive operations, memory loads included. Three heuristics are declared: H1,
++that a trial satisfies rule A and completes the collision with probability at
++least 2^-105; H2, that a budget on the passes of the second test suffices; and
++H3, that at most one eighth of the batches run stage 2. Under the three the
++search succeeds with probability at least 0.39. Total charged time is below
++2^99.39 target-compression units, so the claimed scalar is 99.4. The search
++needs less than 2^20 bytes of memory; the declared 2^35 bytes also cover the
++computations by which the constants and the class were selected (Sections 6 to
++9).
+ 
+ The rate in H1 is an assumption: 2^23 = 8,388,608 times the rate of a uniform
+ 128-bit value. It is not read off single digest words. Section 10 describes
+@@ -34,24 +39,28 @@
+ independent uniform words over the trials, the rate is the number of solutions
+ of a fixed system of equations, and that number is counted: an enumeration
+ without sampling gives 29,977,922 times 2^-128 for Y4 in the class, as a lower
+-bound because part of the enumeration is left out. H1 assumes 8,388,608 times,
+-3.57 times less. The six constants were found by a solver search and chosen by
+-this count. The class is the second largest by this count among the 34 classes
+-of these constants that were counted; Section 10 says why it is used. The
+-counting program is not part of the package, and it and all its checks are the
+-participant's. The model was compared with real messages only on events of
+-probability about 2^-32 and above. The organizer-run experiments measure
+-neither the model nor the factor. With the uniform rate in place of 8,388,608
+-times it, the same search needs 2^127 trials and gives time_log2 = 123.4.
++bound because part of the enumeration is left out. Rule A is not implied by a
++collision: some solutions violate it and are lost. The figure that the claim
++uses is therefore smaller. It leaves out every part of the count for which a
++solver found a solution that violates rule A, 12,040 in all, and is 29,965,882.
++H1 assumes 8,388,608 times, 3.57 times less. The six constants were found by a
++solver search and chosen by this count. The class is the second largest by this
++count among the 34 classes of these constants that were counted; Section 10
++says why it is used. The counting program is not part of the package, and it
++and all its checks are the participant's. The model was compared with real
++messages only on events of probability about 2^-32 and above. The organizer-run
++experiments measure neither the model nor the factor. With the uniform rate in
++place of 8,388,608 times it, the same search needs 2^127 trials and gives
++time_log2 = 122.4.
+ 
+ No full 2-round collision is exhibited, and the search is far beyond feasible
+ computation. What is exhibited, and checked by the organizer's own runner, is
+ the exact half-collision on trials of the search and a toy-scale run of the
+-class search, without the early test and the packing that set the cost of a
+-trial. The program the organizer runs also contains the packed batch, a
+-machine that counts its operations and loads, and a self-test of that count
+-(Section 6.5). Those counts are the program's own; the organizer does not
+-check them.
++class search, without the two tests and the packing that set the cost of a
++trial. The program the organizer runs also contains the packed two-stage
++batch, a machine that counts its operations and loads, and a self-test of
++that count (Section 6.5). Those counts are the program's own; the organizer
++does not check them.
+ 
+ ## 1. Exact complete hash on the messages used
+ 
+@@ -445,7 +454,12 @@
+ for the assignments of E1 and e1, h1, g1, f1, e2, h2, g2, f2 for those of E3
+ in the order a, d, c, b; a prime marks message B.
+ 
+-**6.3 An early test on 32 bits.**
++**6.3 Three tests of a trial.** The algorithm uses two tests: rule A, a
++condition on one word of E3 (Lemma A), and the E1 test, a 32-bit condition
++on E1 alone (Lemma N). A third test, the early test of Lemma E, was the test
++of the submissions named in Section 10. The algorithm of this package does
++not use it. It is kept because the measurements of Section 10 report its
++passes.
+ 
+ **Lemma E.** If R = 0 then
+ (f1 XOR f1') = t XOR ROR(t, 1) with t = a2 XOR a2'.
+@@ -459,11 +473,86 @@
+ and the d output of E1). Substituting, ROR(t, 8) = ROR((f1 XOR f1') XOR t, 7),
+ and rotating both sides left by 7 gives the claim. QED.
+ 
+-The test needs only the first five assignments of E1 and the first four of E3
+-for both messages. For a trial of 6.1 two of them cost almost nothing:
+-h1' = h1 XOR eta, because h1 XOR h1' is the constant eta for every Y4 in the
+-class, and f1 XOR f1' = ROR(g1 XOR g1', 12), because f1 = ROR(Y4 XOR g1, 12)
+-and f1' = ROR(Y4 XOR g1', 12) have the same Y4.
++A trial *passes the early test* when the word
++(f1 XOR f1') XOR t XOR ROR(t, 1) is zero. The test needs the first five
++assignments of E1 and the first four of E3 for both messages.
++
++**Lemma N.** For a trial of 6.1 put beta = b1 XOR b1' and eps = c2 XOR c2',
++both taken from E1, and
++
++    n = eps XOR ROL(beta XOR eps, 1) XOR eta.
++
++Let D3 and D6 be the XOR differences between A and B of digest words 3 and
++6, which are the second and the fourth word of R. Then n = D3 XOR ROL(D6, 8)
++for every trial. In particular R = 0 implies n = 0.
++
++Proof. Digest word 3 is Z[3] XOR Z[11], the a output of E3 and the c output
++of E1, so D3 = (e2 XOR e2') XOR eps. Digest word 6 is Z[6] XOR Z[14], the b
++output of E1 and the d output of E3, so D6 = (b2 XOR b2') XOR (h2 XOR h2').
++In E1, b2 = ROR(b1 XOR c2, 7), so b2 XOR b2' = ROR(beta XOR eps, 7). In E3,
++h2 = ROR(h1 XOR e2, 8), and h1 XOR h1' = eta for every Y4 in the class (6.1),
++so h2 XOR h2' = ROR(eta XOR e2 XOR e2', 8). Rotating D6 left by 8 gives
++ROL(D6, 8) = ROL(beta XOR eps, 1) XOR eta XOR (e2 XOR e2'). The XOR with D3
++cancels e2 XOR e2' and leaves n. QED.
++
++A trial *passes the E1 test* when n = 0. The word n needs the first seven
++assignments of E1 for both messages and nothing of E3: for a trial of 6.1
++the eta of E3 is the constant of the class.
++
++*Rule A.* Let h1 be the second value of E3 on message A, as in 6.2. A trial
++*satisfies rule A* when all of the following hold:
++
++    bit 16 of h1 is 1;
++    bits 0 and 1 of h1 are equal;
++    bits 1 and 2 of h1 are equal;
++    bits 2 and 3 of h1 are equal;
++    bits 3 and 4 of h1 differ;
++    bits 23 and 24 of h1 differ.
++
++These are six conditions, each on one bit or on the XOR of two bits, so a
++uniform word satisfies rule A with probability 2^-6.
++
++**Lemma A.** (a) For a trial of 6.1 let z = a2 XOR d1 be the XOR of the
++fifth and the second value of C2, and e1 = Y3 + Y4. Then
++ROL(h1, 24) = z XOR ROL(e1, 8): bit i of h1 is bit (i + 24) mod 32 of z XOR
++bit (i + 16) mod 32 of e1. (b) For every Y4 in the class, the trial
++satisfies rule A exactly when
++
++    bit 8 of z is 0;
++    bits 24 and 25 of z are equal;
++    bits 25 and 26 of z differ;
++    bits 26 and 27 of z are equal;
++    bits 27 and 28 of z differ;
++    bits 15 and 16 of z differ.
++
++(c) Put S = 0f008000, ALL = 0f008100 and V = 0a008000. The word
++
++    ((z XOR ((z >> 1) AND S)) AND ALL) XOR V
++
++is zero exactly when the trial satisfies rule A.
++
++Proof. (a) The sixth assignment of C2 is Y14 = ROR(d1 XOR a2, 8) = ROR(z, 8),
++and the second assignment of E3 is h1 = ROR(Y14 XOR e1, 16). So h1 = ROR(z,
++24) XOR ROR(e1, 16), and rotating left by 24 gives the claim. (b) Rule A
++reads the bits 0, 1, 2, 3, 4, 16, 23 and 24 of h1. By (a) each of them is a
++bit of z XOR a bit of e1, and the bits of e1 that enter are bits 0, 7, 8, 16,
++17, 18, 19 and 20. All of these lie in the mask 015fe7c1 of Lemma Q, so they
++have the same value for every member of the class: in 00036181, bit 0 is 1,
++bit 7 is 1, bit 8 is 1, bit 16 is 1, bit 17 is 1, bit 18 is 0, bit 19 is 0
++and bit 20 is 0. Inserting these values into the six conditions gives the
++conditions on z. (c) Bit p of z XOR ((z >> 1) AND S) is the XOR of bits p and
++p + 1 of z at the positions p of S and bit p of z elsewhere. S holds the
++lower positions of the five conditions on two bits, ALL holds these and the
++position of the condition on one bit, and V holds the required values. QED.
++
++*What Lemma A does not say.* Lemma A says that the word of (c) tests rule A
++exactly. It does not say that a collision satisfies rule A, and that is not
++true: there are solutions of R = 0 with Y4 in the class whose h1 violates
++rule A, and Section 10 prints one. Rule A is therefore a filter that loses
++solutions. A trial that fails it is dropped, whether or not its residual is
++zero. How much is lost is a question about the count of Section 10 and is
++answered there: the figure that H1 is set against leaves out, in full, every
++outcome of the count for which a solution that violates rule A exists.
+ 
+ **6.4 Algorithm.**
+ 
+@@ -473,14 +562,25 @@
+ 2. For each of the 2^56 values of (X12, X13, X14) with X12 < 2^8 and X13 <
+    2^16, in a fixed order: run step S1 to get a context. For each of the 2^32
+    values of alpha: compute the D0 family, the first half of C0 and the
+-   per-alpha constants. Then evaluate the early test for the 65,536 members of
+-   the class in the order of their numbers, seven members in one packed word
+-   (6.5).
+-3. For every trial that passes the early test, compute its words by 6.1 and R
+-   in full. If R = 0, build A and B by steps S2 and S3 from the trial's words,
+-   evaluate H(A) and H(B), check that they agree, output (A, B) and halt.
+-4. Halt with failure if 2^92 trials have passed the early test without R = 0,
+-   or when all trials are exhausted.
++   per-alpha constants. Then run the batches of 6.5 for the 65,536 members of
++   the class in the order of their numbers, seven members in one packed word.
++   Every batch runs stage A, which tests rule A for its seven trials. If none
++   of them satisfies rule A the batch ends and its trials are dropped.
++   Otherwise the batch runs stage 2, which evaluates the E1 test for its seven
++   trials.
++3. For every trial of a batch that ran stage 2 whose E1 test word is zero,
++   compute its words by 6.1 and R in full. If R = 0, build A and B by steps S2
++   and S3 from the trial's words, evaluate H(A) and H(B), check that they
++   agree, output (A, B) and halt.
++4. Halt with failure if 2^88 trials have been processed in step 3 without R =
++   0; or if 9,363 * 2^85 batches have run stage 2, which is one eighth of the
++   9,363 * 2^88 batches of a run; or when all trials are exhausted.
++
++A trial with R = 0 that satisfies rule A is found: its batch runs stage 2,
++its E1 test word is zero by Lemma N, and step 3 computes its residual,
++unless one of the two budgets of step 4 has ended the run before. A trial
++with R = 0 that violates rule A is found only if another trial of its batch
++satisfies rule A; Section 7 does not count such trials.
+ 
+ The contexts are 2^8 * 2^16 * 2^32 = 2^56, and the trials are 2^56 * 2^32 *
+ 2^16 = 2^104 half-colliding pairs by Lemma T, and they are distinct. Two
+@@ -511,68 +611,86 @@
+ 
+ *What a batch computes.* The seven trials of a batch share a context and an
+ alpha and are seven consecutive members of the class. The members enter through
+-two lists that do not depend on the context: for batch j, U[j] holds ROL(y,7)
+-and V[j] holds Y3 + y modulo 2^32, one member y per lane. Each list has 9,363
+-packed words, because 65536 = 9,362 * 7 + 2; the five spare lanes of the last
+-word repeat its last member. The lists are computed once, before step 2. The
+-batch computes in every lane, in the names of 6.1 to 6.3:
++one list that does not depend on the context: for batch j, U[j] holds ROL(y,7),
++one member y per lane. The list has 9,363 packed words, because 65536 = 9,362 *
++7 + 2; the five spare lanes of the last word repeat its last member. The list
++is computed once, before step 2. A batch has two stages. Stage A computes in
++every lane, in the names of 6.1 to 6.3:
+ 
+ - C0 backwards: Y8 = U[j] XOR pb, Y12 = Y8 - pc, Y0 = ROL(Y12,8) XOR pd and
+   ka = Y0 + (IV[3] + IV[7] - pa - pb), which is IV[3] + IV[7] + w6.
+ - K3: kd, kc, kb, S11, S15 = S11 - kc, S3, and the first value of C2,
+   v = X2 + X6 + w7, as S3 - (ka + kb) + (X2 + X6).
++- C2 to z: its second to fifth values and z, the XOR of the fifth and the
++  second.
++- Rule A: the word of Lemma A (c), and whether it is zero in some lane.
++
++If that word is zero in no lane, the batch ends. Otherwise stage 2 computes:
++
++- The entry count: the number of batches that have run stage 2 is advanced
++  and compared with its budget (step 4).
++- C2, rest: Y14 = ROR(z, 8) and Y6, its sixth and eighth values.
+ - D1: d = (X11 - X12) - S11, X1 = ROL(X12,8) XOR d and a = ROL(d,16) XOR S12.
+-- C1: its first seven assignments. The first is X1 + (X5 + w3) and the fifth
+-  is the sum of the first, the fourth, a and the constant -S1 - S6, since
+-  w10 = a - S1 - S6. The fifth and seventh values are Y1 and Y9.
+-- C2: its other seven assignments. The sixth and the eighth are Y14 and Y6.
+-- E1 on A and B: a1, d1, c1, c1', b1, b1', a2, a2'.
+-- E3 on A and B: h1 = ROR(Y14 XOR V[j], 16), h1' = h1 XOR eta, g1 = Y9 + h1,
+-  g1' = Y9 + h1' and f1 XOR f1' = ROR(g1 XOR g1', 12).
+-- The early test: t = a2 XOR a2', the word (f1 XOR f1') XOR t XOR ROR(t,1),
+-  and whether that word is zero in some lane.
+-
+-The words w6, w7 and w10 are never formed on their own, and w8, w9, w11 and
+-w14 are not needed for the early test: step 3 computes them for the trials
+-that pass.
++- C1 to Y1: its first five assignments. The first is X1 + (X5 + w3) and the
++  fifth, Y1, is the sum of the first, the fourth, a and the constant
++  -S1 - S6, since w10 = a - S1 - S6.
++- E1 on A and B: a1, d1, c1, c1', b1, b1', a2, a2', c2, c2'.
++- The E1 test: eps = c2 XOR c2', beta XOR eps, the word n of Lemma N, and
++  whether n is zero in some lane.
++
++Nothing of E3 is evaluated in a batch. Rule A is a condition on h1, a value
++of E3, but by Lemma A it is tested on z, a value of C2, with the bits of e1
++that it needs folded into the constant V. The words w6, w7 and w10 are never
++formed on their own, and w8, w9, w11 and w14 are not needed in a batch: step
++3 computes them for the trials it processes.
+ 
+ *No lane overflows.* Rotation outputs, list entries and constants are below
+ B = 2^32, and an XOR is never longer in bits than its operands. Every sum
+ formed in the batch is below 10 B, which is below 2^36, so no carry leaves a
+ lane. In detail: Y12 and ka are below 2B. In K3, kc is below 2B, S15 below
+ 3B, ka + kb below 3B, its complement (ka + kb) XOR M below 4B and v below 6B.
+-In D1, d and X1 are below 2B. In C1 the sums are below 3B (first), 2B, 6B
+-(Y1, a sum of a value below 3B and three values below B) and 3B (Y9). In C2
+-they are below 2B, 8B (the fifth assignment, v plus two values below B) and
+-3B. In E1 they are below 8B (a1 = Y1 + Y6 + w12), 2B, 2B and 10B (the two
+-a2). In E3, g1 and g1' are below 4B. Since every lane stays below 2^36, the
+-low 32 bits of every lane equal the scalar value modulo 2^32, and XOR and
+-PROR read only those bits.
++In C2 the third value is below 2B and the fifth, v plus two values below B,
++is below 8B; z, the XOR of the fifth and the second, is below 8B. The only
++sum of the rule A part is the one that forms the flags, below 2B. In stage
++2 the sum for Y6 is below 3B. In D1, d and X1 are below 2B. In C1 the sums
++are below 3B (first), 2B and 6B (Y1, a sum of a value below 3B and three
++values below B). In E1 they are below 8B (a1 = Y1 + Y6 + w12), 2B (c1 and
++c1'), 10B (the two a2) and 3B (c2 and c2'). The only sum of the E1 test
++forms the flags, below 2B. Since every lane stays below 2^36, the low 32
++bits of every lane equal the scalar value modulo 2^32, and XOR and PROR
++read only those bits. In the word of Lemma A (c), S and ALL lie below bit
++31, so (z >> 1) AND S reads bit p + 1 of the same lane for the positions p
++of S, the AND with ALL discards the guard bits of z, and the word is below
++B. The word n is reduced by an AND with M.
+ 
+-*Operation count of one batch.* The batch runs on a load/store machine with
+-16 registers. The second column counts additions, XOR, AND, OR, shifts, the
++*Operation count of one batch.* The batch runs on a load/store machine with 16
++registers. The second column counts additions, XOR, AND, OR, shifts, the
+ comparisons and the branches, with PROR = 5. The third column counts memory
+-traffic: every constant operand, that is a per-context or per-alpha constant,
+-a list entry, a rotation mask or the mask M, is fetched from memory each time
+-it is used and charged as one load. Shift distances are fixed in the
+-instruction.
++traffic: every constant operand, that is a per-context or per-alpha constant, a
++list entry, a rotation mask, the mask M, a constant of rule A or a budget, is
++fetched from memory each time it is used and charged as one load. Shift
++distances are fixed in the instruction.
+ 
+ | Part | What is computed | Operations | Loads |
+ | --- | --- | ---: | ---: |
+ | loop | next list position, end test, branch | 3 | 1 |
+ | C0 backwards | Y8 (1), Y12 (1), Y0 (6), ka (1) | 9 | 7 |
+ | K3 | kd (6), kc (1), kb (6), S11 (1), S15 (3), S3 (6), v (4) | 27 | 14 |
++| C2 to z | d1 (6), c1 (1), b1 (6), fifth (2), z (1) | 16 | 8 |
++| rule A | word (5), flags and branch (4) | 9 | 6 |
++| | stage A, every batch | 64 | 36 |
++| entry count | next count, budget test, branch | 3 | 1 |
++| C2, rest | Y14 (5), c2 (1), Y6 (6) | 12 | 4 |
+ | D1 | d (2), X1 (1), a (6) | 9 | 6 |
+-| C1 | first (1), d1 (6), c1 (1), b1 (6), Y1 (3), d2 (6), Y9 (1) | 24 | 11 |
+-| C2 | d1 (6), c1 (1), b1 (6), fifth (2), Y14 (6), c2 (1), Y6 (6) | 28 | 12 |
+-| E1, A and B | a1 (2), d1 (6), c1 c1' (2), b1 b1' (12), a2 a2' (4) | 26 | 11 |
+-| E3, A and B | h1 (6), h1' (1), g1 g1' (2), f1 XOR f1' (6) | 15 | 6 |
+-| early test | t, word (8), reduce, flags (3), compare, branch (2) | 13 | 6 |
+-| | total for seven trials | 154 | 74 |
+-
+-So a batch is 154 + 74 = 228 primitive operations. No store is needed: the
+-list position stays in a register across batches, and at most 10 batch values
+-are live at any point, so they fit in the 16 registers.
++| C1 to Y1 | first (1), d1 (6), c1 (1), b1 (6), Y1 (3) | 17 | 9 |
++| E1, A and B | a1 d1 (8), c1 c1' b1 b1' (14), a2 a2' c2 c2' (18) | 40 | 15 |
++| E1 test | eps, beta XOR eps (3), n (8), flags and branch (4) | 15 | 7 |
++| | stage 2, only after a pass of stage A | 96 | 42 |
++
++So stage A is 64 + 36 = 100 primitive operations and stage 2 is 96 + 42 = 138.
++No store is needed: the list position and the entry count stay in two registers
++across batches, and the batch values that are live at any point fit in the
++other 14; the self-test below reports the number in use.
+ 
+ Each XOR followed by a rotation is 6 operations, a two-term sum 1, a
+ three-term sum 2 and a difference of two lanes 3; a rotation loads its two
+@@ -581,67 +699,110 @@
+ and for v the sum ka + kb (1), XOR M (1), + S3 (1), + (X2 + X6 + 1) (1): 27
+ operations, with loads for 11, IV[3], IV[7], ROL(S7,7), M, 1, M, X2 + X6 + 1
+ and three mask pairs: 14. The loads of C0 backwards are U[j], pb, -pc, pd,
+-the constant IV[3] + IV[7] - pa - pb and one mask pair; those of E3 are
+-V[j], eta and two mask pairs. The loop advances the list position, compares
+-it with the end of the lists, which is loaded, and branches. In the early
+-test, t is one XOR and the word two XORs and one PROR (8); the word is
+-reduced by an AND with M, and the flags are formed by adding 2^32 - 1 to
+-every lane and selecting bit 32 of every lane, which is set exactly in the
+-lanes whose word is nonzero (3); the flags are compared with a loaded
+-constant and the batch ends with a branch (2).
++the constant IV[3] + IV[7] - pa - pb and one mask pair. The loop advances
++the list position, compares it with the end of the list, which is loaded,
++and branches. In the rule A part the word of Lemma A (c) is a shift, an AND
++with S, an XOR with z, an AND with ALL and an XOR with V (5 operations, 3
++loads); the flags are formed by adding 2^32 - 1 to every lane and selecting
++bit 32 of every lane, which is set exactly in the lanes whose word is
++nonzero (2 operations, 2 loads); the flags are compared with a loaded
++constant and stage A ends with a branch (2 operations, 1 load). The entry
++count is one addition, a comparison with the loaded budget and a branch. In
++C2, Y14 is a rotation of z (5) and Y6 a sum, an XOR and a rotation (7). In
++E1, each of c2 and c2' is an XOR, a rotation and a sum (7). In the E1 test,
++eps is one XOR, beta XOR eps two, and n a rotation by one, two XORs and the
++AND with M (8, with loads for one mask pair, eta and M); the flags, the
++comparison and the branch are as in stage A.
+ 
+ The per-alpha constants are seven: pb, -pc, pd and IV[3] + IV[7] - pa - pb
+-for C0, X5 and X5 + w3 for C1, and alpha for C2.
++for C0, X5 and X5 + w3 for C1, and alpha for C2. The per-context constants
++are fourteen. The constants S, ALL and V of rule A depend on the class
++only.
+ 
+ *The count in the submitted program.* The program of the two declared
+ experiments, experiments/halfsearch.py, contains this batch and the machine
+ that counts it. A packed word is one integer with seven 36-bit lanes. Every
+ addition, XOR, AND, OR and shift of packed words is a call that adds one
+ operation, every constant operand and list entry is fetched by a call that
+-adds one load, and the two comparisons and the two branches add one
+-operation each. The batch is written with these calls only; forming the
+-constants and the two list words is not part of it. The command
++adds one load, and every comparison and every branch adds one operation.
++The batch is written with these calls only; forming the constants and the
++list word is not part of it. The program always evaluates both stages, so
++that stage 2 is counted and checked for every batch; the algorithm runs
++stage 2 only after a pass of stage A. The command
+ 
+     python3 experiments/halfsearch.py --selftest N [seed]
+ 
+ runs N batches. The nine context words, alpha and the list position of a
+ case come from SHAKE-256 of the seed text (default 1) and the case number.
+ Every fourth case is the last batch of the class, and in every fifth case
+-each context word and alpha is 0, 2^32 - 1 or as drawn. In each of the
+-seven lanes the reduced test word and its flag are compared with the test
+-word of Lemma E computed in 32-bit arithmetic, forwards from the trial's
+-message words: C0, C1 and C2 in full, then the first halves of E1 and E3
+-for both messages as written in 6.2 and 6.3, without h1' = h1 XOR eta and
+-the other shortcuts of the batch. The program prints one JSON line: the
+-number of cases, the lanes checked and the lanes equal, the operations and
+-loads of every part and in total, whether they are the same in every case
+-and equal to the table above, for every part the largest lane of a sum
+-next to the bound quoted above, the largest number of registers in use at
+-one time, the number of per-context and per-alpha constants, the number of
+-class members in the two lists, and for how many patterns of zero and
+-nonzero lanes the flags are right. Its exit status is 0 only if all of
+-these agree with this section.
+-
+-With N = 2,000 and seed 1 it reports 14,000 of 14,000 lanes equal; 154
+-operations and 74 loads, per part as in the table and the same in every case;
+-largest sums of 1.997, 4.911, 1.969, 5.618, 6.622, 8.509 and 3.916 times 2^32
+-in C0 backwards, K3, D1, C1, C2, E1 and E3, below the bounds 2, 6, 2, 6, 8, 10
+-and 4; 14 per-context and 7 per-alpha constants; 65,536 members in the 9,363
+-words of a list; and at most 10 registers in use. The register figure follows
+-every value, loaded constants and the intermediate values of a rotation
++each context word and alpha is 0, 2^32 - 1 or as drawn. Every lane is
++checked against the real messages of its trial. The program builds the
++messages A and B of the trial by steps S2 and S3 and compresses each in
++full, with a 2-round compression written out from Section 1 and with no
++shortcut of the batch. From these two compressions it takes Y4 of A; h1,
++the second value of E3 on A; the word n of Lemma N, from E1 evaluated for A
++and for B on their own states and words; and the two digests. A lane is
++right when Y4 is the member of the lane, the digests agree on digest words
++0, 2, 5 and 7, the stage-A flag says whether h1 satisfies rule A as written
++in 6.3, the reduced word of stage 2 equals n, n equals D3 XOR ROL(D6, 8) of
++the two digests, and the stage-2 flag says whether n is nonzero; and no
++lane of a batch counts as right unless both branches are taken exactly when
++one of the seven words in front of them is zero. The program prints one
++JSON line: the number of cases, the lanes checked and the lanes right, the
++lanes that satisfy rule A and the batches in which one does, the operations
++and loads of every part and of both stages, whether they are the same in
++every case and equal to the table above, for every part the largest lane of
++a sum next to the bound quoted above, the largest number of registers in
++use at one time, the number of per-context and per-alpha constants, the
++number of class members in the list, for how many patterns of zero and
++nonzero lanes the flags are right, and for how many packed words built from
++all patterns of the bits of z that rule A reads the stage-A flags are
++right. Its exit status is 0 only if all of these agree with this section.
++
++With N = 2,000 and seed 1 it reports 14,000 of 14,000 lanes right; 64
++operations and 36 loads in stage A and 96 and 42 in stage 2, per part as in the
++table and the same in every case; largest sums of 1.997, 4.911, 6.622, 1.058,
++2.952, 1.969, 5.618, 8.509 and 1.999 times 2^32 in C0 backwards, K3, C2 to z,
++rule A, C2 rest, D1, C1, E1 and the E1 test, below the bounds 2, 6, 8, 2, 3, 2,
++6, 10 and 2; 14 per-context and 7 per-alpha constants; 65,536 members in the
++9,363 words of the list; and at most 11 registers in use. The register figure
++follows every value, loaded constants and the intermediate values of a rotation
+ included, from the step that makes it to its last use, with the operations in
+-the order of the program, and adds one register for the list position. None of
+-the 14,000 test words of that run is zero, so the flags are also formed for all
+-128 patterns of zero and nonzero lanes: all 128 are right.
++the order of the program, and adds two registers for the list position and the
++entry count. In that run 215 lanes satisfy rule A, in 177 batches. None of the
++14,000 words n of that run is zero, so the flags are also formed for all 128
++patterns of zero and nonzero lanes: all 128 are right. Rule A reads eight bits
++of z; the program forms 256 packed words in which every pattern of these bits
++occurs once in every lane, with different other bits, filled guard bits and
++another member of the class in every lane, and compares the stage-A flags with
++rule A as written on h1 = ROR(ROR(z, 8) XOR e1, 16): all 256 are right, and a
++lane satisfies rule A in 28 of them.
++
++Longer runs of the same self-test, N = 1,200,000 with seed 61 and N = 1,200,000
++with seed 62, report 16,800,000 of 16,800,000 lanes right and the same counts
++in every batch; 261,798 lanes pass rule A, which is a share of 2^-6.004, in
++205,330 of the 2,400,000 batches, a share of 0.0856 (every fourth batch of the
++self-test is the last batch of the class, whose seven lanes hold only two
++different members, so this share is below that of a run); no stage-2 test word
++is zero; the largest lane of a sum is 9.496 times 2^32, and at most 11
++registers are in use. The batch was first written and counted in the research
++program in which rule A was found, with the same machine and the same
++primitives: 8,400,000 lanes of this class, each compared with the complete
++digests of its two messages, all right; 64 operations and 36 loads for stage A
++and 93 and 41 for the rest, which is the stage 2 of this package without the
++count of its own entry; 130,929 lanes passed rule A, in 102,378 of 1,200,000
++batches.
+ 
+ In the declared experiment `residual-search` the same program evaluates one
+ batch per organizer seed, for that seed's context and alpha and the list
+-position that holds the first member tried, and returns its operations, its
+-loads and its number of equal lanes as observations. The organizer's runner
+-records observations as untrusted and does not recompute them. The
+-self-test and these observations therefore show what the program in the
+-package counts, and that its lanes agree with its own scalar computation.
+-They are a participant check, not an organizer verification of the cost.
++position that holds the first member tried, and returns the operations and
++loads of its two stages, its number of right lanes and whether a lane
++satisfied rule A as observations. The organizer's runner records
++observations as untrusted and does not recompute them. The self-test and
++these observations therefore show what the program in the package counts,
++and that its lanes agree with the program's own compression of the real
++messages. They are a participant check, not an organizer verification of
++the cost.
+ 
+ ## 7. Success probability
+ 
+@@ -649,53 +810,71 @@
+ fixed target. The algorithm is otherwise deterministic. The trials depend on
+ that word only through the four words X2, X5, X6, X9.
+ 
++Call a trial *good* when R = 0 and the trial satisfies rule A. By 6.4 a
++good trial is found unless a budget of step 4 ends the run before.
++
+ **Heuristic H1 (score-critical).** Over the coins, the 2^104 trials behave with
+-respect to the event R = 0 like independent events of probability at least
+-2^-105 each, to the extent that the probability that no trial has R = 0 is at
++respect to the event "good" like independent events of probability at least
++2^-105 each, to the extent that the probability that no trial is good is at
+ most exp(-1/2) + 0.002. The rate 2^-105 is 2^23 = 8,388,608 times the rate of a
+ uniform 128-bit value. The factor is assumed. Section 10 describes what it is
+ set against: for Y4 in the class and under the seven-word model, a count
+-without sampling that gives the lower bound 29,977,922, from a participant
+-computation. The organizer-run experiments do not measure the factor.
+-
+-**Heuristic H2 (supporting).** With probability at least 0.999 over the coins,
+-fewer than 2^92 of the 2^104 trials pass the early test of Lemma E without
+-having R = 0. (The budget corresponds to a pass rate of 2^-12. The pass rate
+-measured on real trials of the class search is 2^-26.52, which would give
+-2^77.48 passes, below the budget by a factor of 2^14.52. That the number of
+-passes of one run stays near this mean is part of the assumption; Section 10
+-reports eight runs of 2^40 trials in the layout of the algorithm: their pass
+-counts lie between 11,098 and 11,621 and differ from run to run by more than
+-chance, by about 1.3% of the count.)
+-
+-Under H1 and H2 the algorithm outputs a collision with probability at least
+-1 - exp(-1/2) - 0.002 - 0.001 > 0.3934 - 0.003 = 0.3904 >= 0.39. When it
+-outputs a pair, the pair is a genuine collision: step 3 checks both complete
+-digests, and the messages have different lengths.
+-
+-*Sensitivity to the factor.* If the rate is f * 2^-128, the 2^104 trials give
+-1 - exp(-f/2^24) - 0.003 with the same allowances, which reaches 0.39 only for
+-f >= 8,375,631: the assumed 8,388,608 leaves no slack on the probability side.
+-The margin of the claim lies between the assumed 8,388,608 and the counted
+-29,977,922, a factor of 3.57. For a general f the same success probability
+-needs 2^127 / f trials and, at the same 34 operations per trial, time_log2 =
+-123.34 - log2 f: that is 100.34 at f = 2^23, and 123.34 at f = 1, the uniform
+-rate, where 34 * 2^127 / 430 = 2^123.33927 and the package would submit 123.4.
+-With the more cautious f = 2^22 = 4,194,304, which is 7.1 times below the
+-count, the same package would search 2^105 trials, twice as many contexts, and
+-would submit 101.4.
+-
+-*Remark on clustering.* H1 asks for more than a rate: it asks that the trials
+-with R = 0 do not come in clusters. Under M the count of Section 10 gives
+-29,977,922 * 2^104 / 2^128 = 1.79 expected trials with R = 0 in a run, where H1
+-needs 0.5. Suppose that these trials came in clusters of m on average and that
+-the clusters fell independently. Then a run would contain one with probability
+-about 1 - exp(-1.79 / m), and the bound 0.39 would hold for m up to 3.57. So if
+-the counted rate is right, the bound survives a clustering of the successes by
+-that factor. This is a remark and not a proof: the counted rate rests on M, and
+-nothing here bounds m. Section 10 reports what was measured on the question.
++without sampling of the solutions of R = 0, from which every outcome with a
++solution that violates rule A is left out, and which gives the lower bound
++29,965,882; a participant computation. The organizer-run experiments do not
++measure the factor.
++
++**Heuristic H2 (supporting).** With probability at least 0.9995 over the coins,
++fewer than 2^88 of the 2^104 trials pass the E1 test of Lemma N without having
++R = 0. (The budget corresponds to a pass rate of 2^-16. The pass rate measured
++on real trials of the class search is 2^-29.42, which would give 2^74.58
++passes, below the budget by a factor of 2^13.42. Step 3 processes only the
++passes that lie in batches that ran stage 2, which are fewer. That the number
++of passes of one run stays near this mean is part of the assumption; Section 10
++reports eight runs of 2^40 trials in the layout of the algorithm, with between
++1,432 and 1,527 passes of the E1 test each and no spread beyond chance.)
++
++**Heuristic H3 (supporting).** With probability at least 0.9995 over the coins,
++fewer than 9,363 * 2^85 of the 2^104 trials satisfy rule A. (A batch runs stage
++2 only if one of its trials satisfies rule A, and every trial lies in one
++batch, so the number of batches that run stage 2 is at most the number of
++trials that satisfy rule A. The budget is a share 2^-5.81 of the trials. A
++uniform h1 satisfies rule A with probability 2^-6. On real trials in runs laid
++out like those of the algorithm, with the differences stated in Section 10,
++four runs of 2^38 trials each, the share measured is 2^-6.0000; seven times it
++is 0.10938, and the budget of one eighth of the batches is larger by a factor
++of 1.142. That the share of one run stays this close to its mean is part of the
++assumption.)
++
++Under H1, H2 and H3 the algorithm outputs a collision with probability at
++least 1 - exp(-1/2) - 0.002 - 0.0005 - 0.0005 > 0.3934 - 0.003 = 0.3904 >=
++0.39. When it outputs a pair, the pair is a genuine collision: step 3
++checks both complete digests, and the messages have different lengths.
++
++*Sensitivity to the factor.* If the rate of good trials is f * 2^-128, the
++2^104 trials give 1 - exp(-f/2^24) - 0.003 with the same allowances, which
++reaches 0.39 only for f >= 8,375,631: the assumed 8,388,608 leaves no slack on
++the probability side. The margin of the claim lies between the assumed
++8,388,608 and the counted 29,965,882, a factor of 3.57. For a general f the
++same success probability needs 2^127 / f trials and, at the same 17.4
++operations per trial, time_log2 = 122.38 - log2 f: that is 99.38 at f = 2^23,
++and 122.38 at f = 1, the uniform rate, where 17.4 * 2^127 / 430 = 2^122.37282
++and the package would submit 122.4. With the more cautious f = 2^22 =
++4,194,304, which is 7.1 times below the count, the same package would search
++2^105 trials, twice as many contexts, and would submit 100.4.
++
++*Remark on clustering.* H1 asks for more than a rate: it asks that the good
++trials do not come in clusters. Under M the count of Section 10 gives
++29,965,882 * 2^104 / 2^128 = 1.78 expected good trials in a run, or more, where
++H1 needs 0.5. Suppose that these trials came in clusters of m on average and
++that the clusters fell independently. Then a run would contain one with
++probability about 1 - exp(-1.78 / m), and the bound 0.39 would hold for m up to
++3.57. So if the counted rate is right, the bound survives a clustering of the
++successes by that factor. This is a remark and not a proof: the counted rate
++rests on M, and nothing here bounds m. Section 10 reports what was measured on
++the question.
+ 
+-Neither heuristic is proved. Section 10 lists the evidence and its limits.
++None of the three heuristics is proved. Section 10 lists the evidence.
+ 
+ ## 8. Charged time
+ 
+@@ -704,58 +883,67 @@
+ 
+ - **Main loop.** For one context and one alpha the 65,536 members take 9,363
+   batches: 9,362 full ones and one that holds the last two members and is
+-  charged in full. A batch is 228 primitive operations by 6.5, memory loads
+-  included, so the batches cost 9,363 * 228 = 2,134,764 operations. The work
+-  per alpha before the batches is the D0 family and the first half of C0 (below
+-  40 operations), the seven per-alpha constants of 6.5, each placed in seven
++  charged in full. A run has 2^88 pairs of a context and an alpha and so
++  9,363 * 2^88 batches. Every batch runs stage A, 100 primitive operations by
++  6.5, memory loads included. By step 4 at most one eighth of the batches,
++  9,363 * 2^85, run stage 2, 138 operations each. The work per alpha before
++  the batches is the D0 family and the first half of C0 (below 40
++  operations), the seven per-alpha constants of 6.5, each placed in seven
+   lanes (12 operations) and stored, and the loads of the context words read:
+-  below 256 operations. One alpha therefore costs below 2,135,020 operations,
+-  less than 32.578 per trial. It is charged 34 * 65536 = 2,228,224, that is 34
+-  per trial; the difference of about 93,200 operations per alpha, 4.4%, is
+-  margin. The main loop costs at most 2^104 * 34 operations.
++  below 256 operations. On every run the main loop therefore costs at most
++  2^88 times 9,363 * 100 + 9,363 * 138 / 8 + 256 = 1,098,067.75 operations,
++  which is less than 16.756 per trial. It is charged 2^88 times 17.4 * 65536
++  = 1,140,326.4, that is 17.4 per trial; the difference, 3.8% of the bound,
++  is margin. The main loop is charged 2^104 * 17.4 operations. This is the
++  budgeted cost, a bound for every run. The expected cost is lower: if a
++  trial satisfies rule A with probability 2^-6, at most 7 * 2^-6 = 0.109375
++  of the batches run stage 2 on average, and a trial costs at most 16.448
++  operations on average.
+ - **Per context.** Step S1 is below 2^10 operations. Placing the 14 per-context
+   constants of the batch in seven lanes and storing them is 14 * 13 = 182 more.
+   Together they are below 2^11 operations. There are 2^56 contexts: 2^67
+   operations.
+-- **Lists.** The two lists of 6.5 are computed once from eta and Y3: 65,536
+-  members at fewer than 64 operations each, 2^22 operations.
+-- **Early-test passes.** At most 2^92 are processed (step 4). The batch keeps
+-  no values of a passing trial, so the trial is recomputed in scalar form from
+-  its member number: its words by 6.1, the calls C1 and C2, E1 and E3 for both
+-  messages, and the comparison of R. That is below 2^10 operations each, loads
+-  included: 2^102 operations, a share below 2^-7.08 of the main loop.
++- **List.** The list of 6.5 is computed once from eta and Y3: 65,536 members at
++  fewer than 64 operations each, 2^22 operations. The three constants of rule A
++  are stored.
++- **Passes of the E1 test.** At most 2^88 are processed (step 4). The batch
++  keeps no values of a passing trial, so the trial is recomputed in scalar form
++  from its member number: its words by 6.1, the calls C1 and C2, E1 and E3 for
++  both messages, and the comparison of R. That is below 2^10 operations each,
++  loads and the count of the processed trials included: 2^98 operations, a
++  share below 2^-10.12 of the main loop.
+ - **Final step.** Steps S2, S3 and two complete hash evaluations with their
+   input handling: below 2^11 operations and 2 units, once.
+ - **Randomness.** One random word, charged as one operation.
+-- **Preprocessing.** The six constants of 3.2 and the word eta of 6.1 are
+-  stored in the program. They were found by a solver search and chosen by the
+-  count of Section 10. That search, the counts and the measurements of Section
+-  10 used fewer than 2^60 primitive operations in total; this figure is the
+-  participant's estimate from the running times, not a count. As a bound for
+-  recomputing a valid set of constants that does not depend on that solver,
+-  exhaustive search over (w4, w13) for the four fixed inputs finds constants
+-  with the property of Fact P with at most 2^64 candidates at two G evaluations
+-  and a comparison each, below 128 operations: 2^71 operations, below 2^63
+-  units.
++- **Preprocessing.** The six constants of 3.2, the word eta of 6.1 and rule A
++  are stored in the program. The constants were found by a solver search and
++  chosen by the count of Section 10, and rule A was read off counts of the same
++  kind. That search, the counts and the measurements of Section 10 used fewer
++  than 2^60 primitive operations in total; this figure is the participant's
++  estimate from the running times, not a count. As a bound for recomputing a
++  valid set of constants that does not depend on that solver, exhaustive search
++  over (w4, w13) for the four fixed inputs finds constants with the property of
++  Fact P with at most 2^64 candidates at two G evaluations and a comparison
++  each, below 128 operations: 2^71 operations, below 2^63 units.
+ 
+ Total:
+ 
+-    T <= (34 * 2^104 + 2^102 + 2^67 + 2^60 + 2^22 + 2^11 + 1) / 430
++    T <= (17.4 * 2^104 + 2^98 + 2^67 + 2^60 + 2^22 + 2^11 + 1) / 430
+          + 2 + 2^63
+-       <  34 * 2^104 * (1 + 2^-7) / 430 + 2^64
+-       <  2^100.3506 + 2^64
+-       <  2^100.36.
+-
+-Here 34 * 2^104 / 430 = 2^(104 + 5.08746 - 8.74819) = 2^100.33927. The terms
+-after the first add up to less than 2^102.01, which is below 34 * 2^104 * 2^-7
+-= 2^102.087, and log2(1 + 2^-7) < 0.01123. The submitted bound is time_log2 =
+-100.4, a factor of about 1.03 above this total. This is a worst-case bound for
+-the algorithm as stated, which halts within these budgets on every run.
++       <  17.4 * 2^104 * (1 + 2^-7) / 430 + 2^64
++       <  2^99.3841 + 2^64
++       <  2^99.39.
++
++Here 17.4 * 2^104 / 430 = 2^(104 + 4.12102 - 8.74819) = 2^99.37282. The terms
++after the first add up to less than 2^98.01, which is below 17.4 * 2^104 * 2^-7
++= 2^101.121, and log2(1 + 2^-7) < 0.01123. The submitted bound is time_log2 =
++99.4, a factor of about 1.01 above this total. This is a worst-case bound for
++the algorithm as stated, which halts within its two budgets on every run.
+ 
+ No sorting or lookup is charged because the algorithm has none: a trial is
+-tested against zero, not against other trials. The only stored lists are the
+-two fixed lists of class members of 6.5, which are read in order; their loads
+-are among the 74 of a batch.
++tested against zero, not against other trials. The only stored list is the
++fixed list of class members of 6.5, which is read in order; its loads are among
++the 36 of stage A.
+ 
+ ## 9. Memory, preprocessing and advice
+ 
+@@ -764,10 +952,10 @@
+ instruction templates of at most four 256-bit words each: 2^14 words, which is
+ 2^19 bytes. Data is the context (48 words), the per-context and per-alpha
+ constants in packed form (below 32 words), the masks and the fixed constants
+-(below 32 words), the two lists of class members (18,726 words), the batch
++(below 32 words), the list of class members (9,363 words), the batch
+ temporaries (below 64 words) and the two messages and digests of the final
+-check: fewer than 19,456 words, that is 622,592 bytes. The memory of the search
+-is therefore below 2^19 + 622,592 < 2^21 bytes. Nothing grows with the number
++check: fewer than 10,240 words, that is 327,680 bytes. The memory of the search
++is therefore below 2^19 + 327,680 < 2^20 bytes. Nothing grows with the number
+ of trials.
+ 
+ *Memory of the preprocessing.* The computations by which the constants and the
+@@ -780,15 +968,16 @@
+ with them the search. The cost model does not score memory.
+ 
+ preprocessing_log2 = 63 is the bound of Section 8 for recomputing the six
+-constants; it also covers their selection and the selection of eta, and it is
+-included in T. nonuniform_advice_log2_bytes = 5 covers the 28 bytes of the six
+-constants and eta. The lists of 6.5 are not advice: the program computes them
+-from eta and Y3 by Lemma Q. There is no other stored data and no stored
+-collision.
+-
++constants; it also covers their selection and the selection of eta and of
++rule A, and it is included in T. nonuniform_advice_log2_bytes = 6 covers
++the 28 bytes of the six constants and eta and the 12 bytes of the three
++constants S, ALL and V of rule A (Lemma A), 40 bytes in all. The list
++of 6.5 is not advice: the program computes it from eta and Y3 by Lemma Q.
++There is no other stored data and no stored collision.
+ ## 10. Evidence, scope and field meanings
+ 
+-**What is exact.** Sections 2 to 5 and Lemmas Q, F, Y, K, T and E. The
++**What is exact.** Sections 2 to 5 and Lemmas Q, F, Y, K, T, E, N and A.
++Lemma A says what stage A tests, not that a collision passes it. The
+ declared experiment `half-collision` runs one trial of 6.1 per organizer
+ seed, with nine state words, alpha and a member number taken from the seed,
+ and the organizer recomputes both digests; Lemma T predicts that every trial
+@@ -804,8 +993,11 @@
+ that over the trials the other six words behave like independent uniform words,
+ independent of Y4. Under M a trial has R = 0 with probability r * 2^-128, where
+ r * 2^80 is the number of solutions of R = 0 among the 2^208 values of the
+-seven words with Y4 in the class. Call r the *class rate*. H1 is M together
+-with r >= 8,388,608.
++seven words with Y4 in the class. Call r the *class rate*. Rule A is a
++condition on h1, one of the seven words, so under M the trials with R = 0 that
++satisfy rule A have a rate of the same kind, r_A, which counts only the
++solutions that satisfy rule A; r_A is at most r. H1 is M together with r_A >=
++8,388,608.
+ 
+ Given M, the class rate is a property of the constants and the class alone:
+ the number of solutions of a system of equations in seven words. It can be
+@@ -887,12 +1079,13 @@
+ smallest k being 9. A uniform d1 has a beta of the list with probability 0.469;
+ that is not the share of the class rate that the list holds, which is not
+ known. For 2,110 betas of the list beta XOR ROR(eta, 1) has odd weight, so that
+-no eps exists. The other 2,162 were enumerated completely, and 39 of them have
+-a nonzero part; these parts add up to 29,977,922. No beta outside that list was
+-counted, so the count is 29,977,922. What is left out, all betas with k above
+-14, makes the figure a lower bound for r. It is about 2^24.84, so that under M
+-a trial has R = 0 with probability about 2^-103.16, or more, since the figure
+-is a lower bound.
++no eps exists. The other 2,162 were enumerated completely (for three of them,
++all without a part, not without sampling: see the second count below), and 39
++of them have a nonzero part; these parts add up to 29,977,922. No beta outside
++that list was counted, so the count is 29,977,922. What is left out, all betas
++with k above 14, makes the figure a lower bound for r. It is about 2^24.84, so
++that under M a trial has R = 0 with probability about 2^-103.16, or more, since
++the figure is a lower bound.
+ 
+ | beta | k | Outcomes | Exact part | Sampler | Error | Deviation |
+ | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+@@ -985,6 +1178,102 @@
+ solution printed below has the outcome tau = 481c2830, eps = 2d5730a9 of this
+ table.
+ 
++**Rule A and the count that the claim uses (participant computation).**
++Rule A is a condition on h1, one of the four words of the E3 side. So for
++an outcome (tau, eps) the number N3 of step 3 splits into the quadruples
++whose h1 satisfies rule A and those whose h1 violates it, and under M the
++rate of the trials with R = 0 that satisfy rule A is the sum of step 5 with
++the first of the two numbers in place of N3. The claim does not use that
++sum. It uses a smaller figure: every outcome that has at least one solution
++that violates rule A is left out in full, with all its solutions.
++
++Which outcomes these are was decided with a SAT solver. For each of the 287
++outcomes with a nonzero product P1 * N3, over all betas of the list, the E3
++system of step 3 was written as a CNF formula from its definition: the unknowns
++Y4, h1, Y9 and w8, E3 for both messages, and the four XOR differences that the
++outcome prescribes. The solver kissat was asked two questions. First, whether
++the formula has a solution. It has one for all 287 outcomes, and every model,
++evaluated again in plain arithmetic, is a solution of its outcome with Y4 in
++the class; 270 of these models satisfy rule A. Second, whether the formula has
++a solution together with the clause that h1 violates rule A. For 247 outcomes
++the answer is that it has none: every solution of these outcomes satisfies rule
++A, and stage A drops none of them. For the other 40 outcomes, in 14 betas, the
++solver returned a solution that violates rule A, and each was evaluated again
++in plain arithmetic. These 40 outcomes carry 12,040 of the count, 0.041% of it:
++
++| beta | k | Outcomes | Dropped | Part of the beta | Part dropped |
++| --- | ---: | ---: | ---: | ---: | ---: |
++| f8342852 | 13 | 8 | 8 | 8,448 | 8,448.0 |
++| 78346852 | 13 | 12 | 4 | 53,520 | 1,296.0 |
++| f87c2852 | 14 | 6 | 6 | 720 | 720.0 |
++| 78343852 | 13 | 10 | 4 | 13,320 | 648.0 |
++| c81c39b3 | 14 | 2 | 2 | 384 | 384.0 |
++| 78345852 | 13 | 8 | 2 | 21,648 | 144.0 |
++| 787c5852 | 14 | 1 | 1 | 128 | 128.0 |
++| 787c6852 | 14 | 1 | 1 | 128 | 128.0 |
++| 787c3852 | 14 | 1 | 1 | 64 | 64.0 |
++| 58743852 | 13 | 16 | 3 | 5,138 | 27.6 |
++| d81428d3 | 13 | 2 | 2 | 16 | 16.0 |
++| d81428b3 | 13 | 2 | 2 | 14 | 14.0 |
++| d8142873 | 13 | 2 | 2 | 12 | 12.0 |
++| 58fc3852 | 14 | 2 | 2 | 10 | 10.2 |
++| sum | | | 40 | | 12,039.8 |
++
++The largest of them is the outcome tau = 17d4e830, eps = f298b0a9 of beta
++f8342852, with 4,096.0. Without these outcomes the count is
++
++    29,977,922 - 12,040 = 29,965,882.
++
++This is the figure that H1 is set against. Under M it is a lower bound for the
++rate of the trials with R = 0 that satisfy rule A, provided that the solver's
++247 answers "no solution" are right. They are the answers of one solver in one
++run; no proof certificate was kept or checked. The figure is 0.999598 of the
++count of all solutions.
++
++For this package the 39 betas with a nonzero part were counted once more with
++the calculator as it is now, a binary that was only executed (SHA-256
++aa02c98936ffeb25...): it returns the same 39 parts, 29,977,922 in all, no
++outcome through either fallback, and the same 287 outcomes with a nonzero
++product. The products P1 * N3 of the single outcomes are taken from the recount
++that prints both factors in full; their logarithms agree with the two decimals
++that the calculator prints for every outcome. The whole list was also counted
++once more with that binary, all 4,272 betas: the same betas have no eps, the
++same 39 have a part, every part is the same, and the sum is 29,977,922. For
++three betas of the list, c81cd8b3, f81c2873 and f81c28b3, all without a part,
++that run reports what the per-beta file of the first count does not record: the
++E3 count of seven outcomes went through the random-subset branch, so these
++values are estimates. The 69 outcomes of these betas with a nonzero E3 value
++all have an exact E1 count of zero, so their product is zero whatever N3 is. An
++outcome whose E3 value that branch estimated as zero would be missing from the
++sum; that can only make the figure smaller. So for these betas the E3 side was
++not counted without sampling.
++
++How much of the rate rule A really keeps was counted for a shorter list. The
++thread that found the rule split the E3 count of every outcome by the bits of
++h1, with a program of its own, for the 242 outcomes of the 30 betas with a part
++among the 1,500 lightest betas, whose parts add up to 29,862,848: rule A keeps
++0.999839 of that sum. The figure that the claim uses keeps less, because it
++gives up every outcome with a violating solution in full. The same question had
++been put to the solver before, by the thread that found the rule, for the 242
++outcomes of that shorter list: its answers, 215 without and 27 with a violating
++solution, are the same as those above for every one of these outcomes. That
++thread also compared the E3 count N3 with the approximate model counter
++ApproxMC (tolerance 0.4, confidence 0.9) on the CNF of the same E3 system, for
++the 30 outcomes with the largest products of its list, which carry 0.8866 of
++its sum: the mean of log2(N3 / ApproxMC) is -0.002 and the largest difference
++0.10 bits.
++
++A complete solution of the seven-word system with Y4 in the class that violates
++rule A, which can be checked by hand from 6.2: Y1 = 052ce267, Y6 = fad31d99,
++Y12 = 69da227b, w12 = 00000000, w5 = 57d7dfef, Y4 = c0d07bf1, Y9 = fcde77b6,
++Y14 = a48cb1ee, w15 = 0, w8 = 5141ce8c. For these values the four residual
++words of 6.2 are zero, and h1 = d87fa4af does not satisfy rule A: "bits 23 and
++24 differ" fails. Its outcome is tau = 17d4e830, eps = f298b0a9 with beta =
++f8342852, one of the outcomes that the count leaves out. The E3 values are the
++solver's model for that outcome and the E1 values come from a second solver
++call. It shows that a collision need not satisfy rule A; it does not show that
++a message reaches such values.
++
+ *The sampler as a check.* The last three columns of the first table come from
+ the sampler of submission 04638ed8, which is used here as a check and not for
+ the figure. For one beta it draws d1 among the values with that beta and b1, a2
+@@ -1073,13 +1362,23 @@
+ that run has 37.52, +0.4 standard deviations; trials with one of its listed
+ betas -0.8). It lacks a run that counts partial E3 events on real messages,
+ which the class of the package has. So the other class has the larger count and
+-nearly the same checks. The claim is the same for both. The two counts are 3.57
+-and 4.33 times the assumed 2^23; against the next power of two, 2^24, they
+-would leave factors of only 1.79 and 2.17. The sampler was also run for eta =
+-e741835e on four betas (13,225,404 with standard error 1,039,270 against
+-11,482,432 counted; single betas between +0.8 and +2.4 standard errors) and eta
+-= e5c1815f on seven betas (5,627,648 with standard error 225,130 against
+-5,799,040 counted; single betas between -1.6 and +0.3 standard errors).
++nearly the same checks. With a batch of one stage the claim would be the same
++for both classes. Rule A and the two-stage batch of this package were worked
++out, counted and checked for the class of the package only, and that is a
++second reason why the other class is not used. For e74181df the thread that
++found rule A reports, from the same split of the E3 counts by the bits of h1,
++five conditions that keep all of the counted solutions of its list; the best
++further condition that it found keeps 0.973 of them. With five conditions a
++trial passes with probability 2^-5, so that more batches would run stage 2 than
++here; no batch was written or counted for that class, and no claim is derived
++for it. The two counts are 3.57 and 4.33 times the assumed 2^23 (rounded down;
++for the class of the package this is the count of all solutions, before rule
++A); against the next power of two, 2^24, they would leave factors of only 1.78
++and 2.16. The sampler was also run for eta = e741835e on four betas (13,225,404
++with standard error 1,039,270 against 11,482,432 counted; single betas between
+++0.8 and +2.4 standard errors) and eta = e5c1815f on seven betas (5,627,648
++with standard error 225,130 against 5,799,040 counted; single betas between
++-1.6 and +0.3 standard errors).
+ 
+ **Checks of the calculator (participant computations).** The E3 count of step 3
+ is the program of submission 04638ed8; the checks reported there were made with
+@@ -1145,41 +1444,44 @@
+ participant computations.
+ 
+ **Checks by reviewing helper agents (participant computations).** Three helper
+-agents, further instances of the AI model that wrote this package, reviewed it
+-before it was finished and wrote programs of their own from the text of this
+-proof. They are not independent parties, and what follows is quoted from their
+-reports. One compared the whole calculation at 8-bit words, that is the
+-enumeration of outcomes, the E1 count, the E3 count, the weights and the sum
+-over betas, with a brute force of the seven-word system written from 6.2 alone:
+-60 random constant sets, 1,019 classes, 17,258 pairs of a class and a beta, 874
+-of them with solutions, 694,652,928 solutions in all; no pair differs, and the
+-8,632 pairs without an eps are all empty. The same agent repeated the
+-brute-force check of the E1 count at 8 bits with another seed (60 cases, 85,908
+-outcomes with solutions all equal, 60,448 sampled outcomes without solutions
+-all zero) and made a Monte Carlo of the E1 probabilities at 32 bits for the
+-four sampled betas with no code of the project: for their 48 outcomes with a
+-nonzero product the chi-square statistics are 12.6 on 16, 10.6 on 10, 8.3 on 10
+-and 16.7 on 12 degrees of freedom, and the sums of P1 * N3 are 0.980, 0.990,
+-1.005 and 1.012 of the calculator's. The second agent made a Monte Carlo of E1
+-for the heaviest beta with 2^39 draws, 587 hits on its 16 outcomes against
+-628.2 predicted (628.75 by the counts N1 of the table above; the report worked
+-from logarithms kept to two decimals) and none on the outcome that the
+-calculator counts as zero, and a Monte Carlo of the E3 count for the four
+-heaviest outcomes with 2^36 draws each: log2 N3 = 50.06 +- 0.06, 48.14 +- 0.12,
+-49.95 +- 0.09 and 48.04 +- 0.18 against 50, 48, 50 and 48. It also found the
+-solution inside the class that is printed below. The third agent compared the
+-whole calculation with a brute force of its own at 8-bit words, for 10 random
+-cases, half of them with delta = -2, and 182 classes: all 125 pairs of a class
+-and a beta with solutions are equal, and all 46,467 pairs without solutions are
+-zero. With a Monte Carlo of its own at 32 bits it found, for the heaviest beta,
+-the E1 probabilities of all 16 outcomes within 0.14 bits of the calculator's,
+-and the E3 counts of the six largest outcomes at 2^50.05, 2^47.88, 2^50.01,
+-2^47.92, 2^46.89 and 2^45.08 against 2^50, 2^48, 2^50, 2^48, 2^47 and 2^45; for
+-these six outcomes together it gives 12.20 million with standard error 0.44
+-million against 12.58 million counted. Two of the agents report that the
+-calculator returns the same outcomes and parts for the heavy betas when delta =
+-+2 is put in place of -2. So the count does not check the sign of delta; that
+-is checked by the hash tests of the trial, not by the count.
++agents, further instances of the AI model that wrote this package, reviewed an
++earlier version of it, which had the same constants, the same class and the
++same count and a batch of one stage, and wrote programs of their own from the
++text of that proof. They are not independent parties, and what follows is
++quoted from their reports. Rule A, the two-stage batch and the count with rule
++A did not exist then and were not in front of them. One compared the whole
++calculation at 8-bit words, that is the enumeration of outcomes, the E1 count,
++the E3 count, the weights and the sum over betas, with a brute force of the
++seven-word system written from 6.2 alone: 60 random constant sets, 1,019
++classes, 17,258 pairs of a class and a beta, 874 of them with solutions,
++694,652,928 solutions in all; no pair differs, and the 8,632 pairs without an
++eps are all empty. The same agent repeated the brute-force check of the E1
++count at 8 bits with another seed (60 cases, 85,908 outcomes with solutions all
++equal, 60,448 sampled outcomes without solutions all zero) and made a Monte
++Carlo of the E1 probabilities at 32 bits for the four sampled betas with no
++code of the project: for their 48 outcomes with a nonzero product the
++chi-square statistics are 12.6 on 16, 10.6 on 10, 8.3 on 10 and 16.7 on 12
++degrees of freedom, and the sums of P1 * N3 are 0.980, 0.990, 1.005 and 1.012
++of the calculator's. The second agent made a Monte Carlo of E1 for the heaviest
++beta with 2^39 draws, 587 hits on its 16 outcomes against 628.2 predicted
++(628.75 by the counts N1 of the table above; the report worked from logarithms
++kept to two decimals) and none on the outcome that the calculator counts as
++zero, and a Monte Carlo of the E3 count for the four heaviest outcomes with
++2^36 draws each: log2 N3 = 50.06 +- 0.06, 48.14 +- 0.12, 49.95 +- 0.09 and
++48.04 +- 0.18 against 50, 48, 50 and 48. It also found the solution inside the
++class that is printed below. The third agent compared the whole calculation
++with a brute force of its own at 8-bit words, for 10 random cases, half of them
++with delta = -2, and 182 classes: all 125 pairs of a class and a beta with
++solutions are equal, and all 46,467 pairs without solutions are zero. With a
++Monte Carlo of its own at 32 bits it found, for the heaviest beta, the E1
++probabilities of all 16 outcomes within 0.14 bits of the calculator's, and the
++E3 counts of the six largest outcomes at 2^50.05, 2^47.88, 2^50.01, 2^47.92,
++2^46.89 and 2^45.08 against 2^50, 2^48, 2^50, 2^48, 2^47 and 2^45; for these
++six outcomes together it gives 12.20 million with standard error 0.44 million
++against 12.58 million counted. Two of the agents report that the calculator
++returns the same outcomes and parts for the heavy betas when delta = +2 is put
++in place of -2. So the count does not check the sign of delta; that is checked
++by the hash tests of the trial, not by the count.
+ 
+ A complete solution of the seven-word system with Y4 in the class, which can be
+ checked by hand from 6.2: Y1 = 00000000, Y6 = 7e1401e5, Y12 = 5a538ab4, w12 =
+@@ -1191,7 +1493,8 @@
+ and was evaluated again for this text with the G function alone. It shows that
+ the constants and the class do not exclude R = 0; it does not show that a
+ message reaches such values. The solution that the solver search returned with
+-the constants has eta = e5c1815f and so lies in another class.
++the constants has eta = e5c1815f and so lies in another class. For the solution
++printed here h1 = e37197ef, which satisfies rule A.
+ 
+ **How the constants and the class were found.** The constants come from a
+ solver search, not from farming random sets. One CNF instance holds, with real
+@@ -1219,15 +1522,21 @@
+ every trial: all agree on digest words 0, 2, 5 and 7, have Y4 in the class and
+ the pinned words in place, and have the residual that 6.2 computes. A second
+ program, written independently from the text of this proof, checked each of
+-Lemmas Q, F, Y, K and T on 20,000 random trials with these constants and this
+-class against a plain forward compression.
++Lemmas Q, F, Y, K, T, N and A on 20,000 random trials with these constants and
++this class against a plain forward compression, and evaluated the two solutions
++that this section prints.
+ 
+ **Checks of the model on real messages (participant measurement).** Real
+ trials of 6.1 were compared with the same number of draws from M (Y4 a
+ uniform member of the class, the other six words uniform and independent),
+ on the same statistics: how often each of the four residual words, or its
+ low 16 bits, is zero, how many trials have a residual of weight at most 32
+-or at most 40, and how often the early test of Lemma E passes.
++or at most 40, how often the early test of Lemma E passes, and in how many
++trials E1 requires the class. The last of these is the event
++eps XOR ROL(beta XOR eps, 1) = eta, so a trial in which E1 requires the
++class is a trial that passes the E1 test of Lemma N. The algorithm of this
++package uses the E1 test and not the early test; both are reported because
++the programs print both.
+ 
+ In these comparisons the real trials are not laid out as in 6.4. Every
+ thread of the generating program draws its own context, nine random state
+@@ -1328,29 +1637,53 @@
+ record these two counts and nothing else; in particular no residual words and
+ no pair statistics.
+ 
+-What this means for the two heuristics. H2 is not at risk: its budget is
+-2^14.54 above the mean number of passes of these runs, and the runs differ by a
+-percent or two. For H1 it is a warning. H1 treats the trials of a run as
+-independent with respect to R = 0, and here another event of the same trials,
+-at a depth of about 2^-26.52, is seen to depend on the seed words that all
+-trials of a run share. The number of trials in which E1 requires the class, an
+-event that R = 0 needs, shows no such dependence at a depth of about 2^-29.5,
+-but that is far from the depth of R = 0. Four things bear on the question; none
+-settles it for 32-bit words. First, averaged over independent contexts the pass
+-rate agrees with M: 45,141 passes against 45,349 in 2^42 trials of each kind
+-(above), that is 11,285 against 11,337 per 2^40 trials, and the mean of the
+-eight layout runs is 11,258; it is the spread between runs that M does not
+-give. Second, the scaled-down runs in the layout of the algorithm reported
+-below count collisions per run, at word sizes of 8 to 10 bits and with other
+-constants: 7,072 of 18,080 runs had a collision where independent trials
+-predict 7,113.9. Third, eight runs of the class eta = e74181df of the same
+-constants, made with the same eight sets of seed words, show no excess: the
+-ratio of the variance of their pass counts to their mean is 0.74 (chi-square
+-5.2 on 7 degrees of freedom), and the run with the seed words of run 5 is 0.2
+-standard deviations below the mean of the others there. So those seed words do
+-not give a high pass count for every class. Fourth, the remark at the end of
+-Section 7: under M the count gives 1.79 expected trials with R = 0 per run, so
+-the bound 0.39 would survive a clustering of them by a factor of up to 3.57.
++What this means for the three heuristics. The count that differs between runs
++is that of the early test of Lemma E, which the algorithm of this package does
++not use. H2 is about the E1 test of Lemma N. Its passes are the trials in which
++E1 requires the class; their counts in these runs show no such spread, and the
++budget of H2 is 2^13.47 above their mean. H3 is about rule A, which these runs
++did not record; four other runs in the same layout did, and each has a share of
++trials that satisfy rule A within 1.3e-05 of 2^-6, relatively (reported below).
++For H1 it is a warning. H1 treats the trials of a run as independent with
++respect to its event, and here another event of the same trials, at a depth of
++about 2^-26.52, is seen to depend on the seed words that all trials of a run
++share. The number of trials in which E1 requires the class, an event that R = 0
++needs, shows no such dependence at a depth of about 2^-29.5, but that is far
++from the depth of R = 0. Four things bear on the question; none settles it for
++32-bit words. First, averaged over independent contexts the pass rate agrees
++with M: 45,141 passes against 45,349 in 2^42 trials of each kind (above), that
++is 11,285 against 11,337 per 2^40 trials, and the mean of the eight layout runs
++is 11,258; it is the spread between runs that M does not give. Second, the
++scaled-down runs in the layout of the algorithm reported below count collisions
++per run, at word sizes of 8 to 10 bits and with other constants: 7,072 of
++18,080 runs had a collision where independent trials predict 7,113.9. Third,
++eight runs of the class eta = e74181df of the same constants, made with the
++same eight sets of seed words, show no excess: the ratio of the variance of
++their pass counts to their mean is 0.74 (chi-square 5.2 on 7 degrees of
++freedom), and the run with the seed words of run 5 is 0.2 standard deviations
++below the mean of the others there. So those seed words do not give a high pass
++count for every class. Fourth, the remark at the end of Section 7: under M the
++count gives 1.78 expected trials with R = 0 and rule A per run, so the bound
++0.39 would survive a clustering of them by a factor of up to 3.57.
++
++**Rule A and the E1 test on real trials (participant measurement).** The runs
++above did not record rule A. The thread that found the rule ran real trials of
++6.1 for these constants and this class with a program of the same kind that
++also counts rule A, in the layout of the runs above: every run has its own four
++seed words, shared by all its contexts, X12 is below 2^8, and the two
++differences from 6.4 named above apply. Four runs of 2^38 trials counted
++4,294,916,967, 4,294,925,479, 4,295,022,265 and 4,294,920,099 trials that
++satisfy rule A, where a share of 2^-6 is 4,294,967,296: they are -0.8, -0.6,
+++0.8 and -0.7 standard deviations of a binomial count away from it, and no run
++differs from it by more than 1.3e-05 of its value. Together 17,179,784,810 of
++2^40 trials satisfy rule A, a share of 2^-6.0000 (-0.6 standard deviations from
++2^-6). A batch runs stage 2 only if one of its seven trials satisfies rule A,
++so at most seven times this share of the batches do, 0.10938, against the
++budget of 0.125 in step 4. In the same runs 1,390 trials passed the E1 test, a
++share of 2^-29.56, and 11,407 the early test of Lemma E. These runs have no
++model run beside them; they give pass rates and nothing about M. The self-test
++of the program reports the same share of lanes on its own, much smaller, sample
++(6.5).
+ 
+ The same comparisons were made earlier for the constants of submission 04638ed8
+ and are reported there. For its class the largest deviation with independent
+@@ -1403,8 +1736,9 @@
+ whole class is tried with everything else held fixed. In both layouts a run
+ differs from a run of 6.4 in the words it holds fixed: here X2, X9, X13 and
+ X14, there the seed words X2, X5, X6 and X9. The residual of every
+-trial is computed in full; the early test of 6.3 and the packing of 6.5
+-change the cost of a trial and not its outcome, and are not used. M predicts
++trial is computed in full; rule A, the tests of 6.3 and the packing of 6.5
++are not used. The E1 test and the packing change the cost of a trial and
++not its outcome. Rule A drops trials, and these runs do not test it. M predicts
+ r collisions per run. Every collision found is checked again by building
+ both messages and evaluating the toy hash on each in full. The number of
+ runs of every series was fixed before the series started.
+@@ -1488,7 +1822,7 @@
+ used, with rates computed by brute force as above. A configuration is a
+ constant set with that class and a number of contexts per run, chosen so that M
+ predicts L collisions per run: L = 0.5, the value at which H1 gives its bound,
+-or L = 1.7, close to the 1.79 that the count of this package gives per run. The
++or L = 1.7, close to the 1.78 that the count of this package gives per run. The
+ constant sets are drawn at random. Jobs B, C, F and G keep only the sets whose
+ best class has a rate per member above a threshold; every job skips a
+ configuration that would need more trials per run than a limit; the 10-bit sets
+@@ -1543,26 +1877,62 @@
+ words, where a run has 2^104 trials, or about the constants of this package,
+ whose count rests on few paths.
+ 
++**Scaled-down runs with staged tests (participant computation, other
++constants).** The thread that found rule A repeated the scaled-down class
++search of the kind described above with tests placed in front of the residual
++computation: a rule on the bits of h1, a rule on beta, and the E1 test of Lemma
++N, on the toy hash described above, with five constant sets at 8 bits and one
++constant set at 10 bits. The rule on h1 used there is not rule A. It is made of
++the XOR conditions on bits of h1 that every solution of the class satisfies,
++found by brute force for each constant set; there are between zero and three of
++them, and such a rule loses nothing. Six of the nine series also restrict Y4 to
++half of the class, and all use the rule on beta; this package does neither. A
++trial that fails a test is dropped, and the prediction is the brute-force count
++of the solutions that pass. Results: with 8-bit words, 8 series: 13,337
++collisions against 13,505.6 predicted, -1.5 standard deviations of a Poisson
++count (single series up to 2.1); with 10-bit words, 1 series: 84 collisions
++against 93.3 predicted, -1.0 standard deviations of a Poisson count. In every
++series every collision found passed the rules and the E1 test, the E1 test word
++of every trial was equal to the word D3 XOR ROL(D6, r) of its residual, where r
++is the toy's third rotation (Lemma N for the toy hash), no trial had a Y4
++outside its class, and no collision failed the full re-hash. These runs test
++the logic of dropping trials early and Lemma N, end to end and down to
++collisions, at small word sizes. They do not test rule A of this package, which
++has six conditions and loses solutions, and they are not evidence about its
++constants.
++
+ The declared experiment `residual-search` runs the search of Section 6 at toy
+ scale: one context and one alpha per seed, then the members of the class in
+ order from a number taken from the seed, stopping at the first trial whose
+-residual has a zero low byte in digest word 1. The search runs without the
+-early test and without the packing of 6.5, which change the cost of a trial
+-and not its outcome. The organizer checks that every returned pair agrees
+-on 136 digest bits. It checks the trial generator and the residual
+-computation on real digests. It is not a test of H1 and says nothing direct
+-about 128 bits. Beside the search, the program evaluates one packed batch
+-per seed on the counting machine of 6.5 and returns its operations, loads
+-and equal lanes as observations; the organizer records them as untrusted
+-and does not check them.
++residual has a zero low byte in digest word 1. The search runs without rule
++A, without the E1 test and without the packing of 6.5. The organizer checks
++that every returned pair agrees on 136 digest bits. It checks the trial
++generator and the residual computation on real digests. It is not a test of
++H1, H2 or H3 and says nothing direct about 128 bits. Beside the search, the
++program evaluates one packed batch per seed on the counting machine of 6.5
++and returns the operations and loads of its two stages, its right lanes and
++whether a lane satisfied rule A as observations; the organizer records them
++as untrusted and does not check them.
+ 
+ **Limits of the evidence.**
+ 
+-- The factor 2^23 in H1 is assumed. It is set against a count of 29,977,922
++- The factor 2^23 in H1 is assumed. It is set against a count of 29,965,882
+   under M, from a participant computation. The organizer-run experiments do not
+   measure the factor, and the success bound needs it to be at least 8,375,631.
+   With factor 1, the uniform rate, the same search needs 2^127 trials and gives
+-  time_log2 = 123.4.
++  time_log2 = 122.4.
++- Rule A is not implied by a collision; it loses solutions. That it loses no
++  more than the count allows rests on a SAT solver's answers, for 247 of the
++  287 outcomes of the count, that no solution violates rule A. These are the
++  answers of one solver in one run, without a checked certificate, and the
++  solver and its encoding are the participant's. The 40 outcomes with a
++  violating solution are left out in full. Rule A was read off counts of the
++  same kind as the count itself, for this class: it was chosen to fit the
++  solutions that the count knows. Solutions of betas outside the list are not
++  in the count, and nothing is known about whether they satisfy rule A; the
++  claim does not use them. No measurement on real messages reaches the event of
++  H1, so none tests rule A together with R = 0, and the scaled-down runs with
++  staged tests use rules of another kind.
+ - The count is exact only under M. It counts the solutions of the seven-word
+   system; that the trials of the algorithm meet those solutions at the rate M
+   predicts is the assumption. M has been tested end to end, down to actual
+@@ -1625,11 +1995,25 @@
+   above gave 0.024 for those constants. For some constant sets one residual
+   word vanishes 40 times more often than a uniform word while the count is
+   zero.
+-- H2 rests on the early-test pass rate measured on real trials of the class
+-  search with these constants: 11,418 passes in 2^40 trials with independent
++- H2 rests on the pass rate of the E1 test measured on real trials of the class
++  search with these constants: 1,521 passes in 2^40 trials with independent
+   contexts. That the number of passes of a full run of 2^104 trials stays near
+-  the mean is assumed. The runs with shared seed words differ from each other
+-  by more than chance; the budget is 2^14.54 above their mean.
++  the mean is assumed. In the eight runs with shared seed words the counts of
++  this event are 1,462, 1,494, 1,486, 1,472, 1,432, 1,468, 1,471 and 1,527,
++  with no spread beyond chance; the budget is 2^13.47 above their mean.
++- H3 rests on the share of trials that satisfy rule A in four runs of 2^38 real
++  trials with shared seed words, each within 1.3e-05 of 2^-6 relatively, and on
++  the fact that a uniform word satisfies the rule with that probability. The
++  budget is 1.142 times seven times the measured share. That no run of 2^104
++  trials has a share that far above the mean is assumed; four runs cannot
++  exclude seed words for which it has. If either budget of step 4 is exceeded
++  the algorithm halts with failure: that lowers the success probability, by the
++  0.0005 allowed for each of H2 and H3, and does not raise the time bound.
++- The charge of 17.4 operations per trial is the budgeted cost of a two-stage
++  batch. With one stage, as in the submissions named below, a trial costs 34
++  charged operations and the total would be larger by a factor of 2^0.96. The
++  stage counts are those of the machine in the submitted program; no organizer
++  run verifies them.
+ - The two memory figures of the preprocessing in Section 9 are observations of
+   the runs and were not measured by a tool.
+ 
+@@ -1649,38 +2033,41 @@
+   Y4, where that rate is assumed to be 8,388,608 times the uniform one. The
+   exponent of the number of trials is 104 instead of 128, and 127 if only the
+   uniform rate is assumed.
+-- The construction, the trial and the packed batch are those of the submissions
+-  17bba2ae, 5ceb1802 and 04638ed8 on this track, which claim 123.5, 121.5 and
+-  112.4. What is new here is the set of constants, the class, and the count
+-  that replaces the sampled estimate of the rate. The claimed scalar is 12
+-  below that of submission 04638ed8. All of that difference is the factor that
+-  H1 assumes, 2^23 here against 2^11 there; the cost charged per trial is the
+-  same.
++- The construction and the trial are those of the submissions 17bba2ae,
++  5ceb1802 and 04638ed8 on this track, which claim 123.5, 121.5 and 112.4. What
++  is new here is the set of constants, the class, the count that replaces the
++  sampled estimate of the rate, and the batch: it has two stages, with rule A
++  in front and the E1 test of Lemma N in place of the early test of Lemma E,
++  where those submissions have a batch of one stage. The claimed scalar is 13.0
++  below that of submission 04638ed8. Of that difference, 12 bits are the factor
++  that H1 assumes, 2^23 here against 2^11 there, and 0.97 bits are the cost
++  charged per trial, 17.4 operations here against 34 there; the rest is
++  rounding of the two bounds.
+ - A brief literature search found free-start collisions and near-collisions of
+   the compression function for reduced BLAKE variants, and no collision attack
+   on the 2-round BLAKE3 hash. No priority or novelty claim is made.
+ - The time bound counts the arithmetic, logical and shift operations of the
+-  packed batch, its two comparisons and its two branches, and one load for
+-  every use of a constant or list entry, on a 16-register machine. It is an
+-  upper bound under that convention, not a measured running time. The count of
+-  a batch can be rerun with the self-test of the submitted program (6.5); that
+-  is a participant check and no organizer run verifies it.
++  packed batch, its comparisons and its branches, and one load for every use of
++  a constant or list entry, on a 16-register machine, with stage 2 counted for
++  the share of the batches that step 4 allows. It is an upper bound under that
++  convention, not a measured running time. The count of a batch can be rerun
++  with the self-test of the submitted program (6.5); that is a participant
++  check and no organizer run verifies it.
+ 
+ **Field meanings.**
+ 
+-- time_log2 = 100.4 bounds total charged time by 2^100.4 units.
++- time_log2 = 99.4 bounds total charged time by 2^99.4 units.
+ - memory_log2_bytes = 35 bounds the storage of the preprocessing and of the
+-  search by 2^35 bytes; the search alone needs less than 2^21 bytes (Section
++  search by 2^35 bytes; the search alone needs less than 2^20 bytes (Section
+   9).
+ - preprocessing_log2 = 63 bounds the recomputation of the six constants and the
+   selection of the constants and of eta by 2^63 target-compression units.
+-- nonuniform_advice_log2_bytes = 5 bounds the stored constants and eta, 28
+-  bytes, by 32 bytes.
+-- success_probability = 0.39 holds under H1 and H2 as shown in Section 7.
++- nonuniform_advice_log2_bytes = 6 bounds the stored constants, eta and the
++  three constants of rule A, 40 bytes, by 64 bytes.
++- success_probability = 0.39 holds under H1, H2 and H3 as shown in Section 7.
+ 
+ The required baseline_improved identifier blake3-r2-nominal-v2 names the
+ organizer's nominal display reference 128, which is not an established attack,
+-a qualified baseline or a security bound. The claimed scalar 100.4 is lower
+-than that display value. Whether a qualified result improves the Yukon
+-incumbent is decided separately, and no Pareto dominance claim follows from the
+-scalar.
++a qualified baseline or a security bound. The claimed scalar 99.4 is lower than
++that display value. Whether a qualified result improves the Yukon incumbent is
++decided separately, and no Pareto dominance claim follows from the scalar.

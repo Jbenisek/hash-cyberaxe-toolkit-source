@@ -1,0 +1,23 @@
+{
+  "id": "D555-SHA3-R5Q-INCOMPLETE-TREE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR5Q scratch tree completeness audit",
+  "question": "Is pkgR5Q ready for package or experiment intake?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR5Q has only base/4e24cebd and work/; no pkg/sha3-256-r5 submission tree and no request file. Base claim reports time_log2=32.90547, memory_log2=30, preprocessing_log2=32.81088, success_probability=0.4, but this is not package-intake evidence. No experiment or score credit.",
+  "source": "our workflow: D555 read-only pkgR5Q completeness audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D555_r5q_incomplete.md; research/tools/build_pkg/scratch/pkgR5Q/base/4e24cebd/claim.json; research/tools/build_pkg/scratch/pkgR5Q/work/fetch_base.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not applicable",
+  "notes": "Incomplete scratch tree; no package/stage/filing/submission.",
+  "held_fixed": "pkgR5Q scratch contents as found; no writes",
+  "reopen_if": "complete package tree and supplied public organizer request"
+}

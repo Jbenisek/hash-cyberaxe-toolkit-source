@@ -1,0 +1,24 @@
+{
+  "id": "D268-B3M-OUTPUT-PROTOCOL-GATE",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M one-message output protocol gate",
+  "question": "Does the shipped python-message-pairs-v1 protocol already permit the one-message resident output schedule?",
+  "labels": [
+    "C",
+    "Z"
+  ],
+  "status": "COMPUTED",
+  "number": "PROVED static blocker: manifest declares python-message-pairs-v1; root_pair returns both payloads; trial retains both; main appends message_a_hex and message_b_hex before one json.dump. The one-message row therefore remains conditional on a production incremental serializer or organizer memory ruling. RELEASE=85.43472, conditional=84.88595, safe credit=0 bits.",
+  "source": "our workflow: D268 B3M output protocol audit",
+  "evidence": "research/sol_answer_D268_b3m_output_protocol_audit.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/frontline.py; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/manifest.json",
+  "date": "2026-10-13",
+  "own_test": true,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "This is an exact source/protocol audit, not a package rewrite and not an organizer ruling. It identifies the precise missing acceptance input for D258/D267 and preserves the conditional score distinction. No package, staging, submission, or process change.",
+  "held_fixed": "shipped frontline.py, manifest schema, D258/D267 arithmetic and KAT conclusions",
+  "reopen_if": "Organizer accepts incremental output for python-message-pairs-v1 or a rewritten source and exact charged ledger are supplied"
+}

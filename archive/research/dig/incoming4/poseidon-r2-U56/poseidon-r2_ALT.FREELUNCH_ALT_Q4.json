@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FREELUNCH (ALT)",
+ "question": "Q4: alternatives: inverse-S-box variable trick",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "The gain mechanism of FreeLunch is the inverse-power component (huge forward degree, small implicit form). Poseidon has only forward x^5; adding a variable per S-box output does not lower the final univariate degree. See ALT.BACKSKIP for the inverse direction.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FREELUNCH|ALT|Q4. No test; derived.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a backward model with an implicit S-box form lower than 5^8 is built",
+ "prior": 0.02,
+ "potential_bits": 1.0
+}

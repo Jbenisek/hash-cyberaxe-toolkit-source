@@ -1,0 +1,22 @@
+{
+  "id": "D470-B3M-REPLICA-SELFTEST64-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M shipped-layout replica self-test",
+  "question": "Do the existing replicated table helpers, lane identities, gate drills, and halt checks pass an owned self-test?",
+  "labels": ["C", "D", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "frontline.py --selftest 64: ok=true; replicas=true; 128/128 T1/T2 bit-serial checks; XG=[0,1944,true]; all drills pass; RSS 64905216 B = 2^25.9518310869; elapsed 0.98 s.",
+  "source": "our workflow: D470 one-thread frontline replica self-test",
+  "own_test": true,
+  "evidence": "research/retest/b3m_replica/D470_frontline_replica_selftest64_timev.txt; research/sol_answer_D470_b3m_replica_selftest64.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Baseline replicated implementation only. One-copy schedule, register/spill/code-size proof, exact lane-distribution charge, and STREAM semantics remain open; no score/package/staging/filing/submission.",
+  "peak_mem": "64905216 B = 2^25.9518310869 maximum RSS; one thread",
+  "held_fixed": "shipped frontline.py, selftest n=64, one thread on core 1",
+  "reopen_if": "A built one-copy base-table implementation with KAT, register/spill/code-size ledger, and organizer STREAM ruling is supplied",
+  "supersedes": ["D447-B3M-REPLICA-CUT-BLOCKER-20261014"]
+}

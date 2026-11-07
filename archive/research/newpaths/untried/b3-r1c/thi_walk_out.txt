@@ -1,0 +1,5 @@
+context 0: 2^19 legal t_hi steps; reference check on 128 steps, failures 0; distinct omega mod 2^9 = 9, block sizes [65536, 65536, 65536, 65536, 65536, 65536, 65536, 57660, 7876]
+context 1: 2^19 legal t_hi steps; reference check on 128 steps, failures 0; distinct omega mod 2^9 = 9, block sizes [65536, 65536, 65536, 65536, 65536, 65536, 65536, 49180, 16356]
+context 2: 2^19 legal t_hi steps; reference check on 128 steps, failures 0; distinct omega mod 2^9 = 9, block sizes [65536, 65536, 65536, 65536, 65536, 65536, 65536, 51370, 14166]
+context 3: 2^19 legal t_hi steps; reference check on 128 steps, failures 0; distinct omega mod 2^9 = 9, block sizes [65536, 65536, 65536, 65536, 65536, 65536, 65536, 35121, 30415]
+time 2s

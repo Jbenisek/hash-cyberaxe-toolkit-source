@@ -1,0 +1,5 @@
+inst 0 diag D0 FIRST dp 384 gscan 384 OK | SECOND (x=0f575350) dp 0 gscan 0 OK
+inst 1 diag D1 FIRST dp 768 gscan 768 OK | SECOND (x=3bb5e4b1) dp 0 gscan 0 OK
+inst 2 diag D2 FIRST dp 0 gscan 0 OK
+inst 3 diag D3 FIRST dp 0 gscan 0 OK
+gbrute summary: 4 instances, 0 mismatches

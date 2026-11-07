@@ -1,0 +1,1 @@
+d=140000 gcd degree 1, root ok: 1

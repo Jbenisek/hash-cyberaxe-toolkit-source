@@ -1,0 +1,20 @@
+{
+  "id": "WIDE-B3-DIGEST-WORD-PRUNE-B3R3PV-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3R3PV final digest-word pruning",
+  "question": "Can B3R3PV retain fewer than all eight digest words in its walk/recovery without changing the collision predicate?",
+  "labels": ["K", "E"],
+  "status": "COMPUTED",
+  "number": "No: all 256 digest planes feed the next walk and recovery checks all eight output words. Exact lossless saving: 0 operations; time_log2 remains 124.8123.",
+  "source": "local B3R3PV proof.md and claim.json static audit",
+  "own_test": true,
+  "evidence": "research/retest/wide_1014/b3_digest_word_prune_audit.py; research/sol_answer_WIDE_B3_digest_word_prune.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3-r3.wide.digest-word-prune",
+  "peak_mem": 20000000,
+  "notes": "Static proof audit only; no package, staging, filing, or submission changed."
+}

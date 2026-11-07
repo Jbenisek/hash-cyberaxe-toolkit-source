@@ -1,0 +1,23 @@
+{
+  "id": "D496-SHA256-R38-R38E-SELFTEST-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "package-specific vt38 self-test for R38E",
+  "question": "Does the R38E shipped vt38 program pass its complete self-test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R38E vt38 selftest exits 0 and passes all construction, estimator, and eight zero-mismatch RAM checks; 43 registers, costs P0=94, GROUP4=80, X_SUCC=3208, estimator 77/77 at log2=-101.094. D125's ledger-recognition prefile failure remains.",
+  "source": "our workflow: D496 read-only R38E self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D496_r38e_selftest.md; research/tools/build_pkg/scratch/pkgR38E/pkg/sha256-r38/experiments/vt38.py; research/sol_answer_D125_r38_build.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package-specific self-test only; existing ledger-block packaging defect remains. No score/package/stage/filing/submission.",
+  "held_fixed": "R38E scratch package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package ledger block or source changes"
+}

@@ -1,0 +1,2 @@
+R=14 worst total over extreme constants: {'J': 851, 'D': 1016, 'G': 1427}  (per trial: {'J': 3.324, 'D': 3.969, 'G': 5.574})
+R=16 worst total over extreme constants: {'J': 836, 'D': 1002, 'G': 1414}  (per trial: {'J': 3.266, 'D': 3.914, 'G': 5.523})

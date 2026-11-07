@@ -1,0 +1,10 @@
+#define C4 0x000b362eu
+#define W8C 0xda3a7d2fu
+#define E7 0x9a404eb1u
+#define A3 0x44294b96u
+#define K3C 0x478132edu
+#define A2 0x987f24c4u
+#define A1 0x62827866u
+#define E6 0xeb0b9c2du
+#define E5 0xe7f2c81fu
+#define K7 0xab1c5ed5u

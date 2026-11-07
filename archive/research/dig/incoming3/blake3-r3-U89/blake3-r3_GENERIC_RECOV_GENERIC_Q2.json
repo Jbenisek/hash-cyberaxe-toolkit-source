@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.RECOV recovery of the colliding pair",
+ "question": "Is the recovery charge of 64 extra ops per batch necessary? Recount at the needed extra.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Recovery is 0.5614 percent of the ledger (1.6424e38 of 2.9258e40 ops, capr = 12 x 2^114 + 2^48 batches at PH+64 = 659). The proof's own count of the extra is 29 (8 shr + 8 xor + 7 or + 1 and + compare + branch + 3 loop). Extra 29: -0.000430 bit; 30 -0.000418; 32 -0.000393; 40 -0.000295. The earlier ruling (77715f8b) refuted the first package for omitting at least 4 ops per batch; the filed extra of 64 already includes a 35-op margin.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py); research/blake3_r3/ruling_77715f8b/reports/tracks/blake3-pareto/judge-dossier.json",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.00043,
+ "notes": "universe cell blake3-r3|GENERIC.RECOV|GENERIC|Q2. Gain is smaller than the risk that one miscount re-triggers the lane_cost/F1 finding; not recommended on its own. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed ledger; capr as filed.",
+ "reopen_if": "A judge ruling that 29 ops is itemised and enough.",
+ "gain_basis": "T"
+}

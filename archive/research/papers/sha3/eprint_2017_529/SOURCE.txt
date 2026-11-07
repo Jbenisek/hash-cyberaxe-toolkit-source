@@ -1,0 +1,1 @@
+2017/529	Non-Full Sbox Linearization: Applications to Collision Attacks on Round-Reduced Keccak	owner_download	https://eprint.iacr.org/2017/529.pdf

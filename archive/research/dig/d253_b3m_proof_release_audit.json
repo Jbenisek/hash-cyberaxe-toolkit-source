@@ -1,0 +1,20 @@
+{
+  "id": "D253-B3M-PROOF-RELEASE-AUDIT-20261013",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M current proof phase separation",
+  "question": "Does the current B3S2 proof already account for release before output, and what memory peak does it claim?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Current proof Sections 9.1 and 12 explicitly release all search words before output: search <2^42.45124 B, output <2^43.00001 B, phases never co-resident; filed S remains 85.43472. The older 43.75186/86.18671 note is stale. STREAM-open-input remains an organizer ruling, not closed.",
+  "source": "our workflow: D253 proof reconciliation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D253_b3m-proof-reconcile.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/proof.md Sections 9.1 and 12; claim.json",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Read-only source/proof audit. This does not answer the separate organizer question whether streamed output bytes are excluded from held memory, and it does not authorize a package or submission change.",
+  "topic": "blake3-r2 proof release audit",
+  "gain_basis": "S"
+}

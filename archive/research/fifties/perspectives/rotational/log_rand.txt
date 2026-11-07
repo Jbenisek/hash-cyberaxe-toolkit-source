@@ -1,0 +1,6 @@
+[rand] dropped 0 repeated input rows, 1048576 remain
+[rand] N=1048576 n/half=524288 planted 68 51 77 303
+jobs 50000
+done
+rand: 95.25 s, 626852 KB
+rand exit 0

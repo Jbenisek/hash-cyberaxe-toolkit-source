@@ -1,0 +1,5 @@
+RULE WITH 4 CONDITIONS, 200 batches, one shape True: registers in use per part (the two counters included): loop 12, X0 to X10 13, C2 to z 16, rule A 16, entry count 12, C2, rest 15, C1 to Y1 15, E1, A and B 16, E1 test 11, restore 11; stage A 16, stage 2 16, whole batch 16 of 16; words in registers when the batch begins 9; ok
+RULE WITH 6 CONDITIONS, 200 batches, one shape True: registers in use per part (the two counters included): loop 12, X0 to X10 13, C2 to z 16, rule A 16, entry count 11, C2, rest 15, C1 to Y1 15, E1, A and B 16, E1 test 11, restore 11; stage A 16, stage 2 16, whole batch 16 of 16; words in registers when the batch begins 9; ok
+RULE WITH 8 CONDITIONS, 200 batches, one shape True: registers in use per part (the two counters included): loop 12, X0 to X10 13, C2 to z 16, rule A 16, entry count 11, C2, rest 15, C1 to Y1 15, E1, A and B 16, E1 test 11, restore 11; stage A 16, stage 2 16, whole batch 16 of 16; words in registers when the batch begins 9; ok
+RESULT: consistent with Machine.registers()
+

@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.TWID twiddle table",
+ "question": "necessity of the memory",
+ "labels": [
+  "N",
+  "S"
+ ],
+ "status": "COMPUTED",
+ "number": "the 16,384-entry table (524,288 B) is not needed: lean_r1_mem (same program, tableless) reproduces: heap peak 7,944,256 B vs 8,468,544 B (-524,288 B exactly)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_mem_seed1001.txt research/poseidon/orchard/lean_r1_mem/logs/mem_ledger.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Rerun of research/poseidon/orchard/lean_r1_mem/lean_attack seed 1001 line 0, 89.4 s, collision found; heap_peak=7,944,256 matches mem_ledger.txt. | universe cell poseidon-r1|MEM.TWID|MEM|M2",
+ "held_fixed": "lean_r1_mem build, old (lean_r1) charging",
+ "reopen_if": "a judge ruling that the on-demand twiddle code is charged more than measured"
+}

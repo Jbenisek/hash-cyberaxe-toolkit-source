@@ -1,0 +1,149 @@
+[
+ {
+  "pair": [
+   0,
+   5
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   0,
+   10
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   0,
+   15
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   5,
+   10
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   5,
+   15
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   10,
+   15
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   1,
+   6
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   1,
+   11
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   1,
+   16
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   6,
+   11
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   6,
+   16
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   11,
+   16
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   2,
+   7
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   2,
+   12
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   7,
+   12
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   3,
+   8
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   3,
+   13
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   8,
+   13
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   4,
+   9
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   4,
+   14
+  ],
+  "kernel_dim": 0
+ },
+ {
+  "pair": [
+   9,
+   14
+  ],
+  "kernel_dim": 0
+ }
+]

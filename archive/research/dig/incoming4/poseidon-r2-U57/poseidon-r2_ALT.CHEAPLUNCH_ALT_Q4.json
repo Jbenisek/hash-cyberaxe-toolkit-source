@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH (ALT)",
+ "question": "Q4: alternatives: FGLM memory",
+ "labels": [
+  "K"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "The paper states no memory figure; FGLM holds at least D_I-sized matrices (>= 9.8e6 field elements = 312 MB at 5^10 and 62 MB at 5^9) against our 40.9 MB total: the memory term alone is >= 0.6 bit worse.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.CHEAPLUNCH|ALT|Q4. Arithmetic: 1,953,125 x 32 B = 62.5 MB; log2(62.5e6/40.9e6) = 0.61. Lower bound.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a sparse-FGLM variant with memory below 40 MB is shown"
+}

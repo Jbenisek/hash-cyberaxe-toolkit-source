@@ -1,0 +1,41 @@
+== Q1 X7: y = sum_j M0j * T_j, T=S(state after R62 + c63), 1000 inputs per r (real hash)
+r=1 mismatches: 0 of 1000
+r=2 mismatches: 0 of 1000
+== Q2 backward map
+backward: 1000 trials, forward-mismatch count 0 (checked at R62.M level and at R60-entry level)
+5th-root exponentiations: R63 backward = 3 (T0,T1,T2 each need x^d, d=254 bits), each further full round = 3; total R63..R60 = 12 (counter)
+derived totals from y back to R0 entry: r=1: 12+1+12=25 ; r=2: 12+2+12=26 (the R0 lane-2 root is not an unknown: that value must equal the constant K, so it is a CONSTRAINT checked, 1 equation)
+== Q3 degree of last four rounds at R60 entry, exact line (finite differences)
+generic line 0 deg of y(R60 entry + t u) = 625
+generic line 1 deg of y(R60 entry + t u) = 625
+lane-combination after R60.M deg: 5 (predicted 5)
+lane-combination after R61.M deg: 25 (predicted 25)
+lane-combination after R62.M deg: 125 (predicted 125)
+G (constant-free 4 rounds) homogeneous of degree 625: True
+constructed direction ud (backward through constant-free rounds from (0,a,b)) has G(ud)_0 == 0 : True
+degree of y on a line with direction ud (predicted <625): 624
+== Q4 special lane values at R63.S
+t0=t1=0 : y == M02 * t2^5 : True
+t0=t2=0 : y == M01 * t1^5 : True
+t1=t2=0 : y == M00 * t0^5 : True
+125 combos of fixed-point t (0,1,-1,i,-i)^3: y equals the LINEAR form M0.t in 125 of 125
+each of the 125 pulled back through R62,R61,R60 (9 roots) to R60 entry and forward-checked: all OK; first (t=(0,0,0)): ['0xe8c3395e16ccfa977349de89b7e34716332dc047545eaf77e032f23f59be72d', '0x151530363419c5da0d74493bb7159dc295569d7034a1f52d29881e7f10d3c8df', '0x10ccbfe759bb7dc06475eb8361cd39f5d6f1714edddcc37d8dfa2c6c0b69a1ca']
+== Q5 top byte
+r=1 N=100000: top byte min 0 max 63 (0x3f); bit255 set 0, bit254 set 0, byte==0x40: 0, distinct top bytes 64, top-6-bit(y>>250) chi2(63df)=300036.5, time 31s
+r=2 N=30000: top byte min 0 max 63 (0x3f); bit255 set 0, bit254 set 0, byte==0x40: 0, distinct top bytes 64, top-6-bit(y>>250) chi2(63df)=90033.1, time 4s
+p>>248 = 0x40  prob(y>=2^254) = 1.574e-39  prob(top byte==0x40)=1.574e-39
+== Q6 R60..R63 identical for r=1 and r=2
+schedule r=1 tail [60, 61, 62, 63] r=2 tail [60, 61, 62, 63] equal: True
+1000 inputs: hash == one common function Tail(R60..R63) applied to the partial-block output, for both r: 1000
+hash(5,6) differs between r=1 and r=2: True
+== Q7 dead / constant computations (perturbation + dependence tables)
+r=1, 27 steps x 3 lanes = 81 values
+  values whose +1 change does not alter the output (dead): [(63, 'M', 1), (63, 'M', 2)]
+  values that do NOT depend on (nk,rho) (constants): [(0, 'C', 2), (0, 'S', 2)]
+r=2, 30 steps x 3 lanes = 90 values
+  values whose +1 change does not alter the output (dead): [(63, 'M', 1), (63, 'M', 2)]
+  values that do NOT depend on (nk,rho) (constants): [(0, 'C', 2), (0, 'S', 2)]
+== Q8 reverse-mode influence (adjoint) on 100 points, r=1 and r=2
+r=1: (round,step,lane) with zero gradient (count of 100 points): {(63, 'M', 1): 100, (63, 'M', 2): 100}
+r=2: (round,step,lane) with zero gradient (count of 100 points): {(63, 'M', 1): 100, (63, 'M', 2): 100}
+closed form grad at R62.M = M0j*5*t_j^4 nonzero for all j: [True, True, True]

@@ -1,0 +1,23 @@
+{
+  "id": "D398-SHA256-R38-INDEPENDENCE-PROBE-20261014",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 37,
+  "object": "Table-4 prefix/late independent finite probe",
+  "question": "Does an independent one-seed r38 staged run reproduce the prefix marginals and late exact/cell ratio without replay failures?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Seed 8101, one thread, 1,048,576 final proposals and 8,192 prefix proposals per group; zero prefix-redraw/y-anchor/replay inconsistencies. Prefix hits A17=142 (-5.850252880), A18=4089 (-1.002467652), A19=4176 (-0.972094003), E17=2097 (-1.965888854), E18=1094 (-2.904602977), E19=2057 (-1.993673921), E21=4045 (-1.018076013); A16/E16/W16/W7/W8 unit. Late events 10 cells and 31 exact. Pool with D379+D386+D389+D391: 270336 prefix proposals, 26214400 final proposals, 407 cells, 1372 exact, EXACT/cells=2.6339066339 (log2 +1.3972042062).",
+  "source": "our workflow: D253 OPEN scan / owned r38 independence probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D398_r38_independence_probe.md; research/retest/r38n2_gain/out/d398_probe_full.txt; research/tools/traillab/src/smc.c; research/tools/traillab/src/main.c",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.2,
+  "prior": 0.1,
+  "gain_basis": "S",
+  "peak_mem": "not separately measured in D398; one-thread local run",
+  "notes": "Finite local reproducibility evidence only. Full Table-4 47-versus-102-condition independence, carry-aware transfer, attack-weighted distribution, and charged rebuilt path remain OPEN; no score or filing credit.",
+  "reopen_if": "A full-path carry-aware experiment or proof addresses the Table-4 47-versus-102-condition gap."
+}

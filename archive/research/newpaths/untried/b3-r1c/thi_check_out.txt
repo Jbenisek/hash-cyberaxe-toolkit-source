@@ -1,0 +1,2 @@
+basis Y4,E1.c1,w8,C0.d1,D2.a1,D2.b1,S11,S4,X9,w6 (t_hi derived): 300/300 verified on the reference (half-collision, chosen Y4, E1.c1, w8)
+t_hi legal (< 2^19): 4 of 20000 (expected n*2^-13 = 2.44 if uniform); top-4-bit chi2 = 16.6 (15 df)  6s

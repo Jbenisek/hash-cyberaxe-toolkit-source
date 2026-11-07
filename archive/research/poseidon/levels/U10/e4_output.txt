@@ -1,0 +1,36 @@
+q=257 r=1 seed=1: caps scanned 257; coll-ratio min 0.9992 max 1.0011 mean 1.0000 sd 0.0003; var/mean min 0.793 max 1.279; image size min 257 max 257; after-R3 lane0 ratio min 0.9991 max 1.0011  [14s]
+   K=0 (cap=-c02): cap=20 ratio=0.9995 var/mean=0.866 image=257 after-R3 ratio=0.9997
+   cap=0: cap=0 ratio=0.9995 var/mean=0.876 image=257 after-R3 ratio=1.0001
+   cap=1: cap=1 ratio=1.0006 var/mean=1.159 image=257 after-R3 ratio=1.0006
+   cap=-1: cap=256 ratio=1.0004 var/mean=1.099 image=257 after-R3 ratio=1.0001
+   cap=2^65 mod q: cap=2 ratio=1.0007 var/mean=1.172 image=257 after-R3 ratio=1.0003
+   a=cap+c02=1: cap=21 ratio=0.9997 var/mean=0.907 image=257 after-R3 ratio=0.9997
+   a=-1: cap=19 ratio=0.9996 var/mean=0.885 image=257 after-R3 ratio=1.0002
+   largest |ratio-1| caps: [(228, 1.0011), (74, 1.001), (156, 1.0009)]
+q=257 r=2 seed=1: caps scanned 257; coll-ratio min 0.9991 max 1.0008 mean 1.0000 sd 0.0003; var/mean min 0.762 max 1.194; image size min 257 max 257; after-R3 lane0 ratio min 0.9991 max 1.0011  [28s]
+   K=0 (cap=-c02): cap=20 ratio=0.9997 var/mean=0.910 image=257 after-R3 ratio=0.9997
+   cap=0: cap=0 ratio=0.9997 var/mean=0.929 image=257 after-R3 ratio=1.0001
+   cap=1: cap=1 ratio=1.0003 var/mean=1.071 image=257 after-R3 ratio=1.0006
+   cap=-1: cap=256 ratio=0.9995 var/mean=0.877 image=257 after-R3 ratio=1.0001
+   cap=2^65 mod q: cap=2 ratio=1.0002 var/mean=1.054 image=257 after-R3 ratio=1.0003
+   a=cap+c02=1: cap=21 ratio=0.9999 var/mean=0.971 image=257 after-R3 ratio=0.9997
+   a=-1: cap=19 ratio=0.9997 var/mean=0.931 image=257 after-R3 ratio=1.0002
+   largest |ratio-1| caps: [(176, 0.9991), (63, 0.9991), (52, 0.9992)]
+q=257 r=1 seed=2: caps scanned 257; coll-ratio min 0.9992 max 1.0010 mean 1.0000 sd 0.0003; var/mean min 0.803 max 1.249; image size min 257 max 257; after-R3 lane0 ratio min 0.9991 max 1.0011  [42s]
+   K=0 (cap=-c02): cap=135 ratio=1.0003 var/mean=1.081 image=257 after-R3 ratio=1.0002
+   cap=0: cap=0 ratio=1.0000 var/mean=1.008 image=257 after-R3 ratio=1.0000
+   cap=1: cap=1 ratio=1.0003 var/mean=1.072 image=257 after-R3 ratio=0.9999
+   cap=-1: cap=256 ratio=0.9998 var/mean=0.954 image=257 after-R3 ratio=0.9999
+   cap=2^65 mod q: cap=2 ratio=0.9997 var/mean=0.925 image=257 after-R3 ratio=1.0003
+   a=cap+c02=1: cap=136 ratio=1.0002 var/mean=1.055 image=257 after-R3 ratio=1.0007
+   a=-1: cap=134 ratio=0.9994 var/mean=0.842 image=257 after-R3 ratio=0.9999
+   largest |ratio-1| caps: [(21, 1.001), (9, 1.0008), (124, 1.0008)]
+q=769 r=1 seed=1: caps scanned 769; coll-ratio min 0.9998 max 1.0002 mean 1.0000 sd 0.0001; var/mean min 0.860 max 1.168; image size min 769 max 769; after-R3 lane0 ratio min 0.9998 max 1.0002  [743s]
+   K=0 (cap=-c02): cap=10 ratio=0.9999 var/mean=0.926 image=769 after-R3 ratio=0.9999
+   cap=0: cap=0 ratio=1.0001 var/mean=1.061 image=769 after-R3 ratio=1.0000
+   cap=1: cap=1 ratio=1.0000 var/mean=0.985 image=769 after-R3 ratio=1.0000
+   cap=-1: cap=768 ratio=1.0000 var/mean=0.961 image=769 after-R3 ratio=1.0000
+   cap=2^65 mod q: cap=722 ratio=1.0000 var/mean=0.965 image=769 after-R3 ratio=1.0000
+   a=cap+c02=1: cap=11 ratio=1.0000 var/mean=1.007 image=769 after-R3 ratio=0.9999
+   a=-1: cap=9 ratio=0.9998 var/mean=0.860 image=769 after-R3 ratio=1.0000
+   largest |ratio-1| caps: [(597, 1.0002), (92, 1.0002), (125, 1.0002)]

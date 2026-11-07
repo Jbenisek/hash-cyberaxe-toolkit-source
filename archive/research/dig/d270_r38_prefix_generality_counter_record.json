@@ -1,0 +1,26 @@
+{
+  "id": "D270-SHA256-R38-PREFIX-GENERALITY-COUNTER",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 18,
+  "object": "row-16/17/18 prefix-generality counterexample",
+  "question": "Do the exact row-16/17/18 continuation counts remain prefix-independent across valid characteristic prefixes?",
+  "labels": [
+    "C"
+  ],
+  "status": "COMPUTED",
+  "number": "Exact archived-prefix counter: every tested prefix has |L*|=1, but |G| is 32,4,0,56,32,4 across six distinct models; observed set {0,4,32,56}. Therefore a prefix-independent continuation product is false. Ten-prefix final R=1 remains finite LOCAL_ONLY evidence; attack-weighted law, rows19-37 transfer, and Table-4 independence remain OPEN.",
+  "source": "our workflow: D270 r38 prefix-generality counter",
+  "evidence": "research/sol_answer_D270_r38_prefix_generality_counter.md; research/sol_answer_S38-row16-G-prefix-sensitivity.md; research/sol_answer_S38-prefix-generality-recheck-20261013.md; research/sha256grid/scout2-1/prefix_reports_20261013.txt",
+  "date": "2026-10-13",
+  "own_test": true,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "notes": "This supersedes the old missing-artifact cell only for the narrow prefix-independent-count question. It is an exact finite counterexample, not a claim about the attack's prefix distribution or full late-row cost. No package, staging, submission, or process change.",
+  "held_fixed": "published Table-4/5 predicates, archived valid prefixes, exact lstar38.py report-mode replay",
+  "reopen_if": "A new attack-weighted prefix generator proves a different effective law or a full rows19-37 replay changes the cost model",
+  "supersedes": [
+    "S38-LC-open-prefixes"
+  ]
+}

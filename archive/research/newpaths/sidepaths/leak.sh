@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Publication root: stable even when this driver changes working directories.
+if [ -z "${HASHCYBERAXE_WORKSPACE:-}" ]; then
+  _hca_here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+  while [ ! -d "$_hca_here/research" ] && [ "$_hca_here" != / ]; do _hca_here=$(dirname -- "$_hca_here"); done
+  HASHCYBERAXE_WORKSPACE=$_hca_here
+fi
+export HASHCYBERAXE_WORKSPACE
+cd "${HASHCYBERAXE_WORKSPACE}"/research/newpaths/sidepaths
+: > leak_results.txt
+while read nm; do
+  nm=${nm%$'\r'}
+  r=$(timeout 120 z3 -T:110 leak/$nm.smt2 2>&1 | head -1)
+  echo "$nm $r" >> leak_results.txt
+done < leak/list.txt
+echo done > leak.done

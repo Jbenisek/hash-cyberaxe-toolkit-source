@@ -1,0 +1,17 @@
+r=1 ncentres=1 seed=13 m=39062
+CENTRE 0 j=1 degG=1 success=1 arith=3893983656 all=6612467146 sec=258.0
+  line_setup                               arith=         391 other=        1564 total=        1955     0.0s
+  random centre                            arith=           0 other=           3 total=           3     0.0s
+  build g                                  arith=     1436260 other=    24395279 total=    25831539     2.0s
+  S^((p-1)/2) mod g                        arith=  3536772927 other=  2315546480 total=  5852319407   234.3s
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770535 other=   378525992 total=   734296527    21.6s
+  root finding                             arith=           1 other=           4 total=           5     0.0s
+  sqrt + map back                          arith=        3068 other=       12272 total=       15340     0.0s
+  verification (2 reference hashes)        arith=         474 other=        1896 total=        2370     0.0s
+COLLISION nk1  0x0e5378ca76f551ad97290504c320b380c3a36b8175e08c0621b51a448d63931b
+COLLISION rho1 0x05a5d9af0def37327ed16a9c2ce4d07641f24ab221078e76a7b7bdc3af7e8566
+COLLISION nk2  0x0c9ad9040e53410658f5cdb68d87c51d53070a5637a6fb1873cb96f26e55c91c
+COLLISION rho2 0x082fc53480a2be536ecc689c33b7515ee54aa150136c5bd8b6d8ea8ca25e87fb
+COLLISION digest 0x2f945451e6c66a293cd25505fc2a68cbfcdaa5569d71617c0ac2f8b550c39195
+COLLISION centre 0x2c9239d872cd21a92f93b3f190a35645d0034d2e5c01e74b00000003469ba34d
+SUMMARY r=1 centres=1 success=1 total_all=6612504985 total_arith=3894001015 units=27900864.9 log2_units=24.7338 heap_peak=8468640 secs=258.0

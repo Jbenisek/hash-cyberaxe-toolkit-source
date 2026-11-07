@@ -1,0 +1,21 @@
+{
+  "id": "D273-BLAKE3-R3-GENERATOR-REVIEW",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "paired-review verdict for dossier b6cd06dc",
+  "question": "Does the completed review establish evaluability of the BLAKE3-r3 generator/resource ledger?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Dossier b6cd06dc is NOT_EVALUABLE and ineligible at claimed time 124.95470: runtime hash-consing generator peak storage/code and the unshipped PINS hill-climb/preprocessing are absent from the resource record.",
+  "source": "our workflow: D273 external review verdict audit",
+  "evidence": "research/sol_answer_D273_review_verdicts_followup.md; research/dossiers/b6cd06dc/review/reports/tracks/blake3-pareto/aggregate.json; research/dossiers/b6cd06dc/review/reports/tracks/blake3-pareto/judge-dossier.json",
+  "date": "2026-10-13",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "External paired-review result audited read-only; no package or filing state changed.",
+  "held_fixed": "review aggregate status and binding hashes",
+  "reopen_if": "A complete generator, hill-climb/preprocessing ledger, and peak-memory bound are reviewed"
+}

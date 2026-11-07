@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "title": "Final stepback archive review: retained science and explicit limits",
+  "review_date": "2026-10-29",
+  "scope": {
+    "files_read_completely": 15,
+    "total_source_bytes": 103708,
+    "method": "Read the requested direct files in short complete chunks; compare existing article drafts and preserve missing consequential facts. This is a bounded family review, not a recursive archive audit.",
+    "no_actions": "No source programs, solvers, servers, submission tools, build scripts or site changes executed."
+  },
+  "publication_boundary": "Only new scientific paraphrases and bibliographic/provenance facts are retained. Mixed coordination, requests, machine allocation, queues, commands to stage/submit, ordinary correspondence and third-party prose are not copied.",
+  "source_reviews": [
+    {
+      "path": "research/stepback/AC_INPUTS_READY.md",
+      "sha256": "a0bdd670c18848a1496dfb5e923cdda7baad21411065047c6e0f409eaa160426",
+      "bytes": 3487,
+      "disposition": "curated-only",
+      "classification": "Mixed scientific inventory and work-allocation notes",
+      "coverage": "The fixed-characteristic versus characteristic-discovery distinction was not fully represented; retained in findings.",
+      "limitations": [
+        "Pair verification does not verify the reported solver work or re-derive the dense signs.",
+        "The r37 2^29.570 word-operation number belongs to a pair search given chi37, not to discovering the signed characteristic."
+      ]
+    },
+    {
+      "path": "research/stepback/AC_SCOPE.md",
+      "sha256": "0619592e4331d5516b8f1156ae971c5683478d6349c47993a7f4d962b44a4b28",
+      "bytes": 8008,
+      "disposition": "curated-only",
+      "classification": "Mixed scientific scoping, speculative effort estimates and coordination-derived update",
+      "coverage": "Retain discovery gap, dated allowance sensitivity and tiny-model scaling warning.",
+      "limitations": [
+        "No complete characteristic search was performed in this note.",
+        "Estimated runtimes and acceptance likelihoods are opinions, not empirical results; omitted.",
+        "The cloud-update scientific result is paraphrased without private relay or machine-allocation wording."
+      ]
+    },
+    {
+      "path": "research/stepback/CENTRE_PRETEST.md",
+      "sha256": "48fb2cd0af21e2360d4ad6e77aa7e6a7864a9054a087c96dba83f6907beb0aa8",
+      "bytes": 5502,
+      "disposition": "safe-standalone-with-scientific-caveat",
+      "classification": "Authored scientific cost/predictor report",
+      "coverage": "Sufficiently represented by poseidon-centre-pretest-negative-result; no duplicate finding added.",
+      "limitations": [
+        "Its broad zero-information/not-worth-it wording is stronger than the finite tests support.",
+        "Existing article correctly limits the conclusion to tested predictors and r0 observations; pair any raw admission with that caveat."
+      ]
+    },
+    {
+      "path": "research/stepback/DOORS.md",
+      "sha256": "16c590dcc70c8360117878227212c20df45e3c463eb31dd0df9f3c4615fdfa59",
+      "bytes": 12765,
+      "disposition": "curated-only",
+      "classification": "Mixed research synthesis, priority list and operational instructions",
+      "coverage": "Its central time-memory and allowance issues are represented elsewhere; no speculative ranking table copied.",
+      "limitations": [
+        "Three of five source lenses were reportedly overwritten; parts of this synthesis rely on task summaries rather than surviving independent records.",
+        "Its allowance sensitivities use other baselines and are superseded by AC_SCOPE for the named project packages.",
+        "No effort, acceptance odds or current leaderboard conclusion retained."
+      ]
+    },
+    {
+      "path": "research/stepback/LENS.md",
+      "sha256": "b531eaec51c74972fd2c81e5fe1804d04c55b7aae1cff0f02447da39245a430f",
+      "bytes": 10969,
+      "disposition": "curated-only",
+      "classification": "Scientific bookkeeping observations mixed with action/filing instructions",
+      "coverage": "Register/storage pricing, source-true charges, success-floor and whole-memory lessons are already covered by existing accounting articles.",
+      "limitations": [
+        "The address-saving ceiling and many memory savings are hypothetical changes, not completed improvements.",
+        "No new article is justified by summing its partly overlapping small estimates.",
+        "Historical cost-rule interpretations do not establish current policy."
+      ]
+    },
+    {
+      "path": "research/stepback/LENS_unopened_doors.prev.md",
+      "sha256": "50f58c6e2a5d2cf8b0a3d4c03219cb14daecd44c2bffd1cc7b1a1392cd712df5",
+      "bytes": 13806,
+      "disposition": "curated-only",
+      "classification": "Mixed historical rule/admission snapshot and speculative research queue",
+      "coverage": "Higher-round generic-walk and memory-frontier ideas have later technical accounts; no stale projected scores added.",
+      "limitations": [
+        "BLAKE3 r4-r7 prices extrapolate a reference-cost progression and inherit a random-mapping premise.",
+        "Its proposed low-success scoring lever was subsequently rejected by the recorded 0.39 floor.",
+        "Local temporary paths, requests, live-status checks and instructions excluded."
+      ]
+    },
+    {
+      "path": "research/stepback/PR858_RESCORE.md",
+      "sha256": "3bf90d1a35e9f34aa5e47eb8a17fa7b349c6cb1d78878efd2415d0d168b55528",
+      "bytes": 5136,
+      "disposition": "curated-only",
+      "classification": "Historical scoring arithmetic mixed with staging/submission operations",
+      "coverage": "Formula already explained by memory-rule-pareto-and-sharding; snapshot retained only as a rule-history pointer.",
+      "limitations": [
+        "Its low-memory online rows do not establish preprocessing-inclusive memory bounds.",
+        "No historical ranking, staged state or mechanical intake result is current acceptance evidence.",
+        "Operational commands, slot state and package manipulation instructions excluded."
+      ]
+    },
+    {
+      "path": "research/stepback/PREP_MEMORY.md",
+      "sha256": "6a0c44040bd8b18c87c949b984dd76c8109d5aab21a752a1b25b23a5daf10119",
+      "bytes": 2058,
+      "disposition": "safe-standalone-with-scientific-caveat",
+      "classification": "Authored measured preprocessing-memory report",
+      "coverage": "Specific measured RSS values and unmeasured-phase limits preserved in findings.",
+      "limitations": [
+        "Measured maxima across selected runs are not a universal bound.",
+        "The 2^28 choice only covers observed phases; Step-1/development remained assumptions at this snapshot.",
+        "Later cap results are separate instances and must not be substituted."
+      ]
+    },
+    {
+      "path": "research/stepback/R37ZF2_PLAN.md",
+      "sha256": "bb1a167a894a94ce6bf260c5d2a7f9106827e7ebeecf7346efc85118b23cccde",
+      "bytes": 15215,
+      "disposition": "curated-only",
+      "classification": "Mixed scientific review, proposed remedies and operational refile plan",
+      "coverage": "Retain q3 direction defect and correct the allowance-subtraction arithmetic; no acceptance forecasts or operating plan.",
+      "limitations": [
+        "Plan only, not implemented evidence.",
+        "The ~59.5 remaining-time estimate is inconsistent with its own displayed exponents.",
+        "The note conflates one sparse-search and given-characteristic pair-search number; use AC_INPUTS_READY's distinction.",
+        "A declared memory allowance or proposed confidence interval is not a proof of the underlying bound."
+      ]
+    },
+    {
+      "path": "research/stepback/R37_LEANPREP.md",
+      "sha256": "1f252c36b6823d758cb810ee5f53388720b04a043cb45ac6011664d7483d336d",
+      "bytes": 3165,
+      "disposition": "safe-standalone-with-scientific-caveat",
+      "classification": "Authored capped solver-memory comparison and model arithmetic",
+      "coverage": "Measured solver comparison and scope correction retained.",
+      "limitations": [
+        "All six solver configurations were unfinished at 600 seconds.",
+        "The stated clause-database floor applies to the chosen explicit encoding/storage convention, not every possible solver or encoding.",
+        "Its 2^28 covers measured examples, not all unmeasured pipeline phases."
+      ]
+    },
+    {
+      "path": "research/stepback/REGBLOCK_HONEST.md",
+      "sha256": "aac1e6acf85acc66f8f2c83da13de471172b59d0fbb4191bbf324b3292401798",
+      "bytes": 4292,
+      "disposition": "safe-standalone-with-scientific-caveat",
+      "classification": "Authored instrumentation audit",
+      "coverage": "Sufficiently represented by poseidon-register-saving-audit; no duplicate finding added.",
+      "limitations": [
+        "Exact access counts concern the named exec6/exec7 runs.",
+        "Best-honest wording must not imply a universal optimum over all implementations.",
+        "Later explicitly priced wide-register machines are distinct models."
+      ]
+    },
+    {
+      "path": "research/stepback/REPLICA_MEMRULE.md",
+      "sha256": "6d301a4ff1fe61d21d319559a7c3e6cca71ec2edc6bf30099cf2368e52fb2f48",
+      "bytes": 3592,
+      "disposition": "curated-only",
+      "classification": "Scientific phase-peak audit followed by owner/build instructions",
+      "coverage": "Output-phase bottleneck and conditional streaming distinction retained.",
+      "limitations": [
+        "Replica unit-price changes are conservative estimates rather than executed counters.",
+        "Streaming requires its own correct program and charge, not a changed label.",
+        "Operational instructions and evidence-budget manipulations excluded."
+      ]
+    },
+    {
+      "path": "research/stepback/STEP1_CAP_LADDER.md",
+      "sha256": "45041ad4400f9718f8a3dadee31ffb73722c780e7cc740551c4f4b142a32e498",
+      "bytes": 4932,
+      "disposition": "curated-only",
+      "classification": "Scientific solver experiment with mixed server/queue status",
+      "coverage": "Verified models, cap failures, build sensitivity and whole-pipeline caveat retained.",
+      "limitations": [
+        "Two seeds per principal setting, not all seeds.",
+        "Address-space caps and RSS differ.",
+        "Cloud load, queue contents and stopped-worker instructions excluded."
+      ]
+    },
+    {
+      "path": "research/stepback/STEPBACK_1014.md",
+      "sha256": "72ef2996626233fcb48ee4d258f79241c4765ff3891d181312b31bd4ab9797df",
+      "bytes": 5116,
+      "disposition": "curated-only",
+      "classification": "Mixed cross-protocol result summary, API ideas and prioritized work orders",
+      "coverage": "Unique S6RR-LS measured kernel snapshot retained with its untested success premise; duplicate memory facts excluded.",
+      "limitations": [
+        "The record labels many other suggestions untested; none is promoted here.",
+        "Costs/acceptance estimates and operational assignments excluded.",
+        "The SHA3 kernel selftest is not a full-width collision experiment."
+      ]
+    },
+    {
+      "path": "research/stepback/WALL_TRANSFER_r37r38.md",
+      "sha256": "df404790e42ecb85e524b169159ccd8ec653bb640fad02e07e8f56fe11ab7c86",
+      "bytes": 5665,
+      "disposition": "safe-standalone-with-scientific-caveat",
+      "classification": "Authored theoretical transfer analysis and unexecuted experimental proposal",
+      "coverage": "Fixed-IV linkage and reuse objection preserved as an argument, not a closed result.",
+      "limitations": [
+        "No transfer experiment was run; the source labels the verdict UNKNOWN.",
+        "Bit-for-bit cost transfer and solution-count estimates are model assumptions, not universal lower bounds.",
+        "Possible hidden freedom in the dense variables remains open."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "characteristic-discovery-is-not-pair-search",
+      "protocol": "SHA-256",
+      "status": "Historical source distinction with one reported independent certificate check",
+      "sources": [
+        "research/stepback/AC_INPUTS_READY.md",
+        "research/stepback/AC_SCOPE.md"
+      ],
+      "facts": [
+        "The r37 and r38 SAT pair searches took the dense signed characteristic chi37/chi38 as input. Sparse-support search plus a pair found for supplied cells does not price discovery of dense signed rows 0..16.",
+        "The r37 record reports pair-search cost 2^29.570 primitive-word equivalents, or 2^18.201 compression equivalents at C=2644, including three runs and one timeout. It separately reports sparse search near 2^17.3 compression equivalents. The r38 given-characteristic pair search is reported near 2^31.917 word operations, with failed runs included; sparse work is near 2^26.75 word operations.",
+        "The r37 pair A was independently rehashed in the source to digest 3c7353c7 46761dc9 8b3ce5a5 3c6530d2 d6e267fb f0f5b41e b8c21e9a 03b5b458 with distinct messages. This validates that semi-free-start pair, not its discovery bill or fixed-IV reachability.",
+        "The dense signed-characteristic derivation remained unpriced. A timeout or unsuccessful query is not a lower bound on the cheapest possible derivation."
+      ],
+      "limitations": [
+        "Counts are source-reported, not rerun here.",
+        "The cheaper given-characteristic search cannot replace the historical A_C allowance by itself.",
+        "Semi-free-start initial states are not ordinary standard-IV messages."
+      ]
+    },
+    {
+      "id": "allowance-sensitivity-needs-the-correct-baseline",
+      "protocol": "SHA-256",
+      "status": "Historical arithmetic; source plan error corrected from displayed inputs",
+      "sources": [
+        "research/stepback/AC_SCOPE.md",
+        "research/stepback/R37ZF2_PLAN.md",
+        "research/stepback/DOORS.md"
+      ],
+      "facts": [
+        "AC_SCOPE defines the correct sensitivity operation T_new=T_old-2^k_old+2^k_new, keeping every other term fixed. Its October 13 r37 baseline 60.117129 and A_C=2^60 give a no-A_C floor near 56.4364; its r38 baseline 70.17649 and A_C=2^70 give a floor near 67.0579. These are dated model sensitivities, not claims that the allowance can be removed.",
+        "The later R37ZF2_PLAN uses a different baseline, T=2^60.99099 and A_C=2^60, but estimates the remaining term near 2^59.5 and a saving near 1.5 bits. Arithmetic on those displayed exponents instead gives log2(T-A_C)=59.9819233764 and maximum time saving about 1.0090666236 bits.",
+        "The corrected arithmetic does not certify an exact new package numerator: 60.99099 is already rounded, and the remaining premises are unchanged. It prevents publication of the plan's internally inconsistent sensitivity as a result."
+      ],
+      "limitations": [
+        "Different dated packages have different non-A_C terms; their savings must not be mixed.",
+        "No finite derivation bound replacing A_C was supplied by these notes.",
+        "A measured reconstruction cannot silently claim the unobserved original development history had the same cost."
+      ]
+    },
+    {
+      "id": "tiny-unsat-scaling-does-not-price-dense-search",
+      "protocol": "SHA-256",
+      "status": "Source-reported toy result and scope correction",
+      "sources": [
+        "research/stepback/AC_SCOPE.md"
+      ],
+      "facts": [
+        "A deliberately restricted model fixed W1..W15=0, allowed only eight bits of W0 and imposed dW0=1 with full output equality. It returned UNSAT for 18–28 steps in roughly 0.7–1.5 seconds.",
+        "That family has only 256 candidate W0 values. A fit of about 1.081 cost growth per step on it does not estimate dense-characteristic discovery. With all 32 W0 bits free, the 18-step pilot exceeded a three-minute cap.",
+        "The broader search remained unpriced; the tiny model's easy UNSAT results are not evidence that 37/38-step discovery takes seconds."
+      ],
+      "limitations": [
+        "This is a paraphrased dated scientific result; no private relay text is retained.",
+        "A timeout is UNKNOWN, not proof of impossibility or a general runtime bound."
+      ]
+    },
+    {
+      "id": "r38-preprocessing-rss-snapshot",
+      "protocol": "SHA-256",
+      "status": "Measured historical run maxima, incomplete phase coverage",
+      "sources": [
+        "research/stepback/PREP_MEMORY.md"
+      ],
+      "facts": [
+        "On two pinned r38 given-characteristic pair-search CNFs, the reported peak RSS values were 118464512 and 121495552 bytes for Kissat, and 149368832 and 139743232 bytes for CaDiCaL. Three attempts were capped; CaDiCaL on the second instance returned SAT in 8:28.98.",
+        "A later 39-step characteristic-derivation instance had 132265 variables and 771857 clauses. Single-thread CaDiCaL 2.1.3 returned SAT at peak RSS 198053888 bytes in 1:52.11; Kissat 4.0.3 returned SAT at 188432384 bytes in 7:33.76.",
+        "The largest measured peak in this note is 198053888 bytes, approximately 2^27.56. A chosen 2^28-byte envelope covered these observed runs, while the Step-1 solve, development and relevant parallel configurations were not all measured."
+      ],
+      "limitations": [
+        "Observed RSS is not an allocator proof or a bound for every seed/instance.",
+        "These derivation and pair-search instances are different phases.",
+        "No memory or runtime experiment was executed in this archive review."
+      ]
+    },
+    {
+      "id": "r37-plain-solvers-were-not-leaner",
+      "protocol": "SHA-256",
+      "status": "Measured capped runs; no solved instance in this comparison",
+      "sources": [
+        "research/stepback/R37_LEANPREP.md"
+      ],
+      "facts": [
+        "The same dense_full.cnf instance had 107359 variables, 370173 clauses and 991981 literals. Each configuration was single-threaded and capped at 600 seconds; none reached SAT or UNSAT.",
+        "Reported peak RSS: Kissat default 161722368 bytes; Kissat plain 181173248; CaDiCaL plain 292995072; CryptoMiniSat with selected simplifications disabled 269574144; MiniSat without preprocessing 342400000; Kissat basic without reduction 2946197000.",
+        "The largest peak came from retaining learned clauses without reduction. Disabling simplification or using a nominally simpler solver did not reduce memory in these runs.",
+        "The note's 4-bytes-per-literal plus 4-bytes-per-clause calculation gives 5448616 bytes for that explicit clause representation before watches and variable state. It is not an information-theoretic lower bound on every solver or encoding.",
+        "Online memory below 2^20 does not erase a larger preprocessing peak: the historical score uses time_log2+max(0,log2(max_phase_bytes)-20)."
+      ],
+      "limitations": [
+        "Peaks at timeout do not bound longer runs.",
+        "The representation-specific database calculation cannot justify the source's broad 'no solver below 1 MiB' reading.",
+        "A whole-pipeline cap requires all other phases and development to fit."
+      ]
+    },
+    {
+      "id": "step1-cap-ladder-and-build-sensitivity",
+      "protocol": "SHA-256",
+      "status": "Reported verified SAT models under caps; not a whole-pipeline memory certificate",
+      "sources": [
+        "research/stepback/STEP1_CAP_LADDER.md",
+        "research/stepback/PREP_MEMORY.md"
+      ],
+      "facts": [
+        "The Step-1 instance s37_all.cnf has SHA-256 d00346a83f4c01cf76a0673601859aeec0d4a98acce4b76bef187030a426ae33, 124043 variables and 731652 clauses.",
+        "Default Kissat 4.0.4 solved both tested seeds under a 112 MiB address-space cap, 117440512 bytes. Reported RSS was 80715776 and 88006656 bytes, with times 57:54 and 24:26. The saved models were checked against all clauses.",
+        "At 96 MiB, both default runs failed on a 16-to-32 MiB allocation growth. A lean variant avoided a crash but returned UNKNOWN at 7200 seconds for both seeds; it did not establish successful solving at that smaller cap. Intermediate caps between 96 and 112 MiB were not tested.",
+        "A distro Kissat 4.0.3 comparison behaved differently under the cap and was discarded as a binary mismatch. Solver version/build belongs in the reproduction identity.",
+        "The source's approximate 67.798 score using the cap is conditional on every larger phase also fitting. The separate derivation run had already reached 198053888 bytes, and development runs included larger peaks. A Step-1-only improvement therefore does not lower the actual whole-pipeline maximum."
+      ],
+      "limitations": [
+        "Only the reported seeds/builds are covered.",
+        "Address-space cap, measured RSS and declared memory bound are different quantities.",
+        "No solver was launched and no model reverified during this publication review."
+      ]
+    },
+    {
+      "id": "output-peak-cancels-replica-memory-saving",
+      "protocol": "BLAKE3",
+      "status": "Historical model recount and explicit conditional alternative",
+      "sources": [
+        "research/stepback/REPLICA_MEMRULE.md"
+      ],
+      "facts": [
+        "The B3M v2 claim holds its output messages as bytes. Its output phase is priced at 8796093155510 bytes, while its search phase is 6013036259648 bytes. Nonoverlapping phases are combined by their maximum, so shrinking only the search tables leaves the larger output peak unchanged.",
+        "The all-three-replica cut shrinks the modeled search phase to 2508342946112 bytes but increases time_log2 from 62.43471 to 62.49209. With the same displayed peak exponent 43.00001, the score goes from 85.43472 to 85.49210, about 0.0574 bit worse.",
+        "The earlier attractive 83.68196 comparison silently used search memory alone. It describes a different streamed-output program, not the held-output claim.",
+        "Streaming could be useful only with a program and accounting proof that emit the two long messages without retaining their full bytes. That alternative remained conditional in this note; the replica unit changes were estimated rather than freshly executed counters."
+      ],
+      "limitations": [
+        "The printed score differences are rounded.",
+        "Neither the conditional streaming interpretation nor a later acceptance is established here.",
+        "The result concerns this phase layout, not every replica-reduction design."
+      ]
+    },
+    {
+      "id": "probability-bound-direction-and-reuse-obligations",
+      "protocol": "SHA-256",
+      "status": "Unimplemented scientific review findings",
+      "sources": [
+        "research/stepback/R37ZF2_PLAN.md"
+      ],
+      "facts": [
+        "The plan identifies a direction error: a lower confidence bound for the per-variant probability q3 cannot establish an upper bound q3<=2^-70 needed by a dependence-loss argument.",
+        "The two source-reported lower bounds, about 2^-71.4629 and 2^-71.4524, support only their declared lower-tail interpretation. An upper bound requires separate structural proof or an appropriately justified upper statistical bound; proposing one is not completing it.",
+        "Functional program checks, row-16 uniformity diagnostics, rare-event estimates and within-first-block pair dependence are different evidence obligations. Reusing one experiment for all of them requires an explicit argument.",
+        "The plan proposes checking later-row joint outcomes of pairs sharing a first block and restricting claims to average rather than universal dependence. Those proposals were not executed by the plan or this archive review."
+      ],
+      "limitations": [
+        "No nominal Student or bootstrap interval is treated as an exact theorem without its sampling/coverage assumptions.",
+        "The plan's expected acceptance and proposed operating steps are excluded.",
+        "This preserves a proof obligation, not a corrected fully evaluated attack."
+      ]
+    },
+    {
+      "id": "dense-adjacent-wall-conditions-do-not-automatically-transfer",
+      "protocol": "SHA-256",
+      "status": "Unexecuted argument, explicitly UNKNOWN in the source",
+      "sources": [
+        "research/stepback/WALL_TRANSFER_r37r38.md"
+      ],
+      "facts": [
+        "The r37/r38 two-block construction starts its second block from CV1=Compress(IV,M0). In the source's construction W0..W7 are determined bijectively by CV1. This differs from a semi-free-start SAT model where those starting words may be chosen independently.",
+        "The source counts 45 early-tail conditions through row 18 for r37 and 57 for r38. Absorbing them into a free-start SAT model does not show that legal first blocks reach those solutions at no cost.",
+        "The proposed transfer may sacrifice reuse: a single dense solution is reused across many first-block trials, whereas solving anew for each CV1 could add a large search cost. Whether extra dense freedom can avoid this obstruction was not tested.",
+        "The record's numerical one-bit-per-pinned-bit cost and multiple-solution estimates rely on modeling assumptions. They do not prove a universal impossibility of wall absorption, and the source itself marks both targets UNKNOWN."
+      ],
+      "limitations": [
+        "No experiments were run in this source analysis.",
+        "Fixed-IV reachability and the existence of a semi-free-start solution must remain separate.",
+        "The broad no-gain interpretation is not admitted as a theorem."
+      ]
+    },
+    {
+      "id": "sha3-r6-affine-sharing-snapshot",
+      "protocol": "SHA3",
+      "status": "Dated source-reported kernel test and price; full success premise untested",
+      "sources": [
+        "research/stepback/STEPBACK_1014.md"
+      ],
+      "facts": [
+        "The October 14 S6RR-LS record combines round zero and round-one theta as one affine map, with NOT sharing reduced from 603 to 310. It reports a 30056-operation step versus 36283 for S6RR: 2194 affine operations, four stages of 6813, a 591-operation final stage and 19 control/filter operations.",
+        "The same record reports zero mismatches against the plain six-round SHA3-256 function over 1024 evaluations, replay cost 1117 versus 1244, program storage 947328 bytes and measured generator RSS 831488 bytes.",
+        "The reported time_log2=124.38871 is a model figure for that candidate. Its random-mapping premise had not been rechecked for the changed function, and no full collision is established."
+      ],
+      "limitations": [
+        "This is a source-reported historical snapshot, not a newly replayed kernel or present score.",
+        "Functional equivalence does not prove random-walk success statistics.",
+        "Other API suggestions and operating priorities in the source are omitted."
+      ]
+    }
+  ],
+  "existing_coverage": [
+    {
+      "slug": "poseidon-centre-pretest-negative-result",
+      "source": "research/stepback/CENTRE_PRETEST.md",
+      "coverage": "Explains tested predictor economics and guards against the raw source's overbroad negative conclusion."
+    },
+    {
+      "slug": "poseidon-register-saving-audit",
+      "source": "research/stepback/REGBLOCK_HONEST.md",
+      "coverage": "Includes the exact omitted access count, corrected numerators and model-specific scope."
+    },
+    {
+      "slug": "memory-rule-pareto-and-sharding",
+      "coverage": "Explains the historical score, whole-phase peak and why extra work can cancel memory savings; the present note adds the missing actual preprocessing measurements."
+    },
+    {
+      "slug": "poseidon-r2-executed-ledger-correction",
+      "coverage": "Provides the later r2 static-image plus heap correction rather than treating early LENS memory estimates as finished improvements."
+    },
+    {
+      "slug": "sha256-selected-target-cost-floor",
+      "coverage": "Separates a valid instruction optimization from semantic target-call pricing; it does not discharge the separate characteristic/preprocessing gaps preserved here."
+    }
+  ],
+  "admission_summary": {
+    "safe_standalone_with_caveats": [
+      "research/stepback/CENTRE_PRETEST.md",
+      "research/stepback/PREP_MEMORY.md",
+      "research/stepback/R37_LEANPREP.md",
+      "research/stepback/REGBLOCK_HONEST.md",
+      "research/stepback/WALL_TRANSFER_r37r38.md"
+    ],
+    "curated_only": [
+      "research/stepback/AC_INPUTS_READY.md",
+      "research/stepback/AC_SCOPE.md",
+      "research/stepback/DOORS.md",
+      "research/stepback/LENS.md",
+      "research/stepback/LENS_unopened_doors.prev.md",
+      "research/stepback/PR858_RESCORE.md",
+      "research/stepback/R37ZF2_PLAN.md",
+      "research/stepback/REPLICA_MEMRULE.md",
+      "research/stepback/STEP1_CAP_LADDER.md",
+      "research/stepback/STEPBACK_1014.md"
+    ],
+    "warning": "Safe standalone refers to publication content/privacy, not mathematical certification. Normal language, ownership and correction-notice gates still apply. No source admission or build was performed."
+  },
+  "review_limitations": [
+    "Saved solver figures are not independently re-executed.",
+    "Only basic arithmetic on displayed exponents was checked for the R37ZF2 sensitivity correction; exact package accounting remains separate.",
+    "Historical rule/leaderboard states are not asserted to be current.",
+    "Some older raw notes use overbroad impossibility or optimality language; their curated forms deliberately retain only supported scopes."
+  ]
+}

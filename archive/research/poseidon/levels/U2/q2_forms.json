@@ -1,0 +1,144 @@
+{
+ "R0_lane0": {
+  "formal_degree": 1,
+  "tau_degree": 1,
+  "nonzero_coeffs": 2,
+  "squarefree": true,
+  "roots": [
+   "0x20476d5784fbdb5c3df4d32a53f3089da170aa27047edc6e73ec98db211cb3a6"
+  ],
+  "ddf": {
+   "1": 1
+  }
+ },
+ "R0_lane1": {
+  "formal_degree": 1,
+  "tau_degree": 1,
+  "nonzero_coeffs": 2,
+  "squarefree": true,
+  "roots": [
+   "0x32dd79815648188c24f8fb167fef6ac046d67edeaa22d5e07c5db009913caae3"
+  ],
+  "ddf": {
+   "1": 1
+  }
+ },
+ "R0_lane2": {
+  "formal_degree": 1,
+  "tau_degree": 1,
+  "nonzero_coeffs": 2,
+  "squarefree": true,
+  "roots": [
+   "0x76808431efc67ab3828733912832eceabca2a592a0f3982ced4089dfaebad6d"
+  ],
+  "ddf": {
+   "1": 1
+  }
+ },
+ "R1_lane0": {
+  "formal_degree": 5,
+  "tau_degree": 5,
+  "nonzero_coeffs": 6,
+  "squarefree": true,
+  "roots": [
+   "0x47f8d471cf80425f0ef1e46ff5a9e5d2058b10b7f17fca7761004128c981b51"
+  ],
+  "ddf": {
+   "1": 1,
+   "4": 4
+  }
+ },
+ "R1_lane1": {
+  "formal_degree": 5,
+  "tau_degree": 5,
+  "nonzero_coeffs": 6,
+  "squarefree": true,
+  "roots": [
+   "0x37bff86512e7a133f431be479319527b08c14b0a0553461bbdafbc09728a0302"
+  ],
+  "ddf": {
+   "1": 1,
+   "4": 4
+  }
+ },
+ "R1_lane2": {
+  "formal_degree": 5,
+  "tau_degree": 5,
+  "nonzero_coeffs": 6,
+  "squarefree": true,
+  "roots": [],
+  "ddf": {
+   "5": 5
+  }
+ },
+ "R2_lane0": {
+  "formal_degree": 25,
+  "tau_degree": 25,
+  "nonzero_coeffs": 26,
+  "squarefree": true,
+  "roots": [
+   "0x2663d0ad5289dbfe2540373cc529abd1ced3b3a2a38b3c7033f06840be68479f"
+  ],
+  "ddf": {
+   "1": 1,
+   "5": 5,
+   "19": 19
+  }
+ },
+ "R2_lane1": {
+  "formal_degree": 25,
+  "tau_degree": 25,
+  "nonzero_coeffs": 26,
+  "squarefree": true,
+  "roots": [
+   "0x15d88470bd708c9adf24e9d51f1f2aecb0ba494dcde0cf81080080718d16af11",
+   "0x31b7dd6807904e92f9207ff98cd485b26cdbc0a100bce00ee735a4788596084b"
+  ],
+  "ddf": {
+   "1": 2,
+   "2": 4,
+   "4": 4,
+   "5": 5,
+   "10": 10
+  }
+ },
+ "R2_lane2": {
+  "formal_degree": 25,
+  "tau_degree": 25,
+  "nonzero_coeffs": 26,
+  "squarefree": true,
+  "roots": [
+   "0x1d7956d7477d8212305eea59addc82783431e9e287b0b03e9607cc9e8b867784"
+  ],
+  "ddf": {
+   "1": 1,
+   "2": 2,
+   "5": 5,
+   "17": 17
+  }
+ },
+ "R3_lane0": {
+  "formal_degree": 125,
+  "tau_degree": 125,
+  "nonzero_coeffs": 126,
+  "squarefree": true,
+  "n_roots": 0
+ },
+ "R3_lane1": {
+  "formal_degree": 125,
+  "tau_degree": 125,
+  "nonzero_coeffs": 126,
+  "squarefree": true,
+  "n_roots": 0
+ },
+ "R3_lane2": {
+  "formal_degree": 125,
+  "tau_degree": 125,
+  "nonzero_coeffs": 126,
+  "squarefree": true,
+  "n_roots": 1,
+  "roots": [
+   "0x2d13ee69eb7b519d0a46c86e4e95765da8209bda9a098a7b3ab0728c63420b5c"
+  ]
+ }
+}

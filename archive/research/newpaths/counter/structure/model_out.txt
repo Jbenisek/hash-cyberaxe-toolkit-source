@@ -1,0 +1,68 @@
+validation: peeling vs brute force on 600 random systems: 0 mismatches (400 with a basis)
+
+[counter=0 w14=0 pinned] words 100, equations 92, basis size 8; Y4 alone: True
+  Y4 + T basis YES: Y0 Y8 Y12 w0 w1 w2 w3 w5 w6 w7 w12 X2 X9 X14
+  Y4 + T basis NO : E1.d1 E1.a1 E1.b1 E1.a2 E3.h1 E3.g1 E3.f1 E3.e2 Y1 Y2 Y5 Y6 Y9 Y10 Y13 Y14 w8 w9 w10 w11
+  Y4 + E1.d1 + E3.h1: False
+  Y4 + E1.d1 + E3.g1: False
+  Y4 + E1.d1 + E3.e2: False
+  Y4 + E1.d1 + Y14: False
+  Y4 + E3.h1 + E3.g1: False
+  Y4 + E1.d1 + E1.b1: False
+
+[counter=1 w14=0 pinned] words 101, equations 92, basis size 9; Y4 alone: True
+  Y4 + T basis YES: E1.d1 E1.a1 E3.h1 E3.g1 E3.f1 E3.e2 Y0 Y2 Y6 Y8 Y10 Y12 Y14 w0 w1 w2 w3 w5 w6 w7 w12 X2 X9 X14
+  Y4 + T basis NO : E1.b1 E1.a2 Y1 Y5 Y9 Y13 w8 w9 w10 w11
+  Y4 + E1.d1 + E3.h1: False
+  Y4 + E1.d1 + E3.g1: False
+  Y4 + E1.d1 + E3.e2: False
+  Y4 + E1.d1 + Y14: False
+  Y4 + E3.h1 + E3.g1: False
+  Y4 + E1.d1 + E1.b1: False
+
+[counter=2 w14=0 pinned] words 102, equations 92, basis size 10; Y4 alone: True
+  Y4 + T basis YES: E1.d1 E1.a1 E3.h1 E3.g1 E3.f1 E3.e2 Y0 Y2 Y6 Y8 Y10 Y12 Y14 w0 w1 w2 w3 w5 w6 w7 w8 w12 X2 X9 X14
+  Y4 + T basis NO : E1.b1 E1.a2 Y1 Y5 Y9 Y13 w9 w10 w11
+  Y4 + E1.d1 + E3.h1: False
+  Y4 + E1.d1 + E3.g1: False
+  Y4 + E1.d1 + E3.e2: False
+  Y4 + E1.d1 + Y14: False
+  Y4 + E3.h1 + E3.g1: False
+  Y4 + E1.d1 + E1.b1: False
+
+[counter=0 w14 free] words 101, equations 92, basis size 9; Y4 alone: True
+  Y4 + T basis YES: Y0 Y8 Y12 w0 w1 w2 w3 w5 w6 w7 w11 w12 X2 X9 X14
+  Y4 + T basis NO : E1.d1 E1.a1 E1.b1 E1.a2 E3.h1 E3.g1 E3.f1 E3.e2 Y1 Y2 Y5 Y6 Y9 Y10 Y13 Y14 w8 w9 w10
+  Y4 + E1.d1 + E3.h1: False
+  Y4 + E1.d1 + E3.g1: False
+  Y4 + E1.d1 + E3.e2: False
+  Y4 + E1.d1 + Y14: False
+  Y4 + E3.h1 + E3.g1: False
+  Y4 + E1.d1 + E1.b1: False
+
+[counter=1 w14 free] words 102, equations 92, basis size 10; Y4 alone: True
+  Y4 + T basis YES: E1.d1 E1.a1 E3.h1 E3.g1 E3.f1 E3.e2 Y0 Y2 Y6 Y8 Y10 Y12 Y14 w0 w1 w2 w3 w5 w6 w7 w11 w12 X2 X9 X14
+  Y4 + T basis NO : E1.b1 E1.a2 Y1 Y5 Y9 Y13 w8 w9 w10
+  Y4 + E1.d1 + E3.h1: False
+  Y4 + E1.d1 + E3.g1: False
+  Y4 + E1.d1 + E3.e2: False
+  Y4 + E1.d1 + Y14: False
+  Y4 + E3.h1 + E3.g1: False
+  Y4 + E1.d1 + E1.b1: False
+
+[counter=2 w14 free] words 103, equations 92, basis size 11; Y4 alone: True
+  Y4 + T basis YES: E1.d1 E1.a1 E3.h1 E3.g1 E3.f1 E3.e2 Y0 Y2 Y6 Y8 Y10 Y12 Y14 w0 w1 w2 w3 w5 w6 w7 w8 w9 w11 w12 X2 X9 X14
+  Y4 + T basis NO : E1.b1 E1.a2 Y1 Y5 Y9 Y13 w10
+  Y4 + E1.d1 + E3.h1: False
+  Y4 + E1.d1 + E3.g1: False
+  Y4 + E1.d1 + E3.e2: False
+  Y4 + E1.d1 + Y14: False
+  Y4 + E3.h1 + E3.g1: False
+  Y4 + E1.d1 + E1.b1: False
+
+basis filed 8 + T0 (t free, nothing else): triangular True (checks 0)
+
+basis filed 8 + E1.d1 (T0 determined): triangular True (checks 0)
+
+basis filed 8 + E3.h1 (T0 determined): triangular True (checks 0)
+counter=0: filed 8 triangular: True ; filed 8 minus X2 plus E1.d1: False

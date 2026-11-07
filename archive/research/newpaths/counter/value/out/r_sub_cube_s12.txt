@@ -1,0 +1,47 @@
+RUN rates lo=20 li=16 sub=1 cube=1 seed=12
+CNT trials                                   68719476736
+CNT beta=18b0e098                            68719476736
+CNT listed beta                              68719476736
+CNT listed tau                               41531001
+CNT listed E1 outcome                        18
+CNT rule A (8)                               269090919
+CNT gate H4                                  4304330692
+CNT listed partial E3                        7
+CNT listed partial E3 eps 6e21be55           0
+CNT early word 0                             41395
+CNT eta condition                            978
+CNT listed tau & rule A                      160524
+CNT listed tau & gate H4                     2592241
+CNT listed partial E3 & rule A               0
+CNT listed outcome & listed partial E3       0
+CNT residual word 0 zero                     25
+CNT residual word 1 zero                     141
+CNT residual word 2 zero                     14
+CNT residual word 3 zero                     14
+CNT residual words 0,1 zero                  0
+CNT residual low 16 bits all zero            0
+CNT rule-A trials with flips                 269090919
+CNT listed tau & partial E3 eps 6e21be55     0
+CNT listed outcome & rule A                  0
+SQ rule_per_outer 2.227859e+11 tau_per_outer 1.191827e+10 outer 1048576 inner 65536
+COP bit  2 gate 266958749 rule 90275056
+COP bit  4 gate 260712604 rule 0
+COP bit  5 gate 252264637 rule 0
+COP bit  6 gate 134746431 rule 0
+COP bit  9 gate 0 rule 0
+COP bit 10 gate 0 rule 0
+COP bit 11 gate 269041281 rule 256441573
+COP bit 12 gate 269009015 rule 248050054
+COP bit 13 gate 268960433 rule 235442950
+COP bit 14 gate 268895092 rule 218730901
+COP bit 17 gate 264080338 rule 40
+COP bit 18 gate 260162644 rule 4662
+COP bit 20 gate 241826766 rule 241152798
+COP bit 21 gate 222924788 rule 221582187
+COP bit 22 gate 193649508 rule 190986424
+COP bit 23 gate 151664824 rule 146330524
+COP bit 24 gate 67320127 rule 16707666
+COP bit 28 gate 269058540 rule 129704
+COP bit 29 gate 269029062 rule 162651770
+COP bit 30 gate 268957832 rule 122748714
+COP bit 31 gate 268821759 rule 234544

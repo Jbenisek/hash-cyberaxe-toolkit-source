@@ -1,0 +1,21 @@
+r=1 seed=105 line=0 m=39062
+gcd degree 1, charged 6392270690, derived bound 11942345981 (within)
+  init (twiddle table)                     arith=       17359 other=      126642 total=      144001     0.0s peak=524288
+  line setup                               arith=         391 other=        3519 total=        3910     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  B: build g                               arith=     1436260 other=    41901935 total=    43338195     0.6s peak=3347168
+  C: S^((p-1)/2) mod g                     arith=  3536772927 other= 42030109940 total= 45566882867    76.1s peak=8468544
+  D: gcd(g, S^h - 1) (half-gcd)            arith=   389577467 other=  6002693235 total=  6392270702     7.9s peak=9103968
+  E: root isolation                        arith=           2 other=           5 total=           7     0.0s peak=524416
+  F: sqrt + map back                       arith=        3186 other=       40674 total=       43860     0.0s peak=524288
+  G: verification (2 reference hashes)     arith=         474 other=        4266 total=        4740     0.0s peak=524288
+RESULT found=1 success=1 roots_degree=1
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=52002688285 total_arith=3927808066 units=219420625.7 log2_units=27.7091 heap_peak=9103968 secs=84.6
+COLLISION nk1  0x39ef04d614ab86215ce4a0891c036f1311d61c50853cdb52a58fa43a9dbc33f4
+COLLISION rho1 0x070fcb44d11aec053081f5147794a79ab56fc034374b6c60020cc11f7c9e10fb
+COLLISION nk2  0x148cd7282a2ad2594683cd064d217d1dab6cb5fe84f616e59a711d4baab6904d
+COLLISION rho2 0x1fcb5b87e5008ffd321f9a8a914591e1035614194cbf435af41b2f8f8fc39c28
+COLLISION digest 0x184e80e0eaaf47e042f2c40cae9a278c9773e5219ebe55a07383bdd9d8dc3177
+COLLISION centre 0x1ff21b4853344d4bed811fb3cb940501901a2874ec062e1d0000001a745f3a29
+EXIT 0

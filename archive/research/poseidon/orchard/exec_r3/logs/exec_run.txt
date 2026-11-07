@@ -1,0 +1,29 @@
+r=3 line=0 m=976562
+lean-pow breakdown: newton total=1482633071 arith=519695067 | prefix+scale total=12699152 | loop steps=234 total=388583404413 arith=145470734865 per-step total=1660612839 arith=621669807
+trial 1 centre 1: gcd degree 1, charged 66870499838
+TRIALS 1
+  init (twiddle table)                     arith=      263117 other=     1846972 total=     2110089     0.0s peak=8528576
+  line setup                               arith=         391 other=        3519 total=        3910     0.0s peak=8528576
+  A: centre c_i = i                        arith=           1 other=           5 total=           6     0.0s peak=39781056
+  B: build g                               arith=    56924395 other=  1210601991 total=  1267526386    31.5s peak=90116800
+  C: S^((p-1)/2) mod g                     arith=145991406825 other=244090388554 total=390081795379  4656.6s peak=236511936
+  D: gcd(g, S^h - 1) (half-gcd)            arith= 20120915196 other= 46749584656 total= 66870499852   550.7s peak=278983360
+  E: root isolation                        arith=           2 other=           7 total=           9     0.0s peak=81597120
+  F: sqrt + map back                       arith=        3068 other=       39614 total=       42682     0.0s peak=81597120
+  G: verification (2 reference hashes)     arith=         558 other=        5054 total=        5612     0.0s peak=81597120
+  H: canonical encoding of the output      arith=           6 other=        4638 total=        4644     0.0s peak=81597120
+TRIALROW 1 centre 1 degG 1 gcd 66870499838 total 458219869926
+TRIALROW 0 outside the trials (init, line setup, output encoding) total 2118643
+RECONCILE stages=458221988569 trials=458221988569 counters=458221988569 ok=1
+RESULT found=1 success=1 roots_degree=1
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=458221988569 total_arith=166169513559 units=1642372718.9 log2_units=30.6131 heap_peak=278983360 secs=5238.9
+PEAKLIVE allocations=11 payload=236356384 headers=704
+TYPES add=56286046560 sub=54465276770 mul=54434033657 sqr=984156572 ld=62311954629 st=31827198716 ctl=197035663553 rnd=0 perm=877658112
+COLLISION nk1  0x0499f5c4354bafa11ca451e656d380d078444ed6561d6355487453741e1a6815
+COLLISION rho1 0x21625d728b86cf0865d7ad7cd99a0c20464939e5253940d95b3a639d7a909af7
+COLLISION nk2  0x1009050c8c1414cf5975db612457a2e49b06db64fce28c7dd5ad52ed8fc2c567
+COLLISION rho2 0x31611cd777dc6c418e048d96a497f46fa51523b47dbadcd97d0ad171160fcdb8
+COLLISION digest 0x325165c946fe20c28af82e940ec89fca03e6fb74afa1a3fa28a54e552a1f12ec
+COLLISION centre 0x0000000000000000000000000000000000000000000000000000000000000001
+EXIT 0

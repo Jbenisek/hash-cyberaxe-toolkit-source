@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R0D0.q2 (c1,b1): 3-round BLAKE3 generic-birthday circuit, round 0 diagonal call D0, quarter-step 2",
+ "question": "Q2 necessity: change it (no build-time folding / other prefix constants / prefix words free), recount the exact op total.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Demoting this step's constant inputs to run-time registers: circuit 595 ops (+0), step 7 (add 1, xor 1, shr 1, and 2, shl 1, or 1). Prefix words free: circuit 730, step 7. Random nonzero prefixes: step stays [7], circuit [611, 612]. Fewer free chain words (m8 pinned, 7 free): circuit 577 ops (-18) but the chain domain falls to 2^224 < 2^256, so the memoryless rho no longer returns a full-digest collision cheaply (structural argument, not a tested cost; a 224-bit rho gives only truncated collisions, 2^32 of them needed).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work/b3steps.py; research/dig/incoming3/work/scan.py; research/dig/incoming3/work/scan_out.json; research/dig/incoming3/work/validate_out.txt; research/blake3_r3/candidate_blake3/experiments/rho.py; research/dig/incoming3/work/scan2.py; research/dig/incoming3/work/scan2_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R0D0.q2|step|Q2. Recount with the same tracer. The 577 figure counts operations only; the domain argument is structural and was not run as a search.",
+ "held_fixed": "blake3-r3 filed circuit: 7 lanes x 36 bits, 595 ops/batch, prefix 0^32, m8..m15 free",
+ "reopen_if": "a non-rho collision method that needs fewer than 8 free chain words",
+ "topic": "blake3-r3 R0D0.q2 step op count"
+}

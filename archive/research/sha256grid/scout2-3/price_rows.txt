@@ -1,0 +1,17 @@
+leader ledger 72.63344; derivative row (no 2% pad) 72.61488
+q3_model -> 2^-101.0101 (leader fixed-sample bound):
+   q3 only            72.06934  (vs 72.64 -0.5707, vs 72.61489 -0.5455)
+   q3 + no 2% pad     72.05555
+   q3 + pair 0.002931 71.66911
+   q3 + pair + no pad 71.66001
+q3_model -> 2^-101.0002 (G2 bound, this study):
+   q3 only            72.06455  (vs 72.64 -0.5755, vs 72.61489 -0.5503)
+   q3 + no 2% pad     72.05080
+   q3 + pair 0.002931 71.66595
+   q3 + pair + no pad 71.65689
+
+fresh_m8675309 + g2_main + g3_pool (167936 runs; combined Student bound 2^-101.00013):
+   q3 only            72.06451272
+   q3 + no 2% pad     72.05076990
+   q3 + pair 0.002931 71.66592469
+   q3 + pair + no pad 71.65686809 (upward 71.65687)

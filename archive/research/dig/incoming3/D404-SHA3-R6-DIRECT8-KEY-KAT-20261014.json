@@ -1,0 +1,22 @@
+{
+  "id": "D404-SHA3-R6-DIRECT8-KEY-KAT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "direct8 noncontiguous 135-row key-packing KAT",
+  "question": "Does the compact direct8 key-row packing agree with the reference six-round digest on generated batches?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "In-memory 135-row generator executed on 2 random lists and 4 batches (1,024 messages): zero wrong key words, KAT PASS, reported K_batch 37,713. This validates packing only; direct8 filtering, route charge, memory, and H_K remain open.",
+  "source": "our workflow: direct8 generated-key interpreter KAT",
+  "own_test": true,
+  "evidence": "research/sol_answer_D404_sha3r6_direct8_key_kat.md; research/retest/sha3_r6_alt8/direct8_kernel_kat.py; research/retest/sha3_r6_alt8/direct8_kernel_kat.txt; research/tools/build_pkg/scratch/pkgS6K/work/k/kgen.py; research/tools/build_pkg/scratch/pkgS6K/work/k/run.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.2,
+  "prior": 0.05,
+  "gain_basis": "C",
+  "notes": "Finite key-packing KAT only. It does not test direct8 survivor extraction/pair rates or production memory/register/organizer constraints. No score or package credit.",
+  "reopen_if": "The direct8 filter and compact key route are integrated and receive full reference, charge, memory, and survivor/pair validation."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "D413-SHA3-R6-141-REFRESH-NUMBERS-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 141-bit authoritative proof-refresh numbers",
+  "question": "What exact G, cap, cost rows, N, and time result should replace the stale 140-bit narrative?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "The corrected BKEY=141 ledger gives G=19262931545893435657738815, Q=5422033208259315580998022577179475312640, S_cap=21179837418410660155028713941243002880, exact N=7069170787089782366932836729369691803876, and upward time_log2=121.70963. D413_run.json contains all exact cost rows and failure terms for regenerating Sections 9-10.",
+  "source": "Local import of the checked-in ledger_r6.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_D413_sha3r6_141_refresh_numbers.md; research/retest/lens_t3/d413_141_refresh_numbers.py; research/retest/lens_t3/D413_run.json; research/tools/build_pkg/scratch/pkgS6K141/work/ledger_r6.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 1.0,
+  "gain_basis": "C",
+  "notes": "Scratch refresh data only; no package edit, staging, filing, or submission. H_coset and organizer acceptance remain open.",
+  "reopen_if": "The exact ledger or the required proof/claim refresh changes."
+}

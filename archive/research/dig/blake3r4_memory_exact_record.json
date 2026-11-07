@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-MEMORY-EXACT-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "exact current memory audit",
+  "question": "Does the shipped r4 ledger fit under the 2^20-byte memory rule?",
+  "labels": ["N", "C"],
+  "status": "COMPUTED",
+  "number": "search peak 1048568 B, limit 1048576 B, 8 B spare; setup 1042104 B; N=45975348661915794155860938138573316801453; time_log2=125.35348",
+  "source": "research/blake3_r4/b4/pkg/blake3/experiments/bsrho.py --ledger --loss",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_memory_exact_1014.md; research/dig_new/blake3-r4/ATLAS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "1048568 B",
+  "notes": "Exact current-layout audit. The separate over-limit surface remains conditional because shortened table-entry recovery is not repriced; no package/stage/filing/submission."
+}

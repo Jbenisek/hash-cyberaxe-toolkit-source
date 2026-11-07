@@ -1,0 +1,17 @@
+LEVEL d=4 shift=5924 pow=133895 shift_abs_peak=1049184 pow_abs_peak=1049120 live_before=1048864 secs 0.0 0.0
+LEVEL d=9 shift=7091 pow=694995 shift_abs_peak=1049824 pow_abs_peak=1049760 live_before=1049184 secs 0.0 0.0
+LEVEL d=19 shift=11223 pow=3145445 shift_abs_peak=1051104 pow_abs_peak=1051040 live_before=1049824 secs 0.0 0.0
+LEVEL d=38 shift=74432 pow=12680405 shift_abs_peak=1058656 pow_abs_peak=1053472 live_before=1051040 secs 0.0 0.0
+LEVEL d=76 shift=141746 pow=57185294 shift_abs_peak=1063744 pow_abs_peak=1064064 live_before=1053472 secs 0.0 0.1
+LEVEL d=152 shift=279894 pow=116860203 shift_abs_peak=1078848 pow_abs_peak=1079552 live_before=1058336 secs 0.0 0.2
+LEVEL d=305 shift=562623 pow=238658110 shift_abs_peak=1109120 pow_abs_peak=1110624 live_before=1068128 secs 0.0 0.5
+LEVEL d=610 shift=1293831 pow=550798421 shift_abs_peak=1169600 pow_abs_peak=1172672 live_before=1087648 secs 0.0 0.9
+LEVEL d=1220 shift=2633325 pow=1162656729 shift_abs_peak=1290560 pow_abs_peak=1296768 live_before=1126688 secs 0.0 2.1
+LEVEL d=2441 shift=5345818 pow=2365776560 shift_abs_peak=1532544 pow_abs_peak=1545056 live_before=1204832 secs 0.0 5.0
+LEVEL d=4882 shift=10869932 pow=4808168856 shift_abs_peak=2016448 pow_abs_peak=2041536 live_before=1361056 secs 0.0 11.0
+LEVEL d=9765 shift=24572193 pow=10765748253 shift_abs_peak=2984320 pow_abs_peak=3034592 live_before=1673568 secs 0.0 22.3
+LEVEL d=19531 shift=50014432 pow=22477494147 shift_abs_peak=4920064 pow_abs_peak=5020704 live_before=2298592 secs 0.1 46.7
+LEVEL d=39062 shift=101431190 pow=45559479096 shift_abs_peak=8791488 pow_abs_peak=8992832 live_before=3548576 secs 0.2 103.9
+LEVEL d=78125 shift=205854179 pow=92254059584 shift_abs_peak=16534400 pow_abs_peak=16937184 live_before=6048608 secs 0.5 227.0
+REMOVE d=78125 charged=2265633
+REMOVE d=1000 charged=29008

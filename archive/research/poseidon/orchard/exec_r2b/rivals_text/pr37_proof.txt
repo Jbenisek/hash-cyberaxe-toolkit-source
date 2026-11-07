@@ -1,0 +1,2172 @@
+diff --git a/pareto/candidates/poseidon/proof.md b/pareto/candidates/poseidon/proof.md
+index 891d728..196a3cf 100644
+-- a/pareto/candidates/poseidon/proof.md
+++ b/pareto/candidates/poseidon/proof.md
+@@ -1,3 +1,2165 @@
+# Organizer draft
+# Orchard r=2: cached-modulus-transform collision with a counted operation ledger
+ 
+Not a submission or qualified baseline. See ../../README.md.
+This is a local unsubmitted draft. Its earlier cached-QN1 version was submitted as
+`ef0c89e6-1b2f-4b8c-95d7-da8af15a03d9` and rejected by the remote judge; the CLI exposed
+only the summary status `refuted`, not the detailed objection. This draft adds a fused
+multiply-by-X accounting improvement and does not claim to resolve that earlier objection.
+
+## Submission revision and claim
+
+This package reuses the verified r=2 collision, input-line construction, polynomial
+root-finding, interpolation, half-gcd trace, and kernel definitions from public submission
+`186052af-551a-4146-962f-245da3bcefbe` (commit `02c3f6a`). That submission's proof and
+trace are retained below as the auditable source for the unchanged work. This revision
+changes the Frobenius powering buffer schedule: it retains the fixed transform of `q` in
+the storage occupied by `q`. It groups exponent bits into bounded windows and reduces each
+nonzero `X^d` multiplication with one inverse NTT, using a short quotient and the retained
+transform. It restores coefficient-form `q` once before the gcd. It does not change `q`,
+`X^p mod q`, the gcd, the selected root, or the certificate.
+
+The revised exact total is `W = 64,990,446,343.5` primitive operations, so
+`log2(W/258) = 27.908281` and the declared upward-rounded `time_log2` is **27.908282**.
+The maximum live set is 2,359,296 32-byte words plus the 1 MiB code allowance:
+76,546,048 bytes, `log2 = 26.189824558880016`, declared upward-rounded as
+`memory_log2_bytes = 26.189825`. The score from the declared fields is **34.098107**.
+Appendices C and D retain the successive cost ledgers. Appendix D supersedes C's per-bit
+multiply-by-X delta with grouped powers of X and gives the final total.
+
+## 1. Target
+
+Profile `poseidon-orchard-r2-prefix-v1`: Orchard P128Pow5T3 over the Pallas field
+F_p, p = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001 (255 bits),
+width 3, S-box x -> x^5, deployed round constants rc[i] (i = 0..63) and the deployed 3x3
+MDS matrix M, both pinned in `orchard-pallas-constants.json`. The reduced permutation
+applies the original full rounds 0, 1, 2, 3, the original partial rounds 4..5
+(S-box on lane 0 only), and the original full rounds 60, 61, 62, 63. Each round adds
+rc[i], applies the S-box layer, then multiplies by M. The hash of (nk, rho) is lane 0
+of the permutation of the state [nk, rho, 2^65]; both inputs are canonical (below p) and
+the output is the entire field element, 32 little-endian bytes.
+
+Claim: an ordinary collision, two distinct canonical pairs with equal reduced hash, found
+by a deterministic procedure whose complete primitive-operation count and peak memory are
+stated below. Cost model `orchard-field-ram-v2`: every field addition, subtraction or
+multiplication, every 256-bit load or store, comparison, branch, shift or boolean word
+operation costs one unit; C(2) = 216 + 21*2 = 258 units per reduced permutation.
+Normalized time T = W / C(2), `time_log2` = log2 T. Memory in bytes, including code.
+
+Notation. x^5 is a bijection of F_p because gcd(5, p-1) = 1; its inverse is x -> x^e5 with
+e5 = 5^-1 mod (p-1), so "the fifth root" is a single well-defined field element. We write
+H(nk, rho) for the reduced hash. p-1 = 2^32 * 3 * 463 * (two large primes), so F_p contains
+primitive roots of unity of every order 3 * 2^k with k <= 32; all transforms below are cyclic
+number-theoretic transforms of such lengths.
+
+## 2. The input line that bypasses rounds 0 and 1
+
+Write c0 = rc[0], c1 = rc[1], K5 = (2^65 + c0[2])^5 (a constant). For an input (nk, rho)
+put A = (nk + c0[0])^5 and B = (rho + c0[1])^5. After the round-0 S-box layer the state is
+(A, B, K5); after the round-0 MDS and the round-1 constants, the round-1 S-box inputs are
+
+  u_t = M[t][0]*A + M[t][1]*B + M[t][2]*K5 + c1[t],   t = 0, 1, 2.
+
+**Lemma 1 (line).** Fix k = 2 and let mu5 = -M[2][0] / M[2][1] (M[2][1] is nonzero, M being
+MDS). Let (A0, B0) be the unique solution of the two linear equations
+
+  M[t][0]*A0 + M[t][1]*B0 + M[t][2]*K5 + c1[t] = 0,   t = 0, 1
+
+(unique because the minor M[0][0]M[1][1] - M[0][1]M[1][0] of an MDS matrix is nonzero).
+For a parameter T in F_p define the line A = T + A0, B = mu5*T + B0 and the input
+nk(T) = A^e5 - c0[0], rho(T) = B^e5 - c0[1]. Then along the line u_2 is the constant
+kappa := M[2][0]A0 + M[2][1]B0 + M[2][2]K5 + c1[2], and u_0 = a_0*T, u_1 = a_1*T with
+a_t = M[t][0] + M[t][1]*mu5 (both nonzero, checked on the deployed matrix). Consequently the
+round-1 S-box outputs are (a_0^5 T', a_1^5 T', kappa^5) with T' := T^5, which is affine in T'.
+
+Proof. Substituting the line into u_t gives u_t = a_t*T + (M[t][0]A0 + M[t][1]B0 + M[t][2]K5 + c1[t]);
+the bracket vanishes for t = 0, 1 by the choice of (A0, B0), and a_2 = 0 by the choice of mu5.
+Raising a_t*T to the fifth power gives a_t^5 T^5. Since T -> T' = T^5 is a bijection of F_p,
+every T' in F_p is reached by exactly one line point, and the map T' -> (nk, rho) is injective
+(A and B determine nk and rho uniquely, and A is determined by T' = T^5 through T). QED
+
+Every quantity in Lemma 1 was recomputed from the pinned constants by the program in
+Appendix A; the two bracket conditions and a_2 = 0 are asserted there, and the identity
+H(nk(T), rho(T)) = f(T^5) below is asserted at three parameter values.
+
+**Lemma 2 (degree).** Let s(T') denote the state after the round-1 MDS, an affine function
+of T' by Lemma 1. Applying rounds 2, 3 (full), 4..5 (partial) and 60..63 (full) to
+s(T') and taking lane 0 defines a polynomial f in F_p[T'] of degree at most
+D = 5^(6+2) = 390625, and H(nk(T), rho(T)) = f(T^5) for every T.
+
+Proof. Each S-box multiplies the degree of the lane it acts on by at most 5 and the linear
+layers do not raise degrees; two bypassed rounds leave 6 full rounds and 2 partial rounds,
+hence degree at most 5^(6+2). (Equality holds generically and is verified computationally:
+the program in Appendix A constructs f by composition and asserts deg f = 390625; the procedure
+only needs deg f < N1.) The identity with H follows from Lemma 1. QED
+
+**Lemma 3 (soundness of the certificate).** If T'_0 != T'_1 satisfy f(T'_0) = f(T'_1), the
+two inputs (nk(T_0), rho(T_0)) and (nk(T_1), rho(T_1)) with T_i = (T'_i)^e5 are distinct
+canonical pairs with equal reduced hash. Proof: injectivity in Lemma 1 and Lemma 2. The
+organizer checker recomputes both hashes from the certificate bytes; it does not depend on
+any statement below.
+
+## 3. The procedure
+
+All polynomial arithmetic is over F_p. D = 390625, N1 = 393216 (the least 3*2^k >= D) and
+N2 = 786432 (the least 3*2^k >= 2D-1). The procedure is deterministic: it uses no random coins.
+
+Start points. The start points are s_n = n + 1 (n = 0, 1, 2, ...). Only trial 0 (s_0 = 1) was executed; it succeeded and is charged. Disclosure: an earlier entry (1096f6b9) ran a different start sequence on this target, s_n = SHA-256("poseidon_mage r=2 trial n") mod p; for it trials 0 and 1 failed and trial 2 succeeded (three trials, all charged in that entry). After that entry, trial 0 at s = 1, the start point recorded by earlier entries (tanctl 1942e47d, hecmas 1baf8baf), was evaluated and found deg g = 1; no other start point has been run on this target at this round. The fixed candidate algorithm uses this start point and no random coins.
+
+Step 1 (f, once per trial). Evaluate f at the N1 points omega^i, i < N1, omega a primitive N1-th root of
+unity: each evaluation starts from the affine state s(T') of Lemma 1 and applies the
+6 + 2 remaining rounds. One inverse transform of length N1 then yields the coefficients of
+f, exactly, because deg f = D < N1. (Appendix A constructs f by composition instead; both
+produce the same uniquely defined polynomial, and the appendix asserts agreement with the
+permutation at three points.) f is discarded once q has been formed in Step 2, so it is not live
+during Steps 3-5; a retry rebuilds it, and the rebuild is charged to every trial.
+
+Step 2 (trial n). s0 = s_n; (x0, x1) = (nk(T), rho(T)) for T = s0^e5; y = H(x0, x1), which
+equals f(s0). q = (f - y) / (X - s0) by synthetic division, of degree Dq := D - 1 = 390624, made monic by one
+field inversion. In 4.2 and 4.3 the modulus degree is Dq; N1 and N2 are also the least lengths
+3*2^k >= Dq and >= 2 Dq - 1. The roots of q are the parameters T' != s0 with f(T') = y, together
+with s0 itself when f'(s0) = 0; a root equal to s0 is discarded (the program asserts that every
+reported pair is distinct).
+
+Step 3 (Frobenius). Compute `h=X^p mod q` with 236 binary squarings and the grouped
+left-to-right exponent schedule from Appendix D. With `k0=floor(log2 Dq)=18`, initialize
+`acc=X^(2^k0)`; the remaining 236 bits are partitioned into windows of width at most four.
+For a window of width `w` and binary value `d`, perform its `w` modular squarings, then
+multiply by `X^d mod q` when `d != 0`. The selected schedule has 65 windows, 20 nonzero
+values, and maximum `d=15`.
+
+Before powering, pad the coefficient array of `q` in place from `Dq+1` to `N1` and
+forward-transform it. The resulting `QN1=FFT_N1(q)` replaces the coefficient array; retain
+the top 14 coefficients of monic `q` for the short quotient calculations in Appendix D.
+Each Barrett squaring uses `QN1` for the quotient-times-q product. For `d=1`, use the fused
+single-X operation from Appendix C. For `2<=d<=15`, divide `X^d*acc` by `q` using its top
+`d` coefficients to obtain a quotient `c` of degree at most `d-1`. Evaluate `c/N1` at the
+NTT roots in the same permuted order as `QN1`, multiply pointwise by `QN1`, and inverse-
+transform into the existing scratch buffer. Since `Dq+d-1<N1`, this cyclic convolution is
+the ordinary product. Shift `acc` upward by `d` in place and subtract the recovered `c*q`;
+the result is exactly `X^d*acc mod q`. Appendix D proves the root ordering, quotient
+identity, operation charge, and memory bound. Finally inverse-transform `QN1` in place and
+scale it to restore coefficient-form `q` for the gcd.
+
+Step 4 (gcd). g = gcd(q, h - X). Since X^p - X = prod_{a in F_p} (X - a), g is the product of
+X - a over the F_p-roots a of q. g is computed by the half-gcd algorithm of Section 5, whose
+charged operations are the ones it executed on this instance.
+
+Step 5 (roots). On this instance deg g = 1 (the general case is the root branch of 5.2). Since g is monic of degree 1, its root is -g_0 (one subtraction). Each root T'_1 gives a second input through
+Lemma 1; the pair is verified by two reduced-hash evaluations. If deg g were 0 the trial would
+fail and trial n+1 would run.
+
+## 4. Operation charges
+
+Prices follow `orchard-field-ram-v2`: one unit for every field add/sub/mul, every
+256-bit load/store, comparison, branch, shift or boolean word operation. Field inversion is
+x^(p-2) by a binary ladder: 254 squarings and 76 multiplications, 330 units; a fifth root
+x^e5 is 253 squarings and 124 multiplications, 377 units. Nothing is free: zero-padding
+stores, folding adds, copies and loop control are itemized where they occur.
+
+4.1 Transforms. For N = 3*2^k the forward transform is decimation-in-frequency and the
+inverse is decimation-in-time, so that pointwise products act on the permuted order and no
+bit-reversal pass exists; the radix-3 stage is innermost and untwiddled. Twiddles are produced
+by a running product (one multiplication per butterfly), so there is no twiddle table.
+A radix-2 butterfly is charged 9/2 units: the twiddle update multiplication, the twiddle
+product, one addition, one subtraction and one half unit of loop/address work (two
+butterflies per compare-and-branch). A radix-3 butterfly (3-point DFT on three elements) is
+charged 17/2 units: one multiplication, three additions, four subtractions and the half unit.
+Loop control: a radix-8 pass processes eight elements, twelve butterflies, per loop iteration
+(one index update, one comparison, one branch: 3 units per 12 butterflies), so 1/2 unit per
+butterfly is conservative; every other per-element loop (pointwise steps, padding, copies,
+folds, remainders, shifts) is unrolled eight elements per iteration and charged 1/2 unit per
+element. Memory traffic: radix-2 levels run in register-blocked passes of three levels, one
+load and one store per element per pass, i.e. 2/3 unit per element per level; the k mod 3
+leftover levels are merged with the radix-3 level into one final pass, charged one load and one
+store per element. The actual traffic is therefore 2N(floor(k/3) + 1) <= (2/3)Nk + 2N for every
+k (equality whenever k is a multiple of 3). The transform constants (for each of at most 20
+lengths: the root of unity, at most 20 per-level twiddle steps and N^-1, each an exponentiation of
+at most 380 units) are computed once and kept with the code: 20 * 22 * 380 = 167,200 units, charged
+in the setup. Hence
+
+  T(N) = (N/2)*k*(9/2) + (2/3)*N*k + (N/3)*(17/2) + 2N = N*(35k/12 + 29/6),
+
+T(393216) = 21,397,504 and T(786432) = 45,088,768. The 1/N scaling of an inverse transform is folded
+into the preceding pointwise step as one extra multiplication per point: a pointwise square
+costs 9/2 units (load, two multiplications, store, 1/2 loop), a pointwise product with a cached
+unscaled transform 11/2 (two loads, two multiplications, store, 1/2 loop); zero padding is 3/2
+per zero (store, 1/2 loop); a copy is 5/2 (load, store, 1/2 loop). These closed forms are exact
+rationals and are asserted
+equal to the instrumented kernels of Appendix A for every N = 3*2^k from 3 to 3072, and the
+transform's convolution is checked against schoolbook multiplication there.
+
+4.2 Modular squaring of a (deg a < Dq) modulo the monic q of degree Dq (Appendix A, `SQ`), with
+n = Dq-1, N1 >= Dq, N2 = 2*N1 >= 2Dq-1:
+  S1  copy a into the length-N2 buffer A and pad (Dq + N2 + N2/2 units); A = FFT_N2(A); square
+      pointwise with scaling (9/2 per point); a2 = IFFT_N2(A). Since deg a^2 <= 2Dq-2 < N2,
+      a2 = a^2 exactly. Copy a2[0:N1] to R (5/2 per word) and fold a2f[i] = a2[i] + a2[i+N1]
+      for i < 2Dq-1-N1 (9/2 each).
+  S2  move the top n coefficients of a2 in reversed order to A[0:n] (5/2 n), pad (3/2 (N2-n)),
+      FFT_N2, multiply pointwise (11/2 per point) by the cached transform INVQ of
+      inv = rev(q)^-1 mod X^n, IFFT_N2; the low n coefficients, reversed in place (5 per pair),
+      are the quotient quot = floor(a^2 / q) (Barrett division, exact because q is monic).
+  S3  pad quot to N1 (3/2 (N1-n)), FFT_N1, multiply pointwise (11/2 per point) by the
+      retained `QN1 = FFT_N1(q)`, IFFT_N1 giving prod = quot*q modulo X^N1 - 1;
+      rem[i] = a2f[i] - prod[i] for i < Dq (9/2 each). Correctness: quot*q = a^2 - rem with
+      deg rem < Dq <= N1, so reducing both sides modulo X^N1 - 1 gives prod = a2f - rem.
+  The retained baseline kernel costs 264,163,016 units when it recomputes FFT_N1(q) inside
+  each squaring. With QN1 retained, the revised squaring costs 241,785,063 units; the
+  removed term is CACHE(Dq+1,N1) = 22,377,953. The transform and Barrett identities are
+  unchanged; the baseline self-tests checked the cached and uncached forms against an
+  independent library at D = 125, 625, 3125.
+The archived coefficient-domain multiply-by-X kernel costs `13 Dq/2` units. The final
+cached-transform schedule instead scales each QN1 entry by `lead/N1` before the inverse
+transform, so the transform returns `lead*q`; a descending in-place shift/subtract then costs
+`9 Dq/2 + 1` units (2 Dq loads including the initial lead read, Dq stores, Dq subtractions,
+half a loop unit per coefficient, and one scalar multiplication for `lead/N1`). No
+per-coefficient multiplication remains in this shift/subtract. The transform copy/scale costs
+`7 N1/2` units (one load, multiply, store and half a loop per entry), followed by T(N1).
+
+4.3 Newton inverse of rev(q) modulo X^n: precision doubling m -> m2 = min(2m, n), each step two
+products at the least length N(m) = 3*2^j >= m2, with d = m2 - m, charged
+(m2 + 3N/2) + (m + 3N/2) + 5 T(N) + 11 N + (5/2) d + (3/2)(N - d) + (7/2) d units; total
+NEWTON = 330,975,267.5 units. The cached transform INVQ costs CACHE(n, N2) = 2n + (N2-n) + N2/2 + T(N2)
+= 46,659,039 once per trial. Powering start: acc = X^(2^k0) is written directly (3 Dq/2 units).
+
+4.4 Evaluation of f: N1 evaluations at 6 + 27*6 + 21*2 + 1 = 211 units each (affine
+start, six full rounds at 27 units, 2 partial rounds at 21 units, one store), one inverse
+transform T(N1) with N1 scaling multiplications, the evaluation points omega^i produced by a
+running product (one multiplication and one store each, 2 N1 units), and one permutation pass
+putting the evaluations into the order the decimation-in-time inverse expects (load, store and
+an index update per element, 3 N1 units): 106,725,376 units. Peak live words in this phase: the
+N1 points and the N1 evaluations.
+
+4.5 Trial preparation: one start-point draw (one addition, 1 unit), three fifth roots (3 x 377), one reduced permutation for y (258), synthetic
+division (9/2 per coefficient: load, multiply, add, store, 1/2 loop), one inversion (330), the
+monic scaling (7/2 per coefficient: load, multiply, store, 1/2 loop) and forming h - X (4): 3,126,724 units per trial. Setup, once: the constants of
+Lemma 1 (two inversions, a few fifth powers, products and sums), charged as a flat 2,000 units,
+plus the transform constants of 4.1 (167,200 units): 169,200 units.
+
+4.6 Finish: per root three fifth roots, one verifying permutation and an 8-unit digest
+comparison, plus one permutation for the first input: 1,655 units.
+
+## 5. The gcd stage and root extraction
+
+5.1 Algorithm. g = gcd(q, h - X) is computed by a half-gcd in the shape of von zur Gathen
+and Gerhard (Modern Computer Algebra, 11.4): hgcd(r0, r1, k) returns the 2x2 cofactor matrix
+R with R*(r0, r1) = (r_j, r_{j+1}) where j is the last index with deg r0 - deg r_j <= k; it
+recurses on the top 2d coefficients with d = ceil(k/2), applies the matrix, performs one
+division, recurses again with the remaining budget, and composes the two matrices and the
+quotient. Below k <= 48 the classical Euclidean algorithm runs on the truncated inputs. The
+top level (fast_gcd) repeatedly calls hgcd on the top 2d+1 coefficients of (a, b) with
+d = ceil(deg a / 4), applies the half-size matrix, performs one division, and finishes with
+classical Euclid once deg b <= 48; it never composes a full-size matrix. All degree bookkeeping
+is exact, so non-normal remainder sequences are handled by the degree tests.
+
+Memory-lean execution (three devices, each charged and inside the memory model):
+(i) Views. The truncated top part handed to a child hgcd is a read-only pointer into the
+parent's buffer, which stays owned by a live frame until the child returns; no copy is made.
+(ii) Wrapped matrix-vector step. (a', b') = R (a, b) is computed modulo X^N - 1 with
+N = the least 3*2^j >= n_h + 1, n_h = deg a - deg R11, fixed before any arithmetic. Degree
+argument: for the remainder sequence of (a, b) with cofactors s_i a + t_i b = r_i, t_0 = 0,
+t_1 = 1, t_{i+1} = t_{i-1} - q_i t_i, induction gives deg t_{i+1} = n0 - n_i (non-normal sequences
+included). hgcd returns R = [[s_h, t_h], [s_{h+1}, t_{h+1}]], whose first h quotients agree with
+those of (a, b), so a' = r_h has degree exactly n0 - deg R11 = n_h < N and deg b' < n_h.
+Reduction modulo X^N - 1 is linear, so R00 a + R01 b mod (X^N - 1) = r_h exactly even though
+the individual products alias; likewise for b'. Inputs longer than N are folded while being
+copied. The program asserts deg a' = n_h < N and deg b' < n_h at every such step (all passed).
+Four buffers of N words are live; at the top level a and b are freed once copied.
+(iii) Shared-transform 2x2 matrix products inside hgcd: each nonzero entry is transformed once
+at the least length covering every one of the eight products (linear, no wrap; asserted), with
+one in-place 2x2 pointwise pass per row.
+Each device is used only when its charge is below the product-by-product charge; the choice is
+a deterministic function of the sizes and is recorded in the histogram.
+The implementation was checked against an independent library gcd on random pairs of degree
+50..5000, on nontrivial gcds of degrees 1, 2, 3, 7, 40, on twelve adversarial pairs built
+backwards from prescribed quotient sequences with non-normal steps and quotient degrees up to
+199, and on sequences of 3000 normal steps (Appendix A, test listing).
+
+5.2 Charges. The program charges every operation it performs at its actual sizes:
+- a product of polynomials of lengths m1, m2: the cheaper of classical (4 m1 m2 for load, load,
+  multiply, add per coefficient pair, plus m1 m2 / 2 loop control and 2(m1+m2-1) for zeroing and
+  storing the output) and transform (3 T(N) + 5N + 2(m1+m2) + (N-m1) + (N-m2) + N/2: two forward
+  and one inverse transform, the scaled pointwise product, copying both inputs into their padded
+  buffers, the padding stores and loop control, N the least 3*2^j >= m1+m2-1, T from 4.1), the
+  choice being recorded;
+- addition/subtraction of length m: 4m + m/2; copy, shift or truncation: 2m + m/2; field inversion
+  380 (a conservative round-up of the 330-unit ladder); monic normalisation 380 + m + m/2;
+  division inner loops carry the same 1/2 unit per coefficient iteration;
+- division of degree n by degree m, L = n-m+1: the cheaper of classical
+  380 + L(4(m+1) + 2) + L(m+1)/2 + 2(n+1) + (n+1)/2 and Newton division (inverse of the reversed divisor at precision
+  L as in 4.3, two products, 4(m+1) + 2(n+1)); on this instance every division was classical;
+- wrapped matrix-vector step at length N (inputs of lengths la, lb, entries of lengths l_ij):
+  loading a and b 5/2 min(l,N) + 9/2 max(0,l-N) + 3/2 max(0,N-l) each; per nonzero entry 7/2 l
+  (load, scale by 1/N, store, loop) + 3/2 (N-l) + T(N); 2 T(N) for the transforms of a and b; per
+  nonzero output row 9/2 N for the first pointwise term and 13/2 N for the second; one inverse
+  T(N) per row;
+- shared-transform 2x2 matrix product at length N: per nonzero entry of the right factor
+  7/2 l + 3/2 (N-l) + T(N), of the left factor 5/2 l + 3/2 (N-l) + T(N); per row one pointwise
+  pass of 29/2 N (six loads, four multiplications, two additions, two stores, loop); T(N) per
+  nonzero output entry.
+- Roots of g: when deg g = 1 the root is -g_0 of the monic g (1 unit). When deg g >= 2 the
+  program splits g by equal-degree factorisation with shifts c_n = n + 1 (1 unit each);
+  (X + c)^((p-1)/2) mod g is charged as 253 schoolbook modular squarings
+  (4d^2 + (d-1)(4d+2) + (d^2 + (d-1)d)/2 each) and popcount((p-1)/2) - 1 multiplications by X + c
+  (4d + (d-1)(4d+2) + (d + (d-1)d)/2 each), the gcd with g by classical Euclid as above, recursing
+  on both factors. On this instance deg g = 1, so the splitting branch was not executed.
+- explicit overhead, charged per trial from the histogram by `gcd_overhead`: +N per transform
+  product (the 1/2 loop unit of each of its two copy/pad loops), +2m per monic normalisation (load
+  and store per coefficient), +5N per wrapped matrix-vector step and +10N per shared-transform
+  matrix product (compaction of outputs into coefficient-length buffers, 5/2 per word), and +5 per
+  recorded operation (degree scans and recursion bookkeeping).
+Memory: the live coefficient words of every polynomial held by an active frame of the
+recursion (inputs, matrix entries, remainders; views add none) plus scratch: 2N words for a
+transform product, m1+m2-1 for a classical one, (n+1) + L for a division, 4N for a wrapped
+matrix-vector step, and for a shared-transform matrix product 4N (right-factor transforms) + 2N
+(the row's left-factor transforms, overwritten by its outputs) + the first row's outputs while the
+second row runs.
+
+5.3 Executed count. On this instance (trial 0, deg q = 390624) the stage performed
+775,708 classical and 1,525 transform products, 390,623 classical and 0 Newton divisions in the half-gcd (the root stage adds its own, listed in the histogram) and charged 6,563,144,943 units with a peak of 1,957,008 live words; the
+charge of the root stage was 1 (together 6,563,144,944), and the explicit overhead added
+113,341,196. The remainder sequence was normal: every division in the histogram is of degree n by n - 1 and every wrapped step has deg a - deg b = 1, so the histogram is the schedule fixed by the sizes alone. 10,835 products had a zero operand and were charged 0. Charge by kind (each row recomputed by `halfgcd_charge.py`
+from the histogram of Appendix B):
+
+| kind | units |
+|---|---:|
+| matvec_wrap | 3,475,412,615 |
+| matmul_shared | 2,302,687,136 |
+| division_classical | 475,650,701 |
+| product_classical | 216,553,167 |
+| addsub | 85,119,633 |
+| product_ntt | 7,721,308 |
+| monic | 383 |
+| root_linear | 1 |
+| total | 6,563,144,944 |
+
+Appendix B reproduces `gcd_trace_r2_t0.json`, the
+histogram of every charged operation by kind and size; `halfgcd_charge.py` (Appendix A,
+standard library only) recomputes the charge from that histogram and the rules above.
+
+## 6. Totals
+
+| phase | units | peak live words |
+|---|---:|---:|
+| setup (Lemma 1 and transform constants) | 169,200 | |
+| trial 0: build f (4.4) | 106,725,376 | 786,440 |
+| trial 0: preparation (4.5) | 3,126,724 | 781,258 |
+| trial 0: Newton inverse + cached INVQ and in-place QN1 | 399,035,697 | 1,570,271 |
+| trial 0: 236 cached-QN1 squarings + 585,936 start stores with loop control | 57,061,860,804 | 2,359,296 |
+| trial 0: 20 fused multiply-by-X^d windows, segmentation and setup | 720,266,987.5 | 1,963,488 |
+| trial 0: restore q coefficients before gcd | 22,773,760 | 1,570,272 |
+| trial 0: half-gcd + roots (5.3) | 6,563,144,944 | 1,957,008 |
+| trial 0: gcd explicit overhead (5.2) | 113,341,196 | |
+| trial 0: finish (4.6) | 1,655 | |
+| **total** | **64,990,446,343.5** | **2,359,296** |
+
+Total W = 64,990,446,343.5 units; T = W / 258 = 251,900,179.6255; `time_log2` = log2 T =
+27.908281350, declared as 27.908282 (ceiling at six decimals; not a downward rounding).
+
+Executed trials of the stream (context): trial 0: deg g = 1.
+
+## 7. Success probability and the trial budget
+
+The fixed candidate algorithm reads no random coins. On this target its specified start point
+produces the verified certificate, so its success probability is 1. Grouped exponent windows
+are algebraically equivalent to binary exponentiation, and each `X^d` reduction is exact by
+polynomial division and the NTT convolution identity. The declared cost includes schedule
+construction, all window operations and the unchanged successful trial. No expectation or
+randomness extrapolation enters the claim, and `heuristics` remains empty. The half-gcd charge
+is about 10.1% of W; tripling it would raise `time_log2` by less than 0.3 bits.
+
+## 8. Certificate
+
+`certificates/message-a.bin` encodes (x0, x1) = the inputs of parameter s0 and
+`certificates/message-b.bin` the inputs of the root T'_1;  The expected digest
+in `certificates/manifest.json` is the common reduced hash ce852ad7ca3e407b8aa64d550a7a921ef39600c3ac1d2a162bbf547db9bff00a (32 little-endian
+bytes). All inputs are canonical and the files differ. The organizer checker recomputes
+the reduced permutation on each file; that check is independent of every count above.
+
+## 9. Memory
+
+Peak live storage is the maximum over the phases (Section 6, table): 2,359,296 words of 32 bytes,
+plus a fixed 2^20-byte allowance for code, constants and the stack: the kernels are a few
+thousand machine instructions, the transform constants are at most 20 * 22 words (14 KB), the
+pinned permutation constants at most 201 words (64 rounds of 3 constants and the 3x3 MDS, 6.4 KB), and the recursion stack holds at most 20 frames
+of a few dozen words.
+log2 of that total is 26.189825, declared as `memory_log2_bytes` = 26.189825 (ceiling at
+six decimals). The QN1 buffer occupies the former q coefficient allocation padded by only
+2,591 words; the multiply-by-X^d inverse transforms reuse the existing R buffer. The top 14
+coefficients of q and short quotient/schedule arrays fit in the fixed 1 MiB allowance. f is
+not live after Step 2 (Section 3). The normalized cost axis
+`time_log2` + max(0, `memory_log2_bytes` - 20) is 34.098107 with the declared bounds; the
+claim keeps the two raw bounds separate.
+
+## 10. Limitations and relation to prior entries
+
+The time bound is an operation count under the organizer's prices, not wall-clock time. The
+published predecessor executed the deterministic mathematical procedure and its counted
+half-gcd on this instance; the organizer verifies the resulting certificate. This revision
+adds grouped multiply-by-X^d reduction with an exact short-quotient identity. It has not been
+timed or run as participant Python on the host. Its operation count follows the transform and
+word-operation prices in Sections 4 and Appendices C–D; the cached and uncached Barrett
+identities were covered by predecessor kernel self-tests. The gcd trace is unchanged and its
+exact charge is reproduced in Appendix B. The certificate proves the collision independently
+of the operation accounting.
+
+Credits. The univariate root-finding of the lane-0 output with gcd(., X^p - X) and the
+deterministic executed-outcome argument were introduced on this board by Th0rgal
+(94e9246a); hecmas (a18c0d0a) added round-0 absorption, NTT Barrett powering and a counted
+half-gcd; tanctl (b86575d7, b257d730, 0aed4072) introduced the two-round linearizing line
+and worst-case fast-gcd accounting. The two-round bypass itself is the trick of Bariant,
+Bouvier, Leurent and Perrin (ToSC 2022/3) for SPN CICO problems. What this package adds is
+its accounting: closed forms validated against instrumented kernels, no bit-reversal passes,
+scaling folded into pointwise steps, the N1-fold remainder, reuse of the q buffer for
+FFT_N1(q), grouped exact multiply-by-X^d reductions, an executed and histogram-reproducible
+half-gcd, and f discarded after q is formed.
+
+## Appendix A. Program listings
+
+The following archived listings are from the directly declared predecessor and reproduce its
+unchanged kernels and half-gcd trace. Where its `attack.py` and `powering.py` show
+`cache_qn1=False` and the original aggregate ledger, Appendix C is the overriding final
+powering schedule and cost calculation for this candidate. The r=2 mathematical values and
+half-gcd trace are identical; the revised buffers and all changed charges are itemized there.
+
+The executed driver (`attack.py`), the instrumented kernels with their closed forms and self-tests
+(`ntt.py`, `modsq.py`, `powering.py`), the counted half-gcd and root stage (`halfgcd.py`, `gcd_stage.py`,
+`roots.py`), the trace charge (`halfgcd_charge.py`) and the standard-library reproduction (`accounting.py`).
+Run `python accounting.py orchard-pallas-constants.json ledger_r2.json <dir with the gcd_trace files>` to recompute
+every number of Section 6 and the pair; `python ntt.py`, `python modsq.py`, `python powering.py` run the
+kernel self-tests. The ledger and the trace histogram are reproduced verbatim in Appendix B.
+
+
+### attack.py
+
+```python
+"""poseidon_mage counted attack driver. Charges follow proof sections 4 and 5.
+Executes the two-round-bypass univariate collision search at r partial rounds, charges every
+phase as stated in the proof, writes ledger_r<r>.json and a candidate package directory.
+Usage: python attack.py <constants.json> <r> <outdir> [--max-trials N]
+"""
+import json, sys, hashlib, math, os, time
+from fractions import Fraction
+def _jd(o):
+    if isinstance(o, Fraction): return int(o) if o.denominator == 1 else float(o)
+    raise TypeError(str(type(o)))
+def JI(x):
+    return int(x) if (isinstance(x, Fraction) and x.denominator == 1) or isinstance(x, int) else x
+from flint import fmpz_mod_ctx, fmpz_mod_poly_ctx
+
+P = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001
+CODE_BYTES = 1 << 20
+E5 = pow(5, -1, P - 1)                       # fifth-root exponent
+EXP_COST = lambda e: (e.bit_length() - 1) + (bin(e).count('1') - 1)   # sq + mul of a binary ladder
+INV_COST = EXP_COST(P - 2)                   # 330: 254 squarings + 76 multiplications
+ROOT5_COST = EXP_COST(E5)
+
+def n3(x):
+    """smallest 3*2^k >= x"""
+    k = 0
+    while 3 << k < x: k += 1
+    return 3 << k
+from ntt import T                              # transform charge, validated in ntt.py
+
+class Target:
+    def __init__(self, cpath, r, k=2):
+        C = json.load(open(cpath)); self.r = r; self.k = k
+        self.RC = [[int(x, 16) for x in row] for row in C['round_constants']]
+        self.M = [[int(x, 16) for x in row] for row in C['mds']]
+        self.CAP = 1 << 65; self.Cnorm = 216 + 21 * r
+        self.idx = [*range(4), *range(4, 4 + r), *range(60, 64)]
+        self.ctx = fmpz_mod_ctx(P); self.pctx = fmpz_mod_poly_ctx(self.ctx)
+        self._line()
+    def perm(self, s):
+        s = list(s); M, RC = self.M, self.RC
+        for i in self.idx:
+            s = [(x + c) % P for x, c in zip(s, RC[i])]
+            for col in (range(3) if i < 4 or i >= 60 else range(1)): s[col] = pow(s[col], 5, P)
+            s = [sum(c * x for c, x in zip(row, s)) % P for row in M]
+        return s
+    def H(self, x0, x1): return self.perm((x0, x1, self.CAP))[0]
+    def _line(self):
+        M, RC, k = self.M, self.RC, self.k; inv = lambda x: pow(x, P - 2, P)
+        K5 = pow((self.CAP + RC[0][2]) % P, 5, P); self.K5 = K5
+        i, j = [t for t in range(3) if t != k]
+        lam5 = 1; mu5 = (-M[k][0] * inv(M[k][1])) % P
+        a, b, e = M[i][0], M[i][1], (-(M[i][2] * K5 + RC[1][i])) % P
+        c, d, f = M[j][0], M[j][1], (-(M[j][2] * K5 + RC[1][j])) % P
+        det = (a * d - b * c) % P; di = inv(det)
+        A0 = ((e * d - b * f) * di) % P; B0 = ((a * f - e * c) * di) % P
+        self.lam5, self.mu5, self.A0, self.B0 = lam5, mu5, A0, B0
+        self.slope = [(M[t][0] * lam5 + M[t][1] * mu5) % P for t in range(3)]
+        self.constk = (M[k][0] * A0 + M[k][1] * B0 + M[k][2] * K5 + RC[1][k]) % P
+        assert self.slope[k] == 0 and all(self.slope[t] for t in (i, j))
+        for t in (i, j): assert (M[t][0] * A0 + M[t][1] * B0 + M[t][2] * K5 + RC[1][t]) % P == 0
+        # state after round-1 S-box as affine functions of T' : lane t = sb_lin[t]*T' + sb_const[t]
+        self.sb_lin = [0 if t == k else pow(self.slope[t], 5, P) for t in range(3)]
+        self.sb_const = [pow(self.constk, 5, P) if t == k else 0 for t in range(3)]
+    def inputs(self, Tp):
+        T_ = pow(Tp, E5, P); A = (self.lam5 * T_ + self.A0) % P; B = (self.mu5 * T_ + self.B0) % P
+        return (pow(A, E5, P) - self.RC[0][0]) % P, (pow(B, E5, P) - self.RC[0][1]) % P
+    def build_f(self):
+        """lane-0 output as a polynomial in T' (composition, FLINT). Uniquely defined; charged as
+        evaluation at the N1 roots of unity + one inverse transform (proof 4.4)."""
+        pc = self.pctx; M, RC = self.M, self.RC
+        st = [sum((pc([M[row][col]]) * pc([self.sb_const[col], self.sb_lin[col]]) for col in range(3)), pc([0])) for row in range(3)]
+        for i in [2, 3, *range(4, 4 + self.r), *range(60, 64)]:
+            st = [x + pc([c]) for x, c in zip(st, RC[i])]
+            for col in (range(3) if i < 4 or i >= 60 else range(1)): st[col] = st[col] ** 5
+            st = [sum((pc([M[row][col]]) * st[col] for col in range(3)), pc([0])) for row in range(3)]
+        f = st[0]; assert f.degree() == 5 ** (6 + self.r)
+        for Tp in (1, 2, 12345):     # consistency with the permutation
+            assert int(f(self.ctx(Tp))) == self.H(*self.inputs(Tp))
+        return f
+
+STREAM = "seq"                                   # start points s_n = n + 1 (the board convention)
+STREAM_COST = {"seq": 1}                         # one addition
+def stream(r, n): return n + 1
+
+def run(cpath, r, outdir, max_trials=None):
+    t = Target(cpath, r); D = 5 ** (6 + r); N1 = n3(D); N2 = n3(2 * D - 1); C = t.Cnorm
+    ledger = {'stream': STREAM, 'r': r, 'D': D, 'N1': N1, 'N2': N2, 'C': C, 'phases': {}, 'memory_words': {}, 'trials': []}
+    ph, mem = ledger['phases'], ledger['memory_words']
+    t0 = time.time(); f = t.build_f(); t_build = time.time() - t0
+    # charge: N1 evaluations (affine start 6 + 6 full rounds*27 + r partial*21 + 1 store) + IFFT_N1 + scaling
+    # setup (Lemma 1 constants: two inversions, a handful of fifth powers, products and sums) charged as a flat 2,000
+    # Lemma 1 constants (2,000) + transform constants: for each of at most 20 lengths, the root of unity, at most
+    # 20 per-level twiddle steps and N^-1, each an exponentiation of at most 380 units: 20 * 22 * 380 = 167,200
+    ph['setup'] = 2000 + 167200
+    # build of f, charged once per trial (f is discarded after q is formed and rebuilt on a retry):
+    # N1 evaluations + IFFT_N1 + N1 scaling + evaluation points omega^i by running product (1 mul + 1 store each)
+    BUILD = JI(N1 * (6 + 27 * 6 + 21 * r + 1) + T(N1) + N1 + 2 * N1 + 3 * N1)   # + permutation of the points into the transform order
+    ph['build_f_per_trial'] = BUILD
+    mem['build_f'] = 2 * N1 + 8        # evaluation points, evaluation buffer (becomes f), state
+    mem['form_q'] = 2 * D + 8          # f and q live together during the synthetic division
+    X = t.pctx.gen()
+    from powering import execute_frobenius     # Frobenius powering (proof 4.2-4.3)
+    from gcd_stage import gcd_stage            # counted half-gcd and roots (proof 5)
+    from halfgcd_charge import gcd_overhead
+    result = None
+    for n in range(max_trials or 10 ** 9):          # retries until a trial succeeds
+        s0 = stream(r, n); x0, x1 = t.inputs(s0); y = t.H(x0, x1)
+        assert int(f(t.ctx(s0))) == y
+        q, rem = divmod(f - t.pctx([y]), X - t.pctx([s0])); assert rem == 0 and q.degree() == D - 1
+        lead = int(q[D - 1]); q = q * t.pctx([pow(lead, P - 2, P)]); assert int(q[D - 1]) == 1
+        trial = {'n': n, 's0': str(s0), 'inputs0': [str(x0), str(x1)], 'y': str(y)}
+        # charges: build of f; start-point draw (one addition); inputs: 3 fifth roots; y: one
+        # permutation; synthetic division 4D; monic: inversion + 4D; forming h - X later: 4
+        trial['ops_build'] = BUILD
+        trial['ops_prepare'] = STREAM_COST[STREAM] + 3 * ROOT5_COST + C + 4 * D + INV_COST + 4 * D + 4
+        t1 = time.time(); h, led_pow = execute_frobenius(q, r, cache_qn1=False); trial['t_pow'] = time.time() - t1
+        trial['ops_powering'] = JI(led_pow['ops']['total']); trial['mem_powering'] = led_pow['peak_words']['max']
+        trial['powering'] = {k: v for k, v in led_pow.items() if k not in ('time_log2', 'memory_log2', 'score_contribution', 'memory_bytes')}
+        t2 = time.time(); g, roots, led_gcd = gcd_stage(q, h - X, r); trial['t_gcd'] = time.time() - t2
+        trial['ops_gcd'] = led_gcd['ops']; trial['mem_gcd'] = led_gcd['peak_words']; trial['gcd'] = {k: v for k, v in led_gcd.items() if k != 'trace'}
+        trial['gcd_trace'] = led_gcd.get('trace')
+        trial['ops_gcd_overhead'] = gcd_overhead(led_gcd.get('trace') or {})   # proof 5.2: copy loops, load/store, bookkeeping
+        trial['deg_g'] = g.degree(); trial['roots'] = [str(int(x)) for x in roots]
+        trial['ops_total'] = trial['ops_build'] + trial['ops_prepare'] + trial['ops_powering'] + trial['ops_gcd'] + trial['ops_gcd_overhead']
+        ledger['trials'].append(trial)
+        print(f"trial {n}: deg g = {g.degree()} pow {trial['t_pow']:.0f}s gcd {trial['t_gcd']:.0f}s ops {trial['ops_total']:.4g}")
+        if g.degree() >= 1:
+            pairs = []
+            for rt in roots:
+                s1 = int(rt); u0, u1 = t.inputs(s1)
+                assert (u0, u1) != (x0, x1) and t.H(u0, u1) == y
+                pairs.append({'s1': str(s1), 'inputs': [str(u0), str(u1)]})
+            # charge: per root 3 fifth roots + 1 verifying permutation + 8 for the digest comparison; plus the s0 digest
+            trial['ops_finish'] = len(roots) * (3 * ROOT5_COST + C + 8) + C
+            trial['ops_total'] += trial['ops_finish']
+            result = (trial, pairs, y); break
+    assert result, "no trial succeeded"
+    trial, pairs, y = result
+    total = JI(ph['setup'] + sum(tr['ops_total'] for tr in ledger['trials']))
+    peak = max(mem['build_f'], mem['form_q'], max(max(tr['mem_powering'], tr['mem_gcd']) for tr in ledger['trials']))
+    ledger['total_ops'] = total; ledger['time_log2'] = math.log2(total / C)
+    ledger['peak_words'] = peak; ledger['memory_bytes'] = peak * 32 + CODE_BYTES
+    ledger['memory_log2_bytes'] = math.log2(ledger['memory_bytes'])
+    ledger['score'] = ledger['time_log2'] + max(0, ledger['memory_log2_bytes'] - 20)
+    ledger['digest'] = y.to_bytes(32, 'little').hex(); ledger['pairs'] = pairs; ledger['t_build'] = t_build
+    os.makedirs(outdir, exist_ok=True)
+    for tr_ in ledger['trials']:
+        if tr_.get('gcd_trace') is not None:
+            json.dump(tr_['gcd_trace'], open(os.path.join(outdir, f'gcd_trace_r{r}_t{tr_["n"]}.json'), 'w', newline=chr(10)), separators=(',', ':'))
+        tr_.pop('gcd_trace', None)
+    json.dump(ledger, open(os.path.join(outdir, f'ledger_r{r}.json'), 'w', newline=chr(10)), indent=1, default=_jd)
+    # certificates
+    cdir = os.path.join(outdir, f'package_r{r}', 'certificates'); os.makedirs(cdir, exist_ok=True)
+    enc = lambda a, b: int(a).to_bytes(32, 'little') + int(b).to_bytes(32, 'little')
+    x0, x1 = map(int, trial['inputs0']); open(os.path.join(cdir, 'message-a.bin'), 'wb').write(enc(x0, x1))
+    certs = []
+    for i, pr in enumerate(pairs):
+        name = f'message-b{i}.bin' if i else 'message-b.bin'
+        open(os.path.join(cdir, name), 'wb').write(enc(*pr['inputs']))
+        certs.append({'id': f'orchard-r{r}-pair-{i}', 'type': 'hash-collision-witness-v2', 'message_a': 'certificates/message-a.bin',
+                      'message_b': f'certificates/{name}', 'expected_digest': ledger['digest'], 'target_profile': f'poseidon-orchard-r{r}-prefix-v1'})
+    json.dump({'schema_version': 2, 'certificates': certs}, open(os.path.join(cdir, 'manifest.json'), 'w', newline=chr(10)))
+    print(json.dumps({k: ledger[k] for k in ('total_ops', 'time_log2', 'peak_words', 'memory_log2_bytes', 'score', 'digest')}, indent=1, default=_jd))
+    return ledger
+
+if __name__ == '__main__':
+    a = sys.argv; mt = int(a[a.index('--max-trials') + 1]) if '--max-trials' in a else None
+    run(a[1], int(a[2]), a[3], mt)
+```
+
+
+### ntt.py
+
+```python
+"""ntt.py - instrumented number-theoretic transform over the Pallas field, N = 3*2^k.
+
+Forward = decimation in frequency (radix-2 levels, lengths N, N/2, ..., 6, then one
+untwiddled 3-point DFT on each contiguous block of 3).  Inverse = exact reversal
+(3-point inverse DFT, then decimation-in-time levels 6, 12, ..., N) and returns N*a.
+Outputs of the forward transform are in a fixed permuted order; pointwise products are
+order-free, so no bit-reversal permutation exists anywhere.  Twiddles are generated on the
+fly by a running product (one multiplication per butterfly), so there is NO twiddle table:
+the charge per radix-2 butterfly is 2 mul + 1 add + 1 sub + 1/2 loop = 4.5.
+
+The radix-3 stage is innermost and needs no twiddles, so a radix-3 butterfly is one 3-point DFT
+= 1 mul + 7 add/sub + 1/2 loop = 8.5.  T(N) below is the closed form for this algorithm.
+
+Memory traffic: register-blocked passes of three radix-2 levels: (1 load + 1 store)/3 per
+element per radix-2 level; the radix-3 level is one pass: 1 load + 1 store per element.
+Pass schedule: levels are grouped into passes of three radix-2 levels; the k mod 3 leftover
+levels are merged with the radix-3 level into one final pass, so the actual traffic is
+2N*(floor(k/3)+1) <= (2/3)Nk + 2N for every k (equality at k = 15 and k = 18).  The
+instrumented kernel does not model passes; it charges the closed form per level.
+Loop control: a radix-8 pass processes 8 elements = 12 butterflies per iteration (one index
+add + one compare + one branch = 3 units per 12 butterflies), so 1/2 per butterfly is
+conservative.
+
+T(N) = (N/2)*k*(9/2) + (2/3)*N*k + (N/3)*(17/2) + 2N  =  N*(35/12*k + 29/6),  k = log2(N/3).
+"""
+from fractions import Fraction
+
+P = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001
+_FACTORS = (2, 3, 463, 539204044132271846773, 8999194758858563409123804352480028797519453)
+
+
+def _generator():
+    g = 2
+    while True:
+        if all(pow(g, (P - 1) // f, P) != 1 for f in _FACTORS):
+            return g
+        g += 1
+
+
+GEN = _generator()
+
+
+def root_of_unity(N):
+    assert (P - 1) % N == 0
+    return pow(GEN, (P - 1) // N, P)
+
+
+def log2_k(N):
+    """N = 3*2^k -> k."""
+    assert N % 3 == 0 and N // 3 > 0 and (N // 3) & (N // 3 - 1) == 0, N
+    return (N // 3).bit_length() - 1
+
+
+def nice_length(n):
+    """Smallest 3*2^k >= n."""
+    N = 3
+    while N < n:
+        N *= 2
+    return N
+
+
+class Counter:
+    CATS = ('mul', 'add', 'sub', 'load', 'store', 'loop')
+
+    def __init__(self):
+        self.c = {k: Fraction(0) for k in self.CATS}
+
+    def add(self, **kw):
+        for k, v in kw.items():
+            self.c[k] += Fraction(v)
+
+    def total(self):
+        return sum(self.c.values())
+
+    def snapshot(self):
+        return dict(self.c)
+
+    def __repr__(self):
+        return 'Counter(total=%s, %s)' % (self.total(), {k: str(v) for k, v in self.c.items()})
+
+
+# closed-form charges -----------------------------------------------------------------
+R2_BUTTERFLY = Fraction(9, 2)      # 2 mul + 1 add + 1 sub + 1/2 loop
+R3_BUTTERFLY = Fraction(17, 2)     # 1 mul + 3 add + 4 sub + 1/2 loop
+MEM_R2_LEVEL = Fraction(2, 3)      # per element per radix-2 level (load+store, radix-8 passes)
+MEM_R3_LEVEL = 2                   # per element
+
+
+def T(N):
+    """Charged operations of one forward or inverse transform of length N = 3*2^k."""
+    k = log2_k(N)
+    return Fraction(N, 2) * k * R2_BUTTERFLY + MEM_R2_LEVEL * N * k + Fraction(N, 3) * R3_BUTTERFLY + MEM_R3_LEVEL * N
+
+
+def _r2_charge(ctr, nb, N):
+    ctr.add(mul=2 * nb, add=nb, sub=nb, loop=Fraction(nb, 2), load=Fraction(N, 3), store=Fraction(N, 3))
+
+
+def _r3_charge(ctr, nb, N):
+    ctr.add(mul=nb, add=3 * nb, sub=4 * nb, loop=Fraction(nb, 2), load=N, store=N)
+
+
+def ntt_forward(a, ctr):
+    """In place DIF transform of list a (length N = 3*2^k) with instrumented charges."""
+    N = len(a)
+    k = log2_k(N)
+    wN = root_of_unity(N)
+    length = N
+    for _ in range(k):
+        half = length // 2
+        wstep = pow(wN, N // length, P)
+        nb = 0
+        for start in range(0, N, length):
+            w = 1
+            for j in range(start, start + half):
+                u = a[j]
+                v = a[j + half]
+                a[j] = (u + v) % P
+                a[j + half] = ((u - v) * w) % P
+                w = (w * wstep) % P
+                nb += 1
+        _r2_charge(ctr, nb, N)
+        length = half
+    assert length == 3
+    w3 = pow(wN, N // 3, P)
+    nb = 0
+    for s in range(0, N, 3):
+        a0, a1, a2 = a[s], a[s + 1], a[s + 2]
+        t = (a1 + a2) % P
+        d = (a1 - a2) % P
+        m = (w3 * d) % P
+        a[s] = (a0 + t) % P
+        a[s + 1] = (a0 - a2 + m) % P
+        a[s + 2] = (a0 - a1 - m) % P
+        nb += 1
+    _r3_charge(ctr, nb, N)
+    return a
+
+
+def ntt_inverse(a, ctr):
+    """In place DIT inverse of ntt_forward; returns N * (original vector) (unscaled)."""
+    N = len(a)
+    k = log2_k(N)
+    wN = root_of_unity(N)
+    w3i = pow(wN, N - N // 3, P)
+    nb = 0
+    for s in range(0, N, 3):
+        a0, a1, a2 = a[s], a[s + 1], a[s + 2]
+        t = (a1 + a2) % P
+        d = (a1 - a2) % P
+        m = (w3i * d) % P
+        a[s] = (a0 + t) % P
+        a[s + 1] = (a0 - a2 + m) % P
+        a[s + 2] = (a0 - a1 - m) % P
+        nb += 1
+    _r3_charge(ctr, nb, N)
+    length = 3
+    for _ in range(k):
+        half = length
+        length *= 2
+        wstep = pow(wN, N - N // length, P)
+        nb = 0
+        for start in range(0, N, length):
+            w = 1
+            for j in range(start, start + half):
+                u = a[j]
+                v = (a[j + half] * w) % P
+                a[j] = (u + v) % P
+                a[j + half] = (u - v) % P
+                w = (w * wstep) % P
+                nb += 1
+        _r2_charge(ctr, nb, N)
+    assert length == N
+    return a
+
+
+def _selftest():
+    import random
+    rng = random.Random(1)
+    for N in (3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, 3072):
+        a = [rng.randrange(P) for _ in range(N)]
+        b = [rng.randrange(P) for _ in range(N)]
+        c1, c2 = Counter(), Counter()
+        A = ntt_forward(list(a), c1)
+        B = ntt_forward(list(b), Counter())
+        assert c1.total() == T(N), (N, c1.total(), T(N))
+        back = ntt_inverse(list(A), c2)
+        assert c2.total() == T(N), (N, c2.total(), T(N))
+        assert [(x * pow(N, P - 2, P)) % P for x in back] == a
+        C = [(x * y) % P for x, y in zip(A, B)]
+        conv = ntt_inverse(C, Counter())
+        invN = pow(N, P - 2, P)
+        conv = [(x * invN) % P for x in conv]
+        ref = [0] * N
+        for i in range(N):
+            for j in range(N):
+                ref[(i + j) % N] = (ref[(i + j) % N] + a[i] * b[j]) % P
+        assert conv == ref, N
+        print('N=%5d k=%2d T(N)=%s ok' % (N, log2_k(N), T(N)))
+
+
+if __name__ == '__main__':
+    _selftest()
+```
+
+
+### modsq.py
+
+```python
+"""modsq.py - counted Barrett modular squaring (wrap trick), Newton inverse, X-multiply.
+
+Loop control: every per-element loop (pointwise, padding, copies, folds, subtraction,
+reversal, X-multiply, Newton linear work, cache build) is charged 1/2 unit per element:
+loops are unrolled 8 elements per iteration, one index add + one compare + one branch =
+3 units per 8 elements, charged as 1/2 per element (conservative).
+
+Polynomials are Python lists (coefficient i at index i) over the Pallas field.  q is monic
+of degree D (list of D+1 entries), n = D-1, inv = rev(q)^-1 mod X^n (list of n entries).
+N1 = smallest 3*2^k >= D, N2 = smallest 3*2^k >= 2D-1 (= 2*N1 for every D used here).
+
+barrett_square (proof 4.2, S1-S3) on buffers Q (D+1), R (N1: holds a / a2f / rem), A (N2),
+cached INVQ (N2, unscaled transform of inv) and optionally QN1 (N1, unscaled transform
+of q).  Every store/load/field operation is charged on the Counter; closed forms SQ, NEWTON
+and MULX reproduce the instrumented totals exactly (asserted in _selftest).
+"""
+from fractions import Fraction
+from ntt import P, T, nice_length, ntt_forward, ntt_inverse, Counter
+
+
+def sizes(D):
+    N1, N2 = nice_length(D), nice_length(2 * D - 1)
+    assert N2 == 2 * N1, (D, N1, N2)
+    return N1, N2
+
+
+def _pad(buf, lo, hi, ctr):
+    for i in range(lo, hi):
+        buf[i] = 0
+    ctr.add(store=hi - lo, loop=Fraction(hi - lo, 2))
+
+
+def _pointwise_mul(dst, src, N, ctr):
+    """dst[i] = dst[i]*src[i]/N : 2 loads, 2 muls, 1 store."""
+    invN = pow(N, P - 2, P)
+    for i in range(N):
+        dst[i] = (dst[i] * src[i] % P) * invN % P
+    ctr.add(load=2 * N, mul=2 * N, store=N, loop=Fraction(N, 2))
+
+
+def _pointwise_sq(dst, N, ctr):
+    """dst[i] = dst[i]^2/N : 1 load, 2 muls, 1 store."""
+    invN = pow(N, P - 2, P)
+    for i in range(N):
+        dst[i] = (dst[i] * dst[i] % P) * invN % P
+    ctr.add(load=N, mul=2 * N, store=N, loop=Fraction(N, 2))
+
+
+def transform_cache(coeffs, N, ctr):
+    """Unscaled forward transform of coeffs padded to N (copy: load+store each; pad stores;
+    one loop of N elements)."""
+    buf = list(coeffs) + [0] * (N - len(coeffs))
+    ctr.add(load=len(coeffs), store=N, loop=Fraction(N, 2))
+    ntt_forward(buf, ctr)
+    return buf
+
+
+def CACHE(length, N):
+    return 2 * length + (N - length) + Fraction(N, 2) + T(N)
+
+
+def barrett_square(a, q, caches, ctr):
+    """Return a^2 mod q (list of D coefficients); a has D entries, q is monic with D+1."""
+    D = len(q) - 1
+    n = D - 1
+    N1, N2 = sizes(D)
+    INVQ = caches['INVQ']
+    # S1: A = a padded to N2, square via transform, a2 = a^2 exact (degree <= 2D-2).
+    A = list(a) + [0] * (N2 - D)
+    ctr.add(load=D, store=N2, loop=Fraction(N2, 2))   # copy a (D) + zero pad (N2-D), one loop
+    ntt_forward(A, ctr)
+    _pointwise_sq(A, N2, ctr)
+    ntt_inverse(A, ctr)
+    # fold a2 onto N1 into R: a2f[i] = a2[i] + a2[i+N1] for i < 2D-1-N1, else a2[i].
+    nf = max(0, 2 * D - 1 - N1)
+    R = A[:N1]
+    ctr.add(load=N1, store=N1, loop=Fraction(N1, 2))
+    for i in range(nf):
+        R[i] = (R[i] + A[i + N1]) % P
+    ctr.add(load=2 * nf, add=nf, store=nf, loop=Fraction(nf, 2))
+    # S2: hi = reversed top n coefficients (indices D..2D-2) moved to A[0:n], rest zero.
+    hi = [A[2 * D - 2 - t] for t in range(n)]
+    for t in range(n):
+        A[t] = hi[t]
+    ctr.add(load=n, store=n, loop=Fraction(n, 2))
+    _pad(A, n, N2, ctr)
+    ntt_forward(A, ctr)
+    _pointwise_mul(A, INVQ, N2, ctr)
+    ntt_inverse(A, ctr)                   # A[0:n] = rev(quot)
+    for t in range(n // 2):               # reverse in place: 2 loads + 2 stores per pair
+        A[t], A[n - 1 - t] = A[n - 1 - t], A[t]
+    ctr.add(load=2 * (n // 2), store=2 * (n // 2), loop=n // 2)   # 1/2 per element moved
+    # S3: prod = quot * q mod (X^N1 - 1); rem = a2f - prod (first D coefficients).
+    _pad(A, n, N1, ctr)                   # quot padded to N1 in A[0:N1]
+    if 'QN1' in caches:
+        QN1 = caches['QN1']
+    else:                                 # transient transform of q into A[N1:N2]
+        QN1 = transform_cache(q, N1, ctr)
+    Af = A[:N1]
+    ntt_forward(Af, ctr)
+    _pointwise_mul(Af, QN1, N1, ctr)
+    ntt_inverse(Af, ctr)                  # prod
+    rem = [0] * D
+    for i in range(D):
+        rem[i] = (R[i] - Af[i]) % P
+    ctr.add(load=2 * D, sub=D, store=D, loop=Fraction(D, 2))
+    assert all((R[i] - Af[i]) % P == 0 for i in range(D, N1)), 'remainder tail must vanish'
+    return rem
+
+
+def SQ(D, cache_qn1=True):
+    """Closed-form charge of one barrett_square."""
+    n = D - 1
+    N1, N2 = sizes(D)
+    nf = max(0, 2 * D - 1 - N1)
+    h = Fraction(1, 2)
+    s1 = (D + N2 + h * N2) + 2 * T(N2) + (4 * N2 + h * N2) + (2 * N1 + h * N1) + (4 * nf + h * nf)
+    s2 = (2 * n + h * n) + (N2 - n) * (1 + h) + 2 * T(N2) + (5 * N2 + h * N2) + 5 * (n // 2)
+    s3 = (N1 - n) * (1 + h) + 2 * T(N1) + (5 * N1 + h * N1) + (4 * D + h * D)
+    if not cache_qn1:
+        s3 += CACHE(D + 1, N1)
+    return s1 + s2 + s3
+
+
+def newton_steps(D):
+    """Yield (m, m2, N): precision m -> m2 = min(2m, n) using transform length N >= m2."""
+    n = D - 1
+    m = 1
+    while m < n:
+        m2 = min(2 * m, n)
+        yield m, m2, nice_length(m2)
+        m = m2
+
+
+def newton_inverse(q, ctr):
+    """inv = rev(q)^-1 mod X^(D-1) by Newton iteration with transforms of length N(m).
+
+    Step m -> m2: F = rev(q) mod X^m2 (padded), G = g_m (padded); h = coefficients m..m2-1
+    of F*G (cyclic length N >= m2 is exact there); g_m2 = g_m - X^m * (g_m * h mod X^(m2-m)).
+    """
+    D = len(q) - 1
+    n = D - 1
+    f = [q[D - i] for i in range(D + 1)]        # rev(q), f[0] = 1
+    g = [1]
+    for m, m2, N in newton_steps(D):
+        F = [f[i] for i in range(m2)] + [0] * (N - m2)
+        ctr.add(load=m2, store=N, loop=Fraction(N, 2))         # copy m2 + pad N-m2, one loop
+        G = list(g) + [0] * (N - m)
+        ctr.add(load=m, store=N, loop=Fraction(N, 2))          # copy m + pad N-m, one loop
+        ntt_forward(F, ctr)
+        ntt_forward(G, ctr)
+        _pointwise_mul(F, G, N, ctr)
+        ntt_inverse(F, ctr)                                    # F[m:m2] = h
+        h = F[m:m2]
+        for i in range(m2 - m):
+            F[i] = h[i]
+        ctr.add(load=m2 - m, store=m2 - m, loop=Fraction(m2 - m, 2))
+        _pad(F, m2 - m, N, ctr)
+        ntt_forward(F, ctr)
+        _pointwise_mul(F, G, N, ctr)
+        ntt_inverse(F, ctr)                                    # F[0:m2-m] = g*h mod X^(m2-m)
+        g = g + [(-F[i]) % P for i in range(m2 - m)]
+        ctr.add(load=m2 - m, sub=m2 - m, store=m2 - m, loop=Fraction(m2 - m, 2))
+    assert len(g) == n
+    return g
+
+
+def NEWTON(D):
+    total = Fraction(0)
+    for m, m2, N in newton_steps(D):
+        h = Fraction(1, 2)
+        d = m2 - m
+        total += (m2 + N + h * N) + (m + N + h * N) + 5 * T(N) + 2 * (5 * N + h * N)             + (2 * d + h * d) + (N - d) * (1 + h) + (3 * d + h * d)
+    return total
+
+
+def newton_peak_words(D):
+    """q (D+1) + F (N) + G (N) + g (m2) at the largest step."""
+    return max(D + 1 + 2 * N + m2 for _, m2, N in newton_steps(D))
+
+
+def mulx(acc, q, ctr):
+    """acc <- acc * X mod q in place; charged 6D + D/2 loop (one merged pass needs 5D + D/2)."""
+    D = len(q) - 1
+    lead = acc[D - 1]
+    new = [0] + acc[:D - 1]
+    for i in range(D):
+        new[i] = (new[i] - lead * q[i]) % P
+    acc[:] = new
+    ctr.add(load=3 * D, store=D, mul=D, sub=D, loop=Fraction(D, 2))
+
+
+def MULX(D):
+    return 6 * D + Fraction(D, 2)
+
+
+def _selftest():
+    import random
+    from flint import fmpz_mod_ctx, fmpz_mod_poly_ctx
+    ctx = fmpz_mod_ctx(P)
+    pctx = fmpz_mod_poly_ctx(ctx)
+    rng = random.Random(7)
+    for D in (125, 625, 3125):
+        N1, N2 = sizes(D)
+        q = [rng.randrange(P) for _ in range(D)] + [1]
+        a = [rng.randrange(P) for _ in range(D)]
+        c = Counter()
+        inv = newton_inverse(q, c)
+        assert c.total() == NEWTON(D), (D, c.total(), NEWTON(D))
+        fq = pctx(q)
+        revq = pctx([q[D - i] for i in range(D + 1)])
+        prod = revq * pctx(inv)
+        assert [int(prod[i]) for i in range(D - 1)] == [1] + [0] * (D - 2), 'newton inverse wrong'
+        c1, c2 = Counter(), Counter()
+        caches = {'INVQ': transform_cache(inv, N2, c1), 'QN1': transform_cache(q, N1, c2)}
+        assert c1.total() == CACHE(D - 1, N2) and c2.total() == CACHE(D + 1, N1)
+        for cache_qn1 in (True, False):
+            cc = dict(caches) if cache_qn1 else {'INVQ': caches['INVQ']}
+            c = Counter()
+            rem = barrett_square(a, q, cc, c)
+            assert c.total() == SQ(D, cache_qn1), (D, cache_qn1, c.total(), SQ(D, cache_qn1))
+            ref = (pctx(a) * pctx(a)) % fq
+            assert [int(ref[i]) for i in range(D)] == rem, 'barrett square wrong'
+        c = Counter()
+        acc = list(a)
+        mulx(acc, q, c)
+        ref = (pctx(a) * pctx([0, 1])) % fq
+        assert [int(ref[i]) for i in range(D)] == acc and c.total() == MULX(D)
+        print('D=%d N1=%d N2=%d NEWTON=%s SQ(cached)=%s SQ(uncached)=%s ok'
+              % (D, N1, N2, NEWTON(D), SQ(D), SQ(D, False)))
+
+
+if __name__ == '__main__':
+    _selftest()
+```
+
+
+### powering.py
+
+```python
+"""powering.py - exact charged ledger of X^p mod q (Frobenius) for the stated algorithm,
+plus a thin python-flint executor (the value X^p mod q is algorithm-independent).
+
+Algorithm (proof 3, step 3): k0 = floor(log2 D); acc = X^(2^k0) (degree < D, written directly);
+then for each of the 254-k0 remaining bits of p (bits 253-k0 .. 0): acc <- acc^2 mod q by
+barrett_square, and acc <- acc*X mod q when the bit is set.  Setup: Newton inverse of
+rev(q) mod X^(D-1), cached transform INVQ (length N2) and optionally QN1 (length N1).
+
+Live buffers during a squaring: Q (D+1), R (N1, a / a2f / rem), A (N2), INVQ (N2),
+[QN1 (N1) if cached].  Newton: Q (D+1), F (N), G (N), g (m2).  Peak = max of both.
+"""
+from fractions import Fraction
+import math
+from ntt import P, T
+from modsq import sizes, SQ, NEWTON, MULX, CACHE, newton_peak_words
+
+CODE_BYTES = 1 << 20
+WORD = 32
+
+
+def C_of(r):
+    return 216 + 21 * r
+
+
+def bit_plan(D):
+    """(k0, number of squarings, number of X-multiplies) for X^p mod q with deg q = D."""
+    k0 = D.bit_length() - 1                      # 2^k0 <= D-1 < 2^(k0+1)  (so deg 2^k0 < D)
+    if (1 << k0) >= D:
+        k0 -= 1
+    assert (1 << k0) < D
+    top = P >> (254 - k0)
+    assert top == 1 << k0, 'top k0+1 bits of p are 1 followed by zeros'
+    rest = P & ((1 << (254 - k0)) - 1)
+    return k0, 254 - k0, bin(rest).count('1')
+
+
+def frobenius_ledger(D, r, cache_qn1=True):
+    N1, N2 = sizes(D)
+    k0, nsq, nmulx = bit_plan(D)
+    C = C_of(r)
+    newton = NEWTON(D)
+    cache = CACHE(D - 1, N2) + (CACHE(D + 1, N1) if cache_qn1 else 0)
+    init = D + Fraction(D, 2)                    # write acc = X^(2^k0): D stores + loop
+    sq = SQ(D, cache_qn1)
+    mulx = MULX(D)
+    total = newton + cache + init + nsq * sq + nmulx * mulx
+    live = {'Q': D + 1, 'R': N1, 'A': N2, 'INVQ': N2}
+    if cache_qn1:
+        live['QN1'] = N1
+    pow_peak = sum(live.values())
+    newton_peak = newton_peak_words(D)
+    cache_build_peak = D + 1 + (D - 1) + N2 + (N1 if cache_qn1 else 0)   # inv + its padded buffer (+QN1)
+    peak = max(pow_peak, newton_peak, cache_build_peak)
+    mem_bytes = peak * WORD + CODE_BYTES
+    t = math.log2(total / C)
+    m = math.log2(mem_bytes)
+    return {
+        'D': D, 'r': r, 'C': C, 'N1': N1, 'N2': N2, 'k0': k0, 'cache_qn1': cache_qn1,
+        'n_squarings': nsq, 'n_mulx': nmulx,
+        'ops': {'newton': newton, 'cache_build': cache, 'init': init, 'squaring_each': sq,
+                'squarings': nsq * sq, 'mulx_each': mulx, 'mulx_total': nmulx * mulx, 'total': total},
+        'T_N1': T(N1), 'T_N2': T(N2),
+        'live_words_squaring': live, 'peak_words': {'powering': pow_peak, 'newton': newton_peak,
+                                                     'cache_build': cache_build_peak, 'max': peak},
+        'memory_bytes': mem_bytes, 'time_log2': t, 'memory_log2': m,
+        'score_contribution': t + max(0.0, m - 20),
+    }
+
+
+def execute_frobenius(q, r, cache_qn1=True):
+    """q: python-flint fmpz_mod_poly (monic, degree D). Returns (X^p mod q, ledger)."""
+    D = q.degree()
+    x = q.context().gen() if hasattr(q, 'context') else None
+    if x is None:
+        from flint import fmpz_mod_poly_ctx, fmpz_mod_ctx
+        x = fmpz_mod_poly_ctx(fmpz_mod_ctx(P)).gen()
+    res = x.pow_mod(P, q)
+    return res, frobenius_ledger(D, r, cache_qn1)
+
+
+def table():
+    rows = []
+    print('%-2s %-14s %18s %9s %12s %9s %9s %8s' % ('r', 'caches', 'ops', 'log2 t', 'peak words', 'log2 mem', 'score', 'nsq/nmx'))
+    for r in (1, 2):
+        D = 5 ** (6 + r) - 1
+        for cache_qn1, name in ((True, 'INVQ+QN1'), (False, 'INVQ only')):
+            L = frobenius_ledger(D, r, cache_qn1)
+            print('%-2d %-14s %18.1f %9.4f %12d %9.4f %9.4f %4d/%-3d' % (
+                r, name, L['ops']['total'], L['time_log2'], L['peak_words']['max'], L['memory_log2'],
+                L['score_contribution'], L['n_squarings'], L['n_mulx']))
+            rows.append(L)
+    return rows
+
+
+if __name__ == '__main__':
+    for r in (1, 2):
+        L = frobenius_ledger(5 ** (6 + r) - 1, r, False)
+        print('r=%d D=%d N1=%d N2=%d k0=%d squarings=%d mulx=%d T(N1)=%s T(N2)=%s SQ=%s NEWTON=%s' % (
+            r, L['D'], L['N1'], L['N2'], L['k0'], L['n_squarings'], L['n_mulx'], L['T_N1'], L['T_N2'],
+            L['ops']['squaring_each'], L['ops']['newton']))
+        print('   live words during a squaring:', L['live_words_squaring'], 'peaks:', L['peak_words'])
+    table()
+```
+
+
+### halfgcd.py
+
+```python
+"""Counted half-gcd over F_p (python-flint arithmetic; every charge an exact Fraction).
+
+Prices (orchard-field-ram-v2): field add/sub/mul, 256-bit load/store, compare/branch, shift/mask: 1 each.
+Loop control: 1/2 per inner iteration (loops unrolled 8 per iteration, the convention of proof 4.1).
+  T(N)   transform of length N = 3*2^k (ntt.py): N*(35k/12 + 29/6); only these lengths are used.
+  transform product of lengths m1, m2, N = nice_length(m1+m2-1):
+         3 T(N) + 5 N (pointwise: 2 loads, 2 muls with 1/N folded, 1 store) + 2 (m1+m2) (copy both inputs
+         into padded buffers) + (N-m1) + (N-m2) (padding stores) + N/2 (loop control)
+  classical product: 4 m1 m2 + m1 m2 / 2 + 2 (m1+m2-1); each product uses the cheaper rule.
+  add/sub of length m: 4 m + m/2.   copy/shift/truncate of length m: 2 m + m/2.
+  field inversion: 380 (a round-up of the 330-unit ladder for x^(p-2): 254 squarings + 76 multiplications).   monic: 380 + m + m/2.
+  division of degree n by degree m, L = n-m+1: the cheaper of
+         classical 380 + L (4 (m+1) + 2) + L (m+1)/2 + 2 (n+1) + (n+1)/2
+         Newton    newton_inv(L) + product(L, L) + product(L, m+1) + 4 (m+1) + (m+1)/2 + 2 (n+1) + (n+1)/2
+  newton_inv(L) = 380 + sum over doubling precisions m -> m2 = min(2m, L), N = nice_length(m2):
+         (m2+N) + (m+N) + 5 T(N) + 10 N + 2 (m2-m) + (N-(m2-m)) + 3 (m2-m)      (modsq.NEWTON step)
+LEAN mode (default; proof 5.1, memory-lean execution):
+  views: a truncation r >> t handed to a child hgcd is a read-only pointer into the parent's buffer: no
+         copy, no charge, no words (the child never writes its inputs; the parent keeps the buffer alive).
+  matvec_wrap (R (a, b) with R = cofactor matrix from hgcd on the top part of (a, b)): one cyclic transform
+         length N = nice_length(n_h + 1), n_h = deg a - deg R11 = deg of the first output (degree relation,
+         asserted at run time together with deg of both outputs < N).  Charge, la/lb input lengths, l_ij the
+         lengths of the entries (0 = absent):
+           load(l)  = 5/2 min(l,N) + 9/2 max(0, l-N) (fold) + 3/2 max(0, N-l) (pad)       for a and b
+           loadR(l) = 7/2 l (load, mul by 1/N, store, loop) + 3/2 (N-l)                    per nonzero entry
+           T(N) per transformed input (a, b, each nonzero entry) and per nonzero output row (inverse);
+           pointwise per row: 9/2 N for its first term (2 loads, mul, store, loop), 13/2 N for a second
+           term (3 loads, mul, add, store, loop).
+         Memory: 4 buffers of N words (a^, b^, X, Y) at the peak; the top level frees a, b once copied.
+  matmul_shared (S P, 2x2): every entry transformed once at N = nice_length(max_{i,l,j} len S_il + len P_lj - 1)
+         (linear, no wrap): P entries loadR, S entries load (5/2 l + 3/2 (N-l)), T(N) each nonzero entry, per
+         row an in-place 2x2 pointwise pass 29/2 N (6 loads, 4 mul, 2 add, 2 stores, loop), T(N) per nonzero
+         output entry.  Memory: 4 N (P^) + 2 N (one row of S^, overwritten by the row's outputs).
+  Each wrapped/shared step is taken only when its charge is below the plain product-by-product charge.
+Memory model: live coefficient words of every polynomial owned by an active frame of the recursion plus
+transform scratch (2 N words for a transform product, m1+m2-1 for a classical one, (n+1)+L (+2N) for a division,
+the buffer counts above for matvec_wrap / matmul_shared).
+"""
+from flint import fmpz_mod_ctx, fmpz_mod_poly_ctx
+
+from fractions import Fraction
+from ntt import T, nice_length   # T(N) = N*(35k/12 + 29/6), N = 3*2^k only (proof 4.1)
+
+LEAN = True            # views + wrapped matvec + top-level input freeing
+SHARED_MATMUL = True   # shared-transform 2x2 matrix product inside hgcd (LEAN only)
+
+def ntt_len(m):
+    """transform length for a product of total length m: smallest 3*2^k >= m."""
+    return nice_length(max(m, 3))
+
+def product_charge(m1, m2):
+    if m1 == 0 or m2 == 0: return Fraction(0), 'zero', 0
+    classical = Fraction(4 * m1 * m2) + Fraction(m1 * m2, 2) + 2 * (m1 + m2 - 1)
+    N = ntt_len(m1 + m2 - 1)
+    transform = 3 * T(N) + 5 * N + 2 * (m1 + m2) + (N - m1) + (N - m2) + Fraction(N, 2)
+    if classical <= transform: return classical, 'classical', m1 + m2 - 1
+    return transform, 'ntt', 2 * N
+
+def newton_inv_charge(L):
+    """inverse series to precision L (modsq.NEWTON step formula, proof 4.3), plus the constant-term inversion."""
+    ops = Fraction(380); m = 1
+    while m < L:
+        m2 = min(2 * m, L); N = nice_length(max(m2, 3))
+        ops += (m2 + N) + (m + N) + 5 * T(N) + 10 * N + 2 * (m2 - m) + (N - (m2 - m)) + 3 * (m2 - m)
+        m = m2
+    return ops
+
+def division_charge(n, m):
+    L = n - m + 1
+    classical = Fraction(380 + L * (4 * (m + 1) + 2) + 2 * (n + 1)) + Fraction(L * (m + 1), 2) + Fraction(n + 1, 2)
+    newton = newton_inv_charge(L) + product_charge(L, L)[0] + product_charge(L, m + 1)[0] + 4 * (m + 1) + Fraction(m + 1, 2) + 2 * (n + 1) + Fraction(n + 1, 2)
+    return (classical, 'classical') if classical <= newton else (newton, 'newton')
+
+# ---- lean kinds: charges (halfgcd_charge.py reproduces these independently) ----
+def _load(l, N): return Fraction(5 * min(l, N), 2) + Fraction(9 * max(0, l - N), 2) + Fraction(3 * max(0, N - l), 2)
+def _loadR(l, N): return Fraction(7 * l, 2) + Fraction(3 * (N - l), 2)
+def _loadS(l, N): return Fraction(5 * l, 2) + Fraction(3 * (N - l), 2)
+
+def matvec_wrap_charge(la, lb, l00, l01, l10, l11, N):
+    ops = _load(la, N) + _load(lb, N) + 2 * T(N)
+    for l in (l00, l01, l10, l11):
+        if l: ops += _loadR(l, N) + T(N)
+    for x, y in ((l00, l01), (l10, l11)):
+        terms = (x > 0) + (y > 0)
+        if terms: ops += Fraction(9 * N, 2) + (terms - 1) * Fraction(13 * N, 2) + T(N)
+    return ops
+
+def matmul_shared_charge(s, pm, N):
+    """s = (s00, s01, s10, s11), pm = (p00, p01, p10, p11) entry lengths."""
+    ops = Fraction(0)
+    for l in pm:
+        if l: ops += _loadR(l, N) + T(N)
+    for l in s:
+        if l: ops += _loadS(l, N) + T(N)
+    for i in range(2):
+        ops += Fraction(29 * N, 2)
+        for j in range(2):
+            if (s[2 * i] and pm[j]) or (s[2 * i + 1] and pm[2 + j]): ops += T(N)
+    return ops
+
+class Counter:
+    """ops ledger + live-memory model: polynomials owned by active frames + transform scratch."""
+    def __init__(self):
+        self.ops = Fraction(0); self.peak = 0; self.frames = []; self.hist = {}; self.peak_where = None
+        self.n_products = {'classical': 0, 'ntt': 0, 'zero': 0}; self.n_div = {'classical': 0, 'newton': 0}
+        self.n_lean = {'matvec_wrap': 0, 'matmul_shared': 0}
+    def charge(self, x, kind=None, key=None):
+        self.ops += x
+        if kind is not None:
+            h = self.hist.setdefault(kind, {}); h[key] = h.get(key, 0) + 1
+    def push(self): f = {}; self.frames.append(f); return f
+    def pop(self): self.frames.pop()
+    def live(self): return sum(p.length() for f in self.frames for p in f.values())
+    def mark(self, v, where=None):
+        if v > self.peak: self.peak = v; self.peak_where = where
+    def scratch(self, w, where=None): self.mark(self.live() + w, where)
+
+class Arith:
+    """python-flint arithmetic with charges."""
+    def __init__(self, pctx, C):
+        self.p = pctx; self.C = C; self.zero = pctx([0]); self.one = pctx([1])
+    @staticmethod
+    def L(a): return a.length()
+    def mul(self, a, b):
+        ops, kind, scratch = product_charge(self.L(a), self.L(b))
+        self.C.charge(ops, 'product_' + kind, '%d,%d' % (self.L(a), self.L(b))); self.C.n_products[kind] += 1; self.C.scratch(scratch, 'product')
+        return a * b
+    def add(self, a, b): self.C.charge(Fraction(9 * max(self.L(a), self.L(b)), 2), 'addsub', str(max(self.L(a), self.L(b)))); self.C.scratch(max(self.L(a), self.L(b)), 'add'); return a + b
+    def sub(self, a, b): self.C.charge(Fraction(9 * max(self.L(a), self.L(b)), 2), 'addsub', str(max(self.L(a), self.L(b)))); self.C.scratch(max(self.L(a), self.L(b)), 'sub'); return a - b
+    def shift_right(self, a, t):
+        if t <= 0: return a
+        self.C.charge(Fraction(5 * max(0, self.L(a) - t), 2), 'copy', str(max(0, self.L(a) - t))); self.C.scratch(max(0, self.L(a) - t), 'copy'); return a.right_shift(t)
+    def view(self, a, t):
+        """read-only pointer to the coefficients of a from index t on (LEAN): no copy, no charge, no words."""
+        return a.right_shift(t) if t > 0 else a
+    def divmod(self, a, b):
+        n, m = a.degree(), b.degree(); assert m >= 0
+        if n < m: self.C.charge(Fraction(5 * self.L(a), 2), 'copy', str(self.L(a))); return self.zero, a
+        ops, kind = division_charge(n, m)
+        self.C.charge(ops, 'division_' + kind, '%d,%d' % (n, m)); self.C.n_div[kind] += 1
+        self.C.scratch((n + 1) + (n - m + 1) + (2 * ntt_len(2 * (n - m + 1)) if kind == 'newton' else 0), 'division')
+        return divmod(a, b)
+    def monic(self, a): self.C.charge(380 + Fraction(3 * self.L(a), 2), 'monic', str(self.L(a))); return a.monic()
+
+def mat_apply(A, R, a, b):
+    F = A.C.push()
+    try:
+        out = []
+        for i in range(2):
+            F['t0'] = A.mul(R[i][0], a); F['t1'] = A.mul(R[i][1], b)
+            F['r%d' % i] = A.add(F['t0'], F['t1']); del F['t0'], F['t1']
+        return F['r0'], F['r1']
+    finally: A.C.pop()
+
+def mat_apply_charge(A, R, a, b):
+    ops = Fraction(0)
+    for i in range(2):
+        m = []
+        for j, v in ((0, a), (1, b)):
+            ops += product_charge(A.L(R[i][j]), A.L(v))[0]
+            m.append(A.L(R[i][j]) + A.L(v) - 1 if A.L(R[i][j]) and A.L(v) else 0)
+        ops += Fraction(9 * max(m), 2)
+    return ops
+
+def is_identity(A, R): return R[0][0] == A.one and R[1][1] == A.one and R[0][1].is_zero() and R[1][0].is_zero()
+
+def matvec(A, R, a, b, owner=None, consume_R=False):
+    """(a', b') = R (a, b), R = hgcd matrix computed from the top part of (a, b).
+    owner = (frame, key_a, key_b): a, b are owned by that frame and are freed once copied into the transform buffers.
+    consume_R: the caller's frame holds R under 'R..' and does not need it afterwards (R00 freed once loaded)."""
+    C = A.C
+    if not LEAN: return mat_apply(A, R, a, b)
+    n0 = a.degree(); n_h = n0 - R[1][1].degree()           # degree relation: deg r_h = deg r0 - deg t_{h+1}
+    N = ntt_len(n_h + 1)
+    ls = [A.L(R[i][j]) for i in range(2) for j in range(2)]
+    la, lb = A.L(a), A.L(b)
+    assert max(ls) <= N, (ls, N)
+    wrap = matvec_wrap_charge(la, lb, *ls, N)
+    if wrap >= mat_apply_charge(A, R, a, b):
+        return mat_apply(A, R, a, b)
+    C.charge(wrap, 'matvec_wrap', '%d,%d,%d,%d,%d,%d,%d' % (la, lb, *ls, N)); C.n_lean['matvec_wrap'] += 1
+    base = C.live()
+    if owner is not None:
+        C.mark(base + N, 'matvec_wrap load a'); base -= la
+        C.mark(base + 2 * N, 'matvec_wrap load b'); base -= lb
+    if consume_R: base -= ls[0]
+    C.mark(base + 4 * N, 'matvec_wrap 4N')
+    a2 = R[0][0] * a + R[0][1] * b; b2 = R[1][0] * a + R[1][1] * b
+    # cyclic shortcut is exact iff both outputs have degree < N (asserted), and N was fixed in advance by n_h
+    assert a2.degree() == n_h and a2.degree() < N and b2.degree() < n_h, (a2.degree(), n_h, b2.degree(), N)
+    if owner is not None:
+        F, ka, kb = owner; del F[ka], F[kb]
+    return a2, b2
+
+def mat_mul(A, S, R):
+    F = A.C.push()
+    try:
+        out = [[None, None], [None, None]]
+        for i in range(2):
+            for j in range(2):
+                F['t0'] = A.mul(S[i][0], R[0][j]); F['t1'] = A.mul(S[i][1], R[1][j])
+                out[i][j] = F['o%d%d' % (i, j)] = A.add(F['t0'], F['t1']); del F['t0'], F['t1']
+        return out
+    finally: A.C.pop()
+
+def mat_mul_lean(A, S, P):
+    C = A.C
+    s = [A.L(S[i][j]) for i in range(2) for j in range(2)]; pm = [A.L(P[i][j]) for i in range(2) for j in range(2)]
+    if LEAN and is_identity(A, S): return P                    # second recursion made no step: S P = P
+    if not (LEAN and SHARED_MATMUL): return mat_mul(A, S, P)
+    mx = max([s[2 * i + l] + pm[2 * l + j] - 1 for i in range(2) for j in range(2) for l in range(2) if s[2 * i + l] and pm[2 * l + j]] + [1])
+    N = ntt_len(mx)
+    sh = matmul_shared_charge(s, pm, N)
+    plain = Fraction(0)
+    for i in range(2):
+        for j in range(2):
+            plain += product_charge(s[2 * i], pm[j])[0] + product_charge(s[2 * i + 1], pm[2 + j])[0]
+            plain += Fraction(9 * max(s[2 * i] + pm[j] - 1 if s[2 * i] and pm[j] else 0, s[2 * i + 1] + pm[2 + j] - 1 if s[2 * i + 1] and pm[2 + j] else 0), 2)
+    if sh >= plain: return mat_mul(A, S, P)
+    C.charge(sh, 'matmul_shared', ','.join(map(str, s + pm + [N]))); C.n_lean['matmul_shared'] += 1
+    out = [[S[i][0] * P[0][j] + S[i][1] * P[1][j] for j in range(2)] for i in range(2)]
+    for i in range(2):
+        for j in range(2): assert out[i][j].degree() < N
+    base = C.live()
+    C.mark(base + 6 * N, 'matmul_shared row 0')
+    C.mark(base + 6 * N + A.L(out[0][0]) + A.L(out[0][1]), 'matmul_shared row 1')
+    return out
+
+def q_apply(A, q, R):
+    """Q*R with Q = [[0,1],[1,-q]]"""
+    F = A.C.push()
+    try:
+        u = []
+        for j in range(2):
+            F['t'] = A.mul(q, R[1][j]); F['u%d' % j] = A.sub(R[0][j], F['t']); del F['t']; u.append(F['u%d' % j])
+        return [[R[1][0], R[1][1]], [u[0], u[1]]]
+    finally: A.C.pop()
+
+CUTOFF = 48    # degree-drop k below which the classical base case runs (chosen by a sweep of cutoffs 32..128)
+TOP_FRACTION = 4   # top level reduces the degree by n0/TOP_FRACTION per hgcd call (memory/ops trade)
+
+def identity(A): return [[A.one, A.zero], [A.zero, A.one]]
+
+def hold_matrix(F, name, R):
+    for i in range(2):
+        for j in range(2): F['%s%d%d' % (name, i, j)] = R[i][j]
+def drop_matrix(F, name):
+    for i in range(2):
+        for j in range(2): F.pop('%s%d%d' % (name, i, j), None)
+
+def euclid_matrix(A, r0, r1, k):
+    """classical base case. Frame slots 'x', 'y' hold the current pair only when owned by this frame
+    (LEAN: the inputs are views of the caller's buffers and are not counted again)."""
+    F = A.C.push()
+    try:
+        n0 = r0.degree(); R = identity(A)
+        x, y = r0, r1
+        if not LEAN: F['x'], F['y'] = x, y
+        while not y.is_zero() and n0 - y.degree() <= k:
+            F['q'], F['rem'] = A.divmod(x, y)
+            R = q_apply(A, F['q'], R); hold_matrix(F, 'R', R); del F['q']
+            F.pop('x', None)
+            if 'y' in F: F['x'] = F.pop('y')
+            x, y = y, F.pop('rem'); F['y'] = y
+        return R
+    finally: A.C.pop()
+
+def hgcd(A, r0, r1, k):
+    """R with R(r0,r1) = (r_h, r_{h+1}), h = max{j : deg r0 - deg r_j <= k}. r0, r1 are held by the caller."""
+    C = A.C; n0 = r0.degree()
+    if r1.is_zero() or k < n0 - r1.degree(): return identity(A)
+    if k <= CUTOFF: return euclid_matrix(A, r0, r1, k)
+    F = C.push()
+    try:
+        d = (k + 1) // 2; t = n0 - 2 * d
+        if LEAN:
+            R = hgcd(A, A.view(r0, t), A.view(r1, t), d); hold_matrix(F, 'R', R)
+            if is_identity(A, R): a, b = r0, r1                        # views of the caller's buffers
+            else: F['a'], F['b'] = a, b = matvec(A, R, r0, r1)
+        else:
+            F['r0s'] = A.shift_right(r0, t); F['r1s'] = A.shift_right(r1, t)
+            R = hgcd(A, F['r0s'], F['r1s'], d); del F['r0s'], F['r1s']; hold_matrix(F, 'R', R)
+            F['a'], F['b'] = a, b = mat_apply(A, R, r0, r1)
+        if b.is_zero() or k < n0 - b.degree(): return R
+        F['q'], F['c'] = A.divmod(a, b); F.pop('a', None)
+        dstar = k - (n0 - b.degree()); t2 = b.degree() - 2 * dstar
+        if LEAN:
+            S = hgcd(A, A.view(b, t2), A.view(F['c'], t2), dstar); F.pop('b', None); del F['c']; hold_matrix(F, 'S', S)
+        else:
+            F['bs'] = A.shift_right(b, t2); F['cs'] = A.shift_right(F['c'], t2)
+            S = hgcd(A, F['bs'], F['cs'], dstar); del F['bs'], F['cs'], F['b'], F['c']; hold_matrix(F, 'S', S)
+        QR = q_apply(A, F['q'], R); del F['q']; drop_matrix(F, 'R'); hold_matrix(F, 'QR', QR)
+        return mat_mul_lean(A, S, QR)
+    finally: C.pop()
+
+def fast_gcd(A, a, b):
+    """monic gcd(a,b) with every operation charged; the top level only applies half-size matrices."""
+    C = A.C; F = C.push()
+    try:
+        if a.degree() < b.degree(): a, b = b, a
+        F['a'], F['b'] = a, b
+        while not F['b'].is_zero() and F['b'].degree() > CUTOFF:
+            n0 = F['a'].degree(); d = (n0 + TOP_FRACTION - 1) // TOP_FRACTION
+            if LEAN:
+                t = n0 - 2 * d
+                R = hgcd(A, A.view(F['a'], t), A.view(F['b'], t), d); hold_matrix(F, 'R', R)
+                if not is_identity(A, R):
+                    a2, b2 = matvec(A, R, F['a'], F['b'], owner=(F, 'a', 'b'), consume_R=True)
+                    drop_matrix(F, 'R'); F['a'], F['b'] = a2, b2
+                drop_matrix(F, 'R')
+            else:
+                R = hgcd(A, F['a'], F['b'], d); hold_matrix(F, 'R', R)
+                F['a2'], F['b2'] = mat_apply(A, R, F['a'], F['b']); drop_matrix(F, 'R')
+                F['a'], F['b'] = F['a2'], F['b2']; del F['a2'], F['b2']
+            if F['b'].is_zero(): break
+            q, F['rem'] = A.divmod(F['a'], F['b']); F['a'], F['b'] = F['b'], F['rem']; del F['rem']
+        while not F['b'].is_zero():
+            q, F['rem'] = A.divmod(F['a'], F['b']); F['a'], F['b'] = F['b'], F['rem']; del F['rem']
+        return A.monic(F['a'])
+    finally: C.pop()
+
+def make(p):
+    pctx = fmpz_mod_poly_ctx(fmpz_mod_ctx(p)); return pctx, Arith(pctx, Counter())
+```
+
+
+### gcd_stage.py
+
+```python
+"""gcd_stage(q, hX, r) -> (g, roots, ledger). q monic of degree D; hX = (X^p mod q) - X; r = round count
+(labels the preregistered EDF stream). ledger: 'ops' (int, gcd + roots), 'ops_exact' (str Fraction),
+'peak_words', 'trace' (JSON histogram keyed by (kind, sizes)), and the breakdown."""
+import json
+import halfgcd
+from halfgcd import Arith, Counter, fast_gcd
+from roots import find_roots
+
+def gcd_stage(q, hX, r, cutoff=None, top_fraction=None, lean=None, shared_matmul=None):
+    if lean is not None: halfgcd.LEAN = lean
+    if shared_matmul is not None: halfgcd.SHARED_MATMUL = shared_matmul
+    if cutoff is not None: halfgcd.CUTOFF = cutoff
+    if top_fraction is not None: halfgcd.TOP_FRACTION = top_fraction
+    pctx = q.context()
+    A = Arith(pctx, Counter())
+    g = fast_gcd(A, q, hX)
+    gcd_ops = A.C.ops; gp = dict(A.C.n_products); gd = dict(A.C.n_div)
+    import copy; hist0 = copy.deepcopy(A.C.hist)
+    def diff(kind): return sum(A.C.hist.get(kind, {}).values()) - sum(hist0.get(kind, {}).values())
+    rts = find_roots(g, r, pctx, A.C)
+    total = A.C.ops
+    return g, rts, {
+        'ops': int(total) if total.denominator == 1 else int(total) + 1, 'ops_exact': str(total),
+        'peak_words': int(A.C.peak), 'gcd_degree': g.degree(), 'roots': [str(x) for x in rts],
+        'cutoff': halfgcd.CUTOFF, 'top_fraction': halfgcd.TOP_FRACTION,
+        'gcd_ops': str(gcd_ops), 'roots_ops': str(total - gcd_ops), 'roots_draws': getattr(A.C, 'draws', 0),
+        'gcd_products': gp, 'gcd_divisions': gd, 'gcd_lean': dict(A.C.n_lean), 'lean': halfgcd.LEAN,
+        'shared_matmul': halfgcd.SHARED_MATMUL, 'peak_where': A.C.peak_where,
+        'roots_divisions': {'classical': diff('division_classical'), 'newton': diff('division_newton')},
+        'roots_products': {k: A.C.n_products[k] - gp[k] for k in gp}, 'roots_monic': diff('monic'), 'roots_powmod': diff('edf_powmod'),
+        'trace': json.loads(json.dumps(A.C.hist)),
+    }
+```
+
+
+### roots.py
+
+```python
+"""Roots in F_p of a fully-split polynomial g (deg d <= 16) by equal-degree splitting,
+charged with schoolbook arithmetic on polynomials of degree < d.
+
+Charges (every item 1 op):
+  mulmod(d): schoolbook product of two length-d polys 4*d*d (load, load, mul, add/store)
+             + reduction of a length-(2d-1) poly modulo monic g: (d-1)*(4*d+2)
+             + loop control 1/2 per inner iteration: (d*d + (d-1)*d)/2; add/sub 4d + d/2; monic 380 + m + m/2
+  squaring charged as mulmod (conservative). Shifted exponentiation (X+c)^((p-1)/2) mod g:
+  253 squarings + popcount((p-1)/2)-1 multiplications by (X+c) (each charged 4*d + reduction).
+  gcd of two degree-<d polynomials: classical Euclid, each division charged as halfgcd.division_charge.
+  shift draw: 1 op (c_n = n + 1).
+Deterministic: shifts are c_n = n + 1, n = 0,1,2,... (no hash).
+"""
+from fractions import Fraction
+from halfgcd import division_charge
+P = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001
+E = (P - 1) // 2
+POP = bin(E).count('1')
+
+class RootCounter:
+    """standalone counter (the driver passes the halfgcd Counter instead so one histogram holds both)"""
+    def __init__(self): self.ops = 0; self.draws = 0; self.hist = {}
+    def charge(self, x, kind=None, key=None):
+        self.ops += x
+        if kind is not None:
+            h = self.hist.setdefault(kind, {}); h[key] = h.get(key, 0) + 1
+
+def mulmod_charge(d): return Fraction(4 * d * d + (d - 1) * (4 * d + 2)) + Fraction(d * d + (d - 1) * d, 2)
+def mulx_charge(d): return Fraction(4 * d + (d - 1) * (4 * d + 2)) + Fraction(d + (d - 1) * d, 2)
+def powmod_shift_charge(d): return 253 * mulmod_charge(d) + (POP - 1) * mulx_charge(d)
+
+def find_roots(g, r, pctx, C: RootCounter, stream_index=None):
+    """g monic, splits completely over F_p (a gcd with X^p - X). Returns sorted list of int roots."""
+    if stream_index is None: stream_index = [0]
+    d = g.degree()
+    X = pctx.gen()
+    if d == 0: return []
+    if d == 1:
+        C.charge(1, 'root_linear', ''); return [int(-g[0])]
+    if d == 2:
+        # quadratic: roots via the EDF below as well (keeps one method); fallthrough
+        pass
+    while True:
+        n = stream_index[0]; stream_index[0] += 1
+        c = n + 1
+        C.charge(1, 'edf_draw', ''); C.draws = getattr(C, 'draws', 0) + 1
+        # h = (X + c)^E mod g
+        h = (X + pctx([c])).pow_mod(E, g); C.charge(powmod_shift_charge(d), 'edf_powmod', str(d))
+        u = (h - pctx([1])).gcd(g); C.charge(Fraction(9 * d, 2), 'edf_constsub', str(d))
+        # Euclid charge for gcd of (g, h-1): simulate degree sequence with real division charges
+        a, b = g, (h - pctx([1]))
+        if b.is_zero(): continue
+        while not b.is_zero():
+            if a.degree() < b.degree(): a, b = b, a; continue
+            ops, kind = division_charge(a.degree(), b.degree()); C.charge(ops, 'division_' + kind, '%d,%d' % (a.degree(), b.degree()))
+            a, b = b, a % b
+        C.charge(380 + Fraction(3 * (a.degree() + 1), 2), 'monic', str(a.degree() + 1))
+        if 0 < u.degree() < d:
+            v = g // u; dc, dk = division_charge(d, u.degree()); C.charge(dc, 'division_' + dk, '%d,%d' % (d, u.degree()))
+            return sorted(find_roots(u.monic(), r, pctx, C, stream_index) + find_roots(v.monic(), r, pctx, C, stream_index))
+
+if __name__ == '__main__':
+    import random
+    from flint import fmpz_mod_ctx, fmpz_mod_poly_ctx
+    pctx = fmpz_mod_poly_ctx(fmpz_mod_ctx(P)); X = pctx.gen(); rnd = random.Random(5)
+    for d in (1, 2, 3, 4, 5, 8, 12, 16):
+        for _ in range(3):
+            rts = sorted({rnd.randrange(P) for _ in range(d)})
+            g = pctx([1])
+            for s in rts: g = g * (X - pctx([s]))
+            C = RootCounter()
+            got = find_roots(g, 1, pctx, C)
+            assert got == rts, (d, got, rts)
+            print(f"d={len(rts)}: ok ops={C.ops:.4g} draws={C.draws}")
+    print("roots ALL OK")
+```
+
+
+### halfgcd_charge.py
+
+```python
+"""Standard-library reproduction of the gcd-stage charge from its trace histogram.
+usage: python halfgcd_charge.py gcd_ledger_r1.json   (self-check: recomputed ops == ledger ops_exact)
+Rules: see halfgcd.py / roots.py docstrings. Transform T from ntt.py (stdlib)."""
+import json, sys
+from fractions import Fraction
+from ntt import T, nice_length
+
+def ntt_len(m): return nice_length(max(m, 3))
+def product_classical(m1, m2): return Fraction(4 * m1 * m2) + Fraction(m1 * m2, 2) + 2 * (m1 + m2 - 1)
+def product_ntt(m1, m2):
+    N = ntt_len(m1 + m2 - 1); return 3 * T(N) + 5 * N + 2 * (m1 + m2) + (N - m1) + (N - m2) + Fraction(N, 2)
+def newton_inv(L):
+    ops = Fraction(380); m = 1
+    while m < L:
+        m2 = min(2 * m, L); N = nice_length(max(m2, 3))
+        ops += (m2 + N) + (m + N) + 5 * T(N) + 10 * N + 2 * (m2 - m) + (N - (m2 - m)) + 3 * (m2 - m); m = m2
+    return ops
+def load_ab(l, N): return Fraction(5 * min(l, N), 2) + Fraction(9 * max(0, l - N), 2) + Fraction(3 * max(0, N - l), 2)
+def load_R(l, N): return Fraction(7 * l, 2) + Fraction(3 * (N - l), 2)
+def load_S(l, N): return Fraction(5 * l, 2) + Fraction(3 * (N - l), 2)
+def matvec_wrap(la, lb, l00, l01, l10, l11, N):
+    """R (a, b) mod X^N - 1: a, b and each nonzero R entry transformed once, per row pointwise 9/2 N + 13/2 N
+    for a second term, one inverse per nonzero row."""
+    tot = load_ab(la, N) + load_ab(lb, N) + 2 * T(N)
+    for l in (l00, l01, l10, l11):
+        if l: tot += load_R(l, N) + T(N)
+    for x, y in ((l00, l01), (l10, l11)):
+        n = (x > 0) + (y > 0)
+        if n: tot += Fraction(9 * N, 2) + (n - 1) * Fraction(13 * N, 2) + T(N)
+    return tot
+def matmul_shared(s00, s01, s10, s11, p00, p01, p10, p11, N):
+    """S P (2x2) at linear length N: every nonzero entry transformed once, in-place 2x2 pointwise per row
+    29/2 N, one inverse per nonzero output entry."""
+    s = (s00, s01, s10, s11); pm = (p00, p01, p10, p11); tot = Fraction(0)
+    for l in pm:
+        if l: tot += load_R(l, N) + T(N)
+    for l in s:
+        if l: tot += load_S(l, N) + T(N)
+    for i in range(2):
+        tot += Fraction(29 * N, 2)
+        for j in range(2):
+            if (s[2 * i] and pm[j]) or (s[2 * i + 1] and pm[2 + j]): tot += T(N)
+    return tot
+def product_min(m1, m2):
+    if m1 == 0 or m2 == 0: return Fraction(0)
+    return min(product_classical(m1, m2), product_ntt(m1, m2))
+def division_classical(n, m):
+    L = n - m + 1; return Fraction(380 + L * (4 * (m + 1) + 2) + 2 * (n + 1)) + Fraction(L * (m + 1), 2) + Fraction(n + 1, 2)
+def division_newton(n, m):
+    L = n - m + 1
+    return newton_inv(L) + product_min(L, L) + product_min(L, m + 1) + 4 * (m + 1) + Fraction(m + 1, 2) + 2 * (n + 1) + Fraction(n + 1, 2)
+POP = bin((0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001 - 1) // 2).count('1')
+def mulmod(d): return Fraction(4 * d * d + (d - 1) * (4 * d + 2)) + Fraction(d * d + (d - 1) * d, 2)
+def mulx(d): return Fraction(4 * d + (d - 1) * (4 * d + 2)) + Fraction(d + (d - 1) * d, 2)
+
+def charge_from_trace(hist):
+    return sum(charge_by_kind(hist).values(), Fraction(0))
+
+def charge_by_kind(hist):
+    out = {}
+    for kind, table in hist.items():
+        total = Fraction(0)
+        for key, cnt in table.items():
+            k = [int(x) for x in key.split(',')] if key != '' else []
+            if kind == 'product_classical': c = product_classical(*k)
+            elif kind == 'product_ntt': c = product_ntt(*k)
+            elif kind == 'product_zero': c = Fraction(0)
+            elif kind == 'division_classical': c = division_classical(*k)
+            elif kind == 'division_newton': c = division_newton(*k)
+            elif kind == 'matvec_wrap': c = matvec_wrap(*k)
+            elif kind == 'matmul_shared': c = matmul_shared(*k)
+            elif kind == 'addsub': c = Fraction(9 * k[0], 2)
+            elif kind == 'copy': c = Fraction(5 * k[0], 2)
+            elif kind == 'monic': c = 380 + Fraction(3 * k[0], 2)
+            elif kind == 'inversion': c = Fraction(380)
+            elif kind == 'edf_draw': c = Fraction(1)
+            elif kind == 'edf_powmod': c = Fraction(253 * mulmod(k[0]) + (POP - 1) * mulx(k[0]))
+            elif kind == 'edf_constsub': c = Fraction(9 * k[0], 2)
+            elif kind == 'root_linear': c = Fraction(1)
+            else: raise ValueError(kind)
+            total += c * cnt
+        out[kind] = total
+    return out
+
+def gcd_overhead(hist):
+    """Explicit charge for work the per-operation rules leave implicit (proof 5.2, last item):
+    +N per transform product (1/2 loop on each of the two copy/pad loops), +2m per monic normalisation
+    (load and store per coefficient), +5N per wrapped matrix-vector step and +10N per shared-transform
+    matrix product (output compaction into coefficient-length buffers, 2.5 units per word), and +5 per
+    recorded operation (degree scans and recursion bookkeeping)."""
+    total = Fraction(0)
+    for kind, table in hist.items():
+        for key, cnt in table.items():
+            k = [int(x) for x in key.split(',')] if key != '' else []
+            if kind == 'product_ntt': c = Fraction(ntt_len(k[0] + k[1] - 1))
+            elif kind == 'monic': c = Fraction(2 * k[0])
+            elif kind == 'matvec_wrap': c = Fraction(5 * k[-1])
+            elif kind == 'matmul_shared': c = Fraction(10 * k[-1])
+            else: c = Fraction(0)
+            total += (c + 5) * cnt
+    return int(total) if total.denominator == 1 else int(total) + 1
+
+if __name__ == '__main__':
+    led = json.load(open(sys.argv[1]))
+    tr = led['trace'] if 'trace' in led else json.load(open(sys.argv[2]))
+    got = charge_from_trace(tr)
+    print('recomputed', got, '| ledger ops', led['ops'], 'exact', led.get('ops_exact'))
+    assert str(got) == led.get('ops_exact', str(led['ops'])), 'MISMATCH'
+    print('SELF-CHECK OK; histogram JSON bytes:', len(json.dumps(tr, separators=(',', ':'))))
+```
+
+
+### accounting.py
+
+```python
+"""accounting.py - standard-library reproduction of every charged number (Appendix A driver).
+Usage: python accounting.py <constants.json> <ledger_r<r>.json> [dir holding gcd_trace_r<r>_t<n>.json]
+Recomputes: T(N), SQ, NEWTON, CACHE, MULX, the powering total, build/prepare/finish charges,
+the half-gcd charge from the recorded trace, totals, log2 values, memory; then recomputes the
+certified pair from the recorded root with a pure-Python permutation and checks the digest.
+Requires ntt.py, modsq.py, powering.py, halfgcd_charge.py beside it (all standard library).
+"""
+import json, sys, math, hashlib, os
+from ntt import T
+from modsq import sizes, SQ, NEWTON, MULX, CACHE
+from powering import frobenius_ledger, bit_plan
+P = 0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001
+E5 = pow(5, -1, P - 1); EXP = lambda e: (e.bit_length() - 1) + (bin(e).count('1') - 1)
+INV_COST, ROOT5_COST = EXP(P - 2), EXP(E5)
+CODE_BYTES = 1 << 20
+
+def main(cpath, lpath, trace_dir=None):
+    C_ = json.load(open(cpath)); L = json.load(open(lpath)); r = L['r']; D = 5 ** (6 + r); C = 216 + 21 * r
+    RC = [[int(x, 16) for x in row] for row in C_['round_constants']]; M = [[int(x, 16) for x in row] for row in C_['mds']]
+    N1, N2 = sizes(D - 1); assert (N1, N2) == (L['N1'], L['N2']) and D == L['D'] and C == L['C']
+    build = N1 * (6 + 27 * 6 + 21 * r + 1) + T(N1) + N1 + 2 * N1 + 3 * N1
+    assert build == L['phases']['build_f_per_trial'] and L['phases']['setup'] == 2000 + 167200
+    total = L['phases']['setup']; ok = True
+    for tr in L['trials']:
+        assert L.get('stream') == 'seq'
+        prep = 1 + 3 * ROOT5_COST + C + 4 * D + INV_COST + 4 * D + 4
+        pw = frobenius_ledger(D - 1, r, cache_qn1=tr['powering']['cache_qn1'])   # modulus q has degree D-1
+        assert prep == tr['ops_prepare'] and pw['ops']['total'] == tr['ops_powering']
+        if trace_dir:
+            from halfgcd_charge import charge_from_trace, gcd_overhead
+            g = charge_from_trace(json.load(open(os.path.join(trace_dir, f"gcd_trace_r{r}_t{tr['n']}.json"))))
+            gi = int(g) if g.denominator == 1 else int(g) + 1
+            assert gi == tr['ops_gcd'], (gi, tr['ops_gcd'])
+            print(f"  gcd+roots charge recomputed from the trace histogram: {gi:,}")
+        fin = tr.get('ops_finish', 0)
+        if fin: assert fin == len(tr['roots']) * (3 * ROOT5_COST + C + 8) + C
+        assert tr['ops_build'] == build
+        if trace_dir:
+            ov = gcd_overhead(json.load(open(os.path.join(trace_dir, f"gcd_trace_r{r}_t{tr['n']}.json"))))
+            assert ov == tr['ops_gcd_overhead'], (ov, tr['ops_gcd_overhead'])
+            print(f"  gcd overhead recomputed from the trace histogram: {ov:,}")
+        total += build + prep + tr['ops_powering'] + tr['ops_gcd'] + tr['ops_gcd_overhead'] + fin
+    assert total == L['total_ops'], (total, L['total_ops'])
+    t = math.log2(total / C); m = math.log2(L['peak_words'] * 32 + CODE_BYTES)
+    print(f"r={r} D={D} N1={N1} N2={N2} C={C}\ntotal ops {total:,}  time_log2 {t:.6f}  memory_log2 {m:.6f}  score {t + max(0, m - 20):.6f}")
+    assert abs(t - L['time_log2']) < 1e-9 and abs(m - L['memory_log2_bytes']) < 1e-9
+    # recompute the pair from the recorded parameters (pure Python)
+    k = 2; CAP = 1 << 65; inv = lambda x: pow(x, P - 2, P); K5 = pow((CAP + RC[0][2]) % P, 5, P)
+    i, j = [t_ for t_ in range(3) if t_ != k]; lam5 = 1; mu5 = (-M[k][0] * inv(M[k][1])) % P
+    a, b, e = M[i][0], M[i][1], (-(M[i][2] * K5 + RC[1][i])) % P; c, d, f = M[j][0], M[j][1], (-(M[j][2] * K5 + RC[1][j])) % P
+    det = (a * d - b * c) % P; di = inv(det); A0 = ((e * d - b * f) * di) % P; B0 = ((a * f - e * c) * di) % P
+    def inputs(Tp):
+        T_ = pow(Tp, E5, P); A = (lam5 * T_ + A0) % P; B = (mu5 * T_ + B0) % P
+        return (pow(A, E5, P) - RC[0][0]) % P, (pow(B, E5, P) - RC[0][1]) % P
+    def H(x0, x1):
+        s = [x0, x1, CAP]
+        for idx in (*range(4), *range(4, 4 + r), *range(60, 64)):
+            s = [(x + cc) % P for x, cc in zip(s, RC[idx])]
+            for col in (range(3) if idx < 4 or idx >= 60 else range(1)): s[col] = pow(s[col], 5, P)
+            s = [sum(cc * x for cc, x in zip(row, s)) % P for row in M]
+        return s[0]
+    tr = L['trials'][-1]; n = tr['n']
+    s0 = n + 1
+    assert str(s0) == tr['s0']; x0, x1 = inputs(s0); assert [str(x0), str(x1)] == tr['inputs0']
+    y = H(x0, x1); assert y.to_bytes(32, 'little').hex() == L['digest']
+    for pr in L['pairs']:
+        u0, u1 = inputs(int(pr['s1'])); assert [str(u0), str(u1)] == pr['inputs'] and (u0, u1) != (x0, x1) and H(u0, u1) == y
+    print(f"pair(s) recomputed from the start point and the recorded root(s): {len(L['pairs'])} collision(s) on digest {L['digest']}")
+
+if __name__ == '__main__':
+    main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
+```
+
+
+## Appendix B. Inherited baseline ledger and gcd trace histograms
+
+The ledger printed here records the predecessor's uncached-QN1 powering run. Its polynomial
+values, certified pair, and gcd trace are the same as this candidate's; its aggregate powering
+total and peak are historical baseline values, superseded by Section 6 and Appendix C. The
+gcd trace itself remains unchanged and is the source for the half-gcd charge above.
+
+`ledger_r2.json` (every phase count, sizes, flags, the stream indices, the root(s) and the pair):
+
+```json
+{
+ "stream": "seq",
+ "r": 2,
+ "D": 390625,
+ "N1": 393216,
+ "N2": 786432,
+ "C": 258,
+ "phases": {
+  "setup": 169200,
+  "build_f_per_trial": 106725376
+ },
+ "memory_words": {
+  "build_f": 786440,
+  "form_q": 781258
+ },
+ "trials": [
+  {
+   "n": 0,
+   "s0": "1",
+   "inputs0": [
+    "10002178851817054251917902702717986462693052164540911503127726574781588282335",
+    "18192449225072953150817159590594426361076309192021029144290354995437570750592"
+   ],
+   "y": "4948495015720745793283689140601836379617824969621619117738264404183434823118",
+   "ops_build": 106725376,
+   "ops_prepare": 3126724,
+   "t_pow": 676.370468378067,
+   "ops_powering": 62837488594.5,
+   "mem_powering": 2356705,
+   "powering": {
+    "D": 390624,
+    "r": 2,
+    "C": 258,
+    "N1": 393216,
+    "N2": 786432,
+    "k0": 18,
+    "cache_qn1": false,
+    "n_squarings": 236,
+    "n_mulx": 46,
+    "ops": {
+     "newton": 330975267.5,
+     "cache_build": 46659039,
+     "init": 585936,
+     "squaring_each": 264163016,
+     "squarings": 62342471776,
+     "mulx_each": 2539056,
+     "mulx_total": 116796576,
+     "total": 62837488594.5
+    },
+    "T_N1": 21397504,
+    "T_N2": 45088768,
+    "live_words_squaring": {
+     "Q": 390625,
+     "R": 393216,
+     "A": 786432,
+     "INVQ": 786432
+    },
+    "peak_words": {
+     "powering": 2356705,
+     "newton": 1567680,
+     "cache_build": 1567680,
+     "max": 2356705
+    }
+   },
+   "t_gcd": 107.59903478622437,
+   "ops_gcd": 6563144944,
+   "mem_gcd": 1957008,
+   "gcd": {
+    "ops": 6563144944,
+    "ops_exact": "6563144944",
+    "peak_words": 1957008,
+    "gcd_degree": 1,
+    "roots": [
+     "2574648662352184608969622289421669360007188535021345486931298598945469544374"
+    ],
+    "cutoff": 48,
+    "top_fraction": 4,
+    "gcd_ops": "6563144943",
+    "roots_ops": "1",
+    "roots_draws": 0,
+    "gcd_products": {
+     "classical": 775708,
+     "ntt": 1525,
+     "zero": 10835
+    },
+    "gcd_divisions": {
+     "classical": 390623,
+     "newton": 0
+    },
+    "gcd_lean": {
+     "matvec_wrap": 10835,
+     "matmul_shared": 9932
+    },
+    "lean": true,
+    "shared_matmul": true,
+    "peak_where": "matmul_shared row 1",
+    "roots_divisions": {
+     "classical": 0,
+     "newton": 0
+    },
+    "roots_products": {
+     "classical": 0,
+     "ntt": 0,
+     "zero": 0
+    },
+    "roots_monic": 0,
+    "roots_powmod": 0
+   },
+   "ops_gcd_overhead": 113341196,
+   "deg_g": 1,
+   "roots": [
+    "2574648662352184608969622289421669360007188535021345486931298598945469544374"
+   ],
+   "ops_total": 69623828489.5,
+   "ops_finish": 1655
+  }
+ ],
+ "total_ops": 69623997689.5,
+ "time_log2": 28.00763834694367,
+ "peak_words": 2356705,
+ "memory_bytes": 76463136,
+ "memory_log2_bytes": 26.18826103517757,
+ "score": 34.19589938212124,
+ "digest": "ce852ad7ca3e407b8aa64d550a7a921ef39600c3ac1d2a162bbf547db9bff00a",
+ "pairs": [
+  {
+   "s1": "2574648662352184608969622289421669360007188535021345486931298598945469544374",
+   "inputs": [
+    "24296906477611585102459430162779293880243610871032441845918136603176819168910",
+    "10899846194988547320127713635443541199409059681824863137336229662929768693300"
+   ]
+  }
+ ],
+ "t_build": 4.3057990074157715
+}
+```
+
+`gcd_trace_r2_t0.json` (trial 0: histogram of every charged half-gcd and root operation by kind and size; `halfgcd_charge.py` recomputes the stage charge from it):
+
+```json
+{"division_classical":{"96,95":517,"95,94":495,"94,93":1222,"93,92":1214,"92,91":1947,"91,90":2012,"90,89":2516,"89,88":2340,"88,87":2689,"87,86":2639,"86,85":2684,"85,84":2729,"84,83":2771,"83,82":2728,"82,81":2894,"81,80":3091,"80,79":3214,"79,78":3565,"78,77":3935,"77,76":3584,"76,75":4139,"75,74":4025,"74,73":4029,"73,72":4123,"72,71":4643,"71,70":4643,"70,69":5350,"69,68":5350,"68,67":6216,"67,66":6216,"66,65":6565,"65,64":6564,"64,63":6781,"63,62":6781,"62,61":6901,"61,60":6901,"60,59":7287,"59,58":7287,"58,57":7698,"57,56":7698,"56,55":8074,"55,54":8074,"54,53":8745,"53,52":8745,"52,51":9565,"51,50":9565,"50,49":10449,"49,48":10449,"144,143":137,"48,47":10245,"286,285":130,"141,140":345,"47,46":9539,"573,572":40,"142,141":351,"285,284":170,"1144,1143":40,"570,569":85,"283,282":171,"139,138":216,"46,45":8887,"2289,2288":19,"571,570":86,"1143,1142":43,"4578,4577":8,"2287,2286":21,"1141,1140":43,"568,567":45,"282,281":45,"9156,9155":3,"4576,4575":11,"2286,2285":22,"18310,18309":3,"9153,9152":6,"4575,4574":11,"36621,36620":2,"9154,9153":5,"18309,18308":3,"73242,73241":1,"36619,36618":1,"18307,18306":2,"9151,9150":2,"4573,4572":2,"2284,2283":2,"1140,1139":2,"146484,146483":1,"73240,73239":1,"36618,36617":1,"292968,292967":1,"45,44":8495,"44,43":8320,"43,42":8151,"42,41":8107,"41,40":7976,"40,39":7621,"39,38":7251,"38,37":6898,"37,36":6806,"108,107":192,"36,35":6192,"216,215":16,"106,105":352,"35,34":5485,"430,429":9,"213,212":170,"105,104":346,"859,858":9,"214,213":176,"427,426":86,"211,210":162,"103,102":164,"34,33":4620,"1717,1716":9,"429,428":85,"856,855":42,"426,425":76,"3433,3432":9,"858,857":43,"1714,1713":22,"855,854":34,"6867,6866":4,"1716,1715":21,"3432,3431":11,"13734,13733":1,"6865,6864":5,"3430,3429":10,"1713,1712":12,"27466,27465":1,"13731,13730":2,"6864,6863":5,"54931,54930":1,"13732,13731":3,"27463,27462":2,"13729,13728":2,"6862,6861":2,"3429,3428":2,"109863,109862":1,"27465,27464":1,"54930,54929":1,"219725,219724":1,"33,32":4272,"32,31":4055,"31,30":3935,"30,29":3549,"29,28":3138,"28,27":2762,"27,26":2091,"162,161":54,"26,25":1271,"322,321":50,"159,158":172,"645,644":7,"160,159":177,"321,320":86,"1288,1287":7,"642,641":43,"319,318":85,"157,156":121,"25,24":387,"2575,2574":7,"643,642":42,"1285,1284":21,"640,639":36,"318,317":36,"5151,5150":1,"1287,1286":21,"2574,2573":10,"10300,10299":1,"5148,5147":5,"2572,2571":11,"1284,1283":15,"20599,20598":1,"5149,5148":6,"10297,10296":3,"5146,5145":4,"2571,2570":4,"41199,41198":1,"10299,10298":3,"20598,20597":2,"82396,82395":1,"41196,41195":1,"20596,20595":1,"10296,10295":1,"164793,164792":1,"121,120":85,"241,240":82,"118,117":173,"483,482":37,"120,119":177,"240,239":85,"966,965":16,"481,480":43,"238,237":85,"117,116":92,"1932,1931":5,"964,963":21,"480,479":42,"3862,3861":5,"1929,1928":10,"963,962":21,"7725,7724":2,"1930,1929":11,"3861,3860":5,"15450,15449":1,"7723,7722":3,"3859,3858":6,"1927,1926":6,"961,960":6,"478,477":6,"237,236":6,"30898,30897":1,"15447,15446":2,"7722,7721":3,"61797,61796":1,"15448,15447":1,"30897,30896":1,"123594,123593":1,"181,180":62,"363,362":17,"180,179":87,"724,723":17,"360,359":43,"178,177":86,"1449,1448":7,"361,360":43,"723,722":22,"2898,2897":1,"1447,1446":10,"721,720":21,"358,357":25,"177,176":25,"5794,5793":1,"2895,2894":5,"1446,1445":11,"11587,11586":1,"2896,2895":6,"5791,5790":3,"2893,2892":4,"1444,1443":4,"720,719":4,"23175,23174":1,"5793,5792":3,"11586,11585":2,"46348,46347":1,"23172,23171":1,"11584,11583":1,"5790,5789":1,"92694,92693":1,"136,135":48,"273,272":3,"135,134":87,"544,543":2,"270,269":43,"133,132":87,"1087,1086":2,"271,270":44,"541,540":21,"268,267":40,"132,131":40,"2173,2172":2,"543,542":22,"1084,1083":11,"540,539":19,"4345,4344":2,"1086,1085":11,"2170,2169":5,"1083,1082":8,"8691,8690":1,"2172,2171":6,"4344,4343":3,"17380,17379":1,"8688,8687":2,"4342,4341":3,"2169,2168":3,"34761,34760":1,"8689,8688":1,"17379,17378":1,"69519,69518":1,"102,101":79,"204,203":36,"100,99":89,"408,407":12,"202,201":42,"99,98":85,"816,815":2,"406,405":22,"201,200":43,"1630,1629":2,"813,812":11,"405,404":21,"3259,3258":2,"814,813":10,"1627,1626":5,"811,810":9,"403,402":9,"199,198":9,"97,96":20,"6517,6516":2,"1629,1628":5,"3256,3255":3,"1626,1625":4,"13035,13034":1,"3258,3257":2,"6516,6515":1,"26070,26069":1,"13033,13032":1,"6514,6513":1,"3255,3254":1,"52138,52137":1,"153,152":37,"306,305":15,"151,150":44,"24,23":97,"612,611":4,"304,303":21,"150,149":42,"1222,1221":4,"609,608":10,"303,302":21,"2445,2444":1,"610,609":11,"1221,1220":5,"4888,4887":1,"2442,2441":3,"1219,1218":6,"607,606":7,"301,300":7,"148,147":7,"9777,9776":1,"2443,2442":3,"4887,4886":2,"19552,19551":1,"9774,9773":1,"4885,4884":1,"2440,2439":1,"1218,1217":1,"39102,39101":1,"115,114":17,"229,228":17,"112,111":44,"459,458":6,"114,113":44,"228,227":22,"916,915":6,"456,455":11,"226,225":21,"111,110":26,"1833,1832":3,"457,456":10,"915,914":5,"3666,3665":2,"1831,1830":3,"913,912":5,"454,453":5,"225,224":5,"7332,7331":1,"3664,3663":1,"1830,1829":2,"14664,14663":1,"7330,7329":1,"3663,3662":1,"29325,29324":1,"172,171":12,"345,344":1,"171,170":22,"688,687":1,"342,341":11,"169,168":22,"1375,1374":1,"343,342":11,"685,684":5,"340,339":9,"168,167":9,"2749,2748":1,"687,686":6,"1372,1371":3,"684,683":4,"5499,5498":1,"1374,1373":3,"2748,2747":2,"10996,10995":1,"5496,5495":1,"2746,2745":1,"1371,1370":1,"21993,21992":1,"129,128":20,"258,257":9,"127,126":22,"516,515":4,"256,255":11,"126,125":21,"1032,1031":1,"514,513":5,"255,254":10,"2062,2061":1,"1029,1028":2,"513,512":5,"4123,4122":1,"1030,1029":3,"2059,2058":2,"1027,1026":2,"511,510":2,"253,252":2,"124,123":2,"8247,8246":1,"2061,2060":1,"4122,4121":1,"16494,16493":1,"193,192":10,"387,386":5,"192,191":10,"774,773":2,"385,384":6,"190,189":11,"1546,1545":2,"771,770":3,"384,383":5,"3093,3092":1,"772,771":2,"1545,1544":1,"6186,6185":1,"3091,3090":1,"1543,1542":1,"769,768":1,"382,381":1,"189,188":1,"12369,12368":1,"145,144":8,"291,290":2,"580,579":2,"288,287":5,"1159,1158":2,"289,288":6,"577,576":3,"2319,2318":1,"579,578":2,"1158,1157":1,"4638,4637":1,"2317,2316":1,"1156,1155":1,"576,575":1,"9276,9275":1,"109,108":5,"217,216":5,"435,434":3,"870,869":1,"433,432":2,"1740,1739":1,"868,867":2,"432,431":3,"3478,3477":1,"1737,1736":1,"867,866":1,"6956,6955":1,"163,162":4,"327,326":1,"652,651":1,"324,323":3,"1305,1304":1,"325,324":3,"651,650":2,"2608,2607":1,"1302,1301":1,"649,648":1,"5216,5215":1,"123,122":3,"244,243":3,"489,488":2,"243,242":3,"978,977":1,"487,486":1,"1956,1955":1,"976,975":1,"486,485":1,"3911,3910":1,"184,183":1,"367,366":1,"733,732":1,"183,182":3,"364,363":2,"1467,1466":1,"366,365":1,"732,731":1,"2932,2931":1,"138,137":2,"276,275":1,"550,549":1,"1099,1098":1,"274,273":1,"547,546":1,"2198,2197":1,"207,206":1,"412,411":1,"825,824":1,"205,204":1,"411,410":1,"1647,1646":1,"154,153":2,"309,308":1,"618,617":1,"307,306":1,"1234,1233":1,"232,231":1,"463,462":1,"924,923":1,"174,173":1,"346,345":1,"692,691":1,"130,129":1,"259,258":1,"518,517":1,"195,194":1,"161,160":1,"23,22":3,"22,21":2,"21,20":2,"20,19":2,"19,18":2,"18,17":2,"17,16":1,"16,15":1,"15,14":1,"14,13":1,"13,12":1,"12,11":1,"11,10":1,"10,9":1,"9,8":1,"8,7":1,"7,6":1,"6,5":1,"5,4":1,"4,3":1,"3,2":1,"2,1":1},"product_zero":{"2,0":10835},"addsub":{"1":10835,"2":21670,"3":21670,"4":21670,"5":21670,"6":21670,"7":21670,"8":21670,"9":21670,"10":21670,"11":21670,"12":21670,"13":21670,"14":21670,"15":21670,"16":21670,"17":21670,"18":21669,"19":21668,"20":21668,"21":21668,"22":21668,"23":21667,"24":21572,"25":21188,"26":20196,"27":19045,"28":17955,"29":16433,"30":15232,"31":14708,"32":14111,"33":13466,"34":12928,"35":11839,"36":10671,"37":9726,"38":8541,"39":7640,"40":6995,"41":6531,"42":6024,"43":5523,"44":5264,"45":4937,"46":4501,"47":3372,"48":2401,"49":1820,"50":968,"95":182,"96":660,"97":613,"98":142,"192":256,"193":127,"191":130,"383":126,"384":40,"382":88,"764":64,"765":40,"1527":32,"1528":19,"763":24,"3053":16,"3054":8,"1526":13,"3052":8,"6105":8,"6106":3,"6104":5,"12208":4,"12209":3,"381":2,"24415":2,"24416":2,"12207":1,"48829":1,"48830":1,"73":523,"74":196,"72":332,"145":183,"146":17,"144":247,"288":94,"289":9,"143":76,"287":119,"574":52,"575":9,"286":34,"573":55,"1146":30,"1147":9,"1145":23,"2290":16,"2291":9,"572":12,"4579":8,"4580":4,"2289":7,"4578":4,"9157":4,"9158":1,"1144":2,"9156":3,"18312":2,"18313":1,"18311":1,"36622":1,"36623":1,"55":524,"56":235,"51":900,"52":1034,"53":434,"54":295,"109":224,"110":57,"108":207,"216":128,"217":49,"215":79,"431":49,"432":7,"107":36,"430":57,"860":28,"861":7,"859":25,"1718":16,"1719":7,"429":15,"1717":9,"3435":7,"3436":1,"858":4,"3434":7,"6868":4,"6869":1,"6867":3,"13734":2,"13735":1,"3433":1,"13733":1,"27467":1,"27468":1,"82":255,"83":88,"81":176,"162":128,"163":81,"323":64,"324":37,"161":48,"645":32,"646":16,"322":27,"644":16,"1289":16,"1290":5,"1288":11,"2576":8,"2577":5,"80":7,"5151":4,"5152":2,"2575":3,"5150":2,"10301":2,"10302":1,"10300":1,"20600":1,"20601":1,"62":238,"63":66,"61":198,"122":128,"123":63,"121":68,"243":60,"244":17,"242":47,"484":32,"485":17,"60":38,"967":16,"968":7,"483":15,"966":9,"1933":7,"1934":1,"241":4,"1932":7,"3864":4,"3865":1,"3863":3,"7726":2,"7727":1,"1931":1,"7725":1,"15451":1,"15452":1,"92":130,"93":49,"91":83,"183":45,"184":3,"182":62,"364":24,"365":2,"181":19,"363":30,"726":13,"727":2,"362":8,"725":14,"1450":8,"1451":2,"1449":6,"2898":4,"2899":2,"724":3,"2897":2,"5795":2,"5796":1,"5794":1,"11588":1,"11589":1,"69":130,"70":80,"137":64,"138":35,"68":52,"273":32,"274":12,"136":30,"272":20,"545":12,"546":2,"544":14,"1088":7,"1089":2,"543":4,"1087":6,"2174":4,"2175":2,"2173":2,"4346":2,"4347":2,"1086":1,"8691":1,"8692":1,"103":64,"104":38,"205":32,"206":15,"102":28,"204":17,"409":15,"410":4,"408":12,"816":8,"817":4,"815":4,"1631":4,"1632":1,"1630":3,"3260":2,"3261":1,"407":1,"3259":1,"6519":1,"6520":1,"78":60,"79":18,"77":48,"154":32,"155":16,"153":16,"307":16,"308":6,"306":10,"612":8,"613":6,"76":5,"1223":4,"1224":3,"611":2,"2445":2,"2446":2,"1222":1,"4889":1,"4890":1,"59":57,"58":53,"116":32,"117":13,"115":20,"231":12,"232":1,"57":13,"230":15,"460":7,"461":1,"229":4,"459":7,"918":4,"919":1,"917":3,"1834":2,"1835":1,"458":1,"1833":1,"3667":1,"3668":1,"87":32,"88":21,"173":16,"174":9,"86":12,"345":8,"346":4,"172":7,"344":4,"689":4,"690":1,"688":3,"1376":2,"1377":1,"1375":1,"2750":1,"2751":1,"66":32,"67":11,"65":22,"130":16,"131":10,"259":8,"260":4,"129":6,"258":4,"517":4,"518":2,"516":2,"1032":2,"1033":2,"64":2,"2063":1,"2064":1,"99":7,"195":7,"196":2,"194":6,"388":4,"389":2,"387":2,"774":2,"775":2,"1547":1,"1548":1,"75":5,"147":5,"291":4,"292":3,"581":2,"582":1,"290":1,"580":1,"1161":1,"1162":1,"111":4,"219":4,"220":1,"218":3,"436":2,"437":1,"435":1,"871":1,"872":1,"84":3,"164":4,"165":3,"327":2,"328":2,"653":1,"654":1,"124":4,"125":1,"246":2,"247":1,"245":1,"490":1,"491":1,"94":2,"185":2,"186":1,"368":1,"369":1,"71":2,"139":2,"140":1,"276":1,"277":1,"105":2,"207":1,"208":1,"156":1,"157":1,"118":1,"89":1},"product_classical":{"2,1":21670,"2,2":21670,"2,3":21670,"2,4":21670,"2,5":21670,"2,6":21670,"2,7":21670,"2,8":21670,"2,9":21670,"2,10":21670,"2,11":21670,"2,12":21670,"2,13":21670,"2,14":21670,"2,15":21670,"2,16":21670,"2,17":21669,"2,18":21668,"2,19":21668,"2,20":21668,"2,21":21668,"2,22":21667,"2,23":21572,"2,24":21188,"2,25":20196,"2,26":19045,"2,27":17955,"2,28":16433,"2,29":15232,"2,30":14708,"2,31":14111,"2,32":13466,"2,33":12928,"2,34":11839,"2,35":10671,"2,36":9726,"2,37":8541,"2,38":7640,"2,39":6995,"2,40":6531,"2,41":6024,"2,42":5523,"2,43":5264,"2,44":4937,"2,45":4501,"2,46":3372,"2,47":2307,"2,48":1544,"2,49":496,"48,50":137,"2,96":476,"2,97":142,"2,95":386,"2,191":256,"2,192":127,"2,190":130,"2,382":126,"2,383":40,"2,381":88,"2,763":64,"2,764":40,"2,94":45,"2,1526":32,"2,1527":19,"2,762":24,"2,3052":16,"2,3053":8,"2,1525":13,"2,3051":8,"2,6104":8,"2,6105":3,"2,6103":5,"2,12207":4,"2,12208":3,"2,380":2,"2,24414":2,"2,24415":2,"2,12206":1,"2,48828":1,"2,48829":1,"2,72":523,"2,73":196,"2,71":332,"2,144":183,"2,145":17,"2,143":247,"2,287":94,"2,288":9,"2,142":76,"2,286":119,"2,573":52,"2,574":9,"2,285":34,"2,572":55,"2,1145":30,"2,1146":9,"2,1144":23,"2,2289":16,"2,2290":9,"2,571":12,"2,4578":8,"2,4579":4,"2,2288":7,"2,4577":4,"2,9156":4,"2,9157":1,"2,1143":2,"2,9155":3,"2,18311":2,"2,18312":1,"2,18310":1,"2,36621":1,"2,36622":1,"2,54":524,"2,55":235,"24,26":823,"25,27":992,"24,27":937,"25,28":553,"25,26":439,"26,27":351,"26,28":351,"2,53":295,"2,108":224,"2,109":57,"2,107":207,"2,215":128,"2,216":49,"23,27":296,"24,28":202,"2,214":79,"2,430":49,"2,431":7,"2,106":36,"2,429":57,"2,859":28,"2,860":7,"2,858":25,"2,1717":16,"2,1718":7,"2,428":15,"2,1716":9,"2,3434":7,"2,3435":1,"2,857":4,"2,3433":7,"2,6867":4,"2,6868":1,"2,6866":3,"2,13733":2,"2,13734":1,"2,3432":1,"2,13732":1,"2,27466":1,"2,27467":1,"2,81":255,"2,82":88,"2,80":176,"2,161":128,"2,162":81,"2,322":64,"2,323":37,"2,160":48,"2,644":32,"2,645":16,"2,321":27,"2,643":16,"2,1288":16,"2,1289":5,"2,1287":11,"2,2575":8,"2,2576":5,"2,79":7,"2,5150":4,"2,5151":2,"2,2574":3,"2,5149":2,"2,10300":2,"2,10301":1,"2,10299":1,"2,20599":1,"2,20600":1,"2,61":238,"2,62":66,"2,60":198,"2,121":128,"2,122":63,"2,120":68,"2,242":60,"2,243":17,"2,241":47,"2,483":32,"2,484":17,"2,59":38,"2,966":16,"2,967":7,"2,482":15,"2,965":9,"2,1932":7,"2,1933":1,"2,240":4,"2,1931":7,"2,3863":4,"2,3864":1,"2,3862":3,"2,7725":2,"2,7726":1,"2,1930":1,"2,7724":1,"2,15450":1,"2,15451":1,"2,91":130,"2,92":49,"2,90":83,"2,182":45,"2,183":3,"2,181":62,"2,363":24,"2,364":2,"2,180":19,"2,362":30,"2,725":13,"2,726":2,"2,361":8,"2,724":14,"2,1449":8,"2,1450":2,"2,1448":6,"2,2897":4,"2,2898":2,"2,723":3,"2,2896":2,"2,5794":2,"2,5795":1,"2,5793":1,"2,11587":1,"2,11588":1,"2,68":130,"2,69":80,"2,136":64,"2,137":35,"2,67":52,"2,272":32,"2,273":12,"2,135":30,"2,271":20,"2,544":12,"2,545":2,"2,543":14,"2,1087":7,"2,1088":2,"2,542":4,"2,1086":6,"2,2173":4,"2,2174":2,"2,2172":2,"2,4345":2,"2,4346":2,"2,1085":1,"2,8690":1,"2,8691":1,"23,25":182,"2,51":130,"2,52":83,"22,25":94,"22,26":94,"2,102":64,"2,103":38,"2,50":57,"2,204":32,"2,205":15,"2,101":28,"2,203":17,"2,408":15,"2,409":4,"2,407":12,"2,815":8,"2,816":4,"2,814":4,"2,1630":4,"2,1631":1,"2,1629":3,"2,3259":2,"2,3260":1,"2,406":1,"2,3258":1,"2,6518":1,"2,6519":1,"2,77":60,"2,78":18,"2,76":48,"2,153":32,"2,154":16,"2,152":16,"2,306":16,"2,307":6,"2,305":10,"2,611":8,"2,612":6,"2,75":5,"2,1222":4,"2,1223":3,"2,610":2,"2,2444":2,"2,2445":2,"2,1221":1,"2,4888":1,"2,4889":1,"2,58":57,"2,57":53,"2,115":32,"2,116":13,"2,114":20,"2,230":12,"2,231":1,"2,56":13,"2,229":15,"2,459":7,"2,460":1,"2,228":4,"2,458":7,"2,917":4,"2,918":1,"2,916":3,"2,1833":2,"2,1834":1,"2,457":1,"2,1832":1,"2,3666":1,"2,3667":1,"2,86":32,"2,87":21,"2,172":16,"2,173":9,"2,85":12,"2,344":8,"2,345":4,"2,171":7,"2,343":4,"2,688":4,"2,689":1,"2,687":3,"2,1375":2,"2,1376":1,"2,1374":1,"2,2749":1,"2,2750":1,"2,65":32,"2,66":11,"2,64":22,"2,129":16,"2,130":10,"2,258":8,"2,259":4,"2,128":6,"2,257":4,"2,516":4,"2,517":2,"2,515":2,"2,1031":2,"2,1032":2,"2,63":2,"2,2062":1,"2,2063":1,"2,98":7,"2,194":7,"2,195":2,"2,193":6,"2,387":4,"2,388":2,"2,386":2,"2,773":2,"2,774":2,"2,1546":1,"2,1547":1,"2,74":5,"2,146":5,"2,290":4,"2,291":3,"2,580":2,"2,581":1,"2,289":1,"2,579":1,"2,1160":1,"2,1161":1,"2,110":4,"2,218":4,"2,219":1,"2,217":3,"2,435":2,"2,436":1,"2,434":1,"2,870":1,"2,871":1,"2,83":3,"2,163":4,"2,164":3,"2,326":2,"2,327":2,"2,652":1,"2,653":1,"2,123":4,"2,124":1,"2,245":2,"2,246":1,"2,244":1,"2,489":1,"2,490":1,"2,93":2,"2,184":2,"2,185":1,"2,367":1,"2,368":1,"2,70":2,"2,138":2,"2,139":1,"2,275":1,"2,276":1,"2,104":2,"2,206":1,"2,207":1,"2,155":1,"2,156":1,"2,117":1,"2,88":1},"matvec_wrap":{"193,192,47,48,48,49,192":137,"383,382,95,96,96,97,384":130,"189,188,46,47,47,48,192":345,"765,764,190,191,191,192,768":40,"191,190,47,48,48,49,192":351,"381,380,94,95,95,96,384":170,"1527,1526,381,382,382,383,1536":40,"761,760,189,190,190,191,768":85,"379,378,94,95,95,96,384":171,"187,186,46,47,47,48,192":216,"3053,3052,762,763,763,764,3072":19,"763,762,190,191,191,192,768":86,"1525,1524,380,381,381,382,1536":43,"6105,6104,1525,1526,1526,1527,6144":8,"3051,3050,762,763,763,764,3072":21,"1523,1522,380,381,381,382,1536":43,"759,758,189,190,190,191,768":45,"377,376,93,94,94,95,384":45,"12209,12208,3051,3052,3052,3053,12288":3,"6103,6102,1525,1526,1526,1527,6144":11,"3049,3048,761,762,762,763,3072":22,"24415,24414,6103,6104,6104,6105,24576":3,"12205,12204,3050,3051,3051,3052,12288":6,"6101,6100,1524,1525,1525,1526,6144":11,"48829,48828,12206,12207,12207,12208,49152":2,"12207,12206,3051,3052,3052,3053,12288":5,"24413,24412,6102,6103,6103,6104,24576":3,"97657,97656,24413,24414,24414,24415,98304":1,"48827,48826,12206,12207,12207,12208,49152":1,"24411,24410,6102,6103,6103,6104,24576":2,"12203,12202,3050,3051,3051,3052,12288":2,"6099,6098,1524,1525,1525,1526,6144":2,"3047,3046,761,762,762,763,3072":2,"1521,1520,379,380,380,381,1536":2,"195313,195312,48827,48828,48828,48829,196608":1,"97655,97654,24413,24414,24414,24415,98304":1,"48825,48824,12205,12206,12206,12207,49152":1,"390625,390624,97655,97656,97656,97657,393216":1,"145,144,35,36,36,37,192":192,"289,288,71,72,72,73,384":16,"143,142,35,36,36,37,192":352,"575,574,143,144,144,145,768":9,"285,284,70,71,71,72,384":170,"141,140,34,35,35,36,192":346,"1147,1146,286,287,287,288,1536":9,"287,286,71,72,72,73,384":176,"571,570,142,143,143,144,768":86,"283,282,70,71,71,72,384":162,"139,138,34,35,35,36,192":164,"2291,2290,572,573,573,574,3072":9,"573,572,142,143,143,144,768":85,"1143,1142,285,286,286,287,1536":42,"569,568,141,142,142,143,768":76,"4579,4578,1144,1145,1145,1146,6144":9,"1145,1144,285,286,286,287,1536":43,"2287,2286,571,572,572,573,3072":22,"1141,1140,284,285,285,286,1536":34,"9157,9156,2288,2289,2289,2290,12288":4,"2289,2288,571,572,572,573,3072":21,"4577,4576,1143,1144,1144,1145,6144":11,"18313,18312,4577,4578,4578,4579,24576":1,"9155,9154,2288,2289,2289,2290,12288":5,"4575,4574,1143,1144,1144,1145,6144":10,"2285,2284,570,571,571,572,3072":12,"36623,36622,9155,9156,9156,9157,49152":1,"18309,18308,4576,4577,4577,4578,24576":2,"9153,9152,2287,2288,2288,2289,12288":5,"73243,73242,18310,18311,18311,18312,98304":1,"18311,18310,4577,4578,4578,4579,24576":3,"36619,36618,9154,9155,9155,9156,49152":2,"18307,18306,4576,4577,4577,4578,24576":2,"9151,9150,2287,2288,2288,2289,12288":2,"4573,4572,1142,1143,1143,1144,6144":2,"146485,146484,36620,36621,36621,36622,196608":1,"36621,36620,9154,9155,9155,9156,49152":1,"73241,73240,18309,18310,18310,18311,98304":1,"292968,292967,73241,73242,73242,73243,393216":1,"109,108,26,27,27,28,96":232,"217,216,53,54,54,55,192":54,"107,106,26,27,27,28,96":351,"431,430,107,108,108,109,384":50,"213,212,52,53,53,54,192":172,"105,104,25,26,26,27,96":351,"861,860,214,215,215,216,768":7,"215,214,53,54,54,55,192":177,"429,428,106,107,107,108,384":86,"1719,1718,429,430,430,431,1536":7,"857,856,213,214,214,215,768":43,"427,426,106,107,107,108,384":85,"211,210,52,53,53,54,192":121,"103,102,25,26,26,27,96":202,"3435,3434,858,859,859,860,3072":7,"859,858,214,215,215,216,768":42,"1715,1714,428,429,429,430,1536":21,"855,854,213,214,214,215,768":36,"425,424,105,106,106,107,384":36,"6869,6868,1716,1717,1717,1718,6144":1,"1717,1716,428,429,429,430,1536":21,"3433,3432,857,858,858,859,3072":10,"13735,13734,3433,3434,3434,3435,12288":1,"6865,6864,1715,1716,1716,1717,6144":5,"3431,3430,857,858,858,859,3072":11,"1713,1712,427,428,428,429,1536":15,"27467,27466,6866,6867,6867,6868,24576":1,"6867,6866,1716,1717,1717,1718,6144":6,"13731,13730,3432,3433,3433,3434,12288":3,"6863,6862,1715,1716,1716,1717,6144":4,"3429,3428,856,857,857,858,3072":4,"54933,54932,13732,13733,13733,13734,49152":1,"13733,13732,3432,3433,3433,3434,12288":3,"27465,27464,6865,6866,6866,6867,24576":2,"109863,109862,27465,27466,27466,27467,98304":1,"54929,54928,13731,13732,13732,13733,49152":1,"27463,27462,6865,6866,6866,6867,24576":1,"13729,13728,3431,3432,3432,3433,12288":1,"219725,219724,54930,54931,54931,54932,196608":1,"163,162,40,41,41,42,192":85,"323,322,80,81,81,82,384":82,"159,158,39,40,40,41,192":173,"645,644,160,161,161,162,768":37,"161,160,39,40,40,41,192":177,"321,320,79,80,80,81,384":85,"1289,1288,321,322,322,323,1536":16,"643,642,160,161,161,162,768":43,"319,318,79,80,80,81,384":85,"157,156,38,39,39,40,192":92,"2577,2576,643,644,644,645,3072":5,"1287,1286,321,322,322,323,1536":21,"641,640,159,160,160,161,768":42,"5151,5150,1287,1288,1288,1289,6144":5,"2573,2572,642,643,643,644,3072":10,"1285,1284,320,321,321,322,1536":21,"10301,10300,2574,2575,2575,2576,12288":2,"2575,2574,643,644,644,645,3072":11,"5149,5148,1286,1287,1287,1288,6144":5,"20601,20600,5149,5150,5150,5151,24576":1,"10299,10298,2574,2575,2575,2576,12288":3,"5147,5146,1286,1287,1287,1288,6144":6,"2571,2570,642,643,643,644,3072":6,"1283,1282,320,321,321,322,1536":6,"639,638,159,160,160,161,768":6,"317,316,78,79,79,80,384":6,"41199,41198,10299,10300,10300,10301,49152":1,"20597,20596,5148,5149,5149,5150,24576":2,"10297,10296,2573,2574,2574,2575,12288":3,"82397,82396,20598,20599,20599,20600,98304":1,"20599,20598,5149,5150,5150,5151,24576":1,"41197,41196,10298,10299,10299,10300,49152":1,"164793,164792,41197,41198,41198,41199,196608":1,"123,122,30,31,31,32,96":65,"243,242,60,61,61,62,192":62,"119,118,29,30,30,31,96":174,"485,484,120,121,121,122,384":17,"121,120,29,30,30,31,96":177,"241,240,59,60,60,61,192":87,"967,966,241,242,242,243,768":17,"481,480,119,120,120,121,384":43,"239,238,59,60,60,61,192":86,"117,116,28,29,29,30,96":124,"1933,1932,482,483,483,484,1536":7,"483,482,120,121,121,122,384":43,"965,964,240,241,241,242,768":22,"3865,3864,965,966,966,967,3072":1,"1931,1930,482,483,483,484,1536":10,"963,962,240,241,241,242,768":21,"479,478,119,120,120,121,384":25,"237,236,58,59,59,60,192":25,"7727,7726,1931,1932,1932,1933,6144":1,"3861,3860,964,965,965,966,3072":5,"1929,1928,481,482,482,483,1536":11,"15451,15450,3862,3863,3863,3864,12288":1,"3863,3862,965,966,966,967,3072":6,"7723,7722,1930,1931,1931,1932,6144":3,"3859,3858,964,965,965,966,3072":4,"1927,1926,481,482,482,483,1536":4,"961,960,239,240,240,241,768":4,"30901,30900,7724,7725,7725,7726,24576":1,"7725,7724,1930,1931,1931,1932,6144":3,"15449,15448,3861,3862,3862,3863,12288":2,"61799,61798,15449,15450,15450,15451,49152":1,"30897,30896,7723,7724,7724,7725,24576":1,"15447,15446,3861,3862,3862,3863,12288":1,"7721,7720,1929,1930,1930,1931,6144":1,"123594,123593,30898,30899,30899,30900,98304":1,"183,182,45,46,46,47,192":48,"365,364,90,91,91,92,384":3,"181,180,44,45,45,46,192":87,"727,726,181,182,182,183,768":2,"361,360,89,90,90,91,384":43,"179,178,44,45,45,46,192":87,"1451,1450,362,363,363,364,1536":2,"363,362,90,91,91,92,384":44,"723,722,180,181,181,182,768":21,"359,358,89,90,90,91,384":40,"177,176,43,44,44,45,192":40,"2899,2898,724,725,725,726,3072":2,"725,724,180,181,181,182,768":22,"1447,1446,361,362,362,363,1536":11,"721,720,179,180,180,181,768":19,"5795,5794,1448,1449,1449,1450,6144":2,"1449,1448,361,362,362,363,1536":11,"2895,2894,723,724,724,725,3072":5,"1445,1444,360,361,361,362,1536":8,"11589,11588,2896,2897,2897,2898,12288":1,"2897,2896,723,724,724,725,3072":6,"5793,5792,1447,1448,1448,1449,6144":3,"23175,23174,5793,5794,5794,5795,24576":1,"11585,11584,2895,2896,2896,2897,12288":2,"5791,5790,1447,1448,1448,1449,6144":3,"2893,2892,722,723,723,724,3072":3,"46349,46348,11586,11587,11587,11588,49152":1,"11587,11586,2896,2897,2897,2898,12288":1,"23173,23172,5792,5793,5793,5794,24576":1,"92694,92693,23173,23174,23174,23175,98304":1,"137,136,33,34,34,35,192":79,"273,272,67,68,68,69,384":36,"135,134,33,34,34,35,192":89,"545,544,135,136,136,137,768":12,"271,270,67,68,68,69,384":42,"133,132,32,33,33,34,192":85,"1089,1088,271,272,272,273,1536":2,"543,542,135,136,136,137,768":22,"269,268,66,67,67,68,384":43,"2175,2174,543,544,544,545,3072":2,"1085,1084,270,271,271,272,1536":11,"541,540,134,135,135,136,768":21,"4347,4346,1086,1087,1087,1088,6144":2,"1087,1086,271,272,272,273,1536":10,"2171,2170,542,543,543,544,3072":5,"1083,1082,270,271,271,272,1536":9,"539,538,134,135,135,136,768":9,"267,266,66,67,67,68,384":9,"131,130,32,33,33,34,192":20,"8691,8690,2172,2173,2173,2174,12288":2,"2173,2172,542,543,543,544,3072":5,"4343,4342,1085,1086,1086,1087,6144":3,"2169,2168,541,542,542,543,3072":4,"17381,17380,4344,4345,4345,4346,24576":1,"4345,4344,1085,1086,1086,1087,6144":2,"8689,8688,2171,2172,2172,2173,12288":1,"34761,34760,8689,8690,8690,8691,49152":1,"17379,17378,4344,4345,4345,4346,24576":1,"8687,8686,2171,2172,2172,2173,12288":1,"4341,4340,1084,1085,1085,1086,6144":1,"69519,69518,17379,17380,17380,17381,98304":1,"205,204,50,51,51,52,192":37,"101,100,24,25,25,26,96":88,"409,408,101,102,102,103,384":15,"203,202,50,51,51,52,192":44,"99,98,24,25,25,26,96":94,"817,816,203,204,204,205,768":4,"407,406,101,102,102,103,384":21,"201,200,49,50,50,51,192":42,"1631,1630,407,408,408,409,1536":4,"813,812,202,203,203,204,768":10,"405,404,100,101,101,102,384":21,"3261,3260,814,815,815,816,3072":1,"815,814,203,204,204,205,768":11,"1629,1628,406,407,407,408,1536":5,"6519,6518,1629,1630,1630,1631,6144":1,"3257,3256,813,814,814,815,3072":3,"1627,1626,406,407,407,408,1536":6,"811,810,202,203,203,204,768":7,"403,402,100,101,101,102,384":7,"199,198,49,50,50,51,192":7,"13037,13036,3258,3259,3259,3260,12288":1,"3259,3258,814,815,815,816,3072":3,"6517,6516,1628,1629,1629,1630,6144":2,"26071,26070,6517,6518,6518,6519,24576":1,"13033,13032,3257,3258,3258,3259,12288":1,"6515,6514,1628,1629,1629,1630,6144":1,"3255,3254,813,814,814,815,3072":1,"1625,1624,405,406,406,407,1536":1,"52138,52137,13034,13035,13035,13036,49152":1,"155,154,38,39,39,40,192":17,"307,306,76,77,77,78,384":17,"151,150,37,38,38,39,192":44,"613,612,152,153,153,154,768":6,"153,152,37,38,38,39,192":44,"305,304,75,76,76,77,384":22,"1223,1222,305,306,306,307,1536":6,"609,608,151,152,152,153,768":11,"303,302,75,76,76,77,384":21,"149,148,36,37,37,38,192":26,"2445,2444,610,611,611,612,3072":3,"611,610,152,153,153,154,768":10,"1221,1220,304,305,305,306,1536":5,"4889,4888,1221,1222,1222,1223,6144":2,"2443,2442,610,611,611,612,3072":3,"1219,1218,304,305,305,306,1536":5,"607,606,151,152,152,153,768":5,"301,300,74,75,75,76,384":5,"9777,9776,2443,2444,2444,2445,12288":1,"4887,4886,1221,1222,1222,1223,6144":1,"2441,2440,609,610,610,611,3072":2,"19553,19552,4887,4888,4888,4889,24576":1,"9775,9774,2443,2444,2444,2445,12288":1,"4885,4884,1220,1221,1221,1222,6144":1,"39102,39101,9775,9776,9776,9777,49152":1,"231,230,57,58,58,59,192":12,"113,112,27,28,28,29,96":43,"461,460,114,115,115,116,384":1,"115,114,28,29,29,30,96":45,"229,228,56,57,57,58,192":22,"919,918,229,230,230,231,768":1,"457,456,113,114,114,115,384":11,"227,226,56,57,57,58,192":22,"111,110,27,28,28,29,96":35,"1835,1834,458,459,459,460,1536":1,"459,458,114,115,115,116,384":11,"915,914,228,229,229,230,768":5,"455,454,113,114,114,115,384":9,"225,224,55,56,56,57,192":9,"3667,3666,916,917,917,918,3072":1,"917,916,228,229,229,230,768":6,"1831,1830,457,458,458,459,1536":3,"913,912,227,228,228,229,768":4,"7333,7332,1832,1833,1833,1834,6144":1,"1833,1832,457,458,458,459,1536":3,"3665,3664,915,916,916,917,3072":2,"14663,14662,3665,3666,3666,3667,12288":1,"7329,7328,1831,1832,1832,1833,6144":1,"3663,3662,915,916,916,917,3072":1,"1829,1828,456,457,457,458,1536":1,"29325,29324,7330,7331,7331,7332,24576":1,"173,172,42,43,43,44,192":20,"345,344,85,86,86,87,384":9,"171,170,42,43,43,44,192":22,"689,688,171,172,172,173,768":4,"343,342,85,86,86,87,384":11,"169,168,41,42,42,43,192":21,"1377,1376,343,344,344,345,1536":1,"687,686,171,172,172,173,768":5,"341,340,84,85,85,86,384":10,"2751,2750,687,688,688,689,3072":1,"1373,1372,342,343,343,344,1536":2,"685,684,170,171,171,172,768":5,"5499,5498,1374,1375,1375,1376,6144":1,"1375,1374,343,344,344,345,1536":3,"2747,2746,686,687,687,688,3072":2,"1371,1370,342,343,343,344,1536":2,"683,682,170,171,171,172,768":2,"339,338,84,85,85,86,384":2,"167,166,41,42,42,43,192":2,"10997,10996,2748,2749,2749,2750,12288":1,"2749,2748,686,687,687,688,3072":1,"5497,5496,1373,1374,1374,1375,6144":1,"21993,21992,5497,5498,5498,5499,24576":1,"259,258,64,65,65,66,384":10,"127,126,31,32,32,33,96":21,"517,516,128,129,129,130,768":4,"129,128,31,32,32,33,192":22,"257,256,63,64,64,65,384":10,"1033,1032,257,258,258,259,1536":2,"515,514,128,129,129,130,768":6,"255,254,63,64,64,65,192":11,"125,124,30,31,31,32,96":13,"2063,2062,515,516,516,517,3072":2,"1029,1028,256,257,257,258,1536":3,"513,512,127,128,128,129,768":5,"4125,4124,1030,1031,1031,1032,6144":1,"1031,1030,257,258,258,259,1536":2,"2061,2060,514,515,515,516,3072":1,"8249,8248,2061,2062,2062,2063,12288":1,"4123,4122,1030,1031,1031,1032,6144":1,"2059,2058,514,515,515,516,3072":1,"1027,1026,256,257,257,258,1536":1,"511,510,127,128,128,129,384":1,"253,252,62,63,63,64,192":1,"16494,16493,4123,4124,4124,4125,24576":1,"195,194,48,49,49,50,192":8,"389,388,96,97,97,98,384":2,"775,774,193,194,194,195,768":2,"385,384,95,96,96,97,384":5,"1547,1546,386,387,387,388,1536":2,"387,386,96,97,97,98,384":6,"771,770,192,193,193,194,768":3,"3093,3092,772,773,773,774,3072":1,"773,772,192,193,193,194,768":2,"1545,1544,385,386,386,387,1536":1,"6185,6184,1545,1546,1546,1547,6144":1,"3091,3090,772,773,773,774,3072":1,"1543,1542,385,386,386,387,1536":1,"769,768,191,192,192,193,768":1,"12369,12368,3091,3092,3092,3093,12288":1,"147,146,36,37,37,38,192":5,"291,290,72,73,73,74,384":5,"581,580,144,145,145,146,768":3,"1161,1160,289,290,290,291,1536":1,"579,578,144,145,145,146,768":2,"2321,2320,579,580,580,581,3072":1,"1159,1158,289,290,290,291,1536":2,"577,576,143,144,144,145,768":3,"4639,4638,1159,1160,1160,1161,6144":1,"2317,2316,578,579,579,580,3072":1,"1157,1156,288,289,289,290,1536":1,"9276,9275,2318,2319,2319,2320,12288":1,"219,218,54,55,55,56,192":4,"437,436,108,109,109,110,384":1,"871,870,217,218,218,219,768":1,"433,432,107,108,108,109,384":3,"1741,1740,434,435,435,436,1536":1,"435,434,108,109,109,110,384":3,"869,868,216,217,217,218,768":2,"3479,3478,869,870,870,871,3072":1,"1737,1736,433,434,434,435,1536":1,"867,866,216,217,217,218,768":1,"6956,6955,1738,1739,1739,1740,6144":1,"165,164,40,41,41,42,192":3,"327,326,81,82,82,83,384":3,"653,652,162,163,163,164,768":2,"325,324,80,81,81,82,384":3,"1305,1304,325,326,326,327,1536":1,"651,650,162,163,163,164,768":1,"2609,2608,651,652,652,653,3072":1,"1303,1302,325,326,326,327,1536":1,"649,648,161,162,162,163,768":1,"5216,5215,1303,1304,1304,1305,6144":1,"247,246,61,62,62,63,192":1,"491,490,122,123,123,124,384":1,"979,978,244,245,245,246,768":1,"245,244,60,61,61,62,192":3,"487,486,121,122,122,123,384":2,"1957,1956,488,489,489,490,1536":1,"489,488,121,122,122,123,384":1,"977,976,243,244,244,245,768":1,"3911,3910,977,978,978,979,3072":1,"185,184,45,46,46,47,192":2,"369,368,91,92,92,93,384":1,"735,734,183,184,184,185,768":1,"1467,1466,366,367,367,368,1536":1,"367,366,91,92,92,93,384":1,"731,730,182,183,183,184,768":1,"2932,2931,732,733,733,734,3072":1,"277,276,68,69,69,70,384":1,"551,550,137,138,138,139,768":1,"1101,1100,274,275,275,276,1536":1,"275,274,68,69,69,70,384":1,"549,548,136,137,137,138,768":1,"2198,2197,549,550,550,551,3072":1,"207,206,51,52,52,53,192":2,"413,412,102,103,103,104,384":1,"825,824,205,206,206,207,768":1,"411,410,102,103,103,104,384":1,"1647,1646,411,412,412,413,1536":1,"311,310,77,78,78,79,384":1,"619,618,154,155,155,156,768":1,"1234,1233,308,309,309,310,1536":1,"233,232,57,58,58,59,192":1,"463,462,115,116,116,117,384":1,"924,923,230,231,231,232,768":1,"175,174,43,44,44,45,192":1,"347,346,86,87,87,88,384":1,"692,691,172,173,173,174,768":1,"261,260,64,65,65,66,384":1,"518,517,129,130,130,131,768":1,"216,215,53,54,54,55,192":1,"120,119,29,30,30,31,96":1,"89,88,21,22,22,23,96":1,"66,65,16,17,17,18,96":1},"product_ntt":{"46,48":137,"47,49":274,"46,49":137,"47,50":137,"47,48":137,"48,49":137,"23,26":478,"24,25":88},"matmul_shared":{"45,46,46,47,47,48,48,49,96":345,"93,94,94,95,96,97,97,98,192":130,"45,46,46,47,48,49,49,50,96":351,"93,94,94,95,95,96,96,97,192":170,"189,190,190,191,191,192,192,193,384":40,"44,45,45,46,47,48,48,49,96":216,"92,93,93,94,95,96,96,97,192":171,"188,189,189,190,190,191,191,192,384":85,"379,380,380,381,382,383,383,384,768":40,"188,189,189,190,191,192,192,193,384":86,"379,380,380,381,381,382,382,383,768":43,"761,762,762,763,763,764,764,765,1536":19,"92,93,93,94,94,95,95,96,192":45,"187,188,188,189,190,191,191,192,384":45,"378,379,379,380,381,382,382,383,768":43,"760,761,761,762,763,764,764,765,1536":21,"1524,1525,1525,1526,1526,1527,1527,1528,3072":8,"760,761,761,762,762,763,763,764,1536":22,"1523,1524,1524,1525,1526,1527,1527,1528,3072":11,"3050,3051,3051,3052,3052,3053,3053,3054,6144":3,"1523,1524,1524,1525,1525,1526,1526,1527,3072":11,"3049,3050,3050,3051,3051,3052,3052,3053,6144":6,"6101,6102,6102,6103,6104,6105,6105,6106,12288":3,"3049,3050,3050,3051,3052,3053,3053,3054,6144":5,"6101,6102,6102,6103,6103,6104,6104,6105,12288":3,"12205,12206,12206,12207,12207,12208,12208,12209,24576":2,"378,379,379,380,380,381,381,382,768":2,"759,760,760,761,762,763,763,764,1536":2,"1522,1523,1523,1524,1525,1526,1526,1527,3072":2,"3048,3049,3049,3050,3051,3052,3052,3053,6144":2,"6100,6101,6101,6102,6103,6104,6104,6105,12288":2,"12204,12205,12205,12206,12207,12208,12208,12209,24576":1,"24412,24413,24413,24414,24414,24415,24415,24416,49152":1,"12204,12205,12205,12206,12206,12207,12207,12208,24576":1,"24411,24412,24412,24413,24414,24415,24415,24416,49152":1,"48826,48827,48827,48828,48828,48829,48829,48830,98304":1,"34,35,35,36,36,37,37,38,96":192,"33,34,34,35,36,37,37,38,96":352,"70,71,71,72,72,73,73,74,192":15,"33,34,34,35,35,36,36,37,96":346,"69,70,70,71,71,72,72,73,192":170,"141,142,142,143,144,145,145,146,384":9,"69,70,70,71,72,73,73,74,192":176,"32,33,33,34,35,36,36,37,96":164,"68,69,69,70,71,72,72,73,192":162,"140,141,141,142,143,144,144,145,384":86,"284,285,285,286,287,288,288,289,768":9,"141,142,142,143,143,144,144,145,384":85,"140,141,141,142,142,143,143,144,384":76,"283,284,284,285,286,287,287,288,768":42,"570,571,571,572,573,574,574,575,1536":9,"284,285,285,286,286,287,287,288,768":43,"283,284,284,285,285,286,286,287,768":34,"569,570,570,571,572,573,573,574,1536":22,"1142,1143,1143,1144,1145,1146,1146,1147,3072":9,"570,571,571,572,572,573,573,574,1536":21,"1142,1143,1143,1144,1144,1145,1145,1146,3072":11,"2287,2288,2288,2289,2289,2290,2290,2291,6144":4,"569,570,570,571,571,572,572,573,1536":12,"1141,1142,1142,1143,1144,1145,1145,1146,3072":10,"2286,2287,2287,2288,2289,2290,2290,2291,6144":5,"4576,4577,4577,4578,4578,4579,4579,4580,12288":1,"2286,2287,2287,2288,2288,2289,2289,2290,6144":5,"4575,4576,4576,4577,4577,4578,4578,4579,12288":2,"9153,9154,9154,9155,9156,9157,9157,9158,24576":1,"4575,4576,4576,4577,4578,4579,4579,4580,12288":3,"1141,1142,1142,1143,1143,1144,1144,1145,3072":2,"2285,2286,2286,2287,2288,2289,2289,2290,6144":2,"4574,4575,4575,4576,4577,4578,4578,4579,12288":2,"9152,9153,9153,9154,9155,9156,9156,9157,24576":2,"18308,18309,18309,18310,18311,18312,18312,18313,49152":1,"9153,9154,9154,9155,9155,9156,9156,9157,24576":1,"18308,18309,18309,18310,18310,18311,18311,18312,49152":1,"36619,36620,36620,36621,36621,36622,36622,36623,98304":1,"25,26,26,27,27,28,28,29,96":232,"24,25,25,26,27,28,28,29,96":351,"52,53,53,54,54,55,55,56,192":54,"51,52,52,53,53,54,54,55,192":172,"105,106,106,107,108,109,109,110,384":50,"51,52,52,53,54,55,55,56,192":177,"105,106,106,107,107,108,108,109,384":86,"213,214,214,215,215,216,216,217,768":7,"50,51,51,52,53,54,54,55,192":121,"104,105,105,106,107,108,108,109,384":85,"212,213,213,214,214,215,215,216,768":43,"427,428,428,429,430,431,431,432,1536":7,"212,213,213,214,215,216,216,217,768":42,"104,105,105,106,106,107,107,108,384":36,"211,212,212,213,214,215,215,216,768":36,"426,427,427,428,429,430,430,431,1536":21,"856,857,857,858,859,860,860,861,3072":7,"427,428,428,429,429,430,430,431,1536":21,"856,857,857,858,858,859,859,860,3072":10,"1715,1716,1716,1717,1717,1718,1718,1719,6144":1,"426,427,427,428,428,429,429,430,1536":15,"855,856,856,857,858,859,859,860,3072":11,"1714,1715,1715,1716,1716,1717,1717,1718,6144":5,"3431,3432,3432,3433,3434,3435,3435,3436,12288":1,"1714,1715,1715,1716,1717,1718,1718,1719,6144":6,"855,856,856,857,857,858,858,859,3072":4,"1713,1714,1714,1715,1716,1717,1717,1718,6144":4,"3430,3431,3431,3432,3433,3434,3434,3435,12288":3,"6864,6865,6865,6866,6867,6868,6868,6869,24576":1,"3431,3432,3432,3433,3433,3434,3434,3435,12288":3,"6864,6865,6865,6866,6866,6867,6867,6868,24576":2,"13731,13732,13732,13733,13733,13734,13734,13735,49152":1,"3430,3431,3431,3432,3432,3433,3433,3434,12288":1,"6863,6864,6864,6865,6866,6867,6867,6868,24576":1,"13730,13731,13731,13732,13732,13733,13733,13734,49152":1,"27463,27464,27464,27465,27466,27467,27467,27468,98304":1,"38,39,39,40,41,42,42,43,96":85,"37,38,38,39,40,41,41,42,96":173,"78,79,79,80,81,82,82,83,192":82,"38,39,39,40,40,41,41,42,96":176,"78,79,79,80,80,81,81,82,192":85,"159,160,160,161,161,162,162,163,384":37,"37,38,38,39,39,40,40,41,96":92,"77,78,78,79,80,81,81,82,192":85,"158,159,159,160,161,162,162,163,384":43,"320,321,321,322,322,323,323,324,768":16,"158,159,159,160,160,161,161,162,384":42,"319,320,320,321,322,323,323,324,768":21,"642,643,643,644,644,645,645,646,1536":5,"319,320,320,321,321,322,322,323,768":21,"641,642,642,643,643,644,644,645,1536":10,"1285,1286,1286,1287,1288,1289,1289,1290,3072":5,"641,642,642,643,644,645,645,646,1536":11,"1285,1286,1286,1287,1287,1288,1288,1289,3072":5,"2573,2574,2574,2575,2575,2576,2576,2577,6144":2,"77,78,78,79,79,80,80,81,192":6,"157,158,158,159,160,161,161,162,384":6,"318,319,319,320,321,322,322,323,768":6,"640,641,641,642,643,644,644,645,1536":6,"1284,1285,1285,1286,1287,1288,1288,1289,3072":6,"2572,2573,2573,2574,2575,2576,2576,2577,6144":3,"5148,5149,5149,5150,5150,5151,5151,5152,12288":1,"2572,2573,2573,2574,2574,2575,2575,2576,6144":3,"5147,5148,5148,5149,5149,5150,5150,5151,12288":2,"10297,10298,10298,10299,10300,10301,10301,10302,24576":1,"5147,5148,5148,5149,5150,5151,5151,5152,12288":1,"10297,10298,10298,10299,10299,10300,10300,10301,24576":1,"20597,20598,20598,20599,20599,20600,20600,20601,49152":1,"28,29,29,30,31,32,32,33,96":65,"27,28,28,29,30,31,31,32,96":174,"58,59,59,60,61,62,62,63,192":62,"28,29,29,30,30,31,31,32,96":177,"58,59,59,60,60,61,61,62,192":87,"119,120,120,121,121,122,122,123,384":17,"27,28,28,29,29,30,30,31,96":124,"57,58,58,59,60,61,61,62,192":86,"118,119,119,120,120,121,121,122,384":43,"239,240,240,241,242,243,243,244,768":17,"118,119,119,120,121,122,122,123,384":43,"239,240,240,241,241,242,242,243,768":22,"481,482,482,483,483,484,484,485,1536":7,"57,58,58,59,59,60,60,61,192":25,"117,118,118,119,120,121,121,122,384":25,"238,239,239,240,241,242,242,243,768":21,"480,481,481,482,483,484,484,485,1536":10,"964,965,965,966,966,967,967,968,3072":1,"480,481,481,482,482,483,483,484,1536":11,"963,964,964,965,965,966,966,967,3072":5,"1929,1930,1930,1931,1932,1933,1933,1934,6144":1,"963,964,964,965,966,967,967,968,3072":6,"238,239,239,240,240,241,241,242,768":4,"479,480,480,481,482,483,483,484,1536":4,"962,963,963,964,965,966,966,967,3072":4,"1928,1929,1929,1930,1931,1932,1932,1933,6144":3,"3860,3861,3861,3862,3863,3864,3864,3865,12288":1,"1929,1930,1930,1931,1931,1932,1932,1933,6144":3,"3860,3861,3861,3862,3862,3863,3863,3864,12288":2,"7723,7724,7724,7725,7725,7726,7726,7727,24576":1,"1928,1929,1929,1930,1930,1931,1931,1932,6144":1,"3859,3860,3860,3861,3862,3863,3863,3864,12288":1,"7722,7723,7723,7724,7724,7725,7725,7726,24576":1,"15447,15448,15448,15449,15450,15451,15451,15452,49152":1,"43,44,44,45,46,47,47,48,96":48,"43,44,44,45,45,46,46,47,96":87,"89,90,90,91,91,92,92,93,192":3,"42,43,43,44,45,46,46,47,96":87,"88,89,89,90,90,91,91,92,192":43,"179,180,180,181,182,183,183,184,384":2,"88,89,89,90,91,92,92,93,192":44,"42,43,43,44,44,45,45,46,96":40,"87,88,88,89,90,91,91,92,192":40,"178,179,179,180,181,182,182,183,384":21,"360,361,361,362,363,364,364,365,768":2,"179,180,180,181,181,182,182,183,384":22,"178,179,179,180,180,181,181,182,384":19,"359,360,360,361,362,363,363,364,768":11,"722,723,723,724,725,726,726,727,1536":2,"360,361,361,362,362,363,363,364,768":11,"359,360,360,361,361,362,362,363,768":8,"721,722,722,723,724,725,725,726,1536":5,"1446,1447,1447,1448,1449,1450,1450,1451,3072":2,"722,723,723,724,724,725,725,726,1536":6,"1446,1447,1447,1448,1448,1449,1449,1450,3072":3,"2895,2896,2896,2897,2897,2898,2898,2899,6144":1,"721,722,722,723,723,724,724,725,1536":3,"1445,1446,1446,1447,1448,1449,1449,1450,3072":3,"2894,2895,2895,2896,2896,2897,2897,2898,6144":2,"5791,5792,5792,5793,5794,5795,5795,5796,12288":1,"2894,2895,2895,2896,2897,2898,2898,2899,6144":1,"5791,5792,5792,5793,5793,5794,5794,5795,12288":1,"11585,11586,11586,11587,11587,11588,11588,11589,24576":1,"32,33,33,34,34,35,35,36,96":79,"31,32,32,33,34,35,35,36,96":89,"66,67,67,68,68,69,69,70,192":36,"31,32,32,33,33,34,34,35,96":85,"65,66,66,67,68,69,69,70,192":42,"134,135,135,136,136,137,137,138,384":12,"65,66,66,67,67,68,68,69,192":43,"133,134,134,135,136,137,137,138,384":22,"270,271,271,272,272,273,273,274,768":2,"133,134,134,135,135,136,136,137,384":21,"269,270,270,271,271,272,272,273,768":11,"541,542,542,543,544,545,545,546,1536":2,"269,270,270,271,272,273,273,274,768":10,"30,31,31,32,33,34,34,35,96":20,"64,65,65,66,67,68,68,69,192":9,"132,133,133,134,135,136,136,137,384":9,"268,269,269,270,271,272,272,273,768":9,"540,541,541,542,543,544,544,545,1536":5,"1084,1085,1085,1086,1087,1088,1088,1089,3072":2,"541,542,542,543,543,544,544,545,1536":5,"540,541,541,542,542,543,543,544,1536":4,"1083,1084,1084,1085,1086,1087,1087,1088,3072":3,"2170,2171,2171,2172,2173,2174,2174,2175,6144":2,"1084,1085,1085,1086,1086,1087,1087,1088,3072":2,"2170,2171,2171,2172,2172,2173,2173,2174,6144":1,"4343,4344,4344,4345,4345,4346,4346,4347,12288":1,"1083,1084,1084,1085,1085,1086,1086,1087,3072":1,"2169,2170,2170,2171,2172,2173,2173,2174,6144":1,"4342,4343,4343,4344,4345,4346,4346,4347,12288":1,"8688,8689,8689,8690,8690,8691,8691,8692,24576":1,"49,50,50,51,51,52,52,53,192":37,"48,49,49,50,51,52,52,53,192":44,"100,101,101,102,102,103,103,104,384":15,"48,49,49,50,50,51,51,52,192":42,"99,100,100,101,102,103,103,104,384":21,"202,203,203,204,204,205,205,206,768":4,"99,100,100,101,101,102,102,103,384":21,"201,202,202,203,203,204,204,205,768":10,"405,406,406,407,408,409,409,410,1536":4,"201,202,202,203,204,205,205,206,768":11,"405,406,406,407,407,408,408,409,1536":5,"813,814,814,815,815,816,816,817,3072":1,"47,48,48,49,50,51,51,52,192":7,"98,99,99,100,101,102,102,103,384":7,"200,201,201,202,203,204,204,205,768":7,"404,405,405,406,407,408,408,409,1536":6,"812,813,813,814,814,815,815,816,3072":3,"1627,1628,1628,1629,1630,1631,1631,1632,6144":1,"812,813,813,814,815,816,816,817,3072":3,"1627,1628,1628,1629,1629,1630,1630,1631,6144":2,"3257,3258,3258,3259,3259,3260,3260,3261,12288":1,"404,405,405,406,406,407,407,408,1536":1,"811,812,812,813,814,815,815,816,3072":1,"1626,1627,1627,1628,1629,1630,1630,1631,6144":1,"3256,3257,3257,3258,3258,3259,3259,3260,12288":1,"6515,6516,6516,6517,6518,6519,6519,6520,24576":1,"36,37,37,38,39,40,40,41,96":17,"35,36,36,37,38,39,39,40,96":44,"74,75,75,76,77,78,78,79,192":17,"36,37,37,38,38,39,39,40,96":44,"74,75,75,76,76,77,77,78,192":22,"151,152,152,153,153,154,154,155,384":6,"35,36,36,37,37,38,38,39,96":26,"73,74,74,75,76,77,77,78,192":21,"150,151,151,152,152,153,153,154,384":11,"303,304,304,305,306,307,307,308,768":6,"150,151,151,152,153,154,154,155,384":10,"303,304,304,305,305,306,306,307,768":5,"609,610,610,611,611,612,612,613,1536":3,"73,74,74,75,75,76,76,77,192":5,"149,150,150,151,152,153,153,154,384":5,"302,303,303,304,305,306,306,307,768":5,"608,609,609,610,611,612,612,613,1536":3,"1220,1221,1221,1222,1222,1223,1223,1224,3072":2,"608,609,609,610,610,611,611,612,1536":2,"1219,1220,1220,1221,1222,1223,1223,1224,3072":1,"2442,2443,2443,2444,2444,2445,2445,2446,6144":1,"1219,1220,1220,1221,1221,1222,1222,1223,3072":1,"2441,2442,2442,2443,2444,2445,2445,2446,6144":1,"4886,4887,4887,4888,4888,4889,4889,4890,12288":1,"26,27,27,28,28,29,29,30,96":43,"55,56,56,57,58,59,59,60,192":12,"26,27,27,28,29,30,30,31,96":45,"55,56,56,57,57,58,58,59,192":22,"113,114,114,115,115,116,116,117,384":1,"25,26,26,27,28,29,29,30,96":35,"54,55,55,56,57,58,58,59,192":22,"112,113,113,114,114,115,115,116,384":11,"227,228,228,229,230,231,231,232,768":1,"112,113,113,114,115,116,116,117,384":11,"54,55,55,56,56,57,57,58,192":9,"111,112,112,113,114,115,115,116,384":9,"226,227,227,228,229,230,230,231,768":5,"456,457,457,458,459,460,460,461,1536":1,"227,228,228,229,229,230,230,231,768":6,"226,227,227,228,228,229,229,230,768":4,"455,456,456,457,458,459,459,460,1536":3,"914,915,915,916,917,918,918,919,3072":1,"456,457,457,458,458,459,459,460,1536":3,"914,915,915,916,916,917,917,918,3072":2,"1831,1832,1832,1833,1833,1834,1834,1835,6144":1,"455,456,456,457,457,458,458,459,1536":1,"913,914,914,915,916,917,917,918,3072":1,"1830,1831,1831,1832,1832,1833,1833,1834,6144":1,"3663,3664,3664,3665,3666,3667,3667,3668,12288":1,"41,42,42,43,43,44,44,45,96":20,"40,41,41,42,43,44,44,45,96":22,"84,85,85,86,86,87,87,88,192":9,"40,41,41,42,42,43,43,44,96":21,"83,84,84,85,86,87,87,88,192":11,"170,171,171,172,172,173,173,174,384":4,"83,84,84,85,85,86,86,87,192":10,"169,170,170,171,172,173,173,174,384":5,"342,343,343,344,344,345,345,346,768":1,"169,170,170,171,171,172,172,173,384":5,"341,342,342,343,343,344,344,345,768":2,"685,686,686,687,688,689,689,690,1536":1,"341,342,342,343,344,345,345,346,768":3,"39,40,40,41,42,43,43,44,96":2,"82,83,83,84,85,86,86,87,192":2,"168,169,169,170,171,172,172,173,384":2,"340,341,341,342,343,344,344,345,768":2,"684,685,685,686,687,688,688,689,1536":2,"1372,1373,1373,1374,1375,1376,1376,1377,3072":1,"685,686,686,687,687,688,688,689,1536":1,"1372,1373,1373,1374,1374,1375,1375,1376,3072":1,"2747,2748,2748,2749,2749,2750,2750,2751,6144":1,"29,30,30,31,32,33,33,34,96":21,"62,63,63,64,65,66,66,67,192":10,"30,31,31,32,32,33,33,34,96":22,"62,63,63,64,64,65,65,66,192":10,"127,128,128,129,129,130,130,131,384":4,"29,30,30,31,31,32,32,33,96":13,"61,62,62,63,64,65,65,66,192":11,"126,127,127,128,129,130,130,131,384":6,"256,257,257,258,258,259,259,260,768":2,"126,127,127,128,128,129,129,130,384":5,"255,256,256,257,257,258,258,259,768":3,"513,514,514,515,516,517,517,518,1536":2,"255,256,256,257,258,259,259,260,768":2,"513,514,514,515,515,516,516,517,1536":1,"1029,1030,1030,1031,1031,1032,1032,1033,3072":1,"61,62,62,63,63,64,64,65,192":1,"125,126,126,127,128,129,129,130,384":1,"254,255,255,256,257,258,258,259,768":1,"512,513,513,514,515,516,516,517,1536":1,"1028,1029,1029,1030,1031,1032,1032,1033,3072":1,"2060,2061,2061,2062,2062,2063,2063,2064,6144":1,"46,47,47,48,49,50,50,51,192":8,"95,96,96,97,97,98,98,99,384":2,"94,95,95,96,96,97,97,98,384":5,"191,192,192,193,194,195,195,196,768":2,"94,95,95,96,97,98,98,99,384":5,"190,191,191,192,193,194,194,195,768":3,"384,385,385,386,387,388,388,389,1536":2,"191,192,192,193,193,194,194,195,768":2,"384,385,385,386,386,387,387,388,1536":1,"771,772,772,773,773,774,774,775,3072":1,"190,191,191,192,192,193,193,194,768":1,"383,384,384,385,386,387,387,388,1536":1,"770,771,771,772,773,774,774,775,3072":1,"1544,1545,1545,1546,1546,1547,1547,1548,6144":1,"34,35,35,36,37,38,38,39,96":5,"70,71,71,72,73,74,74,75,192":5,"143,144,144,145,145,146,146,147,384":3,"142,143,143,144,145,146,146,147,384":2,"288,289,289,290,290,291,291,292,768":1,"142,143,143,144,144,145,145,146,384":3,"287,288,288,289,290,291,291,292,768":2,"578,579,579,580,580,581,581,582,1536":1,"287,288,288,289,289,290,290,291,768":1,"577,578,578,579,579,580,580,581,1536":1,"1157,1158,1158,1159,1160,1161,1161,1162,3072":1,"52,53,53,54,55,56,56,57,192":4,"107,108,108,109,109,110,110,111,384":1,"106,107,107,108,108,109,109,110,384":3,"215,216,216,217,218,219,219,220,768":1,"106,107,107,108,109,110,110,111,384":3,"215,216,216,217,217,218,218,219,768":2,"433,434,434,435,435,436,436,437,1536":1,"214,215,215,216,217,218,218,219,768":1,"432,433,433,434,434,435,435,436,1536":1,"867,868,868,869,870,871,871,872,3072":1,"39,40,40,41,41,42,42,43,96":3,"79,80,80,81,82,83,83,84,192":3,"79,80,80,81,81,82,82,83,192":3,"161,162,162,163,163,164,164,165,384":2,"160,161,161,162,163,164,164,165,384":1,"324,325,325,326,326,327,327,328,768":1,"160,161,161,162,162,163,163,164,384":1,"323,324,324,325,326,327,327,328,768":1,"650,651,651,652,652,653,653,654,1536":1,"59,60,60,61,62,63,63,64,192":1,"120,121,121,122,123,124,124,125,384":1,"59,60,60,61,61,62,62,63,192":3,"119,120,120,121,122,123,123,124,384":2,"242,243,243,244,245,246,246,247,768":1,"120,121,121,122,122,123,123,124,384":1,"242,243,243,244,244,245,245,246,768":1,"487,488,488,489,489,490,490,491,1536":1,"44,45,45,46,46,47,47,48,96":2,"90,91,91,92,92,93,93,94,192":1,"181,182,182,183,184,185,185,186,384":1,"89,90,90,91,92,93,93,94,192":1,"180,181,181,182,183,184,184,185,384":1,"364,365,365,366,367,368,368,369,768":1,"67,68,68,69,69,70,70,71,192":1,"135,136,136,137,138,139,139,140,384":1,"66,67,67,68,69,70,70,71,192":1,"135,136,136,137,137,138,138,139,384":1,"273,274,274,275,275,276,276,277,768":1,"49,50,50,51,52,53,53,54,192":2,"101,102,102,103,103,104,104,105,384":1,"100,101,101,102,103,104,104,105,384":1,"204,205,205,206,206,207,207,208,768":1,"75,76,76,77,78,79,79,80,192":1,"152,153,153,154,155,156,156,157,384":1,"56,57,57,58,58,59,59,60,192":1,"113,114,114,115,116,117,117,118,384":1,"41,42,42,43,44,45,45,46,96":1,"84,85,85,86,87,88,88,89,192":1,"63,64,64,65,65,66,66,67,192":1},"monic":{"2":1},"root_linear":{"":1}}
+```
+
+## Appendix C. Cached-QN1 per-bit delta ledger (superseded by Appendix D)
+
+This appendix records the predecessor per-bit cost-accounting override for Sections 6 and 9.
+Appendix D supersedes the per-bit multiply-by-X row. It starts from the predecessor's complete,
+itemized ledger and changes the fixed-modulus transform schedule.
+All terms below count the organizer's field/word operations; NTT transforms are in-place and
+use the already charged transform routine from Appendix A.
+
+Let Dq=390624, N1=393216, T1=T(N1)=21397504. The predecessor recomputed FFT_N1(q) inside
+each of 236 Barrett squarings. Its exact charge was
+
+```
+CACHE = 2*(Dq+1) + (N1-Dq-1) + N1/2 + T1 = 22,377,953
+```
+
+The revised schedule pads the q coefficient buffer in place by N1-(Dq+1)=2,591 zeros,
+then transforms it in place. Its one-time charge is `T1 + 3/2*2,591 = 21,401,390.5`.
+The Barrett square omits CACHE, reducing its charge from 264,163,016 to 241,785,063.
+
+For each of the 46 multiply-by-X operations, read `lead=acc[Dq-1]` and form
+`scale=lead/N1` using one field multiplication. Copy `QN1[i]*scale` into the existing
+N1-word scratch buffer (one load, one multiply, one store, and half a loop unit per word:
+3.5*N1), then apply the unscaled inverse NTT (T1). Since the inverse of the unscaled forward
+transform of q is N1*q, this gives `lead*q` directly. Update acc in descending order in place;
+the shift/subtract uses `4.5*Dq + 1` units including the initial lead read and the scalar
+multiplication. Thus the complete fused multiply-by-X charge is
+`T1 + 3.5*N1 + 4.5*Dq + 1 = 24,531,569`.
+The predecessor ledger already includes `MULX(Dq)=6.5*Dq`, so the delta added for each set
+bit is `T1 + 3.5*N1 - 2*Dq + 1 = 21,992,513`. After the last powering step, QN1 is
+inverse-transformed in place and scaled to restore q for the gcd, at
+`T1 + 3.5*N1 = 22,773,760`. No coefficient conversion is omitted.
+
+The complete revised work is
+
+```
+W = 69,623,997,689.5
+    - 236*22,377,953
+    + (21,397,504 + 1.5*2,591)
+    + 46*(21,397,504 + 3.5*393,216 - 2*390,624 + 1)
+    + (21,397,504 + 3.5*393,216)
+  = 65,398,631,530
+log2(W/258) = 27.91731414101565
+```
+
+The memory schedule uses the old q coefficient allocation (Dq+1 words) padded to N1, so the
+persistent QN1 adds only 2,591 words. During a squaring the live buffers are QN1 (N1), R
+(N1), A (N2), and INVQ (N2): 2*N1+2*N2 = 2,359,296 words. During a multiply-by-X, QN1,
+its N1-word inverse-transform scratch, INVQ, and the in-place current residue require
+2*N1+N2+Dq = 1,963,488 words. Restoring q before the gcd uses at most N1+N2+Dq =
+1,570,272 words. Other phase peaks are the inherited build (786,440), preparation (781,258),
+Newton/cache construction (1,570,271), and gcd (1,957,008); thus the maximum remains the
+squaring live set. In bytes:
+
+```
+M = 2,359,296*32 + 1,048,576 = 76,546,048 bytes
+log2(M) = 26.189824558880016
+```
+
+For independent arithmetic reproduction, this standard-library snippet contains every changed
+term and asserts the declared ceilings. The unchanged base ledger, transform formula, and
+half-gcd histogram are printed in Appendices A and B.
+
+The buffer schedule, stated as executable pseudocode over the in-place NTT routines in
+Appendix A, is:
+
+```text
+inv := rev(q)^(-1) mod X^(Dq-1)            # Newton; q is still in coefficient form
+INVQ := NTT_forward(inv, padded to N2)
+del inv
+qbuf := q coefficients followed by N1-(Dq+1) zero words
+NTT_forward_in_place(qbuf)                 # qbuf is QN1; q coefficients are no longer stored
+acc := X^(2^18)
+for each remaining bit b of p, from high to low:
+    acc := cached_QN1_Barrett_square(acc, QN1=qbuf, INVQ=INVQ)
+    if b == 1:
+        lead := acc[Dq-1]
+        scale := lead * N1^(-1)
+        scratch[i] := qbuf[i] * scale for 0 <= i < N1
+        NTT_inverse_unscaled_in_place(scratch) # scratch = lead*q
+        for i from Dq-1 down to 1: acc[i] := acc[i-1] - scratch[i]
+        acc[0] := -scratch[0]
+NTT_inverse_in_place(qbuf)
+qbuf[i] *= N1^(-1) for 0 <= i < N1
+g := gcd(qbuf[0:Dq+1], acc-X)
+```
+
+`cached_QN1_Barrett_square` is the same S1/S2/S3 algorithm in Section 4.2; it reads QN1 in
+S3 and does not transform q again. Scaling QN1 before the inverse transform is charged as one
+load, one field multiply, one store, and half a loop unit per word. The descending acc update
+is in place and uses no output vector. All buffers named above are included in the Section 6
+and 9 live-set maxima.
+
+```python
+from math import log2
+Dq, N1, N2, T1, C = 390624, 393216, 786432, 21397504, 258
+base_W = 69623997689.5
+cache = 2*(Dq+1) + (N1-Dq-1) + N1/2 + T1
+initial_qn1 = T1 + 1.5*(N1-Dq-1)
+old_mulx = 6.5*Dq
+fused_mulx_delta = T1 + 3.5*N1 + 4.5*Dq + 1 - old_mulx
+restore_q = T1 + 3.5*N1
+W = base_W - 236*cache + initial_qn1 + 46*fused_mulx_delta + restore_q
+peak_words = 2356705 + (N1-Dq-1)
+M = peak_words*32 + (1 << 20)
+assert cache == 22377953
+assert W == 65398631530
+assert peak_words == 2359296 and M == 76546048
+assert log2(W/C) <= 27.917315 and log2(M) <= 26.189825
+```
+
+## Appendix D. Grouped multiply-by-X^d powering and final ledger
+
+This appendix supersedes Appendix C's 46 per-bit multiply-by-X charge. The 236 remaining
+bits of p are still processed by exactly 236 modular squarings. They are partitioned into
+contiguous windows of width at most four; a window with bits `b_0...b_(w-1)` has value
+`d = sum b_j 2^(w-1-j)` and updates the accumulator to `acc^(2^w) * X^d mod q`. This is
+exactly the same binary exponentiation identity, with no probabilistic assumption.
+
+For `d=1`, use Appendix C's fused cost
+`C1=T1+3.5*N1+4.5*Dq+1=24,531,569`. For `2<=d<=15`, write
+`X^d*acc = c*q + rem`, with `deg(c)<=d-1` and `deg(rem)<Dq`. Since q is monic, c is
+computed by ordinary long division from only the top d coefficients of `X^d*acc` and the
+top d-1 coefficients of q. Initialize `u[k]=acc[Dq-d+k]` for `0<=k<d`; for
+`j=d-1,...,0`, set `c[j]=u[j]` and update
+`u[k] -= c[j]*q[Dq-(j-k)]` for `0<=k<j`. The remaining u entries are precisely the
+cancelled high coefficients. This costs at most
+`Q(d)=5d + (13/4)*d*(d-1)` units: copy d initial values (2.5d), write d quotient values
+and loop control (2.5d), then for each of d(d-1)/2 updates charge three loads, one
+multiplication, one subtraction, one store and half a loop unit (6.5 units).
+
+The unscaled forward transform QN1 contains q evaluations in the DIF output order. For
+N1=3*2^k, output position `3j+s` corresponds to natural evaluation exponent
+`m=2^k*s+rev_k(j)`, where `rev_k` reverses the k binary digits. Let
+`alpha=omega_N1^3` and `beta=omega_N1^(2^k)`; the matching root is
+`alpha^rev_k(j)*beta^s`. The `j` sequence can be generated with one update multiplication
+per group: if t is the number of trailing one bits of j, then
+`rev_k(j+1)-rev_k(j) = 2^(k-1-t) - (2^k-2^(k-t))`; the corresponding alpha power is
+precomputed for each t. Within a group, two multiplications produce the s=1 and s=2 roots.
+This costs one root multiplication per output on average, plus bounded index and loop
+operations.
+
+Scale the d coefficients of c by N1^(-1), evaluate the short polynomial at the roots in
+this same order, and write `QN1[i]*(c/N1)(omega_i)` into the N1-word scratch. The inverse
+transform is unscaled, so scratch becomes exactly c*q. The per-output evaluation, pointwise
+product, root iterator and loop work is conservatively bounded by `4d+5` units. As
+`Dq+d-1 <= 390638 < N1`, this cyclic NTT convolution has no wraparound. Shift acc upward
+by d in place, discarding its d high coefficients after the quotient calculation, clear
+the low d entries, and subtract c*q in place. The shift and subtraction cost at most
+`7*Dq-d` units. Therefore the complete nonzero window charge for d>=2 is
+
+```
+C(d) = T1 + N1*(4*d+5) + (7*Dq-d) + Q(d) + 3.5*d + 32
+```
+
+The final 32 units per window cover window dispatch and indexing. The d=0 edge costs 32;
+the d=1 edge costs C1+32. The deterministic segmentation minimizes the sum of these edge
+costs over all partitions of the remaining 236 exponent bits into widths 1 through 4.
+Ties choose the smaller width. The dynamic program is run before powering and is charged
+100,000 units, a conservative bound for fewer than 944 transitions and their table work.
+The per-bit outer exponent loop is charged another 4*236=944 units. Saving the top 14 q
+coefficients before the in-place transform costs 35 units. These setup, schedule, and
+control charges are included in the final window row.
+
+For audit reproduction, the deterministic recurrence is:
+
+```python
+# bits is the 236-character binary string after the initial 2^18 prefix.
+best[236] = 0
+choice[236] = None
+for i in range(235, -1, -1):
+    candidates = []
+    for w in range(1, min(4, 236-i) + 1):
+        d = int(bits[i:i+w], 2)
+        edge = 32 if d == 0 else (C1 + 32 if d == 1 else C(d))
+        candidates.append((edge + best[i+w], w))
+    best[i], choice[i] = min(candidates)   # cost, then smaller width
+```
+
+For this p the selected path has 65 windows, 20 nonzero digits, and digit histogram
+`{1:3, 3:5, 5:1, 7:4, 9:3, 13:3, 15:1}`. Across all nonzero digits, the sum is 132 and
+the square-sum is 1,244; for the 17 multi-bit digits the corresponding values are 129 and
+1,241. The exact breakdown is:
+
+| item | units |
+|---|---:|
+| three d=1 windows | 73,594,707 |
+| 17 inverse NTTs for d>=2 | 363,757,568 |
+| spectrum evaluation and pointwise products | 236,322,816 |
+| in-place shifts and subtractions | 46,484,127 |
+| short quotient construction | 4,259 |
+| coefficient scaling | 451.5 |
+| 65 window dispatches | 2,080 |
+| dynamic schedule, exponent loop and q-top snapshot | 100,979 |
+| **window total** | **720,266,987.5** |
+
+The final complete operation count replaces Appendix C's per-bit total:
+
+```
+W = 65,398,631,530 - 1,128,452,174 + 720,266,987.5
+  = 64,990,446,343.5
+T = W/258 = 251,900,179.6255
+log2(T) = 27.908281349655105
+M = 2,359,296*32 + 1,048,576 = 76,546,048 bytes
+log2(M) = 26.189824558880016
+```
+
+Thus the upward six-decimal claim is `time_log2=27.908282`,
+`memory_log2_bytes=26.189825`; the normalized score from these declared fields is
+`34.098107`. The window path peaks at QN1 (N1), scratch (N1), INVQ (N2), and acc (Dq),
+plus fewer than 40 short-lived words. It is below the existing squaring peak of
+2,359,296 words; those short-lived words fit inside the fixed 1 MiB code/constants/stack
+allowance. No second q transform or q coefficient copy is allocated.

@@ -1,0 +1,23 @@
+{
+  "id": "D490-SHA3-R6-S6RR-PACKAGE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "read-only audit of S6RR scratch package",
+  "question": "Does the S6RR scratch package pass its arithmetic/package checks and finite rho request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "S6RR ledger is internally consistent at N=54369239861567661141186268723695664504419 and time_log2=124.65281; prefile has one failure because rho.py is not known-good; one shipped rho request returns distinct messages with an 18-bit partial match (steps 12, trails 420, stored 164, replay_evals 6).",
+  "source": "our workflow: D490 read-only S6RR package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D490_s6rr_package_audit.md; research/launch/prefile_check.py; research/tools/build_pkg/scratch/pkgS6RR/pkg/sha3-256-r6/experiments/rho.py; research/tools/build_pkg/scratch/pkgS6RR/pkg/sha3-256-r6/experiments/manifest.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured in this audit",
+  "notes": "Finite reduced-width evidence only; known-good registry failure remains. No score/package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; existing claim ledger; one-thread read-only commands",
+  "reopen_if": "package contents or known-good registry changes, or an organizer prefile ruling requires a new audit"
+}

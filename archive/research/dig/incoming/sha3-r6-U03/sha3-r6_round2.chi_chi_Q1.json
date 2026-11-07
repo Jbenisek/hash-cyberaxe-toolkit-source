@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "1-indexed round 3 chi + theta4 parities (leader chi3 block, 53.30 ops/message); 140-bit key = digest lanes 0..3 at z in KEEP (35 planes)",
+ "question": "How many rows, bits and conditions does the chi3 block use?",
+ "labels": [
+  "N",
+  "B"
+ ],
+ "status": "COMPUTED",
+ "number": "rows 320 of 320 (1600 chi outputs, 1600 input bits, 320 theta4 column parities); conditions at this block: 0 own (the 256 linear prefix conditions of rounds 1-2 are upstream); per Gray step only 273 of 320 rows (499 of 1600 theta3-applied words) change, 47 rows have unchanged input",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/sha3-r6-U03/work/ (kk.py validated 24r vs hashlib and 6r vs organizer verifier; cone.py, fam.py, fp.py, q.py; cone.json, footprint.json, q_results.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell round2.chi|Q1. Family = leader's 128-byte prefix family rebuilt by us (L8=0, L5=L15=D0, C2=NOT rotl(C4,1); z XORed into lanes 4 and 14): A2 affine in z checked 30x256, z-flip support 22 words (matches Lemma 3). Exact backward bit-cone from the 140 key bits through rounds 6,5,4,3 (cone.json): chi6 140 out/35 rows; chi5 1161 out/290 rows (reads 1363 words, matches leader Lemma 10); chi4 1600/320; chi3 1600/320 rows, 320 theta columns. Step footprint measured with 24 random bases x 32 flips x 256 groups: 22 / 499 / 1087 words after A2 / theta3 / chi3; 273 chi3 rows touched, identical for every flip (z-rotation symmetry). Leader quotes 554 words for the stored round-3 patch; ours is the exact union over 256 groups (499), theirs may be a structural bound (ours structural 750). Not reconciled with K=13 bodies (not read).",
+ "topic": "sha3r6 round2.chi Q1"
+}

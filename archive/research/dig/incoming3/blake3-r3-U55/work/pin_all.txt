@@ -1,0 +1,10 @@
+pin analogue e=0 p=4 mode=0 rounds=3 runs=1000 mean_evals=83476  ratio_to_2^e*sqrt(pi 2^32/2)=1.0163 se=0.0164  trajectories_per_run=1.0
+pin analogue e=0 p=4 mode=1 rounds=3 runs=1000 mean_evals=81692  ratio_to_2^e*sqrt(pi 2^32/2)=0.9946 se=0.0168  trajectories_per_run=1.0
+pin analogue e=4 p=4 mode=0 rounds=3 runs=100 mean_evals=1504488  ratio_to_2^e*sqrt(pi 2^32/2)=1.1448 se=0.1271  trajectories_per_run=18.2
+pin analogue e=4 p=5 mode=0 rounds=3 runs=100 mean_evals=1543254  ratio_to_2^e*sqrt(pi 2^32/2)=1.1743 se=0.1194  trajectories_per_run=18.7
+pin analogue e=4 p=6 mode=0 rounds=3 runs=100 mean_evals=970570  ratio_to_2^e*sqrt(pi 2^32/2)=0.7385 se=0.0667  trajectories_per_run=11.7
+pin analogue e=4 p=7 mode=0 rounds=3 runs=100 mean_evals=1170725  ratio_to_2^e*sqrt(pi 2^32/2)=0.8908 se=0.0743  trajectories_per_run=14.1
+pin analogue e=4 p=4 mode=1 rounds=3 runs=100 mean_evals=1226999  ratio_to_2^e*sqrt(pi 2^32/2)=0.9337 se=0.0904  trajectories_per_run=14.8
+pin analogue e=8 p=4 mode=0 rounds=3 runs=12 mean_evals=16907758  ratio_to_2^e*sqrt(pi 2^32/2)=0.8041 se=0.2031  trajectories_per_run=205.2
+pin analogue e=8 p=4 mode=1 rounds=3 runs=12 mean_evals=31701356  ratio_to_2^e*sqrt(pi 2^32/2)=1.5076 se=0.4431  trajectories_per_run=380.6
+finished

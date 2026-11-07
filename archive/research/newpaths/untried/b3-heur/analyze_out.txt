@@ -1,0 +1,26 @@
+log evals_s1.tsv: 5794 evaluations (distinct points, cache hits are not re-run)
+  phase A: 1212 evaluations, binary seconds 241.9
+  phase B: 4581 evaluations, binary seconds 294.6
+  phase T: 1 evaluations, binary seconds 0.2
+  return codes: {'0': 5794}
+
+members of the front-line class (eta 830303cf) evaluated: 2499 of 2^19 = 524,288
+  S values: {67633152: 2499}
+  r7 values: {67698688: 2499}
+  total values: {67698688: 617, 75235328: 582, 76161024: 1300}
+  members with S > 67,633,152: 0; with total > 76,161,024: 0; with total = 76,161,024: 1300
+  total grouped by e1 bits (2, 21, 26):
+    (0, 0, 0): [67698688]  (121 members)
+    (0, 0, 1): [75235328]  (325 members)
+    (0, 1, 0): [75235328]  (257 members)
+    (0, 1, 1): [67698688]  (134 members)
+    (1, 0, 0): [67698688]  (151 members)
+    (1, 0, 1): [76161024]  (826 members)
+    (1, 1, 0): [76161024]  (474 members)
+    (1, 1, 1): [67698688]  (211 members)
+  total a function of bits (2, 21, 26) alone on the sample: True
+
+off-class points evaluated: 3295, distinct classes (eta) 1029, classes with any nonzero rate: 2
+  class fixed-bit counts visited (class size 2^(32-fixed)): {8: 3, 9: 19, 10: 54, 11: 93, 12: 137, 13: 149, 14: 143, 15: 137, 16: 113, 17: 76, 18: 48, 19: 30, 20: 18, 21: 5, 22: 3, 23: 1}
+    eta 830503cf fixed 13: 52 members, best 732c3f26 total 21,196,800 S 15,073,280 rows 16
+    eta 830303d7 fixed 13: 40 members, best 6f300f4b total 1,572,864 S 1,572,864 rows 1

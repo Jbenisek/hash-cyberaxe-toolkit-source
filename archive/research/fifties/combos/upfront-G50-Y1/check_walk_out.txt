@@ -1,0 +1,7 @@
+0 walk {'opened': 18, 'e_lanes': 9, 'passes': 1, 'solver_calls': 0, 'fills': 5} halted 0 mismatches 0 | vector {'opened': 18, 'e_lanes': 9, 'passes': 1, 'solver_calls': 0, 'fills': 5} OK
+1 walk {'opened': 12, 'e_lanes': 36, 'passes': 0, 'solver_calls': 0, 'fills': 12} halted 0 mismatches 0 | vector {'opened': 12, 'e_lanes': 36, 'passes': 0, 'solver_calls': 0, 'fills': 12} OK
+2 walk {'opened': 24, 'e_lanes': 18, 'passes': 0, 'solver_calls': 0, 'fills': 8} halted 0 mismatches 0 | vector {'opened': 24, 'e_lanes': 18, 'passes': 0, 'solver_calls': 0, 'fills': 8} OK
+3 walk {'opened': 18, 'e_lanes': 151, 'passes': 1, 'solver_calls': 1, 'fills': 55} halted 0 mismatches 0 | vector {'opened': 18, 'e_lanes': 151, 'passes': 1, 'solver_calls': 1, 'fills': 55} OK
+4 walk {'opened': 15, 'e_lanes': 9, 'passes': 0, 'solver_calls': 0, 'fills': 4} halted 0 mismatches 0 | vector {'opened': 15, 'e_lanes': 9, 'passes': 0, 'solver_calls': 0, 'fills': 4} OK
+5 walk {'opened': 20, 'e_lanes': 135, 'passes': 1, 'solver_calls': 0, 'fills': 60} halted 0 mismatches 0 | vector {'opened': 20, 'e_lanes': 135, 'passes': 1, 'solver_calls': 0, 'fills': 60} OK
+contexts with a difference: 0

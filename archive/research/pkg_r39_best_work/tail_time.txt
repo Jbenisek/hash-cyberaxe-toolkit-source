@@ -1,0 +1,7 @@
+dk rc=0 ms=17266
+sha256 rc=0 ms=17756
+dk rc=0 ms=16980
+sha256 rc=0 ms=16624
+dk rc=0 ms=16703
+sha256 rc=0 ms=16956
+ 00:02:53 up  8:12,  1 user,  load average: 22.80, 28.02, 33.93

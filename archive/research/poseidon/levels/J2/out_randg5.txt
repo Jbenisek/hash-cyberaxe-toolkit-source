@@ -1,0 +1,6 @@
+randg5 0: nfac 20 deg4 7 roots 2 | 132 76 76 76 76 76 36 33 9 4 4 4 4 4 4 4 2 2 1 1 (7s)
+randg5 1: nfac 20 deg4 4 roots 3 | 348 87 28 28 28 20 14 12 12 12 7 6 4 4 4 4 3 1 1 1 (5s)
+randg5 2: nfac 17 deg4 5 roots 2 | 124 124 100 62 60 52 40 25 13 4 4 4 4 4 2 1 1 (5s)
+randg5 3: nfac 10 deg4 6 roots 0 | 340 140 85 35 4 4 4 4 4 4 (5s)
+randg5 4: nfac 10 deg4 1 roots 0 | 228 140 84 57 28 28 21 20 14 4 (4s)
+randg5 5: nfac 9 deg4 1 roots 0 | 172 172 120 86 20 20 20 10 4 (5s)

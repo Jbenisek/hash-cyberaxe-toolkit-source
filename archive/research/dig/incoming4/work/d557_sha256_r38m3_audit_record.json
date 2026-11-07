@@ -1,0 +1,23 @@
+{
+  "id": "D557-SHA256-R38M3-PREFILE-SELFTEST-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR38M3 prefile and a0lean38 selftest",
+  "question": "What is verified for pkgR38M3?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR38M3 prefile ALL PASS: N=789779068018615953003308365799, time_log2=87.90374, log2(N/2728)=87.90373595. One-process a0lean38.py selftest exits 0; published pair, 90 classes x 3840, row-16 affine/neighbours, 12 prefilter bits, W7, step3b, rows19/20, seven bit-sliced prefilters, online zero lane mismatches, q3 11 verified semi-free-start pairs/0 failures/4 alternate E19 patterns, and 512 variants all pass. Finite evidence only; no score/premise transfer.",
+  "source": "our workflow: D557 read-only pkgR38M3 prefile/selftest audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D557_r38m3_audit.md; research/tools/build_pkg/scratch/pkgR38M3/pkg/sha256-r38/claim.json; research/tools/build_pkg/scratch/pkgR38M3/pkg/sha256-r38/proof.md; research/tools/build_pkg/scratch/pkgR38M3/pkg/sha256-r38/experiments/a0lean38.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package/self-test evidence only; no package/stage/filing/submission.",
+  "held_fixed": "pkgR38M3 package bytes as found; one process; no package writes",
+  "reopen_if": "owner/organizer ruling or a supplied public request"
+}

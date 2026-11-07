@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m13",
+ "question": "Q1 value/count as used",
+ "labels": [
+  "X"
+ ],
+ "status": "COMPUTED",
+ "number": "m13 is chain word 5: digest word 5 fed back unchanged (identity embedding into m8..m15); free, 32 bits, variable in every lane. Used 3 times: R0D2.y (marginal 2 ops); R1C3.y (marginal 2 ops); R2C2.x (marginal 2 ops); marginal ops sum 6 of 595 (each read counted with the other reads kept; a read that starts a round-0 call costs more because it unfolds a constant call). Digest word 5 as the source of m13: bit bias over 200000 random chain inputs, 32 bits, max |z| = 1.91 (limit for 32 tests about 3.3).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U55/work/msg_reads.json; research/dig/incoming3/blake3-r3-U55/work/words.py; research/dig/incoming3/blake3-r3-U55/work/words.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|m13|msgword|Q1. exact trace counts; bit bias sampled (fixed seed). validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "target 0^32||x (m0..m7 = 0, m8..m15 chain words, identity embedding), standard IV/counter 0/length 64/flags 11, 3 rounds, filed circuit rules (7 lanes x 36-bit pitch, filed Tracer rules, 595 ops per batch of 7); all other reads unchanged",
+ "reopen_if": "a reading of the machine rule or a lane layout that charges these three reads differently, or a measured bias of digest word 5 on the full 256-bit chain (T2 of the filed entry covered 42 projections)",
+ "topic": "blake3-r3|m13|msgword|Q1"
+}

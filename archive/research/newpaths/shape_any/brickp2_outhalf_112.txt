@@ -1,0 +1,3 @@
+start: brick width 8 (F'=4, |P|=8)
+it 1: brick width 7 F'=3 |P|=9 groups E=80 P=D3.a1,m0,m1,m2,m3,m4,m5,m6,m7,
+it 2: brick width 6 F'=2 |P|=10 groups E=80 P=C2.d1,D3.a1,m0,m1,m2,m3,m4,m5,m6,m7,

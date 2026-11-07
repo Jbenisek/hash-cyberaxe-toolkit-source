@@ -1,0 +1,16 @@
+# twists w=16 N=2^20 seed=4.  eq = max_ij Pr[out_j(tM)==out_i(M)] * 2^w (uniform 1); rot-eq for rotations: == ROT(out_i(M)); corr = max |bit correlation| / sigma (sigma=2^-10); xdiff/adiff = max_i max_delta Pr[diff=delta]*2^w; orbit = XOR of out over the closed orbit: max |bit bias|/sigma
+rot1          msg-fixed 0.0000 | eq max  1.625 at (np.int64(7), np.int64(5)) | rot-eq max  1.625 diag 0.438..1.250 | corr  3.91 | xdiff  2.312 adiff  2.500
+rot_half      msg-fixed 0.0000 | eq max  1.688 at (np.int64(3), np.int64(4)) | rot-eq max  1.688 diag 0.688..1.375 | corr  4.24 | xdiff  2.312 adiff  2.375 | orbit(k=2) bias  2.78 Pr[word=0]*2^w  0.945
+P             msg-fixed 0.0000 | eq max  1.688 at (np.int64(5), np.int64(5)) | corr  4.25 | xdiff  2.250 adiff  2.562 | orbit(k=8) bias  2.54 Pr[word=0]*2^w  0.930
+Pinv          msg-fixed 0.0000 | eq max  1.688 at (np.int64(0), np.int64(2)) | corr  4.04 | xdiff  2.375 adiff  2.312 | orbit(k=8) bias  2.54 Pr[word=0]*2^w  0.930
+P2            msg-fixed 0.0000 | eq max  1.688 at (np.int64(1), np.int64(5)) | corr  3.74 | xdiff  2.312 adiff  2.312 | orbit(k=4) bias  2.67 Pr[word=0]*2^w  0.875
+P4            msg-fixed 0.0000 | eq max  1.625 at (np.int64(4), np.int64(4)) | corr  4.11 | xdiff  2.312 adiff  2.312 | orbit(k=2) bias  3.12 Pr[word=0]*2^w  1.094
+torus_shift2  msg-fixed 0.0000 | eq max  1.625 at (np.int64(2), np.int64(6)) | corr  4.17 | xdiff  2.375 adiff  2.375 | orbit(k=2) bias  2.62 Pr[word=0]*2^w  1.078
+torus_shift1  msg-fixed 0.0000 | eq max  1.688 at (np.int64(7), np.int64(3)) | corr  4.85 | xdiff  2.375 adiff  2.375 | orbit(k=4) bias  2.70 Pr[word=0]*2^w  0.867
+transpose     msg-fixed 0.0000 | eq max  1.812 at (np.int64(6), np.int64(2)) | corr  4.30 | xdiff  2.375 adiff  2.375 | orbit(k=2) bias  2.56 Pr[word=0]*2^w  1.141
+mirror        msg-fixed 0.0000 | eq max  1.625 at (np.int64(7), np.int64(5)) | corr  4.24 | xdiff  2.312 adiff  2.375 | orbit(k=2) bias  2.36 Pr[word=0]*2^w  1.055
+palindrome    msg-fixed 0.0000 | eq max  1.938 at (np.int64(3), np.int64(2)) | corr  4.31 | xdiff  2.562 adiff  2.438 | orbit(k=2) bias  2.76 Pr[word=0]*2^w  1.000
+swap_xy       msg-fixed 0.0000 | eq max  1.562 at (np.int64(1), np.int64(6)) | corr  4.34 | xdiff  2.500 adiff  2.438 | orbit(k=2) bias  2.69 Pr[word=0]*2^w  0.914
+complement    msg-fixed 0.0000 | eq max  1.625 at (np.int64(4), np.int64(5)) | corr  3.86 | xdiff  2.312 adiff  2.250 | orbit(k=2) bias  3.29 Pr[word=0]*2^w  0.898
+negation      msg-fixed 0.0000 | eq max  1.625 at (np.int64(4), np.int64(1)) | corr  4.09 | xdiff  2.375 adiff  2.375 | orbit(k=2) bias  2.67 Pr[word=0]*2^w  1.086
+random        msg-fixed 0.0000 | eq max  1.625 at (np.int64(0), np.int64(0)) | corr  3.88 | xdiff  2.375 adiff  2.375

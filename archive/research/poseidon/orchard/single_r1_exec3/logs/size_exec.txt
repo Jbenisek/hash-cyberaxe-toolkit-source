@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 276715	   1728	   5464	 283907	  45503	single

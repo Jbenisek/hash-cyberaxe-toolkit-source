@@ -1,0 +1,1 @@
+PROJ src=random k=9 name=SUMALL bits=32 observed=524278 expected=524288.0 ratio=1.0000 z=-0.01

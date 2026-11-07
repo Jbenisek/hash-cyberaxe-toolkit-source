@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json, psearch.cpp, psearch30.txt, plever.py, plever_out.json, scan_joint.txt",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.00241,
+ "gain_basis": "T",
+ "object": "last block of a multi-block chunk",
+ "question": "Q4: alternatives",
+ "labels": [
+  "S"
+ ],
+ "status": "COMPUTED",
+ "number": "Chaining value h tuned by a prefix block. Search: 64-byte block P (words P0 = t, P1 = t >> 32, rest 0), h = first 8 words of the 3-round non-root compression of P (counter 0, length 64, flags 1); the next block (flags 10, message 0^32 || x) has 16 constant-fold sites (12 single words b', c', d' of the four round-0 columns, 4 sums). 2^30 trials, 43 s on 8 threads at nice 10: 5 hits (expected 16 * 2^30 / 2^32 = 4): t = 887398322 (site v0'+v5'), 214938249 (v12'), 639130335 (v14'), 939343106 (v0'+v5'), 508565131 (v13'). For each: the traced circuit with cv = h, flags 10 has 594 ops, equals the scalar compress, and the circuit output equals verifier/blake3.py at 3 rounds for 210 random messages P || 0^32 || x per hit (128-byte messages, two blocks). time_log2 125.10616 vs 125.10856: saving 0.00241 bit. Two sites need about 2^64 / C(16,2) = 2^57 trials by this search; not run.",
+ "topic": "b3r3.MODE.last.Q4",
+ "notes": "universe cell blake3-r3|MODE.last|MODE|Q4. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. LEVER (small): applies to the filed 125.1087 entry as a change of message layout (two blocks, flags 10) and a 64-byte constant prefix block; the ledger gets the same terms except PH 594 and one extra constant compression done offline (setup 2000 already covers constants). Caveats: not run through rho.py end to end with a two-block message (circuit and verifier agree); judge acceptance of a 128-byte pair not tested; the prefix search is advice (2^30 work) and the entry would have to state it.",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "k = 2: 2^57-trial search or a structured preimage; or a ruling that the advice/prefix block is charged more than 2^30 compressions"
+}

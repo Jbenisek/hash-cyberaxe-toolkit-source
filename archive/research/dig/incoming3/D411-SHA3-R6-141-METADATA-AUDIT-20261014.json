@@ -1,0 +1,22 @@
+{
+  "id": "D411-SHA3-R6-141-METADATA-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 141-bit derivative proof and claim metadata audit",
+  "question": "Does the checked-in wider-key source and exact ledger agree with the proof and claim text?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Source KEYMASK has 141 variable bits, NPL=178, and the embedded exact ledger has BKEY=141. The proof narrative and claim restrictions retain stale 140-bit/132-free-bit/R140 wording and a 2^140 key-word cardinality sentence. The 2^144-word address ceiling is unchanged, but a filing-ready proof must state the 141-bit sparse domain and updated bounds explicitly.",
+  "source": "Static audit of the existing pkgS6K141 source, proof, and claim",
+  "own_test": true,
+  "evidence": "research/sol_answer_D411_sha3r6_141_metadata_audit.md; research/retest/lens_t3/d411_141_metadata_audit.py; research/retest/lens_t3/D411_run.json; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/claim.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.01,
+  "prior": 0.8,
+  "gain_basis": "C",
+  "notes": "The row is not filing-ready until the stale proof/claim text and sparse-table cardinality wording are corrected and organizer acceptance is obtained. No package edit, staging, filing, or submission.",
+  "reopen_if": "The derivative proof or claim is refreshed, the organizer rules on the 141-bit row, or a new source/ledger revision changes BKEY, NPL, or the memory argument."
+}

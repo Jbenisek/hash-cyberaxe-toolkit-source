@@ -1,0 +1,1 @@
+2011/286	Bicliques for Preimages: Attacks on Skein-512 and the SHA-2 family	s2	https://link.springer.com/content/pdf/10.1007/978-3-642-34047-5_15.pdf

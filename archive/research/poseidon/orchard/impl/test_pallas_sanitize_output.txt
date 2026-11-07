@@ -1,0 +1,9 @@
+field vectors checked (add, sub, mul, sqr, inv, legendre, sqrt, hex): 506
+random identities ok; sqrt on 2000 squares and 987 non-residues
+Tonelli-Shanks max primitives seen over 64 random squares: 992
+fp_inv: bitlen(p-2)=255 popcount=77 -> 254 sqr + 76 mul = 330 primitives (inv_calls=1)
+fp_legendre: 253 sqr + 45 mul = 298 primitives
+fp_sqrt on a random square (one sample): 707 sqr + 124 mul = 831 primitives
+poseidon vectors checked: 3155  (r=0:1008 r=1:1008 r=2:1008 r=3:20 r=5:20 r=10:20 r=30:20 r=55:20 r=56:31)
+per-call primitive count == C(r) = 216+21r on every vector (r=1: 237, r=2: 258), one call = 1 unit
+ALL CHECKS PASSED

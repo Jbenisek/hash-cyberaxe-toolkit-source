@@ -1,0 +1,157 @@
+fringe/ - non-default angles for a 2-round BLAKE3 collision (cost model: 1 unit per compression, 1/430 per
+other word op, memory free, preprocessing up to ~2^88 negligible).  Plain text.  Owner: the "fringe" agent.
+Tags: COMPUTED = measured by a program here; DERIVED = follows by argument from stated facts; GUESS = judgement.
+
+THE DEFAULT (what most teams do)  [GUESS]
+  A differential pair through the 2 rounds, usually from the free length difference (v14 = 55 vs 63 absorbed in
+  K2 by m4, m5), counted with message modification / classes, or SAT on the whole collision.  The board's
+  92-94 entries and our 93.5 are this.  Everything below is something else.
+
+TOOLS (all checked)
+  toyb3.py      toy 2-round BLAKE3, any w; matches Grok's job28.compress on 800 random messages at w=8,12,16,32
+                and the hand-checked 32-bit G of job28/ANSWER.md  [COMPUTED: python -B toyb3.py]
+  gdv.py        word-level guess-and-determine (same model as ../gd_order.py) over more family variants
+  gdcv.py       the same with the chaining value of a 2-block message as a table-backed block (angle 2)
+  export_rules.py, bf_copy.c (copy of ../audit/bf.c), bfrun.sh   exact minimum-guess search
+  cnfgen.py, satrun.sh, satcheck.sh, cmscheck.sh                bit-level SAT sampler (angle 7)
+  quicktests.py  absorb / sym / neutral / rx / sibling;  famcoll.py (angle 8);  bfbase.py (SAT baseline)
+  gdtab.py      2^64 whole-call table rules (angle 11);  lsearch.py  local search for smaller guess sets
+  gdnum.py      numeric check of a GD order on the toy (C program generated from the order, members verified)
+
+ANGLE 1  SUM ABSORPTION: the 'fixed' family over-constrains by 2 words.   ALIVE (free improvement, exact search below)
+  Fact: a and x enter G only through a1 = a+b+x (b is used again, a and x are not).  So E0's output depends on
+  (Y0+m1, Y5, Y10, Y15, m11) and E2's on (Y2+m9, Y7, Y8, Y13, m14): 10 effective words, not 12.
+  [COMPUTED: quicktests.py absorb, G(a+t,b,c,d,x-t,y) = G(a,..,y) in 4096/4096 at w=32; control with b: 0/4096]
+  Variant plusA = hold the 10 effective words: out0,2,5,7 stay constant, family freedom 6 words (fixed: 4).
+  Intermediate eoutA = hold the 8 output words of E0,E2: freedom 8.  outhalfA (freedom 12) as in ../gd_order.
+  Greedy GD (30000 runs each, gdv_greedy.log)  [COMPUTED]:
+     fixedA 8 guesses -> 4 checks | plusA 10 -> 4 | eoutA 12 -> 4 | outhalfA 16 -> 4
+     fixedB 9 -> 5 | plusB 10 -> 4 | eoutB 12 -> 4 | outhalfB 16 -> 4
+  On half B absorption does lower the count: fixedB needs >= 9 guesses = 5 checks (exact, ../variants k=8 none),
+  plusB has a 10-guess order = 4 checks.  Half A stays at 4, so the best half is unchanged.  [COMPUTED]
+  Local search (lsearch.py, 120 starts, remove-2-add-1 moves): plusA best 10 = 4 checks.  [COMPUTED]
+  Numeric check of the GD model on the toy (gdnum.py: C program that guesses the order's words, solves the rest,
+  tests the checks; members verified with toyb3):  [COMPUTED]
+     fixedA order, w=6, 2^28 trials: 18 members (expected 16), all with equal out0,2,5,7 and family constants.
+     plusA order (10 guesses, 4 checks), w=6, 2^28 trials: 15 members (expected 16), all verified, and all 15 have
+     (m1, m9) different from the reference: they lie outside the 'fixed' family, as the absorption says.
+     plusB order (10 guesses, 4 checks), w=6, 2^28 trials: 19 members, all with equal out1,3,4,6, all outside
+     the 'fixed' family ((m12, m15) moved).
+     eoutA order (12 guesses, 4 checks), w=6, 2^28 trials: 14 members, all with equal out0,2,5,7 and equal E0/E2
+     outputs, all outside the 'fixed' family.
+  Exact (bf, plain model): see EXACT below.
+  Cost if it worked: same formula as idea 1; checks c with a two-list join ~2^(32+16c+1) list entries, each
+  entry ~30-60 word ops = 2^-3.8..-2.8 units under the 1/430 rule [DERIVED], so c = 4 would be ~2^93-94 units
+  (not 2^97) IF a join with key 4 existed; ../separable R5 finds join key 0 on 2000 sampled 8-guess sets of
+  'fixed' (all checks in the final cascade).  Whether plusA's larger freedom allows a join is untested.
+
+ANGLE 2  TABLE-BACKED CHAINING VALUE (2-block messages).   NEEDS MORE (greedy: no gain; exact search below)
+  Block 2 starts from v0..v7 = CV = first 8 output words of block 1.  Hash 2^64 random first blocks
+  (2^64 preprocessing, memory free) and index them by any 2 CV words: then per trial ANY 2 CV words can be
+  prescribed at O(1) (one lookup, ~1 hit expected); with 2^88 preprocessing, 2.75 words.  In GD terms the CV is
+  a block of 8 unknown words of dimension 2 (rules {p,q} -> r).  This is NOT the free-start model (all 8 CV
+  words free, ../variants 'cvvar'): only 2 words are free, the other 6 come with the lookup.  [DERIVED]
+  Diagnostic, free-start (unreachable) for comparison: freeing init0..3 gives 2 checks, init0..7 1 check,
+  all 16 init words 0 checks (greedy, 4000 runs) - the 4 checks live in round 0's constant inputs.  [COMPUTED]
+  With the realistic table rule (t=2): fixedA 10 guesses/freedom 6 -> 4 checks; plusA 12/8 -> 4; eoutA 14/10 -> 4;
+  outhalfA 18/14 -> 4; fixedB 11/6 -> 5 (greedy 3000 runs); local search fixedA+CV best 10 -> 4.  [COMPUTED]
+  (lsearch.log prints "-2 checks" for the CV file: that run used freedom 12 without the CV block's 6 equations;
+  lsearch.py is corrected; true count 10 - 6 = 4.)
+  Elsewhere: any trial that is solved backwards to the initial state pays 8 CV words as checks; with the table it
+  pays 6.  The filed 55/63 arrangement (h8_ref.py, read only) uses the IV as constants in K0..K3; its
+  basis_sat.py proof ("no second prescribed word") assumes that.  With a 2-block message (block 2 = the 55/63
+  block, flags 10 instead of 11) two CV words become prescribable per trial at one lookup.  Re-running that
+  proof with the CV block rule {p,q} -> rest is the cheap test.  Benefit unknown.  [DERIVED mechanism, GUESS value]
+
+ANGLE 3  LENGTH SIBLINGS: one base message, every block length.   DEAD FOR THE PINNED MAIN LINE (see last lines)
+  K2 = G(IV2,IV6,IV2,L; m4,m5): with a1* := L ^ a1 kept, m4_L = (a1* ^ L) - IV2 - IV6 and
+  m5_L = m5 + a1 - a1_L give the same K2 output for EVERY length L.  So one base yields up to 64 messages with
+  identical round-0 state Q; they differ only in C3's x input (m4) and E1's y input (m5).
+  [COMPUTED: quicktests.py sibling, Q identical in 6400/6400 sibling messages at w=32, control 100/6400;
+   Y words differing between siblings: 3, 7, 11, 15 only]
+  Pairs (L, L^8) for L = 48..55 all have the same modular difference dm4 = +-8 (sign = bit 3 of a1*), the same as
+  55/63 [DERIVED].  Padding: the base needs zero bytes from L_min on.  L_min = 55 (the filed family): 1 XOR-8 pair
+  + 4 XOR-4 pairs per base; m13 < 2^16: 2 XOR-8 pairs (54/62, 55/63); m13 = 0: 4; m12 = m13 = 0: 8.  [DERIVED]
+  Gain if the pins/classes tolerate the low 3 bits of m4 varying (and the zero words): up to x8 trials per base
+  (3 bits of supply) for XOR 8, x4 for XOR 4.
+  Checked against pin H8 (research/grok/work/job16_entry/h8_ref.py, read only): the pin fixes ALL of C3's inputs,
+  X3,X7,X11,X15, w4 = 0x97475638, w13 = 0x0007C006.  Siblings change w4 (C3's x), so a base carries the pin for
+  one length only; and w13's byte 54 is 0x07, so lengths below 55 are impossible with this pin.  The pin itself
+  works for any pair (L, L^8) (W4B = ((K+W4)^8)-K does not involve L), but each L needs its own base.  [DERIVED]
+  So: no gain for the filed path; it would matter only for a trial that does not pin C3's x.
+
+ANGLE 4  INTERNAL SYMMETRY (E0 vs E2, E1 vs E3 wiring).   DEAD (greedy worse than fixed)
+  If E0's effective inputs equal E2's then out0 = out2 and out5 = out7.
+  [COMPUTED: quicktests.py sym, 4096/4096 at w=32].  symAB (both halves): output 128 bits, freedom 6 words,
+  greedy 12 guesses -> 6 checks; symA_outB / symB_outA: output 64 bits, freedom 7, greedy 14 -> 7 checks. [COMPUTED]
+  Full shift-by-2 state symmetry: impossible, IV0..3 and (0,0,len,flags) are not symmetric and message relations
+  leave 128 bits of freedom against 256 bits of conditions.  [DERIVED]
+
+ANGLE 5  ROTATIONAL / ROTATIONAL-XOR PAIRS.   DEAD
+  P[G(rot x) = rot G(x)] at w=32: r=1 2^-9.01, r=8 2^-18, r=16 0 of 262144  [COMPUTED: quicktests.py rx];
+  16 calls -> 2^-144 at best [DERIVED]; no IV word is rotation-invariant, so the constants start the pair with a
+  dense RX difference [COMPUTED]; and a rotational pair is not a collision anyway.
+
+ANGLE 6  NEUTRAL BITS for the half-fixed family.   DEAD
+  0 of 8256 one- and two-bit message differences kept the E0/E2 inputs (or the effective inputs) on any of 2048
+  base messages at w=8; 0 of 512 one-bit differences at w=32.  [COMPUTED: quicktests.py neutral]
+  Reason: every message word is used in round 0, every round-0 call feeds all four round-1 columns.  [DERIVED]
+
+ANGLE 7  BIT-LEVEL SAT SAMPLER for family members (cost model prices solver work at 1/430 per op).   DEAD
+  Would beat 92.2 if one member cost <= ~40 CPU-seconds at 32 bits (2^64 members x 2^23 units/s).  [DERIVED]
+  w=8: fixedA, plusA, outhalfA unsolved by kissat and cadical in 399 s (runs ended by an outside SIGTERM, see
+  ../separable/NOTES.txt incident).  w=6: all three unsolved by kissat in 300 s; outhalfA w=6 (a 24-bit
+  condition) also unsolved by cryptominisat in 90 s, and with 60 of 96 message bits fixed unsolved in 60 s.
+  Brute force (numpy) finds 5 verified solutions of the same w=6 outhalfA instance in 101 s.  [COMPUTED]
+  Encodings checked: fixing all message bits to the seed message is SAT in 0.1-0.2 s.  [COMPUTED]
+
+ANGLE 8  PARTIAL-OUTPUT BIRTHDAY WITH STRUCTURED FAMILIES (low-entropy outputs).   DEAD
+  All 120 families 'two message words free, rest random' at w=8: out_A half-collisions 67, out_B 73 against 60.0
+  expected for a uniform output; no full collision (expected 1.4e-8).  [COMPUTED: famcoll.py 2 120 8 1]
+  20 random three-word families at w=6 (2^18 messages each): out_A 40836, out_B 40750 colliding pairs against
+  40960 expected; best family ratio 1.05; no full collision (expected 0.0024).  [COMPUTED: famcoll.py 3 20 6 2]
+
+ANGLE 9  WAGNER k-LIST ON THE XOR SPLIT out = F(E0,E1) xor G(E2,E3).   DEAD
+  Needs a product family (E0,E1 inputs from list i, E2,E3 inputs from list j): 768 bits of conditions on a
+  512-bit message, 2^-256 members per pair.  [DERIVED]
+
+ANGLE 10  MULTI-BLOCK CV DIFFERENCES, FLAGS, MULTI-CHUNK PARENT.   DEAD
+  A CV difference in cv0..3 is absorbed by m0,m2,m4,m6 in round 0 but needs a block-1 near-collision on the other
+  128+ CV bits (>= 2^64) and returns in round 1 in C0, C2, C3.  The root of a multi-chunk message is a parent
+  compression whose message words are chunk outputs (not controllable); root counter is always 0; flags of a
+  1-block message are fixed (11).  [DERIVED]
+
+ANGLE 11  FREE MEMORY AS 2^64 TABLES OF WHOLE G CALLS.   NO GAIN IN GREEDY (../audit 'pair' rules cover the K calls)
+  A call whose 4 state inputs (K calls) or 4 state outputs (E0, E2 in eoutA) are family constants is a 2-dim
+  relation: a 2^64 table answers any 2 independent ports.  gdtab.py, greedy 3000-6000 runs  [COMPUTED]:
+     fixedA 8 -> 4 checks | plusA 10 -> 4 | eoutA 12 -> 4 | outhalfA 16 -> 4 | eoutA + CV table 14 -> 4
+  MODEL BUG CAUGHT (my first version): keys must be independent coordinates.  E0 with constant outputs gives b and c
+  from the constants alone, and d, y each fix a1; keying the table on such pairs gave a false 0 / 2 checks for
+  eoutA.  Fix: drop ports implied by the constants, and skip a key pair when one port implies the other.
+  Anyone adding table rules should apply the same test.  [COMPUTED]
+
+THE 4-CHECK FLOOR  [COMPUTED greedy over 11 variants + CV table + call tables; exact for fixedA by ../variants
+  and ../separable: kmin = 8 = 4 checks]  Every half-fixing family tried sits at 4 checks (half B: 4-5).  Only
+  freeing round-0 constant inputs (free start, unreachable) lowers it: init0..3 -> 2, init0..7 -> 1, all -> 0.
+  Reading [GUESS]: the checks come from round 0 starting from constants while its message words are used again
+  in round 1; nothing realistic tried here (absorption, CV table, call tables, other halves) moves it.
+
+NEXT (cheap, for whoever owns the line)  [GUESS on value]
+  1. Idea 1: use plusA (or eoutA) instead of fixedA as the family: same checks, 2 (4) more words of freedom.
+     Run ../separable's join-key tools (kdiag/jtree) on plusA's 10-guess sets: freedom may allow a join 'fixed'
+     does not have.  Orders: gdv_best_plusA_len64.txt, gdv_best_eoutA_len64.txt; rule files rules_*.txt.
+  2. 55/63 line: re-run basis_sat.py with block 2 of a 2-block message and the CV block rule (any 2 CV words ->
+     all 8, 2^64 table); flags word 10 instead of 11.
+  3. Drop: siblings (pinned C3), SAT samplers, symmetry, RX, neutral bits.
+
+EXACT MINIMUM GUESSES (bf_copy.c = ../audit/bf.c, plain model, exhaustive)   [COMPUTED, see bf_summary.log]
+  fixedA (sanity): k<=5 none (matches ../audit and ../variants: kmin = 8).
+  plusA  k<=9: stopped at the 2700 s limit, 0 of 4 parts complete, no covering set found in the part searched
+         (machine load ~31 on 24 cores).  INCONCLUSIVE for 3 checks.
+  fixedA + CV table (t=2) k<=9: stopped at 2700 s, 0 of 3 parts complete, none found.  INCONCLUSIVE.
+  Follow-up k<=8 (would rule out 2 checks): plusA stopped at the 1500 s cap, 0/4 parts complete, none found;
+  fixedAcv2 k<=8 stopped by me after ~18 min (0/3 parts, none found) to free the cores.  INCONCLUSIVE.
+  The audit's bf.c is too slow here under this load; ../variants' gdx did fixed k=8 in ~50 s on 8 cores, so the
+  cheap way to settle plusA / eoutA / CV is to feed the systems to that tool (rules_*.txt here are in bf.c's
+  format; gdx's input format not checked; gdv.build(variant) gives the equations directly).
+  No process of this folder is left running.

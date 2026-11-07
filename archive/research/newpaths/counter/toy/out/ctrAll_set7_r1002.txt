@@ -1,0 +1,5 @@
+HEAD arr ctr W 8 set 7 eta b9 ncls 16 sumper 4587520 beta 100 nd 256 nouter 936 first 1002 count 1
+HIT arr ctr W 8 set 7 run 1002 outer 777 x2 86 member 14 y4 f6 d1 55 t 35 A 1033231300001310110112001002130221100131033300100332111 B 103323130000131013011000100213022110013103330010033211100000000 digest 38 4c 2c 9c 1f 57 d0 f0
+RUN arr ctr W 8 set 7 run 1002 seed 69 5b 0 32 nouter 936 trials 977633280 tzero 3833856 bad 0 coll 1 bogus 0 z1 3819494 z3 3571741 z4 3822776 z6 4109642 z2 84709
+PART arr ctr W 8 set 7 first 1002 count 1 trials 977633280 tzero 3833856 bad 0 coll 1 bogus 0 seconds 121.5 rate 8.05e+06
+END

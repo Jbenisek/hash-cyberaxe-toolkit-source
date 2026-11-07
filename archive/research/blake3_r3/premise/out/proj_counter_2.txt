@@ -1,0 +1,1 @@
+PROJ src=counter k=2 name=W2 bits=32 observed=524148 expected=524288.0 ratio=0.9997 z=-0.19

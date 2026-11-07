@@ -1,0 +1,22 @@
+{
+  "id": "D367-POSR1-TWOLEVEL-ADDRESS-REGISTER-AUDIT",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "two-level twiddle address and register bound",
+  "question": "What source-level address/control and register bound remains when the r1 direct twiddle table is replaced by H[q]*L[r]?",
+  "labels": ["N", "D", "S"],
+  "status": "COMPUTED",
+  "number": "For F=417307279 nonzero twiddle accesses, field-only replacement is +834578276 ops after the exact 36282-op init saving; adding one shift and one mask per access gives +1669192834, with N_old=8958701332 and N_fixed=53122677504, log2(N/237)=25.17189922/27.73986556. A conservative two-extra-address model gives +2503807392 and 25.30040703/27.76235565. Tables save exactly 516096 B, but a rebuilt factorized compiler register/spill report, KAT, and whole-run peak are absent.",
+  "source": "our source-level arithmetic audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D367_poseidon_r1_twolevel_address_register_audit.md; research/poseidon/count_twolevel_fetches.py; research/poseidon/orchard/pkg_r1/src/ntt.c; research/poseidon/orchard/lean_r2/pkg_stage_r1/proof.md; D357; D359; D362",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Middle row is the cheapest explicit shift/mask address model. Register liveness is source-level only: x[16] plus one factorized twiddle temporary; compiler spills/code growth, rebuilt KAT, allocator peak and final score remain OPEN. No package, staging, filing, or submission.",
+  "held_fixed": "D359 F=417307279; D362 post-init N_old=7289508498 and N_fixed=51453484670; D357 H/L identity",
+  "reopen_if": "A rebuilt factorized kernel supplies compiler register/spill output, dynamic ledger, KAT, and peak evidence",
+  "peak_mem": "7952544 B conditional tracked peak after replacing 524288-B direct twiddle table by 8192-B H/L tables"
+}

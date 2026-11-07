@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GROEBNER Groebner / resultant elimination",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "the line model is already a resultant elimination; the generic Macaulay route is conditional on regularity and scores 960 (r=1): recomputed log2 N = 194.655, log2 ops = 589.296, log2 bytes = 398.641",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc3.py research/dig/incoming4/_scan_poseidon/calc3a.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc3.py recomputes the P3.9 table (m = 58, q = 50, d_reg = 201). | universe cell poseidon-r1|ALT.GROEBNER|ALT|Q2",
+ "held_fixed": "regularity assumed",
+ "reopen_if": "regularity proved and sparse structure exploited"
+}

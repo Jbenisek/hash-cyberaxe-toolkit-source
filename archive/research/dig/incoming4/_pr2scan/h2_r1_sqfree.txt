@@ -1,0 +1,9 @@
+{"r": 1, "j": 0, "c": "0x589d011af11bab1240f16a76490fd4ac393fd0e1cc62be5783646bf0324aac4", "deg_g": 39062, "gcd_g_gprime_degree": 0, "deg_gcd_square_roots": 0, "deg_gcd_nonsquare_roots": 0, "sec_build": 7.1, "sec_sqfree": 4.6, "sec_roots": 0.0}
+{"r": 1, "j": 0, "c": "0x11de2388c1f194dbb6258a843b5766388903a9c81cc919f6f344bafb23813faa", "deg_g": 39062, "gcd_g_gprime_degree": 0, "deg_gcd_square_roots": 0, "deg_gcd_nonsquare_roots": 0, "sec_build": 7.0, "sec_sqfree": 5.4, "sec_roots": 0.0}
+{"r": 1, "j": 0, "c": "0x1d96f3ef22f6cf670f849d97a983c108087a442cbd9b945efb51a50925bc1605", "deg_g": 39062, "gcd_g_gprime_degree": 0, "deg_gcd_square_roots": 0, "deg_gcd_nonsquare_roots": 0, "sec_build": 7.6, "sec_sqfree": 4.7, "sec_roots": 0.0}
+{"r": 1, "j": 0, "c": "0x2bb75c72672774f3e33e474af096dbb7c52ef7610536bc6c1e3ef5da17d625f9", "deg_g": 39062, "gcd_g_gprime_degree": 0, "deg_gcd_square_roots": 0, "deg_gcd_nonsquare_roots": 0, "sec_build": 6.4, "sec_sqfree": 5.1, "sec_roots": 0.0}
+{"r": 1, "j": 0, "c": "0x1f8f631af482468898cb994f5d69bd8964562841548f285534b7ad5332d0bdb4", "deg_g": 39062, "gcd_g_gprime_degree": 0, "deg_gcd_square_roots": 0, "deg_gcd_nonsquare_roots": 0, "sec_build": 7.6, "sec_sqfree": 5.3, "sec_roots": 0.0}
+
+real	1m1.259s
+user	0m0.015s
+sys	0m0.030s

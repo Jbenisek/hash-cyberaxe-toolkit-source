@@ -1,0 +1,9 @@
+AB coords: lanes after R0.M are M_i0*A + M_i1*B + M_i2*K
+R1 full: lane0 n=21 deg=5 degx=5 degy=5 fullTriangle=True (tri=21); lane1 n=21 deg=5 degx=5 degy=5 fullTriangle=True (tri=21); lane2 n=21 deg=5 degx=5 degy=5 fullTriangle=True (tri=21)  (0.5s)
+   verify against poseidon_ref at random point:  MATCH
+R2 full: lane0 n=351 deg=25 degx=25 degy=25 fullTriangle=True (tri=351); lane1 n=351 deg=25 degx=25 degy=25 fullTriangle=True (tri=351); lane2 n=351 deg=25 degx=25 degy=25 fullTriangle=True (tri=351)  (2.4s)
+   verify against poseidon_ref at random point:  MATCH
+R3 full: lane0 n=8001 deg=125 degx=125 degy=125 fullTriangle=True (tri=8001); lane1 n=8001 deg=125 degx=125 degy=125 fullTriangle=True (tri=8001); lane2 n=8001 deg=125 degx=125 degy=125 fullTriangle=True (tri=8001)  (12.3s)
+   verify against poseidon_ref at random point:  MATCH
+R4 partial: lane0 n=196251 deg=625 degx=625 degy=625 fullTriangle=True (tri=196251); lane1 n=196251 deg=625 degx=625 degy=625 fullTriangle=True (tri=196251); lane2 n=196251 deg=625 degx=625 degy=625 fullTriangle=True (tri=196251)  (14.0s)
+   verify against poseidon_ref at random point:  MATCH

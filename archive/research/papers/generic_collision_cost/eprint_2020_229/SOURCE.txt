@@ -1,0 +1,1 @@
+2020/229	Tight Time-Space Lower Bounds for Finding Multiple Collision Pairs and Their Applications	owner_download	https://eprint.iacr.org/2020/229.pdf

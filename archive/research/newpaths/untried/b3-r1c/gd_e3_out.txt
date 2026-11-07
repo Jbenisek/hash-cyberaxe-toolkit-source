@@ -1,0 +1,4 @@
+variables 120, relations 88, unknown at start 97
+hold E3 inputs (Y4,Y9,Y14,w8): dof=5  min peak dimension = 7 words (5 free choices + 2 scanned)
+   order: K0.d1[1/1] -> S0[2/2] -> K1.a1[3/3] -> S1[4/4] -> S2[5/5] -> K3.a1[6/6] -> S3[7/6] -> D2.a1[7/6] -> D1.a1[7/5]
+   guesses=9  time 155.5s

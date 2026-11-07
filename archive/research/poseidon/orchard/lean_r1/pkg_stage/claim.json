@@ -1,0 +1,58 @@
+{
+ "schema_version": 3,
+ "submission_state": "ready",
+ "target_profile": "poseidon-orchard-r1-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 1,
+ "claim": {
+  "time_log2": 25.837,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 23.042,
+  "preprocessing_log2": 7.319,
+  "success_probability": 0.6,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r1-prefix-v1 only (one partial round plus the eight fixed full rounds); the construction relies on the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "The run is probabilistic: at most two independent centres on two different lines; the claimed success probability is for the whole run, with the implemented halts of proof.md section 4 counted as failures."
+ ],
+ "baseline_improved": "poseidon-orchard-r1-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H1-root-count-model",
+   "role": "score-critical",
+   "statement": "For a centre c uniform in [0, 2^254) and line j in {0,1,2}, the number K of nonzero squares among the F_p-roots of the monic odd-part polynomial g_c (degree 39062) is Poisson with mean 1/2, independent across centres and lines, so one centre succeeds with probability 1 - exp(-1/2) = 0.3935 and two centres with probability 0.632 (claimed: 0.60, which needs a per-centre probability of only 0.37).",
+   "scope": "Odd-part polynomials of the Orchard r = 1 digest along the three lines of proof.md section 2 over the Pallas base field; the program of proof.md section 4 with at most two centres; algorithmic random words modelled as independent uniform.",
+   "extrapolation": "From 65 complete single-centre executions at the selected target (28 successes) and from earlier toy analogues over a 38-bit prime (degrees 125 to 15625, up to 600,000 centres, rate 0.3937 +- 0.001) to the full field; the target-size sample cannot separate 0.3935 from nearby rates at its width and is used only to support the weaker per-centre bound 0.37.",
+   "evidence_ids": [
+    "proof:187-197"
+   ],
+   "limitations": "No proof that g_c behaves like a random polynomial for the root count; the toy rates and the target-size rate are measurements, not a bound; the certificates show only that found roots yield collisions and say nothing about their frequency; the random words of the program come from a deterministic generator."
+  },
+  {
+   "id": "H2-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 are the totals of an instrumented execution of the described program under the stated rules: 1 per field operation, 1 per element load or store, 4 control operations per 16 elements of a straight loop (12 per 16-element transform block), 237 per reduced permutation evaluation of stage B, and 16-element register blocks as the only register assumption.",
+   "scope": "All stages of the program of proof.md section 4 at the target dimensions (m = 39062, N = 98304, N' = 49152, H = 49152).",
+   "extrapolation": "None beyond the executed dimensions; the worst case for two centres is formed from the measured data-independent stages and the implemented budgets of the data-dependent stages.",
+   "evidence_ids": [
+    "proof:83-93",
+    "proof:121-165"
+   ],
+   "limitations": "The instrumented source is not shipped (candidate files are restricted to declared Python experiments), so the totals cannot be recomputed from the package; word-level costs outside the stated rules (cache, address arithmetic beyond the control charges) are not part of the model."
+  },
+  {
+   "id": "H3-gcd-budget",
+   "role": "supporting",
+   "statement": "The half-gcd stage on (g, R - 1) stays within 800,000,000 charged operations; the stage has this budget as an implemented halt and a halt counts as a failure of the run.",
+   "scope": "Stage D of proof.md section 4 for inputs produced by stages B and C.",
+   "extrapolation": "From 65 executions (stage totals 790,284,664 to 790,285,374) to all inputs; exceeding the budget requires a non-normal remainder sequence (probability about 1/p per step) or a gcd of large degree.",
+   "evidence_ids": [
+    "proof:202-203"
+   ],
+   "limitations": "Cost concentration is observed and argued, not proved; the budget itself bounds the loss."
+  }
+ ]
+}

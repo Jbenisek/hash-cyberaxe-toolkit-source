@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.ATT attempts / restarts / amplification",
+ "question": "Is the single attempt necessary? Use a attempts at lambda/a each and recount.",
+ "labels": [
+  "N"
+ ],
+ "status": "KILLED",
+ "number": "a=1 125.10856; a=2 +0.4986 bit; a=3 +0.7909; a=4 +0.9984; a=8 +1.4993 (ideal 0.5 log2 a). Each attempt repays in-flight, stage 2 and init; recovery once. More attempts only cost time at fixed success 0.39.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.ATT|GENERIC|Q2. Closed by number: killed for a>1. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed ledger, P_total = 0.39165 (lambda total 0.497).",
+ "reopen_if": "Never at P fixed to 0.39."
+}

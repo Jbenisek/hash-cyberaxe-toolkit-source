@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.SPLIT (ROOT)",
+ "question": "Q1: exact gcd degree seen and the splitting cost charged",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "gcd(g, S^h-1) degree over 11 complete first-centre CPU runs at r=2 (line 0): deg 0 x7, deg 1 x3, deg 2 x1; GPU d192 (12 centres): F_p-roots of g 0 x6, 1 x4, 2 x1, 4 x1 and nonzero square roots 0 x8, 1 x4. Root finder charged at most 1,172,907 ops per random shift at deg 16 (bound_root.c), observed 7 ops at deg 1.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/bound_root.txt; research/poseidon/d192_r2_results.jsonl; research/poseidon/orchard/lean_r2/logs/r2_s201000.txt..r2_s202005.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ROOT.SPLIT|ROOT|Q1. Tabulated from lean_r2/logs/r2_s20*.txt and poseidon/d192_r2_results.jsonl; the deg-2 case is seed 201003 (verified collision). The halt allows deg G <= 16 (otherwise the centre is abandoned).",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use; first centre of each execution only",
+ "reopen_if": "a run with gcd degree above 4 appears or the sampled mix of degrees changes (more samples)",
+ "topic": "poseidon-r2 root split degrees"
+}

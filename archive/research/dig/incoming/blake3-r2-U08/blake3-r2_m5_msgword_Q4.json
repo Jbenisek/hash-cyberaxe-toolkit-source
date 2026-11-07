@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m5 = w5: alternative carry patterns of the -8 and shifts reaching tau 285020a0",
+ "question": "Q4: alternative outcomes / carry patterns (75/32 effect) and whether they reach the same later differences",
+ "labels": [
+  "C",
+  "B"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "Over all 2^32 shifts: 33048 distinct shifts reach tau 285020a0 for beta* from some s (262144 (s,pattern) pairs = 2048 x 128); the actual shift -8 reaches it with 16 s, the +8 mirror also 16, shift 0 none; 29 xor patterns of w5^(w5-8) with counts halving (2^31 ... 16)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/e1_delta.py; research/dig/incoming/blake3-r2-U08/work/e1_delta_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m5|msgword|Q4. The 8-step (-8 for the pinned W4, +8 for the swap) is the only shift the construction can produce, so the other shifts are not reachable alternatives; they are listed only to show -8 is not worse than any other shift on the a-side. Delta shift measured on E1 a2 only (a-side of the L count); b1/c1/eps parts of L and the E3 side are not recomputed."
+}

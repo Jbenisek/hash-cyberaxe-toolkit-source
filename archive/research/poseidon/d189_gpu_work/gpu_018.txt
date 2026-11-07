@@ -1,0 +1,9 @@
+D185 GPU=NVIDIA GeForce RTX 3090 cc=8.6 degree=39062 ntt_n=131072
+CACHE ops(add=109182992 sub=109287573 mul=113589015 sqr=8448 total=332068028)
+CACHE_NTT calls=98
+POWER ops(add=2270560256 sub=2281614802 mul=2434424165 sqr=222208 total=6986821431)
+POWER squares=256 multiplies=46 wall_ms=25464.360 result_degree=39061
+POWER_NTT calls=2038 square_calls=256 square_ntt_total=1720 square_ntt_mean=6.718750 multiply_ntt_total=318 multiply_ntt_mean=6.913043
+REAL_G_POWER input=./research/poseidon/d189_gpu_work/g_018.bin output=./research/poseidon/d189_gpu_work/q_018.bin logical=39062
+SETUP ops(add=0 sub=0 mul=131071 sqr=15 total=131086)
+MEM host_peak_bytes=41943232 device_peak_bytes=8388608 host_live=20527296 device_live=8388608 total_peak_sum=50331840 wall_ms=26535.050

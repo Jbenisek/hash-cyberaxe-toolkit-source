@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-QE-HMASK-TYPED",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 typed-domain E-dependent-q h-mask family",
+  "question": "Can q=q0 xor (E&qE) plus the seven-mask h-XOR correction map the residual toggles on typed domains?",
+  "labels": ["K"],
+  "status": "COMPUTED",
+  "number": "Exact typed QF_BV CEGIS: UNSAT for five rows (t0 deltas 00002000/00001000; t1 all three) and capped at 15 witnesses for t0 delta 00000400.",
+  "source": "our exact typed-domain QF_BV CEGIS: D179 E-dependent q",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/SYNTH_QE_HMASK_TYPED.md; research/retest/b3_omega_coupled/exact/synth_qe_hmask_typed.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.witness_map",
+  "notes": "The t0/00000400 row is explicitly inconclusive at the 15-iteration cap. The five UNSAT rows rule out only this affine E-dependent-q plus h-mask family; arbitrary nonlinear maps and universal class invariance remain OPEN. No saving is credited."
+}

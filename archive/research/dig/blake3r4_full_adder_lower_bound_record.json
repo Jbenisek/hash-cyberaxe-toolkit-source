@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-FA-LOWER-BOUND-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "shared full-adder four-gate lower bound",
+  "question": "Can sum and carry of three bits be realized by one shared <=4-gate XOR/AND/OR network with free polarity?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "Exhaustive truth-table BFS: 1, 15, 180, 2168, 27898 states at depths 0..4; no four-gate state contains both targets; pivot five-gate construction PASS",
+  "source": "research/dig_new/blake3-r4/full_adder_synthesis_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_full_adder_lower_bound_1014.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "small finite truth-table enumeration",
+  "notes": "Exact lower bound within the stated two-input Boolean gate model with free polarity/constants. Does not rule out multi-bit architectures or non-Boolean adder tricks; no package/stage/filing/submission."
+}

@@ -1,0 +1,3 @@
+row ii per-context 3616538 fixed share 0.4520 score 63.1578
+row ii keep 1/2 u=11: R 1.3019 gain 0.1536 bit -> 63.0041
+row ii keep 1/2 u=25: R 1.3019 gain 0.1439 bit -> 63.0139

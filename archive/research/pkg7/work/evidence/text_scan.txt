@@ -1,0 +1,5 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; python -B work/tools/text_scan.py
+clean  blake3-r2/experiments/halfsearch.py  (63738 bytes)
+clean  blake3-r2/experiments/manifest.json  (5161 bytes)
+NOTE: 1 line(s) are reported by the word test only because of a constant of the pin written in hexadecimal digits, and are not counted: halfsearch.py:94
+files 2, account names looked for 2, word list read, findings 0

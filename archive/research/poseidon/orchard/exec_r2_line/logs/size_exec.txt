@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 992161	  23792	  28448	1044401	  fefb1	single

@@ -1,0 +1,22 @@
+{
+  "id": "D405-SHA3-R6-DIRECT8-NET-SENSITIVITY-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "direct8 conditional net sensitivity",
+  "question": "Does the direct8 setup saving survive the measured compact-key kernel charge?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Using the filed G and B_cap, exact D402 setup saving 105,654,793,820 per group, and D403 mean +152.0833 operations/batch, conditional N rises to approximately 7.141552922242445e48 and time_log2 121.72432198 (upward 121.72433), +0.00213585 bits versus filed 121.72219. No route validity or score transfer is proved.",
+  "source": "our workflow: direct8 ledger sensitivity arithmetic",
+  "own_test": false,
+  "evidence": "research/sol_answer_D405_sha3r6_direct8_net_sensitivity.md; research/sol_answer_D402_sha3r6_direct8_setup_charge.md; research/sol_answer_D403_sha3r6_direct8_kernel_charge.md; research/tools/build_pkg/scratch/pkgS6K/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.05,
+  "prior": 0.05,
+  "gain_basis": "C",
+  "notes": "Conditional arithmetic assumes unchanged survivor/list/FES/generic-tail/success terms and uses finite mean kernel delta. Direct8 remains unproved and receives no score credit; filed 121.72219 remains authoritative.",
+  "reopen_if": "A full direct8 route demonstrates a materially smaller charged kernel delta or another independent saving while passing all correctness and success checks."
+}

@@ -1,0 +1,41 @@
+{
+ "root": {
+  "dim": 8,
+  "one_extra_pin_feasible": false,
+  "min_dS": null,
+  "maximin": 0,
+  "maximin_at": [
+   4,
+   0,
+   4
+  ],
+  "pareto": [],
+  "join_floor_log2_entries": Infinity
+ },
+ "ctr": {
+  "dim": 9,
+  "one_extra_pin_feasible": false,
+  "min_dS": null,
+  "maximin": 0,
+  "maximin_at": [
+   5,
+   0,
+   4
+  ],
+  "pareto": [],
+  "join_floor_log2_entries": Infinity
+ },
+ "ctr2": {
+  "dim": 10,
+  "one_extra_pin_feasible": false,
+  "min_dS": null,
+  "maximin": 0,
+  "maximin_at": [
+   6,
+   0,
+   4
+  ],
+  "pareto": [],
+  "join_floor_log2_entries": Infinity
+ }
+}

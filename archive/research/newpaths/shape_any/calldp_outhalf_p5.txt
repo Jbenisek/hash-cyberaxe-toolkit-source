@@ -1,0 +1,34 @@
+system outhalf_p5.sys: N=82 E=80 F=2  rho(all,{})=0  covered words=82
+group D0    |eqs|=8  inner width 2  list 2
+group D1    |eqs|=4  inner width 1  list 1
+group D2    |eqs|=8  inner width 1  list 1
+group D3    |eqs|=8  inner width 2  list 2
+group C0    |eqs|=8  inner width 4  list 4
+group C1    |eqs|=8  inner width 4  list 4
+group C2    |eqs|=8  inner width 3  list 3
+group C3    |eqs|=8  inner width 5  list 5
+group E0    |eqs|=8  inner width 5  list 5
+group E2    |eqs|=8  inner width 6  list 6
+group out   |eqs|=4  inner width 4  list 4
+EXACT brick-level optimum (11 groups): width 6
+JOIN J=2 list=0 : D0 D1 D2 D3 C0 C1 C2 C3 E0 E2 out
+  JOIN J=6 list=6 : D0 D1 D2 D3 C0 C1 C2 C3 E2 out
+    JOIN J=6 list=6 : E2 out
+      [out] inner 4
+      [E2] inner 6
+    JOIN J=6 list=6 : D0 D1 D2 D3 C0 C1 C2 C3
+      JOIN J=6 list=6 : D0 D1 D2 D3 C1 C2 C3
+        JOIN J=6 list=6 : D0 D1 D2 D3 C2 C3
+          JOIN J=6 list=6 : D1 D2 D3 C2 C3
+            JOIN J=6 list=6 : D1 D2 C2 C3
+              JOIN J=4 list=4 : D1 D2 C3
+                JOIN J=4 list=4 : D2 C3
+                  [C3] inner 5
+                  [D2] inner 1
+                [D1] inner 1
+              [C2] inner 3
+            [D3] inner 2
+          [D0] inner 2
+        [C1] inner 4
+      [C0] inner 4
+  [E0] inner 5

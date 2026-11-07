@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-j2-keepg",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 J2-span keep-g witness maps",
+  "question": "Does an exact J2 XOR-span mask yield a coupled witness map by toggling f and correcting h while keeping g fixed?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "All 32 span masks were checked in QF_BV; only q=04000000 -> delta=00000040 and q=80000000 -> delta=00000800 give J1 UNSAT (known directions). No unresolved delta is reached; all other nontrivial span candidates have an exact J1 split.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/j2_span_keepg_smt.py; research/retest/b3_omega_coupled/exact/j2_span_keepg_smt.out; research/retest/b3_omega_coupled/exact/j2_span_audit.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "The map is exact for J2 by the span audit, and h2 is held fixed by construction; this is a negative result for this keep-g family on the four unresolved directions. Universal class invariance remains OPEN; no saving credited."
+}

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "distinguished-point filter (4 operations per batch)",
+ "question": "R2 own recount of the filter operations",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Filter on digest word 0 of the seven lanes: t = w0 + 0xFFFFFFFF per lane (add), u = t AND bit32 (and), compare with the all-lanes pattern, branch = 4 operations. With d = 114 > 32 the tested bits are s1 = 32 so no extra AND (rho.py: stage1 = 4 + (1 if s1 < 32)). Per batch 4 of 599.19 (0.67 percent of the loop).",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|LEDGER.DPF|LEDGER|R2. Counted from proof.md 3.3 and rho.py ledger(); not a separate circuit build.",
+ "held_fixed": "d = 114, one-word filter, 7 lanes",
+ "reopen_if": "a filter that is correct with fewer than 4 operations (a 3-operation filter would need the compare folded into the branch)",
+ "gain_basis": "count"
+}

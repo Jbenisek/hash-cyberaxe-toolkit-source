@@ -1,0 +1,23 @@
+{
+  "id": "D664-SHA256-R38-ROW4-MOVES4-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 23,
+  "object": "SHA-256 r38 Zone-D row-4 W8 movement profile",
+  "question": "Which later quantities move when W8 is redrawn inside the row-4 G family?",
+  "labels": ["D", "S"],
+  "status": "SAMPLED",
+  "number": "Existing moves4 output: 65536 consistent redraws; E4 changes 1.0000, A4 0, rows5..15 base pass 1.0000; E23[29] changes 0.5013, ds1(W23)/dW25/W23/W25 about 0.999, dW27/dW31=1.000, listed upstream quantities 0, and exact final equality 0.",
+  "source": "our workflow: D664 audit of the existing Zone-D r38 moves4 run",
+  "own_test": true,
+  "evidence": "research/tools/traillab/digs/zoneD38/out/moves4.out; research/tools/traillab/digs/zoneD38/zd38.c; research/tools/traillab/row_cards/zoneD38_row_04.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "published Zone-D r38 pair, W8 in G, 65536 redraws, rows 0..15 model",
+  "notes": "Finite movement control only; missing row-4 signature and full attack-weighted rate remain open. No package/stage/filing/submission.",
+  "reopen_if": "A full-path signature/rate test or schedule-level movement proof becomes available"
+}

@@ -1,0 +1,9 @@
+# toy w=5 rots=(2, 1, 1, 1) random baselines: one word 2^-5, half (4 words) 2^-20, digest 2^-40
+w=5 filed: IV t=0 flags=11             N=2^22 Xbad=0 | log2 p: ZA -inf A -inf Afold -inf [0] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.30 dY7=0 -6.31 dY15=0 -inf | 14.8s
+w=5 chunk t=1 flags=3                  N=2^22 Xbad=0 | log2 p: ZA -inf A -19.19 Afold -19.19 [7] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.30 dY7=0 -6.29 dY15=0 -inf | 14.6s
+w=5 chunk t=rand0 flags=3              N=2^22 Xbad=0 | log2 p: ZA -inf A -19.68 Afold -19.68 [5] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.31 dY7=0 -6.29 dY15=0 -inf | 13.4s
+w=5 chunk t=rand1 flags=3              N=2^22 Xbad=0 | log2 p: ZA -inf A -20.00 Afold -20.00 [4] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.29 dY7=0 -6.30 dY15=0 -inf | 14.9s
+w=5 chunk t=rand2 flags=3              N=2^22 Xbad=0 | log2 p: ZA -inf A -22.00 Afold -22.00 [1] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.29 dY7=0 -6.31 dY15=0 -inf | 16.0s
+w=5 2-block cv=rand0 t=rand flags=2    N=2^22 Xbad=0 | log2 p: ZA -inf A -20.42 Afold -20.42 [3] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.30 dY7=0 -6.30 dY15=0 -inf | 14.8s
+w=5 2-block cv=rand1 t=rand flags=2    N=2^22 Xbad=0 | log2 p: ZA -inf A -20.42 Afold -20.42 [3] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.30 dY7=0 -6.31 dY15=0 -inf | 14.9s
+w=5 2-block cv=rand2 t=rand flags=2    N=2^22 Xbad=0 | log2 p: ZA -inf A -19.68 Afold -19.68 [5] | ZB -inf B -inf Bfold -inf [0] | full -inf [0] fullZA [0] | dY3=0 -inf dY11=0 -6.30 dY7=0 -6.29 dY15=0 -inf | 14.7s

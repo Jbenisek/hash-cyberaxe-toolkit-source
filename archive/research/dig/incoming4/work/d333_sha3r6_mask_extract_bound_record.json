@@ -1,0 +1,22 @@
+{
+  "id": "D333-SHA3R6-MASK-EXTRACT-BOUND-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "portable DP mask extraction bound",
+  "question": "What exact portable mask/ctz price can be added to the packed DP-rho ledger?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "0-hit mask path 12 ops; <=33 extra ops per endpoint; U=10,000 gives R'=1,232,167,864 and cap-64 time_log2=127.813390487432...; mask KAT 256/256 clean",
+  "source": "our workflow: D333 SHA3-r6 mask extraction bound",
+  "own_test": true,
+  "evidence": "research/sol_answer_D333_sha3r6_mask_extract_bound.md; research/retest/t1/mask_extract_audit.py; research/retest/t1/mask_extract_rss_probe.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "27.200 MEASURED single-process Windows WorkingSet64 sampled every 10 ms during mask/extraction KAT",
+  "notes": "Portable scalar fallback only; endpoint packing, restart/replay state, vector semantics and organizer word-width remain open; no score transfer.",
+  "held_fixed": "cap-64 B=364460; E_MAX and R from packed-charge audit; endpoint cap U=10000; one BelowNormal child",
+  "reopen_if": "Replace fallback with the production endpoint/restart implementation and obtain organizer accounting"
+}

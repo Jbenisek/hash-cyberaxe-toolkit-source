@@ -1,0 +1,57 @@
+AP conditional (Sol)
+   O = 805,538,240,453,692,110,434,000
+   log2(O/430+2^38) = 70.6661064111  ->  70.6662  (k=706662 passes, 706661 fails)
+   share S64: 51.8700%
+   share 303Bf: 30.8144%
+   share 80Bf: 8.1358%
+   share 117Bf: 11.8986%
+   share 106Bf: 10.7800%
+   share passes: 17.3156%
+cloud C(2^21) = 118,176,248,651 = 27.515052/g, log2 36.782149
+Astra mean C(2^21) = 84,664,467,756.43898 = 19.712483/g
+AP ceiling, cloud m=2^21
+   O = 732,230,882,321,464,529,572,633
+   log2(O/430+2^38) = 70.5284519546  ->  70.5285  (k=705285 passes, 705284 fails)
+AP ceiling, Astra mean m=2^21
+   O = 725,838,905,001,662,604,393,793
+   log2(O/430+2^38) = 70.5158027205  ->  70.5159  (k=705159 passes, 705158 fails)
+AP ceiling, Astra mean m=2^21 (J*ceil per frame)
+   O = 725,838,905,001,769,611,555,375
+   log2(O/430+2^38) = 70.5158027205  ->  70.5159  (k=705159 passes, 705158 fails)
+SENS: AP ceiling, cloud m=Nrec=53*2^26
+   O = 734,942,929,999,943,846,646,553
+   log2(O/430+2^38) = 70.5337855588  ->  70.5338  (k=705338 passes, 705337 fails)
+SENS: AP ceiling, Astra mean m=Nrec
+   O = 730,584,988,439,001,409,273,153
+   log2(O/430+2^38) = 70.5252054435  ->  70.5253  (k=705253 passes, 705252 fails)
+SENS: AP, cloud m=2^21, AM test(2) 23/G kept (AM line 104)
+   O = 751,072,813,567,347,973,739,289
+   log2(O/430+2^38) = 70.5651061112  ->  70.5652  (k=705652 passes, 705651 fails)
+SENS: AP, 117/G removed at zero cost
+   O = 709,690,155,420,285,024,890,576
+   log2(O/430+2^38) = 70.4833426270  ->  70.4834  (k=704834 passes, 704833 fails)
+   move vs AP: 0.1377 bit  [AP ceiling, cloud m=2^21]
+   move vs AP: 0.1503 bit  [AP ceiling, Astra mean m=2^21]
+   move vs AP: 0.1503 bit  [AP ceiling, Astra mean m=2^21 (J*ceil per frame)]
+   move vs AP: 0.1323 bit  [SENS: AP ceiling, cloud m=Nrec=53*2^26]
+   move vs AP: 0.1409 bit  [SENS: AP ceiling, Astra mean m=Nrec]
+   move vs AP: 0.1010 bit  [SENS: AP, cloud m=2^21, AM test(2) 23/G kept (AM line 104)]
+   move vs AP: 0.1828 bit  [SENS: AP, 117/G removed at zero cost]
+pkg16f filed
+   O = 6,080,111,232,731,503,201,962,608,254,739,666,816
+   log2(O/430+2^38) = 113.4453162837  ->  113.4454  (k=1134454 passes, 1134453 fails)
+   shares: table 89.9824%  records 9.3146%  roots 0.7030%
+pkg16f K*-only (512 once per frame)
+   O = 609,079,694,566,501,146,181,744,462,938,870,656
+   log2(O/430+2^38) = 110.1259214803  ->  110.1260  (k=1101260 passes, 1101259 fails)
+SENS: pkg16f K*-only at 360 (30 lines x 12)
+   O = 609,079,694,188,334,707,106,977,309,139,171,248
+   log2(O/430+2^38) = 110.1259214794  ->  110.1260  (k=1101260 passes, 1101259 fails)
+   frame factor log2 3.319395;  records 92.9825%  roots 7.0175%
+pkg16f, cloud sweep m=2^21 in place of table (reference)
+   O = 903,094,766,552,959,756,320,429,028,356,103,562
+   log2(O/430+2^38) = 110.6941678568  ->  110.6942  (k=1106942 passes, 1106941 fails)
+LEAD: K*-only + 2^21 c at 512 + index 2^46 (unverified)
+   O = 45,413,847,485,645,553,179,883,844,166,587,264
+   log2(O/430+2^38) = 106.3804946444  ->  106.3805  (k=1063805 passes, 1063804 fails)
+lead closed form: 20000 random frames/c, step-3 H equals K* every time (identity)

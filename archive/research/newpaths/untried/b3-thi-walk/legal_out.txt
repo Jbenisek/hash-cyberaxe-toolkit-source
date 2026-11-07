@@ -1,0 +1,7 @@
+P1 profile: message_domain = 'Finite byte strings of bit length below 2^64.'
+   tree = 'Standard binary tree over 1024-byte chunks with 64-bit zero-based chunk counters. Largest power-of-two left subtree for non-power-of-two chunk counts. Parent CV=IV, block=left CV || right CV, length64, counter0, PARENT flag.'
+P2 blake3.py rejects len(data) >= 2^61 bytes (bit length >= 2^64); _compress loads [counter & MASK, counter >> 32]
+   largest t with 1024 t + 63 < 2^61: 2251799813685247 = 2^51 - 1: True ; t >> 32 = 524287 = 2^19 - 1: True
+P3 thi = 2^19 - 1: 50 of 50 trials give CV words 0,2,5,7 equal on the reference, messages < 2^61 bytes
+P4 blake3(F || A) makes 17 t + 1 compressions for t = 1..64, 100, 255..257, 1000, 1023: 0 mismatches
+   at t = 2^51 - 1: 38280596832649200 compressions per message = 2^55.0875; both messages 2^56.0875 units; pkgCM (t < 2^32) charged both below 2^37.1

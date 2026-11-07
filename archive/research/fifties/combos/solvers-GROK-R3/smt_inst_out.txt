@@ -1,0 +1,7 @@
+closure ('C0.a1', 'C0.b1', 'C1.a1', 'D3.a1') derived words 74 checks ['C1.a1', 'Y1', 'C2.c1', 'w8']
+   check C1.a1  -X1 -X5 -w3 +C1.a1 = 0 (mod 2^32)
+   check Y1     -C1.a1 -C1.b1 -w10 +Y1 = 0 (mod 2^32)
+   check C2.c1  -X10 -C2.d1 +C2.c1 = 0 (mod 2^32)
+   check w8     -D0.a1 +S0 +S5 +w8 = 0 (mod 2^32)
+relations 78 selftest {'terms_reproduce_all_derived_words': True, 'four_checks_hold': True, 'ctr_outer_roundtrip': True, 'flipped_guess_failing_checks': 4}
+true guess {'C0.a1': 'ffe295f1', 'C0.b1': 'f3fe1e57', 'C1.a1': '5307a8e8', 'D3.a1': '44a91573'}

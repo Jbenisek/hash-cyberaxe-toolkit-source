@@ -1,0 +1,24 @@
+target T = ROR(eta,1)^ROR(C,12) = d931617f, parity 0
+solutions X with X^ROR(X,1)=T: ['91de41aa', '6e21be55']
+[rand] rows 1048576
+  U1 formula ROR(C,19)^ROR(dc2,7)^ROR(dc2,8) = K1[6]^ROR(K1[3],8): 1048576 of 1048576
+  K1[3] = dc2 == 91de41aa : 0 rows ; K3[3] = de2 == 91de41aa : 0 rows
+  K1[3] = dc2 == 6e21be55 : 0 rows ; K3[3] = de2 == 6e21be55 : 0 rows
+  U3 = K3[4]^ROR(K3[1],8): distinct 1048434 ; U3 == 0 on 0 rows ; top values 004861e0:2, 0188cf37:2, 04087ec6:2, 06dbe1e2:2, 081f7013:2
+  K1[1]=da2  distinct   144687  collision pairs     28433947  Renyi-2 estimate 14.24 bits  max count 576 (18b0a090)
+  K1[3]=dc2  distinct   986224  collision pairs        77525  Renyi-2 estimate 22.76 bits  max count 11 (8a1011d5)
+  K3[1]=dg2  distinct  1048369  collision pairs          208  Renyi-2 estimate 31.30 bits  max count 3 (908a33e1)
+  K3[3]=de2  distinct  1028537  collision pairs        21067  Renyi-2 estimate 24.64 bits  max count 5 (06e09313)
+  U3         distinct  1048434  collision pairs          142  Renyi-2 estimate 31.85 bits  max count 2 (004861e0)
+  U1         distinct   986128  collision pairs        77635  Renyi-2 estimate 22.76 bits  max count 11 (4eaf51f3)
+[ctx] rows 262144
+  U1 formula ROR(C,19)^ROR(dc2,7)^ROR(dc2,8) = K1[6]^ROR(K1[3],8): 262144 of 262144
+  K1[3] = dc2 == 91de41aa : 0 rows ; K3[3] = de2 == 91de41aa : 0 rows
+  K1[3] = dc2 == 6e21be55 : 0 rows ; K3[3] = de2 == 6e21be55 : 0 rows
+  U3 = K3[4]^ROR(K3[1],8): distinct 262059 ; U3 == 0 on 0 rows ; top values 0101cd64:2, 056a31b5:2, 05fb48f2:2, 074a1cc1:2, 08adb8cf:2
+  K1[1]=da2  distinct    79169  collision pairs      1758259  Renyi-2 estimate 14.25 bits  max count 153 (0890e090)
+  K1[3]=dc2  distinct   257572  collision pairs         4886  Renyi-2 estimate 22.75 bits  max count 5 (8a0032f5)
+  K3[1]=dg2  distinct   262042  collision pairs          102  Renyi-2 estimate 28.33 bits  max count 2 (073fa180)
+  K3[3]=de2  distinct   253546  collision pairs         9453  Renyi-2 estimate 21.79 bits  max count 7 (27b0bd33)
+  U3         distinct   262059  collision pairs           85  Renyi-2 estimate 28.59 bits  max count 2 (0101cd64)
+  U1         distinct   257560  collision pairs         4899  Renyi-2 estimate 22.74 bits  max count 5 (0caf5196)

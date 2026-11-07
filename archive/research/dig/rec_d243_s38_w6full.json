@@ -1,0 +1,19 @@
+{
+  "id": "D243-S38-W6FULL",
+  "hash": "sha256-38",
+  "row_i": 5,
+  "row_j": 15,
+  "object": "Zone D 38 full 2^32 W6 run",
+  "question": "What is the exact full-domain W6 count for the r38 rows-5-15 family?",
+  "labels": ["D", "X"],
+  "status": "OPEN",
+  "number": "not run; full 2^32 W6 enumeration remains residual",
+  "source": "main session",
+  "own_test": false,
+  "evidence": "research/tools/traillab/row_cards/zoneD38_row_05.md; research/tools/traillab/row_cards/zoneD38_row_06.md; research/tools/traillab/digs/zoneD38/",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "New residual cell after the partial Zone D 38 close. The existing 2^24 subset is not promoted to a full-domain count.",
+  "topic": "sha256-38 zoneD38 residual W6 full"
+}

@@ -1,0 +1,101 @@
+Sat Oct 10 00:12:08 MDT 2026
+e3sat.py: reps 5 on the main sample and the plants; solver time limit 300 s; clock 4.70e+09
+X2 ledger check: T(435 + 2^-9.8132 * 2^18.51) = 70.990 (stack_calc V4 70.990)
+trivial-formula CPU baselines (s): kissat 0.0022, kissat-nc 0.0022, cadical 0.0022, cms 0.0023
+rec11: 120 passing in 127617 tried (e3solve2_rerun.txt: 120 of 127617); rec7: 150 passing in 148371 tried (e3solve_out.txt: 150 of 148371); 4.0 s
+bplant tau#0: generated with 24 fixed q/w8 bits in 0.03 s; passes the outer filter for tau#0: True (viable outcomes 1)
+bplant tau#1: generated with 24 fixed q/w8 bits in 0.03 s; passes the outer filter for tau#1: True (viable outcomes 1)
+bplant tau#2: generated with 8 fixed q/w8 bits in 0.03 s; passes the outer filter for tau#2: True (viable outcomes 1)
+bplant tau#3: generated with 24 fixed q/w8 bits in 0.03 s; passes the outer filter for tau#3: True (viable outcomes 1)
+bplant tau#4: generated with 16 fixed q/w8 bits in 0.03 s; passes the outer filter for tau#4: True (viable outcomes 2)
+bplant tau#5: generated with 24 fixed q/w8 bits in 0.03 s; passes the outer filter for tau#5: True (viable outcomes 1)
+bplant tau#6: generated with 8 fixed q/w8 bits in 0.03 s; passes the outer filter for tau#6: True (viable outcomes 1)
+rec11_s000_t4      sols 0 | DFS simple 2^17.97 joint 2^13.89 | kissat LB 2^12.74 T 2^22.72 cf 0 | kissat-nc LB 2^12.97 T 2^23.09 cf 0 | cadical LB 2^13.09 T 2^22.75 cf 61 | cms LB 2^11.91 T 2^22.65 cf 24 | best SAT/best DFS: LB 2^-1.99, TIME 2^+8.76
+rec11_s001_t0      sols 0 | DFS simple 2^15.20 joint 2^14.81 | kissat LB 2^12.73 T 2^22.83 cf 0 | kissat-nc LB 2^12.96 T 2^23.40 cf 0 | cadical LB 2^12.97 T 2^22.80 cf 48 | cms LB 2^12.49 T 2^23.20 cf 87 | best SAT/best DFS: LB 2^-2.32, TIME 2^+7.99
+rec11_s002_t4      sols 0 | DFS simple 2^19.15 joint 2^13.63 | kissat LB 2^12.73 T 2^22.73 cf 0 | kissat-nc LB 2^12.97 T 2^23.20 cf 0 | cadical LB 2^12.98 T 2^22.87 cf 51 | cms LB 2^11.99 T 2^23.07 cf 29 | best SAT/best DFS: LB 2^-1.63, TIME 2^+9.10
+rec11_s003_t1      sols 0 | DFS simple 2^18.27 joint 2^19.82 | kissat LB 2^12.74 T 2^23.14 cf 0 | kissat-nc LB 2^12.95 T 2^23.54 cf 0 | cadical LB 2^12.92 T 2^22.64 cf 42 | cms LB 2^12.34 T 2^22.85 cf 62 | best SAT/best DFS: LB 2^-5.93, TIME 2^+4.37
+rec11_s004_t4      sols 0 | DFS simple 2^17.57 joint 2^12.66 | kissat LB 2^12.73 T 2^22.69 cf 0 | kissat-nc LB 2^12.96 T 2^23.38 cf 0 | cadical LB 2^12.90 T 2^22.67 cf 43 | cms LB 2^12.01 T 2^23.28 cf 28 | best SAT/best DFS: LB 2^-0.65, TIME 2^+10.01
+rec11_s005_t1      sols 0 | DFS simple 2^12.81 joint 2^12.78 | kissat LB 2^12.74 T 2^23.06 cf 0 | kissat-nc LB 2^12.98 T 2^24.20 cf 0 | cadical LB 2^12.89 T 2^22.56 cf 41 | cms LB 2^11.85 T 2^22.66 cf 21 | best SAT/best DFS: LB 2^-0.94, TIME 2^+9.78
+rec11_s005_t4      sols 0 | DFS simple 2^14.04 joint 2^12.75 | kissat LB 2^12.74 T 2^23.04 cf 0 | kissat-nc LB 2^12.95 T 2^23.30 cf 0 | cadical LB 2^12.89 T 2^23.11 cf 41 | cms LB 2^11.91 T 2^22.76 cf 29 | best SAT/best DFS: LB 2^-0.84, TIME 2^+10.01
+rec11_s006_t0      sols 0 | DFS simple 2^17.14 joint 2^17.53 | kissat LB 2^12.81 T 2^23.23 cf 0 | kissat-nc LB 2^12.94 T 2^24.12 cf 0 | cadical LB 2^12.93 T 2^23.17 cf 46 | cms LB 2^13.16 T 2^23.74 cf 150 | best SAT/best DFS: LB 2^-4.33, TIME 2^+6.03
+rec11_s007_t1      sols 0 | DFS simple 2^18.35 joint 2^21.12 | kissat LB 2^12.75 T 2^22.83 cf 0 | kissat-nc LB 2^12.98 T 2^23.56 cf 0 | cadical LB 2^13.13 T 2^23.02 cf 86 | cms LB 2^12.23 T 2^23.49 cf 81 | best SAT/best DFS: LB 2^-6.13, TIME 2^+4.48
+rec11_s007_t4      sols 0 | DFS simple 2^19.86 joint 2^21.12 | kissat LB 2^12.84 T 2^23.17 cf 0 | kissat-nc LB 2^12.98 T 2^23.62 cf 0 | cadical LB 2^13.22 T 2^23.42 cf 94 | cms LB 2^12.25 T 2^23.59 cf 75 | best SAT/best DFS: LB 2^-7.61, TIME 2^+3.32
+rec11_s008_t1      sols 0 | DFS simple 2^19.26 joint 2^20.81 | kissat LB 2^12.73 T 2^22.97 cf 0 | kissat-nc LB 2^12.96 T 2^23.94 cf 0 | cadical LB 2^12.98 T 2^22.60 cf 56 | cms LB 2^12.64 T 2^23.19 cf 88 | best SAT/best DFS: LB 2^-6.63, TIME 2^+3.34
+rec11_s009_t1      sols 0 | DFS simple 2^19.26 joint 2^16.14 | kissat LB 2^12.73 T 2^22.95 cf 0 | kissat-nc LB 2^12.96 T 2^22.55 cf 0 | cadical LB 2^12.98 T 2^22.51 cf 51 | cms LB 2^13.02 T 2^23.41 cf 139 | best SAT/best DFS: LB 2^-3.41, TIME 2^+6.37
+rec11_s009_t4      sols 0 | DFS simple 2^19.96 joint 2^16.13 | kissat LB 2^12.73 T 2^23.12 cf 0 | kissat-nc LB 2^12.96 T 2^22.74 cf 0 | cadical LB 2^12.98 T 2^22.70 cf 51 | cms LB 2^12.86 T 2^23.37 cf 146 | best SAT/best DFS: LB 2^-3.40, TIME 2^+6.57
+rec11_s010_t1      sols 0 | DFS simple 2^18.27 joint 2^18.56 | kissat LB 2^12.75 T 2^22.94 cf 0 | kissat-nc LB 2^12.97 T 2^23.41 cf 0 | cadical LB 2^13.15 T 2^22.71 cf 60 | cms LB 2^11.92 T 2^23.12 cf 29 | best SAT/best DFS: LB 2^-6.35, TIME 2^+4.44
+rec11_s011_t6      sols 0 | DFS simple 2^17.93 joint 2^19.40 | kissat LB 2^12.83 T 2^23.11 cf 0 | kissat-nc LB 2^12.99 T 2^23.82 cf 0 | cadical LB 2^13.35 T 2^23.29 cf 113 | cms LB 2^13.28 T 2^23.74 cf 162 | best SAT/best DFS: LB 2^-5.09, TIME 2^+5.18
+rec11_s012_t4      sols 0 | DFS simple 2^19.83 joint 2^16.70 | kissat LB 2^12.83 T 2^23.63 cf 0 | kissat-nc LB 2^12.96 T 2^23.99 cf 0 | cadical LB 2^12.97 T 2^22.94 cf 40 | cms LB 2^12.90 T 2^23.64 cf 126 | best SAT/best DFS: LB 2^-3.87, TIME 2^+6.25
+rec11_s013_t4      sols 0 | DFS simple 2^17.97 joint 2^14.62 | kissat LB 2^12.84 T 2^23.28 cf 0 | kissat-nc LB 2^13.00 T 2^23.80 cf 0 | cadical LB 2^13.21 T 2^23.35 cf 65 | cms LB 2^12.62 T 2^23.69 cf 90 | best SAT/best DFS: LB 2^-1.99, TIME 2^+8.66
+rec11_s014_t1      sols 0 | DFS simple 2^19.26 joint 2^15.50 | kissat LB 2^12.75 T 2^23.69 cf 0 | kissat-nc LB 2^12.96 T 2^23.12 cf 0 | cadical LB 2^12.93 T 2^22.96 cf 54 | cms LB 2^12.60 T 2^23.47 cf 118 | best SAT/best DFS: LB 2^-2.89, TIME 2^+7.46
+rec11_s015_t1      sols 0 | DFS simple 2^19.26 joint 2^18.24 | kissat LB 2^12.73 T 2^22.91 cf 0 | kissat-nc LB 2^12.97 T 2^23.78 cf 0 | cadical LB 2^12.92 T 2^22.54 cf 52 | cms LB 2^12.22 T 2^22.87 cf 57 | best SAT/best DFS: LB 2^-6.02, TIME 2^+4.30
+rec11_s016_t6      sols 0 | DFS simple 2^17.83 joint 2^17.15 | kissat LB 2^12.83 T 2^23.07 cf 0 | kissat-nc LB 2^12.98 T 2^24.16 cf 0 | cadical LB 2^12.92 T 2^22.65 cf 45 | cms LB 2^12.07 T 2^22.85 cf 36 | best SAT/best DFS: LB 2^-5.08, TIME 2^+5.50
+rec11_s017_t1      sols 0 | DFS simple 2^18.27 joint 2^15.57 | kissat LB 2^12.84 T 2^23.37 cf 0 | kissat-nc LB 2^12.98 T 2^23.58 cf 0 | cadical LB 2^12.92 T 2^22.77 cf 43 | cms LB 2^12.43 T 2^23.01 cf 110 | best SAT/best DFS: LB 2^-3.14, TIME 2^+7.19
+rec11_s018_t5      sols 0 | DFS simple 2^15.99 joint 2^16.46 | kissat LB 2^12.79 T 2^22.93 cf 0 | kissat-nc LB 2^12.93 T 2^23.95 cf 0 | cadical LB 2^12.90 T 2^22.44 cf 45 | cms LB 2^12.90 T 2^23.18 cf 133 | best SAT/best DFS: LB 2^-3.20, TIME 2^+6.45
+rec11_s019_t0      sols 0 | DFS simple 2^19.13 joint 2^20.21 | kissat LB 2^12.77 T 2^22.97 cf 0 | kissat-nc LB 2^12.92 T 2^23.69 cf 0 | cadical LB 2^12.75 T 2^22.52 cf 30 | cms LB 2^12.57 T 2^23.19 cf 93 | best SAT/best DFS: LB 2^-6.57, TIME 2^+3.38
+rplant_s000_tx     sols 1 | DFS simple 2^18.05 joint 2^19.81 | kissat LB 2^13.86 T 2^24.05 cf 0 | kissat-nc LB 2^14.06 T 2^25.68 cf 0 | cadical LB 2^14.48 T 2^24.44 cf 263 | cms LB 2^14.40 T 2^24.92 cf 291 | best SAT/best DFS: LB 2^-4.19, TIME 2^+6.00 | planted h1 found: DFS True, all SAT True
+rplant_s001_tx     sols 1 | DFS simple 2^21.25 joint 2^19.57 | kissat LB 2^13.88 T 2^24.53 cf 0 | kissat-nc LB 2^14.07 T 2^25.88 cf 0 | cadical LB 2^14.58 T 2^24.37 cf 212 | cms LB 2^14.43 T 2^25.03 cf 284 | best SAT/best DFS: LB 2^-5.69, TIME 2^+4.80 | planted h1 found: DFS True, all SAT True
+rplant_s002_tx     sols 2 | DFS simple 2^20.20 joint 2^18.40 | kissat LB 2^14.48 T 2^25.03 cf 0 | kissat-nc LB 2^14.68 T 2^26.47 cf 0 | cadical LB 2^15.39 T 2^25.14 cf 474 | cms LB 2^15.18 T 2^25.61 cf 473 | best SAT/best DFS: LB 2^-3.92, TIME 2^+6.63 | planted h1 found: DFS True, all SAT True
+rplant_s003_tx     sols 2 | DFS simple 2^16.84 joint 2^16.56 | kissat LB 2^14.39 T 2^24.85 cf 0 | kissat-nc LB 2^14.66 T 2^25.79 cf 0 | cadical LB 2^15.08 T 2^25.03 cf 291 | cms LB 2^14.72 T 2^25.59 cf 380 | best SAT/best DFS: LB 2^-2.17, TIME 2^+8.29 | planted h1 found: DFS True, all SAT True
+rplant_s004_tx     sols 1 | DFS simple 2^15.76 joint 2^14.51 | kissat LB 2^13.86 T 2^24.33 cf 0 | kissat-nc LB 2^14.10 T 2^25.12 cf 0 | cadical LB 2^14.58 T 2^24.62 cf 181 | cms LB 2^13.97 T 2^24.69 cf 157 | best SAT/best DFS: LB 2^-0.65, TIME 2^+9.83 | planted h1 found: DFS True, all SAT True
+bplant_s000_t0     sols 1 | DFS simple 2^18.33 joint 2^20.96 | kissat LB 2^13.86 T 2^24.56 cf 0 | kissat-nc LB 2^14.05 T 2^25.68 cf 0 | cadical LB 2^14.67 T 2^24.48 cf 267 | cms LB 2^13.98 T 2^24.65 cf 220 | best SAT/best DFS: LB 2^-4.46, TIME 2^+6.15 | planted h1 found: DFS True, all SAT True
+bplant_s001_t1     sols 1 | DFS simple 2^19.31 joint 2^19.59 | kissat LB 2^13.85 T 2^24.27 cf 0 | kissat-nc LB 2^14.05 T 2^25.89 cf 0 | cadical LB 2^14.63 T 2^24.77 cf 259 | cms LB 2^14.00 T 2^24.81 cf 194 | best SAT/best DFS: LB 2^-5.46, TIME 2^+4.96 | planted h1 found: DFS True, all SAT True
+bplant_s002_t2     sols 1 | DFS simple 2^18.34 joint 2^23.81 | kissat LB 2^13.85 T 2^24.35 cf 0 | kissat-nc LB 2^14.03 T 2^25.48 cf 0 | cadical LB 2^14.63 T 2^24.20 cf 282 | cms LB 2^14.28 T 2^24.78 cf 313 | best SAT/best DFS: LB 2^-4.50, TIME 2^+5.85 | planted h1 found: DFS True, all SAT True
+bplant_s003_t3     sols 1 | DFS simple 2^21.09 joint 2^22.87 | kissat LB 2^13.86 T 2^24.25 cf 0 | kissat-nc LB 2^14.05 T 2^25.66 cf 0 | cadical LB 2^14.84 T 2^24.53 cf 249 | cms LB 2^14.37 T 2^24.87 cf 319 | best SAT/best DFS: LB 2^-7.24, TIME 2^+3.16 | planted h1 found: DFS True, all SAT True
+bplant_s004_t4     sols 1 | DFS simple 2^17.47 joint 2^20.36 | kissat LB 2^13.85 T 2^24.20 cf 0 | kissat-nc LB 2^14.07 T 2^25.78 cf 0 | cadical LB 2^14.57 T 2^24.21 cf 279 | cms LB 2^14.24 T 2^24.79 cf 217 | best SAT/best DFS: LB 2^-3.61, TIME 2^+6.73 | planted h1 found: DFS True, all SAT True
+bplant_s005_t5     sols 1 | DFS simple 2^17.35 joint 2^19.89 | kissat LB 2^13.85 T 2^24.04 cf 0 | kissat-nc LB 2^14.05 T 2^25.58 cf 0 | cadical LB 2^14.42 T 2^24.23 cf 231 | cms LB 2^14.01 T 2^24.53 cf 234 | best SAT/best DFS: LB 2^-3.50, TIME 2^+6.69 | planted h1 found: DFS True, all SAT True
+bplant_s006_t6     sols 1 | DFS simple 2^19.06 joint 2^21.27 | kissat LB 2^13.87 T 2^24.30 cf 0 | kissat-nc LB 2^14.07 T 2^25.78 cf 0 | cadical LB 2^14.65 T 2^24.30 cf 281 | cms LB 2^14.29 T 2^24.68 cf 229 | best SAT/best DFS: LB 2^-5.18, TIME 2^+5.25 | planted h1 found: DFS True, all SAT True
+
+all 349 systems: solution sets agree (DFS simple = DFS joint = every SAT config): 349; unsound SAT models: 0; real systems with an E3 solution: 0
+
+X2 ledger (V4: c = 400 + 35 + 2^-9.8132 * SOLVE): SOLVE 2^18.51 -> T 70.990; SOLVE 0 -> T 70.024 (ceiling of any solve gain 0.966 bit)
+
+rec11: 120 passing steps, 152 systems; per passing step:
+  DFS simple      mean 2^18.87 median 2^18.39 p90 2^19.96 max 2^20.83  -> T 71.177 (-0.186 bit vs 70.990)
+  DFS joint       mean 2^19.26 median 2^16.80 p90 2^20.81 max 2^23.24  -> T 71.403 (-0.413 bit vs 70.990)
+  kissat LB       mean 2^13.10 median 2^12.77 p90 2^13.75 max 2^14.33  -> T 70.056 (+0.934 bit vs 70.990)
+  kissat TIME     mean 2^23.51 median 2^23.28 p90 2^24.21 max 2^24.81  -> T 75.001 (-4.011 bit vs 70.990)
+  kissat-nc LB    mean 2^13.31 median 2^12.97 p90 2^13.97 max 2^14.56  -> T 70.061 (+0.930 bit vs 70.990)
+  kissat-nc TIME  mean 2^24.06 median 2^23.91 p90 2^24.84 max 2^25.35  -> T 75.536 (-4.545 bit vs 70.990)
+  cadical LB      mean 2^13.44 median 2^13.17 p90 2^14.11 max 2^14.88  -> T 70.065 (+0.926 bit vs 70.990)
+  cadical TIME    mean 2^23.43 median 2^23.27 p90 2^24.17 max 2^24.95  -> T 74.924 (-3.934 bit vs 70.990)
+  cms LB          mean 2^12.83 median 2^12.56 p90 2^13.63 max 2^14.71  -> T 70.051 (+0.940 bit vs 70.990)
+  cms TIME        mean 2^23.77 median 2^23.57 p90 2^24.49 max 2^25.20  -> T 75.252 (-4.262 bit vs 70.990)
+  kissat    conflicts mean 0.0 max 0; propagations mean 621; zero-conflict steps 120
+  kissat-nc conflicts mean 0.0 max 0; propagations mean 1,955; zero-conflict steps 120
+  cadical   conflicts mean 85.2 max 314; propagations mean 2,982; zero-conflict steps 0
+  cms       conflicts mean 100.2 max 428; propagations mean 3,401; zero-conflict steps 0
+
+rec7: 150 passing steps, 185 systems; per passing step:
+  DFS simple      mean 2^18.51 median 2^18.03 p90 2^19.66 max 2^20.83  -> T 70.988 (+0.002 bit vs 70.990)
+  DFS joint       mean 2^19.16 median 2^16.80 p90 2^20.22 max 2^23.80  -> T 71.347 (-0.356 bit vs 70.990)
+  kissat LB       mean 2^13.05 median 2^12.74 p90 2^13.74 max 2^14.36  -> T 70.055 (+0.935 bit vs 70.990)
+  kissat TIME     mean 2^23.36 median 2^23.10 p90 2^24.05 max 2^25.01  -> T 74.854 (-3.864 bit vs 70.990)
+  kissat-nc LB    mean 2^13.26 median 2^12.97 p90 2^13.96 max 2^14.56  -> T 70.060 (+0.931 bit vs 70.990)
+  kissat-nc TIME  mean 2^24.02 median 2^23.82 p90 2^24.75 max 2^25.76  -> T 75.497 (-4.507 bit vs 70.990)
+  cadical LB      mean 2^13.42 median 2^13.10 p90 2^14.17 max 2^14.88  -> T 70.064 (+0.926 bit vs 70.990)
+  cadical TIME    mean 2^23.31 median 2^23.09 p90 2^24.06 max 2^24.95  -> T 74.814 (-3.823 bit vs 70.990)
+  cms LB          mean 2^12.81 median 2^12.60 p90 2^13.51 max 2^14.41  -> T 70.050 (+0.940 bit vs 70.990)
+  cms TIME        mean 2^23.68 median 2^23.49 p90 2^24.40 max 2^25.29  -> T 75.165 (-4.175 bit vs 70.990)
+  kissat    conflicts mean 0.0 max 0; propagations mean 571; zero-conflict steps 150
+  kissat-nc conflicts mean 0.0 max 0; propagations mean 1,902; zero-conflict steps 150
+  cadical   conflicts mean 85.3 max 267; propagations mean 3,048; zero-conflict steps 0
+  cms       conflicts mean 98.8 max 367; propagations mean 3,408; zero-conflict steps 0
+
+rec11+rec7: 270 passing steps, 337 systems; per passing step:
+  DFS simple      mean 2^18.68 median 2^18.27 p90 2^19.85 max 2^20.83  -> T 71.075 (-0.085 bit vs 70.990)
+  DFS joint       mean 2^19.21 median 2^16.80 p90 2^20.49 max 2^23.80  -> T 71.372 (-0.382 bit vs 70.990)
+  kissat LB       mean 2^13.08 median 2^12.75 p90 2^13.74 max 2^14.36  -> T 70.056 (+0.935 bit vs 70.990)
+  kissat TIME     mean 2^23.43 median 2^23.17 p90 2^24.14 max 2^25.01  -> T 74.921 (-3.931 bit vs 70.990)
+  kissat-nc LB    mean 2^13.28 median 2^12.97 p90 2^13.97 max 2^14.56  -> T 70.060 (+0.930 bit vs 70.990)
+  kissat-nc TIME  mean 2^24.04 median 2^23.89 p90 2^24.76 max 2^25.76  -> T 75.515 (-4.524 bit vs 70.990)
+  cadical LB      mean 2^13.43 median 2^13.15 p90 2^14.11 max 2^14.88  -> T 70.064 (+0.926 bit vs 70.990)
+  cadical TIME    mean 2^23.37 median 2^23.17 p90 2^24.10 max 2^24.95  -> T 74.864 (-3.873 bit vs 70.990)
+  cms LB          mean 2^12.82 median 2^12.56 p90 2^13.57 max 2^14.71  -> T 70.050 (+0.940 bit vs 70.990)
+  cms TIME        mean 2^23.72 median 2^23.52 p90 2^24.44 max 2^25.29  -> T 75.205 (-4.214 bit vs 70.990)
+  kissat    conflicts mean 0.0 max 0; propagations mean 593; zero-conflict steps 270
+  kissat-nc conflicts mean 0.0 max 0; propagations mean 1,925; zero-conflict steps 270
+  cadical   conflicts mean 85.2 max 314; propagations mean 3,018; zero-conflict steps 0
+  cms       conflicts mean 99.4 max 428; propagations mean 3,405; zero-conflict steps 0
+exit 0
+Sat Oct 10 00:13:17 MDT 2026

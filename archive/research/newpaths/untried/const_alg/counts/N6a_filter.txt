@@ -1,0 +1,1 @@
+FILTER N6a: ONLY the betas with k <= 16: 18829, answered 18829, lines not understood 0; no eps 9363, infeasible 0, no passing outcome 5151, with a passing outcome 4315 (passing outcomes in all 2595559); by k: 10:1 11:9 12:48 13:189 14:540 15:1188 16:2340

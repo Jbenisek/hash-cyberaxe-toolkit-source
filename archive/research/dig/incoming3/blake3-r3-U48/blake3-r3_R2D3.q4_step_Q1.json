@@ -1,0 +1,22 @@
+{
+ "object": "step R2D3.q4",
+ "question": "Q1: round 2, call D3 = G(3,4,9,14), quarter-step q4: c = c + d; b = ror7(b ^ c) - the value/count of this step as used in the filed 125.1087 circuit.",
+ "status": "COMPUTED",
+ "number": "R2D3.q4: 7 ops (add 1, xor 1, rotation 5 [5 ops each: shr,and,shl,and,or], and 0) in the shipped 7-lane, pitch-36 circuit; the circuit totals 595 ops = 100 add + 88 xor + 400 rotation + 7 and (3 internal masks, all at q3 steps of round 2 calls D1, D2, D3; 4 digest masks); time_log2 125.10856. This step is 1.18% of the 595 ops. One op in the ledger is worth 0.00241 bit of time_log2.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_steps.py; research/dig/incoming3/blake3-r3-U46/work/steps_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. Per-step counts come from our own tracer (b3scan.py) with every emitted op tagged by (round, call, quarter); the tags sum to 595 (digest xor and masks = 12). Matches the 595 and the 3 internal masks of research/blake3_r3/levers_step_count.md.",
+ "held_fixed": "filed layout (7 lanes, pitch 36, 4 guard bits), unrolled straight line, constants folded, standard 3-round order and permutation",
+ "reopen_if": "the filed circuit changes (lane layout, rotation form) or the organizer's op model changes",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|R2D3.q4|step|Q1",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

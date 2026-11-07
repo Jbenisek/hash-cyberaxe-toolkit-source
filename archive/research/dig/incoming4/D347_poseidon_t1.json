@@ -1,0 +1,20 @@
+{
+  "id": "D347-POSR1-T1-CHARGE-AUDIT",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "T1 twiddle recurrence charge audit",
+  "question": "Does the completed T1 run prove a valid compressed twiddle implementation and memory saving?",
+  "labels": ["C", "N"],
+  "status": "LOCAL_ONLY",
+  "number": "synthetic N=7152527399, log2_units=24.8471; full TWFULL remains in the kernels",
+  "source": "our workflow: poseidon T1 charge audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D347_poseidon_t1_charge_audit.md; research/memcomp/poseidon/T1_twiddle_table_-__recurrence___sqrt-sp/c_t1/run.txt; research/memcomp/poseidon/T1_twiddle_table_-__recurrence___sqrt-sp/patch_t1.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Collision and reconcile pass are on the unchanged full-table path with modified counters. TWFULL is unmetered and excluded from heap_peak; whole-process RSS and a real compressed kernel are missing.",
+  "peak_mem": "UNKNOWN"
+}

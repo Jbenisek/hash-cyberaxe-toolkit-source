@@ -1,0 +1,5 @@
+55-63,56-58 unsat (error "line 42 column 24: model is not available") 
+55-63,56-60 unsat (error "line 42 column 24: model is not available") 
+55-63,58-60 unsat (error "line 42 column 24: model is not available") 
+55-63,60-62 unsat (error "line 42 column 24: model is not available") 
+57-63,56-58 unsat (error "line 42 column 24: model is not available") 

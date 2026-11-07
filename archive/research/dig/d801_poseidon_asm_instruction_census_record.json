@@ -1,0 +1,22 @@
+{
+  "id": "D801-POSEIDON-ASM-INSTRUCTION-CENSUS-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "GCC assembly instruction and memory-reference census for owned Poseidon NTT kernels",
+  "question": "What exact compiler-local instruction, memory-reference, stack-reference, vector, and frame-subtraction counts are emitted for the Poseidon r1/r2 stage/pass kernels under nearby flag sets?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "WSL GCC 15.2.0 assembly was parsed for both owned ntt.c sources under O3-native, O2-native, and O3-no-AVX512. O3-native r1/r2 pass_fwd counts are 395/1347 instructions and pass_inv counts are 420/1571; all full target-family counts are in the answer and machine-readable result. This is static compiler evidence only; no organizer primitive, register, spill, dynamic, or score credit is inferred.",
+  "source": "owned research/poseidon/orchard/lean_r1_fix/ntt.c and lean_r2/ntt.c",
+  "own_test": true,
+  "evidence": "research/retest/poseidon/d801_asm_instruction_census.py; research/retest/poseidon/d801_result_utf8.json; research/sol_answer_D801_poseidon_asm_instruction_census.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "owned sources and WSL GCC 15.2.0; only compiler flags varied",
+  "notes": "Static assembly counts are not contest primitive counts. D798/D799 spill evidence and organizer register/ABI/word-width rules remain open; no package/stage/filing/submission.",
+  "reopen_if": "A target-specific organizer charge maps these emitted operations and spills to the contest ledger, followed by a full attack KAT and memory audit.",
+  "peak_mem": "0 FREE"
+}

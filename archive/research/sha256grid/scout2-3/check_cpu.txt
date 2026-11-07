@@ -1,0 +1,11 @@
+validity: 200000 candidates, 22746 valid by vt38.valid, 0 disagreements
+variant pool: 4096 records, 0 bad (validity or W8..W10), 256 distinct A0
+row 17: 6439 proposals re-run by vt38 code, 3470 survivors/successes, 0 disagreements
+row 18: 5500 proposals re-run by vt38 code, 3210 survivors/successes, 0 disagreements
+row 19: 4347 proposals re-run by vt38 code, 1784 survivors/successes, 0 disagreements
+row 20: 1600 proposals re-run by vt38 code, 1600 survivors/successes, 0 disagreements
+row 21: 1600 proposals re-run by vt38 code, 824 survivors/successes, 0 disagreements
+row 22: 800 proposals re-run by vt38 code, 800 survivors/successes, 0 disagreements
+row 23..37 (tail): 3219 proposals re-run by vt38 code, 219 survivors/successes, 0 disagreements
+smc_hits.bin: 219 successes re-verified with vt38 (outcome/compress/cells): 0 failures
+TOTAL disagreements/failures: 0

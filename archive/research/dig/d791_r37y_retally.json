@@ -1,0 +1,20 @@
+{
+  "id": "D791-R37Y-RETALLY-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "R37Y exact ledger and audit re-tally",
+  "question": "Does the filed R37Y row recompute exactly, and are any components inconsistent with the charging rule?",
+  "labels": ["K", "E"],
+  "status": "COMPUTED",
+  "number": "Replayed lowm.py: N=5971293942808353212645/2644, log2_T=60.97002711966891, upward time_log2=60.97003, memory=983480 B=2^19.9075. Conditional audit flag: free NOT/inversion flips would add 0.02080 bit if the organizer charges each NOT; cap-slack and A_C prose are non-score inconsistencies.",
+  "source": "R37Y filed source hashes and owned pkgR37X lowm.py ledger/memory modes",
+  "own_test": true,
+  "evidence": "research/sol_answer_D791_r37y_retally.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "sha256-r37.r37y.exact-retally",
+  "peak_mem": 983480,
+  "notes": "Read-only re-tally; no package/stage/filing/submission."
+}

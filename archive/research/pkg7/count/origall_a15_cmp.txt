@@ -1,0 +1,9 @@
+a15: betas finished by the original 54 (equal to the exact part at the one printed decimal 54, different 0, with a sampled outcome 1), not finished 6
+sum of the original's printed parts 185377197.2; exact sum over the same betas 185377197.217698; largest difference on one beta 0.043750; exact part of the betas not finished 0.334610
+not finished 19b1bf98 exact part 0.102890
+not finished 1fb36398 exact part 0.099609
+not finished 19b1e398 exact part 0.091797
+not finished 19b17f98 exact part 0.032898
+sampled 1fb3ff98 original 0.0 exact 0.005626
+not finished 1fb1bf98 exact part 0.003998
+not finished 1fb17f98 exact part 0.003418

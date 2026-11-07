@@ -1,0 +1,22 @@
+{
+  "id": "D357-POSR1-TWOLEVEL-TWIDDLE-IDENTITY",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "two-level twiddle-table algebraic identity",
+  "question": "Is the proposed 128x128 factorized twiddle table functionally identical to the 2^14-entry table?",
+  "labels": ["N", "D"],
+  "status": "COMPUTED",
+  "number": "Exact field identity: all 16384 forward and all inverse-domain entries match; full 524288 B -> 8192 B, saving 516096 B",
+  "source": "our research-only field arithmetic audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D357_poseidon_r1_twolevel_twiddle_identity.md; research/poseidon/twiddle_twolevel_check.py; research/poseidon/orchard/lean_r1_mem/ntt.c",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Correctness and byte-count only. Extra multiplication/control/register costs and whole-run memory peak remain unmeasured; the existing cost OPEN cell is not closed and no score credit is claimed.",
+  "held_fixed": "Poseidon-r1 root rho, table domain 0..2^14-1, 32-byte field elements, source inverse addressing",
+  "reopen_if": "A complete two-level implementation with KAT, exact ledger, register accounting, and peak measurement",
+  "peak_mem": "0 FREE arithmetic-only audit"
+}

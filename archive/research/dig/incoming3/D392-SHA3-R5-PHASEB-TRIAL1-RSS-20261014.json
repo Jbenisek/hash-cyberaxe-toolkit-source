@@ -1,0 +1,22 @@
+{
+  "id": "D392-SHA3-R5-PHASEB-TRIAL1-RSS-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "r5-trail-1 phase RSS",
+  "question": "Does an independent owned phase-B trial reproduce the r5 trail RSS and exact observation path?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Trial 1 exited 0 with nodes=2082480, cores=646, sum_c1=600711168, kept=251, sum_c2=735420810384, half_vectors=25918866. Peak Windows WorkingSet64=35213312 bytes, log2=25.06961759097, sampled every 50 ms (140 samples).",
+  "source": "our workflow: D392 r5 phase-B trial-1 RSS",
+  "own_test": true,
+  "evidence": "research/sol_answer_D392_r5_phaseB_trial1_rss.md; research/retest/r5_phaseB_probe.py; research/retest/r5_phaseB_probe_trial1.json; research/tools/build_pkg/scratch/pkgR5M2/pkg/sha3-256-r5/experiments/r5.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Independent finite component measurement only. It does not bound full r5 preprocessing, D15/advice, or allocator-inclusive peak and transfers no score or filing credit.",
+  "held_fixed": "pkgR5M2 experiments/r5.py; trial index 1; one BelowNormal child; no parallel workers",
+  "reopen_if": "Full phase-B campaign, D15/advice, and allocator-inclusive preprocessing RSS are measured",
+  "peak_mem": "25.0696175910 MEASURED Windows WorkingSet64, one trial, 50-ms sampler"
+}

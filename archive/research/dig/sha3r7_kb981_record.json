@@ -1,0 +1,21 @@
+{
+  "id": "S7-KB981-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "GB/GA boundary size KB",
+  "question": "What boundary size minimizes the r7 emitted step in the tested 900..1017 allocator range?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "KB=981: selector step 44875 (full counted step 44890); C selector under 1 MiB PASS; 1238 spill slots; time_log2 124.73295530605293",
+  "source": "research/r7/s7ls/kb_boundary_probe.py plus 970..990 sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_KB981_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0015121004333593646,
+  "peak_mem": "1,038,464 B (log2 19.986019773064076)",
+  "notes": "Conditional local generator/ledger result, cross-checked by a temporary C selector with 981 added: chosen KB 981 step 44875, code 648320 B, spill slots 1238, peak 1004 KiB. Current charged selector declares only {930,945,960,975,990,1000,1012}, where 975 remains best; KB=981 needs a selector-list extension. K constants and Q unchanged; no package/stage/filing/submission.",
+  "potential_bits": 0.02,
+  "prior": 0.3
+}

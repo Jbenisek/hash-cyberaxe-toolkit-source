@@ -1,0 +1,3 @@
+rounds=3 maxD=5  min checks=0
+histogram of per-D best checks: 0:1 1:0 2:719 3:0 4:1888 5:0 6:1793 7:0 8:2484
+examples D (bitmask of differing message words): {7,10,12,14,}  init(v12..v15 mask)=0

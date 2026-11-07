@@ -1,0 +1,23 @@
+{
+  "id": "D336-R6-DPRHO-WORDRAM-RECONCILIATION-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "dense DP-rho 64-bit word-RAM charge",
+  "question": "How many operations per 64-bit word per step does the packed DP-rho cost?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Under the explicit 64-bit word-RAM model: cap-64 body B=364460 words/batch; portable extraction/control gives conditional time_log2 127.8133904874 to 127.8204191392 (cap-64), with cap-32 127.8932201668 and cap-16 127.9591497008; one-256-lane-op pricing is a separate rule",
+  "source": "our workflow: D336 R6 DP-rho word-RAM reconciliation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D319_sha3_dprho_charge_refresh.md; research/sol_answer_D332_sha3r6_packed_walk_rss.md; research/sol_answer_D333_sha3r6_mask_extract_bound.md; research/retest/t1/packed_charge_audit.json; research/retest/t1/control_cost_audit.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.22,
+  "gain_basis": "T",
+  "peak_mem": "27.200 MEASURED KAT/audit WorkingSet64; full production search peak UNKNOWN",
+  "notes": "This closes the old unit ambiguity only under the stated 64-bit word-RAM and explicit conditional Q/R model. Endpoint packing, production restart/replay implementation, organizer word-width/register semantics and full-search residency remain separate open premises; no filing credit.",
+  "held_fixed": "E_MAX=341476420935623421560566117864968815495; R=1231837864; U=10000; cap 16/32/64 emitted spill schedules",
+  "reopen_if": "A production kernel with exact endpoint/restart/Q ledger or an organizer ruling adopts the one-256-lane-op unit"
+  ,"supersedes": ["R6-DPrho"]
+}

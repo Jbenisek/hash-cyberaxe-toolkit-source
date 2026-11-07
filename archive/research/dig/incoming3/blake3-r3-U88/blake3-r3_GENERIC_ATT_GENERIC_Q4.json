@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.ATT attempts / restarts / amplification",
+ "question": "Alternatives: restarts after table-full / cut trails, stored collision, continuing run.",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "No restart is used: a table-full halt has probability 8.6e-57 and a stage-2 halt about 0; one fresh 256-bit word (1 op). A stored collision or continuing one run to higher P only raises q: P 0.45 costs +0.132 bit over the floor. 'Success amplification' is listed as charged time in the cost model.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.ATT|GENERIC|Q4. Expected-time scoring is not what the filed claim or the judge uses. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed program.",
+ "reopen_if": "A rule that scores expected rather than budgeted time (then all halts would be re-costed)."
+}

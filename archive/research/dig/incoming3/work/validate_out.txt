@@ -1,0 +1,5 @@
+scalar 7-round == verifier (== pip blake3: False) on 50 random 64B: True
+scalar 3-round == verifier 3-round: True
+rounds 7 packed ok: True ops 1532 {'add': 260, 'xor': 216, 'shr': 208, 'and': 432, 'shl': 208, 'or': 208}
+rounds 3 packed ok: True ops 595 {'add': 100, 'xor': 88, 'shr': 80, 'and': 167, 'shl': 80, 'or': 80}
+official empty-input vector (af1349b9...f3262) checked against organizer verifier at 7 rounds

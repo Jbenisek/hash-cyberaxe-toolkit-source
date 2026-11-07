@@ -1,0 +1,20 @@
+{
+  "id": "S7-LS1R7-AUDIT-20261015",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "ls1r7 seven-round linear-structure candidate audit",
+  "question": "Does the local ls1r7 artifact reproduce its exact 124.28591 ledger and declared memory bound?",
+  "labels": ["N", "C", "S", "I"],
+  "status": "COMPUTED",
+  "number": "N=49187422147729679489593250431363403722568; time_log2=124.28591; memory=1045500 bytes; success lower bound 0.3900000008 under H_rand",
+  "source": "research/r7/ls1r7/proof.md and claim.json",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_ls1r7_audit_1015.md",
+  "date": "2026-10-15",
+  "lever": true,
+  "gain_bits": 0.43779,
+  "gain_basis": "T",
+  "peak_mem": "1045500 bytes declared search peak; generator phase 897330 bytes",
+  "notes": "Research-only audit. H_rand is score-critical; H_reg/H_code are supporting declared conventions. Empty certificate manifest; no package/stage/filing/submission."
+}

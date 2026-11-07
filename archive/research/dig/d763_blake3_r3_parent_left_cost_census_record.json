@@ -1,0 +1,23 @@
+{
+  "id": "D763-BLAKE3-R3-PARENT-LEFT-COST-CENSUS-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 variable-left parent operation-cost census",
+  "question": "What exact operation count appears over 4096 fixed deterministic variable-left parent configurations?",
+  "labels": ["C", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "Seed 763419, 4096 configurations: all 4096 at 730 ops; min=max=mean=730, sum=2990080; first-block control=595.",
+  "source": "our owned BLAKE3-r3 eng.py tracer",
+  "own_test": true,
+  "evidence": "research/sol_answer_D763_blake3_r3_parent_left_cost_census.md; research/retest/blake3_r3/PREREG_D763_PARENT_LEFT_COST.md; research/retest/blake3_r3/d763_parent_left_cost.py; research/retest/blake3_r3/D763_parent_left_cost.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 1.0,
+  "gain_basis": "S",
+  "held_fixed": "checked-in owned eng.py tracer, flags=12, words 0..7 variable, words 8..15 odd mconst, deterministic seed 763419",
+  "notes": "Finite operation-cost census only; it confirms the 730-op variable-left boundary but proves no global differential, collision rate, score, package, staging, filing or submission claim.",
+  "reopen_if": "A global worst-case cost proof or a claimable BLAKE3-r3 differential route becomes available."
+}

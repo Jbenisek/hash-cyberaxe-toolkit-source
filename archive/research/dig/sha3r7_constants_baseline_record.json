@@ -1,0 +1,21 @@
+{
+  "id": "S7-CONSTANTS-BASELINE-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "K constants selection baseline",
+  "question": "Does the inherited gen 512 constant-selection run reproduce its claimed trial and exact charge?",
+  "labels": ["N", "C"],
+  "status": "COMPUTED",
+  "number": "512 trials; trial 192 minimum at 28543 ops; 557056 B peak; 2181/2304 registers",
+  "source": "Appendix C extracted from research/r7/pkgS7P/sha3-256/proof.md",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_constants_baseline_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "peak_mem": "557056 B measured under 1 MiB cap",
+  "notes": "Exact six-round selector baseline reproduced. Seven-round re-selection remains open; no package/stage/filing/submission.",
+  "potential_bits": 0.02,
+  "prior": 0.2
+}

@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-allmember32",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "coupled omega targeted all-member checks",
+  "question": "Do selected representative-kept and representative-dead typed words remain all-or-none over every member of their class?",
+  "labels": ["I", "K"],
+  "status": "SAMPLED",
+  "number": "32 complete class groups; 1,048,576 exact word/member evaluations; 0 mixed groups and 0 internal errors",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_omega_class.md; research/retest/b3_omega_coupled/exact/RESULT.md; research/retest/b3_omega_coupled/exact/allmember_32.out.gz",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Each class used the first representative-kept word and the first typed word absent from its representative list, with all 32768 members tested. This is exact for the selected words only and does not prove class invariance over all typed words."
+}

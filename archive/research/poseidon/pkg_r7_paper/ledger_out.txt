@@ -1,0 +1,5 @@
+VALIDATION (as-run configuration, observed F and E; model vs algorithmic total)
+r | model total | measured algorithmic | model - measured | slack (bits) | heap model | heap measured
+3 | 410,937,818,567 | 409,369,056,359 | 1,568,762,208 | 5.518e-03 | 244,745,792 | 244,745,792
+4 | 3,993,660,556,174 | 3,977,289,295,772 | 16,371,260,402 | 5.926e-03 | 1,072,730,560 | 1,072,730,624
+5 | 9,217,469,769,975 | 9,171,678,989,504 | 45,790,780,471 | 7.185e-03 | 4,759,669,952 | 4,759,669,952

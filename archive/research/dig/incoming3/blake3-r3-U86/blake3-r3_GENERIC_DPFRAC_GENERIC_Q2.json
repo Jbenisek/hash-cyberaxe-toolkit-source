@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.DPFRAC distinguished-point fraction",
+ "question": "Is d = 114 necessary? Change it and recount the exact score (time plus memory term).",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Score by integer d (table 32 B x tmax, tmax scaled 2^(114-d)): d=110 128.325 (mem 9.8 MB), 111 127.380, 112 126.484, 113 125.6728 (mem 1,556,096 B, +0.5642), 114 125.10856 (966,272 B), 115 125.11908 (+0.01052), 116 +0.0313, 117 +0.0720, 118 +0.1502. Expected finished trails at halt 16,364.7; P(table full at 18,432) = 8.6e-57, i.e. the 12.6 percent table margin is far larger than needed. Recovery is 0.5614 percent of the ledger and scales with 2^d.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.DPFRAC|GENERIC|Q2. d below 114 is blocked by the memory term (slope 0.6 bit of memory per bit of d against 0.008 bit of recovery). Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed ledger formulas with L=2^d; INFLIGHT, cutloss, kappa as filed; success proof not re-derived for other d.",
+ "reopen_if": "A table-entry smaller than 32 B or a different memory rule."
+}

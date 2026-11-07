@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json, scan.cpp, scan_joint.txt, scan0.txt, scan1.txt, scan2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "state word v15 = flags d",
+ "question": "Q2: necessity (change it, recount the exact outcome)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Flags word changed: ops stay 595 for flags in {1,2,3,4,8,10,11,12,13,14,15,16,32} (traced). Exact scan of all 2^32 values of v15: v7', v11', v15' never zero (counts 0, 0, 0); only a' = v3' is zero (1c8bc0b9), usable only through the sum site v3' + v4'. Flags are fixed by the structure: one-block root = CHUNK_START|CHUNK_END|ROOT = 11; last block of a longer chunk = 10; parent root = 12.",
+ "topic": "b3r3.INIT.v15.Q2",
+ "notes": "universe cell blake3-r3|INIT.v15|INIT|Q2. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Exact scan col 3 (mode 0).",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "a legal value or layout that gives fewer than 595 ops per 7-lane batch, or a ledger line that charges a different count"
+}

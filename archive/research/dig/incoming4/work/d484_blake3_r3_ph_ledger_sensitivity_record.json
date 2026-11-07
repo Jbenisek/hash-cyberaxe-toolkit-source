@@ -1,0 +1,23 @@
+{
+  "id": "D484-BLAKE3-R3-PH-LEDGER-SENSITIVITY-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "conditional B3R3 PH ledger sensitivity",
+  "question": "What does the existing arithmetic ledger produce for PH=595, PH=590, and the source-supported PH=589?",
+  "labels": ["C", "D", "S"],
+  "status": "COMPUTED",
+  "number": "Standalone formula replay exactly reproduces baseline PH=595: N=29093431801591888499697033443257678941569, time_log2=125.1004046656. PH=590 gives N=28849327737550480410281065289751701648846, time_log2=125.0882488825; PH=589 gives N=28800643125756746376702571272302970369551, time_log2=125.0858122095. Conditional only; no score change.",
+  "source": "our workflow: D484 PH ledger sensitivity",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d484_ph_ledger_sensitivity.py; research/retest/blake3_r3/D484_PREREG.md; research/retest/blake3_r3/D484_run.txt; research/sol_answer_D484_blake3_r3_ph_ledger_sensitivity.md; research/blake3_r3/b3r3s/ledger_appendix.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "12312576 B = 2^23.5536292939 maximum working set; one thread",
+  "notes": "Exact arithmetic sensitivity only. Prefix search/advice, two-block organizer acceptance, production memory, and final ledger remain open. No package/stage/submit.",
+  "held_fixed": "existing b3r3s ledger formulas and constants; only PH varies",
+  "reopen_if": "The route's production schedule changes any non-PH term or the prefix/advice charge is measured"
+}

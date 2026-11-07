@@ -1,0 +1,22 @@
+{
+  "id": "D388-SHA3-R6-WIDER-KEY-COST-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "wider key width b=141 conditional cost",
+  "question": "Does the current r6 ledger make b=141 cheaper, and what charge is still missing?",
+  "labels": ["C", "S", "X"],
+  "status": "COMPUTED",
+  "number": "Owned current-ledger sweep: b=139 time_log2 121.74725, b=140 control 121.72219, b=141 conditional 121.70963; b=141 still lacks a wider kernel, exact operation charge, and measured/proved memory.",
+  "source": "our workflow: keywidth_r6_current.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_D388_sha3r6_wider_key_cost_audit.md; research/retest/lens_t3/keywidth_r6_current.py; research/tools/build_pkg/scratch/pkgS6K/work/new/ledger_r6.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.01256,
+  "gain_basis": "T",
+  "notes": "Conditional arithmetic only. The b=140 control reproduces the shipped ledger. The apparent b=141 gain is not transferable: wider key extraction/batch generation, register/spill behavior, sparse-table memory, preprocessing and judge charge remain open. Legacy plane scaling is explicitly not used as an exact price.",
+  "held_fixed": "Current pkgS6K ledger, current failure model, current 8-bit filter, current generated-kernel budgets; only b-dependent denominators and cap were changed.",
+  "reopen_if": "Build and self-test a b=141 kernel, charge its wider extraction/table/tag path, and measure or prove peak memory including preprocessing.",
+  "peak_mem": "UNKNOWN"
+}

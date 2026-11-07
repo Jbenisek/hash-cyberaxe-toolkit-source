@@ -1,0 +1,4 @@
+ops/candidate 43: trials 2^42.983, candidates per trial 2^45.00, ops per trial 2^50.43, score 84.66
+ops/candidate  1: trials 2^42.983, candidates per trial 2^45.00, ops per trial 2^45.00, score 79.24
+bar: an E1 trial must cost under 2^29.37 ops; with the T1 filter paid after the solve, a solve under 2^16.37 ops
+even with T1 free of charge, one exhaustive 2^32 sweep at 1 op/candidate scores 66.24

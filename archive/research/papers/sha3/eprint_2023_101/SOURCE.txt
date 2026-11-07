@@ -1,0 +1,1 @@
+2023_101	Practical Preimage Attacks on 3-Round Keccak-256 and 4-Round Keccak[r=640, c=160]	https://tosc.iacr.org/index.php/ToSC/article/download/12079/11920

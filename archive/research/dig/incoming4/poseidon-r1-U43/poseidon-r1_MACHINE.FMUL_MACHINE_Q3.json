@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.FMUL mul/sqr charge",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "product count is set by the NTT size: radix-4/split-radix cuts twiddle multiplications by about 25%: gain 0.0089 bit (bound); the charge itself is fixed at 1 per product by the rules",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Arithmetic on the types line. | universe cell poseidon-r1|MACHINE.FMUL|MACHINE|Q3",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "a fused multiply-accumulate counted as one op"
+}

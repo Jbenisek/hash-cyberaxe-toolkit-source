@@ -1,0 +1,20 @@
+{
+  "id": "D243-S38-C2ROW14-FAMILY-LOCAL",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 14,
+  "object": "Zone D 38 row-14 C2 family published-prefix exact count",
+  "question": "Across all row-14 forward passers, how many E15 values survive the corrected C2 continuation?",
+  "labels": ["C", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "E14 cell=1024; row14 base/expansion passers=160; all 160 x 2^32 E15 C2 search has total 1 passer (E14x=21966471)",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-c2row14-family.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Corrected C2 uses dW16=M.dl[0]. Fixed published prefix only; no per-split full rebuild and no global final-event claim. Full D243 row-14 family remains OPEN.",
+  "held_fixed": "published rows <14 and late split; E14 over its full cell, then E15 over all 2^32 values per passer",
+  "topic": "sha256-38 zoneD38 residual C2 row14"
+}

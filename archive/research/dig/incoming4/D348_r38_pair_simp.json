@@ -1,0 +1,20 @@
+{
+  "id": "D348-R38-PAIR-CAP-SIMPLIFIER",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "pair-cap and simplifier phase",
+  "question": "What terminal memory evidence does the r38 dense-pair cap/simplifier sweep provide?",
+  "labels": ["C", "S", "Z"],
+  "status": "SAMPLED",
+  "number": "capCP timed out at 2^26.92958 RSS; simplifier exited 0 at 2^27.21082 RSS and emitted 132265-var/357597-clause CNF",
+  "source": "our workflow: r38 solver-cap sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D348_r38_pair_cap_and_simplifier.md; research/memcomp/sha256-r38/capCP.err; research/memcomp/sha256-r38/simp.err; research/memcomp/sha256-r38/simp.stat",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Finite terminal observations only. capCP has no SAT/UNSAT result; capS/capCW and caps3 remain incomplete. No score transfer.",
+  "peak_mem": "27.21082 MEASURED simplifier RSS; pair cap 26.92958 MEASURED"
+}

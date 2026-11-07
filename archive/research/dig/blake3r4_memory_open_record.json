@@ -1,0 +1,23 @@
+{
+  "id": "B3R4-MEMORY-OVER20-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "memory over 2^20 conditional surface",
+  "question": "Does allowing the memory penalty make an over-limit layout profitable after all charges?",
+  "labels": ["N", "C", "S"],
+  "status": "OPEN",
+  "number": "Current layout exact: 1048568 B (8 B spare); conditional best scanned layout: 1056664 B, time 124.988982, score 125.000067, P=0.391270",
+  "source": "research/blake3_r4/b4/pkg/blake3/experiments/bsrho.py local ledger enumeration",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_memory_exact_1014.md; research/sol_answer_B3R4_memory_surface_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.3534,
+  "gain_basis": "T",
+  "potential_bits": 0.1,
+  "prior": 0.1,
+  "peak_mem": "1056664 B conditional best",
+  "notes": "The exact current layout is in bounds. The over-limit row is not a filing claim: shortened table entries require an exact recovery-cost recount before the apparent score can be used. No package/stage/filing/submission.",
+  "reopen_if": "recovery repricing for shortened entries lands"
+}

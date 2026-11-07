@@ -1,0 +1,23 @@
+{
+  "id": "D433-B3M-EXTRATREES-FRESH40-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "fresh independent validation of nonlinear B3M step-rate predictor",
+  "question": "Does the fixed D431 ExtraTrees predictor retain signal on a second 40-point fresh exact-counter campaign?",
+  "labels": ["D", "Z"],
+  "status": "SAMPLED",
+  "number": "Forty fresh WSL exact-counter samples with G=18f0e098 and seed D433-fresh40 gave control [1.0,1.0], held-out r=0.6114809946, top-quarter ratio=1.2871178816, and permutation p=0 at 2,000-draw resolution under the fixed D431 model. This is finite LOCAL_ONLY evidence; safe gain remains 0 because selection cost, larger stability, judge acceptance, and rate-to-success linkage are unproved.",
+  "source": "our workflow: D433 preregistered fresh40 ExtraTrees validation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D433_b3m_extratrees_fresh40.md; research/retest/t2/PREREG_D433_EXTRATREES_FRESH40.md; research/gridwave6/b3_basextech_fh_class/mult_18f0e098_D433fresh40.json; research/retest/t2/D433_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured for exact counter/predictor; one-thread WSL run, 216.9 s",
+  "notes": "Fresh finite validation only; no score/package/stage/filing/submission.",
+  "held_fixed": "D431 model, feature map, and PR858 no-transfer rule",
+  "reopen_if": "Larger campaign, charged fixed selector, and accepted rate-to-success derivation are available"
+}

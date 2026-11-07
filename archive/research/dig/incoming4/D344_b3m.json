@@ -1,0 +1,19 @@
+{
+  "id": "D344-B3M-INVENTORY-DELTA",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "post-D250 filing inventory delta",
+  "question": "Did later filing-log rows change the accepted BLAKE3-r2 comparison line?",
+  "labels": ["N"],
+  "status": "LOCAL_ONLY",
+  "number": "0 accepted-line changes; B3BS remains pending and B3Z2 is worse",
+  "source": "our workflow: filing-inventory-delta",
+  "own_test": true,
+  "evidence": "research/sol_answer_D344_current_inventory_delta.md; research/FILINGS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Read-only reconciliation; no package or submission change.",
+  "peak_mem": "0 FREE"
+}

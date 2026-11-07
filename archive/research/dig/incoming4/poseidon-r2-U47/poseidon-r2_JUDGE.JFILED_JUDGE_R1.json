@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JFILED (JUDGE)",
+ "question": "R1: ruling on the filed entries",
+ "labels": [
+  "N"
+ ],
+ "status": "BEDROCK",
+ "number": "r1: 651c0ca6 REFUTED (fail 1 of 2; sole fatal lane_cost/F-COST-1: per-element control charged 4-12 per 16 elements); refile 142889b7 not_evaluable (first submit refused: note under 5 KiB; refile 28.781 + 3.043 = 31.824); 56ddf2d0 REFUTED (fatal: uncharged NTT switch dispatch, +0.005 bit; 27.954 + 3.047 = 31.001). r2: nothing filed; the sampled r2 package was stopped.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "HANDOFF.md (lines 414-431); research/dig/incoming4/work/ledger_numbers.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JFILED|JUDGE|R1. Recorded from HANDOFF; I did not fetch the dossiers.",
+ "held_fixed": "rulings of the r1 filings as recorded in HANDOFF.md 10-12 18:20 .. 20:25; no r2 entry has been filed",
+ "reopen_if": "an r2 entry is filed or a new ruling on r1 appears"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "experiments": [
+    {
+      "id": "bsrho-n18",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r4-prefix-v1 target with 64-byte messages K || x (K the fixed 32-byte prefix of the entry, one block, flags 11), collision of the low 18 bits of the complete digest. Each trial runs ONE attempt of the shipped 256-lane search on the walk g = f XOR q (plan(18): distinguished points with the low 2 bits all ones, 8 batches of 256 lanes, the stage-1 test, the quotient-filter table, the cut rule, the recovery with checkpoints on the packed circuit) from a word derived from the trial seed, with no amplification, and returns the two 64-byte messages K || x and K || y when the attempt found a pair, two nulls otherwise. The same program also runs the same attempt on an ideal function of the same width (keyed blake2b) and one family-law run with a fresh key at n = 12; these are reported as untrusted observations only.",
+      "hypothesis": "For every returned pair the two messages are distinct and their complete 4-round digests agree in the low 18 bits (digest bytes 0 and 1 and the low 2 bits of byte 2). This is exact: the program recovers a merge of two trails of the walk g = f XOR q at width 18. The number of trials that return a pair is the number of single attempts that succeeded; it is reported as a program check, with the ideal-function control as an untrusted observation, and no probability, interval or sampling inference is drawn from it. Observations (untrusted, the program's own): target_ok, ideal_ok, target_batches, target_halt, ideal_halt, t1_steps. Not shown: any width-256 cost or success probability.",
+      "program": "experiments/bsrho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffff030000000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "proj-k0-w256",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r4-prefix-v1 target with 64-byte messages K || x at full width 256. Each trial evaluates 2048 points x with the shipped bit-sliced circuit (source by trial index mod 3: uniform inputs from the seed, counter inputs r + i, iterates of g from 256 seed-derived starts), recovers the digests from the stored planes by XOR with q, and returns two distinct points whose complete digests agree in the low 21 bits when the set contains such a pair, two nulls otherwise. Untrusted observations: the source and the number of equal pairs in the low 21 bits.",
+      "hypothesis": "For every returned pair the two messages K || x and K || y are distinct and their complete 4-round digests agree in the low 21 bits (digest bytes 0 and 1 and the low 5 bits of byte 2). This is exact: it checks the bit-sliced circuit, the mask q and the message construction with the prefix at full width. The number of returned pairs and the equal-pair counts are reported as program checks, not as estimates, and no inference is drawn from them. Observations (untrusted): source, dup_w0. Not shown: collision structure at 2^128 evaluations.",
+      "program": "experiments/bsrho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffff1f0000000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    }
+  ]
+}

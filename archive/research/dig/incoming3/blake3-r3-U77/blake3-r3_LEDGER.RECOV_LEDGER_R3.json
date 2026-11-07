@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "recovery: at most 12 * 2^114 + 2^48 batches, one recovery",
+ "question": "R3 control: metered recovery of the shipped program",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "rho.py recover wrapped to count batches: n = 32, 747 attempts: max recovery batches 2,225 of capr 3,136 (0.7095), max stored trail length 2,388; n = 22, 4,000 attempts: max 119 of capr 256 (0.4648), max stored length 153; never above capr (a + 1 <= capr holds). Every success is a digest collision at width n (checked inside the program). Positive control for the check itself: the earlier price 620 per batch is below the exact need 624, so that charge fails the same comparison (the judge's finding, confirmed by this recount).",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/ctrl.py, research/dig/incoming3/blake3-r3-U76/work/ctrl22.out, research/dig/incoming3/blake3-r3-U76/work/ctrl32.out",
+ "notes": "universe cell blake3-r3|LEDGER.RECOV|LEDGER|R3. n = 22 and 32 only; the n = 256 cap is the formula.",
+ "held_fixed": "rho.py search/recover unchanged, wrapped counters; seeds ctrl-r3-a, ctrl-r3-b",
+ "reopen_if": "a metered recovery above capr batches",
+ "gain_basis": "count"
+}

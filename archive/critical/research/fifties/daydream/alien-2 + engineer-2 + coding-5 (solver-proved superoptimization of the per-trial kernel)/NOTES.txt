@@ -1,0 +1,57 @@
+alien-2 + engineer-2 + coding-5: solver-checked superoptimisation of the per-trial kernel (pkgCK, 63.1880). 2026-10-09, 21:00-21:45.
+Input: proof.md 9.8 (omega side and fill listings), 9.6 (shortcut), 6.5 (machine), Section 11 (charges). The package itself was only read, not changed.
+
+RESULT (COMPUTED): one proved rewrite: -2 units per omega side, +2 per fill. This gives log2 T 63.18793 -> 63.16708 (-0.02085 bit),
+exact integers, accounting.py.
+
+The rewrite. It uses identities that Lemma KP already states: x = p - A and omega = (ROL(x,16) XOR L) + C, with L = ROL(X15,24) XOR S15.
+  omega side, old (19): U; Y8=U^C0.b1; Y12=Y8+(-C0.c1); Y0=PROR(Y12,24)^C0.d1; C0a1=Y0+(-C0.b1-w6); X0=C0a1+(-X4-w2);
+                        D0d1=X0^ROL(X15,8); D0a1=PROR(D0d1,16)^S15; w8=D0a1+(-S0-S5); E; om=E+w8
+  omega side, new (17): U; Y8; Y12; Y0 (unchanged); X0 = Y0 + A2   [A2 = (-C0.b1-w6)+(-X4-w2), context operand]
+                        D0a1 = PROR(X0,16) ^ L   [L = ROL(X15,24)^S15, context operand, replaces S15]; w8; E; om (unchanged)
+  fill, new (56):  first D0d1 = X0 ^ ROL(X15,8), then C0a1 = X0 + B in place [B = X4+w2], then the 16 printed lines unchanged.
+  The context operand count stays 16 (A2, B and L replace -C0.b1-w6, -X4-w2 and S15). The context needs about 3 more scalar ops
+  (24 allowed, 21 used before), so the context charge stays 600.
+  Registers: X0 replaces C0a1 and D0d1 in the frame until the fill, then C0a1 and D0d1 hold it (X0 dies), so there is no extra
+  register. Passing lanes always come after their batch's fill in code position, so the 9.6 shortcut still finds C0a1 and D0d1 in registers.
+  New charges: partner batch 52->50 (fifth 33->31), representative batch 61->59 (last 47->45), opened cluster 267->257, fill 54->56.
+  The counts and budgets (A, E, G, PASS, credit, RUN_CONTEXTS) are unchanged. Only u_O and u_G change inside WB.
+Proofs (z3 5.1, all mutation-tested: the mutants give sat):
+  prove_omega.py: scalar 32-bit equality of om, D0a1, C0a1, D0d1 (old vs new). PACKED 256-bit, 7x36-bit lanes, PROR exactly as in 6.5:
+    om and D0a1 are bit-identical as whole words; C0a1 and D0d1 are equal in the low 32 bits of every lane; lane bounds are
+    X0<2^33, C0a1<2^33+2^32, D0d1<2^33, om<3*2^32, and bits 252..255 are zero. All PROVED.
+  prove_fill_lane.py: one 40-bit lane, the full new fill vs the old fill: Y9 low 32 bits equal, bits 35..34 = 01 (the T1 address),
+    every new value < 2^36. PROVED. Interval rule of Lemma MB on the new fill: every sum < 2^36 (largest Y1 < 2^35.70), so
+    no carry crosses a lane and the one-lane proof covers all 7 lanes.
+  prove_fill.py (all 7 lanes at 256 bits in one query): z3 'unknown' at its 900 s cap. Not needed, given the lemma above.
+Text the filer must change if this is adopted: 9.8 listings and Lemma MB bounds (Y1 bound 2^35.70 instead of 2^35.17; om
+  unchanged), Section 11 rows (59/45, 257, 56) and the claim restriction text (52->50, 33->31, 54->56, 267->257, 61->59,
+  "8 member lines" -> 6, "17 lines ... in 16 packed lines" -> 19 in 18), WB, W_CTX, CREDIT is unchanged, and the unit
+  constants in experiments/frontline.py. NOT DONE HERE: re-running frontline.py, and recomputing WB/W_CTX/RUN_CONTEXTS if the
+  filer re-balances them.
+
+STRICT WINDOWS (COMPUTED): enum_windows.py. Every window of 1..4 consecutive lines of the omega side (9 lines) and of the fill (16 lines),
+  75 windows, with the live-outs unchanged. Exhaustive over all programs of <=2 lines that cost strictly less, with ops
+  {add, xor, and, or} cost 1, PROR cost 5 and PROR^x cost 6, operands from the window's live-ins and a pool of context expressions
+  (795 constants; a depth-2 pool of 4035 in the --deep run), filtered on 64 random vectors. 0 candidates (log enum_windows.log).
+  -> defence note: "with live-outs fixed, the printed omega side and fill are locally optimal for windows <= 4 lines against
+     <=2-line replacements (exhaustive over the stated op set and pool; random-vector filter, no survivors so nothing for z3)".
+  --deep (pool 4035): also 0 candidates in all 75 windows (enum_windows_deep.log, 1125 s).
+  --relaxed (omega side; the live-outs are om and Y0 only, with C0a1 and D0d1 recomputed in the fill): 9 candidates (enum_windows_relaxed.log).
+     All 9 are the two folds above or the two together, e.g. window [C0a1,X0,D0d1,D0a1] cost 9 -> "Y0+k1+k2 ;
+     ror(t,16)^ror(X15r8,16)^S15", cost 7. The search found the rewrite on its own (positive control), and found no third saving.
+  Limits: replacements of 3+ lines are not enumerated. The pool is closed only to depth 2. Multiply, NOT, packed SUB and
+  memory-operand forms are not in the set. The saving above comes from CHANGING the live-outs (deferring C0a1 and D0d1 to
+  the fill), which a strict window search cannot see.
+
+OTHER LEVERS (not proved, for the owner):
+  - Biased packed SUB in the fill: D1d1 = K'' - X12 with K'' = (K-1 mod 2^32) + 2^34 per lane. No lane goes negative because
+    X12 < 2^34. Fill 56 -> 55, total -0.02578 bit. This needs the machine text to allow SUB; 9.6 currently says "never a packed
+    subtraction". GUESS: legal under the organizer's "primitive op" model, but it changes the stated machine.
+  - Batched zero test of a partner batch: OR the 7 loaded T2' masks, then one compare and branch; the per-lane compare+branch
+    (14) is moved into the fill row (a batch with any nonzero mask is exactly a filled batch). Cluster 267 -> 241,
+    fill +14: -0.0064 bit alone, -0.0274 combined with the rewrite (DERIVED, not proved).
+  - Marginal values (COMPUTED): 1 unit per omega side = 0.0153 bit; per fill = 0.0049; per lane test (31 lanes per cluster)
+    = 0.0915. So the "0.2 bit per op" premise of the brief is too high by about 10x for the omega side. The lane test
+    (shift, AND, load, compare, branch) is where single units are worth most. A one-instruction branch-if-zero would be
+    worth about 0.09 bit per unit, but it is a machine-model question for the owner (GUESS), not a kernel rewrite.

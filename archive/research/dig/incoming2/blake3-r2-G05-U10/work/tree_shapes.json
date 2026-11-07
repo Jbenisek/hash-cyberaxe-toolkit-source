@@ -1,0 +1,264 @@
+[
+ {
+  "len": 1,
+  "chunks": 1,
+  "total_compressions": 1,
+  "nonroot": 0,
+  "root_flags": 11,
+  "root_b": 1,
+  "root_h": "h=IV",
+  "kinds": {
+   "ROOT": 1
+  }
+ },
+ {
+  "len": 55,
+  "chunks": 1,
+  "total_compressions": 1,
+  "nonroot": 0,
+  "root_flags": 11,
+  "root_b": 55,
+  "root_h": "h=IV",
+  "kinds": {
+   "ROOT": 1
+  }
+ },
+ {
+  "len": 63,
+  "chunks": 1,
+  "total_compressions": 1,
+  "nonroot": 0,
+  "root_flags": 11,
+  "root_b": 63,
+  "root_h": "h=IV",
+  "kinds": {
+   "ROOT": 1
+  }
+ },
+ {
+  "len": 64,
+  "chunks": 1,
+  "total_compressions": 1,
+  "nonroot": 0,
+  "root_flags": 11,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "ROOT": 1
+  }
+ },
+ {
+  "len": 65,
+  "chunks": 1,
+  "total_compressions": 2,
+  "nonroot": 1,
+  "root_flags": 10,
+  "root_b": 1,
+  "root_h": "h=CV",
+  "kinds": {
+   "ROOT": 1,
+   "chunkblk": 1
+  }
+ },
+ {
+  "len": 127,
+  "chunks": 1,
+  "total_compressions": 2,
+  "nonroot": 1,
+  "root_flags": 10,
+  "root_b": 63,
+  "root_h": "h=CV",
+  "kinds": {
+   "ROOT": 1,
+   "chunkblk": 1
+  }
+ },
+ {
+  "len": 128,
+  "chunks": 1,
+  "total_compressions": 2,
+  "nonroot": 1,
+  "root_flags": 10,
+  "root_b": 64,
+  "root_h": "h=CV",
+  "kinds": {
+   "ROOT": 1,
+   "chunkblk": 1
+  }
+ },
+ {
+  "len": 1024,
+  "chunks": 1,
+  "total_compressions": 16,
+  "nonroot": 15,
+  "root_flags": 10,
+  "root_b": 64,
+  "root_h": "h=CV",
+  "kinds": {
+   "ROOT": 1,
+   "chunkblk": 15
+  }
+ },
+ {
+  "len": 1025,
+  "chunks": 2,
+  "total_compressions": 18,
+  "nonroot": 17,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "ROOT": 1,
+   "chunk_end": 2,
+   "chunkblk": 15
+  }
+ },
+ {
+  "len": 1088,
+  "chunks": 2,
+  "total_compressions": 18,
+  "nonroot": 17,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "ROOT": 1,
+   "chunk_end": 2,
+   "chunkblk": 15
+  }
+ },
+ {
+  "len": 2048,
+  "chunks": 2,
+  "total_compressions": 33,
+  "nonroot": 32,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "ROOT": 1,
+   "chunk_end": 2,
+   "chunkblk": 30
+  }
+ },
+ {
+  "len": 2049,
+  "chunks": 3,
+  "total_compressions": 35,
+  "nonroot": 34,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 1,
+   "ROOT": 1,
+   "chunk_end": 3,
+   "chunkblk": 30
+  }
+ },
+ {
+  "len": 3072,
+  "chunks": 3,
+  "total_compressions": 50,
+  "nonroot": 49,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 1,
+   "ROOT": 1,
+   "chunk_end": 3,
+   "chunkblk": 45
+  }
+ },
+ {
+  "len": 3073,
+  "chunks": 4,
+  "total_compressions": 52,
+  "nonroot": 51,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 1,
+   "ROOT": 1,
+   "chunk_end": 5,
+   "chunkblk": 45
+  }
+ },
+ {
+  "len": 4096,
+  "chunks": 4,
+  "total_compressions": 67,
+  "nonroot": 66,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 1,
+   "ROOT": 1,
+   "chunk_end": 5,
+   "chunkblk": 60
+  }
+ },
+ {
+  "len": 4097,
+  "chunks": 5,
+  "total_compressions": 69,
+  "nonroot": 68,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 3,
+   "ROOT": 1,
+   "chunk_end": 5,
+   "chunkblk": 60
+  }
+ },
+ {
+  "len": 7168,
+  "chunks": 7,
+  "total_compressions": 118,
+  "nonroot": 117,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 4,
+   "ROOT": 1,
+   "chunk_end": 8,
+   "chunkblk": 105
+  }
+ },
+ {
+  "len": 8192,
+  "chunks": 8,
+  "total_compressions": 135,
+  "nonroot": 134,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 4,
+   "ROOT": 1,
+   "chunk_end": 10,
+   "chunkblk": 120
+  }
+ },
+ {
+  "len": 8193,
+  "chunks": 9,
+  "total_compressions": 137,
+  "nonroot": 136,
+  "root_flags": 12,
+  "root_b": 64,
+  "root_h": "h=IV",
+  "kinds": {
+   "parent_nonroot": 7,
+   "ROOT": 1,
+   "chunk_end": 9,
+   "chunkblk": 120
+  }
+ }
+]

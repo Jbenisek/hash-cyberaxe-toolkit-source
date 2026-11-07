@@ -1,0 +1,15 @@
+machine counts (filed conventions, verified lanes): single whole-batch 231 (=158 ops + 73 loads);  two: stage A 113 (=72+41), stage 2 142 (=101+41)
+registers: single 13, two 13 (limit 16)
+(a) single-stage (Lemma N for every lane):
+   stage A total 231, stage 2 total 0; per-batch = stageA + (enter frac)*stage2; 7 lanes/batch
+   middle-loop overhead per trial 0.00195 (<=2^10 per X14 over 2^19 members)
+   per trial: expected 33.0023, budgeted 33.0023, charged 34.4
+   f=2^25: time_log2 = 98.3679 -> 98.37 ;  conservative rate 159827285 / f = margin 4.763x (2.252 bits)
+   f=2^26: time_log2 = 97.3679 -> 97.37 ;  conservative rate 159827285 / f = margin 2.382x (1.252 bits)
+(b) two-stage (stage A ends at the rule on h1):
+   stage A total 113, stage 2 total 142; per-batch = stageA + (enter frac)*stage2; 7 lanes/batch
+   per-lane rule pass 2^-4.0013; batch enters stage 2 with prob 0.36323; budget frac 0.400
+   middle-loop overhead per trial 0.00195 (<=2^10 per X14 over 2^19 members)
+   per trial: expected 23.5134, budgeted 24.2593, charged 25.3
+   f=2^25: time_log2 = 97.9246 -> 97.92 ;  conservative rate 159827285 / f = margin 4.763x (2.252 bits)
+   f=2^26: time_log2 = 96.9246 -> 96.92 ;  conservative rate 159827285 / f = margin 2.382x (1.252 bits)

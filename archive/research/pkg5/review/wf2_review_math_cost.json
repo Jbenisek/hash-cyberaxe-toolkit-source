@@ -1,0 +1,121 @@
+{
+ "verdict": "ready after minor fixes",
+ "findings": [
+  {
+   "severity": "must fix",
+   "where": "tools\\pkg5_data.py l.155 (VERSION_REVIEW); rendered in submission-note-r2.md l.620-621",
+   "what": "\"No reviewing agent has seen this version of the package\" is false from this review round on. Filing it unchanged would publish a false statement.",
+   "fix": "After the round, set VERSION_REVIEW to say what was reviewed and by whom (helper agents of the same model, not independent parties), then rebuild and revalidate. Quote a reviewer's result only after the main session has rerun it."
+  },
+  {
+   "severity": "must fix",
+   "where": "src\\manifest.json l.20 (residual-search hypothesis); rendered blake3-r2\\experiments\\manifest.json l.20",
+   "what": "\"batch_stage_2_entered = 1 for at most about 0.109375 of the seeds\" presents a bound on an expectation as a bound on a count of 256 seeds. The expected count is about 26.7 with standard deviation 4.9, so more than 28 of 256 has probability about 0.36 and more than 32 (the H3 budget share of one eighth) about 0.12. My two seed sets gave 30 and 32 of 256 (review\\judge_time.out); the local intake gave 22. With organizer seeds other than the local ones, the organizer-run report can contradict a declared prediction, and the experiments role must discuss H3.",
+   "fix": "Replace with: \"batch_stage_2_entered = 1 for a share of about 0.104 of the seeds on average if trials satisfy rule A with probability 2^-6 (at most 7 * 2^-6 = 0.109375): about 27 of 256 seeds with a standard deviation of about 5, so the count of one run can lie above one eighth of the seeds by chance and is no test of H3.\" Rebuild and revalidate (hashes change)."
+  },
+  {
+   "severity": "minor",
+   "where": "src\\manifest.json l.7; blake3-r2\\experiments\\halfsearch.py l.6-13 (docstring)",
+   "what": "\"The program never imports or calls an implementation of BLAKE3\" is contradicted two lines later and by the code: residual-search calls batch_check -> reference -> compress2, a complete 2-round compression of the trial's messages. The judge sees the whole source. I found no organizer rule against it (docs\\HEURISTIC_EXPERIMENTS.md asks only for the standard library and determinism); the owner should still confirm.",
+   "fix": "Write: \"No BLAKE3 library is imported, and the returned pairs are built with the quarter-round G alone. The file contains its own 2-round compression (compress2, written out from proof.md Section 1), used only to check the counted batch and in the self-test, never for a returned pair.\""
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.1251-1259 and l.1929-1933 (\"nothing is known about whether they satisfy rule A\"); note l.228-235",
+   "what": "An out-of-sample figure for rule A exists and is not stated. The rule was read from the 30 betas with k at most 13: 27 of 242 outcomes have a violating solution, carrying 10,606 of 29,862,848 (0.036%). On the nine betas added later (all k = 14; 115,074) it is 13 of 45 outcomes carrying 1,434 (1.25%), a share 35 times larger; six of those nine betas are dropped in full (review\\judge_time.out). The bound is not affected, but a judge can compute this from the two tables.",
+   "fix": "Add both figures to Section 10 (rule A paragraph and Limits) and the note, with one sentence: betas the rule was not read from comply less, and betas with k above 14, which are not counted, may be rejected more often."
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.553-555 (src\\proof_head.md l.541-543), l.822-824 (H1), l.1187-1188, l.1198-1200",
+   "what": "Solver results are written as facts: \"every outcome ... for which a solution that violates rule A exists\" is left out, and \"every solution of these outcomes satisfies rule A\". Both hold only if the 247 \"no solution\" answers are right. The abstract (l.44-45) and claim.json word it correctly.",
+   "fix": "Write \"for which the solver found a solution that violates rule A\" and \"if these answers are right, every solution of these outcomes satisfies rule A\"."
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.1229-1231, l.1924-1928; claim.json l.33 (H1 limitations, \"one SAT solver's uncertified answers\"); note l.210-211, l.505-507",
+   "what": "\"One solver, one run\" can be improved. I repeated all 287 questions with a CNF written separately from proof 6.2 (unknown Y14 instead of h1; the four output differences of the residual as conditions) and two other solvers. cadical (18 s) and cryptominisat5 (23 s) both give 247 without and 40 with a violating solution, the same answer as kissat for every outcome; all 287 base systems are satisfiable and every model checks in plain arithmetic (review\\judge_sat.py, judge_sat_*.out). No proof certificate was checked.",
+   "fix": "After the main session reruns review\\judge_sat.sh, replace the limitation by: three solvers, two of them on a CNF written separately by a reviewing helper agent, give the same answers; no certificate was checked."
+  },
+  {
+   "severity": "minor",
+   "where": "claim.json l.49-51 (H3 extrapolation, limitations: \"four runs cannot exclude seed words for which it has\"); proof.md l.837-847, l.2004-2009",
+   "what": "H3 rests on four sets of seed words in a layout with two stated differences. A CPU check removes both differences and widens the base (review\\judge_h3.py, Windows Python with numpy, 60 s, 5 processes): 8,192 sets of seed words in the layout of 6.4 (X1 = X10 = 0, X12 < 2^8, X13 < 2^16), 2^15 sampled batches each, 1,878,904,437 lanes. Share satisfying rule A 2^-5.9996; per set between 0.931 and 1.075 times 2^-6 (one binomial sd 0.0166; H3 needs below 1.1429); chi-square 8,358.7 on 8,192. Batches entering stage 2: 0.10383 overall, at most 0.1112 per set (budget 0.125). The three most extreme sets give 0.9994, 0.9998 and 1.0018 on 64 fresh samples each. 33,688 lanes compared with the real messages, 0 wrong. Batches are sampled, not enumerated.",
+   "fix": "Main session reruns \"python -B review\\judge_h3.py 8192 15 5 0\" and adds the result to H3's extrapolation and Section 10 as a helper agent's computation. Replace \"four runs cannot exclude\" by what 8,192 sets with none above the budget allow (at most about 3.7e-4 of the seed sets at 95%, for the sampled share)."
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.1181-1231 (rule A and the count the claim uses); l.1145-1179 (heaviest beta)",
+   "what": "Reproducing from the package alone: the cost can be reproduced (self-test rerun gave the printed figures); the count cannot, which the text says. For rule A the reader gets per-beta sums and one of the 40 dropped outcomes, so the solver questions cannot be repeated. The text also does not say that the 16 printed outcomes of the heaviest beta all have the answer \"no violating solution\" (true in evidence\\rule_a_sat_e7c1815f.txt; the 25 betas with no dropped outcome carry 99.65% of the count).",
+   "fix": "Add: \"For the 16 outcomes of the heaviest beta the answer is that no solution violates rule A, so 47% of the count can be rechecked with any SAT solver from the definitions.\" Add a table of the 40 dropped outcomes (beta, tau, eps, product), or of all 287 with their answer (about 20 KB; proof is 127 KB of 512 KB, judge evidence 232 KB of 512 KB)."
+  },
+  {
+   "severity": "minor",
+   "where": "src\\claim.json, H1 evidence_ids (rendered claim.json l.32) and H1 limitations (l.33)",
+   "what": "H1's event is \"R = 0 and rule A\", but its evidence_ids omit 6.3 and 6.4, where rule A is defined and where the text says what the algorithm drops. H1's limitations also lack the sentence, present in proof l.1933-1935 and the note, that no measurement on real messages tests rule A together with R = 0.",
+   "fix": "Add proof:457-555 and proof:557-590 to H1's evidence_ids (after the rebuild moves the lines). Add \"No measurement tests rule A together with R = 0.\" to H1 limitations; 35 characters are free, so shorten another clause."
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.1202 and note l.107 (0.041%); proof.md l.2014 (2^0.96) against l.2043 and note l.17 (0.97 bits)",
+   "what": "Two rounding inconsistencies. 12,039.8 of 29,977,922 is 0.0402%, and l.1230 prints 0.999598; \"0.041%\" is that figure rounded up at the third decimal. log2(34 / 17.4) is 0.9664 and is printed once as 0.96 and twice as 0.97.",
+   "fix": "Print \"0.0402%\" (rule_lost_pct with four decimals) or \"below 0.041%\". Use one rounding for the cost gain, e.g. 0.97 in both places (charge_gain in pkg5_data.py l.662 floors it)."
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.976-977; src\\proof_head.md l.963 (end of file)",
+   "what": "The heading \"## 10. Evidence, scope and field meanings\" follows the last line of Section 9 with no empty line. pkg4 had one (its l.788); this is a regression, and some Markdown renderers will not show a heading.",
+   "fix": "End src\\proof_head.md with an empty line. Every evidence line range moves by one; check them after the build."
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.2063-2064 (field meanings); claim.json l.22 (restriction 5, \"selecting them and eta\")",
+   "what": "Section 9 (l.970-972) says preprocessing_log2 also covers the selection of rule A; the field meanings and the restriction name only the constants and eta.",
+   "fix": "Add \"and of rule A\" in both places."
+  },
+  {
+   "severity": "minor",
+   "where": "proof.md l.1233-1235; note l.212-213; tools\\pkg5_data.py l.2742-2743",
+   "what": "\"the calculator as it is now, a binary that was only executed (SHA-256 aa02c98936ffeb25...)\" is unclear to a public reader, and a truncated hash of a file that is not in the package helps nobody.",
+   "fix": "Write \"with the compiled calculator in its present form, run unchanged\" and either drop the hash or print all 64 digits."
+  },
+  {
+   "severity": "information",
+   "where": "H1-residual-hit-rate (claim.json l.27-34; proof Section 7 and 10)",
+   "what": "As the judge I would mark H1 \"plausible\" (partly supported), unchanged from the pkg4 draft: stated model, counted rate, margin 3.57, candid limits; against it about 70 bits of extrapolation (tested near 2^-32, used at 2^-103), constants and class chosen by the count, independence assumed, no slack on the probability side. The new part holds up: Lemma A is correct (I rederived S, ALL, V by hand), the dropping of 40 outcomes is conservative and three solvers agree, and the printed violating solution checks (R = 0, h1 = d87fa4af, bits 23 and 24 both 0, beta f8342852). I found no concrete flaw that would justify \"refuted\".",
+   "fix": "None beyond the findings above. The owner should know that the support for rule A is still entirely participant computation."
+  },
+  {
+   "severity": "information",
+   "where": "H2-e1-test-passes (claim.json l.36-43)",
+   "what": "I would mark H2 \"plausible\", well supported: Lemma N is exact (rechecked), the measured rate 1,521 in 2^40 is 2^-29.43, the eight shared-seed runs show no spread (3.6 on 7), four more runs give 1,390, and the budget is 2^13.4 above the mean. All figures equal their files. The evidence is participant-produced, as for H2 of the filed packages.",
+   "fix": "None."
+  },
+  {
+   "severity": "information",
+   "where": "H3-stage-2-entries (claim.json l.45-52)",
+   "what": "I would mark H3 \"plausible\": the statement is exact about what it bounds (batches entering are at most trials satisfying rule A), the time bound does not depend on it, and the evidence is relevant (2^-6 for a uniform word; four runs each within 1.3e-5; my 8,192-set check). The weak points are a margin of only 1.143 and evidence that is all participant-produced. I verified in night_cheaper_classB3.cu l.134 and l.157 that the runs use shared seed words, X12 < 2^8 and exactly rule A. Lanes of one batch are slightly positively correlated (0.10383 of batches enter against 0.10438 for independent lanes), which is the favourable direction.",
+   "fix": "None required. Raising the budget to 5/32 at the same claim would use up the 3.8% charge margin; I do not recommend it."
+  },
+  {
+   "severity": "information",
+   "where": "hash-smash\\judge\\prompts\\paired-common-v1.md l.80-96, lane-experiments-v1.md l.15-18",
+   "what": "The judge's scale is established / plausible / unsupported / refuted; \"unsupported\" means no relevant evidence at all. The experiments role is told to note the absence of organizer-run evidence and never to trust participant reports. pkg5 adds a third declared heuristic and so one more place where a single \"unsupported\" leaves no score, for a gain of 1.0 bit over pkg4. H3 has the same kind of support as H2 of the filed packages, with far less margin.",
+   "fix": "Owner's decision between pkg4 (100.4, two heuristics) and pkg5 (99.4, three). If possible, read what the roles wrote on H2 of the filed packages first."
+  },
+  {
+   "severity": "information",
+   "where": "proof.md, claim.json, submission-note-r2.md, experiments\\halfsearch.py, both manifests",
+   "what": "Public reading: all six files are plain ASCII with no control characters; no path, account name, address or key; no instruction addressed to a reader or a model; no offensive word (review\\judge_scan.py). AI credits in the note (l.611-650) are complete: Claude Opus 5.5 in Claude Code with helper agents, Grok 4.7, a Venice.ai model, GPT in pro mode, GPT-6 Luna, other teams' public notes, and the co-author credit for ticket 2bf40fb. Claim fields are at most 4,075 of 4,096 characters; all evidence line ranges point at the right sections. The two experiments take 0.1 s and 1.5 s for 256 seeds here (limit 20 s); the program is 37,041 of 65,536 bytes.",
+   "fix": "None."
+  },
+  {
+   "severity": "information",
+   "where": "research\\pkg4 (frozen), author's item 1",
+   "what": "The three betas whose E3 count went through the random-subset branch (c81cd8b3, f81c2873, f81c28b3) are handled correctly in pkg5 (l.1241-1249); calc2_total has 2,159 plain rows, 2,110 without eps and 3 flagged. pkg4's \"enumerated completely\" does not carry that caveat.",
+   "fix": "If pkg4 is ever filed instead, add the same sentence there first."
+  }
+ ],
+ "checked": "Read all of proof.md (2,074 lines), claim.json, the note, halfsearch.py, both manifests, FOLLOWUP_agent.md, rule_a_sat.py, the evidence files and the rule and layout lines of the GPU source. Recomputed from files: Fact P, Lemma A constants, both printed solutions, the count sums (29,977,922.3; dropped 12,039.8 in 40 outcomes of 14 betas; 29,965,882.5), the whole-list totals, cost (16.755 budgeted, 16.447 expected, 3.85% margin, total 2^99.3741 below 2^99.3841), success 0.39047, the H2 and H3 figures. Reran: self-test 2000/1 (identical figures), check_pkg5.py (83 ok, exit 0); SHA-256 of proof.md and claim.json equal the report's. Own work in research\\pkg5\\review\\judge_*: rule A with cadical and cryptominisat5 on my own encoding, H3 over 8,192 sets of seed words, experiment timing, text scan, claim field lengths and evidence ranges. Read the organizer's judge prompts and limits in the editing copy.",
+ "not_checked": "The calculator and the count 29,977,922 itself, ApproxMC, the toy runs and every GPU run: figures taken from their files. Sections 1 to 5 and the parts of Section 10 and the note inherited from pkg4 were read, not recomputed. Not rerun: build, fmt, selftest_pkg5.py, the long self-tests, the Docker intake, the judge pipeline. pkg5_data.py l.741-2565 not read. No proof certificate for any solver answer. My H3 check samples 2^15 batches per set of seed words, not whole runs, and covers rule A only. No yukon command, no GPU job, nothing sent, no package file edited."
+}

@@ -1,0 +1,2 @@
+basis Y4,Y14,Y12,w12,w5,C0.d1,D2.b1,X9,w6: 500/500 random choices give a legal half-collision pair with the chosen Y4,Y14,Y12,w12,w5 (checks needed: 0)
+lift: 200/200 planted pairs recovered from the 9 E words + 5 GD words (checks after the 4th and 5th guess: 1 and 4), one-bit-wrong D2.c1 rejected 200/200

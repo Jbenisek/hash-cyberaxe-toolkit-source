@@ -1,0 +1,21 @@
+{
+  "id": "D320-B3M-CURRENT-SELFTEST-512",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "current B3M shipped-path self-test",
+  "question": "Does the unchanged current B3M source still pass its full finite self-test at 512 cases?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "frontline.py --selftest 512 exits 0 with ok=true: constants, 256/256 width-8 automata, 1024/1024 T1/T2 checks, S7, precheck, replicas, F1 fill=224, all halt drills and gate drills pass with zero mismatches.",
+  "source": "our workflow: D320 current B3M self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D320_b3m_current_selftest.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Finite source evidence only. It does not resolve the python-message-pairs-v1 output protocol or organizer memory ruling; no package, staging, filing, or submission.",
+  "held_fixed": "unchanged current pkgB3S2 source and self-test definitions",
+  "reopen_if": "A source/protocol rewrite or organizer ruling on streamed output becomes available"
+}

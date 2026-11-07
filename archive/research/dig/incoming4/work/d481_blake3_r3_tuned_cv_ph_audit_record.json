@@ -1,0 +1,23 @@
+{
+  "id": "D481-BLAKE3-R3-TUNED-CV-PH-AUDIT-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "stored tuned-CV PH operation count",
+  "question": "What exact operation count does the stored tuned CV produce under the declared seven-lane tracer, and does the IV control remain 595?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Independent one-thread tracer: tuned h with flags 10 gives 589 operations; IV flags-11 control gives 595; 13 nonzero folded sites; peak working set 12406784 B = 2^23.5646258628. This conflicts with the stale PH=590 conditional note and requires source reconciliation before any ledger change.",
+  "source": "our workflow: D481 independent tuned-CV PH audit",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d481_tuned_cv_ph_audit.py; research/retest/blake3_r3/D481_PREREG.md; research/retest/blake3_r3/D481_run.txt; research/sol_answer_D481_blake3_r3_tuned_cv_ph_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "12406784 B = 2^23.5646258628 maximum working set; one thread",
+  "notes": "Source-level count only. Does not run a package, prove prefix-search rate/advice, or establish organizer acceptance. No package/stage/submit.",
+  "held_fixed": "standard three-round G schedule; seven 36-bit lanes; stored h_tuned.json; flags 10; constants folded; five-op rotate",
+  "reopen_if": "A source-equivalent tracer reproduces PH=590 or identifies the exact accounting difference; then reconcile before changing any ledger"
+}

@@ -1,0 +1,16 @@
+q, v2(q-1), q mod 4, #x with x^5=x, fixed triples of S layer, #cycles of x->x^5 on F_q^*, max cycle len, cycle len spectrum (len:count)
+257 8 1 5 125 16 64 {1: 4, 2: 2, 4: 2, 8: 2, 16: 2, 32: 2, 64: 2}
+769 8 1 5 125 44 64 {1: 4, 2: 10, 4: 6, 8: 6, 16: 6, 32: 6, 64: 6}
+12289 12 1 5 125 68 1024 {1: 4, 2: 10, 4: 6, 8: 6, 16: 6, 32: 6, 64: 6, 128: 6, 256: 6, 512: 6, 1024: 6}
+65537 16 1 5 125 32 16384 {1: 4, 2: 2, 4: 2, 8: 2, 16: 2, 32: 2, 64: 2, 128: 2, 256: 2, 512: 2, 1024: 2, 2048: 2, 4096: 2, 8192: 2, 16384: 2}
+1009 4 1 5 125 140 12 {1: 4, 2: 10, 4: 6, 6: 80, 12: 40}
+4099 1 3 3 27 10 682 {1: 2, 2: 2, 682: 6}
+1000003 1 3 3 27 10 166666 {1: 2, 2: 2, 166666: 6}
+
+Fibre differences (r=1): pairs of inputs in the same lane-0 fibre; unordered difference multiplicity vs shuffled-output null
+q=257 seed=1 r=1 v2=8: REAL pairs=8492965 max-multiplicity=320 distinct diffs=33024 axis-aligned pairs=65417 || NULL pairs=8492965 max=339 distinct=33024 axis=65669  [3s]
+q=257 seed=2 r=1 v2=8: REAL pairs=8484812 max-multiplicity=325 distinct diffs=33024 axis-aligned pairs=65430 || NULL pairs=8484812 max=326 distinct=33024 axis=66324  [4s]
+q=769 seed=1 r=1 v2=8: REAL pairs=227367981 max-multiplicity=898 distinct diffs=295680 axis-aligned pairs=591094 || NULL pairs=227367981 max=893 distinct=295680 axis=590301  [45s]
+q=769 seed=2 r=1 v2=8: REAL pairs=227373543 max-multiplicity=903 distinct diffs=295680 axis-aligned pairs=590573 || NULL pairs=227373543 max=884 distinct=295680 axis=590448  [84s]
+q=1009 seed=1 r=1 v2=4: REAL pairs=513594269 max-multiplicity=1167 distinct diffs=509040 axis-aligned pairs=1016685 || NULL pairs=513594269 max=1157 distinct=509040 axis=1017048  [179s]
+q=1009 seed=2 r=1 v2=4: REAL pairs=513654137 max-multiplicity=1164 distinct diffs=509040 axis-aligned pairs=1017130 || NULL pairs=513654137 max=1171 distinct=509040 axis=1018361  [279s]

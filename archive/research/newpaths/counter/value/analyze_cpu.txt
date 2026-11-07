@@ -1,0 +1,95 @@
+== r_sub_cube_s11.txt: RUN rates lo=20 li=16 sub=1 cube=1 seed=11  (trials 2^36.00)
+  listed tau                                     41289584  2^ -10.701   expected    41418752.00 (2^-10.696)  z -20.07
+  listed E1 outcome                                    22  2^ -31.541   expected          19.88 (2^-31.687)  z  +0.48
+  rule A (8)                                    268387421  2^  -8.000   expected   268435456.00 (2^-8.000)  z  -2.93
+  gate H4                                      4291379399  2^  -4.001   expected  4294967296.00 (2^-4.000)  z -54.75
+  rule A (8)                               variance/mean per outer step      571.9; z with that variance  -0.12
+  listed tau                               variance/mean per outer step      246.8; z with that variance  -1.28
+  listed tau & rule A (vs product of exact rates)         160769  2^ -18.705   expected      161792.00 (2^-18.696)  z  -2.54
+  listed outcome & rule A (vs product of exact rates)              0  2^    -inf   expected           0.08 (2^-39.687)  z  -0.28
+  listed partial E3 & rule A (vs product of margins)              0  2^    -inf   expected           0.23 (2^-38.142)  z  -0.48
+  listed partial E3                                    58  2^ -30.142
+  listed partial E3 eps 6e21be55                       32  2^ -31.000
+  early word 0                                      38953  2^ -20.751
+  eta condition                                       989  2^ -26.050
+  residual word 0 zero                                 17  2^ -31.913
+  residual word 1 zero                                146  2^ -28.810
+  residual word 2 zero                                 22  2^ -31.541
+  residual word 3 zero                                 13  2^ -32.300
+  listed outcome & listed partial E3                    0  2^    -inf
+  beta=18b0e098                               68719476736  2^   0.000
+  listed beta                                 68719476736  2^   0.000
+  d1-direction co-pass of rule-A trials (n = 268387421): bit: P(gate H4 | rule A) / P(rule A | rule A)
+   2:0.992/0.335  4:0.969/0.000  5:0.937/0.000  6:0.499/0.000  9:0.000/0.000  10:0.000/0.000  11:1.000/0.953  12:1.000/0.922  13:1.000/0.875  14:0.999/0.813  17:0.981/0.000  18:0.967/0.000  20:0.899/0.896  21:0.829/0.824  22:0.719/0.709  23:0.562/0.542  24:0.252/0.062  28:1.000/0.001  29:1.000/0.604  30:0.999/0.454  31:0.999/0.001
+== r_sub_cube_s12.txt: RUN rates lo=20 li=16 sub=1 cube=1 seed=12  (trials 2^36.00)
+  listed tau                                     41531001  2^ -10.692   expected    41418752.00 (2^-10.696)  z +17.44
+  listed E1 outcome                                    18  2^ -31.830   expected          19.88 (2^-31.687)  z  -0.42
+  rule A (8)                                    269090919  2^  -7.996   expected   268435456.00 (2^-8.000)  z +40.01
+  gate H4                                      4304330692  2^  -3.997   expected  4294967296.00 (2^-4.000)  z +142.87
+  rule A (8)                               variance/mean per outer step      571.3; z with that variance  +1.67
+  listed tau                               variance/mean per outer step      247.4; z with that variance  +1.11
+  listed tau & rule A (vs product of exact rates)         160524  2^ -18.708   expected      161792.00 (2^-18.696)  z  -3.15
+  listed outcome & rule A (vs product of exact rates)              0  2^    -inf   expected           0.08 (2^-39.687)  z  -0.28
+  listed partial E3 & rule A (vs product of margins)              0  2^    -inf   expected           0.03 (2^-41.189)  z  -0.17
+  listed partial E3                                     7  2^ -33.193
+  listed partial E3 eps 6e21be55                        0  2^    -inf
+  early word 0                                      41395  2^ -20.663
+  eta condition                                       978  2^ -26.066
+  residual word 0 zero                                 25  2^ -31.356
+  residual word 1 zero                                141  2^ -28.860
+  residual word 2 zero                                 14  2^ -32.193
+  residual word 3 zero                                 14  2^ -32.193
+  listed outcome & listed partial E3                    0  2^    -inf
+  beta=18b0e098                               68719476736  2^   0.000
+  listed beta                                 68719476736  2^   0.000
+  d1-direction co-pass of rule-A trials (n = 269090919): bit: P(gate H4 | rule A) / P(rule A | rule A)
+   2:0.992/0.335  4:0.969/0.000  5:0.937/0.000  6:0.501/0.000  9:0.000/0.000  10:0.000/0.000  11:1.000/0.953  12:1.000/0.922  13:1.000/0.875  14:0.999/0.813  17:0.981/0.000  18:0.967/0.000  20:0.899/0.896  21:0.828/0.823  22:0.720/0.710  23:0.564/0.544  24:0.250/0.062  28:1.000/0.000  29:1.000/0.604  30:1.000/0.456  31:0.999/0.001
+== r_all_cube_s13.txt: RUN rates lo=20 li=16 sub=0 cube=1 seed=13  (trials 2^36.00)
+  listed tau                                     41419667  2^ -10.696   expected    41418752.00 (2^-10.696)  z  +0.14
+  listed E1 outcome                                    23  2^ -31.476   expected          19.88 (2^-31.687)  z  +0.70
+  rule A (8)                                    268658732  2^  -7.999   expected   268435456.00 (2^-8.000)  z +13.63
+  gate H4                                      4299619910  2^  -3.998   expected  4294967296.00 (2^-4.000)  z +70.99
+  listed partial E3                                    12  2^ -32.415   expected          13.94 (2^-32.199)  z  -0.52
+  listed partial E3 eps 6e21be55                        4  2^ -34.000   expected           3.59 (2^-34.155)  z  +0.21
+  rule A (8)                               variance/mean per outer step      572.9; z with that variance  +0.57
+  listed tau                               variance/mean per outer step      247.3; z with that variance  +0.01
+  listed tau & rule A (vs product of exact rates)         161906  2^ -18.695   expected      161792.00 (2^-18.696)  z  +0.28
+  listed outcome & rule A (vs product of exact rates)              0  2^    -inf   expected           0.08 (2^-39.687)  z  -0.28
+  listed partial E3 & rule A (vs product of exact rates)              1  2^ -36.000   expected           0.05 (2^-40.199)  z  +4.05
+  early word 0                                      39641  2^ -20.725
+  eta condition                                      1039  2^ -25.979
+  residual word 0 zero                                 21  2^ -31.608
+  residual word 1 zero                                192  2^ -28.415
+  residual word 2 zero                                 15  2^ -32.093
+  residual word 3 zero                                  6  2^ -33.415
+  listed outcome & listed partial E3                    0  2^    -inf
+  beta=18b0e098                               68719476736  2^   0.000
+  listed beta                                 68719476736  2^   0.000
+  d1-direction co-pass of rule-A trials (n = 268658732): bit: P(gate H4 | rule A) / P(rule A | rule A)
+   2:0.992/0.336  4:0.969/0.000  5:0.937/0.000  6:0.500/0.000  9:0.000/0.000  10:0.000/0.000  11:1.000/0.953  12:1.000/0.922  13:1.000/0.876  14:0.999/0.813  17:0.981/0.000  18:0.967/0.000  20:0.899/0.896  21:0.828/0.823  22:0.719/0.709  23:0.564/0.544  24:0.251/0.062  28:1.000/0.000  29:1.000/0.603  30:1.000/0.456  31:0.999/0.001
+== r_all_free_s14.txt: RUN rates lo=20 li=16 sub=0 cube=0 seed=14  (trials 2^36.00)
+  beta=18b0e098                                  33560638  2^ -11.000   expected    33554432.00 (2^-11.000)  z  +1.07
+  listed beta                                   276831310  2^  -7.956   expected   276824064.00 (2^-7.956)  z  +0.44
+  listed tau                                       142284  2^ -18.882   expected      142416.00 (2^-18.880)  z  -0.35
+  rule A (8)                                    268437516  2^  -8.000   expected   268435456.00 (2^-8.000)  z  +0.13
+  gate H4                                      4295009424  2^  -4.000   expected  4294967296.00 (2^-4.000)  z  +0.64
+  listed partial E3                                    14  2^ -32.193   expected          13.94 (2^-32.199)  z  +0.02
+  listed partial E3 eps 6e21be55                        3  2^ -34.415   expected           3.59 (2^-34.155)  z  -0.31
+  rule A (8)                               variance/mean per outer step        1.0; z with that variance  +0.13
+  listed tau                               variance/mean per outer step        1.0; z with that variance  -0.35
+  listed tau & rule A (vs product of exact rates)            595  2^ -26.783   expected         556.31 (2^-26.880)  z  +1.64
+  listed partial E3 & rule A (vs product of exact rates)              1  2^ -36.000   expected           0.05 (2^-40.199)  z  +4.05
+  early word 0                                       3156  2^ -24.376
+  eta condition                                        19  2^ -31.752
+  residual word 0 zero                                 14  2^ -32.193
+  residual word 1 zero                                 85  2^ -29.591
+  residual word 2 zero                                 16  2^ -32.000
+  residual word 3 zero                                 15  2^ -32.093
+  listed outcome & listed partial E3                    0  2^    -inf
+  d1-direction co-pass of rule-A trials (n = 268437516): bit: P(gate H4 | rule A) / P(rule A | rule A)
+   2:0.992/0.335  4:0.898/0.000  5:0.883/0.000  6:0.602/0.000  9:0.000/0.000  10:0.000/0.000  11:1.000/0.944  12:1.000/0.916  13:0.999/0.871  14:0.999/0.809  17:0.967/0.000  18:0.956/0.000  20:0.803/0.794  21:0.768/0.757  22:0.684/0.670  23:0.547/0.524  24:0.254/0.154  28:1.000/0.001  29:1.000/0.578  30:0.999/0.453  31:0.999/0.001
+
+== pooled by kind
+cube_all_cpu: trials 2^36.000; listed tau 41419667 (2^-10.696); listed E1 outcome 23 (2^-31.476); listed partial E3 12 (2^-32.415); listed partial E3 eps 6e21be55 4 (2^-34.000); rule A (8) 268658732 (2^-7.999); early word 0 39641 (2^-20.725); eta condition 1039 (2^-25.979)
+cube_sub_cpu: trials 2^37.000; listed tau 82820585 (2^-10.697); listed E1 outcome 40 (2^-31.678); listed partial E3 65 (2^-30.978); listed partial E3 eps 6e21be55 32 (2^-32.000); rule A (8) 537478340 (2^-7.998); early word 0 80348 (2^-20.706); eta condition 1967 (2^-26.058)
+free_all_cpu: trials 2^36.000; listed tau 142284 (2^-18.882); listed partial E3 14 (2^-32.193); listed partial E3 eps 6e21be55 3 (2^-34.415); rule A (8) 268437516 (2^-8.000); early word 0 3156 (2^-24.376); eta condition 19 (2^-31.752)

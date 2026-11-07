@@ -1,0 +1,4 @@
+passing outer steps 120 of 127617; viable outcomes per step 1.27
+joint DFS: nodes per passing step 61,772.1 (2^15.91); (1)&(2) solutions per passing step 174.93; set mismatches against the simple solver 0
+simple solver on the same steps: DFS nodes 48,966.0, f1 solutions 0.0
+ops per passing step about 626,664 = 2^19.26; per walked step x 2^-9.8132 = 696.6

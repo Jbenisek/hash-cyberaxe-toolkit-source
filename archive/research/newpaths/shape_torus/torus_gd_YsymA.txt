@@ -1,0 +1,5 @@
+YsymA: 112 unknown words, 102 equations, freedom 10 words
+  guess-count histogram {13: 1, 14: 473, 15: 917, 16: 980, 17: 481, 18: 124, 19: 23, 20: 1}
+  best 13 guesses -> 3 checks; guesses ['K3.b1', 'K3.c2', 'K2.b1', 'D2.c1', 'C0.a2', 'K2.a2', 'm11', 'm9', 'D1.c1', 'C0.d2', 'K0.a1', 'C0.c2', 'D0.d2']
+  check equations ['D3:b2', 'C1:b1', 'C1:c2']
+  DM largest block over index choices from the best order: min 58, max 87

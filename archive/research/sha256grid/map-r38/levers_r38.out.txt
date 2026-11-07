@@ -1,0 +1,42 @@
+leader 0ae69bcb rebuilt (COMPUTED)                             72.633442  ceil5 72.63345
+attack proper, no allowances (COMPUTED): 72.066750
+online ops per group (COMPUTED): 29955.04; per A0 block at caps 117.02
+
+# allowance rows (premise changes; arithmetic COMPUTED)
+A_S 2^70 -> 2^50 (r37 A_S convention)                          72.379911  ceil5 72.37992  delta -0.2535
+A_S 2^50 and the 2% N_G pad removed (50/51)                    72.357760  ceil5 72.35777  delta -0.2757
+r37 convention A_C 2^60, A_S 2^50, DEV 2^40                    72.067087  ceil5 72.06709  delta -0.5664
+measured-rerun A_C 2^50, A_S 2^50, DEV 2^42 (GUESS inputs)     72.066751  ceil5 72.06676  delta -0.5667
+
+# success-side rows (H2/H5 margins; arithmetic COMPUTED)
+pair budget 1 -> 0.0018 (f = 1/(2-delta))                      72.065078  ceil5 72.06508  delta -0.5684
+pair budget 1 -> 2^-6 (about 9x measured)                      72.069932  ceil5 72.06994  delta -0.5635
+q3 2^-102 -> 2^-101.0101 (fixed-sample 99% bound)              72.069342  ceil5 72.06935  delta -0.5641
+both: q3 2^-101.0101 and pair 2^-6                             71.672070  ceil5 71.67208  delta -0.9614
+both, plus A_S 2^50 and no 2% pad                              71.115429  ceil5 71.11543  delta -1.5180
+
+# 8bc7d6c5-form premises (its ruling named only H4): q3_model 2^-101.01, structural pair bound
+  structural delta = 0.002931 (COMPUTED from 8bc7d6c5's H5 constants)
+q3_model 2^-102 -> 2^-101.01 (8bc7d6c5 value)                  72.069293  ceil5 72.0693  delta -0.5641
+pair budget 1 -> structural 0.0029 (8bc7d6c5 form)             72.065473  ceil5 72.06548  delta -0.5680
+both 8bc7d6c5-form premises                                    71.669082  ceil5 71.66909  delta -0.9644
+both + A_S 2^50 + no 2% pad                                    71.111118  ceil5 71.11112  delta -1.5223
+both + A_S 2^50 + no pad + A_C 2^60/DEV 2^40 (r37 convention)  70.195953  ceil5 70.19596  delta -2.4375
+
+# engine rows (op counts are GUESS; arithmetic exact given them)
+first block bit-sliced: 2728 -> 400 ops per group (GUESS)      72.564854  ceil5 72.56486  delta -0.0686
+A0 blocks packed/bit-sliced: 30 -> 15 ops (GUESS)              72.518502  ceil5 72.51851  delta -0.1149
+entry loop unrolled, one branch per bucket: 56.69 -> 35 (GUESS) 72.464130  ceil5 72.46413  delta -0.1693
+W7-pass row-17 path bit-sliced per CV: 25.41 -> 15 (GUESS)     72.554656  ceil5 72.55466  delta -0.0788
+N1 cap 4x -> 1.25x (deep 4.61 -> 1.44) (DERIVED)               72.609907  ceil5 72.60991  delta -0.0235
+  engine scale conservative 0.5704  optimistic 0.4422 (per-block ops 66.8 / 51.8)
+engine conservative + first block 400 (GUESS)                  72.112532  ceil5 72.11254  delta -0.5209
+engine optimistic + first block 250 (GUESS)                    71.937630  ceil5 71.93764  delta -0.6958
+engine conservative + A_S 2^50 + no pad (GUESS)                71.714604  ceil5 71.71461  delta -0.9188
+engine cons + margins + A_S 2^50 + no pad (GUESS)              70.764501  ceil5 70.76451  delta -1.8689
+engine cons + margins + r37 allowances + no pad (GUESS)        69.452351  ceil5 69.45236  delta -3.1811
+
+# floor of the construction: attack proper only, per engine setting (GUESS)
+attack proper, filed engine (COMPUTED)                         72.066750  ceil5 72.06676  delta -0.5667
+attack proper, conservative engine (GUESS)                     71.207188  ceil5 71.20719  delta -1.4263
+attack proper, conservative engine + margins (GUESS)           69.450288  ceil5 69.45029  delta -3.1832

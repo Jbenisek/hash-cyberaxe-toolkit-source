@@ -1,0 +1,16 @@
+A nt=2 rels=[1, 0]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=2 rels=[0, 1]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=2 rels=[1, 1]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=3 rels=[1, 0, 0]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=3 rels=[0, 1, 0]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=3 rels=[1, 1, 0]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=3 rels=[0, 0, 1]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=3 rels=[1, 0, 1]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=3 rels=[0, 1, 1]  pred-holds 0.007812  actual-holds 0.007812  mismatches 0
+A nt=3 rels=[1, 1, 1]  pred-holds 0.000000  actual-holds 0.000000  mismatches 0
+A total mismatches: 0
+B schedule parsed from organizer matches propagator: [(0, 4, 8, 12, 0, 1), (1, 5, 9, 13, 2, 3), (2, 6, 10, 14, 4, 5), (3, 7, 11, 15, 6, 7), (0, 5, 10, 15, 8, 9), (1, 6, 11, 12, 10, 11), (2, 7, 8, 13, 12, 13), (3, 4, 9, 14, 14, 15)]
+B linearized relation checks: 31289 G-steps, mismatches 0
+C round-0 column entry -> all-C column: 1048576 / 1048576
+D solve=False: low-9-bit complement 4073 / 1048576 (rate 2^-8.01, predicted 2^-8 unsolved, 1 solved); full-word 0
+D solve=True: low-9-bit complement 1048576 / 1048576 (rate 2^0.00, predicted 2^-8 unsolved, 1 solved); full-word 1048576

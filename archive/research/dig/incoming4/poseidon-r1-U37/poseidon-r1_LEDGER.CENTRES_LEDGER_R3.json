@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.CENTRES independent centres charged",
+ "question": "control (known-answer or independent check)",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "control: toy F_10007, 3000 random monic degree-120 odd parts: P(at least one nonzero-square root) = 0.4013 (95% +-0.0175) vs 0.3935 model; the 180-centre per-line sample of the fix gives 57/180 = 0.317 (halts and first-centre flag count as failures)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/per_line_sample.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Toy control run here; per-line sample numbers are from per_line_sample.md (HANDOFF 20:30), not rerun. | universe cell poseidon-r1|LEDGER.CENTRES|LEDGER|R3",
+ "held_fixed": "uniform-coefficient toy, independent centres",
+ "reopen_if": "a proved per-centre bound (cloud 49 one-orbit route) that replaces the sampled one"
+}

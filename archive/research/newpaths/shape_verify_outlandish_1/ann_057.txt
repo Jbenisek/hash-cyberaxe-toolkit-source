@@ -1,0 +1,2 @@
+held=(0, 5, 7) anneal steps 25000 seed 12
+BEST core eqs left 105  F' 6  P=['E2.d2', 'E0.b2', 'E0.a2', 'E2.c2', 'm14', 'm2', 'E0.d2', 'K0.d2', 'm13', 'E2.b2']

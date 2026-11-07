@@ -1,0 +1,3 @@
+counter 2: full 94 words / 88 rels, core 73 words / 67 rels, DOF 6, depth 73
+min: guess set of size <= 7 (k <= 1) closing every word: SAT
+   guesses ['R0D1.d2', 'R0D2.c1', 'R0D2.d1', 'R0D2.d2', 'R0D3.b1', 'R0D3.c2', 'R1C0.a1']  propagate check: True

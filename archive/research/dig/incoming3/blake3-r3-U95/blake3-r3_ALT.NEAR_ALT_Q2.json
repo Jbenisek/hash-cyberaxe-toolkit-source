@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "near-collision: stage B (cv differs in one word, final block free) sampled",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "final block compressed with cv and cv^delta (flags 10, counter 0, length 64): (i) same block, delta random 32-bit or MSB in cv word j=0..7, 8 x 2^18 pairs per j: 0 equal digest words, min digest-difference weight 86-91 (random-pair minimum 86 over 8.4M); (ii) block also differs in one word w in 0,5,8,12,15 (j in 0,3,4,7), 2^18 pairs per (j,w): min weight 89-94, 0 equal words",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_near.py; research/blake3_r3/alt/exp_near.log; research/blake3_r3/alt/exp_near.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Random cv, so no stage-A structure; stage B between two keyed functions is a 2^128 problem unless a pin exists, none seen.",
+ "held_fixed": "flags 10, counter 0, length 64; random cv",
+ "reopen_if": "a (cv, cv') pair from stage A with a measured digest-equal probability above 2^-20 for some block pair",
+ "topic": "blake3-r3|ALT.NEAR|ALT|Q2"
+}

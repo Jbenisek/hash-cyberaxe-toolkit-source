@@ -1,0 +1,6 @@
+q=4 D=625 cs=0 j=0 succ=3915/10000 alt=620/1000 verified=3915 fail=0 t=52s
+q=4 D=625 cs=0 j=1 succ=3944/10000 alt=618/1000 verified=3944 fail=0 t=54s
+q=4 D=625 cs=0 j=2 succ=3900/10000 alt=637/1000 verified=3900 fail=0 t=64s
+q=4 D=625 cs=1 j=0 succ=3959/10000 alt=631/1000 verified=3959 fail=0 t=63s
+q=4 D=625 cs=1 j=1 succ=3935/10000 alt=635/1000 verified=3935 fail=0 t=62s
+q=4 D=625 cs=1 j=2 succ=3977/10000 alt=632/1000 verified=3977 fail=0 t=62s

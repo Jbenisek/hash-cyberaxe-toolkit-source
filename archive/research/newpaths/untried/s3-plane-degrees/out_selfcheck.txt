@@ -1,0 +1,2 @@
+(1) organizer reference: 64 points x 15 comparisons, mismatches 0
+(2) cube sums vs cube_degree.cube: 600 stage comparisons, mismatches 0; direction/source mismatches 0

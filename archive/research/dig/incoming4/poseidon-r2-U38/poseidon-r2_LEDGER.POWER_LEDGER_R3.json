@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.POWER (LEDGER)",
+ "question": "R3: control (same stage under the r1 recount)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Strict r1 recount (logs/ledger_r1.txt): power stage 12,639,379,434 (arith 3,536,772,927), 238 steps at 52,739,184 each. r2: 54,638,630,504, per step 229,902,037. Stage ratio 4.32, per-step ratio 4.36 for a 5x longer modulus; arith ratio 4.56. (The filed r1 number 6,241,583,567 used the loose control charge and is not comparable.)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|LEDGER.POWER|LEDGER|R3. Clean control: same code family and charge; ratios sit just under the degree ratio 5, as expected when the 236/238 step count is nearly fixed.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "the r2 entry is rebuilt (two-family template), the charging rules change (control ops, dispatch, address ops), or an r2 run disagrees with these numbers"
+}

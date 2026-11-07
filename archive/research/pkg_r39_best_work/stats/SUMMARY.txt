@@ -1,0 +1,13 @@
+windows 24 claws match ledger in all: True []
+N 1,418,347  W9inF9 22,528 (0.01588 vs 0.01587, z=0.15)  W8inF8 100,445 (0.07082 vs 0.07031, z=2.35)  both 1,611 (0.001136 vs 0.001115, z=0.74)
+  W17 low-8 matches 5,431 (expected 5540.42)
+  W17 low-12 matches 301 (expected 346.28)
+  W17 low-16 matches 17 (expected 21.64)
+  W17 low-20 matches 2 (expected 1.35)
+  W17 low-24 matches 0 (expected 0.08)
+  chi-square lo16: 66050.1 on 65535 df, z = 1.42
+  chi-square hi16: 65303.2 on 65535 df, z = -0.64
+  chi-square w18: 213.4 on 255 df, z = -1.84
+  per-window lo16 z: -1.30 .. 1.10, mean 0.10, mean square 0.58; sum of squares 14.0 on 24 df = -1.4 sigma
+  binomial chi-square over windows: F9 5.9, F8 24.9 on 23 df
+  F9 adjacent pairs 346 vs 357.9 expected

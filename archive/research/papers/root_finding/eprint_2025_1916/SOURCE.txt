@@ -1,0 +1,1 @@
+2025/1916	Graeffe-Based Attacks on Poseidon and NTT Lower Bounds	owner_download	https://eprint.iacr.org/2025/1916.pdf

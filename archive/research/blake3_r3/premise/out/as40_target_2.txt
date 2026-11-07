@@ -1,0 +1,1 @@
+{"n": 40, "cond": "target", "first": 240, "count": 120, "successes": 55, "bad_pairs": 0, "halts": 0, "seconds": 453.9}

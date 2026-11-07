@@ -1,0 +1,15 @@
+{
+ "lane0_deg_after_R3": 25,
+ "lane1_deg": 25,
+ "lane2_deg": 25,
+ "quotient_degree": 24,
+ "tries_to_find_pair": 1,
+ "lane0_equal_at_interface": true,
+ "digest_equal_for_this_pair": false,
+ "E_deg_in_W2_for_fixed_W1": 15625,
+ "bezout_bound": 374976,
+ "filed_odd_part_degree": 39062,
+ "ratio_bezout_over_filed": 9.6,
+ "W1": "0x110e27003f9931ee3af27f802dc5fd3d9974d75b333824fe61790134676b1b69",
+ "W2": "0x1a5e91fae824b049063b123091419a2a3a6d238b0387f4a3107866ae069b790a"
+}

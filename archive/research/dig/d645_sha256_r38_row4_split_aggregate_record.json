@@ -1,0 +1,23 @@
+{
+  "id": "D645-SHA256-R38-ROW4-SPLIT-AGGREGATE-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": null,
+  "object": "SHA-256 r38 Zone-D row-4 fixed-split aggregate",
+  "question": "What is the exact aggregate result across the published row-4 split and the independent fixed-split controls?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Across 11 exact row4full controls (published seed 0 plus seeds 1..5 and 65535..65539), every 2^26 G member rebuilt consistently and passed rows 5..15; published-pair failures were zero. The published split has 4604 final state-equal members (4604/2^26=6.860494613647461e-5, log2=-13.8313278819); all 10 independent controls have zero.",
+  "source": "our workflow: D645 exact aggregate of Zone-D r38 row4full controls",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/aggregate_row4_controls.py; research/retest/zoneD38/aggregate_row4_controls.out; research/retest/zoneD38/row4full_seed0.out; research/retest/zoneD38/row4full_seed1.out; research/retest/zoneD38/row4full_seed2.out; research/retest/zoneD38/row4full_seed3.out; research/retest/zoneD38/row4full_seed4.out; research/retest/zoneD38/row4full_seed5.out; research/retest/zoneD38/row4full_seed65535.out; research/retest/zoneD38/row4full_seed65536.out; research/retest/zoneD38/row4full_seed65537.out; research/retest/zoneD38/row4full_seed65538.out; research/retest/zoneD38/row4full_seed65539.out",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "current zd38 row4full program and the exact completed fixed-split controls",
+  "notes": "Derived finite split-dependence aggregate only. It does not prove production split transfer, global rate, full-late completion, charged score, package, stage, filing, or submission.",
+  "reopen_if": "A production-law split-transfer proof or a full row-5/6 completion family becomes available"
+}

@@ -1,0 +1,69 @@
+mode iv seed 0 log2N 4 cv: 6a09e667 bb67ae85 3c6ef372 a54ff53a 510e527f 9b05688c 1f83d9ab 5be0cd19 flags 11
+DBG ed9a64f6 a33a8df5 45370f21 92592feb 263d5e8e 0946cf80 d9baad1b 99e47e5a R 71571126 93747c09 6d47cfe0 b328d82d
+DBG 6b54e904 a60ab02b b77bdeb3 302a5efe d710d4ed f756cbb0 f767a7d5 19f45dde R a2e4345f 75665d51 ef798078 038a90ec
+DBG 330c4884 181e9853 26b1b02e 1224a810 286f906a 9bfa4998 26fd14c9 01e4aa1a R 43f20106 81a52695 b8e14562 b643bb91
+DBG 2391735e 510b13fb e9afae01 f620cf95 ee44d318 405f3ef0 dfdf2df5 b1e4923a R 523ccea5 58514f99 9a92a81e d2cce3c2
+DBG 9443918d 9bd1cf84 1d4caa54 4a87a69b 03162319 c8d10fa1 15dbc1ca 71e451f6 R edba7d7b 7106a57a 5602f7fb 1333cb11
+N 16
+low16zero r1 r3 r4 r6: 0 0 0 0
+wordzero  r1 r3 r4 r6: 0 0 0 0
+pairs low8 zero (13 14 16 34 36 46): 0 0 0 0 0 0 
+all four low8 zero: 0   all four low4 zero: 0
+weight mean 60.93750 var 37.1836  weight<=40: 0
+hist: 52:1 55:3 56:1 57:1 59:1 60:1 61:1 62:2 63:1 64:1 68:1 71:1 75:1
+first block: 5d6be684 856c4df4 2061550b 7a939710 886ebcb5 4b51632c 07e9edd6 605b6286 40f63d40 f9f1977a fc804ec2 85502b02 0134e517 3cf9dd4b 09817473 a3f31f5a
+mode cv seed 1 log2N 4 cv: 62547ca5 643ff8c9 72bb96d2 f43905ea cfe8f18f 49209d98 13282701 44ae0cac flags 10
+DBG ed9a64f6 a33a8df5 45370f21 92592feb 263d5e8e 0946cf80 d9baad1b 99e47e5a R d37d1f75 f690ddec da47b9bf bf27a06f
+DBG 6b54e904 a60ab02b b77bdeb3 302a5efe d710d4ed f756cbb0 f767a7d5 19f45dde R 27fbd0b9 645727f2 d22e9c20 1c3a91b8
+DBG 330c4884 181e9853 26b1b02e 1224a810 286f906a 9bfa4998 26fd14c9 01e4aa1a R c1d10e51 35aa055b 93ecca5e f05a14bf
+DBG 2391735e 510b13fb e9afae01 f620cf95 ee44d318 405f3ef0 dfdf2df5 b1e4923a R cd46b09a 3d50d7cc 258d45e1 5259d22e
+DBG 9443918d 9bd1cf84 1d4caa54 4a87a69b 03162319 c8d10fa1 15dbc1ca 71e451f6 R 53d81105 a036a03a 5af2b2a2 15dfdf74
+N 16
+low16zero r1 r3 r4 r6: 0 0 0 0
+wordzero  r1 r3 r4 r6: 0 0 0 0
+pairs low8 zero (13 14 16 34 36 46): 0 0 0 0 0 0 
+all four low8 zero: 0   all four low4 zero: 0
+weight mean 65.68750 var 34.8398  weight<=40: 0
+hist: 57:1 60:1 61:2 62:1 63:3 64:1 65:2 69:1 71:1 73:1 74:1 80:1
+first block: e0121ac7 72d65e5f 14e0c054 ea92e21e b1244a43 c00bbf52 8282aa00 2036cd96 611a92e6 e5a5c8ca 4bec8549 4f03e258 d338cb42 41bf3834 1afdb4ac 30910956
+mode cv seed 2 log2N 4 cv: 76eadb0a 1b1e88a7 56d9e40e 757b3888 e5bc61b6 0ea38fa2 4260b151 e9cd56ba flags 10
+DBG ed9a64f6 a33a8df5 45370f21 92592feb 263d5e8e 0946cf80 d9baad1b 99e47e5a R f5d7cb0c 7710ee02 395b4f17 c53b525b
+DBG 6b54e904 a60ab02b b77bdeb3 302a5efe d710d4ed f756cbb0 f767a7d5 19f45dde R ae339851 78a5a53a 134a4ce9 b2623ea8
+DBG 330c4884 181e9853 26b1b02e 1224a810 286f906a 9bfa4998 26fd14c9 01e4aa1a R 4610cf70 99803642 808d3b58 e5b56467
+DBG 2391735e 510b13fb e9afae01 f620cf95 ee44d318 405f3ef0 dfdf2df5 b1e4923a R 3895052d f193fcea 8a22894d ebbe624e
+DBG 9443918d 9bd1cf84 1d4caa54 4a87a69b 03162319 c8d10fa1 15dbc1ca 71e451f6 R 0dba10db 4431a068 c61bd4a0 9a1a367b
+N 16
+low16zero r1 r3 r4 r6: 0 0 0 0
+wordzero  r1 r3 r4 r6: 0 0 0 0
+pairs low8 zero (13 14 16 34 36 46): 0 0 0 0 0 0 
+all four low8 zero: 0   all four low4 zero: 0
+weight mean 64.18750 var 48.6523  weight<=40: 0
+hist: 55:1 56:1 57:1 58:1 60:2 61:1 62:1 63:1 64:2 68:1 73:2 74:1 79:1
+first block: f52bea01 089d4c5f 04f83b07 a6cd271c 7b47a56d effa657a fc11112f bdf730ea d2ea10eb ff508a3e 81a0920c 972cc97b 304cd57b 9bdd47a6 33a1c5a4 b7917133
+mode cv seed 3 log2N 4 cv: 4920a0eb 596bdc08 604afef3 874c73b6 defeb09c 782b2174 f7102b10 a946a1f9 flags 10
+DBG ed9a64f6 a33a8df5 45370f21 92592feb 263d5e8e 0946cf80 d9baad1b 99e47e5a R 828c0e56 3bf36361 bc10799d e3c3a038
+DBG 6b54e904 a60ab02b b77bdeb3 302a5efe d710d4ed f756cbb0 f767a7d5 19f45dde R 225a93a9 a53da260 72623c66 81d38b93
+DBG 330c4884 181e9853 26b1b02e 1224a810 286f906a 9bfa4998 26fd14c9 01e4aa1a R dfe0901e 74cd7ec1 dd9089a2 03152fc6
+DBG 2391735e 510b13fb e9afae01 f620cf95 ee44d318 405f3ef0 dfdf2df5 b1e4923a R 178e42d3 87b926a1 05917ec7 805036d0
+DBG 9443918d 9bd1cf84 1d4caa54 4a87a69b 03162319 c8d10fa1 15dbc1ca 71e451f6 R c08693fe 1610394f 4c136f77 59c4e349
+N 16
+low16zero r1 r3 r4 r6: 0 0 0 0
+wordzero  r1 r3 r4 r6: 0 0 0 0
+pairs low8 zero (13 14 16 34 36 46): 0 0 0 0 0 0 
+all four low8 zero: 0   all four low4 zero: 0
+weight mean 61.00000 var 11.0000  weight<=40: 0
+hist: 56:2 57:1 58:2 60:3 62:3 64:2 65:2 67:1
+wsl : elapsed 0.57 s
+At line:1 char:383
++ ... depaths_0"; wsl -d Ubuntu -- bash historical-sources/~~Projects/~HashSmash/worksp ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (elapsed 0.57 s:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+first block: 5d6be684 856c4df4 2061550b 7a939710 886ebcb5 4b51632c 07e9edd6 605b6286 40f63d40 f9f1977a fc804ec2 85502b02 0134e517 3cf9dd4b 09817473 a3f31f5a
+mode cv seed 1 log2N 24 cv: 62547ca5 643ff8c9 72bb96d2 f43905ea cfe8f18f 49209d98 13282701 44ae0cac flags 10
+N 16777216
+elapsed 0.37 s
+mode m seed 0 log2N 24 cv: 6a09e667 bb67ae85 3c6ef372 a54ff53a 510e527f 9b05688c 1f83d9ab 5be0cd19 flags 11
+N 16777216
+low16zero r1 r3 r4 r6: 224 658 349 193

@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R2C3.q3 (a2,d2)",
+ "question": "Q2 necessity: delete or bypass each op of this quarter-step (pass operand A, pass operand B, or zero) and recount whether the digest is still right",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "8 of 8 ops are individually necessary: for each op, all deletion variants (pass A, pass B, zero) give a wrong digest on the first of 350 random and adversarial batches; the recount after deletion is a wrong digest, so no op of this step is removable. No mask in this step (out bound 13.074 units < 16), so there is no overflow-only necessity question: the lane sum cannot reach 2^36 (exact arithmetic bound).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/_b3r3_work/q2_mutate.py; research/dig/incoming3/_b3r3_work/q2_mutate.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Necessity is shown per op by a counterexample batch for each variant tried; replacement by other operations was not enumerated here (the rotation is covered in Q4).",
+ "held_fixed": "Held fixed: the shipped 595-op circuit (research/blake3_r3/candidate_blake3/experiments/rho.py: 7 lanes x 36 bits, ops add/and/or/xor/shl/shr, constants folded) re-derived by our own tracer b3core.py (595 ops; equals the scalar 3-round digest on 300+ batches; scalar core equals verifier/blake3.py on 3 and 7 rounds and the official 7-round fixture). Single deletion of one op at a time; three replacement variants; 350 batches (300 random, 50 adversarial).",
+ "reopen_if": "an op of this step is removable under a replacement other than pass A, pass B or zero"
+}

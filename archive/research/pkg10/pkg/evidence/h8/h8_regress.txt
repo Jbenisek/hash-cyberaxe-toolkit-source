@@ -1,0 +1,3 @@
+h8_regress_real40 against h8_real40: STAT lines 42, different 0
+h8_regress_model40 against h8_model40: STAT lines 42, different 0
+h8_regress_layout_run1 against h8_layout_run1: STAT lines 43, different 0

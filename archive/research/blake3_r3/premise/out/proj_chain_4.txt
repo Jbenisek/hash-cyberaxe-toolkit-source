@@ -1,0 +1,1 @@
+PROJ src=chain k=4 name=W4 bits=32 observed=523616 expected=524288.0 ratio=0.9987 z=-0.93

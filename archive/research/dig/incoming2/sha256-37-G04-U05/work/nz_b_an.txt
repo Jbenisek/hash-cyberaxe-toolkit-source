@@ -1,0 +1,17 @@
+records 49131 cells(rows24..36) 3028 zero output difference 3153 zero but not cells 125 cells but not zero 0
+support patterns (bit k = names[k] nonzero), top 12:
+  ff dA36,dA35,dA34,dA33,dE36,dE35,dE34,dE33  45978  (0.9358)
+  00 none                                     3153  (0.0642)
+number of nonzero words histogram: {0: 3153, 8: 45978}
+shape A-words zero, some E word nonzero (the only shape rows 0..3 can absorb): 0 of 49131
+nonzero-difference records 45978 distinct 45978 max multiplicity 1
+no colliding pair among 45978 -> support > 2^29.98 (birthday)
+  dA36: distinct 45978, zero fraction 0.0000, top [('351deac0', 1), ('0b985a27', 1), ('e20f72d3', 1)]
+  dA35: distinct 45978, zero fraction 0.0000, top [('24428961', 1), ('794b4b84', 1), ('42910e6c', 1)]
+  dA34: distinct 45977, zero fraction 0.0000, top [('d020d017', 2), ('1d2636ac', 1), ('d3c46a50', 1)]
+  dA33: distinct 45978, zero fraction 0.0000, top [('828f06e9', 1), ('b3ee35c3', 1), ('7c9f04f9', 1)]
+  dE36: distinct 45978, zero fraction 0.0000, top [('8b924734', 1), ('8c8eb3de', 1), ('b7ddf70d', 1)]
+  dE35: distinct 45978, zero fraction 0.0000, top [('572b9311', 1), ('c8041e88', 1), ('5621c714', 1)]
+  dE34: distinct 45978, zero fraction 0.0000, top [('711f5f9d', 1), ('f840dd7e', 1), ('e131221c', 1)]
+  dE33: distinct 45978, zero fraction 0.0000, top [('7a76e75f', 1), ('a09b3801', 1), ('fb975250', 1)]
+popcount of the 256-bit difference (nonzero records): min 96, median 128, mean 128.0

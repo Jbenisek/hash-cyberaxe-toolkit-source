@@ -1,0 +1,20 @@
+  step 32/238  12.2s
+  step 64/238  22.8s
+  step 96/238  32.0s
+  step 128/238  40.1s
+  step 160/238  48.2s
+  step 192/238  56.4s
+  step 224/238  64.7s
+r=1 j=0 seed=1 m=39062
+centre c = 0x3554f503555d80259b1e842f6e862629100041060c0114410000000040822041
+build_g debug: H=49152 m=39062 nonzero coefficients above m: 0
+deg gcd = 0
+SUCCESS=0
+stage                                                         arith  ld+st+ctl+rnd          total       sec     peak B
+ntt_init (twiddle table, roots)                               17359          20480          37839       0.0     524288
+line_setup                                                      391           1564           1955       0.0     524288
+random centre                                                     0              3              3       0.0     524288
+build g (2H evaluations of F + inverse NTT)                18737764       58088975       76826739       0.9    4920032
+S^((p-1)/2) mod g                                        2758325814     1691127695     4449453509      68.9   26374144
+gcd(g, R-1)                                              3064570480     4959760753     8024331233     105.2    6774336
+TOTAL arith 5841651808  all-charged 12550651278   units = 52956334.5   log2(all/C) = 25.6583   log2(arith/C) = 24.5550

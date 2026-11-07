@@ -1,0 +1,17 @@
+part1 w6-solutions, of which Y4 in class: 3 1
+part1 w6-solutions, of which Y4 in class: 4 1
+part1 w6-solutions, of which Y4 in class: 2 1
+part1 w6-solutions, of which Y4 in class: 1 1
+part1 w6-solutions, of which Y4 in class: 3 1
+part1 w6-solutions, of which Y4 in class: 1 1
+part1 w6-solutions, of which Y4 in class: 2 1
+part1 w6-solutions, of which Y4 in class: 1 1
+python : ./research/fifties/movers/scan.py:52: RuntimeWarning: overflow encountered 
+in scalar subtract
+At line:1 char:367
++ ... rkspace\research\fifties\movers"; python -B scan.py 7 *> scan_out.txt
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (historical-source-path...scalar subtract:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  X0 = c['P'] - c['Q4'] - (a - c['I1'] - c['I5'])

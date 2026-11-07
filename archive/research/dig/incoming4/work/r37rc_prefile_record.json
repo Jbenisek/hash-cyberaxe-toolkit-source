@@ -1,0 +1,22 @@
+{
+  "id": "R37Rc-prefile-selftest-current",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "R37Rc tightened package prefile and self-test",
+  "question": "Does the current pkgR37Rc artifact pass the package gates and its shipped finite self-test?",
+  "labels": ["C", "D"],
+  "status": "LOCAL_ONLY",
+  "number": "prefile ALL PASS; exact N=3306134173986485452677; time_log2=60.11713; T_num/T_den=3306134173986485452677/2644; selftest exit 0 with zero mismatches",
+  "source": "our workflow: current-package-audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D311_r37rc_prefile_selftest.md; research/pkgR37Rc/sha256-r37/claim.json; research/pkgR37Rc/sha256-r37/proof.md; research/pkgR37Rc/sha256-r37/experiments/xtab.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "count",
+  "topic": "sha256-37.package-prefile-selftest",
+  "held_fixed": "The shipped R37Rc package, its declared premises, exact ledger, dependencies, and experiment source; only read-only checker and self-test execution were added.",
+  "reopen_if": "A changed R37Rc artifact, a judge ruling on its premises/memory, or an independent full-scale premise test appears.",
+  "notes": "Package consistency and finite self-test confirmed; this does not prove H1/H2/H3/H9 or organizer acceptance. No package edit/staging/submission."
+}

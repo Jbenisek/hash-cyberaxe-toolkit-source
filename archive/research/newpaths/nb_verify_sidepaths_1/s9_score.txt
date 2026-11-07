@@ -1,0 +1,10 @@
+filed: (1.65, 92.52030215092782, 92.53)
+claim arithmetic (3.5/trial replaces stage A row only): total 64.23 save 0.074 bit (1.57, 92.44862571233197, 92.45)
+spec consts, unlimited registers (claim-like) | s2 gathered, dispatch same A/rep  2.84  total  61.94  save 0.126 bit  c 1.51  log2T 92.3924  claim 92.40
+spec consts, unlimited registers (claim-like) | s2 repacked, dispatch +20% A/rep  2.84  total  62.99  save 0.102 bit  c 1.54  log2T 92.4208  claim 92.43
+spec consts, 14 working registers (Belady) | s2 gathered, dispatch same A/rep  4.18  total  63.27  save 0.095 bit  c 1.55  log2T 92.4301  claim 92.44
+spec consts, 14 working registers (Belady) | s2 repacked, dispatch +20% A/rep  4.18  total  64.33  save 0.071 bit  c 1.57  log2T 92.4486  claim 92.45
+mask consts, unlimited registers (traffic lower bound) | s2 gathered, dispatch same A/rep  4.82  total  63.92  save 0.080 bit  c 1.56  log2T 92.4394  claim 92.44
+mask consts, unlimited registers (traffic lower bound) | s2 repacked, dispatch +20% A/rep  4.82  total  64.97  save 0.057 bit  c 1.59  log2T 92.4669  claim 92.47
+mask consts, 14 working registers (Belady) = literal | s2 gathered, dispatch same A/rep  6.42  total  65.52  save 0.045 bit  c 1.60  log2T 92.4759  claim 92.48
+mask consts, 14 working registers (Belady) = literal | s2 repacked, dispatch +20% A/rep  6.42  total  66.57  save 0.022 bit  c 1.63  log2T 92.5027  claim 92.51

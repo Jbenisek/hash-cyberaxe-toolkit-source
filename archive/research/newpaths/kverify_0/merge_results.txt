@@ -1,0 +1,14 @@
+=== kv_merge run Thu Oct  8 13:36:46 2026
+COMPLETE n=12 lists 2^6 t=6 all taus: found 3973 exact 3973 (2^n=4096) bad=0 steps=28933 steps/sol=7.28  0.0s
+COMPLETE n=16 lists 2^8 t=8 all taus: found 65720 exact 65720 (2^n=65536) bad=0 steps=460472 steps/sol=7.01  0.0s
+COMPLETE n=20 lists 2^10 t=10 all taus: found 1049042 exact 1049042 (2^n=1048576) bad=0 steps=7346642 steps/sol=7.00  0.5s
+ONE-TAU n=20 lists 2^10 t=10: sols=1137 (exp 1024) bad=0 steps=13607 steps/sol=11.97
+ONE-TAU n=24 lists 2^12 t=12: sols=4043 (exp 4096) bad=0 steps=53127 steps/sol=13.14
+ONE-TAU n=28 lists 2^14 t=14: sols=16594 (exp 16384) bad=0 steps=213492 steps/sol=12.87
+ONE-TAU n=32 lists 2^16 t=16: sols=65922 (exp 65536) bad=0 steps=852982 steps/sol=12.94
+UNBAL n=20 a=(10, 10, 6, 6) t=10 taus=64: sols=251 (exp 256) bad=0 steps/sol excl build=803.0  formula 2^(n-min)=256.0  stream term=272.0  predicted 2*(2^(n-a3-a4)+2^(n-a1-a2))+stream+1=787.0
+UNBAL n=20 a=(10, 10, 6, 6) t=4 taus=16: sols=4229 (exp 4096) bad=0 steps/sol excl build=503.0  formula 2^(n-min)=256.0  stream term=4.2  predicted 2*(2^(n-a3-a4)+2^(n-a1-a2))+stream+1=519.2
+UNBAL n=20 a=(12, 8, 10, 10) t=10 taus=64: sols=65564 (exp 65536) bad=0 steps/sol excl build=10.0  formula 2^(n-min)=1.0  stream term=5.0  predicted 2*(2^(n-a3-a4)+2^(n-a1-a2))+stream+1=10.0
+UNBAL n=20 a=(8, 8, 8, 8) t=4 taus=16: sols=4129 (exp 4096) bad=0 steps/sol excl build=66.5  formula 2^(n-min)=16.0  stream term=2.0  predicted 2*(2^(n-a3-a4)+2^(n-a1-a2))+stream+1=67.0
+UNBAL n=20 a=(11, 11, 11, 11) t=10 taus=64: sols=1045742 (exp 1048576) bad=0 steps/sol excl build=2.3  formula 2^(n-min)=0.2  stream term=0.2  predicted 2*(2^(n-a3-a4)+2^(n-a1-a2))+stream+1=2.2
+UNBAL n=20 a=(10, 10, 10, 10) t=2 taus=4: sols=1047498 (exp 1048576) bad=0 steps/sol excl build=5.0  formula 2^(n-min)=1.0  stream term=0.0  predicted 2*(2^(n-a3-a4)+2^(n-a1-a2))+stream+1=5.0

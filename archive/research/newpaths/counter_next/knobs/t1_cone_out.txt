@@ -1,0 +1,24 @@
+basis outer8 + E1.d1 + T1: triangular True, checks 0
+words that move with T1 (37): C1.a1 C1.b1 C1.c1 C1.d1 C2.b1 C2.c1 D0.a1 D0.b1 D0.c1 D0.d1 E1.a2 E1.b1 E3.e2 E3.f1 E3.g1 E3.h1 K0.a1 K1.a1 T0 T1 X0 X10 X5 Y1 Y10 Y13 Y14 Y2 Y5 Y6 Y9 w0 w1 w2 w3 w8 w9
+  Y4 moves with T1: False (Y4 is a basis word here, so it cannot move: see below)
+  w2     moves with T1: True
+  w3     moves with T1: True
+  K1.a1  moves with T1: True
+  X0     moves with T1: True
+  X4     moves with T1: False
+  X8     moves with T1: False
+  X12    moves with T1: False
+  C0.a1  moves with T1: False
+  C0.b1  moves with T1: False
+  Y0     moves with T1: False
+  Y8     moves with T1: False
+  Y12    moves with T1: False
+  Y1     moves with T1: True
+  Y9     moves with T1: True
+  w8     moves with T1: True
+  S0     moves with T1: False
+  S1     moves with T1: False
+  S5     moves with T1: False
+  S9     moves with T1: False
+  S13    moves with T1: False
+  X15    moves with T1: False

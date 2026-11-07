@@ -1,0 +1,20 @@
+{
+  "id": "S37-D177B-FREECV8192",
+  "hash": "sha256-37",
+  "row_i": 16,
+  "row_j": 16,
+  "object": "Procedure C randomized common-CV row-16 calibration",
+  "question": "Does the enlarged common-CV inverse parameterization produce row-16 survivors for new local candidates?",
+  "labels": ["D", "X", "Z"],
+  "status": "SAMPLED",
+  "number": "10 candidates x 8,192 contexts = 81,920; prefix rows 0..15 pass 81,920/81,920; full row-16 pass 0/81,920",
+  "source": "our workflow: d177b free-CV calibration",
+  "own_test": true,
+  "evidence": "research/retest/d177b_procedure_c/FREE_CV_ROW16_CALIBRATION.md; research/retest/d177b_procedure_c/FREE_CV_ROW16_CALIBRATION.txt; research/retest/d177b_procedure_c/free_cv_row16_calibration.py",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "r37.d177b.free_cv_row16",
+  "notes": "Bounded calibration only: common random E[-4..-1], E0, E1 and backward A inversion, 17-round replay. It does not estimate the full N_local family or late rows; a targeted E-driven construction remains open."
+}

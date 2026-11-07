@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m5 = w5: necessity of the cancellation w5p = w5 - 8 (relax w5p; relax the shift in E1)",
+ "question": "Q2: necessity of each condition group here (relax one, recount exact outcome mass)",
+ "labels": [
+  "I",
+  "K"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "(a) K2: for w5=12345678 exactly 1 of 2^32 w5p (the rule value) gives equal K2 state; (b) E1 a2-tau (tau 285020a0, beta* 18b0e098): compatible s at shift -8 = 16 of 2^11 (control table 16,32,8,16,32,8,16 reproduced); at shift 0 = 0, at +8 = 16; the maximum over all 2^32 shifts is 16 (attained at 5880 shifts), so -8 is a maximum, not above it. beta2 18d0e098: 32 at -8, max 32",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/e1_delta.py; research/dig/incoming/blake3-r2-U08/work/e1_delta_out.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m5|msgword|Q2. (a) is exhaustive. (b) is the a-side only (criterion of proof 9.7 validated against brute force at width 10, 0/400 mismatches) so LOCAL_ONLY: the full L adds the c1 cube and eps coupling. The shift is forced to -8 anyway by w4 pinned (Q2/m4), so no free alternative exists. Delta shift measured on E1 a2 only (a-side of the L count); b1/c1/eps parts of L and the E3 side are not recomputed."
+}

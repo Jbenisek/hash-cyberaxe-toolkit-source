@@ -1,0 +1,1 @@
+{"V0 shipped (96 lists, 1 word/prefix)": [57.0023, 0.0, 12743514], "V1 typed lists only (12 lists)": [57.189, 0.1867522617107659, 1596699], "V2 rebuild list per live block (from typed)": [60.6013, 3.5989808917554105, 1596699], "V3 DFS-from-scratch per live block": [85.1168, 28.114488520376145, 1596699]}

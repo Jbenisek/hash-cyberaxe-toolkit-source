@@ -1,0 +1,6 @@
+outer step 0 (t_hi walk, 2^19 steps): mod2^9: 9 values, 9 runs; mod2^12: 9 values, 9 runs; mod2^16: 9 values, 9 runs; mod2^17: 18 values, 524288 runs; mod2^20: 144 values, 524288 runs
+    front-line cluster of 32 members (e1 bits 10..14): omega mod 2^9 takes 1 values
+outer step 1 (t_hi walk, 2^19 steps): mod2^9: 9 values, 9 runs; mod2^12: 9 values, 9 runs; mod2^16: 9 values, 9 runs; mod2^17: 18 values, 524288 runs; mod2^20: 144 values, 524288 runs
+    front-line cluster of 32 members (e1 bits 10..14): omega mod 2^9 takes 1 values
+outer step 2 (t_hi walk, 2^19 steps): mod2^9: 9 values, 9 runs; mod2^12: 9 values, 9 runs; mod2^16: 9 values, 9 runs; mod2^17: 18 values, 524288 runs; mod2^20: 144 values, 524288 runs
+    front-line cluster of 32 members (e1 bits 10..14): omega mod 2^9 takes 1 values

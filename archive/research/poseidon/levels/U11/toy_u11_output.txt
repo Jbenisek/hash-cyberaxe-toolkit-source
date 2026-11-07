@@ -1,0 +1,82 @@
+## q=769 seed=1 r=1 N=591361 pairs=174853620480 E[pairs equal in lane0 per level]=227377920.0
+distinct full 3-lane outputs: 591361 of 591361 (X1: must equal N)
+distinct (lane0,lane1): 373658  (lane0,lane2): 374070  (lane1,lane2): 373798  lane0: 769
+pairs equal lane0&lane1: 296220  lane0&lane2: 294972  (expected random  295680.0 ) lane0&lane1&lane2: 0
+fibre sizes: min 687 max 857 mean 769.0 var/mean 1.12 empty 0
+level | pairs equal lane0 | ratio vs P/q | cumulative-chain pairs (equal at all levels so far) | expected P/q^k | joint(level,final) | expected P/q^2
+  R0 | 227082624 | 0.99870 | 227082624 | 227377920.00 | 295900 | 295680.00
+  R1 | 227368587 | 0.99996 | 265728 | 295680.00 | 296593 | 295680.00
+  R2 | 227389694 | 1.00005 | 382 | 384.50 | 296366 | 295680.00
+  R3 | 227354843 | 0.99990 | 1 | 0.50 | 295259 | 295680.00
+  R4 | 227371356 | 0.99997 | 0 | 0.00 | 296098 | 295680.00
+ R60 | 227374200 | 0.99998 | -1 | 0.00 | 295338 | 295680.00
+ R61 | 227362927 | 0.99993 | -1 | 0.00 | 294927 | 295680.00
+ R62 | 227365510 | 0.99995 | -1 | 0.00 | 295534 | 295680.00
+ R63 | 227413891 | 1.00016 | -1 | 0.00 | 227413891 | 295680.00
+R0.M lane0 fibre sizes: min 769 max 769 (PROVED: all q, a line in (A,B))
+## q=1009 seed=1 r=2 N=1018081 pairs=518243952240 E[pairs equal in lane0 per level]=513621360.0
+distinct full 3-lane outputs: 1018081 of 1018081 (X1: must equal N)
+distinct (lane0,lane1): 644293  (lane0,lane2): 643510  (lane1,lane2): 643526  lane0: 1009
+pairs equal lane0&lane1: 507352  lane0&lane2: 508306  (expected random  509040.0 ) lane0&lane1&lane2: 0
+fibre sizes: min 918 max 1114 mean 1009.0 var/mean 1.001 empty 0
+level | pairs equal lane0 | ratio vs P/q | cumulative-chain pairs (equal at all levels so far) | expected P/q^k | joint(level,final) | expected P/q^2
+  R0 | 513112824 | 0.99901 | 513112824 | 513621360.00 | 508340 | 509040.00
+  R1 | 513701057 | 1.00016 | 521136 | 509040.00 | 510434 | 509040.00
+  R2 | 513591499 | 0.99994 | 555 | 504.50 | 508721 | 509040.00
+  R3 | 513643032 | 1.00004 | 0 | 0.50 | 509518 | 509040.00
+  R4 | 513639525 | 1.00004 | 0 | 0.00 | 508529 | 509040.00
+  R5 | 513589923 | 0.99994 | -1 | 0.00 | 507512 | 509040.00
+ R60 | 513597026 | 0.99995 | -1 | 0.00 | 509306 | 509040.00
+ R61 | 513628516 | 1.00001 | -1 | 0.00 | 509445 | 509040.00
+ R62 | 513649729 | 1.00006 | -1 | 0.00 | 509433 | 509040.00
+ R63 | 513622368 | 1.00000 | -1 | 0.00 | 513622368 | 509040.00
+R0.M lane0 fibre sizes: min 1009 max 1009 (PROVED: all q, a line in (A,B))
+## q=1009 seed=2 r=1 N=1018081 pairs=518243952240 E[pairs equal in lane0 per level]=513621360.0
+distinct full 3-lane outputs: 1018081 of 1018081 (X1: must equal N)
+distinct (lane0,lane1): 643361  (lane0,lane2): 643068  (lane1,lane2): 643601  lane0: 1009
+pairs equal lane0&lane1: 509626  lane0&lane2: 510331  (expected random  509040.0 ) lane0&lane1&lane2: 0
+fibre sizes: min 896 max 1133 mean 1009.0 var/mean 1.059 empty 0
+level | pairs equal lane0 | ratio vs P/q | cumulative-chain pairs (equal at all levels so far) | expected P/q^k | joint(level,final) | expected P/q^2
+  R0 | 513112824 | 0.99901 | 513112824 | 513621360.00 | 509048 | 509040.00
+  R1 | 513553429 | 0.99987 | 482832 | 509040.00 | 509303 | 509040.00
+  R2 | 513605457 | 0.99997 | 462 | 504.50 | 508319 | 509040.00
+  R3 | 513608813 | 0.99998 | 1 | 0.50 | 509249 | 509040.00
+  R4 | 513658902 | 1.00007 | 0 | 0.00 | 507955 | 509040.00
+ R60 | 513614130 | 0.99999 | -1 | 0.00 | 509950 | 509040.00
+ R61 | 513609669 | 0.99998 | -1 | 0.00 | 508099 | 509040.00
+ R62 | 513614927 | 0.99999 | -1 | 0.00 | 508736 | 509040.00
+ R63 | 513651972 | 1.00006 | -1 | 0.00 | 513651972 | 509040.00
+R0.M lane0 fibre sizes: min 1009 max 1009 (PROVED: all q, a line in (A,B))
+## q=257 seed=1 r=1 N=66049 pairs=2181202176 E[pairs equal in lane0 per level]=8487168.0
+distinct full 3-lane outputs: 66049 of 66049 (X1: must equal N)
+distinct (lane0,lane1): 41852  (lane0,lane2): 41711  (lane1,lane2): 41787  lane0: 257
+pairs equal lane0&lane1: 32814  lane0&lane2: 33126  (expected random  33024.0 ) lane0&lane1&lane2: 0
+fibre sizes: min 206 max 304 mean 257.0 var/mean 1.001 empty 0
+level | pairs equal lane0 | ratio vs P/q | cumulative-chain pairs (equal at all levels so far) | expected P/q^k | joint(level,final) | expected P/q^2
+  R0 | 8454272 | 0.99612 | 8454272 | 8487168.00 | 32703 | 33024.00
+  R1 | 8482938 | 0.99950 | 29952 | 33024.00 | 32659 | 33024.00
+  R2 | 8486691 | 0.99994 | 116 | 128.50 | 32863 | 33024.00
+  R3 | 8485572 | 0.99981 | 0 | 0.50 | 33069 | 33024.00
+  R4 | 8494506 | 1.00086 | 0 | 0.00 | 33081 | 33024.00
+ R60 | 8493398 | 1.00073 | -1 | 0.00 | 32771 | 33024.00
+ R61 | 8488224 | 1.00012 | -1 | 0.00 | 33129 | 33024.00
+ R62 | 8487715 | 1.00006 | -1 | 0.00 | 33269 | 33024.00
+ R63 | 8487341 | 1.00002 | -1 | 0.00 | 8487341 | 33024.00
+R0.M lane0 fibre sizes: min 257 max 257 (PROVED: all q, a line in (A,B))
+## q=257 seed=1 r=2 N=66049 pairs=2181202176 E[pairs equal in lane0 per level]=8487168.0
+distinct full 3-lane outputs: 66049 of 66049 (X1: must equal N)
+distinct (lane0,lane1): 41714  (lane0,lane2): 41780  (lane1,lane2): 41860  lane0: 257
+pairs equal lane0&lane1: 33102  lane0&lane2: 32899  (expected random  33024.0 ) lane0&lane1&lane2: 0
+fibre sizes: min 202 max 293 mean 257.0 var/mean 0.887 empty 0
+level | pairs equal lane0 | ratio vs P/q | cumulative-chain pairs (equal at all levels so far) | expected P/q^k | joint(level,final) | expected P/q^2
+  R0 | 8454272 | 0.99612 | 8454272 | 8487168.00 | 32485 | 33024.00
+  R1 | 8482938 | 0.99950 | 29952 | 33024.00 | 32986 | 33024.00
+  R2 | 8486691 | 0.99994 | 116 | 128.50 | 32818 | 33024.00
+  R3 | 8485572 | 0.99981 | 0 | 0.50 | 33163 | 33024.00
+  R4 | 8494506 | 1.00086 | 0 | 0.00 | 32907 | 33024.00
+  R5 | 8485596 | 0.99981 | -1 | 0.00 | 32881 | 33024.00
+ R60 | 8489870 | 1.00032 | -1 | 0.00 | 32845 | 33024.00
+ R61 | 8483419 | 0.99956 | -1 | 0.00 | 32781 | 33024.00
+ R62 | 8483621 | 0.99958 | -1 | 0.00 | 32656 | 33024.00
+ R63 | 8483579 | 0.99958 | -1 | 0.00 | 8483579 | 33024.00
+R0.M lane0 fibre sizes: min 257 max 257 (PROVED: all q, a line in (A,B))

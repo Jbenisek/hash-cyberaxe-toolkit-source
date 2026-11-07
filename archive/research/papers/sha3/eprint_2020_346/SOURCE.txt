@@ -1,0 +1,1 @@
+2020/346	Algebraic Attacks on Round-Reduced Keccak/Xoodoo	owner_download	https://eprint.iacr.org/2020/346.pdf

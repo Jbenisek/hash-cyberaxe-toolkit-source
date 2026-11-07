@@ -1,0 +1,5 @@
+N,lower_bound_bits,upper_bound_bits,witness_late_support,exact_minimum_known,lower_bound_method,upper_bound_method
+37,6,25,"22,24",False,Exhaustive word-support no-singleton bound,"Supplied reference card, Table 17 messages; expansion recomputed"
+38,6,44,"23,24",False,Exhaustive word-support no-singleton bound,Recomputed native witness
+39,11,120,"23,38",False,Exhaustive word-support no-singleton bound,Recomputed native witness
+40,11,133,"24,39",False,Exhaustive word-support no-singleton bound,Recomputed native witness

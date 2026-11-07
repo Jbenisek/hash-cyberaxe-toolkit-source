@@ -1,0 +1,32 @@
+q=257 seed=1 det[e0;e0M;e0M^2]=44 (0 => trail for r=3)
+ [1] |{L3=c}| over c: mean 257.00 var/q 1.074 min 217 max 300 empty 0   (random function of q^2 inputs into q cells: var/q ~ 1)
+     same for L4: var/q 0.889 min 219 max 322
+     max |N_c-q| = 43  (sqrt q=16.0 ; ratio 2.68)
+     R3-equal unordered pairs 8489742 (random N(N-1)/2/q=8487168)
+ [2] pairs equal at R3&R4         :     33078  random expectation 33024.0  ratio 1.002
+ [2] pairs equal at R3&R4&R5      :         0  random expectation 128.5  ratio 0.000
+ [2] pairs equal at R3&R4&R5&R6   :         0  random expectation 0.5  ratio 0.000
+ [2] pairs equal at R4 alone      :   8483643  random expectation 8487168.0  ratio 1.000
+ [2] pairs equal at R4&R5 (no R3) :     32735  random expectation 33024.0  ratio 0.991
+ [2] pairs equal at R5 alone      :   8490532  random expectation 8487168.0  ratio 1.000
+     trail-partner count per input (R3&R4 group size-1): hist [24256, 24190, 12330, 4112, 900, 204, 49, 8] ; mean 1.002 var 0.998 (Poisson mean~1.00 var same)
+ [3] on R3 surface, L4: sum of distinct values per fibre = 41711 ; random control mean 41739.5 sd 75.2  (z=-0.38)
+ [3] on R3 surface, L5: sum of distinct values per fibre = 41716 ; random control mean 41767.8 sd 73.9  (z=-0.70)
+ [3] on R3 surface, L6: sum of distinct values per fibre = 41808 ; random control mean 41736.6 sd 70.4  (z=1.02)
+ [4] CONTROL free (s1,s2): L4 and L5 take each value exactly q times for s0 in {0,1,5}: True ; after 3 partial rounds balanced: False
+q=257 seed=2 det[e0;e0M;e0M^2]=7 (0 => trail for r=3)
+ [1] |{L3=c}| over c: mean 257.00 var/q 1.068 min 211 max 298 empty 0   (random function of q^2 inputs into q cells: var/q ~ 1)
+     same for L4: var/q 0.994 min 215 max 295
+     max |N_c-q| = 46  (sqrt q=16.0 ; ratio 2.87)
+     R3-equal unordered pairs 8489534 (random N(N-1)/2/q=8487168)
+ [2] pairs equal at R3&R4         :     33170  random expectation 33024.0  ratio 1.004
+ [2] pairs equal at R3&R4&R5      :         0  random expectation 128.5  ratio 0.000
+ [2] pairs equal at R3&R4&R5&R6   :         0  random expectation 0.5  ratio 0.000
+ [2] pairs equal at R4 alone      :   8487091  random expectation 8487168.0  ratio 1.000
+ [2] pairs equal at R4&R5 (no R3) :     32649  random expectation 33024.0  ratio 0.989
+ [2] pairs equal at R5 alone      :   8489507  random expectation 8487168.0  ratio 1.000
+     trail-partner count per input (R3&R4 group size-1): hist [24207, 24462, 11934, 4092, 1110, 186, 42, 16] ; mean 1.004 var 1.016 (Poisson mean~1.00 var same)
+ [3] on R3 surface, L4: sum of distinct values per fibre = 41700 ; random control mean 41760.4 sd 98.7  (z=-0.61)
+ [3] on R3 surface, L5: sum of distinct values per fibre = 41862 ; random control mean 41763.7 sd 96.3  (z=1.02)
+ [3] on R3 surface, L6: sum of distinct values per fibre = 41720 ; random control mean 41740.5 sd 60.8  (z=-0.34)
+ [4] CONTROL free (s1,s2): L4 and L5 take each value exactly q times for s0 in {0,1,5}: True ; after 3 partial rounds balanced: False

@@ -1,0 +1,24 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "chain input words m8..m15 = x (identity embedding)",
+ "question": "Q3: degrees of freedom or score-optimal value",
+ "labels": [
+  "N",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "256 free bits, all required: eight 32-bit words. Which digest word goes to which slot is a wiring choice with no op cost (not separately traced; register renaming); the start slot s = 8 is the optimum. Value freedom is only the start point r (one random word) of the chain.",
+ "topic": "b3r3.PIN.X.Q3",
+ "notes": "universe cell blake3-r3|PIN.X|PIN|Q3. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Identity embedding digest word i -> slot m(8+i).",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "an embedding of fewer than 256 bits that still yields a digest collision with probability 1 per tag collision"
+}

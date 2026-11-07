@@ -1,0 +1,5 @@
+P6 prefix: empty header 6 ops, nonempty header 11 ops (loop control not included)
+P6 toy: 9 variant runs (4 real variants, A1 = 2^32 - 3, 1 and 0; the real limits 2^32 and A1 as well as toy limits), 946 headers, 1188 entries: count and fill == definition, 0 mismatches
+P6 count: 144 ops per iteration (incl. loop branch), 16 per variant (loads, A1, both segment setups, guard, list-loop branch); fill: 232 ops per iteration, 17 per variant
+pre1.json {'G_hit_ops': 117, 'G_nonhit_max_ops': 115, 'F7_in_ops': 25, 'F7_out_ops': 22, 'A2_hit_ops': 41, 'A2_nonhit_max_ops': 39, 'A2REC_total_ops': 39168, 'GREC_total_ops': 3072, 'LIVE_ops': 21, 'LIVE_g': 5}
+pre2.json {'P5_SETUP': 37, 'P5_BODY_MAX': 57, 'P5_APPEND': 46, 'P5_LOOP': 3, 'P6_ZERO16': 34, 'P6_COUNT_IT': 144, 'P6_COUNT_VAR': 16, 'P6_FILL_IT': 232, 'P6_FILL_VAR': 17, 'P6_PREFIX_EMPTY': 6, 'P6_PREFIX_NONEMPTY': 11}

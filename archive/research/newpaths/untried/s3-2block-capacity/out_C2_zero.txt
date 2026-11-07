@@ -1,0 +1,6 @@
+{"capmode": "zero", "cap_lanes": []}
+built B2 (320 coords) in 0.3s
+{"round2_radical_dim": 0, "sec": 1.0}
+{"round2_field_dim": 3, "sec": 1.0}
+{"round3_radical_dim": 0, "round3_field_dim": 1, "round2_dim_used": 3}
+{"round3_field_dim": 1, "total_sec": 1.0}

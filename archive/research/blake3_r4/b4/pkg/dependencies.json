@@ -1,0 +1,22 @@
+[
+  {
+    "submissionId": "62cfd777-5613-463f-b561-e2340e00e528",
+    "rationale": "Our own entry for blake3 round 3 (124.8123, passed the judges): the bit-sliced 256-lane chain step with pivot full adders, the mask walk g = f XOR q, the declared 1,024-register file and the 36-byte instruction charge. This entry is that program at four rounds: it keeps its target form (64-byte message 0^32 || x, flags 11), program structure, trail-and-table search, handlers, recovery walk, ledger method, success argument and experiments, and changes the round count, the circuit generator (two passes, no node table, so that it fits beside the larger program), the table entry (26 bytes) and the numbers.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.6, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "0a9640ed-558a-4f0a-aba8-45e89ffcfd7c",
+    "rationale": "Our own entry for blake3 round 3 (124.96822, bit-sliced 256-lane chain step, declared 1,024-register file, 36-byte instruction charge; passed the judges). Taken from it: the program structure, trail-and-table search, handlers, recovery walk, ledger method, restated Lemma 2 and the form of the experiments.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.4, 4, 5, 6, 7 and Appendix A."
+  },
+  {
+    "submissionId": "3356413f-cd60-410c-8847-2266d6444ac5",
+    "rationale": "Our own entry for blake3 round 3 (124.95448, same program with a fixed first block P as advice; passed the judges). Taken from it: the polarity-signal generator idea, the declared register-file layout and the generator code and peak-storage accounting of its Section 3.6 (restated here for the new generator); its two-block mode, prefix, scan and polarity climb are not used.",
+    "evidence": "proof.md Sections 3.2, 3.6, 3.7 and 7."
+  },
+  {
+    "submissionId": "6ae36351-5836-4a46-ad34-227688264123",
+    "rationale": "jungjipdo's entry for blake3 round 3 (124.91252). Credited for two ideas, re-implemented here from the text of its proof Sections 3.3 and 3.4 (no file of that entry was used or run): the pivot full adder (the input whose polarity differs is the pivot; u = x ^ p, sum = u ^ y, carry = ((u & (y ^ p)) ^ p); five gates per bit) and the mask walk g = f XOR q (the digest planes are fed back as stored, so no complement and no polarity search are needed, and equality under g is equivalent to equality under f).",
+    "evidence": "proof.md first paragraph and Sections 1, 3.2, 3.3 and 8."
+  }
+]

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JHEUR (JUDGE)",
+ "question": "R4: score sensitivity: proved vs sampled",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "Proved-only single-family route about 38,600 centres (+13.2 bits over 4 centres) vs the two-family template (one attempt, 2 lines, success >= 0.4999999999): its r1 ledger worst case is a W^p mod (f-y) of degree 78,125 per line (92.25e9 ops at the top level, logs/calib.txt) against 45.56e9 for the odd part; r2 not built (top level would scale about 5x).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/orchard/twofam_r1/logs/calib.txt; HANDOFF.md (lines 414-431); research/dig/incoming4/work/ledger_numbers.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JHEUR|JUDGE|R4. Calibration read from twofam_r1/logs/calib.txt; r2 scaling is a statement, not a measurement.",
+ "held_fixed": "rulings of the r1 filings as recorded in HANDOFF.md 10-12 18:20 .. 20:25; no r2 entry has been filed",
+ "reopen_if": "the r2 two-family ledger is built"
+}

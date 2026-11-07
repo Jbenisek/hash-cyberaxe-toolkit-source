@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HCENT (PREM)",
+ "question": "R4: score sensitivity",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "1 centre 28.133, 2 centres 29.133, 4 centres 30.133 bits of time; the proved-only route would need about 38,600 centres (+13.2 bits over 4, score about 46 per HANDOFF), the two-family template removes centres altogether.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HCENT|PREM|R4. 38,600 figure from HANDOFF 10-12 19:35, not recomputed.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure; centres independent (fresh random centre each)",
+ "reopen_if": "the r2 entry is rebuilt (two-family template), the charging rules change (control ops, dispatch, address ops), or an r2 run disagrees with these numbers"
+}

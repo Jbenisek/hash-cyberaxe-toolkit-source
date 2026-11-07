@@ -1,0 +1,20 @@
+{
+  "id": "R6-DPrho-fixed-trace-runner",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "DP-rho cap-64 fixed event replay",
+  "question": "Does a precomputed cap-64 spill event sequence compile and reproduce the packed Boolean outputs without a runtime allocator?",
+  "labels": ["D", "X", "B", "E"],
+  "status": "COMPUTED",
+  "number": "90878 events; 26016 loads; 25954 stores; 0 drops; 0 bad words; B=364540; conditional score 127.813659627756",
+  "source": "our workflow: fixed trace runner",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-DPrho-fixed-trace-runner.md; research/retest/t1/packed_kernel_trace.c; research/retest/t1/packed_kernel_trace_result.txt",
+  "date": "2026-10-13",
+  "lever": true,
+  "gain_bits": 0.217769356754,
+  "gain_basis": "T",
+  "notes": "The fixed event replay independently validates the scalar-Belady tie choice. It is a finite software-model result; hit-mask extraction, restart/recovery, control/address pricing, and organizer width/spill acceptance remain OPEN, so no filing-safe gain is claimed.",
+  "reopen_if": "A generated production kernel with exact extraction/recovery/control ledger and organizer ruling on packed width/register spills."
+}

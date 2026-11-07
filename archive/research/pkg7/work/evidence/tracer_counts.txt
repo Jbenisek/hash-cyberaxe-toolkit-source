@@ -1,0 +1,11 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; python -B work/tools/tracer_counts.py 300; tracer: research/pkg7_prep/opt_verify/ov_tracer.py
+RULE WITH 4 CONDITIONS, 300 cases: instruction list the same in 300, results of the batch on the tracer equal to those on the program's machine (and the memory and the table words) in 300, faults 0
+   from the instruction list (operations, loads, stores): stage A 29+8+0; stage 2 101+27+0; outer step 148+91+21; table build 43+26+5; middle step 85+40+9; equal to TABLES of the program: True
+   smallest register file that runs each piece: outer step 11, table build 7, middle step 13, batch 16; the batch on a file of 16: runs; on 15: refused; ok
+RULE WITH 6 CONDITIONS, 300 cases: instruction list the same in 300, results of the batch on the tracer equal to those on the program's machine (and the memory and the table words) in 300, faults 0
+   from the instruction list (operations, loads, stores): stage A 32+9+0; stage 2 105+30+0; outer step 148+91+21; table build 43+26+5; middle step 85+40+9; equal to TABLES of the program: True
+   smallest register file that runs each piece: outer step 11, table build 7, middle step 13, batch 16; the batch on a file of 16: runs; on 15: refused; ok
+RULE WITH 8 CONDITIONS, 300 cases: instruction list the same in 300, results of the batch on the tracer equal to those on the program's machine (and the memory and the table words) in 300, faults 0
+   from the instruction list (operations, loads, stores): stage A 37+10+0; stage 2 105+30+0; outer step 148+91+21; table build 43+26+5; middle step 85+40+9; equal to TABLES of the program: True
+   smallest register file that runs each piece: outer step 11, table build 7, middle step 13, batch 16; the batch on a file of 16: runs; on 15: refused; ok
+RESULT: the tracer confirms the counts and the registers

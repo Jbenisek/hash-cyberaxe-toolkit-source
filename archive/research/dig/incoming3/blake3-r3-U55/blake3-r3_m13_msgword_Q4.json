@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m13",
+ "question": "Q4 alternatives: other embeddings, other free sets",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Embedding alternatives: all 8! = 40320 assignments of digest words to m8..m15 give 595 ops in 40320 of 40320 (exact trace; every chain word is a lane variable of bound 2^32-1, so an assignment only renames input registers). Free-set alternatives (ops, fed-back width): m8..m15 595 (256 bits), m8..m14 590 (224), m8..m13 560 (192), m8..m11 525 (128), m8..m9 485 (64); each missing word costs 2^16 in time (Q2), all 16 words free 730 ops. No alternative is cheaper in score.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U55/work/words.py; research/dig/incoming3/blake3-r3-U55/work/words.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|m13|msgword|Q4. validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "target 0^32||x (m0..m7 = 0, m8..m15 chain words, identity embedding), standard IV/counter 0/length 64/flags 11, 3 rounds, filed circuit rules (7 lanes x 36-bit pitch, filed Tracer rules, 595 ops per batch of 7); all other reads unchanged; the search is the plain birthday chain of the filed entry",
+ "reopen_if": "an embedding that is not a renaming and removes work (for example a digest word that already equals a message-read sum), or a non-injective embedding with a counted collision-rate gain",
+ "topic": "blake3-r3|m13|msgword|Q4"
+}

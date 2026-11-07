@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json, scan.cpp, scan_joint.txt, scan0.txt, scan1.txt, scan2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "state word v12 = t_lo (chunk counter low)",
+ "question": "Q2: necessity (change it, recount the exact outcome)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Counter (low word) changed: ops of the 3-round chain circuit stay 595 for counters 0, 1, 2, 1023, 2^32, 2^64-1 and 300 random 64-bit values (time_log2 125.10856 unchanged), because every round-0 column call is all-constant and folds. Exact scan of all 2^32 values of v12 (K = 0, other state words as in the target): v4' = 0 for exactly 1 value (201b8e14), v8' = 0 for 1 (41e5f136), v12' = 0 for 1 (ec448e39); no value zeroes two of the four column outputs (joint count 0). Each such zero would delete one immediate op (0.00241 bit), but a root compression of one chunk has counter 0 by definition, so none of these values is available. The value 0 is forced by the target, not chosen for cost.",
+ "topic": "b3r3.INIT.v12.Q2",
+ "notes": "universe cell blake3-r3|INIT.v12|INIT|Q2. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Exact 2^32 scan (scan.cpp mode 0, OpenMP, nice 10, about 20 s per mode in WSL). The 16 immediate sites of the filed circuit are the diagonal-call constants v0'+v5', v5', v10', v15' (and the three rotations of that pattern); they are listed by imm.py logic in exp1.py/eng.py (8 add-imm, 8 xor-imm).",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "a legal value or layout that gives fewer than 595 ops per 7-lane batch, or a ledger line that charges a different count, or a legal chunk-index use where the counter reaches a root compression"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "S256-R40-L05-CLUSTER-REPLAY-20261021",
+  "hash": "sha256-r40",
+  "row_i": null,
+  "row_j": null,
+  "object": "Task35 L05 cluster-start replay",
+  "question": "Do established R40 tail/full-kernel vectors and later-start candidates reproduce their cluster starts and finite schedule weights?",
+  "labels": ["X", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "18/18 tail cases start at W0 and match L04 weights; full examples replay starts 11/13/14/15 with weights 146/162/203/188; five later-start candidates replay start W9 with W0..W40 weights 319/321/323/326/329",
+  "source": "our workflow: Task35 L05 cluster-start replay",
+  "own_test": true,
+  "evidence": "research/luna_dig/task35_l05_cluster_start.py; research/luna_dig/TASK35_L05_CLUSTER_START_20261021.md; research/grok/work/G_river_2/ANSWER.md; research/grok/work/G_river_6/ANSWER.md; research/grok/work/G_river_7/ANSWER.md; research/dig/GRID_R40.md",
+  "date": "2026-10-21",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Exact finite XOR-linear re-expansion of supplied vectors. Tail minima start at W0; condition-free full-kernel examples start at W11/W13/W14/W15; the five supplied later-start candidates start at W9. Later-start weights are finite schedule costs only, and rank-1/rank-2 are subcode minima. No signed/modular state, compression, release/claw transfer, charged ledger, probability, or score credit follows.",
+  "peak_mem": "0 FREE self-contained 16-word Python replay",
+  "held_fixed": "Supplied local G_river/G_r40 vectors, XOR sigma0/sigma1 schedule, and published window endpoints",
+  "reopen_if": "A permitted signed/modular state characteristic, full compression-state witness/UNSAT proof, or charged ledger comparing cluster starts is available."
+}

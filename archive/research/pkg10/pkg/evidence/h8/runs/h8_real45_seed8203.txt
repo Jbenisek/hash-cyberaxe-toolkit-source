@@ -1,0 +1,44 @@
+real: pin 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006  eta 830303cf  class of 2^19 values of Y4  D3 fdb77cfd
+  lengths 55/63  w4' 97475640  delta fffffff8  Y3 8127c181 Y3' 7edf3e7e  Y11 7af77f38 Y11' 850000c3 D11 0a08818b  class mask 03cf8303 value 030c0303
+STAT real trials 2^45.00  bad 0
+STAT real early test passes: 1553271 (2^-24.433)   E1 requires the eta of Y4: 12500 (2^-31.390)   contradictions (must be 0): 0
+STAT real E1 deep: trials with a listed beta 141734051418 (2^-7.956)   trials with a listed E1 outcome 26
+STAT real E3 deep: trials with a listed partial E3 event 7129 (2^-32.201)
+STAT real word zero:             8704 (2^-31.913)      43211 (2^-29.601)       8602 (2^-31.930)       5297 (2^-32.629)
+STAT real low 16 zero:      530648701 (2^-16.017) 1373225028 (2^-14.645)  840582638 (2^-15.353)  410727047 (2^-16.386)
+STAT real low 16 of two:   01:24262 02:58311 03:9639 12:34750 13:4107 23:15154
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 6064   weight <= 16/24/32/40: 0 1908 6100663 2877699600   lowest weight seen 18
+STAT real trailing zero bits >= 24..48: 24:2186837 28:143022 32:8704 36:645 40:72 44:2 48:0
+STAT real trailing zero bits exactly 0..23: 23363003170260 5910687010697 2955342500652 1477670084860 738834051707 369417352118 184708882297 92354502097 46177272673 23088477512 11544367830 3117187040 4209358034 2108903098 1054513646 523805610 265331605 132658890 66326913 33121319 16556927 8327426 4186215 1952569
+STAT real rule on h1 (bits 0=0, 1=1, 16=0, 17=0): passes 2199023237841 (2^-4.000000)   listed partial E3 events that pass it: 4137
+STAT real E1 beta 18b0e098: trials 17179866610   with a listed tau 10357483   with a listed outcome 3
+STAT real E1 beta 18d0e098: trials 17179962713   with a listed tau 24771759   with a listed outcome 8
+STAT real E1 beta 18b1a098: trials 17179797805   with a listed tau 10620575   with a listed outcome 7
+STAT real E1 beta 18d1a098: trials 17180110372   with a listed tau 19669008   with a listed outcome 8
+STAT real E1 beta 18b3e098: trials 4295018935   with a listed tau 589671   with a listed outcome 0
+STAT real E1 beta 18d3e098: trials 4295034427   with a listed tau 1375206   with a listed outcome 0
+STAT real E1 beta 18d1a398: trials 4294926691   with a listed tau 655656   with a listed outcome 0
+STAT real E1 beta 19f1a098: trials 4294964100   with a listed tau 492315   with a listed outcome 0
+STAT real E1 beta 18d16398: trials 4294929250   with a listed tau 328139   with a listed outcome 0
+STAT real E1 beta 18f1e098: trials 4294979846   with a listed tau 885249   with a listed outcome 0
+STAT real E1 beta 19f0e098: trials 4294969895   with a listed tau 228897   with a listed outcome 0
+STAT real E1 beta 19b1e098: trials 4294929987   with a listed tau 1058346   with a listed outcome 0
+STAT real E1 beta 19d1e098: trials 4294946486   with a listed tau 491127   with a listed outcome 0
+STAT real E1 beta 19b0a098: trials 17179899067   with a listed tau 1210653   with a listed outcome 0
+STAT real E1 beta 19d0a098: trials 17179715234   with a listed tau 196382   with a listed outcome 0
+STAT real E3 eps 6e61be55: listed partial events 2160
+STAT real E3 eps 6e21be55: listed partial events 1840
+STAT real E3 eps 6e203e55: listed partial events 1280
+STAT real E3 eps 6e603e55: listed partial events 890
+STAT real E3 eps 6e23be55: listed partial events 349
+STAT real E3 eps 6e63be55: listed partial events 289
+STAT real E3 eps 6e5fbe55: listed partial events 101
+STAT real E3 eps 6fdfbe55: listed partial events 79
+STAT real E3 eps 6fa03e55: listed partial events 77
+STAT real E3 eps 6fa1be55: listed partial events 28
+STAT real E3 eps 6e603c55: listed partial events 8
+STAT real E3 eps 6e60bc55: listed partial events 14
+STAT real E3 eps 6fde3e55: listed partial events 5
+STAT real E3 eps 6f9fbe55: listed partial events 8
+STAT real E3 eps 6f9e3e55: listed partial events 1

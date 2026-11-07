@@ -1,0 +1,25 @@
+{
+ "j": 1,
+ "inner_degree_m": 3125,
+ "F_degree": 78125,
+ "field": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001",
+ "model": "levels/decomp/decomp.py Line(j) circuit(s0_line(L),1); r=1",
+ "H": "monic, H(0)=0, degree m, coefficient list ascending (c0..cm), 64-hex per coefficient",
+ "H_sha256_of_hexlist": "19d7deac9ea56b91193e582a6ba954e0700be33af6e9a533c130a19ee0726b6a",
+ "nonconstant_digit_index": 0,
+ "digit_degree": 3124,
+ "digit_constant_term_hex": "22f528deee9815c212ae4609c5a3cd85f953511ee40913320b9c63e76bb0eb85",
+ "digit_sha256_of_hexlist": "7a82a47e13741793d52630f2a2c74bd0f0808d24489d0f9b0a2c69de198741bb",
+ "nonconstant_digit_count": 24,
+ "digits_visited": 26,
+ "meaning": "F = sum_i c_i H^i with deg c_i < m; c_idx is nonconstant, so F is not G(H) for any G",
+ "independent_peel_verification": true,
+ "runtime_s": {
+  "H_candidate": 4.5,
+  "digit_expansion": 2.0,
+  "verify": 0.4,
+  "total": 6.9
+ },
+ "H_file": "nd_j1_m3125_H.hex",
+ "digit_file": "nd_j1_m3125_digit.hex"
+}

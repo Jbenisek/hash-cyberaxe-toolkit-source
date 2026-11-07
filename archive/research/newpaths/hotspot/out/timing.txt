@@ -1,0 +1,46 @@
+CONST CMASK 03cf8303 CVAL 030c0303 DELTA5 fffffff8
+RUN real sub=1 threads=2^16 outer/thread=2^5 inner=2^12 launches=8 seed=9 nsel=14 tsel=16 rsel=19 esel=1 hwt=25 hwh=40 launches_done=8 records=2991
+CNT trials                                   68719476736
+CNT listed tau                               41373273
+CNT listed E1 outcome                        16
+CNT rule A (8)                               268451732
+CNT gate H4                                  4296916115
+CNT listed partial E3                        26
+CNT early word 0                             39900
+CNT eta condition                            978
+CNT listed outcome & rule A                  0
+CNT listed outcome & gate H4                 1
+CNT listed tau & rule A                      162725
+CNT listed partial E3 & rule A               2
+CNT listed outcome & listed partial E3       0
+CNT residual word 0 zero                     23
+CNT residual word 1 zero                     174
+CNT residual word 2 zero                     27
+CNT residual word 3 zero                     10
+CNT residual low 16 all zero                 0
+CNT listed outcome & early                   0
+CNT listed tau & early                       1789
+CNT listed partial E3 eps 6e21be55           4
+CNT beta != 18b0e098 (must be 0)             0
+CNT T0 == 0                                  18
+HW 21 1
+HW 22 5
+HW 23 16
+HW 24 29
+HW 25 66
+HW 26 162
+HW 27 498
+HW 28 1179
+HW 29 2875
+HW 30 6753
+HW 31 15204
+HW 32 33971
+HW 33 72150
+HW 34 151000
+HW 35 306824
+HW 36 607382
+HW 37 1172579
+HW 38 2197126
+HW 39 4014582
+HW 40 7158667
+OVERFLOW 0

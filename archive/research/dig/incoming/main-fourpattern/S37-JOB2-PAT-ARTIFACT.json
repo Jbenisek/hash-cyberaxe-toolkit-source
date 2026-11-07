@@ -1,0 +1,19 @@
+{
+  "id": "S37-JOB2-PAT-ARTIFACT",
+  "hash": "sha256-37",
+  "row_i": 18,
+  "row_j": 21,
+  "object": "rows 18/19 four-pattern survival: job2 '2 of 4 patterns' result",
+  "question": "Do only 2 of the 4 rows-18/19 value patterns survive to a collision (contradicting the filed four-pattern lever)?",
+  "labels": ["P", "K"],
+  "status": "KILLED",
+  "number": "Artifact: job2 held printed E19[29]=1 inside window rows 19..21; the lever needs E19[29]=E18[10]. With only E19[29] freed (chi37_job2_e19z.txt): exact events of 25.17M: P11 1945 (-13.65), P01 1917 (-13.68), P10 1853 (-13.72), P00 1834 (-13.74), all re-hashed through 37 steps, 0 mismatches. Stored full collisions exist for P10, P01, P00. Filed +1.93..1.98 bit lever stands.",
+  "source": "main session",
+  "own_test": true,
+  "evidence": "research/retest/four_pattern_contradiction/RESULT.md",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": null,
+  "topic": "r37.rows1819.fourpattern",
+  "notes": "Kills the claim 'only 2 patterns live / 1.0 bit' (S37-JOB2-PAT); that row must not be applied. Not run: per-pattern rows 22+ as a separate stage (included in the window out event) and a fresh joint q3."
+}

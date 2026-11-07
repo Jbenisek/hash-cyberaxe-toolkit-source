@@ -1,0 +1,20 @@
+{
+  "id": "B3-D179-EFH-MASK",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 E/f/h-dependent XOR witness-map family",
+  "question": "Can h' = h xor r0 xor (E&rE) xor (f&rF) xor (h&rH), with g' = g xor delta and f/E fixed, map every coupled witness for the residual class toggles?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact QF_BV CEGIS is UNSAT for delta 00002000 after 5 witnesses, 00001000 after 2, and 00000400 after 13.",
+  "source": "our exact QF_BV CEGIS probe",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/synth_hmask_efh.py; research/retest/b3_omega_coupled/exact/SYNTH_HMASK_EFH.md; research/retest/b3_omega_coupled/exact/SYNTH_HMASK_EFH.out",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "topic": "blake3.d179.witness_map",
+  "notes": "Negative only for the stated E/f/h-dependent XOR-mask family. Nonlinear or piecewise maps and universal coupled class invariance remain OPEN; no saving is credited."
+}

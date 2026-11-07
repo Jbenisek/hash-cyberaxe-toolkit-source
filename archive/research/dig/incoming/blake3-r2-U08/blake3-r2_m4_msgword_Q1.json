@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m4 = w4: pinned word W4=97475638 (A) vs W4p=97475640 (B)",
+ "question": "Q1: difference/condition count as used at this word",
+ "labels": [
+  "P",
+  "0"
+ ],
+ "status": "COMPUTED",
+ "number": "w4 PINNED: 32 of 32 bits fixed (1 value of 2^32); difference W4p-W4 = +8 additive, xor 00000078 (bits 3-6); 0 free bits. Effect at C3: b2,d2 equal (64 bit equalities hold), a2,c2 differ: dY3 xor fff8ffff (add fdb77cfd), dY11 xor fff77ffb (add 0a08818b)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/w4_solutions.txt; research/dig/incoming/blake3-r2-U08/work/w4prime_solutions.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m4|msgword|Q1. Layout from proof.md 3.1-3.2: w4 is pinned, not one of the 8 free words (Lemma T2); w4p=((K+w4)^8)-K, K=IV2+IV6=5bf2cd1d; K+W4=f33a2355 has bit3=0 so XOR 8 adds +8. Package writes the difference as W4-W4p=-8. Exact C3 outputs reproduced: W4 a2=8127c181 d2=bbfbdffe c2=7af77f38 b2=76f7aefd; W4p a2=7edf3e7e d2=bbfbdffe c2=850000c3 b2=76f7aefd. Other constants held as printed (X3,X7,X11,X15,W13; proof.md 3.2); controls reproduce Fact P exactly."
+}

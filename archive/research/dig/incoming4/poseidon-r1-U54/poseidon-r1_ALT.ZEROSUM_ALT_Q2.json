@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.ZEROSUM zero-sum structure",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "a zero-sum over N = 2^21 digests gives no pair of equal digests: expected colliding pairs among 2^21 random 255-bit digests = 2^(41-255) = 2^-214",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "log2 arithmetic. | universe cell poseidon-r1|ALT.ZEROSUM|ALT|Q2",
+ "held_fixed": "N = 2^21",
+ "reopen_if": "a zero-sum structure that also forces equality"
+}

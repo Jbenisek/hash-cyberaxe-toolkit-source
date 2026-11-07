@@ -1,0 +1,20 @@
+{
+  "id": "D243-POSEIDON-D15625-RESULT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "ALT.FUNCDEC inner degree d=15,625 exact j=0 digit test",
+  "question": "Does the r=2, j=0 skip-line polynomial have a functional decomposition at inner degree 15,625?",
+  "labels": ["N", "K"],
+  "status": "COMPUTED",
+  "number": "Exact real circuit: nonconst=24 of 26 B-adic digits; decomposes=false; elapsed 104 s. Controls: d=625 nonconst=624/626 and d=3125 nonconst=124/126, both decomposes=false.",
+  "source": "our workflow: dig-poseidon-close",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-poseidon-d15625.md; research/dig/incoming4/work/testD.py; research/dig/incoming4/work/testD_real_j0.txt",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Exact exhaustive B-adic digit test on the prescribed r=2, j=0 circuit. This closes d=15,625 only; d=78,125 remains OPEN and was not run because its estimated cost is about 14 hours. The prior OPEN residual is superseded.",
+  "topic": "poseidon alt funcdec residual d=15625",
+  "supersedes": ["D243-POSEIDON-D15625"]
+}

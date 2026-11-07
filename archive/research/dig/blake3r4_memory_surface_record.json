@@ -1,0 +1,21 @@
+{
+  "id": "B3R4-MEMORY-SURFACE-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "memory over 2^20 conditional table/register surface",
+  "question": "Does allowing the memory penalty make a smaller table/register layout beat the current r4 row?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "conditional best entry10/R771: time 124.988982, peak 1056664 B, score 125.000067, P 0.391270",
+  "source": "research/blake3_r4/b4/pkg/blake3/experiments/bsrho.py local ledger enumeration",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_memory_surface_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.3534,
+  "peak_mem": "1,056,664 B for conditional best; recovery repricing OPEN",
+  "notes": "Conditional arithmetic with unchanged recovery cost; no package/stage/filing/submission. Short entries need an exact recovery charge before use.",
+  "potential_bits": 0.1,
+  "prior": 0.1
+}

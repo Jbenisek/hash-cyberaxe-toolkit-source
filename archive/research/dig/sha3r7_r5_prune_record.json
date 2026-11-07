@@ -1,0 +1,21 @@
+{
+  "id": "S7-R5-PRUNE-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "third-GB output prune before R6",
+  "question": "Can the last generic round store only the 320 planes consumed by R6?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "5533 vs 6813 raw ops; 1280 raw saved; conditional flag row 1020..1150 saved => time 124.7033025..124.6992817; 512-lane/2-step KAT 0 mismatches",
+  "source": "research/dig_new/sha3-r7/r5_prune_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_r5_prune_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.03,
+  "peak_mem": "conditional branch row 1,044,160 B using +4,096 B allowance; raw pruned body 1920 plane regs",
+  "notes": "Exact raw prune and KAT; conditional ledger endpoints use the r6 130..260 flag range and +4,096 B code allowance. Shared-body r7 emission remains open; no package/stage/filing/submission.",
+  "potential_bits": 0.04,
+  "prior": 0.2
+}

@@ -1,0 +1,6 @@
+[rand] 1048576 rows: U1 holds on 1048576, Q7 holds on 1048576, U3 holds on 1048576, Z7 holds on 1048576
+[ctx] 262144 rows: U1 holds on 262144, Q7 holds on 262144, U3 holds on 262144, Z7 holds on 262144
+E1 census, both seeds: 1038 hits in 2^36 -> log2 P(dc2 = 6e21be55) = -25.980 (Poisson sd of log2 0.045); dc2 values {'6e21be55': 1038}
+hits whose da2 is one of the 14 table t values for s = 6e21be55: 20 of 1038
+indicative pkgCG joint  sum_t P_E1(t) * W15(t, 6e21be55) = 2^-91.29   (with W13: 2^-91.17)
+per t: 175020a0:3, 175060a0:0, 185020a0:2, 185060a0:1, 275020a0:3, 275060a0:1, 285020a0:1, 285060a0:2, 385020a0:2, 385060a0:2, 675020a0:0, 675060a0:1, 685020a0:1, 685060a0:1

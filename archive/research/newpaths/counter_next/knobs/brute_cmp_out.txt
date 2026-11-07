@@ -1,0 +1,7 @@
+case 0 (y 49e459aa Y9 f67ab01c w8 621bb0a5): search 768, brute force 768 (count line 768); identical sets: True; search nodes 343454
+case 1 (y 49f4b1c6 Y9 7b411f4e w8 6ffd9c65): search 128, brute force 128 (count line 128); identical sets: True; search nodes 238958
+case 2 (y 09f47a5e Y9 bbe2532f w8 37d0dc6b): search 256, brute force 256 (count line 256); identical sets: True; search nodes 441926
+case 3 (y c9f45a0e Y9 0b5ed812 w8 8e3674ba): search 320, brute force 320 (count line 320); identical sets: True; search nodes 460398
+case 4 (y 79f49e62 Y9 caea0518 w8 79827b7a): search 0, brute force 0 (count line 0); identical sets: True; search nodes 57022
+case 5 (y 49e44996 Y9 f69542b8 w8 8330550f): search 0, brute force 0 (count line 0); identical sets: True; search nodes 23870
+ALL IDENTICAL

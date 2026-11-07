@@ -1,0 +1,78 @@
+/* Round Climber working UI. Plain on purpose: the real look comes from the design pass. Hooks the design keeps:
+   [data-tab], [data-list], [data-search], [data-filter-row], [data-filter-status], .chip--<status>, [data-lever],
+   [data-stack], [data-send]. */
+:root { --bg: #0f0b19; --panel: #171125; --line: #2e2547; --text: #ece9f5; --muted: #a49cbc; --accent: #7a3dff;
+  --works: #5be08f; --filed: #ffd166; --projected: #9a7bff; --open: #4cc9f0; --closed: #8a8aa0; --record: #5d5875; --blocked: #ff9f1c; --bad: #ff4d6d; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, "Segoe UI", sans-serif; }
+a { color: #b9a2ff; }
+header.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6em 1.4em; padding: 18px 24px 10px; border-bottom: 1px solid var(--line); }
+header.top h1 { margin: 0; font-size: 1.35rem; }
+header.top nav a { margin-right: 1em; }
+.muted { color: var(--muted); }
+main { padding: 16px 24px 60px; }
+.tabs { display: flex; flex-wrap: wrap; gap: .4em; margin: 10px 0 14px; }
+.tabs button, .btn { min-height: 34px; padding: 0 .9em; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--text); font: inherit; font-size: .9rem; cursor: pointer; }
+.tabs button[aria-pressed="true"], .btn--on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.controls { display: flex; flex-wrap: wrap; gap: .6em; align-items: center; margin-bottom: 10px; }
+.controls input, .controls select { min-height: 34px; padding: 0 .7em; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--text); font: inherit; }
+.controls input[type=search] { min-width: 300px; }
+table.list { width: 100%; border-collapse: collapse; font-size: .88rem; }
+table.list th { position: sticky; top: 0; background: #1d1630; text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); font-weight: 600; }
+table.list td { padding: 6px 8px; border-bottom: 1px solid #221a36; vertical-align: top; }
+table.list td.text { max-width: 640px; }
+table.list tr:hover td { background: #1a1429; }
+code, .mono { font-family: ui-monospace, Consolas, monospace; font-size: .85em; }
+.chip { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: .78rem; font-weight: 600; white-space: nowrap; background: #241c3a; color: var(--text); border: 1px solid transparent; }
+.chip--works, .chip--found, .chip--alive, .chip--passed, .chip--answered, .chip--C, .chip--B { color: #06281a; background: var(--works); }
+.chip--filed { color: #2a1e00; background: var(--filed); }
+.chip--projected { color: #fff; background: var(--projected); }
+.chip--open, .chip--validating, .chip--O { color: #062430; background: var(--open); }
+.chip--closed, .chip--dead, .chip--n\/a, .chip--rejected, .chip--failed { color: #fff; background: var(--closed); }
+.chip--blocked { color: #2a1400; background: var(--blocked); }
+.chip--record, .chip--evidence, .chip--unparsed, .chip--other { color: var(--text); background: var(--record); }
+.chip--L { color: #2a1e00; background: #f2c766; }
+.more { margin: 12px 0; text-align: center; }
+.summary { width: 100%; border-collapse: collapse; font-size: .85rem; margin-bottom: 16px; }
+.summary th, .summary td { padding: 4px 8px; border-bottom: 1px solid #221a36; text-align: right; }
+.summary th:first-child, .summary td:first-child { text-align: left; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 6px 0 16px; }
+.card { padding: 10px 12px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); }
+.card b { display: block; font-size: 1.35rem; font-family: ui-monospace, Consolas, monospace; }
+.card span { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+/* lever board */
+.board { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr); gap: 18px; }
+@media (max-width: 1000px) { .board { grid-template-columns: 1fr; } }
+.lever { display: grid; grid-template-columns: auto 1fr auto; gap: 4px 10px; align-items: start; padding: 10px 12px; margin-bottom: 8px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); cursor: pointer; }
+.lever[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.lever[aria-disabled="true"] { opacity: .38; cursor: not-allowed; }
+.lever .bits { font-family: ui-monospace, Consolas, monospace; font-weight: 700; }
+.lever .why { grid-column: 1 / -1; font-size: .8rem; color: var(--bad); }
+.lever .src { grid-column: 1 / -1; font-size: .75rem; color: var(--muted); }
+.stack { position: sticky; top: 12px; padding: 14px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); }
+.stack h2 { margin: 0 0 8px; font-size: 1.05rem; }
+.score { font-family: ui-monospace, Consolas, monospace; font-size: 1.6rem; font-weight: 700; }
+.pairs { list-style: none; padding: 0; margin: 8px 0; font-size: .85rem; }
+.pairs li { padding: 3px 0; }
+textarea.out { width: 100%; min-height: 120px; background: #0b0814; color: var(--text); border: 1px solid var(--line); border-radius: 8px; font: 12px ui-monospace, Consolas, monospace; }
+details.group > summary { cursor: pointer; margin: 14px 0 8px; font-weight: 600; }
+
+/* publication-responsive-v1: scroll wide data inside labelled regions. */
+.board > *, .lever > *, .stack, .controls > * { min-width: 0; }
+.lever { grid-template-columns: auto minmax(0, 1fr) auto; overflow-wrap: anywhere; }
+.controls input[type=search] { min-width: 0; width: min(100%, 360px); }
+.controls select { max-width: 100%; }
+[data-list], [data-summary] { width: 100%; max-width: 100%; min-width: 0; overflow: auto; }
+[data-list] table, [data-summary] table { min-width: 640px; }
+[data-list]:focus-visible, [data-summary]:focus-visible { outline: 2px solid #a1f2b9; outline-offset: 3px; }
+@media (max-width: 600px) {
+  main { padding: 16px 14px 40px; }
+  header.top { padding-inline: 14px; }
+  .board { grid-template-columns: minmax(0, 1fr); }
+  .stack { position: static; overflow-wrap: anywhere; }
+  .cards { grid-template-columns: repeat(auto-fit, minmax(min(145px, 100%), 1fr)); }
+}
+
+/* publication-chip-contrast-v1 */
+.chip--projected { color: #1b1034; }
+.chip--closed, .chip--dead, .chip--n\/a, .chip--rejected, .chip--failed { color: #121321; }

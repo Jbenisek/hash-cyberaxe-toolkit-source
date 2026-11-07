@@ -1,0 +1,21 @@
+{
+  "id": "D783-SHIPPED-Q3-TRANSFER-SMOKE-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "D783 shipped-q3 transfer smoke",
+  "question": "Does the external counter harness execute the shipped q3 law and expose a tail-cell intersection?",
+  "labels": ["K", "E"],
+  "status": "OPEN",
+  "number": "One paired seed completed: F 1629 tails/16 exact/0 cells/0 joint; A 1681 tails/16 exact/0 cells/0 joint. This is feasibility smoke only, not a transfer-rate estimate.",
+  "source": "research/retest/D783_transfer_counter.py and D783_transfer_counter_smoke.json",
+  "own_test": true,
+  "evidence": "research/sol_answer_D783_r38_shipped_transfer_smoke.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 3.4,
+  "topic": "sha256-r38.d783.shipped-q3-transfer",
+  "peak_mem": null,
+  "notes": "External read-only harness; shipped source hash C72B756B489AB89687FFCA1B28C02B58B621096D47B6770267C02BC13E45B6EE. No package/stage/filing/submission."
+}

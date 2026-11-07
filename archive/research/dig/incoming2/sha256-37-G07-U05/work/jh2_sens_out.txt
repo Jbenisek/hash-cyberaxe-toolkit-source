@@ -1,0 +1,29 @@
+<class 'dict'> ['theta', 'kept_fibres', 'kept_variants', 'kept_groups', 'g', 'vbar']
+base 60.17144 60.171439729415304
+CONTROL q3=-72.0129                  proof 60.16846 ours 60.16846 MATCH
+CONTROL q3=-72.5                     proof 60.23041 ours 60.23041 MATCH
+CONTROL q3=-73                       proof 60.31551 ours 60.31551 MATCH
+CONTROL q3=-74.02                    proof 60.57978 ours 60.57978 MATCH
+CONTROL AC=64                        proof 64.01134 ours 64.01134 MATCH
+CONTROL AC=56                        proof 57.59403 ours 57.59403 MATCH
+CONTROL exq=1                        proof 60.38458 ours 60.38458 MATCH
+CONTROL exq=2.40                     proof 60.17365 ours 60.17365 MATCH
+CONTROL exq=pooled 402680/164011     proof 60.17000 ours 60.17000 MATCH
+CONTROL safety1.00                   proof 60.16957 ours 60.16957 MATCH
+CONTROL safety1.05                   proof 60.18547 ours 60.18547 MATCH
+controls matched 11 of 11
+q3_log2 -71.000  time 60.08722
+q3_log2 -71.500  time 60.12057
+q3_log2 -71.974  time 60.16426
+q3_log2 -72.040  time 60.17144
+q3_log2 -72.500  time 60.23040
+q3_log2 -73.000  time 60.31550
+q3_log2 -73.500  time 60.42788
+q3_log2 -74.000  time 60.57320
+q3_log2 -74.500  time 60.75654
+q3_log2 -75.000  time 60.98154
+slope bits of score per bit of q3 charge (0.01 bit step): 0.11142
+measured pt (cell 2^-71.974, ratio 2.46455) 60.16229  vs charged 60.17144  slack bits 0.00915
+q3 bits of extra loss until time_log2 (5dp) rises: 0.00000 bit (0.00000 raw), score now 60.17144
+
+[exited with code 0]

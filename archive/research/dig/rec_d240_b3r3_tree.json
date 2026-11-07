@@ -1,0 +1,19 @@
+{
+  "id": "D240-B3R3-TREE",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "tree shapes with more than one compression pair",
+  "question": "Bounded D240 recheck of the tree reference/mode path",
+  "labels": ["N", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Reference/mode KAT passed; tree-mode cost identities remain consistent. No tree differential line was tested.",
+  "source": "our workflow: dig d240",
+  "own_test": true,
+  "evidence": "research/dig/incoming3/blake3-r3-U64/work/exp1.py; research/dig/incoming3/blake3-r3-U64/work/exp1_d240_out.json",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Bounded recheck only; the existing MODE.tree Q4 cell remains OPEN because no 3-round tree differential was searched.",
+  "topic": "b3r3.MODE.tree.Q4"
+}

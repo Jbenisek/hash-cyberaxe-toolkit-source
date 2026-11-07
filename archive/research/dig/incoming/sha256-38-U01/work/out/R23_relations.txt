@@ -1,0 +1,102 @@
+model chi38: 38 steps, anchor row 13 (x and y rows 10..13 held), E-driven rows 16..21, lowest conditioned row 6
+  conditions: 47 two-bit/linear (printed), 44 in the attack model; 'except' words: W7
+  free word W6 (late): W6 rand late
+  free word W7 (late): W7 fset s0 03bff800 late
+  free word W8 (late): W8 cell late
+  relaxation E19coset
+  relaxation W23free
+WINDOW rows 22..37 event=out np 4096 m 256 mt2 1024 mw 256 mt 8192 threads 3 prefix-conditions cells
+-- seed 9301
+  init: 4096 particles, acceptance 1.000000 (rows 14..15)
+  E16 set under the prefix conditions: 32 values (enumerated 2^22 candidates)
+  stage 16 (E-driven, list of 32): accepted 1048576 of 1048576, log2 est -27.0000
+  stage 17 (E-driven): forced  8 bits, accepted 2058 of 1048576, log2 est -43.9930
+  stage 18 (E-driven): forced  9 bits, accepted 65420 of 1048576, log2 est -56.9955
+  stage 19 (E-driven): forced 12 bits, accepted 131098 of 1048576, log2 est -71.9952
+  stage 20 (E-driven): forced  6 bits, accepted 1048576 of 1048576, log2 est -77.9952
+  stage 21 (E-driven): forced  6 bits, accepted 524368 of 1048576, log2 est -84.9950
+[s9301] prefix log2 P(rows 6..21) = -84.9950
+[s9301] samples 33554432 (late words redrawn per sample), prefix broken by redraw 0, y-anchor inconsistent 0, replay mismatches 0
+[s9301]   cells          rows 22..37:          519  rate 1.546741e-05 (log2 -15.9804) 95% [1.4193e-05, 1.6857e-05]  with exact 519
+[s9301]   ALL            rows 22..37:        19345  rate 5.765259e-04 (log2 -10.7603) 95% [5.6846e-04, 5.8471e-04]  with exact 1320
+[s9301]   P_0_30         rows 22..37:        19345  rate 5.765259e-04 (log2 -10.7603) 95% [5.6846e-04, 5.8471e-04]  with exact 1320
+[s9301]   O_0_30         rows 22..37:            0  rate 0.000000e+00 (log2     -inf) 95% [-2.6682e-24, 1.1449e-07]  with exact 0
+[s9301]   P_1_31         rows 22..37:        14107  rate 4.204214e-04 (log2 -11.2159) 95% [4.1354e-04, 4.2742e-04]  with exact 979
+[s9301]   O_1_31         rows 22..37:         5238  rate 1.561046e-04 (log2 -12.6452) 95% [1.5193e-04, 1.6039e-04]  with exact 341
+[s9301]   P_14_21        rows 22..37:        19345  rate 5.765259e-04 (log2 -10.7603) 95% [5.6846e-04, 5.8471e-04]  with exact 1320
+[s9301]   O_14_21        rows 22..37:            0  rate 0.000000e+00 (log2     -inf) 95% [-2.6682e-24, 1.1449e-07]  with exact 0
+[s9301]   P_16_25        rows 22..37:        14888  rate 4.436970e-04 (log2 -11.1381) 95% [4.3663e-04, 4.5088e-04]  with exact 1026
+[s9301]   O_16_25        rows 22..37:         4457  rate 1.328290e-04 (log2 -12.8781) 95% [1.2899e-04, 1.3679e-04]  with exact 294
+[s9301]   EXACT          zero output difference after the last step:         1320  rate 3.933907e-05 (log2 -14.6337) 95% [3.7273e-05, 4.1519e-05]
+[s9301]   ratios to 'cells' (95% cluster-robust over particles; halves = particles split in two):
+[s9301]     EXACT/cells = 2.54335 +- 0.17281  (log2 +1.3467)  halves 2.51362 +- 0.23987 | 2.57252 +- 0.24885
+[s9301]     ALL/cells = 37.27360 +- 3.21314  (log2 +5.2201)  halves 37.07393 +- 4.44674 | 37.46947 +- 4.63834
+[s9301]     P_0_30/cells = 37.27360 +- 3.21314  (log2 +5.2201)  halves 37.07393 +- 4.44674 | 37.46947 +- 4.63834
+[s9301]     O_0_30/cells = 0.00000 +- 0.00000  (log2 -inf)  halves 0.00000 +- 0.00000 | 0.00000 +- 0.00000
+[s9301]     P_1_31/cells = 27.18112 +- 2.33498  (log2 +4.7645)  halves 27.17510 +- 3.24692 | 27.18702 +- 3.35498
+[s9301]     O_1_31/cells = 10.09249 +- 0.92101  (log2 +3.3352)  halves 9.89883 +- 1.26443 | 10.28244 +- 1.34022
+[s9301]     P_14_21/cells = 37.27360 +- 3.21314  (log2 +5.2201)  halves 37.07393 +- 4.44674 | 37.46947 +- 4.63834
+[s9301]     O_14_21/cells = 0.00000 +- 0.00000  (log2 -inf)  halves 0.00000 +- 0.00000 | 0.00000 +- 0.00000
+[s9301]     P_16_25/cells = 28.68593 +- 2.46226  (log2 +4.8423)  halves 28.58755 +- 3.41649 | 28.78244 +- 3.54562
+[s9301]     O_16_25/cells = 8.58767 +- 0.79244  (log2 +3.1023)  halves 8.48638 +- 1.09144 | 8.68702 +- 1.14929
+[s9301]   log2 P(rows 6..37, model cells) = prefix + log2 rate(cells) = -100.9754
+[s9301]   time 22.6 s
+-- seed 9302
+  init: 4096 particles, acceptance 1.000000 (rows 14..15)
+  stage 16 (E-driven, list of 32): accepted 1048576 of 1048576, log2 est -27.0000
+  stage 17 (E-driven): forced  8 bits, accepted 1932 of 1048576, log2 est -44.0841
+  stage 18 (E-driven): forced  9 bits, accepted 65568 of 1048576, log2 est -57.0834
+  stage 19 (E-driven): forced 12 bits, accepted 133663 of 1048576, log2 est -72.0552
+  stage 20 (E-driven): forced  6 bits, accepted 1048576 of 1048576, log2 est -78.0552
+  stage 21 (E-driven): forced  6 bits, accepted 524420 of 1048576, log2 est -85.0548
+[s9302] prefix log2 P(rows 6..21) = -85.0548
+[s9302] samples 33554432 (late words redrawn per sample), prefix broken by redraw 0, y-anchor inconsistent 0, replay mismatches 0
+[s9302]   cells          rows 22..37:          493  rate 1.469254e-05 (log2 -16.0546) 95% [1.3452e-05, 1.6048e-05]  with exact 493
+[s9302]   ALL            rows 22..37:        19204  rate 5.723238e-04 (log2 -10.7709) 95% [5.6429e-04, 5.8047e-04]  with exact 1265
+[s9302]   P_0_30         rows 22..37:        19204  rate 5.723238e-04 (log2 -10.7709) 95% [5.6429e-04, 5.8047e-04]  with exact 1265
+[s9302]   O_0_30         rows 22..37:            0  rate 0.000000e+00 (log2     -inf) 95% [-2.6682e-24, 1.1449e-07]  with exact 0
+[s9302]   P_1_31         rows 22..37:        14003  rate 4.173219e-04 (log2 -11.2266) 95% [4.1047e-04, 4.2429e-04]  with exact 913
+[s9302]   O_1_31         rows 22..37:         5201  rate 1.550019e-04 (log2 -12.6554) 95% [1.5085e-04, 1.5927e-04]  with exact 352
+[s9302]   P_14_21        rows 22..37:        19204  rate 5.723238e-04 (log2 -10.7709) 95% [5.6429e-04, 5.8047e-04]  with exact 1265
+[s9302]   O_14_21        rows 22..37:            0  rate 0.000000e+00 (log2     -inf) 95% [-2.6682e-24, 1.1449e-07]  with exact 0
+[s9302]   P_16_25        rows 22..37:        14839  rate 4.422367e-04 (log2 -11.1429) 95% [4.3518e-04, 4.4941e-04]  with exact 1011
+[s9302]   O_16_25        rows 22..37:         4365  rate 1.300871e-04 (log2 -12.9082) 95% [1.2628e-04, 1.3400e-04]  with exact 254
+[s9302]   EXACT          zero output difference after the last step:         1265  rate 3.769994e-05 (log2 -14.6951) 95% [3.5679e-05, 3.9835e-05]
+[s9302]   ratios to 'cells' (95% cluster-robust over particles; halves = particles split in two):
+[s9302]     EXACT/cells = 2.56592 +- 0.17871  (log2 +1.3595)  halves 2.45174 +- 0.23071 | 2.69231 +- 0.27745
+[s9302]     ALL/cells = 38.95335 +- 3.48699  (log2 +5.2837)  halves 37.34749 +- 4.64005 | 40.73077 +- 5.25725
+[s9302]     P_0_30/cells = 38.95335 +- 3.48699  (log2 +5.2837)  halves 37.34749 +- 4.64005 | 40.73077 +- 5.25725
+[s9302]     O_0_30/cells = 0.00000 +- 0.00000  (log2 -inf)  halves 0.00000 +- 0.00000 | 0.00000 +- 0.00000
+[s9302]     P_1_31/cells = 28.40365 +- 2.53328  (log2 +4.8280)  halves 27.21622 +- 3.36658 | 29.71795 +- 3.82428
+[s9302]     O_1_31/cells = 10.54970 +- 0.99407  (log2 +3.3991)  halves 10.13127 +- 1.32963 | 11.01282 +- 1.49106
+[s9302]     P_14_21/cells = 38.95335 +- 3.48699  (log2 +5.2837)  halves 37.34749 +- 4.64005 | 40.73077 +- 5.25725
+[s9302]     O_14_21/cells = 0.00000 +- 0.00000  (log2 -inf)  halves 0.00000 +- 0.00000 | 0.00000 +- 0.00000
+[s9302]     P_16_25/cells = 30.09939 +- 2.68287  (log2 +4.9117)  halves 28.81467 +- 3.56404 | 31.52137 +- 4.05164
+[s9302]     O_16_25/cells = 8.85396 +- 0.84695  (log2 +3.1463)  halves 8.53282 +- 1.13582 | 9.20940 +- 1.26702
+[s9302]   log2 P(rows 6..37, model cells) = prefix + log2 rate(cells) = -101.1094
+[s9302]   time 26.9 s
+== summary over 2 seed(s): EXACT/cells 2.55435 +- 0.12430 ; ALL/cells 38.09190 +- 2.37083 ; P_0_30/cells 38.09190 +- 2.37083 ; O_0_30/cells 0.00000 +- 0.00000 ; P_1_31/cells 27.77668 +- 1.72261 ; O_1_31/cells 10.31522 +- 0.67757 ; P_14_21/cells 38.09190 +- 2.37083 ; O_14_21/cells 0.00000 +- 0.00000 ; P_16_25/cells 29.37451 +- 1.82075 ; O_16_25/cells 8.71739 +- 0.57993
+== summary: log2 P(rows 6..37, model cells) mean -101.0424, seed sd 0.0947 (seeds: -100.9754 -101.1094)
+== pooled over 2 seeds: samples 67108864
+   cells          1012 (with exact 1012)
+   ALL            38549 (with exact 2585)
+   P_0_30         38549 (with exact 2585)
+   O_0_30         0 (with exact 0)
+   P_1_31         28110 (with exact 1892)
+   O_1_31         10439 (with exact 693)
+   P_14_21        38549 (with exact 2585)
+   O_14_21        0 (with exact 0)
+   P_16_25        29727 (with exact 2037)
+   O_16_25        8822 (with exact 548)
+   EXACT          2585
+   EXACT/cells pooled 2.55435 ; per-seed mean 2.55464, seed-to-seed sd 0.01596, 95% of the mean +- 0.02212
+   ALL/cells pooled 38.09190
+   P_0_30/cells pooled 38.09190
+   O_0_30/cells pooled 0.00000
+   P_1_31/cells pooled 27.77668
+   O_1_31/cells pooled 10.31522
+   P_14_21/cells pooled 38.09190
+   O_14_21/cells pooled 0.00000
+   P_16_25/cells pooled 29.37451
+   O_16_25/cells pooled 8.71739
+exit 0

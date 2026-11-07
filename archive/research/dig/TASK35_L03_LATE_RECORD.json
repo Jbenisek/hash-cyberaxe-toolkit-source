@@ -1,0 +1,22 @@
+{
+  "id": "S256-R40-L03-LATE-COMPARE-20261021",
+  "hash": "sha256-r40",
+  "row_i": null,
+  "row_j": null,
+  "object": "Task35 L03 late-word zero versus cancellation comparison",
+  "question": "Does forcing W39-W42 to zero differ from a late cancellation pattern that returns the linearized state to zero?",
+  "labels": ["X", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "three-target witness W39..W42=00000000/00000000/00000000/6a70373c; four-target witness weight 67 has all four zero; entry-34 late pattern W39..W42=44280480/00000000/00000000/00000001 and model-Z state zero after step 42",
+  "source": "our workflow: Task35 L03 late constraints",
+  "own_test": true,
+  "evidence": "research/luna_dig/task35_l03_late_constraints.py; research/luna_dig/TASK35_L03_LATE_CONSTRAINTS_20261021.md; research/grok/work/G_r40_joint_tail/ANSWER.md",
+  "date": "2026-10-21",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Exact finite XOR-linear schedule and model-Z state comparison. Late cancellation uses M1=44280480, M2=850a2130 and is H-only after step 41; it is not an all-four-late-zero schedule. Clean 16-word schedule realization, modular carries, full state characteristic, ledger, and score remain open. L03 Q3/Q4/Q5/Q7/Q13/Q14 remain blocked/open; Q6 local-only; Q8/Q10 empty.",
+  "peak_mem": "0 FREE self-contained 512-column Python elimination and 43-step state replay",
+  "held_fixed": "XOR-linear SHA-256 schedule, model-Z round state, published weight-25 vector, and published entry-34 late pattern",
+  "reopen_if": "A permitted signed/modular realization or complete charged state/ledger for the cancellation pattern is available."
+}

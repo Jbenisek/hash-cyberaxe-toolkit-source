@@ -1,0 +1,23 @@
+{
+  "id": "D539-SHA3-R6-S6I-BASELINE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6i baseline prefile and three supplied reduced campaign requests",
+  "question": "What does the older S6i baseline produce on the supplied reduced campaign requests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6i claims time_log2=122.66807; prefile SOME FAIL for no executable ledger appendix and note labels D20/D83, while other intake checks pass. Its 256-trial reduced/within16/cross16 requests complete with zero key mismatches and zero key matches: pairs 0/224/165; fixed fes_ops=664829, chi_transpose_ops=2387968, verify_check_ops=2630; table_ops 835485/834717/835173; in_range_mismatches 16351/16095/16247; within/cross pair counts 513/131526/500 and 485/130615/519.",
+  "source": "our workflow: D539 read-only pkgS6i baseline audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D539_s6i_baseline_audit.md; research/tools/build_pkg/scratch/pkgS6i/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6i/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6i/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6i/work/req_fes-campaign-reduced.json; research/tools/build_pkg/scratch/pkgS6i/work/req_hcoset-within16.json; research/tools/build_pkg/scratch/pkgS6i/work/req_hcoset-cross16.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Reduced-width baseline mechanics only; missing ledger and note labels prevent exact score credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS6i package bytes and supplied request specifications as found; one process; no file writes",
+  "reopen_if": "ledger/note repair or owner/organizer acceptance ruling arrives"
+}

@@ -1,0 +1,21 @@
+{
+ "schema_version": 2,
+ "certificates": [
+  {
+   "id": "collision-1",
+   "type": "hash-collision-witness-v2",
+   "message_a": "certificates/c1-a.bin",
+   "message_b": "certificates/c1-b.bin",
+   "expected_digest": "b1a1f74b35ab0ac785f4de40372539ce1a938fa02c042feac0d757ebe5fbc801",
+   "target_profile": "poseidon-orchard-r2-prefix-v1"
+  },
+  {
+   "id": "collision-2",
+   "type": "hash-collision-witness-v2",
+   "message_a": "certificates/c2-a.bin",
+   "message_b": "certificates/c2-b.bin",
+   "expected_digest": "9b6d4cde0932652dda5ecc0380f2e536cb792d22bda17ac3cc941ed592b26b22",
+   "target_profile": "poseidon-orchard-r2-prefix-v1"
+  }
+ ]
+}

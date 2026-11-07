@@ -1,0 +1,46 @@
+sources sha256: n3r.inc a5fa399525d9cb52 pair_calc_sub.c c2c5fa4a5aa0b5e6 sub_bf.c 1b979d7fd921d46a; binary 77a854c50b7052ee; 2026-10-06 20:53
+RUN 1: sub_bf8 3 5 7001 (pruned search, cubes)
+A side 3 with rules and cubes at 8-bit words: 3 cases; outcomes with solutions 18428 (in a class with a proper cube 11532; solutions 23577634): n3r_orig equal 18428 different 0, n3r_proj from the df1 list equal 18428 different 0, n3r_proj from the class patterns equal 18428 different 0, n3x total equal 18428 different 0; empty outcomes sampled: agree 3144260 disagree 0; not counted 0
+A rule counts compared (outcome, rule, function) 331704, different 0; (outcome, rule) pairs: all pass 15824, none 40244, split 54500; with a rule bit outside eta below bit 7: 50673; with a three-bit parity in the rule 28809 (split 15521)
+B whole event at 8-bit words: 5 sides 3 with 8 sides 1 each, 872 classes in all; (class, beta) pairs with Z-tuples 800 (in a class with a proper cube 597; 7-tuples in Z in all 495012352); integers compared (class, beta, total or rule) 1562624, different 0; rule counts on pairs with Z-tuples 4800, of them split by the rule 2623
+B outcomes with a nonzero product: enumeration 1205, counter 1205; E1 against the side-1 histogram: compared 4412, different 0; n3r_orig against n3r_proj: equal 4412, different 0; not counted 0; pairs the counter calls impossible that have Z-tuples 0; identities of the differences violated in the enumeration 0
+B outcomes listed by the counter 4412, of them counted by n3r_proj alone (n3r_orig above its cap of 2^999 triples) 0
+cubes: classes 144, with a proper cube 108; members of the classes 2048, inside the cubes 980
+RESULT zero differences
+exit status 0
+RUN 2: sub_bf8 2 4 7002 (pruned search, cubes)
+A side 3 with rules and cubes at 8-bit words: 2 cases; outcomes with solutions 30470 (in a class with a proper cube 24180; solutions 14400490): n3r_orig equal 30470 different 0, n3r_proj from the df1 list equal 30470 different 0, n3r_proj from the class patterns equal 30470 different 0, n3x total equal 30470 different 0; empty outcomes sampled: agree 2093782 disagree 0; not counted 0
+A rule counts compared (outcome, rule, function) 548460, different 0; (outcome, rule) pairs: all pass 15548, none 76126, split 91146; with a rule bit outside eta below bit 7: 110006; with a three-bit parity in the rule 60940 (split 36799)
+B whole event at 8-bit words: 4 sides 3 with 8 sides 1 each, 656 classes in all; (class, beta) pairs with Z-tuples 847 (in a class with a proper cube 602; 7-tuples in Z in all 140175232); integers compared (class, beta, total or rule) 1175552, different 0; rule counts on pairs with Z-tuples 5082, of them split by the rule 2659
+B outcomes with a nonzero product: enumeration 1314, counter 1314; E1 against the side-1 histogram: compared 4692, different 0; n3r_orig against n3r_proj: equal 4692, different 0; not counted 0; pairs the counter calls impossible that have Z-tuples 0; identities of the differences violated in the enumeration 0
+B outcomes listed by the counter 4692, of them counted by n3r_proj alone (n3r_orig above its cap of 2^999 triples) 0
+cubes: classes 125, with a proper cube 95; members of the classes 1536, inside the cubes 646
+RESULT zero differences
+exit status 0
+RUN 3: H8_NOCUT=1 sub_bf8 0 4 7003 (unpruned search of pair_calc.c, cubes)
+A side 3 with rules and cubes at 8-bit words: 0 cases; outcomes with solutions 0 (in a class with a proper cube 0; solutions 0): n3r_orig equal 0 different 0, n3r_proj from the df1 list equal 0 different 0, n3r_proj from the class patterns equal 0 different 0, n3x total equal 0 different 0; empty outcomes sampled: agree 0 disagree 0; not counted 0
+A rule counts compared (outcome, rule, function) 0, different 0; (outcome, rule) pairs: all pass 0, none 0, split 0; with a rule bit outside eta below bit 7: 0; with a three-bit parity in the rule 0 (split 0)
+B whole event at 8-bit words (unpruned search): 4 sides 3 with 8 sides 1 each, 488 classes in all; (class, beta) pairs with Z-tuples 377 (in a class with a proper cube 247; 7-tuples in Z in all 622242816); integers compared (class, beta, total or rule) 874496, different 0; rule counts on pairs with Z-tuples 2262, of them split by the rule 1395
+B outcomes with a nonzero product: enumeration 553, counter 553; E1 against the side-1 histogram: compared 1843, different 0; n3r_orig against n3r_proj: equal 1843, different 0; not counted 0; pairs the counter calls impossible that have Z-tuples 0; identities of the differences violated in the enumeration 0
+B outcomes listed by the counter 1843, of them counted by n3r_proj alone (n3r_orig above its cap of 2^999 triples) 0
+cubes: classes 61, with a proper cube 41; members of the classes 1024, inside the cubes 499
+RESULT zero differences
+exit status 0
+RUN 4: RULE_BF_CAPWORK=5 sub_bf8 0 4 7004 (pruned search, cubes; n3r_orig left out above 2^5 triples)
+A side 3 with rules and cubes at 8-bit words: 0 cases; outcomes with solutions 0 (in a class with a proper cube 0; solutions 0): n3r_orig equal 0 different 0, n3r_proj from the df1 list equal 0 different 0, n3r_proj from the class patterns equal 0 different 0, n3x total equal 0 different 0; empty outcomes sampled: agree 0 disagree 0; not counted 0
+A rule counts compared (outcome, rule, function) 0, different 0; (outcome, rule) pairs: all pass 0, none 0, split 0; with a rule bit outside eta below bit 7: 0; with a three-bit parity in the rule 0 (split 0)
+B whole event at 8-bit words: 4 sides 3 with 8 sides 1 each, 736 classes in all; (class, beta) pairs with Z-tuples 824 (in a class with a proper cube 601; 7-tuples in Z in all 90190080); integers compared (class, beta, total or rule) 1318912, different 0; rule counts on pairs with Z-tuples 4944, of them split by the rule 3136
+B outcomes with a nonzero product: enumeration 1254, counter 1254; E1 against the side-1 histogram: compared 5286, different 0; n3r_orig against n3r_proj: equal 1184, different 0; not counted 0; pairs the counter calls impossible that have Z-tuples 0; identities of the differences violated in the enumeration 0
+B outcomes listed by the counter 5286, of them counted by n3r_proj alone (n3r_orig above its cap of 2^5 triples) 4102
+cubes: classes 92, with a proper cube 70; members of the classes 1024, inside the cubes 517
+RESULT zero differences
+exit status 0
+RUN 5: SUB_BF_NOCUBE=1 sub_bf8 1 2 7005 (no cube: the counter of rule_exact with the new kinds of rules)
+A side 3 with rules and cubes at 8-bit words (NO cube): 1 cases; outcomes with solutions 32882 (in a class with a proper cube 0; solutions 17045664): n3r_orig equal 32882 different 0, n3r_proj from the df1 list equal 32882 different 0, n3r_proj from the class patterns equal 32882 different 0, n3x total equal 32882 different 0; empty outcomes sampled: agree 1047302 disagree 0; not counted 0
+A rule counts compared (outcome, rule, function) 591876, different 0; (outcome, rule) pairs: all pass 8723, none 110473, split 78096; with a rule bit outside eta below bit 7: 130842; with a three-bit parity in the rule 65764 (split 22550)
+B whole event at 8-bit words (NO cube): 2 sides 3 with 8 sides 1 each, 224 classes in all; (class, beta) pairs with Z-tuples 154 (in a class with a proper cube 0; 7-tuples in Z in all 245554176); integers compared (class, beta, total or rule) 401408, different 0; rule counts on pairs with Z-tuples 924, of them split by the rule 647
+B outcomes with a nonzero product: enumeration 228, counter 228; E1 against the side-1 histogram: compared 926, different 0; n3r_orig against n3r_proj: equal 926, different 0; not counted 0; pairs the counter calls impossible that have Z-tuples 0; identities of the differences violated in the enumeration 0
+B outcomes listed by the counter 926, of them counted by n3r_proj alone (n3r_orig above its cap of 2^999 triples) 0
+cubes: classes 59, with a proper cube 0; members of the classes 768, inside the cubes 768
+RESULT zero differences
+exit status 0

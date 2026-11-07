@@ -1,0 +1,7 @@
+H8: 99 outcomes, exact class rate 159833954.0
+rule A1: 0 outcomes can violate it; they carry 0.0 in all (share 0.000e+00); rate without them 159833954.0
+rule A2: 9 outcomes can violate it; they carry 5.4 in all (share 3.393e-08); rate without them 159833948.6
+rule A3: 15 outcomes can violate it; they carry 6669.4 in all (share 4.173e-05); rate without them 159827284.6
+rule A4: 15 outcomes can violate it; they carry 6669.4 in all (share 4.173e-05); rate without them 159827284.6
+rule A5: 61 outcomes can violate it; they carry 35957442.2 in all (share 2.250e-01); rate without them 123876511.8
+rule A6: 73 outcomes can violate it; they carry 69232599.6 in all (share 4.332e-01); rate without them 90601354.4

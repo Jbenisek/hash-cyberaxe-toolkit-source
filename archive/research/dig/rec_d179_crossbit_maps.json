@@ -1,0 +1,18 @@
+{
+  "id": "C0960",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 residual cross-bit witness maps",
+  "question": "Do the sample-inferred E[0]- and f[1]-selected h XOR maps preserve the coupled J1/J2/J3 witness language?",
+  "labels": ["C", "I"],
+  "status": "COMPUTED",
+  "number": "4/4 epsilon-direction map checks SAT with explicit countermodels; residual 00000400 and universal invariance remain OPEN",
+  "source": "our workflow: D179 cross-bit QF_BV audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_crossbit_maps.md; research/retest/b3_omega_coupled/exact/residual_crossbit_maps.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Restricted-family negative only; no aliveness split or class-invariance credit."
+}

@@ -1,0 +1,27 @@
+# Step 5b: the ORIGINAL calculator (pair_calc.c, option -sub) on ALL 60 betas of a cube, 4 processes, a time limit
+
+Source: `research/pkg10/pkg/count/c05b_all.sh`
+
+Public SHA-256: `ae2e7fd487b5f3b76db446e44f498b47570ad695f2a78b728b9eaef0445d3983`
+
+## Purpose recorded in the source
+
+Step 5b: the ORIGINAL calculator (pair_calc.c, option -sub) on ALL 60 betas of a cube, 4 processes, a time limit
+per beta (default 90 s; a beta that hits it is listed as not finished and is NOT in the sum).
+  c05b_all.sh NAME EXTRA_MASK EXTRA_VALUE [SECONDS]
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+Companion documents are not listed here. Use the linked source for interfaces and prerequisites.
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

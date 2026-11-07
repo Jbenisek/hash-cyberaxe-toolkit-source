@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-QUANTIFIED-400-300S",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 full J1/J2/J3 split query for delta 00000400",
+  "question": "Does the class-0 representative have a full coupled aliveness split from its 00000400 toggle?",
+  "labels": ["K"],
+  "status": "OPEN",
+  "number": "Exact quantified QF_BV query for y=81e44182, direction 0, epsilon 0, and full J1/J2/J3 returned UNKNOWN at 300000 ms; no SAT/UNSAT conclusion.",
+  "source": "our exact quantified QF_BV probe",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/quantified_split_probe.py; research/retest/b3_omega_coupled/exact/QUANTIFIED_SPLIT_000400_300S.md",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.quantified.split.000400",
+  "notes": "Bounded timeout only. It neither finds a genuine aliveness split nor proves invariance; D179 remains OPEN and no saving is credited."
+}

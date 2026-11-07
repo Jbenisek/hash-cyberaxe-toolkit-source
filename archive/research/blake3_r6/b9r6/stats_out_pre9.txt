@@ -1,0 +1,6 @@
+T3 n=18: attempts returning a verified pair: target 178 of 256, ideal function 182 of 256
+T1 n=12 fresh K: 256 runs, mean first repeat 82.51 (sqrt(pi N/2) = 80.21)
+T2 width 256, K=0: 2048 points, 21-bit projections, equal pairs per trial if uniform 0.9995, trials with a pair if uniform 0.6319
+  source uniform (86 trials): returned pairs 48 (uniform reference 54.3); w0 73 (uniform reference 86.0); w3 72 (uniform reference 86.0); w7 91 (uniform reference 86.0); xor8 84 (uniform reference 86.0); sum8 74 (uniform reference 86.0); p01 64 (uniform reference 86.0); p23 102 (uniform reference 86.0)
+  source counter (85 trials): returned pairs 54 (uniform reference 53.7); w0 82 (uniform reference 85.0); w3 90 (uniform reference 85.0); w7 98 (uniform reference 85.0); xor8 83 (uniform reference 85.0); sum8 102 (uniform reference 85.0); p01 86 (uniform reference 85.0); p23 96 (uniform reference 85.0)
+  source iterates (85 trials): returned pairs 54 (uniform reference 53.7); w0 85 (uniform reference 85.0); w3 86 (uniform reference 85.0); w7 102 (uniform reference 85.0); xor8 96 (uniform reference 85.0); sum8 81 (uniform reference 85.0); p01 93 (uniform reference 85.0); p23 92 (uniform reference 85.0)

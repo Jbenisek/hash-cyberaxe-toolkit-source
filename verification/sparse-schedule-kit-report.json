@@ -1,0 +1,1 @@
+{"passed":true,"archive_sha256":"3be996a1e1d6058198d2026119f84be2ea2e1cd64a1ba484e6a5addd12fd9223","bytes":13790,"cases":6,"quick_checks":99,"tamper_and_disabled_assertions_rejected":true,"scope":"Quick linear/modular schedule and sigma-inverse checks only; no compression collision, global minimum proof, full support recomputation, compiler, or expensive enumeration executed."}

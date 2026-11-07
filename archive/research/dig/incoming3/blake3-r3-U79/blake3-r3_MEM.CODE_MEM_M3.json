@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "written-out code",
+ "question": "M3 score-optimal unroll under the 2^20 limit",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "With the filed table the largest unroll that fits 2^20 is U=19 (12,194 instructions, 438,984 B, total 1,030,856 B), T -0.00007 bit against U=16. U=20 crosses (2^20.0053, S +0.0052). With the packed table of MEM.DPTAB M3 the optimum is U=9 at d=113. The unroll alone is worth at most 0.0067 bit (U=1) and gives back 0.00045 bit from U=8 to U=infinity.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out",
+ "notes": "universe cell blake3-r3|MEM.CODE|MEM|M3. Ledger arithmetic.",
+ "held_fixed": "filed table and counters",
+ "reopen_if": "none (under 0.001 bit)",
+ "gain_basis": "S"
+}

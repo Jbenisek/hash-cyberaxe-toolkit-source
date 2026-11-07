@@ -1,0 +1,112 @@
+== g_real_sub45.txt: RUN real sub=1 threads=2^16 outer/thread=2^5 inner=2^12 launches=4096 seed=101  (trials 2^45.00)
+  listed tau                                  21208086796  2^ -10.696   expected 21206401024.00 (2^-10.696)  z +11.58
+  listed E1 outcome                                 10129  2^ -31.694   expected       10176.00 (2^-31.687)  z  -0.47
+  rule A (8)                                 137439352335  2^  -8.000   expected 137438953472.00 (2^-8.000)  z  +1.08
+  gate H4                                   2199026821712  2^  -4.000   expected 2199023255552.00 (2^-4.000)  z  +2.40
+  listed tau & rule A (vs product of exact rates)       82814726  2^ -18.697   expected    82837504.00 (2^-18.696)  z  -2.50
+  listed outcome & rule A (vs product of exact rates)             36  2^ -39.830   expected          39.75 (2^-39.687)  z  -0.59
+  listed partial E3                                  8596  2^ -31.931
+  listed partial E3 eps 6e21be55                     1576  2^ -34.378
+  early word 0                                   20408381  2^ -20.717
+  eta condition                                    518686  2^ -26.015
+  residual word 0 zero                               9494  2^ -31.787
+  residual word 1 zero                              80583  2^ -28.702
+  residual word 2 zero                               8753  2^ -31.904
+  residual word 3 zero                               6508  2^ -32.332
+  listed outcome & listed partial E3                    0  2^    -inf
+  beta != 18b0e098 (must be 0)                          0  2^    -inf
+  listed E1 outcomes per tau (observed/exact): 530/512.0 223/256.0 2003/2048.0 1056/1024.0 531/512.0 246/256.0 1991/2048.0 1009/1024.0 1037/1024.0 561/512.0 133/128.0 63/64.0 505/512.0 241/256.0; chi-square 15.8 on 14 cells
+== g_model_sub44.txt: RUN model sub=1 threads=2^16 outer/thread=2^4 inner=2^12 launches=4096 seed=102  (trials 2^44.00)
+  listed tau                                  10603173612  2^ -10.696   expected 10603200512.00 (2^-10.696)  z  -0.26
+  listed E1 outcome                                  5019  2^ -31.707   expected        5088.00 (2^-31.687)  z  -0.97
+  rule A (8)                                  68719407609  2^  -8.000   expected 68719476736.00 (2^-8.000)  z  -0.26
+  gate H4                                   1099511962970  2^  -4.000   expected 1099511627776.00 (2^-4.000)  z  +0.32
+  listed tau & rule A (vs product of exact rates)       41413565  2^ -18.696   expected    41418752.00 (2^-18.696)  z  -0.81
+  listed outcome & rule A (vs product of exact rates)             20  2^ -39.678   expected          19.88 (2^-39.687)  z  +0.03
+  listed partial E3                                  4068  2^ -32.010
+  listed partial E3 eps 6e21be55                      717  2^ -34.514
+  early word 0                                   10197327  2^ -20.718
+  eta condition                                    259398  2^ -26.015
+  residual word 0 zero                               4657  2^ -31.815
+  residual word 1 zero                              39953  2^ -28.714
+  residual word 2 zero                               4449  2^ -31.881
+  residual word 3 zero                               3288  2^ -32.317
+  listed outcome & listed partial E3                    0  2^    -inf
+  beta != 18b0e098 (must be 0)                          0  2^    -inf
+  listed E1 outcomes per tau (observed/exact): 232/256.0 114/128.0 991/1024.0 511/512.0 267/256.0 135/128.0 1039/1024.0 505/512.0 484/512.0 264/256.0 64/64.0 41/32.0 248/256.0 124/128.0; chi-square 10.7 on 14 cells
+== g_real_all44.txt: RUN real sub=0 threads=2^16 outer/thread=2^4 inner=2^12 launches=4096 seed=103  (trials 2^44.00)
+  listed tau                                  10603957574  2^ -10.696   expected 10603200512.00 (2^-10.696)  z  +7.35
+  listed E1 outcome                                  5010  2^ -31.709   expected        5088.00 (2^-31.687)  z  -1.09
+  rule A (8)                                  68720109499  2^  -8.000   expected 68719476736.00 (2^-8.000)  z  +2.41
+  gate H4                                   1099508299937  2^  -4.000   expected 1099511627776.00 (2^-4.000)  z  -3.17
+  listed partial E3                                  3626  2^ -32.176   expected        3569.09 (2^-32.199)  z  +0.95
+  listed partial E3 eps 6e21be55                      894  2^ -34.196   expected         920.00 (2^-34.155)  z  -0.86
+  listed tau & rule A (vs product of exact rates)       41414523  2^ -18.696   expected    41418752.00 (2^-18.696)  z  -0.66
+  listed outcome & rule A (vs product of exact rates)             19  2^ -39.752   expected          19.88 (2^-39.687)  z  -0.20
+  early word 0                                   10204830  2^ -20.717
+  eta condition                                    259370  2^ -26.015
+  residual word 0 zero                               4865  2^ -31.752
+  residual word 1 zero                              42666  2^ -28.619
+  residual word 2 zero                               4368  2^ -31.907
+  residual word 3 zero                               3267  2^ -32.326
+  listed outcome & listed partial E3                    0  2^    -inf
+  beta != 18b0e098 (must be 0)                          0  2^    -inf
+  listed E1 outcomes per tau (observed/exact): 236/256.0 116/128.0 993/1024.0 560/512.0 269/256.0 145/128.0 998/1024.0 513/512.0 480/512.0 240/256.0 64/64.0 28/32.0 238/256.0 130/128.0; chi-square 16.5 on 14 cells
+== g_model_all43.txt: RUN model sub=0 threads=2^16 outer/thread=2^3 inner=2^12 launches=4096 seed=104  (trials 2^43.00)
+  listed tau                                   5301609162  2^ -10.696   expected  5301600256.00 (2^-10.696)  z  +0.12
+  listed E1 outcome                                  2532  2^ -31.694   expected        2544.00 (2^-31.687)  z  -0.24
+  rule A (8)                                  34360173667  2^  -8.000   expected 34359738368.00 (2^-8.000)  z  +2.35
+  gate H4                                    549756297480  2^  -4.000   expected 549755813888.00 (2^-4.000)  z  +0.65
+  listed partial E3                                  1867  2^ -32.133   expected        1784.54 (2^-32.199)  z  +1.95
+  listed partial E3 eps 6e21be55                      448  2^ -34.193   expected         460.00 (2^-34.155)  z  -0.56
+  listed tau & rule A (vs product of exact rates)       20710111  2^ -18.696   expected    20709376.00 (2^-18.696)  z  +0.16
+  listed outcome & rule A (vs product of exact rates)             14  2^ -39.193   expected           9.94 (2^-39.687)  z  +1.29
+  early word 0                                    5100518  2^ -20.718
+  eta condition                                    129502  2^ -26.017
+  residual word 0 zero                               2370  2^ -31.789
+  residual word 1 zero                              21506  2^ -28.608
+  residual word 2 zero                               2216  2^ -31.886
+  residual word 3 zero                               1617  2^ -32.341
+  listed outcome & listed partial E3                    0  2^    -inf
+  beta != 18b0e098 (must be 0)                          0  2^    -inf
+  listed E1 outcomes per tau (observed/exact): 137/128.0 67/64.0 501/512.0 238/256.0 143/128.0 65/64.0 499/512.0 261/256.0 263/256.0 125/128.0 38/32.0 10/16.0 128/128.0 57/64.0; chi-square 8.9 on 14 cells
+
+== GPU real (counter arrangement) against GPU model (seven-word model, beta* forced), rates per trial
+-- sub: real 2^45.00 trials, model 2^44.00 trials
+  listed tau                           real   21208086796 (2^ -10.696)  model   10603173612 (2^ -10.696)  ratio 1.0001 +- 0.0000 (Poisson only)
+  listed E1 outcome                    real         10129 (2^ -31.694)  model          5019 (2^ -31.707)  ratio 1.0091 +- 0.0174 (Poisson only)
+  rule A (8)                           real  137439352335 (2^  -8.000)  model   68719407609 (2^  -8.000)  ratio 1.0000 +- 0.0000 (Poisson only)
+  gate H4                              real 2199026821712 (2^  -4.000)  model 1099511962970 (2^  -4.000)  ratio 1.0000 +- 0.0000 (Poisson only)
+  listed partial E3                    real          8596 (2^ -31.931)  model          4068 (2^ -32.010)  ratio 1.0565 +- 0.0201 (Poisson only)
+  listed partial E3 eps 6e21be55       real          1576 (2^ -34.378)  model           717 (2^ -34.514)  ratio 1.0990 +- 0.0495 (Poisson only)
+  early word 0                         real      20408381 (2^ -20.717)  model      10197327 (2^ -20.718)  ratio 1.0007 +- 0.0004 (Poisson only)
+  eta condition                        real        518686 (2^ -26.015)  model        259398 (2^ -26.015)  ratio 0.9998 +- 0.0024 (Poisson only)
+  listed outcome & rule A              real            36 (2^ -39.830)  model            20 (2^ -39.678)  ratio 0.9000 +- 0.2510 (Poisson only)
+  listed tau & rule A                  real      82814726 (2^ -18.697)  model      41413565 (2^ -18.696)  ratio 0.9999 +- 0.0002 (Poisson only)
+  listed partial E3 & rule A           real           330 (2^ -36.634)  model           135 (2^ -36.923)  ratio 1.2222 +- 0.1249 (Poisson only)
+  residual word 0 zero                 real          9494 (2^ -31.787)  model          4657 (2^ -31.815)  ratio 1.0193 +- 0.0182 (Poisson only)
+  residual word 1 zero                 real         80583 (2^ -28.702)  model         39953 (2^ -28.714)  ratio 1.0085 +- 0.0062 (Poisson only)
+  residual word 2 zero                 real          8753 (2^ -31.904)  model          4449 (2^ -31.881)  ratio 0.9837 +- 0.0181 (Poisson only)
+  residual word 3 zero                 real          6508 (2^ -32.332)  model          3288 (2^ -32.317)  ratio 0.9897 +- 0.0212 (Poisson only)
+-- all: real 2^44.00 trials, model 2^43.00 trials
+  listed tau                           real   10603957574 (2^ -10.696)  model    5301609162 (2^ -10.696)  ratio 1.0001 +- 0.0000 (Poisson only)
+  listed E1 outcome                    real          5010 (2^ -31.709)  model          2532 (2^ -31.694)  ratio 0.9893 +- 0.0241 (Poisson only)
+  rule A (8)                           real   68720109499 (2^  -8.000)  model   34360173667 (2^  -8.000)  ratio 1.0000 +- 0.0000 (Poisson only)
+  gate H4                              real 1099508299937 (2^  -4.000)  model  549756297480 (2^  -4.000)  ratio 1.0000 +- 0.0000 (Poisson only)
+  listed partial E3                    real          3626 (2^ -32.176)  model          1867 (2^ -32.133)  ratio 0.9711 +- 0.0277 (Poisson only)
+  listed partial E3 eps 6e21be55       real           894 (2^ -34.196)  model           448 (2^ -34.193)  ratio 0.9978 +- 0.0578 (Poisson only)
+  early word 0                         real      10204830 (2^ -20.717)  model       5100518 (2^ -20.718)  ratio 1.0004 +- 0.0005 (Poisson only)
+  eta condition                        real        259370 (2^ -26.015)  model        129502 (2^ -26.017)  ratio 1.0014 +- 0.0034 (Poisson only)
+  listed outcome & rule A              real            19 (2^ -39.752)  model            14 (2^ -39.193)  ratio 0.6786 +- 0.2390 (Poisson only)
+  listed tau & rule A                  real      41414523 (2^ -18.696)  model      20710111 (2^ -18.696)  ratio 0.9999 +- 0.0003 (Poisson only)
+  listed partial E3 & rule A           real           136 (2^ -36.913)  model            64 (2^ -37.000)  ratio 1.0625 +- 0.1611 (Poisson only)
+  residual word 0 zero                 real          4865 (2^ -31.752)  model          2370 (2^ -31.789)  ratio 1.0264 +- 0.0257 (Poisson only)
+  residual word 1 zero                 real         42666 (2^ -28.619)  model         21506 (2^ -28.608)  ratio 0.9920 +- 0.0083 (Poisson only)
+  residual word 2 zero                 real          4368 (2^ -31.907)  model          2216 (2^ -31.886)  ratio 0.9856 +- 0.0257 (Poisson only)
+  residual word 3 zero                 real          3267 (2^ -32.326)  model          1617 (2^ -32.341)  ratio 1.0102 +- 0.0307 (Poisson only)
+
+== pooled by kind
+cube_all_gpu: trials 2^44.000; listed tau 10603957574 (2^-10.696); listed E1 outcome 5010 (2^-31.709); listed partial E3 3626 (2^-32.176); listed partial E3 eps 6e21be55 894 (2^-34.196); rule A (8) 68720109499 (2^-8.000); early word 0 10204830 (2^-20.717); eta condition 259370 (2^-26.015)
+cube_all_gpu_model: trials 2^43.000; listed tau 5301609162 (2^-10.696); listed E1 outcome 2532 (2^-31.694); listed partial E3 1867 (2^-32.133); listed partial E3 eps 6e21be55 448 (2^-34.193); rule A (8) 34360173667 (2^-8.000); early word 0 5100518 (2^-20.718); eta condition 129502 (2^-26.017)
+cube_sub_gpu: trials 2^45.000; listed tau 21208086796 (2^-10.696); listed E1 outcome 10129 (2^-31.694); listed partial E3 8596 (2^-31.931); listed partial E3 eps 6e21be55 1576 (2^-34.378); rule A (8) 137439352335 (2^-8.000); early word 0 20408381 (2^-20.717); eta condition 518686 (2^-26.015)
+cube_sub_gpu_model: trials 2^44.000; listed tau 10603173612 (2^-10.696); listed E1 outcome 5019 (2^-31.707); listed partial E3 4068 (2^-32.010); listed partial E3 eps 6e21be55 717 (2^-34.514); rule A (8) 68719407609 (2^-8.000); early word 0 10197327 (2^-20.718); eta condition 259398 (2^-26.015)

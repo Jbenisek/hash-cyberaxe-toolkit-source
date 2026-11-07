@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.BACKSKIP (ALT)",
+ "question": "Q2: necessity: why not skip rounds backwards",
+ "labels": [
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "The inverse S-box is x^e with e = 5^-1 mod (p-1) = (4(p-1)+1)/5 (checked), e/(p-1) = 0.8: a dense polynomial of degree about 0.8p. Backward the S-box is full-size, not degree 5, so there is no cheap backward skip; the forward degree 5^k grows slowly, which is why only forward skipping works.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testA.json; 3rd_openai_workspace/luna3/ANSWER.md (P3.12)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.BACKSKIP|ALT|Q2. Exact exponent identity on Pallas, checked by me.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a backward family whose inverse S-box outputs stay affine in a parameter is exhibited"
+}

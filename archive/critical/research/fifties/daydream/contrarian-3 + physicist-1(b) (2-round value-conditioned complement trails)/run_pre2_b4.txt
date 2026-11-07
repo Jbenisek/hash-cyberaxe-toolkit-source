@@ -1,0 +1,1 @@
+MAXPRE 2 leaves 0 fold-consistent trails cost<=4: 0

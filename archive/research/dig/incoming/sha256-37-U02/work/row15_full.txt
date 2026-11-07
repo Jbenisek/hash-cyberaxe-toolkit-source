@@ -1,0 +1,72 @@
+enumerated 4294967296
+BASE rows15 cells (E+W): L0 131072 | L1 (+dW17,dW30) 4096 | L2 (+row16 local) 32
+dropE bit 31 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 30 sym u : L0 131072 | L1 4096 | L2 32
+dropE bit 29 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 28 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 27 sym 0 : L0 262144 | L1 4096 | L2 32
+dropE bit 26 sym 1 : L0 262144 | L1 6144 | L2 32
+dropE bit 25 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 24 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 23 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 22 sym n : L0 131072 | L1 4096 | L2 32
+dropE bit 21 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 20 sym 0 : L0 262144 | L1 4096 | L2 32
+dropE bit 19 sym 1 : L0 262144 | L1 4096 | L2 32
+dropE bit 18 sym 1 : L0 262144 | L1 8192 | L2 32
+dropE bit 17 sym n : L0 131072 | L1 4096 | L2 32
+dropE bit 16 sym 0 : L0 262144 | L1 8192 | L2 32
+dropE bit 15 sym 1 : L0 262144 | L1 8192 | L2 32
+dropE bit 14 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 13 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit 12 sym u : L0 131072 | L1 4096 | L2 32
+dropE bit 11 sym 0 : L0 262144 | L1 8192 | L2 32
+dropE bit 10 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit  9 sym u : L0 131072 | L1 4096 | L2 32
+dropE bit  8 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit  7 sym 1 : L0 262144 | L1 8192 | L2 32
+dropE bit  6 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit  5 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit  4 sym + : L0 131072 | L1 4096 | L2 32
+dropE bit  3 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit  2 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit  1 sym = : L0 131072 | L1 4096 | L2 32
+dropE bit  0 sym = : L0 131072 | L1 4096 | L2 32
+drop W15[29] cell bit: L0 131072 | L1 4096 | L2 32
+drop whole W15 cell: L0 262144 | L1 4096 | L2 32
+SOL 7dd41680
+SOL 7dd41681
+SOL 7dd416a0
+SOL 7dd416a1
+SOL 7dd41a80
+SOL 7dd41a81
+SOL 7dd41aa0
+SOL 7dd41aa1
+SOL 7dd43680
+SOL 7dd43681
+SOL 7dd436a0
+SOL 7dd436a1
+SOL 7dd43a80
+SOL 7dd43a81
+SOL 7dd43aa0
+SOL 7dd43aa1
+SOL fdb41680
+SOL fdb41681
+SOL fdb416a0
+SOL fdb416a1
+SOL fdb41a80
+SOL fdb41a81
+SOL fdb41aa0
+SOL fdb41aa1
+SOL fdb43680
+SOL fdb43681
+SOL fdb436a0
+SOL fdb436a1
+SOL fdb43a80
+SOL fdb43a81
+SOL fdb43aa0
+SOL fdb43aa1
+
+real	0m7.925s
+user	0m19.953s
+sys	0m0.044s

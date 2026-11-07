@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "algebraic degree of digest bits, cube sums on low bits of m8",
+ "question": "Value or count as used in the filed entry (blake3-r3, 125.1087)?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "cube of the d lowest bits of m8, d=1,2,4,8,12,16, 8 random bases, digest bits whose cube sum is 0 on all bases (of 256): 1 round 158-179 (low degree survives), 2 rounds 0-3 and 3 rounds 0-1 for all d (chance level 256/2^8 = 1), 7-round control 0. After round 2 every digest bit has degree above 16 in these variables",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_deg.py; research/blake3_r3/alt/exp_deg.json; research/blake3_r3/alt/exp_deg.log",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "A zero-sum is a distinguisher, not a collision; no conversion to a collision is known or claimed.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); m0..m7=0, m8..m15 random base",
+ "reopen_if": "a cube of dimension <= 20 whose sum is zero for all 256 digest bits at 3 rounds",
+ "topic": "blake3-r3|ALT.ALGDEG|ALT|Q1"
+}

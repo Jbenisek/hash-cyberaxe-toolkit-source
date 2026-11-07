@@ -1,0 +1,22 @@
+{
+  "id": "D469-SHA256-R38-FULL-TABLE4-NEGATIVE-PROBE-20261014",
+  "hash": "sha256-38",
+  "row_i": 16,
+  "row_j": 37,
+  "object": "SHA-256-r38 finite full-Table-4 unrelaxed negative probe",
+  "question": "Does a small owned run with both chi38 relaxation declarations removed produce any exact full-condition passer?",
+  "labels": ["C", "D", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "One seed, np=4096: 0/4096 joint; W23=0/4096, E21=2000/4096, all other listed marginals 4096/4096.",
+  "source": "our workflow: D469 one-thread r38_groupaudit_exact probe",
+  "own_test": true,
+  "evidence": "research/retest/r38_groupaudit/D469_full_table4_seed9001_exact1.txt; research/sol_answer_D469_sha256_r38_full_table4_negative_probe.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Finite negative observation only. The temporary chi file removed only E19coset and W23free relax lines; no universal impossibility, exact rate, independence, score, package, staging, filing, or submission is claimed.",
+  "peak_mem": "154406912 B = 2^27.2021620952 maximum RSS; one thread",
+  "held_fixed": "corrected chi38 printed conditions; np=4096, m=512, mt2=512, threads=1, seed=9001",
+  "reopen_if": "A schedule-recomputed multi-seed full-path law or an explicit organizer-approved unrelaxed search is supplied",
+  "supersedes": ["D464-SHA256-R38-CORRECTED-FULL-PAIR-AUDIT-20261014"]
+}

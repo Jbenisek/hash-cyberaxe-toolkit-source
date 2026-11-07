@@ -1,0 +1,22 @@
+{
+  "id": "D334-B3M-BATCH-LIST-SIZES-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M transient batch-list sizes",
+  "question": "What is the maximum transient member-list size in the owned B3M schedule?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Source-bounded width 7; deep Python list 988 B for (e1,y) pairs or 1,240 B for (e1,y,k) triples; packed arrays 144/180 B; formula-only process peak 16,433,152 B (log2 23.97011)",
+  "source": "our workflow: D334 B3M batch-list sizes",
+  "own_test": true,
+  "evidence": "research/sol_answer_D334_b3m_batch_list_sizes.md; research/retest/b3m_batch_list_probe.py; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/frontline.py lines 1332-1408",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "23.970 MEASURED formula-only single-process Windows WorkingSet64; seven-member batch shape",
+  "notes": "Narrows only transient member-list residency; full B3M search tables, allocator behavior, output retention and organizer ruling remain open; no score transfer.",
+  "held_fixed": "CLASS_VALUE=0x030C0303, FREE_MASK=0xFC307CFC, Y3=0x8127C181; maximum source batch width 7; one process",
+  "reopen_if": "Measure the complete production search with all tables and batch allocations under the organizer memory rule"
+}

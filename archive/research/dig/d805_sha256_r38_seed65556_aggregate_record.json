@@ -1,0 +1,22 @@
+{
+  "id": "D805-ZONED38-AGGREGATE-SEED65556-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 37,
+  "object": "aggregate refresh of row-4 signature and C2 full-late fixed-split controls through seed 65556",
+  "question": "What are the exact aggregate counts after adding the independent seed-65556 controls?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "Ten row-4 controls (nine independent) total 671088640 rebuilds and 10485760 signature candidates; published state-equalities 4604, independent state-equalities 0. Twenty-five C2 controls (24 independent) total 4000 row14 base/expansion passers, 25 strict/C2 candidates, and zero full-late/state equalities. Conditional iid zero-success upper bound for the independent row4 candidates is 3.17439163843858e-7 (21.58701653352503 bits). Fixed-split only.",
+  "source": "owned D805 output logs plus prior exact D804 aggregate JSON",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/PREREG_D805_SEED65556.md; research/retest/zoneD38/row4hits_seed65556.out; research/retest/zoneD38/c2all14late_seed65556.out; research/retest/zoneD38/d805_aggregate_seed65556.py; research/retest/zoneD38/D805_aggregate_seed65556.json; research/sol_answer_D805_sha256_r38_seed65556_aggregate.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "all prior aggregate rows, exact D805 seed-65556 logs, and the checked-in zd38 binaries",
+  "notes": "Parser aggregate only; no production split transfer, late-law independence, score, package, staging, filing, or submission credit.",
+  "reopen_if": "Production-law transfer experiment or organizer-approved rate proof lands.",
+  "peak_mem": "12.98 MEASURED maximum of 8008 KiB C2 and 7760 KiB row4 RSS"
+}

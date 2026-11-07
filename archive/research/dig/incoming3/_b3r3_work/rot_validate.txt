@@ -1,0 +1,15 @@
+r=16 depth=2 mode=h unary ops=10
+FOUND: [shr r0 shr16] [and_imm r1 maskffff]
+FOUND: [and_imm r0 maskffff0000] [shr r1 shr16]
+DONE r=16 depth=2 mode=h family: E=4 K=1 unary=10 nodes=249 found=2
+r=16 depth=2 mode=lw unary ops=10
+FOUND: [shl r0 shl16] [and_imm r1 maskffff0000]
+FOUND: [and_imm r0 maskffff] [shl r1 shl16]
+DONE r=16 depth=2 mode=lw family: E=4 K=1 unary=10 nodes=249 found=2
+r=12 depth=5 mode=full unary ops=18
+FOUND: [shr r0 shr12] [shl r0 shl20] [and_imm r1 maskfffff] [and_imm r2 maskfff00000] [or r3 r4]
+FOUND: [shr r0 shr12] [shl r0 shl20] [and_imm r1 maskfffff] [and_imm r2 maskfff00000] [xor r3 r4]
+FOUND: [shr r0 shr12] [shl r0 shl20] [and_imm r1 maskfffff] [and_imm r2 maskfff00000] [add r3 r4]
+FOUND: [shr r0 shr12] [shl r0 shl20] [and_imm r2 maskfff00000] [and_imm r1 maskfffff] [or r3 r4]
+FOUND: [shr r0 shr12] [shl r0 shl20] [and_imm r2 maskfff00000] [and_imm r1 maskfffff] [xor r3 r4]
+DONE r=12 depth=5 mode=full family: E=5 K=2 unary=18 nodes=237510128 found=72

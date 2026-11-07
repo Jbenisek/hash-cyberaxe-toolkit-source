@@ -1,0 +1,137 @@
+shape_odd/ - the owner's "odd shapes" request (circle, hexagon, sphere, Moebius, fractal, other), tested on toys.
+Owner of this folder: the shape_odd research agent.  Plain text.  Labels: COMPUTED / DERIVED / GUESS.
+Research only: nothing submitted, no yukon, no trace.
+
+FILES
+  toy.py          numpy toy 2-round BLAKE3 (w = 8,12,16,32; rotations floor(r*w/32); IV low w bits; blen 2w; flags 11).
+                  selfcheck: numpy == scalar == ../fringe/toyb3.py on 1200 messages; 32-bit G hand value.  COMPUTED
+  shapes.py       families: collision rate of output-word groups over shaped message families (ratio vs uniform)
+                  twists: pairs (M, tau M) and closed orbits under twists tau
+  parity.py       circle invariant: word parity (rotation-invariant, XOR-linear) - all linear relations by Walsh transform
+  shapegraph.py   exact facts: call-message graph, torus-lattice symmetries, Moebius fixed point M*, circle bound
+  gd_sphere.py    sphere / nested families in the guess-and-determine model (../gd_order.py, ../gd_promote.py, read only)
+  sat_sphere.py   exact SAT question: can ONE half-digest word be held with 0 checks? (../gd_sat.py encoder, read only)
+                  CNF files deleted after the runs (regenerate: python sat_sphere.py out0 | out0,out2,out5 | out0 16)
+  core.py         2-core of the GD hypergraph by peeling (core.txt)
+  run_sat.sh, run_sat3.sh, stop_single.sh   WSL runners (kissat, 600 s timeouts)
+  results: fam_w8.txt fam_w12.txt fam_w16.txt twist_w8.txt twist_w16.txt parity_w8/16/32.txt shapegraph.txt
+           gd_sphere_outhalf.txt gd_sphere_fixed.txt sat_sphere.log
+  Noise levels: fam w=8 half-digest (32-bit) expected 512 pairs -> +-4.4% (1 sigma); max over 70 groups ~ +-13%.
+                twist w=8: 64 equality cells of 4096 hits -> max ~1.04 by chance; random-twist baseline row is printed.
+
+UNIT OF THE PROJECTIONS (DERIVED): family whose half-digest takes 2^h values, c word checks of 32 bits each paid by
+  rejection: log2 cost ~ (128 + h)/2 + 32c (members needed times cost per member; word-op discounts ignored).
+  Board best ~92-94; generic 128.
+
+(a) CIRCLE - each word is a ring of 32 bit positions
+  Mapping: rotational pairs (M, ROT_r M); rotation-invariant sub-rings (period w/2, w/4 words: the circle folded =
+    a fractal copy, BLAKE3-32 on period-16 words would act as a BLAKE3-16 with rotations 0,12,8,7 if no carry crossed
+    bit 16); parity of a word (the one linear function every rotation preserves).
+  Toy (COMPUTED): twists rot1, rot_half: Pr[out_j(ROT M) == ROT(out_i(M))] = 0.98..1.05 x 2^-8 at w=8 (2^20 pairs;
+    random-twist baseline 1.03); w=16 within noise.  Families circle_period_half/quarter: half-digest collision ratio
+    0.93..1.05 at w=8 (uniform).  Parity: max |corr| over all 2^24 relations (16 message parities x 8 output parities)
+    5.8 sigma at w=8, 5.3 sigma at w=16 (pure-noise max ~5.6 sigma) - and the same after ONE round (X): no relation.
+  Bound (DERIVED, shapegraph.txt): even an EXACT rotational symmetry F(ROT M) = ROT F(M) gives a collision of a
+    rotational pair only if all 8 output words are ROT_r-invariant (>= 128-bit condition, r = 16), or a birthday on
+    rotation classes that saves at most sqrt(32) = 2^2.5 (2^125.5).  The IV breaks the symmetry at the first addition
+    (K_j has a = IV_j for both members; IV words are not rotation-invariant); a chosen CV cannot repair it (v8..v15 =
+    IV0..3, 0, 0, len, flags are fixed and not periodic).
+  Projected 32-bit: >= 2^125.5 even if ideal; real >= 2^128.  VERDICT: dead.
+
+(b) HEXAGON / HONEYCOMB - three-way structure
+  Mapping 1, lattice (COMPUTED): the 4x4 state is a torus Z4 x Z4 with three line directions (a triangular lattice,
+    dual of the honeycomb): rows = roles a,b,c,d, columns and diagonals = G lines.  The only maps (r,c) ->
+    (r, e c + s r + t) keeping columns and diagonals are the 4 column shifts; none of the 3 non-trivial ones commutes
+    with the message permutation, and none fixes the initial state (moves 15 or 16 of 16 words).  So 2-round BLAKE3
+    has NO lattice symmetry even before constants.  (fringe/ tested the internal symAB variant of this.)
+  Mapping 2, call-message graph (COMPUTED): join each message word's round-0 call to its round-1 call.  Every call has
+    degree 2; the graph is one OCTAGON  C0-m2-K1-m3-C1-m10-D1-m11-E0-m1-K0-m0-C2-m7-K3-m6-C0  and two SQUARES
+    C3-m4-K2-m5-E1-m12-D2-m13-C3  and  D0-m8-E3-m15-D3-m14-E2-m9-D0.  No hexagon exists in it.  The two 8-cycles of
+    the message permutation fold into 8+4+4 at call level.  E2 (half A) shares its square with E3 (half B); m5, m8,
+    m12, m15 (Sol's free set F) are exactly the words half A sees once.  Toy: families moving only one square's
+    4 words (or only F): half-digest ratio 0.96..1.03 at w=8 - uniform.  No exploitable decoupling (the squares are
+    message-word sharing only; state diffusion after round 0 is complete).
+  Mapping 3, three-term sums a1 = a + b + x as 3-list joins (DERIVED): if all three sides touch the same 32c-bit key,
+    the cheapest full-output join is the product of two sides against the third: L1*L2 = L3 = 2^(32+16c) for 2^64
+    members, the same as a 2-list join (2^96 at c = 4, 2^80 at c = 3).  Gains need multi-level key structure, which
+    is the kmath/ksplit work (kmath shows O(1)/solution for 4-8 sides with split keys).
+  VERDICT: dead as a separate path; reduces to the 2-list / k-list work already in flight.
+
+(c) SPHERE - many targets around a centre
+  Mapping: the half-digest held only to a set of 2^h values (release held words, or hold only k of out0,2,5,7):
+    birthday 2^((128+h)/2); Hamming-ball families; non-uniform ("lumpy") image of the half-digest.
+  GD (COMPUTED, greedy upper bounds, plain and with tables, gd_sphere_*.txt):
+    outhalf with k of the 4 words held: best checks = k for every subset tried (k=1: all 4; k=2: all 6; k=3: 3 of 4
+    before I stopped the run; k=4: 4, from ../audit/greedy_outhalf.txt and gd_order).  The greedy never uses an output equation to solve anything: 16 guesses =
+    whole message, forward compute, k checks.  fixed variant with r of the 12 held words released: best checks 4-r
+    (r=1: 3, r=2: 2; 12 and 66 cases).
+    Exponent: outhalf 128 + 16k, fixed 192 - 16r: every held 32-bit word costs one 32-bit check and saves only 16
+    bits of birthday.  Best is k = 0 = generic.
+  Exact (DERIVED): adding one equation raises the minimum check count by 0 or 1, releasing one constant lowers it by
+    0 or 1.  With fixed c = 4 exact (separable/: no full-closure set of <= 7 guesses), releasing r words leaves
+    c >= 4 - r, so the fixed-sphere exponent >= 192 - 16r >= 128: dead for every r.
+  SAT (COMPUTED, sat_sphere.log; kissat, exact depth T = number of equations):
+    sanity: out0 held, 16 guesses -> SAT in 3 s (the trivial order).
+    out0 held, 15 guesses (0 checks): UNKNOWN after 600 s.  out2 held, 15 guesses: UNKNOWN after 600 s.
+    triples {out0,out2,out5} and {out2,out5,out7}, 13 guesses (0 checks): UNKNOWN after 600 s each.
+    (out5/out7 single runs were stopped by me after 9 s to free CPU for the triples.)  So c(1) and c(3) are OPEN.
+  2-core (COMPUTED, core.txt): peeling removes almost nothing - the cores keep 117..121 of 128 words for every
+    subset of held words (fixed: 93 of 100), so no cheap exact search over the core is available.
+  What decides the sphere (DERIVED): the only level that could beat the board is k = 3 with 0 checks (2^80).
+    c(3) >= c(4) - 1 and c(4) >= 1 (main session, with tables), so c(3) = 0 needs c(4) = 1 exactly.  In words:
+    if anyone ever finds a 1-check order for the whole half, check at once whether dropping ONE of the four output
+    equations gives a 0-check order - that would turn 2^96 into 2^80.  Otherwise the sphere stays dead.
+  Toy: Hamming balls r = 2, 3 around a random centre, msb-only family: no excess (r3: 16 pairs vs 13.5 expected).
+    Uniform family half-digest ratio 0.95 / 1.00 (+-4.4%), single words and pairs 1.000: no lumpiness visible.
+  w = 12, 16 (fam_w12.txt, fam_w16.txt): no half-digest collision at all among 2^21 members (expected 0.008 at
+    w=12, ~0 at w=16), single words 1.000, word pairs <= 1.15 except tiny families (1-2 pairs observed vs 0.1-0.5).
+  VERDICT: dead on all computed evidence; one conditional door (k = 3 if c(4) = 1) stays open, see above.
+
+(d) MOEBIUS / TWISTED RING
+  Mapping: twisted pairs (M, tau M) and closed orbits M, tau M, ..., tau^k M = M for tau in {P, P^-1, P^2, P^4,
+    torus shift 1 and 2, transpose, mirror i<->i+8, palindrome, x<->y in every call, complement, negation,
+    rotations}; slide: round 0 returning the initial state.
+  Toy (COMPUTED, twist_w8.txt, 2^20 pairs): max equality rate out_j(tau M) == out_i(M): 1.02..1.07 x 2^-8 (random
+    baseline 1.03); max bit correlation 3.1..4.2 sigma (random 3.9); max XOR / additive difference frequency 1.05..1.06
+    (random 1.05); orbit XOR-sum max bit bias <= 2.8 sigma; Pr[orbit-sum word = 0] 0.99..1.01 x 2^-8.  w=16 same
+    within noise (twist_w16.txt).
+  Exact (COMPUTED, shapegraph.txt): the unique message with round0(init, M*) = init is
+    M* = f18e6f3b 03b36a40 5b13ce48 79ac165c 1f434a9b ff044d48 804339e9 6023e684
+         464c6cba 06277727 6ae5892a a0d9a941 ff10325c 1bdae340 d96a2b5b a03a31f6
+    and 2-round digest(M*) == 1-round digest(P M*) (checked).  A slide needs a full 512-bit state equality and round 0
+    is a bijection, so there is exactly one message per target state: no family (DERIVED).
+  VERDICT: dead.
+
+(e) FRACTAL / NESTED
+  Mapping: level k = family with k half-digest words held (families inside families); self-similar sub-structure
+    (period-16 words = a half-width copy).
+  Result (COMPUTED greedy + DERIVED): checks per level = k (one 32-bit check per level, i.e. the cost per member
+    multiplies by 2^32 at every level while the family shrinks by 2^32 and the birthday gains 2^16).  The half-width
+    copy dies at the first addition with an IV word (see (a)).  VERDICT: dead.
+
+(f) OTHER ODD SHAPES
+  Transpose, mirror (m_i = m_i+8), palindrome, x = y, all-equal, P-orbit families: half-digest and all 70 four-word
+    output groups uniform at w=8 (fam_w8.txt).  COMPUTED.  Dead.
+  Mirror fold (DERIVED, exact): out = Z_top ^ Z_bottom is unchanged by swapping state rows 0<->2 and 1<->3 (the
+    antipodal map of each column circle).  Using it needs Z(M') = antipode(Z(M)): a 512-bit condition, and the map
+    is not a G symmetry (it swaps roles a<->c, b<->d).  Dead.
+  Two-block CV (chosen IV): cannot give the initial state any lattice/rotation symmetry (v8..v15 fixed).  The CV as
+    list freedom is the variants/ agent's cvvar model.  Not repeated here.
+
+OVERLAPS: fringe/ (rx probability at 32 bits, symAB torus symmetry, plus/eout variants), variants/ (two-block CV),
+  separable/, ksplit/, kmath/ (2-list and k-list joins).  This folder adds the toy surveys, the exact lattice and
+  call-graph facts, the sphere/nested trade-off and its SAT check.
+
+STATUS (2026-10-08, end of run)
+  Every shape tested is dead on the computed evidence; nothing here beats the board (~92).
+  (a) circle        dead  COMPUTED toys w=8/16, parity w=8/16/32; DERIVED bound >= 2^125.5 even with exact symmetry
+  (b) hexagon       dead  COMPUTED lattice symmetries (none survive), call-message graph = octagon + 2 squares;
+                          DERIVED 3-list = 2-list cost 2^(32+16c) for a shared key
+  (c) sphere        dead* COMPUTED greedy checks = k (outhalf) / 4-r (fixed): exponent 128+16k / 192-16r;
+                          *open door: k=3 with 0 checks (2^80) needs c(4) = 1; SAT undecided in 600 s
+  (d) Moebius       dead  COMPUTED 14 twists + closed orbits at w=8/16 all uniform; M* computed; DERIVED slide = 1 msg
+  (e) fractal       dead  same numbers as (c): each nested level costs a full 32-bit check
+  (f) other         dead  transpose/mirror/palindrome/x=y families uniform; mirror-fold antipode needs 512-bit match
+  Compute used: <= 4 of my processes at a time, no GPU (nothing here needed it), no yukon, no trace.
+  One harness refusal: a foreground "Start-Sleep 60" wait was blocked by the tool's no-sleep rule; not retried,
+    I polled files and used a background until-loop instead.

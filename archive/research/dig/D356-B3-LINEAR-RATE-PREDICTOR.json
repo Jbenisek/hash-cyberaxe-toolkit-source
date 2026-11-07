@@ -1,0 +1,20 @@
+{
+  "id": "D356-B3-LINEAR-RATE-PREDICTOR",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "linear bit predictor for step-level rate multiplier",
+  "question": "Can a preregistered ridge model on uG and v bits select the best-quarter BLAKE3-r2 steps?",
+  "labels": ["C", "Z"],
+  "status": "KILLED",
+  "number": "Held-out n=40: r=-0.141, predicted top-quarter rate ratio=0.917; preregistered pass requires r>=0.39 and ratio>=1.10; permutation p=0.811",
+  "source": "our preregistered t2 linear-predictor screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D356_b3_linear_rate_predictor.md; research/retest/t2/pred_linear_screen.py; research/retest/t2/RESULT.md; research/gridwave6/b3_basextech_fh_class/mult_18f0e098_120.json; research/gridwave6/b3_basextech_fh_class/mult_18f0e098_40.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Kills only the preregistered linear ridge feature map. Nonlinear or richer predictors remain OPEN; no score or package credit.",
+  "peak_mem": "UNKNOWN"
+}

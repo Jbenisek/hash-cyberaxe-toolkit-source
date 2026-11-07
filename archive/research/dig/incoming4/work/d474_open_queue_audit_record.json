@@ -1,0 +1,23 @@
+{
+  "id": "D474-OPEN-QUEUE-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "live OPEN queue and local-resource audit after D469-D473",
+  "question": "Is a new top-ranked OPEN cell runnable and non-duplicative from the current workspace?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "No new runnable top-queue cell: D180-owned SHA3-r6 inputs, organizer/owner blockers, or absent full generators remain; D469-D473 do not alter a claimable score.",
+  "source": "our workflow: D474 live OPEN-queue audit",
+  "own_test": true,
+  "evidence": "public archive; research/dig/OPEN.md; research/sol_answer_D469_sha256_r38_full_table4_negative_probe.md; research/sol_answer_D470_b3m_replica_selftest64.md; research/sol_answer_D471_r37_dense_cnf_memory.md; research/sol_answer_D472_grid_r37_memory_increment.md; research/sol_answer_SELFREVIEW_1014.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "UNKNOWN (read-only audit; no process launched)",
+  "notes": "No solver or participant process launched; pre-existing interactive Python sessions were not touched. No package/staging/filing/submission.",
+  "held_fixed": "PR858 rules, current local claims, D469-D473 evidence, and generated OPEN view",
+  "reopen_if": "D180 result/specification, organizer ruling, owner driver, or a new local runnable artifact lands"
+}

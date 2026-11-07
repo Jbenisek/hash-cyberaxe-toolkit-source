@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "nonzero constant words in the final block instead of a cv search",
+ "question": "Alternatives?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "random nonzero m0..m7 cost 611-612 operations (+16..17); constructing m0..m7 that zero the c'/d' immediates gives 597 (one column), 599, 601, 603 (all four columns): always worse, because each nonzero word is added again in rounds 1 and 2",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_ops.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Single-block alternative; the chain through a variable cv (variable first block) was not costed.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); cv=IV",
+ "reopen_if": "a construction where a nonzero prefix word is absorbed without an add in rounds 1 and 2",
+ "topic": "blake3-r3|ALT.MULTI|ALT|Q4"
+}

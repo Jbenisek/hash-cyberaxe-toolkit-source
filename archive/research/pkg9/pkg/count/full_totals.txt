@@ -1,0 +1,21 @@
+PIN d3 fdb77cfd d11 0a08818b delta fffffff8 y3 8127c181 y11 7af77f38 eta 830303cf fixed_bits 13 rules 8 mode 3 nocut 0 extra_mask 00000000 extra_value 00000000
+RULE 0 00030000:0 00000404:1 00000808:1 00000001:0 00000002:1  outside_eta 00000c00  (name F5)
+RULE 1 00010000:0 00020000:0 00000001:0 00000002:1 00000404:1 00000808:1  outside_eta 00000c00  (name old6)
+RULE 2 00010000:0 00020000:0 00000001:0 00000002:1 00000404:1 00000808:1 00000c00:1  outside_eta 00000c00  (name K7)
+RULE 3 00010000:0 00020000:0 00000001:0 00000002:1 00000404:1 00000808:1 0000000c:1 61000000:1  outside_eta 60000c00  (name K8)
+RULE 4 00030000:0 00000404:1 00000808:1 00000001:0 00000002:1 01001008:0  outside_eta 00001c00  (name S6)
+RULE 5 00030000:0 00000404:1 00000808:1 00000001:0 00000002:1 01001008:0 02002040:0  outside_eta 00003c00  (name S7)
+RULE 6 00010000:0 00020000:0 00000001:0 00000002:1 00000404:1 00000808:1 01001008:0 02002040:0  outside_eta 00003c00  (name S8)
+RULE 7 00000001:0 00000002:1 00010000:0 00020000:0 0000000c:1  outside_eta 00000000  (name p5)
+denominator 2^83; betas in the list 60, searched 60, with a part 60; outcomes passing the necessary conditions 20318, listed (side-3 solutions in the cube) 1207, with a nonzero product 453
+counted by n3r_orig 913, by n3r_proj alone 294 (of them with a product 21), NOT counted 0, E1 not counted 0
+checks inside the run: n3r_orig against n3r_proj on the same outcome: equal 913, different 0; the unchanged n3x (where it does not sample) against the integer count: equal 906, different 0; n3x sampled on 52 outcomes; integer E1 against e1_exact: equal 1207, different 0
+R (all solutions) = 85074516985129/524288 = 162,266,763.658769608
+rule F5    (5 conditions): pass 2722188192869763/16777216 = 162,255,060.247764766 | kept_whole 2658161987811/16384 = 162,241,332.263854980 | violate 11,703.411005 | tainted 25,431.394915 | outcomes with a product: all pass 165, none pass 45, split 243
+rule old6  (6 conditions): pass 5443991608233427/33554432 = 162,243,592.984480470 | kept_whole 332270216079/2048 = 162,241,316.444824219 | violate 23,170.674289 | tainted 25,447.213945 | outcomes with a product: all pass 132, none pass 104, split 217
+rule K7    (7 conditions): pass 302248762304709/2097152 = 144,123,440.887789249 | kept_whole 64513843589/512 = 126,003,600.759765625 | violate 18,143,322.770980 | tainted 36,263,162.899004 | outcomes with a product: all pass 54, none pass 249, split 150
+rule K8    (8 conditions): pass 528287346417605/4194304 = 125,953,518.490220308 | kept_whole 107782144 = 107,782,144.000000000 | violate 36,313,245.168549 | tainted 54,484,619.658770 | outcomes with a product: all pass 29, none pass 249, split 175
+rule S6    (6 conditions): pass 2722188192874883/33554432 = 81,127,530.124034971 | kept_whole 0 = 0.000000000 | violate 81,139,233.534735 | tainted 162,266,763.658770 | outcomes with a product: all pass 0, none pass 45, split 408
+rule S7    (7 conditions): pass 5105306373346779/67108864 = 76,074,993.213218138 | kept_whole 0 = 0.000000000 | violate 86,191,770.445551 | tainted 162,266,763.658770 | outcomes with a product: all pass 0, none pass 167, split 286
+rule S8    (8 conditions): pass 5105157355890091/67108864 = 76,072,772.680075333 | kept_whole 0 = 0.000000000 | violate 86,193,990.978694 | tainted 162,266,763.658770 | outcomes with a product: all pass 0, none pass 212, split 241
+rule p5    (5 conditions): pass 302248762304709/2097152 = 144,123,440.887789249 | kept_whole 64513843589/512 = 126,003,600.759765625 | violate 18,143,322.770980 | tainted 36,263,162.899004 | outcomes with a product: all pass 54, none pass 249, split 150

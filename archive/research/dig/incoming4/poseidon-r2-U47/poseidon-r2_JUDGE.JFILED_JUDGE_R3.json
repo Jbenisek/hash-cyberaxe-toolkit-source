@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JFILED (JUDGE)",
+ "question": "R3: control: did r1 get through where the ledger was the same",
+ "labels": [
+  "N"
+ ],
+ "status": "BEDROCK",
+ "number": "No r1 entry has been judged accepted; the three tries failed on different fatal items (control charge, probability note length, dispatch). The r2 package was built with the stricter charging from the first refile.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "HANDOFF.md (lines 414-431); research/dig/incoming4/work/ledger_numbers.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JFILED|JUDGE|R3. From the HANDOFF sequence.",
+ "held_fixed": "rulings of the r1 filings as recorded in HANDOFF.md 10-12 18:20 .. 20:25; no r2 entry has been filed",
+ "reopen_if": "an r2 entry is filed or a new ruling on r1 appears"
+}

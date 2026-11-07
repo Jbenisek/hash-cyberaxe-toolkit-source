@@ -1,0 +1,1 @@
+{"passed":true,"cases":5,"scope":"Retain attached source entries, replace fresh excerpts, preserve exact backup, idempotence and corruption rejection in disposable storage."}

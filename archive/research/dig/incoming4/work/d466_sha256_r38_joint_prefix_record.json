@@ -1,0 +1,22 @@
+{
+  "id": "D466-SHA256-R38-JOINT-PREFIX-SEED5001-20261014",
+  "hash": "sha256-38",
+  "row_i": 6,
+  "row_j": 21,
+  "object": "SHA-256-r38 corrected all-Table-4 joint prefix rerun",
+  "question": "Does a fresh exact prefix batch reproduce the finite joint/product relationship under the corrected W25 relation?",
+  "labels": ["C", "S", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "New seeds 5001..5008: 149/32768 joint, log2 -7.78083148; pooled with the prior exact all-group batch: 346/65536 = 0.005279541015625, log2 -7.56537177. Pooled nontrivial marginals E21=32512/65536, W23=670/65536, W25=60504/65536; product=0.00468233825813513, log2 -7.73855512; joint/product=1.12754370243, +0.17318335 bits.",
+  "source": "our workflow: D466 one-thread corrected r38_groupaudit_exact rerun",
+  "own_test": true,
+  "evidence": "research/retest/r38_groupaudit/D466_seed5001_5008_exact1.txt; research/retest/r38_groupaudit/all_exact1_20261013.txt; research/sol_answer_D466_sha256_r38_joint_prefix_seed5001.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Finite LOCAL_ONLY prefix evidence. No rows-22..37 transfer, universal independence, relaxed candidate, score credit, package, staging, filing, or submission.",
+  "peak_mem": "single-thread native r38_groupaudit_exact; no RSS measurement taken",
+  "held_fixed": "corrected W25[4]=W25[6] relation, np=4096, m=512, mt2=512, 1 thread",
+  "reopen_if": "A schedule-recomputed full-path joint-law campaign under the actual attack proposal is still required",
+  "supersedes": ["D248-SHA256-R38-TABLE4-EXACT-RERUN-20261013"]
+}

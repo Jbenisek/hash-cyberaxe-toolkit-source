@@ -1,0 +1,46 @@
+validate_pkg7_text.sh tests (2026-10-07 01:07)
+mirror /root/hashsmash/hash-smash-pkg7fix at 86f1102ff2d6873db29d992599412ae9eb23bda2
+--- candidate files (mirror, from research/pkg7/blake3-r2)
+644     48 lanes/exploratory/candidates/blake3-r2/certificates/manifest.json
+644  16360 lanes/exploratory/candidates/blake3-r2/claim.json
+644  63738 lanes/exploratory/candidates/blake3-r2/experiments/halfsearch.py
+644   5235 lanes/exploratory/candidates/blake3-r2/experiments/manifest.json
+644 138012 lanes/exploratory/candidates/blake3-r2/proof.md
+sha256 a3c78779269ab224b0a36cc0cc075aaebdfb496a3a695bce1e743cf7bd45c4c8  certificates/manifest.json
+sha256 bfbc61d8a80fe655a43d987fed2e91e25c28a97209a824c9cc231b82d55432cd  claim.json
+sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563  experiments/halfsearch.py
+sha256 3ba8bc765bcb2bbe3835ad78dac25f46f58875f90d647e7285c99d1edc5acff8  experiments/manifest.json
+sha256 177436221877ec724ac733392561c1a77e1ff7bc004add67138c146b655c22d6  proof.md
+claim.json as in research/pkg7: "submission_state": "draft"
+--- .yukon/setup.sh (the unit tests of the repository)
+Ran 23 tests in 0.158s
+OK
+Ran 84 tests in 0.168s
+OK
+Ran 176 tests in 4.361s
+OK (skipped=5)
+HashSmash paired-lane setup and tests passed
+--- local_tracks.py check blake3-r2-exploratory
+[
+  {
+    "track": "blake3-r2-exploratory",
+    "status": "mechanically_valid",
+    "submission_state": "draft",
+    "certificates_verified": 0,
+    "qualified": false
+  }
+]
+--- intake with the mirror copy marked ready (no image pull)
+image present locally: python:3.12.12-slim-bookworm@sha256:2986c55feb36e6cae00fa1fefb454283e4b33f35e75ff8bdd123b134130be301
+{"certificates_verified": 0, "evidence": "lanes/exploratory/.yukon/work/tracks/blake3-r2-exploratory/judge-evidence.json", "package_sha256": "a48d06fced34491f26683da85bd6542899077fedc52a75b60279de7b5062a4e1", "status": "mechanically_valid"}
+experiment status: passed
+  program sha256: {'experiments/halfsearch.py': 'cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563'}
+  half-collision: trials=256 successes=256 full collisions=0 no pair=0 repeated=0 replay identical=True
+  residual-search: trials=256 successes=256 full collisions=0 no pair=0 repeated=0 replay identical=True tries mean=382.1 max=1721
+    observation batch_lanes_right: 256 rows, values [7], sum 1792
+    observation batch_stage_2_entered: 256 rows, values [0, 1], sum 9
+    observation batch_stage_2_loads: 256 rows, values [30], sum 7680
+    observation batch_stage_2_operations: 256 rows, values [105], sum 26880
+    observation batch_stage_a_loads: 256 rows, values [10], sum 2560
+    observation batch_stage_a_operations: 256 rows, values [37], sum 9472
+exit status 0

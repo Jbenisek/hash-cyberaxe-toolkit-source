@@ -1,0 +1,23 @@
+{
+  "id": "D670-SHA256-R38-CONTROL-AGGREGATE-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 37,
+  "object": "SHA-256 r38 Zone-D 17-split row-4 and C2 control aggregate",
+  "question": "Do the completed independent split controls reproduce the published row-4 equalities or the C2 late continuation?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Exact aggregate over seeds 0,1,2,3,4,5,65535..65545: 17 row4 scans, 1,140,850,688 rebuilds, all rows5..15 pass; seed0 has 4604 final equalities and 16 independent seeds have zero. Paired C2 scans: 2720/2720 row14 passers, 17 C2 candidates, zero rows16..37/full-state continuations.",
+  "source": "our workflow: D670 exact Zone-D r38 expanded control aggregate",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/aggregate_controls_d670.out; research/retest/zoneD38/aggregate_controls_d670.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.05,
+  "prior": 0.8,
+  "gain_basis": "D",
+  "held_fixed": "current zd38 row4full/zd38c2lateall executables and the listed fixed split seeds",
+  "notes": "Finite aggregate only. It supports split dependence but gives no split-transfer/global-rate/charged-score/package/stage/filing/submission credit.",
+  "reopen_if": "A production-law split-transfer proof or a full global completion campaign becomes available"
+}

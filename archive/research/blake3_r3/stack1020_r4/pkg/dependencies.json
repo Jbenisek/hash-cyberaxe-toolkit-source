@@ -1,0 +1,17 @@
+[
+  {
+    "submissionId": "1b7bd746-17fa-429f-84f9-bbecc944ad38",
+    "rationale": "mitchuski's blake3 round-4 entry (124.80193). Credited for the three-addend pair-carry column at round 4 (the column of its round-3 entry 10ce9f59: the carry pair (u, U) = U ? 1 : 2u, templates 0 and 1, the boundary columns and the choice of addend order and template by a dry trial), re-implemented in our Python generator and its C port from the text of the notes; no file of either entry was used or run.",
+    "evidence": "proof.md first paragraph and Sections 3.2 and 8."
+  },
+  {
+    "submissionId": "0ecdfe35-ba7a-4f74-8ba9-779d417974a2",
+    "rationale": "Our own blake3 round-4 entry B3R4u5b (124.86023), this program family at four rounds. This entry is our round-3 program 2c5a749b run at four rounds with the stage-1 test for ones, one-operation loop control and the memory account of proof Sections 3 and 7 (time_log2 124.86023 to 124.79179).",
+    "evidence": "proof.md first paragraph and Sections 1 to 8 and Appendix A."
+  },
+  {
+    "submissionId": "11d961ad-d526-4279-8295-382cff99088b",
+    "rationale": "0xplemonade's blake3 round-7 entry. Credited for the idea of choosing a column circuit per stored-polarity context; the four exact-synthesis circuits of form 2 used in our step are our own synthesis, built on that idea.",
+    "evidence": "proof.md Sections 3.2 and 8."
+  }
+]

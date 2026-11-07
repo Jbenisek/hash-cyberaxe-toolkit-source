@@ -1,0 +1,22 @@
+(c) proof.md against what this script computes
+  [ok] 1 of 1  proof.md prints what this script computes: the six constants
+  [ok] 1 of 1  proof.md prints what this script computes: K + W4 and W4'
+  [ok] 1 of 1  proof.md prints what this script computes: table of the pinned call, first execution
+  [ok] 1 of 1  proof.md prints what this script computes: table of the pinned call, second execution
+  [ok] 1 of 1  proof.md prints what this script computes: the pinned call, statement
+  [ok] 1 of 1  proof.md prints what this script computes: W4 - W4'
+  [ok] 1 of 1  proof.md prints what this script computes: the two lengths
+  [ok] 1 of 1  proof.md prints what this script computes: Lemma Q statement
+  [ok] 1 of 1  proof.md prints what this script computes: Lemma Q proof: x and m
+  [ok] 1 of 1  proof.md prints what this script computes: Lemma Q proof: the sum and its half
+  [ok] 1 of 1  proof.md prints what this script computes: eta
+  [ok] 1 of 1  proof.md prints what this script computes: Lemma A (c): the constants
+  [ok] 1 of 1  proof.md prints what this script computes: Lemma A (b): the conditions on z
+  [ok] 1 of 1  proof.md prints what this script computes: rule A as stated on h1
+  [ok] 1 of 1  proof.md prints what this script computes: the member count
+  [ok] 1 of 1  the solution inside the class printed in Section 10: digest words 1, 3, 4, 6 equal for A and B, Y4 in the class
+  [ok] 1 of 1  the solution inside the class: its h1 satisfies rule A
+  [ok] 1 of 1  the solution that violates rule A printed in Section 10: digest words 1, 3, 4, 6 equal for A and B, Y4 in the class
+  [ok] 1 of 1  the solution that violates rule A: its h1 violates rule A
+    solutions of the seven-word system found in the text and evaluated: 2
+RESULT (c): the proof prints what this script computes

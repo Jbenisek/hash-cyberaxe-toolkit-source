@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R2D0.q3 (a2,d2)",
+ "question": "Q4 alternatives: other ways to compute this quarter-step (rotation by 8 in fewer ops; other add trees)",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "no 4-op program computes the lane-wise ror8 (clean 32-bit result, arbitrary 36-bit lane input incl. guard garbage, arbitrary neighbour lanes) in family A (80 unary ops: shifts and interval/complement masks; 897197129 nodes tried, 0 found) nor in family B (all 35 shift amounts, 114 unary ops, 4123479264 nodes, 0 found). The same search finds the shipped 5-op form (shr, shl, and, and, or/xor/add; 72 variants) in a small validation family, so it can see such programs. Add alternatives: one tree only. The rotation part stays 5 ops and the step stays 7 ops.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/_b3r3_work/rotsearch.cpp; research/dig/incoming3/_b3r3_work/run_rot4.sh; research/dig/incoming3/_b3r3_work/rot4_out.txt; research/dig/incoming3/_b3r3_work/run_rot4b.sh; research/dig/incoming3/_b3r3_work/rot4b_out.txt; research/dig/incoming3/_b3r3_work/rot_validate.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Family-limited: shl/shr by the listed amounts, and with lane-replicated interval masks and their complements, reg-reg and/or/xor/add; no xor/add immediates; the middle lane of a 3-lane model must be exact. Outside the family this is OPEN.",
+ "held_fixed": "Held fixed: the shipped 595-op circuit (research/blake3_r3/candidate_blake3/experiments/rho.py: 7 lanes x 36 bits, ops add/and/or/xor/shl/shr, constants folded) re-derived by our own tracer b3core.py (595 ops; equals the scalar 3-round digest on 300+ batches; scalar core equals verifier/blake3.py on 3 and 7 rounds and the official 7-round fixture). Rotation by 8 with inputs allowed to carry guard bits (xor of an unclean sum).",
+ "reopen_if": "a 4-op rotation using xor/add immediates, other shift sets, or a lane pitch other than 36"
+}

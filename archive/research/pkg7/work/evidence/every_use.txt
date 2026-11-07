@@ -1,0 +1,24 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563 with the line KEPT = 0 set in memory; python -B work/tools/every_use.py 600
+
+RULE WITH 4 CONDITIONS, no word kept: 600 cases, 4200 of 4200 lanes right, stored words right in 600 of 600, same counts in every case True, reads of a kept word 0
+  outer step: 148 operations + 91 loads + 21 stores = 260; registers 11 of 16; next w5 6+6+2; K2 and D3 67+39+9; K3 43+25+4; C0 and D2 32+21+6
+  table build: 43 operations + 26 loads + 5 stores = 74; registers 7 of 16; build loop 3+1; build C0 13+11+2; build D1 27+14+3
+  middle step: 85 operations + 52 loads + 9 stores = 146; registers 9 of 16; next X2 6+6+2; D2 and K1 47+27+4; K0 32+19+3; class loop entry 0+0
+  batch: 129 operations + 61 loads + 0 stores = 190; registers 10 of 16; loop 3+1; X0 to X10 3+4; C2 to z 17+8; rule A 6+5; entry count 3+1; C2, rest 12+4; C1 to Y1 31+16; E1, A and B 41+16; E1 test 13+6
+  batch, stage A 29 + 18 = 47; stage 2 100 + 43 = 143
+
+RULE WITH 6 CONDITIONS, no word kept: 600 cases, 4200 of 4200 lanes right, stored words right in 600 of 600, same counts in every case True, reads of a kept word 0
+  outer step: 148 operations + 91 loads + 21 stores = 260; registers 11 of 16; next w5 6+6+2; K2 and D3 67+39+9; K3 43+25+4; C0 and D2 32+21+6
+  table build: 43 operations + 26 loads + 5 stores = 74; registers 7 of 16; build loop 3+1; build C0 13+11+2; build D1 27+14+3
+  middle step: 85 operations + 52 loads + 9 stores = 146; registers 9 of 16; next X2 6+6+2; D2 and K1 47+27+4; K0 32+19+3; class loop entry 0+0
+  batch: 132 operations + 62 loads + 0 stores = 194; registers 10 of 16; loop 3+1; X0 to X10 3+4; C2 to z 17+8; rule A 9+6; entry count 3+1; C2, rest 12+4; C1 to Y1 31+16; E1, A and B 41+16; E1 test 13+6
+  batch, stage A 32 + 19 = 51; stage 2 100 + 43 = 143
+
+RULE WITH 8 CONDITIONS, no word kept: 600 cases, 4200 of 4200 lanes right, stored words right in 600 of 600, same counts in every case True, reads of a kept word 0
+  outer step: 148 operations + 91 loads + 21 stores = 260; registers 11 of 16; next w5 6+6+2; K2 and D3 67+39+9; K3 43+25+4; C0 and D2 32+21+6
+  table build: 43 operations + 26 loads + 5 stores = 74; registers 7 of 16; build loop 3+1; build C0 13+11+2; build D1 27+14+3
+  middle step: 85 operations + 52 loads + 9 stores = 146; registers 9 of 16; next X2 6+6+2; D2 and K1 47+27+4; K0 32+19+3; class loop entry 0+0
+  batch: 137 operations + 63 loads + 0 stores = 200; registers 10 of 16; loop 3+1; X0 to X10 3+4; C2 to z 17+8; rule A 14+7; entry count 3+1; C2, rest 12+4; C1 to Y1 31+16; E1, A and B 41+16; E1 test 13+6
+  batch, stage A 37 + 20 = 57; stage 2 100 + 43 = 143
+
+RESULT: all counts hold

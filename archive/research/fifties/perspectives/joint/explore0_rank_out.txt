@@ -1,0 +1,38 @@
+[rand] rows 1048576
+  affine rank of R (all, 1048576 rows): 126
+    relation: w1:00000000 w3:000000ff w4:02000000 w6:fe000001  = 0
+    relation: w1:00000000 w3:ffffff00 w4:02000000 w6:01fffffe  = 0
+  affine rank of R (half0, 524288 rows): 126
+    relation: w1:00000000 w3:000000ff w4:02000000 w6:fe000001  = 0
+    relation: w1:00000000 w3:ffffff00 w4:02000000 w6:01fffffe  = 0
+  affine rank of R (half1, 524288 rows): 126
+    relation: w1:00000000 w3:000000ff w4:02000000 w6:fe000001  = 0
+    relation: w1:00000000 w3:ffffff00 w4:02000000 w6:01fffffe  = 0
+  dc1 distinct 1; top: 0e09818b:1048576
+  dh1 distinct 1 (expect 1, eta) 830303cf
+  parity(dc1)=1 fraction 1.000000   parity(dg1)=1 fraction 0.500143
+  DERIVED parity(R3)^parity(R6) = parity(dc1)^1: holds on 1048576 of 1048576
+  DERIVED parity(R1)^parity(R4) = parity(dg1):   holds on 1048576 of 1048576
+  DERIVED R6^ROR(R3,8)^ROR(eta,8) = K1[6]^ROR(K1[3],8): 1048576 of 1048576
+  DERIVED R4^ROR(R1,8) = K3[4]^ROR(K3[1],8):            1048576 of 1048576
+  P(R3,R6 word-parity sum = 0) = 1.000000 ; P(R1,R4 word-parity sum = 0) = 0.499857
+[ctx] rows 262144
+  affine rank of R (all, 262144 rows): 126
+    relation: w1:00000000 w3:000000ff w4:02000000 w6:fe000001  = 0
+    relation: w1:00000000 w3:ffffff00 w4:02000000 w6:01fffffe  = 0
+  affine rank of R (half0, 131072 rows): 126
+    relation: w1:00000000 w3:000000ff w4:02000000 w6:fe000001  = 0
+    relation: w1:00000000 w3:ffffff00 w4:02000000 w6:01fffffe  = 0
+  affine rank of R (half1, 131072 rows): 126
+    relation: w1:00000000 w3:000000ff w4:02000000 w6:fe000001  = 0
+    relation: w1:00000000 w3:ffffff00 w4:02000000 w6:01fffffe  = 0
+  affine rank per context (16384 rows each): [126, 126, 126, 126, 126, 126, 126, 126, 126, 126, 126, 126, 126, 126, 126, 126]
+  affine rank per (context, member) group of 1024 rows: values {115: 1, 116: 1, 117: 4, 118: 14, 119: 13, 120: 21, 121: 41, 122: 29, 123: 47, 124: 48, 125: 26, 126: 11}
+  dc1 distinct 1; top: 0e09818b:262144
+  dh1 distinct 1 (expect 1, eta) 830303cf
+  parity(dc1)=1 fraction 1.000000   parity(dg1)=1 fraction 0.500519
+  DERIVED parity(R3)^parity(R6) = parity(dc1)^1: holds on 262144 of 262144
+  DERIVED parity(R1)^parity(R4) = parity(dg1):   holds on 262144 of 262144
+  DERIVED R6^ROR(R3,8)^ROR(eta,8) = K1[6]^ROR(K1[3],8): 262144 of 262144
+  DERIVED R4^ROR(R1,8) = K3[4]^ROR(K3[1],8):            262144 of 262144
+  P(R3,R6 word-parity sum = 0) = 1.000000 ; P(R1,R4 word-parity sum = 0) = 0.499481

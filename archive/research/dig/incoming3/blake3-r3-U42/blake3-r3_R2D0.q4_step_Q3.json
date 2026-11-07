@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R2D0.q4 (c2,b2)",
+ "question": "Q3 degrees of freedom or score-optimal value: cheapest evaluation of this quarter-step (add order, mask placement) and of the whole circuit under the lane-bound model",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "7 ops as shipped = score-optimal for this step under the bound model; 1 add order (two operands). Whole-circuit exhaustive search over every add order, premask and postmask placement (two independent halves, Pareto DP over 3 rounds) gives the optimum 595 ops = shipped, so no step can be made cheaper by reordering or by moving masks. Value of one op = 0.00240 bit of time_log2 (main loop share 0.9944).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/_b3r3_work/q3_opt.py; research/dig/incoming3/_b3r3_work/q3_opt_out.txt; research/dig/incoming3/_b3r3_work/q3_plan.py; research/dig/incoming3/_b3r3_work/boundcheck.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Exact inside the shipped bound model (interval bound per word, mask when a sum could reach 2^36); a tighter lane-bound proof would change the model (see Q2 of R2D1.q3 for the mask that the witness shows necessary).",
+ "held_fixed": "Held fixed: the shipped 595-op circuit (research/blake3_r3/candidate_blake3/experiments/rho.py: 7 lanes x 36 bits, ops add/and/or/xor/shl/shr, constants folded) re-derived by our own tracer b3core.py (595 ops; equals the scalar 3-round digest on 300+ batches; scalar core equals verifier/blake3.py on 3 and 7 rounds and the official 7-round fixture). Bound model: add allowed only if bounds sum < 2^36; mask costs 1 op and resets bound to 2^32-1; xor bound = next power of two minus 1; rotation output clean; the 4 digest masks kept.",
+ "reopen_if": "a proof that a lane sum stays below 2^36 where the model masks (false for D1.q3, witness in Q2), or a lane layout other than 7 x 36 bits"
+}

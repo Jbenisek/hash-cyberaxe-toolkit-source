@@ -1,0 +1,4 @@
+(a) planted 300: planted h1 missed 0, unsound solutions 0, solutions per plant 1.68, f1 enumerated per plant 81481.8, DFS nodes per plant 202396.8
+(b) outer steps tried 148371, passing 150 (share 2^-9.95; exact 2^-9.81)
+    per passing step: viable outcomes 1.23, f1 solutions of (2) 11274.2 (median 8192, max 61440), DFS nodes 38699.7, survivors of (1) 87.040, E3 solutions 0 in total
+    ops per passing step (DERIVED weights above): about 372,234 = 2^18.51; per walked outer step x 2^-9.81 = 413.8

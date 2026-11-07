@@ -1,0 +1,20 @@
+{
+ "0": {
+  "deg": 78125,
+  "lc": "0x1c66a426cd2d5ec686ea41cae3a27d49c8724fffa0bc4f305029be8b2cce93c3",
+  "lc_tracker_matches": true,
+  "sec": 1.1
+ },
+ "1": {
+  "deg": 78125,
+  "lc": "0x23f4f4090b603b7edbc59c1e6873df7a90d68316f73ac9517f55080764cf3905",
+  "lc_tracker_matches": true,
+  "sec": 1.0
+ },
+ "2": {
+  "deg": 78125,
+  "lc": "0x191734549b1df57af01548d1bb07d507b21fdd533a2ab8e07e0dc05e02cd900e",
+  "lc_tracker_matches": true,
+  "sec": 0.9
+ }
+}

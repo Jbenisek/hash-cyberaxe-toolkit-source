@@ -1,0 +1,22 @@
+{
+  "id": "S256-R40-L02-JOIN-REPLAY-20261021",
+  "hash": "sha256-r40",
+  "row_i": null,
+  "row_j": null,
+  "object": "Task35 L02 join-step tail-window replay",
+  "question": "Do the published r40 join-step tail vectors and allowed windows reproduce their exact finite XOR-linear weights?",
+  "labels": ["X", "C", "Z"],
+  "status": "COMPUTED",
+  "number": "s17,N40: 21-word window weight 217; s18,N40: 22-word window weight 230; s18,N41: 22-word window weight 230",
+  "source": "our workflow: Task35 L02 join replay",
+  "own_test": true,
+  "evidence": "research/luna_dig/task35_l02_join_replay.py; research/luna_dig/TASK35_L02_JOIN_REPLAY_20261021.md; research/grok/work/G_river_5/ANSWER.md",
+  "date": "2026-10-21",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Exact finite replay of supplied XOR-linear tail witnesses and allowed windows. Confirms published numbers but does not establish modular/state transfer, global success probability, or score credit. L02 Q3/Q4/Q7/Q13 remain blocked/open; Q5/Q6 remain local-only; Q8/Q10 remain empty.",
+  "peak_mem": "0 FREE self-contained 16-word Python replay",
+  "held_fixed": "Published s17/s18 message vectors, XOR-linear sigma maps, and allowed tail windows",
+  "reopen_if": "A permitted signed/modular state lift, full charged ledger, or global transfer proof is available."
+}

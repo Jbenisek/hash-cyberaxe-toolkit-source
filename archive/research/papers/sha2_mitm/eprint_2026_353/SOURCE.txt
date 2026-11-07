@@ -1,0 +1,1 @@
+2026/353	Dual-Syncopation Meet-in-the-Middle Attacks: New Results on SHA-2 and MD5	owner_download	https://eprint.iacr.org/2026/353.pdf

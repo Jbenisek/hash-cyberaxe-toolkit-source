@@ -1,0 +1,6 @@
+W 32; screen2 bases=2 draws=6 (replay of ctr_split_numeric main stream: same screen-2 candidates); cross test 8 bases x 32 draws (seed 5151)
+mode C0: screen2 candidates 7, candidate bits 7, refuted by a cross move 7, unrefuted 0 (3s)
+mode T0: screen2 candidates 32, candidate bits 34, refuted by a cross move 34, unrefuted 0 (10s)
+mode T0T1: screen2 candidates 85, candidate bits 85, refuted by a cross move 85, unrefuted 0 (28s)
+mode E1d1: screen2 candidates 63, candidate bits 66, refuted by a cross move 66, unrefuted 0 (10s)
+mode E3h1: screen2 candidates 49, candidate bits 49, refuted by a cross move 49, unrefuted 0 (10s)

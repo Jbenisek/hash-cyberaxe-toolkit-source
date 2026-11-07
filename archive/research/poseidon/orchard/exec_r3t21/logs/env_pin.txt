@@ -1,0 +1,1 @@
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0 (read from the .comment section of the counted executable); the same machine, queried after the run: Linux 6.18.40.1-microsoft-standard-WSL2 on Ubuntu 26.04 LTS under WSL2; CPU AMD Ryzen 9 7900X 12-Core Processor

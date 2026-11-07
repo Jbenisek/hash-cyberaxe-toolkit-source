@@ -1,0 +1,4 @@
+0 raises ValueError need exactly 64 bytes
+63 raises ValueError need exactly 64 bytes
+64 63db1edfefaf4d99
+noncanonical raises ValueError non-canonical field element

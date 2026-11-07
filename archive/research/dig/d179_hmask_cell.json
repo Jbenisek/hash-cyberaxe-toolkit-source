@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-HMASK-CEGIS",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 h-dependent XOR-mask witness-map family",
+  "question": "Can the three residual class toggles be covered by the expanded affine h-dependent XOR map family?",
+  "labels": ["K"],
+  "status": "COMPUTED",
+  "number": "Exact QF_BV CEGIS: delta 00002000 UNSAT after 8 witnesses; delta 00001000 UNSAT after 6; delta 00000400 bounded at 12 iterations (inconclusive).",
+  "source": "our exact QF_BV CEGIS: D179 h-dependent mask",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/SYNTH_HXOR_HMASK.md; research/retest/b3_omega_coupled/exact/synth_hxor_allmask_h.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.witness_map",
+  "notes": "Candidate family is f'=f xor q, induced g'=g xor (ROL12(q) xor delta), and h'=h xor r0 xor (g&rg) xor (e2&re) xor (f&rf) xor (E&rE) xor (h&rh). UNSAT is family-negative only; the arbitrary nonlinear map and universal class-invariance theorem remain OPEN. No saving is credited."
+}

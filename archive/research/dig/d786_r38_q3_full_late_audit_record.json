@@ -1,0 +1,22 @@
+{
+  "id": "D786-SHA256-R38-Q3-FULL-LATE-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "shipped r38 q3 sampler full-late condition audit",
+  "question": "Among candidates reaching pkgR38M7's q3 exact predicate, how many also satisfy every chi38 rows-22..37 cell, plus, and X2 condition?",
+  "labels": ["C", "S", "Z"],
+  "status": "SAMPLED",
+  "number": "96 deterministic q3 replicates; 157711 candidates reached the package exact call, 883 passed the package predicate, 710 passed all rows-22..37 conditions, and all 710 were package-exact. Conditional full-late/package-exact fraction 710/883=0.8040770102; return-count and source checks passed.",
+  "source": "our workflow: D786 preregistered external q3 hook",
+  "own_test": true,
+  "evidence": "research/prereg_D786_r38_q3_full_late_audit.md; research/retest/r38_stack_D250/d786_q3_full_late_audit.py; research/retest/r38_stack_D250/d786_q3_full_late_audit.json; research/sol_answer_D786_r38_q3_full_late_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "peak_mem": "not separately metered; one Python process, no package modification",
+  "held_fixed": "shipped a0lean38.py source by value; 96 fixed labels D786-r38-q3-audit-000..095; original exact predicate and q3 control flow",
+  "notes": "Finite LOCAL_ONLY law diagnostic. Full-late is a subset of package-exact in this run, but the measured 0.8041 conditional share does not prove independence, transfer, or a score/package change.",
+  "reopen_if": "A larger preregistered run, a proved equivalence, or an organizer ruling on the q3/full-late law is obtained."
+}

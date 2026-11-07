@@ -1,0 +1,9 @@
+E3-held roots with verified E1 inputs: 16475  distinct E1 tuples: 16475  E3 tuples: 8
+E1 input bits (Y12, K, w5, c1): largest |z| over 128 bits 3.12, mean |z| 0.95, chi2/dof 1.39
+side-1 events, E3-held roots vs uniform E1 inputs (2^24 samples):
+  beta = beta* (pair 189060a0/6e203e55)        held:    10/16475   uniform rate 2^-10.97 -> expected 8.2   z 0.62
+  beta in the 453-pair beta set                held:    75/16475   uniform rate 2^-7.76 -> expected 76.1   z -0.13
+  beta = beta* and t low 8 bits = t* low 8     held:     0/16475   uniform rate 2^-14.04 -> expected 1.0   z -0.99
+  s low 8 bits = s* low 8 bits                 held:   207/16475   uniform rate 2^-6.45 -> expected 188.0   z 1.39
+  t low 12 bits = t* low 12 bits               held:   275/16475   uniform rate 2^-5.96 -> expected 263.9   z 0.68
+beta* = 18b1a098

@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.IMM immediates",
+ "question": "Is the 256-bit immediate necessary? Remove it (constants from registers or loaded per use) and recount the exact outcome.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Straight-line batch (595 ops) has 183 ops with a 256-bit immediate (167 AND masks, 8 add, 8 xor) over 25 distinct 256-bit constants, plus 160 shifts with 7 distinct counts (16,12,8,7,20,24,25). No immediates, constants held in registers: zero loop cost when R>=48 registers (Belady, 0 spills), +0.0024 bit at R=40, +0.084 at R=32. No immediates and NO constant registers (every use a load): +183 loads/batch = +0.3843 bit; shift counts also loaded: +0.6527 bit.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py); research/blake3_r3/dig_scan/d_regs.json (d_regs.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.IMM|MACHINE|Q2. Load/store of a constant counted as one op like any word op (M5). The note's remark 'fewer than about 40 registers needs loads and stores' is tightened: with immediates 25 registers give zero spills; with all 25 constants pinned in registers 48 give zero spills. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "straight-line code of the filed circuit (595 ops, unrolled, SSA order as emitted); 36-bit pitch, 7 lanes; Belady min-spill; machine = loads/stores each 1/638; table of 25 constants costs 800 B of memory (inside the 2^20 headroom of 82,304 B).",
+ "reopen_if": "The organizer states a register count below 48 (then constants cost loads), or rules that immediates are not offered AND the file has under 40 registers."
+}

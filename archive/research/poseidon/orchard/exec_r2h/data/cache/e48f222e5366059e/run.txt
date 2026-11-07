@@ -1,0 +1,5 @@
+r=2 line=0 m=195312
+lean-pow breakdown: newton total=254429748 arith=99982993 | prefix+scale total=2539833 | loop steps=236 total=41195559226 arith=16147887941 per-step total=174557454 arith=68423253
+trial 1 centre 1: gcd degree 0, charged 8348776877
+trial 2 centre 2: gcd degree 0, charged 8348776877
+EXIT 143

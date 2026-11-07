@@ -1,0 +1,22 @@
+{
+  "id": "D371-POSR1-BUTTERFLY-CONTROL-EXACT",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.CTL exact butterfly subtotal",
+  "question": "What is the exact charged 9-control butterfly subtotal in the lean_r1_fix powering schedule?",
+  "labels": ["N", "D"],
+  "status": "COMPUTED",
+  "number": "Exact source-level count: 4,718,592 butterfly iterations per powering step, 238 steps, and 9 charged controls per iteration gives 10,107,224,064 operations per two-centre run (1,123,024,896 per centre). The +2 loop-exit term is separate.",
+  "source": "our source-level schedule reconciliation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D371_poseidon_r1_butterfly_control_exact.md; research/poseidon/orchard/lean_r1_fix/ntt.c; research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md; research/dig/CELLS.jsonl C1776",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Supersedes C1776's uninstrumented subtotal estimate. This does not price a rebuilt unrolled kernel: slot-address controls, remaining loop/index operations, code size, and register/spill effects remain open. No package, staging, filing, or submission.",
+  "held_fixed": "lean_r1_fix source, 16-word blocks, 5 a=15 and 3 a=14 transforms per step, 238 powering steps",
+  "reopen_if": "the powering schedule or butterfly charge rule changes, or a rebuilt unrolled kernel is evaluated",
+  "supersedes": ["C1776"],
+  "peak_mem": "22.922985 ESTIMATED proof-tracked peak 8468640 B"
+}

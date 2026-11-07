@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.GCD (LEDGER)",
+ "question": "R3: control",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Same bound program at r=1: derived tree 2,435,877,439 (logs/bound_gcd_r1.txt) vs strict r1 observation 2,413,235,457 (arith 355,770,866); r2/r1 ratios: derived 19,187,264,087 / 2,435,877,439 = 7.877, observed 19,035,935,044 / 2,413,235,457 = 7.888, consistent for a 5x size (n log^2 n-like growth). Observation is 0.93 percent below the derived tree at r1, 0.79 percent at r2.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|LEDGER.GCD|LEDGER|R3. Two-point control with the same bound program at both round counts.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use",
+ "reopen_if": "the r2 entry is rebuilt (two-family template), the charging rules change (control ops, dispatch, address ops), or an r2 run disagrees with these numbers"
+}

@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json, exp_d1b.py, exp_d1b_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "state word v14 = block_len b",
+ "question": "Q4: alternatives",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Alternatives: the 55/63 length pair of the 2-round line is a differential device (cancellation in call K2 through m4/m5), not a cost lever at 3 rounds: with the cancel the round-0 state is equal but the message words m4, m5 differ again in rounds 1 and 2; measured under DOOR.d22 (6000 pairs, no biased digest bit left at 3 rounds). Unaligned layouts (x shifted by 1..3 bytes): 644 ops (traced, includes the shift code).",
+ "topic": "b3r3.INIT.v14.Q4",
+ "notes": "universe cell blake3-r3|INIT.v14|INIT|Q4. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. See DOOR.d22.",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "a legal value or layout that gives fewer than 595 ops per 7-lane batch, or a ledger line that charges a different count"
+}

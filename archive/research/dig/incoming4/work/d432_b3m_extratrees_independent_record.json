@@ -1,0 +1,23 @@
+{
+  "id": "D432-B3M-EXTRATREES-INDEPENDENT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "independent validation of B3M nonlinear step-rate predictor",
+  "question": "Does the fixed D431 ExtraTrees model generalize to fresh exact-counter samples?",
+  "labels": ["D", "Z"],
+  "status": "SAMPLED",
+  "number": "Twenty fresh WSL exact-counter samples with G=18f0e098 and seed D432-independent gave control [1.0,1.0], held-out r=0.6796754103, top-quarter ratio=1.2092425728, and permutation p=0.008 when scored by the fixed D431 model. This is finite LOCAL_ONLY validation; safe gain remains 0 because n=20, selector cost, larger-campaign stability, and rate-to-success linkage are unproved.",
+  "source": "our workflow: D432 preregistered independent ExtraTrees validation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D432_b3m_extratrees_independent.md; research/retest/t2/PREREG_D432_EXTRATREES_INDEPENDENT.md; research/retest/t2/D432_run_summary.json; research/gridwave6/b3_basextech_fh_class/mult_18f0e098_20.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured for exact counter/predictor; one-thread WSL run, 102.0 s",
+  "notes": "Independent finite validation only; no score/package/stage/filing/submission.",
+  "held_fixed": "D431 model, feature map, and PR858 no-transfer rule",
+  "reopen_if": "Larger independent campaign and a charged fixed selector are available"
+}

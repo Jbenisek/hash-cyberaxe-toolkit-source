@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH CheapLunch",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "degrees of freedom: k (outputs) and weights; the collision needs k = 1 and a second free input; not explored",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "No test. | universe cell poseidon-r1|ALT.CHEAPLUNCH|ALT|Q3",
+ "held_fixed": "r=1",
+ "reopen_if": "a CheapLunch table for compression-mode collisions"
+}

@@ -1,0 +1,24 @@
+# first bench round (base / fast; RR=3-size powering and m=250,000 half-gcd), T=6
+base rep1 POW m=976562 E=2^26+2^24+2^21+1 T=6 ck_g=4cccdfbf7ab46714 ck_F=e70518a8919198f6 ops=11641962517 thread_control=103365758 split_extra=480 algorithmic=11538596279 heap_peak=261522560
+fast rep1 POW m=976562 E=2^26+2^24+2^21+1 T=6 ck_g=4cccdfbf7ab46714 ck_F=297e0dd603fc18d7 ops=7955743509 thread_control=61006711 split_extra=1095374 algorithmic=7893641424 heap_peak=227968128
+base rep2 POW m=976562 E=2^26+2^24+2^21+1 T=6 ck_g=4cccdfbf7ab46714 ck_F=7da623f66bd5953c ops=11641962517 thread_control=103365758 split_extra=480 algorithmic=11538596279 heap_peak=261522560
+fast rep2 POW m=976562 E=2^26+2^24+2^21+1 T=6 ck_g=4cccdfbf7ab46714 ck_F=e70518a8919198f6 ops=7955743509 thread_control=61006711 split_extra=1095374 algorithmic=7893641424 heap_peak=227968128
+base rep3 POW m=976562 E=2^26+2^24+2^21+1 T=6 ck_g=4cccdfbf7ab46714 ck_F=e70518a8919198f6 ops=11641962517 thread_control=103365758 split_extra=480 algorithmic=11538596279 heap_peak=261522560
+fast rep3 POW m=976562 E=2^26+2^24+2^21+1 T=6 ck_g=4cccdfbf7ab46714 ck_F=c85239888d048c6a ops=7955743509 thread_control=61006711 split_extra=1095374 algorithmic=7893641424 heap_peak=227968128
+base rep1 GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=12484123453 thread_control=88960166 algorithmic=12395163287 heap_peak=107109952
+fast rep1 GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=10611737258 thread_control=239543286 algorithmic=10372165204 heap_peak=98721344
+base rep2 GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=12484123453 thread_control=88960166 algorithmic=12395163287 heap_peak=107109952
+fast rep2 GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=10611737258 thread_control=239543286 algorithmic=10372165204 heap_peak=98721344
+base rep3 GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=12484123453 thread_control=88960166 algorithmic=12395163287 heap_peak=107109952
+fast rep3 GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=10611737258 thread_control=239543286 algorithmic=10372165204 heap_peak=98721344
+
+[exited with code 0]
+# second round (split, r4-size)
+pow_base4_1.txt: POW m=4882812 E=2^29+2^27+2^24+1 T=6 ck_g=4c5c7efebd869c83 ck_F=8525681f572b11b9 ops=65376944407 thread_control=168651216 split_extra=300 algorithmic=65208292891 heap_peak=1139839040
+pow_base4_2.txt: POW m=4882812 E=2^29+2^27+2^24+1 T=6 ck_g=4c5c7efebd869c83 ck_F=4832c94f2acdac57 ops=65376944407 thread_control=168651216 split_extra=300 algorithmic=65208292891 heap_peak=1139839040
+pow_fast4_1.txt: POW m=4882812 E=2^29+2^27+2^24+1 T=6 ck_g=4c5c7efebd869c83 ck_F=6dd9b78d8cc23b5f ops=64378787038 thread_control=122138506 split_extra=124722 algorithmic=64256523810 heap_peak=1139839040
+pow_split4_1.txt: POW m=4882812 E=2^29+2^27+2^24+1 T=6 ck_g=4c5c7efebd869c83 ck_F=62d6f510d40e92fe ops=65336382867 thread_control=128089676 split_extra=300 algorithmic=65208292891 heap_peak=1139839040
+pow_split4_2.txt: 
+pow_split_1.txt: POW m=976562 E=2^26+2^24+2^21+1 T=6 ck_g=4cccdfbf7ab46714 ck_F=e70518a8919198f6 ops=11615506271 thread_control=76909512 split_extra=480 algorithmic=11538596279 heap_peak=261522560
+gcd_split_1.txt: GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=12683963083 thread_control=288799796 algorithmic=12395163287 heap_peak=107109952
+gcd_split_2.txt: GCD m=250000 d=3 T=6 ck_A=7c45d2b372e45ba7 ck_B=7ca972e8f2879484 lG=4 ck_G=933da2dddad0c974 ck_L=933da2dddad0c974 match=1 ops=12683963083 thread_control=288799796 algorithmic=12395163287 heap_peak=107109952

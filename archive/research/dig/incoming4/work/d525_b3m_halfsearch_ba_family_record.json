@@ -1,0 +1,23 @@
+{
+  "id": "D525-BLAKE3-R2-HALFSEARCH-BA-FAMILY-SWEEP-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgBA12/pkgBA18/pkgBA15/pkgBA16/pkgBA1516 halfsearch identity and self-tests",
+  "question": "Which unique halfsearch executables underlie the BA-family claim rows, and do their finite self-tests pass?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "BA12/BA18 share 8AA41D05... with claims 85.1349/71.4233; BA15 is C74E1738... claim 77.7853 and unregistered; BA16/BA1516 share DD8EBF6D... claims 70.4223/76.6771. Representative selftests all exit 0 with 16380 packed lanes and zero mismatches/bound failures; BA16 additionally G15 15953/15953 and kept 471/471. All current prefiles lack a recognized executable ledger block; no score credit.",
+  "source": "our workflow: D525 read-only halfsearch BA-family sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D525_b3m_halfsearch_ba_family_sweep.md; research/tools/build_pkg/scratch/pkgBA12/pkg/blake3-r2/experiments/halfsearch.py; research/tools/build_pkg/scratch/pkgBA15/pkg/blake3-r2/experiments/halfsearch.py; research/tools/build_pkg/scratch/pkgBA16/pkg/blake3-r2/experiments/halfsearch.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this sweep",
+  "notes": "Copy/claim identity and finite self-tests only; no score/package/stage/filing/submission.",
+  "held_fixed": "five current scratch package copies; three unique executable hashes; one-thread selftests",
+  "reopen_if": "changed halfsearch.py, repaired ledger, or owner/organizer acceptance ruling arrives"
+}

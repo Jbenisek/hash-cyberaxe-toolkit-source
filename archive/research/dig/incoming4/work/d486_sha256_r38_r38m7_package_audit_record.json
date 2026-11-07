@@ -1,0 +1,23 @@
+{
+  "id": "D486-SHA256-R38-R38M7-PACKAGE-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "read-only audit of newer R38M7 scratch package",
+  "question": "Does the newer R38M7 scratch package pass its arithmetic and finite self-test checks?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R38M7 prefile is SOME FAIL only on the internal label pkgR38M6 in the note and proof header; all arithmetic, dependency, size, LF, and known-good checks pass. Exact N=789782238349839437021687302533 and time_log2=87.90375; shipped selftest exits 0 and reports 11 verified 38-step semi-free-start witnesses with 0 failed checks.",
+  "source": "our workflow: D486 read-only newer scratch-package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D486_new_scratch_package_audit.md; research/launch/prefile_check.py; research/tools/build_pkg/scratch/pkgR38M7/pkg/sha256-r38/experiments/a0lean38.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite local evidence only. The internal label must be cleaned for a clean prefile; semi-free-start witnesses are not full collisions and declared H premises remain. No package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; existing claim ledger; one-thread read-only commands",
+  "reopen_if": "package contents change or an organizer prefile ruling requires a new audit"
+}

@@ -1,0 +1,4 @@
+6-bit double-kernel classes: 8  [2.2s]
+numpy weight check ok
+class 4: relaxation inconsistent for every b4 of every mid with w4<=13  [9.1s]
+class 5: relaxation inconsistent for every b4 of every mid with w4<=13  [12.5s]

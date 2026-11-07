@@ -1,0 +1,434 @@
+{
+ "P1.L0.ARC": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.3
+ },
+ "P1.L0.SBOX": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 15625,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 15625,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 15625,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 0.6
+ },
+ "P1.L0.MDS": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.4
+ },
+ "P1.L1.ARC": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.3
+ },
+ "P1.L1.SBOX": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.3
+ },
+ "P1.L1.MDS": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.3
+ },
+ "P1.L2.ARC": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.8
+ },
+ "P1.L2.SBOX": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.5
+ },
+ "P1.L2.MDS": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.4
+ },
+ "R60.L0.ARC": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.4
+ },
+ "R60.L0.SBOX": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.5
+ },
+ "R60.L0.MDS": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.4
+ },
+ "R60.L1.ARC": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.3
+ },
+ "R60.L1.SBOX": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.2
+ },
+ "R60.L1.MDS": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.3
+ },
+ "R60.L2.ARC": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.2
+ },
+ "R60.L2.SBOX": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 2.9
+ },
+ "R60.L2.MDS": {
+  "lines": [
+   {
+    "j": 0,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 1,
+    "deg": 78125,
+    "lc_nonzero": true
+   },
+   {
+    "j": 2,
+    "deg": 78125,
+    "lc_nonzero": true
+   }
+  ],
+  "hash_same": [
+   0,
+   4
+  ],
+  "sec": 3.1
+ }
+}

@@ -1,0 +1,2 @@
+counter word T0 moved (20000 trials): round-0 output X unchanged in 20000; all held words kept in 0; held words broken: {'Y14': 20000}
+counter word T1 moved (20000 trials): round-0 output X unchanged in 20000; all held words kept in 0; held words broken: {'Y4': 20000, 'Y9': 20000}

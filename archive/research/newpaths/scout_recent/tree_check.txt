@@ -1,0 +1,1 @@
+360 messages: organizer digest == tree_root(prefix CVs, CV_t(last chunk)) in all; CV_t = compress(IV, block, counter t, len, flags 3)

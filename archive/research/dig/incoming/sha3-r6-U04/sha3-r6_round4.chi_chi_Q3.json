@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "round idx 4 chi (leader's round-5 cone), key = digest lanes (0..3,0) x z=0..34 (140 bits)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": null,
+ "evidence": "research/dig/incoming/sha3-r6-U04/work/cone5.py; research/dig/incoming/sha3-r6-U04/work/cone5_out.json",
+ "id": "sha3-r6|round4.chi|chi|Q3",
+ "question": "How much log2 freedom is left at round 4 chi (state bits the key does not see)?",
+ "labels": [
+  "C"
+ ],
+ "status": "COMPUTED",
+ "number": "chi4 output: 1600-1505 = 95 bits (2^95) unseen by the key; chi4 input: 0 bits free (all 1600 used); key itself sees 140 of 256 digest bits, 116 digest bits outside the key. Variants: z=0..28 gives 238 free output bits, 0 input.",
+ "topic": "sha3r6.cone.round4.freedom",
+ "notes": "Universe cell sha3-r6|round4.chi|chi|Q3. POSSIBLE LEVER, one measurement only, not chased: the key z-set matters. Same 140-bit key size with z-set {7i mod 64, i<35} gives chi4-output cone 1163 and chi4-input cone 1368 (vs 1505/1600 contiguous); 300 random 35-subsets give output cone 1258-1375. A smaller cone means less round-5 work, but a non-contiguous key would break the leader's prefix/Gray structure and the effect on the leader's 2.19 ops/message is unknown; gain in bits not computed. Own Keccak-f (validated: 24-round perm reproduces hashlib sha3_256('') digest). Key z=0..34 is the natural reading of '35 planes x 4 lanes' (leader z-set unpublished); contiguous 29 planes gives 1362 (leader 1363), no prefix matches leader's 140/175/1363 jointly. Round idx 4 = 1-based round 5; the leader's 2.19 ops figure itself is not reproduced."
+}

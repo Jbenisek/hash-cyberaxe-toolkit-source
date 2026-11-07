@@ -1,0 +1,4 @@
+vt38 W cells rows 0..15 (mask bits / diff): [(0, 0, '0x0'), (1, 0, '0x0'), (2, 0, '0x0'), (3, 0, '0x0'), (4, 0, '0x0'), (5, 0, '0x0'), (6, 0, '0x0'), (7, 1, '0x20000000'), (8, 3, '0x4400800'), (9, 1, '0x20000000'), (10, 9, '0x50112aa'), (11, 3, '0x81400'), (12, 0, '0x0'), (13, 0, '0x0'), (14, 0, '0x0'), (15, 3, '0x4400800')]
+row 7: value-part failures 8773, difference-part failures 8773 (of 131072)
+row 8: value-part failures 2948, difference-part failures 2948 (of 131072)
+row 9: value-part failures 22889, difference-part failures 22889 (of 131072)

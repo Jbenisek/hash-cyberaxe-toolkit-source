@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "main loop: 595 operations per batch of 7 chain steps (85 per step, 0.133 compression)",
+ "question": "R4 score sensitivity of the batch operation count (best case the program executes)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Per operation per batch 0.00241 bit (595 -> 594: -0.00241; 596: +0.00240); -10 operations -0.0243; -30 -0.0741; -59 -0.1495; +10 +0.0239. The main loop is 99.439 percent of the ledger, so the whole score is this count: a free main loop would save 7.48 bit. The count is the executed count (no branch skips part of the batch): 595 is both bound and best case. Alternatives in MACHINE.WIDTH: 592 operations at 6 lanes; 595 at 7 lanes is the per-step optimum of the family tested.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|LEDGER.LOOP|LEDGER|R4. Exact ledger fractions, only PH varied.",
+ "held_fixed": "ledger of the filed entry; filter 4, control 3 per 16 batches",
+ "reopen_if": "a correct batch with fewer than 595 operations at 7 lanes of 36 bits (each operation saved is 0.0024 bit)",
+ "gain_basis": "T"
+}

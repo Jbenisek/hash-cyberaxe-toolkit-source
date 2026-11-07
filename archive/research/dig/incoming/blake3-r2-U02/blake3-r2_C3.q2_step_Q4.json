@@ -1,0 +1,19 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "labels": [
+  "P"
+ ],
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "C3.q2 (c1,b1) pinned constants (Fact P)",
+ "question": "Q4 alternative constant pairs (Y3,Y11): recompute Fact P outputs for the 64 (Y3,Y11) cells on the current ledger",
+ "status": "COMPUTED",
+ "number": "64 (Y3,Y11) cells (Y3 bits 18..16 x Y11 bits 19,15,2 around 8127c181/7af77f38): 8 realizable by Fact P, 56 not; whole profile has 16 Y3 x 2 Y11 (bit-31 orbits of the same 8 cells); 512 constructed pins replayed through C3: all equal b2,d2 with the profile D3,D11. q2 (c1,b1): c1=Y11-ror(d1^Y3,8) must satisfy c1^(c1+D11)=rol(Y11^(Y11+D11),12): passes in 8/64 cells (Y11=7af77f38 only); the 7 other settings of Y11 bits 19,15,2 fail here in all 8 Y3 patterns (56/64 fail). Ledger (beta* 18b0e098, S 6 outcomes, per 2^83): 67,633,152 at Y3 8120c181,8123c181,8124c181,8127c181 and 0 at 8121c181,8122c181,8125c181,8126c181 (y16!=y17 gate); control 8127c181 gives 71,698,432 whole / 67,633,152 S; no cell beats the record.",
+ "evidence": "research/dig/incoming/blake3-r2-U02/work/factp.py; research/dig/incoming/blake3-r2-U02/work/cells64.py; research/dig/incoming/blake3-r2-U02/work/cells64.json; research/dig/incoming/blake3-r2-U02/work/cc_cell.py; research/dig/incoming/blake3-r2-U02/work/cc_out.jsonl; research/pkg17/count/count_class.py (reused unchanged)",
+ "notes": "Universe cell blake3-r2|C3.q2|step|Q4. Own enumeration (factp.py: carry-cube solver, validated on the record pins -> Y3 8127c181/7edf3e7e, Y11 7af77f38/850000c3, d2 bbfbdffe, b2 76f7aefd; valid-R count for D11 = 133,742 agrees with the realize/ report's 66,871 betas x2) plus the existing exact beta* counter count_class.py (reproduces 71,698,432 / 67,633,152 on the control; its width-6 brute-force self-test is the validation). Scope: record profile (delta=-8, D3=fdb77cfd, D11=0a08818b, eta 830303cf, length XOR 8 so W13 top byte 0); other profiles not enumerated here. Ledger = rate term only (2^11 x part_S); filter (1)/E-count/solver terms for other Y3 were not recomputed (not needed: no cell raises the rate). Y11 variant check: Y11=7af77f3c (bit 2 flipped, no pin exists) gives the same beta* part 71,698,432 / 67,633,152, so those Y11 bits are free in rate but unrealizable. Other betas: the old +177.69 (1.1e-6 relative) at 8123/8124 lies outside beta* and is not used by the record. Quarter attribution in a 4-quarter call is by which equality fails; the grid verdict is the same for all four rows."
+}

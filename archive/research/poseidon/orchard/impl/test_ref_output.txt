@@ -1,0 +1,7 @@
+permutation vectors 11/11, hash vectors 11/11, byte-level digest 11/11
+hash vector 0: nk=0 rho=1 out=0x062ff1c32bb0ef109d6a1bc9399a083eed83c2a7fb54cdbe389d32a011d75883
+hash vector 0 out LE bytes: 8358d711a0329d38becd54fba7c283ed3e089a39c91b6a9d10efb02bc3f12f06
+negative controls differ: ok
+hash_reduced(r=56) == hash_full on 20 random inputs
+schedule(1) = [0, 1, 2, 3, 4, 60, 61, 62, 63]  schedule(2) = [0, 1, 2, 3, 4, 5, 60, 61, 62, 63]
+noncanonical inputs rejected: ok

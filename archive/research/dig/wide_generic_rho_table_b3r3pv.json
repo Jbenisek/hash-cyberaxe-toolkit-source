@@ -1,0 +1,20 @@
+{
+  "id": "WIDE-GENERIC-RHO-TABLE-B3R3PV-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3R3PV generic rho table capacity",
+  "question": "Does the free 1 MiB permit a larger B3R3PV DP table?",
+  "labels": ["K", "E"],
+  "status": "COMPUTED",
+  "number": "Search memory is 1048562 bytes, leaving 14 bytes; 25-byte entries permit zero additional entries. Exact delta and credited gain are both zero.",
+  "source": "B3R3PV proof.md Section 3.6 exact memory layout",
+  "own_test": true,
+  "evidence": "research/retest/wide_1014/generic_rho_table_audit.py; research/sol_answer_WIDE_generic_rho_table.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3-r3.wide.generic-rho-table",
+  "peak_mem": 20000000,
+  "notes": "Brent/Floyd replacement remains unpriced/open; no package/staging/filing/submission."
+}

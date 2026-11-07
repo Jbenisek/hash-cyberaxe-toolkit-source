@@ -1,0 +1,23 @@
+{
+  "id": "D502-SHA256-R37-R37X2-SELFTEST-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "R37X2 shipped xtab self-test",
+  "question": "Does the distinct R37X2 xtab executable pass its finite self-test despite the registry prefile failure?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Prefile internally consistent except known-good registry; N=3432967497532751581983; time_log2=60.17144; selftest exits 0 with F7 violations 0, 155092 fibre lanes/108798 good pairs/0 mismatches, packed-u 6000/0 mismatches, and mask lookup mismatches 0.",
+  "source": "our workflow: D502 read-only R37X2 self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D502_r37x2_selftest.md; research/tools/build_pkg/scratch/pkgR37X2/pkg/sha256-r37/claim.json; research/tools/build_pkg/scratch/pkgR37X2/pkg/sha256-r37/experiments/xtab.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; known-good registry failure remains. No score/package/stage/filing/submission.",
+  "held_fixed": "R37X2 package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "known-good registry/packaging changes or a new source artifact arrives"
+}

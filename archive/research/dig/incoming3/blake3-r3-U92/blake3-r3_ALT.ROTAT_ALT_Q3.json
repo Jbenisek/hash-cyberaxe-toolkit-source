@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "rotational relation: best rotation amount",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "bits the digest must satisfy for d = rotl_k d: 8*(32-gcd(k,32)); minimum 128 at k=16, 192 at k=8,24, 224 at k=4,12,20,28, 240 at k=2,6,10,..., 248 at odd k; the score-optimal k is 16 and it still costs 2^128 on top of the relation probability",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_rot.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Exact arithmetic over all k=1..31; relation probability itself not included.",
+ "held_fixed": "digest uniform premise (H1)",
+ "reopen_if": "a digest-word structure making rotl_16-periodic outputs more likely than 2^-16 per word",
+ "topic": "blake3-r3|ALT.ROTAT|ALT|Q3"
+}

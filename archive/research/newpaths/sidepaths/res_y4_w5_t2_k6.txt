@@ -1,0 +1,7 @@
+SOL 0 1 2 3 15 21
+SOL 0 1 2 3 15 44
+SOL 0 1 2 3 15 48
+SOL 0 1 2 3 21 44
+SOL 0 1 2 3 21 48
+DONE k=6 proc=0/1 found=47110 nodes=209992573
+exit=0 secs=83

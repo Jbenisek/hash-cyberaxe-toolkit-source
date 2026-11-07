@@ -1,0 +1,22 @@
+{
+  "id": "D402-SHA3-R6-DIRECT8-SETUP-CHARGE-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "direct8 generated setup charge",
+  "question": "What exact setup charge would the D401 direct-plane predicate have before rebuilding its key/list kernel?",
+  "labels": ["C", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "In-memory execution of the checked-in generator with direct forms gives point counts [1347,11651,14725,13152,3376,192], sum 44443, with register peaks [10,28,28,28,26,9]. All 320 input planes remain loaded, so pop_D is unchanged. Conditional setup arithmetic is S_g=4,489,239,685,249 per group versus 4,594,894,479,069, saving 105,654,793,820 operations (0.0335606053 bits of the setup subtotal).",
+  "source": "our workflow: source-level generated direct8 setup audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D402_sha3r6_direct8_setup_charge.md; research/retest/sha3_r6_alt8/direct8_setup_audit.py; research/retest/sha3_r6_alt8/direct8_setup_audit.txt; research/tools/build_pkg/scratch/pkgS6K/work/new_fes.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.25,
+  "prior": 0.05,
+  "gain_basis": "C",
+  "notes": "Setup-only conditional arithmetic. The current kernel assumes digest filter bits and omits them from the key; direct8 requires a new key/list kernel, KAT, register/spill, memory, survivor, and pair-rate proof. No score or package credit.",
+  "reopen_if": "A full direct8 FES/list/kernel route is generated and charged, with reference equivalence and organizer-style survivor/pair evidence."
+}

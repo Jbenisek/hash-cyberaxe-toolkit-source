@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "REFUTED: lane_cost/F1-recovery-undercharge (ruling 77715f8b, blake3-pareto, exploratory lane, policy paired-lanes-v1)",
+ "question": "R3 control: metered recovery of the program against the filed 659 per batch",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Metered recovery batches never exceed capr (2,225 of 3,136 at n = 32, 119 of 256 at n = 22); per batch the exact need 624 is below the charge 659 (positive control: the price 620 is below 624, so the earlier charge fails the same check). The returned pairs verify (every success is a collision at width n).",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/ctrl.py, research/dig/incoming3/blake3-r3-U76/work/ctrl22.out, research/dig/incoming3/blake3-r3-U76/work/ctrl32.out",
+ "notes": "universe cell blake3-r3|JUDGE.JRECOV|JUDGE|R3. Counts of Python batches, priced by the ledger formula; no machine-code build.",
+ "held_fixed": "rho.py at n = 22, 32",
+ "reopen_if": "a recovery step that needs more than 659 operations per batch",
+ "gain_basis": "count"
+}

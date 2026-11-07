@@ -1,0 +1,1 @@
+2026/1281	Resultants Meet Resultant: Improving CICO-1 and CICO-2 Attacks on ZK-Friendly Permutations	owner_download	https://eprint.iacr.org/2026/1281.pdf

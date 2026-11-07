@@ -1,0 +1,19 @@
+r=1 ncentres=2 seed=7 m=39062
+INIT arith=17359 other=153554 total=170913
+lean-pow breakdown: newton total=86672156 arith=21679385 | prefix+scale total=781411 | loop steps=238 total=12551925867 arith=3515054480 per-step total=52739184 arith=14769136
+CENTRE 0 j=1 degG=0 success=0 arith=3893980444 all=15081617023 sec=144.3
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  build g                                  arith=     1436260 other=    27561870 total=    28998130     1.0s peak=3347168
+  S^((p-1)/2) mod g                        arith=  3536772927 other=  9102606507 total= 12639379434   130.6s peak=8468544
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770866 other=  2057464591 total=  2413235457    12.7s peak=8468640
+lean-pow breakdown: newton total=86638920 arith=21674765 | prefix+scale total=781411 | loop steps=238 total=12551925867 arith=3515054480 per-step total=52739184 arith=14769136
+CENTRE 1 j=2 degG=0 success=0 arith=3893975824 all=15081583787 sec=122.3
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  build g                                  arith=     1436260 other=    27561870 total=    28998130     0.8s peak=3347168
+  S^((p-1)/2) mod g                        arith=  3536768307 other=  9102577891 total= 12639346198   110.6s peak=8468544
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770866 other=  2057464591 total=  2413235457    10.9s peak=8468640
+SUMMARY r=1 centres=2 success=0 total_all=30163371723 total_arith=7787973627 units=127271610.6 log2_units=26.9233 heap_peak=8468640 secs=266.6
+GAPS gcd=3989065 root=0
+TYPES add=2715539521 sub=2534837883 mul=2470952111 sqr=66644112 ld=2997156220 st=1663301116 ctl=17668344662 rnd=2 perm=46596096

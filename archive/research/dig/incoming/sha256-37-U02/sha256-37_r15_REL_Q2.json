@@ -1,0 +1,19 @@
+{
+ "hash": "sha256-37",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "row_i": 15,
+ "row_j": 18,
+ "object": "row15 relation E15[4]=E16[4] (+ at bit 4 of E15/E16 and its x2 line)",
+ "question": "Q2: drop the relation E15[4]=E16[4] singly: do violators (E15[4]!=E16[4]) survive to the event?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "Violators E15[4]!=E16[4] (dropq E16 00000010; dropx2 E15; lin E15[4]^E16[4]=1) pass rows 16 and 17 at the printed rate (accepted 4,118 and 65,673 of 1,048,576 vs 4,113 and 65,511) and die at row 18: accepted 0 of 1,048,576 vs 131,780 for the holders; seeds 1 and 2 both dead, 0 samples reach rows 22..36, EXACT 0. Dropping the relation therefore adds no EXACT sample; dropped/required = 1 on the prefix (violator share at row 18 below 3 in 1,048,576 per seed, rule of three). Control (same drop, relation re-added as lin =0) reproduces the baseline bit for bit: prefix -58.9863, EXACT 323.",
+ "evidence": "research/dig/incoming/sha256-37-U02/work/win15.sh; research/dig/incoming/sha256-37-U02/work/out_e15z.txt; research/dig/incoming/sha256-37-U02/work/out_e15V.txt",
+ "notes": "Universe cell sha256-37|r15|REL|Q2. S37-E7 called it implied (untested): it is not implied by rows 15..17, it is NECESSARY at row 18 (prefix kill, not run to the event because no sample survives). Both copies of the relation are dropped (the + in E16 and the x2 line), as in the R17-d trap. traillab window rows 22 36, event out, np 4096, mt 1024, 2 seeds; pass counts are SMC proposals. No gain."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D512-BLAKE3-R2-PKGCN-CM-SHARED-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgCN/pkgCM shared frontline prefile and self-test",
+  "question": "Does the shared pkgCN/pkgCM executable pass its finite self-test, and what defects remain in the draft copies?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgCN and pkgCM executable hash DE7CD058... identical; prefile SOME FAIL (no ledger appendix/exact N, internal labels audit/fallback); claim time_log2=62.7934; selftest exits 0 with 256 automata cases, 512 T1/T2 cases, precheck, XG, F1_fill=224, all halt drills, and all gate drills passing.",
+  "source": "our workflow: D512 read-only pkgCN/pkgCM shared audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D512_b3m_pkgcn_audit.md; research/tools/build_pkg/scratch/pkgCN/pkg/blake3-r2/experiments/frontline.py; research/tools/build_pkg/scratch/pkgCM/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; shared executable bytes cover both copies, but current drafts have no exact ledger N and internal-label defects. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgCN/pkgCM package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package ledger/note repair or a new owner artifact arrives"
+}

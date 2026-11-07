@@ -1,0 +1,5 @@
+imposed bits f from vt38 CELL/PLUS (rows 17..22): [10, 11, 12, 6, 6, 1]  mask/plus overlaps: [0, 0, 0, 0, 0, 0]  f23 = 6  tail weight log2 = -2.098032
+fresh_m8675309.log: 32768 run lines, keys != runkey(master 8675309, r): 0, max |log2Z recomputed from counts - logged| = 5.00e-07
+fresh_m8675309.log: n 32768 (distinct r 32768), mean 2^-100.99982, rel sd 0.0255, t 2.3265, one-sided 99% bound 2^-101.00030; min 2^-101.1833 max 2^-100.8575; skew 0.052 exkurt 0.015; hits 140304183 bad 0
+   batch means (128 batches of 256): bound 2^-101.00031; batch-mean sd / (run sd/sqrt(k)) = 1.021
+fresh_m8675309.a0: SR(sum |R_j|) 191773672732; accepted 134217728, chi2 vs |R_j|/SR 202.5 (255 df, p 0.993); tail-rate heterogeneity chi2 220.2 (255 df, p 0.944); per-A0 log2 rate rel. to mean: min -0.0046 max +0.0066 sd 0.0018

@@ -1,0 +1,29 @@
+r=2 line=0 m=195312
+lean-pow breakdown: newton total=254304810 arith=99688081 | prefix+scale total=2539833 | loop steps=236 total=41148215266 arith=16031889221 per-step total=174356844 arith=67931733
+trial 1 centre 1: gcd degree 1, charged 8338576731
+TRIALS 1
+  init (twiddle table)                     arith=       66511 other=      470714 total=      537225     0.0s peak=2237120
+  line setup                               arith=         391 other=        3519 total=        3910     0.0s peak=2237120
+  A: centre c_i = i                        arith=           1 other=           5 total=           6     0.0s peak=8487616
+  B: build g                               arith=     6421153 other=   136166527 total=   142587680     1.9s peak=14783168
+  C: S^((p-1)/2) mod g                     arith= 16131772614 other= 25273593477 total= 41405366091   256.4s peak=37774016
+  D: gcd(g, S^h - 1) (half-gcd)            arith=  2578407840 other=  5760168905 total=  8338576745    43.9s peak=43123392
+  E: root isolation                        arith=           2 other=           7 total=           9     0.0s peak=23487168
+  F: sqrt + map back                       arith=        3066 other=       39596 total=       42662     0.0s peak=23487168
+  G: verification (2 reference hashes)     arith=         516 other=        4676 total=        5192     0.0s peak=23487168
+  H: canonical encoding of the output      arith=           6 other=        4638 total=        4644     0.0s peak=23487168
+TRIALROW 1 centre 1 degG 1 gcd 8338576731 total 49886578385
+TRIALROW 0 outside the trials (init, line setup, output encoding) total 545779
+RECONCILE stages=49887124164 trials=49887124164 counters=49887124164 ok=1
+RESULT found=1 success=1 roots_degree=1
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=49887124164 total_arith=18716672100 units=193360946.4 log2_units=27.5267 heap_peak=43123392 secs=302.3
+PEAKLIVE allocations=11 payload=37624352 headers=704
+TYPES add=6430156255 sub=6147280813 mul=5996818136 sqr=142416896 ld=7681111909 st=4016156377 ctl=19371734050 rnd=0 perm=101449728
+COLLISION nk1  0x1e9184a9a5a1539378059e3b69f23b79673cdb74d72b6f5a84ee38db72abfda5
+COLLISION rho1 0x01919ee9056d2c96f89a12c78f41a2e1cf177323a1eca609bc9b2cd5583a85fd
+COLLISION nk2  0x13e388f2207d5702ae743d0e00eac6fe7128fadfdb84607df58235957e60d88f
+COLLISION rho2 0x20d04e9f04eda131112868489d41071de943fe9bff92b168a2c60f77a3ad28b5
+COLLISION digest 0x3ab2143957ab5cfff46c586d178bda5719070a9795fdbf25272f32cd82cf3451
+COLLISION centre 0x0000000000000000000000000000000000000000000000000000000000000001
+EXIT 0

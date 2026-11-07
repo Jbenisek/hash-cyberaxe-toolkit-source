@@ -1,0 +1,2 @@
+system fixed.sys: N=100 E=96 F=4  rho(all,{})=0  covered words=100
+--- toy counts at w=6 (first clusters)

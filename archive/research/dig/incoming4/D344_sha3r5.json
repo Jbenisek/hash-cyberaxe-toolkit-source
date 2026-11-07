@@ -1,0 +1,19 @@
+{
+  "id": "D344-SHA3R5-INVENTORY-DELTA",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "post-D250 filing inventory delta",
+  "question": "Did later filing-log rows change the accepted SHA3-r5 comparison line?",
+  "labels": ["N"],
+  "status": "LOCAL_ONLY",
+  "number": "0 accepted-line changes; S5Z 32.79669 remains validating",
+  "source": "our workflow: filing-inventory-delta",
+  "own_test": true,
+  "evidence": "research/sol_answer_D344_current_inventory_delta.md; research/FILINGS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "The 32.79157 row is refuted by the Appendix-J small-sign ruling.",
+  "peak_mem": "0 FREE"
+}

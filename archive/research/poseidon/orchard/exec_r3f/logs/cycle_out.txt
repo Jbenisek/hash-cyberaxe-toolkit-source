@@ -1,0 +1,15 @@
+tr: warning: an unescaped backslash at end of string is not portable
+cycle: source-hash=a9bf29e756853ada
+memmeter peak 275972096 bytes, wall 5813.426 s, exit 0
+COLLISION digest 0x325165c946fe20c28af82e940ec89fca03e6fb74afa1a3fa28a54e552a1f12ec
+COLLISION centre 0x0000000000000000000000000000000000000000000000000000000000000001
+logs/exec_run.txt collision verified reference ok organizer ok
+PACKAGE FAILED
+ "secs": 5813.426,
+ "trials": 1
+}
+Traceback (most recent call last):
+  File "./research/poseidon/orchard/exec_r3f/build_package.py", line 205, in <module>
+    left = re.findall(r'@@[A-Z0-9_]+@@', nt); assert not left, left
+                                                     ^^^^^^^^
+AssertionError: ['@@ARENA@@', '@@EXTENT@@']

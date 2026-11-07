@@ -1,0 +1,20 @@
+BASE N = 3436742575482187376270  log2(N/430) = 62.79333893569689227  claim 62.7934
+unit of a masked open (with premium) = 7958682521846785300
+B1 descriptor: one-add address (-3), tree takes n0=0 (-2), JE=JU>>7 (-2)   dN=55710777652927497100
+    N=3381031797829259879170 bits=0.02357820814039 claim=62.7698 cert=True  dN = 7 (A+16384) - 896 (K+1)
+B1+ext (iv,v,vi) masked open 144 -> 133                                    dN=87545507465436731356
+    N=3349197068016750644914 bits=0.03722652539006 claim=62.7562 cert=True  dN = 11 (A+16384) - 1408 (K+1) - 2^38
+B1+(iv,v) only, open 144 -> 134                                            dN=79586825218467853000
+    N=3357155750263719523270 bits=0.03380232236614 claim=62.7596 cert=True  no code-size change
+B2 immediates: rep 59->58 (tail 45->44), fallback U_NEST 21->11            dN=4413677460857361155
+    N=3432328898021330015115 bits=0.00185398899567 claim=62.7915 cert=True  dN = 2341 K + 1280 (K+1)
+B3 carry word reuses w8 of the omega side (20 -> 19 per rep batch)         dN=2853471122857522216
+    N=3433889104359329854054 bits=0.00119834363615 claim=62.7922 cert=True  dN = 2341 (K+1)
+B4 PX by the kept representative omega word (selection 13 -> 11)           dN=15917364906254617128
+    N=3420825210575932759142 bits=0.00669740216111 claim=62.7867 cert=True  dN = 2 (A+16384) - 256 (K+1) - 2^37
+B1+B4 (two changes) open 144 -> 135                                        dN=71628142559182114228
+    N=3365114432923005262042 bits=0.03038622719104 claim=62.7630 cert=True  joint
+JOINT B1+B2+B3 (not one change)                                            dN=62977926236642380471
+    N=3373764649245544995799 bits=0.02668245661044 claim=62.7667 cert=True  joint
+checks: 12800 chunk words JE == JU >> 7; 0 empty first chunks have n1 = 0; carry word and da identities OK
+ALL_OK

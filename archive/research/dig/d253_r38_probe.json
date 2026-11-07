@@ -1,0 +1,21 @@
+{
+  "id": "D253-SHA256-R38-ROW17-DEPENDENCY-PROBE-20261013",
+  "hash": "sha256-38",
+  "row_i": 17,
+  "row_j": 18,
+  "object": "row-17 exact DP dependency on prefix offsets",
+  "question": "Does the fixed-q row-17 DP count change under local prefix-derived carry offsets?",
+  "labels": ["C", "S", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Published fixed-q count is 65536; seven one-bit/word offset probes all remain 65536; 64 random offset pairs range from 0 to 65536, so the count is not invariant under arbitrary offsets.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/r38_prefix_dependency_probe.py; research/retest/r38_prefix_dependency_probe.json",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "notes": "Exact local dependency probe with the published q held fixed. It is not a valid-prefix generator and does not replay rows 19--37; therefore it cannot close the universal r38 prefix-generality cell or provide filing credit.",
+  "held_fixed": "Published q=(ex,ax,ey,ay,wx) and row-17 constraint masks; varied only local ca/ce/cy offsets.",
+  "reopen_if": "Repeat the exact DP and full rows 19--37 over independently generated valid SHA-256-r38 prefixes, or prove prefix invariance."
+}

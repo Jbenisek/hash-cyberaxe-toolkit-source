@@ -1,0 +1,23 @@
+{
+  "id": "D249-B3R3-SPIDER-DIFF-20261013",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "bounded three-round BLAKE3 single/two-word differential families",
+  "question": "Do bounded single/two-word differential families produce low-active paths or digest-equal pairs?",
+  "labels": ["D", "Z", "S"],
+  "status": "LOCAL_ONLY",
+  "number": "Exp1: 622592 sampled pairs (262144 one-word xor/add and 491520 two-word xor), no digest-equal pair. Exp2: 512 one-bit xor classes x 32768 = 16777216 pairs; maximum digest-equal count is 1/32768, with p0 max 0.50262451171875.",
+  "source": "our workflow: b3r3-spider-diff",
+  "own_test": true,
+  "evidence": "research/blake3_r3/spider_diff/exp1.py; research/blake3_r3/spider_diff/exp2.py; research/blake3_r3/spider_diff/exp1.pkl; research/blake3_r3/spider_diff/exp2.pkl; research/sol_answer_B3R3-spider-diff-20261013.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "b3r3.spider-diff.q4",
+  "held_fixed": "Local three-round BLAKE3 vector engine; one-word xor/add differences; selected two-word xor differences; deterministic seeds 1 and 2; sample sizes stated in number.",
+  "reopen_if": "A full attack-weighted differential search or a proved mode-specific path becomes available.",
+  "notes": "Bounded sampled evidence only. The mode-conditioned survival values are finite-sample control statistics, not a universal probability or filing premise. No score credit, package, staging, or submission.",
+  "kind": null
+}

@@ -1,0 +1,44 @@
+{
+ "schema_version": 3,
+ "target_profile": "poseidon-orchard-r31-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 31,
+ "claim": {
+  "time_log2": 126.22441,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 20,
+  "preprocessing_log2": 39,
+  "success_probability": 0.39,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Two distinct 64-byte messages with equal digests for the Orchard hash with 31 partial rounds (poseidon-orchard-r31-prefix-v1), found as a collision F(x) = F(y), x != y, of the walk F(x) = digest(message(kappa x - E0_0)) / OUTSCALE_kappa: message() is the injective parametrisation of the input line on which rounds 0 and 1 are affine, kappa one of 4 fixed nonzero field elements drawn uniformly (the coins at which one step constant is 1), start x_0 a random 254-bit coin. Plain birthday search, one trail with distinguished points x < DELTA, one table; the success probability uses no property of the rounds.",
+  "Cost model orchard-field-ram-v2, C = 867. Prices used: canonical field ADD and MUL 1/C each; every other primitive 256-bit word operation (AND, OR, shift, compare, branch, register move, aligned load or store, random word) 1/C. No permutation call is charged as a unit: every evaluation executes the 506-operation step program (204 ADD, 302 MUL; proof.md Section 2, listing in Appendix C), an equivalent form of rounds 2-63. The per-attempt constants are computed into a declared file of 261 256-bit registers (SETUP_D = 866 operations, charged), counted in memory; arithmetic takes register operands; instructions are 4 bytes.",
+  "Ledger (proof.md Section 6, instruction listings): a trail step is 506 + 2 operations, plus 2 per block of 32 unrolled steps; a recovery evaluation at most 506 + 6, at most 3 G + d - 1 of them; table scan, insertion, bisection, constant writes, the setup, the message roots are at most 15,134,370,573 operations. The offline derivation of the constants and parameters is bounded in proof.md Section 6a by 2^48 word operations (literal PREP_OPS), inside time_log2 and also declared as preprocessing_log2 = 39 (one quantity, not added twice). time_log2 is the full budget with every halt charged at its limit: S = n + d trail steps, log2 T = 126.224401, claimed 126.22441 (rounded up). One attempt; no restart, amplification or advice.",
+  "Memory: 28,223 table entries of one 32-byte word (low 128 bits of the value in the high half, index in the low half), a side array of 16-bit high parts (1,764 words), the start word, code at most 17,585 instructions at 4 bytes, constants, the 261-register file and the per-attempt setup memory: 1,048,548 bytes, below 2^20 (proof.md Section 7; the code term and the word layout are derived there).",
+  "Success probability at least 0.39: Lemma 2 (proof.md Section 5) proves 0.39000000001158742890 (at least 0.39) for a uniformly random function at the filed budget, with explicit terms for the trail, detection, table, lockstep and positioning. H1 (the only premise, score-critical, the fixed-map premise of the published r = 23 .. 56 entries of this lineage) states that each fixed map F_kappa behaves like a uniformly random function for this search, so that the search reaches 0.39 at the filed budget; measurements at reduced width are in proof.md Section 8.",
+  "The program is printed in full in proof.md Appendix B (standard library only); the step program in Appendix C. One organizer-run experiment is declared (lowbits-birthday, python-message-pairs-v1, event digest-xor-mask; source experiments/exp_lowbits.py): agreement of the first 14 bits of this target's own digest (proof.md Section 9). No full collision is produced or claimed; the claim is the cost of the search."
+ ],
+ "baseline_improved": "poseidon-orchard-r31-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "experiment_manifest": "experiments/manifest.json",
+ "heuristics": [
+  {
+   "id": "H1-fixed-map",
+   "role": "score-critical",
+   "statement": "The filed trail has n = 133559717 * 2^100 steps, at which Lemma 2 gives 0.390000000 for a uniformly random function (the least multiple of 2^100 that reaches 0.39). Premise (H1, the fixed-map premise): each of the 4 fixed maps F_kappa(x) = digest(message(kappa x - E0_0)) / OUTSCALE_kappa behaves like a uniformly random function for the search of proof.md Section 3, so that the search with kappa drawn uniformly from the set and a uniform start succeeds with probability at least 0.39 at the budget n.",
+   "scope": "Target poseidon-orchard-r31-prefix-v1, inputs on the line of proof.md Section 1, one trail with the parameters of proof.md Section 3 (S = n + d). Applies to this round count and budget. Only the success probability rests on it; the step program, the recovery, the ledger and the memory are proved or checked exactly (proof.md Sections 2, 4, 6, 7).",
+   "extrapolation": "Support, reproducible observations and not a population bound. (1) Organizer-run experiment lowbits-birthday (python-message-pairs-v1, digest-xor-mask; proof.md Section 9): this target's own digest at r = 31, agreement of the first 14 bits, fresh inputs, at most 1200 evaluations per trial (a random function needs about 160). (2) Participant measurements on the real map F_kappa at widths 16 to 24 bits with a keyed SHA-256 control (proof.md Section 8): the hazard multiplier of the exact first-repeat law, estimates and 95% intervals per width, compared with 1 for a random function. H1 applies the random-function law to the same map at 254 bits over 2^127 steps. Sensitivity: if the collision rate of the map is c times that of a random function, success is about 1 - exp(-c x) - n/N - eps with x = 0.49511; c = 1 gives 0.39 and the budget tolerates a relative deficit of 0.0000 percent only.",
+   "evidence_ids": [
+    "proof:38-52",
+    "proof:54-86",
+    "proof:97-115",
+    "proof:117-120",
+    "experiment:lowbits-birthday"
+   ],
+   "limitations": "H1 is a premise on fixed maps, with no proof; the budget has essentially no robustness margin against a collision-rate deficit. The measurements are at 16 to 24 bits and cannot resolve a deficit at the filed level; the organizer experiment checks the digest at 14 bits, not the map F_kappa."
+  }
+ ],
+ "submission_state": "draft",
+ "lane": "exploratory"
+}

@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "round-1 theta: column-parity kernel of the message space",
+ "question": "Q4 column-parity kernel alternatives at the first theta (what directions leave theta as the identity).",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Kernel of the column-parity map on the free message bits: 135-byte format 760 dims (1080 bits, column-parity rank 320, no column has a single free bit); 64-byte format 192 dims (rank 320 of 512; 128 columns have a single free bit). The kernel is exactly spanned by the within-column pairs (span dim = kernel dim); weight-2 kernel vectors: 1,320 (135-byte) and 192 (64-byte) and all are CP pairs, so the leader's 32 z-directions (L0^L5 pair at each z) are 32 of these. theta acts as the identity on 200/200 sampled pairs (192/192 in the 64-byte format).",
+ "evidence": "research/dig/incoming/sha3-r6-U01/work/q4_theta.py; research/dig/incoming/sha3-r6-U01/work/q4_theta_out.json",
+ "notes": "Universe cell sha3-r6|round0.theta|theta|Q4. Exact rank counts. Alternatives to the leader's pair class exist only inside this kernel; the chi1 side of the question is cell sha3-r6|round0.chi|chi|Q4 (no kernel output difference). theta2/theta3 kernels belong to later rounds' cells.",
+ "topic": "sha3-r6 theta kernel"
+}

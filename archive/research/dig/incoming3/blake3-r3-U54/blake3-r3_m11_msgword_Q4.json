@@ -1,0 +1,22 @@
+{
+ "object": "message word m11",
+ "question": "Q4: alternatives to the filed use of m11, counted exactly.",
+ "status": "COMPUTED",
+ "number": "Alternatives for m11: (a) freeze it to 0: 590 ops (-5); (b) freeze with neighbours (ops from 595): m8+m9 -> 559 (-36), m10+m11 -> 560 (-35), m8..m11 -> 525 (-70, -0.1791 bit); (c) freeze all of m8..m15 -> 0 ops (circuit constant). The savings are real in the op count (a frozen pair makes a round-0 diagonal call all-constant and folds about 18 ops per call) but the chain then covers fewer than 256 bits, see Q2. OPEN: whether partial-collision harvesting at memory near 2^20 bytes can pay for it.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_words.py; research/dig/incoming3/blake3-r3-U46/work/words_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. Alternatives costed in ops and time_log2 only; whether a restricted-domain chain can still deliver a 256-bit collision at 2^20 bytes was not tested by search.",
+ "held_fixed": "target fixed; layout fixed; other words as in the target",
+ "reopen_if": "partial-collision harvesting (many 224- or 192-bit collisions, check the rest) is shown to cost near sqrt(N) per collision at memory about 2^20 bytes; then the frozen-word saving (0.09 to 0.18 bit) would apply",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|m11|msgword|Q4",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

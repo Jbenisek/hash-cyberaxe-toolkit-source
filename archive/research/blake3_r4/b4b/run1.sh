@@ -1,0 +1,13 @@
+
+# Publication root: stable even when this driver changes working directories.
+if [ -z "${HASHCYBERAXE_WORKSPACE:-}" ]; then
+  _hca_here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+  while [ ! -d "$_hca_here/research" ] && [ "$_hca_here" != / ]; do _hca_here=$(dirname -- "$_hca_here"); done
+  HASHCYBERAXE_WORKSPACE=$_hca_here
+fi
+export HASHCYBERAXE_WORKSPACE
+cd "${HASHCYBERAXE_WORKSPACE}/research/blake3_r4/b4b/pkg/blake3/experiments"
+ulimit -v 2000000
+echo "== ledger"; nice -n 10 python3 -B bsrho.py --ledger 2>&1 | grep -v "^{" 
+echo "== sweep"; nice -n 10 python3 -B bsrho.py --sweep 2>&1 | tail -12
+echo "== selftest"; nice -n 10 python3 -B bsrho.py --selftest 2>&1 | tail -5; echo rc=$?

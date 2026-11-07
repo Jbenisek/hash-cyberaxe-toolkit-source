@@ -1,0 +1,23 @@
+{
+  "id": "D489-SHA3-R6-S6K141-FULL-EXPERIMENT-REPLAY-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "complete current 141-bit S6K experiment replay",
+  "question": "Do all four checked-in S6K141 experiment requests replay cleanly against the current shipped source?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "All four current requests exit 0 with zero stderr. fes-campaign-reduced: 256/256 null pairs and key_mismatch=0; hcoset-within16: 35 null pairs and counts 499/130275/520; hcoset-cross16: 80 null pairs and counts 507/130778/482; hcoset-filter8: 0 null pairs, survivors8=489, pairs8_survivors=476. Current setup/transform counts are 31726434/2460672.",
+  "source": "our workflow: D489 complete current S6K141 experiment replay",
+  "own_test": true,
+  "evidence": "research/sol_answer_D489_s6k141_full_experiment_replay.md; research/tools/build_pkg/scratch/pkgS6K141/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6K141/work/req_fes-campaign-reduced.json; research/tools/build_pkg/scratch/pkgS6K141/work/req_hcoset-within16.json; research/tools/build_pkg/scratch/pkgS6K141/work/req_hcoset-cross16.json; research/tools/build_pkg/scratch/pkgS6K141/work/req_hcoset-filter8.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Complete finite reduced-width replay only. Old saved outputs are 140-bit artifacts and are not current 141-bit evidence. No score/package/stage/filing/submission.",
+  "held_fixed": "current pkgS6K141 package bytes and checked-in request files; one-thread replays",
+  "reopen_if": "refreshed output artifacts or package bytes change"
+}

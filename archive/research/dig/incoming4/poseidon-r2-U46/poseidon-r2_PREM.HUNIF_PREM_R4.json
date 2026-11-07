@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HUNIF (PREM)",
+ "question": "R4: score sensitivity",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "If coefficients of the real g are not uniform and the true rate sits at 0.30, 4 centres give 0.760 (vs 0.865); matching 0.866 would need 6 centres: +0.58 bit.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HUNIF|PREM|R4. Scenario arithmetic.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure; centres independent (fresh random centre each)",
+ "reopen_if": "a sample of 100+ r2 centres per line shows a rate outside the model band"
+}

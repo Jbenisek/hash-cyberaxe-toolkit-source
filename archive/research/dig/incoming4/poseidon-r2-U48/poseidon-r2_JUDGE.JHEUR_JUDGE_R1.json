@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JHEUR (JUDGE)",
+ "question": "R1: value: score-critical heuristic declared",
+ "labels": [
+  "N"
+ ],
+ "status": "BEDROCK",
+ "number": "r2 package: H1 per-line success fractions (score-critical), H2 charging rules, H3 stage budgets enforced as halts. Claimed probability 0.00 (smallest line limit 0.0000 from 3 samples).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/orchard/lean_r2/pkg_stage_r2/claim.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JHEUR|JUDGE|R1. claim.json of pkg_stage_r2.",
+ "held_fixed": "r2 sampled package",
+ "reopen_if": "a different template is filed"
+}

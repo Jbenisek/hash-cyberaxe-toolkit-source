@@ -1,0 +1,23 @@
+{
+  "id": "D511-BLAKE3-R2-PKGCO-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "distinct pkgCO prefile and shipped self-test",
+  "question": "Does the distinct pkgCO frontline pass its finite self-test, and what defects remain in its draft package?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Prefile SOME FAIL: no ledger appendix/exact N and internal-label failures D25/D27/D33/D41/D42/D45/D47/D48/D49/D54; claim time_log2=61.8857. Shipped frontline selftest exits 0 with 256 automata cases, 512 T1/T2 cases, precheck, replicas, level16, two full contexts with zero mismatches/halts, and all W/C/R/WB halt drills passing.",
+  "source": "our workflow: D511 read-only pkgCO audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D511_b3m_pkgco_audit.md; research/tools/build_pkg/scratch/pkgCO/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgCO/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; current draft has no exact ledger N and multiple internal-label defects. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgCO package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package ledger/note repair or a new owner artifact arrives"
+}

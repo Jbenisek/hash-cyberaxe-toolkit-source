@@ -1,0 +1,844 @@
+==============================================================================================================
+[rand] jobs 50000, rows per half 524288
+
+-- AB scan: V = B_j op rotl(A_i, r).  'r=0,i=j' is the XOR/modular difference itself; 'other' is every rotational or cross-word relation
+  each cell: (#combos |z|>=5 on T) / (#of those confirmed on V: same sign, |z|>=3); combos per cell = 4x4 word pairs x 32 r x ops (AB: x,s,r = 3; WW: x,s = 2), split by subset
+  list   compare    subset      meanHW     bits    hw<=4    hw<=8   hw>=24    d4<=4    d4<=6   msmall     zero     coll
+  dig    D vs 0     r=0,i=j     7/7     12/12     3/3      3/3      6/6      0/0      2/2      0/0      0/0      4/4   
+  dig    D vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  dig    D vs S     r=0,i=j     0/0      9/9      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  dig    D vs S     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  dig    S vs 0     r=0,i=j     7/7     12/12     3/3      3/3      6/6      0/0      2/2      0/0      0/0      4/4   
+  dig    S vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  e1     D vs 0     r=0,i=j    12/12    12/12     0/0     12/12     9/9      9/9     10/10     0/0      0/0     12/12  
+  e1     D vs 0     other      18/18    18/18     2/2     21/21    27/27     5/5     20/20     0/0      0/0     36/36  
+  e1     D vs S     r=0,i=j     1/1     10/10     1/1      3/3      2/2      1/1      2/2      0/0      0/0      3/3   
+  e1     D vs S     other       9/9     10/10     0/0      4/4      4/4      0/0      3/3      0/0      0/0      8/8   
+  e1     S vs 0     r=0,i=j    12/12    12/12     2/2     12/12    10/10     7/7     10/10     0/0      0/0     12/12  
+  e1     S vs 0     other      16/16    16/16     2/2     19/19    24/24     3/2     17/17     0/0      0/0     28/28  
+  e3     D vs 0     r=0,i=j    11/11    12/12     0/0      7/7      7/7      4/4      6/6      0/0      0/0      6/6   
+  e3     D vs 0     other       0/0      0/0      0/0      2/2      3/3      0/0      4/4      0/0      0/0      3/3   
+  e3     D vs S     r=0,i=j     1/1      9/9      0/0      1/1      1/1      1/1      1/1      0/0      0/0      1/1   
+  e3     D vs S     other       0/0      0/0      0/0      1/1      1/1      0/0      0/0      0/0      0/0      1/1   
+  e3     S vs 0     r=0,i=j    11/11    12/12     0/0      7/7      8/8      3/3      5/5      0/0      0/0      6/6   
+  e3     S vs 0     other       0/0      0/0      0/0      1/1      1/1      0/0      3/3      0/0      0/0      1/1   
+  plant  D vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  plant  D vs 0     other       0/0      0/0      6/6      0/0      0/0      2/2      0/0      5/5      3/3      5/5   
+  plant  D vs S     r=0,i=j     0/0      8/8      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  plant  D vs S     other       0/0      0/0      3/3      0/0      0/0      0/0      0/0      2/2      0/0      4/4   
+  plant  S vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  plant  S vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+
+  top confirmed AB findings outside 'r=0,i=j' (list, comparison, statistic, i, j, r, op, zT, zV); word index 0..3 = digest words 1,3,4,6 / outputs (a2 b2 c2 d2) / (e2 f2 g2 h2):
+   dig / D vs 0: 0 confirmed
+   dig / D vs S: 0 confirmed
+   dig / S vs 0: 0 confirmed
+   dig / U vs 0: 0 confirmed
+   e1 / D vs 0: 147 confirmed
+      bits    i3 j2 r 0 op s  zT +478.66 zV +478.67
+      bits    i3 j2 r 0 op r  zT +478.66 zV +478.67
+      bits    i3 j0 r 8 op x  zT +462.25 zV +462.25
+      bits    i0 j3 r24 op x  zT +462.25 zV +462.25
+      bits    i2 j3 r 0 op s  zT +460.82 zV +460.69
+      bits    i2 j3 r 0 op r  zT +460.82 zV +460.69
+      bits    i0 j3 r24 op r  zT +388.05 zV +387.92
+      bits    i3 j0 r 8 op s  zT +387.96 zV +388.12
+   e1 / D vs S: 38 confirmed
+      bits    i3 j2 r 0 op r  zT +318.94 zV +318.27
+      meanHW  i3 j2 r 0 op r  zT +215.88 zV +212.16
+      bits    i3 j2 r 0 op x  zT +183.66 zV +183.56
+      bits    i0 j2 r24 op x  zT +115.29 zV +115.02
+      bits    i0 j2 r24 op r  zT +101.24 zV +101.58
+      bits    i2 j3 r 0 op r  zT  +72.86 zV  +71.95
+      bits    i3 j0 r 8 op r  zT  +38.63 zV  +38.76
+      bits    i2 j0 r 8 op r  zT  +38.34 zV  +38.04
+   e1 / S vs 0: 124 confirmed
+      bits    i3 j2 r 0 op s  zT +478.56 zV +478.80
+      bits    i3 j0 r 8 op x  zT +462.25 zV +462.25
+      bits    i0 j3 r24 op x  zT +462.25 zV +462.25
+      bits    i2 j3 r 0 op s  zT +460.96 zV +460.83
+      bits    i2 j3 r 0 op r  zT +452.27 zV +452.27
+      bits    i3 j0 r 8 op s  zT +387.96 zV +388.09
+      bits    i0 j3 r24 op r  zT +387.54 zV +387.40
+      bits    i3 j2 r 0 op r  zT +311.71 zV +312.22
+   e1 / U vs 0: 0 confirmed
+   e3 / D vs 0: 12 confirmed
+      coll    i0 j0 r16 op s  zT  +35.82 zV  +37.00
+      coll    i0 j0 r16 op r  zT  +34.76 zV  +37.00
+      hw>=24  i0 j0 r16 op s  zT  +23.41 zV  +22.49
+      hw>=24  i0 j0 r16 op r  zT  +22.05 zV  +23.09
+      hw<=8   i0 j0 r16 op s  zT  -18.26 zV  -18.81
+      hw<=8   i0 j0 r16 op r  zT  -17.96 zV  -18.56
+      hw>=24  i0 j0 r16 op x  zT   -7.79 zV   -5.86
+      d4<=6   i0 j0 r16 op x  zT   -7.40 zV   -7.70
+   e3 / D vs S: 3 confirmed
+      coll    i0 j0 r16 op r  zT  +18.60 zV  +19.90
+      hw>=24  i0 j0 r16 op r  zT  +13.58 zV  +14.36
+      hw<=8   i0 j0 r16 op r  zT  -12.35 zV  -14.26
+   e3 / S vs 0: 6 confirmed
+      coll    i0 j0 r16 op s  zT  +36.38 zV  +33.31
+      hw>=24  i0 j0 r16 op s  zT  +22.67 zV  +22.97
+      hw<=8   i0 j0 r16 op s  zT  -16.84 zV  -19.03
+      d4<=6   i0 j0 r16 op s  zT   +8.29 zV   +7.44
+      d4<=6   i3 j3 r16 op x  zT   +6.10 zV   +6.33
+      d4<=6   i0 j0 r16 op x  zT   -5.68 zV   -6.25
+   e3 / U vs 0: 0 confirmed
+   plant / D vs 0: 21 confirmed
+      coll    i3 j3 r13 op s  zT  +37.00 zV  +37.00
+      coll    i3 j3 r13 op r  zT  +37.00 zV  +37.00
+      coll    i0 j0 r 5 op x  zT  +37.00 zV  +37.00
+      msmall  i3 j3 r13 op s  zT  +30.41 zV  +31.34
+      msmall  i3 j3 r13 op x  zT  +29.23 zV  +29.94
+      hw<=4   i3 j3 r13 op x  zT  +13.26 zV  +14.34
+      zero    i1 j1 r11 op x  zT  +11.68 zV   +9.66
+      zero    i1 j1 r11 op s  zT  +11.68 zV   +9.66
+   plant / D vs S: 9 confirmed
+      coll    i3 j3 r13 op s  zT  +37.00 zV  +37.00
+      coll    i3 j3 r13 op r  zT  +37.00 zV  +37.00
+      coll    i0 j0 r 5 op x  zT  +27.01 zV  +22.48
+      msmall  i3 j3 r13 op s  zT   +9.95 zV  +10.22
+      msmall  i3 j3 r13 op x  zT   +9.59 zV   +9.81
+      hw<=4   i3 j3 r13 op x  zT   +7.06 zV   +7.56
+      coll    i2 j2 r 7 op x  zT   +6.05 zV   +3.82
+      hw<=4   i3 j3 r13 op s  zT   +5.43 zV   +6.43
+   plant / S vs 0: 0 confirmed
+   plant / U vs 0: 0 confirmed
+   U / D vs 0: 0 confirmed
+   U / D vs S: 0 confirmed
+   U / S vs 0: 0 confirmed
+   U / U vs 0: 0 confirmed
+
+  mode multiplicity >= 4 (rotation + constant relations, B_j = rotl(A_i,r) op const), AB scan:
+      ('AB', 'e1', 'D', 0, 0, 0, 'x', 'T') maxm 284 value 1890e090
+      ('AB', 'e1', 'S', 0, 0, 0, 'x', 'T') maxm 284 value 1890e090
+      ('AB', 'e3', 'D', 0, 0, 0, 'x', 'T') maxm 4 value 09e1b515
+      ('AB', 'e3', 'S', 0, 0, 0, 'x', 'T') maxm 4 value 09e1b515
+      ('AB', 'plant', 'D', 0, 0, 5, 'x', 'T') maxm 37 value 12345678
+      ('AB', 'e1', 'S', 0, 3, 24, 'x', 'T') maxm 4 value 6cffbda2
+      ('AB', 'e1', 'D', 1, 1, 0, 'x', 'T') maxm 8 value 9b2561e5
+      ('AB', 'e1', 'S', 1, 1, 0, 'x', 'T') maxm 8 value 9b2561e5
+      ('AB', 'plant', 'D', 1, 1, 11, 'x', 'T') maxm 7 value 00000000
+      ('AB', 'e1', 'D', 2, 2, 0, 'x', 'T') maxm 8 value 8a001255
+      ('AB', 'e1', 'S', 2, 2, 0, 'x', 'T') maxm 8 value 8a001255
+      ('AB', 'plant', 'D', 2, 2, 7, 'x', 'T') maxm 12 value 33333333
+      ('AB', 'e1', 'S', 3, 0, 8, 'x', 'T') maxm 4 value ffbda26c
+      ('AB', 'e1', 'D', 3, 3, 0, 'x', 'T') maxm 284 value 901890e0
+      ('AB', 'e1', 'S', 3, 3, 0, 'x', 'T') maxm 284 value 901890e0
+      ('AB', 'e3', 'D', 3, 3, 0, 'x', 'T') maxm 4 value da8ae2b6
+      ('AB', 'e3', 'S', 3, 3, 0, 'x', 'T') maxm 4 value da8ae2b6
+      ('AB', 'plant', 'D', 3, 3, 13, 'x', 'T') maxm 6 value 00000003
+      ('AB', 'e1', 'D', 0, 0, 0, 's', 'T') maxm 306 value 18afa070
+      ('AB', 'e1', 'S', 0, 0, 0, 's', 'T') maxm 306 value 18afa070
+      ('AB', 'e3', 'D', 0, 0, 0, 's', 'T') maxm 60 value f9cf6ced
+      ('AB', 'e3', 'S', 0, 0, 0, 's', 'T') maxm 60 value f9cf6ced
+      ('AB', 'plant', 'D', 1, 1, 11, 's', 'T') maxm 7 value 00000000
+      ('AB', 'e1', 'D', 2, 2, 0, 's', 'T') maxm 147 value 8a10f16b
+      ('AB', 'e1', 'S', 2, 2, 0, 's', 'T') maxm 147 value 8a10f16b
+      ('AB', 'e1', 'D', 3, 3, 0, 's', 'T') maxm 147 value 80086fe0
+      ('AB', 'e1', 'S', 3, 3, 0, 's', 'T') maxm 147 value 80086fe0
+      ('AB', 'plant', 'D', 3, 3, 13, 's', 'T') maxm 49 value b95fc176
+      ('AB', 'e1', 'D', 0, 0, 0, 'r', 'T') maxm 306 value 18afa070
+      ('AB', 'e1', 'S', 0, 0, 0, 'r', 'T') maxm 97 value f86fdf80
+      ('AB', 'e3', 'D', 0, 0, 0, 'r', 'T') maxm 60 value f9cf6ced
+      ('AB', 'plant', 'D', 1, 1, 11, 'r', 'T') maxm 7 value 00000000
+      ('AB', 'e1', 'D', 2, 2, 0, 'r', 'T') maxm 147 value 8a10f16b
+      ('AB', 'e1', 'S', 2, 2, 0, 'r', 'T') maxm 5 value 6a002e4b
+      ('AB', 'e1', 'D', 3, 3, 0, 'r', 'T') maxm 147 value 80086fe0
+      ('AB', 'e1', 'S', 3, 3, 0, 'r', 'T') maxm 129 value 80087020
+      ('AB', 'plant', 'D', 3, 3, 13, 'r', 'T') maxm 67 value 0badcafe
+      ('AB', 'e1', 'D', 0, 0, 0, 'x', 'V') maxm 293 value 18b0a090
+      ('AB', 'e1', 'S', 0, 0, 0, 'x', 'V') maxm 293 value 18b0a090
+      ('AB', 'e3', 'D', 0, 0, 0, 'x', 'V') maxm 5 value 22909513
+     total AB jobs with maxm >= 4: 75
+
+-- WW scan: V = X_j op rotl(X_i, r) inside one 4-word set
+  each cell: (#combos |z|>=5 on T) / (#of those confirmed on V: same sign, |z|>=3); combos per cell = 4x4 word pairs x 32 r x ops (AB: x,s,r = 3; WW: x,s = 2), split by subset
+  list   compare    subset      meanHW     bits    hw<=4    hw<=8   hw>=24    d4<=4    d4<=6   msmall     zero     coll
+  R      D vs C     i=j        27/27    64/63    14/14   136/136  136/136   48/46   131/131    1/1      0/0    162/162 
+  R      D vs C     i!=j       50/50   123/123    7/7     84/84    80/80    14/12    73/72     1/1      0/0     20/18  
+  R      D vs U     i=j        78/76   157/157    0/0     30/30    23/17     0/0      0/0      0/0      0/0     42/42  
+  R      D vs U     i!=j      209/208  478/478    7/7     93/93    82/82    22/18    73/73     1/1      0/0     24/23  
+  R      C vs U     i=j        54/53   123/122    9/9    130/130  132/132   35/30   130/130    2/2      0/0     93/93  
+  R      C vs U     i!=j      169/166  433/432    0/0     13/11     6/6      0/0      0/0      0/0      0/0      0/0   
+  R      D vs 0     i=j        98/98   165/165   21/21   143/143  144/144  119/119  137/136    8/8      8/8    196/196 
+  R      D vs 0     i!=j      284/284  515/513   14/14   108/107   98/96    53/53    75/75     4/4      0/0     59/59  
+  K1     D vs C     i=j        61/61   103/103   18/18   176/175  183/183   83/83   187/187    1/1      0/0    248/248 
+  K1     D vs C     i!=j      205/204  305/305   21/21   326/323  294/291  128/128  263/260    5/5      4/4    768/768 
+  K1     D vs U     i=j       236/236  248/248   12/12   209/209  212/212   95/95   157/156    0/0      0/0    248/248 
+  K1     D vs U     i!=j      737/737  768/768   29/29   652/651  612/612  170/166  426/421    6/6      4/4    768/768 
+  K1     C vs U     i=j       237/237  248/248   13/13   203/202  209/209   76/69   167/167    1/1      0/0    178/177 
+  K1     C vs U     i!=j      737/736  768/768   23/23   635/634  572/570   52/50   273/269    4/4      4/4    699/699 
+  K1     D vs 0     i=j       239/239  248/248   21/21   222/222  223/223  130/128  202/202    6/6      6/6    248/248 
+  K1     D vs 0     i!=j      750/750  768/768   47/47   686/685  655/655  222/218  493/492    8/8      8/8    768/768 
+  K3     D vs C     i=j        43/43    91/91    11/11   137/136  148/146   60/59   138/138    1/1      0/0    182/182 
+  K3     D vs C     i!=j      156/155  318/317    6/6    125/125  122/121   60/59    90/90     0/0      0/0    152/152 
+  K3     D vs U     i=j       148/148  177/177    2/2     97/97    81/81     5/5     27/27     0/0      0/0    124/124 
+  K3     D vs U     i!=j      477/476  644/644    8/6    176/174  180/177   63/62    95/94     0/0      0/0    151/151 
+  K3     C vs U     i=j       124/124  146/146    8/8    159/159  153/152   41/37   129/129    2/2      0/0     78/78  
+  K3     C vs U     i!=j      448/447  560/560    0/0     96/94   103/102    0/0      1/1      0/0      0/0     10/8   
+  K3     D vs 0     i=j       151/151  186/185   28/28   160/159  164/164  121/121  148/148    8/8      8/8    219/219 
+  K3     D vs 0     i!=j      525/523  661/661   11/11   240/238  242/239   73/73   104/103    0/0      0/0    154/154 
+  DA     D vs C     i=j         0/0      0/0      7/7    128/128  129/128   36/33   130/129    0/0      0/0     96/90  
+  DA     D vs C     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     D vs U     i=j         0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     D vs U     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     C vs U     i=j         0/0      0/0      9/9    128/128  129/128   29/26   128/128    2/2      0/0     92/92  
+  DA     C vs U     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     D vs 0     i=j         0/0      0/0     16/16   128/128  133/133  108/108  135/135    7/7      8/8    142/142 
+  DA     D vs 0     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  RP     D vs C     i=j        41/41    67/65    12/12   144/144  137/137   37/35   110/110    2/2      0/0    171/171 
+  RP     D vs C     i!=j       39/39   116/114    0/0     12/12    10/10     2/2      4/4      0/0      0/0      4/4   
+  RP     D vs U     i=j       110/108  150/150    5/5     69/69    61/57     1/1      7/6      0/0      0/0    104/104 
+  RP     D vs U     i!=j      304/302  493/493    1/1     70/69    67/65     2/2      4/4      0/0      0/0      6/6   
+  RP     C vs U     i=j        85/85   119/119    7/7    136/136  143/141   25/23   105/105    2/2      0/0     92/92  
+  RP     C vs U     i!=j      291/288  453/453    0/0     69/66    68/65     0/0      0/0      0/0      0/0      0/0   
+  RP     D vs 0     i=j       121/121  160/160   34/34   167/167  164/164  118/118  143/143    8/8      8/8    200/200 
+  RP     D vs 0     i!=j      358/357  529/527    2/1    123/122   99/98     2/2      4/4      0/0      0/0      8/8   
+  U      U vs 0     i=j         0/0      0/0     16/16   128/128  130/130   97/97   135/135    8/8      8/8    123/123 
+  U      U vs 0     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+
+  top confirmed WW findings (set, comparison, statistic, i, j, r, op, zT, zV):
+   R / D vs C: 1163 confirmed
+      meanHW  i0 j2 r25 op x  zT -965.67 zV -962.75
+      meanHW  i2 j0 r 7 op x  zT -964.61 zV -964.64
+      bits    i0 j2 r25 op x  zT +497.47 zV +497.48
+      bits    i2 j0 r 7 op x  zT +497.42 zV +497.48
+      bits    i3 j1 r 8 op x  zT +385.93 zV +385.62
+      bits    i1 j3 r24 op x  zT +385.64 zV +385.66
+      meanHW  i3 j1 r 8 op x  zT -380.10 zV -378.78
+      meanHW  i1 j3 r24 op x  zT -380.05 zV -379.27
+      bits    i3 j1 r 7 op x  zT +341.89 zV +341.46
+      bits    i1 j3 r25 op x  zT +341.76 zV +341.78
+   R / D vs U: 1305 confirmed
+      meanHW  i0 j2 r25 op x  zT -985.04 zV -985.23
+      meanHW  i2 j0 r 7 op x  zT -983.34 zV -985.17
+      bits    i2 j0 r 7 op x  zT +502.72 zV +502.90
+      bits    i0 j2 r25 op x  zT +502.62 zV +502.72
+      bits    i3 j1 r 8 op x  zT +408.45 zV +408.50
+      bits    i1 j3 r24 op x  zT +408.19 zV +407.99
+      meanHW  i3 j1 r 8 op x  zT -407.62 zV -406.38
+      meanHW  i1 j3 r24 op x  zT -407.26 zV -407.16
+      bits    i1 j3 r25 op x  zT +356.41 zV +356.53
+      bits    i3 j1 r 7 op x  zT +356.30 zV +356.75
+   R / C vs U: 1316 confirmed
+      bits    i1 j3 r24 op x  zT +114.94 zV +114.88
+      bits    i3 j1 r 8 op x  zT +114.82 zV +115.27
+      bits    i1 j1 r25 op x  zT +103.03 zV +103.56
+      bits    i1 j1 r 7 op x  zT +103.02 zV +103.60
+      bits    i3 j1 r27 op x  zT  +93.33 zV  +92.90
+      bits    i1 j3 r 5 op x  zT  +93.09 zV  +93.98
+      bits    i1 j1 r31 op x  zT  +92.39 zV  +93.06
+      bits    i1 j1 r 1 op x  zT  +92.35 zV  +92.75
+      bits    i3 j1 r 1 op x  zT  +90.25 zV  +90.90
+      bits    i1 j0 r13 op x  zT  +90.19 zV  +89.67
+   R / U vs 0: 0 confirmed
+   K1 / D vs C: 3368 confirmed
+      meanHW  i2 j0 r 8 op x  zT -2266.80 zV -2270.19
+      meanHW  i0 j2 r24 op x  zT -2266.80 zV -2270.19
+      meanHW  i2 j0 r 8 op s  zT -2179.24 zV -2176.79
+      meanHW  i0 j2 r24 op s  zT -2098.47 zV -2098.37
+      meanHW  i3 j1 r 7 op x  zT -867.24 zV -863.82
+      meanHW  i1 j3 r25 op x  zT -867.24 zV -863.82
+      bits    i0 j2 r24 op s  zT +815.20 zV +815.22
+      bits    i2 j0 r 8 op s  zT +789.51 zV +789.49
+      bits    i3 j1 r 7 op x  zT +782.32 zV +781.99
+      bits    i1 j3 r25 op x  zT +782.32 zV +781.99
+   K1 / D vs U: 5578 confirmed
+      meanHW  i2 j0 r 8 op x  zT -4096.11 zV -4099.38
+      meanHW  i0 j2 r24 op s  zT -4093.41 zV -4101.59
+      meanHW  i0 j2 r24 op x  zT -4093.36 zV -4094.87
+      meanHW  i2 j0 r 8 op s  zT -4086.51 zV -4097.09
+      meanHW  i1 j3 r25 op x  zT -1281.54 zV -1280.26
+      meanHW  i3 j1 r 7 op x  zT -1278.24 zV -1279.28
+      bits    i0 j2 r24 op x  zT +833.52 zV +833.48
+      bits    i0 j2 r24 op s  zT +833.46 zV +833.48
+      bits    i1 j3 r25 op x  zT +833.42 zV +833.44
+      bits    i3 j1 r 7 op x  zT +833.41 zV +833.45
+   K1 / C vs U: 5080 confirmed
+      meanHW  i0 j2 r24 op x  zT -1171.68 zV -1173.82
+      meanHW  i2 j0 r 8 op x  zT -1170.68 zV -1173.85
+      bits    i0 j2 r24 op x  zT +550.10 zV +550.43
+      bits    i2 j0 r 8 op x  zT +549.80 zV +550.27
+      bits    i0 j0 r31 op x  zT +500.16 zV +500.59
+      bits    i0 j0 r 1 op x  zT +500.14 zV +500.56
+      bits    i0 j2 r25 op x  zT +500.13 zV +500.50
+      bits    i2 j0 r 7 op x  zT +500.13 zV +500.56
+      bits    i2 j0 r 9 op x  zT +500.13 zV +500.47
+      bits    i2 j2 r31 op x  zT +500.11 zV +500.58
+   K1 / U vs 0: 0 confirmed
+   K3 / D vs C: 1832 confirmed
+      bits    i3 j1 r 8 op x  zT +793.38 zV +793.41
+      bits    i1 j3 r24 op x  zT +793.38 zV +793.41
+      meanHW  i3 j1 r 8 op x  zT -663.02 zV -662.22
+      meanHW  i1 j3 r24 op x  zT -663.02 zV -662.22
+      meanHW  i2 j0 r 7 op x  zT -616.27 zV -616.52
+      meanHW  i0 j2 r25 op x  zT -616.21 zV -617.03
+      bits    i0 j2 r25 op x  zT +611.92 zV +611.96
+      bits    i2 j0 r 7 op x  zT +611.89 zV +611.93
+      bits    i2 j0 r 7 op s  zT +386.74 zV +387.00
+      bits    i1 j3 r24 op s  zT +368.19 zV +368.95
+   K3 / D vs U: 2445 confirmed
+      bits    i1 j3 r24 op x  zT +833.53 zV +833.43
+      bits    i3 j1 r 8 op x  zT +833.34 zV +833.49
+      meanHW  i3 j1 r 8 op x  zT -769.06 zV -768.25
+      meanHW  i1 j3 r24 op x  zT -768.37 zV -769.43
+      meanHW  i0 j2 r25 op x  zT -638.74 zV -638.95
+      meanHW  i2 j0 r 7 op x  zT -637.27 zV -639.17
+      bits    i0 j2 r25 op x  zT +615.90 zV +615.78
+      bits    i2 j0 r 7 op x  zT +615.72 zV +615.71
+      meanHW  i0 j1 r 8 op x  zT -392.64 zV -391.44
+      meanHW  i1 j0 r24 op x  zT -392.53 zV -390.70
+   K3 / C vs U: 2047 confirmed
+      bits    i1 j3 r24 op x  zT +268.68 zV +268.93
+      bits    i3 j1 r 8 op x  zT +268.52 zV +268.90
+      bits    i3 j1 r 8 op s  zT +232.39 zV +232.96
+      bits    i1 j3 r24 op s  zT +207.85 zV +208.04
+      bits    i1 j1 r15 op x  zT +199.98 zV +200.21
+      bits    i1 j1 r17 op x  zT +199.65 zV +200.15
+      bits    i1 j3 r 7 op x  zT +199.64 zV +200.06
+      bits    i3 j3 r15 op x  zT +199.52 zV +200.10
+      bits    i3 j1 r25 op x  zT +199.43 zV +200.07
+      bits    i3 j1 r23 op x  zT +199.36 zV +200.34
+   K3 / U vs 0: 0 confirmed
+   DA / D vs C: 515 confirmed
+      hw>=24  i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i3 j3 r16 op s  zT  -37.00 zV  -37.00
+      hw>=24  i2 j2 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i2 j2 r16 op s  zT  -37.00 zV  -37.00
+      hw>=24  i1 j1 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i1 j1 r16 op s  zT  -37.00 zV  -37.00
+      hw>=24  i0 j0 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i0 j0 r16 op s  zT  -37.00 zV  -37.00
+      hw<=8   i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i2 j2 r16 op x  zT  +37.00 zV  +37.00
+   DA / D vs U: 0 confirmed
+   DA / C vs U: 513 confirmed
+      hw>=24  i3 j3 r16 op x  zT  -37.00 zV  -37.00
+      hw>=24  i3 j3 r16 op s  zT  +37.00 zV  +37.00
+      hw>=24  i2 j2 r16 op x  zT  -37.00 zV  -37.00
+      hw>=24  i2 j2 r16 op s  zT  +37.00 zV  +37.00
+      hw>=24  i1 j1 r16 op x  zT  -37.00 zV  -37.00
+      hw>=24  i1 j1 r16 op s  zT  +37.00 zV  +37.00
+      hw>=24  i0 j0 r16 op x  zT  -37.00 zV  -37.00
+      hw>=24  i0 j0 r16 op s  zT  +37.00 zV  +37.00
+      hw<=8   i3 j3 r16 op x  zT  -37.00 zV  -37.00
+      hw<=8   i2 j2 r16 op x  zT  -37.00 zV  -37.00
+   DA / U vs 0: 0 confirmed
+   RP / D vs C: 902 confirmed
+      meanHW  i0 j2 r24 op s  zT -496.59 zV -497.99
+      meanHW  i2 j0 r 8 op s  zT +490.15 zV +492.40
+      bits    i3 j3 r 1 op s  zT +369.63 zV +369.41
+      bits    i3 j3 r31 op s  zT +366.95 zV +366.54
+      meanHW  i3 j3 r 1 op s  zT +331.83 zV +330.75
+      bits    i2 j0 r 8 op s  zT +315.91 zV +316.41
+      bits    i0 j2 r24 op s  zT +309.82 zV +310.17
+      meanHW  i3 j3 r31 op s  zT -299.83 zV -297.33
+      bits    i1 j1 r31 op s  zT +234.10 zV +234.51
+      bits    i1 j1 r 1 op s  zT +230.64 zV +231.68
+   RP / D vs U: 1442 confirmed
+      meanHW  i0 j2 r24 op s  zT -501.58 zV -504.20
+      meanHW  i2 j0 r 8 op s  zT +492.93 zV +494.06
+      bits    i3 j3 r31 op s  zT +403.00 zV +403.00
+      bits    i3 j3 r 1 op s  zT +401.68 zV +401.89
+      meanHW  i3 j3 r 1 op s  zT +396.35 zV +397.10
+      meanHW  i3 j3 r31 op s  zT -362.19 zV -362.18
+      bits    i2 j0 r 8 op s  zT +317.04 zV +317.42
+      bits    i0 j2 r24 op s  zT +311.65 zV +311.67
+      bits    i3 j3 r31 op x  zT +261.33 zV +261.73
+      bits    i3 j3 r 1 op x  zT +261.33 zV +261.73
+   RP / C vs U: 1582 confirmed
+      bits    i3 j3 r26 op x  zT +251.80 zV +251.91
+      bits    i3 j3 r 6 op x  zT +251.77 zV +251.98
+      bits    i3 j3 r25 op x  zT +239.59 zV +239.85
+      bits    i3 j3 r 7 op x  zT +239.40 zV +239.63
+      bits    i3 j3 r31 op x  zT +234.57 zV +234.30
+      bits    i3 j3 r 1 op x  zT +234.43 zV +234.17
+      bits    i3 j3 r13 op x  zT +231.56 zV +231.38
+      bits    i3 j3 r19 op x  zT +231.53 zV +231.57
+      bits    i3 j3 r20 op x  zT +217.74 zV +218.36
+      bits    i3 j3 r12 op x  zT +217.72 zV +217.98
+   RP / U vs 0: 0 confirmed
+   U / D vs C: 0 confirmed
+   U / D vs U: 0 confirmed
+   U / C vs U: 0 confirmed
+   U / U vs 0: 645 confirmed
+      hw>=24  i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i3 j3 r16 op s  zT  -37.00 zV  -37.00
+      hw>=24  i2 j2 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i2 j2 r16 op s  zT  -37.00 zV  -37.00
+      hw>=24  i1 j1 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i1 j1 r16 op s  zT  -37.00 zV  -37.00
+      hw>=24  i0 j0 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i0 j0 r16 op s  zT  -37.00 zV  -37.00
+      hw<=8   i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i2 j2 r16 op x  zT  +37.00 zV  +37.00
+
+  Named rotational-XOR coordinates of R (op x): collision pairs D / C / U and H2 of D, T | V
+     U4 = R4 ^ ROR(R1,8)            D       30 C     29 U     29 H2 32.09 mode 2 | D       45 C     36 U     33 H2 31.51 mode 2
+     U6 = R6 ^ ROR(R3,8)            D    19233 C     35 U     16 H2 22.77 mode 8 | D    19371 C     51 U     31 H2 22.76 mode 7
+     W4 = R4 ^ ROR(R1,7)            D    31988 C     36 U     36 H2 22.03 mode 8 | D    32151 C     28 U     39 H2 22.03 mode 7
+     W3 = R3 ^ ROL(R6,7)            D     5232 C     19 U     25 H2 24.65 mode 4 | D     5340 C     30 U     38 H2 24.62 mode 5
+     R1 ^ ROR(R4,24)=R1^ROL(R4,8)   D       30 C     37 U     32 H2 32.09 mode 2 | D       45 C     31 U     24 H2 31.51 mode 2
+     R3 ^ ROL(R6,8)                 D    19233 C     39 U     43 H2 22.77 mode 8 | D    19371 C     39 U     31 H2 22.76 mode 7
+
+  mode multiplicity >= 4 in WW scan (X_j = rotl(X_i, r) op const), data only, by set:
+    R: 48 jobs; top: [(26, (3, 3, 16, 'x', 'V'), '05940594'), (24, (1, 1, 16, 'x', 'V'), '0cf80cf8'), (24, (1, 1, 16, 'x', 'T'), 'c129c129'), (23, (3, 3, 16, 'x', 'T'), '1b0a1b0a'), (23, (2, 2, 16, 'x', 'T'), '1d2f1d2f'), (23, (1, 1, 16, 's', 'V'), 'f1690e97')]
+    K1: 1241 jobs; top: [(524288, (3, 1, 7, 'x', 'V'), '18b0e098'), (524288, (3, 1, 7, 'x', 'T'), '18b0e098'), (524288, (2, 0, 8, 'x', 'V'), '00000000'), (524288, (2, 0, 8, 'x', 'T'), '00000000'), (524288, (2, 0, 8, 's', 'V'), '00000000'), (524288, (2, 0, 8, 's', 'T'), '00000000')]
+    K3: 528 jobs; top: [(524288, (3, 1, 8, 'x', 'V'), '830303cf'), (524288, (3, 1, 8, 'x', 'T'), '830303cf'), (524288, (1, 3, 24, 'x', 'V'), 'cf830303'), (524288, (1, 3, 24, 'x', 'T'), 'cf830303'), (3321, (3, 1, 8, 's', 'V'), '80fcfe4b'), (3318, (3, 1, 8, 's', 'T'), '80fd023b')]
+    DA: 24 jobs; top: [(23, (3, 3, 16, 'x', 'V'), '76b076b0'), (23, (3, 3, 16, 'x', 'T'), '6ce26ce2'), (23, (2, 2, 16, 'x', 'T'), 'ba19ba19'), (23, (1, 1, 16, 'x', 'T'), '739b739b'), (23, (1, 1, 16, 's', 'V'), '0654f9ab'), (22, (1, 1, 16, 'x', 'V'), '437c437c')]
+    RP: 148 jobs; top: [(72, (3, 3, 16, 'x', 'T'), '20b920b9'), (64, (3, 3, 16, 'x', 'V'), '20e920e9'), (40, (3, 3, 16, 's', 'T'), 'ff880078'), (35, (3, 3, 16, 's', 'V'), '1f86e079'), (24, (1, 1, 16, 'x', 'V'), '0cf80cf8'), (24, (1, 1, 16, 'x', 'T'), 'c129c129')]
+    controls C/U with maxm >= 4: 549 jobs; top [(37, ('WW', 'K1', 'C', 2, 0, 8, 'x', 'V')), (37, ('WW', 'K1', 'C', 2, 0, 8, 'x', 'T')), (37, ('WW', 'K1', 'C', 0, 2, 24, 'x', 'V')), (37, ('WW', 'K1', 'C', 0, 2, 24, 'x', 'T')), (32, ('WW', 'K1', 'C', 2, 0, 8, 's', 'V')), (32, ('WW', 'K1', 'C', 0, 2, 24, 's', 'V'))]
+
+-- joint over 4 words, same r: sum HW(B_w ^ rotl(A_w, r)); z of mean vs Bin(128,1/2) and vs S; count sumHW<=44 (uniform P 2.58e-04)
+  dig   (largest |z| on T first)
+     r= 0  T: mean 63.017 z0 -125.79 zS +0.00 n44 1097 z44 +37.00 | V: mean 63.006 z0 -127.21 zS +0.00 n44 1037 z44 +37.00
+     r=14  T: mean 63.990 z0 -1.22 zS -2.17 n44 120 z44 -1.27 | V: mean 64.007 z0 +0.96 zS +2.50 n44 133 z44 -0.13
+     r= 5  T: mean 64.015 z0 +1.97 zS +0.55 n44 124 z44 -0.92 | V: mean 63.997 z0 -0.36 zS +0.57 n44 128 z44 -0.57
+     r=31  T: mean 64.014 z0 +1.75 zS +0.42 n44 136 z44 +0.04 | V: mean 63.994 z0 -0.75 zS -1.39 n44 128 z44 -0.57
+  e1    (largest |z| on T first)
+     r= 0  T: mean 55.172 z0 -1129.97 zS +0.00 n44 18897 z44 +37.00 | V: mean 55.157 z0 -1131.89 zS +0.00 n44 18986 z44 +37.00
+     r=25  T: mean 63.983 z0 -2.15 zS -0.82 n44 83 z44 -4.77 | V: mean 63.998 z0 -0.21 zS +0.48 n44 72 z44 -5.90
+     r= 9  T: mean 63.986 z0 -1.80 zS -2.03 n44 81 z44 -4.97 | V: mean 64.002 z0 +0.20 zS -1.03 n44 101 z44 -3.02
+     r=22  T: mean 63.988 z0 -1.52 zS -1.87 n44 80 z44 -5.08 | V: mean 64.004 z0 +0.49 zS +0.04 n44 87 z44 -4.37
+  e3    (largest |z| on T first)
+     r= 0  T: mean 64.396 z0 +50.69 zS +0.00 n44 312 z44 +12.95 | V: mean 64.397 z0 +50.78 zS +0.00 n44 315 z44 +13.14
+     r=15  T: mean 64.020 z0 +2.59 zS +0.75 n44 124 z44 -0.92 | V: mean 63.989 z0 -1.39 zS -2.17 n44 102 z44 -2.92
+     r=23  T: mean 64.018 z0 +2.27 zS +1.89 n44 110 z44 -2.18 | V: mean 64.001 z0 +0.14 zS -0.48 n44 143 z44 +0.64
+     r=21  T: mean 63.986 z0 -1.80 zS -0.96 n44 134 z44 -0.05 | V: mean 64.004 z0 +0.49 zS -0.49 n44 140 z44 +0.38
+  plant (largest |z| on T first)
+     r=20  T: mean 63.980 z0 -2.55 zS -2.15 n44 141 z44 +0.47 | V: mean 63.982 z0 -2.31 zS -2.05 n44 130 z44 -0.39
+     r= 3  T: mean 64.017 z0 +2.19 zS +1.90 n44 133 z44 -0.13 | V: mean 64.000 z0 +0.05 zS -0.92 n44 151 z44 +1.31
+     r= 8  T: mean 63.996 z0 -0.52 zS -1.94 n44 140 z44 +0.38 | V: mean 63.984 z0 -2.00 zS -0.66 n44 143 z44 +0.64
+     r=17  T: mean 63.985 z0 -1.91 zS -1.22 n44 139 z44 +0.30 | V: mean 64.009 z0 +1.14 zS +0.74 n44 156 z44 +1.72
+  U     (largest |z| on T first)
+     r=25  T: mean 64.019 z0 +2.48 zS +0.00 n44 135 z44 +0.00 | V: mean 64.008 z0 +0.96 zS +0.00 n44 142 z44 +0.55
+     r= 8  T: mean 63.982 z0 -2.37 zS +0.00 n44 133 z44 -0.13 | V: mean 64.008 z0 +1.07 zS +0.00 n44 134 z44 -0.05
+     r= 6  T: mean 63.983 z0 -2.13 zS +0.00 n44 133 z44 -0.13 | V: mean 64.003 z0 +0.35 zS +0.00 n44 111 z44 -2.09
+     r= 2  T: mean 63.990 z0 -1.34 zS +0.00 n44 130 z44 -0.39 | V: mean 63.998 z0 -0.22 zS +0.00 n44 121 z44 -1.19
+==============================================================================================================
+[ctx] jobs 50000, rows per half 131046
+
+-- AB scan: V = B_j op rotl(A_i, r).  'r=0,i=j' is the XOR/modular difference itself; 'other' is every rotational or cross-word relation
+  each cell: (#combos |z|>=5 on T) / (#of those confirmed on V: same sign, |z|>=3); combos per cell = 4x4 word pairs x 32 r x ops (AB: x,s,r = 3; WW: x,s = 2), split by subset
+  list   compare    subset      meanHW     bits    hw<=4    hw<=8   hw>=24    d4<=4    d4<=6   msmall     zero     coll
+  dig    D vs 0     r=0,i=j     7/6     12/12     0/0      3/3      5/5      0/0      0/0      0/0      0/0      1/0   
+  dig    D vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  dig    D vs S     r=0,i=j     0/0      9/9      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  dig    D vs S     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  dig    S vs 0     r=0,i=j     7/6     12/12     0/0      3/3      5/5      0/0      0/0      0/0      0/0      1/0   
+  dig    S vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  e1     D vs 0     r=0,i=j    12/12    12/12     0/0      8/8      7/7      4/4     10/10     0/0      0/0     12/12  
+  e1     D vs 0     other      20/18    48/46     0/0     15/15    18/18     2/2     14/14     0/0      0/0     19/19  
+  e1     D vs S     r=0,i=j     3/2     11/11     0/0      2/1      1/1      0/0      1/1      0/0      0/0      3/3   
+  e1     D vs S     other       7/5     16/15     0/0      2/2      2/2      0/0      2/2      0/0      0/0      3/3   
+  e1     S vs 0     r=0,i=j    12/12    12/12     0/0      9/9      8/8      3/3      9/9      0/0      0/0     12/12  
+  e1     S vs 0     other      16/16    27/25     0/0     12/12    16/16     2/2     12/12     0/0      0/0     16/16  
+  e3     D vs 0     r=0,i=j     9/9     12/12     0/0      4/4      5/4      1/1      4/4      0/0      0/0     10/10  
+  e3     D vs 0     other      15/7    185/160    0/0      2/2      2/2      0/0      0/0      0/0      0/0      3/3   
+  e3     D vs S     r=0,i=j     1/1     10/10     0/0      1/1      1/1      0/0      1/1      0/0      0/0      1/1   
+  e3     D vs S     other       7/2    104/81     0/0      2/2      1/1      0/0      0/0      0/0      0/0      2/2   
+  e3     S vs 0     r=0,i=j     9/9     12/12     0/0      4/4      4/3      1/1      3/3      0/0      0/0      9/9   
+  e3     S vs 0     other       3/1     36/32     0/0      1/1      1/1      0/0      0/0      0/0      0/0      1/1   
+  plant  D vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  plant  D vs 0     other       0/0      0/0      4/3      0/0      0/0      0/0      0/0      5/2      3/3      3/3   
+  plant  D vs S     r=0,i=j     0/0      8/8      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  plant  D vs S     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      3/3   
+  plant  S vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  plant  S vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     r=0,i=j     0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  U      U vs 0     other       0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+
+  top confirmed AB findings outside 'r=0,i=j' (list, comparison, statistic, i, j, r, op, zT, zV); word index 0..3 = digest words 1,3,4,6 / outputs (a2 b2 c2 d2) / (e2 f2 g2 h2):
+   dig / D vs 0: 0 confirmed
+   dig / D vs S: 0 confirmed
+   dig / S vs 0: 0 confirmed
+   dig / U vs 0: 0 confirmed
+   e1 / D vs 0: 132 confirmed
+      bits    i3 j2 r 0 op s  zT +297.28 zV +297.15
+      bits    i3 j2 r 0 op r  zT +297.28 zV +297.15
+      bits    i3 j0 r 8 op x  zT +286.90 zV +286.65
+      bits    i0 j3 r24 op x  zT +286.90 zV +286.65
+      bits    i2 j3 r 0 op s  zT +286.40 zV +286.10
+      bits    i2 j3 r 0 op r  zT +286.40 zV +286.10
+      bits    i0 j3 r24 op r  zT +240.05 zV +240.14
+      bits    i3 j0 r 8 op s  zT +240.02 zV +239.86
+   e1 / D vs S: 29 confirmed
+      bits    i3 j2 r 0 op r  zT +196.99 zV +196.34
+      bits    i3 j2 r 0 op x  zT +111.61 zV +111.62
+      meanHW  i3 j2 r 0 op r  zT +105.57 zV +106.63
+      bits    i0 j2 r24 op x  zT  +68.86 zV  +68.90
+      bits    i0 j2 r24 op r  zT  +58.89 zV  +58.51
+      bits    i2 j3 r 0 op r  zT  +40.19 zV  +43.09
+      bits    i0 j3 r24 op r  zT  +22.96 zV  +22.97
+      bits    i0 j3 r24 op s  zT  +22.74 zV  +23.24
+   e1 / S vs 0: 99 confirmed
+      bits    i3 j2 r 0 op s  zT +297.37 zV +296.95
+      bits    i3 j0 r 8 op x  zT +286.90 zV +286.65
+      bits    i0 j3 r24 op x  zT +286.90 zV +286.65
+      bits    i2 j3 r 0 op s  zT +286.35 zV +285.61
+      bits    i2 j3 r 0 op r  zT +281.08 zV +280.37
+      bits    i3 j0 r 8 op s  zT +240.06 zV +239.86
+      bits    i0 j3 r24 op r  zT +239.64 zV +239.72
+      bits    i3 j2 r 0 op r  zT +191.87 zV +191.53
+   e1 / U vs 0: 0 confirmed
+   e3 / D vs 0: 174 confirmed
+      bits    i0 j0 r 2 op r  zT  +32.66 zV  +26.19
+      bits    i3 j0 r 8 op x  zT  +32.59 zV  +17.49
+      bits    i0 j3 r24 op x  zT  +32.59 zV  +17.49
+      bits    i0 j0 r31 op s  zT  +30.79 zV  +39.18
+      bits    i0 j0 r 1 op x  zT  +30.28 zV  +27.04
+      bits    i0 j0 r31 op r  zT  +29.51 zV  +39.43
+      bits    i3 j0 r 8 op r  zT  +29.47 zV  +23.64
+      bits    i0 j0 r31 op x  zT  +29.24 zV  +22.15
+   e3 / D vs S: 88 confirmed
+      bits    i0 j0 r 2 op r  zT  +22.84 zV  +17.25
+      bits    i0 j0 r 1 op x  zT  +21.26 zV  +20.40
+      bits    i0 j0 r31 op x  zT  +20.52 zV  +19.17
+      bits    i0 j0 r31 op r  zT  +20.47 zV  +24.29
+      bits    i3 j0 r 8 op x  zT  +20.29 zV   +5.10
+      bits    i0 j3 r24 op x  zT  +20.29 zV   +5.10
+      bits    i0 j3 r 4 op x  zT  +19.08 zV  +10.23
+      bits    i3 j0 r 8 op r  zT  +18.96 zV  +15.95
+   e3 / S vs 0: 36 confirmed
+      bits    i0 j0 r13 op s  zT  +21.95 zV  +14.88
+      bits    i3 j0 r 8 op s  zT  +20.53 zV  +18.86
+      bits    i0 j0 r31 op s  zT  +19.97 zV  +29.90
+      bits    i3 j0 r28 op s  zT  +19.59 zV  +16.20
+      bits    i0 j3 r24 op x  zT  +18.41 zV  +12.35
+      bits    i3 j0 r 8 op x  zT  +18.41 zV  +12.35
+      bits    i0 j0 r30 op s  zT  +17.43 zV  +17.20
+      bits    i0 j0 r 1 op s  zT  +14.96 zV  +30.73
+   e3 / U vs 0: 0 confirmed
+   plant / D vs 0: 11 confirmed
+      coll    i3 j3 r13 op r  zT  +19.35 zV  +37.00
+      coll    i3 j3 r13 op s  zT  +17.24 zV  +32.26
+      msmall  i3 j3 r13 op s  zT  +15.61 zV  +13.17
+      msmall  i3 j3 r13 op x  zT  +15.15 zV  +13.17
+      coll    i0 j0 r 5 op x  zT  +14.33 zV  +14.33
+      zero    i1 j1 r11 op x  zT   +9.12 zV   +4.01
+      zero    i1 j1 r11 op s  zT   +9.12 zV   +4.01
+      zero    i1 j1 r11 op r  zT   +9.12 zV   +4.01
+   plant / D vs S: 3 confirmed
+      coll    i3 j3 r13 op r  zT   +8.97 zV  +18.39
+      coll    i3 j3 r13 op s  zT   +7.83 zV  +14.41
+      coll    i0 j0 r 5 op x  zT   +7.27 zV   +7.27
+   plant / S vs 0: 0 confirmed
+   plant / U vs 0: 0 confirmed
+   U / D vs 0: 0 confirmed
+   U / D vs S: 0 confirmed
+   U / S vs 0: 0 confirmed
+   U / U vs 0: 0 confirmed
+
+  mode multiplicity >= 4 (rotation + constant relations, B_j = rotl(A_i,r) op const), AB scan:
+      ('AB', 'e1', 'D', 0, 0, 0, 'x', 'T') maxm 83 value 08902090
+      ('AB', 'e1', 'S', 0, 0, 0, 'x', 'T') maxm 83 value 08902090
+      ('AB', 'e3', 'D', 0, 0, 0, 'x', 'T') maxm 7 value 27b0bd33
+      ('AB', 'e3', 'S', 0, 0, 0, 'x', 'T') maxm 7 value 27b0bd33
+      ('AB', 'plant', 'D', 0, 0, 5, 'x', 'T') maxm 10 value 12345678
+      ('AB', 'e1', 'D', 1, 1, 0, 'x', 'T') maxm 4 value 192541e4
+      ('AB', 'e1', 'S', 1, 1, 0, 'x', 'T') maxm 4 value 192541e4
+      ('AB', 'plant', 'D', 1, 1, 11, 'x', 'T') maxm 4 value 00000000
+      ('AB', 'e1', 'D', 2, 2, 0, 'x', 'T') maxm 4 value 8a00f2ad
+      ('AB', 'e1', 'S', 2, 2, 0, 'x', 'T') maxm 4 value 8a00f2ad
+      ('AB', 'e1', 'D', 3, 3, 0, 'x', 'T') maxm 83 value 8018b060
+      ('AB', 'e1', 'S', 3, 3, 0, 'x', 'T') maxm 83 value 8018b060
+      ('AB', 'e3', 'D', 3, 3, 0, 'x', 'T') maxm 7 value fca4b3be
+      ('AB', 'e3', 'S', 3, 3, 0, 'x', 'T') maxm 7 value fca4b3be
+      ('AB', 'e1', 'D', 0, 0, 0, 's', 'T') maxm 128 value f8701f60
+      ('AB', 'e1', 'S', 0, 0, 0, 's', 'T') maxm 128 value f8701f60
+      ('AB', 'e3', 'D', 0, 0, 0, 's', 'T') maxm 23 value 01ef6ced
+      ('AB', 'e3', 'S', 0, 0, 0, 's', 'T') maxm 23 value 01ef6ced
+      ('AB', 'plant', 'D', 1, 1, 11, 's', 'T') maxm 4 value 00000000
+      ('AB', 'e1', 'D', 2, 2, 0, 's', 'T') maxm 45 value 89fff1ab
+      ('AB', 'e1', 'S', 2, 2, 0, 's', 'T') maxm 45 value 89fff1ab
+      ('AB', 'e1', 'D', 3, 3, 0, 's', 'T') maxm 45 value 7ff77020
+      ('AB', 'e1', 'S', 3, 3, 0, 's', 'T') maxm 45 value 7ff77020
+      ('AB', 'plant', 'D', 3, 3, 13, 's', 'T') maxm 11 value b95fc176
+      ('AB', 'e1', 'D', 0, 0, 0, 'r', 'T') maxm 128 value f8701f60
+      ('AB', 'e1', 'S', 0, 0, 0, 'r', 'T') maxm 27 value 078fdf80
+      ('AB', 'e3', 'D', 0, 0, 0, 'r', 'T') maxm 23 value 01ef6ced
+      ('AB', 'plant', 'D', 1, 1, 11, 'r', 'T') maxm 4 value 00000000
+      ('AB', 'e1', 'D', 2, 2, 0, 'r', 'T') maxm 45 value 89fff1ab
+      ('AB', 'e1', 'D', 3, 3, 0, 'r', 'T') maxm 45 value 7ff77020
+      ('AB', 'e1', 'S', 3, 3, 0, 'r', 'T') maxm 39 value 80087020
+      ('AB', 'plant', 'D', 3, 3, 13, 'r', 'T') maxm 12 value 0badcafe
+      ('AB', 'e1', 'D', 0, 0, 0, 'x', 'V') maxm 75 value 18b0a080
+      ('AB', 'e1', 'S', 0, 0, 0, 'x', 'V') maxm 75 value 18b0a080
+      ('AB', 'e3', 'D', 0, 0, 0, 'x', 'V') maxm 7 value 7ec07575
+      ('AB', 'e3', 'S', 0, 0, 0, 'x', 'V') maxm 7 value 7ec07575
+      ('AB', 'plant', 'D', 0, 0, 5, 'x', 'V') maxm 10 value 12345678
+      ('AB', 'e1', 'D', 1, 1, 0, 'x', 'V') maxm 4 value 5905612f
+      ('AB', 'e1', 'S', 1, 1, 0, 'x', 'V') maxm 4 value 5905612f
+      ('AB', 'e1', 'D', 2, 2, 0, 'x', 'V') maxm 4 value 9a007734
+     total AB jobs with maxm >= 4: 61
+
+-- WW scan: V = X_j op rotl(X_i, r) inside one 4-word set
+  each cell: (#combos |z|>=5 on T) / (#of those confirmed on V: same sign, |z|>=3); combos per cell = 4x4 word pairs x 32 r x ops (AB: x,s,r = 3; WW: x,s = 2), split by subset
+  list   compare    subset      meanHW     bits    hw<=4    hw<=8   hw>=24    d4<=4    d4<=6   msmall     zero     coll
+  R      D vs C     i=j        20/17    54/52     4/4    130/130  120/120   14/13   128/128    0/0      0/0     43/42  
+  R      D vs C     i!=j       31/31   123/102    4/4     76/76    69/69     5/5     69/68     0/0      0/0     11/11  
+  R      D vs U     i=j        43/38   146/146    0/0     10/10     9/7      0/0      0/0      0/0      0/0      1/1   
+  R      D vs U     i!=j      111/104  419/408    4/4     79/78    68/68     6/6     69/69     0/0      0/0     11/11  
+  R      C vs U     i=j        20/20   105/104    4/4    118/117  124/124   12/12   128/128    0/0      0/0     41/40  
+  R      C vs U     i!=j       83/81   327/324    0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  R      D vs 0     i=j        60/50   160/154    7/5    135/134  130/130   22/18   128/128    2/2      6/6    102/79  
+  R      D vs 0     i!=j      162/144  505/491   10/8     81/81    78/77    14/10    72/71     4/4      0/0     14/14  
+  K1     D vs C     i=j        41/40    82/82     4/4    134/134  131/131   53/52   163/163    0/0      0/0    248/248 
+  K1     D vs C     i!=j      163/160  257/257    6/6    201/201  205/204   57/57   174/174    4/4      4/4    386/379 
+  K1     D vs U     i=j       226/224  248/248    3/3    183/183  178/173   34/34   101/101    0/0      0/0    248/248 
+  K1     D vs U     i!=j      690/688  768/768    6/6    563/562  481/475   38/37   248/245    4/4      4/4    753/752 
+  K1     C vs U     i=j       220/219  248/248    4/4    163/162  179/179   26/26   130/130    0/0      0/0    136/136 
+  K1     C vs U     i!=j      694/687  768/768    7/7    505/502  417/411    6/5    108/105    4/4      0/0    379/378 
+  K1     D vs 0     i=j       229/227  248/248   16/16   200/195  189/185   70/70   176/174    5/5      4/4    248/248 
+  K1     D vs 0     i!=j      703/697  768/768   31/31   622/617  550/544   86/86   340/329    8/8      8/8    768/768 
+  K3     D vs C     i=j        47/33   170/166    4/4    106/103  114/114   15/14   132/130    0/0      0/0    152/152 
+  K3     D vs C     i!=j      137/101  570/560    2/2     91/86    95/91     4/3     77/77     0/0      0/0    146/146 
+  K3     D vs U     i=j       111/103  184/181    0/0     68/63    52/50     0/0     11/11     0/0      0/0    124/124 
+  K3     D vs U     i!=j      352/313  699/697    2/2    107/100  108/101    4/4     79/78     0/0      0/0    148/148 
+  K3     C vs U     i=j       103/100  142/142    4/4    138/137  122/118   12/12   128/128    0/0      0/0     35/35  
+  K3     C vs U     i!=j      318/293  580/574    0/0     42/38    39/35     0/0      0/0      0/0      0/0      0/0   
+  K3     D vs 0     i=j       130/118  202/202    7/7    141/127  146/136   28/26   133/131    2/1      6/4    248/248 
+  K3     D vs 0     i!=j      425/359  724/722    6/6    127/112  131/119   17/17    86/82     0/0      0/0    309/308 
+  DA     D vs C     i=j         0/0      0/0      4/4    128/128  125/125   12/12   127/127    0/0      0/0     34/33  
+  DA     D vs C     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     D vs U     i=j         0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     D vs U     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     C vs U     i=j         0/0      0/0      4/4    128/128  125/125   12/12   128/128    0/0      0/0     39/39  
+  DA     C vs U     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  DA     D vs 0     i=j         0/0      0/0      8/7    128/128  128/128   16/16   129/129    3/3      4/4     56/56  
+  DA     D vs 0     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+  RP     D vs C     i=j        28/28    63/61     4/4    114/114  105/104   14/13   101/100    0/0      0/0     95/94  
+  RP     D vs C     i!=j       26/21   108/95     0/0      5/3      7/6      0/0      2/2      0/0      0/0      2/2   
+  RP     D vs U     i=j        76/76   148/148    1/1     35/35    36/33     1/1      2/2      0/0      0/0     63/63  
+  RP     D vs U     i!=j      200/189  478/469    0/0     24/24    25/21     1/1      2/2      0/0      0/0      2/2   
+  RP     C vs U     i=j        64/64   112/112    4/4    112/111  117/117   12/12   100/100    0/0      0/0     34/34  
+  RP     C vs U     i!=j      194/182  409/403    0/0     18/18    19/19     0/0      0/0      0/0      0/0      0/0   
+  RP     D vs 0     i=j        90/86   163/157   11/11   153/151  142/141   22/16   132/132    5/5      6/6    198/175 
+  RP     D vs 0     i!=j      253/238  561/544    1/0     43/41    42/39     2/2      2/2      0/0      0/0      4/4   
+  U      U vs 0     i=j         0/0      0/0      7/5    128/128  128/128   16/16   128/128    3/3      4/4     62/62  
+  U      U vs 0     i!=j        0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0      0/0   
+
+  top confirmed WW findings (set, comparison, statistic, i, j, r, op, zT, zV):
+   R / D vs C: 872 confirmed
+      meanHW  i0 j2 r25 op x  zT -491.78 zV -481.06
+      meanHW  i2 j0 r 7 op x  zT -491.38 zV -481.70
+      bits    i0 j2 r25 op x  zT +309.50 zV +308.98
+      bits    i2 j0 r 7 op x  zT +309.47 zV +308.93
+      bits    i3 j1 r 8 op x  zT +238.70 zV +237.73
+      bits    i1 j3 r24 op x  zT +238.60 zV +237.54
+      bits    i3 j1 r 7 op x  zT +213.56 zV +214.38
+      bits    i1 j3 r25 op x  zT +213.28 zV +214.50
+      bits    i2 j0 r 7 op s  zT +193.11 zV +192.54
+      meanHW  i1 j3 r24 op x  zT -187.76 zV -188.31
+   R / D vs U: 950 confirmed
+      meanHW  i2 j0 r 7 op x  zT -501.13 zV -488.39
+      meanHW  i0 j2 r25 op x  zT -500.29 zV -492.08
+      bits    i0 j2 r25 op x  zT +312.91 zV +311.87
+      bits    i2 j0 r 7 op x  zT +312.90 zV +311.67
+      bits    i3 j1 r 8 op x  zT +253.18 zV +252.11
+      bits    i1 j3 r24 op x  zT +253.13 zV +252.30
+      bits    i3 j1 r 7 op x  zT +222.44 zV +224.14
+      bits    i1 j3 r25 op x  zT +222.40 zV +224.21
+      meanHW  i1 j3 r24 op x  zT -202.38 zV -204.74
+      meanHW  i3 j1 r 8 op x  zT -201.14 zV -203.77
+   R / C vs U: 954 confirmed
+      bits    i1 j3 r24 op x  zT  +69.98 zV  +68.02
+      bits    i3 j1 r 8 op x  zT  +69.43 zV  +67.79
+      bits    i1 j1 r 7 op x  zT  +61.24 zV  +59.65
+      bits    i1 j1 r25 op x  zT  +60.89 zV  +59.76
+      bits    i1 j1 r 1 op x  zT  +55.42 zV  +54.99
+      bits    i1 j1 r31 op x  zT  +55.40 zV  +54.98
+      bits    i1 j3 r 5 op x  zT  +54.07 zV  +55.03
+      bits    i3 j1 r27 op x  zT  +53.90 zV  +55.48
+      bits    i3 j1 r 1 op x  zT  +52.76 zV  +53.03
+      bits    i1 j3 r31 op x  zT  +52.69 zV  +52.89
+   R / U vs 0: 0 confirmed
+   K1 / D vs C: 2300 confirmed
+      meanHW  i2 j0 r 8 op x  zT -1135.12 zV -1138.49
+      meanHW  i0 j2 r24 op x  zT -1135.12 zV -1138.49
+      meanHW  i2 j0 r 8 op s  zT -1090.03 zV -1092.30
+      meanHW  i0 j2 r24 op s  zT -1050.81 zV -1052.61
+      bits    i0 j2 r24 op s  zT +509.28 zV +509.35
+      bits    i2 j0 r 8 op s  zT +493.20 zV +492.95
+      bits    i3 j1 r 7 op x  zT +488.31 zV +488.31
+      bits    i1 j3 r25 op x  zT +488.31 zV +488.31
+      meanHW  i3 j1 r 7 op x  zT -432.32 zV -435.06
+      meanHW  i1 j3 r25 op x  zT -432.32 zV -435.06
+   K1 / D vs U: 4755 confirmed
+      meanHW  i0 j2 r24 op x  zT -2048.70 zV -2049.45
+      meanHW  i0 j2 r24 op s  zT -2047.99 zV -2050.95
+      meanHW  i2 j0 r 8 op x  zT -2046.90 zV -2049.09
+      meanHW  i2 j0 r 8 op s  zT -2040.76 zV -2037.97
+      meanHW  i1 j3 r25 op x  zT -638.33 zV -642.01
+      meanHW  i3 j1 r 7 op x  zT -638.00 zV -638.33
+      bits    i0 j2 r24 op s  zT +520.57 zV +520.44
+      bits    i2 j0 r 8 op x  zT +520.53 zV +520.46
+      bits    i0 j2 r24 op x  zT +520.45 zV +520.80
+      bits    i1 j3 r25 op x  zT +520.38 zV +520.66
+   K1 / C vs U: 3971 confirmed
+      meanHW  i2 j0 r 8 op x  zT -587.24 zV -583.64
+      meanHW  i0 j2 r24 op x  zT -587.13 zV -585.32
+      bits    i2 j0 r 8 op x  zT +342.73 zV +341.26
+      bits    i0 j2 r24 op x  zT +342.59 zV +341.64
+      bits    i0 j2 r25 op x  zT +311.72 zV +310.00
+      bits    i0 j0 r31 op x  zT +311.48 zV +309.81
+      bits    i2 j0 r 7 op x  zT +311.47 zV +310.12
+      bits    i0 j0 r 1 op x  zT +311.46 zV +309.79
+      bits    i0 j2 r23 op x  zT +311.39 zV +309.82
+      bits    i2 j2 r31 op x  zT +311.30 zV +310.12
+   K1 / U vs 0: 0 confirmed
+   K3 / D vs C: 1782 confirmed
+      bits    i1 j3 r24 op x  zT +495.15 zV +494.84
+      bits    i3 j1 r 8 op x  zT +495.15 zV +494.84
+      bits    i2 j0 r 7 op x  zT +381.76 zV +380.85
+      bits    i0 j2 r25 op x  zT +381.71 zV +380.84
+      meanHW  i3 j1 r 8 op x  zT -326.56 zV -327.38
+      meanHW  i1 j3 r24 op x  zT -326.56 zV -327.38
+      meanHW  i0 j2 r25 op x  zT -324.64 zV -306.99
+      meanHW  i2 j0 r 7 op x  zT -323.33 zV -307.05
+      bits    i2 j0 r 7 op s  zT +238.58 zV +238.93
+      bits    i1 j3 r24 op s  zT +232.19 zV +231.35
+   K3 / D vs U: 1975 confirmed
+      bits    i1 j3 r24 op x  zT +520.91 zV +520.66
+      bits    i3 j1 r 8 op x  zT +520.48 zV +520.54
+      meanHW  i1 j3 r24 op x  zT -384.91 zV -385.98
+      bits    i0 j2 r25 op x  zT +384.49 zV +383.49
+      bits    i2 j0 r 7 op x  zT +384.22 zV +383.20
+      meanHW  i3 j1 r 8 op x  zT -383.98 zV -384.59
+      meanHW  i2 j0 r 7 op x  zT -333.48 zV -315.23
+      meanHW  i0 j2 r25 op x  zT -332.91 zV -318.31
+      bits    i1 j3 r24 op s  zT +243.28 zV +242.99
+      bits    i3 j1 r 8 op s  zT +242.32 zV +240.22
+   K3 / C vs U: 1616 confirmed
+      bits    i1 j3 r24 op x  zT +166.34 zV +164.80
+      bits    i3 j1 r 8 op x  zT +165.58 zV +164.72
+      bits    i3 j1 r 8 op s  zT +143.87 zV +142.48
+      bits    i1 j3 r24 op s  zT +128.94 zV +129.06
+      bits    i1 j3 r 9 op x  zT +126.58 zV +120.89
+      bits    i3 j1 r25 op x  zT +126.42 zV +120.84
+      bits    i1 j3 r 7 op x  zT +126.31 zV +120.62
+      bits    i3 j3 r17 op x  zT +126.02 zV +120.30
+      bits    i1 j1 r17 op x  zT +125.97 zV +121.26
+      bits    i3 j1 r23 op x  zT +125.78 zV +120.83
+   K3 / U vs 0: 0 confirmed
+   DA / D vs C: 429 confirmed
+      hw>=24  i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i2 j2 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i1 j1 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i0 j0 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i2 j2 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i1 j1 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i0 j0 r16 op x  zT  +37.00 zV  +37.00
+      d4<=6   i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      d4<=6   i2 j2 r16 op x  zT  +37.00 zV  +37.00
+   DA / D vs U: 0 confirmed
+   DA / C vs U: 436 confirmed
+      hw>=24  i3 j3 r16 op x  zT  -37.00 zV  -37.00
+      hw>=24  i2 j2 r16 op x  zT  -37.00 zV  -37.00
+      hw>=24  i1 j1 r16 op x  zT  -37.00 zV  -37.00
+      hw>=24  i0 j0 r16 op x  zT  -37.00 zV  -37.00
+      hw<=8   i3 j3 r16 op x  zT  -37.00 zV  -37.00
+      hw<=8   i2 j2 r16 op x  zT  -37.00 zV  -37.00
+      hw<=8   i1 j1 r16 op x  zT  -37.00 zV  -37.00
+      hw<=8   i0 j0 r16 op x  zT  -37.00 zV  -37.00
+      d4<=6   i3 j3 r16 op x  zT  -37.00 zV  -37.00
+      d4<=6   i2 j2 r16 op x  zT  -37.00 zV  -37.00
+   DA / U vs 0: 0 confirmed
+   RP / D vs C: 647 confirmed
+      meanHW  i0 j2 r24 op s  zT -255.98 zV -245.19
+      meanHW  i2 j0 r 8 op s  zT +252.03 zV +241.26
+      bits    i3 j3 r 1 op s  zT +227.53 zV +228.39
+      bits    i3 j3 r31 op s  zT +226.45 zV +226.41
+      bits    i2 j0 r 8 op s  zT +196.03 zV +192.89
+      bits    i0 j2 r24 op s  zT +192.20 zV +189.55
+      meanHW  i3 j3 r 1 op s  zT +162.57 zV +166.49
+      meanHW  i3 j3 r31 op s  zT -146.12 zV -149.35
+      bits    i1 j1 r31 op s  zT +144.91 zV +142.78
+      bits    i1 j1 r 1 op s  zT +142.44 zV +140.93
+   RP / D vs U: 1067 confirmed
+      meanHW  i0 j2 r24 op s  zT -257.27 zV -245.97
+      meanHW  i2 j0 r 8 op s  zT +253.57 zV +241.45
+      bits    i3 j3 r31 op s  zT +249.85 zV +249.07
+      bits    i3 j3 r 1 op s  zT +249.00 zV +248.19
+      bits    i2 j0 r 8 op s  zT +196.48 zV +192.95
+      meanHW  i3 j3 r 1 op s  zT +195.36 zV +199.14
+      bits    i0 j2 r24 op s  zT +193.41 zV +190.38
+      meanHW  i3 j3 r31 op s  zT -178.28 zV -181.77
+      bits    i3 j3 r31 op x  zT +161.30 zV +159.08
+      bits    i3 j3 r 1 op x  zT +161.30 zV +159.08
+   RP / C vs U: 1176 confirmed
+      bits    i3 j3 r26 op x  zT +154.55 zV +153.68
+      bits    i3 j3 r 6 op x  zT +154.13 zV +153.41
+      bits    i3 j3 r 7 op x  zT +147.12 zV +145.72
+      bits    i3 j3 r25 op x  zT +146.74 zV +145.94
+      bits    i3 j3 r 1 op x  zT +144.01 zV +142.28
+      bits    i3 j3 r31 op x  zT +143.89 zV +142.19
+      bits    i3 j3 r13 op x  zT +141.90 zV +141.54
+      bits    i3 j3 r19 op x  zT +141.69 zV +141.04
+      bits    i3 j3 r12 op x  zT +132.89 zV +132.54
+      bits    i3 j3 r20 op x  zT +132.44 zV +132.35
+   RP / U vs 0: 0 confirmed
+   U / D vs C: 0 confirmed
+   U / D vs U: 0 confirmed
+   U / C vs U: 0 confirmed
+   U / U vs 0: 474 confirmed
+      hw>=24  i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i2 j2 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i1 j1 r16 op x  zT  +37.00 zV  +37.00
+      hw>=24  i0 j0 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i2 j2 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i1 j1 r16 op x  zT  +37.00 zV  +37.00
+      hw<=8   i0 j0 r16 op x  zT  +37.00 zV  +37.00
+      hw<=4   i3 j3 r16 op x  zT  +37.00 zV  +37.00
+      hw<=4   i2 j2 r16 op x  zT  +37.00 zV  +37.00
+
+  Named rotational-XOR coordinates of R (op x): collision pairs D / C / U and H2 of D, T | V
+     U4 = R4 ^ ROR(R1,8)            D       13 C      2 U      0 H2 29.30 mode 2 | D       17 C      4 U      1 H2 28.91 mode 2
+     U6 = R6 ^ ROR(R3,8)            D     1245 C      1 U      2 H2 22.72 mode 4 | D     1180 C      2 U      0 H2 22.79 mode 4
+     W4 = R4 ^ ROR(R1,7)            D     2646 C      1 U      4 H2 21.63 mode 4 | D     2698 C      1 U      3 H2 21.60 mode 5
+     W3 = R3 ^ ROL(R6,7)            D     4228 C      3 U      2 H2 20.95 mode 7 | D     4505 C      1 U      0 H2 20.86 mode 7
+     R1 ^ ROR(R4,24)=R1^ROL(R4,8)   D       13 C      1 U      1 H2 29.30 mode 2 | D       17 C      3 U      1 H2 28.91 mode 2
+     R3 ^ ROL(R6,8)                 D     1245 C      2 U      1 H2 22.72 mode 4 | D     1180 C      1 U      1 H2 22.79 mode 4
+
+  mode multiplicity >= 4 in WW scan (X_j = rotl(X_i, r) op const), data only, by set:
+    R: 28 jobs; top: [(12, (3, 3, 16, 's', 'T'), '05d9fa26'), (11, (3, 3, 16, 'x', 'V'), '14b314b3'), (11, (1, 1, 16, 'x', 'T'), 'b347b347'), (11, (0, 0, 16, 'x', 'V'), '61346134'), (11, (0, 0, 16, 'x', 'T'), '29272927'), (10, (3, 3, 16, 'x', 'T'), '03260326')]
+    K1: 1044 jobs; top: [(131046, (3, 1, 7, 'x', 'V'), '18b0e098'), (131046, (3, 1, 7, 'x', 'T'), '18b0e098'), (131046, (2, 0, 8, 'x', 'V'), '00000000'), (131046, (2, 0, 8, 'x', 'T'), '00000000'), (131046, (2, 0, 8, 's', 'V'), '00000000'), (131046, (2, 0, 8, 's', 'T'), '00000000')]
+    K3: 522 jobs; top: [(131046, (3, 1, 8, 'x', 'V'), '830303cf'), (131046, (3, 1, 8, 'x', 'T'), '830303cf'), (131046, (1, 3, 24, 'x', 'V'), 'cf830303'), (131046, (1, 3, 24, 'x', 'T'), 'cf830303'), (997, (3, 1, 8, 's', 'T'), '80fd023b'), (931, (3, 1, 8, 's', 'V'), '80fd024b')]
+    DA: 16 jobs; top: [(11, (3, 3, 16, 'x', 'T'), '2d0b2d0b'), (11, (2, 2, 16, 'x', 'V'), '6bf56bf5'), (11, (2, 2, 16, 'x', 'T'), 'efd4efd4'), (11, (0, 0, 16, 'x', 'V'), '07fd07fd'), (10, (3, 3, 16, 'x', 'V'), 'bf82bf82'), (10, (2, 2, 16, 's', 'T'), 'fc800380')]
+    RP: 136 jobs; top: [(24, (3, 3, 16, 'x', 'V'), '23fd23fd'), (22, (3, 3, 16, 'x', 'T'), 'e0b9e0b9'), (17, (3, 3, 16, 's', 'T'), 'ff3800c8'), (15, (3, 3, 16, 's', 'V'), 'd0872f79'), (13, (2, 2, 16, 'x', 'V'), '34283428'), (11, (1, 1, 16, 'x', 'T'), 'b347b347')]
+    controls C/U with maxm >= 4: 176 jobs; top [(14, ('WW', 'K1', 'C', 2, 0, 8, 'x', 'T')), (14, ('WW', 'K1', 'C', 0, 2, 24, 'x', 'T')), (13, ('WW', 'U', 'U', 3, 3, 16, 'x', 'T')), (13, ('WW', 'U', 'U', 2, 2, 16, 'x', 'V')), (13, ('WW', 'U', 'U', 0, 0, 16, 'x', 'T')), (12, ('WW', 'K1', 'C', 2, 0, 8, 'x', 'V'))]
+
+-- joint over 4 words, same r: sum HW(B_w ^ rotl(A_w, r)); z of mean vs Bin(128,1/2) and vs S; count sumHW<=44 (uniform P 2.58e-04)
+  dig   (largest |z| on T first)
+     r= 0  T: mean 63.007 z0 -63.56 zS +0.00 n44 290 z44 +27.08 | V: mean 62.879 z0 -71.72 zS +0.00 n44 291 z44 +27.16
+     r= 9  T: mean 64.044 z0 +2.80 zS +1.09 n44 19 z44 -2.64 | V: mean 63.991 z0 -0.61 zS +0.92 n44 41 z44 +1.15
+     r= 4  T: mean 64.037 z0 +2.38 zS +1.62 n44 34 z44 +0.00 | V: mean 64.011 z0 +0.71 zS -0.11 n44 37 z44 +0.49
+     r=30  T: mean 64.032 z0 +2.07 zS +1.93 n44 26 z44 -1.27 | V: mean 63.997 z0 -0.22 zS +1.11 n44 39 z44 +0.82
+  e1    (largest |z| on T first)
+     r= 0  T: mean 55.094 z0 -569.91 zS +0.00 n44 4853 z44 +37.00 | V: mean 55.268 z0 -558.82 zS +0.00 n44 4623 z44 +37.00
+     r=16  T: mean 63.968 z0 -2.07 zS -0.67 n44 49 z44 +2.40 | V: mean 64.049 z0 +3.12 zS -1.06 n44 45 z44 +1.78
+     r=18  T: mean 64.030 z0 +1.89 zS +1.85 n44 20 z44 -2.44 | V: mean 64.000 z0 +0.01 zS -1.02 n44 22 z44 -2.04
+     r=31  T: mean 64.029 z0 +1.85 zS +1.16 n44 23 z44 -1.84 | V: mean 64.000 z0 +0.03 zS -0.03 n44 27 z44 -1.09
+  e3    (largest |z| on T first)
+     r= 0  T: mean 64.285 z0 +18.21 zS +0.00 n44 93 z44 +8.32 | V: mean 64.037 z0 +2.35 zS +0.00 n44 77 z44 +6.32
+     r= 4  T: mean 64.070 z0 +4.49 zS +3.28 n44 36 z44 +0.32 | V: mean 63.988 z0 -0.78 zS +0.46 n44 35 z44 +0.15
+     r=20  T: mean 63.939 z0 -3.87 zS -2.40 n44 30 z44 -0.55 | V: mean 63.961 z0 -2.48 zS -1.36 n44 33 z44 -0.02
+     r=31  T: mean 64.052 z0 +3.35 zS +2.55 n44 24 z44 -1.65 | V: mean 63.952 z0 -3.05 zS -2.07 n44 34 z44 +0.00
+  plant (largest |z| on T first)
+     r=31  T: mean 64.046 z0 +2.92 zS +1.10 n44 29 z44 -0.73 | V: mean 64.010 z0 +0.66 zS +0.42 n44 26 z44 -1.27
+     r=21  T: mean 63.956 z0 -2.83 zS -1.45 n44 32 z44 -0.20 | V: mean 63.968 z0 -2.07 zS -3.02 n44 26 z44 -1.27
+     r= 4  T: mean 64.042 z0 +2.71 zS +0.96 n44 39 z44 +0.82 | V: mean 64.000 z0 -0.00 zS +0.63 n44 45 z44 +1.78
+     r=16  T: mean 64.035 z0 +2.23 zS -0.70 n44 34 z44 +0.00 | V: mean 63.992 z0 -0.53 zS -0.58 n44 19 z44 -2.64
+  U     (largest |z| on T first)
+     r= 8  T: mean 63.963 z0 -2.35 zS +0.00 n44 33 z44 -0.02 | V: mean 63.999 z0 -0.07 zS +0.00 n44 35 z44 +0.15
+     r= 2  T: mean 63.964 z0 -2.29 zS +0.00 n44 27 z44 -1.09 | V: mean 64.002 z0 +0.15 zS +0.00 n44 35 z44 +0.15
+     r= 1  T: mean 64.029 z0 +1.88 zS +0.00 n44 42 z44 +1.31 | V: mean 64.005 z0 +0.30 zS +0.00 n44 31 z44 -0.37
+     r= 5  T: mean 63.972 z0 -1.80 zS +0.00 n44 16 z44 -3.27 | V: mean 64.000 z0 -0.03 zS +0.00 n44 35 z44 +0.15

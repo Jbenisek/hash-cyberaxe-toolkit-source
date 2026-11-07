@@ -1,0 +1,11 @@
+length only (K2): AA 55/63 {'colsActive': [3], 'diagActive': [1, 3], 'cleanDigestWords': [0, 2, 5, 7]}
+flags only (K3): 11 vs 12 or 11 vs 10 {'colsActive': [0, 2], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+length+flags (K2,K3): AC, A-B* {'colsActive': [0, 2, 3], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+counter t_lo only (K0) {'colsActive': [2], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+counter t_hi only (K1) {'colsActive': [0, 1], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+K0+K1 (t_lo and t_hi) {'colsActive': [0, 1, 2], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+K0+K2 {'colsActive': [2, 3], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+K1+K2 {'colsActive': [0, 1, 3], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+K0+K3 {'colsActive': [0, 2], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+K1+K3 {'colsActive': [0, 1, 2], 'diagActive': [0, 1, 2, 3], 'cleanDigestWords': []}
+1e6 random G calls, y-only difference: equal outputs per slot (a,b,c,d) = [0, 0, 0, 0] ; x-only difference: [0, 0, 0, 0]

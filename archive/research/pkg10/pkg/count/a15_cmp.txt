@@ -1,0 +1,16 @@
+KIND a15: PIN d3 fdb77cfd d11 0a08818b delta fffffff8 y3 8127c181 y11 7af77f38 eta 830303cf fixed_bits 15 rules 8 mode 3 nocut 0 extra_mask 04200000 extra_value 00000000
+total R: ours 194382080300609/1048576 = 185,377,197.552308083 | Sol 194382080300609/1048576 | EQUAL
+rule F5    pass: ours 3109942325834715/16777216 = 185,367,007.603330314 | Sol (M A15 codim 5) 3109942325834715/16777216 | EQUAL
+rule old6  pass: ours 3109793308378027/16777216 = 185,358,125.470759094 | Sol (M A15 old six (baseline)) 3109793308378027/16777216 | EQUAL
+rule S6    pass: ours 3109942325834715/16777216 = 185,367,007.603330314 | Sol (M A15 codim 6) 3109942325834715/16777216 | EQUAL
+rule S7    pass: ours 6219882655062379/33554432 = 185,366,948.099803299 | Sol (M A15 codim 7) 6219882655062379/33554432 | EQUAL
+rule S8    pass: ours 6219586146887739/33554432 = 185,358,111.467592090 | Sol (M A15 codim 8) 6219586146887739/33554432 | EQUAL
+rule S9    pass: ours 81752754751179/524288 = 155,931,005.003316879 | Sol (M A15 codim 9) 81752754751179/524288 | EQUAL
+rule p5    pass: ours 81752760518347/524288 = 155,931,016.003316879 | Sol: no figure for this rule in this class
+rule p4    pass: ours 1554896901466299/8388608 = 185,358,154.948508620 | Sol: no figure for this rule in this class
+rules with a figure of Sol: 6 of 8; Sol rules of the table not run by us: 0
+outcomes with a nonzero product (gpt_sol_profiles_M_A15.csv): ours 317, Sol 317 (its file has 453 rows, 136 of them with zero pairs); in both 317; only ours 0; only Sol 0; integers compared 951, differing 0
+betas with a part: ours 53, Sol (sum of its outcome rows) 53; R per beta differing 0
+gpt_sol_beta_M_A15.csv: 60 betas, 53 positive; R per beta differing from ours 0
+outcomes of ours not counted: 0; differences inside our run (two functions, n3x, E1): 0
+RESULT: everything equal

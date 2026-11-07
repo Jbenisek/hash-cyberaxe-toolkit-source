@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.PEAK (MEM)",
+ "question": "M3: time cost of shrinking the gcd peak by 3.1 MB",
+ "labels": [
+  "E"
+ ],
+ "status": "OPEN",
+ "number": "Target: gcd peak down to the power-stage level (-3,117,472 B, 0.1143 bit of memory). Time cost not measured; replacing half-gcd by classical Euclid in place costs of the order m^2 = 3.8e10 multiplies against the stage 1.9e10 total ops, so it is not free. Net sign unknown.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.PEAK|MEM|M3. Untested; allocations of the gcd matrices not yet inspected line by line.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "a gcd schedule with peak <= 37.6 MB at <= 1.08x time is found (break-even 0.1143 bit)",
+ "prior": 0.1,
+ "potential_bits": 0.11
+}

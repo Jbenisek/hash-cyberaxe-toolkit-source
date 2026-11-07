@@ -1,0 +1,19 @@
+{
+  "id": "blake3-r2|OUT.d4|OUT|Q1",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "digest word 4 = Z4 ^ Z12 (residual from E1/E3)",
+  "question": "Exact output map and condition count used for digest word 4",
+  "labels": ["N", "I"],
+  "status": "COMPUTED",
+  "number": "D4 = E3.b XOR E1.d exactly; equality is one 32-bit residual condition, with no structural cancellation",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/BLAKE3_2ROUND_MAP.md; research/sol_answer_B3R2-G05-output-digest-words.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "T",
+  "notes": "Derived from the round-1 diagonal placement and final digest XOR; upstream legal-message relaxation and global rate remain OPEN."
+}

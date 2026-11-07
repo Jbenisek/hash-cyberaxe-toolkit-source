@@ -1,0 +1,12 @@
+[
+  {
+    "submissionId": "86ebd942-5d22-4786-b065-332ba3180792",
+    "rationale": "0xshikhar's r = 2 entry (normalized cost 32.73333), the board leader for this target: the reference this entry is measured against, the same two-free-round line construction with an executed-outcome claim; this entry is a derivative with its own program, ledger and memory accounting.",
+    "evidence": "proof.md sections 1, 6 and 7; claim.json."
+  },
+  {
+    "submissionId": "7585f946-21d5-462e-9ef0-a239e3f3e341",
+    "rationale": "Our own r = 2 entry (normalized cost 32.92573): the same line, odd part, centre order c_i = i, stage chain with one printed total, canonical output stage H and statically linked memory accounting are kept; this entry charges loop and address work under the half-unit rule of section 4.2 instead of the per-operation rule of that entry.",
+    "evidence": "proof.md sections 1, 2, 3, 4.1, 4.2, 6 and 7; claim.json."
+  }
+]

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "door 45: chaining-value route via a 224-bit near-collision first block",
+ "question": "D1 RELABEL at 3 rounds (no test given): is matching k bits of words 1..7 of a 3-round first-block CV cheaper than generic?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "3-round CHUNK_START block (cv=IV, t=0, b=64, flags 1), N = 2^24 random blocks, k bits taken round-robin from digest words 1..7 (word 0 free): pairs / expected(uniform birthday) = 1.007 (k=32, 33,010 pairs), 1.048 (k=36, 2,147 vs 2,048), 1.102 (k=40, 141 vs 128), 1.375 (k=44, 11 vs 8), 0 vs 0.5 (k=48). All within Poisson noise (largest z about 1.15). No excess over generic; generic price of a 224-bit match is 2^112 evaluations (of a 128-bit match 2^64).",
+ "evidence": "research/dig/incoming3/blake3-r3-U74/work/d45.py, research/dig/incoming3/blake3-r3-U74/work/d45.out",
+ "notes": "universe cell blake3-r3|DOOR.d45|DOOR|D1. Known answer first: compress(flags=1, b=64) equals the verifier _compress on 50/50 points at rounds 3 and 7. LOCAL_ONLY: toy k up to 48 and random (unstructured) first blocks; a structured near-collision (difference trail) is not tested, so the claimed 2^64 stays unexplained, not refuted. Known answers first (validate.out): own numpy compress == organizer verifier _compress on 1200 random calls at rounds 1/2/3/7, 0 mismatches; BLAKE3('') 7 rounds = af1349b9...f3262; rho.py digest_words == verifier blake3(0^32||x) at 7 and 3 rounds (300 each, 0 mismatches); packed 7-lane circuit == verifier at 3 rounds (700 lanes, 0 mismatches).",
+ "held_fixed": "first block of a chunk only (flags 1), cv = IV, t = 0, b = 64, 3 rounds; random blocks; 2^24 samples; toy k 32..48",
+ "reopen_if": "an excess of pairs above uniform that grows with k at 3 rounds, or a structured difference trail with fewer than 7 word conditions across the 3 rounds",
+ "gain_basis": "count"
+}

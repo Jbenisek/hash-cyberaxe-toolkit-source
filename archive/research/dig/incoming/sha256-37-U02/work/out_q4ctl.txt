@@ -1,0 +1,32 @@
+== q4ctl seeds 1 np 4096 mt 1024 relax: P=sym E17 =0=====+01===u1=+==0==1===1u====
+model chi37: 37 steps, anchor row 14 (x and y rows 11..14 held), E-driven rows 16..21, lowest conditioned row 4
+  conditions: 31 two-bit/linear (printed), 25 in the attack model; 'except' words: W6 W7
+  free word W6 (late): W6 fset s0 03c00800 late
+  free word W7 (late): W7 fset s0 017f8000 late
+  free word W8 (late): W8 cell+fset s0 043ff800 back late
+  free word W15 (early): W15 list 7dd41680 7dd41681 7dd416a0 7dd416a1 7dd41a80 7dd41a81 7dd41aa0 7dd41aa1 7dd43680 
+  relaxation R1
+  relaxation R2disputed
+WINDOW rows 22..36 event=out np 4096 m 256 mt2 1024 mw 256 mt 1024 threads 3 prefix-conditions prefix
+-- seed 1
+  init: 4096 particles, acceptance 1.000000 (rows 15..15)
+  stage 16 (E-driven): forced  9 bits, accepted 4113 of 1048576, log2 est -16.9940
+  stage 17 (E-driven): forced  9 bits, accepted 65511 of 1048576, log2 est -29.9946
+  stage 18 (E-driven): forced 12 bits, accepted 131780 of 1048576, log2 est -44.9868
+  stage 19 (E-driven): forced  6 bits, accepted 1048576 of 1048576, log2 est -50.9868
+  stage 20 (E-driven): forced  6 bits, accepted 524455 of 1048576, log2 est -57.9863
+  stage 21 (E-driven): forced  1 bits, accepted 1048576 of 1048576, log2 est -58.9863
+[s1] prefix log2 P(rows 4..21) = -58.9863
+[s1] samples 4194304 (late words redrawn per sample), prefix broken by redraw 0, y-anchor inconsistent 0, replay mismatches 0
+[s1]   cells          rows 22..36:          144  rate 3.433228e-05 (log2 -14.8301) 95% [2.9164e-05, 4.0416e-05]  with exact 144
+[s1]   EXACT          zero output difference after the last step:          323  rate 7.700920e-05 (log2 -13.6646) 95% [6.9057e-05, 8.5878e-05]
+[s1]   ratios to 'cells' (95% cluster-robust over particles; halves = particles split in two):
+[s1]     EXACT/cells = 2.24306 +- 0.27103  (log2 +1.1655)  halves 2.29577 +- 0.40408 | 2.19178 +- 0.36352
+[s1]   log2 P(rows 4..36, model cells) = prefix + log2 rate(cells) = -73.8164
+[s1]   time 7.3 s
+== summary over 1 seed(s): EXACT/cells 2.24306 +- 0.27103
+== summary: log2 P(rows 4..36, model cells) mean -73.8164, seed sd 0.0000 (seeds: -73.8164)
+
+real	0m7.418s
+user	0m19.929s
+sys	0m0.422s

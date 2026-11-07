@@ -1,0 +1,7 @@
+[
+  {
+    "submissionId": "27d33f4a-6728-4fd4-a20a-e52a0beca815",
+    "rationale": "Our own entry for Poseidon round 5 (47.12325, in review). This entry keeps its attack, program and ledger rules and changes two source lines of the allocator (SMALL_BLOCK in common.c, ARENA in common.h), with a new counted run at 4 threads.",
+    "evidence": "proof.md Section 1 (What changed vs 27d33f4a), Sections 4.2, 4.5, 6 and 7."
+  }
+]

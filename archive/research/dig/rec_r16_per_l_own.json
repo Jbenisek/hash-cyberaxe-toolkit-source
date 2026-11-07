@@ -1,0 +1,20 @@
+{
+  "id": "S37-E8-OWN",
+  "hash": "sha256-37",
+  "row_i": 15,
+  "row_j": 16,
+  "object": "Own exact row-16 per-L* enumeration",
+  "question": "What are the exact row-16 accepted counts for each legal L* W15 class?",
+  "labels": ["B", "D", "X"],
+  "status": "COMPUTED",
+  "number": "32 L* classes; total 1,052,672 accepted (u,l); 1,042,240 distinct u; 28 nonempty; mean 2^-16.994 over full u, or 2^-7.9943754508 conditional on the 2^23 row-16 E-cell values; distinct-u probability 2^-12.009",
+  "source": "our workflow: dense_boring/l16.c",
+  "own_test": true,
+  "evidence": "research/retest/r16_per_l/OWN_RESULT.md; research/retest/dense_boring/l16.c",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "r37.row16.perl.own",
+  "notes": "Single-thread exact fixed-prefix enumeration over all 2^23 row-16 E assignments per L* class. Confirms the total 1,052,672 and that four empty classes die by row-16 two-bit relations, not dW16. Late rows and the wider Procedure-C family remain OPEN."
+}

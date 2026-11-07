@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-direct-symmetry",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 direct g-toggle witness maps",
+  "question": "Which class toggles preserve the exact coupled J1/J3 equations with f,e2,h fixed and g,y XORed?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact bit-vector UNSAT for J1 and both J3 epsilon values at deltas 40000000, 10000000, 0000c000, 00000030, 00000008",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/direct_symmetry_smt.py; research/retest/b3_omega_coupled/exact/direct_symmetry_smt.out; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Together with prior 80000000 and 00000800 maps and the 04000000/38000000 high-six-bit involutions, 9/15 class directions have exact coupled witness maps; six remain open."
+}

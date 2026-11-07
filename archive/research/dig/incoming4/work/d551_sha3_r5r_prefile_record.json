@@ -1,0 +1,23 @@
+{
+  "id": "D551-SHA3-R5R-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR5R prefile and duplicate executable comparison",
+  "question": "What is currently creditable for pkgR5R without a fresh organizer request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR5R claims time_log2=32.87429, memory_log2=30, preprocessing_log2=32.77757, success_probability=0.4. Prefile SOME FAIL: ledger prints N=None; note labels D25/staged; claim labels D20/D21/D22/D23/D24/D25/pkgR5P; proof-header labels D20/D23. Other intake checks pass. r5.py SHA-256 7FD4E4F811CE05A9A651D4DBFEE4A52AF582877B7B7934A3538CB7210B2B99EA matches R5P-L. No fresh request is present; no exact-N/score/premise credit.",
+  "source": "our workflow: D551 read-only pkgR5R prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D551_r5r_prefile.md; research/tools/build_pkg/scratch/pkgR5R/pkg/sha3-256-r5/claim.json; research/tools/build_pkg/scratch/pkgR5R/pkg/sha3-256-r5/proof.md; research/tools/build_pkg/scratch/pkgR5R/pkg/sha3-256-r5/experiments/r5.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No fresh organizer request; executable duplicates R5P-L; no package/stage/filing/submission.",
+  "held_fixed": "pkgR5R package bytes as found; no file writes to package",
+  "reopen_if": "ledger/label repair or supplied public organizer request"
+}

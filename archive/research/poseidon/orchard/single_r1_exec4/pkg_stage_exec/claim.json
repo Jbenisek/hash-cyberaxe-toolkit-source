@@ -1,0 +1,36 @@
+{
+ "schema_version": 3,
+ "submission_state": "ready",
+ "target_profile": "poseidon-orchard-r1-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 1,
+ "claim": {
+  "time_log2": 25.32356,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 23.387,
+  "preprocessing_log2": 0,
+  "success_probability": 1,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r1-prefix-v1 only (one partial round plus the eight fixed full rounds); the construction uses the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "Success probability 1 means: one deterministic procedure (centres c_i = i tried in the order i = 1, 2, 3, ... until the first collision) was executed once from the start on the fixed target and stopped with a collision after 1 trials; the time is the executed operation count of that run with every trial charged, failed ones included, and the memory its executed peak. It is not a probability over centres; no start was selected beforehand."
+ ],
+ "baseline_improved": "poseidon-orchard-r1-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H1-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 describe the executed program of proof.md section 9 under the stated rules: 1 per field operation (a Montgomery conversion is one multiplication), 1 per element load or store plus 1 address operation, 3 per loop iteration plus 2 per loop exit (the loops written with the macro FOR8 are unrolled eight times in the source and charged 3 per pass of eight; the generated kernels are straight-line), 1 per other executed index or control operation, 237 per reduced permutation evaluation, and a register file of 18 words of 256 bits per transform block (16 data words plus two working words: the twiddle operand and the butterfly temporary) as the only register assumption.",
+   "scope": "All stages of the executed run of proof.md section 4 at the target dimensions (m = 39062 for the powering, N = 98304 and N' = 49152 in its transforms, 98304 evaluations of the line).",
+   "extrapolation": "None. The time is the executed total of one run of the shipped source, with every trial charged and the output stage included; no bound, estimate or other run enters it.",
+   "evidence_ids": [
+    "proof:57-122",
+    "proof:128-169"
+   ],
+   "limitations": "The counts are produced by the instrumentation written into the source; the source is part of the proof text and was not run by the organizer. Word-level costs outside the stated rules (cache, bandwidth) are not part of the model."
+  }
+ ]
+}

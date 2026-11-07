@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+Text extraction beside an external PDF: citation only, not a distributable paper payload.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/papers/sha3/eprint_2023_101/paper.txt
+Publisher/preprint locator (derived from the source identifier): https://eprint.iacr.org/2023/101

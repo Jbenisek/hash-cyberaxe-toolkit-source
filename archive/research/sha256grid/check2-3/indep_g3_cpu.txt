@@ -1,0 +1,21 @@
+imposed bits f from vt38 CELL/PLUS (rows 17..22): [10, 11, 12, 6, 6, 1]  mask/plus overlaps: [0, 0, 0, 0, 0, 0]  f23 = 6  tail weight log2 = -2.098032
+g3_v1.log: 65536 run lines, keys != runkey(master 20261012, r): 0, max |log2Z recomputed from counts - logged| = 5.00e-07
+g3_v1.log: n 65536 (distinct r 65536), mean 2^-100.99999, rel sd 0.0338, t 2.3264, one-sided 99% bound 2^-101.00043; min 2^-101.1975 max 2^-100.7976; skew 0.058 exkurt 0.006; hits 280585659 bad 0
+   batch means (128 batches of 512): bound 2^-101.00041; batch-mean sd / (run sd/sqrt(k)) = 0.935
+g3_pool.log: 4096 run lines, keys != runkey(master 20261011, r): 0, max |log2Z recomputed from counts - logged| = 5.00e-07
+g3_pool.log: n 4096 (distinct r 4096), mean 2^-101.00019, rel sd 0.0255, t 2.3273, one-sided 99% bound 2^-101.00153; min 2^-101.1728 max 2^-100.8607; skew 0.056 exkurt -0.016; hits 17533633 bad 0
+   batch means (128 batches of 32): bound 2^-101.00169; batch-mean sd / (run sd/sqrt(k)) = 1.107
+cpu_m4242_lane0.log: 1280 run lines, keys != runkey(master 4242, r): 0, max |log2Z recomputed from counts - logged| = 5.00e-07
+cpu_m4242_lane1.log: 172 run lines, keys != runkey(master 4242, r): 0, max |log2Z recomputed from counts - logged| = 4.97e-07
+cpuB_m4343.log: 1038 run lines, keys != runkey(master 4343, r): 0, max |log2Z recomputed from counts - logged| = 5.00e-07
+cpu_m4242_lane0.log + cpu_m4242_lane1.log + cpuB_m4343.log: n 2490 (distinct r 1799), mean 2^-100.99872, rel sd 0.0247, t 2.3278, one-sided 99% bound 2^-101.00038; min 2^-101.1105 max 2^-100.8903; skew 0.035 exkurt -0.127; hits 10664683 bad 0
+   batch means (16 batches of 155): bound 2^-101.00035; batch-mean sd / (run sd/sqrt(k)) = 0.832
+cpuC_m4444_v1.log: 80 run lines, keys != runkey(master 4444, r): 0, max |log2Z recomputed from counts - logged| = 4.89e-07
+cpuC_m4444_v1.log: n 80 (distinct r 80), mean 2^-101.00157, rel sd 0.0326, t 2.3745, one-sided 99% bound 2^-101.01413; min 2^-101.1304 max 2^-100.9056; skew -0.055 exkurt -0.259; hits 343217 bad 0
+   batch means (16 batches of 5): bound 2^-101.01420; batch-mean sd / (run sd/sqrt(k)) = 0.918
+g1_pilot.log: 256 run lines, keys != runkey(master 9001, r): 0, max |log2Z recomputed from counts - logged| = 4.96e-07
+g1_pilot.log: n 256 (distinct r 256), mean 2^-100.99914, rel sd 0.0258, t 2.3411, one-sided 99% bound 2^-101.00460; min 2^-101.1150 max 2^-100.9076; skew 0.139 exkurt -0.184; hits 1094789 bad 0
+   batch means (16 batches of 16): bound 2^-101.00327; batch-mean sd / (run sd/sqrt(k)) = 0.681
+g3_v1.a0: SR(sum |R_j|) 191773672732; accepted 65536, chi2 vs |R_j|/SR 262.9 (255 df, p 0.354); tail-rate heterogeneity chi2 777.7 (255 df, p 0.000); per-A0 log2 rate rel. to mean: min -0.0063 max +0.0071 sd 0.0024
+g3_pool.a0: SR(sum |R_j|) 191773672732; accepted 268435456, chi2 vs |R_j|/SR 238.4 (255 df, p 0.765); tail-rate heterogeneity chi2 236.1 (255 df, p 0.797); per-A0 log2 rate rel. to mean: min -0.0160 max +0.0161 sd 0.0053
+cpuB_m4343.a0: SR(sum |R_j|) 191773672732; accepted 8503296, chi2 vs |R_j|/SR 330.6 (255 df, p 0.001); tail-rate heterogeneity chi2 285.7 (255 df, p 0.091); per-A0 log2 rate rel. to mean: min -0.0376 max +0.0308 sd 0.0116

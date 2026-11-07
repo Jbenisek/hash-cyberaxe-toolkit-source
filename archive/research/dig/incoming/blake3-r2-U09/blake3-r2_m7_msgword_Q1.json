@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m7 message word",
+ "question": "difference/condition count as used on m7",
+ "labels": [
+  "I"
+ ],
+ "status": "COMPUTED",
+ "number": "w6 and w7: A-vs-B difference 0 in 20000/20000 builds (B copies A except w4,w5 by construction); 0 conditions placed on the value of either word (both are outputs of the K3 inversion: w6=K3a1-IV3-IV7, w7=S3-K3a1-K3b1); no fixed bits (max bit bias 0.0083 / 0.0089 over 20000, all 32 bits free in both)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U09/work/scan_m67.py; research/dig/incoming/blake3-r2-U09/work/scan_m67.out.json; research/dig/incoming/blake3-r2-U09/work/validate_b3.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|m7|msgword|Q1. w7 is the second message word of K3 (round 0) and the first of C2 (round 1, permuted slot 4). Construction validated first: 3000/3000 random 8-word inputs reproduce X3/X7/X11/X15, Y4=y, S and X equal A vs B, digest words 0,2,5,7 equal (work/validate_b3.py, reused from U06 on our b3lib.py written from pkgB3U proof). Reads the pair block layout: m6,m7 are equal in A and B and carry no printed condition of their own; their values are derived from K3 pins (X3 etc.). Bias figures are sampled on 20000; zero-difference is structural. Method same as blake3-r2-U06 (scan_m01.py) applied to words 6,7. Tested the pkgB3U root construction only, 2-round, A (len 55) vs B (len 63).",
+ "topic": "b3 msgword m7 Q1"
+}

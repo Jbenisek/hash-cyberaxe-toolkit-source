@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-allmember1000",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "coupled omega 1000-word all-member audit",
+  "question": "Do 2,000 selected typed words per class remain all-or-none over every member under the exact coupled checker?",
+  "labels": ["I", "K"],
+  "status": "SAMPLED",
+  "number": "32,000 complete groups; 1,048,576,000 exact evaluations; 16,000 all-kept, 16,000 all-rejected, 0 mixed, 0 errors",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_omega_class.md; research/retest/b3_omega_coupled/exact/RESULT.md; research/retest/b3_omega_coupled/exact/allmember_1000.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "The first 1000 representative-kept and first 1000 representative-rejected typed words were tested against all 32768 members of each class. Exact finite evidence only; the universal class-invariance proof remains OPEN."
+}

@@ -1,0 +1,3 @@
+HEAD eshare seed 2026101021 G 4294967296 ; sum of N2 over the 2^16 low halves 233715456 (E_COUNT 233715456: EQUAL)
+E per walk context: mean 24964.4990 (exact if omega mod 2^16 is uniform: 24963.5039) ratio 1.000040 +- 0.000040 ; var/mean 168075.3 ; live blocks 0.10791 per block ; contexts with no live block 0.84750
+SECONDS 0.4

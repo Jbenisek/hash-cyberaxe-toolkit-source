@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.TWID (MEM)",
+ "question": "M2: necessity: drop the table (tableless NTT) and recount",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Memory gain 0.0759 bit. A running-product twiddle costs at least one extra multiply per butterfly; multiplies are 8.5 percent of all observed ops, and the butterfly multiplies are most of them, so the time cost is up to 0.115 bit (90 percent of the multiplies repeated) - larger than the gain.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.TWID|MEM|M2. Lower bound on the time cost; real cost also adds loads/stores/control. Net: not worth it.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "twiddles are generated at < 1 op per butterfly"
+}

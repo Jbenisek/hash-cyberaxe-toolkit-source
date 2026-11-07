@@ -1,0 +1,76 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; python -B work/tools/lane_bound.py 2000
+
+RULE WITH 4 CONDITIONS: bounds of the sums for all inputs (units of 2^32)
+  outer step  next w5      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  outer step  K2 and D3    largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  outer step  K3           largest bound of a sum    7 * 2^32 - 2   bound of TABLES 7 * 2^32   below
+  outer step  C0 and D2    largest bound of a sum    5 * 2^32 - 5   bound of TABLES 5 * 2^32   below
+  outer step: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 7 * 2^32 - 2; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  table build build C0     largest bound of a sum    3 * 2^32 - 3   bound of TABLES 3 * 2^32   below
+  table build build D1     largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  table build: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 4 * 2^32 - 3; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  middle step next X2      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  middle step D2 and K1    largest bound of a sum    8 * 2^32 - 5   bound of TABLES 8 * 2^32   below
+  middle step K0           largest bound of a sum    6 * 2^32 - 3   bound of TABLES 6 * 2^32   below
+  middle step: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 8 * 2^32 - 5; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  batch       X0 to X10    largest bound of a sum    3 * 2^32 - 2   bound of TABLES 3 * 2^32   below
+  batch       C2 to z      largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  batch       rule A       largest bound of a sum 2 * 2^32 - 4244634881   bound of TABLES 2 * 2^32   below
+  batch       C2, rest     largest bound of a sum    5 * 2^32 - 4   bound of TABLES 5 * 2^32   below
+  batch       C1 to Y1     largest bound of a sum    5 * 2^32 - 5   bound of TABLES 5 * 2^32   below
+  batch       E1, A and B  largest bound of a sum    9 * 2^32 - 9   bound of TABLES 9 * 2^32   below
+  batch       E1 test      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  batch: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 9 * 2^32 - 9; largest bound of a stored word 0 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  largest bound of a sum: 9 * 2^32 - 9 = 38654705655 < 2^36 = 68719476736: True; largest bound of a word that enters the flags of stage 2: 4294967295; of the word added to the carry word of stage A: 50332416 (ALL = 50332416); of a stored word: 4294967295 (2^32 - 1 = 4294967295); shifted words misused in all pieces: 0
+  2000 random cases on the program's machine: every sum at most the bound of its part: True; largest sum seen 7.745 * 2^32
+  RESULT: all bounds hold
+
+RULE WITH 6 CONDITIONS: bounds of the sums for all inputs (units of 2^32)
+  outer step  next w5      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  outer step  K2 and D3    largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  outer step  K3           largest bound of a sum    7 * 2^32 - 2   bound of TABLES 7 * 2^32   below
+  outer step  C0 and D2    largest bound of a sum    5 * 2^32 - 5   bound of TABLES 5 * 2^32   below
+  outer step: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 7 * 2^32 - 2; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  table build build C0     largest bound of a sum    3 * 2^32 - 3   bound of TABLES 3 * 2^32   below
+  table build build D1     largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  table build: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 4 * 2^32 - 3; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  middle step next X2      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  middle step D2 and K1    largest bound of a sum    8 * 2^32 - 5   bound of TABLES 8 * 2^32   below
+  middle step K0           largest bound of a sum    6 * 2^32 - 3   bound of TABLES 6 * 2^32   below
+  middle step: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 8 * 2^32 - 5; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  batch       X0 to X10    largest bound of a sum    3 * 2^32 - 2   bound of TABLES 3 * 2^32   below
+  batch       C2 to z      largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  batch       rule A       largest bound of a sum 2 * 2^32 - 4043308289   bound of TABLES 2 * 2^32   below
+  batch       C2, rest     largest bound of a sum    5 * 2^32 - 4   bound of TABLES 5 * 2^32   below
+  batch       C1 to Y1     largest bound of a sum    5 * 2^32 - 5   bound of TABLES 5 * 2^32   below
+  batch       E1, A and B  largest bound of a sum    9 * 2^32 - 9   bound of TABLES 9 * 2^32   below
+  batch       E1 test      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  batch: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 9 * 2^32 - 9; largest bound of a stored word 0 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  largest bound of a sum: 9 * 2^32 - 9 = 38654705655 < 2^36 = 68719476736: True; largest bound of a word that enters the flags of stage 2: 4294967295; of the word added to the carry word of stage A: 251659008 (ALL = 251659008); of a stored word: 4294967295 (2^32 - 1 = 4294967295); shifted words misused in all pieces: 0
+  2000 random cases on the program's machine: every sum at most the bound of its part: True; largest sum seen 7.745 * 2^32
+  RESULT: all bounds hold
+
+RULE WITH 8 CONDITIONS: bounds of the sums for all inputs (units of 2^32)
+  outer step  next w5      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  outer step  K2 and D3    largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  outer step  K3           largest bound of a sum    7 * 2^32 - 2   bound of TABLES 7 * 2^32   below
+  outer step  C0 and D2    largest bound of a sum    5 * 2^32 - 5   bound of TABLES 5 * 2^32   below
+  outer step: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 7 * 2^32 - 2; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  table build build C0     largest bound of a sum    3 * 2^32 - 3   bound of TABLES 3 * 2^32   below
+  table build build D1     largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  table build: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 4 * 2^32 - 3; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  middle step next X2      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  middle step D2 and K1    largest bound of a sum    8 * 2^32 - 5   bound of TABLES 8 * 2^32   below
+  middle step K0           largest bound of a sum    6 * 2^32 - 3   bound of TABLES 6 * 2^32   below
+  middle step: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 8 * 2^32 - 5; largest bound of a stored word 4294967295 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  batch       X0 to X10    largest bound of a sum    3 * 2^32 - 2   bound of TABLES 3 * 2^32   below
+  batch       C2 to z      largest bound of a sum    4 * 2^32 - 3   bound of TABLES 4 * 2^32   below
+  batch       rule A       largest bound of a sum 2 * 2^32 - 2969500929   bound of TABLES 2 * 2^32   below
+  batch       C2, rest     largest bound of a sum    5 * 2^32 - 4   bound of TABLES 5 * 2^32   below
+  batch       C1 to Y1     largest bound of a sum    5 * 2^32 - 5   bound of TABLES 5 * 2^32   below
+  batch       E1, A and B  largest bound of a sum    9 * 2^32 - 9   bound of TABLES 9 * 2^32   below
+  batch       E1 test      largest bound of a sum    2 * 2^32 - 2   bound of TABLES 2 * 2^32   below
+  batch: operations, loads and stores per part on the second machine equal TABLES: True; largest bound of a sum 9 * 2^32 - 9; largest bound of a stored word 0 (2^32 - 1 = 4294967295); shifted words misused: 0 []
+  largest bound of a sum: 9 * 2^32 - 9 = 38654705655 < 2^36 = 68719476736: True; largest bound of a word that enters the flags of stage 2: 4294967295; of the word added to the carry word of stage A: 1325466368 (ALL = 1325466368); of a stored word: 4294967295 (2^32 - 1 = 4294967295); shifted words misused in all pieces: 0
+  2000 random cases on the program's machine: every sum at most the bound of its part: True; largest sum seen 7.745 * 2^32
+  RESULT: all bounds hold

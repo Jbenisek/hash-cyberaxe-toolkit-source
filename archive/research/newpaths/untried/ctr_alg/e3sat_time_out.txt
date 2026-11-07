@@ -1,0 +1,57 @@
+Sat Oct 10 00:14:34 MDT 2026
+trivial-formula CPU (s), no printing: kissat 0.00184, kissat-nc 0.00196, cadical 0.00199, cms 0.00396
+rec11_s000_t4      kissat solve 2^22.12 parse 2^20.58 | kissat-nc solve 2^22.63 parse 2^19.84 | cadical solve 2^20.16 parse 2^21.51 | cms solve 2^-inf parse 2^-inf STATUS?
+rec11_s001_t0      kissat solve 2^22.30 parse 2^21.00 | kissat-nc solve 2^22.98 parse 2^19.61 | cadical solve 2^18.72 parse 2^21.29 | cms solve 2^-inf parse 2^-inf STATUS?
+rec11_s002_t4      kissat solve 2^22.38 parse 2^20.19 | kissat-nc solve 2^22.86 parse 2^20.59 | cadical solve 2^18.64 parse 2^21.70 | cms solve 2^-inf parse 2^-inf STATUS?
+rec11_s003_t1      kissat solve 2^22.21 parse 2^19.97 | kissat-nc solve 2^23.12 parse 2^18.61 | cadical solve 2^20.13 parse 2^21.48 | cms solve 2^18.50 parse 2^-inf STATUS?
+rec11_s004_t4      kissat solve 2^21.56 parse 2^21.29 | kissat-nc solve 2^23.09 parse 2^20.20 | cadical solve 2^18.99 parse 2^21.47 | cms solve 2^21.04 parse 2^-inf STATUS?
+rec11_s005_t1      kissat solve 2^22.02 parse 2^21.54 | kissat-nc solve 2^23.89 parse 2^19.86 | cadical solve 2^20.38 parse 2^20.82 | cms solve 2^-inf parse 2^-inf STATUS?
+rec11_s005_t4      kissat solve 2^22.19 parse 2^20.48 | kissat-nc solve 2^22.76 parse 2^20.19 | cadical solve 2^19.62 parse 2^21.21 | cms solve 2^18.52 parse 2^-inf STATUS?
+rec11_s006_t0      kissat solve 2^22.53 parse 2^19.49 | kissat-nc solve 2^23.61 parse 2^18.13 | cadical solve 2^19.47 parse 2^20.79 | cms solve 2^19.76 parse 2^-inf STATUS?
+rec11_s007_t1      kissat solve 2^22.07 parse 2^20.34 | kissat-nc solve 2^22.92 parse 2^19.91 | cadical solve 2^20.65 parse 2^20.98 | cms solve 2^-inf parse 2^-inf STATUS?
+rec11_s007_t4      kissat solve 2^22.25 parse 2^19.85 | kissat-nc solve 2^23.14 parse 2^20.16 | cadical solve 2^21.53 parse 2^21.98 | cms solve 2^21.81 parse 2^-inf STATUS?
+rec11_s008_t1      kissat solve 2^22.05 parse 2^21.29 | kissat-nc solve 2^23.87 parse 2^19.84 | cadical solve 2^-inf parse 2^21.85 | cms solve 2^20.39 parse 2^-inf STATUS?
+rec11_s009_t1      kissat solve 2^22.07 parse 2^21.17 | kissat-nc solve 2^21.82 parse 2^19.06 | cadical solve 2^18.35 parse 2^21.01 | cms solve 2^20.11 parse 2^-inf STATUS?
+rec11_s009_t4      kissat solve 2^22.02 parse 2^20.28 | kissat-nc solve 2^21.80 parse 2^19.91 | cadical solve 2^20.22 parse 2^21.90 | cms solve 2^19.35 parse 2^-inf STATUS?
+rec11_s010_t1      kissat solve 2^22.25 parse 2^20.76 | kissat-nc solve 2^22.77 parse 2^19.78 | cadical solve 2^19.49 parse 2^21.98 | cms solve 2^19.09 parse 2^-inf STATUS?
+rec11_s011_t6      kissat solve 2^22.41 parse 2^20.65 | kissat-nc solve 2^23.58 parse 2^19.53 | cadical solve 2^21.24 parse 2^21.50 | cms solve 2^19.91 parse 2^-inf STATUS?
+rec11_s012_t4      kissat solve 2^22.03 parse 2^20.73 | kissat-nc solve 2^23.50 parse 2^21.91 | cadical solve 2^20.94 parse 2^22.22 | cms solve 2^-inf parse 2^-inf STATUS?
+rec11_s013_t4      kissat solve 2^22.22 parse 2^21.31 | kissat-nc solve 2^23.51 parse 2^20.84 | cadical solve 2^20.30 parse 2^22.13 | cms solve 2^-inf parse 2^14.78 STATUS?
+rec11_s014_t1      kissat solve 2^22.34 parse 2^20.56 | kissat-nc solve 2^22.21 parse 2^19.92 | cadical solve 2^19.78 parse 2^21.37 | cms solve 2^20.62 parse 2^-inf STATUS?
+rec11_s015_t1      kissat solve 2^22.15 parse 2^20.55 | kissat-nc solve 2^23.51 parse 2^19.99 | cadical solve 2^19.44 parse 2^21.27 | cms solve 2^-inf parse 2^-inf STATUS?
+rec11_s016_t6      kissat solve 2^22.32 parse 2^20.70 | kissat-nc solve 2^23.96 parse 2^20.02 | cadical solve 2^19.36 parse 2^21.84 | cms solve 2^18.86 parse 2^-inf STATUS?
+rec11_s017_t1      kissat solve 2^22.45 parse 2^20.39 | kissat-nc solve 2^23.23 parse 2^20.40 | cadical solve 2^20.08 parse 2^22.08 | cms solve 2^21.34 parse 2^18.95 STATUS?
+rec11_s018_t5      kissat solve 2^22.45 parse 2^21.72 | kissat-nc solve 2^23.62 parse 2^21.02 | cadical solve 2^20.21 parse 2^21.71 | cms solve 2^13.20 parse 2^19.49 STATUS?
+rec11_s019_t0      kissat solve 2^22.34 parse 2^20.59 | kissat-nc solve 2^23.45 parse 2^19.56 | cadical solve 2^20.24 parse 2^21.32 | cms solve 2^20.60 parse 2^-inf STATUS?
+rplant_s000_tx     kissat solve 2^23.38 parse 2^21.90 | kissat-nc solve 2^25.51 parse 2^21.36 | cadical solve 2^22.61 parse 2^22.42 | cms solve 2^-inf parse 2^-inf STATUS?
+rplant_s001_tx     kissat solve 2^23.68 parse 2^21.76 | kissat-nc solve 2^25.59 parse 2^21.50 | cadical solve 2^22.66 parse 2^22.30 | cms solve 2^-inf parse 2^-inf STATUS?
+rplant_s002_tx     kissat solve 2^24.24 parse 2^22.20 | kissat-nc solve 2^26.05 parse 2^22.21 | cadical solve 2^23.53 parse 2^22.99 | cms solve 2^16.84 parse 2^-inf STATUS?
+rplant_s003_tx     kissat solve 2^24.01 parse 2^22.36 | kissat-nc solve 2^25.49 parse 2^22.07 | cadical solve 2^22.45 parse 2^23.12 | cms solve 2^20.79 parse 2^-inf STATUS?
+rplant_s004_tx     kissat solve 2^23.44 parse 2^21.62 | kissat-nc solve 2^24.60 parse 2^21.57 | cadical solve 2^22.50 parse 2^23.02 | cms solve 2^20.56 parse 2^-inf STATUS?
+bplant_s000_t0     kissat solve 2^23.69 parse 2^22.26 | kissat-nc solve 2^25.43 parse 2^21.77 | cadical solve 2^22.71 parse 2^23.05 | cms solve 2^-inf parse 2^-inf STATUS?
+bplant_s001_t1     kissat solve 2^23.46 parse 2^22.26 | kissat-nc solve 2^25.59 parse 2^22.10 | cadical solve 2^22.48 parse 2^22.86 | cms solve 2^15.52 parse 2^19.85 STATUS?
+bplant_s002_t2     kissat solve 2^23.65 parse 2^22.37 | kissat-nc solve 2^25.40 parse 2^22.20 | cadical solve 2^22.80 parse 2^23.10 | cms solve 2^-inf parse 2^18.22 STATUS?
+bplant_s003_t3     kissat solve 2^23.44 parse 2^22.28 | kissat-nc solve 2^25.60 parse 2^22.14 | cadical solve 2^22.85 parse 2^22.76 | cms solve 2^-inf parse 2^20.45 STATUS?
+bplant_s004_t4     kissat solve 2^23.30 parse 2^22.32 | kissat-nc solve 2^25.56 parse 2^22.24 | cadical solve 2^22.71 parse 2^22.86 | cms solve 2^18.22 parse 2^-inf STATUS?
+bplant_s005_t5     kissat solve 2^23.30 parse 2^22.16 | kissat-nc solve 2^25.33 parse 2^21.89 | cadical solve 2^22.47 parse 2^22.89 | cms solve 2^-inf parse 2^-inf STATUS?
+bplant_s006_t6     kissat solve 2^23.73 parse 2^22.27 | kissat-nc solve 2^25.69 parse 2^22.04 | cadical solve 2^22.57 parse 2^22.97 | cms solve 2^20.90 parse 2^17.37 STATUS?
+
+rec11: 120 passing steps; per passing step (mean; median):
+  kissat    solve 2^22.64; 2^22.37 | parse+setup 2^21.47 | literals 2^13.00 | status mismatches 0
+  kissat-nc solve 2^23.59; 2^23.51 | parse+setup 2^21.02 | literals 2^13.00 | status mismatches 0
+  cadical   solve 2^21.07; 2^20.91 | parse+setup 2^22.20 | literals 2^13.00 | status mismatches 0
+  cms       solve 2^19.56; 2^18.80 | parse+setup 2^-inf | literals 2^11.92 | status mismatches 152
+
+rec7: 150 passing steps; per passing step (mean; median):
+  kissat    solve 2^22.59; 2^22.39 | parse+setup 2^21.38 | literals 2^12.95 | status mismatches 0
+  kissat-nc solve 2^23.62; 2^23.44 | parse+setup 2^20.99 | literals 2^12.95 | status mismatches 0
+  cadical   solve 2^21.17; 2^20.91 | parse+setup 2^22.05 | literals 2^12.95 | status mismatches 0
+  cms       solve 2^19.17; 2^18.62 | parse+setup 2^-inf | literals 2^11.88 | status mismatches 185
+
+rec11+rec7: 270 passing steps; per passing step (mean; median):
+  kissat    solve 2^22.61; 2^22.38 | parse+setup 2^21.42 | literals 2^12.97 | status mismatches 0
+  kissat-nc solve 2^23.61; 2^23.48 | parse+setup 2^21.00 | literals 2^12.97 | status mismatches 0
+  cadical   solve 2^21.13; 2^20.91 | parse+setup 2^22.12 | literals 2^12.97 | status mismatches 0
+  cms       solve 2^19.36; 2^18.71 | parse+setup 2^-inf | literals 2^11.90 | status mismatches 337
+exit 0
+Sat Oct 10 00:16:00 MDT 2026

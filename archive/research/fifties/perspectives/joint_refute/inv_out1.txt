@@ -1,0 +1,8 @@
+groups 96 scanned 189449 time 40s
+union of within-group difference spaces: rank 126 -> 2 universal group invariants
+global affine relations (constant over all groups): 2
+infeasible groups 63, of which explained by universal invariants 0
+  rand: 48 groups, hull-infeasible 34, rejected by universal invariants alone 0
+  pass: 48 groups, hull-infeasible 29, rejected by universal invariants alone 0
+  inv 0 mask R1 00000000 R3 000000ff R4 02000000 R6 fe000001 weight 17  const=1 in 0/96 groups
+  inv 1 mask R1 00000000 R3 ffffff00 R4 02000000 R6 01fffffe weight 49  const=1 in 0/96 groups

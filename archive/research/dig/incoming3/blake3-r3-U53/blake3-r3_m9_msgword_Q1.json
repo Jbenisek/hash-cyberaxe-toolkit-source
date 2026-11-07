@@ -1,0 +1,22 @@
+{
+ "object": "message word m9",
+ "question": "Q1: value/count of message word m9 as used in the filed circuit.",
+ "status": "COMPUTED",
+ "number": "m9 is a chain word (part of x, fed by digest word 1 with the identity embedding). Used 3 times: round 0 call D0 (y); round 1 call D2 (x); round 2 call D1 (x). Each use is one add of the variable word into the a-chain; whole-step ops at the uses: round 0: step ops 8 (adds 2); round 1: step ops 8 (adds 2); round 2: step ops 8 (adds 2). Ops that depend on the word being variable rather than the constant 0: 5 of 595 (0.0121 bit of time_log2), because a constant word also lets constant-only G calls fold.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_words.py; research/dig/incoming3/blake3-r3-U46/work/words_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. Uses taken from the message permutation applied per round (own word_positions in b3scan.py); ops from the tracer by setting the word to constant 0 and recounting.",
+ "held_fixed": "target 0^32||x (m0..m7 = 0, m8..m15 = x), flags 11, counter 0, length 64, 3 rounds; filed layout",
+ "reopen_if": "the target prefix or the chain embedding changes",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|m9|msgword|Q1",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

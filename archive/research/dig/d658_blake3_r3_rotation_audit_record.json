@@ -1,0 +1,23 @@
+{
+  "id": "D658-BLAKE3-R3-ROTATION-AUDIT-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 rotational-symmetry differential audit",
+  "question": "Does rotating every free message word produce a rotated digest under the actual constants?",
+  "labels": ["D", "P"],
+  "status": "SAMPLED",
+  "number": "Existing exact local run: for every k=1..31 over 2^18 random m8..m15 samples, maximum rotated-equal digest words was 0; minimum digest Hamming distance was 87 bits; initial-state rotation distance was nonzero for every k. Symmetric all-zero-state control behaves as expected.",
+  "source": "our workflow: D658 audit of the existing BLAKE3-r3 rotational test",
+  "own_test": true,
+  "evidence": "research/blake3_r3/alt/exp_rot.py; research/blake3_r3/alt/exp_rot.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "actual BLAKE3-r3 constants, free m8..m15 family, recorded 2^18 random samples per k",
+  "notes": "Finite sampled negative control only; it does not prove universal absence of rotational structure and gives no score/package credit.",
+  "reopen_if": "A universal rotational relation or a reproducible excess beyond the sampled control is proposed"
+}

@@ -1,0 +1,6 @@
+fixed13 plain: 100 words; max closure 1 guess = 9; 2 guesses = 14 ('K0.a1', 'K2.a1'); 4 sides x 2 guesses cover at most 56 of 100
+fixed13 tables: 100 words; max closure 1 guess = 9; 2 guesses = 14 ('K0.a1', 'K2.a1'); 4 sides x 2 guesses cover at most 56 of 100
+outhalf plain: 128 words; max closure 1 guess = 5; 2 guesses = 10 ('K0.a1', 'K0.a2'); 4 sides x 2 guesses cover at most 40 of 128
+outhalf tables: 128 words; max closure 1 guess = 5; 2 guesses = 10 ('K0.a1', 'K0.a2'); 4 sides x 2 guesses cover at most 40 of 128
+outhalf13 plain: 128 words; max closure 1 guess = 5; 2 guesses = 10 ('K0.a1', 'K0.a2'); 4 sides x 2 guesses cover at most 40 of 128
+outhalf13 tables: 128 words; max closure 1 guess = 5; 2 guesses = 10 ('K0.a1', 'K0.a2'); 4 sides x 2 guesses cover at most 40 of 128

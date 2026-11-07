@@ -1,0 +1,22 @@
+{
+ "object": "step R2D3.q3",
+ "question": "Q2: round 2, call D3 = G(3,4,9,14), quarter-step q3: a = a + b + y; d = ror8(d ^ a), y = m1 (a ZERO word: its add is not emitted) - necessity: leave the step out and recount the exact outcome (ops, ledger time_log2, digest).",
+ "status": "COMPUTED",
+ "number": "Skipping this quarter-step (a, d or c, b left unchanged) removes 8 ops (595 -> 587) and would lower time_log2 by 0.0194 if it were allowed, but the function is then no longer 3-round BLAKE3: on 1500 random inputs it differs from the true digest in 64.2 of 256 bits on average (4 of 8 digest words stay equal, the other 4 change every time). So the step is necessary: its output reaches the digest, and none of its emitted ops is dead.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_steps.py; research/dig/incoming3/blake3-r3-U46/work/steps_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. The skipped circuit was traced and checked against the scalar skipped function (0 mismatches of 100). Necessity here is functional (the digest is the required hash), not a search property. The op saving shown is hypothetical, not a lever.",
+ "held_fixed": "all other quarter-steps and the digest xor unchanged; same 7-lane layout; inputs 0^32||x random",
+ "reopen_if": "the target function changes, or a cheaper circuit for the same step is proposed",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|R2D3.q3|step|Q2",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

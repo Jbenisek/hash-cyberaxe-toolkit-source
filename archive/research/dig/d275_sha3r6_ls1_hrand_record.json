@@ -1,0 +1,21 @@
+{
+  "id": "D275-SHA3-R6-LS1-HRAND-SCOUT",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "LS1 finite H-randomness projection scout",
+  "question": "Do the tested LS1 input families show a large low-width projection bias?",
+  "labels": ["S"],
+  "status": "LOCAL_ONLY",
+  "number": "Owner hrand_out: three 32-bit windows over 2^24 samples are near expected 32768 (z ranges -0.71..1.09); chained iterates also -0.49..0.38. Across 65536 single-bit input/output cells (4096 pairs each), max |z|=4.09 versus expected normal maximum ~4.4 and mean z^2=0.9994. Finite projection evidence only; full 256-bit H_rand and success law remain OPEN.",
+  "source": "owner artifact audited by our workflow: D275 LS1 H-randomness scout",
+  "evidence": "research/sol_answer_D275_sha3r6_ls1_hrand_scout.md; research/sha3r6_gap/ls1/hrand_out.txt",
+  "date": "2026-10-13",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite low-width projection screen; no inference for full-width adaptive rho behavior or filing score.",
+  "held_fixed": "owner LS1 hash map, three 32-bit windows, declared sample sizes",
+  "reopen_if": "A full-width experiment or proof addresses adaptive trail dependence and the 2^128-scale success law"
+}

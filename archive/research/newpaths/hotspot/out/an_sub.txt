@@ -1,0 +1,431 @@
+===== h_sub.bin: sub-class; launches 3584; trials 2^44.81; records 1309284; finished=True
+null sample: discovery 229527, held-out 229345
+
+-- listed tau (sample): discovery n=142049 (141994 outer steps), held-out n=141452; all: 283376 outer steps, max per step 2, share in steps with >=2 events 0.001
+   y6[15]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z  -296.2 | held-out x2.00 z -295.6  CONFIRMED
+   y6[16]     [internal] =1: P(bit|E) 1.000 vs null 0.501; enrich x2.00 z  +295.9 | held-out x2.00 z +295.5  CONFIRMED
+   h1[13]     [internal] =0: P(bit|E) 0.495 vs null 0.501; enrich x1.01 z    -3.1 | held-out x1.00 z   +0.3
+   D2a1[8]    [basis   ] =1: P(bit|E) 0.502 vs null 0.497; enrich x1.01 z    +3.0 | held-out x1.00 z   +0.1
+   w6[24]     [basis   ] =0: P(bit|E) 0.497 vs null 0.502; enrich x1.01 z    -2.9 | held-out x1.00 z   -1.1
+   T0[11]     [inner   ] =0: P(bit|E) 0.497 vs null 0.501; enrich x1.01 z    -2.8 | held-out x1.00 z   -0.6
+   y14[17]    [internal] =0: P(bit|E) 0.498 vs null 0.502; enrich x1.01 z    -2.8 | held-out x1.00 z   -1.1
+   h1[1]      [internal] =0: P(bit|E) 0.498 vs null 0.502; enrich x1.01 z    -2.8 | held-out x1.00 z   -1.1
+   S4[23]     [basis   ] =1: P(bit|E) 0.502 vs null 0.498; enrich x1.01 z    +2.7 | held-out x1.00 z   +0.2
+   Y9[26]     [outer   ] =0: P(bit|E) 0.498 vs null 0.503; enrich x1.01 z    -2.6 | held-out x1.01 z   -1.6
+   C2a[6]     [outer   ] =1: P(bit|E) 0.501 vs null 0.497; enrich x1.01 z    +2.6 | held-out x1.00 z   +0.3
+   KY[3]      [outer   ] =0: P(bit|E) 0.498 vs null 0.503; enrich x1.01 z    -2.5 | held-out x1.00 z   +0.4
+   bits with |z|>=5.0 on discovery: 2 of 780; by group {'internal': 2}
+
+-- rule A (sample): discovery n=114554 (114546 outer steps), held-out n=114568; all: 229105 outer steps, max per step 2, share in steps with >=2 events 0.000
+   y14[1]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z  +276.4 | held-out x2.00 z +276.3  CONFIRMED
+   h1[17]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z  -276.4 | held-out x2.00 z -276.3  CONFIRMED
+   h1[16]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z  -276.3 | held-out x2.00 z -276.6  CONFIRMED
+   y14[0]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z  +276.3 | held-out x2.00 z +276.6  CONFIRMED
+   h1[0]      [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z  -276.3 | held-out x2.00 z -276.4  CONFIRMED
+   y14[16]    [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z  -276.3 | held-out x2.00 z -276.4  CONFIRMED
+   y14[17]    [internal] =1: P(bit|E) 1.000 vs null 0.502; enrich x1.99 z  +276.0 | held-out x2.00 z +276.3  CONFIRMED
+   h1[1]      [internal] =1: P(bit|E) 1.000 vs null 0.502; enrich x1.99 z  +276.0 | held-out x2.00 z +276.3  CONFIRMED
+   h1[2]      [internal] =0: P(bit|E) 0.496 vs null 0.502; enrich x1.01 z    -3.4 | held-out x1.01 z   -2.2
+   y14[18]    [internal] =1: P(bit|E) 0.504 vs null 0.498; enrich x1.01 z    +3.4 | held-out x1.01 z   +2.2
+   y14[30]    [internal] =0: P(bit|E) 0.496 vs null 0.502; enrich x1.01 z    -3.1 | held-out x1.00 z   -0.3
+   C2a[30]    [outer   ] =0: P(bit|E) 0.496 vs null 0.501; enrich x1.01 z    -2.9 | held-out x1.00 z   -0.8
+   bits with |z|>=5.0 on discovery: 8 of 780; by group {'internal': 8}
+
+-- eta condition (sample): discovery n=113268 (113247 outer steps), held-out n=113568; all: 226793 outer steps, max per step 2, share in steps with >=2 events 0.000
+   y6[16]     [internal] =1: P(bit|E) 0.754 vs null 0.501; enrich x1.50 z  +139.3 | held-out x1.50 z +137.4  CONFIRMED
+   y6[27]     [internal] =0: P(bit|E) 0.364 vs null 0.500; enrich x1.27 z   -74.9 | held-out x1.26 z  -73.2  CONFIRMED
+   y6[19]     [internal] =0: P(bit|E) 0.424 vs null 0.499; enrich x1.15 z   -41.2 | held-out x1.14 z  -40.0  CONFIRMED
+   d1[14]     [internal] =1: P(bit|E) 0.545 vs null 0.499; enrich x1.09 z   +25.2 | held-out x1.09 z  +25.1  CONFIRMED
+   c1[14]     [inner   ] =1: P(bit|E) 0.545 vs null 0.499; enrich x1.09 z   +25.2 | held-out x1.09 z  +25.1  CONFIRMED
+   y6[26]     [internal] =1: P(bit|E) 0.544 vs null 0.502; enrich x1.08 z   +23.0 | held-out x1.09 z  +25.6  CONFIRMED
+   K0d[31]    [outer   ] =1: P(bit|E) 0.503 vs null 0.497; enrich x1.01 z    +3.0 | held-out x1.00 z   -1.2
+   D2a1[3]    [basis   ] =0: P(bit|E) 0.496 vs null 0.501; enrich x1.01 z    -3.0 | held-out x1.00 z   +1.2
+   c1[4]      [inner   ] =1: P(bit|E) 0.503 vs null 0.498; enrich x1.01 z    +2.9 | held-out x1.01 z   +1.5
+   d1[4]      [internal] =1: P(bit|E) 0.503 vs null 0.498; enrich x1.01 z    +2.9 | held-out x1.01 z   +1.5
+   S4[5]      [basis   ] =0: P(bit|E) 0.497 vs null 0.502; enrich x1.01 z    -2.9 | held-out x1.00 z   +0.4
+   C2b[9]     [outer   ] =1: P(bit|E) 0.504 vs null 0.499; enrich x1.01 z    +2.9 | held-out x1.00 z   -0.5
+   bits with |z|>=5.0 on discovery: 6 of 780; by group {'inner': 1, 'internal': 5}
+
+-- listed E1 outcome: discovery n=4551 (4551 outer steps), held-out n=4364; all: 8914 outer steps, max per step 2, share in steps with >=2 events 0.000
+   y6[15]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z   -66.8 | held-out x2.00 z  -65.4  CONFIRMED
+   y6[16]     [internal] =1: P(bit|E) 1.000 vs null 0.501; enrich x2.00 z   +66.8 | held-out x2.00 z  +65.4  CONFIRMED
+   S4[25]     [basis   ] =1: P(bit|E) 0.523 vs null 0.500; enrich x1.05 z    +3.1 | held-out x1.01 z   +0.3
+   w6[2]      [basis   ] =1: P(bit|E) 0.523 vs null 0.500; enrich x1.05 z    +3.1 | held-out x1.02 z   +1.1
+   KY[25]     [outer   ] =1: P(bit|E) 0.523 vs null 0.500; enrich x1.04 z    +3.0 | held-out x1.01 z   +0.7
+   T0[8]      [inner   ] =1: P(bit|E) 0.523 vs null 0.500; enrich x1.04 z    +2.9 | held-out x1.01 z   +0.8
+   S4[12]     [basis   ] =0: P(bit|E) 0.478 vs null 0.500; enrich x1.04 z    -2.9 | held-out x0.98 z   +1.0
+   X9[7]      [basis   ] =0: P(bit|E) 0.479 vs null 0.501; enrich x1.04 z    -2.9 | held-out x0.98 z   +1.2
+   D2b1[14]   [basis   ] =0: P(bit|E) 0.478 vs null 0.500; enrich x1.04 z    -2.9 | held-out x0.95 z   +3.0
+   i[5]       [inner   ] =1: P(bit|E) 0.522 vs null 0.500; enrich x1.04 z    +2.9 | held-out x0.97 z   -1.7
+   i[2]       [inner   ] =1: P(bit|E) 0.521 vs null 0.500; enrich x1.04 z    +2.8 | held-out x0.98 z   -1.4
+   C2a[0]     [outer   ] =0: P(bit|E) 0.480 vs null 0.500; enrich x1.04 z    -2.7 | held-out x1.01 z   -0.7
+   bits with |z|>=5.0 on discovery: 2 of 780; by group {'internal': 2}
+
+-- E1 outcome & rule A: discovery n=20 (20 outer steps), held-out n=22; all: 42 outer steps, max per step 1, share in steps with >=2 events 0.000
+   y6[15]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z    -4.4 | held-out x2.00 z   -4.6
+   y14[1]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z    +4.4 | held-out x2.00 z   +4.6
+   h1[17]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z    -4.4 | held-out x2.00 z   -4.6
+   y14[0]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z    +4.4 | held-out x2.00 z   +4.6
+   h1[16]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z    -4.4 | held-out x2.00 z   -4.6
+   y14[16]    [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z    -4.4 | held-out x2.00 z   -4.6
+   h1[0]      [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z    -4.4 | held-out x2.00 z   -4.6
+   y6[16]     [internal] =1: P(bit|E) 1.000 vs null 0.501; enrich x2.00 z    +4.4 | held-out x2.00 z   +4.6
+   y14[17]    [internal] =1: P(bit|E) 1.000 vs null 0.502; enrich x1.99 z    +4.4 | held-out x2.00 z   +4.6
+   h1[1]      [internal] =1: P(bit|E) 1.000 vs null 0.502; enrich x1.99 z    +4.4 | held-out x2.00 z   +4.6
+   C2c[7]     [outer   ] =0: P(bit|E) 0.150 vs null 0.500; enrich x1.70 z    -3.1 | held-out x1.27 z   -1.3
+   C2b[29]    [outer   ] =1: P(bit|E) 0.850 vs null 0.501; enrich x1.70 z    +3.0 | held-out x1.09 z   +0.4
+   bits with |z|>=5.0 on discovery: 0 of 780; by group {}
+
+-- listed partial E3: discovery n=3585 (1263 outer steps), held-out n=3746; all: 2469 outer steps, max per step 36, share in steps with >=2 events 0.911
+   y14[1]     [internal] =1: P(bit|E) 0.997 vs null 0.500; enrich x1.99 z   +26.6 | held-out x2.00 z  +24.9  CONFIRMED
+   h1[17]     [internal] =0: P(bit|E) 0.003 vs null 0.500; enrich x1.99 z   -26.6 | held-out x2.00 z  -24.9  CONFIRMED
+   h1[16]     [internal] =0: P(bit|E) 0.003 vs null 0.500; enrich x1.99 z   -26.6 | held-out x2.00 z  -24.9  CONFIRMED
+   y14[0]     [internal] =1: P(bit|E) 0.997 vs null 0.500; enrich x1.99 z   +26.6 | held-out x2.00 z  +24.9  CONFIRMED
+   h1[0]      [internal] =0: P(bit|E) 0.009 vs null 0.499; enrich x1.98 z   -26.2 | held-out x1.97 z  -24.2  CONFIRMED
+   y14[16]    [internal] =0: P(bit|E) 0.009 vs null 0.499; enrich x1.98 z   -26.2 | held-out x1.97 z  -24.2  CONFIRMED
+   Y9[0]      [outer   ] =0: P(bit|E) 0.087 vs null 0.498; enrich x1.82 z   -22.0 | held-out x1.84 z  -21.0  CONFIRMED
+   h1[25]     [internal] =0: P(bit|E) 0.229 vs null 0.500; enrich x1.54 z   -19.0 | held-out x1.49 z  -17.2  CONFIRMED
+   y14[9]     [internal] =1: P(bit|E) 0.771 vs null 0.500; enrich x1.54 z   +19.0 | held-out x1.49 z  +17.2  CONFIRMED
+   h1[24]     [internal] =0: P(bit|E) 0.242 vs null 0.500; enrich x1.52 z   -18.7 | held-out x1.51 z  -18.3  CONFIRMED
+   y14[8]     [internal] =1: P(bit|E) 0.758 vs null 0.500; enrich x1.52 z   +18.7 | held-out x1.51 z  +18.3  CONFIRMED
+   Y9[1]      [outer   ] =0: P(bit|E) 0.275 vs null 0.500; enrich x1.45 z   -12.0 | held-out x1.47 z  -11.7  CONFIRMED
+   bits with |z|>=5.0 on discovery: 16 of 780; by group {'outer': 4, 'internal': 12}
+
+-- partial E3 eps(beta*): discovery n=552 (166 outer steps), held-out n=574; all: 307 outer steps, max per step 20, share in steps with >=2 events 0.940
+   Y9[1]      [outer   ] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z   -10.0 | held-out x1.99 z   -9.0  CONFIRMED
+   y14[1]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z   +10.0 | held-out x2.00 z   +9.0  CONFIRMED
+   h1[17]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z   -10.0 | held-out x2.00 z   -9.0  CONFIRMED
+   h1[0]      [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z   -10.0 | held-out x2.00 z   -9.0  CONFIRMED
+   y14[16]    [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z   -10.0 | held-out x2.00 z   -9.0  CONFIRMED
+   h1[16]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z   -10.0 | held-out x2.00 z   -9.0  CONFIRMED
+   y14[0]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z   +10.0 | held-out x2.00 z   +9.0  CONFIRMED
+   Y9[0]      [outer   ] =0: P(bit|E) 0.000 vs null 0.498; enrich x1.99 z   -10.0 | held-out x2.00 z   -9.0  CONFIRMED
+   Y9[2]      [outer   ] =1: P(bit|E) 0.757 vs null 0.500; enrich x1.52 z    +5.2 | held-out x1.63 z   +5.6  CONFIRMED
+   C0d1[8]    [basis   ] =1: P(bit|E) 0.665 vs null 0.500; enrich x1.33 z    +3.3 | held-out x0.99 z   -0.1
+   w8[21]     [outer   ] =1: P(bit|E) 0.654 vs null 0.500; enrich x1.31 z    +3.1 | held-out x1.52 z   +4.7
+   D2b1[31]   [basis   ] =0: P(bit|E) 0.346 vs null 0.500; enrich x1.31 z    -3.1 | held-out x0.86 z   +1.2
+   bits with |z|>=5.0 on discovery: 9 of 780; by group {'outer': 3, 'internal': 6}
+
+-- partial E3 & rule A: discovery n=123 (81 outer steps), held-out n=145; all: 178 outer steps, max per step 4, share in steps with >=2 events 0.604
+   y14[1]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z    +8.3 | held-out x2.00 z   +8.6  CONFIRMED
+   h1[17]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z    -8.3 | held-out x2.00 z   -8.6  CONFIRMED
+   h1[16]     [internal] =0: P(bit|E) 0.000 vs null 0.500; enrich x2.00 z    -8.3 | held-out x2.00 z   -8.6  CONFIRMED
+   y14[0]     [internal] =1: P(bit|E) 1.000 vs null 0.500; enrich x2.00 z    +8.3 | held-out x2.00 z   +8.6  CONFIRMED
+   h1[0]      [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z    -8.3 | held-out x2.00 z   -8.6  CONFIRMED
+   y14[16]    [internal] =0: P(bit|E) 0.000 vs null 0.499; enrich x2.00 z    -8.3 | held-out x2.00 z   -8.6  CONFIRMED
+   y14[17]    [internal] =1: P(bit|E) 1.000 vs null 0.502; enrich x1.99 z    +8.3 | held-out x2.00 z   +8.6  CONFIRMED
+   h1[1]      [internal] =1: P(bit|E) 1.000 vs null 0.502; enrich x1.99 z    +8.3 | held-out x2.00 z   +8.6  CONFIRMED
+   Y9[0]      [outer   ] =0: P(bit|E) 0.106 vs null 0.498; enrich x1.78 z    -6.5 | held-out x1.72 z   -6.2  CONFIRMED
+   h1[24]     [internal] =0: P(bit|E) 0.154 vs null 0.500; enrich x1.69 z    -5.7 | held-out x1.56 z   -4.8  CONFIRMED
+   y14[8]     [internal] =1: P(bit|E) 0.846 vs null 0.500; enrich x1.69 z    +5.7 | held-out x1.56 z   +4.8  CONFIRMED
+   h1[25]     [internal] =0: P(bit|E) 0.171 vs null 0.500; enrich x1.66 z    -5.5 | held-out x1.52 z   -4.6  CONFIRMED
+   bits with |z|>=5.0 on discovery: 13 of 780; by group {'outer': 1, 'internal': 12}
+
+-- residual word 0 zero: discovery n=4136 (4108 outer steps), held-out n=4126; all: 8220 outer steps, max per step 2, share in steps with >=2 events 0.010
+   h1[0]      [internal] =0: P(bit|E) 0.025 vs null 0.499; enrich x1.95 z   -60.2 | held-out x1.94 z  -59.8  CONFIRMED
+   y14[16]    [internal] =0: P(bit|E) 0.025 vs null 0.499; enrich x1.95 z   -60.2 | held-out x1.94 z  -59.8  CONFIRMED
+   y14[18]    [internal] =1: P(bit|E) 0.590 vs null 0.498; enrich x1.18 z   +11.6 | held-out x1.19 z  +11.8  CONFIRMED
+   h1[2]      [internal] =0: P(bit|E) 0.410 vs null 0.502; enrich x1.18 z   -11.6 | held-out x1.19 z  -11.8  CONFIRMED
+   S4[19]     [basis   ] =0: P(bit|E) 0.477 vs null 0.500; enrich x1.05 z    -2.9 | held-out x0.96 z   +2.4
+   a1[10]     [internal] =0: P(bit|E) 0.478 vs null 0.500; enrich x1.04 z    -2.8 | held-out x0.99 z   +0.6
+   c1[11]     [inner   ] =0: P(bit|E) 0.480 vs null 0.501; enrich x1.04 z    -2.7 | held-out x0.99 z   +0.4
+   d1[11]     [internal] =0: P(bit|E) 0.480 vs null 0.501; enrich x1.04 z    -2.7 | held-out x0.99 z   +0.4
+   S11[26]    [basis   ] =0: P(bit|E) 0.480 vs null 0.501; enrich x1.04 z    -2.6 | held-out x0.98 z   +1.0
+   C2d[22]    [outer   ] =1: P(bit|E) 0.519 vs null 0.499; enrich x1.04 z    +2.5 | held-out x1.03 z   +1.7
+   C2a[18]    [outer   ] =0: P(bit|E) 0.481 vs null 0.501; enrich x1.04 z    -2.5 | held-out x1.00 z   -0.3
+   h1[28]     [internal] =1: P(bit|E) 0.518 vs null 0.498; enrich x1.04 z    +2.5 | held-out x1.01 z   +0.8
+   bits with |z|>=5.0 on discovery: 4 of 780; by group {'internal': 4}
+
+-- residual word 1 zero: discovery n=35350 (35244 outer steps), held-out n=35298; all: 70437 outer steps, max per step 2, share in steps with >=2 events 0.006
+   y6[27]     [internal] =1: P(bit|E) 0.631 vs null 0.500; enrich x1.26 z   +45.8 | held-out x1.26 z  +45.8  CONFIRMED
+   y6[16]     [internal] =1: P(bit|E) 0.601 vs null 0.501; enrich x1.20 z   +34.8 | held-out x1.19 z  +33.8  CONFIRMED
+   h1[16]     [internal] =0: P(bit|E) 0.431 vs null 0.500; enrich x1.14 z   -23.8 | held-out x1.14 z  -24.1  CONFIRMED
+   y14[0]     [internal] =1: P(bit|E) 0.569 vs null 0.500; enrich x1.14 z   +23.8 | held-out x1.14 z  +24.1  CONFIRMED
+   h1[2]      [internal] =0: P(bit|E) 0.448 vs null 0.502; enrich x1.11 z   -18.6 | held-out x1.09 z  -16.2  CONFIRMED
+   y14[18]    [internal] =1: P(bit|E) 0.552 vs null 0.498; enrich x1.11 z   +18.6 | held-out x1.09 z  +16.2  CONFIRMED
+   y6[19]     [internal] =0: P(bit|E) 0.456 vs null 0.499; enrich x1.09 z   -15.2 | held-out x1.08 z  -13.3  CONFIRMED
+   h1[25]     [internal] =0: P(bit|E) 0.470 vs null 0.500; enrich x1.06 z   -10.6 | held-out x1.06 z  -10.8  CONFIRMED
+   y14[9]     [internal] =1: P(bit|E) 0.530 vs null 0.500; enrich x1.06 z   +10.6 | held-out x1.06 z  +10.8  CONFIRMED
+   y14[19]    [internal] =0: P(bit|E) 0.478 vs null 0.500; enrich x1.04 z    -7.8 | held-out x1.05 z   -8.9  CONFIRMED
+   h1[3]      [internal] =1: P(bit|E) 0.522 vs null 0.500; enrich x1.04 z    +7.8 | held-out x1.05 z   +8.9  CONFIRMED
+   d1[17]     [internal] =1: P(bit|E) 0.522 vs null 0.501; enrich x1.04 z    +7.4 | held-out x1.06 z  +10.2  CONFIRMED
+   bits with |z|>=5.0 on discovery: 15 of 780; by group {'inner': 1, 'outer': 1, 'internal': 13}
+
+-- residual word 2 zero: discovery n=3888 (3844 outer steps), held-out n=3863; all: 7663 outer steps, max per step 3, share in steps with >=2 events 0.022
+   D2b1[28]   [basis   ] =0: P(bit|E) 0.476 vs null 0.500; enrich x1.05 z    -3.0 | held-out x1.03 z   -1.8
+   y6[20]     [internal] =1: P(bit|E) 0.524 vs null 0.500; enrich x1.05 z    +3.0 | held-out x0.99 z   -0.5
+   S11[30]    [basis   ] =0: P(bit|E) 0.478 vs null 0.502; enrich x1.05 z    -2.9 | held-out x1.00 z   +0.2
+   w5[8]      [outer   ] =1: P(bit|E) 0.522 vs null 0.499; enrich x1.05 z    +2.9 | held-out x1.02 z   +1.1
+   KY[27]     [outer   ] =0: P(bit|E) 0.478 vs null 0.500; enrich x1.04 z    -2.6 | held-out x1.01 z   -0.6
+   K0d[16]    [outer   ] =0: P(bit|E) 0.477 vs null 0.498; enrich x1.04 z    -2.6 | held-out x0.99 z   +0.5
+   KY[18]     [outer   ] =1: P(bit|E) 0.522 vs null 0.501; enrich x1.04 z    +2.6 | held-out x1.00 z   +0.1
+   w6[9]      [basis   ] =1: P(bit|E) 0.520 vs null 0.499; enrich x1.04 z    +2.6 | held-out x1.00 z   +0.2
+   C2d[20]    [outer   ] =0: P(bit|E) 0.480 vs null 0.501; enrich x1.04 z    -2.5 | held-out x1.01 z   -0.8
+   S11[13]    [basis   ] =1: P(bit|E) 0.520 vs null 0.499; enrich x1.04 z    +2.5 | held-out x1.01 z   +0.8
+   w5[27]     [outer   ] =0: P(bit|E) 0.478 vs null 0.498; enrich x1.04 z    -2.5 | held-out x1.00 z   +0.3
+   C0d1[22]   [basis   ] =0: P(bit|E) 0.480 vs null 0.500; enrich x1.04 z    -2.4 | held-out x1.01 z   -0.6
+   bits with |z|>=5.0 on discovery: 0 of 780; by group {}
+
+-- residual word 3 zero: discovery n=2872 (2867 outer steps), held-out n=2871; all: 5728 outer steps, max per step 2, share in steps with >=2 events 0.005
+   y14[8]     [internal] =0: P(bit|E) 0.275 vs null 0.500; enrich x1.45 z   -23.8 | held-out x1.41 z  -21.8  CONFIRMED
+   h1[24]     [internal] =1: P(bit|E) 0.725 vs null 0.500; enrich x1.45 z   +23.8 | held-out x1.41 z  +21.8  CONFIRMED
+   y6[16]     [internal] =1: P(bit|E) 0.600 vs null 0.501; enrich x1.20 z   +10.6 | held-out x1.21 z  +11.3  CONFIRMED
+   c1[5]      [inner   ] =1: P(bit|E) 0.539 vs null 0.500; enrich x1.08 z    +4.1 | held-out x1.13 z   +7.1
+   d1[5]      [internal] =1: P(bit|E) 0.539 vs null 0.500; enrich x1.08 z    +4.1 | held-out x1.13 z   +7.1
+   Y9[3]      [outer   ] =0: P(bit|E) 0.470 vs null 0.502; enrich x1.06 z    -3.4 | held-out x1.03 z   -1.4
+   C2a[17]    [outer   ] =1: P(bit|E) 0.530 vs null 0.500; enrich x1.06 z    +3.2 | held-out x0.97 z   -1.7
+   d1[29]     [internal] =0: P(bit|E) 0.471 vs null 0.500; enrich x1.06 z    -3.1 | held-out x1.01 z   -0.8
+   c1[29]     [inner   ] =0: P(bit|E) 0.471 vs null 0.500; enrich x1.06 z    -3.1 | held-out x1.01 z   -0.8
+   S11[19]    [basis   ] =1: P(bit|E) 0.526 vs null 0.500; enrich x1.05 z    +2.8 | held-out x1.00 z   -0.2
+   y6[11]     [internal] =0: P(bit|E) 0.474 vs null 0.500; enrich x1.05 z    -2.8 | held-out x1.01 z   -0.7
+   y14[6]     [internal] =1: P(bit|E) 0.524 vs null 0.498; enrich x1.05 z    +2.8 | held-out x1.03 z   +1.6
+   bits with |z|>=5.0 on discovery: 3 of 780; by group {'internal': 3}
+
+-- HW(R) <= 23: discovery n=3445 (3415 outer steps), held-out n=3393; all: 6783 outer steps, max per step 3, share in steps with >=2 events 0.016
+   y14[16]    [internal] =0: P(bit|E) 0.203 vs null 0.499; enrich x1.59 z   -34.3 | held-out x1.56 z  -32.2  CONFIRMED
+   h1[0]      [internal] =0: P(bit|E) 0.203 vs null 0.499; enrich x1.59 z   -34.3 | held-out x1.56 z  -32.2  CONFIRMED
+   h1[16]     [internal] =0: P(bit|E) 0.355 vs null 0.500; enrich x1.29 z   -16.7 | held-out x1.27 z  -15.5  CONFIRMED
+   y14[0]     [internal] =1: P(bit|E) 0.645 vs null 0.500; enrich x1.29 z   +16.7 | held-out x1.27 z  +15.5  CONFIRMED
+   y14[1]     [internal] =1: P(bit|E) 0.643 vs null 0.500; enrich x1.28 z   +16.5 | held-out x1.26 z  +15.2  CONFIRMED
+   h1[17]     [internal] =0: P(bit|E) 0.357 vs null 0.500; enrich x1.28 z   -16.5 | held-out x1.26 z  -15.2  CONFIRMED
+   y6[16]     [internal] =1: P(bit|E) 0.643 vs null 0.501; enrich x1.28 z   +16.4 | held-out x1.23 z  +13.1  CONFIRMED
+   y6[15]     [internal] =0: P(bit|E) 0.390 vs null 0.500; enrich x1.22 z   -12.7 | held-out x1.19 z  -11.1  CONFIRMED
+   y6[27]     [internal] =0: P(bit|E) 0.429 vs null 0.500; enrich x1.14 z    -8.2 | held-out x1.13 z   -7.6  CONFIRMED
+   h1[1]      [internal] =1: P(bit|E) 0.554 vs null 0.502; enrich x1.10 z    +5.9 | held-out x1.12 z   +6.9  CONFIRMED
+   y14[17]    [internal] =1: P(bit|E) 0.554 vs null 0.502; enrich x1.10 z    +5.9 | held-out x1.12 z   +6.9  CONFIRMED
+   h1[2]      [internal] =0: P(bit|E) 0.451 vs null 0.502; enrich x1.10 z    -5.8 | held-out x1.06 z   -3.5  CONFIRMED
+   bits with |z|>=5.0 on discovery: 15 of 780; by group {'internal': 15}
+
+== pairs of parameter bits (discovery; search parameters only: inner, Y4, basis, outer words)
+-- listed E1 outcome (n=4551):
+   raw              c1[20]=1 & c1[22]=0: z  +40.9 enrich x2.07 | held-out x1.94 (z +35.9, f 0.250)
+   raw              c1[11]=0 & c1[12]=1: z  +39.5 enrich x2.03 | held-out x1.98 (z +37.6, f 0.250)
+   beyond-marginals c1[20]=0 & c1[22]=1: z  +39.0 enrich x1.92 | held-out x2.06 (z +40.5, f 0.250)
+   beyond-marginals c1[11]=1 & c1[12]=0: z  +38.8 enrich x1.98 | held-out x2.02 (z +38.7, f 0.250)
+   raw              c1[11]=1 & c1[12]=1: z  -38.4 enrich x0.00 | held-out x0.00 (z -38.0, f 0.249)
+   beyond-marginals c1[11]=0 & c1[12]=0: z  -38.3 enrich x0.00 | held-out x0.00 (z -38.3, f 0.251)
+   beyond-marginals c1[11]=1 & c1[12]=1: z  -38.3 enrich x0.00 | held-out x0.00 (z -38.0, f 0.249)
+   raw              c1[11]=0 & c1[12]=0: z  -38.2 enrich x0.00 | held-out x0.00 (z -38.3, f 0.251)
+   raw              c1[20]=1 & c1[22]=1: z  -38.2 enrich x0.00 | held-out x0.00 (z -38.3, f 0.252)
+   beyond-marginals c1[20]=1 & c1[22]=1: z  -38.1 enrich x0.00 | held-out x0.00 (z -38.3, f 0.252)
+-- listed partial E3 (n=3585):
+   raw              Y9[0]=0 & Y9[2]=1: z  +58.7 enrich x2.72 | held-out x2.77 (z +62.4, f 0.249)
+   raw              Y9[0]=0 & Y9[1]=0: z  +58.2 enrich x2.71 | held-out x2.76 (z +62.3, f 0.251)
+   raw              Y9[1]=0 & Y9[2]=1: z  +41.7 enrich x2.23 | held-out x2.28 (z +45.2, f 0.249)
+   raw              Y9[0]=0 & w8[26]=0: z  +41.6 enrich x2.22 | held-out x2.26 (z +44.4, f 0.249)
+   raw              Y9[0]=0 & w8[22]=0: z  +36.1 enrich x2.06 | held-out x2.19 (z +42.1, f 0.250)
+   raw              S11[12]=1 & Y9[0]=0: z  +35.8 enrich x2.05 | held-out x1.75 (z +26.6, f 0.250)
+   raw              C2c[22]=1 & Y9[0]=0: z  +35.5 enrich x2.04 | held-out x1.79 (z +27.8, f 0.251)
+   raw              Y9[16]=1 & Y9[17]=0: z  +35.3 enrich x2.03 | held-out x1.99 (z +35.0, f 0.252)
+   raw              C2c[17]=1 & Y9[0]=0: z  +35.2 enrich x2.03 | held-out x1.74 (z +26.3, f 0.250)
+   beyond-marginals Y9[16]=0 & Y9[17]=1: z  +34.4 enrich x1.96 | held-out x2.00 (z +35.4, f 0.250)
+-- eta condition (sample) (n=40000):
+   raw              c1[21]=1 & c1[22]=0: z  +60.9 enrich x1.61 | held-out x1.60 (z +117.3, f 0.250)
+   raw              c1[21]=0 & c1[22]=0: z  -60.7 enrich x0.40 | held-out x0.40 (z -115.4, f 0.248)
+   beyond-marginals c1[21]=1 & c1[22]=1: z  -60.5 enrich x0.40 | held-out x0.39 (z -118.2, f 0.251)
+   beyond-marginals c1[21]=0 & c1[22]=1: z  +60.5 enrich x1.60 | held-out x1.60 (z +116.1, f 0.251)
+   raw              c1[20]=1 & c1[22]=0: z  +60.4 enrich x1.60 | held-out x1.60 (z +116.8, f 0.250)
+   beyond-marginals c1[21]=1 & c1[22]=0: z  +60.4 enrich x1.61 | held-out x1.60 (z +117.3, f 0.250)
+   raw              c1[20]=0 & c1[22]=0: z  -60.4 enrich x0.40 | held-out x0.41 (z -114.9, f 0.249)
+   beyond-marginals c1[21]=0 & c1[22]=0: z  -60.3 enrich x0.40 | held-out x0.40 (z -115.4, f 0.248)
+   beyond-marginals c1[20]=0 & c1[22]=1: z  +60.2 enrich x1.60 | held-out x1.59 (z +115.7, f 0.250)
+   raw              c1[21]=1 & c1[22]=1: z  -60.1 enrich x0.40 | held-out x0.39 (z -118.2, f 0.251)
+-- residual word 1 zero (n=35350):
+   raw              Y9[2]=0 & Y9[3]=1: z  -19.2 enrich x0.80 | held-out x0.80 (z -22.2, f 0.250)
+   raw              Y9[8]=1 & Y9[9]=0: z  +17.0 enrich x1.18 | held-out x1.16 (z +17.5, f 0.251)
+   raw              Y9[8]=1 & Y9[9]=1: z  -16.8 enrich x0.82 | held-out x0.83 (z -18.2, f 0.251)
+   beyond-marginals Y9[8]=1 & Y9[9]=1: z  -16.4 enrich x0.82 | held-out x0.83 (z -18.2, f 0.251)
+   beyond-marginals Y9[8]=1 & Y9[9]=0: z  +16.4 enrich x1.18 | held-out x1.16 (z +17.5, f 0.251)
+   beyond-marginals Y9[8]=0 & Y9[9]=1: z  +16.4 enrich x1.16 | held-out x1.16 (z +17.7, f 0.248)
+   beyond-marginals Y9[8]=0 & Y9[9]=0: z  -16.4 enrich x0.83 | held-out x0.84 (z -16.9, f 0.249)
+   raw              Y9[8]=0 & Y9[9]=0: z  -16.0 enrich x0.83 | held-out x0.84 (z -16.9, f 0.249)
+   raw              Y9[8]=0 & Y9[9]=1: z  +15.8 enrich x1.16 | held-out x1.16 (z +17.7, f 0.248)
+   raw              e1[7]=0 & e1[10]=1: z  +15.7 enrich x1.17 | held-out x1.15 (z +16.5, f 0.250)
+-- HW(R) <= 23 (n=3445):
+   raw              e1[6]=0 & w8[6]=1: z  -12.5 enrich x0.63 | held-out x0.71 (z  -9.8, f 0.250)
+   raw              Y9[2]=0 & Y9[3]=1: z  -12.5 enrich x0.63 | held-out x0.66 (z -11.5, f 0.250)
+   raw              Y9[16]=1 & Y9[17]=1: z  -12.3 enrich x0.63 | held-out x0.71 (z  -9.9, f 0.250)
+   raw              Y9[1]=0 & Y9[3]=0: z  +11.1 enrich x1.34 | held-out x1.35 (z +11.8, f 0.252)
+   raw              Y9[2]=0 & Y9[3]=0: z  +11.1 enrich x1.33 | held-out x1.33 (z +11.1, f 0.252)
+   beyond-marginals e1[6]=0 & w8[6]=1: z  -10.9 enrich x0.63 | held-out x0.71 (z  -9.8, f 0.250)
+   raw              e1[6]=1 & w8[6]=1: z  +10.7 enrich x1.32 | held-out x1.32 (z +10.9, f 0.250)
+   beyond-marginals e1[6]=1 & w8[6]=1: z  +10.7 enrich x1.32 | held-out x1.32 (z +10.9, f 0.250)
+   beyond-marginals e1[6]=0 & w8[6]=0: z  +10.6 enrich x1.31 | held-out x1.29 (z  +9.7, f 0.251)
+   raw              e1[6]=0 & w8[6]=0: z  +10.5 enrich x1.31 | held-out x1.29 (z  +9.7, f 0.251)
+-- listed tau (sample) (n=40000):
+   raw              Y12[16]=1 & KY[16]=0: z  +51.1 enrich x1.51 | held-out x1.50 (z +107.7, f 0.249)
+   raw              Y12[16]=0 & KY[16]=0: z  -50.4 enrich x0.50 | held-out x0.50 (z -109.4, f 0.250)
+   beyond-marginals Y12[16]=0 & KY[16]=1: z  +50.3 enrich x1.49 | held-out x1.50 (z +109.5, f 0.251)
+   beyond-marginals Y12[16]=0 & KY[16]=0: z  -50.1 enrich x0.50 | held-out x0.50 (z -109.4, f 0.250)
+   beyond-marginals Y12[16]=1 & KY[16]=1: z  -49.9 enrich x0.51 | held-out x0.50 (z -107.8, f 0.250)
+   beyond-marginals Y12[16]=1 & KY[16]=0: z  +49.8 enrich x1.51 | held-out x1.50 (z +107.7, f 0.249)
+   raw              Y12[16]=1 & KY[16]=1: z  -49.6 enrich x0.51 | held-out x0.50 (z -107.8, f 0.250)
+   raw              Y12[16]=0 & KY[16]=1: z  +48.9 enrich x1.49 | held-out x1.50 (z +109.5, f 0.251)
+   raw              Y12[3]=0 & KY[3]=0: z  +31.5 enrich x1.32 | held-out x1.31 (z +68.0, f 0.249)
+   raw              Y12[3]=0 & KY[3]=1: z  -31.3 enrich x0.69 | held-out x0.69 (z -67.4, f 0.250)
+-- rule A (sample) (n=40000):
+   raw              C2c[12]=1 & w5[25]=1: z   +4.7 enrich x1.05 | held-out x1.00 (z  -0.8, f 0.251)
+   raw              Y12[4]=0 & Y9[13]=0: z   +4.6 enrich x1.05 | held-out x1.00 (z  -0.4, f 0.250)
+   raw              C2c[12]=0 & w5[29]=1: z   -4.5 enrich x0.95 | held-out x0.99 (z  -1.3, f 0.251)
+   raw              w6[27]=0 & w5[30]=1: z   +4.5 enrich x1.05 | held-out x0.99 (z  -1.0, f 0.251)
+   raw              w5[30]=0 & Y9[17]=0: z   -4.5 enrich x0.96 | held-out x1.00 (z  +0.7, f 0.249)
+   raw              C2a[14]=0 & w5[25]=0: z   -4.4 enrich x0.96 | held-out x1.01 (z  +1.2, f 0.250)
+   raw              C0d1[15]=0 & Y9[13]=1: z   -4.4 enrich x0.96 | held-out x1.00 (z  +0.3, f 0.250)
+   raw              C0d1[5]=1 & S11[22]=0: z   +4.4 enrich x1.04 | held-out x1.00 (z  -0.5, f 0.250)
+   raw              Y12[3]=1 & w5[25]=0: z   -4.3 enrich x0.96 | held-out x1.00 (z  -0.8, f 0.251)
+   raw              c1[24]=1 & C0d1[12]=0: z   +4.3 enrich x1.04 | held-out x1.00 (z  -0.0, f 0.251)
+-- residual word 0 zero (n=4136):
+   raw              Y9[16]=0 & Y9[17]=1: z  +16.3 enrich x1.45 | held-out x1.39 (z +14.5, f 0.250)
+   beyond-marginals Y9[16]=1 & Y9[17]=0: z  +14.5 enrich x1.34 | held-out x1.37 (z +13.9, f 0.252)
+   raw              Y9[16]=0 & Y9[17]=0: z  -14.4 enrich x0.60 | held-out x0.60 (z -14.9, f 0.249)
+   beyond-marginals Y9[16]=0 & Y9[17]=0: z  -14.3 enrich x0.60 | held-out x0.60 (z -14.9, f 0.249)
+   raw              Y9[16]=1 & Y9[17]=1: z  -14.3 enrich x0.61 | held-out x0.63 (z -13.6, f 0.250)
+   beyond-marginals Y9[16]=1 & Y9[17]=1: z  -14.2 enrich x0.61 | held-out x0.63 (z -13.6, f 0.250)
+   beyond-marginals Y9[16]=0 & Y9[17]=1: z  +14.0 enrich x1.45 | held-out x1.39 (z +14.5, f 0.250)
+   raw              e1[6]=0 & w8[6]=0: z  +12.4 enrich x1.34 | held-out x1.31 (z +11.4, f 0.251)
+   raw              Y9[16]=1 & Y9[17]=0: z  +12.3 enrich x1.34 | held-out x1.37 (z +13.9, f 0.252)
+   raw              e1[6]=1 & w8[6]=0: z  -12.2 enrich x0.67 | held-out x0.70 (z -11.3, f 0.249)
+
+== greedy hot spots (conjunctions of up to 4 bit conditions on SEARCH parameters; chosen on discovery, measured on held-out)
+-- listed partial E3 [any search parameter]: Y9[0]=0 & Y9[2]=1 & Y9[1]=0 & w8[22]=0
+   discovery: gain x5.77 at fraction 0.0629 (2^-3.99); held-out: gain x6.12 (2^2.61), fraction 0.0625, 1432/3746 events inside, z +80.8
+      held-out listed tau (sample)       : gain x  1.01 (8928/141452 inside, z +0.9)
+      held-out rule A (sample)           : gain x  1.01 (7233/114568 inside, z +0.9)
+      held-out eta condition (sample)    : gain x  1.00 (7106/113568 inside, z +0.1)
+      held-out listed E1 outcome         : gain x  1.08 (295/4364 inside, z +1.4)
+      held-out E1 outcome & rule A       : gain x  0.73 (1/22 inside, z -0.3)
+      held-out partial E3 eps(beta*)     : gain x  6.13 (220/574 inside, z +31.7)
+      held-out partial E3 & rule A       : gain x  4.85 (44/145 inside, z +12.0)
+      held-out residual word 0 zero      : gain x  1.12 (290/4126 inside, z +2.1)
+      held-out residual word 1 zero      : gain x  1.10 (2418/35298 inside, z +4.7)
+      held-out residual word 2 zero      : gain x  0.98 (236/3863 inside, z -0.4)
+      held-out residual word 3 zero      : gain x  1.31 (235/2871 inside, z +4.3)
+      held-out HW(R) <= 23               : gain x  1.41 (299/3393 inside, z +6.2)
+-- listed partial E3 [inner only (c1, i, T0)]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- listed E1 outcome [any search parameter]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- listed E1 outcome [inner only (c1, i, T0)]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- eta condition (sample) [any search parameter]: c1[14]=1
+   discovery: gain x1.09 at fraction 0.4992 (2^-1.00); held-out: gain x1.09 (2^0.13), fraction 0.5011, 62082/113568 events inside, z +30.7
+      held-out listed tau (sample)       : gain x  1.00 (70843/141452 inside, z -0.2)
+      held-out rule A (sample)           : gain x  1.00 (57366/114568 inside, z -0.2)
+      held-out listed E1 outcome         : gain x  1.00 (2178/4364 inside, z -0.3)
+      held-out E1 outcome & rule A       : gain x  1.00 (11/22 inside, z -0.0)
+      held-out listed partial E3         : gain x  1.05 (1968/3746 inside, z +3.0)
+      held-out partial E3 eps(beta*)     : gain x  1.08 (311/574 inside, z +2.0)
+      held-out partial E3 & rule A       : gain x  0.91 (66/145 inside, z -1.1)
+      held-out residual word 0 zero      : gain x  1.02 (2103/4126 inside, z +1.1)
+      held-out residual word 1 zero      : gain x  1.01 (17786/35298 inside, z +1.1)
+      held-out residual word 2 zero      : gain x  1.00 (1929/3863 inside, z -0.2)
+      held-out residual word 3 zero      : gain x  1.01 (1458/2871 inside, z +0.7)
+      held-out HW(R) <= 23               : gain x  1.02 (1731/3393 inside, z +1.1)
+-- eta condition (sample) [inner only (c1, i, T0)]: c1[14]=1
+   discovery: gain x1.09 at fraction 0.4992 (2^-1.00); held-out: gain x1.09 (2^0.13), fraction 0.5011, 62082/113568 events inside, z +30.7
+      held-out listed tau (sample)       : gain x  1.00 (70843/141452 inside, z -0.2)
+      held-out rule A (sample)           : gain x  1.00 (57366/114568 inside, z -0.2)
+      held-out listed E1 outcome         : gain x  1.00 (2178/4364 inside, z -0.3)
+      held-out E1 outcome & rule A       : gain x  1.00 (11/22 inside, z -0.0)
+      held-out listed partial E3         : gain x  1.05 (1968/3746 inside, z +3.0)
+      held-out partial E3 eps(beta*)     : gain x  1.08 (311/574 inside, z +2.0)
+      held-out partial E3 & rule A       : gain x  0.91 (66/145 inside, z -1.1)
+      held-out residual word 0 zero      : gain x  1.02 (2103/4126 inside, z +1.1)
+      held-out residual word 1 zero      : gain x  1.01 (17786/35298 inside, z +1.1)
+      held-out residual word 2 zero      : gain x  1.00 (1929/3863 inside, z -0.2)
+      held-out residual word 3 zero      : gain x  1.01 (1458/2871 inside, z +0.7)
+      held-out HW(R) <= 23               : gain x  1.02 (1731/3393 inside, z +1.1)
+-- listed tau (sample) [any search parameter]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- listed tau (sample) [inner only (c1, i, T0)]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- rule A (sample) [any search parameter]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- rule A (sample) [inner only (c1, i, T0)]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- residual word 1 zero [any search parameter]: c1[17]=1
+   discovery: gain x1.04 at fraction 0.5008 (2^-1.00); held-out: gain x1.06 (2^0.08), fraction 0.4997, 18676/35298 events inside, z +11.0
+      held-out listed tau (sample)       : gain x  1.00 (70757/141452 inside, z +0.4)
+      held-out rule A (sample)           : gain x  0.99 (56952/114568 inside, z -1.8)
+      held-out eta condition (sample)    : gain x  0.99 (56384/113568 inside, z -2.2)
+      held-out listed E1 outcome         : gain x  1.00 (2180/4364 inside, z -0.0)
+      held-out E1 outcome & rule A       : gain x  1.18 (13/22 inside, z +0.9)
+      held-out listed partial E3         : gain x  0.97 (1824/3746 inside, z -1.6)
+      held-out partial E3 eps(beta*)     : gain x  0.96 (276/574 inside, z -0.9)
+      held-out partial E3 & rule A       : gain x  0.92 (67/145 inside, z -0.9)
+      held-out residual word 0 zero      : gain x  1.00 (2054/4126 inside, z -0.2)
+      held-out residual word 2 zero      : gain x  0.99 (1913/3863 inside, z -0.6)
+      held-out residual word 3 zero      : gain x  1.09 (1557/2871 inside, z +4.6)
+      held-out HW(R) <= 23               : gain x  0.97 (1643/3393 inside, z -1.8)
+-- residual word 1 zero [inner only (c1, i, T0)]: c1[17]=1
+   discovery: gain x1.04 at fraction 0.5008 (2^-1.00); held-out: gain x1.06 (2^0.08), fraction 0.4997, 18676/35298 events inside, z +11.0
+      held-out listed tau (sample)       : gain x  1.00 (70757/141452 inside, z +0.4)
+      held-out rule A (sample)           : gain x  0.99 (56952/114568 inside, z -1.8)
+      held-out eta condition (sample)    : gain x  0.99 (56384/113568 inside, z -2.2)
+      held-out listed E1 outcome         : gain x  1.00 (2180/4364 inside, z -0.0)
+      held-out E1 outcome & rule A       : gain x  1.18 (13/22 inside, z +0.9)
+      held-out listed partial E3         : gain x  0.97 (1824/3746 inside, z -1.6)
+      held-out partial E3 eps(beta*)     : gain x  0.96 (276/574 inside, z -0.9)
+      held-out partial E3 & rule A       : gain x  0.92 (67/145 inside, z -0.9)
+      held-out residual word 0 zero      : gain x  1.00 (2054/4126 inside, z -0.2)
+      held-out residual word 2 zero      : gain x  0.99 (1913/3863 inside, z -0.6)
+      held-out residual word 3 zero      : gain x  1.09 (1557/2871 inside, z +4.6)
+      held-out HW(R) <= 23               : gain x  0.97 (1643/3393 inside, z -1.8)
+-- residual word 0 zero [any search parameter]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- residual word 0 zero [inner only (c1, i, T0)]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- HW(R) <= 23 [any search parameter]: no literal passes z >= 6.0 with fraction >= 2^-10
+-- HW(R) <= 23 [inner only (c1, i, T0)]: no literal passes z >= 6.0 with fraction >= 2^-10
+
+== outer-step score (per-bit log ratios of bits with |z|>=4 on discovery; outer-step parameters only)
+   gain = P(score in top q | event) / q on HELD-OUT data, q = kept fraction of outer steps
+-- score of listed partial E3 on 4 bits (Y9, w8); gains at q = 1/2 1/4 1/8 1/16 1/64 1/256 1/1024:
+   listed partial E3          (n=  3746):   1.64   2.44   3.41   4.56   5.51   5.51   5.51
+   listed tau (sample)        (n=141452):   1.00   1.00   1.01   1.02   1.01   1.01   1.01
+   rule A (sample)            (n=114568):   1.01   1.01   1.01   1.01   1.01   1.01   1.01
+   eta condition (sample)     (n=113568):   1.00   0.99   1.00   1.00   1.00   1.00   1.00
+   listed E1 outcome          (n=  4364):   1.00   1.01   1.02   1.05   1.06   1.06   1.06
+   E1 outcome & rule A        (n=    22):   0.97   0.87   0.73   0.37   0.00   0.00   0.00
+   partial E3 eps(beta*)      (n=   574):   1.78   3.20   5.07   6.54   8.42   8.42   8.42
+   partial E3 & rule A        (n=   145):   1.54   2.14   2.88   3.93   5.41   5.41   5.41
+   residual word 0 zero       (n=  4126):   1.04   1.02   1.05   1.05   1.02   1.02   1.02
+   residual word 1 zero       (n= 35298):   1.00   0.99   1.03   1.07   1.08   1.08   1.08
+   residual word 2 zero       (n=  3863):   1.01   0.98   0.95   0.95   0.99   0.99   0.99
+   residual word 3 zero       (n=  2871):   1.03   1.05   1.01   1.03   0.99   0.99   0.99
+   HW(R) <= 23                (n=  3393):   1.02   1.15   1.22   1.24   1.25   1.25   1.25
+-- listed E1 outcome: no outer-step bit with |z| >= 4 on discovery
+-- eta condition (sample): no outer-step bit with |z| >= 4 on discovery
+-- listed tau (sample): no outer-step bit with |z| >= 4 on discovery
+-- rule A (sample): no outer-step bit with |z| >= 4 on discovery
+-- score of residual word 1 zero on 2 bits (Y9); gains at q = 1/2 1/4 1/8 1/16 1/64 1/256 1/1024:
+   residual word 1 zero       (n= 35298):   1.03   1.03   0.90   0.90   0.90   0.90   0.90
+   listed tau (sample)        (n=141452):   1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   rule A (sample)            (n=114568):   0.99   0.99   1.00   1.00   1.00   1.00   1.00
+   eta condition (sample)     (n=113568):   1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   listed E1 outcome          (n=  4364):   1.00   1.00   1.01   1.01   1.01   1.01   1.01
+   E1 outcome & rule A        (n=    22):   1.18   1.18   0.73   0.73   0.73   0.73   0.73
+   listed partial E3          (n=  3746):   1.00   1.00   1.24   1.24   1.24   1.24   1.24
+   partial E3 eps(beta*)      (n=   574):   1.11   1.11   1.49   1.49   1.49   1.49   1.49
+   partial E3 & rule A        (n=   145):   0.99   0.99   0.97   0.97   0.97   0.97   0.97
+   residual word 0 zero       (n=  4126):   0.99   0.99   1.00   1.00   1.00   1.00   1.00
+   residual word 2 zero       (n=  3863):   1.01   1.01   1.04   1.04   1.04   1.04   1.04
+   residual word 3 zero       (n=  2871):   1.03   1.03   0.90   0.90   0.90   0.90   0.90
+   HW(R) <= 23                (n=  3393):   1.07   1.07   0.82   0.82   0.82   0.82   0.82
+-- score of HW(R) <= 23 on 1 bits (Y9); gains at q = 1/2 1/4 1/8 1/16 1/64 1/256 1/1024:
+   HW(R) <= 23                (n=  3393):   1.07   1.07   1.07   1.07   1.07   1.07   1.07
+   listed tau (sample)        (n=141452):   1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   rule A (sample)            (n=114568):   0.99   0.99   0.99   0.99   0.99   0.99   0.99
+   eta condition (sample)     (n=113568):   1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   listed E1 outcome          (n=  4364):   1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   E1 outcome & rule A        (n=    22):   1.18   1.18   1.18   1.18   1.18   1.18   1.18
+   listed partial E3          (n=  3746):   1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   partial E3 eps(beta*)      (n=   574):   1.11   1.11   1.11   1.11   1.11   1.11   1.11
+   partial E3 & rule A        (n=   145):   0.99   0.99   0.99   0.99   0.99   0.99   0.99
+   residual word 0 zero       (n=  4126):   0.99   0.99   0.99   0.99   0.99   0.99   0.99
+   residual word 1 zero       (n= 35298):   1.03   1.03   1.03   1.03   1.03   1.03   1.03
+   residual word 2 zero       (n=  3863):   1.01   1.01   1.01   1.01   1.01   1.01   1.01
+   residual word 3 zero       (n=  2871):   1.03   1.03   1.03   1.03   1.03   1.03   1.03
+
+== value maps (all data): chi-square of the event distribution against the null sample
+-- listed E1 outcome (n=8915): inner index i (16 bins): chi2 9/15 (z -1.0); counter t: floor(log2 t) (bins 0..31): chi2 15/9 (z +1.5); counter t: top 4 bits: chi2 13/15 (z -0.4); c1 top 5 free bits (sub-cube): chi2 2793/31 (z +350.8)
+-- listed partial E3 (n=7331): inner index i (16 bins): chi2 43/15 (z +5.2); counter t: floor(log2 t) (bins 0..31): chi2 26/9 (z +3.9); counter t: top 4 bits: chi2 54/15 (z +7.1); c1 top 5 free bits (sub-cube): chi2 228/31 (z +25.0)
+-- eta condition (sample) (n=226836): inner index i (16 bins): chi2 23/15 (z +1.5); counter t: floor(log2 t) (bins 0..31): chi2 19/14 (z +0.9); counter t: top 4 bits: chi2 22/15 (z +1.3); c1 top 5 free bits (sub-cube): chi2 7459/31 (z +943.3)
+-- listed tau (sample) (n=283501): inner index i (16 bins): chi2 17/15 (z +0.4); counter t: floor(log2 t) (bins 0..31): chi2 25/14 (z +2.1); counter t: top 4 bits: chi2 25/15 (z +1.8); c1 top 5 free bits (sub-cube): chi2 56/31 (z +3.2)
+-- rule A (sample) (n=229122): inner index i (16 bins): chi2 17/15 (z +0.4); counter t: floor(log2 t) (bins 0..31): chi2 14/14 (z +0.0); counter t: top 4 bits: chi2 14/15 (z -0.2); c1 top 5 free bits (sub-cube): chi2 60/31 (z +3.7)
+-- residual word 1 zero (n=70648): inner index i (16 bins): chi2 20/15 (z +0.9); counter t: floor(log2 t) (bins 0..31): chi2 10/12 (z -0.4); counter t: top 4 bits: chi2 9/15 (z -1.2); c1 top 5 free bits (sub-cube): chi2 190/31 (z +20.1)
+-- HW(R) <= 23 (n=6838): inner index i (16 bins): chi2 7/15 (z -1.4); counter t: floor(log2 t) (bins 0..31): chi2 2/9 (z -1.7); counter t: top 4 bits: chi2 9/15 (z -1.0); c1 top 5 free bits (sub-cube): chi2 87/31 (z +7.2)
+-- E1 outcome & rule A (n=42): inner index i (16 bins): chi2 0/-1 (z +nan); counter t: floor(log2 t) (bins 0..31): chi2 3/2 (z +0.7); counter t: top 4 bits: chi2 0/-1 (z +nan); c1 top 5 free bits (sub-cube): chi2 0/-1 (z +nan)
+
+trials in this file: 2^44.81

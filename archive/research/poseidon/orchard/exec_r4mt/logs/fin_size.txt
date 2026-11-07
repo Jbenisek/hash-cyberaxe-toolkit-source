@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 401960	     32	1230903612	1231305604	49643b84	./research/poseidon/orchard/exec_r4mt/data/cloud_T6/single

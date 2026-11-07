@@ -1,0 +1,3 @@
+original_filename: cox-little-oshea_Using-Algebraic-Geometry_2e.pdf
+source_url: http://ndl.ethernet.edu.et/bitstream/123456789/22981/1/David%20A.%20Cox_.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

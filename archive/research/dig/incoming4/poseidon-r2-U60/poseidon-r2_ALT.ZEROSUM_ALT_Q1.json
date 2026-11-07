@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.ZEROSUM (ALT)",
+ "question": "Q1: zero-sum identity on the real r=2 line",
+ "labels": [
+  "P"
+ ],
+ "status": "COMPUTED",
+ "number": "Verified: sum over a coset aH of F_j(W), |H| = 2^19 = 524,288 > 390,625, equals |H| F_j(0) exactly: j=0 True (33.6 s), j=1 True. r=0 (|H| = 2^14 > 15,625) also true. Reproduces Luna 3 P3.14 at r=1.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testB.json; 3rd_openai_workspace/luna3/P3_14.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.ZEROSUM|ALT|Q1. Direct evaluation of the line digest F_j at 524,288 points; reference validated first (pinned vectors 11/11, r=2 collision verified).",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated; one coset parameter a",
+ "reopen_if": "a coset sum that fails for degree < |H| - 1 (it cannot)",
+ "topic": "poseidon-r2 zero-sum"
+}

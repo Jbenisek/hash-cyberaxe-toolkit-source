@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.SHRINK (MEM)",
+ "question": "M3: time cost of shrinking",
+ "labels": [
+  "E"
+ ],
+ "status": "OPEN",
+ "number": "Not measured at r=2. Break-evens in bits (memory gain that a time cost must stay under): dropping the F vector 0.2390 (only valid if the peak stage also loses it), gcd-peak reduction 0.1143, tableless 0.0759. The tableless variant is bounded above by the multiply share (see MEM.TWID M2) and fails the break-even. Priced by Luna 3 for r=1; lean_r1_mem was running.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.SHRINK|MEM|M3. No r=2 build.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "lean_r1_mem results (r=1) transfer: a measured r1 time ratio < 2^bits_saved",
+ "prior": 0.15,
+ "potential_bits": 0.2
+}

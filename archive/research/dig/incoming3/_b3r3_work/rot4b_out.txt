@@ -1,0 +1,8 @@
+r=16 depth=4 mode=full unary ops=92
+DONE r=16 depth=4 mode=full family: E=6 K=35 unary=92 nodes=1831252273 found=0
+r=12 depth=4 mode=full unary ops=114
+DONE r=12 depth=4 mode=full family: E=8 K=35 unary=114 nodes=4123467951 found=0
+r=8 depth=4 mode=full unary ops=114
+DONE r=8 depth=4 mode=full family: E=8 K=35 unary=114 nodes=4123479264 found=0
+r=7 depth=4 mode=full unary ops=114
+DONE r=7 depth=4 mode=full family: E=8 K=35 unary=114 nodes=4122229354 found=0

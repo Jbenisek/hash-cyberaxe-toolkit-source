@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "H3-machine-convention: ledger counted in the convention of the organizer count C(r3) = 638",
+ "question": "R3 control: guard-bit scheme on extreme inputs, and the same tracer on the unfolded circuit against the organizer count",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Extreme and structured inputs (all pairs of 0, 1, 0x7FFFFFFF, 0x80000000, 0xAAAAAAAA, 0x55555555, 0xFFFFFFFF in all 8 words, plus 2,000 random mixtures): 14,343 lanes, 0 mismatches against the scalar digest; on an all-ones input no non-shift intermediate exceeds 252 bits (machine word 256). Control against the organizer: the organizer's own counter gives 638 for the 3-round compress (145 and, 97 shr, 96 add, 108 xor, 96 shl, 96 or; run on the organizer verifier only); our tracer on the same unfolded compress (IV, counter, length, flags and all 16 message words as variables, 5-operation rotations with guard bits) counts 736 (144 add, 104 xor, 96 shr, 96 shl, 96 or, 200 and). So the organizer reference is 98 operations (13 percent) lighter than our per-operation count of the same circuit; the unit is conservative for us, and the 595 comes from folding the fixed key and constants (141 saved), then 7-lane packing.",
+ "evidence": "research/dig/incoming3/blake3-r3-U75/work/h3.py, research/dig/incoming3/blake3-r3-U75/work/h3.out, research/dig/incoming3/blake3-r3-U75/work/orgcount.out",
+ "notes": "universe cell blake3-r3|PREM.H3|PREM|R3. The organizer counter leaves some first operations uncounted by construction of its Word class (plain-int operands); we did not change it. The gap is disclosed, not used.",
+ "held_fixed": "same circuit, two counters: organizer Word counter vs filed Tracer",
+ "reopen_if": "a judge ruling that prices packed operations differently from single operations",
+ "gain_basis": "count"
+}

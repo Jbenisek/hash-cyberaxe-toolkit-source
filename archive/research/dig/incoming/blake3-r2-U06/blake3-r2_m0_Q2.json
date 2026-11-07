@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "pkgB3U message word m0 (w0)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U06/work/b3lib.py; research/dig/incoming/blake3-r2-U06/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U06/work/scan_m01.py (+scan_m01.out.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m0|msgword|Q2",
+ "question": "Is the zero difference / the exact value of this word necessary for the Lemma H event?",
+ "status": "SAMPLED",
+ "labels": [
+  "0"
+ ],
+ "number": "0 of 6000 differences in B only (3000 contexts, one random bit-flip + one random delta each) keep digest words 0,2,5,7 equal; all 8 of 8 digest words differ in every one (min 8); changing the value of w0 in A alone (nonzero XOR) keeps the admissible constants X3,X7,X11,X15 in 0/3000. 95% upper bound on the keep rate about 5e-4 (rule of three)",
+ "notes": "Universe cell blake3-r2|m0|msgword|Q2 (unit blake3-r2-U06). Class: FREE (not pinned w4, not cancelling w5, not forced constant X3/X7/X11/X15). w0 = K0 first message word; a middle line in the root instance (function of the six outer words and X2, Section 4), in the claim's counter instance (Section 8) the free trial word fixed by c1 with the counter t solved from K0's second assignment. Read again only by C2 (fifth assignment, Y2). Necessary: a difference in this word reaches C2 (Y2), whose output goes into E2 (round 1 call on lanes 2,7,8,13 for w0 / lanes 0,5,10,15 for w1), which breaks the zero difference that Lemma H needs for digest words 0,2,5,7. The test is a sample (hypothesis: structural reason above), not a proof; for the exact value, any change of w0 with the rest fixed destroys the pinned X constants (structure: K0 is an exact bijection, Q3).",
+ "topic": "b3r2.m0.msgword.Q2"
+}

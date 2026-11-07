@@ -1,0 +1,28 @@
+conn_k1.json advice c,j,DF 0 13 41 attempts 40 ok 32 Counter({'ok': 32, 'cond': 8})
+conn_k11.json advice c,j,DF 0 17 43 attempts 40 ok 40 Counter({'ok': 40})
+conn_k2.json advice c,j,DF 0 13 46 attempts 40 ok 9 Counter({'cond': 31, 'ok': 9})
+conn_k5.json advice c,j,DF 0 9 36 attempts 40 ok 6 Counter({'cond': 34, 'ok': 6})
+conn_k6.json advice c,j,DF 0 2 51 attempts 40 ok 31 Counter({'ok': 31, 'cond': 9})
+conn_k8.json advice c,j,DF 0 22 53 attempts 40 ok 18 Counter({'cond': 22, 'ok': 18})
+conn_k9.json advice c,j,DF 0 10 36 attempts 40 ok 22 Counter({'ok': 22, 'cond': 18})
+n ok 158
+nFIX (520, 520, 520)
+ED_F (520, 520, 520)
+inactive_rows (2, 13, 6.89)
+active_rows_alpha1 (307, 318, 313.11)
+ED_after_zero (530, 585, 554.46)
+ED_after_D2 (1452, 1487, 1470.25)
+EM_M1 (520, 520, 520)
+EM_M2 (1404, 1428, 1412.88)
+EM_M3 (1427, 1443, 1435.63)
+lin_rows (315, 320, 317.31)
+n_row_masks (987, 1005, 998.66)
+n_conditions_M4 (127, 127, 127)
+EM_M4 (1547, 1567, 1557.06)
+DF (33, 53, 42.94)
+M2 added [888, 888, 888, 888, 888] range 884 908
+M3 added 13 35
+M4 added 117 125
+DF after M3 (1600-EM_M3) 157 173
+DF dist [(33, 2), (34, 3), (35, 14), (36, 17), (37, 9), (38, 12), (39, 3), (42, 25), (43, 21), (44, 3), (49, 5), (50, 10), (51, 10), (52, 4), (53, 20)]
+DF<33? 0

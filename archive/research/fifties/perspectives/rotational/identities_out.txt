@@ -1,0 +1,70 @@
+sigma0 = db1 ^ ROR(eta,1) = d931617f; solutions of x ^ ROR(x,1) = sigma0: ['91de41aa', '6e21be55']
+constant differences and their distance d4 to the nearest period-4 word (uniform word: mean 11.6):
+   db1       18b0e098  HW 11  d4 9
+   dc1       0e09818b  HW 11  d4 9
+   de1       03cf8303  HW 13  d4 13
+   eta=dh1   830303cf  HW 13  d4 13
+   Y3^Y3'    fff8ffff  HW 29  d4 3
+   Y11^Y11'  fff77ffb  HW 29  d4 3
+   eps       91de41aa  HW 15  d4 13
+   ~eps      6e21be55  HW 17  d4 13
+
+[rand] 1048576 rows (repeated input rows dropped)
+   db1 == 18b0e098                                         failures 0
+   dh1 == eta                                              failures 0
+   dd2 == ROR(da2,8)                                       failures 0
+   db2 == ROR(db1^dc2,7)                                   failures 0
+   dh2 == ROR(eta^de2,8)                                   failures 0
+   df2 == ROR(df1^dg2,7)                                   failures 0
+   U6 == ROR(db1,7)^ROR(eta,8)^ROR(dc2,7)^ROR(dc2,8)       failures 0
+   W3 == db1^ROR(eta,1)^de2^ROR(de2,1)                     failures 0
+   U4 == ROR(df1^dg2^ROR(dg2,1),7)                         failures 0
+   W4 == ROR(da2,8)^ROR(da2,7)^ROR(df1,7)                  failures 0
+   parity(R3) == parity(R6)                                failures 0
+   parity(U6) == 0                                         failures 0
+   parity(df1) = 0 fraction 0.4999   parity(R1)==parity(R4) fraction 0.4999
+   hits: dc2 in {eps,~eps} 0   de2 in {eps,~eps} 0   W4 == 0 0   U4 == 0 0   R1 == 0 0
+   per-word Renyi-2 entropy from collision pairs (uniform 32-bit word: 128.0 pairs expected):
+      R1   pairs        195  H2  31.39
+      R3   pairs        681  H2  29.59
+      R4   pairs        169  H2  31.60
+      R6   pairs        379  H2  30.43
+      U4   pairs        142  H2  31.85
+      U6   pairs      77635  H2  22.76
+      W3   pairs      21118  H2  24.63
+      W4   pairs     128215  H2  22.03
+      da2  pairs   28433947  H2  14.24
+      dc2  pairs      77525  H2  22.76
+      de2  pairs      21067  H2  24.64
+      df1  pairs   27318929  H2  14.30
+      dg2  pairs        208  H2  31.30
+
+[ctx] 262092 rows (repeated input rows dropped)
+   db1 == 18b0e098                                         failures 0
+   dh1 == eta                                              failures 0
+   dd2 == ROR(da2,8)                                       failures 0
+   db2 == ROR(db1^dc2,7)                                   failures 0
+   dh2 == ROR(eta^de2,8)                                   failures 0
+   df2 == ROR(df1^dg2,7)                                   failures 0
+   U6 == ROR(db1,7)^ROR(eta,8)^ROR(dc2,7)^ROR(dc2,8)       failures 0
+   W3 == db1^ROR(eta,1)^de2^ROR(de2,1)                     failures 0
+   U4 == ROR(df1^dg2^ROR(dg2,1),7)                         failures 0
+   W4 == ROR(da2,8)^ROR(da2,7)^ROR(df1,7)                  failures 0
+   parity(R3) == parity(R6)                                failures 0
+   parity(U6) == 0                                         failures 0
+   parity(df1) = 0 fraction 0.4995   parity(R1)==parity(R4) fraction 0.4995
+   hits: dc2 in {eps,~eps} 0   de2 in {eps,~eps} 0   W4 == 0 0   U4 == 0 0   R1 == 0 0
+   per-word Renyi-2 entropy from collision pairs (uniform 32-bit word: 8.0 pairs expected):
+      R1   pairs          5  H2  32.68
+      R3   pairs         39  H2  29.71
+      R4   pairs         10  H2  31.68
+      R6   pairs         29  H2  30.14
+      U4   pairs         33  H2  29.96
+      U6   pairs       4847  H2  22.76
+      W3   pairs       9401  H2  21.80
+      W4   pairs       9159  H2  21.84
+      da2  pairs    1757574  H2  14.25
+      dc2  pairs       4834  H2  22.76
+      de2  pairs       9394  H2  21.80
+      df1  pairs    3973903  H2  13.08
+      dg2  pairs         50  H2  29.36

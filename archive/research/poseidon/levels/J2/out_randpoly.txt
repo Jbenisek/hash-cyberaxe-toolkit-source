@@ -1,0 +1,4 @@
+randpoly 0: nfac 10 deg4 0 roots 4 | 422 87 51 50 7 3 1 1 1 1 (4s)
+randpoly 1: nfac 6 deg4 0 roots 1 | 533 37 30 13 10 1 (5s)
+randpoly 2: nfac 4 deg4 0 roots 2 | 612 10 1 1 (6s)
+randpoly 3: nfac 4 deg4 0 roots 0 | 383 194 38 9 (5s)

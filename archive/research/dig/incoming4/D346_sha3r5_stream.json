@@ -1,0 +1,20 @@
+{
+  "id": "D346-SHA3R5-PHALF-STREAM-KAT",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "P-half tables streamed per block",
+  "question": "Does the streamed P-half-table implementation preserve the reference outputs while lowering residency?",
+  "labels": ["N", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "8/8 core KAT pairs and 6/6 slack pairs identical; stream RSS max 2^21.49185 versus reference 2^25.14035",
+  "source": "our workflow: sha3-r5 P-half stream KAT",
+  "own_test": true,
+  "evidence": "research/sol_answer_D346_sha3r5_phalf_stream_kat.md; research/memcomp/sha3-r5/B__P_half_tables_streamed_per_block__Gra/run2.sh; research/memcomp/sha3-r5/B__P_half_tables_streamed_per_block__Gra/run4.sh",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Finite harness equivalence and RSS only; full package ledger, all-campaign peak, and production rewrite charge remain open.",
+  "peak_mem": "21.49185 MEASURED streamed core-0 RSS"
+}

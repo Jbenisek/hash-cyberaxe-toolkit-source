@@ -1,0 +1,11 @@
+Q3_LOG2 default -71.47 time 60.99099
+q3 one bit lower 2^-72.47        text 61.57158 ours 61.57158 MATCH
+Table 15 value 2^-74.03          text 62.76763 ours 62.76763 MATCH
+four patterns alone 2^-72.02     text 61.28957 ours 61.28957 MATCH
+q3 -71.47 time 60.99099
+q3 -71.00 time 60.77716
+q3 -72.47 time 61.57157
+slope bit/bit at charge: 0.4963
+pcap_assumed 28103/50000000
+bit per +1 op/fb: 1.452e-05
+memory headroom to 2^20: 440832 bytes (72.5%) log2 mem 19.21310

@@ -1,0 +1,13 @@
+Is the board's structure visible to the XOR-linear model?  (COMPUTED)
+Board path: dv14 (length) absorbed in K2 by m4, m5; digest half A (out0,2,5,7) equal for free once C3 is pinned.
+Here: kernel dimension of half A (and of 'E0,E2 inputs unchanged') with differences only in m4, m5 and the low 7
+bits of v14, at w = 8, 12, 16, 32.  A zero dimension means no XOR-linear characteristic has the board's free half:
+the free half exists only through value-dependent (pinned) transitions in C3.
+w= 8: vars 23; dim(half A collides) = 0; dim(E0,E2 state inputs unchanged) = 0; dim(round-0 output unchanged) = 7
+      example round-0 local collision: dm4=0x1 dm5=0x1 dv14=0x1
+w=12: vars 31; dim(half A collides) = 0; dim(E0,E2 state inputs unchanged) = 0; dim(round-0 output unchanged) = 7
+      example round-0 local collision: dm4=0x1 dm5=0x1 dv14=0x1
+w=16: vars 39; dim(half A collides) = 0; dim(E0,E2 state inputs unchanged) = 0; dim(round-0 output unchanged) = 7
+      example round-0 local collision: dm4=0x1 dm5=0x1 dv14=0x1
+w=32: vars 71; dim(half A collides) = 0; dim(E0,E2 state inputs unchanged) = 0; dim(round-0 output unchanged) = 7
+      example round-0 local collision: dm4=0x1 dm5=0x1 dv14=0x1

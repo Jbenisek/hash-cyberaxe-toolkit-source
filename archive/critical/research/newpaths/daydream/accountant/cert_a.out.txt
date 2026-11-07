@@ -1,0 +1,5 @@
+filed claim 122.98920 certificate True 1.5s
+P1 claim 122.83936 certificate True 3.0s
+P2 claim 122.96136 certificate True 1.5s
+P1+P2 claim 122.80844 certificate True 2.9s
+A3 claim 122.98401 certificate True 4.3s

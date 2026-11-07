@@ -1,0 +1,8 @@
+records                    1577
+trace_vs_compress_fail     0
+diag_solved                1577
+bc_fail                    0
+S_fail                     0
+complete                   0
+zero_D_words               0
+zero_digest_xor_words      0

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "evaluations: 0.99885 * 2^128 points",
+ "question": "R4 score sensitivity of the number of evaluations",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Q +1 percent = +0.01436 bit, -1 percent = -0.01450; 0.1 percent = 0.00144 bit. Q follows 0.5 log2(lambda), so the claimed success 0.30 / 0.50 / 0.63 / 0.90 instead of 0.39 moves the time -0.2374 / +0.2383 / +0.4971 / +1.1003 bit against lambda 0.497 (see PREM.H1 R4). The in-flight and cut allowances are 0.17 and 0.015 percent of Q (0.0025 and 0.0002 bit).",
+ "evidence": "research/dig/incoming3/blake3-r3-U77/work/evals_mc.py, research/dig/incoming3/blake3-r3-U77/work/evals_mc.out, research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out, research/dig/incoming3/blake3-r3-U75/work/h12.out",
+ "notes": "universe cell blake3-r3|LEDGER.EVALS|LEDGER|R4. Exact ledger.",
+ "held_fixed": "ledger of the filed entry",
+ "reopen_if": "a required success probability below 0.39",
+ "gain_basis": "T"
+}

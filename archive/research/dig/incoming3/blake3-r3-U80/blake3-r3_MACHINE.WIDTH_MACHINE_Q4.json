@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "word width (bits per register operation)",
+ "question": "Q4 alternatives to seven 36-bit lanes",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Alternatives built and checked: eight 32-bit lanes with lane-isolated add ((a&H)+(b&H)) ^ ((a^b)&T), 6 ops per two-word add: 1,080 ops = 135 per step, worse by 0.667 bit; seven 34-bit lanes 622 = 88.86, worse by 0.064; one lane per word: 595 ops = 0.9326 unit per step (folding alone beats the organizer's 638 by 7 percent, packing gives the factor 7). Not built: a cheaper rotation (4 operations) was looked for in the guard-bit layout and is not possible for pitch 36 (the shifted neighbour bits land inside the kept range for r > 4); a multiplication-based rotate needs a multiply primitive the model does not list.",
+ "evidence": "research/dig/incoming3/blake3-r3-U80/work/width.py, research/dig/incoming3/blake3-r3-U80/work/width.out",
+ "notes": "universe cell blake3-r3|MACHINE.WIDTH|MACHINE|Q4. The rotation remark is an argument, not a run.",
+ "held_fixed": "W = 256",
+ "reopen_if": "a 4-operation rotation of packed lanes (saves up to 80 ops per batch, 0.2 bit), or a multiply primitive in the cost model",
+ "gain_basis": "T"
+}

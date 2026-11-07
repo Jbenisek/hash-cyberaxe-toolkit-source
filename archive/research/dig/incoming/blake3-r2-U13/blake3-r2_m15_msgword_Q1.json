@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m15 (w15): zero padding word, constant 0 in A and B",
+ "question": "Q1 difference/condition count at this word",
+ "labels": [
+  "N",
+  "0"
+ ],
+ "status": "COMPUTED",
+ "number": "Difference: 0 bits (w15 = 0 in both A and B in 0 of 20000 sampled blocks differ or are nonzero). Classification: padding word, a constant zero, not free, not pinned by X3/X7/X11/X15; the 55-byte length of block A forces bytes 60-63 (B may use only the low 3 bytes of a 63-byte block) to be zero, and the construction has no parameter for it. Constants X3/X7/X11/X15 hold in 2000/2000 builds with w15=0. No condition counted on it (0 bits).",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U13/work/scan_m1415.py; research/dig/incoming/blake3-r2-U13/work/scan_m1415.out.json; research/dig/incoming/blake3-r2-U13/work/b3lib.py; research/dig/incoming/blake3-r2-U13/work/validate_b3.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|m15|msgword|Q1. Own b3lib construction (pkgB3U Sec 4) validated 3000/3000 first (U10 copy). Sampled window of the 8-parameter construction; U06 template adapted. No gain seen. Unit text says free/pinned/cancelling/forced; finding is a fourth class, padding zero.",
+ "topic": "blake3-r2 msgword m15"
+}

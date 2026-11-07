@@ -1,0 +1,22 @@
+{
+  "id": "D471-R37-DENSE-CNF-MEMORY-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA-256-r37 dense-row CNF preprocessing stand-in",
+  "question": "What peak memory does the owned dense-row CNF construction use before any SAT solve?",
+  "labels": ["C", "D", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "selftest37.py dense: 43019 variables, 408779 clauses, 6.33 s elapsed, 147416 KiB = 150953984 B = 2^27.1695335923 peak RSS, exit 0; no external solver invoked.",
+  "source": "our workflow: D471 one-thread llw24 dense CNF construction",
+  "own_test": true,
+  "evidence": "research/retest/r37/D471_llw24_dense_selftest_timev.txt; research/sol_answer_D471_r37_dense_cnf_memory.md; research/dense_dig/llw24/selftest37.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Measured preprocessing component only. The full five-stage A_C characteristic search, dense-to-sparse join, complete operation meter, and organizer interpretation remain open; no score/package/staging/filing/submission.",
+  "peak_mem": "2^27.1695335923 MEASURED /usr/bin/time -v Python dense CNF construction, one thread",
+  "held_fixed": "selftest37.py dense mode, chi37, PYTHONDONTWRITEBYTECODE=1, one thread on core 1",
+  "reopen_if": "The owner supplies the complete five-stage A_C driver and the dense-to-sparse join for an end-to-end metered run",
+  "supersedes": ["D446-SHA256-R37-AC-FLOOR-BLOCKER-20261014"]
+}

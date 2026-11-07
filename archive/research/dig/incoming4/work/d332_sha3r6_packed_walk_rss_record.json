@@ -1,0 +1,22 @@
+{
+  "id": "D332-SHA3R6-PACKED-WALK-RSS-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "packed DP-rho walk KAT RSS",
+  "question": "What peak whole-process RSS does the owned 256-lane packed DP-rho walk KAT use?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "150,429,696 bytes peak Windows WorkingSet64 (log2 27.16451); 24-step 256-lane KAT exited 0 with zero output/control mismatches and 256 cap restarts",
+  "source": "our workflow: D332 SHA3-r6 packed walk RSS",
+  "own_test": true,
+  "evidence": "research/sol_answer_D332_sha3r6_packed_walk_rss.md; research/retest/t1/packed_walk_rss_probe.py; research/retest/t1/packed_walk_kat.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "27.165 MEASURED single-process Windows WorkingSet64 sampled every 50 ms during owned 256-lane packed KAT",
+  "notes": "Finite deterministic KAT only; no DP hits occurred, so it does not measure full search extraction/restart/replay or transfer to a filing row.",
+  "held_fixed": "packed_walk_kat.py; 256 lanes; 24 steps; CAP=17; 64-plane schedule; one BelowNormal child",
+  "reopen_if": "Measure the production full-width rho attempt with explicit endpoint extraction and restart/replay accounting"
+}

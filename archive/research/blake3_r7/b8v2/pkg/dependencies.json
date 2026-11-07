@@ -1,0 +1,42 @@
+[
+  {
+    "submissionId": "1cd0dd3b-eb60-4572-a75f-937cd771ec4a",
+    "rationale": "Our own B3R7 (time_log2 125.05397, memory 2^20.86686, scalar score 125.92083), filed 10-15: the search, the plan method, the proof Section 4 (the supermartingale Lemma 2, clause (d) of H1), the experiments, the generator's use-count and packing changes and the ledger of this entry are those of 1cd0dd3b. Changed: the step is a rolled program (rounds 1-2 straight, rounds 3-7 as 5 iterations of one generic round, the message permutation done by charged register moves, loop control charged) instead of a straight line, so that the whole program fits in 2^20 bytes and the memory term (0.86686 bit) is removed; the price is a larger step (55,210 operations against 45,974), a re-planned table (the largest that fits in 2^20) and a larger register file (1,856). Changed in this revision (v2): Section 4 (Lemma 2) is replaced by Lemma 2 v2 answering the rulings on 1cd0dd3b (Section 9 of the proof); program, ledger and experiments unchanged.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "a6ee439c-5b82-41f2-8acb-9917c8c70756",
+    "rationale": "Our own round-4 entry B3R4d (125.06000), filed 10-15: the program, circuit generator, ledger method, experiments and certificates of this entry are those of a6ee439c taken from four rounds to seven (BLAKE3 has seven rounds), and its Section 4 (the supermartingale Lemma 2, clause (d) of H1, the plan method with the Chernoff trail sums) is used unchanged in structure with the new parameters. Changed (by 1cd0dd3b and here): the round count and unit (C = 1470), the step (a rolled program here), the plan (Tp, B, c, table size), and the memory statement: the program fits in 2^20 bytes here (proof Section 3.8).",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "41b32afc-ed4c-4ef1-b9f2-8c72ab163582",
+    "rationale": "Our own round-4 entry B3R4b (125.02375), rejected by the judges (not_evaluable) on one finding about the success-probability step of its Lemma 2 (F1-adaptive-finished-trail-conditioning, H4). The program, circuit, ledger method, experiments and certificates descend from 41b32afc; its finding is answered in a6ee439c and in Section 4 of this entry (the new Lemma 2 and clause (d) of H1).",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "75d5e1f9-8948-4f49-b7a6-5e9475495a7a",
+    "rationale": "Our own first blake3 round-4 entry (125.35348): the whole program of this entry. This entry keeps its target form (64-byte message 0^32 || x, flags 11), the bit-sliced 256-lane step with pivot full adders, the mask walk g = f XOR q, the two-pass circuit generator, the trail-and-table search, handlers, ledger method, success argument and experiments, and changes three things: the declared register file (800 registers instead of 1,024), the table entry (10 bytes, no stored length, instead of 26) and the recovery, which now recomputes both trail lengths in a first pass and is charged at two passes; the numbers follow.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "62cfd777-5613-463f-b561-e2340e00e528",
+    "rationale": "Our own entry for blake3 round 3 (124.8123, passed the judges): the bit-sliced 256-lane chain step with pivot full adders, the mask walk g = f XOR q, the declared register file and the 36-byte instruction charge, from which the round-4 program was taken.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "0a9640ed-558a-4f0a-aba8-45e89ffcfd7c",
+    "rationale": "Our own entry for blake3 round 3 (124.96822, bit-sliced 256-lane chain step, declared 1,024-register file, 36-byte instruction charge; passed the judges). Taken from it: the program structure, trail-and-table search, handlers, recovery walk, ledger method, restated Lemma 2 and the form of the experiments.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.4, 4, 5, 6, 7 and Appendix A."
+  },
+  {
+    "submissionId": "3356413f-cd60-410c-8847-2266d6444ac5",
+    "rationale": "Our own entry for blake3 round 3 (124.95448, same program with a fixed first block P as advice; passed the judges). Taken from it: the polarity-signal generator idea, the declared register-file layout and the generator code and peak-storage accounting of its Section 3.6 (restated here for the new generator); its two-block mode, prefix, scan and polarity climb are not used.",
+    "evidence": "proof.md Sections 3.2, 3.6, 3.7 and 7."
+  },
+  {
+    "submissionId": "6ae36351-5836-4a46-ad34-227688264123",
+    "rationale": "jungjipdo's entry for blake3 round 3 (124.91252). Credited for two ideas, re-implemented here from the text of its proof Sections 3.3 and 3.4 (no file of that entry was used or run): the pivot full adder (the input whose polarity differs is the pivot; u = x ^ p, sum = u ^ y, carry = ((u & (y ^ p)) ^ p); five gates per bit) and the mask walk g = f XOR q (the digest planes are fed back as stored, so no complement and no polarity search are needed, and equality under g is equivalent to equality under f).",
+    "evidence": "proof.md first paragraph and Sections 1, 3.2, 3.3 and 8."
+  }
+]

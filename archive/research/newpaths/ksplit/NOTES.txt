@@ -1,0 +1,171 @@
+ksplit - does the solving order of idea 1 split into k independent sides (k = 3, 4, 8)?
+Owner: agent "ksplit".  Plain text.  Labels: COMPUTED (a program here produced it), DERIVED (follows from
+stated model + computed facts), GUESS.  Newest results at the bottom.
+
+FILES
+  kmodel.py      exports gd_order.build() + gd_sat.table_macros() (read-only imports) -> sys_<variant>_<mode>.txt
+                 (same word order as separable/sys_*.txt: checked identical for outhalf)
+  ks.c           closure / delta engine; modes:
+                   enum g proc nprocs maxB   all valid g-sets over class representatives (DFS, canonical),
+                                             each analysed by the subset-tree DP below (env KS_LIN, KS_EXTRA, KS_GATE)
+                   one w1 .. wg              one guess set, best tree per number of leaves k
+                   glob file                 cheap "are the checks global?" test for big sets (g <= 20)
+  regsat.py      SAT helpers (cardinality encoding, loader)
+  bigsat.py      SAT: proper closed region with delta <= D and >= S words?   big_*.cnf / big_*.out
+  rootcore.py    SAT: two proper closed regions, delta <= D each and of the union, covering the peeling core
+                 rc_*.cnf / rc_*.out
+  rootsat.py     same with a layered closure instead of the core (too hard for kissat, not used for results)
+  tcore.py       peeling core (also permissive: square per-call blocks removable)
+  explain.py     best bipartition of one guess set and the jointly derived words
+  grow.py        heuristic growth of large low-delta regions;  cater.c  word-order (caterpillar) width search
+  run_enum.sh, glob.sh, one.sh, why.sh, sat1.sh, build*.sh   WSL runners
+  res_*.p*       enumeration outputs;  glob_*.out   global-test outputs;  why_fp.out  coupling statistics
+
+1. MODEL (DERIVED)
+  Words W, equations E of gd_order.build (each primitive G equation; solvable for any one unknown word),
+  optional table macros (gd_sat).  cl(T) = propagation closure of guess set T.
+  delta(X) = |X| - Ein(X), Ein(X) = number of equations whose unknown words all lie in X.
+  For a guess set T with K = cl(T):  conditions inside T  full(T) = |T| - delta(K).
+  delta(W) = F (fixed 4, outhalf 12).
+
+  Tree (hierarchical k-list).  Guess set G split by a binary tree; leaves are groups of guesses (sides), every
+  internal node v joins the lists of its children x, y.  K_v = cl(guesses below v).
+    separable conditions at v   n_v = delta(K_x) + delta(K_y) - delta(K_x u K_y)
+                                (equations with all words in K_x u K_y, and words derived on both sides;
+                                 each is a sum of an x-term and a y-term in Z/2^32 or in xor-after-rotation)
+    post (non-separable) at v   p_v = delta(K_x u K_y) - delta(K_v)
+                                (conditions that only appear after words are derived from BOTH sides)
+  This is the task's formalisation with "every word lies in some closure" relaxed to "no non-separable
+  condition": words outside K_x u K_y are allowed if deriving them creates no extra equation.
+  Option LIN: a word derived after the join only through additive (resp. xor) equations from K_x u K_y is a
+  sum of per-side terms; extra equations of the same group then also count as separable.
+  k = 2 with a core is the separable agent's two-list split; the flat k-split is the tree whose internal nodes
+  have no own closure (subsumed: a flat k-split is visible in any tree over the same leaves).
+
+  Cost model (log2, units; member = one family member, need 2^64):
+    leaf list    X <= 32*delta(K_leaf), built at 2^(32*(|leaf| - delta)) per kept entry
+    node         pre = X_x + X_y - 32 n_v  (join output before filter, capped by bound B by shrinking children)
+                 X_v = pre - 32 p_v
+    feasible at B if every list built and every pre <= 2^B and X_root >= 64.  Cost ~ 2^B * (2k).
+  No Wagner clamping in the DP (R3: it cannot matter where no separable condition exists; section 3 covers
+  clamping in general).
+
+2. RESULTS
+  R1 COMPUTED (kmodel.py stats): largest closure of 1 / 2 guesses: fixed 9 / 14 words of 100 (plain and
+     tables), outhalf 5 / 10 words of 128.  So the task's strict flat split (every word in some side closure,
+     no core) with sides of <= 2 words cannot cover: 4 sides * 14 = 56 < 100; 8 sides * 9 = 72 < 100.
+  R2 COMPUTED (ks enum 8, fixed plain): 19316 valid 8-guess sets over class representatives (equal to the
+     variants agent's count; minimum basis is 8 per separable R2).  For EVERY set and EVERY binary tree over it
+     (k = 1..8 leaves) the best cost is 2^192 = brute force (guess all 8, filter 4 checks).
+     res_fp8b.p*.  With the linear-chain refinement (KS_LIN=1): identical, and in every set no node of any
+     tree has a single separable condition (sets_with_any_separable_condition = 0) and every root
+     bipartition has n = 0, p = 4.  res_fp8lin.p*.
+  R3 DERIVED from R2: the checks of every minimal fixed-variant guess set are GLOBAL: no proper subset of the
+     guesses carries a condition and no two parts of the set share one.  All 4 checks appear only in the
+     final cascade, after words are derived from all 8 guesses together.  Hence no k-split (k = 2,3,4,8,
+     flat or hierarchical, with or without Wagner clamping - clamping needs separable conditions) gives
+     anything below 2^192 for 8 guesses.  (separable agent R5/R6 found the same on 2000 + 74771 sets.)
+  R4 COMPUTED (ks glob, LIN=1): all 1005 outhalf full-closure sets found by the separable agent's local
+     search (1004 of 16 guesses = 4 checks, one of 17 = 5 checks) are GLOBAL in the same sense: no proper
+     subset carries a condition, no root bipartition has a separable condition.  glob_oh_plain_lin.out.
+     (sample, not exhaustive)
+  R5 COMPUTED (ks enum 8 with KS_EXTRA=1: every valid 8-set plus every possible extra guess word, i.e. all
+     "8 + 1 dependent guess" sets = MITM matching word on one side; 1,777,072 sets): no binary tree over any
+     of them reaches cost 2^128 (gate at 2^128; brute force would be 2^224).  The only root split without a
+     post condition is the trivial one (all 8 basis words on one side, the extra word alone on the other,
+     n = 1).  res_fp9x.p*.
+  R6 COMPUTED: outhalf tables, 951 sets from the separable local search: all GLOBAL. glob_oh_tables_lin.out.
+
+3. GENERAL LOWER BOUND FOR ANY TREE (DERIVED, generic model)
+  Setting: any guess set (dependent guesses allowed), any binary join tree (any k, flat or hierarchical),
+  cores (outer loops), Wagner clamping (inner joins forced to chosen partial sums), table rules.
+  At an internal node v the joined pairs, before any post filter, are assignments of J_v = K_x u K_y that
+  satisfy every equation inside J_v.  There are 2^(32 delta(J_v)) such assignments and together they extend to
+  the 2^(32F) family members, so one joined pair extends on average to 2^(32(F - delta(J_v))) members.
+  Cores and clamps select pairs by functions of the words of J_v (and of the run), which does not change this
+  average.  To output 2^64 members the node must therefore produce, over all runs,
+        >= 2^(64 + 32(delta(J_v) - F))  joined pairs.          (fixed F = 4:  >= 2^(32 delta(J_v) - 64))
+  A leaf of s guesses is the same with delta = s.  Consequences for the fixed variant:
+    cost < 2^96 (in particular < 2^85) requires delta(J_v) <= 4 at every node and leaves of <= 4 guesses.
+    Check: Wagner's 4-list (4 sides of 64 bits, 128 condition bits) has delta(J) = 4 at every node: bound
+    2^64, achieved - the bound is tight where clamping applies.  The minimal 8-sets of R2 have delta(J_root)
+    = 8: bound 2^192 = what the DP found.
+  The lowest node v* whose closure is W has children with PROPER closed regions A, B (delta <= 4 each, as
+  closure never raises delta) and J = A u B with delta(J) <= 4; also delta(J) >= F = 4 because J determines
+  every word (2^(32 delta(J)) J-assignments must hold the 2^128 members injectively).  So delta(J) = 4, no
+  post condition: the words outside J are derived each by exactly one
+  equation, i.e. W - J is removable by repeatedly peeling a word that lies in only one remaining equation.
+  Hence A u B contains the peeling core: 93 of the 100 words (fixed; peeled: C0.b2 C2.b2 K2.a2 m5 m8 m12
+  m15) - outhalf: 121 of 128.
+  A set closed under more rules (tables, 2^64 tables) is also closed under the plain equations, so
+  impossibility for plain-closed regions covers every table model as well.
+  R7 COMPUTED (ks enum 8, fixed TABLES model = gd_sat macros, KS_LIN=1): 665,838 valid 8-sets (= variants
+     agent's t1 count).  In every one no node of any tree has a separable condition; every root bipartition
+     n = 0, p = 4.  Best tree = brute force 2^192 for every k.  res_ft8lin.p*.
+  R8 COMPUTED (bigsat.py + kissat): "a proper closed region A (A != W, closed under propagation) with
+     delta(A) <= 4 and |A| >= 47" is UNSATISFIABLE (big_fp_D4_S47.out).  Sanity: D=4,S=25 SAT (a 25-word
+     region = closure of 4 words, the known maximum), D=1,S=9 SAT, D=2,S=14 SAT.
+  R9 COMPUTED (tcore.py): the peeling core stays 93 words even if any square block inside one G call may
+     be solved jointly (table rules); outhalf 121.
+  R10 DERIVED (section 3 + R8 + R9): in the FIXED variant every join-tree structure - any number of sides k,
+     flat or hierarchical, any guess set including dependent (MITM) guesses, cores, Wagner clamping,
+     propagation plus any table rules acting inside single G calls (gd_sat tables, 2^64 tables) - costs at
+     least 2^96 for 2^64 family members, in the generic model.  Proof: cost < 2^96 forces delta <= 4 at every
+     node; the lowest node whose closure is everything then joins two proper closed regions with delta <= 4
+     whose union contains the 93-word core, so one of them has >= 47 words - impossible by R8.
+     So no k-split reaches the 2^85 target; nothing to implement at toy size (task step 4 not triggered).
+  R10b COMPUTED (rootcore.py, independent confirmation of R10): "two proper closed regions A, B with
+     delta(A), delta(B), delta(A u B) <= 4 and A u B containing the 93-word core" is UNSATISFIABLE
+     (rc_fp_D4.out, < 2 min).  Sanity: with bound 12 it is SAT (A 57 words delta 12, B 82 words delta 8,
+     union 98 words delta 4; rc_fp_D12.out), and bigsat D=2,S=15 is UNSAT (largest delta-2 region = 14 words =
+     largest pair closure of R1), so the encodings separate correctly.
+  R11 COMPUTED + DERIVED, OUTHALF (F = 12): rootcore with bound 12 on the 121-word core is UNSATISFIABLE
+     (rc_oh_D12.out).  Section 3 with F = 12: cost < 2^96 needs delta(J) <= 12 at every node and leaves of
+     <= 12 guesses.  So in the outhalf variant every join tree costs >= 2^96 UNLESS a single leaf of <= 12
+     guesses already has closure W - i.e. a guess basis of 12 words (0 checks), which would be a direct
+     sampler needing no split at all (that basis question is the open SAT k=12..15 of the main session /
+     audit).  Either way a k-split adds nothing below 2^96.
+
+4. WHY (the obstruction, in words)
+  - The only conditions of the fixed family are the 8 fixed round-1 column outputs (2 per call C0..C3).
+    Round 0 (K and D calls) is a bijection between the 12 free message words and its words (Sol answer W
+    3.3): a region inside round 0 never carries a condition.
+  - A C call's 2 conditions involve its 6 inputs: one output word of EACH of D0, D1, D2, D3 and two K-call
+    messages (C0: D0.a2 D3.b2 D2.c2 D1.d2 m2 m6).  Each D output depends on one output of EACH K call; so
+    forward every condition depends on all 12 free words, and backward (through the inverse permutation)
+    on all 16 round-0 output words.  A condition becomes visible only in a region that has closed the
+    round-0 permutation around a C call in both directions; in every minimal set that needs all 8 basis
+    words (R2).  Hence (R2, R7, R4) in every minimal guess set the 4 checks are global: no proper part of the
+    set sees any of them, every split leaves all 4 checks to the joint cascade (post p = 4, n = 0).
+  - Quantitatively (R8): a proper region of local dimension <= 4 has at most 46 words (likely 25, the
+    closure of 4 free words: bigsat D=4,S=26 was not decided in ~20 min and was stopped); a split needs
+    two of them covering 93 words.
+  - Which words couple the sides (explain.py, examples): for the greedy set the best split leaves C1, C2,
+    most of C3, D0, D2, D3, K1 and 7 message words to the joint cascade; for C0.c1 C3.b1 D1.a1 D1.a2 D1.b2
+    D2.c1 K0.a1 K2.a1 the joint part is C1, D0, D3, K1 and 8 message words (COMPUTED for these two sets;
+    that every minimal set leaves a full K call, a D call and the C calls reading it to the cascade is a
+    GUESS from these examples - the WHY statistics below are the computed part).
+  - WHY statistics COMPUTED over all 19,316 minimal fixed sets (KS_WHY=1, why_fp.out), maximum over every
+    bipartition (A, B) of the set:  |cl(A) u cl(B)| <= 61 of 100 words (61 for 6189 sets, 39..57 for the
+    rest; the no-post requirement is the 93-word core); C-call equations inside cl(A) u cl(B) <= 20 of 32;
+    complete C calls inside <= 1 (6938 sets: none).  At least 39 words and 12 C-call equations are always
+    derived only after both sides are joined - that joint cascade carries all 4 checks.
+
+5. COST FORMULA FOR THE k-LIST JOIN (DERIVED here; agrees with kmath/kmerge_results.txt experiments)
+  Two-level 4-list, lists 2^a1..2^a4 (a_i <= 32*side words), n check bits all 4-way separable, clamp t bits
+  at level 1: per clamp value |L12| = 2^(a1+a2-t), |L34| = 2^(a3+a4-t), members 2^(sum a - n - t).
+  Work per member = 2^(n - min(a1+a2, a3+a4)) (independent of t); members in total up to 2^(sum a - n).
+  So the main session's claim is right: 4 lists of 2^(n/2) give any number of members up to 2^n at O(1)
+  amortized (kmath measured ~7 steps per solution).  8 lists: O(1) amortized iff n <= 4a.  3 lists: work
+  per member 2^(n - min(a1+a2, a3)), no gain unless one list alone covers n.
+  With n = 32*(g - F) and a_i <= min(32 s_i, ~85): flat 4 sides need sum of side dimensions = 8 (four sides
+  of 2 words, or eight of 1) with ALL g - F checks 4-way separable.  For g = 8 that is exactly a minimal
+  basis split 2+2+2+2 - and R2 shows such splits have no separable check at all.
+  The general lower bound of section 3 holds for these Wagner trees too (Wagner's own example attains it).
+
+6. BEST STRUCTURE PER k (log2 of total work for 2^64 members)
+  fixed, plain or tables, any k = 2,3,4,8:  best found = brute force 2^192 (g = 8, all 19,316 / 665,838
+     minimal sets, every tree); g = 9 (8 + one MITM word): nothing <= 2^128; any structure: >= 2^96 (R10).
+  outhalf (plain, tables): every sampled minimal set (1955, g = 16 = 4 checks) is global, so every tree on
+     them is brute force 2^192 (16 guesses, 4 checks: 2^(64+128)).  Any structure: >= 2^96 unless a
+     12-word basis exists (R11).

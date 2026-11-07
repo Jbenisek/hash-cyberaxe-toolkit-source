@@ -1,0 +1,10 @@
+hit t=887398322 site=100
+hit t=214938249 site=12
+hit t=639130335 site=14
+hit t=939343106 site=100
+hit t=508565131 site=13
+done trials=2^30 hits=5
+
+real	0m42.861s
+user	3m30.754s
+sys	0m4.559s

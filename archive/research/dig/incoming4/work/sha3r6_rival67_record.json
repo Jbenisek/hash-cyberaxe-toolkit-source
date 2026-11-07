@@ -1,0 +1,22 @@
+{
+  "id": "SHA3R6-rival67-draft-audit",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r6 rival67 generic draft audit",
+  "question": "Does the newly modified rival67 source reproduce its declared step and finite self-test, and is it package-ready?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "ledger reports 34587 step ops and 2304 registers; selftest 512 messages x 4 chains exits 0 with 0 differences; draft has no submission/experiment/certificate manifests; declared time_log2=124.46633",
+  "source": "our workflow: current-draft-audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D317_sha3r6_rival67_audit.md; research/sha3r6_gap/rival67/claim.json; research/sha3r6_gap/rival67/proof.md; research/sha3r6_gap/rival67/sha3r6_rho.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "count",
+  "topic": "sha3-r6.draft-package-audit",
+  "held_fixed": "The current rival67 draft source and declared generic DP-search row; only direct ledger/self-test checks were run.",
+  "reopen_if": "A complete package with manifests or a revised lower-cost row appears.",
+  "notes": "Finite source check only. Row is worse than the 121.7-range SHA3-r6 board and is not package-ready; no staging/submission."
+}

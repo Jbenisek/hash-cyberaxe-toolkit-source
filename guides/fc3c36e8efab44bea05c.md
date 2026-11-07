@@ -1,0 +1,135 @@
+# ------------------------------------------------------------------ numbers
+
+Source: `research/poseidon/pkg_r7_paper/v3/build_paper.py`
+
+Public SHA-256: `aa63497dee726f727e3ba68c14469df353adc4b6831fb3304fb2dbeca440c495`
+
+## Purpose recorded in the source
+
+(paper entry: fresh random words, shift in F_p^*, no program) Builds the Poseidon r7 algebraic paper package into OUT (default ./out): claim.json, proof.md, submission-note.md, experiments/, certificates/.
+python -B build_v2.py [OUT]      (run from this folder; reads template2/, src/, tests/, exp/, the old template for sections 2-5, the r5 section 4.2)
+Every number is computed here from costmodel.py, costmodel_e.py and premise_numbers.py; nothing is typed in by hand except the texts.
+FILING DAY: edit EXECUTOR and EXECUTOR_NOTE below to say what is true about the organizer runner, rerun this script, then run
+  wsl -d Ubuntu -- bash stage_r7alg3.sh <NEW slot name>   (a slot is never reused) and use the submit script it writes (research/launch/submit_pareto_posr7alg5.sh).
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "ast",
+  "costmodel",
+  "costmodel_e",
+  "fractions",
+  "json",
+  "math",
+  "os",
+  "premise_numbers",
+  "re",
+  "shutil",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "ceil5",
+    "line": 23,
+    "arguments": [
+      "x"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "ceil3",
+    "line": 24,
+    "arguments": [
+      "x"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "fl5",
+    "line": 25,
+    "arguments": [
+      "x"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "cut",
+    "line": 107,
+    "arguments": [
+      "a",
+      "b"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "patch",
+    "line": 112,
+    "arguments": [
+      "text",
+      "a",
+      "b",
+      "count"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "fill",
+    "line": 216,
+    "arguments": [
+      "text",
+      "extra"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "fence",
+    "line": 224,
+    "arguments": [
+      "name",
+      "lang"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "find",
+    "line": 271,
+    "arguments": [
+      "prefix"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "rng",
+    "line": 275,
+    "arguments": [
+      "a_",
+      "b_"
+    ],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/poseidon/pkg_r7_paper/RESULT.md
+- research/poseidon/d189_gpu_results.jsonl
+- research/poseidon/d192_r2_results.jsonl
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

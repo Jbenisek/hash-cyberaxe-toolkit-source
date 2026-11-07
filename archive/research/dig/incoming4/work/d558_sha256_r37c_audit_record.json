@@ -1,0 +1,23 @@
+{
+  "id": "D558-SHA256-R37C-PREFILE-SELFTEST-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR37c prefile and xtab selftest",
+  "question": "What is verified for pkgR37c when its ledger appendix is absent?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR37c claims time_log2=61.4877 (C=2644). Prefile SOME FAIL only for absent executable ledger appendix; other intake checks pass. One-process xtab.py selftest exits 0: F7 violations 0; fibre 9556 lanes/5882 good pairs/0 mismatches; packed-u 8000/0 mismatches; 3000 random presence-word false negatives 0; 8000 34-bit lane-index lanes/0 mismatches with lookup ops [3,4,4,3], including 7099 >=2^32. No exact N/score credit.",
+  "source": "our workflow: D558 read-only pkgR37c prefile/selftest audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D558_r37c_audit.md; research/tools/build_pkg/scratch/pkgR37c/pkg/sha256-r37/claim.json; research/tools/build_pkg/scratch/pkgR37c/pkg/sha256-r37/proof.md; research/tools/build_pkg/scratch/pkgR37c/pkg/sha256-r37/experiments/xtab.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; missing ledger prevents exact score credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgR37c package bytes as found; one process; no package writes",
+  "reopen_if": "ledger appendix repair or owner/organizer ruling"
+}

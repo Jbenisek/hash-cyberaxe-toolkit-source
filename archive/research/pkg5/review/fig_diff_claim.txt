@@ -1,0 +1,190 @@
+--- ./research/pkg5/review/fig_claim_pkg4.flat	2026-10-06 08:23:01.089089600 -0600
++++ ./research/pkg5/review/fig_claim_pkg5.flat	2026-10-06 08:23:01.098089800 -0600
+@@ -4,46 +4,52 @@
+ .attack_class: ordinary-collision
+ .rounds: 2
+ .lane: exploratory
+-.claim.time_log2: 100.4
++.claim.time_log2: 99.4
+ .claim.time_unit: target-compressions
+ .claim.memory_log2_bytes: 35
+ .claim.preprocessing_log2: 63
+ .claim.success_probability: 0.39
+-.claim.nonuniform_advice_log2_bytes: 5
++.claim.nonuniform_advice_log2_bytes: 6
+ .restrictions[0]: The two messages have 60 and 62 bytes: each is one chunk, one block, one root compression with flags 11, counter 0 and its true block length;
+ .restrictions[0]: the 62-byte message ends in two zero bytes.
+ .restrictions[1]: Unkeyed BLAKE3-256 with 2 prefix rounds, standard IV, permutation and feed-forward, full 256-bit digest;
+ .restrictions[1]: an ordinary collision between two distinct complete messages.
+ .restrictions[2]: Exact part: for every choice of nine state words the two digests agree on digest words 0, 2, 5 and 7, and a second exact construction enumerates such pairs with the round-1 state word Y4 held inside a class of 65,536 values.
+ .restrictions[2]: Heuristic part: a search over 2^104 such pairs, all with Y4 in the class, for one whose remaining 128 digest bits agree.
++.restrictions[2]: The search examines further only pairs that pass a filter on one internal word (rule A, six bit conditions);
++.restrictions[2]: rule A is not implied by a collision, and a pair that fails it is dropped.
+ .restrictions[3]: Classical 256-bit word RAM under collision-frontier-v5;
+ .restrictions[3]: seven trials per 256-bit word in 36-bit lanes on a 16-register load/store machine;
+-.restrictions[3]: a batch is 154 operations (arithmetic, logical and shift operations, two comparisons and two branches) plus 74 loads and is charged, together with the per-alpha setup and the last partial batch of every class loop, as 34 per trial;
+-.restrictions[3]: no sorting or lookup and no table that grows with the number of trials (two fixed lists of 9,363 words hold the class members and are read in order);
+-.restrictions[3]: at most 2^92 early-test passes are processed before the algorithm halts with failure.
++.restrictions[3]: a batch has two stages: every batch runs stage A, 64 operations (arithmetic, logical and shift operations, comparisons and branches) plus 36 loads, and only a batch in which a trial passes rule A runs stage 2, 96 operations plus 42 loads;
++.restrictions[3]: with stage 2 counted for one eighth of the batches, and with the per-alpha setup and the last partial batch of every class loop, a trial is charged 17.4 operations;
++.restrictions[3]: no sorting or lookup and no table that grows with the number of trials (one fixed list of 9,363 words holds the class members and is read in order);
++.restrictions[3]: the algorithm halts with failure when 9,363 * 2^85 batches have run stage 2 (one eighth of the batches of a run) or when 2^88 trials that passed the second test have been processed.
+ .restrictions[4]: Randomized by one fresh uniform 256-bit word.
+-.restrictions[4]: The success probability 0.39 holds only under heuristics H1 and H2.
++.restrictions[4]: The success probability 0.39 holds only under heuristics H1, H2 and H3.
+ .restrictions[4]: The factor 2^23 = 8,388,608 in H1 is assumed and is not measured by the organizer-run experiments;
+-.restrictions[4]: with the uniform rate instead, the same search needs 2^127 trials and gives time_log2 123.4.
++.restrictions[4]: with the uniform rate instead, the same search needs 2^127 trials and gives time_log2 122.4.
+ .restrictions[4]: No full 2-round collision is exhibited and none was computed.
+-.restrictions[5]: Six 32-bit constants and the 32-bit word eta that defines the class are stored in the program (28 bytes of advice);
+-.restrictions[5]: they were found by a participant's solver search and chosen by a participant's count of the solutions of a seven-word system;
++.restrictions[5]: Six 32-bit constants, the 32-bit word eta that defines the class and three 32-bit constants of rule A are stored in the program (40 bytes of advice);
++.restrictions[5]: the six constants were found by a participant's solver search and chosen by a participant's count of the solutions of a seven-word system, and rule A was read off counts of the same kind;
+ .restrictions[5]: by that count the class used is the second largest of 34 classes of these constants that were counted;
+ .restrictions[5]: and recomputing the constants and selecting them and eta is bounded by 2^63 units and included in the time.
+ .restrictions[5]: memory_log2_bytes 35 covers the memory of that selection (below 2^34 bytes of main memory and below 10 GB of graphics-card memory, as observed by the participant);
+-.restrictions[5]: the search itself needs less than 2^21 bytes.
++.restrictions[5]: the search itself needs less than 2^20 bytes.
+ .restrictions[5]: No priority or novelty claim is made;
+ .restrictions[5]: the number of trials is 2^104 instead of 2^128 because a trial is assumed to succeed 8,388,608 times more often than a uniform 128-bit value would.
+ .baseline_improved: blake3-r2-nominal-v2
+ .heuristics[0].id: H1-residual-hit-rate
+-.heuristics[0].statement: Over the algorithm's one random word, the 2^104 enumerated trials behave with respect to the event that the 128-bit residual R is zero like independent events of probability at least 2^-105 each (2^23 = 8,388,608 times the rate of a uniform 128-bit value), to the extent that the probability that no trial has R = 0 is at most exp(-1/2) + 0.002.
++.heuristics[0].statement: Over the algorithm's one random word, the 2^104 enumerated trials behave, with respect to the event that the 128-bit residual R is zero and the trial satisfies rule A, like independent events of probability at least 2^-105 each (2^23 = 8,388,608 times the rate of a uniform 128-bit value), to the extent that the probability that no trial has this event is at most exp(-1/2) + 0.002.
+ .heuristics[0].role: score-critical
+ .heuristics[0].scope: Exactly the trials of proof.md Section 6.4: lengths 60 and 62, the six constants of Section 3.2, the class of Y4 defined by eta = e7c1815f (Lemma Q), contexts indexed by (X12, X13, X14) with X12 < 2^8 and X13 < 2^16, the D0 family with parameter alpha, and all 65,536 members of the class for every context and alpha.
++.heuristics[0].scope: Rule A is the set of six bit conditions of Section 6.3 on the word h1 of a trial (Lemma A).
+ .heuristics[0].extrapolation: From a participant count of the class rate under the seven-word model, that is of the number of solutions with Y4 in the class of the seven-word system that determines R.
+ .heuristics[0].extrapolation: The count is an enumeration without sampling: for each value beta of an auxiliary difference of one of the two calls involved, every outcome of that call is enumerated, the other call is counted exactly for it, and the probability of the outcome is counted exactly.
+ .heuristics[0].extrapolation: Over the 4,272 lightest values of beta (39 of them with a nonzero part), the count is 29,977,922 times the uniform expectation;
+ .heuristics[0].extrapolation: values of beta that were not enumerated are left out, so this is a lower bound under the model.
+ .heuristics[0].extrapolation: In a second run of the counting program for every value with a nonzero part, no outcome used either of the program's two approximating fallbacks, so every part is a count.
++.heuristics[0].extrapolation: Rule A is not implied by R = 0: a SAT solver finds no solution violating it for 247 of the 287 outcomes of the count;
++.heuristics[0].extrapolation: the other 40 are left out in full, leaving 29,965,882.
+ .heuristics[0].extrapolation: A sampler with the same count of the second call, used as a check, gives 24,522,752 with standard error 1,451,568 for the four values of beta it was run on, against 24,515,584 counted for them (for one of them the sampler is 2.1 standard errors above the counted value, which is not explained).
+ .heuristics[0].extrapolation: From checks of the counting program: against the sampler on other constants;
+ .heuristics[0].extrapolation: of its count for the first call against brute force with 8-bit words and against an independent model counter on outcomes of one value of beta at 32 bits;
+@@ -56,23 +62,23 @@
+ .heuristics[0].extrapolation: one of these runs found 721 trials with one of 69 partial events of the second call (two of the three conditions that its count puts on an outcome) against 706.0 predicted;
+ .heuristics[0].extrapolation: eight runs of 2^40 real trials with shared seed words gave between 11,098 and 11,621 early-test passes (11,418 with independent contexts);
+ .heuristics[0].extrapolation: the ratio of their variance to their mean is 2.8 (chi-square 19.4 on 7 degrees of freedom), so the pass count of a run varies between runs by more than chance, which is not explained.
+-.heuristics[0].extrapolation: And from scaled-down end-to-end runs of the same class search with 8-bit and 10-bit words and other constants, in which the collisions found are compared with the exact prediction of the model (9,835 against 9,837.9 predicted at 8 bits, 693 against 664.6 at 10 bits;
++.heuristics[0].extrapolation: And from scaled-down end-to-end runs of the same class search with 8-bit and 10-bit words and other constants, comparing the collisions found with the model's exact prediction (9,835 against 9,837.9 predicted at 8 bits, 693 against 664.6 at 10 bits;
+ .heuristics[0].extrapolation: the same check for the search without the class restriction gave 1,813 against 1,807.2 over ten constant sets and 1,465 runs).
+ .heuristics[0].extrapolation: And from scaled-down runs in the algorithm's own layout (four seed words per run, contexts in order, all alphas, all members;
+ .heuristics[0].extrapolation: words of 8 to 10 bits, other constants), which test whether a run has at least one collision as often as independent trials give: 18,080 runs at an expected 0.5 collisions per run: 7,072 with a collision against 7,113.9 +- 65.7 predicted, 9,010 collisions against 9,040.0, and no two collisions of a run in the same context;
+ .heuristics[0].extrapolation: 4,300 runs at 1.7 per run: 3,518 against 3,514.5;
+ .heuristics[0].extrapolation: one job of the six is 2.0 standard deviations low (544 against 582.3).
+-.heuristics[0].extrapolation: All of this is in proof.md Section 10.
+-.heuristics[0].extrapolation: The extrapolation is from these to the rate of R = 0 over 2^104 real trials.
++.heuristics[0].extrapolation: All in proof.md Section 10.
++.heuristics[0].extrapolation: The extrapolation is from these to the rate of the event over 2^104 real trials.
+ .heuristics[0].evidence_ids[0]: experiment:residual-search
+ .heuristics[0].evidence_ids[1]: experiment:half-collision
+-.heuristics[0].evidence_ids[2]: proof:302-429
+-.heuristics[0].evidence_ids[3]: proof:645-698
+-.heuristics[0].evidence_ids[4]: proof:789-1634
++.heuristics[0].evidence_ids[2]: proof:311-438
++.heuristics[0].evidence_ids[3]: proof:807-877
++.heuristics[0].evidence_ids[4]: proof:977-2018
+ .heuristics[0].limitations: The factor 8,388,608 is assumed.
+-.heuristics[0].limitations: It is set against a participant count of 29,977,922, 3.57 times larger, which the organizer-run experiments do not measure;
++.heuristics[0].limitations: It is set against a participant count of 29,965,882, 3.57 times larger, which the organizer-run experiments do not measure;
+ .heuristics[0].limitations: the success bound needs a factor of at least 8,375,631.
+-.heuristics[0].limitations: With factor 1 (the uniform rate) the claim would be 2^127 trials and time_log2 123.4.
++.heuristics[0].limitations: With factor 1 (the uniform rate) the claim would be 2^127 trials and time_log2 122.4.
+ .heuristics[0].limitations: The count is exact only under the seven-word model, that six of the seven words behave like independent uniform words over the trials;
+ .heuristics[0].limitations: that the trials of the algorithm meet the counted solutions at the model's rate is the assumption.
+ .heuristics[0].limitations: The model is tested on real messages only for events of probability about 2^-32 and above (below that depth each of the two calls has been counted on real messages only by itself: the first on an event of probability 2^-38.57 per trial, the second, without the third of its conditions, on one of 2^-34.54;
+@@ -80,43 +86,71 @@
+ .heuristics[0].limitations: its use at the probability of a collision, about 2^-103.16, cannot be tested directly.
+ .heuristics[0].limitations: Of the two counts of first-call outcomes on real messages one is 2.4 standard deviations above its prediction (together +1.6).
+ .heuristics[0].limitations: In these runs the values of beta that carry most of the count occurred about 6 in a million too rarely (-2.3 standard deviations over 2^45 trials), which is not explained.
++.heuristics[0].limitations: Rule A is not implied by a collision and loses solutions;
++.heuristics[0].limitations: that it loses no more than the figure allows rests on one SAT solver's uncertified answers, and rule A was chosen from counts of the same kind.
+ .heuristics[0].limitations: The constants and the class were chosen to make the count large, by a solver search and by the count itself;
+ .heuristics[0].limitations: the class used is the second largest of 34 classes of these constants that were counted;
+-.heuristics[0].limitations: the largest, eta = e74181df, has 36,358,944 over the same values of beta and nearly the same checks, and the claim would be the same with it;
++.heuristics[0].limitations: the largest, eta = e74181df, has 36,358,944 over the same values of beta and nearly the same checks, but no rule A or two-stage count exists for it;
+ .heuristics[0].limitations: the count is deterministic, so no sampling noise enters, but a choice that is best under the model says nothing about the model, and if the model overstates the rate for some constants such a search will tend to find them.
+ .heuristics[0].limitations: The count rests on few paths: 47% of it comes from one value of beta and 60% from two.
+-.heuristics[0].limitations: The counting program is not part of the package;
+-.heuristics[0].limitations: it is the participant's, and so is every check of it, those of the participant's reviewing helper agents included;
++.heuristics[0].limitations: The counting program is not in the package;
++.heuristics[0].limitations: it and every check of it are the participant's, those of the reviewing helper agents included (who saw an earlier version without rule A);
+ .heuristics[0].limitations: its count for the first call and its enumeration of outcomes are new code, checked against brute force only for 8-bit words and against an independent counter for one value of beta.
+ .heuristics[0].limitations: All trials of a run share the four seed words, trials of one context share most other words, and the 65,536 trials of one context and alpha differ only in Y4 and what follows from it;
+ .heuristics[0].limitations: their independence is assumed, and with a count that rests on few paths it was not examined whether collisions depend on a few shared words.
+ .heuristics[0].limitations: The 32-bit comparison gave every context its own random words.
+-.heuristics[0].limitations: Eight runs with shared seed words differ in their number of early-test passes by more than chance (variance over mean 2.8);
+-.heuristics[0].limitations: that is unexplained, and it is a dependence on the shared words of the kind that the independence assumed here excludes for the event R = 0.
++.heuristics[0].limitations: Eight runs with shared seed words differ by more than chance in their passes of the early test of Lemma E (variance over mean 2.8);
++.heuristics[0].limitations: that is unexplained and is a dependence on shared words of the kind that the independence assumed here excludes for the event of H1.
+ .heuristics[0].limitations: Scaled-down runs in the algorithm's own layout count the runs with at least one collision, but for words of 8 to 10 bits and with other constants;
+ .heuristics[0].limitations: so the distribution of collisions within one run of the algorithm has been tested directly only at those word sizes.
+ .heuristics[0].limitations: Comparisons of the model with real messages for the constants of an earlier submission showed deviations of up to 3.1 standard deviations in some settings, among them an unexplained spread between two runs.
+ .heuristics[0].limitations: One of the eleven class series of the earlier scaled-down runs has a variance-to-mean ratio of its collisions per run of 1.60, about 2.65 standard errors above 1.
+ .heuristics[0].limitations: Nothing here is organizer-verified except the two declared experiments, which do not measure the 128-bit rate and are not a test of H1.
+-.heuristics[1].id: H2-early-test-passes
+-.heuristics[1].statement: With probability at least 0.999 over the random word, fewer than 2^92 of the 2^104 trials pass the 32-bit early test of proof.md Lemma E without having R = 0.
++.heuristics[1].id: H2-e1-test-passes
++.heuristics[1].statement: With probability at least 0.9995 over the random word, fewer than 2^88 of the 2^104 trials pass the 32-bit E1 test of proof.md Lemma N without having R = 0.
+ .heuristics[1].role: supporting
+-.heuristics[1].scope: The early test of Section 6.3 on the trials of Section 6.4.
+-.heuristics[1].scope: The measured pass rate 2^-26.52 would give 2^77.48 passes;
+-.heuristics[1].scope: the budget of 2^92 corresponds to a pass rate of 2^-12 and is larger by a factor of about 2^14.52, and processing 2^92 passes is charged in the time bound (2^102 operations).
+-.heuristics[1].extrapolation: From participant measurements of the pass rate on real trials of the class search at 32 bits (11,418 passes in 2^40 trials with an independent random context per thread;
+-.heuristics[1].extrapolation: eight runs of 2^40 real trials with shared seed words gave 11,382, 11,211, 11,200, 11,098, 11,621, 11,308, 11,148 and 11,098 early-test passes (11,418 with independent contexts);
+-.heuristics[1].extrapolation: the ratio of their variance to their mean is 2.8 (chi-square 19.4 on 7 degrees of freedom), so the pass count of a run varies between runs by more than chance, which is not explained;
+-.heuristics[1].extrapolation: all in proof.md Section 10) to the 2^104 trials of one run.
+-.heuristics[1].evidence_ids[0]: proof:448-466
+-.heuristics[1].evidence_ids[1]: proof:661-698
+-.heuristics[1].evidence_ids[2]: proof:789-1634
++.heuristics[1].scope: The E1 test of Section 6.3 on all trials of Section 6.4, whether or not their batch runs stage 2;
++.heuristics[1].scope: the algorithm processes only the passes in batches that run stage 2, which are fewer.
++.heuristics[1].scope: The measured pass rate 2^-29.42 would give 2^74.58 passes;
++.heuristics[1].scope: the budget of 2^88 corresponds to a pass rate of 2^-16 and is larger by a factor of about 2^13.42, and processing 2^88 passes is charged in the time bound (2^98 operations).
++.heuristics[1].extrapolation: From participant measurements of the pass rate on real trials of the class search at 32 bits (1,521 passes in 2^40 trials with an independent random context per thread;
++.heuristics[1].extrapolation: eight runs of 2^40 real trials with shared seed words gave 1,462, 1,494, 1,486, 1,472, 1,432, 1,468, 1,471 and 1,527 passes, with no spread beyond chance (chi-square 3.6 on 7 degrees of freedom);
++.heuristics[1].extrapolation: four further runs of 2^38 trials in the same layout gave 1,390 passes in all;
++.heuristics[1].extrapolation: all in proof.md Section 10, where a pass of the E1 test is called a trial in which E1 requires the class) to the 2^104 trials of one run.
++.heuristics[1].evidence_ids[0]: proof:457-555
++.heuristics[1].evidence_ids[1]: proof:557-590
++.heuristics[1].evidence_ids[2]: proof:827-835
++.heuristics[1].evidence_ids[3]: proof:977-2018
+ .heuristics[1].limitations: Not organizer-verified.
+ .heuristics[1].limitations: The measured rate is a mean;
+ .heuristics[1].limitations: that the pass count of a full run of 2^104 trials, whose contexts share the four seed words, stays near that mean is assumed;
+-.heuristics[1].limitations: eight runs with shared seed words differ from each other by more than chance.
+-.heuristics[1].limitations: The budget exceeds the passes expected at the measured rate by a factor of about 2^14.52.
++.heuristics[1].limitations: in eight runs with shared seed words the counts of this event show no spread beyond chance, while the counts of another test of the same trials, the early test of Lemma E that the algorithm does not use, differ between these runs by more than chance.
++.heuristics[1].limitations: The budget exceeds the passes expected at the measured rate by a factor of about 2^13.42.
+ .heuristics[1].limitations: If the budget were exceeded the algorithm halts with failure, which lowers the success probability but does not raise the time bound;
+-.heuristics[1].limitations: H2 enters the success bound only through its own failure probability of 0.001.
++.heuristics[1].limitations: H2 enters the success bound only through its own failure probability of 0.0005.
++.heuristics[2].id: H3-stage-2-entries
++.heuristics[2].statement: With probability at least 0.9995 over the random word, fewer than 9,363 * 2^85 of the 2^104 trials satisfy rule A of proof.md Section 6.3, so that fewer than that many batches run stage 2.
++.heuristics[2].role: supporting
++.heuristics[2].scope: Rule A (Lemma A) on the trials of Section 6.4, in the seven-lane batches of Section 6.5.
++.heuristics[2].scope: A batch runs stage 2 only if one of its seven trials satisfies rule A, and every trial lies in one batch, so the number of batches that run stage 2 is at most the number of trials that satisfy rule A.
++.heuristics[2].scope: The budget is one eighth of the 9,363 * 2^88 batches of a run, a share 2^-5.81 of the trials;
++.heuristics[2].scope: the time bound charges stage 2 for that many batches, and the algorithm halts with failure when the budget is reached.
++.heuristics[2].extrapolation: From the fact that a uniform 32-bit word satisfies the six conditions of rule A with probability 2^-6, and from participant measurements on real trials at 32 bits, in runs with shared seed words that are laid out like a run of the algorithm except that X13 is not restricted and one context word is not held fixed: four runs of 2^38 trials each gave 4,294,916,967, 4,294,925,479, 4,295,022,265 and 4,294,920,099 trials that satisfy rule A, where a share of 2^-6 is 4,294,967,296 (-0.8, -0.6, +0.8 and -0.7 binomial standard deviations), a share of 2^-6.0000 in all.
++.heuristics[2].extrapolation: Seven times that share is 0.10938 of the batches, and the budget of 0.125 is larger by a factor of 1.142.
++.heuristics[2].extrapolation: The self-test of the submitted program finds the same share of lanes on inputs of its own (215 of 14,000 lanes, and 261,798 of 16,800,000 in longer runs).
++.heuristics[2].extrapolation: All in proof.md Sections 6.5 and 10.
++.heuristics[2].extrapolation: The extrapolation is from these runs to the 2^104 trials of one run.
++.heuristics[2].evidence_ids[0]: proof:457-555
++.heuristics[2].evidence_ids[1]: proof:557-590
++.heuristics[2].evidence_ids[2]: proof:837-847
++.heuristics[2].evidence_ids[3]: proof:977-2018
++.heuristics[2].limitations: Not organizer-verified.
++.heuristics[2].limitations: The measured share is a mean over four runs;
++.heuristics[2].limitations: that no run of 2^104 trials, whose contexts share four seed words, has a share 1.142 times as large is assumed, and four runs cannot exclude seed words for which it has.
++.heuristics[2].limitations: The count of another test of the same trials, the early test of Lemma E, varies between runs with shared seed words by more than chance, by about 1.3% of its value;
++.heuristics[2].limitations: that is far below the margin of this budget, but it shows that such a count can depend on the seed words.
++.heuristics[2].limitations: If the budget were exceeded the algorithm halts with failure, which lowers the success probability but does not raise the time bound;
++.heuristics[2].limitations: H3 enters the success bound only through its own failure probability of 0.0005.
++.heuristics[2].limitations: The operation counts of the two stages are the submitted program's own.
+ .certificate_manifest: certificates/manifest.json
+ .experiment_manifest: experiments/manifest.json

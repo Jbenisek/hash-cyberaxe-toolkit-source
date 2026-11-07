@@ -1,0 +1,51 @@
+{
+ "schema_version": 3,
+ "submission_state": "draft",
+ "target_profile": "poseidon-orchard-r7-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": 7,
+ "claim": {
+  "time_log2": 40.85457,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": 37.219,
+  "preprocessing_log2": 20,
+  "success_probability": 0.43348,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r7-prefix-v1 only (seven partial rounds 4, 5, 6, 7, 8, 9 and 10 plus the eight fixed full rounds); the construction uses the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "Algorithm, not executed at r = 7: time_log2 is the worst-case operation count of the shipped source (at most K = 2 coin centres, every trial charged in full with the root isolation at its cap of 64 rounds, one thread), plus the offline bound of 1,000,000 operations of proof.md section 6.2, which is declared as preprocessing_log2 = 20 and is inside time_log2 (one quantity); memory_log2_bytes is the footprint. Cost model orchard-field-ram-v2: every field operation, load, store, control operation and random word is priced 1/C, C = 216 + 21 r = 363.",
+  "success_probability 0.43348 is a probability over the program's coin tape (650 independent uniform 64-bit words supplied at run time on standard input and read by one charged read system call; the tape is the cost model's random-word primitive supplied as an input; the program has no generator and no seed) for the fixed target, derived from the one score-critical premise H-GEOM-w2 (an assumption, no proof) as 1 - (1 - q)^K - K (eps_coin + eps_iso) with q = 0.24733 (proof.md section 9.2). The executed runs at r = 3, 4, 5 had fixed centres and are evidence only (proof.md section 10)."
+ ],
+ "baseline_improved": "poseidon-orchard-r7-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "experiment_manifest": "experiments/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H-GEOM-w2",
+   "statement": "Notation: p is the Pallas prime, D = 5^13, F in F_p[X] the fixed digest polynomial of proof.md section 2.3 at r = 7 (degree D). G(c,t) = (F(c+t) - F(c-t))/(2t) in F_p[c,t] (total degree D-1; G(c,t) = g_c(t^2) for the odd part g_c of proof.md section 3). k(c) is the number of nonzero squares S = t^2 with G(c,t) = 0 (k(c) = deg G_c). V is the Zariski closure of {(c,s1,s2) : G(c,s1) = G(c,s2) = 0, s1^2 != s2^2}. Premise: the plane curve G = 0 has at least one absolutely irreducible component defined over F_p, and V is a curve (pure dimension 1) with at most w = 2 absolutely irreducible components defined over F_p. Reduction (proved from Weil's bound with explicit constants, Bezout and the plane genus bound; proof.md section 9.2, numbers recomputed in Appendix D): for c uniform in F_p, E[k] >= 1/2 - e1 and E[k(k-1)] <= w/4 + e2 with e1 < 4.379e-21 and e2 < 0.00326265; Cauchy-Schwarz gives P(k >= 1) >= 0.2491869895 and Markov on k(k-1) gives P(k > 16) <= 0.0018502303, so the event 1 <= k <= 16 has probability at least q = 0.24733 for a uniform centre; two independent coin centres then succeed with probability at least 0.433487871 (with the coin and isolation terms of proof.md 9.2 and 9.4).",
+   "role": "score-critical",
+   "scope": "The fixed Poseidon target poseidon-orchard-r7-prefix-v1, this line construction (the line j = 0 of the first two rounds, odd part about a centre, proof.md sections 2-3), the polynomial F of proof.md section 2.3; centres uniform on F_p. Not claimed for other round counts. Nothing else in the success bound is heuristic apart from the supporting heuristic H1-charging-rules: the Weil-Cauchy-Schwarz reduction, the isolation lemma (proof.md 9.4) and the independence of the centres (each draw reads fresh words of the coin tape) are proved in proof.md.",
+   "extrapolation": "From the two moments of k(c) that H-GEOM-w2 gives through Weil's bound to the success of the program at r = 7. The bound is explicit and applies for r <= 7 only (at r >= 8 the plane genus bound exceeds the main term). Support that is not proof: usable roots appeared at four of the five centres tried in our executed full-scale runs at r = 3, 4, 5 (proof.md section 10.1), all produced by us; one organizer-run reduced experiment on the digest of the target (proof.md section 10.2).",
+   "evidence_ids": [
+    "proof:241-275",
+    "proof:303-348",
+    "experiment:lowbits-birthday"
+   ],
+   "limitations": "It concerns this F, not every polynomial of degree D: it is false for permutation polynomials (every pure composition of maps x -> a x^5 + b, p = 2 mod 5, is bijective and has k = 0), and a statement about components over the algebraic closure alone does not imply it (X^3 over F_101: two conjugate lines, no off-diagonal rational point). The explicit constants apply for r <= 7."
+  },
+  {
+   "id": "H1-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 describe the program of proof.md Appendix A under the stated rules: 1 per field operation (a Montgomery conversion is one multiplication), 1 per element load or store plus 1 address operation, 3 per loop iteration plus 2 per loop exit (loops written with the macro FOR8 are unrolled eight times in the source and charged 3 per pass of eight; the generated kernels are straight-line), 1 per other executed index or control operation, 363 per reduced permutation evaluation, 61 per coin draw (five tape words), 51,606 for the one read of the tape, the allocator charged per executed operation, and a register file of 18 words of 256 bits per transform block as the only register assumption. The program runs on one thread; there is no dispatch. Two further statements are declared: (A1) the Euclidean sequences of stage D are normal (every quotient has degree 1), which is the case the stage D count describes; (A2) the arena of proof.md section 7 (159,958,022,720 bytes) suffices for the largest trial, the program exiting with status 2 on an allocation failure.",
+   "scope": "All stages of the program of proof.md section 4 at the target dimensions (m = 610,351,562, 1,610,612,736 evaluations of the line and transforms of 805,306,368 points), at their worst case over coins and data (proof.md section 6).",
+   "extrapolation": "The worst-case counts are derived from the source by formula (proof.md section 6) and validated against the counters of the executed runs at smaller r and against the counters of the shipped program at r = 3 (proof.md section 6.1); the r = 7 account itself is not a measured run. The arena rule (1.177 times the heap peak of the allocation walk plus 704 bytes) held at r = 3, 4, 5.",
+   "evidence_ids": [
+    "proof:152-229",
+    "proof:352-354"
+   ],
+   "limitations": "Word-level costs outside the stated rules (cache, bandwidth) are not part of the model."
+  }
+ ]
+}

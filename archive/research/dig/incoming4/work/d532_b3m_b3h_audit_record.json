@@ -1,0 +1,23 @@
+{
+  "id": "D532-BLAKE3-R2-PKGB3H-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgB3H prefile and shipped self-test",
+  "question": "Does pkgB3H remain internally consistent despite its known-good-program registry gap?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgB3H exact ledger N=87167447489133596522, time_log2=57.4923 (log2(N/430)=57.49223042); prefile SOME FAIL only because frontline.py is not in the known-good registry; one-thread selftest exits 0 with ok=true, 256 automata cases, 512 T1/T2 cases, all listed construction/precheck/replica/level16 checks, two full contexts with zero mismatches/halts, and W/C/R/WB halt drills passing.",
+  "source": "our workflow: D532 read-only pkgB3H audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D532_b3h_audit.md; research/tools/build_pkg/scratch/pkgB3H/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgB3H/pkg/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgB3H/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package mechanics and ledger confirmation only. Known-good registry defect remains; no score/package/stage/filing/submission.",
+  "held_fixed": "pkgB3H package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "known-good registry update, owner/organizer acceptance ruling, or changed package artifact"
+}

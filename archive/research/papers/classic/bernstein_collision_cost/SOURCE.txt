@@ -1,0 +1,3 @@
+original_filename: bernstein_Cost-Analysis-of-Hash-Collisions.pdf
+source_url: https://cr.yp.to/hash/collisioncost-20090517.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

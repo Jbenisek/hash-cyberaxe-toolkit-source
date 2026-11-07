@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+Text extraction beside an external PDF: citation only, not a distributable paper payload.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/newpaths/scout_recent/papers/2026_1080.txt
+Publisher/preprint locator (derived from the source identifier): https://eprint.iacr.org/2026/1080

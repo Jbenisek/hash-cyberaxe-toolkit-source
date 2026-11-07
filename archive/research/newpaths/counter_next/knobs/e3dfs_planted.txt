@@ -1,0 +1,1 @@
+planted: 300 outer steps, planted h1 found 300 of 300; other exact solutions 227 (every returned h1 re-verified by the full E3 formulas)

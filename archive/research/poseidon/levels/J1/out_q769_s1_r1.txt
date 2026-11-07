@@ -1,0 +1,21 @@
+q=769 seed=1 r=1
+V: toy (A,B)-chain == generic scalar perm on 5 random inputs
+rows: round | zero-count lane0,1,2 (mean over lanes/q) | pair-zero pts 01,02,12 | triple | rank<=1 total | NEW: dbl-zero / single-zero / no-zero | inherited
+R1  F | zeros 769 769 769 (q=769) | pairs 1 1 1 | triple 0 | low 3 | NEW 3 / 0 / 0 | inh 0
+R2  F | zeros 762 772 766 (q=769) | pairs 1 4 0 | triple 0 | low 12 | NEW 5 / 4 / 0 | inh 3
+R3  F | zeros 724 720 783 (q=769) | pairs 2 0 0 | triple 0 | low 18 | NEW 2 / 4 / 0 | inh 12
+R4  P | zeros 763 790 791 (q=769) | pairs 2 0 3 | triple 0 | low 19 | NEW 0 / 1 / 0 | inh 18
+R60 F | zeros 763 780 771 (q=769) | pairs 1 0 0 | triple 0 | low 24 | NEW 1 / 4 / 0 | inh 19
+R61 F | zeros 740 749 797 (q=769) | pairs 0 1 0 | triple 0 | low 27 | NEW 1 / 2 / 0 | inh 24
+R62 F | zeros 791 743 810 (q=769) | pairs 2 1 2 | triple 0 | low 36 | NEW 5 / 4 / 0 | inh 27
+R63 F | zeros 761 746 729 (q=769) | pairs 3 0 0 | triple 0 | low 40 | NEW 3 / 1 / 0 | inh 36
+W: pairs equal in lane 0 at R60 entry (r=1): 4000000 sampled; entry weight histogram w1,w2,w3 = [0, 10320, 3989680, 0]
+  R60 trail pairs: rows=weight before S (0..3), cols=weight after M: [[0, 0, 0, 0], [0, 0, 0, 10320], [0, 0, 15503, 3974177], [0, 0, 0, 0]] ; S changed weight in 0
+  R61 trail pairs: rows=weight before S (0..3), cols=weight after M: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 56, 15447], [0, 16, 15554, 3968927]] ; S changed weight in 0
+  R62 trail pairs: rows=weight before S (0..3), cols=weight after M: [[0, 0, 0, 0], [0, 0, 0, 16], [0, 0, 66, 15544], [0, 15, 15510, 3968849]] ; S changed weight in 0
+  R63 trail pairs: rows=weight before S (0..3), cols=weight after M: [[0, 0, 0, 0], [0, 0, 0, 15], [0, 0, 50, 15526], [0, 23, 15481, 3968905]] ; S changed weight in 0
+  trail pairs with equal output lane 0 (collisions in sample): 5222  (random expectation 5201.6)
+  R60 random pairs: [[0, 0, 0, 0], [0, 0, 0, 2], [0, 0, 10, 1920], [0, 1, 1961, 496106]]
+  R61 random pairs: [[0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 6, 1965], [0, 1, 1924, 496103]]
+  R62 random pairs: [[0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 6, 1924], [0, 3, 1936, 496130]]
+  R63 random pairs: [[0, 0, 0, 0], [0, 0, 0, 3], [0, 0, 7, 1935], [0, 4, 1934, 496117]]

@@ -1,0 +1,2 @@
+poly_degree_m {0: 7812, 1: 39062, 2: 195312, 3: 976562, 4: 4882812} r3 expected 976562: True
+checked per r {0: 60, 1: 60, 2: 60, 3: 60} ok 240 mismatches 0

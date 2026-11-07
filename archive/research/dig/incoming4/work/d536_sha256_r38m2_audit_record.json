@@ -1,0 +1,23 @@
+{
+  "id": "D536-SHA256-R38-R38M2-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR38M2 prefile and shipped self-test",
+  "question": "Does pkgR38M2 remain internally consistent despite its known-good-program registry gap?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR38M2 exact ledger N=810625303750798994541737997813, time_log2=87.94133 (log2(N/2728)=87.94132203); prefile SOME FAIL only because a0lean38.py is not in the known-good registry. Selftest exits 0 with the published 38-step pair, 64 classes of 3840, row-16/affine/prefilter/W7/step-3b and row-19/20 checks, zero mismatches, 11 verified semi-free-start collisions, zero failed checks, four alternate E19 patterns, and all 512 embedded variants selected.",
+  "source": "our workflow: D536 read-only pkgR38M2 audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D536_r38m2_audit.md; research/tools/build_pkg/scratch/pkgR38M2/pkg/sha256-r38/claim.json; research/tools/build_pkg/scratch/pkgR38M2/pkg/sha256-r38/proof.md; research/tools/build_pkg/scratch/pkgR38M2/pkg/sha256-r38/experiments/a0lean38.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package mechanics and ledger confirmation only. Known-good registry defect remains; no score/package/stage/filing/submission.",
+  "held_fixed": "pkgR38M2 package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "known-good registry update, owner/organizer acceptance ruling, or changed package artifact"
+}

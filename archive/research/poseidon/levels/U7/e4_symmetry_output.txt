@@ -1,0 +1,55 @@
+sqrt(-1) used: 0x9423384f0d74a20ce8bb048dcd97d6222ae78c1c3540d2ab8e53c6467324926   i^2+1 mod p = 0
+
+=== r=1: defect d = s' - i*s after each step, for 6 random inputs (pairs related by i in lanes 0,1 at R0.C; lane 2 is the constant 2^65 in both) ===
+R0.C    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [6, 6, 0]
+R0.S    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [6, 6, 0]
+R0.M    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0] predicted (1-i)*K*M[:,2] equal: True
+R1.C    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R1.S    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R1.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R2.C    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R2.S    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R2.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R3.C    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R3.S    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R3.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R4.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R60.M   defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+first step at which the defect depends on the input: R1.S
+final-state defect lane0 nonzero: True
+
+=== r=2: defect d = s' - i*s after each step, for 6 random inputs (pairs related by i in lanes 0,1 at R0.C; lane 2 is the constant 2^65 in both) ===
+R0.C    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [6, 6, 0]
+R0.S    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [6, 6, 0]
+R0.M    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0] predicted (1-i)*K*M[:,2] equal: True
+R1.C    defect identical across inputs: True   #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R1.S    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R1.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R2.C    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R2.S    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R2.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R3.C    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R3.S    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R3.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R4.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+R5.M    defect identical across inputs: False  #zero-lane-entries (of 6 inputs, per lane): [0, 0, 0]
+first step at which the defect depends on the input: R1.S
+final-state defect lane0 nonzero: True
+
+=== defect at R1.C: predicted (1-i)(K*M[:,2] + c1) ===
+R1.C defect==pred: True
+
+=== projective scaling (lambda^4 != 1): S(lam x)=lam^5 S(x) one round only ===
+S(lam x) == lam^5 S(x): True   S(lam x) == lam S(x): False
+
+=== toy exhaustive: pair (nk,rho)->(i(nk+c0)-c0, i(rho+c1)-c1), count inputs with out' = i^k * out, out' = out; expectation q (=q^2/q) each ===
+q=257 r=1 i=16  counts for out'=i^k*out, k=0..3: [250, 242, 255, 245]  (expected about 257)
+q=257 r=2 i=16  counts for out'=i^k*out, k=0..3: [269, 264, 236, 251]  (expected about 257)
+q=769 r=1 i=62  counts for out'=i^k*out, k=0..3: [749, 736, 806, 753]  (expected about 769)
+q=769 r=2 i=62  counts for out'=i^k*out, k=0..3: [730, 747, 711, 715]  (expected about 769)
+q=1009 r=1 i=469  counts for out'=i^k*out, k=0..3: [1030, 1039, 986, 1005]  (expected about 1009)
+q=1009 r=2 i=469  counts for out'=i^k*out, k=0..3: [1046, 1030, 1079, 1010]  (expected about 1009)
+
+=== toy, constants set to zero: symmetric map commutes with i? (sanity of the PROVED statement) ===
+with zero constants and zero capacity, out(i x, i y) == i*out(x,y) for 3000 / 3000
+with zero constants but capacity 5 (not i-scaled): relation holds for 11 / 3000 (random-level ~ 11 )

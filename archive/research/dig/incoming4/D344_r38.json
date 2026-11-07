@@ -1,0 +1,19 @@
+{
+  "id": "D344-R38-INVENTORY-DELTA",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "post-D250 filing inventory delta",
+  "question": "Did later filing-log rows change the accepted SHA-256-r38 comparison line?",
+  "labels": ["N"],
+  "status": "LOCAL_ONLY",
+  "number": "0 accepted-line changes; R38Q 70.17649 is superseded under PR#858",
+  "source": "our workflow: filing-inventory-delta",
+  "own_test": true,
+  "evidence": "research/sol_answer_D344_current_inventory_delta.md; research/FILINGS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "R38V 87.90375 is worse than the baseline; the old R38Q score is not live.",
+  "peak_mem": "0 FREE"
+}

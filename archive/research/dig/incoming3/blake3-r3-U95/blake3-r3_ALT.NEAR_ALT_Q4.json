@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "near-collision alternatives: differing in s words",
+ "question": "Alternatives?",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "stage A cost for agreement on 256-32s bits with any s of 8 words free: n = sqrt(2*2^(256-32s)/C(8,s)): s=1 2^111.0, s=2 2^94.1, s=3 2^77.6, s=4 2^61.4; stage B between cv and cv' differing in s words was sampled for s=1 only (Q2); its generic cost is 2^128 for any s, so no total below 2^128 without a pin",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_near.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Stage B for s>=2 not sampled; formula only.",
+ "held_fixed": "s=1..4",
+ "reopen_if": "a pin making stage B cost below 2^125 for some s",
+ "topic": "blake3-r3|ALT.NEAR|ALT|Q4"
+}

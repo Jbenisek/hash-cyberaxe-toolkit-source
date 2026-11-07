@@ -1,0 +1,6 @@
+descriptors of 400 contexts: 25591 nonempty chunks with JE == JU >> 7; 12800 real descriptors, all n0 >= 1; 38400 descriptors with n0 = 0, all with n1 = 0
+600 seeds x 3 variants: every observation equal to the unchanged walk (units excepted), 0 mismatches
+   totals per walk family: {'members': 84869, 'opened': 7901, 'closed': 11299, 'e_lanes': 32690, 'fills': 8203, 'passes': 586, 'solver_calls': 158, 'checks': 892953, 'mismatches': 0}
+   in-variant checks: {'bad': 0, 'da': 23652, 'ce': 31530, 'ix_word': 6000, 'n0zero': 0}  (da = filed da, cE = be + JE, IX' = IX << 4, ix < 3 2^32)
+(56s)
+ALL_OK

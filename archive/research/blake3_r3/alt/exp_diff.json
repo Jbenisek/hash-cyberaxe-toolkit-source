@@ -1,0 +1,118 @@
+{
+ "baseline_random_pairs": {
+  "total": 2850816,
+  "min_digest_hw": 89
+ },
+ "Q2 restricted m8..15 rand |D|<=3": {
+  "nsets": 92,
+  "N": 4096,
+  "max_equal_words": 0,
+  "min_digest_hw": 87,
+  "argmin": [
+   9,
+   15
+  ],
+  "total": 376832
+ },
+ "Q2 restricted m8..15 msb |D|<=3": {
+  "nsets": 92,
+  "N": 4096,
+  "max_equal_words": 0,
+  "min_digest_hw": 91,
+  "argmin": [
+   8,
+   10,
+   14
+  ],
+  "total": 376832
+ },
+ "Q2 full 16 words rand |D|<=3": {
+  "nsets": 696,
+  "N": 4096,
+  "max_equal_words": 0,
+  "min_digest_hw": 88,
+  "argmin": [
+   0,
+   4,
+   10
+  ],
+  "total": 2850816
+ },
+ "Q2 full 16 words msb |D|<=3": {
+  "nsets": 696,
+  "N": 4096,
+  "max_equal_words": 0,
+  "min_digest_hw": 90,
+  "argmin": [
+   8,
+   10,
+   15
+  ],
+  "total": 2850816
+ },
+ "Q4 restricted add1 |D|<=2": {
+  "nsets": 36,
+  "N": 16384,
+  "max_equal_words": 0,
+  "min_digest_hw": 90,
+  "argmin": [
+   9,
+   12
+  ],
+  "total": 589824
+ },
+ "Q4 restricted sub1 |D|<=2": {
+  "nsets": 36,
+  "N": 16384,
+  "max_equal_words": 0,
+  "min_digest_hw": 91,
+  "argmin": [
+   10
+  ],
+  "total": 589824
+ },
+ "Q4 restricted add_msb |D|<=2": {
+  "nsets": 36,
+  "N": 16384,
+  "max_equal_words": 0,
+  "min_digest_hw": 89,
+  "argmin": [
+   9,
+   12
+  ],
+  "total": 589824
+ },
+ "Q4 restricted add_2^16 |D|<=2": {
+  "nsets": 36,
+  "N": 16384,
+  "max_equal_words": 0,
+  "min_digest_hw": 87,
+  "argmin": [
+   11,
+   15
+  ],
+  "total": 589824
+ },
+ "Q4 restricted bit7 |D|<=2": {
+  "nsets": 36,
+  "N": 16384,
+  "max_equal_words": 0,
+  "min_digest_hw": 91,
+  "argmin": [
+   8,
+   15
+  ],
+  "total": 589824
+ },
+ "Q4 restricted bit12 |D|<=2": {
+  "nsets": 36,
+  "N": 16384,
+  "max_equal_words": 0,
+  "min_digest_hw": 89,
+  "argmin": [
+   8,
+   15
+  ],
+  "total": 589824
+ }
+}

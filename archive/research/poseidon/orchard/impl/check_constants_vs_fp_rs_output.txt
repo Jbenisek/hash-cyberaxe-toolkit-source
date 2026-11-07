@@ -1,0 +1,3 @@
+fp.rs sha256 b19d4e50867e67af232db34f88d2bf8629d6d7ee2496458a8e37ae758772acd5
+round constants equal JSON: True
+MDS equal JSON: True

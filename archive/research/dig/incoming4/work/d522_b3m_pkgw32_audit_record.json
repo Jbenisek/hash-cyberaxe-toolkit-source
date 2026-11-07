@@ -1,0 +1,23 @@
+{
+  "id": "D522-BLAKE3-R2-PKGW32-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgW32 halfsearch prefile and self-test",
+  "question": "Does the D2 winner32 pkgW32 draft pass its finite self-test and retain an exact charged numerator?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgW32 claim time_log2=72.1694; exact N=2283466521894204308690142 and log2(N/430)=72.16930706609823; prefile SOME FAIL only for missing executable ledger block; halfsearch selftest exits 0 with 256/256 automata/CT/IP/E3/t0/half-collision checks, 16380 packed lanes zero mismatches/bound failures, G15 16026/16026 and kept 479/479, planted roots 224/224, path max 5606.",
+  "source": "our workflow: D522 read-only pkgW32 audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D522_b3m_pkgw32_audit.md; research/tools/build_pkg/scratch/pkgW32/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgW32/pkg/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgW32/pkg/blake3-r2/experiments/halfsearch.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics and exact ledger confirmation only; no score/package/stage/filing/submission.",
+  "held_fixed": "pkgW32 package bytes as found; one-thread selftest 256; no file writes",
+  "reopen_if": "ledger appendix repair or owner/organizer acceptance ruling arrives"
+}

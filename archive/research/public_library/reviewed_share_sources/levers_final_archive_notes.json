@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-29",
+  "title": "Final lever-archive scientific notes: historical counts, failed transfers and scope corrections",
+  "scope": "Independent scientific paraphrases of twelve fully read October 15–21 source records. No raw task coordination, private chats, imported external program/prose or filing instructions reproduced. No experiments rerun and no current judge/board status inferred.",
+  "source_records": [
+    {
+      "path": "research/levers_1015/EDGE_AUDIT.md",
+      "bytes": 24475,
+      "line_count": 139,
+      "sha256": "6b86c806316ab81bedb781408ba8011ccedc2d2681b95a5a0e9e342e90a1243a",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1015/NEXT_RESEARCH.md",
+      "bytes": 6945,
+      "line_count": 20,
+      "sha256": "2ddb9aa0cba05fbf995ad3e68535cd10923966f35485998335d68573bc8e896b",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1015/TRANSFER.md",
+      "bytes": 9418,
+      "line_count": 60,
+      "sha256": "c826a76f4252717929a0ec7535de4e8dd971dac2925b9c7434b27aa4b68be4a8",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1016/h3_convention_fix.md",
+      "bytes": 5789,
+      "line_count": 30,
+      "sha256": "85e41fbfd5389f577e21a31e262d507e4caacf7d164e889d5bfee4388559455e",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1018/deep_push_1018.md",
+      "bytes": 7948,
+      "line_count": 39,
+      "sha256": "335e0186d3c9ac47affebd51f706f255218b33debfb14b04119933a0c485e563",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1018/qwalk_blake3.md",
+      "bytes": 8022,
+      "line_count": 72,
+      "sha256": "ff2fca5b05a8ba5adcd07d030f935708859e97114ddd7bd70f5e229b675ed281",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1018/qwalk_pos_generic.md",
+      "bytes": 8107,
+      "line_count": 69,
+      "sha256": "18d9218300abbb91df35b369dc495acc59bcc681146b7a912941d9dd1f593f31",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1018/qwalk_pos_onecentre.md",
+      "bytes": 7113,
+      "line_count": 63,
+      "sha256": "41c848305d6acd3ec5202195bcd9b24315029c44d7490736fbeced0769c70086",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1018/qwalk_sha256.md",
+      "bytes": 8763,
+      "line_count": 70,
+      "sha256": "47947fc8c49eeec3b8bf21ed638f108ab630dd8176b883709dd8376ad36b320d",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1018/qwalk_sha3.md",
+      "bytes": 8861,
+      "line_count": 64,
+      "sha256": "65b53c31df9a401c094569319dd5667580a314f0e7ac8d6644964bc530d323b3",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1018/STACK_MENU.md",
+      "bytes": 2321,
+      "line_count": 27,
+      "sha256": "b65e21f8ebe30141990a6e7bbfa1d359f664055921e459e25062cc62f9eaae20",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "EXCLUDE raw mixed operational/task/proof-edit coordination; curated science only"
+    },
+    {
+      "path": "research/levers_1021/oracle_results.tsv",
+      "bytes": 192,
+      "line_count": 8,
+      "sha256": "bc7666aae1d5cc6bbbdb236bd8e0e48cff8e3ec562b0223684984431bc658db1",
+      "read_coverage": "Complete text, first through last line; no research code executed",
+      "raw_admission": "SAFE standalone numeric key/value artifact; add scoped context"
+    }
+  ],
+  "disposition": {
+    "safe_originals": [
+      "research/levers_1021/oracle_results.tsv"
+    ],
+    "curated_only_originals": [
+      "research/levers_1015/EDGE_AUDIT.md",
+      "research/levers_1015/NEXT_RESEARCH.md",
+      "research/levers_1015/TRANSFER.md",
+      "research/levers_1016/h3_convention_fix.md",
+      "research/levers_1018/deep_push_1018.md",
+      "research/levers_1018/qwalk_blake3.md",
+      "research/levers_1018/qwalk_pos_generic.md",
+      "research/levers_1018/qwalk_pos_onecentre.md",
+      "research/levers_1018/qwalk_sha256.md",
+      "research/levers_1018/qwalk_sha3.md",
+      "research/levers_1018/STACK_MENU.md"
+    ],
+    "existing_article_overlaps": [
+      "blake3-r3-first-pareto-cost-engineering",
+      "sha3-polarity-planner-family",
+      "memory-rule-pareto-and-sharding",
+      "register-liveness-and-uninitialized-sparse-tables",
+      "credited-derivatives-and-cap-budgets",
+      "poseidon-transform-lever-stack",
+      "poseidon-r56-packed-birthday-walk",
+      "poseidon-negative-transform-memory-experiments"
+    ],
+    "unique_archive_additions": [
+      "Dated per-component near-generic ledgers and nonadditive transfer matrix",
+      "Negative applicability of one particular large-subgroup value-domain kernel at r3",
+      "Explicit distinction between desired BLAKE3 gate targets and achieved counts",
+      "Finite oracle key/value result with no unsupported global closure",
+      "Scientific corrections to historical queue-walk assertions about universal floors and machine-model premises"
+    ]
+  },
+  "records": [
+    {
+      "id": "near-generic-binding-components",
+      "title": "Find the binding cost before transferring an optimization",
+      "status": "HISTORICAL SOURCE-REPORTED component counts; numerical sweeps approximate and uncertified",
+      "source_paths": [
+        "research/levers_1015/EDGE_AUDIT.md"
+      ],
+      "source_sections": [
+        "1.1–1.4",
+        "2(e)",
+        "4"
+      ],
+      "facts": [
+        "B3R3v2's recorded 17,238 logical gates include 2,760 three-variable full adders at five gates each: 13,800 gates, about 80.1%. Rotations are plane renamings in this representation. Isolated-cell optimality does not establish global circuit optimality.",
+        "B3R3v2 main-loop share is reported as 99.08%; B3R4e as 95.06%, with 4.94% recovery; S256R39v2 as 99.61%, with 0.39% recovery. Their different endpoint-table capacities explain why the same memory saving has different value.",
+        "The B3R3v2 coarse sweep changes R1024/25-byte entries/kappa11 at 124.83991 to R800/10-byte entries/two-pass recovery/kappa16 at 124.78967. B3R4e changes 10-byte entries at 125.06182 to 7-byte entries/kappa14 at 124.99285.",
+        "The SHA3 LS1R7 coarse sweep changes packed 32-byte records to 25-byte records and reports 124.28486 to 124.27024. A 10-byte record with length recomputation reports 124.25808. Neither row's packed handler was fully recounted in that source."
+      ],
+      "mechanism": "A smaller endpoint record increases the number of finished trails that fit in a fixed memory budget. This reduces lost candidate pairs from unfinished lanes, but omitting stored lengths adds replay work. Trail caps, table capacity and replay must be optimized jointly.",
+      "limitations": [
+        "The sweep used 1,500 trapezoid panels instead of the filed 20,000 and reproduced two baselines only to about 0.00005 bit.",
+        "The 40-bit-key extra false-match loss was not included in the quoted BLAKE3 numbers.",
+        "SHA3 bins were coarse, with about 0.001 baseline offset; proposed handler/record changes were not complete counted programs.",
+        "No quoted delta is a current filing-grade score or a fresh measurement."
+      ]
+    },
+    {
+      "id": "nonadditive-transfer-matrix",
+      "title": "Memory levers compose through the same table, not as independent bit savings",
+      "status": "HISTORICAL LEDGER-ONLY comparison",
+      "source_paths": [
+        "research/levers_1015/TRANSFER.md",
+        "research/levers_1015/NEXT_RESEARCH.md"
+      ],
+      "source_sections": [
+        "Matrix",
+        "Composition",
+        "Tests run here",
+        "NEXT_RESEARCH items 1,3,4"
+      ],
+      "facts": [
+        "On the old B4 baseline 125.35348, R800 plus 18-byte records gives 125.12336, a 0.2301-bit improvement rather than the 0.2611 sum of individual improvements.",
+        "R800 plus 18-byte records plus 4% additional memory gives score 125.04945 after its memory charge: 0.3040-bit improvement, not the 0.472 sum of components.",
+        "The corresponding R39b table changes were within 0.0013 bit of baseline: it was not table-capacity limited in the same way.",
+        "The same source explicitly says no generator/package was rebuilt for these variants, kappa/lambda success bounds were not recomputed, and Poseidon r3 transfer estimates were inferred without reading that package.",
+        "NEXT_RESEARCH ranked honest preprocessing-memory reductions ahead of tiny loop savings. Its proposed memory-cap ladders and lean drivers were plans, not completed tests."
+      ],
+      "lessons": [
+        "Recompute whole-program peak memory and the full success law after each change.",
+        "An allocation saving that merely moves the peak to another stage is not the sum of isolated savings.",
+        "Retain target, baseline, model version and generator configuration with every delta."
+      ]
+    },
+    {
+      "id": "machine-price-not-probability",
+      "title": "A declared instruction price is not a probabilistic heuristic",
+      "status": "EDITORIAL clarification from a historical ruling-response note; no endorsement of all proposed edits",
+      "source_paths": [
+        "research/levers_1016/h3_convention_fix.md"
+      ],
+      "source_sections": [
+        "Opening ruling",
+        "Recipe 1–6",
+        "Side effects"
+      ],
+      "facts": [
+        "The note records a historical not-evaluable result for d76f9105 concerning H3-machine-convention and proposes separating machine prices from probability hypotheses.",
+        "An exact emitted-instruction count is conditional on a stated instruction/register/memory model. Relabeling an unsupported physical implementation as a declared abstract price does not demonstrate that a real machine realizes the model.",
+        "A model specification should distinguish code bytes, register-file size, scratch memory, setup work, loads/stores and generator charges from H1-type assumptions about collision probabilities.",
+        "The note also contains instructions to delete caveats and external measurement descriptions. Those editing instructions are not reproduced or adopted here; removing a disclosure cannot establish a mathematical bound or repair missing evidence."
+      ],
+      "limitations": [
+        "This is not a refreshed contest-rules or judge-status determination.",
+        "Any public account must retain limitations and realization assumptions even when the source's filing recipe sought shorter wording."
+      ]
+    },
+    {
+      "id": "poseidon-local-applicability",
+      "title": "A disabled kernel branch does not rule out another value-domain construction",
+      "status": "HISTORICAL SOURCE-REPORTED exact ledger comparison for one selected implementation",
+      "source_paths": [
+        "research/levers_1018/deep_push_1018.md",
+        "research/levers_1018/STACK_MENU.md"
+      ],
+      "source_sections": [
+        "deep_push r3_port",
+        "STACK_MENU small-coset value-domain row"
+      ],
+      "facts": [
+        "The inspected r3 kernel's value-domain branch required an inner subgroup of size 2^32, while its degree was 976,562. Switching its VDC flag left stage-C count 342,624,511,244 unchanged.",
+        "In the same kernel, NORMALD changed the stage-D count from 58,534,994,949 to 41,703,729,656 and its model score from 39.55542 to 39.26281.",
+        "That local alternative was still worse than the source's cited filed 37.68134 and rival 35.23077. The comparison does not identify the rival mechanism.",
+        "STACK_MENU separately lists a small-coset value-domain construction credited to bradcush 4bcabff8. Consequently the large-subgroup branch's inapplicability cannot be generalized into 'value-domain powering is impossible below r9'."
+      ],
+      "lessons": [
+        "Write algorithm- and parameter-specific closure statements.",
+        "A flag that changes no operation is evidence that this implementation branch is inactive, not a lower bound against the entire method.",
+        "Compare against the same filed operating point before claiming an improvement."
+      ]
+    },
+    {
+      "id": "poseidon-targets-not-results",
+      "title": "Memory targets and counted alternatives that did not reach the baseline",
+      "status": "HISTORICAL LEDGER observations mixed with explicitly unimplemented targets",
+      "source_paths": [
+        "research/levers_1018/deep_push_1018.md",
+        "research/levers_1018/qwalk_pos_onecentre.md"
+      ],
+      "source_sections": [
+        "r5_route",
+        "r9_mem",
+        "r12_stack",
+        "onecentre stages 1–2"
+      ],
+      "facts": [
+        "The r5 source reports time_log2 34.74110 and score 47.12610 with heap peak 4,759,669,952 bytes. Reducing the arena factor from 1.177 to 1.0 is priced at about 0.235 bit, but reaching score 44.7341 additionally requires an unimplemented heap target no larger than 1,063,225,170 bytes. That target is not an executed memory result.",
+        "The r9 combined ledger reports 64.98166 versus prior 65.39051, still worse than its cited 64.70249 leader. Its remaining idea was aliasing half-gcd R storage onto freed g slots; no counted implementation is supplied in this note.",
+        "The r14 CHUNK_CD=16/VSHIFT=3 stack reports 86.95718 versus 87.18056, whereas r13 reports 82.36993 versus stack-only 82.42935 and r12 remains 77.66268. The source warns that the r12 comparison did not share the filed time-memory operating point.",
+        "The one-centre walk itself acknowledges unresolved experiment obligations and H1/H-NORMAL-like premises. Exact cost recurrences do not make the high-round success assertion unconditional."
+      ],
+      "limitations": [
+        "No new numerical recount or full-scale collision run was performed in this review.",
+        "Historical declared memory and actual resident memory must not be conflated.",
+        "These rows are superseded research observations, not present-day frontier assertions."
+      ]
+    },
+    {
+      "id": "r56-accounting-versus-floor",
+      "title": "A cheaper step is useful; a universal birthday floor does not follow",
+      "status": "HISTORICAL accounting result with corrected inference",
+      "source_paths": [
+        "research/levers_1018/deep_push_1018.md",
+        "research/levers_1018/qwalk_pos_generic.md"
+      ],
+      "source_sections": [
+        "deep_push r56_tie",
+        "generic headline and dated bound question"
+      ],
+      "facts": [
+        "The source reports a combined r56 step/accounting change from 126.21920 to 126.21511 and an 807-operation equivalent-map step, with 60 historical finite reference comparisons.",
+        "The generic question walk extrapolates a delta log2(1-2.29/(135+12r)) to other rounds from the r56 point. Such a calibrated operation ratio is not a fresh per-row certified numerator.",
+        "The note calls a more ambitious score below a proven generic floor and asserts no distribution premise. Those conclusions do not follow: random-function birthday analysis does not by itself establish the law of this fixed cryptographic walk or rule out a different algebraic attack.",
+        "The later library account poseidon-r56-packed-birthday-walk explicitly retains H1 random-function transfer and reports the later 126.21255 accounting row. It supersedes the older point for the library's main narrative."
+      ],
+      "limitations": [
+        "Local tested MDS identities and selected kernel alternatives do not prove a universal operation lower bound.",
+        "Historical 'no more levers' language is scoped to the inspected configurations, not all future cryptanalysis."
+      ]
+    },
+    {
+      "id": "blake3-gate-target",
+      "title": "The open-cluster term identified an opportunity, not a proved stronger gate",
+      "status": "HISTORICAL decomposition and conditional engineering target",
+      "source_paths": [
+        "research/levers_1018/deep_push_1018.md",
+        "research/levers_1018/qwalk_blake3.md"
+      ],
+      "source_sections": [
+        "b3r2_017",
+        "BLAKE3 result stack and stages 1–2"
+      ],
+      "facts": [
+        "The reproduced source numerator is N=3819845051895530750985, with local ledger time_log2 62.94581. The same note distinguishes an official-recount basis 62.62567; the bases must not be silently mixed.",
+        "Reported term shares are opened-cluster masked walk 40.89%, batch fills 22.28%, solver credit 21.71%, E-lanes 6.37%, representative batches 4.33% and context 3.40%.",
+        "The suggested opening-rate reduction from 0.41162 to at most 0.3036 was the condition needed to reach the target, not an achieved exact opening bound.",
+        "Combining two partner batches into one was likewise conditional on proving that no failing partner could escape. No such proof is supplied here.",
+        "The later question walk labels lane-replica streaming and lower selection caps conditional/unbuilt and explicitly warns that several memory levers all hit the same peak."
+      ],
+      "limitations": [
+        "Do not publish the target rates as measurements or proved inequalities.",
+        "The question walk's extrapolated differential wall is not an exhaustive closure of BLAKE3 r3 and above.",
+        "A cheaper smaller-width cell or local gate does not certify the complete search's score."
+      ]
+    },
+    {
+      "id": "sha256-oracle-negative-record",
+      "title": "A finite carry-oracle record that did not close its fixed point",
+      "status": "PRESERVED numeric result; setup provenance incomplete; no general UNSAT conclusion",
+      "source_paths": [
+        "research/levers_1021/oracle_results.tsv"
+      ],
+      "source_sections": [
+        "all eight key/value rows"
+      ],
+      "data": {
+        "R": 39,
+        "carry_positions": 2208,
+        "admissible_subspace_dim": 1,
+        "admissible_weight1_bits": 1125,
+        "weight0_inconsistent": false,
+        "fixed_point_from_weight0": false,
+        "fixed_point_from_any_weight1": false,
+        "best_mismatch": 781
+      },
+      "interpretation": [
+        "The source reports no fixed point from its tested weight-zero or weight-one probes, and records best_mismatch=781.",
+        "The artifact does not name the characteristic, bit convention, solver encoding, candidate-generation rule, exhaustive domain or verification command. Preserve the metric name instead of assuming what a mismatch counts.",
+        "The pair of dimension and admissible-bit counts must not be interpreted as a complete classification of all 39-step differences without the originating algorithm.",
+        "This is a safe standalone numeric artifact to admit with these caveats. It is not a collision witness, a full-round lower bound, or an UNSAT certificate."
+      ]
+    },
+    {
+      "id": "sha256-and-sha3-historical-walks",
+      "title": "Question walks reveal stale-model hazards and already-used ideas",
+      "status": "DATED scientific retrospection, not current coverage or lead claims",
+      "source_paths": [
+        "research/levers_1018/qwalk_sha256.md",
+        "research/levers_1018/qwalk_sha3.md",
+        "research/levers_1015/EDGE_AUDIT.md"
+      ],
+      "source_sections": [
+        "SHA256 stages 1–2",
+        "SHA3 headline/stages 1–2",
+        "EDGE_AUDIT 2(b)"
+      ],
+      "facts": [
+        "The SHA256 walk records two printed-condition corrections: r37 A16 to A15[29] and r38 W25[9] to W25[6]. These are historical reported errata, not newly reverified here.",
+        "It also warns that joint row-16/17–21 changes require a joint measured law rather than multiplication of marginal rates. Its quoted q3 result is statistical evidence, not an exact bound on a fixed target's full search.",
+        "The SHA3 walk explicitly says older time-only r5/r6 scores were rescored under a different memory-aware model. A saving quoted against the older baseline cannot automatically be subtracted from the newer score.",
+        "EDGE_AUDIT's proposed 6,974-to-6,720 Keccak full-round gap was an unmeasured polarity hypothesis. The later sha3-polarity-planner-family article documents actual generated programs and finite checks; the historical hypothesis should not be counted as a separate achieved saving.",
+        "SHA3's question walk at one point calls a collision-rate premise H_reg. Register conventions and random-function transfer are different assumptions and must remain separately identified."
+      ],
+      "limitations": [
+        "No historical board leadership, row completeness or generic-floor assertion is promoted to a current fact.",
+        "The early claims that all relevant ideas were exhausted are not research impossibility proofs."
+      ]
+    },
+    {
+      "id": "lever-stack-credit-index",
+      "title": "Credited ideas retained as a cross-reference, not an additive recipe",
+      "status": "HISTORICAL attribution map; implementation and benefit are configuration-specific",
+      "source_paths": [
+        "research/levers_1018/STACK_MENU.md"
+      ],
+      "source_sections": [
+        "main lever table",
+        "collected techniques table"
+      ],
+      "credits": [
+        {
+          "technique": "streamed reciprocal transform and truncated half-gcd",
+          "source_credit": "0xshikhar 716c3818"
+        },
+        {
+          "technique": "single precommitted centre, single-thread trial, in-place ring folding, MU/F lifetime aliasing and exact static allocation",
+          "source_credit": "0xshikhar 52120fad; static peak-payload arena also credits 86ebd942"
+        },
+        {
+          "technique": "small-coset value-domain stage C",
+          "source_credit": "bradcush 4bcabff8"
+        },
+        {
+          "technique": "row-outer stage-C workspace and placement",
+          "source_credit": "cryptogakusei f7d2e72c"
+        },
+        {
+          "technique": "CRT transform de-padding, pure-power-of-two powering, one-row kernels, normal-remainder half-gcd and stage-D chunk width",
+          "source_credit": "Project method inventory; underlying source-specific credits must be retained from the complete technical articles"
+        }
+      ],
+      "interpretation": "The menu is useful as an attribution and applicability checklist, not evidence that every technique stacks or that all claimed percentages are current. Later source-reported negative array/coset experiments are covered by poseidon-negative-transform-memory-experiments. No inaccessible scratchpad content is reconstructed."
+    }
+  ],
+  "publication_boundary": "The eleven excluded originals contain task allocation, commands to build/stage/file, operational run descriptions, raw task-answer summaries or instructions to remove caveats. Their independent scientific content is preserved above with source digests and status; this JSON is the public-safe derived artifact. No blanket admission of entire levers directories is recommended.",
+  "verification": "Source hashes and complete-read coverage only. All test/count claims remain attributed historical statements except the literal eight-row TSV transcription. No solver, archived program, server, build or submission executed."
+}

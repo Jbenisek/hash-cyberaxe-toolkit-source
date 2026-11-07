@@ -1,0 +1,24 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json, scan.cpp, scan_joint.txt, scan0.txt, scan1.txt, scan2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "key words m0..m7 = 0 (message prefix 0^32)",
+ "question": "Q3: degrees of freedom or score-optimal value",
+ "labels": [
+  "N",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "Score-optimal value K = 0 (595 ops). Could a nonzero K delete fold sites instead? Exact scans of one K word (m_{2j}, y = 0) over 2^32 values: column 0 zeroes v4' for 1 value, v8' for 1, v12' for 2 (v0' for 2), columns 1..3 zero at most one single site each (col 1: none, col 2: v10', col 3: v11' for 3 values); no value zeroes two outputs of a column. So one nonzero word saves at most 1 op and costs 2 (net +1), two words save at most 2 per column and cost 4. Zero degrees of freedom worth keeping: K = 0 is optimal for cost.",
+ "topic": "b3r3.PIN.K.Q3",
+ "notes": "universe cell blake3-r3|PIN.K|PIN|Q3. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Single-word exact scan (scan.cpp mode 1); two-word case by bounding (3 single sites per column, 2 ops per nonzero word).",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "a K with several nonzero words whose joint saving exceeds 2 ops per word (needs more than 3 deleted sites per column pair, impossible by site count)"
+}

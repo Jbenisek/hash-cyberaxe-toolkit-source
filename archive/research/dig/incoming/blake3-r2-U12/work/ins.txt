@@ -1,0 +1,1 @@
+  top0+=t0; nd+=d; nb+=b; ndb+=d&&b; if(d||b) printf("SET w13=%08x d=%d b=%d top0=%d\n",w,d,b,t0);

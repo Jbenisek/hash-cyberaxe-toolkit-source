@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FREELUNCH algebraic Groebner attack",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "alternative: use backward x^(1/5) walks (inverse S-box variables) - the BACKSKIP route; not run",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/freelunch/FREELUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Pointer only. | universe cell poseidon-r1|ALT.FREELUNCH|ALT|Q4",
+ "held_fixed": "r=1",
+ "reopen_if": "see ALT.BACKSKIP"
+}

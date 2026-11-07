@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQ (PREM)",
+ "question": "R2: own recount: P(g has a nonzero square root) per centre",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "r2 pooled 8/23 = 0.348, Wilson 95 percent [0.188, 0.551], 99 percent [0.154, 0.610]; model 0.3935 lies inside. Components: GPU 4/12, CPU 4/11. r1 D189 8/20; r1 per-line 57/180 = 0.317.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/d192_r2_results.jsonl; research/poseidon/orchard/lean_r2/logs/",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HSQ|PREM|R2. Counts as above. The r1 per-line 0.317 is below the model at z = -2.11.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a sample of 100+ r2 centres per line shows a rate outside the model band",
+ "topic": "poseidon-r2 HSQ rate"
+}

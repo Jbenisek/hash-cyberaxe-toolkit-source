@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.TOTAL total units and time_log2",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "fix: N = 109,247,370,875 ops = 460,959,370.78 units, log2 = 28.78006 (claimed 28.781); one centre 27.78023; lean_r1 old charging 14,202,616,031 -> 25.83669 (25.837); ratio 7.69x = +2.943 bit",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md research/poseidon/orchard/lean_r1/submission-note.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Recomputed with the proof.md 6.1 script and the lean_r1 note formula. Later dossier 56ddf2d0 claimed 27.954 (+3.047 mem), not recounted here. | universe cell poseidon-r1|LEDGER.TOTAL|LEDGER|R2",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

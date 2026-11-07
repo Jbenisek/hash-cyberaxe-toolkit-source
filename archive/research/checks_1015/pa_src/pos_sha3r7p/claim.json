@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "submission_state": "ready",
+  "target_profile": "sha3-256-r7-prefix-v1",
+  "attack_class": "ordinary-collision",
+  "rounds": 7,
+  "lane": "exploratory",
+  "claim": {
+    "time_log2": 124.73447,
+    "time_unit": "target-compressions",
+    "memory_log2_bytes": 20,
+    "preprocessing_log2": 31,
+    "success_probability": 0.39,
+    "nonuniform_advice_log2_bytes": 0
+  },
+  "restrictions": [
+    "Two distinct 128-byte one-block messages m(a), m(b) of sha3-256-r7-prefix-v1 (zero state, rate 136, suffix 0x06 with pad10*1, rounds 0 to 6, full 256-bit digest). m(u) places the point u (lanes u0..u3) in lanes 1, 6, 11 = u0, u1, u0^u1^K11 and 4, 9, 14 = u2, u3, u2^u3^K14, the other lanes 0..15 fixed constants K (proof.md Section 2); m is injective. F(u) = digest of m(u) xor a fixed mask PD; F(a) = F(b) with a != b is an ordinary collision. Round 0 and round-1 theta are affine in u (a Guo-Liu-Song 2016 linear structure).",
+    "Distinguished-point parallel collision search (van Oorschot-Wiener) on F with 256 walks per step, as in our entry 2d74a370: DP = 116 top bits of F zero, cap Lc = 2^120 - 2 steps, at most 5,000 trails and a table of 5,000 words, Tb = 17750576 x 2^96 steps, a prefilter-hit counter that aborts the attempt at hit HMAX + 1 (HMAX = floor(Tb (1 + 2^-20)/2^8) + 1 + Lc), one replay with a one-walk program of F of 1,357 operations (proof.md Section 4).",
+    "Machine (declared heuristic H_machine): a register file of 1,024 words of 256 bits (1,018 for program values, 6 for the loop state), every load, store and register move is an instruction charged as one word operation, code counted at 32 bytes per instruction, no compact encoding and no interpreter. One step of 256 walks is 44,940 operations: sections AFF 3,080, GB 8,063 (run three times) and GA 8,500 (run twice), shared code, R6 637, with 8,134 loads, stores and moves of the allocation, plus loop 14, prefilter 17, counter 3 (Section 3).",
+    "Cost model collision-frontier-v5, unit 1897 (the organizer reference operation cost of sha3-256-r7, counted by its trusted counter): N = Tb x 44,940 + (2 x 1,357 + 26) x Lc + R + PRE = 67124878624051350222134568894841221028818 word operations, every loop-control, test, transfer and handler operation counted, at most HMAX + 1 prefilter hits at 211 each in every execution (Section 4); time_log2 = 124.73447 = log2(N/1897) rounded up, integer certificate 1897^100000 2^12473446 < N^100000 <= 1897^100000 2^12473447 (Appendix A).",
+    "Preprocessing, run by the attack and charged in N: the constant-selection run gen 512 (512 candidate constant sets, Appendix C), 513 x 2^32 + 512 x 2^10 operations, and the generator gen_s7ls (Appendix B), which selects the polarity pattern over all 2^25 patterns and the boundary size over 7 sizes and writes the program, 2^34 operations (measured 2^33.85 executed instructions); PRE = 2,220,498,616,320, preprocessing_log2 31. No advice.",
+    "Memory at most 1,040,064 bytes <= 2^20 (register file, program code at 32 bytes per instruction, other code, spill cells, table, walk state; Section 6). The two preprocessing programs run before the search: measured peaks (VmHWM, whole static image counted) 552,960 bytes for gen 512 and at most 1,028,096 bytes for gen_s7ls including the code region it writes; both also fit a 1 MiB sandbox that counts the declared span. memory_log2_bytes = 20, so normalizedTimeMemoryLog2 = 124.73447 + max(0, 20 - 20) = 124.73447; the Python experiments (about 86 MB) are reduced-width evidence, not the attack.",
+    "Success at least 0.39 for one attempt over the fresh word rho, under the score-critical premise H_rand (F behaves as a random function on the evaluated points), with failure terms for cut trails, table limit, self-coincidence, starts and key matches, and the hit-counter abort F5 < 2^-1000 proved by a Chernoff bound (Section 5). No full-scale run and no full collision is claimed."
+  ],
+  "baseline_improved": "sha3-256-r7-nominal-v2",
+  "heuristics": [
+    {
+      "id": "H_rand",
+      "role": "score-critical",
+      "statement": "F(u) = SHA3-256-r7(m(u)) xor PD, with the linear-structure message embedding m of proof.md Section 2, behaves as a uniformly random function from 256-bit values to 256-bit values on the points the search evaluates: values at distinct inputs are independent and uniform, a fresh point is a distinguished point with probability 2^-116, and the remaining length of a trail after a coincidence is geometric with parameter 2^-116 independently of the time of the coincidence. Then the first image coincidence among e evaluations has probability at least 1 - exp(-e(e-1)/2^257), and one attempt succeeds with probability at least 0.39 after the failure terms of proof.md Section 5.",
+      "scope": "The fixed function F of proof.md Section 2 on the points of one attempt: about 1.058 x 2^128 evaluations in 256 lockstep walks from starts rho + i, i < 5,000. Only the pair-coincidence rate among evaluated images and the distinguished-point rate enter the bound. The step program, the cost, the memory and the failure terms are derived, not assumed.",
+      "extrapolation": "Organizer-executed: rho-w22 runs the whole search with the claimed program at width 22 (every trial must return a 22-bit partial collision; our 1,280 local trials took 17.84 steps on average against 17.94 for an ideal random function, z = -0.5); proj-w256 runs eight chained full-width steps and tests 22-bit agreement among 2,048 iterates (model 0.3934 per trial; our local 511/1,280). Our earlier checks of the six-round F with the same embedding (proof.md Section 7.2; NOT repeated for seven rounds): pair-coincidence rates on three 32-bit windows within 0.6 percent of the random value, no single-bit bias, proj at scale 0.3938 in 262,144 trials, GPU rho lengths at 32 to 40 bits within 0.8 percent. Extrapolated from 22-bit projections (and the six-round 32 to 40 bit checks) to 256-bit coincidences at 2^128 evaluations.",
+      "evidence_ids": [
+        "proof:23-52",
+        "proof:220-249",
+        "proof:276-298",
+        "experiment:rho-w22",
+        "experiment:proj-w256"
+      ],
+      "limitations": "An assumption, not proved. The affine round 0 leaves six nonlinear rounds; a structural deviation of the collision rate at 256 bits that does not appear in the projections is not excluded. If the pair-coincidence rate is (1 - eps) of uniform, the same success costs about 0.5 log2(1/(1 - eps)) more bits (0.0073 for eps = 0.01)."
+    },
+    {
+      "id": "H_machine",
+      "role": "supporting",
+      "statement": "Machine convention: the 256-bit word RAM of collision-frontier-v5 with a declared register file of 1,024 words of 256 bits (1,018 hold program values, 6 the loop state), counted as memory (32,768 bytes). Every load, store and register-to-register move is an instruction and is charged as one word operation in every routine; no memory word is read or written except by a charged load or store. All code is counted at 32 bytes per instruction; there is no compact encoding, interpreter or decode convention (proof.md Section 3.2). The cost model and the target profile fix no register count and no code encoding.",
+      "scope": "The machine that runs the step program and the search of proof.md Section 4; it fixes the time and memory ledgers, not the success bound.",
+      "extrapolation": "None statistical: a declared convention. It is the convention of our blake3-r3 entry 0a9640ed (passed review) and of our sha3-256-r6 entry aa2e6be6 (filed), of which this package is the seven-round port. Every transfer the program needs is written in the program (8,134 loads, stores and moves per step) and counted; the executed checks validate the function of this program, not the cost of register access, and the counts are those of the generated listing (Appendix B). The unit 1897 is the organizer reference operation cost of sha3-256-r7.",
+      "evidence_ids": [
+        "proof:75-83",
+        "proof:85-93",
+        "proof:104-117",
+        "proof:251-274"
+      ],
+      "limitations": "A declared convention, not a measured property of hardware. The role supporting is the role of a declared convention and does not mean the choice is free: a smaller register file or another code encoding changes the time and memory ledgers by priced amounts (six-round rows in proof.md Section 8; NOT recomputed for seven rounds) and leaves the success argument unaffected."
+    }
+  ],
+  "experiment_manifest": "experiments/manifest.json",
+  "certificate_manifest": "certificates/manifest.json"
+}

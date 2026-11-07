@@ -1,0 +1,27 @@
+Notation: x = free state (x0,x1,x2); F = full round, P = partial round (S on lane 0 only); 'c' = with the real round constants of the named original rounds, 'n' = no constants
+columns: monomials per lane | degree per lane | number of distinct exponent-residue classes mod 5 over all monomials (1 means every exponent vector is = 0 mod 5)
+F                                  none  sizes [3, 3, 3]            deg [5, 5, 5]              residue-classes(mod 5): 1    full-triangle(deg 5) = 56  [0.0s]
+P (original R4)                    none  sizes [3, 3, 3]            deg [5, 5, 5]              residue-classes(mod 5): 3    full-triangle(deg 5) = 56  [0.0s]
+F,F                                none  sizes [21, 21, 21]         deg [25, 25, 25]           residue-classes(mod 5): 1    full-triangle(deg 25) = 3276  [0.0s]
+P,P (R4,R5)                        none  sizes [24, 24, 24]         deg [25, 25, 25]           residue-classes(mod 5): 19   full-triangle(deg 25) = 3276  [0.0s]
+F,P (R3,R4)                        none  sizes [24, 24, 24]         deg [25, 25, 25]           residue-classes(mod 5): 1    full-triangle(deg 25) = 3276  [0.0s]
+P,F (R4,R60)                       none  sizes [21, 21, 21]         deg [25, 25, 25]           residue-classes(mod 5): 19   full-triangle(deg 25) = 3276  [0.0s]
+P,P,F (R4,R5,R60)                  none  sizes [956, 956, 956]      deg [125, 125, 125]        residue-classes(mod 5): 25   full-triangle(deg 125) = 341376  [0.2s]
+F                                  const sizes [16, 16, 16]         deg [5, 5, 5]              residue-classes(mod 5): 13   full-triangle(deg 5) = 56  [0.2s]
+P (original R4)                    const sizes [8, 8, 8]            deg [5, 5, 5]              residue-classes(mod 5): 7    full-triangle(deg 5) = 56  [0.2s]
+F,F                                const sizes [2076, 2076, 2076]   deg [25, 25, 25]           residue-classes(mod 5): 125  full-triangle(deg 25) = 3276  [0.4s]
+P,P (R4,R5)                        const sizes [196, 196, 196]      deg [25, 25, 25]           residue-classes(mod 5): 79   full-triangle(deg 25) = 3276  [0.4s]
+F,P (R3,R4)                        const sizes [2076, 2076, 2076]   deg [25, 25, 25]           residue-classes(mod 5): 125  full-triangle(deg 25) = 3276  [0.5s]
+P,F (R4,R60)                       const sizes [196, 196, 196]      deg [25, 25, 25]           residue-classes(mod 5): 79   full-triangle(deg 25) = 3276  [0.5s]
+P,P,F (R4,R5,R60)                  const sizes [14976, 14976, 14976] deg [125, 125, 125]        residue-classes(mod 5): 125  full-triangle(deg 125) = 341376  [12.0s]
+F,F,F                              none  sizes [351, 351, 351]      deg [125, 125, 125]        residue-classes(mod 5): 1    full-triangle(deg 125) = 341376  [12.1s]
+
+no-constant check: F^k lane is a polynomial in X=x^5 of degree 5^(k-1): predicted monomials C(5^(k-1)+2,2): k=1: 3 (deg 5 -> 3 monomials x_j^5), k=2: 21, k=3: 351
+
+=== S o M: lane j = (M_j . x)^5 (what the next round's S-box sees, no constants) ===
+lane 0 monomials 21 (homogeneous degree 5 in 3 vars has C(7,2)=21) all coefficients nonzero: True
+lane 1 monomials 21 (homogeneous degree 5 in 3 vars has C(7,2)=21) all coefficients nonzero: True
+lane 2 monomials 21 (homogeneous degree 5 in 3 vars has C(7,2)=21) all coefficients nonzero: True
+
+Coefficient of x0^a x1^b x2^c in (m0 x0+m1 x1+m2 x2)^5 is the multinomial 5!/(a!b!c!) * m0^a m1^b m2^c: nonzero for all 21 (PROVED, 5 < p, M entries nonzero).
+elapsed 12.1s

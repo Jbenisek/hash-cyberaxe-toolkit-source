@@ -1,0 +1,546 @@
+{
+  "edition": "HASH$CyberAxe public GitHub edition 2026-11-06",
+  "note": "Files edited for the public edition, each with its reason; nothing else in them changed. Recorded digests (manifests, replay pins) were updated to the published bytes. original_sha256 identifies the library's archived bytes.",
+  "files": [
+    {
+      "path": "archive/research/dig/SCHEMA.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "c146eae4952fb7b81a715260344ec3fe30e7331880a6bd088403954393dc3190",
+      "original_bytes": 6820,
+      "published_sha256": "6f1e94a372026a72da374a28b2e9d558e18b08beaa55d4f88aa4e6ee46eb8aba",
+      "published_bytes": 6813
+    },
+    {
+      "path": "archive/research/game/climber/DESIGN_BRIEF.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "a6a3607da5e01e04ca26f946d32321d4adbe1269ef9481f473db4ac9c094bb28",
+      "original_bytes": 18532,
+      "published_sha256": "7455c03f3ad842f5251d64cc8df61b3014b4c8e750d05ea326a4d4e7acdfa3cb",
+      "published_bytes": 18535
+    },
+    {
+      "path": "archive/research/game/climber/guided/scan40_topslide/scan_driver.py",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "91fa85bf3435f617d9131c70b4f8c7daa447857c351ff7cff42ff6f28739eb13",
+      "original_bytes": 10596,
+      "published_sha256": "67ec37d0470e8677bf54f4addaefe4e2dd2720a55a43d780946b4e8e8db6f9fa",
+      "published_bytes": 10589
+    },
+    {
+      "path": "archive/research/game/climber/kb/knowledge.js",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "73b16adee396b5a4f5e8c7129001971538f4d96903280e4a2c2a789996570e8e",
+      "original_bytes": 3196507,
+      "published_sha256": "a5036659d1e905ddf2b9cce6d8eb961faf23f8a5b08f7e13be4775566c989658",
+      "published_bytes": 3196500
+    },
+    {
+      "path": "archive/research/game/climber/MAP_README.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "62498519075f09cf03435ac8d1900dc71cd99ccdc101c41b3e87fe37ee5d68e4",
+      "original_bytes": 2245,
+      "published_sha256": "ecdd22b99025a7a3b1c874d07a2ea14a72f5b9fe424fe5e9e743dab84dac0566",
+      "published_bytes": 2238
+    },
+    {
+      "path": "archive/research/game/climber/SCIENCE_ENGINE_SPEC.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "2c0ac9502e20bd2a14d13f9529bb7a0385080a53a5c461f21756627acccf3f1f",
+      "original_bytes": 22814,
+      "published_sha256": "93c2eacc38425d7b1b011f68cf04fc40200350aa1614e55e494e88512a2496e8",
+      "published_bytes": 22835
+    },
+    {
+      "path": "archive/research/luna/L005/run_fullstate_fix.sh",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "314bf2ef519e2b3d9901b40b5c8fcb3a673d879daba374dd4cbd962d1c6428da",
+      "original_bytes": 2061,
+      "published_sha256": "10cbd5d6342176d70dc3542e610bc02ddcff095342c7d078e32c04e44b3fc07a",
+      "published_bytes": 2054
+    },
+    {
+      "path": "archive/research/newpaths/counter/adjudicate/VERDICT.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "4b98dd52743dbdc53e4de9c3012cecf3982045ed2c8cf310681fe68b3bde506d",
+      "original_bytes": 14889,
+      "published_sha256": "261a6c5a1298247a3b78dbadbeed4157cb6509b5d13a94ba8346342e44e99889",
+      "published_bytes": 14887
+    },
+    {
+      "path": "archive/research/papers/sha2_collision/joc_2026_new_records/REFERENCES.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "e84a467d39cf53c3c67790d4ed21b7c3637e1113b0b717be27326ac0597eccd2",
+      "original_bytes": 2358,
+      "published_sha256": "31c60ca6695d8688d7d01f5d1ea9d62e5b2e104fc8cafb72fdb8ae237b402b22",
+      "published_bytes": 2357
+    },
+    {
+      "path": "archive/research/pkg5/review/wf3_review_figures.json",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "2e16773e9eaf6759182969fcb61e4f4820fb1726f939c3623ad5837f0ea17447",
+      "original_bytes": 11291,
+      "published_sha256": "b762fce33454fd29d8077fbb7ed94563d11eb84e6c358baede93a7780987c8ce",
+      "published_bytes": 11290
+    },
+    {
+      "path": "archive/research/pkg7/FILE_STEPS.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "869a40e26f57fdb5e8bbb4f0020879a5809df70051a976917fb3ffe5fb7f1ee2",
+      "original_bytes": 49433,
+      "published_sha256": "dde4fe7c849801b53d8f29ffaa92e669d64f8b6f77c3f9fa63aafb94a36e34b9",
+      "published_bytes": 49432
+    },
+    {
+      "path": "archive/research/poseidon/orchard/FINISH_STATUS.md",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "6e44c50ea77305464f7b6909f00c7de36d9fd9125558c5b38126ac71fae0e35e",
+      "original_bytes": 7345,
+      "published_sha256": "b6fd9ad764e117dc940e3fa49354bd20d3236ee10dfb50c1dac5783a3254f08a",
+      "published_bytes": 7344
+    },
+    {
+      "path": "archive/research/tools/profile/backscore.py",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "03da1ee1c32595570bac0692e8c7110db34f900bd1ba5aa5c229bd14be537069",
+      "original_bytes": 3878,
+      "published_sha256": "8fadd907d747114b77f587d4d4f7b7c376cd5fad49145d21cbbc8d54e0826ba4",
+      "published_bytes": 3871
+    },
+    {
+      "path": "archive/research/tools/profile/backwalk.py",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "5fa5a1b3b5c204b6c3fe33e4121e8c354008fe0d6c626b7cebdb779f39f7eead",
+      "original_bytes": 3060,
+      "published_sha256": "8028234d38894e901dd1ce9225e7f1e3529fd3b84dbd6845d502f53255e98600",
+      "published_bytes": 3053
+    },
+    {
+      "path": "archive/research/tools/profile/mirror.py",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "3192098462a94a882bcacda69c13222776827748c151d39004f2bfd24af0fe22",
+      "original_bytes": 2331,
+      "published_sha256": "2587da04dcd1bb6012fd43b7397d9222e2fa3ead3ea0977473ae507536e53c6d",
+      "published_bytes": 2324
+    },
+    {
+      "path": "archive/research/tools/profile/trail_families.py",
+      "reasons": [
+        "owner quotes replaced with CyberAxe"
+      ],
+      "original_sha256": "2c954401440e82aa6fc84cc3d2d0f6f6f776027af0ac1b5bf9faa5c6fbb34507",
+      "original_bytes": 1628,
+      "published_sha256": "db96c9a3d3d7670815487cdb43a923918911e6d372dbb131f1bb4f5efbfe7180",
+      "published_bytes": 1621
+    },
+    {
+      "path": "guides/099fd71c8952e4ae170a.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "b5fc454fdf76c45d08d755ea9bfd7db55d57f518e9c14571cb25287cdf008f78",
+      "original_bytes": 14152,
+      "published_sha256": "48e2fd8eac7de94e78055961da5607dab943ca86119a193923f2bef790f774db",
+      "published_bytes": 14155
+    },
+    {
+      "path": "guides/0e11e5c8a6d3dec7216f.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "50927f0b17c340d66ed9a4c0c8388c998d9719580dac299498c02c7c542343c6",
+      "original_bytes": 986,
+      "published_sha256": "a01c1cdf2d1b32ac320cad560d3190da0439adcc38f0cf87d7a8bbcc32b2f63b",
+      "published_bytes": 1018
+    },
+    {
+      "path": "guides/16961d856913efdae6a6.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "9b678644a382d107b204b7feb23fe031577df6523a6b52532a02be3249e06c08",
+      "original_bytes": 2934,
+      "published_sha256": "80abea046a6b29c123bc952eda75c5af7e74ed03d9ef6cc4e4641a21e408c8d5",
+      "published_bytes": 2942
+    },
+    {
+      "path": "guides/2439d3da216206821dbe.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "07f09cc48af35b9df6aec8b63015e432ea0c8750a4e70434443c33b35b4a8fc8",
+      "original_bytes": 14189,
+      "published_sha256": "30afee907f110945676904ce4a33f398ebe98ef233c89bd15f74458426f3d1ba",
+      "published_bytes": 14192
+    },
+    {
+      "path": "guides/28189195980457625dda.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "622de906a2cec35b4145a4908965310963eeb90005d33ddeb028e51264bc54e2",
+      "original_bytes": 1051,
+      "published_sha256": "f5d28460f4da2b35ab3b4b49a27000a10d42cac1d88a99d9c3421849f1dffef5",
+      "published_bytes": 1067
+    },
+    {
+      "path": "guides/28a0ed37629c39dd773f.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "f46dec9239d39ebafbaf7228a4159f3c6e7b496f221a00ff4f5de250ff5f3459",
+      "original_bytes": 2124,
+      "published_sha256": "e15bac9aa7fd12227ee22c749da67a8975f2bac7d8551482a75c2a934b6a8c81",
+      "published_bytes": 2142
+    },
+    {
+      "path": "guides/344cf124677087a9a204.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "d2fb0d065e31cfda3705da5a004192e05d5b2053baa74a4a13220d527535721b",
+      "original_bytes": 1055,
+      "published_sha256": "9825a07e349b552946ffb8c50385d6506b3f5fb941c5a5a5671005a371bbb9fc",
+      "published_bytes": 1071
+    },
+    {
+      "path": "guides/3a3b637ec52f04e81afe.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "2e3abe8fd53e10f046fc5233e335b29c50e4f7d3a59309c8beee69f1b51c50ff",
+      "original_bytes": 1547,
+      "published_sha256": "ca5cfb234d67c13508d0684db46ccdcee2e675fbb5cfc8572a27be0b3b07b8c3",
+      "published_bytes": 1546
+    },
+    {
+      "path": "guides/4d72e2e56bb24500c8ee.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "82aeff7428d8d3505ad04819cf38089075b2e57465e1f1ebac870ea2a08d448a",
+      "original_bytes": 987,
+      "published_sha256": "636c6d89995a46699ed7a3c4a70b58b02d3f627006d98797686836ffb4089ecf",
+      "published_bytes": 1019
+    },
+    {
+      "path": "guides/4fc9308069ae003620aa.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "3efd4e89738705d6ed8d2987dbd7b6e8d283b95ed46f02ab31b2f68a9129ee1c",
+      "original_bytes": 2392,
+      "published_sha256": "f8d256924617a7e12c916b05cd5738d63638afa66739caaa9be271410b30503b",
+      "published_bytes": 2427
+    },
+    {
+      "path": "guides/506c42aa248a6bc447a8.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "a0d7846d16c78a3810809fee949012b202722cba72c815f24b5e29473a39018c",
+      "original_bytes": 1790,
+      "published_sha256": "d1478b6f0e61a7a197ddc96d5c6860612860a7fef641cba67680d17b15e7e334",
+      "published_bytes": 1808
+    },
+    {
+      "path": "guides/58df41c3d399ac3ef09c.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "5777ddf973b577d479998871e01b33b805ad01463eea97603b4c6e545a4ceaf9",
+      "original_bytes": 2976,
+      "published_sha256": "99186437e7e7b09a06f8defb4b18ef7facdf97c2ddefcf87930944461ba9ef94",
+      "published_bytes": 2984
+    },
+    {
+      "path": "guides/5aa846d059c6097802f6.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "4cea41713c9b8a789e9615eacedc7a93f637d0830a91b3019b040fb89cf7d490",
+      "original_bytes": 1326,
+      "published_sha256": "4c3035a572e476edaf6188f775b137639243cbdc63b6e11b648d1c1ee4522ac8",
+      "published_bytes": 1321
+    },
+    {
+      "path": "guides/6d5711c896c167b60d80.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "a074b38a1c500ff5ce413a9a3336d5f41b85f1bd7be2c0b47d8d9ba927ca7b00",
+      "original_bytes": 2988,
+      "published_sha256": "53618a7af4a0d7e3f8c53f7b6bcf9c9bf634c7c06dd5d33182ebf21d00e9b910",
+      "published_bytes": 2996
+    },
+    {
+      "path": "guides/71d9f93190a6a6aaa2b3.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "85d618661bba9be166eb04aca53e9d2ca6fc82ec37c3781315a9359d7caee7a3",
+      "original_bytes": 982,
+      "published_sha256": "7da3d877bd592ff253db3ca05990af9b09dde132e9efe9ed6a7705dc23dd7169",
+      "published_bytes": 1014
+    },
+    {
+      "path": "guides/7468dd15fec12fd07087.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "8212232a45bb77cc7b6ce0f0f8e35ad9d003379a35da905b2fafef6aa5926352",
+      "original_bytes": 2786,
+      "published_sha256": "eeab84aecbf14a5552aa7cd0f69a6c51a6a272eceec5ceab1b677b5a3a35b8fb",
+      "published_bytes": 2794
+    },
+    {
+      "path": "guides/76781ae8f95bb8255b70.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "fa4d85a236b96f604eb29ae859d7937286d9c924b7adf15e3fcccf5d4bed4d92",
+      "original_bytes": 14189,
+      "published_sha256": "fa4e09ce5f651ce1315132feaf16a39c0ed0b428a6b36d23939df1e04a4f178b",
+      "published_bytes": 14192
+    },
+    {
+      "path": "guides/7bd1ba282f0eae54c686.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "560fa310360f060f7094fb2210a0eee856e5c7d04ebb13356081045b2ae2d348",
+      "original_bytes": 14153,
+      "published_sha256": "39c99ff579ef213c4b46c8b1409db07d58fcc448a6342c464789b0ec98f0fa7b",
+      "published_bytes": 14156
+    },
+    {
+      "path": "guides/7d7bbbff8229f64d129d.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "7ac130e58a8bfed08cd81c5796eeaa146e72938a7e245963db3f8a4727cf5fe8",
+      "original_bytes": 14189,
+      "published_sha256": "de7e1fdc1bb90ca869ba716ef9a7bc34a4d13f601768311c3a78322c4649dc97",
+      "published_bytes": 14192
+    },
+    {
+      "path": "guides/803c64a4052738606dee.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "8d88a53d25e850221978b18fee3b5b7f2f46262a7c7fe9ec57f03115f8f207bc",
+      "original_bytes": 986,
+      "published_sha256": "cf960b9325390d2964a4e9afbaa5a82a1c0cfc0257915d7a8b986d83d72dbaa4",
+      "published_bytes": 1018
+    },
+    {
+      "path": "guides/86f063a1af0e3348ecb1.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "5a389d0253a8c7a8fb02cf33dc7cc4e0b42621bfe72551362c35966105744c5f",
+      "original_bytes": 2785,
+      "published_sha256": "2911e826c8854efe45950bd7eb028339edf93ed22afe37bf6da08f27631156cf",
+      "published_bytes": 2793
+    },
+    {
+      "path": "guides/88c03110708f2da8f75f.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "401074cfb931b2c3e318f36c681f4d3acee4ed3f9c67e8437e8c2bdcedf3289e",
+      "original_bytes": 2988,
+      "published_sha256": "b9a2240fef9fc85a8c9080e69fdcf3cb8810d066f0d5d0e87fa67933d28aad61",
+      "published_bytes": 2996
+    },
+    {
+      "path": "guides/965416166dcac2c6560e.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "77039d6f5a63afd94ecbd9395142b35b23323bedc700242cbbf80988a1cd3b59",
+      "original_bytes": 14153,
+      "published_sha256": "686c9c8ce1e35e72f79404fed7d0766c1fc6b36c88615559035f7daabc2ac459",
+      "published_bytes": 14156
+    },
+    {
+      "path": "guides/a040be6e991a49d0db60.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "fc569a7b3f1a96a9883ae0a11622096cc356b1c40219c3d3f5083e52a73ea4a0",
+      "original_bytes": 14189,
+      "published_sha256": "9db6000cd9fe375b6b91cceed3e315620e09c8ae22324455f13e7668f7924cf9",
+      "published_bytes": 14192
+    },
+    {
+      "path": "guides/a35fbb004ec48bd288cb.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "6f75d9a21a669ae23c73c1952f3c3a5c16eb95b0af0d8be6a6823fb8d196e2ef",
+      "original_bytes": 2781,
+      "published_sha256": "42f33fc403ed74b68bb5d95c5e432c735524164111d5ada8d0d710c0cddf9128",
+      "published_bytes": 2789
+    },
+    {
+      "path": "guides/ac29374cdd5e9e5223e9.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "99a7eafdf464fb3204efb57725c69ebd77b68775c69bec06cf9c53558925610f",
+      "original_bytes": 3983,
+      "published_sha256": "c6d1ee0e51c64817154503d4238a8596498a7a4e8c910274882f87efd537f2a6",
+      "published_bytes": 4004
+    },
+    {
+      "path": "guides/af51bb9c1e6eb7f88c70.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "70041384b1522108c9ed39a93fe4167b5071fce4e7d1dbcfaca570a4fb71a17b",
+      "original_bytes": 1056,
+      "published_sha256": "c7303f702a8373f556d470541b836c2bc16b2d0b7fb139ca69a1af04018ab80c",
+      "published_bytes": 1072
+    },
+    {
+      "path": "guides/cd25570cb2f3298fbb96.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "cf87aade9f75373a5a3b81932e379a7f1b94c9a8916cbf7bea1a38231858f18c",
+      "original_bytes": 14153,
+      "published_sha256": "b79072f80f631a2e3fb8f58595b35be10bd6ae64e4e9feff007d07ab838ea675",
+      "published_bytes": 14156
+    },
+    {
+      "path": "guides/d4c658f38baf98bc4deb.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "55bfad5a2143afbe157c7105b6dc569f1525d69024e21eb1db9111a3c8e3ea39",
+      "original_bytes": 3013,
+      "published_sha256": "dc81a90babcecafc39828892e35e68fe1f5eebefec6e17289f43bd8c3287336d",
+      "published_bytes": 3007
+    },
+    {
+      "path": "guides/d5974a2a12e632f7cfe6.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "e5eea312a10d352e46e072ab59cd777fd682e931ebead857c70eaf7143f2ffc2",
+      "original_bytes": 2785,
+      "published_sha256": "649143d4d6c72ec8eed8ae0f337ffbc959f9394c39b95668f73b7ef2c7608bab",
+      "published_bytes": 2793
+    },
+    {
+      "path": "guides/da9b3379740e9aade634.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "1fbd4229a49cf6981571c8d3d2452fb52defef18e83147513fe9d68fd4365aaa",
+      "original_bytes": 917,
+      "published_sha256": "baf78c2398614a086206f009f343f8ae31d9e2c9140cfd722d91b0d55f5f84bf",
+      "published_bytes": 935
+    },
+    {
+      "path": "guides/df3f85216253cf7b1757.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "6b8dc1a78c25ea5dfd9501e19eee1c56433ce0cd7ec0869f54628be37d5148bf",
+      "original_bytes": 2991,
+      "published_sha256": "47246532a95d27134229a80376a1b6e04e411ec270fe8a7494a767d91ff35a21",
+      "published_bytes": 2999
+    },
+    {
+      "path": "guides/e7bf7e0849c58be184e3.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "234ca1162ce6e09aa97befdc0da33745f0cadaf3c83da3a8a86d68a4b21a894e",
+      "original_bytes": 20786,
+      "published_sha256": "cc84b027d8d3538f4d4af0ef477757dd8b08ffaded99372364835296f9df9d10",
+      "published_bytes": 20789
+    },
+    {
+      "path": "guides/f7cc70e5aa22ad6153ae.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "5f7aca344f1b0d8ad615478796792a3cd99655e341e8cc1de859a24793e29d0d",
+      "original_bytes": 1055,
+      "published_sha256": "8b9e6d47fa1c50dc0d7074aa14492f382b7a7f5899b2d7e6caafdad499108a5e",
+      "published_bytes": 1071
+    },
+    {
+      "path": "guides/fa939b347fa0ffce5bd8.md",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "1d8f88032c656d4559ebb3d9adc493efa05709402c02267d43c125be233c7fa2",
+      "original_bytes": 2445,
+      "published_sha256": "106fb5b3a24506823d8b23e234b2f1ff68b36c961bcedbc0eccecff8806ebb04",
+      "published_bytes": 2463
+    },
+    {
+      "path": "toolkit-index.csv",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "5891c3d1beafec8809aaec34985c72d6b6551d0d8a159211471cc240c1ff6e77",
+      "original_bytes": 3804662,
+      "published_sha256": "8c9959f8af9788ee5d79a9bb38f0dac63aa55860445bb16f8aab992ff751fb76",
+      "published_bytes": 3805048
+    },
+    {
+      "path": "toolkit.json",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "08a2005593ffe9dc190772750db5223eac01c312dfe13e4802fd52bda518a201",
+      "original_bytes": 4239854,
+      "published_sha256": "91c489bb4b3630d216fa2403f6d76e6983415e156742bc34129ed150bc49d131",
+      "published_bytes": 4240022
+    },
+    {
+      "path": "verification/condcount-bounded-runtime.json",
+      "reasons": [
+        "agent names replaced with HASH$CyberAxe credit / owner quotes with CyberAxe"
+      ],
+      "original_sha256": "b726f85728d89d90bae584e5ab7e4d773ac890f5fcf8e9be8646a1bc9d95fff9",
+      "original_bytes": 861,
+      "published_sha256": "9f605e418ddc6946a12cdaafe83e6347668c30d713a85692688c2b79c588e3a4",
+      "published_bytes": 867
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.PEAK (MEM)",
+ "question": "M2: necessity: which stage sets the peak",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "The peak is the half-gcd stage, 40,741,792 B, not the power stage (37,624,320 B = twiddles 2,097,152 + Y 12,582,912 + tmp 4,194,304 + MU 6,249,952 + g 6,250,016 + F 6,249,984). Build g peaks at 14,638,624 B. Bringing the gcd stage down to the power peak would give 37,816,699 B = 2^25.1725, i.e. 0.1143 bit.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt; research/poseidon/orchard/lean_r2/pkg_stage_r2/submission-note.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.PEAK|MEM|M2. Peaks read from the stage lines; sums recomputed by me; 122,747 text/data/bss + 65,536 stack + 4,096 slack added on top as in the note.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "a different buffer layout or a measured smaller peak"
+}

@@ -1,0 +1,1 @@
+case=e3 peak<=5: NONE (exhaustive)  nodes=37021154 states=4268405  109.0s

@@ -1,0 +1,9 @@
+HEAD arr walk W 8 set 0 eta d9 ncls 16 sumper 4227072 beta bf nd 4 nouter 2048 first 0 count 4 base 0000000030e43090 thi0 0 nt 1 treecap 1000
+RUN set 0 run 0 seed e2 bd dc aa trials 33423481 tzero 130951 bad 0 coll 0 listed 0 z1 130185 z3 144263 z4 130246 z6 119807 z2 7226
+HIT set 0 run 1 g 127523 k 15 y4 d9 thi 0 d1 df tlo 153 t 153 fwd 1 cv 1 tree 1
+RUN set 0 run 1 seed 5f 37 e1 f trials 33423499 tzero 130933 bad 0 coll 1 listed 1 z1 130971 z3 143460 z4 129930 z6 119644 z2 7094
+RUN set 0 run 2 seed d8 72 9c 7c trials 33423700 tzero 130732 bad 0 coll 0 listed 0 z1 130529 z3 143678 z4 130462 z6 119581 z2 7140
+HIT set 0 run 3 g 203670 k 11 y4 99 thi 0 d1 5f tlo 64 t 64 fwd 1 cv 1 tree 1
+RUN set 0 run 3 seed 5 74 63 28 trials 33423655 tzero 130777 bad 0 coll 1 listed 1 z1 130658 z3 143971 z4 130375 z6 119239 z2 7071
+PART set 0 trials 133694335 tzero 523393 bad 0 coll 2 found 2 fwd 2 cv 2 bogus 0 tree 2/2 tcomp 7382 seconds 0.2 gpu 0.0
+END

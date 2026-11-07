@@ -1,0 +1,3 @@
+original_filename: vanoorschot-wiener_Parallel-Collision-Search_JoC1999.pdf
+source_url: https://people.scs.carleton.ca/~paulv/papers/JoC97.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

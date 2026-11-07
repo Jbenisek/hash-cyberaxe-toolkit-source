@@ -1,0 +1,1 @@
+W=8 rotations {16: 4, 12: 3, 8: 2, 7: 1}: 3000 random basis assignments, 100 words each checked against the real toy compression (counter = T0, flags 3): mismatches 0; varying C0.c1 over 2^8 values gives 256 distinct (T0, message) pairs

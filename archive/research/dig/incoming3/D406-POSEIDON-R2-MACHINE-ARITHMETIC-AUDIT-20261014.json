@@ -1,0 +1,22 @@
+{
+  "id": "D406-POSEIDON-R2-MACHINE-ARITHMETIC-AUDIT-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.FMUL and MACHINE.FADD exact ledger decomposition",
+  "question": "Does the checked-in Poseidon-r2 ledger omit or overcharge field multiply/add operations?",
+  "labels": ["C"],
+  "status": "LOCAL_ONLY",
+  "number": "Read-only audit of lean_r2 logs/ledger_r2.txt: FADD=13,435,325,042; FSUB=12,622,540,897; FMUL=12,274,801,600; FSQR=284,827,007; field subtotal=38,617,494,546; all charged=147,592,743,256. Exact counter sums hold. No unpriced FMUL/FADD term exists under the declared one-operation-per-field-operation model.",
+  "source": "our workflow: read-only Poseidon-r2 ledger arithmetic audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D406_poseidon_r2_machine_arithmetic_audit.md; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt; research/poseidon/orchard/lean_r2/common.h; research/poseidon/orchard/lean_r2/proof_template.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.005,
+  "prior": 0.005,
+  "gain_basis": "C",
+  "notes": "The result is exact for the checked-in ledger and its declared machine model. A lower row would require a new kernel/hardware-price premise and organiser acceptance; no score credit is claimed.",
+  "reopen_if": "A lossless replacement kernel or organiser ruling changes the per-field-operation hardware price or demonstrates an omitted charged term."
+}

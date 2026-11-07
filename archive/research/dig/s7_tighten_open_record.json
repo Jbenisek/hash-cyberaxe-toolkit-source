@@ -1,0 +1,22 @@
+{
+  "id": "S7-TIGHTEN-SUMMARY-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "r7 K and GB-exit tightening summary",
+  "question": "After the finite K and GB-exit probes, what tightening remains open?",
+  "labels": ["N", "C", "S"],
+  "status": "OPEN",
+  "number": "GB baseline 44925; all 4 deterministic and 32 shuffled alternatives worse/invalid; K 512-trial minimum trial329 BSTEP44930, conditional time 124.73417",
+  "source": "research/sol_answer_S7_tighten_summary_1014.md",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_GB_exit_1014.md; research/sol_answer_S7_K_reselect_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0003,
+  "gain_basis": "T",
+  "potential_bits": 0.02,
+  "prior": 0.2,
+  "peak_mem": "1039744 B for trial329 conditional ledger",
+  "notes": "Finite local tests only. Exhaustive exit-set optimization, charged constant selector, and package/pre-file remain open; no package/stage/filing/submission."
+}

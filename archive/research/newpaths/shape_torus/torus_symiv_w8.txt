@@ -1,0 +1,1 @@
+w=8 symmetric-IV hypothetical: 2^16 two-orbit messages, symmetry violations 0 (all symmetric); full-digest collisions found 0 (expect ~2^(4w-1)/2^(4w) = 0.5)

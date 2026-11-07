@@ -1,0 +1,95 @@
+# failed trials (TRIALS - 1 of them) also execute xfree(G) after the gcd, charged in stage D outside the half-gcd figure: XFREE_G each
+
+Source: `research/poseidon/orchard/exec_r4mt/build_package.py`
+
+Public SHA-256: `df4563145cf890cdef6a46497c5cdf8d7d1bdeef4b00d3568f6cd9ebccdf804a`
+
+## Purpose recorded in the source
+
+Assemble pkg_stage_exec/ (claim.json, proof.md, certificates/) and submission-note_exec.md for the executed-outcome entry (r = 1, 2 or 3, read from the log).
+Every number comes from logs/exec_run.txt (the one counted run), logs/size_exec.txt (static image), logs/mem_exec.json (memmeter peak of the counted run) and data/collisions_exec.json.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "json",
+  "math",
+  "os",
+  "poseidon_ref",
+  "re",
+  "shutil",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "L",
+    "line": 18,
+    "arguments": [
+      "x"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "ceil5",
+    "line": 19,
+    "arguments": [
+      "x"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "ceil3",
+    "line": 20,
+    "arguments": [
+      "x"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "stage",
+    "line": 42,
+    "arguments": [
+      "name"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "appendix",
+    "line": 129,
+    "arguments": [],
+    "doc": ""
+  },
+  {
+    "name": "ln",
+    "line": 199,
+    "arguments": [
+      "prefix"
+    ],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/poseidon/orchard/exec_r4mt/proof_template_exec.md
+- research/poseidon/d189_gpu_results.jsonl
+- research/poseidon/d192_r2_results.jsonl
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

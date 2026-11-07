@@ -1,0 +1,5 @@
+min K=6: closing guess sets found 0
+
+real	0m7.042s
+user	0m14.068s
+sys	0m0.008s

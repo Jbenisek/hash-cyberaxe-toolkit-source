@@ -1,0 +1,48 @@
+{
+ "schema_version": 3,
+ "submission_state": "draft",
+ "target_profile": "poseidon-orchard-r@@R@@-prefix-v1",
+ "attack_class": "ordinary-collision",
+ "rounds": @@R@@,
+ "claim": {
+  "time_log2": @@TIME_LOG2@@,
+  "time_unit": "target-compressions",
+  "memory_log2_bytes": @@MEM_LOG2@@,
+  "preprocessing_log2": @@PREP_LOG2@@,
+  "success_probability": @@P_SUCC@@,
+  "nonuniform_advice_log2_bytes": 0
+ },
+ "restrictions": [
+  "Applies to the selected target poseidon-orchard-r@@R@@-prefix-v1 only (@@PARTIAL@@ plus the eight fixed full rounds); the construction uses the first two full rounds being skippable on a line and gives no claim for other round counts.",
+  "time_log2 is the worst-case operation count of the algorithm of proof.md section 4 (at most K = @@K@@ centres, every trial charged in full with the root isolation at its cap of @@Z@@ rounds, one thread), plus the offline bound of @@OFFLINE_BOUND@@ operations of proof.md section 6.2, which is declared as preprocessing_log2 = @@PREP_LOG2@@ and is inside time_log2 (one quantity); memory_log2_bytes is the footprint. Cost model orchard-field-ram-v2: every field operation, load, store, control operation and random word is priced 1/C, C = 216 + 21 r = @@C@@.",
+  "success_probability @@P_SUCC@@ is a probability over the algorithm's fresh independent uniform random words (the cost model's random-word primitive) for the fixed target, derived from the one score-critical premise H-GEOM-w@@W@@ as 1 - (1 - q)^K - K (eps_coin + eps_iso) with q = @@Q@@ (proof.md section 9.2)."
+ ],
+ "baseline_improved": "poseidon-orchard-r@@R@@-nominal-v2",
+ "certificate_manifest": "certificates/manifest.json",
+ "lane": "exploratory",
+ "heuristics": [
+  {
+   "id": "H-GEOM-w@@W@@",
+   "statement": "Notation: p is the Pallas prime, D = 5^@@DEXP@@, F in F_p[X] the fixed digest polynomial of proof.md section 2.3 at r = @@R@@ (degree D). G(c,t) = (F(c+t) - F(c-t))/(2t) in F_p[c,t] (total degree D-1; G(c,t) = g_c(t^2) for the odd part g_c of proof.md section 3). k(c) is the number of nonzero squares S = t^2 with G(c,t) = 0 (k(c) = deg G_c). V is the Zariski closure of {(c,s1,s2) : G(c,s1) = G(c,s2) = 0, s1^2 != s2^2}. Premise: the plane curve G = 0 has at least one absolutely irreducible component defined over F_p, and V is a curve (pure dimension 1) with at most w = @@W@@ absolutely irreducible components defined over F_p. Reduction (proved from Weil's bound with explicit constants, Bezout and the plane genus bound; proof.md section 9.2, numbers recomputed in Appendix D): for c uniform in F_p, E[k] >= 1/2 - e1 and E[k(k-1)] <= w/4 + e2 with e1 < @@E1@@ and e2 < @@E2@@; Cauchy-Schwarz gives P(k >= 1) >= @@Q_CS@@ and Markov on k(k-1) gives P(k > @@DMAX@@) <= @@TAIL@@, so the event 1 <= k <= @@DMAX@@ has probability at least q = @@Q@@ for a uniform centre; two independent coin centres then succeed with probability at least @@P_SUCC_EXACT@@ (with the coin and isolation terms of proof.md 9.2 and 9.4).",
+   "role": "score-critical",
+   "scope": "The fixed Poseidon target poseidon-orchard-r@@R@@-prefix-v1, this line construction (the line j = @@LINE@@ of the first two rounds, odd part about a centre, proof.md sections 2-3), the polynomial F of proof.md section 2.3; centres uniform on F_p. Not claimed for other round counts. Nothing else in the success bound is heuristic apart from the supporting heuristic H1-charging-rules: the Weil-Cauchy-Schwarz reduction, the isolation lemma (proof.md 9.4) and the independence of the centres (each draw uses fresh random words) are proved in proof.md.",
+   "extrapolation": "From the two moments of k(c) that H-GEOM-w@@W@@ gives through Weil's bound to the success of the algorithm at r = @@R@@. The bound is explicit and applies for r <= 7 (at r >= 8 the plane genus bound exceeds the main term). Support: usable roots appeared at three of the four centres tried in our executed full-scale runs at r = 3, 4, 5 (proof.md section 10.1).",
+   "evidence_ids": [
+    "proof:@@LN_PREMISE@@",
+    "proof:@@LN_EVIDENCE@@"
+   ],
+   "limitations": "It concerns this F, not every polynomial of degree D: it is false for permutation polynomials (every pure composition of maps x -> a x^5 + b, p = 2 mod 5, is bijective and has k = 0), and a statement about components over the algebraic closure alone does not imply it (X^3 over F_101: two conjugate lines, no off-diagonal rational point). The explicit constants apply for r <= 7."
+  },
+  {
+   "id": "H1-charging-rules",
+   "role": "supporting",
+   "statement": "The counts of proof.md sections 6 and 7 are the operation counts of the algorithm of proof.md section 4 under the stated rules: 1 per field operation (a Montgomery conversion is one multiplication), 1 per element load or store plus 1 address operation, 3 per loop iteration plus 2 per loop exit, 1 per other executed index or control operation, @@C@@ per reduced permutation evaluation, @@COIN_DRAW_COST@@ per coin draw (five random words), the allocator charged per executed operation, and a register file of 18 words of 256 bits per transform block as the only register assumption. The algorithm runs on one thread; there is no dispatch. Two further statements are declared: (A1) the Euclidean sequences of stage D are normal (every quotient has degree 1), which is the case the stage D count describes; (A2) the arena of proof.md section 7 (@@ARENA@@ bytes) suffices for the largest trial.",
+   "scope": "All stages of the algorithm of proof.md section 4 at the target dimensions (m = @@M@@, @@N2@@ evaluations of the line and transforms of @@H@@ points), at their worst case over coins and data (proof.md section 6).",
+   "extrapolation": "The worst-case counts are derived by formula (proof.md section 6) and compared with the instrumented totals of our executed runs at smaller r (proof.md section 6.1). The arena rule (1.177 times the heap peak of the allocation walk plus 704 bytes) held at r = 3, 4, 5.",
+   "evidence_ids": [
+    "proof:@@LN_LEDGER@@"
+   ],
+   "limitations": "Word-level costs outside the stated rules (cache, bandwidth) are not part of the model."
+  }
+ ]
+}

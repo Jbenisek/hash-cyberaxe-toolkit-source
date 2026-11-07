@@ -1,0 +1,177 @@
+selftest 070c0307: S 67,633,152 r7 67,698,688 total 76,161,024 rows 14 eta 830303cf
+A eval 50 t   10.2s T 0.08651 cur 8b2c0f13 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 100 t   20.3s T 0.07476 cur cb2c0bd7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 150 t   30.2s T 0.06477 cur 133c7bc7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 153, T 0.06419, best 2f1c33e7 score 1690.901094
+A eval 200 t   40.1s T 0.05611 cur b32c2bcf best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 250 t   49.7s T 0.04886 cur db3c576f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 298, T 0.04262, best 2f1c33e7 score 1690.901094
+A eval 300 t   59.6s T 0.04237 cur 6f1c53e7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 350 t   69.8s T 0.03654 cur 6f0c1f37 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 400 t   80.0s T 0.03156 cur cb3c6f7f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 439, T 0.02809, best 2f1c33e7 score 1690.901094
+A eval 450 t   90.3s T 0.02718 cur 9f0c33cf best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 500 t  100.3s T 0.02353 cur 371c57b7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 550 t  110.3s T 0.02035 cur 8b3c6b5f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 583, T 0.01853, best 2f1c33e7 score 1690.901094
+A eval 600 t  120.3s T 0.01762 cur 871c23eb best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 650 t  130.1s T 0.01529 cur 832c4ff7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 700 t  140.0s T 0.01324 cur 533c1777 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 731, T 0.01217, best 2f1c33e7 score 1690.901094
+A eval 750 t  150.0s T 0.01146 cur 971c3feb best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 800 t  159.8s T 0.009941 cur 4f1c73af best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 850 t  169.4s T 0.00866 cur bf1c5397 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 870, T 0.008196, best 2f1c33e7 score 1690.901094
+A eval 900 t  179.2s T 0.007518 cur df1c6bc7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 950 t  189.0s T 0.00652 cur b32c0fe7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 1000 t  199.2s T 0.005628 cur 033c4f07 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 1018, T 0.005347, best 2f1c33e7 score 1690.901094
+A eval 1050 t  209.6s T 0.004841 cur 471c6ba7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 1100 t  219.7s T 0.004186 cur 571c2b77 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A eval 1150 t  229.9s T 0.003613 cur 3f0c539f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+A restart at eval 1162, T 0.003494, best 2f1c33e7 score 1690.901094
+A eval 1200 t  240.0s T 0.00312 cur 1f0c3777 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1250 t    3.3s T 0.9523 cur 833c1b77 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1300 t    8.1s T 0.8843 cur 632c3f47 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1350 t   11.9s T 0.8309 cur bf2c438b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 1361, T 0.823, best 2f1c33e7 score 26.182550
+B eval 1400 t   12.8s T 0.8194 cur 533849e8 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1450 t   13.0s T 0.8178 cur 0a7dd477 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1500 t   13.1s T 0.8163 cur b313ddac best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 1509, T 0.816, best 2f1c33e7 score 26.182550
+B eval 1550 t   13.2s T 0.8148 cur ba2117dc best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1600 t   13.3s T 0.8133 cur f01da416 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1650 t   13.5s T 0.8117 cur 24cd6b8a best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 1657, T 0.8115, best 2f1c33e7 score 26.182550
+B eval 1700 t   13.6s T 0.8102 cur 322dea16 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1750 t   13.7s T 0.8088 cur a68352ff best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1800 t   13.8s T 0.8073 cur eebd2625 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 1808, T 0.8062, best 2f1c33e7 score 26.182550
+B eval 1850 t   19.4s T 0.7428 cur f71c27a7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1900 t   24.8s T 0.6831 cur df2c779f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 1950 t   30.6s T 0.6219 cur 8f1c53e7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 1952, T 0.6218, best 2f1c33e7 score 26.182550
+B eval 2000 t   31.0s T 0.6188 cur 46196073 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2050 t   31.1s T 0.6176 cur 765b2c98 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2100 t   31.2s T 0.6162 cur 0deb38a2 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 2101, T 0.6162, best 2f1c33e7 score 26.182550
+B eval 2150 t   35.7s T 0.5765 cur 7f0c732f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2200 t   41.5s T 0.5268 cur 733c139f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 2243, T 0.4864, best 2f1c33e7 score 26.182550
+B eval 2250 t   46.7s T 0.4849 cur 988fae16 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2300 t   46.8s T 0.4838 cur f8e2f119 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2350 t   47.0s T 0.4827 cur ca0da11d best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 2394, T 0.4818, best 2f1c33e7 score 26.182550
+B eval 2400 t   47.6s T 0.4784 cur 271c33f7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2450 t   52.9s T 0.4414 cur d70c4f8f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2500 t   59.7s T 0.3965 cur a33c3b0b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 2535, T 0.372, best 2f1c33e7 score 26.182550
+B eval 2550 t   65.5s T 0.3636 cur 7f1c43fb best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2600 t   71.1s T 0.3321 cur 6f0c3f5f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2650 t   75.9s T 0.309 cur 3f0c2fdf best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 2677, T 0.2978, best 2f1c33e7 score 26.182550
+B eval 2700 t   78.2s T 0.2976 cur cb307d4e best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2750 t   78.3s T 0.2968 cur 71c1b6b4 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2800 t   78.5s T 0.2962 cur 2eea33ad best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 2826, T 0.2959, best 2f1c33e7 score 26.182550
+B eval 2850 t   81.2s T 0.2849 cur 8f2c0317 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2900 t   85.7s T 0.2657 cur 273c2fdf best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 2950 t   91.5s T 0.2418 cur 0f3c4347 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 2963, T 0.2371, best 2f1c33e7 score 26.182550
+B eval 3000 t   96.0s T 0.2265 cur 230c03db best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3050 t  101.7s T 0.2073 cur f33c4b43 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3100 t  107.5s T 0.189 cur 373c1727 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 3104, T 0.1877, best 2f1c33e7 score 26.182550
+B eval 3150 t  114.0s T 0.1712 cur 3f2c0b33 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3200 t  119.3s T 0.1573 cur ab3c2bfb best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 3243, T 0.1489, best 2f1c33e7 score 26.182550
+B eval 3250 t  123.1s T 0.1482 cur 2f1c3367 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3300 t  131.6s T 0.1308 cur ab1c637b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3350 t  136.2s T 0.1214 cur c31c7b8b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 3382, T 0.1159, best 2f1c33e7 score 26.182550
+B eval 3400 t  141.7s T 0.1111 cur ab3c7327 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3450 t  147.9s T 0.1013 cur 232c5773 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3500 t  153.6s T 0.09266 cur 9f2c271b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 3525, T 0.08942, best 2f1c33e7 score 26.182550
+B eval 3550 t  159.4s T 0.08438 cur ef0c57e7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3600 t  166.3s T 0.07586 cur df0c1f6b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3650 t  172.7s T 0.06866 cur 071c6393 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 3664, T 0.06696, best 2f1c33e7 score 26.182550
+B eval 3700 t  178.8s T 0.06269 cur 5b3c072f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3750 t  183.5s T 0.05824 cur 032c37ef best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3800 t  188.2s T 0.05419 cur 0b3c17f3 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 3810, T 0.05314, best 2f1c33e7 score 26.182550
+B eval 3850 t  189.6s T 0.05287 cur 4f1feb2d best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3900 t  189.7s T 0.05274 cur 264f92f7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 3950 t  190.0s T 0.05252 cur 33fb1dda best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 3960, T 0.0525, best 2f1c33e7 score 26.182550
+B eval 4000 t  190.2s T 0.05239 cur 052afd4b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4050 t  190.3s T 0.05228 cur a472858b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4100 t  190.5s T 0.05216 cur b5b6aa90 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 4108, T 0.05214, best 2f1c33e7 score 26.182550
+B eval 4150 t  190.6s T 0.05204 cur 29aaa425 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4200 t  190.8s T 0.05191 cur 878babc8 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4250 t  191.1s T 0.05166 cur 4da93f2f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 4258, T 0.05161, best 2f1c33e7 score 26.182550
+B eval 4300 t  191.3s T 0.05149 cur b668c17c best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4350 t  191.5s T 0.05136 cur 5352c7c3 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4400 t  191.6s T 0.05123 cur 32f7e67e best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 4403, T 0.05122, best 2f1c33e7 score 26.182550
+B eval 4450 t  196.8s T 0.04729 cur 7f0c03c3 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4500 t  201.9s T 0.04365 cur 871c575f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 4544, T 0.04047, best 2f1c33e7 score 26.182550
+B eval 4550 t  207.9s T 0.03993 cur 8f1c03ef best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4600 t  213.3s T 0.03661 cur 471c37bb best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4650 t  219.0s T 0.03363 cur 7f0c7faf best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 4686, T 0.03197, best 2f1c33e7 score 26.182550
+B eval 4700 t  222.3s T 0.03183 cur e13fd93c best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4750 t  222.5s T 0.03176 cur d8b3e8e2 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4800 t  222.6s T 0.03169 cur 82f53b01 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 4836, T 0.03163, best 2f1c33e7 score 26.182550
+B eval 4850 t  222.8s T 0.03159 cur 14f451db best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4900 t  222.9s T 0.03152 cur ed37644b best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 4950 t  223.1s T 0.03144 cur 744dfbec best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 4979, T 0.0314, best 2f1c33e7 score 26.182550
+B eval 5000 t  224.5s T 0.03075 cur 2f1c3b67 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5050 t  230.1s T 0.02823 cur 371c4fcf best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5100 t  235.1s T 0.02614 cur c71c2f43 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 5123, T 0.02531, best 2f1c33e7 score 26.182550
+B eval 5150 t  237.8s T 0.02504 cur 75a18ebe best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5200 t  237.9s T 0.02499 cur 8d554148 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5250 t  238.1s T 0.02493 cur 472e34ea best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 5272, T 0.02491, best 2f1c33e7 score 26.182550
+B eval 5300 t  241.3s T 0.02373 cur df1c13f7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5300 t  241.3s T 0.02371 cur d71c13f7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5350 t  246.4s T 0.02197 cur df1c5be7 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5400 t  252.0s T 0.02009 cur 970c47af best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 5409, T 0.01989, best 2f1c33e7 score 26.182550
+B eval 5450 t  258.2s T 0.0183 cur e70c4f2f best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5500 t  264.2s T 0.01668 cur f70c3f97 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 5546, T 0.01536, best 2f1c33e7 score 26.182550
+B eval 5550 t  269.5s T 0.0153 cur 2f1c3327 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5600 t  275.0s T 0.0141 cur 570c07bf best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5650 t  280.6s T 0.0129 cur 3f1c2f87 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B restart at eval 5679, T 0.01217, best 2f1c33e7 score 26.182550
+B eval 5700 t  286.6s T 0.01178 cur 8f0c1b77 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+B eval 5750 t  293.3s T 0.01059 cur d70c5327 best 2f1c33e7 S 67,633,152 total 76,161,024 eta 830303cf
+
+evaluations 5794 (phase A 1213), binary seconds 536.8, wall 540.1
+class members evaluated: 2499; distinct S values 1: [67633152]...[67633152]
+class members: distinct total values 3; max total 76,161,024 (best known 76,161,024); members above best known: 0; S above 67,633,152: 0
+distinct eta (classes) visited: 1030
+  eta 830303cf fixed 13: best member 070c0307 total 76,161,024 S 67,633,152 r7 67,698,688 rows 14
+  eta 830503cf fixed 13: best member 732c3f26 total 21,196,800 S 15,073,280 r7 15,073,280 rows 16
+  eta 830303d7 fixed 13: best member 6f300f4b total 1,572,864 S 1,572,864 r7 1,572,864 rows 1
+  eta 830307cf fixed 14: best member 2d1c33e7 total 0 S 0 r7 0 rows 0
+  eta 830303df fixed 14: best member 2f1433e7 total 0 S 0 r7 0 rows 0
+  eta 830305cf fixed 13: best member 2e1c23a7 total 0 S 0 r7 0 rows 0
+  eta 830303c9 fixed 11: best member 3b3d3ba7 total 0 S 0 r7 0 rows 0
+  eta 83030dcf fixed 14: best member 3a3c2ba7 total 0 S 0 r7 0 rows 0
+  eta 830302cb fixed 11: best member 3bbe2ba7 total 0 S 0 r7 0 rows 0
+  eta 830703cf fixed 14: best member 3b3c7ba5 total 0 S 0 r7 0 rows 0
+  eta 8f0303cf fixed 15: best member bb2c69a7 total 0 S 0 r7 0 rows 0
+  eta 830302cf fixed 12: best member 3bac6ba7 total 0 S 0 r7 0 rows 0
+  eta 830303f7 fixed 14: best member 3b287ba7 total 0 S 0 r7 0 rows 0
+  eta 8f03024f fixed 13: best member 3b6c69a7 total 0 S 0 r7 0 rows 0
+  eta 830303cb fixed 12: best member 1b2e4bb3 total 0 S 0 r7 0 rows 0
+best overall (phase B) 2f1c33e7 eta 830303cf: total 76,161,024 S 67,633,152 rows 14

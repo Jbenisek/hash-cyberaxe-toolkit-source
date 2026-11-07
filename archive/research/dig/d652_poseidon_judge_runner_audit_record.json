@@ -1,0 +1,23 @@
+{
+  "id": "D652-POSEIDON-JUDGE-RUNNER-AUDIT-20261014",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon Orchard judge-runner empty-message sizing audit",
+  "question": "Does the local organizer runner execute the exact Orchard callback successfully?",
+  "labels": ["P", "D"],
+  "status": "LOCAL_ONLY",
+  "number": "The runner calls digest_fn(b\"\") before any trial. The exact Orchard callback rejects empty input because it requires exactly 64 bytes; a canonical 64-byte zero message returns a 32-byte digest. A synthetic compatibility stub confirms the runner's first callback argument has length 0.",
+  "source": "our workflow: D652 local runner/protocol audit",
+  "own_test": true,
+  "evidence": "research/retest/poseidon/d652_judge_runner_audit.py; research/retest/poseidon/d652_judge_runner_audit.out; research/poseidon/pareto_clone/experiments/runner.py; research/poseidon/pareto_clone/verifier/poseidon.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "checked-in local organizer clone and exact Orchard input contract",
+  "notes": "The compatibility stub is diagnostic only and is not an Orchard digest. No organizer sandbox, package, stage, filing, or submission was used.",
+  "reopen_if": "A runner revision sizes with a valid 64-byte message, or the target contract explicitly defines an empty-message digest"
+}

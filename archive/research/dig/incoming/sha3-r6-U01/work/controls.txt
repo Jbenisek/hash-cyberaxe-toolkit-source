@@ -1,0 +1,4 @@
+q3 controls (run inline with q3.py helpers, linstruct V_best_5 + cond_best_5, our Keccak):
+ conditions ignored, 2 rounds, D_aD_b: fails 200/200
+ conditions met, 3 rounds, D_aD_b: fails 200/200
+ conditions met, 2 rounds (q3_out.json): fails 0/300

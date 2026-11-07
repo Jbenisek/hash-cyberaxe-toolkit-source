@@ -1,0 +1,115 @@
+gcd(5, q-1)=1 checks: {17: 1, 23: 1, 37: 1, 97: 1, 193: 1, 257: 1, 449: 1, 769: 1, 1009: 1, 1000003: 1, 12289: 1}
+
+--- toy q=257 (q-1=256 2-adic 8) seeds=[1, 2, 3] ---
+ seed 1
+   lane0 after R0: equal pairs 8454272 ; expected random 8487168.0 ; ratio 0.9961 ; fibre sizes min/max 257/257 var/mean 0.000
+   lane0 after R1: equal pairs 8481031 ; expected random 8487168.0 ; ratio 0.9993 ; fibre sizes min/max 215/309 var/mean 0.810
+   lane0 after R2: equal pairs 8489187 ; expected random 8487168.0 ; ratio 1.0002 ; fibre sizes min/max 201/300 var/mean 1.057
+   lane0 after R3: equal pairs 8487647 ; expected random 8487168.0 ; ratio 1.0001 ; fibre sizes min/max 205/307 var/mean 1.011
+   lane0 after R4: equal pairs 8485554 ; expected random 8487168.0 ; ratio 0.9998 ; fibre sizes min/max 195/307 var/mean 0.947
+   lane0 after R5: equal pairs 8487579 ; expected random 8487168.0 ; ratio 1.0000 ; fibre sizes min/max 207/303 var/mean 1.009
+   lane0 equal at all of R3..R4: 33025 ; N3/q^1 = 33025.9 ; ratio 1.000
+   lane0 equal at all of R3..R5: 0 ; N3/q^2 = 128.5 ; ratio 0.000
+   lane0 equal at all of R3..R6: 0 ; N3/q^3 = 0.5 ; ratio 0.000
+   lane0 equal at all of R3..R7: 0 ; N3/q^4 = 0.0 ; ratio 0.000
+   r=0: pairs equal at R3 lane0 AND output lane0: 32925 (expected N3/q = 33025.9, ratio 0.997) ; all output-equal pairs 8487404 (ratio to exp 1.0000)
+   r=1: pairs equal at R3 lane0 AND output lane0: 32984 (expected N3/q = 33025.9, ratio 0.999) ; all output-equal pairs 8489001 (ratio to exp 1.0002)
+   r=2: pairs equal at R3 lane0 AND output lane0: 32983 (expected N3/q = 33025.9, ratio 0.999) ; all output-equal pairs 8484561 (ratio to exp 0.9997)
+   r=3: pairs equal at R3 lane0 AND output lane0: 33207 (expected N3/q = 33025.9, ratio 1.005) ; all output-equal pairs 8492236 (ratio to exp 1.0006)
+   r=4: pairs equal at R3 lane0 AND output lane0: 32669 (expected N3/q = 33025.9, ratio 0.989) ; all output-equal pairs 8487016 (ratio to exp 1.0000)
+   r=5: pairs equal at R3 lane0 AND output lane0: 32867 (expected N3/q = 33025.9, ratio 0.995) ; all output-equal pairs 8490620 (ratio to exp 1.0004)
+ seed 2
+   lane0 after R0: equal pairs 8454272 ; expected random 8487168.0 ; ratio 0.9961 ; fibre sizes min/max 257/257 var/mean 0.000
+   lane0 after R1: equal pairs 8479614 ; expected random 8487168.0 ; ratio 0.9991 ; fibre sizes min/max 207/291 var/mean 0.767
+   lane0 after R2: equal pairs 8485281 ; expected random 8487168.0 ; ratio 0.9998 ; fibre sizes min/max 218/304 var/mean 0.939
+   lane0 after R3: equal pairs 8483685 ; expected random 8487168.0 ; ratio 0.9996 ; fibre sizes min/max 220/296 var/mean 0.891
+   lane0 after R4: equal pairs 8490120 ; expected random 8487168.0 ; ratio 1.0003 ; fibre sizes min/max 208/296 var/mean 1.085
+   lane0 after R5: equal pairs 8483376 ; expected random 8487168.0 ; ratio 0.9996 ; fibre sizes min/max 212/309 var/mean 0.881
+   lane0 equal at all of R3..R4: 33269 ; N3/q^1 = 33010.4 ; ratio 1.008
+   lane0 equal at all of R3..R5: 0 ; N3/q^2 = 128.4 ; ratio 0.000
+   lane0 equal at all of R3..R6: 0 ; N3/q^3 = 0.5 ; ratio 0.000
+   lane0 equal at all of R3..R7: 0 ; N3/q^4 = 0.0 ; ratio 0.000
+   r=0: pairs equal at R3 lane0 AND output lane0: 32798 (expected N3/q = 33010.4, ratio 0.994) ; all output-equal pairs 8485100 (ratio to exp 0.9998)
+   r=1: pairs equal at R3 lane0 AND output lane0: 32922 (expected N3/q = 33010.4, ratio 0.997) ; all output-equal pairs 8490686 (ratio to exp 1.0004)
+   r=2: pairs equal at R3 lane0 AND output lane0: 33099 (expected N3/q = 33010.4, ratio 1.003) ; all output-equal pairs 8487338 (ratio to exp 1.0000)
+   r=3: pairs equal at R3 lane0 AND output lane0: 32953 (expected N3/q = 33010.4, ratio 0.998) ; all output-equal pairs 8485820 (ratio to exp 0.9998)
+   r=4: pairs equal at R3 lane0 AND output lane0: 33036 (expected N3/q = 33010.4, ratio 1.001) ; all output-equal pairs 8482880 (ratio to exp 0.9995)
+   r=5: pairs equal at R3 lane0 AND output lane0: 33230 (expected N3/q = 33010.4, ratio 1.007) ; all output-equal pairs 8487102 (ratio to exp 1.0000)
+ seed 3
+   lane0 after R0: equal pairs 8454272 ; expected random 8487168.0 ; ratio 0.9961 ; fibre sizes min/max 257/257 var/mean 0.000
+   lane0 after R1: equal pairs 8492956 ; expected random 8487168.0 ; ratio 1.0007 ; fibre sizes min/max 201/306 var/mean 1.171
+   lane0 after R2: equal pairs 8490960 ; expected random 8487168.0 ; ratio 1.0004 ; fibre sizes min/max 209/303 var/mean 1.111
+   lane0 after R3: equal pairs 8482459 ; expected random 8487168.0 ; ratio 0.9994 ; fibre sizes min/max 210/296 var/mean 0.854
+   lane0 after R4: equal pairs 8485659 ; expected random 8487168.0 ; ratio 0.9998 ; fibre sizes min/max 210/307 var/mean 0.950
+   lane0 after R5: equal pairs 8482261 ; expected random 8487168.0 ; ratio 0.9994 ; fibre sizes min/max 219/302 var/mean 0.848
+   lane0 equal at all of R3..R4: 32679 ; N3/q^1 = 33005.7 ; ratio 0.990
+   lane0 equal at all of R3..R5: 0 ; N3/q^2 = 128.4 ; ratio 0.000
+   lane0 equal at all of R3..R6: 0 ; N3/q^3 = 0.5 ; ratio 0.000
+   lane0 equal at all of R3..R7: 0 ; N3/q^4 = 0.0 ; ratio 0.000
+   r=0: pairs equal at R3 lane0 AND output lane0: 33133 (expected N3/q = 33005.7, ratio 1.004) ; all output-equal pairs 8489437 (ratio to exp 1.0003)
+   r=1: pairs equal at R3 lane0 AND output lane0: 32945 (expected N3/q = 33005.7, ratio 0.998) ; all output-equal pairs 8486897 (ratio to exp 1.0000)
+   r=2: pairs equal at R3 lane0 AND output lane0: 33278 (expected N3/q = 33005.7, ratio 1.008) ; all output-equal pairs 8488657 (ratio to exp 1.0002)
+   r=3: pairs equal at R3 lane0 AND output lane0: 32522 (expected N3/q = 33005.7, ratio 0.985) ; all output-equal pairs 8483437 (ratio to exp 0.9996)
+   r=4: pairs equal at R3 lane0 AND output lane0: 32971 (expected N3/q = 33005.7, ratio 0.999) ; all output-equal pairs 8489043 (ratio to exp 1.0002)
+   r=5: pairs equal at R3 lane0 AND output lane0: 33099 (expected N3/q = 33005.7, ratio 1.003) ; all output-equal pairs 8486921 (ratio to exp 1.0000)
+
+--- toy q=769 (q-1=768 2-adic 8) seeds=[1] ---
+ seed 1
+   lane0 after R0: equal pairs 227082624 ; expected random 227377920.0 ; ratio 0.9987 ; fibre sizes min/max 769/769 var/mean 0.000
+   lane0 after R1: equal pairs 227360683 ; expected random 227377920.0 ; ratio 0.9999 ; fibre sizes min/max 702/863 var/mean 0.940
+   lane0 after R2: equal pairs 227377926 ; expected random 227377920.0 ; ratio 1.0000 ; fibre sizes min/max 696/889 var/mean 0.999
+   lane0 after R3: equal pairs 227368275 ; expected random 227377920.0 ; ratio 1.0000 ; fibre sizes min/max 699/856 var/mean 0.966
+   lane0 after R4: equal pairs 227397524 ; expected random 227377920.0 ; ratio 1.0001 ; fibre sizes min/max 676/863 var/mean 1.065
+   lane0 after R5: equal pairs 227389570 ; expected random 227377920.0 ; ratio 1.0001 ; fibre sizes min/max 670/860 var/mean 1.038
+   lane0 equal at all of R3..R4: 296271 ; N3/q^1 = 295667.5 ; ratio 1.002
+   lane0 equal at all of R3..R5: 0 ; N3/q^2 = 384.5 ; ratio 0.000
+   lane0 equal at all of R3..R6: 0 ; N3/q^3 = 0.5 ; ratio 0.000
+   lane0 equal at all of R3..R7: 0 ; N3/q^4 = 0.0 ; ratio 0.000
+   r=0: pairs equal at R3 lane0 AND output lane0: 295935 (expected N3/q = 295667.5, ratio 1.001) ; all output-equal pairs 227363913 (ratio to exp 0.9999)
+   r=1: pairs equal at R3 lane0 AND output lane0: 296115 (expected N3/q = 295667.5, ratio 1.002) ; all output-equal pairs 227356011 (ratio to exp 0.9999)
+   r=2: pairs equal at R3 lane0 AND output lane0: 296863 (expected N3/q = 295667.5, ratio 1.004) ; all output-equal pairs 227384044 (ratio to exp 1.0000)
+   r=3: pairs equal at R3 lane0 AND output lane0: 295055 (expected N3/q = 295667.5, ratio 0.998) ; all output-equal pairs 227356942 (ratio to exp 0.9999)
+   r=4: pairs equal at R3 lane0 AND output lane0: 294903 (expected N3/q = 295667.5, ratio 0.997) ; all output-equal pairs 227377497 (ratio to exp 1.0000)
+   r=5: pairs equal at R3 lane0 AND output lane0: 295315 (expected N3/q = 295667.5, ratio 0.999) ; all output-equal pairs 227360083 (ratio to exp 0.9999)
+
+--- toy q=1009 (q-1=1008 2-adic 4) seeds=[1] ---
+ seed 1
+   lane0 after R0: equal pairs 513112824 ; expected random 513621360.0 ; ratio 0.9990 ; fibre sizes min/max 1009/1009 var/mean 0.000
+   lane0 after R1: equal pairs 513721202 ; expected random 513621360.0 ; ratio 1.0002 ; fibre sizes min/max 888/1120 var/mean 1.195
+   lane0 after R2: equal pairs 513605349 ; expected random 513621360.0 ; ratio 1.0000 ; fibre sizes min/max 924/1092 var/mean 0.968
+   lane0 after R3: equal pairs 513629163 ; expected random 513621360.0 ; ratio 1.0000 ; fibre sizes min/max 907/1108 var/mean 1.014
+   lane0 after R4: equal pairs 513595136 ; expected random 513621360.0 ; ratio 0.9999 ; fibre sizes min/max 895/1164 var/mean 0.947
+   lane0 after R5: equal pairs 513623926 ; expected random 513621360.0 ; ratio 1.0000 ; fibre sizes min/max 881/1119 var/mean 1.004
+   lane0 equal at all of R3..R4: 508104 ; N3/q^1 = 509047.7 ; ratio 0.998
+   lane0 equal at all of R3..R5: 0 ; N3/q^2 = 504.5 ; ratio 0.000
+   lane0 equal at all of R3..R6: 0 ; N3/q^3 = 0.5 ; ratio 0.000
+   lane0 equal at all of R3..R7: 0 ; N3/q^4 = 0.0 ; ratio 0.000
+   r=0: pairs equal at R3 lane0 AND output lane0: 508951 (expected N3/q = 509047.7, ratio 1.000) ; all output-equal pairs 513637528 (ratio to exp 1.0000)
+   r=1: pairs equal at R3 lane0 AND output lane0: 510442 (expected N3/q = 509047.7, ratio 1.003) ; all output-equal pairs 513648123 (ratio to exp 1.0001)
+   r=2: pairs equal at R3 lane0 AND output lane0: 509365 (expected N3/q = 509047.7, ratio 1.001) ; all output-equal pairs 513673598 (ratio to exp 1.0001)
+   r=3: pairs equal at R3 lane0 AND output lane0: 508870 (expected N3/q = 509047.7, ratio 1.000) ; all output-equal pairs 513609478 (ratio to exp 1.0000)
+   r=4: pairs equal at R3 lane0 AND output lane0: 507857 (expected N3/q = 509047.7, ratio 0.998) ; all output-equal pairs 513604516 (ratio to exp 1.0000)
+   r=5: pairs equal at R3 lane0 AND output lane0: 507966 (expected N3/q = 509047.7, ratio 0.998) ; all output-equal pairs 513609514 (ratio to exp 1.0000)
+  q=97 seed 1: ordered-by-t trail pairs on the R3 surface: 4686 (random expectation ~ n*(q-1)/q^3*n/2 = 4656.0); lane0 equal after R4 for 4686 of them, after R5 for 0 ; output equal r=1: 50, r=2: 47 (random 1/q rate -> 48.3)
+  q=97 seed 2: ordered-by-t trail pairs on the R3 surface: 4556 (random expectation ~ n*(q-1)/q^3*n/2 = 4656.0); lane0 equal after R4 for 4556 of them, after R5 for 0 ; output equal r=1: 37, r=2: 44 (random 1/q rate -> 47.0)
+  q=97 seed 3: ordered-by-t trail pairs on the R3 surface: 4656 (random expectation ~ n*(q-1)/q^3*n/2 = 4656.0); lane0 equal after R4 for 4656 of them, after R5 for 0 ; output equal r=1: 54, r=2: 42 (random 1/q rate -> 48.0)
+  q=193 seed 1: ordered-by-t trail pairs on the R3 surface: 18427 (random expectation ~ n*(q-1)/q^3*n/2 = 18528.0); lane0 equal after R4 for 18427 of them, after R5 for 0 ; output equal r=1: 97, r=2: 109 (random 1/q rate -> 95.5)
+  q=193 seed 2: ordered-by-t trail pairs on the R3 surface: 18374 (random expectation ~ n*(q-1)/q^3*n/2 = 18528.0); lane0 equal after R4 for 18374 of them, after R5 for 0 ; output equal r=1: 118, r=2: 106 (random 1/q rate -> 95.2)
+  q=193 seed 3: ordered-by-t trail pairs on the R3 surface: 18636 (random expectation ~ n*(q-1)/q^3*n/2 = 18528.0); lane0 equal after R4 for 18636 of them, after R5 for 0 ; output equal r=1: 98, r=2: 118 (random 1/q rate -> 96.6)
+  q=257 seed 1: ordered-by-t trail pairs on the R3 surface: 33025 (random expectation ~ n*(q-1)/q^3*n/2 = 32896.0); lane0 equal after R4 for 33025 of them, after R5 for 0 ; output equal r=1: 139, r=2: 116 (random 1/q rate -> 128.5)
+  q=257 seed 2: ordered-by-t trail pairs on the R3 surface: 33269 (random expectation ~ n*(q-1)/q^3*n/2 = 32896.0); lane0 equal after R4 for 33269 of them, after R5 for 0 ; output equal r=1: 123, r=2: 131 (random 1/q rate -> 129.5)
+  q=257 seed 3: ordered-by-t trail pairs on the R3 surface: 32679 (random expectation ~ n*(q-1)/q^3*n/2 = 32896.0); lane0 equal after R4 for 32679 of them, after R5 for 0 ; output equal r=1: 137, r=2: 130 (random 1/q rate -> 127.2)
+  q=449 seed 1: ordered-by-t trail pairs on the R3 surface: 100281 (random expectation ~ n*(q-1)/q^3*n/2 = 100576.0); lane0 equal after R4 for 100281 of them, after R5 for 0 ; output equal r=1: 234, r=2: 267 (random 1/q rate -> 223.3)
+  q=449 seed 2: ordered-by-t trail pairs on the R3 surface: 100331 (random expectation ~ n*(q-1)/q^3*n/2 = 100576.0); lane0 equal after R4 for 100331 of them, after R5 for 0 ; output equal r=1: 233, r=2: 208 (random 1/q rate -> 223.5)
+  q=449 seed 3: ordered-by-t trail pairs on the R3 surface: 100113 (random expectation ~ n*(q-1)/q^3*n/2 = 100576.0); lane0 equal after R4 for 100113 of them, after R5 for 0 ; output equal r=1: 214, r=2: 228 (random 1/q rate -> 223.0)
+  q=17 seed 1: all-state pairs with equal lane-0 S-box input in every one of r partial rounds: [(1, 707472, 707472), (2, 39304, 39304), (3, 0, 0), (4, 0, 0)]   [r, measured, predicted n*(q^(3-r)-1)/2 (r<=3), 0 for r>=3]
+  q=17 seed 2: all-state pairs with equal lane-0 S-box input in every one of r partial rounds: [(1, 707472, 707472), (2, 39304, 39304), (3, 0, 0), (4, 0, 0)]   [r, measured, predicted n*(q^(3-r)-1)/2 (r<=3), 0 for r>=3]
+  q=23 seed 1: all-state pairs with equal lane-0 S-box input in every one of r partial rounds: [(1, 3212088, 3212088), (2, 133837, 133837), (3, 133837, 0), (4, 133837, 0)]   [r, measured, predicted n*(q^(3-r)-1)/2 (r<=3), 0 for r>=3]
+  q=23 seed 2: all-state pairs with equal lane-0 S-box input in every one of r partial rounds: [(1, 3212088, 3212088), (2, 133837, 133837), (3, 0, 0), (4, 0, 0)]   [r, measured, predicted n*(q^(3-r)-1)/2 (r<=3), 0 for r>=3]
+  q=37 seed 1: all-state pairs with equal lane-0 S-box input in every one of r partial rounds: [(1, 34646652, 34646652), (2, 911754, 911754), (3, 0, 0), (4, 0, 0)]   [r, measured, predicted n*(q^(3-r)-1)/2 (r<=3), 0 for r>=3]
+  q=37 seed 2: all-state pairs with equal lane-0 S-box input in every one of r partial rounds: [(1, 34646652, 34646652), (2, 911754, 911754), (3, 0, 0), (4, 0, 0)]   [r, measured, predicted n*(q^(3-r)-1)/2 (r<=3), 0 for r>=3]
+time 145.2s
+
+real	2m25.961s
+user	0m0.000s
+sys	0m0.000s

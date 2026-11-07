@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t34 (DOOR)",
+ "question": "D1: forcing S-box inputs to chosen values by root-finding, r=2",
+ "labels": [
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "Aimed hits at R1..R3 and equal lane 0 at R1..R4, R60, R61 by one univariate root-find are known (LEVELS T34). Forcing both partial-round S-box inputs to 0 (\"freeze\") means two conditions on a 2-dim input: degrees in the plane: lane 0 at P1 entry 625, at P2 entry 3125 (tracker), Bezout 625 x 3125 = 1,953,125 = 5^9 points over the closure; solving costs a resultant of that size, worse than the line. Cloud 46: freeze impossible/rigid (CLAIMED, Luna 3 P3.19 checks it).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testA.json; research/poseidon/levels/LEVELS.md (T34)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|DOOR.t34|DOOR|D1. Degrees from my tracker (plane, generic dense MDS); the freeze impossibility is not tested by me.",
+ "held_fixed": "r=2 target, 4 full + 2 partial + 4 full rounds, Pallas MDS and constants pinned; toy tests use random Cauchy MDS and random constants over F_103",
+ "reopen_if": "a freeze solution is found at toy size"
+}

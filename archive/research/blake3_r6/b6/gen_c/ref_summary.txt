@@ -1,0 +1,6 @@
+instructions 38790
+registers 771
+sha256 e0862b4bb51dcf9a9ce33931462ba1603dfced0355416fd46dab55dbbce9f907
+nodes 39047
+generator_calls 156984
+q_hex 8a0c03e2fc7fe1a07e601533bb62a4bda45cb30040139a5dc38a474c5ab306da

@@ -1,0 +1,46 @@
+system outhalf.sys: N=128 E=116 F=12  rho(all,{})=0  covered words=128
+group K0    |eqs|=8  inner width 2  list 2
+group K1    |eqs|=8  inner width 2  list 2
+group K2    |eqs|=8  inner width 2  list 2
+group K3    |eqs|=8  inner width 2  list 2
+group D0    |eqs|=8  inner width 6  list 6
+group D1    |eqs|=8  inner width 6  list 6
+group D2    |eqs|=8  inner width 6  list 6
+group D3    |eqs|=8  inner width 6  list 6
+group C0    |eqs|=8  inner width 6  list 6
+group C1    |eqs|=8  inner width 6  list 6
+group C2    |eqs|=8  inner width 6  list 6
+group C3    |eqs|=8  inner width 6  list 6
+group E0    |eqs|=8  inner width 6  list 6
+group E2    |eqs|=8  inner width 6  list 6
+group out   |eqs|=4  inner width 4  list 4
+EXACT brick-level optimum (15 groups): width 16
+JOIN J=2 list=0 : K0 K1 K2 K3 D0 D1 D2 D3 C0 C1 C2 C3 E0 E2 out
+  JOIN J=10 list=5 : K0 K1 K3 D0 D1 D2 D3 C0 C1 C2 C3 E0 E2 out
+    JOIN J=15 list=12 : K0 K1 K3 D0 D1 D3 C0 C1 C2 C3 E0 E2 out
+      JOIN J=16 list=14 : K0 K1 K3 D0 D1 D3 C0 C1 C2 E0 E2 out
+        JOIN J=16 list=16 : C1 C2 E0 E2 out
+          JOIN J=12 list=12 : C2 E0 E2 out
+            JOIN J=8 list=8 : E0 E2 out
+              JOIN J=6 list=6 : E2 out
+                [out] inner 4
+                [E2] inner 6
+              [E0] inner 6
+            [C2] inner 6
+          [C1] inner 6
+        JOIN J=16 list=16 : K0 K1 K3 D0 D1 D3 C0
+          JOIN J=14 list=14 : K0 K1 K3 D1 D3 C0
+            JOIN J=14 list=14 : K1 K3 D1 D3 C0
+              JOIN J=11 list=11 : K1 K3 D3 C0
+                JOIN J=11 list=11 : K3 D3 C0
+                  JOIN J=11 list=11 : D3 C0
+                    [C0] inner 6
+                    [D3] inner 6
+                  [K3] inner 2
+                [K1] inner 2
+              [D1] inner 6
+            [K0] inner 2
+          [D0] inner 6
+      [C3] inner 6
+    [D2] inner 6
+  [K2] inner 2

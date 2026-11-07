@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HPOIS (PREM)",
+ "question": "R2: own recount: root-count histogram of the odd-part polynomial",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "pooled 23 centres: zero square roots 15, one 7, two 1; Poisson(1/2) expects 14.0, 7.0, 1.7 (+0.33 for 3+). r1 note histogram (65 runs): 37/20/7/1 vs Poisson 39.4/19.7/4.9/0.8.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/d192_r2_results.jsonl; research/poseidon/orchard/lean_r2/logs/",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|PREM.HPOIS|PREM|R2. GPU nonzero_square_roots (12) + CPU degG (11). No contradiction at this size; sample is small.",
+ "held_fixed": "r2, line j=0, first centre of each execution (CPU lean_r2 logs: seeds 201000-201004, 202000-202005) and GPU d192 centres (12), centres uniform, halts counted as failure",
+ "reopen_if": "a sample of 100+ r2 centres per line shows a rate outside the model band",
+ "topic": "poseidon-r2 H1 histogram"
+}

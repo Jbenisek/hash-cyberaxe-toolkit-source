@@ -1,0 +1,22 @@
+{
+  "id": "D322-B3M-SELFTEST-RSS-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M finite self-test process RSS",
+  "question": "What peak resident working set does the unchanged current B3M self-test use in a single process?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Observed peak WorkingSet64 62,046,208 B (log2 25.88684) over one --selftest 256 and one --selftest 512 run; both exit 0 with ok=true.",
+  "source": "our workflow: D322 B3M self-test RSS",
+  "own_test": true,
+  "evidence": "research/sol_answer_D322_b3m_selftest_rss.md; research/tools/build_pkg/scratch/pkgB3S2/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "25.887 MEASURED max sampled Windows WorkingSet64 across single-process --selftest 256/512 runs at 20 ms polling",
+  "notes": "Finite self-test residency only. Sampling may miss a transient and the self-test is not the full search/preprocessing/output path; it does not close the B3M organizer memory or stream-protocol OPEN cells.",
+  "held_fixed": "unchanged current pkgB3S2 frontline.py; one child process; no package or external participant code",
+  "reopen_if": "A full search/preprocessing RSS trace or organizer memory ruling becomes available"
+}

@@ -1,0 +1,4 @@
+86017 a= 2 theta^q/theta = 40648 is a primitive cube root of 1: True ; roots of x^3-a in F_q: 0
+147457 a= 2 theta^q/theta = 78348 is a primitive cube root of 1: True ; roots of x^3-a in F_q: 0
+270337 a= 2 theta^q/theta = 37352 is a primitive cube root of 1: True ; roots of x^3-a in F_q: 0
+331777 a= 2 theta^q/theta = 239223 is a primitive cube root of 1: True ; roots of x^3-a in F_q: 0

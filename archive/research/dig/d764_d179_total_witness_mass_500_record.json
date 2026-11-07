@@ -1,0 +1,23 @@
+{
+  "id": "D764-D179-TOTAL-WITNESS-MASS-500-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 exact total coupled-witness mass over 500 typed E values",
+  "question": "Does exact enumeration of all J2-valid f and cyclic J1/J3 h witnesses produce a zero/nonzero existential split for any residual member toggle?",
+  "labels": ["C", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "For each delta 00002000, 00001000, 00000400: 346/500 equal total masses, 154/500 unequal; all totals positive; paired J2 solution-count multiset identical (78 at 1536, 232 at 3072, 76 at 4608, 114 at 6144).",
+  "source": "our exact D179 coupled witness-count DP",
+  "own_test": true,
+  "evidence": "research/sol_answer_D764_d179_total_witness_mass_500.md; research/retest/b3_omega_coupled/exact/PREREG_D764_TOTAL_WITNESS_MASS_500.md; research/retest/b3_omega_coupled/exact/D764_run.txt; research/retest/b3_omega_coupled/exact/total_witness_count_dp.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 1.0,
+  "gain_basis": "S",
+  "held_fixed": "first 500 typed class-0 E words and exact J2/J1/J3 DP; residual toggles 00002000, 00001000, 00000400",
+  "notes": "Finite diagnostic only: no zero/nonzero split found, but class-wide aliveness invariance remains OPEN and no score/package/staging/filing/submission credit is taken.",
+  "reopen_if": "A larger exact enumeration or an explicit existential split/witness transformation becomes available."
+}

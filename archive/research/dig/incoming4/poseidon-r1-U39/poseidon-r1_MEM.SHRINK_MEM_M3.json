@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.SHRINK smaller-memory variants",
+ "question": "time cost of shrinking",
+ "labels": [
+  "N",
+  "S"
+ ],
+ "status": "COMPUTED",
+ "number": "lean_r1_mem: -524,384 B (0.0904 bit) for +3.28% time (0.0466 bit, old charging) = net gain 0.0438 bit; further shrink of tmp/MU would each need extra passes (not measured)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_mem_seed1001.txt research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Same measurement as MEM.TWID M3 (not a second lever). | universe cell poseidon-r1|MEM.SHRINK|MEM|M3",
+ "held_fixed": "old charging",
+ "reopen_if": "fix-charging measurement"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D528-SHA3-R5-REDUCED-CAMPAIGN-AUDIT-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS5L/pkgS5L-b reduced fes campaign package rows",
+  "question": "Do the unindexed reduced SHA3-r5 packages pass their supplied finite campaign request files, and are their intake rows clean?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Claims S5L 122.9881 and S5L-b 123.176. S5L's 256-trial request and S5L-b's within/cross requests complete with zero key mismatches and zero key matches; fixed operation counts hold. Prefile defects: missing ledger appendices; note labels D20/D23/D29 and D20/D23/D29/D34. Reduced-width mechanics only; no score credit.",
+  "source": "our workflow: D528 read-only reduced SHA3-r5 campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D528_sha3_reduced_campaign_audit.md; research/tools/build_pkg/scratch/pkgS5L/pkg/sha3-256-r5/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS5L-b/pkg/sha3-256-r5/experiments/fes_campaign.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite reduced-width campaign checks only; no score/package/stage/filing/submission.",
+  "held_fixed": "supplied request files, shipped campaign sources, one-thread runs",
+  "reopen_if": "repaired ledger/labels, changed campaign source, or owner/organizer acceptance ruling arrives"
+}

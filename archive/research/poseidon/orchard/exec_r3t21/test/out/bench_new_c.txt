@@ -1,0 +1,3 @@
+lean-pow breakdown: newton total=1239584458 arith=437888461 | prefix+scale total=12702188 | loop steps=2 total=2227048333 arith=845057647
+bench c steps=2 total=3479336970
+mem_peak=202802304 bytes (6.3376 M slots) arena_hwm=202802304 live_at_peak=6

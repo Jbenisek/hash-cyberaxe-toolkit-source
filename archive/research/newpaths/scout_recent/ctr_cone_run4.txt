@@ -1,0 +1,12 @@
+B=20: outer ['Y4']: basis = C0.a1 C0.c1 D3.b1 E1.d1 S7 X9 Y4 w12 w6 | inner = E1.d1 | residual words that move: E1.d1 E1.b1 E1.a2 E3.h1 E3.g1 E3.e2
+   cone of E1.b1: 3 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; E1.b1<-Y6,E1.d1
+   cone of E1.a2: 4 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; E1.b1<-Y6,E1.d1 ; E1.a2<-E1.a1,E1.b1,w5
+   cone of E3.h1: 5 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; Y10<-Y6,C2.b1 ; Y14<-Y10,C2.c1 ; E3.h1<-Y14,Y4
+   cone of E3.g1: 6 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; Y10<-Y6,C2.b1 ; Y14<-Y10,C2.c1 ; E3.h1<-Y14,Y4 ; E3.g1<-
+   cone of E3.e2: 8 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; Y10<-Y6,C2.b1 ; Y14<-Y10,C2.c1 ; E3.h1<-Y14,Y4 ; E3.g1<-
+B=10: outer ['Y4']: basis = C0.d1 D2.a1 D2.b1 E1.d1 S11 S4 X9 Y4 w6 | inner = E1.d1 | residual words that move: E1.d1 E1.b1 E1.a2 E3.h1 E3.g1 E3.e2
+   cone of E1.b1: 3 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; E1.b1<-Y6,E1.d1
+   cone of E1.a2: 4 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; E1.b1<-Y6,E1.d1 ; E1.a2<-E1.a1,E1.b1,w5
+   cone of E3.h1: 5 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; Y10<-Y6,C2.b1 ; Y14<-Y10,C2.c1 ; E3.h1<-Y14,Y4
+   cone of E3.g1: 6 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; Y10<-Y6,C2.b1 ; Y14<-Y10,C2.c1 ; E3.h1<-Y14,Y4 ; E3.g1<-
+   cone of E3.e2: 8 equations per inner step: E1.a1<-E1.d1,Y12 ; Y6<-E1.a1,Y1,w12 ; Y10<-Y6,C2.b1 ; Y14<-Y10,C2.c1 ; E3.h1<-Y14,Y4 ; E3.g1<-

@@ -1,0 +1,1 @@
+check: 1048576 rows, 0 rows with a K1/K3 mismatch against keys.u32

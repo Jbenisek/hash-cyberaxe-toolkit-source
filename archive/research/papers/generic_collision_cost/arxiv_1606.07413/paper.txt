@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+Text extraction beside an external PDF: citation only, not a distributable paper payload.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/papers/generic_collision_cost/arxiv_1606.07413/paper.txt
+Publisher/preprint locator (derived from the source identifier): https://arxiv.org/abs/1606.07413

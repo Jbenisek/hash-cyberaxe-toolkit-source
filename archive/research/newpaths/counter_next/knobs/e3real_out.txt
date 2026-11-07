@@ -1,0 +1,6 @@
+e3real: 40 real outer steps (seed 5), 7 targets for the partial system
+  E3 inputs (Y4, Y9, w8) of the real compression = outer-step values: 40/40
+  planted trial: CV words 0,2,5,7 equal 40/40; own compress = organizer 40/40
+  planted h1 found by the search: 40/40; other solutions 23
+  every returned h1 mapped back to a trial (E1.d1 -> w0, t), real compressions: same h1, same four E3 differences, half-collision and organizer agreement: 63/63 (t = 0: 0)
+  partial system (dg1, de2 of the listed targets): 0 solutions; mapped back and confirmed on real compressions: 0/0

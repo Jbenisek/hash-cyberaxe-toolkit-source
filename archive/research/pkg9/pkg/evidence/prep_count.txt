@@ -1,0 +1,8 @@
+PROGRAM sha256 d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb; python -B tools/prep_count.py 20000
+work per value of X14 before its batches, on the program's machine (packed words, the same value in seven lanes):
+  next X14: 4 operations, 4 loads, 1 stores; D3 and K2: 44 operations, 29 loads, 6 stores; K1: 34 operations, 20 loads, 4 stores; C0: 9 operations, 6 loads, 2 stores
+  total 91 operations + 59 loads + 13 stores = 163; PREP_OPS of the data module 1024 (covers it: True); per trial 163 / 524288 = 0.000311, PREP_OPS per trial 0.001953
+  registers 10 of 16; largest lane of a sum 5.671 * 2^32 (below 2^36: True); words that the outer loop leaves in memory for it: 9 per context, 12 fixed
+  20000 contexts (every fifth with extreme words): the thirteen stored words equal batch_constants() in 20000 of 20000; same counts in every case: True; the constants of a batch that change with X14 are these thirteen and no other: True
+RESULT: the count holds and PREP_OPS covers it
+exit status 0

@@ -1,0 +1,7 @@
+r=1: hash_reduced(nk,rho) == H(A,B) with A=(nk+c00)^5, B=(rho+c01)^5 ; and fifth-root inversion returns (nk,rho): True
+r=2: hash_reduced(nk,rho) == H(A,B) with A=(nk+c00)^5, B=(rho+c01)^5 ; and fifth-root inversion returns (nk,rho): True
+after round 0 (in A,B): per-lane degree [1, 1, 1] monomials [3, 3, 3] (linear: M_i0 A + M_i1 B + M_i2 K)
+round 1: degree in (A,B) = 5 (=5^1), monomials per lane [21, 21, 21], full triangle (d+1)(d+2)/2 = 21  (0.0s)
+round 2: degree in (A,B) = 25 (=5^2), monomials per lane [351, 351, 351], full triangle (d+1)(d+2)/2 = 351  (0.1s)
+round 3: degree in (A,B) = 125 (=5^3), monomials per lane [8001, 8001, 8001], full triangle (d+1)(d+2)/2 = 8001  (18.4s)
+conclusion: in (A,B) coordinates the lanes have total degree 5^k after round k (k>=1)  -> output degree 5^(8) for r=1, 5^(9) for r=2 (one level less than in (nk,rho))

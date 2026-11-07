@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-fxor-e2-negative",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 f-XOR plus e2-masked h-map audit",
+  "question": "Can any constant f'=f^q with h'=h^r0^(e2&r1) close one of the three remaining class toggles?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact QF_BV CEGIS is UNSAT over q,r0,r1 for deltas 00002000, 00001000, 00000400 after 5, 4, and 6 witnesses respectively.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/synth_fxor_e2mask.py; research/retest/b3_omega_coupled/exact/synth_fxor_e2mask.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Negative only for this 96-bit constant-f-XOR/e2-masked-h family. Nonlinear maps and universal class invariance for the three remaining toggles remain OPEN; no saving credited."
+}

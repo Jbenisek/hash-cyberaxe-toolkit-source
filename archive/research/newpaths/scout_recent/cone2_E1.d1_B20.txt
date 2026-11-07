@@ -1,0 +1,1 @@
+targets ['Y4', 'E1.d1'] not [] outer ['E1.d1'] inner-dep []: NO basis (proved)

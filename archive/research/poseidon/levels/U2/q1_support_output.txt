@@ -1,0 +1,12 @@
+R1: (A,B) degree 5; support in (A,B) per lane: [21, 21, 21] [triangle 21] t=0.0s
+  lane 0: nonzero monomials = 301 ; law set size = 301 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=25) size 351, zero coefficients inside triangle 50 ; max total degree seen 25 ; t=0.0s
+  lane 1: nonzero monomials = 301 ; law set size = 301 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=25) size 351, zero coefficients inside triangle 50 ; max total degree seen 25 ; t=0.0s
+  lane 2: nonzero monomials = 301 ; law set size = 301 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=25) size 351, zero coefficients inside triangle 50 ; max total degree seen 25 ; t=0.0s
+R2: (A,B) degree 25; support in (A,B) per lane: [351, 351, 351] [triangle 351] t=0.0s
+  lane 0: nonzero monomials = 7751 ; law set size = 7751 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=125) size 8001, zero coefficients inside triangle 250 ; max total degree seen 125 ; t=0.2s
+  lane 1: nonzero monomials = 7751 ; law set size = 7751 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=125) size 8001, zero coefficients inside triangle 250 ; max total degree seen 125 ; t=0.4s
+  lane 2: nonzero monomials = 7751 ; law set size = 7751 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=125) size 8001, zero coefficients inside triangle 250 ; max total degree seen 125 ; t=0.6s
+R3: (A,B) degree 125; support in (A,B) per lane: [8001, 8001, 8001] [triangle 8001] t=8.3s
+  lane 0: nonzero monomials = 195001 ; law set size = 195001 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=625) size 196251, zero coefficients inside triangle 1250 ; max total degree seen 625 ; t=19.9s
+  lane 1: nonzero monomials = 195001 ; law set size = 195001 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=625) size 196251, zero coefficients inside triangle 1250 ; max total degree seen 625 ; t=32.3s
+  lane 2: nonzero monomials = 195001 ; law set size = 195001 ; nonzero outside law = 0 ; law monomials that are zero = 0 ; triangle (deg<=625) size 196251, zero coefficients inside triangle 1250 ; max total degree seen 625 ; t=53.6s

@@ -1,0 +1,19 @@
+{
+  "id": "D243-S38-ROWS56",
+  "hash": "sha256-38",
+  "row_i": 5,
+  "row_j": 6,
+  "object": "Zone D 38 rows 5-6 drop families",
+  "question": "Do the unresolved row-5/row-6 drop families yield any full-path mass beyond the printed cells?",
+  "labels": ["D", "Z"],
+  "status": "OPEN",
+  "number": "not run; row-5/row-6 drop tests remain residual",
+  "source": "main session",
+  "own_test": false,
+  "evidence": "research/tools/traillab/row_cards/zoneD38_row_05.md; research/tools/traillab/row_cards/zoneD38_row_06.md; research/tools/traillab/digs/zoneD38/",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "New residual cell after the partial Zone D 38 close. Existing single flips do not replace the missing full drop-family tests.",
+  "topic": "sha256-38 zoneD38 residual rows5-6"
+}

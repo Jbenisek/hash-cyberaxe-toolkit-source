@@ -1,0 +1,34 @@
+TEST T3 (toy, COMPUTED): initial-state difference sources of a single BLAKE3 compression, LX09-style
+absorption in round 0 (LX09 cancel IV differences h0,h2 with m0,m2; GKNWW14 sec. 6 note that BLAKE2 allows no
+difference in v8..v11, v14, v15).  In BLAKE3 the only words of the initial state that two colliding root
+compressions can differ in are v14 (block length) and v15 (flags: 11 for a one-block message, 12 for a parent
+root).  Path F (new): one-block 64-byte message M versus a two-chunk message whose root parent compression has
+message R = CV0||CV1; M copies R except m6, m7, which absorb dv15 = 11^12 in K3.  Control path L: the 55/63-type
+length difference absorbed in K2 by m4, m5 (unpinned).
+For random R (w = 8, 12, 16) we check that round 0 collides exactly and record which round-1 column outputs
+differ; and per-output-word equality rates.  Toy: rotations floor(r*w/32), IV = low w bits, blen 2w.
+Usage: python -B toy_flags.py N
+w= 8 N=524288 F_flags_11v12  round0 state equal for all: True
+   P[dY_i != 0] i=0..15: 1.000 0.000 1.000 0.000 1.000 0.000 0.996 0.000 1.000 0.000 0.995 0.000 1.000 0.000 0.999 0.000
+   P[E0,E2 inputs Y0,Y5,Y10,Y15,Y2,Y7,Y8,Y13 all equal] = 0.000e+00   P[E1,E3 state inputs all equal] = 0.000e+00
+   P[out_i equal] x 2^w, i=0..7: 1.03 1.04 1.01 1.01 1.00 1.04 1.02 0.98
+w= 8 N=524288 L_len_xor8     round0 state equal for all: True
+   P[dY_i != 0] i=0..15: 0.000 0.000 0.000 1.000 0.000 0.000 0.000 0.999 0.000 0.000 0.000 0.999 0.000 0.000 0.000 0.999
+   P[E0,E2 inputs Y0,Y5,Y10,Y15,Y2,Y7,Y8,Y13 all equal] = 0.000e+00   P[E1,E3 state inputs all equal] = 0.000e+00
+   P[out_i equal] x 2^w, i=0..7: 1.00 0.91 1.00 0.96 1.02 0.98 0.98 0.98
+w=12 N=524288 F_flags_11v12  round0 state equal for all: True
+   P[dY_i != 0] i=0..15: 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000
+   P[E0,E2 inputs Y0,Y5,Y10,Y15,Y2,Y7,Y8,Y13 all equal] = 0.000e+00   P[E1,E3 state inputs all equal] = 0.000e+00
+   P[out_i equal] x 2^w, i=0..7: 0.99 1.09 0.98 0.98 1.02 1.09 1.04 0.97
+w=12 N=524288 L_len_xor8     round0 state equal for all: True
+   P[dY_i != 0] i=0..15: 0.000 0.000 0.000 1.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 1.000
+   P[E0,E2 inputs Y0,Y5,Y10,Y15,Y2,Y7,Y8,Y13 all equal] = 0.000e+00   P[E1,E3 state inputs all equal] = 0.000e+00
+   P[out_i equal] x 2^w, i=0..7: 1.09 0.99 0.98 0.77 0.78 0.98 0.97 1.14
+w=16 N=524288 F_flags_11v12  round0 state equal for all: True
+   P[dY_i != 0] i=0..15: 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000
+   P[E0,E2 inputs Y0,Y5,Y10,Y15,Y2,Y7,Y8,Y13 all equal] = 0.000e+00   P[E1,E3 state inputs all equal] = 0.000e+00
+   P[out_i equal] x 2^w, i=0..7: 1.12 1.12 0.50 1.25 0.75 2.25 1.38 0.62
+w=16 N=524288 L_len_xor8     round0 state equal for all: True
+   P[dY_i != 0] i=0..15: 0.000 0.000 0.000 1.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 1.000
+   P[E0,E2 inputs Y0,Y5,Y10,Y15,Y2,Y7,Y8,Y13 all equal] = 0.000e+00   P[E1,E3 state inputs all equal] = 0.000e+00
+   P[out_i equal] x 2^w, i=0..7: 1.25 0.75 0.75 0.62 0.38 1.00 0.62 0.62

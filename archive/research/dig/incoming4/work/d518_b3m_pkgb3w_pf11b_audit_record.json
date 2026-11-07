@@ -1,0 +1,23 @@
+{
+  "id": "D518-BLAKE3-R2-PKGB3W-PF11B-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgB3W_pf11b prefile and shipped self-test",
+  "question": "Does pkgB3W_pf11b remain internally clean under the current prefile and finite self-test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Repeat confirmation of D300 for the same pkgB3W_pf11b package: prefile ALL PASS; exact N=53233508074484940750, time_log2=56.7808 (ledger 56.78077560); shipped selftest exits 0 with ok=true, 256 automata cases, 512 T1/T2 cases, screen/cut/class-list/S7/precheck/replica/prefilter/level16 checks, two full contexts with zero mismatches, and W/C/R/WB halt drills passing.",
+  "source": "our workflow: D518 read-only pkgB3W_pf11b audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D518_b3m_pkgB3W_pf11b_audit.md; research/tools/build_pkg/scratch/pkgB3W_pf11b/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgB3W_pf11b/pkg/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgB3W_pf11b/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Repeat confirmation of D300, not a new package variant. Finite package mechanics and ledger confirmation only; rough evidence estimate is 515984 B and needs authoritative staging measurement if considered. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgB3W_pf11b package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "authoritative staging-size check or owner/organizer acceptance ruling arrives"
+}

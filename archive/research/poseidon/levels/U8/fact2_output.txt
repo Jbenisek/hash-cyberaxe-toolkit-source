@@ -1,0 +1,7 @@
+B1 250000 elapsed 216 result {487887715480415483992657, 21186043132281546156793608169660962271252226488966104018788253841360240111557635227669180162173314659}
+FOUND [487887715480415483992657, 21186043132281546156793608169660962271252226488966104018788253841360240111557635227669180162173314659]
+Traceback (most recent call last):
+  File "./research/poseidon/levels/U8/fact2.py", line 18, in <module>
+    print("final pieces:",[(int(x).bit_length(),int(x),bool(is_prime(x))) for x in work],flush=True)
+                                                            ~~~~~~~~^^^
+TypeError: cannot convert object to mpz

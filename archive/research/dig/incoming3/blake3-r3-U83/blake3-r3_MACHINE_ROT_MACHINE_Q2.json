@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.ROT rotation cost",
+ "question": "Is the 5-op rotation (shr, and, shl, and, or) necessary? Change its price and recount.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "80 variable rotations x 5 ops = 400 of 595 ops (67.2 percent); 16 round-0 rotations fold to constants. Each op per batch is worth 0.002409 bit. A 4-op rotation would be -0.2066 bit, a 3-op rotation -0.4479 bit (hypothetical prices, no such form exists at pitch 36: both masks are needed for r>4, see research/blake3_r3/levers_step_count.md). Lane pitch change recounted with the real tracer: pitch 33 = 684, 34 = 622, 35 = 603, 36 = 595 ops.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.ROT|MACHINE|Q2. Pitch >= 37 gives 6 lanes (6*37=222; 7*37=259>256) so it is excluded. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "7 lanes in a 256-bit word, circuit of rho.py build_hash with the pitch patched; same constants folded.",
+ "reopen_if": "A 7-lane layout whose rotation costs under 5 ops and adds stay unmasked."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D635-BLAKE3-R3-U8-EQUIVALENCE-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 U=8 grouped search equivalence",
+  "question": "Does the U=8 grouped search agree with the per-batch U=1 search on a reduced exact instance?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Current b3r3s search with n=22 and U=8: 100 deterministic starts, grouped U=8 equals U=1 in every pair/result and counter comparison. Plan Q=2688, B=384, L=64/3, tmax=576, e2max=400.",
+  "source": "our workflow: D635 isolated U=8 reduced-instance equivalence",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d635_u8_equivalence.py; research/blake3_r3/b3r3s/pkg/blake3/experiments/rho.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0014,
+  "prior": 0.3,
+  "gain_basis": "D",
+  "held_fixed": "current b3r3s rho.py, n=22 reduced plan, U=8 grouped path versus U=1 reference, deterministic equivalence seeds",
+  "notes": "Reduced-width functional validation only. It does not establish the n=256 mixed-DP proof, full implementation, organizer acceptance, package, stage, filing, or submission.",
+  "reopen_if": "A full-width U=8 implementation or a reduced-instance mismatch appears"
+}

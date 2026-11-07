@@ -1,0 +1,21 @@
+{
+  "id": "D783-SHIPPED-Q3-TRANSFER-LEDGER-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "D783 conditional shipped-q3 ledger replay",
+  "question": "What exact charge follows if the measured STACK lower bound is substituted into the unchanged r38 ledger?",
+  "labels": ["K", "E", "C"],
+  "status": "OPEN",
+  "number": "STACK_LB=1.2088969661946845 gives q3_log2=-99.84110303380531, exact N=3284352853878701102935970551383, time_log2=89.95983 rounded up, N_FB=24310284883254596745255633.",
+  "source": "research/sol_answer_D783_r38_shipped_transfer_ledger.md and unchanged a0lean38.py ledger",
+  "own_test": true,
+  "evidence": "research/sol_answer_D783_r38_shipped_transfer_ledger.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 1.2088969661946845,
+  "topic": "sha256-r38.d783.shipped-q3-transfer",
+  "peak_mem": 26574848,
+  "notes": "Conditional on finite local transfer evidence, unchanged package premises, organizer acceptance, and memory rule. No package/stage/filing/submission."
+}

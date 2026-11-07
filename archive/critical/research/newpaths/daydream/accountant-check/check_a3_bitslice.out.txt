@@ -1,0 +1,5 @@
+group h=12345: transposes 14336 ops (bound 14336); 511 points equal the shipped stand-in bs_values; 8 points x 256 lanes (2048 lane checks) equal the scalar reference
+  per point: input frame 640 + popcount(w(S)) in [640, 682] (bound 960); rounds 0-4: [73842]; round-5 step: [4265]
+group h=987654321987654321987: 8 full-width points (|S| <= 8 of 40) x 256 lanes (2048 lane checks) equal the scalar reference; transposes 14336
+  worst counted point 78795 <= 79067 = 960 + 73842 + 4265; per group 14336 <= 14336  (9s)
+ALL_OK

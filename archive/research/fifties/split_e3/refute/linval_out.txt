@@ -1,0 +1,2 @@
+counter 1: kernel dim 160 | XOR-model: held words kept by 300/300 random kernel moves, by 0 non-kernel moves | real compression: kept by 0/300
+counter 2: kernel dim 179 | XOR-model: held words kept by 300/300 random kernel moves, by 0 non-kernel moves | real compression: kept by 0/300

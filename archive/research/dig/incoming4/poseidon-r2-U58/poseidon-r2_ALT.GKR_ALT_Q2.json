@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GKR (ALT)",
+ "question": "Q2: necessity: is the trail needed by the attack",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "No: the line attack does not use it. The trail is a differential: a difference t*u survives P1 and P2 unseen, but the four tail full rounds activate all lanes (tail minimum: weights over s0..s3 sum to 8, i.e. at least 8 active S-box positions in 4 rounds).",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testA.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.GKR|ALT|Q2. Tail chains recomputed by me with the pinned MDS: 403 support chains pass the MDS constraint, 337 also end with lane 0 zero, 25 weight patterns, min total active 8 (LEVELS: 337 / 25).",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a trail through the tail is found"
+}

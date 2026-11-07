@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m4 = w4: degrees of freedom",
+ "question": "Q3: degrees of freedom here (exact count over carries)",
+ "labels": [
+  "K",
+  "P"
+ ],
+ "status": "COMPUTED",
+ "number": "0 bits in the construction (w4 = W4 exactly; Lemma T2(d) bijection onto admissible blocks pins it); exact event count over all 2^32 w4: 2 values = 1 unordered pair = log2 1 bit of choice (A/B swap only); no free carries: the K2 rule gives w4p uniquely (bit3 of K+w4 fixes the +8/-8 carry sign)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/w4_solutions.txt; research/dig/incoming/blake3-r2-U08/work/w4prime_solutions.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m4|msgword|Q3. DOF measured by exhaustion of the 2^32 w4 scan with the printed rule, so it is exact for the printed constants; the 4 other pinned words are not varied. No fake freedom: nothing to harvest at w4. Other constants held as printed (X3,X7,X11,X15,W13; proof.md 3.2); controls reproduce Fact P exactly."
+}

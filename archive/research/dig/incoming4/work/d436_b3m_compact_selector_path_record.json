@@ -1,0 +1,23 @@
+{
+  "id": "D436-B3M-COMPACT-SELECTOR-PATH-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "actual path cost of compact B3M selector",
+  "question": "How many tree comparisons does the fixed D435 compact selector actually visit on fresh rows?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Across 60 fresh D432/D433 replays, the 32-tree depth-4 D435 selector visited 115..128 non-root nodes (mean 124.6666666667, total 7480) plus 32 accumulators per candidate; 256 feature bits remain separate. This is an exact structural path audit only and gives no score credit.",
+  "source": "our workflow: D436 compact selector path audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D436_b3m_compact_selector_path_audit.md; research/retest/t2/compact_selector_path_audit.py; research/retest/t2/D436_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic single-worker replay",
+  "notes": "Feature extraction, compiled operation count, selection protocol, judge acceptance, and rate-to-success linkage remain open. No package/stage/filing/submission.",
+  "held_fixed": "D435 model and PR858 no-transfer rule",
+  "reopen_if": "Compiled selector ledger and accepted selection protocol are supplied"
+}

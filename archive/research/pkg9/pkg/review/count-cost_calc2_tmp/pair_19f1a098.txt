@@ -1,0 +1,3 @@
+PAIR 830303cf 19f1a098 wt_eta 13 wt_beta 13 cap 31 taus 860160 passing 28 positive 10 sampled 0  E1 probability of passing 2^-35.5  class-rate part 8640.0 (log2 13.08)  largest share 0.47
+EXACT-E1 830303cf 19f1a098 Y11 7af77f38: E1 probability of the positive outcomes 2^-36.1  class-rate part 8640.0 (log2 13.08)  largest share 0.47  formula fallbacks 0
+DONE 19f1a098 exit 0

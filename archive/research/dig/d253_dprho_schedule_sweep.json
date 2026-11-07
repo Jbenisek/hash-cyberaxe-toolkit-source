@@ -1,0 +1,22 @@
+{
+  "id": "D253-SHA3-R6-DPRHO-SCHEDULE-SWEEP-20261013",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "dense DP-rho topological spill-order sweep",
+  "question": "Can a fixed topological order lower the 64-bit plane spill charge without changing the Boolean outputs?",
+  "labels": ["C", "N"],
+  "status": "LOCAL_ONLY",
+  "number": "Completed four-order critical/fanout/free/hybrid sweep in linear and structural CSE; all KATs kat_bad_bits=0. Archived eight-way tie-break best is free_negdist at 64 planes: 51,970 plane RAM events, 364,540 64-bit body words/batch, conditional S=125.8136596 under the 4*1626 normalization; existing in-place packed schedule has 51,950 events, S=125.8133905.",
+  "source": "our workflow: D253 DP-rho schedule sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D253_dprho-unit-recheck.md; schedule_spill_search.json; research/retest/t1/schedule_tiebreak_sweep.json; research/retest/t1/schedule_packed_execution.json; research/retest/t1/packed_walk_kat.json",
+  "date": "2026-10-13",
+  "lever": true,
+  "gain_bits": 0.0,
+  "notes": "Finite fixed-order schedule model only; no production kernel, endpoint/restart ledger, register allocator, or organizer word-width ruling. No filing credit.",
+  "potential_bits": 1.5,
+  "prior": 0.1,
+  "gain_basis": "S",
+  "reopen_if": "A counted emitted kernel reproduces the schedule and settles endpoint/restart/word-width charging"
+}

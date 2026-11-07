@@ -1,0 +1,21 @@
+trials 24*2^40 = 26,388,279,066,624 log2 44.5850
+rule A share log2 -8.000002
+E1 test passes 9537 -> log2 -31.366  (whole-class layout 9520 of 2^44.58 -> -31.363)
+entry share 0.026178; /0.03125 = 0.8377; indep 1-(255/256)^7 0.027025
+T/(3*2^30) = 8192.0; E3 marker ratio rates 1.1833; 268/6314/2^-8 = 10.87
+small: 30*2^34 = 515,396,075,520; z +0.070; sd/pred 0.0912; first stage z -0.657; expected 2,013,265,920
+weighted model good/bad: +0.0848 -0.0848
+H1-residual-hit-rate: lengths statement 443, scope 499, extrapolation 2528, limitations 3249; ids ['experiment:residual-search', 'experiment:half-collision', 'proof:245-545', 'proof:549-621', 'proof:640-777', 'proof:779-906', 'proof:1225-1313', 'proof:1464-2077']
+H2-e1-test-passes: lengths statement 159, scope 406, extrapolation 343, limitations 617; ids ['proof:640-777', 'proof:779-906', 'proof:1250-1258', 'proof:1464-2077']
+H3-stage-2-entries: lengths statement 263, scope 685, extrapolation 959, limitations 1309; ids ['proof:640-777', 'proof:779-906', 'proof:908-1223', 'proof:1260-1274', 'proof:1464-2077']
+claim top keys: attack_class, baseline_improved, certificate_manifest, claim, experiment_manifest, heuristics, lane, restrictions, rounds, schema_version, submission_state, target_profile
+proof:1225-1313: [1225] '## 7. Success probability' ... [1313] 'None of the three heuristics is proved. Section 10' | next [1314] ''
+proof:1250-1258: [1250] '**Heuristic H2 (supporting).** With probability at least 0.9995 over t' ... [1258] 'the assumption.)' | next [1259] ''
+proof:1260-1274: [1260] '**Heuristic H3 (supporting).** With probability at least 0.9995 over t' ... [1274] 'of 19 percent that these samples show, is the assu' | next [1275] ''
+proof:1464-2077: [1464] '## 10. Evidence, scope and field meanings' ... [2077] '  service Venice.' | next [2078] ''
+proof:245-545: [245] '## 4. Construction: the message from eight words, in three levels' ... [545] '2^256 different half-colliding pairs.' | next [546] ''
+proof:549-621: [549] '**6.1 Trials.** A *context* is the six words of an outer step (C0.c1, ' ... [621] 'by the definition of the class. QED.' | next [622] ''
+proof:640-777: [640] '**6.3 Two tests of a trial.** The algorithm uses two tests: rule A, a ' ... [777] 'than half of the count; the rule is a rule for thi' | next [778] ''
+proof:779-906: [779] '**6.4 Algorithm.**' ... [906] 'about 2^52.44, and a run has 2^49 such pairs of w5' | next [907] ''
+proof:908-1223: [908] '**6.5 Seven trials in one word.** A packed word holds seven lanes of 3' ... [1223] 'organizer verification of the cost.' | next [1224] ''
+non-ascii bytes 0; CR 0; tabs 0

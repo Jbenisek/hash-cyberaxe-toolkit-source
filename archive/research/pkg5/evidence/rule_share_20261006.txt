@@ -1,0 +1,27 @@
+SOURCE tools/rule_share.c sha256 189fdf188d21bcf175218bcff2db17456a97153617dee4d7545ef8ce06b0471d arguments 24 1024 16 20261006 seconds 109 threads 4
+VECTORS 20000, z and rule A of the C program equal those of the real compression in 20000; satisfy rule A 308; digest compared with the organizer's reference hash in 20000
+RUN 0 trials 1073741824 satisfy_rule_A 16774504 share*64 0.999838 dev_sd -0.67 batches 153403392 enter_stage_2 15961742 share 0.104051 per(context,alpha) min 870 max 1146
+RUN 1 trials 1073741824 satisfy_rule_A 16779892 share*64 1.000160 dev_sd +0.66 batches 153403392 enter_stage_2 15923880 share 0.103804 per(context,alpha) min 903 max 1146
+RUN 2 trials 1073741824 satisfy_rule_A 16779672 share*64 1.000146 dev_sd +0.60 batches 153403392 enter_stage_2 15955500 share 0.104010 per(context,alpha) min 898 max 1150
+RUN 3 trials 1073741824 satisfy_rule_A 16784792 share*64 1.000452 dev_sd +1.86 batches 153403392 enter_stage_2 15962216 share 0.104054 per(context,alpha) min 900 max 1140
+RUN 4 trials 1073741824 satisfy_rule_A 16778038 share*64 1.000049 dev_sd +0.20 batches 153403392 enter_stage_2 15935782 share 0.103882 per(context,alpha) min 891 max 1189
+RUN 5 trials 1073741824 satisfy_rule_A 16772666 share*64 0.999729 dev_sd -1.12 batches 153403392 enter_stage_2 15954180 share 0.104001 per(context,alpha) min 890 max 1181
+RUN 6 trials 1073741824 satisfy_rule_A 16778040 share*64 1.000049 dev_sd +0.20 batches 153403392 enter_stage_2 15896967 share 0.103629 per(context,alpha) min 914 max 1144
+RUN 7 trials 1073741824 satisfy_rule_A 16782695 share*64 1.000327 dev_sd +1.35 batches 153403392 enter_stage_2 15960800 share 0.104045 per(context,alpha) min 895 max 1144
+RUN 8 trials 1073741824 satisfy_rule_A 16769924 share*64 0.999565 dev_sd -1.79 batches 153403392 enter_stage_2 15886333 share 0.103559 per(context,alpha) min 915 max 1141
+RUN 9 trials 1073741824 satisfy_rule_A 16779064 share*64 1.000110 dev_sd +0.45 batches 153403392 enter_stage_2 15936188 share 0.103884 per(context,alpha) min 900 max 1163
+RUN 10 trials 1073741824 satisfy_rule_A 16782121 share*64 1.000292 dev_sd +1.21 batches 153403392 enter_stage_2 15882655 share 0.103535 per(context,alpha) min 888 max 1150
+RUN 11 trials 1073741824 satisfy_rule_A 16774727 share*64 0.999852 dev_sd -0.61 batches 153403392 enter_stage_2 15906493 share 0.103691 per(context,alpha) min 900 max 1162
+RUN 12 trials 1073741824 satisfy_rule_A 16776148 share*64 0.999936 dev_sd -0.26 batches 153403392 enter_stage_2 15954207 share 0.104002 per(context,alpha) min 892 max 1140
+RUN 13 trials 1073741824 satisfy_rule_A 16775375 share*64 0.999890 dev_sd -0.45 batches 153403392 enter_stage_2 15932597 share 0.103861 per(context,alpha) min 904 max 1150
+RUN 14 trials 1073741824 satisfy_rule_A 16776635 share*64 0.999965 dev_sd -0.14 batches 153403392 enter_stage_2 15950821 share 0.103980 per(context,alpha) min 899 max 1154
+RUN 15 trials 1073741824 satisfy_rule_A 16776613 share*64 0.999964 dev_sd -0.15 batches 153403392 enter_stage_2 15956685 share 0.104018 per(context,alpha) min 893 max 1150
+RUN 16 trials 1073741824 satisfy_rule_A 16773590 share*64 0.999784 dev_sd -0.89 batches 153403392 enter_stage_2 15905535 share 0.103684 per(context,alpha) min 899 max 1137
+RUN 17 trials 1073741824 satisfy_rule_A 16774349 share*64 0.999829 dev_sd -0.71 batches 153403392 enter_stage_2 15902091 share 0.103662 per(context,alpha) min 893 max 1155
+RUN 18 trials 1073741824 satisfy_rule_A 16784162 share*64 1.000414 dev_sd +1.71 batches 153403392 enter_stage_2 15921569 share 0.103789 per(context,alpha) min 901 max 1146
+RUN 19 trials 1073741824 satisfy_rule_A 16779763 share*64 1.000152 dev_sd +0.63 batches 153403392 enter_stage_2 15941693 share 0.103920 per(context,alpha) min 897 max 1183
+RUN 20 trials 1073741824 satisfy_rule_A 16777853 share*64 1.000038 dev_sd +0.16 batches 153403392 enter_stage_2 15958880 share 0.104032 per(context,alpha) min 886 max 1163
+RUN 21 trials 1073741824 satisfy_rule_A 16777839 share*64 1.000037 dev_sd +0.15 batches 153403392 enter_stage_2 15927418 share 0.103827 per(context,alpha) min 894 max 1150
+RUN 22 trials 1073741824 satisfy_rule_A 16780241 share*64 1.000180 dev_sd +0.74 batches 153403392 enter_stage_2 15962996 share 0.104059 per(context,alpha) min 903 max 1142
+RUN 23 trials 1073741824 satisfy_rule_A 16776102 share*64 0.999934 dev_sd -0.27 batches 153403392 enter_stage_2 15950446 share 0.103977 per(context,alpha) min 890 max 1164
+SUMMARY runs 24 trials_per_run 2^30.00; share of trials that satisfy rule A, times 64: min 0.999565 max 1.000452 all 1.000029; chi-square of the runs against 2^-6 (binomial) 18.7 on 24; share of batches that enter stage 2: min 0.103535 max 0.104059 all 0.103873 (budget 0.125, 7/64 = 0.109375, 1-(63/64)^7 = 0.104379); passes per (context, alpha) of 65536: min 870 max 1189

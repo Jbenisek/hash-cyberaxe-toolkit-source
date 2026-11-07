@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "door 24: force more than 4 digest words by construction",
+ "question": "D1 RELABEL at 3 rounds: own bijection check on E1/E3 inputs over a sampled outer step; plus the legal 55/63 length-cancel pair counted at rounds 1/2/3",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "(A) 3 sampled outer steps (b/flags 55/11, 63/3, 64/11) x 2^22 inner words w0 at ROUNDS=3 (20 points per step cross-checked against verifier _compress at 3 rounds): round-0 state X unchanged (0 of 16 words vary); only Y6 (E1 input) and Y14 (E3 input) vary; #Y6 = #Y14 = #(Y6,Y14) pairs = #distinct w0 (4,192,230 / 4,192,266 / 4,192,253 of 4,194,304) against a product of about 1.757e13; closed form Y6 = ROR7(C2.b1 ^ (C2.c1+Y14)) holds on all 3 x 2^22 points; all 16 state words entering the third round vary with w0. Identical to the r2 result: rounds past 2 do not touch the first two rounds. (B) legal pair A (b55, flags 3) vs B (b63, flags 11), only m4..m7 re-signed so the round-0 state is identical (checked, 16 of 16 words): digest words equal in 100 percent of 2^18 pairs: 8 of 8 at 1 round (known answer), 0 of 8 at 2 rounds, 0 of 8 at 3 rounds; digest bits that never differ: 256, 0, 0 of 256. So the round-0 cancellation alone pins nothing once a second round runs; at 3 rounds no digest word is pinned by construction (word-model X1 for D={4,5} says 8 checks at r3, consistent).",
+ "evidence": "research/dig/incoming3/blake3-r3-U73/work/d24.py, research/dig/incoming3/blake3-r3-U73/work/d24.out, research/dig/incoming3/blake3-r3-U73/work/b3own.py, research/dig/incoming3/blake3-r3-U73/work/common.py, research/dig/incoming3/blake3-r3-U73/work/validate.out",
+ "notes": "universe cell blake3-r3|DOOR.d24|DOOR|D1. Known answers first (validate.out): own numpy compress == organizer verifier _compress on 1200 random calls at rounds 1/2/3/7, 0 mismatches; BLAKE3('') 7 rounds = af1349b9...f3262; rho.py digest_words == verifier blake3(0^32||x) at 7 and 3 rounds (300 each, 0 mismatches); packed 7-lane circuit == verifier at 3 rounds (700 lanes, 0 mismatches). The r2 claim of exactly 4 digest pins needs the round-1 cancellations (message words solved for the E-step); that construction was NOT rebuilt here (the r2 cell did not rebuild it either), so the pin count at 2 and 3 rounds under the full construction stays as the word model X1 states it. Part B is a negative control: round-0 cancellation only.",
+ "held_fixed": "cv = IV, block counter solved (q = ROL(K0.d1,16)^K0.a1) and w1 solved so K0 outputs and X stay fixed; 3 outer steps with random other words; pair test: random m, only m4,m5,m6,m7 re-signed, 2^18 pairs, block lengths 55/63, flags 3/11",
+ "reopen_if": "a construction that keeps at least one digest word equal at 3 rounds by solving round-1 and round-2 cancellations, or the r2 4-pin construction rebuilt and carried through round 2 with a pinned-word count above 0",
+ "topic": "b3.door24.bijection"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "D354-POSR2-DECOMP-R2J2-CLOSE",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "functional-decomposition r2/j2 digit completion",
+  "question": "Does the real r2,j2 skip-line polynomial decompose through inner degrees d=5,25,125?",
+  "labels": ["K", "Z"],
+  "status": "KILLED",
+  "number": "full B-adic nonconstant digits: d=5 78124/78125, d=25 15621/15625, d=125 3121/3125; remainder degrees 4,24,124",
+  "source": "existing Poseidon decomposition run2.log",
+  "own_test": true,
+  "evidence": "research/sol_answer_D354_poseidon_decomp_r2j2_close.md; research/poseidon/levels/decomp/run2.log; research/poseidon/levels/decomp/RESULT.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Completes only d=5,25,125 for r2,j2. Larger d=15625 and d=78125 are not closed; D352 d=78125 timed out. No score credit.",
+  "peak_mem": "UNKNOWN"
+}

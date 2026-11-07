@@ -1,0 +1,13 @@
+cone3_E3h1_B40.txt: outer ['Y4', 'E3.h1']: basis = C0.a1 D3.d1 E3.h1 K3.c1 S9 X2 X4 Y4 Y8 | inner = X2 | residual words that move: E1.d1 E1.b1 E1.a2 E3.g1 E3.e2
+   cone of E1.d1: 37 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d
+   cone of E1.b1: 38 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d
+   cone of E1.a2: 39 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d
+   cone of E3.g1: 31 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d
+   cone of E3.e2: 37 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d
+cone3_triple_c2.txt: targets ['Y4', 'E1.d1', 'E3.h1'] not []: NO basis (proved)
+cone3_E3h1_B70.txt: outer ['Y4', 'E3.h1']: basis = C0.a1 D1.d1 D2.a1 D3.a1 E3.h1 X1 X9 Y4 Y8 | inner = C0.a1 D3.a1 X9 | residual words that move: E1.d1 E1.b1 E1.a2 E3.g1 E3.e2
+   cone of E1.d1: 67 equations per inner step: D3.b1<-D3.a1 ; C0.d1<-X12,C0.a1 ; X4<-D3.b1,X9 ; C0.c1<-C0.b1,X4 ; Y12<-Y
+   cone of E1.b1: 68 equations per inner step: D3.b1<-D3.a1 ; C0.d1<-X12,C0.a1 ; X4<-D3.b1,X9 ; C0.c1<-C0.b1,X4 ; Y12<-Y
+   cone of E1.a2: 70 equations per inner step: D3.b1<-D3.a1 ; C0.d1<-X12,C0.a1 ; X4<-D3.b1,X9 ; C0.c1<-C0.b1,X4 ; Y12<-Y
+   cone of E3.g1: 57 equations per inner step: D3.b1<-D3.a1 ; C0.d1<-X12,C0.a1 ; X4<-D3.b1,X9 ; C0.c1<-C0.b1,X4 ; Y12<-Y
+   cone of E3.e2: 63 equations per inner step: D3.b1<-D3.a1 ; C0.d1<-X12,C0.a1 ; X4<-D3.b1,X9 ; C0.c1<-C0.b1,X4 ; Y12<-Y

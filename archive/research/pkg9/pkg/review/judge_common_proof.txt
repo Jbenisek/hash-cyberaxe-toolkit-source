@@ -1,0 +1,166 @@
+# A free half-collision and a search inside one class for 2-round BLAKE3 The scalar below is `time_log2` under `collision-frontier-v5`.
+This exploratory package targets blake3-r2-prefix-v1.
+Seven trials are evaluated in one 256-bit word, in two stages.
+Only a batch in which a trial satisfies rule A runs stage 2, which tests a 32-bit condition that every collision satisfies.
+A batch in which no trial satisfies rule A is dropped; a trial that fails rule A is examined further only if another trial of its batch satisfies it, and Section 7 does not count such a trial.
+Under the three the search succeeds with probability at least 0.39.
+Section 10 describes what it is set against.
+The remaining half of the digest depends on seven words, one of which is Y4.
+No full 2-round collision is exhibited, and the search is far beyond feasible computation.
+The program the organizer runs also contains the packed two-stage batch, a machine that counts its operations and loads, and a self-test of that count (Section 6.5).
+Those counts are the program's own; the organizer does not check them. ## 1.
+Exact complete hash on the messages used H is unkeyed BLAKE3-256 with only rounds 0 and 1 kept in every compression.
+A message of n <= 64 bytes is one chunk consisting of one block, with no parent node, so H evaluates exactly one compression.
+The block is the message followed by 64 - n zero bytes, used only for loading words.
+The compression has flags CHUNK_START | CHUNK_END | ROOT = 11, true block length n, and chunk counter and root-output counter both zero.
+Decode the zero-filled block into sixteen little-endian 32-bit words w[0..15].
+The IV is 6a09e667 bb67ae85 3c6ef372 a54ff53a 510e527f 9b05688c 1f83d9ab 5be0cd19.
+Initialize v[0..7] = IV, v[8..11] = IV[0..3] and v[12..15] = (0, 0, n, 11).
+The block length n is the initial value of v[14] and enters nowhere else.
+All additions and subtractions on state and message words are modulo 2^32.
+G(a,b,c,d,x,y) is v[a] = v[a]+v[b]+x; v[d] = ROR(v[d] XOR v[a],16) v[c] = v[c]+v[d]; v[b] = ROR(v[b] XOR v[c],12) v[a] = v[a]+v[b]+y; v[d] = ROR(v[d] XOR v[a],8) v[c] = v[c]+v[d]; v[b] = ROR(v[b] XOR v[c],7).
+A round is four column calls followed by four diagonal calls on the current schedule s, and between rounds s is replaced by s[P[i]] with P = (2,6,3,10,7,0,4,13,1,11,12,5,9,14,15,8).
+Written out for the two retained rounds, with names used throughout: round 0 K0 = G(0,4,8,12, w0, w1) K1 = G(1,5,9,13, w2, w3) K2 = G(2,6,10,14, w4, w5) K3 = G(3,7,11,15, w6, w7) D0 = G(0,5,10,15, w8, w9) D1 = G(1,6,11,12, w10, w11) D2 = G(2,7,8,13, w12, w13) D3 = G(3,4,9,14, w14, w15) round 1 C0 = G(0,4,8,12, w2, w6) C1 = G(1,5,9,13, w3, w10) C2 = G(2,6,10,14, w7, w0) C3 = G(3,7,11,15, w4, w13) E0 = G(0,5,10,15, w1, w11) E1 = G(1,6,11,12, w12, w5) E2 = G(2,7,8,13, w9, w14) E3 = G(3,4,9,14, w15, w8) S denotes the state after K0..K3, X the state after round 0, Y the state after C0..C3 and Z the final state.
+The compression output is o[i] = Z[i] XOR Z[i+8] and o[i+8] = Z[i+8] XOR IV[i] for i = 0..7.
+The digest H(m) is the first 32 output bytes, LE4(o[0]) || ...
+It is not a free-start, chosen-IV, compression-only or truncated-output setting. ## 2.
+Inverting one G call Consider one call G(a,b,c,d,x,y) with input values A, B, C, D and name its eight assignments a1 = A + B + x d1 = ROR(D XOR a1, 16) c1 = C + d1 b1 = ROR(B XOR c1, 12) a2 = a1 + b1 + y d2 = ROR(d1 XOR a2, 8) c2 = c1 + d2 b2 = ROR(b1 XOR c2, 7).
+**Fact 1.** Reading the assignments backwards, b1 = ROL(b2, 7) XOR c2 c1 = c2 - d2 d1 = ROL(d2, 8) XOR a2 B = ROL(b1, 12) XOR c1 C = c1 - d1 a1 = ROL(d1, 16) XOR D y = a2 - a1 - b1 x = a1 - A - B.
+Three ingredients **3.1 The length is cancelled inside K2.** K2 is the only call of round 0 that reads the block length n, the initial value of v[14], and it overwrites that word; it is also the only call of round 0 that reads w4 and w5.
+The third and fourth depend only on d1 and constants.
+**3.3 Half of the digest does not see the difference.** **Lemma H.** Take two executions of the 2-round compression that have the same state X after round 0 and the same message words except w4 and w5.
+Suppose (X[3], X[7], X[11], X[15]) = (X3, X7, X11, X15), w13 = W13, and w4 is W4 in the first execution and W4' in the second.
+Then the two digests agree on digest words 0, 2, 5 and 7.
+C0, C1, C2 read neither w4 nor w5 and act on identical states, so they leave identical values in both executions.
+C3 reads state words 3, 7, 11, 15 and the words w4, w13; by Fact P it leaves the same v[7] and v[15] in both executions and may differ only in v[3] and v[11].
+So Y agrees except possibly in Y[3] and Y[11].
+E0 reads Y[0], Y[5], Y[10], Y[15] and w1, w11.
+E2 reads Y[2], Y[7], Y[8], Y[13] and w9, w14.
+None of these is Y[3], Y[11], w4 or w5, so E0 and E2 produce identical outputs Z[0], Z[5], Z[10], Z[15] and Z[2], Z[7], Z[8], Z[13].
+Finally o[0] = Z[0] XOR Z[8], o[2] = Z[2] XOR Z[10], o[5] = Z[5] XOR Z[13] and o[7] = Z[7] XOR Z[15] use only those eight words.
+The remaining digest words o[1] = Z[1] XOR Z[9], o[3] = Z[3] XOR Z[11], o[4] = Z[4] XOR Z[12] and o[6] = Z[6] XOR Z[14] are computed from the outputs of E1 and E3 only.
+The **residual** of a pair is the 128-bit string R = (o[1] XOR o'[1], o[3] XOR o'[3], o[4] XOR o'[4], o[6] XOR o'[6]).
+The pair is a collision exactly when R = 0. ## 4.
+**Step S2.** w4' = W4' and w5' = w5 + W4 - W4', all modulo 2^32.
+By Lemma L the compression of B has the same state X after round 0.
+The second assignment is h1 = ROR(Y14 XOR e1, 16), so the XOR difference between A and B of E3's first-half d value is eta = h1 XOR h1' = ROR((Y3 + Y4) XOR (Y3 + Y4 + DY3), 16), a function of Y4 alone.
+The *class* is the set of all words Y4 that give this eta.
+Y4 is in the class exactly when e1 XOR (e1 + DY3) = x, that is when (e1 XOR x) - e1 = DY3 modulo 2^32.
+For words e and x, (e XOR x) - e is, modulo 2^32, the sum over the bits i of x of 2^i where bit i of e is 0 and of -2^i where it is 1, which is 2 ((NOT e) AND x) - x; for i = 31 the two signs give the same word.
+So the condition is 2 ((NOT e1) AND x) = DY3 + x modulo 2^32.
+(.., Y4, .., Y12) = C0 = G(X0, X4, X8, X12, w2, w6) (Y1, .., Y9, ..) = C1 = G(X1, X5, X9, X13, w3, w10) (.., Y6, .., Y14) = C2 = G(X2, X6, X10, X14, w7, w0) E1 on A:
+G(Y1, Y6, Y11', Y12, w12, w5 + delta) E3 on A:
+G(Y3', Y4, Y9, Y14, w15, w8) and R is formed from the eight output words of E1 and E3 as in 3.3.
+Write a1, d1, c1, b1, a2, .. for the assignments of E1 and e1, h1, g1, f1, e2, h2, g2, f2 for those of E3 in the order a, d, c, b; a prime marks message B.
+**6.3 Three tests of a trial.** The algorithm uses two tests: rule A, a condition on one word of E3 (Lemma A), and the E1 test, a 32-bit condition on E1 alone (Lemma N).
+It is kept because the measurements of Section 10 report its passes.
+**Lemma E.** If R = 0 then (f1 XOR f1') = t XOR ROR(t, 1) with t = a2 XOR a2'.
+In E1 the inputs Y1, Y6, Y12 and the first word are the same for A and B, so a1 and d1 are the same, and d2 XOR d2' = ROR(a2 XOR a2', 8).
+In E3, f2 XOR f2' = ROR((f1 XOR f1') XOR (g2 XOR g2'), 7).
+R = 0 says in its first word that a2 XOR a2' = g2 XOR g2' (digest word 1 is Z[1] XOR Z[9], the a output of E1 and the c output of E3) and in its third word that d2 XOR d2' = f2 XOR f2' (digest word 4 is Z[4] XOR Z[12], the b output of E3 and the d output of E1).
+Substituting, ROR(t, 8) = ROR((f1 XOR f1') XOR t, 7), and rotating both sides left by 7 gives the claim.
+A trial *passes the early test* when the word (f1 XOR f1') XOR t XOR ROR(t, 1) is zero.
+The test needs the first five assignments of E1 and the first four of E3 for both messages.
+**Lemma N.** For a trial of 6.1 put beta = b1 XOR b1' and eps = c2 XOR c2', both taken from E1, and n = eps XOR ROL(beta XOR eps, 1) XOR eta.
+Let D3 and D6 be the XOR differences between A and B of digest words 3 and 6, which are the second and the fourth word of R.
+Then n = D3 XOR ROL(D6, 8) for every trial.
+Digest word 3 is Z[3] XOR Z[11], the a output of E3 and the c output of E1, so D3 = (e2 XOR e2') XOR eps.
+Digest word 6 is Z[6] XOR Z[14], the b output of E1 and the d output of E3, so D6 = (b2 XOR b2') XOR (h2 XOR h2').
+In E1, b2 = ROR(b1 XOR c2, 7), so b2 XOR b2' = ROR(beta XOR eps, 7).
+Rotating D6 left by 8 gives ROL(D6, 8) = ROL(beta XOR eps, 1) XOR eta XOR (e2 XOR e2').
+The XOR with D3 cancels e2 XOR e2' and leaves n.
+The word n needs the first seven assignments of E1 for both messages and nothing of E3: for a trial of 6.1 the eta of E3 is the constant of the class.
+*Rule A.* Let h1 be the second value of E3 on message A, as in 6.2.
+**Lemma A.** (a) For a trial of 6.1 let z = a2 XOR d1 be the XOR of the fifth and the second value of C2, and e1 = Y3 + Y4.
+Then ROL(h1, 24) = z XOR ROL(e1, 8): bit i of h1 is bit (i + 24) mod 32 of z XOR bit (i + 16) mod 32 of e1.
+The word ((z XOR ((z >> 1) AND S)) AND ALL) XOR V is zero exactly when the trial satisfies rule A.
+(a) The sixth assignment of C2 is Y14 = ROR(d1 XOR a2, 8) = ROR(z, 8), and the second assignment of E3 is h1 = ROR(Y14 XOR e1, 16).
+So h1 = ROR(z, 24) XOR ROR(e1, 16), and rotating left by 24 gives the claim.
+(c) Bit p of z XOR ((z >> 1) AND S) is the XOR of bits p and p + 1 of z at the positions p of S and bit p of z elsewhere.
+It does not say that a collision satisfies rule A, and that is not true: there are solutions of R = 0 with Y4 in the class whose h1 violates rule A, and Section 10 prints one.
+A batch in which no trial satisfies it is dropped, whether or not one of its trials has a zero residual; a trial that fails rule A is examined further only if another trial of its batch satisfies it (6.4).
+How much is lost is a question about the count of Section 10 and is answered there: the figure that H1 is set against leaves out, in full, every outcome of the count for which a solver found a solution that violates rule A.
+Otherwise the batch runs stage 2, which evaluates the E1 test for its seven trials. 3.
+If R = 0, build A and B by steps S2 and S3 from the trial's words, evaluate H(A) and H(B), check that they agree, output (A, B) and halt. 4.
+A trial with R = 0 that satisfies rule A is found: its batch runs stage 2, its E1 test word is zero by Lemma N, and step 3 computes its residual, unless one of the two budgets of step 4 has ended the run before.
+A trial with R = 0 that violates rule A is found only if another trial of its batch satisfies rule A;
+**6.5 Seven trials in one word.** A packed word holds seven lanes of 36 bits at bit offsets 0, 36, .., 216.
+A lane represents its value modulo 2^32; bits 32..35 are carry guards.
+A rotation of every lane by r is the five operations PROR(z, r) = ((z >> r) AND A_r) OR ((z << (32-r)) AND B_r) with A_r selecting the low 32-r bits of every lane and B_r the next r bits; the masks discard guard bits and bits shifted in from the neighbouring lane, so the result is reduced below 2^32.
+The lane layout, seven 36-bit lanes with reduction delayed to the rotations and a five-operation masked rotation, follows the public ticket 2bf40fb on this track, which uses it for a birthday search.
+The members enter through one list that does not depend on the context: for batch j, U[j] holds ROL(y,7), one member y per lane.
+The list is computed once, before step 2.
+Otherwise stage 2 computes: - The entry count: the number of batches that have run stage 2 is advanced and compared with its budget (step 4). - C2, rest:
+Rule A is a condition on h1, a value of E3, but by Lemma A it is tested on z, a value of C2, with the bits of e1 that it needs folded into the constant V.
+*Operation count of one batch.* The batch runs on a load/store machine with 16 registers.
+The second column counts additions, XOR, AND, OR, shifts, the comparisons and the branches, with PROR = 5.
+No store is needed: the list position and the entry count stay in two registers across batches, and the batch values that are live at any point fit in the other 14; the self-test below reports the number in use.
+In the E1 test, eps is one XOR, beta XOR eps two, and n a rotation by one, two XORs and the AND with M (8, with loads for one mask pair, eta and M); the flags, the comparison and the branch are as in stage A.
+A packed word is one integer with seven 36-bit lanes.
+The program always evaluates both stages, so that stage 2 is counted and checked for every batch; the algorithm runs stage 2 only after a pass of stage A.
+The command python3 experiments/halfsearch.py --selftest N [seed] runs N batches.
+From these two compressions it takes Y4 of A; h1, the second value of E3 on A; the word n of Lemma N, from E1 evaluated for A and for B on their own states and words; and the two digests.
+Its exit status is 0 only if all of these agree with this section.
+None of the 14,000 words n of that run is zero, so the flags are also formed for all 128 patterns of zero and nonzero lanes: all 128 are right.
+They are a participant check, not an organizer verification of the cost. ## 7.
+Success probability The probability space is the one uniform 256-bit word of step 1, for the fixed target.
+Call a trial *good* when R = 0 and the trial satisfies rule A.
+By 6.4 a good trial is found unless a budget of step 4 ends the run before.
+(The budget corresponds to a pass rate of 2^-16.
+Step 3 processes only the passes that lie in batches that ran stage 2, which are fewer.
+(A batch runs stage 2 only if one of its trials satisfies rule A, and every trial lies in one batch, so the number of batches that run stage 2 is at most the number of trials that satisfy rule A.
+When it outputs a pair, the pair is a genuine collision: step 3 checks both complete digests, and the messages have different lengths.
+*Remark on clustering.* H1 asks for more than a rate: it asks that the good trials do not come in clusters.
+The constants were found by a solver search and chosen by the count of Section 10, and rule A was read off counts of the same kind.
+That search, the counts and the measurements of Section 10 used fewer than 2^60 primitive operations in total; this figure is the participant's estimate from the running times, not a count.
+Bound the code by 4096 instruction templates of at most four 256-bit words each: 2^14 words, which is 2^19 bytes.
+The solver search and the counting programs ran on a desktop machine and stayed below 16 GB of main memory, 2^34 bytes; the sampling programs and the programs for real messages stayed below 10 GB of the memory of one graphics card.
+These two limits are the participant's observation of the runs, not instrumented peaks. memory_log2_bytes = 35 covers both at once, 2^34 + 10 * 2^30 < 2^35 bytes, and with them the search.
+The list of 6.5 is not advice: the program computes it from eta and Y3 by Lemma Q.
+There is no other stored data and no stored collision. ## 10.
+Lemma T predicts that every trial agrees on the 128 masked digest bits.
+**The seven-word model.** By 6.2 the residual of a trial is a function of the constants and of seven 32-bit words: for E1 its first-half values d1 and b1 and its a output a2 on message A, and for E3 the words Y4, Y9, w8 and its first-half value h1 on message A.
+(E1's a1 and d1 are the same for A and B, so a1 enters only through d1 and a2; each of the seven words is a bijective image of one input or message word of its call when the others are fixed.) In the algorithm Y4 takes every member of the class equally often.
+The model M says that over the trials the other six words behave like independent uniform words, independent of Y4.
+Rule A is a condition on h1, one of the seven words, so under M the trials with R = 0 that satisfy rule A have a rate of the same kind, r_A, which counts only the solutions that satisfy rule A; r_A is at most r.
+**How r is counted (participant computation, not organizer-verified).** Write tau, eps for the XOR differences between A and B of E1's a and c outputs and beta for that of its first-half b.
+As in the proof of Lemma E, E1's d and b output differences are ROR(tau, 8) and ROR(beta XOR eps, 7), and E3's d and b output differences are ROR(eta XOR eps', 8) and ROR(psi XOR tau', 7), where eta, psi are the XOR differences of E3's first-half d and b and tau', eps' those of its c and a outputs.
+So R = 0 holds exactly when tau' = tau, eps' = eps, psi = tau XOR ROR(tau, 1) and eta = eps XOR ROL(beta XOR eps, 1).
+As in Lemma Q, the d1 with a given beta are those for which c1 has prescribed bits on the mask ROL(beta,12) AND 7fffffff; they are a share 2^-k of all d1, where k is the number of bits of the mask.
+Only finitely many words occur as beta, and they can be listed by increasing k. 2.
+In E1, a2' = a2 + delta + (b1' - b1), and b1' - b1 = (b1 XOR beta) - b1 is a signed sum over the bits of beta.
+So tau = a2 XOR a2' is one of the XOR differences that an addition can show when its additive difference is delta plus such a signed sum.
+For eps, the last equation above says eps XOR ROR(eps, 1) = beta XOR ROR(eta, 1).
+A word has the form eps XOR ROR(eps, 1) exactly when its weight is even, and then for exactly two words eps, each the complement of the other.
+So a beta for which beta XOR ROR(eta, 1) has odd weight contributes nothing, and every other beta has two candidates for eps. 3.
+*The E3 side.* For an outcome, N3 is the number of quadruples (Y4, h1, Y9, w8) for which E3 produces eta, psi, eps and tau; all of them have Y4 in the class.
+For a word x and a mask m, (x XOR m) - x is the signed sum over the bits i of m of (1 - 2 x_i) 2^i, so an addition whose XOR output difference is prescribed fixes the bits of its result on that mask once its additive input difference is known.
+Their additive differences are the constant Y3' - Y3 and three signed sums (over the bits of eta, psi and ROR(eta XOR eps, 8)); the admissible values of those three are enumerated with a carry automaton, and for each choice the number of completions is a product of two carry automata, one for Y4 against e1 = Y3 + Y4 and one for g1 + h2.
+When the enumeration exceeds a work budget the program uses a uniform random subset with the matching weight; it reports every outcome for which it did, and such a value is an estimate and not a count. 4.
+*The E1 side.* For an outcome, P1 is the probability that E1 produces tau and eps when d1 is uniform among the values with this beta and b1 and a2 are uniform.
+Put nu = ROR(tau, 8), the XOR difference of E1's d output.
+Two additive differences are involved: db = b1' - b1, a signed sum over the bits of beta, and dd = d2' - d2, a signed sum over the bits of nu.
+The first must make the addition a2 + (delta + db) show tau, the second must make the addition c2 + (DY11 + dd) show eps.
+For every such pair (db, dd) the bits of a2 on tau, of d2 on nu and of c2 on eps are prescribed, and the number of pairs (c1, a2) that have them is counted by an automaton over the bits of c1 with two state bits, the borrow of d1 = c1 - Y11 and the carry of c2 = c1 + d2.
+A triple (c1, b1, a2) determines db and dd, so the counts of the pairs (db, dd) are added.
+When the list of the db or of the dd exceeds a limit the program falls back to a product formula that treats the additions as independent; it reports every outcome for which it did, and such a value is not a count. 5.
+Steps 1 to 5 use no random number unless one of the two fallbacks of steps 3 and 4 is taken.
+The arithmetic is double-precision floating point: sums and products of integers, with a relative rounding error of 2^-53 per operation once a value exceeds 2^53.
+| tau | eps | N1 | N3 | Adds | | --- | --- | ---:
+Both counts can be recomputed with a model counter from the definitions of 6.2 and of steps 2 to 4, without the calculator.
+**Rule A and the count that the claim uses (participant computation).** Rule A is a condition on h1, one of the four words of the E3 side.
+So for an outcome (tau, eps) the number N3 of step 3 splits into the quadruples whose h1 satisfies rule A and those whose h1 violates it, and under M the rate of the trials with R = 0 that satisfy rule A is the sum of step 5 with the first of the two numbers in place of N3.
+Second, whether the formula has a solution together with the clause that h1 violates rule A.
+One CNF instance holds, with real word values: the call C3 for both messages with equal b and d outputs, so that every model is a set of constants with the property of Fact P;
+E1 and E3 for both messages; a zero residual; and a bound on the number of bit positions, bit 31 excepted, at which a difference is active in six additions of E1 and E3.
+The bound steers the search towards solutions that are reached with high probability under M; the count, not the bound, is what H1 is set against.
+The last of these is the event eps XOR ROL(beta XOR eps, 1) = eta, so a trial in which E1 requires the class is a trial that passes the E1 test of Lemma N.
+The algorithm of this package uses the E1 test and not the early test; both are reported because the programs print both.
+The search runs without rule A, without the E1 test and without the packing of 6.5.
+The organizer checks that every returned pair agrees on 136 digest bits.
+It is not a test of H1, H2 or H3 and says nothing direct about 128 bits.
+Beside the search, the program evaluates one packed batch per seed on the counting machine of 6.5 and returns the operations and loads of its two stages, its right lanes and whether a lane satisfied rule A as observations; the organizer records them as untrusted and does not check them.
+**Scope and limitations.** - No full collision of the 2-round hash is exhibited.
+No priority or novelty claim is made. - The time bound counts the arithmetic, logical and shift operations of the packed batch, its comparisons and its branches, and one load for every use of a constant or list entry, on a 16-register machine, with stage 2 counted for the share of the batches that step 4 allows.
+The count of a batch can be rerun with the self-test of the submitted program (6.5); that is a participant check and no organizer run verifies it.
+The required baseline_improved identifier blake3-r2-nominal-v2 names the organizer's nominal display reference 128, which is not an established attack, a qualified baseline or a security bound.

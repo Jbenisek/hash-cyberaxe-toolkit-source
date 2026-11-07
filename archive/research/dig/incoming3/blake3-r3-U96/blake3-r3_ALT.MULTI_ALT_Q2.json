@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "two-block chunk (fixed first block, final block flags 10): recount",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "595 operations per step for 300 random chaining values with flags 10 and zero prefix words: no change (min 595, max 595); the first block is computed once; messages become 128 bytes sharing the first block",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_ops.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Constants enter only as immediates; cost is independent of cv unless a folded constant is exactly 0.",
+ "held_fixed": "final block m0..m7=0, m8..m15 variable, counter 0, length 64",
+ "reopen_if": "none",
+ "topic": "blake3-r3|ALT.MULTI|ALT|Q2"
+}

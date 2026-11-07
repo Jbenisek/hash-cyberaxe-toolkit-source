@@ -1,0 +1,102 @@
+CONST CMASK 03cf8303 CVAL 030c0303 DELTA5 fffffff8
+RUN real sub=1 threads=2^16 outer/thread=2^0 inner=2^12 launches=4 seed=7 nsel=4 tsel=4 rsel=6 esel=0 hwt=0 hwh=128 launches_done=4 records=123246
+CNT trials                                   1073741824
+CNT listed tau                               654109
+CNT listed E1 outcome                        0
+CNT rule A (8)                               4180417
+CNT gate H4                                  67232946
+CNT listed partial E3                        0
+CNT early word 0                             640
+CNT eta condition                            22
+CNT listed outcome & rule A                  0
+CNT listed outcome & gate H4                 0
+CNT listed tau & rule A                      2565
+CNT listed partial E3 & rule A               0
+CNT listed outcome & listed partial E3       0
+CNT residual word 0 zero                     0
+CNT residual word 1 zero                     2
+CNT residual word 2 zero                     1
+CNT residual word 3 zero                     0
+CNT residual low 16 all zero                 0
+CNT listed outcome & early                   0
+CNT listed tau & early                       22
+CNT listed partial E3 eps 6e21be55           0
+CNT beta != 18b0e098 (must be 0)             0
+CNT T0 == 0                                  0
+HW 26 2
+HW 27 8
+HW 28 20
+HW 29 34
+HW 30 108
+HW 31 268
+HW 32 572
+HW 33 1143
+HW 34 2426
+HW 35 4729
+HW 36 9655
+HW 37 18460
+HW 38 34962
+HW 39 63100
+HW 40 112941
+HW 41 195168
+HW 42 331259
+HW 43 544065
+HW 44 875383
+HW 45 1367806
+HW 46 2089161
+HW 47 3108136
+HW 48 4514391
+HW 49 6384728
+HW 50 8838968
+HW 51 11905343
+HW 52 15677788
+HW 53 20123774
+HW 54 25248814
+HW 55 30879849
+HW 56 36925921
+HW 57 43040739
+HW 58 49069917
+HW 59 54565802
+HW 60 59312128
+HW 61 62916159
+HW 62 65193289
+HW 63 65958655
+HW 64 65228903
+HW 65 62973315
+HW 66 59373834
+HW 67 54674614
+HW 68 49160205
+HW 69 43155951
+HW 70 37019988
+HW 71 30987874
+HW 72 25341140
+HW 73 20216447
+HW 74 15743099
+HW 75 11971993
+HW 76 8876173
+HW 77 6424517
+HW 78 4529915
+HW 79 3118632
+HW 80 2093277
+HW 81 1369268
+HW 82 870202
+HW 83 540581
+HW 84 325905
+HW 85 192358
+HW 86 109738
+HW 87 61187
+HW 88 32738
+HW 89 17349
+HW 90 8660
+HW 91 4377
+HW 92 2166
+HW 93 949
+HW 94 460
+HW 95 200
+HW 96 79
+HW 97 42
+HW 98 9
+HW 99 6
+HW 100 1
+HW 103 1
+OVERFLOW 0

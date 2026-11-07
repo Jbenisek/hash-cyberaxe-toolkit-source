@@ -1,0 +1,3 @@
+# name	lx	X3	X7	X11	X15	W4	W13	D3	D11	delta	Y3	Y11	eta	source
+N6a	6	3d55e40c	ca84e63c	4fff43fc	a7882079	782535ba	3fbb7ffd	c972a031	bf0ab0ef	00000006	9b472fe7	e035a78c	a031fb8f	const_alg/pinctr.log (trailmin5_ctr.py lx6 ctrbound 90 seed 61)
+N8a	8	880ee512	6f67d2f1	bfbe6214	fba72e9e	688947f8	00bc6401	aac82f8d	5d37f74f	fffffff8	aa9c4839	f2a00058	30f35548	const_alg/pinctr.log (trailmin5_ctr.py lx8 ctrbound 90 seed 52)

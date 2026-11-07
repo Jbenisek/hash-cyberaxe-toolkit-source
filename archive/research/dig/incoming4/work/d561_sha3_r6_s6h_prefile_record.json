@@ -1,0 +1,23 @@
+{
+  "id": "D561-SHA3-R6-S6H-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6h prefile audit",
+  "question": "What is creditable for pkgS6h without a public request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6h claims time_log2=122.66823. Prefile SOME FAIL for absent executable ledger appendix and note label D20; other checks pass. No request or exact N; no score/premise credit.",
+  "source": "our workflow: D561d read-only pkgS6h prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D561_s6h_prefile.md; research/tools/build_pkg/scratch/pkgS6h/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6h/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No public request; no package/stage/filing/submission.",
+  "held_fixed": "pkgS6h package bytes as found; no writes",
+  "reopen_if": "ledger/label repair or public request"
+}

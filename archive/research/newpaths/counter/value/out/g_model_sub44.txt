@@ -1,0 +1,52 @@
+RUN model sub=1 threads=2^16 outer/thread=2^4 inner=2^12 launches=4096 seed=102
+CNT trials                                   17592186044416
+CNT listed tau                               10603173612
+CNT listed E1 outcome                        5019
+CNT rule A (8)                               68719407609
+CNT gate H4                                  1099511962970
+CNT listed partial E3                        4068
+CNT early word 0                             10197327
+CNT eta condition                            259398
+CNT listed outcome & rule A                  20
+CNT listed outcome & gate H4                 311
+CNT listed tau & rule A                      41413565
+CNT listed partial E3 & rule A               135
+CNT listed outcome & listed partial E3       0
+CNT residual word 0 zero                     4657
+CNT residual word 1 zero                     39953
+CNT residual word 2 zero                     4449
+CNT residual word 3 zero                     3288
+CNT residual low 16 all zero                 0
+CNT listed outcome & early                   0
+CNT listed tau & early                       458393
+CNT listed partial E3 eps 6e21be55           717
+CNT beta != 18b0e098 (must be 0)             0
+TAUI 0 232
+TAUI 1 114
+TAUI 2 991
+TAUI 3 511
+TAUI 4 267
+TAUI 5 135
+TAUI 6 1039
+TAUI 7 505
+TAUI 8 484
+TAUI 9 264
+TAUI 10 64
+TAUI 11 41
+TAUI 12 248
+TAUI 13 124
+E3G 0 939
+E3G 1 717
+E3G 2 1173
+E3G 3 796
+E3G 4 154
+E3G 5 106
+E3G 6 41
+E3G 7 42
+E3G 8 67
+E3G 9 6
+E3G 10 0
+E3G 11 11
+E3G 12 13
+E3G 13 2
+E3G 14 1

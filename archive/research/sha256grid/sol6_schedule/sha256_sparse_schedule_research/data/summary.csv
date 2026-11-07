@@ -1,0 +1,5 @@
+N,admissible_late_supports,linear_exact_full_supports,linear_exact_minimum_bits,modular_lower_bound_bits,modular_upper_bound_bits,modular_exact_minimum,word_support_candidates_modular_not_sufficient
+37,14,99,25,6,25,OPEN,1691
+38,7,44,44,6,44,OPEN,931
+39,3,12,159,11,120,OPEN,417
+40,2,9,173,11,133,OPEN,354

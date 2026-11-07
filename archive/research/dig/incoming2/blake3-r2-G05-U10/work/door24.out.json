@@ -1,0 +1,448 @@
+{
+ "random_sample": {
+  "N": 20000,
+  "E1": 20000,
+  "E3": 20000,
+  "joint": 20000
+ },
+ "grids": [
+  {
+   "params": [
+    "C0c1",
+    "C0d1"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0c1",
+    "D3d1"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0c1",
+    "S15"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0c1",
+    "S9"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0c1",
+    "w5"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0c1",
+    "X2"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0c1",
+    "y"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0d1",
+    "D3d1"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0d1",
+    "S15"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0d1",
+    "S9"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0d1",
+    "w5"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0d1",
+    "X2"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "C0d1",
+    "y"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "D3d1",
+    "S15"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "D3d1",
+    "S9"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "D3d1",
+    "w5"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "D3d1",
+    "X2"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "D3d1",
+    "y"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "S15",
+    "S9"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "S15",
+    "w5"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "S15",
+    "X2"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "S15",
+    "y"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "S9",
+    "w5"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "S9",
+    "X2"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "S9",
+    "y"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "w5",
+    "X2"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "w5",
+    "y"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  },
+  {
+   "params": [
+    "X2",
+    "y"
+   ],
+   "E1": 144,
+   "E3": 144,
+   "joint": 144,
+   "cartesian": false
+  }
+ ],
+ "dependence": {
+  "C0c1": {
+   "E1_coords_changed": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    7,
+    8,
+    10
+   ],
+   "E3_coords_changed": [
+    2,
+    3,
+    6,
+    7,
+    9,
+    11
+   ]
+  },
+  "C0d1": {
+   "E1_coords_changed": [
+    0,
+    1,
+    4,
+    5,
+    8,
+    10
+   ],
+   "E3_coords_changed": [
+    2,
+    3,
+    6,
+    7,
+    9,
+    11
+   ]
+  },
+  "D3d1": {
+   "E1_coords_changed": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    7,
+    8,
+    10
+   ],
+   "E3_coords_changed": [
+    2,
+    3,
+    6,
+    7,
+    9,
+    11
+   ]
+  },
+  "S15": {
+   "E1_coords_changed": [
+    0,
+    1,
+    4,
+    5,
+    8,
+    10
+   ],
+   "E3_coords_changed": [
+    2,
+    3,
+    6,
+    7,
+    9,
+    11
+   ]
+  },
+  "S9": {
+   "E1_coords_changed": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    7,
+    8,
+    10
+   ],
+   "E3_coords_changed": [
+    2,
+    3,
+    6,
+    7,
+    9,
+    11
+   ]
+  },
+  "w5": {
+   "E1_coords_changed": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "E3_coords_changed": [
+    2,
+    3,
+    6,
+    7,
+    9,
+    11
+   ]
+  },
+  "X2": {
+   "E1_coords_changed": [
+    0,
+    1,
+    4,
+    5,
+    8,
+    10
+   ],
+   "E3_coords_changed": [
+    2,
+    3,
+    6,
+    7,
+    9,
+    11
+   ]
+  },
+  "y": {
+   "E1_coords_changed": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    7
+   ],
+   "E3_coords_changed": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    11
+   ]
+  }
+ }
+}

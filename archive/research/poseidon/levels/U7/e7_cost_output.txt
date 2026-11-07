@@ -1,0 +1,53 @@
+d = 5^-1 mod (p-1) = 0x333333333333333333333333333333334e9ee0c9a10a60e2e0f0f3f0cccccccd  bits 254  hamming weight 125
+x^5: 2 squarings + 1 multiplication = 3 field mults (x^2, x^4, x^4*x)
+x^d left-to-right binary: 253 squarings + 124 multiplications = 377
+x^d sliding window (best w=5): ~310 field mults   ratio to x^5: 103.3
+x^d cost vs x^5 (field-mult count): about 103x
+timing x^5: python pow 1.66 us, gmpy2.powmod 0.61 us
+timing x^d: python pow 261.76 us, gmpy2.powmod 60.36 us
+note: tiny exponents are dominated by call overhead; use the mult counts above as the cost model.
+
+=== per-level cost in field multiplications (additions/constants ignored), r=1 and r=2 ===
+forward round: full = 3 S-boxes (9) + MDS (9) = 18; partial = 1 S-box (3) + MDS (9) = 12; R0 = 2 live S-boxes + M*(A,B,K) with K precomputed = 6+9 = 15 (can be 6 if K is folded: M*(A,B,K) = A*m0+B*m1+const => 6); R63 = 3 S-boxes + row 0 only (3) = 12
+backward round (state after M -> state before C): M^-1 (9) + inverse S-boxes: full = 3*310, partial = 1*310 (other lanes unchanged)
+
+r=1: level / orig round / forward mults / backward mults
+  L1   R0   forward  12   backward    629
+  L2   R1   forward  18   backward    939
+  L3   R2   forward  18   backward    939
+  L4   R3   forward  18   backward    939
+  L5   R4   forward  12   backward    319
+  L6   R60  forward  18   backward    939
+  L7   R61  forward  18   backward    939
+  L8   R62  forward  18   backward    939
+  L9   R63  forward  12   backward    939
+  total forward 144   total backward 7521
+
+r=2: level / orig round / forward mults / backward mults
+  L1   R0   forward  12   backward    629
+  L2   R1   forward  18   backward    939
+  L3   R2   forward  18   backward    939
+  L4   R3   forward  18   backward    939
+  L5   R4   forward  12   backward    319
+  L6   R5   forward  12   backward    319
+  L7   R60  forward  18   backward    939
+  L8   R61  forward  18   backward    939
+  L9   R62  forward  18   backward    939
+  L10  R63  forward  12   backward    939
+  total forward 156   total backward 7840
+
+forward-vs-backward at a split point (cumulative mults) for r=1: split after level k: forward k levels, backward 9-k levels
+  split after L0: forward prefix     0 + backward suffix    7521 =    7521
+  split after L1: forward prefix    12 + backward suffix    6892 =    6904
+  split after L2: forward prefix    30 + backward suffix    5953 =    5983
+  split after L3: forward prefix    48 + backward suffix    5014 =    5062
+  split after L4: forward prefix    66 + backward suffix    4075 =    4141
+  split after L5: forward prefix    78 + backward suffix    3756 =    3834
+  split after L6: forward prefix    96 + backward suffix    2817 =    2913
+  split after L7: forward prefix   114 + backward suffix    1878 =    1992
+  split after L8: forward prefix   132 + backward suffix     939 =    1071
+  split after L9: forward prefix   144 + backward suffix       0 =     144
+
+A full backward step is ~103x a forward step per S-box; backward through the 4 final full rounds costs 3756 vs forward 66.
+python big-int: one forward hash (r=1) 193.4 us
+python big-int: 24 inverse S-boxes 7824.3 us (one backward pass would invert ~24)

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "counter and length alternatives: exhaustive constants scan",
+ "question": "Alternatives?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "7280 combinations of flags, length 0..64 and counter values: no operation saving; only the counter value above and the chaining-value constructions of ALT.MULTI zero an immediate",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_ops.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Scan over small counters only (7 values) plus the exhaustive low-word search of Q3.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "none",
+ "topic": "blake3-r3|ALT.COUNTER|ALT|Q4"
+}

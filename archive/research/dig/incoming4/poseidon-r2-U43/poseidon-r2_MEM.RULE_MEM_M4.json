@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.RULE (MEM)",
+ "question": "M4: alternatives: trade memory for time at the other end (use more memory to cut ops)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Spending more memory only pays if one extra bit of memory (x2 bytes = +1 bit) saves more than half the ops. The time terms that could be bought with memory (twiddle tables, spectra of operands) are at most the transform share; storing spectra (the memory-hungry schedule) was rejected in the r1 lean build for exactly this reason.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.RULE|MEM|M4. Argument from the rule; r1 lean_r1 trade documented in its note.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "a table that removes > 50 percent of ops costs under 2x memory"
+}

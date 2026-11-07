@@ -1,0 +1,64 @@
+{
+ "clusters": 120,
+ "seed": "recount120",
+ "words through my tracer": 1200,
+ "words with two X2 values": 720,
+ "lanes in those words": 5040,
+ "distinct (stage A, stage 2, registers) triples": {
+  "(47, 135, 16)": 1200
+ },
+ "lanes right": 8400,
+ "lanes wrong": 0,
+ "lane-sum bound broken": [],
+ "largest lane seen per part (units of 2^32) vs declared bound": {
+  "loop": [
+   0.0,
+   null
+  ],
+  "X0 to X10": [
+   2.9856,
+   3
+  ],
+  "C2 to z": [
+   3.8558,
+   4
+  ],
+  "rule A": [
+   1.0,
+   2
+  ],
+  "entry count": [
+   0.0,
+   null
+  ],
+  "C2, rest": [
+   4.6643,
+   5
+  ],
+  "C1 to Y1": [
+   4.648,
+   5
+  ],
+  "E1, A and B": [
+   7.5017,
+   9
+  ],
+  "E1 test": [
+   2.0,
+   2
+  ],
+  "restore": [
+   0.0,
+   null
+  ]
+ },
+ "reads per word of each X2-dependent memory word": {
+  "X2+w7": 2,
+  "-w2": 1,
+  "w0": 2,
+  "w12-S1-S6": 1,
+  "w3": 1,
+  "S5": 1,
+  "S12": 1
+ }
+}

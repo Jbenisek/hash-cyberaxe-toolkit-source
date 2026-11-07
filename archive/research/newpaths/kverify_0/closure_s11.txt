@@ -1,0 +1,11 @@
+fixed len64: 100 unknown words, 96 equations, freedom F=4
+COMPUTED R1 check: max closure 1 guess = 9  2 guesses = 14
+COMPUTED peeling core: 93 words; peeled ['C0.b2', 'C2.b2', 'm12', 'm15', 'm5', 'K2.a2', 'm8']
+COMPUTED greedy set ['K2.c1', 'K3.d1', 'K3.d2', 'C3.a2', 'm0', 'D1.d1', 'K2.d2', 'C0.a1'] {'full': True, 'sub_cond': 0, 'best': {2: (0, 0), 3: (0, 0), 4: (0, 0)}}
+CONTROL m0 | K0.d1: |A|,|B| = 9 9  n_sep = 1
+CONTROL greedy | C0.b1 : n_sep = 1
+CONTROL m0,K3.d1 | K0.c2,K3.d2: n_sep = 1  lin extra = 0
+COMPUTED random greedy 8-sets: {'sets': 300, 'sub_cond': 0, 'nonfull': 0} tries 4098
+  k=2: histogram of (max n_sep, max n_sep with LIN) over all partitions into 2 blocks: {(0, 0): 300}
+  k=3: histogram of (max n_sep, max n_sep with LIN) over all partitions into 3 blocks: {(0, 0): 300}
+  k=4: histogram of (max n_sep, max n_sep with LIN) over all partitions into 4 blocks: {(0, 0): 300}

@@ -1,0 +1,6 @@
+[ctx] dropped 52 repeated input rows, 262092 remain
+[ctx] N=262092 n/half=131046 planted 20 13 11 71
+jobs 50000
+done
+ctx: 19.85 s, 240284 KB
+ctx exit 0

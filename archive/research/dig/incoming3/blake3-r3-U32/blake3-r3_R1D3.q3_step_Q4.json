@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work_b3r3/analyze.py; research/dig/incoming3/work_b3r3/b3steps.py; research/dig/incoming3/work_b3r3/analysis.json; research/blake3_r3/candidate_blake3/experiments/rho.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "question": "Q4 alternatives: does any other formulation of R1D3.q3 cost fewer operations?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "tested with the filed tracer: add operands sorted ascending or descending by bound: total 595 and 595 (no change, step stays 8 ops); lane pitch 36 (filed) 595, pitch 35 603, 34 622, 33 684 total (8/8/8/10 ops at this step, masks 0/0/0/2): a smaller guard width only adds masks, 7 lanes x 36 is the maximum for 256-bit words. Hand check: folding a constant xor through the rotation (ror(d)^ror(a) for constant d) and fusing or into add give the same count. The 3 masks of the filed circuit sit at R3D1.q3, R3D2.q3, R3D3.q3 (round 3), not here, so no mask at this step is removable",
+ "notes": "validation first: filed scalar digest vs organizer verifier/blake3.py matched 300/300 random 64-byte messages at 7, 3, 2 and 1 rounds; verifier empty-input 7-round hash = af1349b9...3262 (spec vector) ok; numpy tracer vs scalar 200/200; filed packed circuit selftest True (595 ops). Alternatives are a small family (operand order, pitch, rotation distribution), not a search over all circuits; 'no cheaper' is for this family only.",
+ "held_fixed": "rotation recipe 5 ops, 7 lanes, constants folded, digest masks 4",
+ "reopen_if": "a rotation or mask recipe below 5 ops per rotation or a lane layout above 7 lanes is found",
+ "object": "step R1D3.q3 (G call R1D3 quarter-step q3)"
+}

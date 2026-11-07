@@ -1,0 +1,58 @@
+=== T1: injectivity of the full 3-lane state (X1); gcd(5,q-1)=1 vs 5 ===
+OBSERVED q=11 gcd(5,q-1)=5 r=1: inputs 121, distinct 3-lane outputs 4, distinct lane0 4 (of 11), distinct (lane0,lane1) 4
+OBSERVED q=11 gcd(5,q-1)=5 r=2: inputs 121, distinct 3-lane outputs 3, distinct lane0 3 (of 11), distinct (lane0,lane1) 3
+OBSERVED q=31 gcd(5,q-1)=5 r=1: inputs 961, distinct 3-lane outputs 31, distinct lane0 23 (of 31), distinct (lane0,lane1) 31
+OBSERVED q=31 gcd(5,q-1)=5 r=2: inputs 961, distinct 3-lane outputs 29, distinct lane0 21 (of 31), distinct (lane0,lane1) 29
+OBSERVED q=41 gcd(5,q-1)=5 r=1: inputs 1681, distinct 3-lane outputs 55, distinct lane0 32 (of 41), distinct (lane0,lane1) 52
+OBSERVED q=41 gcd(5,q-1)=5 r=2: inputs 1681, distinct 3-lane outputs 56, distinct lane0 30 (of 41), distinct (lane0,lane1) 54
+OBSERVED q=23 gcd(5,q-1)=1 r=1: inputs 529, distinct 3-lane outputs 529, distinct lane0 23 (of 23), distinct (lane0,lane1) 340
+OBSERVED q=23 gcd(5,q-1)=1 r=2: inputs 529, distinct 3-lane outputs 529, distinct lane0 23 (of 23), distinct (lane0,lane1) 337
+OBSERVED q=29 gcd(5,q-1)=1 r=1: inputs 841, distinct 3-lane outputs 841, distinct lane0 29 (of 29), distinct (lane0,lane1) 538
+OBSERVED q=29 gcd(5,q-1)=1 r=2: inputs 841, distinct 3-lane outputs 841, distinct lane0 29 (of 29), distinct (lane0,lane1) 546
+OBSERVED q=37 gcd(5,q-1)=1 r=1: inputs 1369, distinct 3-lane outputs 1369, distinct lane0 37 (of 37), distinct (lane0,lane1) 869
+OBSERVED q=37 gcd(5,q-1)=1 r=2: inputs 1369, distinct 3-lane outputs 1369, distinct lane0 37 (of 37), distinct (lane0,lane1) 870
+OBSERVED q=103 gcd(5,q-1)=1 r=1: inputs 10609, distinct 3-lane outputs 10609, distinct lane0 103 (of 103), distinct (lane0,lane1) 6796
+OBSERVED q=103 gcd(5,q-1)=1 r=2: inputs 10609, distinct 3-lane outputs 10609, distinct lane0 103 (of 103), distinct (lane0,lane1) 6721
+OBSERVED q=257 gcd(5,q-1)=1 r=1: inputs 66049, distinct 3-lane outputs 66049, distinct lane0 257 (of 257), distinct (lane0,lane1) 41730
+OBSERVED q=257 gcd(5,q-1)=1 r=2: inputs 66049, distinct 3-lane outputs 66049, distinct lane0 257 (of 257), distinct (lane0,lane1) 41889
+
+=== T2: X2 exhaustive: (nk,rho)->(A,B) bijection, state after R0.M lies on plane (M^-1 s)_2 = K ===
+OBSERVED q=23: distinct (A,B) 529 of 529; plane condition holds for 529 of 529 inputs; H(A,B)==hash for all inputs r=1,2: True
+OBSERVED q=29: distinct (A,B) 841 of 841; plane condition holds for 841 of 841 inputs; H(A,B)==hash for all inputs r=1,2: True
+OBSERVED q=103: distinct (A,B) 10609 of 10609; plane condition holds for 10609 of 10609 inputs; H(A,B)==hash for all inputs r=1,2: True
+OBSERVED q=257: distinct (A,B) 66049 of 66049; plane condition holds for 66049 of 66049 inputs; H(A,B)==hash for all inputs r=1,2: True
+
+=== T3: pairs of STATES (all q^3) staying lane-0-equal through partial rounds (X6, exhaustive), q=23, 3 seeds ===
+OBSERVED q=23 seed=1 (N=12167 states): ordered pairs, entry lane0 equal & lane0 equal after R4/R5/R6: [267674, 267674, 276138] ; predicted from trail algebra [267674, 0, 0] ; (generic expectation for pairs of any entry ~ N^2/q = 6436343)
+   chained: lane0 equal after R4 and after R5: any entry 267674 (random ~ N^2/q^2 = 279841); entry lane0 equal too: 0
+OBSERVED q=23 seed=2 (N=12167 states): ordered pairs, entry lane0 equal & lane0 equal after R4/R5/R6: [267674, 267674, 289892] ; predicted from trail algebra [267674, 0, 0] ; (generic expectation for pairs of any entry ~ N^2/q = 6436343)
+   chained: lane0 equal after R4 and after R5: any entry 267674 (random ~ N^2/q^2 = 279841); entry lane0 equal too: 0
+OBSERVED q=23 seed=3 (N=12167 states): ordered pairs, entry lane0 equal & lane0 equal after R4/R5/R6: [267674, 267674, 271906] ; predicted from trail algebra [267674, 0, 0] ; (generic expectation for pairs of any entry ~ N^2/q = 6436343)
+   chained: lane0 equal after R4 and after R5: any entry 267674 (random ~ N^2/q^2 = 279841); entry lane0 equal too: 0
+OBSERVED q=29 seed=1 (N=24389 states): ordered pairs, entry lane0 equal & lane0 equal after R4/R5/R6: [682892, 682892, 689620] ; predicted from trail algebra [682892, 0, 0] ; (generic expectation for pairs of any entry ~ N^2/q = 20511149)
+   chained: lane0 equal after R4 and after R5: any entry 682892 (random ~ N^2/q^2 = 707281); entry lane0 equal too: 0
+OBSERVED q=29 seed=2 (N=24389 states): ordered pairs, entry lane0 equal & lane0 equal after R4/R5/R6: [682892, 682892, 709804] ; predicted from trail algebra [682892, 0, 0] ; (generic expectation for pairs of any entry ~ N^2/q = 20511149)
+   chained: lane0 equal after R4 and after R5: any entry 682892 (random ~ N^2/q^2 = 707281); entry lane0 equal too: 0
+OBSERVED q=29 seed=3 (N=24389 states): ordered pairs, entry lane0 equal & lane0 equal after R4/R5/R6: [682892, 682892, 682892] ; predicted from trail algebra [682892, 0, 0] ; (generic expectation for pairs of any entry ~ N^2/q = 20511149)
+   chained: lane0 equal after R4 and after R5: any entry 682892 (random ~ N^2/q^2 = 707281); entry lane0 equal too: 0
+
+=== T4: Jacobian rank-drop points of (nk,rho)->state, exhaustive q=103 ===
+OBSERVED q=103 r=1: number of inputs (of 10609) where the 3x2 Jacobian has rank < 2, after each round: [('init', 0), ('R0', 205), ('R1', 208), ('R2', 213), ('R3', 221), ('R4', 222), ('R60', 226), ('R61', 230), ('R62', 238), ('R63', 246)] ; round-0 prediction a=0 or b=0: 205
+OBSERVED q=103 r=2: number of inputs (of 10609) where the 3x2 Jacobian has rank < 2, after each round: [('init', 0), ('R0', 205), ('R1', 208), ('R2', 213), ('R3', 221), ('R4', 222), ('R5', 222), ('R60', 231), ('R61', 239), ('R62', 247), ('R63', 256)] ; round-0 prediction a=0 or b=0: 205
+
+=== T5: do the lane-0 collision pairs of r=1 and r=2 coincide? q=103, 3 seeds (same constants, schedules differ by R5) ===
+OBSERVED seed=1: collision pairs r=1: 547195, r=2: 547267, in both: 5319; independent-random expectation 5321.9
+   pairs with equal lane0 after R4.M: 545878; of them colliding at r=1 output: 5330, at r=2 output: 5353 (random expectation 5308.4 each)
+OBSERVED seed=2: collision pairs r=1: 545598, r=2: 545914, in both: 5381; independent-random expectation 5293.2
+   pairs with equal lane0 after R4.M: 547576; of them colliding at r=1 output: 5147, at r=2 output: 5236 (random expectation 5309.3 each)
+OBSERVED seed=3: collision pairs r=1: 546650, r=2: 547054, in both: 5145; independent-random expectation 5314.5
+   pairs with equal lane0 after R4.M: 546902; of them colliding at r=1 output: 5350, at r=2 output: 5222 (random expectation 5313.0 each)
+
+=== T6: degree-drop directions of round 0 (X10), exhaustive over all q+1 directions of P^1 ===
+OBSERVED q=23 gcd(5,q-1)=1: directions (u:v) with M_i0 u^5 + M_i1 v^5 = 0, lanes 0,1,2: [1, 1, 1] (PROVED 1 each when gcd=1; 5 or 0 when gcd=5)
+OBSERVED q=29 gcd(5,q-1)=1: directions (u:v) with M_i0 u^5 + M_i1 v^5 = 0, lanes 0,1,2: [1, 1, 1] (PROVED 1 each when gcd=1; 5 or 0 when gcd=5)
+OBSERVED q=37 gcd(5,q-1)=1: directions (u:v) with M_i0 u^5 + M_i1 v^5 = 0, lanes 0,1,2: [1, 1, 1] (PROVED 1 each when gcd=1; 5 or 0 when gcd=5)
+OBSERVED q=103 gcd(5,q-1)=1: directions (u:v) with M_i0 u^5 + M_i1 v^5 = 0, lanes 0,1,2: [1, 1, 1] (PROVED 1 each when gcd=1; 5 or 0 when gcd=5)
+OBSERVED q=257 gcd(5,q-1)=1: directions (u:v) with M_i0 u^5 + M_i1 v^5 = 0, lanes 0,1,2: [1, 1, 1] (PROVED 1 each when gcd=1; 5 or 0 when gcd=5)
+OBSERVED q=11 gcd(5,q-1)=5: directions (u:v) with M_i0 u^5 + M_i1 v^5 = 0, lanes 0,1,2: [0, 0, 0] (PROVED 1 each when gcd=1; 5 or 0 when gcd=5)
+OBSERVED q=31 gcd(5,q-1)=5: directions (u:v) with M_i0 u^5 + M_i1 v^5 = 0, lanes 0,1,2: [0, 0, 0] (PROVED 1 each when gcd=1; 5 or 0 when gcd=5)

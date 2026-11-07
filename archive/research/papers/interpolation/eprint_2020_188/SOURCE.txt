@@ -1,0 +1,1 @@
+2020/188	Out of Oddity New Cryptanalytic Techniques against Symmetric Primitives Optimized for Integrity Proof Systems	s2	https://hal.inria.fr/hal-03090185/file/crypto-submission.pdf

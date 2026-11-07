@@ -1,0 +1,14 @@
+T0 C3 A 8127c181 76f7aefd 7af77f38 bbfbdffe B 7edf3e7e 76f7aefd 850000c3 bbfbdffe
+T1 scan X3 (others pinned): #(Y7 equal)=1 #(Y15 equal)=2 #(both)=1
+T1 scan X11 (others pinned): #(Y7 equal)=2 #(Y15 equal)=1 #(both)=1
+T2.0 scan Y7' (E2 b-in, E0 fixed): #(d5 eq: Z13 same)=6 #(d7 eq: Z7 same)=1 #(both)=1
+T2.0 scan Y15' (E0 d-in, E2 fixed): #(d5 eq: Z5 same)=2 #(d7 eq: Z15 same)=2 #(both)=1
+T2.1 scan Y7' (E2 b-in, E0 fixed): #(d5 eq: Z13 same)=2 #(d7 eq: Z7 same)=4 #(both)=1
+T2.1 scan Y15' (E0 d-in, E2 fixed): #(d5 eq: Z5 same)=1 #(d7 eq: Z15 same)=2 #(both)=1
+T3.0 scan Y4 (E3 b-in; E1 side fixed, true pair): #(d4 eq)=1 #(d6 eq)=2 #(both)=0 | E3-alone: #(dZ4=0)=3 #(dZ14=0)=0
+T3.0 scan Y12 (E1 d-in; E3 side fixed, true pair): #(d4 eq)=0 #(d6 eq)=0 #(both)=0 | E1-alone: #(dZ12=0)=0 #(dZ6=0)=0
+T3.1 scan Y4 (E3 b-in; E1 side fixed, true pair): #(d4 eq)=3 #(d6 eq)=0 #(both)=0 | E3-alone: #(dZ4=0)=0 #(dZ14=0)=0
+T3.1 scan Y12 (E1 d-in; E3 side fixed, true pair): #(d4 eq)=0 #(d6 eq)=2 #(both)=0 | E1-alone: #(dZ12=0)=0 #(dZ6=0)=0
+T3.2 scan Y4 (E3 b-in; E1 side fixed, true pair): #(d4 eq)=0 #(d6 eq)=0 #(both)=0 | E3-alone: #(dZ4=0)=1 #(dZ14=0)=0
+T3.2 scan Y12 (E1 d-in; E3 side fixed, true pair): #(d4 eq)=0 #(d6 eq)=0 #(both)=0 | E1-alone: #(dZ12=0)=0 #(dZ6=0)=0
+DONE 863 s

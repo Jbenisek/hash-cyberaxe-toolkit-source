@@ -1,0 +1,29 @@
+is 5187662682403 prime: 1
+v3(p-1)= 1 ; v3(p^2+p+1)= 1
+Ns bits 139 U bits 624 C bits 212 C'' bits 412
+--- order of alpha (= order of M) ---
+alpha^n == 1: True
+  q=2: exponent of q in ord(alpha) = 32 (max possible 32)
+  q=3: exponent of q in ord(alpha) = 2 (max possible 2)
+  q=463: exponent of q in ord(alpha) = 1 (max possible 1)
+  q=73: exponent of q in ord(alpha) = 1 (max possible 1)
+  q=5839: exponent of q in ord(alpha) = 1 (max possible 1)
+  q=12221196943: exponent of q in ord(alpha) = 1 (max possible 1)
+  q=5187662682403: exponent of q in ord(alpha) = 1 (max possible 1)
+  smooth part of order of M = 483648860635735837148703479199660471484416 = 2^? ... 139 bits; full smooth group order Ns bits 139
+  alpha^(n/C)==1 (C-part of order trivial)?: False
+  alpha^(n/C'')==1 (C''-part trivial)?: False
+--- projective order (order of M modulo scalars) divides p^2+p+1 ---
+alpha^(p^2+p+1) = norm = detM (scalar): True
+  alpha^(m/3) is scalar (so projective order not divisible by 3)? False
+  alpha^(m/73) is scalar (so projective order not divisible by 73)? False
+  alpha^(m/5839) is scalar (so projective order not divisible by 5839)? False
+  alpha^(m/12221196943) is scalar (so projective order not divisible by 12221196943)? False
+  alpha^(m/5187662682403) is scalar (so projective order not divisible by 5187662682403)? False
+  alpha^(m/C'') is scalar? False
+--- det M in F_p^* ---
+legendre(det)= -1  => 2-part of ord(det) is 2^32
+  det^((p-1)/3) == 1 ? False
+  det^((p-1)/463) == 1 ? False
+  det^((p-1)/C) == 1 ? False
+--- same for each Cauchy-structured scalar of M: T,S ---

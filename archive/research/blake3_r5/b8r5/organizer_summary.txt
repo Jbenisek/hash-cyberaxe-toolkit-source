@@ -1,0 +1,2 @@
+bsrho-n18 (organizer run, public seed): 175 of 256 trials returned a pair that the organizer verified; ideal-function control (program's own) 175 of 256; family-law runs at n = 12 (program's own): mean first repeat 79.38; halts target 81, ideal 79.
+proj-k0-w256 (organizer run): 168 of 256 trials returned a verified pair; by source: uniform 58 of 86; counter 51 of 85; iterates 59 of 85; equal pairs in the seven projections (program's own), total over 256 trials: w0 274, w3 259, w7 232, xor8 237, sum8 243, p01 260, p23 309.

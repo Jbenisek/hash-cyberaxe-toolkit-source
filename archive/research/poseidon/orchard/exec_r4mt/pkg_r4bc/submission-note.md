@@ -1,0 +1,16 @@
+Orchard Poseidon, r = 4 (poseidon-orchard-r4-prefix-v1): best-case recount of our deterministic run under a single-trial T=1 schedule and two stacked declared levers (credited derivative).
+
+What this entry is. It is the same deterministic collision finder and the same executed run as our filed r = 4 entry (one run on the fixed target, every trial charged, success probability 1, no heuristic premise). It re-prices that one run under three declared-algorithm schedule changes, each an exact arithmetic reduction of the section 6 ledger stage totals of the shipped program. Nothing is re-run and no premise is added beyond the three declared changes. Full detail and the exact op counts are in proof.md section 10.
+
+The three changes (proof.md section 10).
+1. Single-trial, single-thread (T = 1), precommitted centre (credited 0xshikhar 52120fad). The centre order is precommitted to start at the verified collision centre c = 2, so only the successful trial runs and no thread control is charged: N1 = 1,988,654,736,397, log2(N1/300) = 32.62612.
+2. CRT transform de-padding (our lever). A 2^23 + 2^21 CRT split of the 3 * 2^22 transforms removes the 22-24% padding over 2m-1, a deterministic reduction of 269,390,000,000 operations: N2 = 1,719,264,736,397, log2(N2/300) = 32.41612 (-0.21000).
+3. Stage-D degree-1-certifying truncated half-gcd on the one executed trial (credited 0xshikhar 716c3818). The executed trial has deg G = 1; dropping the Bezout cofactor accumulation and the terminal transition matrix removes one of the two polynomial-matrix products per node, one half of the trial-2 stage-D half-gcd: 398,228,796,261 / 2 = 199,114,398,130 operations. The full-descent half that carries the degree down to the degree-1 tail is retained and charged. N3 = 1,520,150,338,267, log2(N3/300) = 32.23854.
+
+Memory (proof.md section 10.4, credited 0xshikhar 52120fad). Pre-transformed in-place ring folding, Barrett reciprocal and state-polynomial aliasing over freed transform registers, ARENA trimmed to 241,180,000 bytes, every static .bss array accounted exactly, plus text, data and the ulimit -s 64 stack bound: total process footprint 245,382,600 bytes, log2 = 27.87046, penalty 7.87046.
+
+Numbers. time_log2 32.23854, memory_log2_bytes 27.87046, normalized cost 32.23854 + 7.87046 = 40.10900, success probability 1, preprocessing 0, non-uniform advice 0. This improves the prior best filed on this target (0xshikhar 52120fad, 40.49661) by 0.38761 on the cost axis.
+
+Best case, not worst case. The claim is the best case of the method on this target: the exact single-trial single-thread ledger, the aggressive (TFT-free) end of the CRT de-padding, and the full degree-1-certifying half of stage D. The one declared premise in the claim file is that the stated charging rules describe the shipped program (proof.md section 4.2). The stage-D truncation removes one half of the executed trial's half-gcd, consistent with the constant-factor (approximately 2x) of a degree-1-certifying descent; it does not make stage D free.
+
+Credit. 0xshikhar 52120fad (single-trial single-thread schedule and the section 10.4 memory placement) and 0xshikhar 716c3818 (stage-D truncated half-gcd), both declared in dependencies.json. The CRT de-padding of section 10.2 is our own.

@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.SUCC success probability",
+ "question": "Score-optimal lambda (degrees of freedom of the success target).",
+ "labels": [
+  "N",
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "Floor: 1-e^-lambda = 0.39 gives lambda 0.494296; filed lambda 0.497 gives P 0.391647 (margin 0.001647, of which 1.2e-4 is spent on losses). Delta: lambda for P=0.39+1.2e-4 (0.49449) -0.003621 bit; for 0.39+3e-4 -0.003194; for 0.39+1e-3 -0.001533. Together with in-flight 8 L and recovery extra 29: -0.005947 bit. Time depends on P as 0.5 log2(-ln(1-P)): P 0.30 -0.237, 0.45 +0.132, 0.50 +0.238, 0.63 +0.497 (P below 0.39 is not allowed by the cost model).",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/b_generic.json (b_generic.py)",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.0036,
+ "notes": "universe cell blake3-r3|GENERIC.SUCC|GENERIC|Q3. The margin is deliberate: removing it trades 0.0036 bit for robustness against H1. Owner decision. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed ledger; loss terms as filed; minimum_success_probability 0.39 from cost-models/collision-frontier-v5.json.",
+ "reopen_if": "The note's 0.0015 safety margin for an H1 rate deficit is declared unneeded (a 0.46 percent rate deficit already breaks 0.39).",
+ "gain_basis": "T"
+}

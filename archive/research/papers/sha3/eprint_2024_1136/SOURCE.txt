@@ -1,0 +1,1 @@
+2024/1136	Probabilistic Linearization: Internal Differential Collisions in up to 6 Rounds of SHA-3	owner_download	https://eprint.iacr.org/2024/1136.pdf

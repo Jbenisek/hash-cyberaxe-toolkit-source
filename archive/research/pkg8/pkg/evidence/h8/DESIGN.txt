@@ -1,0 +1,262 @@
+Design of the 8-byte length family (lengths 55 and 63), pin H8
+================================================================
+Research note, 2026-10-06.  Nothing here is filed.  This replaces, for delta = +-8,
+the construction of research\pkg5\blake3-r2\proof.md sections 3, 4 and 6.1; the names,
+the call layout (K0..K3, D0..D3 of round 0; C0..C3, E0..E3 of round 1) and the inverse
+"Fact 1" (proof.md section 2) are used unchanged.  The reference is h8_ref.py; the
+solve order is arrangement.txt (= research\night\main\h8_arrangement.txt, the certificate
+of basis_sat.py with PIN_EXTRA=w14).  Verification counts are in h8_ref_check.txt.
+
+0.  Constants of pin H8
+-----------------------
+    K  = IV[2] + IV[6] = 5bf2cd1d
+    lengths 55 and 63, 55 XOR 63 = 8
+    X3  = 29d4fa98   X7  = bee3af28   X11 = 44036000   X15 = 40c58500
+    W4  = 97475638   W13 = 0007c006   (top byte of W13 is 0)
+    W4' = ((K+W4) XOR 8) - K = 97475640      delta = W4 - W4' = fffffff8  (= -8)
+    C3 = G(X3,X7,X11,X15; w4, W13):
+        w4=W4 :  a out Y3  = 8127c181   c out Y11  = 7af77f38   b out 76f7aefd  d out bbfbdffe
+        w4=W4':  a out Y3' = 7edf3e7e   c out Y11' = 850000c3   b out 76f7aefd  d out bbfbdffe
+        DY3 = Y3' - Y3 = fdb77cfd        D11 = Y11' - Y11 = 0a08818b
+    eta = 830303cf.    (All finite computations; pin_facts.py and h8_ref verify them.)
+
+1.  Length cancellation  (Lemma L', replaces proof.md Lemma L)
+--------------------------------------------------------------
+Lemma L'.  K2 with block length 55 and words (w4, w5) leaves the same four state words
+as K2 with block length 63 and words (w4', w5'), where
+        w4' = ((K + w4) XOR 8) - K,   w5' = w5 + w4 - w4'.
+Proof.  Let a1 = K + w4.  In the second run the first assignment gives K + w4' = a1 XOR 8,
+so the second gives ROR(63 XOR (a1 XOR 8), 16) = ROR(55 XOR a1, 16) because 63 XOR 8 = 55;
+hence the same d1.  The third and fourth assignments depend only on d1 and constants.
+The fifth gives (a1 XOR 8) + b1 + w5' = a1 + b1 + w5 since w5' - w5 = w4 - w4' =
+a1 - (a1 XOR 8).  The last three depend only on values already equal.  QED.
+(K2 is the only round-0 call that reads v[14] = block length, w4 or w5, and it overwrites
+v[14]; so two messages sharing every word but w4, w5 related this way have the same S and
+the same X.  This needs delta even, which 8 is; proof.md section 8 / NOTES section 9.)
+
+Honest byte strings.  A is the first 55 bytes of w0..w15, B the first 63 bytes with
+w4->w4', w5->w5'.  B's bytes 55..62 must be zero: byte 55 is the top byte of w13, bytes
+56..59 are w14, bytes 60..62 are the low three bytes of w15.  So the family forces
+        w14 = 0,  w15 = 0,  top byte of w13 = 0,
+in addition to proof.md's w15 = 0.  W13 = 0007c006 has top byte 0; w14 and w15 are pinned
+to 0 in the construction.  A's bytes 55..63 are zero fill automatically.
+
+2.  The pinned call and the free half  (Lemmas P', H', replace Fact P and Lemma H)
+----------------------------------------------------------------------------------
+Lemma P'.  For the H8 constants C3 gives equal b output (76f7aefd) and equal d output
+(bbfbdffe) for w4 = W4 and w4 = W4', and differs in the a and c outputs as in section 0.
+Lemma H'.  Two 2-round compressions with equal state X after round 0, equal message words
+except w4, w5, with (X3,X7,X11,X15) the pin, w13 = W13 and w4 in {W4, W4'}, agree on digest
+words 0, 2, 5, 7.
+Proof (identical to proof.md Lemma H).  C0, C1, C2 read neither w4 nor w5 and act on equal
+states, so they agree.  C3 leaves equal v[7], v[15] by Lemma P', so Y agrees except maybe
+Y[3], Y[11].  E0 = G(0,5,10,15; w1,w11) and E2 = G(2,7,8,13; w9,w14) read none of Y[3],
+Y[11], w4, w5 (w14 = 0 is a shared constant), so Z[0],Z[5],Z[10],Z[15] and Z[2],Z[7],Z[8],
+Z[13] agree, and o0,o2,o5,o7 use only those.  QED.
+The residual R = (o1^o1', o3^o3', o4^o4', o6^o6') comes from E1 and E3 only; a collision is
+R = 0.  E1 = G(Y1,Y6,Y11,Y12; w12,w5), E3 = G(Y3,Y4,Y9,Y14; w15,w8), with Y11->Y11',
+Y3->Y3', w5->w5' on message B.
+
+3.  The class  (Lemma Q', replaces proof.md Lemma Q)
+----------------------------------------------------
+w15 = 0, so E3's first assignment is e1 = Y3 + Y4 (message A) and e1' = Y3' + Y4 (B); its
+second is h1 = ROR(Y14 ^ e1, 16).  Since Y14 is equal for A and B, the XOR difference of
+E3's first-half d value is eta(Y4) = ROR((Y3+Y4) XOR (Y3+Y4+DY3), 16), a function of Y4.
+Lemma Q'.  Fix eta = 830303cf.  The class {Y4 : eta(Y4) = eta} is
+        { Y4 : (Y3 + Y4) AND 03cf8303 = 030c0303 },
+with Y4 = e1 - Y3.  It has 2^19 members (13 bits of e1 fixed, 19 free, bit 31 among them).
+Proof (as proof.md Lemma Q).  x = ROL(eta,16) = 03cf8303 has bit 31 = 0, so m = x.  Y4 is
+in the class iff e1 XOR (e1+DY3) = x, i.e. (e1 XOR x) - e1 = DY3, i.e. 2((NOT e1) AND x) =
+DY3 + x = 01870000, which is even; halving gives (NOT e1) AND m = 00c38000, all of whose
+bits lie in m, so (e1 AND m) = (NOT 00c38000) AND m = 030c0303 and the other 19 bits of e1
+are free.  QED.
+Member k (0 <= k < 2^19): e1 carries the bits of k at its free positions in increasing
+order; Y4 = e1 - Y3.  (h8_ref.class_member, in_class, class_mask_value.)
+
+4.  Context  (step S1', Lemma S', replaces proof.md section 4 and Lemma S)
+--------------------------------------------------------------------------
+The arrangement of basis_sat.py (PIN_EXTRA=w14) has eight free basis words
+        C0.c1  C0.d1  S11  S4  X13  X14  Y4  w0 ,
+inner word Y4.  Seven are the context (step S1'); Y4 is the trial.  Each line below is one
+assignment of one call (round 0, or C0/C1/C2) solved by Fact 1 for the word on its left;
+pinned words (X3,X7,X11,X15,w4=W4,w13=W13,w14=0,w15=0,Y3,Y11) appear as constants and are
+not listed.  Order is topological (the solver's certificate).  Fifty lines, Y4-independent:
+
+  K0.a1 = IV0 + IV4 + w0
+  X8    = C0.c1 - C0.d1
+  K0.d1 = ROR(0 ^ K0.a1, 16)
+  K0.c1 = IV0 + K0.d1
+  K0.b1 = ROR(IV4 ^ K0.c1, 12)
+  S8    = ROL(S4,7) ^ K0.b1
+  D2.c1 = X8 - X13
+  D2.d1 = D2.c1 - S8
+  D2.b1 = ROL(X7,7) ^ X8
+  S7    = ROL(D2.b1,12) ^ D2.c1
+  X2    = ROL(X13,8) ^ D2.d1
+  K3.b1 = ROL(S7,7) ^ S11
+  K3.c1 = ROL(K3.b1,12) ^ IV7
+  K2.a1 = IV2 + IV6 + W4
+  K3.d1 = K3.c1 - IV3
+  S15   = S11 - K3.c1
+  K2.d1 = ROR(55 ^ K2.a1, 16)
+  S3    = ROL(S15,8) ^ K3.d1
+  K2.c1 = IV2 + K2.d1
+  D3.a1 = S3 + S4 + 0           (w14 = 0)
+  K2.b1 = ROR(IV6 ^ K2.c1, 12)
+  D2.a1 = X2 - D2.b1 - W13
+  D3.b1 = X3 - D3.a1 - 0        (w15 = 0; this is the X3 pin as a constraint)
+  D3.d1 = ROL(X14,8) ^ X3
+  S13   = ROL(D2.d1,16) ^ D2.a1
+  D3.c1 = ROL(D3.b1,12) ^ S4
+  K3.a1 = ROL(K3.d1,16) ^ 11
+  S9    = D3.c1 - D3.d1
+  K1.c1 = S9 - S13
+  w6    = K3.a1 - IV3 - IV7
+  S14   = ROL(D3.d1,16) ^ D3.a1
+  K1.d1 = K1.c1 - IV1
+  S10   = K2.c1 + S14
+  X9    = D3.c1 + X14
+  K1.a1 = ROL(K1.d1,16) ^ 0
+  X4    = ROR(D3.b1 ^ X9, 7)
+  w2    = K1.a1 - IV1 - IV5
+  S6    = ROR(K2.b1 ^ S10, 7)
+  C0.b1 = ROR(X4 ^ C0.c1, 12)
+  w7    = S3 - K3.a1 - K3.b1
+  S12   = S8 - K0.c1
+  K1.b1 = ROR(IV5 ^ K1.c1, 12)
+  S2    = ROL(S14,8) ^ K2.d1
+  S1    = ROL(S13,8) ^ K1.d1
+  S5    = ROR(K1.b1 ^ S9, 7)
+  w12   = D2.a1 - S2 - S7
+  w3    = S1 - K1.a1 - K1.b1
+  S0    = ROL(S12,8) ^ K0.d1
+  w1    = S0 - K0.a1 - K0.b1
+  w5    = S2 - K2.a1 - K2.b1
+
+Lemma S'.  For every assignment of the seven context words, round 0 with block length 55
+on the sixteen words (w6,w7 and the twelve above, plus pinned w4,w13,w14,w15) gives the
+column state S and state X with (X3,X7,X11,X15) the pin, w4 = W4, w13 = W13, w14 = w15 = 0.
+Proof.  Every line is Fact 1 (proof.md section 2) for one assignment of one round-0 (or
+C0/C1/C2) call, solved for the name on its left; the pinned outputs X3,X7,X11,X15 and
+pinned words w4,w13,w14,w15 enter their own assignment-equations as constants (line
+D3.b1 = X3 - D3.a1 - 0 is the X3-output equation; D2.a1 = X2 - D2.b1 - W13 the w13 equation),
+so forward evaluation reproduces them.  The order is acyclic and every word is solved once
+(the SAT certificate, arrangement.txt).  QED.  (Verified: on 200000 instances the forward
+round 0 of A and of B, lengths 55 and 63, gives equal X with the pin -- r0eq, pin, zword
+all 200000/200000 in h8_ref_check.txt.)
+
+5.  Trial  (step 6.1', Lemmas F',Y',K',T', replace proof.md Lemmas F,Y,K,T)
+---------------------------------------------------------------------------
+Only w8,w9,w10,w11 move with the member; w6,w7 (all of K3) stay fixed, and the member moves
+the state words X12,X0,X6,X10 (then X1,X5).  Forty-six lines, recomputed per class member
+Y4 (the first 21, Y8..E3.h1, give E3.h1 for the stage-A test; the cone of E3.h1 is 19):
+
+  Y8    = ROL(Y4,7) ^ C0.b1
+  Y12   = Y8 - C0.c1
+  Y0    = ROL(Y12,8) ^ C0.d1
+  C0.a1 = Y0 - C0.b1 - w6
+  X0    = C0.a1 - X4 - w2
+  X12   = ROL(C0.d1,16) ^ C0.a1
+  D0.d1 = ROL(X15,8) ^ X0
+  D1.c1 = X11 - X12
+  D0.c1 = S10 + D0.d1
+  D1.b1 = ROR(S6 ^ D1.c1, 12)
+  X10   = D0.c1 + X15
+  X6    = ROR(D1.b1 ^ X11, 7)
+  C2.a1 = X2 + X6 + w7
+  D1.d1 = D1.c1 - S11
+  C2.d1 = ROR(X14 ^ C2.a1, 16)
+  X1    = ROL(X12,8) ^ D1.d1
+  C2.c1 = X10 + C2.d1
+  C2.b1 = ROR(X6 ^ C2.c1, 12)
+  Y2    = C2.a1 + C2.b1 + w0
+  Y14   = ROR(C2.d1 ^ Y2, 8)
+  E3.h1 = ROR(Y14 ^ (Y3 + Y4 + w15), 16)    [stage A ends here]
+  D1.a1 = ROL(D1.d1,16) ^ S12
+  D0.b1 = ROR(S5 ^ D0.c1, 12)
+  w10   = D1.a1 - S1 - S6
+  X5    = ROR(D0.b1 ^ X10, 7)
+  C1.a1 = X1 + X5 + w3
+  C1.d1 = ROR(X13 ^ C1.a1, 16)
+  C1.c1 = X9 + C1.d1
+  C1.b1 = ROR(X5 ^ C1.c1, 12)
+  Y1    = C1.a1 + C1.b1 + w10
+  Y13   = ROR(C1.d1 ^ Y1, 8)
+  Y9    = C1.c1 + Y13
+  Y10   = C2.c1 + Y14
+  E3.g1 = Y9 + E3.h1
+  Y6    = ROR(C2.b1 ^ Y10, 7)
+  E1.a1 = Y1 + Y6 + w12
+  D0.a1 = ROL(D0.d1,16) ^ S15
+  E1.d1 = ROR(Y12 ^ E1.a1, 16)
+  w8    = D0.a1 - S0 - S5
+  w9    = X0 - D0.a1 - D0.b1
+  E1.b1 = ROR(Y6 ^ (Y11 + E1.d1), 12)
+  E3.f1 = ROR(Y4 ^ E3.g1, 12)
+  w11   = X1 - D1.a1 - D1.b1
+  Y5    = ROR(C1.b1 ^ Y9, 7)
+  E1.a2 = E1.a1 + E1.b1 + w5
+  E3.e2 = (Y3 + Y4 + w15) + E3.f1 + w8
+
+Lemma F' (D0,D1,D3).  With the new X0,X10 and the words w8,w9 above, D0 = G(S0,S5,S10,S15)
+has outputs (X0,X5,X10,X15); with the new X1,X6 and w10,w11, D1 = G(S1,S6,S11,S12) has
+outputs (X1,X6,X11,X12); D3 is untouched (its words w14=w15=0 and inputs are the context's),
+so it keeps (X3,X4,X9,X14).  Lemma Y' (C0).  C0 = G(X0,X4,X8,X12; w2,w6) has b output Y4 = y
+and d output Y12.  Lemma K'.  K3 is unchanged (w6,w7 fixed), so S3,S7,S11,S15 are the
+context's.  Lemma T' (whole trial).  Round 0 with length 55 on the trial's words gives the
+context's S (K3 unchanged) and its X with X0,X1,X5,X6,X10,X12 replaced; in round 1 C0 has b
+output Y4 = y.  With Lemmas L',H' the pair A,B agrees on digest words 0,2,5,7, and for y in
+the class the XOR difference of E3's first-half d value is eta.
+Proof.  Each line is Fact 1 for one assignment of D0,D1,C0,C1,C2 (and the reduced E1,E3),
+solved for the name on its left; D2,D3,K0,K1,K2,K3 are not touched because none of their
+words or inputs is reassigned.  So round 0 maps the trial's words to the stated S and X.
+Lemma L' then gives equal X for B.  The hypotheses of Lemma H' hold, giving the four free
+digest words; Lemma Q' gives the eta for y in the class.  QED.  (Verified: on 200000
+triples half = 200000/200000, y4A = y4B = 200000/200000, eta = 200000/200000, wonly =
+200000/200000.)
+
+6.  Loop structure and cost (in G-call assignments)
+---------------------------------------------------
+Outer loop -- context, six words (C0.c1, C0.d1, S11, S4, X13, w0): solve the 31 context
+lines that are not downstream of X14.  Cost 31 assignments, once.
+Middle loop -- the word X14: solve the 19 context lines downstream of X14
+(D3.d1, S9, K1.c1, S14, K1.d1, S10, X9, K1.a1, X4, w2, S6, C0.b1, K1.b1, S2, S1, S5, w12,
+w3, w5).  Cost 19 assignments per X14, and every X14 gives a fresh context carrying all
+2^19 class members.  (X14 is the cheapest of the seven -- the others cost 21 to 37; see the
+dependency counts.  X14 feeds all 46 trial lines, so no member work can be hoisted above it.)
+Inner loop -- the member Y4 (2^19 values): stage A solves the 19-assignment cone of E3.h1
+to get h1, on which a rule-A-style bit test (not derived here, section 8) is applied; a
+member that passes continues through the rest of the 46 trial lines for the full residual
+(cones: E3.g1 33, E3.e2 37, E1.d1 33, E1.b1 34, E1.a2 35 assignments cumulative).  Only
+w8,w9,w10,w11 among the message words change per member.  The dominant work is the 19-
+assignment stage A per member, the same as the filed pkg5 trial (20 recomputed words
+including Y4; NOTES section 7 addendum).
+
+7.  Trial count
+---------------
+The map (eight basis words) -> (sixteen message words) is injective (the words determine the
+whole computation, hence the basis), so distinct basis values give distinct messages A.  The
+seven context words are free 32-bit words and Y4 ranges over the 2^19 class, so there are
+2^(7*32) * 2^19 = 2^243 distinct half-colliding trials, well above 2^104.  In the loop above
+one outer context (six words) supplies 2^32 (X14) * 2^19 (members) = 2^51 trials, and the
+2^192 outer contexts give 2^192 * 2^51 = 2^243.  Distinctness within a context: two X14 give
+different X9,X4,..; two members give different Y4.
+
+8.  What is NOT established here
+-------------------------------
+- Lemmas S',T' (and F',Y',K') are argued as Fact 1 applied line by line plus the SAT
+  acyclicity/completeness certificate (arrangement.txt), and verified on 200000 random
+  instances; a hand transcription of all 96 per-line Fact-1 proofs in full prose is not
+  written out.  The claim "round 0 forward reproduces the pins for EVERY basis value" rests
+  on that certificate, not on an exhaustive proof, though it held on every instance tested.
+- No rule-A analogue and no E1-test analogue (proof.md Lemmas A, N) are derived for this
+  class: the per-member filter that makes the search cheap is NOT designed here.  Without it
+  the inner loop has no early test.  This is the main missing piece for a package.
+- The class rate (brief: 159,833,954 over the 1500 lightest betas, ~2 bits better than the
+  old family's 36M) is NOT recomputed here; it comes from night_main scan files
+  (pinH8_830303cf.total) that this task did not rerun.  No score/claim number is produced.
+- The packed 7-lane batch and its operation/load count (proof.md 6.5), the success
+  probability (section 7) and the charged time (section 8) are not ported.
+- Only single-block messages (<=64 bytes) are implemented in hash2; that is all the family
+  needs, and it equals the organizer verifier for all lengths 0..64, but it is not the full
+  tree hash.

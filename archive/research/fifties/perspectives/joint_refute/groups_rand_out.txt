@@ -1,0 +1,67 @@
+group   1 scanned       1 x=00 T=00 rank 120 (half 120) zero_in_hull 0 sat-check rank 120 feas 0
+group   2 scanned       2 x=00 T=00 rank 122 (half 122) zero_in_hull 0 sat-check rank 122 feas 0
+group   3 scanned       3 x=00 T=00 rank 117 (half 117) zero_in_hull 0 sat-check rank 117 feas 0
+group   4 scanned       4 x=00 T=00 rank 116 (half 116) zero_in_hull 0 sat-check rank 116 feas 0
+group   5 scanned       5 x=00 T=00 rank 120 (half 120) zero_in_hull 0 sat-check rank 120 feas 0
+group   6 scanned       6 x=00 T=00 rank 123 (half 123) zero_in_hull 0 sat-check rank 123 feas 0
+group   7 scanned       7 x=00 T=00 rank 119 (half 119) zero_in_hull 0 sat-check rank 119 feas 0
+group   8 scanned       8 x=00 T=00 rank 120 (half 120) zero_in_hull 0 sat-check rank 120 feas 0
+group   9 scanned       9 x=10 T=00 rank 125 (half 125) zero_in_hull 1
+group  10 scanned      10 x=00 T=00 rank 126 (half 126) zero_in_hull 1
+group  11 scanned      11 x=00 T=00 rank 126 (half 126) zero_in_hull 1
+group  12 scanned      12 x=00 T=00 rank 122 (half 122) zero_in_hull 0 sat-check rank 122 feas 0
+group  13 scanned      13 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+group  14 scanned      14 x=00 T=00 rank 120 (half 120) zero_in_hull 0 sat-check rank 120 feas 0
+group  15 scanned      15 x=00 T=00 rank 121 (half 121) zero_in_hull 0 sat-check rank 121 feas 0
+group  16 scanned      16 x=00 T=00 rank 121 (half 121) zero_in_hull 1
+group  17 scanned      17 x=00 T=00 rank 125 (half 125) zero_in_hull 1
+group  18 scanned      18 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+group  19 scanned      19 x=00 T=00 rank 116 (half 116) zero_in_hull 0 sat-check rank 116 feas 0
+group  20 scanned      20 x=00 T=00 rank 123 (half 123) zero_in_hull 1
+group  21 scanned      21 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+group  22 scanned      22 x=00 T=00 rank 122 (half 122) zero_in_hull 0 sat-check rank 122 feas 0
+group  23 scanned      23 x=00 T=00 rank 125 (half 125) zero_in_hull 0 sat-check rank 125 feas 0
+group  24 scanned      24 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+group  25 scanned      25 x=00 T=00 rank 123 (half 123) zero_in_hull 1
+group  26 scanned      26 x=00 T=00 rank 121 (half 121) zero_in_hull 0 sat-check rank 121 feas 0
+group  27 scanned      27 x=00 T=00 rank 126 (half 126) zero_in_hull 1
+group  28 scanned      28 x=00 T=00 rank 125 (half 125) zero_in_hull 1
+group  29 scanned      29 x=00 T=00 rank 118 (half 118) zero_in_hull 0 sat-check rank 118 feas 0
+group  30 scanned      30 x=00 T=00 rank 123 (half 123) zero_in_hull 0 sat-check rank 123 feas 0
+group  31 scanned      31 x=00 T=00 rank 121 (half 121) zero_in_hull 0 sat-check rank 121 feas 0
+group  32 scanned      32 x=00 T=00 rank 121 (half 121) zero_in_hull 0 sat-check rank 121 feas 0
+group  33 scanned      33 x=00 T=00 rank 123 (half 123) zero_in_hull 0 sat-check rank 123 feas 0
+group  34 scanned      34 x=00 T=00 rank 125 (half 125) zero_in_hull 0 sat-check rank 125 feas 0
+group  35 scanned      35 x=00 T=00 rank 122 (half 122) zero_in_hull 0 sat-check rank 122 feas 0
+group  36 scanned      36 x=00 T=00 rank 120 (half 120) zero_in_hull 0 sat-check rank 120 feas 0
+group  37 scanned      37 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+group  38 scanned      38 x=00 T=00 rank 121 (half 121) zero_in_hull 0 sat-check rank 121 feas 0
+group  39 scanned      39 x=00 T=00 rank 123 (half 123) zero_in_hull 0 sat-check rank 123 feas 0
+group  40 scanned      40 x=00 T=00 rank 118 (half 118) zero_in_hull 0 sat-check rank 118 feas 0
+group  41 scanned      41 x=00 T=00 rank 118 (half 118) zero_in_hull 0 sat-check rank 118 feas 0
+group  42 scanned      42 x=00 T=00 rank 120 (half 120) zero_in_hull 0 sat-check rank 120 feas 0
+group  43 scanned      43 x=00 T=00 rank 122 (half 122) zero_in_hull 1
+group  44 scanned      44 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+group  45 scanned      45 x=00 T=00 rank 126 (half 126) zero_in_hull 1
+group  46 scanned      46 x=00 T=00 rank 119 (half 119) zero_in_hull 0 sat-check rank 119 feas 0
+group  47 scanned      47 x=00 T=00 rank 118 (half 118) zero_in_hull 0 sat-check rank 118 feas 0
+group  48 scanned      48 x=00 T=00 rank 124 (half 124) zero_in_hull 1
+group  49 scanned      49 x=00 T=00 rank 126 (half 126) zero_in_hull 1
+group  50 scanned      50 x=00 T=00 rank 122 (half 122) zero_in_hull 0 sat-check rank 122 feas 0
+group  51 scanned      51 x=00 T=00 rank 125 (half 125) zero_in_hull 0 sat-check rank 125 feas 0
+group  52 scanned      52 x=00 T=00 rank 120 (half 120) zero_in_hull 0 sat-check rank 120 feas 0
+group  53 scanned      53 x=00 T=00 rank 116 (half 116) zero_in_hull 0 sat-check rank 116 feas 0
+group  54 scanned      54 x=00 T=00 rank 121 (half 121) zero_in_hull 0 sat-check rank 121 feas 0
+group  55 scanned      55 x=00 T=00 rank 123 (half 123) zero_in_hull 0 sat-check rank 123 feas 0
+group  56 scanned      56 x=00 T=00 rank 120 (half 120) zero_in_hull 1
+group  57 scanned      57 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+group  58 scanned      58 x=00 T=00 rank 123 (half 123) zero_in_hull 0 sat-check rank 123 feas 0
+group  59 scanned      59 x=00 T=00 rank 118 (half 118) zero_in_hull 0 sat-check rank 118 feas 0
+group  60 scanned      60 x=00 T=00 rank 122 (half 122) zero_in_hull 0 sat-check rank 122 feas 0
+group  61 scanned      61 x=00 T=00 rank 123 (half 123) zero_in_hull 0 sat-check rank 123 feas 0
+group  62 scanned      62 x=00 T=00 rank 121 (half 121) zero_in_hull 0 sat-check rank 121 feas 0
+group  63 scanned      63 x=00 T=00 rank 119 (half 119) zero_in_hull 0 sat-check rank 119 feas 0
+group  64 scanned      64 x=00 T=00 rank 124 (half 124) zero_in_hull 0 sat-check rank 124 feas 0
+mode rand seed 0xbada55 groups 64 scanned 64 : zero in hull 14/64 = 0.219 ; mean rank 121.8 ; time 94s
+  x!=0: 1 groups, zero in hull 1
+  x==0: 63 groups, zero in hull 13

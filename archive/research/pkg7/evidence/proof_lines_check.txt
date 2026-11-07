@@ -1,0 +1,17 @@
+PROGRAM sha256 d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb; src/proof_head.md sha256 d87e77d8dbaadc15aca4ae32e6fd550ae63eed594401c393b6170555d09e346b; python -B tools/proof_lines_check.py 20000
+steps S1 and T typed from the displays of Section 4, 20000 trials (every fourth with extreme context words, every second with y outside the class at random):
+  words equal the program's: 20000 of 20000
+  Lemma S: K0: 20000 of 20000
+  Lemma S: K1: 20000 of 20000
+  Lemma S: K2: 20000 of 20000
+  Lemma S: K3: 20000 of 20000
+  Lemma S: D2: 20000 of 20000
+  Lemma S: D3: 20000 of 20000
+  Lemma F: D0: 20000 of 20000
+  Lemma F: D1: 20000 of 20000
+  Lemma Y: C0: 20000 of 20000
+  theorem: lengths and zero bytes: 20000 of 20000
+  theorem: digest words 0, 2, 5, 7: 20000 of 20000
+  theorem: Y4 = y in A and in B: 20000 of 20000
+  round 0 forwards gives S and X of the text: 20000 of 20000
+RESULT: all hold

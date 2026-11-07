@@ -1,0 +1,64 @@
+
+====================================================================================================
+G. exact GF(2) affine rank of the low k bits of every word (4k-bit vectors; rows XOR row 0; up to 4096 rows)
+====================================================================================================
+  full = 4k (or 8k for two-part rows). XOR-view rank only; the Z/2^k module of the modular view is in modfourier F.
+  k= 1: R 4/4 Rm 4/4 K1 2/4 K3 3/4 M1 2/4 M3 3/4 K1|K3 5/8 ctrl 4/4
+  k= 2: R 8/8 Rm 8/8 K1 5/8 K3 7/8 M1 4/8 M3 7/8 K1|K3 12/16 ctrl 8/8
+  k= 4: R 16/16 Rm 16/16 K1 11/16 K3 15/16 M1 9/16 M3 15/16 K1|K3 26/32 ctrl 16/16
+  k= 8: R 32/32 Rm 32/32 K1 26/32 K3 31/32 M1 24/32 M3 31/32 K1|K3 57/64 ctrl 32/32
+  k=16: R 64/64 Rm 64/64 K1 42/64 K3 55/64 M1 48/64 M3 62/64 K1|K3 97/128 ctrl 64/64
+  k=24: R 96/96 Rm 96/96 K1 58/96 K3 78/96 M1 70/96 M3 94/96 K1|K3 136/192 ctrl 96/96
+  k=32: R 126/128 Rm 128/128 K1 59/128 K3 93/128 M1 89/128 M3 126/128 K1|K3 152/256 ctrl 128/128
+
+====================================================================================================
+H. the strongest modular character of Rm and where its mass sits
+====================================================================================================
+  word 4 mod 2^20 [train]: |E chi| 0.0006  mass centre r0 =  1034715 (0.9868 of 2^k)  P(within 1/16 of r0) 0.1253  P(within 1/16 of 0) 0.1255 (uniform 0.125)
+  word 4 mod 2^20 [ test]: |E chi| 0.0007  mass centre r0 =   900068 (0.8584 of 2^k)  P(within 1/16 of r0) 0.1252  P(within 1/16 of 0) 0.1244 (uniform 0.125)
+  word 4 mod 2^20 [  ctx]: |E chi| 0.0002  mass centre r0 =   870361 (0.8300 of 2^k)  P(within 1/16 of r0) 0.1238  P(within 1/16 of 0) 0.1242 (uniform 0.125)
+  word 1 mod 2^12 [train]: |E chi| 0.2220  mass centre r0 =        3 (0.0006 of 2^k)  P(within 1/16 of r0) 0.1907  P(within 1/16 of 0) 0.1905 (uniform 0.125)
+  word 1 mod 2^12 [ test]: |E chi| 0.2227  mass centre r0 =     4096 (0.9999 of 2^k)  P(within 1/16 of r0) 0.1894  P(within 1/16 of 0) 0.1892 (uniform 0.125)
+  word 1 mod 2^12 [  ctx]: |E chi| 0.2270  mass centre r0 =     4092 (0.9991 of 2^k)  P(within 1/16 of r0) 0.1923  P(within 1/16 of 0) 0.1923 (uniform 0.125)
+  word 6 mod 2^12 [train]: |E chi| 0.3959  mass centre r0 =     4095 (0.9998 of 2^k)  P(within 1/16 of r0) 0.2234  P(within 1/16 of 0) 0.2232 (uniform 0.125)
+  word 6 mod 2^12 [ test]: |E chi| 0.3964  mass centre r0 =        2 (0.0004 of 2^k)  P(within 1/16 of r0) 0.2226  P(within 1/16 of 0) 0.2225 (uniform 0.125)
+  word 6 mod 2^12 [  ctx]: |E chi| 0.4002  mass centre r0 =     4094 (0.9995 of 2^k)  P(within 1/16 of r0) 0.2245  P(within 1/16 of 0) 0.2243 (uniform 0.125)
+  word 3 mod 2^20 [train]: |E chi| 0.5671  mass centre r0 =  1048460 (0.9999 of 2^k)  P(within 1/16 of r0) 0.4027  P(within 1/16 of 0) 0.4028 (uniform 0.125)
+  word 3 mod 2^20 [ test]: |E chi| 0.5688  mass centre r0 =  1048095 (0.9995 of 2^k)  P(within 1/16 of r0) 0.4034  P(within 1/16 of 0) 0.4033 (uniform 0.125)
+  word 3 mod 2^20 [  ctx]: |E chi| 0.5735  mass centre r0 =       98 (0.0001 of 2^k)  P(within 1/16 of r0) 0.4082  P(within 1/16 of 0) 0.4083 (uniform 0.125)
+  word 3 mod 2^12 [train]: |E chi| 0.1063  mass centre r0 =        5 (0.0012 of 2^k)  P(within 1/16 of r0) 0.1376  P(within 1/16 of 0) 0.1371 (uniform 0.125)
+  word 3 mod 2^12 [ test]: |E chi| 0.1056  mass centre r0 =        1 (0.0002 of 2^k)  P(within 1/16 of r0) 0.1372  P(within 1/16 of 0) 0.1367 (uniform 0.125)
+  word 3 mod 2^12 [  ctx]: |E chi| 0.1073  mass centre r0 =     4089 (0.9982 of 2^k)  P(within 1/16 of r0) 0.1370  P(within 1/16 of 0) 0.1368 (uniform 0.125)
+  CONTROL mod 2^20: |E chi| 0.0003
+  word 1: |E chi_(2^-20)| of Rm 0.0005, M1 0.9749, M3 0.0008, carry term Rm-M1-M3 0.2870
+  word 3: |E chi_(2^-20)| of Rm 0.5679, M1 0.9448, M3 0.9460, carry term Rm-M1-M3 0.5449
+  word 4: |E chi_(2^-20)| of Rm 0.0006, M1 0.9448, M3 0.0010, carry term Rm-M1-M3 0.2787
+  word 6: |E chi_(2^-20)| of Rm 0.0009, M1 0.0116, M3 0.0014, carry term Rm-M1-M3 0.0182
+
+====================================================================================================
+I. sign vs carry on the E parts: H(K|M), H(M|K) (plug-in, test half), and what pinning M buys
+====================================================================================================
+  plug-in entropies are biased low when the distinct count nears the row count; read them as lower bounds.
+  E1 word 1: H(K) 15.48  H(M) 11.00  H(K|M) 7.80  H(M|K) 3.32  [distinct K 109710, M 2048 of 524288]
+  E1 word 3: H(K) 18.93  H(M) 16.93  H(K|M) 2.07  H(M|K) 0.07  [distinct K 507163, M 234169 of 524288]
+  E1 word 4: H(K) 15.48  H(M) 16.93  H(K|M) 1.95  H(M|K) 3.40  [distinct K 109710, M 234169 of 524288]
+  E1 word 6: H(K) 18.93  H(M) 18.99  H(K|M) 0.01  H(M|K) 0.07  [distinct K 507163, M 522912 of 524288]
+  E3 word 1: H(K) 19.00  H(M) 19.00  H(K|M) 0.00  H(M|K) 0.00  [distinct K 524233, M 524203 of 524288]
+  E3 word 3: H(K) 18.98  H(M) 17.44  H(K|M) 1.56  H(M|K) 0.02  [distinct K 519094, M 275035 of 524288]
+  E3 word 4: H(K) 19.00  H(M) 19.00  H(K|M) 0.00  H(M|K) 0.00  [distinct K 524254, M 524257 of 524288]
+  E3 word 6: H(K) 18.98  H(M) 19.00  H(K|M) 0.00  H(M|K) 0.02  [distinct K 519094, M 524124 of 524288]
+
+  E1 word 1 (a2): top XOR keys d on TRAIN, P(K=d) and max over m of P(K=d | M=m) on TRAIN, then the same m on TEST
+    d=1890e090  #m giving d:  215  P(K=d) tr 5.42e-04 te 5.05e-04 | best m=f86fdf70: P(K=d|m) tr 1.32e-02 te 0.00e+00 (gain nan bits)  P(m) te 4.63e-04
+    d=18b0a090  #m giving d:  206  P(K=d) tr 5.40e-04 te 5.59e-04 | best m=f790a090: P(K=d|m) tr 2.26e-02 te 3.97e-03 (gain 2.83 bits)  P(m) te 4.81e-04
+    d=0890a090  #m giving d:  113  P(K=d) tr 5.30e-04 te 4.73e-04 | best m=f78fa070: P(K=d|m) tr 3.07e-02 te 4.05e-03 (gain 3.10 bits)  P(m) te 4.71e-04
+    d=08b0e080  #m giving d:  171  P(K=d) tr 5.17e-04 te 4.92e-04 | best m=f750df80: P(K=d|m) tr 2.00e-02 te 7.94e-03 (gain 4.01 bits)  P(m) te 4.81e-04
+    d=18b0a080  #m giving d:  172  P(K=d) tr 5.07e-04 te 4.83e-04 | best m=f8af6080: P(K=d|m) tr 1.84e-02 te 1.61e-02 (gain 5.06 bits)  P(m) te 4.75e-04
+
+  E1 word 3 (c2) and E3 word 3 (e2): the same, top 3 XOR keys
+    K1 d=8a001255  #m giving d:     6  P(K=d) tr 1.53e-05 te 3.81e-06 | best m=86000dd5 (train rows 35): P(K=d|m) tr 5.71e-02 te 0.00e+00 (test rows 42)
+    K1 d=8a0033f5  #m giving d:     6  P(K=d) tr 1.34e-05 te 0.00e+00 | best m=75ffecd5 (train rows 36): P(K=d|m) tr 5.56e-02 te 0.00e+00 (test rows 43)
+    K1 d=9a107275  #m giving d:     6  P(K=d) tr 1.14e-05 te 1.91e-06 | best m=96100d95 (train rows 13): P(K=d|m) tr 7.69e-02 te 0.00e+00 (test rows 14)
+    K3 d=0f90ad13  #m giving d:     4  P(K=d) tr 7.63e-06 te 0.00e+00 | best m=06709313 (train rows 27): P(K=d|m) tr 3.70e-02 te 0.00e+00 (test rows 36)
+    K3 d=09e1b515  #m giving d:     4  P(K=d) tr 7.63e-06 te 0.00e+00 | best m=f7609313 (train rows 14): P(K=d|m) tr 7.14e-02 te 0.00e+00 (test rows 9)
+    K3 d=6160b515  #m giving d:     3  P(K=d) tr 5.72e-06 te 0.00e+00 | best m=1ea052f3 (train rows 9): P(K=d|m) tr 1.11e-01 te 0.00e+00 (test rows 19)

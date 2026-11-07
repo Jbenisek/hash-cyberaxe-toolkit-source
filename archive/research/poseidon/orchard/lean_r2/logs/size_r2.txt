@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 116643	    768	   5336	 122747	  1df7b	lean_attack

@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-j2-basis",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 single-bit J2 symmetry basis",
+  "question": "Which single-bit f XOR toggles preserve the J2 relation for both epsilon rows?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Common exact symmetries q=00001000, 00002000, 04000000, 20000000, 80000000; q=00200000 is epsilon-0-only",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/j2_symmetry_basis.py; research/retest/b3_omega_coupled/exact/j2_symmetry_basis.out; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Exact carry-DP restriction for future witness-map searches; J2 symmetry alone does not close the four remaining coupled directions."
+}

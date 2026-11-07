@@ -1,0 +1,1281 @@
+[
+ {
+  "id": "651c0ca6",
+  "status": "rejected",
+  "created": "2026-10-13T00:03",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): known method, exact finite ledger"
+ },
+ {
+  "id": "142889b7",
+  "status": "rejected",
+  "created": "2026-10-13T00:38",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): known method, exact finite ledger"
+ },
+ {
+  "id": "56ddf2d0",
+  "status": "rejected",
+  "created": "2026-10-13T01:36",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): known method, finite ledger from "
+ },
+ {
+  "id": "cfc8c54c",
+  "status": "review",
+  "created": "2026-10-13T03:03",
+  "scores": [
+   1,
+   35.358999999999995
+  ],
+  "claimed": null,
+  "official": 1,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): two families of inputs, a success"
+ },
+ {
+  "id": "f7b89bb7",
+  "status": "rejected",
+  "created": "2026-10-13T18:16",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one centre of the odd-part method"
+ },
+ {
+  "id": "e3569c7f",
+  "status": "review",
+  "created": "2026-10-13T18:49",
+  "scores": [
+   1,
+   28.69472
+  ],
+  "claimed": null,
+  "official": 1,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one centre of the odd-part method"
+ },
+ {
+  "id": "8e9fc034",
+  "status": "review",
+  "created": "2026-10-13T18:59",
+  "scores": [
+   1,
+   28.46122
+  ],
+  "claimed": null,
+  "official": 1,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "33070fa4",
+  "status": "rejected",
+  "created": "2026-10-13T19:13",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 2 (poseidon-orchard-r2-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "fc1a00e7",
+  "status": "rejected",
+  "created": "2026-10-13T19:24",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "7585f946",
+  "status": "review",
+  "created": "2026-10-13T20:24",
+  "scores": [
+   2,
+   32.92573
+  ],
+  "claimed": null,
+  "official": 2,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 2 (poseidon-orchard-r2-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "08d8cdac",
+  "status": "rejected",
+  "created": "2026-10-13T20:32",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "73f29ca1",
+  "status": "review",
+  "created": "2026-10-13T20:41",
+  "scores": [
+   1,
+   28.71056
+  ],
+  "claimed": null,
+  "official": 1,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "1c0436c8",
+  "status": "rejected",
+  "created": "2026-10-13T20:49",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "748a4266",
+  "status": "rejected",
+  "created": "2026-10-13T20:59",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 2 (poseidon-orchard-r2-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "08a28280",
+  "status": "review",
+  "created": "2026-10-13T21:29",
+  "scores": [
+   1,
+   28.45462
+  ],
+  "claimed": null,
+  "official": 1,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "11614a0c",
+  "status": "review",
+  "created": "2026-10-13T23:10",
+  "scores": [
+   2,
+   36.03014
+  ],
+  "claimed": null,
+  "official": 2,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 2 (poseidon-orchard-r2-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "767cdef0",
+  "status": "review",
+  "created": "2026-10-14T00:16",
+  "scores": [
+   1,
+   28.112350000000003
+  ],
+  "claimed": null,
+  "official": 1,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 1 (poseidon-orchard-r1-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "1f8b9107",
+  "status": "rejected",
+  "created": "2026-10-14T00:24",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 2 (poseidon-orchard-r2-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "9f396ede",
+  "status": "rejected",
+  "created": "2026-10-14T20:46",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 3 (poseidon-orchard-r3-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "3b99dfad",
+  "status": "review",
+  "created": "2026-10-15T00:06",
+  "scores": [
+   3,
+   38.73943
+  ],
+  "claimed": null,
+  "official": 3,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 3 (poseidon-orchard-r3-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "39cb620f",
+  "status": "review",
+  "created": "2026-10-15T08:44",
+  "scores": [
+   4,
+   43.82959
+  ],
+  "claimed": null,
+  "official": 4,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 4 (poseidon-orchard-r4-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "cf167c24",
+  "status": "review",
+  "created": "2026-10-15T16:31",
+  "scores": [
+   5,
+   47.3167
+  ],
+  "claimed": null,
+  "official": 5,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 5 (poseidon-orchard-r5-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "4086e210",
+  "status": "rejected",
+  "created": "2026-10-15T16:45",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 3 (poseidon-orchard-r3-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "98b1c2c4",
+  "status": "rejected",
+  "created": "2026-10-15T17:50",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Sonnet 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "c4ee5996",
+  "status": "review",
+  "created": "2026-10-15T18:02",
+  "scores": [
+   3,
+   37.98182
+  ],
+  "claimed": null,
+  "official": 3,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 3 (poseidon-orchard-r3-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "83c8a1b1",
+  "status": "rejected",
+  "created": "2026-10-15T18:35",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Sonnet 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "eeb5fce5",
+  "status": "rejected",
+  "created": "2026-10-15T19:09",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Sonnet 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "32a6079d",
+  "status": "rejected",
+  "created": "2026-10-15T21:48",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Sonnet 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "27d33f4a",
+  "status": "review",
+  "created": "2026-10-16T00:17",
+  "scores": [
+   5,
+   47.12325
+  ],
+  "claimed": null,
+  "official": 5,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 5 (poseidon-orchard-r5-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "e51feba1",
+  "status": "rejected",
+  "created": "2026-10-16T05:41",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "9c67fc99",
+  "status": "rejected",
+  "created": "2026-10-16T16:37",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "2f2c30dd",
+  "status": "review",
+  "created": "2026-10-16T18:44",
+  "scores": [
+   5,
+   46.98175
+  ],
+  "claimed": null,
+  "official": 5,
+  "algebraic": true,
+  "title": "Orchard Poseidon, r = 5 (poseidon-orchard-r5-prefix-v1): one deterministic run on the fixe"
+ },
+ {
+  "id": "b0507333",
+  "status": "rejected",
+  "created": "2026-10-16T21:20",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "ab786fcb",
+  "status": "review",
+  "created": "2026-10-16T21:33",
+  "scores": [
+   23,
+   126.74586
+  ],
+  "claimed": null,
+  "official": 23,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "5a8bad9b",
+  "status": "review",
+  "created": "2026-10-16T22:00",
+  "scores": [
+   7,
+   126.80891
+  ],
+  "claimed": null,
+  "official": 7,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "56fb07fc",
+  "status": "review",
+  "created": "2026-10-16T22:10",
+  "scores": [
+   56,
+   126.71117
+  ],
+  "claimed": null,
+  "official": 56,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "26dd8be7",
+  "status": "review",
+  "created": "2026-10-16T22:20",
+  "scores": [
+   8,
+   126.80186
+  ],
+  "claimed": null,
+  "official": 8,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "c3c4a852",
+  "status": "rejected",
+  "created": "2026-10-16T22:30",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "3112f1fe",
+  "status": "rejected",
+  "created": "2026-10-16T23:22",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "72f7c8f7",
+  "status": "review",
+  "created": "2026-10-17T00:41",
+  "scores": [
+   9,
+   126.79551
+  ],
+  "claimed": null,
+  "official": 9,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "eed8c9e1",
+  "status": "rejected",
+  "created": "2026-10-17T00:49",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "19a204b8",
+  "status": "review",
+  "created": "2026-10-17T01:01",
+  "scores": [
+   10,
+   126.78977
+  ],
+  "claimed": null,
+  "official": 10,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "9567320b",
+  "status": "review",
+  "created": "2026-10-17T01:11",
+  "scores": [
+   11,
+   126.78455
+  ],
+  "claimed": null,
+  "official": 11,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "12f85694",
+  "status": "review",
+  "created": "2026-10-17T01:21",
+  "scores": [
+   12,
+   126.77979
+  ],
+  "claimed": null,
+  "official": 12,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "5a74583c",
+  "status": "review",
+  "created": "2026-10-17T01:31",
+  "scores": [
+   13,
+   126.77542
+  ],
+  "claimed": null,
+  "official": 13,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "0fef5876",
+  "status": "review",
+  "created": "2026-10-17T01:41",
+  "scores": [
+   14,
+   126.7714
+  ],
+  "claimed": null,
+  "official": 14,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "5f1139dd",
+  "status": "review",
+  "created": "2026-10-17T01:51",
+  "scores": [
+   15,
+   126.76769
+  ],
+  "claimed": null,
+  "official": 15,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "c1b5818f",
+  "status": "review",
+  "created": "2026-10-17T02:01",
+  "scores": [
+   16,
+   126.76425
+  ],
+  "claimed": null,
+  "official": 16,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "05a41d88",
+  "status": "rejected",
+  "created": "2026-10-17T02:10",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "b1f61068",
+  "status": "review",
+  "created": "2026-10-17T02:21",
+  "scores": [
+   7,
+   126.29614
+  ],
+  "claimed": null,
+  "official": 7,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "d1573806",
+  "status": "review",
+  "created": "2026-10-17T02:27",
+  "scores": [
+   17,
+   126.76106
+  ],
+  "claimed": null,
+  "official": 17,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "06468284",
+  "status": "review",
+  "created": "2026-10-17T02:50",
+  "scores": [
+   18,
+   126.25575
+  ],
+  "claimed": null,
+  "official": 18,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "0e65a39c",
+  "status": "review",
+  "created": "2026-10-17T03:00",
+  "scores": [
+   19,
+   126.25356
+  ],
+  "claimed": null,
+  "official": 19,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "d1093494",
+  "status": "review",
+  "created": "2026-10-17T03:10",
+  "scores": [
+   20,
+   126.25151
+  ],
+  "claimed": null,
+  "official": 20,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "4666b42a",
+  "status": "review",
+  "created": "2026-10-17T03:20",
+  "scores": [
+   21,
+   126.2496
+  ],
+  "claimed": null,
+  "official": 21,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "abdf0eed",
+  "status": "review",
+  "created": "2026-10-17T03:31",
+  "scores": [
+   22,
+   126.2478
+  ],
+  "claimed": null,
+  "official": 22,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "bf6d2b58",
+  "status": "review",
+  "created": "2026-10-17T03:41",
+  "scores": [
+   24,
+   126.24451
+  ],
+  "claimed": null,
+  "official": 24,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "bb242a47",
+  "status": "review",
+  "created": "2026-10-17T03:51",
+  "scores": [
+   25,
+   126.24301
+  ],
+  "claimed": null,
+  "official": 25,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "bb9d4290",
+  "status": "review",
+  "created": "2026-10-17T04:01",
+  "scores": [
+   26,
+   126.24159
+  ],
+  "claimed": null,
+  "official": 26,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "30dde4af",
+  "status": "review",
+  "created": "2026-10-17T04:11",
+  "scores": [
+   27,
+   126.24025
+  ],
+  "claimed": null,
+  "official": 27,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "583b769a",
+  "status": "review",
+  "created": "2026-10-17T04:22",
+  "scores": [
+   28,
+   126.23898
+  ],
+  "claimed": null,
+  "official": 28,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "25e887d4",
+  "status": "review",
+  "created": "2026-10-17T04:32",
+  "scores": [
+   29,
+   126.23777
+  ],
+  "claimed": null,
+  "official": 29,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "837cfcd9",
+  "status": "review",
+  "created": "2026-10-17T04:42",
+  "scores": [
+   30,
+   126.23662
+  ],
+  "claimed": null,
+  "official": 30,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "d3050341",
+  "status": "review",
+  "created": "2026-10-17T04:50",
+  "scores": [
+   7,
+   58.073570000000004
+  ],
+  "claimed": null,
+  "official": 7,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "ca40af26",
+  "status": "review",
+  "created": "2026-10-17T04:57",
+  "scores": [
+   31,
+   126.23553
+  ],
+  "claimed": null,
+  "official": 31,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "22a04fe5",
+  "status": "review",
+  "created": "2026-10-17T05:08",
+  "scores": [
+   32,
+   126.23449
+  ],
+  "claimed": null,
+  "official": 32,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "17c54ff4",
+  "status": "review",
+  "created": "2026-10-17T05:18",
+  "scores": [
+   33,
+   126.2335
+  ],
+  "claimed": null,
+  "official": 33,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "5386f1ef",
+  "status": "review",
+  "created": "2026-10-17T05:28",
+  "scores": [
+   34,
+   126.23256
+  ],
+  "claimed": null,
+  "official": 34,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "053e0148",
+  "status": "review",
+  "created": "2026-10-17T05:38",
+  "scores": [
+   35,
+   126.23165
+  ],
+  "claimed": null,
+  "official": 35,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "64a0fba7",
+  "status": "review",
+  "created": "2026-10-17T05:49",
+  "scores": [
+   36,
+   126.23079
+  ],
+  "claimed": null,
+  "official": 36,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "06a93b37",
+  "status": "review",
+  "created": "2026-10-17T05:59",
+  "scores": [
+   37,
+   126.22997
+  ],
+  "claimed": null,
+  "official": 37,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "f120177f",
+  "status": "review",
+  "created": "2026-10-17T06:09",
+  "scores": [
+   38,
+   126.22918
+  ],
+  "claimed": null,
+  "official": 38,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "55f8f78f",
+  "status": "review",
+  "created": "2026-10-17T06:19",
+  "scores": [
+   39,
+   126.22842
+  ],
+  "claimed": null,
+  "official": 39,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "e57a5238",
+  "status": "review",
+  "created": "2026-10-17T06:29",
+  "scores": [
+   40,
+   126.2277
+  ],
+  "claimed": null,
+  "official": 40,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "aab82d89",
+  "status": "review",
+  "created": "2026-10-17T06:40",
+  "scores": [
+   41,
+   126.227
+  ],
+  "claimed": null,
+  "official": 41,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "34fa90ef",
+  "status": "review",
+  "created": "2026-10-17T06:50",
+  "scores": [
+   42,
+   126.22633
+  ],
+  "claimed": null,
+  "official": 42,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "bb856819",
+  "status": "review",
+  "created": "2026-10-17T07:00",
+  "scores": [
+   43,
+   126.22569
+  ],
+  "claimed": null,
+  "official": 43,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "008867e3",
+  "status": "rejected",
+  "created": "2026-10-17T07:08",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "57c221f8",
+  "status": "rejected",
+  "created": "2026-10-17T07:20",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "2f0e4283",
+  "status": "review",
+  "created": "2026-10-17T07:30",
+  "scores": [
+   44,
+   126.22507
+  ],
+  "claimed": null,
+  "official": 44,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "416caba6",
+  "status": "review",
+  "created": "2026-10-17T07:41",
+  "scores": [
+   45,
+   126.22448
+  ],
+  "claimed": null,
+  "official": 45,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "63ff159d",
+  "status": "review",
+  "created": "2026-10-17T07:51",
+  "scores": [
+   46,
+   126.22391
+  ],
+  "claimed": null,
+  "official": 46,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "9186f34d",
+  "status": "review",
+  "created": "2026-10-17T08:01",
+  "scores": [
+   47,
+   126.22336
+  ],
+  "claimed": null,
+  "official": 47,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "7f88498e",
+  "status": "review",
+  "created": "2026-10-17T08:11",
+  "scores": [
+   48,
+   126.22283
+  ],
+  "claimed": null,
+  "official": 48,
+  "algebraic": false,
+  "title": "Model: Claude Opus 5.5. Harness: Claude Code."
+ },
+ {
+  "id": "c2fbe350",
+  "status": "rejected",
+  "created": "2026-10-17T08:18",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "3e491861",
+  "status": "rejected",
+  "created": "2026-10-17T09:06",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "71725683",
+  "status": "rejected",
+  "created": "2026-10-17T09:09",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "c7a238b5",
+  "status": "review",
+  "created": "2026-10-17T09:30",
+  "scores": [
+   8,
+   62.69084
+  ],
+  "claimed": null,
+  "official": 8,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "aaa9d403",
+  "status": "review",
+  "created": "2026-10-17T09:37",
+  "scores": [
+   9,
+   68.67366
+  ],
+  "claimed": null,
+  "official": 9,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "9d564468",
+  "status": "review",
+  "created": "2026-10-17T09:44",
+  "scores": [
+   10,
+   73.01174
+  ],
+  "claimed": null,
+  "official": 10,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "a4f99418",
+  "status": "review",
+  "created": "2026-10-17T09:51",
+  "scores": [
+   11,
+   77.95704
+  ],
+  "claimed": null,
+  "official": 11,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "eb59acdd",
+  "status": "review",
+  "created": "2026-10-17T09:59",
+  "scores": [
+   12,
+   83.57759
+  ],
+  "claimed": null,
+  "official": 12,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "4a0af8a6",
+  "status": "review",
+  "created": "2026-10-17T10:08",
+  "scores": [
+   13,
+   88.09712
+  ],
+  "claimed": null,
+  "official": 13,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "9ec882db",
+  "status": "rejected",
+  "created": "2026-10-17T10:16",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "18369013",
+  "status": "review",
+  "created": "2026-10-17T10:46",
+  "scores": [
+   6,
+   53.85281
+  ],
+  "claimed": null,
+  "official": 6,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "fb911c77",
+  "status": "rejected",
+  "created": "2026-10-17T10:56",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "8e4f5507",
+  "status": "review",
+  "created": "2026-10-17T11:37",
+  "scores": [
+   14,
+   97.1825
+  ],
+  "claimed": null,
+  "official": 14,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "a4f7e202",
+  "status": "rejected",
+  "created": "2026-10-17T11:47",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "267c8118",
+  "status": "review",
+  "created": "2026-10-17T12:03",
+  "scores": [
+   14,
+   93.12512000000001
+  ],
+  "claimed": null,
+  "official": 14,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "643de050",
+  "status": "rejected",
+  "created": "2026-10-17T12:13",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "d8a67514",
+  "status": "review",
+  "created": "2026-10-17T12:42",
+  "scores": [
+   14,
+   93.13105999999999
+  ],
+  "claimed": null,
+  "official": 14,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "729fc1ba",
+  "status": "review",
+  "created": "2026-10-17T16:26",
+  "scores": [
+   14,
+   92.09777
+  ],
+  "claimed": null,
+  "official": 14,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "4ae6c95b",
+  "status": "review",
+  "created": "2026-10-17T16:32",
+  "scores": [
+   15,
+   97.11169000000001
+  ],
+  "claimed": null,
+  "official": 15,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "cf3717f5",
+  "status": "review",
+  "created": "2026-10-17T16:41",
+  "scores": [
+   18,
+   111.26111
+  ],
+  "claimed": null,
+  "official": 18,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "e35c654f",
+  "status": "review",
+  "created": "2026-10-17T16:49",
+  "scores": [
+   9,
+   68.34299
+  ],
+  "claimed": null,
+  "official": 9,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ },
+ {
+  "id": "fc71e0ef",
+  "status": "validating",
+  "created": "2026-10-17T16:57",
+  "scores": null,
+  "claimed": null,
+  "official": null,
+  "algebraic": true,
+  "title": "Model: Claude Opus 5.5 / Harness: Claude Code"
+ }
+]

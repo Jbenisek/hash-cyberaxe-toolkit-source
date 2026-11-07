@@ -1,0 +1,43 @@
+arm len N 4000000 seed 202
+complete_with_retry 0 frac 0.000000 ; complete_single_try 0 frac 0.000000 ; dumped 273
+diag D0: FIRST zero 0.998679 mean 0.9324 max 80640 | SECOND(first-tried) zero 0.999054 mean 0.4179 max 768 | diag ok single 0.000001 retry 0.000018
+  hist FIRST 0..8: 3994716 0 2 0 17 1 5 0 48 >8:5211
+  hist SECOND 0..8: 5279 0 0 0 0 0 0 0 0 >8:5
+  over all samples: mean FIRST roots tried 0.932, mean FIRST roots with SECOND root 0.0005, mean (x,y) pairs 0.7484 (max 580608); given FIRST solvable: P(diag solvable) 0.0138
+diag D1: FIRST zero 0.998651 mean 0.9723 max 78720 | SECOND(first-tried) zero 0.999444 mean 0.1319 max 432 | diag ok single 0.000001 retry 0.000017
+  hist FIRST 0..8: 3994604 0 4 1 21 0 4 0 75 >8:5291
+  hist SECOND 0..8: 5393 0 0 0 0 0 0 0 0 >8:3
+  over all samples: mean FIRST roots tried 0.972, mean FIRST roots with SECOND root 0.0008, mean (x,y) pairs 1.3500 (max 1474560); given FIRST solvable: P(diag solvable) 0.0124
+diag D2: FIRST zero 0.998659 mean 0.9691 max 57024 | SECOND(first-tried) zero 0.999441 mean 0.9929 max 5120 | diag ok single 0.000001 retry 0.000016
+  hist FIRST 0..8: 3994634 1 1 0 17 1 4 0 69 >8:5273
+  hist SECOND 0..8: 5363 0 0 0 0 0 0 0 0 >8:3
+  over all samples: mean FIRST roots tried 0.969, mean FIRST roots with SECOND root 0.0004, mean (x,y) pairs 0.6657 (max 516096); given FIRST solvable: P(diag solvable) 0.0121
+diag D3: FIRST zero 0.998676 mean 0.9386 max 45568 | SECOND(first-tried) zero 0.999244 mean 1.2452 max 5120 | diag ok single 0.000001 retry 0.000017
+  hist FIRST 0..8: 3994706 0 2 0 14 0 7 0 66 >8:5205
+  hist SECOND 0..8: 5290 0 0 0 0 0 0 0 0 >8:4
+  over all samples: mean FIRST roots tried 0.939, mean FIRST roots with SECOND root 0.0003, mean (x,y) pairs 0.4377 (max 311232); given FIRST solvable: P(diag solvable) 0.0128
+RETRY_CAP 1000000 COUNT_ALL 1
+joint diag-solvable pairs (01 02 03 12 13 23): 0 0 0 0 0 0
+time 74.777 s ; ns/sample 18694.3 ; ns/complete 0.0
+ops: word 1084989541 dp_transitions 32975196032 solves 31249245 ; per complete: word 0.0 dp 0.0 solves 0.000
+D full-width pass counts: 0 0 0 0
+k  1 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  2 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  3 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  4 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  5 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  6 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  7 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  8 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k  9 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 10 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 11 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 12 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 13 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 14 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 15 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+k 16 single 0 0 0 0 | pairs 0 0 0 0 0 0 | trip 0 0 0 0 | all4 0
+bitfreq e0: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+bitfreq e1: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+bitfreq e2: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+bitfreq e3: 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000

@@ -1,0 +1,102 @@
+outer ['Y4', 'E3.h1']: basis = C0.a1 D3.d1 E3.h1 K3.c1 S9 X2 X4 Y4 Y8 | inner = X2 | residual words that move: E1.d1 E1.b1 E1.a2 E3.g1 E3.e2
+     K3.d1   <- K3.c1
+     K2.a1   <- 
+     K3.a1   <- K3.d1
+     w6      <- K3.a1
+     C0.b1   <- Y4 Y8
+     Y0      <- C0.a1 C0.b1 w6
+     K2.d1   <- K2.a1
+     K2.c1   <- K2.d1
+     K2.b1   <- K2.c1
+     D3.c1   <- S9 D3.d1
+     X14     <- D3.d1
+     X9      <- D3.c1 X14
+     D3.b1   <- X4 X9
+     D3.a1   <- D3.b1
+     S14     <- D3.d1 D3.a1
+     C0.c1   <- C0.b1 X4
+     Y12     <- Y8 C0.c1
+     C0.d1   <- Y12 Y0
+     X12     <- C0.d1 C0.a1
+     X8      <- C0.c1 C0.d1
+     D1.c1   <- X12
+     D2.b1   <- X8
+     K3.b1   <- K3.c1
+     S10     <- K2.c1 S14
+   * D2.a1   <- X2 D2.b1
+     S4      <- D3.b1 D3.c1
+     S3      <- D3.a1 S4
+     S15     <- K3.d1 S3
+     S11     <- K3.c1 S15
+     S7      <- K3.b1 S11
+     D1.d1   <- D1.c1 S11
+     D2.c1   <- D2.b1 S7
+     X1      <- X12 D1.d1
+     X13     <- X8 D2.c1
+   * D2.d1   <- X13 X2
+   * S13     <- D2.d1 D2.a1
+   * K1.c1   <- S9 S13
+   * K1.d1   <- K1.c1
+   * K1.a1   <- K1.d1
+   * S8      <- D2.c1 D2.d1
+   * K0.b1   <- S4 S8
+   * w2      <- K1.a1
+   * K0.c1   <- K0.b1
+   * K1.b1   <- K1.c1
+   * X0      <- C0.a1 X4 w2
+   * S12     <- S8 K0.c1
+   * S1      <- S13 K1.d1
+   * S5      <- K1.b1 S9
+   * D0.d1   <- X0
+   * w3      <- S1 K1.a1 K1.b1
+   * D0.c1   <- S10 D0.d1
+   * D1.a1   <- D1.d1 S12
+     S6      <- K2.b1 S10
+   * D0.b1   <- S5 D0.c1
+   * X10     <- D0.c1
+   * X5      <- D0.b1 X10
+     D1.b1   <- S6 D1.c1
+     w7      <- S3 K3.a1 K3.b1
+     X6      <- D1.b1
+   * C1.a1   <- X1 X5 w3
+     Y14     <- E3.h1 Y4
+   * C1.d1   <- X13 C1.a1
+   * C2.a1   <- X2 X6 w7
+   * C1.c1   <- X9 C1.d1
+   * C2.d1   <- X14 C2.a1
+   * w10     <- D1.a1 S1 S6
+   * C1.b1   <- X5 C1.c1
+   * C2.c1   <- X10 C2.d1
+     S2      <- S14 K2.d1
+   * Y1      <- C1.a1 C1.b1 w10
+   * C2.b1   <- X6 C2.c1
+   * Y10     <- C2.c1 Y14
+   * w12     <- D2.a1 S2 S7
+   * Y13     <- C1.d1 Y1
+   * Y6      <- C2.b1 Y10
+   * K0.d1   <- K0.c1
+   * Y9      <- C1.c1 Y13
+   * Y2      <- Y14 C2.d1
+   * E1.a1   <- Y1 Y6 w12
+   * S0      <- S12 K0.d1
+   * D0.a1   <- D0.d1 S15
+   * w11     <- X1 D1.a1 D1.b1
+   * w0      <- Y2 C2.a1 C2.b1
+   * E1.d1   <- Y12 E1.a1
+   * E3.g1   <- Y9 E3.h1
+   * K0.a1   <- w0
+     w5      <- S2 K2.a1 K2.b1
+   * w8      <- D0.a1 S0 S5
+   * w9      <- X0 D0.a1 D0.b1
+   * E1.b1   <- Y6 E1.d1
+   * E3.f1   <- Y4 E3.g1
+   * T0      <- K0.d1 K0.a1
+   * w1      <- S0 K0.a1 K0.b1
+   * Y5      <- C1.b1 Y9
+   * E1.a2   <- E1.a1 E1.b1 w5
+   * E3.e2   <- Y4 E3.f1 w8
+   cone of E1.d1: 37 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d1<-K1.c1 ; K1.a1<-K1.d1 ; S8<-D2.c1,D2.d1 ; w2<-K1.a1 ; K0.b1<-S4,S8 ; X0<-C0.a1,X4,w2 ; K0.c1<-K0.b1 ; K1.b1<-K1.c1 ; D0.d1<-X0 ; S1<-S13,K1.d1 ; S12<-S8,K0.c1 ; S5<-K1.b1,S9 ; D0.c1<-S10,D0.d1 ; D1.a1<-D1.d1,S12 ; w3<-S1,K1.a1,K1.b1 ; X10<-D0.c1 ; D0.b1<-S5,D0.c1 ; X5<-D0.b1,X10 ; C1.a1<-X1,X5,w3 ; C2.a1<-X2,X6,w7 ; C1.d1<-X13,C1.a1 ; C2.d1<-X14,C2.a1 ; C1.c1<-X9,C1.d1 ; C2.c1<-X10,C2.d1 ; w10<-D1.a1,S1,S6 ; C1.b1<-X5,C1.c1 ; Y10<-C2.c1,Y14 ; C2.b1<-X6,C2.c1 ; Y1<-C1.a1,C1.b1,w10 ; w12<-D2.a1,S2,S7 ; Y6<-C2.b1,Y10 ; E1.a1<-Y1,Y6,w12 ; E1.d1<-Y12,E1.a1
+   cone of E1.b1: 38 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d1<-K1.c1 ; K1.a1<-K1.d1 ; S8<-D2.c1,D2.d1 ; w2<-K1.a1 ; K0.b1<-S4,S8 ; X0<-C0.a1,X4,w2 ; K0.c1<-K0.b1 ; K1.b1<-K1.c1 ; D0.d1<-X0 ; S1<-S13,K1.d1 ; S12<-S8,K0.c1 ; S5<-K1.b1,S9 ; D0.c1<-S10,D0.d1 ; D1.a1<-D1.d1,S12 ; w3<-S1,K1.a1,K1.b1 ; X10<-D0.c1 ; D0.b1<-S5,D0.c1 ; X5<-D0.b1,X10 ; C1.a1<-X1,X5,w3 ; C2.a1<-X2,X6,w7 ; C1.d1<-X13,C1.a1 ; C2.d1<-X14,C2.a1 ; C1.c1<-X9,C1.d1 ; C2.c1<-X10,C2.d1 ; w10<-D1.a1,S1,S6 ; C1.b1<-X5,C1.c1 ; Y10<-C2.c1,Y14 ; C2.b1<-X6,C2.c1 ; Y1<-C1.a1,C1.b1,w10 ; w12<-D2.a1,S2,S7 ; Y6<-C2.b1,Y10 ; E1.a1<-Y1,Y6,w12 ; E1.d1<-Y12,E1.a1 ; E1.b1<-Y6,E1.d1
+   cone of E1.a2: 39 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d1<-K1.c1 ; K1.a1<-K1.d1 ; S8<-D2.c1,D2.d1 ; w2<-K1.a1 ; K0.b1<-S4,S8 ; X0<-C0.a1,X4,w2 ; K0.c1<-K0.b1 ; K1.b1<-K1.c1 ; D0.d1<-X0 ; S1<-S13,K1.d1 ; S12<-S8,K0.c1 ; S5<-K1.b1,S9 ; D0.c1<-S10,D0.d1 ; D1.a1<-D1.d1,S12 ; w3<-S1,K1.a1,K1.b1 ; X10<-D0.c1 ; D0.b1<-S5,D0.c1 ; X5<-D0.b1,X10 ; C1.a1<-X1,X5,w3 ; C2.a1<-X2,X6,w7 ; C1.d1<-X13,C1.a1 ; C2.d1<-X14,C2.a1 ; C1.c1<-X9,C1.d1 ; C2.c1<-X10,C2.d1 ; w10<-D1.a1,S1,S6 ; C1.b1<-X5,C1.c1 ; Y10<-C2.c1,Y14 ; C2.b1<-X6,C2.c1 ; Y1<-C1.a1,C1.b1,w10 ; w12<-D2.a1,S2,S7 ; Y6<-C2.b1,Y10 ; E1.a1<-Y1,Y6,w12 ; E1.d1<-Y12,E1.a1 ; E1.b1<-Y6,E1.d1 ; E1.a2<-E1.a1,E1.b1,w5
+   cone of E3.g1: 31 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d1<-K1.c1 ; S8<-D2.c1,D2.d1 ; K1.a1<-K1.d1 ; K0.b1<-S4,S8 ; w2<-K1.a1 ; K0.c1<-K0.b1 ; K1.b1<-K1.c1 ; X0<-C0.a1,X4,w2 ; S1<-S13,K1.d1 ; S12<-S8,K0.c1 ; D0.d1<-X0 ; S5<-K1.b1,S9 ; D1.a1<-D1.d1,S12 ; w3<-S1,K1.a1,K1.b1 ; D0.c1<-S10,D0.d1 ; X10<-D0.c1 ; D0.b1<-S5,D0.c1 ; X5<-D0.b1,X10 ; C1.a1<-X1,X5,w3 ; C1.d1<-X13,C1.a1 ; C1.c1<-X9,C1.d1 ; w10<-D1.a1,S1,S6 ; C1.b1<-X5,C1.c1 ; Y1<-C1.a1,C1.b1,w10 ; Y13<-C1.d1,Y1 ; Y9<-C1.c1,Y13 ; E3.g1<-Y9,E3.h1
+   cone of E3.e2: 37 equations per inner step: D2.a1<-X2,D2.b1 ; D2.d1<-X13,X2 ; S13<-D2.d1,D2.a1 ; K1.c1<-S9,S13 ; K1.d1<-K1.c1 ; S8<-D2.c1,D2.d1 ; K1.a1<-K1.d1 ; K0.b1<-S4,S8 ; w2<-K1.a1 ; K1.b1<-K1.c1 ; K0.c1<-K0.b1 ; X0<-C0.a1,X4,w2 ; S5<-K1.b1,S9 ; S12<-S8,K0.c1 ; D0.d1<-X0 ; S1<-S13,K1.d1 ; D1.a1<-D1.d1,S12 ; w3<-S1,K1.a1,K1.b1 ; D0.c1<-S10,D0.d1 ; X10<-D0.c1 ; D0.b1<-S5,D0.c1 ; X5<-D0.b1,X10 ; C1.a1<-X1,X5,w3 ; C1.d1<-X13,C1.a1 ; C1.c1<-X9,C1.d1 ; w10<-D1.a1,S1,S6 ; C1.b1<-X5,C1.c1 ; Y1<-C1.a1,C1.b1,w10 ; Y13<-C1.d1,Y1 ; K0.d1<-K0.c1 ; Y9<-C1.c1,Y13 ; S0<-S12,K0.d1 ; D0.a1<-D0.d1,S15 ; E3.g1<-Y9,E3.h1 ; w8<-D0.a1,S0,S5 ; E3.f1<-Y4,E3.g1 ; E3.e2<-Y4,E3.f1,w8

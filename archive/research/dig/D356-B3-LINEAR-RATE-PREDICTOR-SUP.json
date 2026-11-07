@@ -1,0 +1,21 @@
+{
+  "id": "D356-B3-LINEAR-RATE-PREDICTOR-SUP",
+  "kind": "supersession",
+  "supersedes": ["D356-B3-LINEAR-RATE-PREDICTOR"],
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "supersession: D356 duplicate audit",
+  "question": "Which record is authoritative for the duplicate D356 screen?",
+  "labels": [],
+  "status": "COMPUTED",
+  "number": "D341 is authoritative; D356 is a deterministic duplicate with no new evidence",
+  "source": "our queue audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D341_b3m_step_rate_predictor_screen.md; research/sol_answer_D356_b3_linear_rate_predictor.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Bookkeeping only; build_views excludes superseded D356 from active counts. No package or submission action.",
+  "peak_mem": "UNKNOWN"
+}

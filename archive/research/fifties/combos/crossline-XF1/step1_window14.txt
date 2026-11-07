@@ -1,0 +1,14 @@
+sanity mismatches (alive32 vs T2, alive9 vs S7) over 20000: 0
+contexts 100, clusters 40000, opened 16211 (share 0.40527; program p* 0.45937), members in opened clusters 518752, 171.0 s
+  prefix  9 bits alive: 1.00000 of opened-cluster members
+  prefix 12 bits alive: 1.00000 of opened-cluster members
+  prefix 13 bits alive: 1.00000 of opened-cluster members
+  prefix 14 bits alive: 0.53023 of opened-cluster members
+  prefix 16 bits alive: 0.26511 of opened-cluster members
+  prefix 20 bits alive: 0.26511 of opened-cluster members
+  prefix 22 bits alive: 0.26511 of opened-cluster members
+  prefix 24 bits alive: 0.15806 of opened-cluster members
+  prefix 28 bits alive: 0.15806 of opened-cluster members
+  prefix 32 bits alive: 0.13412 of opened-cluster members
+window-chain mismatches per member (rep carries): {'Y4w': 0, 'Y12w': 0, 'X0w': 0, 'omw': 0, 'low9_notin_W': 0} checked 518752
+histogram of alive-14 members per opened cluster: {16: 8371, 18: 7840}

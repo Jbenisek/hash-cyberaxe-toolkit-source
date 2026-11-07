@@ -1,0 +1,44 @@
+linear subspaces of F2^5: 374
+
+[1] chi row: restriction weight w(a) by Hamming weight of a
+  |a|=1: w(a) in [2]
+  |a|=2: w(a) in [3]
+  |a|=3: w(a) in [3, 4]
+  |a|=4: w(a) in [4]
+  |a|=5: w(a) in [4]
+  output-difference sets are affine of dim w(a): True
+  single-bit a=e_i -> b=e_i needs 2 conditions (x_{i-1}=1, x_{i+1}=0); w(e_i) = 2
+
+[2] chi full linearization
+  affine subspaces (dim:count, cosets counted with multiplicity) on which chi is affine: {0: 32, 1: 992, 2: 320}
+  max dim = 2 -> fully linearizing one chi row costs 3 linear conditions
+  fully linearizing all 320 chi1 rows costs 960 of 1080 message DF
+
+[3] TDA difference phase (input differences compatible with a fixed output difference b)
+  (|b|, #compatible a, max affine dim D(b), min w(a), worst w inside a max-dim affine set): count
+    (1, 9, 2, 2, 4) : 5
+    (2, 9, 2, 2, 4) : 5
+    (2, 10, 2, 2, 4) : 5
+    (3, 10, 2, 2, 4) : 5
+    (3, 12, 2, 3, 4) : 5
+    (4, 11, 2, 3, 4) : 5
+    (5, 11, 2, 3, 4) : 1
+  max D(b) over all b = 2
+  the 520 zero-difference bits (512 capacity + 8 pad) need >= ceil(520/2) = 260 active chi1 rows
+  for a generic (non-kernel) TDA target; each active row costs >= 2 value conditions
+
+[4] digest round: chi6 rows in plane y=0, zero difference required on output bits x=0..3
+  nonzero input differences that can give a digest collision in their row: [('00001', '2 cond'), ('00101', '3 cond'), ('10101', '3 cond'), ('00011', '3 cond'), ('01011', '3 cond'), ('00111', '4 cond'), ('10111', '4 cond'), ('01111', '4 cond'), ('11111', '4 cond')]
+  (bit string printed x=0..4 left to right)
+  single-bit row inputs that make a digest collision impossible: x in [0, 1, 2, 3]
+  plane-0 chi6 inputs come from theta6-output lanes (x,x): [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
+
+[5] message space (135-byte block, byte 135 = 0x86, capacity 512 = 0)
+  free bits: 1080  zero-difference bits: 520
+  columns: 320  min free bits per column: 3  -> parity map rank 320, CP-kernel dim 760
+
+[6] fan-in of one chi2 input bit from chi1 output bits (theta2 then rho, pi)
+  (chi1 output bits, distinct chi1 rows) over all 1600 chi2 input bits: [(11, 10)]
+  making one chi1 output bit linear costs 1 condition (fix x_{i+1}, x_{i+2} or their sum);
+  the two bits a chi2 input bit needs from one chi1 row are adjacent (x, x-1) and share one condition,
+  so linearizing an isolated chi2 condition bit costs <= 10 conditions, and all of chi1 costs 960

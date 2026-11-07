@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "H1-random-mapping (score-critical): f(x) = digest(0^32 || x) behaves as a random mapping on 2^256 points",
+ "question": "R4 score sensitivity: bits of time per unit deficit of the pair-collision rate, and the slack before the claimed success 0.39 is lost",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Exact ledger rerun (rho.py ledger with lambda scaled by 1/(1-eps), success 0.39 restored by more evaluations): eps = 0.001 +0.0007 bit; 0.0046 +0.0033; 0.01 +0.0072; 0.05 +0.0367; 0.10 +0.0755; 0.25 +0.2061; 0.50 +0.4969 (closed form 0.5*log2(1/(1-eps))); slope 0.7213 bit per unit eps. Success 0.39 is lost without repair at eps > 0.0049 (own recount, total losses 1.6e-4) or 0.0050 (losses 1.2e-4); the entry states 0.0046 / 0.0047, so the stated threshold is conservative. A higher true rate would help: +1 percent rate -0.0072 bit, +10 percent -0.0688, x2 -0.5 (not claimed). Required success p moves the time by 0.5*log2(lambda): p=0.30 -0.2374 bit, 0.39 (lambda 0.4943) -0.0039, 0.50 +0.2383, 0.63 +0.4971, 0.90 +1.1003 against the filed lambda 0.497.",
+ "evidence": "research/dig/incoming3/blake3-r3-U75/work/h12.py, research/dig/incoming3/blake3-r3-U75/work/h12.out",
+ "notes": "universe cell blake3-r3|PREM.H1|PREM|R4. H1 itself is not tested here (cannot be at width 256); this cell prices what a deficit would cost. Basis: exact ledger arithmetic.",
+ "held_fixed": "ledger of the filed entry (125.10856), plan(256), only lambda varied, all halts/caps at their filed formulas",
+ "reopen_if": "evidence of a collision-rate deficit above 0.5 percent at the scales the search evaluates (then 0.0036 bit per half percent)",
+ "gain_basis": "T"
+}

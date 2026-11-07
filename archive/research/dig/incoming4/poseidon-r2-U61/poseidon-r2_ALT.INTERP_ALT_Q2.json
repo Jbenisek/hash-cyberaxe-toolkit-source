@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.INTERP (ALT)",
+ "question": "Q2: necessity: interpolate the full bivariate polynomial",
+ "labels": [
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "Full plane degree 5^10 = 9,765,625 (tracker); a dense bivariate interpolation has up to C(9,765,627, 2) = 4.768e+13 monomials; the line needs 393,216 evaluations. LEVELS lists AB-support sizes (e.g. 4,887,501 monomials after R5 at r=2, 196,251 at R4). No bivariate route comes near the line.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testA.json; research/poseidon/levels/LEVELS.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.INTERP|ALT|Q2. Degree tracker today (testA.json), support counts from LEVELS.md section 2.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a sparse support below 1e6 monomials after the last round"
+}

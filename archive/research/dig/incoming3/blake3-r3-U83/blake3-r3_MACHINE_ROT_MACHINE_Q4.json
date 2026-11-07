@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.ROT rotation cost",
+ "question": "Alternative lane layouts and rotation forms.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "8 lanes at pitch 32 with SWAR add (6 ops per add): 1095 ops = 136.9 per instance against 85.0 shipped (bound, +0.68 bit). 4 lanes at pitch 64 with a 4-op rotation (shr, shl, or, and): about 515 ops / 4 = 129 per instance (hand estimate, NOT traced), also worse. 7 lanes pitch 36 stays best.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.ROT|MACHINE|Q4. The pitch-64 figure is an estimate and is labelled so; the 8-lane figure uses 6 ops per variable add as a bound (the shipped circuit has 100 adds). Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "256-bit word, no wider words (M5), op price 1/638.",
+ "reopen_if": "The organizer prices a wider (512-bit) word as one op (gain about 0.99 bit, a pricing question, see levers_machine.md)."
+}

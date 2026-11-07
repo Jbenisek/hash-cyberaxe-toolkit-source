@@ -1,0 +1,54 @@
+{
+ "single": [
+  [
+   "C0.d1",
+   {
+    "resolved": false,
+    "unresolved": 36
+   }
+  ],
+  [
+   "D2.a1",
+   {
+    "resolved": false,
+    "unresolved": 50
+   }
+  ],
+  [
+   "D2.b1",
+   {
+    "resolved": false,
+    "unresolved": 65
+   }
+  ],
+  [
+   "S11",
+   {
+    "resolved": false,
+    "unresolved": 79
+   }
+  ],
+  [
+   "S4",
+   {
+    "resolved": false,
+    "unresolved": 70
+   }
+  ],
+  [
+   "X9",
+   {
+    "resolved": false,
+    "unresolved": 62
+   }
+  ],
+  [
+   "w6",
+   {
+    "resolved": false,
+    "unresolved": 83
+   }
+  ]
+ ],
+ "double": []
+}

@@ -1,0 +1,4 @@
+run_main.sh pid 715 started 17:16:41
+h_sub pid 721 (timeout wrapper) 17:16:41
+h_all pid 1798 (timeout wrapper) 17:35:29
+all GPU jobs finished 17:40:58 (h_sub exit 0 1128 s, h_all exit 0 329 s); nothing of mine left running

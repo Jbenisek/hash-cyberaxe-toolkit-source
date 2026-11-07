@@ -1,0 +1,5 @@
+W=16 tries=120000 founders=0
+diag 0: reached 120000 passed 55 rate 0.000458333
+diag 1: reached 120000 passed 1 rate 8.33333e-06
+diag 2: reached 120000 passed 29 rate 0.000241667
+diag 3: reached 120000 passed 1 rate 8.33333e-06

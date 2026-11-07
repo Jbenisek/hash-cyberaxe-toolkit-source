@@ -1,0 +1,3 @@
+lean-pow breakdown: newton total=37039409 arith=21679385 | prefix+scale total=175813 | loop steps=238 total=5815104185 arith=3515054480 per-step total=24433210 arith=14769136
+lean m=39062: ok   lean arith=3536772927 total=5852319407 peak(extra)=5444256 243.8s | cached arith=2758322184 total=4450610523 66.4s
+LEAN TESTS PASSED

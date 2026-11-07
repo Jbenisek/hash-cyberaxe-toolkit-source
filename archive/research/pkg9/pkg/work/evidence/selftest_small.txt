@@ -1,0 +1,12 @@
+
+  [ok] rule A with 8 conditions: stage A 37 operations and 10 loads, stage 2 105 and 30; outer step 148+91+21, table build 43+26+5, middle step 85+40+9 (operations+loads+stores); per part as in TABLES, in every case
+  [ok] every sum below the bound of its part: X0 to X10 2.968 < 3, C2 to z 3.831 < 4, rule A 1.0 < 2, C2, rest 4.818 < 5, C1 to Y1 4.511 < 5, E1, A and B 7.999 < 9, E1 test 1.999 < 2
+  [ok] flags right on all 128 patterns of zero lanes and on all 65536 words of rule A patterns (every pattern of the bits of z that the rule reads with every pattern of the free bits [27, 28, 29] of e1, once in every lane; in 1792 words a lane satisfies the rule)
+    words kept in registers during a class loop: 9; loaded again by stage 2: 4; reads of a kept word (no load): stage A 10, stage 2 26
+  [ok] registers: batch 16, outer step 11, table build 7, middle step 13, of 16; the list holds 131072 members in 18725 words; words stored per outer step 21, per value of X2 9
+    largest lane of a sum: batch 35 bits, outer step 35, table build 34, middle step 35 (of 36); lanes that satisfy rule A: 54 of 14000; batches that enter stage 2: 46 of 2000 (every fourth case is the short last batch)
+  [ok] the self-test prints the same bytes when repeated
+  [ok] a second seed text (500 cases) also ends with exit status 0
+  [ok] wrong arguments end with a usage message and no output on stdout
+    distinct rotation masks loaded by the four pieces (constants, 256-bit words): 14
+RESULT: all steps hold

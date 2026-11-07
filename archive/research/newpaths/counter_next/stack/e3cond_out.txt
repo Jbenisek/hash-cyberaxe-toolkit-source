@@ -1,0 +1,21 @@
+constants: DY3 fdb77cfd eta 830303cf beta* 18b0e098 eps 6e21be55
+Lemma N word for beta*, eps: n = 00000000 (0 needed)
+tau 175020a0  G 830f01cf  df1 1cf830f0  weight   96/1033   LM(eta,0->G) (True, 14)
+tau 185020a0  G 830f0147  df1 147830f0  weight  256/1033   LM(eta,0->G) (True, 14)
+tau 275020a0  G 830f034f  df1 34f830f0  weight   16/1033   LM(eta,0->G) (True, 14)
+tau 285020a0  G 830f03c7  df1 3c7830f0  weight  384/1033   LM(eta,0->G) (True, 14)
+tau 385020a0  G 830f0247  df1 247830f0  weight  256/1033   LM(eta,0->G) (True, 14)
+tau 675020a0  G 830f054f  df1 54f830f0  weight    1/1033   LM(eta,0->G) (True, 15)
+tau 685020a0  G 830f05c7  df1 5c7830f0  weight   24/1033   LM(eta,0->G) (True, 15)
+G values agree on mask fffff877 (27 bits), common value 830f0047
+Part A: 200000 real E3 pairs (sub-class y), identity failures 0; df2 == ROR(dg2,8) seen 0 times
+counter checks (planted 600, brute force at 8 bits 2000): failures 0
+tau 175020a0: (1) mean #h1 2^17.931, P(none) 0.9987 | (2) mean #f1 2^6.996, P(none) 0.9793
+tau 185020a0: (1) mean #h1 2^18.197, P(none) 0.9860 | (2) mean #f1 2^7.800, P(none) 0.9580
+tau 275020a0: (1) mean #h1 2^18.856, P(none) 0.9953 | (2) mean #f1 2^6.961, P(none) 0.9787
+tau 285020a0: (1) mean #h1 2^18.614, P(none) 0.9953 | (2) mean #f1 2^8.371, P(none) 0.9847
+tau 385020a0: (1) mean #h1 2^18.509, P(none) 0.9860 | (2) mean #f1 2^9.034, P(none) 0.9653
+tau 675020a0: (1) mean #h1 2^16.172, P(none) 0.9960 | (2) mean #f1 2^6.668, P(none) 0.9827
+tau 685020a0: (1) mean #h1 2^16.982, P(none) 0.9920 | (2) mean #f1 2^8.093, P(none) 0.9893
+outer steps with some j solvable: (1) 0.0327  (2) 0.0520  (1) and (2) for the same j 0.00133  (n = 1500)
+proxy mass sum_j w_j*#1*#2: share carried by the surviving steps 1.0 by construction; top 1% of steps carries 1.000 of it

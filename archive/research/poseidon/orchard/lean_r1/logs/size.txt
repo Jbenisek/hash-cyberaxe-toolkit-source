@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+  91703	    768	   5336	  97807	  17e0f	lean_final2

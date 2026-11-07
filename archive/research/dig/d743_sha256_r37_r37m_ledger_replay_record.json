@@ -1,0 +1,23 @@
+{
+  "id": "D743-SHA256-R37-R37M-LEDGER-REPLAY-20261014",
+  "hash": "sha256-37",
+  "row_i": 5,
+  "row_j": 6,
+  "object": "R37M enlarged-family ledger replay and cutoff discrepancy",
+  "question": "Does the checked-in 61.09053 projection survive the stated n>=17728 cutoff and exact class selection?",
+  "labels": ["C", "D", "N"],
+  "status": "COMPUTED",
+  "number": "Literal n>=17728 replay: 500 cost-ranked classes, 10,824,512 variants, time_log2 61.13853, memory 3,181,152 B (over 2^20). All-record replay reproduces 61.09053 and 1,006,176 B, but 368 selected classes have n<17728 (minimum 8192); the report's cutoff label is false.",
+  "source": "our workflow: D743 exact R37M ledger replay",
+  "own_test": true,
+  "evidence": "research/sol_answer_D743_sha256_r37_r37m_ledger_replay.md; research/retest/zoneD_family/run_D743_ledger_replay.py; research/retest/zoneD_family/out/D743_ledger_replay.json; research/retest/zoneD_family/ledgers.py; research/retest/zoneD_family/out/cls/",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.15,
+  "prior": 0.02,
+  "gain_basis": "D",
+  "held_fixed": "checked-in classes executable/output, 64 E5/E6 contexts, existing ledgers.py, extra_per_class=8, 500 cost-ranked classes",
+  "notes": "Arithmetic projection audit only. No per-context R37M implementation, KAT, end-to-end run, q3 measurement, package, staging, filing, or submission.",
+  "reopen_if": "A per-context R37M implementation and end-to-end KAT are available; if the intended cutoff is changed, preregister the replacement selection and memory rule."
+}

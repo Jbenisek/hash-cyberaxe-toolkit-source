@@ -1,0 +1,2 @@
+proof.md:3: 124.69481 is the board score of our credited round-3 entry 2c5a749b, quoted as such; this entry's value is 124.79179.
+bsrho.py:932: the search loop exits at the first passing batch at or after batch B (break) or by a Halt at a budget; proof 3.3 and Section 4 Step 7 bound it by B + 3,000 batches outside an event below 2^-134, charged in the ledger.

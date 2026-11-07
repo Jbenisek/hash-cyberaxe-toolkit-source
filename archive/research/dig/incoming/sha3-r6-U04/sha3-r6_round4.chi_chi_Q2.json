@@ -1,0 +1,22 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "round idx 4 chi (leader's round-5 cone), key = digest lanes (0..3,0) x z=0..34 (140 bits)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "evidence": "research/dig/incoming/sha3-r6-U04/work/cone5.py; research/dig/incoming/sha3-r6-U04/work/cone5_out.json",
+ "id": "sha3-r6|round4.chi|chi|Q2",
+ "question": "Which cone bits at round 4 chi are necessary for the 140-bit key?",
+ "labels": [
+  "C",
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "All of them. Bit-flip test, 16-24 random states per case, 1600 flips each side: chi4-output bits that ever changed the key = 1505 = cone exactly (0 outside, 0 cone bits never hit); chi4-input bits = 1600 = cone (0 outside, 0 unhit). Same exact match for z=0..28 (1362 / 1600) and all-z (1600 / 1600). No cone bit is redundant (sampled; a dependency never seen in 16-24 states would be missed).",
+ "topic": "sha3r6.cone.round4.necessary",
+ "notes": "Universe cell sha3-r6|round4.chi|chi|Q2. Round 5 (idx) reads every chi4 input bit, so no input-side trimming exists for the contiguous key. Own Keccak-f (validated: 24-round perm reproduces hashlib sha3_256('') digest). Key z=0..34 is the natural reading of '35 planes x 4 lanes' (leader z-set unpublished); contiguous 29 planes gives 1362 (leader 1363), no prefix matches leader's 140/175/1363 jointly. Round idx 4 = 1-based round 5; the leader's 2.19 ops figure itself is not reproduced."
+}

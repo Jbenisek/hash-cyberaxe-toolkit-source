@@ -1,0 +1,57 @@
+ok   lines per step O, M, Y, T, round 1: [29, 21, 10, 12, 24] (text: 29, 21, 10, 12, 24; 96)
+ok   no line mixes + or - with XOR without brackets
+ok   Lemma T2 (a) and (c) as structure: every line assigns a new name and reads only what its level may read
+ok   Table C: 88 cells, 88 different names
+ok   the lines outside Table C are the eight of E1 and E3: ['E1.a1', 'E1.a2', 'E1.b1', 'E1.d1', 'E3.e2', 'E3.f1', 'E3.g1', 'E3.h1']
+ok   Table C: every cell's line reads exactly the other terms of that assignment of that call
+ok   levels of the message words: w6 w7 outer; w0 w1 w2 w3 w12 middle; w8..w11 trial
+ok   fourteen S words assigned
+ok   X words assigned: X0 X1 X4 X5 X6 X8 X9 X10 X12 X13 X14
+ok   trial lines under E3.h1: 11 (X0 D0.d1 D0.c1 X10 C2.a1 C2.d1 C2.c1 C2.b1 Y2 Y14 E3.h1)
+outer steps 8, lanes 2016, different trials 1944, different messages A 1944
+ok   Lemma T3 on the sample: as many messages A as tuples of eight words
+ok   Lemma T4 (a): the five table words of a lane, each below 2^32                      672 cases, wrong 0
+ok   bytes 55..63 of both blocks zero                                                  2016 cases, wrong 0
+ok   H from the bytes = the traced compression                                         2016 cases, wrong 0
+ok   digest words 0, 2, 5, 7 agree (Theorem of Section 5)                              2016 cases, wrong 0
+ok   every name of the 96 lines = its value in the compression of A (T2 b)             2016 cases, wrong 0
+ok   schedule of Section 1                                                             2016 cases, wrong 0
+ok   block admissible: w4 w13 w14 w15 and X3 X7 X11 X15                                2016 cases, wrong 0
+ok   the eight words read back from the compression (T2 d, injective)                  2016 cases, wrong 0
+ok   B: same S and same X as A (Lemma L)                                               2016 cases, wrong 0
+ok   B: Y differs from A in Y3 and Y11 only, values of Fact P                          2016 cases, wrong 0
+ok   Y4 = y in A and in B                                                              2016 cases, wrong 0
+ok   eta = 830303cf exactly for the members of the class (Lemma Q / T)                 2016 cases, wrong 0
+ok   class membership by the mask of Lemma Q                                           2016 cases, wrong 0
+ok   Lemma N: n = D3 XOR ROL(D6, 8) (with the trial's own eta)                         2016 cases, wrong 0
+ok   Lemma A (a): ROL(h1, 24) = z XOR ROL(e1, 8)                                       2016 cases, wrong 0
+ok   Lemma A (b): rule A on h1 = the conditions on z                                   2016 cases, wrong 0
+ok   stage A flag of the lane = rule A on the real h1                                  2016 cases, wrong 0
+ok   stage 2 word of the lane = n of the real messages                                 2016 cases, wrong 0
+ok   z of the lane (low 32 bits) = C2.d1 XOR Y2                                        2016 cases, wrong 0
+ok   T2 (c): the trials of a context differ at most in w8..w11                          288 cases, wrong 0
+lanes that satisfy rule A: 9 of 2016 (share 0.00446, 2^-8 = 0.00391); batches with one: 9 of 288 (0.0312)
+ok   largest lane, 2 C1.a1 <3             2.7284 * 2^32
+ok   largest lane, 2 C1.c1 <2             1.7516 * 2^32
+ok   largest lane, 2 E1.a1 <7             5.6606 * 2^32
+ok   largest lane, 2 E1.a2 <9             7.4043 * 2^32
+ok   largest lane, 2 E1.c1 <2             1.5194 * 2^32
+ok   largest lane, 2 E1.c2 <3             2.5003 * 2^32
+ok   largest lane, 2 X10-X15 <4           3.6767 * 2^32
+ok   largest lane, 2 Y1+S1+S6 <5          4.3375 * 2^32
+ok   largest lane, 2 beta^eps <4          3.9984 * 2^32
+ok   largest lane, 2 sum for Y6 <5        4.4130 * 2^32
+ok   largest lane, A C2 fifth <4          3.7402 * 2^32
+ok   largest lane, A C2.a1 <2             1.9764 * 2^32
+ok   largest lane, A C2.c1 <4             3.5277 * 2^32
+ok   largest lane, A X0 <2                1.8524 * 2^32
+ok   largest lane, A X10 <3               2.9297 * 2^32
+ok   largest lane, A rule sum <=1         1.0000 * 2^32
+ok   largest lane, A z <4                 3.9996 * 2^32
+ok   largest lane, build C0.a1 <2         1.8108 * 2^32
+ok   largest lane, build D1.c1 <3         2.2595 * 2^32
+ok   largest lane, build D1.d1 <4         2.6435 * 2^32
+ok   largest lane, build X1 <4            2.9947 * 2^32
+ok   largest lane, build XA <3            2.2269 * 2^32
+ok   largest lane, build Y12 <2           0.2416 * 2^32
+all checks of this part hold

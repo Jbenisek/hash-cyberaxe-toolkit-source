@@ -1,0 +1,3 @@
+res/split_part_02_t0_Y13_k8.txt: solutions 19316 best 176.0
+res/split_part_02_t0_Y5_k8.txt: solutions 19316 best 176.0
+JOB6DONE

@@ -1,0 +1,4 @@
+synthetic outer steps (brute_cases.txt): 1267 groups, 1472 solutions; size-biased mean group size 1.30; sizes {1: 1074, 2: 186, 3: 2, 4: 5}
+real outer steps: 6000, with partial solutions: 6
+real outer steps, groups by full E3 differences: 6508 groups, 7568 solutions; size-biased mean group size 1.31; sizes {1: 5536, 2: 925, 3: 6, 4: 41}
+real outer steps, sub-groups that also share the E1 differences (beta, tau, eps): 7568 groups, 7568 solutions; size-biased mean group size 1.00; sizes {1: 7568}

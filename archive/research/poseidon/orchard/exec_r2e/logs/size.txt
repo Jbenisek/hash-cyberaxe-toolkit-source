@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 819597	  22832	  28768	 871197	  d4b1d	/root/b_r2e/exec_attack

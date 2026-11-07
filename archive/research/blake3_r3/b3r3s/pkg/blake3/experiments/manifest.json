@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiments": [
+    {
+      "id": "rho-n22",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 22 bits of the complete digest. Each trial runs the search of proof.md Section 2 at width n = 22 (distinguished points: low 4 bits zero and the next 4 bits below 12; groups of 2 batches with replay; 25-byte table entries; budgets plan(22)), with up to 60 fresh attempts from the trial seed, and returns the two 64-byte messages 0^32 || x and 0^32 || y.",
+      "hypothesis": "For every trial the two messages are distinct and their complete 3-round digests agree on the low 22 bits (digest bytes 0 and 1 and the low 6 bits of byte 2). This is exact: the program recovers a merge of two trails of the chain x -> low 22 bits of the digest of 0^32 || x. Observations (untrusted, the program's own): attempts and batches. Expected: about 2 attempts per trial and at most 378 batches per attempt; all 256 trials return a pair; a few trials may return a pair another trial also returns, because at width 22 the merges concentrate on few pairs. Not shown: any width-256 cost or success probability.",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffff3f0000000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    }
+  ]
+}

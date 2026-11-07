@@ -1,0 +1,54 @@
+# -------- 4 the rolled program and its register allocation
+
+Source: `research/blake3_r7/b9v3/patch_b8.py`
+
+Public SHA-256: `985bcea9a161c922e6835031f830e8181fab705c0132de8ee959c3637b4b8ad6`
+
+## Purpose recorded in the source
+
+Builds bsrho.py of B3R7b from the b7 file (bsrho_b7.py): rolled program (rounds 1-2 straight, rounds 3-7 as a loop of one generic round).
+usage: python3 -B patch_b8.py > bsrho_b8.py  (GEN_C is embedded separately by embed_gen.py)
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "re",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "rep",
+    "line": 207,
+    "arguments": [
+      "old",
+      "new",
+      "cnt"
+    ],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/blake3_r7/b9v3/proof_t8.md
+- research/blake3_r7/b9v3/proof_t9.md
+- research/blake3_r7/b9v3/mk_proof9.py
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

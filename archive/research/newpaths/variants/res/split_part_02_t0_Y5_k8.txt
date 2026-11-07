@@ -1,0 +1,3 @@
+NEWBEST 176.0  sol#1  Z=0,20,21,33,34,45,57,73, A= B=  dimZ=5 dimA=5 dimB=5 dimS=5 |S|=101
+solutions 19316 best 176.0
+histogram of per-solution best (floor): 176:19316

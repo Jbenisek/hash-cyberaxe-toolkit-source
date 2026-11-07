@@ -1,0 +1,169 @@
+== proof: 552 figures, 65 distinct ones not found as a string in evidence/ or the program
+                162,266,764  line 42
+                 36,263,164  line 47
+                      122.6  line 57 (+2)
+                   01200183  line 192
+                      5.002  line 847
+                     0.9995  line 884 (+1)
+                      31.39  line 887 (+1)
+                       4.81  line 896
+                     0.3934  line 906
+                     0.3904  line 906
+                 33,502,523  line 912 (+1)
+                     122.52  line 916
+                       3.76  line 929
+                     18.253  line 954 (+1)
+                    0.21875  line 959
+                     17.525  line 960
+                      10.25  line 976
+                   4.255501  line 1000
+                   8.748193  line 1000
+                    0.01123  line 1002
+                     75,776  line 1019
+                  2,424,832  line 1020 (+1)
+                    129,147  line 1164 (+1)
+                     27,041  line 1167
+                     100.73  line 1173 (+1)
+           162,266,763.6588  line 1221
+                1,048,576.0  line 1247 (+12)
+                   98,304.0  line 1251 (+2)
+                   65,536.0  line 1252 (+3)
+                   32,768.0  line 1253
+                    2,048.0  line 1254
+               64,061,440.0  line 1293
+               50,036,736.0  line 1294
+                4,259,840.0  line 1295
+                5,505,024.0  line 1296
+                1,392,640.0  line 1297
+                  745,472.0  line 1298
+                    1,162.5  line 1303
+                      3.625  line 1313
+                    12.2188  line 1315
+                     2.1973  line 1317
+                     0.1348  line 1318
+                   16,384.0  line 1364 (+1)
+                    8,192.0  line 1366
+                     0.0078  line 1378
+                      77.65  line 1388
+                     23.503  line 1436
+                     15.913  line 1438
+                     67,416  line 1507
+                 47,846,517  line 1512
+                       32.2  line 1599
+                      12.09  line 1602
+                   1,784.55  line 1618
+                     0.1216  line 1655
+                     0.2183  line 1659
+                    9,837.9  line 1676
+                      664.6  line 1677
+                    1,807.2  line 1678
+                      22.35  line 1722
+                      0.024  line 1770
+                      123.5  line 1814
+                      121.5  line 1814
+                      112.4  line 1814
+                       99.4  line 1814
+                 29,965,882  line 1821
+== claim: 88 figures, 12 distinct ones not found as a string in evidence/ or the program
+                      122.6  line 21 (+1)
+                162,266,764  line 31
+             162,266,763.66  line 31
+                    9,837.9  line 31
+                      664.6  line 31
+                 33,502,523  line 33
+                     100.73  line 33
+                      22.35  line 33
+                     0.9995  line 37 (+1)
+                      31.39  line 39
+                       4.81  line 48
+                     0.2183  line 49
+== note: 140 figures, 18 distinct ones not found as a string in evidence/ or the program
+                       99.4  line 10
+                      123.5  line 11
+                      121.5  line 11
+                      112.4  line 11
+                162,266,764  line 54 (+1)
+                      122.6  line 60 (+2)
+                 29,977,922  line 99
+                      22.35  line 100 (+1)
+           162,266,763.6588  line 161
+                       77.7  line 172
+                    9,837.9  line 223
+                      664.6  line 224
+                     18.253  line 261
+                     17.525  line 262
+                      5.002  line 285
+                      10.25  line 297
+                      31.39  line 302
+                     100.73  line 334
+== claim.json
+   state draft  time_log2 97.6
+   restriction 0: 295 characters
+   restriction 1: 166 characters
+   restriction 2: 669 characters
+   restriction 3: 881 characters
+   restriction 4: 372 characters
+   restriction 5: 850 characters
+   H1-residual-hit-rate id: 20 characters
+   H1-residual-hit-rate statement: 384 characters
+   H1-residual-hit-rate role: 14 characters
+   H1-residual-hit-rate scope: 423 characters
+   H1-residual-hit-rate extrapolation: 2506 characters
+   H1-residual-hit-rate limitations: 2955 characters
+   H1-residual-hit-rate proof:227-433: first [## 4. Construction: the message from eight words] last [pairs.] line before blank: True line after blank: True
+   H1-residual-hit-rate proof:437-488: first [**6.1 Trials.** A *context* is seven words (vc, vd, S11, S4,] last [is eta by the definition of the class. QED.] line before blank: True line after blank: True
+   H1-residual-hit-rate proof:507-607: first [**6.3 Three tests of a trial.** The algorithm uses two tests] last [solution exists; these answers are not certified.] line before blank: True line after blank: True
+   H1-residual-hit-rate proof:609-639: first [**6.4 Algorithm.**] last [ and each of these is a function of the message A.] line before blank: True line after blank: True
+   H1-residual-hit-rate proof:863-935: first [## 7. Success probability] last [uristics is proved. Section 10 lists the evidence.] line before blank: True line after blank: True
+   H1-residual-hit-rate proof:1040-1792: first [## 10. Evidence, scope and field meanings] last [  the runs and were not measured by a tool.] line before blank: True line after blank: True
+   H2-e1-test-passes id: 17 characters
+   H2-e1-test-passes statement: 156 characters
+   H2-e1-test-passes role: 10 characters
+   H2-e1-test-passes scope: 414 characters
+   H2-e1-test-passes extrapolation: 412 characters
+   H2-e1-test-passes limitations: 592 characters
+   H2-e1-test-passes proof:507-607: first [**6.3 Three tests of a trial.** The algorithm uses two tests] last [solution exists; these answers are not certified.] line before blank: True line after blank: True
+   H2-e1-test-passes proof:609-639: first [**6.4 Algorithm.**] last [ and each of these is a function of the message A.] line before blank: True line after blank: True
+   H2-e1-test-passes proof:884-890: first [**Heuristic H2 (supporting).** With probability at least 0.9] last [n stays near this mean is part of the assumption.)] line before blank: True line after blank: True
+   H2-e1-test-passes proof:1040-1792: first [## 10. Evidence, scope and field meanings] last [  the runs and were not measured by a tool.] line before blank: True line after blank: True
+   H3-stage-2-entries id: 18 characters
+   H3-stage-2-entries statement: 189 characters
+   H3-stage-2-entries role: 10 characters
+   H3-stage-2-entries scope: 673 characters
+   H3-stage-2-entries extrapolation: 985 characters
+   H3-stage-2-entries limitations: 987 characters
+   H3-stage-2-entries proof:507-607: first [**6.3 Three tests of a trial.** The algorithm uses two tests] last [solution exists; these answers are not certified.] line before blank: True line after blank: True
+   H3-stage-2-entries proof:609-639: first [**6.4 Algorithm.**] last [ and each of these is a function of the message A.] line before blank: True line after blank: True
+   H3-stage-2-entries proof:641-861: first [**6.5 Seven trials in one word.** A packed word holds seven ] last [the cost.] line before blank: True line after blank: True
+   H3-stage-2-entries proof:892-903: first [**Heuristic H3 (supporting).** With probability at least 0.9] last [ stays that close to this mean is the assumption.)] line before blank: True line after blank: True
+   H3-stage-2-entries proof:1040-1792: first [## 10. Evidence, scope and field meanings] last [  the runs and were not measured by a tool.] line before blank: True line after blank: True
+   proof: 111484 bytes, non-ASCII or control bytes [], tabs 0, CRLF 0, longest line 79, sha256 76a0c35b7a42624bfdf8355d33156a7c73feabaa2e5d02d7c5f26fa51a875f10
+   claim: 15452 bytes, non-ASCII or control bytes [], tabs 0, CRLF 0, longest line 2978, sha256 86804b4e80fc732793149d470febc3a414404521a112b9956a08e3a7451236d8
+   note: 29949 bytes, non-ASCII or control bytes [], tabs 0, CRLF 0, longest line 199, sha256 11aefcb36cffa07dd44e21f93937fb12f832c18ecd338207d9657f0656cc2115
+   program: 39623 bytes, non-ASCII or control bytes [], tabs 0, CRLF 0, longest line 126, sha256 d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb
+   manifest: 5161 bytes, non-ASCII or control bytes [], tabs 0, CRLF 0, longest line 1799, sha256 a87d654ddccbf431549cbac3c946fa3f7b6df01d95614f63b714f7c495509338
+   certificates: 48 bytes, non-ASCII or control bytes [], tabs 0, CRLF 0, longest line 22, sha256 a3c78779269ab224b0a36cc0cc075aaebdfb496a3a695bce1e743cf7bd45c4c8
+== hashes quoted in FILE_STEPS.md
+    short ('76a0c35b', '5f10')
+    short ('86804b4e', '36d8')
+    short ('a87d654d', '9338')
+    short ('d7a0e96a', '16eb')
+== hashes quoted in validation_log.txt
+    2986c55feb36e6cae00fa1fefb454283e4b33f35e75ff8bdd123b134130be301
+    3b614ea43faaf5b6ae357088cc8a54fb4c90be5f47c4778227d98cd05bb512df
+    76a0c35b7a42624bfdf8355d33156a7c73feabaa2e5d02d7c5f26fa51a875f10
+    86804b4e80fc732793149d470febc3a414404521a112b9956a08e3a7451236d8
+    a3c78779269ab224b0a36cc0cc075aaebdfb496a3a695bce1e743cf7bd45c4c8
+    a87d654ddccbf431549cbac3c946fa3f7b6df01d95614f63b714f7c495509338
+    d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb
+== hashes quoted in note
+== hashes quoted in selftest_pkg6_all
+== hashes quoted in selftest_pkg6_text_final
+    11aefcb36cffa07dd44e21f93937fb12f832c18ecd338207d9657f0656cc2115
+    76a0c35b7a42624bfdf8355d33156a7c73feabaa2e5d02d7c5f26fa51a875f10
+    86804b4e80fc732793149d470febc3a414404521a112b9956a08e3a7451236d8
+    a87d654ddccbf431549cbac3c946fa3f7b6df01d95614f63b714f7c495509338
+    d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb
+== hashes quoted in proof_lines_check
+    4a53b97b46857acdacf010a9a482fc353d33164fa8941d4282b640d9bb3981dd
+    d7a0e96a0bd9a4048d4d638089fd5a06e3a417fd5a2373c51dbd583d66a716eb

@@ -1,0 +1,8 @@
+tr: warning: an unescaped backslash at end of string is not portable
+cycle: source-hash=df73de6b3e04d72b
+memmeter peak 222314496 bytes, wall 3202.856 s, exit 0
+COLLISION digest 0x325165c946fe20c28af82e940ec89fca03e6fb74afa1a3fa28a54e552a1f12ec
+COLLISION centre 0x0000000000000000000000000000000000000000000000000000000000000001
+logs/exec_run.txt collision verified reference ok organizer ok
+{"time": 30.08182, "time_exact": 30.08181758742944, "mem_bytes": 250386180, "mem_log2": 27.9, "score": 37.98182, "N": 317054280703, "units": 1136395271.3369176, "heap": 202802752, "static": 250320644, "gcd_obs": 56416271248, "rss": 222314496, "peak_live": 11, "secs": 3202.856, "trials": 1}
+prefile: ALL PASS

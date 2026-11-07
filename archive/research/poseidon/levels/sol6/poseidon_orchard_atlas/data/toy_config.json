@@ -1,0 +1,37 @@
+{
+  "p": 257,
+  "capacity": 2,
+  "width": 3,
+  "exponent": 5,
+  "full_rounds": [
+    0,
+    1,
+    2,
+    3,
+    60,
+    61,
+    62,
+    63
+  ],
+  "constants": "native RC reduced mod 257",
+  "MDS": [
+    [
+      103,
+      43,
+      147
+    ],
+    [
+      43,
+      147,
+      225
+    ],
+    [
+      147,
+      225,
+      200
+    ]
+  ],
+  "native_target": false,
+  "inputs_exhausted": 66049,
+  "compile_and_run_wall_seconds": 0.2716249750001225
+}

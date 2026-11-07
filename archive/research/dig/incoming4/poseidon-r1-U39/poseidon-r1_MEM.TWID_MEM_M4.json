@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.TWID twiddle table",
+ "question": "alternatives for the memory",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "two-level table (w^j = T_hi[j>>7] * T_lo[j&127], 256 entries = 8 KB) would keep one multiplication per twiddle and save ~516 KB (0.0891 bit); not built or measured",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Proposal only: byte saving 524,288 - 8,192 computed; time not measured. | universe cell poseidon-r1|MEM.TWID|MEM|M4",
+ "held_fixed": "r = 1",
+ "reopen_if": "build and charge it; reopen on the measurement"
+}

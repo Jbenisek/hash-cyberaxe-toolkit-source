@@ -1,0 +1,8 @@
+== 10 bits, 3 seeds: sub-class = best half, A2, B2
+toy BLAKE3, 2 rounds, 10-bit words; pin 39b aa da 25e 279 163; plain c = 0.9475; class eta = 3f2, 16 members, class rate 29.0869
+  A2: 0 XOR conditions hold for all the class mass (288 values of h1 carry mass):
+  B2: 4 betas carry class mass; they agree on 3 bits: ((beta ^ 44) & 64) == 0
+  T: best 8 of 16 members; exact rate of T 31.0869 (x1.069 of the class); with A and B 31.0869 (share 1.0000 of T)
+  collisions per seed (all / passing A and B): 36/36 24/24 24/24
+  RESULT W=10 T=8/16 ka=-1 useb=2 seeds=3: sub-class, no rejection: predicted 93.3 observed 84 (variance/mean 1.71); with A and B: predicted 93.3 observed 84 (variance/mean 1.71)
+  CHECKS trials 2^41.58; Y4 wrong 0; pass A 2^0.000; pass B 2^-0.262; pass A and B 2^-0.262; pass C (E1-only test) 2^-9.930; pass old test 2^-8.751; pass A, B and C 3120990508; collisions failing C 0; failing the old test 0; trials where a test word differs from its residual identity 0; hits failing the full-hash check 0

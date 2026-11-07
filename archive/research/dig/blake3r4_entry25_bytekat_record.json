@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-ENTRY25-BYTEKAT-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "25-byte entry C serialization KAT",
+  "question": "Does an independent byte-level implementation round-trip the 25-byte packed entry at the boundary?",
+  "labels": ["N", "C"],
+  "status": "COMPUTED",
+  "number": "C11 byte KAT PASS: 10,000 random entries plus maximum-boundary entry, 10,001 total, exact 25-byte little-endian serialization",
+  "source": "research/dig_new/blake3-r4/entry25_kat.c",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_entry25_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.02300014,
+  "gain_basis": "T",
+  "peak_mem": "1048574 B conditional ledger",
+  "notes": "Serialization KAT only; generated integration and organizer acceptance remain open. No package/stage/filing/submission."
+}

@@ -1,0 +1,8 @@
+cut C0.b1: check offsets [0, 4, 8, 12, 16, 20, 24, 28] (arc width 28); additions reading loop words: 13, carry bits per position 20
+    Y12(2 ops, 2 loop), C0.d1(2 ops, 1 loop), C0.a1(3 ops, 2 loop), D1.c1(1 ops, 1 loop), D1.d1(2 ops, 1 loop), w10(3 ops, 1 loop), w2(3 ops, 1 loop), K1.a1(1 ops, 1 loop), w3(3 ops, 1 loop), C1.a1(3 ops, 2 loop), C1.c1(2 ops, 1 loop), Y1(3 ops, 3 loop), CHECK(3 ops, 2 loop)
+   position order: state >= 2^(28 + 20) = 2^48 per position
+   slice order: carries crossing the 8 nibble boundaries >= 140 bits (7 boundaries x 20)
+cut C1.a1: check offsets [0, 4, 8, 12, 16, 20, 24, 28] (arc width 28); additions reading loop words: 13, carry bits per position 19
+    C1.c1(2 ops, 1 loop), Y13(2 ops, 1 loop), w10(3 ops, 3 loop), D1.a1(3 ops, 1 loop), D1.c1(2 ops, 1 loop), X12(1 ops, 1 loop), w3(3 ops, 2 loop), K1.a1(3 ops, 1 loop), w2(1 ops, 1 loop), C0.a1(3 ops, 1 loop), C0.c1(2 ops, 1 loop), Y12(2 ops, 2 loop), CHECK(4 ops, 3 loop)
+   position order: state >= 2^(28 + 19) = 2^47 per position
+   slice order: carries crossing the 8 nibble boundaries >= 133 bits (7 boundaries x 19)

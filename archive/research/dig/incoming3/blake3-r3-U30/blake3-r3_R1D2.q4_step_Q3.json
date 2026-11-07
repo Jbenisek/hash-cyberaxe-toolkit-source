@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work_b3r3/analyze.py; research/dig/incoming3/work_b3r3/b3steps.py; research/dig/incoming3/work_b3r3/analysis.json; research/blake3_r3/candidate_blake3/experiments/rho.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "question": "Q3 degrees of freedom or score-optimal value at R1D2.q4",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "the step outputs depend on 2 input words (m12, m13; 64 of 256 input bits change an output in 128 samples each) and image size is full: 2097152 distinct output pairs of 2097152 random x against 2097152 expected for uniform 64 bits; mean flipped output bits per influencing input bit flip 6.2 (word 1) / 7.1 (word 2). Score-optimal formulation at this step: the filed one (see Q4: no tested variant is cheaper)",
+ "notes": "validation first: filed scalar digest vs organizer verifier/blake3.py matched 300/300 random 64-byte messages at 7, 3, 2 and 1 rounds; verifier empty-input 7-round hash = af1349b9...3262 (spec vector) ok; numpy tracer vs scalar 200/200; filed packed circuit selftest True (595 ops). Cone measured by flipping each of the 256 input bits on 128 random x (sampled, a silent bit would need more samples to rule out a rare dependence); distinct count over 2^21 random x.",
+ "held_fixed": "random x over all 256 bits, constant key 0^32, flags 11",
+ "reopen_if": "a pair of inputs is found whose step outputs coincide although the inputs differ in the cone (collision structure), or a dependence outside the listed words",
+ "object": "step R1D2.q4 (G call R1D2 quarter-step q4)"
+}

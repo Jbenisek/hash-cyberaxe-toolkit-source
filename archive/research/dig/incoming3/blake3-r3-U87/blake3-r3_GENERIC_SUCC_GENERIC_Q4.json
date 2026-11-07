@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "GENERIC.SUCC success probability",
+ "question": "Alternative check: measured success of the shipped search at small widths.",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "rho.search with plan(n): n=22, 1500 attempts: 697 pairs found (0.4647; 87 budget halts); n=32, 40 attempts: 17 (0.425, standard error 0.078). Every pair verified x!=y and f(x)=f(y). Both above 0.39 but dominated by finite-size slack (28 L is 11 percent of q at n=32, 0.17 percent at 256), so this does not test the 256-bit margin.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/c_tests.json (c_tests.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|GENERIC.SUCC|GENERIC|Q4. Earlier T3 (4000 attempts n=32: 0.443 against 0.4535 ideal) is consistent; this adds n=22 only. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "shipped rho.py search and plan, n=22 and 32, seeds fixed in c_tests.py.",
+ "reopen_if": "A test at width where 28 L / q is under 1 percent (needs n>=64: about 1e9 batches)."
+}

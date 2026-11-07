@@ -1,0 +1,11 @@
+counter-arrangement hits: 305, t min 1 max 255 mean 121.8 (uniform 1..255 has mean 128); prefix up to 255 toy chunks
+set 0: n 16 |D|  4  trials/coll filed 1.07e+09 ctr 3.36e+07 (x31.75)  lines/trial filed 47.3 ctr 20.8  lines/coll ratio x72.1
+set 1: n 16 |D| 16  trials/coll filed 1.04e+09 ctr 7.67e+07 (x13.58)  lines/trial filed 47.3 ctr 13.5  lines/coll ratio x47.7
+set 2: n 16 |D| 16  trials/coll filed 8.18e+08 ctr 7.67e+07 (x10.67)  lines/trial filed 47.3 ctr 13.5  lines/coll ratio x37.5
+set 3: n 16 |D| 16  trials/coll filed 6.74e+08 ctr 6.32e+07 (x10.67)  lines/trial filed 47.3 ctr 13.5  lines/coll ratio x37.5
+set 4: n  8 |D| 32  trials/coll filed 1.04e+09 ctr 2.68e+08 (x3.88)  lines/trial filed 48.6 ctr 12.3  lines/coll ratio x15.4
+set 5: n 16 |D| 16  trials/coll filed 7.01e+08 ctr 4.88e+07 (x14.37)  lines/trial filed 47.3 ctr 13.5  lines/coll ratio x50.5
+set 6: n 16 |D|  4  trials/coll filed 1.07e+09 ctr 3.36e+07 (x31.75)  lines/trial filed 47.3 ctr 20.8  lines/coll ratio x72.1
+set 7: n 16 |D|  4  trials/coll filed 9.82e+08 ctr 3.36e+07 (x29.26)  lines/trial filed 47.3 ctr 20.8  lines/coll ratio x66.5
+geomean over sets 0..7: trials per collision x14.98 (3.91 bits); lines per collision (excluding the common residual check) x45.39 (5.50 bits)
+lines/trial: filed = member 10 + trial 28 + E1/E3 first halves 8 + middle 21/n; ctr = E1.a1, Y6, Y10, Y14, Y2 (5) + E1.b1, E1.a2 (2, c1 per d1 tabulated) + E3.h1, g1, f1, e2 (4) + (member 10 + trial 28)/|D| + 21/(n|D|); w0, K0.a1, t, w1 only for survivors

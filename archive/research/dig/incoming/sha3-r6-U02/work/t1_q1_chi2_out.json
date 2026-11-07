@@ -1,0 +1,28 @@
+{
+ "affine_fail_pairs": "0/20",
+ "support_words": [
+  22
+ ],
+ "uniform_allones_all_j": true,
+ "rows_touched": [
+  22
+ ],
+ "rows_with_2plus_inputs": [
+  0
+ ],
+ "o2p_changed_words_union_over_slices": {
+  "min": 499,
+  "mean": 499.0,
+  "max": 499
+ },
+ "o2p_changed_words_mean_per_slice": {
+  "min": 309.9375,
+  "mean": 313.9287109375,
+  "max": 318.796875
+ },
+ "chi2_out_changed_words_union": {
+  "min": 66,
+  "mean": 66.0,
+  "max": 66
+ }
+}

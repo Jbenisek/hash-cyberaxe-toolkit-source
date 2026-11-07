@@ -1,0 +1,23 @@
+{
+  "id": "D530-BLAKE3-R2-PKGB3W-FAST-FINAL-SHARED-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgB3W_fast/pkgB3W_final shared executable prefile and self-test",
+  "question": "Do the B3W fast and final copies remain internally clean under the current prefile and finite self-test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgB3W_fast and pkgB3W_final prefile ALL PASS; exact N=53674430149335259056, time_log2=56.7927 (ledger 56.79267592); both frontline.py files share SHA-256 C7C94D6D...; one-thread selftest exits 0 with ok=true, 256 automata cases, 512 T1/T2 cases, all listed construction/precheck/replica/prefilter/level16 checks, two full contexts with zero mismatches/halts, and W/C/R/WB halt drills passing.",
+  "source": "our workflow: D530 read-only pkgB3W_fast/pkgB3W_final audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D530_b3w_fast_final_audit.md; research/tools/build_pkg/scratch/pkgB3W_fast/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgB3W_final/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgB3W_fast/pkg/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgB3W_fast/pkg/blake3-r2/experiments/frontline.py; research/tools/build_pkg/scratch/pkgB3W_final/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package mechanics and ledger confirmation only. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgB3W_fast/pkgB3W_final package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "owner/organizer acceptance ruling or a changed package artifact arrives"
+}

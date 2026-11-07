@@ -1,0 +1,4 @@
+{"space": "U32", "round": 6, "dim": 26, "mode": "basis", "cubes": 1, "nonzero_digest_sums": 1, "nonzero_delta_sums": 1, "mean_delta_sum_bits": 142.0, "sec": 0.4}
+{"space": "U32", "round": 6, "dim": 26, "mode": "span", "cubes": 1, "nonzero_digest_sums": 1, "nonzero_delta_sums": 1, "mean_delta_sum_bits": 138.0, "sec": 0.4}
+{"space": "U32", "round": 6, "dim": 28, "mode": "basis", "cubes": 1, "nonzero_digest_sums": 1, "nonzero_delta_sums": 1, "mean_delta_sum_bits": 132.0, "sec": 0.4}
+{"space": "U32", "round": 6, "dim": 28, "mode": "span", "cubes": 1, "nonzero_digest_sums": 1, "nonzero_delta_sums": 1, "mean_delta_sum_bits": 114.0, "sec": 0.4}

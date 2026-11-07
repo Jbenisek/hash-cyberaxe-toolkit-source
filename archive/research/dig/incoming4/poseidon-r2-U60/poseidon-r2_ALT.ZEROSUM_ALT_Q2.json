@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.ZEROSUM (ALT)",
+ "question": "Q2: necessity: subgroup size",
+ "labels": [
+  "P"
+ ],
+ "status": "COMPUTED",
+ "number": "Control: |H| = 2^18 = 262,144 < 390,625 gives sum != |H| F(0) (confirmed: True); r=0 with |H| = 2^13 < 15,625 also fails. The identity needs |H| > degree.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/testB.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.ZEROSUM|ALT|Q2. Same code as Q1.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "never (algebraic identity)"
+}

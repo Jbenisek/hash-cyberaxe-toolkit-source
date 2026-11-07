@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "theta2 column-parity kernel membership of the z-space chi1-output differences, all 21 aligned lane pairs",
+ "question": "Q4 theta kernel alternatives: can any z combination (any aligned lane pair) have a chi1-output difference in the theta2 kernel, so theta2 does not spread it?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Kernel dimension 0 for all 21 aligned same-column lane pairs (including the leader's (4,14)): the 32 column-parity vectors of the z-bits are linearly independent (rank 32), so the only z-combination in the theta2 kernel is 0. The leader's two flipped bits sit in chi1-output columns 0 and 2 (distinct), spreading to 4 D columns = 22 words.",
+ "evidence": "research/dig/incoming/sha3-r6-U02/work/t7_theta_kernel.py; research/dig/incoming/sha3-r6-U02/work/t7_theta_kernel_out.json; research/dig/incoming/sha3-r6-U02/work/t6_alt_pairs.py",
+ "notes": "Universe cell sha3-r6|round1.theta|theta|Q4. Exact GF(2) nullspace of the 32 parity vectors per pair (flips at the chi1 output position X of each varying input, neighbours at stop values 0 / all-ones). Scope: 2 aligned lanes per z, z in bits 0..31, equal plane offset; three-lane or shifted-z carriers and non-aligned z (theta1 spreading) were not scanned. The earlier double-kernel ISD work (research/sha3r6/isd/RESULT.md) covers general message directions and was not re-run.",
+ "topic": "sha3-r6 theta2 kernel alternatives"
+}

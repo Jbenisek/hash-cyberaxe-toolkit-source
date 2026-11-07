@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.BACKSKIP (ALT)",
+ "question": "Q4: alternatives: meet-in-the-middle with one backward layer",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "One inverse layer is cheap per point (one exponentiation ~ 254 squarings) and the front reaches R4 after the free skip; but the join is the fibre of the digest (about p points) and finding a point on it is the original problem. See DOOR.t31.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.BACKSKIP|ALT|Q4. Not tested beyond the P3.12 toy.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a join condition with a low-degree description is found",
+ "prior": 0.03,
+ "potential_bits": 1.0
+}

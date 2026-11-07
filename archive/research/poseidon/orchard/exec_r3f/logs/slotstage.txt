@@ -1,0 +1,4 @@
+--- pareto_candidate.py --family poseidon --rounds 3
+{"family": "poseidon", "rounds": 3, "state": "ready", "package_sha256": "fc47fe8a57a3b396ab763df59b4b044c7c9d6a218bac71601b34b654c03cf754"}
+pareto_candidate rc=0; package sha256 d1e9222581548bb7; candidate bytes 289422
+=== staged POSR3F -> /root/hashsmash/yukon/pos_posr3f ; submit script (NOT run): ./research/launch/slotstage/out/submit_POSR3F.sh

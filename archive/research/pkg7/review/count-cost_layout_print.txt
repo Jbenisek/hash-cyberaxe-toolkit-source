@@ -1,0 +1,6 @@
+count-cost_layout.py scale 1.0: Y3 8127c181 Y3' 7edf3e7e Y11 7af77f38 Y11' 850000c3 W4' 97475640; members 524288, batches 74899; trials rebuilt as real strings and hashed with the organizer's verifier and my own compression: 105, failed checks 0; 584 s
+A: n=512 r5=1.0035+-0.0030 max=1.373 r4=1.0033 r6=1.0037 st2=0.1234/0.1611 beta +1.05sd
+B: n=512 r5=0.9988+-0.0025 max=1.228 r4=0.9987 r6=0.9990 st2=0.1150/0.1421 beta -0.18sd
+C: n=2048 r5=0.9988+-0.0015 max=1.273 r4=0.9988 r6=0.9987 st2=0.1142/0.1485 beta -0.42sd per outer 0.997/0.996/1.001/0.992..(0.992 to 1.005)
+D: n=2048 r5=1.0000+-0.0014 max=1.393 r4=1.0000 r6=1.0002 st2=0.1165/0.1524 beta +0.69sd per outer 0.999/1.004/0.992/1.005
+E: n=512 r5=1.0006+-0.0008 max=1.052 r4=1.0004 r6=1.0011 st2=0.1058/0.1238 beta +0.27sd per outer 1.000/1.001

@@ -1,0 +1,35 @@
+hgcd: n=300 db=299 deg gcd = 3 (planted 3) arith=355851 total=5024415 extra peak=66688 bytes, 0.0s
+naive: deg gcd = 3 arith=278325 total=2197589 0.0s
+HGCD OK
+hgcd: n=1000 db=999 deg gcd = 5 (planted 5) arith=2540493 total=43894270 extra peak=227104 bytes, 0.1s
+naive: deg gcd = 5 arith=2328635 total=18182470 0.1s
+HGCD OK
+hgcd: n=1000 db=10 deg gcd = 5 (planted 5) arith=23276 total=166971 extra peak=96128 bytes, 0.0s
+naive: deg gcd = 5 arith=23276 total=166846 0.0s
+HGCD OK
+hgcd: n=1000 db=500 deg gcd = 5 (planted 5) arith=1097587 total=18768104 extra peak=258304 bytes, 0.0s
+naive: deg gcd = 5 arith=1165466 total=8236901 0.0s
+HGCD OK
+hgcd: n=1000 db=6 deg gcd = 5 (planted 5) arith=13952 total=107965 extra peak=96128 bytes, 0.0s
+naive: deg gcd = 5 arith=13952 total=107884 0.0s
+HGCD OK
+hgcd: n=3000 db=2999 deg gcd = 7 (planted 7) arith=11469962 total=186213513 extra peak=597408 bytes, 0.3s
+naive: deg gcd = 7 arith=18987929 total=147563777 0.6s
+HGCD OK
+hgcd: n=3000 db=100 deg gcd = 0 (planted 0) arith=1234764 total=21150882 extra peak=1079936 bytes, 0.0s
+naive: deg gcd = 0 arith=636761 total=3992791 0.0s
+HGCD OK
+hgcd: n=3000 db=600 deg gcd = 10 (planted 10) arith=2263027 total=37850796 extra peak=999936 bytes, 0.1s
+naive: deg gcd = 10 arith=3798771 total=24531886 0.1s
+HGCD OK
+hgcd: n=3000 db=2999 deg gcd = 0 (planted 0) arith=11472363 total=186232973 extra peak=597408 bytes, 0.3s
+naive: deg gcd = 0 arith=18990330 total=147583160 0.6s
+HGCD OK
+hgcd: n=5000 db=4999 deg gcd = 20 (planted 20) arith=25831410 total=437364978 extra peak=1100960 bytes, 0.7s
+naive: deg gcd = 20 arith=51642950 total=400910750 1.5s
+HGCD OK
+hgcd: n=5000 db=3000 deg gcd = 20 (planted 20) arith=14256062 total=240048660 extra peak=1128064 bytes, 0.4s
+naive: deg gcd = 20 arith=30991281 total=219639431 0.9s
+HGCD OK
+hgcd: n=20000 db=19999 deg gcd = 9 (planted 9) arith=170065279 total=2811957344 extra peak=4403584 bytes, 4.4s
+HGCD OK

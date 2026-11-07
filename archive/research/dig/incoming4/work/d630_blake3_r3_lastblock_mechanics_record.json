@@ -1,0 +1,23 @@
+{
+  "id": "D630-BLAKE3-R3-LASTBLOCK-MECHANICS-20261014",
+  "hash": "blake3-r3",
+  "row_i": 3,
+  "row_j": null,
+  "object": "BLAKE3-r3 last-block two-block mechanics and synthetic tuned-CV tracer",
+  "question": "Does P||(0^32||x) with CHUNK_START then CHUNK_END|ROOT match the local three-round model, and what does the checked-in synthetic tuned-CV tracer measure?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Organizer/model KAT: 0/200 two-block mismatches and 0/50 single-block mismatches. Synthetic h_tuned tracer: PH=589, 88 variable sites, 13 saving sites; best three zero-sites save 3 additional ops; packed/scalar check 0/2100 mismatches.",
+  "source": "our workflow: D630 isolated BLAKE3-r3 last-block mechanics test",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d630_lastblock_mechanics.py; research/blake3_r3/lastblock/mech.py; research/blake3_r3/lastblock/verify.py; research/blake3_r3/lastblock/h_tuned.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": null,
+  "prior": 0.1,
+  "gain_basis": "D",
+  "held_fixed": "rounds=3; P||0^32||x; first flags CHUNK_START; second flags CHUNK_END|ROOT; counter=0; block length=64; synthetic h_tuned tracer only",
+  "notes": "Mechanics and tracer arithmetic only. No legal prefix, 2^96 search, score, package, stage, filing, or submission credit.",
+  "reopen_if": "A legal prefix P producing the tuned CV, a contest ruling for the two-block path, or a fresh organizer-accepted score premise is supplied"
+}

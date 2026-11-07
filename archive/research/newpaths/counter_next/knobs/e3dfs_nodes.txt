@@ -1,0 +1,12 @@
+targets 7 (heaviest outcomes of a15_outcomes.tsv), mass share 0.588270 (C_targets 109051904.00, C_total 185377197.55)
+outer steps 300: nodes per outer step mean 6328.5, median 38, max 173278, sd 20325.0; E3 solutions found 0
+mean nodes per level k = 1..32: 2.0 4.0 8.0 11.8 11.4 11.6 23.1 46.3 60.6 78.5 83.2 89.2 178.3 356.7 356.7 713.4 713.4 1426.8 786.8 596.5 250.9 250.9 125.4 77.7 38.8 19.1 7.6 0.0 0.0 0.0 0.0 0.0
+targets 20 (heaviest outcomes of a15_outcomes.tsv), mass share 0.899375 (C_targets 166723584.00, C_total 185377197.55)
+outer steps 300: nodes per outer step mean 12414.7, median 254, max 216518, sd 28863.7; E3 solutions found 0
+mean nodes per level k = 1..32: 2.0 4.0 8.0 11.8 18.9 19.0 38.1 76.2 110.3 159.6 170.5 185.2 370.3 740.7 740.7 1481.4 1481.4 2962.8 1405.4 983.9 462.5 462.5 231.3 160.4 80.2 39.8 7.9 0.0 0.0 0.0 0.0 0.0
+targets 60 (heaviest outcomes of a15_outcomes.tsv), mass share 0.999931 (C_targets 185364480.00, C_total 185377197.55)
+outer steps 300: nodes per outer step mean 20895.6, median 926, max 295998, sd 39266.6; E3 solutions found 0
+mean nodes per level k = 1..32: 2.0 4.0 8.0 11.8 18.9 23.3 42.3 84.7 169.4 226.6 320.2 336.0 596.7 1193.4 1193.4 2386.8 2386.8 4773.5 2496.0 1684.5 941.2 941.2 494.1 308.7 154.3 76.5 13.5 5.1 2.6 0.0 0.0 0.0
+targets 317 (heaviest outcomes of a15_outcomes.tsv), mass share 1.000000 (C_targets 185377197.55, C_total 185377197.55)
+outer steps 300: nodes per outer step mean 47647.7, median 27086, max 457278, sd 63784.0; E3 solutions found 0
+mean nodes per level k = 1..32: 2.0 4.0 8.0 16.0 32.0 64.0 128.0 236.3 371.0 477.8 637.8 800.5 1334.6 2669.2 2669.2 5338.5 5338.5 10676.9 5524.5 3622.2 2041.5 2566.3 1300.1 808.7 500.0 319.2 124.9 22.7 10.5 2.4 0.5 0.2

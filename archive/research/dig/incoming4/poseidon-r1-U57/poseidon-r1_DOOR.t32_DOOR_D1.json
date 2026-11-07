@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t32 alternative parametrisations and host curves",
+ "question": "RELABEL re-ask of the door at r = 1",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "r=1: three canonical lines are all that skip round 2 as well among rational curves preserving the round-1 affine trail (P3.2 BOUNDED); my r=2 line test confirms 3 valid lines and degree 5^8 for r=2; r=1 degree 5^7 = 78,125 verified by the lead-degree runs",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/r2var.py research/dig/incoming4/_scan_poseidon/r2var.json 3rd_openai_workspace/luna3/P3_2_skip.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "r2var.py base: 3 of 3 lines valid; the r=1 tool shares the code. | universe cell poseidon-r1|DOOR.t32|DOOR|D1",
+ "held_fixed": "r=1 and r=2 line model",
+ "reopen_if": "a curve outside the affine-trail family with lower degree"
+}

@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m13 (w13 = W13 = 0x0007c006; read by D2.a2 in round 0 and C3.a2 in round 1; pinned)",
+ "question": "Q3 degrees of freedom (exact count)",
+ "labels": [
+  "S"
+ ],
+ "status": "COMPUTED",
+ "number": "0 bits: exactly 1 value (0x0007c006) of 2^32 (also 1 of the 2^24 with top byte zero) satisfies the condition; the construction places no other freedom on w13 (given w13, w12 and the rest re-solve through D2.a1 = X2 - D2.b1 - w13).",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/w13enum.c; research/dig/incoming/blake3-r2-U12/work/w13enum_out.txt; research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m13|msgword|Q3. Exhaustive over 2^32 for the fixed constants X3,X7,X11,X15,W4,W4'. A different (X3,X7,X11,X15,W4) would move the solution; that is a different construction, not tested here.",
+ "topic": "blake3-r2 m13 word"
+}

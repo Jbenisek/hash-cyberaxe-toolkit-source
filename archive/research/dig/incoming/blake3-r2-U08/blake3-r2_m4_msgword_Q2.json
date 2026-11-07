@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "m4 = w4: necessity of the pin (relax w4 over 2^32; relax w4p over 2^32)",
+ "question": "Q2: necessity of each condition group here (relax one, recount exact outcome mass)",
+ "labels": [
+  "K",
+  "P"
+ ],
+ "status": "COMPUTED",
+ "number": "Exhaustive 2^32: (A) w4 free, w4p by the K2 rule: d2 equal for 4, b2 equal for 2, both for 2 (W4 and W4p, the same pair swapped). (B) w4=W4 fixed, w4p free: d2 equal 3, b2 equal 2, both 2 (97475638, 97475640). So the pin is necessary: relaxing it loses all but 1 unordered pair of 2^32 (mass 2^-31 of w4 values, 2^-32 of w4p)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U08/work/w4scan.c; research/dig/incoming/blake3-r2-U08/work/w4scan_out.txt; research/dig/incoming/blake3-r2-U08/work/w4_solutions.txt; research/dig/incoming/blake3-r2-U08/work/w4prime_solutions.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r2|m4|msgword|Q2. Event tested = the Fact P / Lemma H requirement that C3 gives equal b and d outputs for w4 and w4p, others fixed. Both solutions in (A) are the same pair with A/B swapped (second row has delta -8). Relaxing the other pinned constants (X3,X7,X11,X15,W13) was not scanned here (not this word). Other constants held as printed (X3,X7,X11,X15,W13; proof.md 3.2); controls reproduce Fact P exactly."
+}

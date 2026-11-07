@@ -1,0 +1,24 @@
+r=3 line=0 m=976562
+lean-pow breakdown: newton total=1122517068 arith=437899694 | prefix+scale total=12787561 | loop steps=234 total=227857812083 arith=97781157657
+trial 1 centre 1: gcd degree 0, charged 53622771303
+TRIALS 1
+  init (twiddle table)                     arith=      525904 other=     3746975 total=     4272879 peak=16777280
+  line setup                               arith=         391 other=        4519 total=        4910 peak=16777280
+  A: centre c_i = i                        arith=           1 other=        1125 total=        1126 peak=48027392
+  B: build g                               arith=    56928469 other=  1209068557 total=  1265997026 peak=98359104
+  C: S^((p-1)/2) mod g                     arith= 98220034244 other=130773085285 total=228993119529 peak=211190912
+  D: gcd(g, S^h - 1) (half-gcd)            arith= 15759850687 other= 37862921731 total= 53622772418 peak=211191360
+  H: canonical encoding of the output      arith=           6 other=        5638 total=        5644 peak=16777280
+  I: report formatting, single write, exit arith=           0 other=     3384436 total=     3384436 peak=16777280
+TRIALROW 1 centre 1 degG 0 gcd 53622771303 total 283881890099
+TRIALROW 0 outside the trials (init, line setup, output encoding, report and write) total 7667869
+RECONCILE stages=283889557968 trials=283889557968 counters=283889557968 ok=1
+RESULT found=0 success=0 roots_degree=0
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=283889557968 total_arith=114037339702 heap_peak=211191360
+ARENA size=290000000 extent=290000000
+THREADS n=6 dispatches=32572 chunks=1710051 woken=135404 thread_control=2544105260 split_extra=35546960 algorithmic_total=281309905748
+THREADMEM n=6 stack=16384 block=512 used=101376 image=1622016
+PEAKLIVE allocations=11 payload=211190656 headers=704
+TYPES add=37297595825 sub=38062255013 mul=37933669509 sqr=743819355 ld=41193641177 st=22439408561 ctl=105341510416 rnd=0 perm=877658112
+EXIT 1

@@ -1,0 +1,54 @@
+train A: drawn 549755813888 (2^39.00), t==0 skipped 120, used 549755813768
+test B: drawn 549755813888 (2^39.00), t==0 skipped 148, used 549755813740
+
+1. per word: -log2 P(R_w == 0 mod 2^k)  [train A / test B]  (uniform = k); counts at k=32 = exact zeros of the word
+   k           word 1                word 3                word 4                word 6        
+   0     -0.00 /  -0.00 (    0)   -0.00 /  -0.00 (    0)   -0.00 /  -0.00 (    0)   -0.00 /  -0.00 (    0)
+   4      4.75 /   4.75 (    0)    3.71 /   3.71 (    0)    4.00 /   4.00 (    0)    3.89 /   3.89 (    0)
+   8      8.75 /   8.75 (    0)    7.14 /   7.14 (    0)    7.25 /   7.25 (    0)    9.10 /   9.10 (    0)
+  12     12.06 /  12.06 (    0)   11.02 /  11.02 (    0)   11.25 /  11.25 (    0)   12.19 /  12.19 (    0)
+  16     16.05 /  16.05 (    0)   14.55 /  14.55 (    0)   15.25 /  15.25 (    0)   16.19 /  16.19 (    0)
+  20     20.05 /  20.05 (    0)   16.58 /  16.58 (    0)   19.26 /  19.26 (    0)   19.65 /  19.65 (    0)
+  24     23.77 /  23.76 (38515)   20.58 /  20.58 (99999)   23.25 /  23.27 (55055)   23.97 /  23.96 (33552)
+  28     27.77 /  27.75 ( 2408)   23.93 /  23.93 (34368)   27.84 /  27.89 ( 2284)   28.27 /  28.32 ( 1698)
+  32     31.69 /  31.83 (  159)   28.64 /  28.61 ( 1317)   31.83 /  32.14 (  144)   32.22 /  32.18 (  110)
+  30     29.78 /  29.75 (  596)   25.91 /  25.93 ( 8693)   29.81 /  29.88 (  584)   30.29 /  30.33 (  418)
+  31     30.56 /  30.65 (  348)   26.93 /  26.90 ( 4292)   30.89 /  31.03 (  277)   31.31 /  31.25 (  207)
+   full words (k=32):
+   word 1: zeros train 159, test 144 ; -log2 P = 31.69 / 31.83 ; pooled 31.76  [95%: 31.60 .. 31.93]
+   word 3: zeros train 1317, test 1346 ; -log2 P = 28.64 / 28.61 ; pooled 28.62  [95%: 28.57 .. 28.68]
+   word 4: zeros train 144, test 116 ; -log2 P = 31.83 / 32.14 ; pooled 31.98  [95%: 31.81 .. 32.16]
+   word 6: zeros train 110, test 113 ; -log2 P = 32.22 / 32.18 ; pooled 32.20  [95%: 32.02 .. 32.40]
+   sum over the four words (independence model): 124.55 bits
+
+2. conditional cost per 2-adic level, word w: c_w(k) = -log2 P(tz >= k+1 | tz >= k) (uniform 1.00), pooled A+B
+   word 1: 1.75 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 0.30 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 0.72 1.00 1.01 0.99 1.00 1.00 1.01 0.83 1.16
+   word 3: 1.00 1.00 0.46 1.25 0.43 1.00 1.00 1.00 1.00 1.01 1.28 0.59 0.21 1.00 1.00 1.33 1.00 0.74 0.22 0.06 1.00 1.00 1.00 1.00 1.00 0.34 1.01 1.00 1.00 0.99 0.99 1.71
+   word 4: 1.00 1.00 1.00 1.00 0.25 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.02 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.63 1.01 0.97 0.99 0.98 1.11 1.02
+   word 6: 1.00 1.00 1.00 0.89 2.21 1.00 1.00 1.00 1.00 1.00 1.00 0.09 1.00 1.00 1.00 1.00 1.00 0.46 1.00 1.00 1.00 1.00 1.00 1.32 1.35 1.01 0.99 0.98 1.01 1.01 0.96 0.92
+
+3. joint levels: all four words == 0 mod 2^k, against the product of the per-word marginals  [train A / test B]
+  k= 0 ( 0 bits):   -log2 P  -0.00 vs product  -0.00 (excess +0.00, count 549755813768)  -log2 P  -0.00 vs product  -0.00 (excess +0.00, count 549755813740)
+  k= 1 ( 4 bits):   -log2 P   4.75 vs product   4.75 (excess -0.00, count 20395260345)  -log2 P   4.75 vs product   4.75 (excess -0.00, count 20395204955)
+  k= 2 ( 8 bits):   -log2 P   8.75 vs product   8.75 (excess -0.00, count 1274672914)  -log2 P   8.75 vs product   8.75 (excess -0.00, count 1274686566)
+  k= 3 (12 bits):   -log2 P  12.21 vs product  12.21 (excess +0.00, count 115787613)  -log2 P  12.21 vs product  12.21 (excess +0.00, count 115794434)
+  k= 4 (16 bits):   -log2 P  16.33 vs product  16.35 (excess +0.02, count 6668966)  -log2 P  16.33 vs product  16.35 (excess +0.02, count 6668992)
+  k= 5 (20 bits):   -log2 P  20.26 vs product  20.24 (excess -0.02, count 436649)  -log2 P  20.26 vs product  20.24 (excess -0.02, count 436582)
+  k= 6 (24 bits):   -log2 P  24.25 vs product  24.24 (excess -0.01, count 27609)  -log2 P  24.25 vs product  24.24 (excess -0.01, count 27544)
+  k= 7 (28 bits):   -log2 P  28.24 vs product  28.24 (excess +0.00, count 1738)  -log2 P  28.19 vs product  28.24 (excess +0.05, count 1797)
+  k= 8 (32 bits):   -log2 P  32.52 vs product  32.24 (excess -0.28, count 89)  -log2 P  32.68 vs product  32.24 (excess -0.44, count 80)
+  k= 9 (36 bits):   -log2 P  35.83 vs product  36.24 (excess +0.41, count 9)  -log2 P  37.00 vs product  36.24 (excess -0.76, count 4)
+  k=10 (40 bits):   -log2 P    inf vs product  40.25 (excess -inf, count 0)  -log2 P  37.42 vs product  40.25 (excess +2.83, count 3)
+  k=11 (44 bits):   -log2 P    inf vs product  44.53 (excess -inf, count 0)  -log2 P  39.00 vs product  44.53 (excess +5.53, count 1)
+
+4. pairs: -log2 P(both == 0 mod 2^k) minus the product of marginals (positive = pair helps)  [A / B], selected k
+  w1,w3:  k4 +0.00/+0.00 (n=1561110080)  k8 +0.01/+0.01 (n=9109974)  k12 +0.24/+0.24 (n=73801)  k14 +0.29/+0.27 (n=8231)  k16 +0.29/+0.40 (n=412)  k18 +0.15/+0.59 (n=28)
+  w1,w4:  k4 +0.00/+0.00 (n=1274738214)  k8 -0.05/-0.05 (n=8095904)  k12 +1.74/+1.74 (n=177652)  k14 +2.72/+2.73 (n=21895)  k16 +2.70/+2.71 (n=1356)  k18 +3.94/+3.97 (n=197)
+  w1,w6:  k4 +0.02/+0.02 (n=1396386743)  k8 -0.04/-0.04 (n=2255812)  k12 +0.04/+0.03 (n=28429)  k14 +1.00/+0.97 (n=3458)  k16 +0.85/+0.96 (n=195)  k18 +0.61/+0.71 (n=15)
+  w3,w4:  k4 +0.00/+0.00 (n=2629877495)  k8 +0.07/+0.07 (n=26833434)  k12 +0.06/+0.07 (n=114184)  k14 +0.07/+0.07 (n=12435)  k16 +0.08/+0.04 (n=623)  k18 -0.28/+0.04 (n=36)
+  w3,w6:  k4 -0.00/-0.00 (n=2839018852)  k8 -0.74/-0.74 (n=4238613)  k12 -1.31/-1.31 (n=22908)  k14 -2.11/-2.10 (n=1426)  k16 -2.30/-2.40 (n=62)  k18 -1.60/-1.15 (n=11)
+  w4,w6:  k4 +0.00/+0.00 (n=2320840872)  k8 -0.00/-0.00 (n=6589249)  k12 +0.09/+0.09 (n=51549)  k14 +1.07/+1.09 (n=6354)  k16 +1.05/+1.00 (n=392)  k18 +1.44/+1.31 (n=46)
+
+5. joint capped tz vector (cap 7): chi-square of the 4-word joint against the product of marginals, A and B
+  A: chi2 3.47e+08 on 4067 dof (z = 3845591.3) ; largest |log2 ratio| at tz=(0, 3, 4, 4): -0.572
+  B: chi2 3.47e+08 on 4067 dof (z = 3845858.4) ; largest |log2 ratio| at tz=(0, 3, 4, 4): -0.572

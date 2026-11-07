@@ -1,0 +1,34 @@
+round R1: lanes (0,1) S-box inputs both zero: resultant degree 1, F_p-rational common zeros (A,B): 1
+   point A=0x3a6b4715.. B=0x165d64bd..  r=1: rank after each round [1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x3a6b4715.. B=0x165d64bd..  r=2: rank after each round [1, 1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R1: lanes (0,2) S-box inputs both zero: resultant degree 1, F_p-rational common zeros (A,B): 1
+   point A=0x3c80d886.. B=0x1f430622..  r=1: rank after each round [1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x3c80d886.. B=0x1f430622..  r=2: rank after each round [1, 1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R1: lanes (1,2) S-box inputs both zero: resultant degree 1, F_p-rational common zeros (A,B): 1
+   point A=0x2de17246.. B=0x2622542e..  r=1: rank after each round [1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x2de17246.. B=0x2622542e..  r=2: rank after each round [1, 1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R1 total F_p-rational double-zero points: 3
+round R2: lanes (0,1) S-box inputs both zero: resultant degree 25, F_p-rational common zeros (A,B): 0
+round R2: lanes (0,2) S-box inputs both zero: resultant degree 25, F_p-rational common zeros (A,B): 1
+   point A=0x3be6dbe5.. B=0x25ad8493..  r=1: rank after each round [2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x3be6dbe5.. B=0x25ad8493..  r=2: rank after each round [2, 1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R2: lanes (1,2) S-box inputs both zero: resultant degree 25, F_p-rational common zeros (A,B): 1
+   point A=0x19e7d937.. B=0x24fb1f09..  r=1: rank after each round [2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x19e7d937.. B=0x24fb1f09..  r=2: rank after each round [2, 1, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R2 total F_p-rational double-zero points: 2
+round R3: lanes (0,1) S-box inputs both zero: resultant degree 625, F_p-rational common zeros (A,B): 2
+   point A=0x2bc2c41e.. B=0x3e2b4a3c..  r=1: rank after each round [2, 2, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x2bc2c41e.. B=0x3e2b4a3c..  r=2: rank after each round [2, 2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x1471af07.. B=0x12019d8b..  r=1: rank after each round [2, 2, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x1471af07.. B=0x12019d8b..  r=2: rank after each round [2, 2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R3: lanes (0,2) S-box inputs both zero: resultant degree 625, F_p-rational common zeros (A,B): 2
+   point A=0x2a353508.. B=0x14c33a71..  r=1: rank after each round [2, 2, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x2a353508.. B=0x14c33a71..  r=2: rank after each round [2, 2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x39259860.. B=0x326f2dea..  r=1: rank after each round [2, 2, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x39259860.. B=0x326f2dea..  r=2: rank after each round [2, 2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R3: lanes (1,2) S-box inputs both zero: resultant degree 625, F_p-rational common zeros (A,B): 2
+   point A=0x276df159.. B=0x1971e3b0..  r=1: rank after each round [2, 2, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x276df159.. B=0x1971e3b0..  r=2: rank after each round [2, 2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x184c09b2.. B=0x1ed72586..  r=1: rank after each round [2, 2, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+   point A=0x184c09b2.. B=0x1ed72586..  r=2: rank after each round [2, 2, 1, 1, 1, 1, 1, 1, 1] ; output (via AB pipeline) matches hash_reduced(nk,rho): True
+round R3 total F_p-rational double-zero points: 6

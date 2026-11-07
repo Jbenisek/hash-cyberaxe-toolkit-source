@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "counter: value that zeroes a folded constant",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "exhaustive search over the 2^32 low counter words finds exactly one value, 0xec448e39 (3,963,162,169), that zeroes post-column d' of column 0 and gives 594 operations; no value for the high counter word; but it needs a chunk index of about 4e9 (about 4 TB of chunks before it) and a parent compression, so it is unusable",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_counter.py; research/blake3_r3/alt/opcount.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Shows the counter is a free constant in principle (one operation), blocked by the message size and the tree.",
+ "held_fixed": "m0..m7=0 prefix, column G0 with the counter word as d",
+ "reopen_if": "a way to place a chunk with index 3,963,162,169 without hashing it",
+ "topic": "blake3-r3|ALT.COUNTER|ALT|Q3"
+}

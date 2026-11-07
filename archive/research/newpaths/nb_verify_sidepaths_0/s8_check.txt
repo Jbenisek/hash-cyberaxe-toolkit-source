@@ -1,0 +1,6 @@
+1. build_cv(IV, 11) == fam55.build on 200 random inputs: OK
+   single block C3 outputs Y3A Y3B Y7A Y7B Y11A Y11B Y15A Y15B dw5: 8127c181 7edf3e7e 76f7aefd 76f7aefd 7af77f38 850000c3 bbfbdffe bbfbdffe fffffff8
+2. two-block 119/127-byte pairs, 40 random first blocks x 50: half-collision on words 0,2,5,7 (organizer reference, 2 rounds): 2000/2000
+3. C3 outputs and dw5 identical to the single-block values, Y4 = y: 2000/2000
+4. residual == F(seven words; single-block constants): 2000/2000
+   single block control: residual == F: 500/500

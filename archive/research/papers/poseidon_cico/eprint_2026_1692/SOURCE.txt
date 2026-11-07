@@ -1,0 +1,1 @@
+2026/1692	How to Attack Poseidon via Smart Subspace Restriction	owner_download	https://eprint.iacr.org/2026/1692.pdf

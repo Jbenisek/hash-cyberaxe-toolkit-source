@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m13 (w13 = W13 = 0x0007c006; read by D2.a2 in round 0 and C3.a2 in round 1; pinned)",
+ "question": "Q4 alternative outcomes / carry patterns and whether they reach the same later differences",
+ "labels": [
+  "S",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "No alternative outcome: the only w13 with the same d and b outputs for w4=W4 and w4=W4' is W13 (1 of 2^32). Near misses exist (15 d-only, 29 b-only) but none keeps digest words 0,2,5,7 (0 of 150 rebuilt blocks each); at W13 the difference is the fixed pattern (a2 xor fff8ffff, c2 xor fff77ffb) and Y3,Y11 differ with Y7,Y15 equal in 3000/3000 blocks. w13 is also read by D2.a2, which is difference-free (outputs equal 3000/3000).",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/w13enum.c; research/dig/incoming/blake3-r2-U12/work/w13enum_out.txt; research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U12/work/scan_m1213.out.json; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m13|msgword|Q4. Same later difference at every admissible instance, because the admissible set is a single point.",
+ "topic": "blake3-r2 m13 word"
+}

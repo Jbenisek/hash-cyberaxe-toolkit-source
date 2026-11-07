@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JRUNNER (JUDGE)",
+ "question": "R1: value: runner cannot size the Orchard digest",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "The organizer digest takes exactly 64 bytes (two LE field encodings) and rejects non-canonical elements; our digest_bytes mirror raises ValueError for any other length, including b\"\". The r2 note states \"No Python experiment is declared\".",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r2/poseidon_ref.py; research/poseidon/orchard/lean_r2/pkg_stage_r2/submission-note.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JRUNNER|JUDGE|R1. Behaviour of our mirror (poseidon_ref.digest_bytes) read and exercised in verify_collision; the organizer runner itself was not run (yukon).",
+ "held_fixed": "poseidon_ref.py digest_bytes; r2 package note",
+ "reopen_if": "the organizer changes the runner or adds an Orchard sizing hook"
+}

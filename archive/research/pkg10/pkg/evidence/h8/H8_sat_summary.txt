@@ -1,0 +1,8 @@
+SUMMARY all: 99 outcomes, satisfiable 99, unsatisfiable 0, undecided 0; witnesses with zero residual in plain arithmetic 99 of 99; witnesses passing A1: 99; witnesses passing A2: 96; witnesses passing A3: 92; witnesses passing A4: 90; witnesses passing A5: 60; witnesses passing A6: 41
+SUMMARY system AND h1 violates A1: unsatisfiable 99 of 99, satisfiable 0 (witness checked in plain arithmetic: zero residual 0, violates the rule 0), undecided 0
+SUMMARY system AND h1 violates A2: unsatisfiable 90 of 99, satisfiable 9 (witness checked in plain arithmetic: zero residual 9, violates the rule 9), undecided 0
+SUMMARY system AND h1 violates A3: unsatisfiable 84 of 99, satisfiable 15 (witness checked in plain arithmetic: zero residual 15, violates the rule 15), undecided 0
+SUMMARY system AND h1 violates A4: unsatisfiable 84 of 99, satisfiable 15 (witness checked in plain arithmetic: zero residual 15, violates the rule 15), undecided 0
+SUMMARY system AND h1 violates A5: unsatisfiable 38 of 99, satisfiable 61 (witness checked in plain arithmetic: zero residual 61, violates the rule 61), undecided 0
+SUMMARY system AND h1 violates A6: unsatisfiable 26 of 99, satisfiable 73 (witness checked in plain arithmetic: zero residual 73, violates the rule 73), undecided 0
+rc 0 seconds 16 TMP line: 1 

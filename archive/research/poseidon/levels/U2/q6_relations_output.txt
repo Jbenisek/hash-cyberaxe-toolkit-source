@@ -1,0 +1,42 @@
+== Part A: q=257 seed=1: affine dimension of lane sets (dimension of affine span of the point set; number of variables)
+  init  : affine dim 2 of 3
+  R0.C  : affine dim 2 of 3
+  R0.S  : affine dim 2 of 3
+  R0.M  : affine dim 2 of 3
+  R1.C  : affine dim 2 of 3
+  R1.S  : affine dim 3 of 3
+  R1.M  : affine dim 3 of 3
+  R2.C  : affine dim 3 of 3
+  R2.S  : affine dim 3 of 3
+  R2.M  : affine dim 3 of 3
+  R3.C  : affine dim 3 of 3
+  R3.S  : affine dim 3 of 3
+  R3.M  : affine dim 3 of 3
+  pairs of steps (union of 6 lanes; affine dim of 6 would mean NO affine relation among them):
+  R0.S  + R0.M : affine dim 2 of 6  -> 4 independent affine relations
+  R0.S  + R1.S : affine dim 5 of 6  -> 1 independent affine relations
+  R0.S  + R1.M : affine dim 5 of 6  -> 1 independent affine relations
+  R0.S  + R2.S : affine dim 5 of 6  -> 1 independent affine relations
+  R0.S  + R2.M : affine dim 5 of 6  -> 1 independent affine relations
+  R0.S  + R3.M : affine dim 5 of 6  -> 1 independent affine relations
+  R0.M  + R1.S : affine dim 5 of 6  -> 1 independent affine relations
+  R0.M  + R1.M : affine dim 5 of 6  -> 1 independent affine relations
+  R0.M  + R2.S : affine dim 5 of 6  -> 1 independent affine relations
+  R0.M  + R2.M : affine dim 5 of 6  -> 1 independent affine relations
+  R0.M  + R3.M : affine dim 5 of 6  -> 1 independent affine relations
+  R1.S  + R1.M : affine dim 3 of 6  -> 3 independent affine relations
+  R1.S  + R2.S : affine dim 6 of 6  -> 0 independent affine relations
+  R1.S  + R2.M : affine dim 6 of 6  -> 0 independent affine relations
+  R1.S  + R3.M : affine dim 6 of 6  -> 0 independent affine relations
+  R1.M  + R2.S : affine dim 6 of 6  -> 0 independent affine relations
+  R1.M  + R2.M : affine dim 6 of 6  -> 0 independent affine relations
+  R1.M  + R3.M : affine dim 6 of 6  -> 0 independent affine relations
+  R2.S  + R2.M : affine dim 3 of 6  -> 3 independent affine relations
+  R2.S  + R3.M : affine dim 6 of 6  -> 0 independent affine relations
+  R2.M  + R3.M : affine dim 6 of 6  -> 0 independent affine relations
+== Part B: q=257: least degree of a nonzero polynomial relation among (R1.M lanes, R2.M lanes) [6 variables]
+  degree <= 1: 7 monomials, rank 7 on 87 points -> no relation (PROVED) t=0.0s
+  degree <= 2: 28 monomials, rank 28 on 108 points -> no relation (PROVED) t=0.0s
+  degree <= 3: 84 monomials, rank 84 on 164 points -> no relation (PROVED) t=0.0s
+  degree <= 4: 210 monomials, rank 210 on 290 points -> no relation (PROVED) t=0.0s
+  degree <= 5: 462 monomials, rank 459 on 542 points, nullity 3, of which vanish on all 66049 points: 3 (kernel basis vectors checked) t=5.8s

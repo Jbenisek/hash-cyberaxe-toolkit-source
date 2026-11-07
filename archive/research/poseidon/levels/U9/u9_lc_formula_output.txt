@@ -1,0 +1,4 @@
+Phi3(z): degree 125 (formal 125), constant coefficient nonzero: True, leading coefficient nonzero: True, F_p roots: 0
+exact line polynomial r=1: degree 1953125, leading coefficient 0x1cdbcfb39f0d7b7e46...
+lc_exact / Phi3(u^5,v^5)^(5^5) = 0x26726671eb865f9fb9... (constant c if the formula holds)
+second random line: constant = 0x26726671eb865f9fb9... ; equal to the first: True

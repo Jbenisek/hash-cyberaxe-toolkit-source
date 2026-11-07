@@ -1,0 +1,22 @@
+{
+  "id": "D380-SHA256-R38-W78-GROUP-MARGINALS-20261014",
+  "hash": "sha256-38",
+  "row_i": 7,
+  "row_j": 8,
+  "object": "Table-4 W7/W8 marginal probe",
+  "question": "What are the W7 and W8 three-relation marginal rates under the actual rows-6..21-conditioned late proposal?",
+  "labels": ["C", "E"],
+  "status": "SAMPLED",
+  "number": "Eight one-thread seeds, N=8,388,608 final late proposals. W7 hits=8,388,608 and W8 hits=8,388,608, both rate 1.0 (log2 0). Zero prefix-redraw, y-anchor, and replay inconsistencies.",
+  "source": "our controlled traillab W7/W8 marginal probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D380_r38_w78_group_marginals.md; research/retest/r38_stack/D380_w78_prefix_marginals.out; research/tools/traillab/src/smc.c; research/tools/traillab/src/main.c; research/tools/traillab/chi/chi38.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "The nominal 2^-3 W7/W8 factors are not their effective rates in this actual proposal. W8 is enforced by V_CELL; W7's unit rate is finite sampled evidence for the F7 s0-difference set under except W7, not a universal proof. Full Table-4 joint independence remains OPEN; no score credit.",
+  "held_fixed": "chi38; rows 22..37 event out; carrier none; np=128,m=64,mt2=256,mw=64,mt=8192; seeds 6001..6008; one thread; --prefix-marginals",
+  "reopen_if": "A universal F7 W7-relation proof or larger exact enumeration is supplied, and all groups are combined under one common staged proposal for a full product-vs-joint comparison.",
+  "peak_mem": "22.9240701856 MEASURED /usr/bin/time -v maximum RSS; one-thread eight-seed late proposal probe"
+}

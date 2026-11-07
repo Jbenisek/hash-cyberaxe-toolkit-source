@@ -1,0 +1,4 @@
+mode 2 col 0 zero counts a'=2 b'=1 c'=1 d'=2 witnesses c572ff67 ab2a45e9 6cae99a7 cd0c3b86
+mode 2 col 1 zero counts a'=1 b'=0 c'=0 d'=0 witnesses d6e2c260 00000000 00000000 00000000
+mode 2 col 2 zero counts a'=2 b'=0 c'=1 d'=0 witnesses 01644c49 00000000 7205ed05 00000000
+mode 2 col 3 zero counts a'=1 b'=0 c'=3 d'=0 witnesses 14d3290d 00000000 69634673 00000000

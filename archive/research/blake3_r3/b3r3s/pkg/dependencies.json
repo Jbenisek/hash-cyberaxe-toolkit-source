@@ -1,0 +1,7 @@
+[
+  {
+    "submissionId": "e479cbbf-8aca-4fc6-bdc4-31b38d55c7ca",
+    "rationale": "Our own first entry for blake3 round 3 (Jbenisek, 125.1087, in review). This entry keeps its construction, circuit, recovery, ledger and premise tests and changes the filter, the distinguished-point density and the table entry size.",
+    "evidence": "proof.md first paragraph, Sections 3.3 and 7, Appendix A."
+  }
+]

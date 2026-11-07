@@ -1,0 +1,32 @@
+CHECK W 8 set 0 beta bf nd 4 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2991, half digest equal 2991, Y4 = member 2991, E1.d1 = drawn d1 2991, no cut bits 2991, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2991, only w0 w1 move with d1 2991 (of 2991; t = 0 skipped 9)
+CHECK ALL RIGHT
+CHECK W 8 set 1 beta b3 nd 16 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2988, half digest equal 2988, Y4 = member 2988, E1.d1 = drawn d1 2988, no cut bits 2988, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2988, only w0 w1 move with d1 2988 (of 2988; t = 0 skipped 12)
+CHECK ALL RIGHT
+CHECK W 8 set 2 beta b3 nd 16 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2985, half digest equal 2985, Y4 = member 2985, E1.d1 = drawn d1 2985, no cut bits 2985, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2985, only w0 w1 move with d1 2985 (of 2985; t = 0 skipped 15)
+CHECK ALL RIGHT
+CHECK W 8 set 3 beta b3 nd 16 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2993, half digest equal 2993, Y4 = member 2993, E1.d1 = drawn d1 2993, no cut bits 2993, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2993, only w0 w1 move with d1 2993 (of 2993; t = 0 skipped 7)
+CHECK ALL RIGHT
+CHECK W 8 set 4 beta 33 nd 32 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2988, half digest equal 2988, Y4 = member 2988, E1.d1 = drawn d1 2988, no cut bits 2988, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2988, only w0 w1 move with d1 2988 (of 2988; t = 0 skipped 12)
+CHECK ALL RIGHT
+CHECK W 8 set 5 beta b3 nd 16 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2995, half digest equal 2995, Y4 = member 2995, E1.d1 = drawn d1 2995, no cut bits 2995, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2995, only w0 w1 move with d1 2995 (of 2995; t = 0 skipped 5)
+CHECK ALL RIGHT
+CHECK W 8 set 6 beta bf nd 4 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2992, half digest equal 2992, Y4 = member 2992, E1.d1 = drawn d1 2992, no cut bits 2992, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2992, only w0 w1 move with d1 2992 (of 2992; t = 0 skipped 8)
+CHECK ALL RIGHT
+CHECK W 8 set 7 beta bf nd 4 trials 3000
+FILED   : 88 words = forward 3000, half digest equal 3000, Y4 = member 3000, no cut bits 3000, tree hash = root CV 3000 (of 3000)
+COUNTER : 88 words = forward (counter t, flags 3) 2984, half digest equal 2984, Y4 = member 2984, E1.d1 = drawn d1 2984, no cut bits 2984, tree hash of P||A = tree over (prefix CVs, last-chunk outputs) 2984, only w0 w1 move with d1 2984 (of 2984; t = 0 skipped 16)
+CHECK ALL RIGHT

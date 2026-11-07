@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "recovery: at most 12 * 2^114 + 2^48 batches, one recovery",
+ "question": "R4 score sensitivity of the recovery charge",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Per-batch price: 595 -0.00079 bit; 620 (the charge behind 125.1081) -0.00048; 624 (exact need) -0.00043; 659 filed; 700 +0.00050; 1254 (two full scalar walks, 2 x 595 + 64) +0.00729; 2 x 659 +0.00808. Cap: 12 L -> 6 L would be -0.00405 bit and -> 3 L -0.00609 bit, but those are not bounds (cut trails would then number about 41 and 815 on average). The whole recovery term is 0.0081 bit. The exact-need charge (624) would save 0.00043 bit.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|LEDGER.RECOV|LEDGER|R4. Exact ledger. The 0.00043 bit is a charge-tightening candidate (proof 3.3 charges 64 where 29 are needed), not a new method.",
+ "held_fixed": "ledger of the filed entry",
+ "reopen_if": "a recovery with fewer steps than the cap (expected 1.5 to 3 L) that is allowed to be charged at its expectation",
+ "gain_basis": "T"
+}

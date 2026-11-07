@@ -1,0 +1,4 @@
+law of total covariance for the coupled bits (ctx: 256 groups x 1024; rand: 2^20 independent rows)
+  R3 bit 20: ctx E[Cov|group] -0.0333  Cov(group means) -0.0004  sum -0.0337 | rand total Cov -0.0001 (sd 0.0010)
+  R6 bit 13: ctx E[Cov|group] +0.0270  Cov(group means) +0.0022  sum +0.0292 | rand total Cov -0.0008 (sd 0.0010)
+  R6 bit 12: ctx E[Cov|group] +0.0025  Cov(group means) -0.0001  sum +0.0024 | rand total Cov -0.0002 (sd 0.0010)

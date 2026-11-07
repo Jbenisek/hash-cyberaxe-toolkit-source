@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JRUNNER (JUDGE)",
+ "question": "R3: control: whether a Python experiment could be declared instead",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "A declared experiment would need to size a digest with a valid 64-byte input; not tried because candidate files and experiments are limited to 64 KiB and the C program is far larger. A 4-line Python experiment that only reports counts could be declared; judge reaction unknown.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JRUNNER|JUDGE|R3. Not tested.",
+ "held_fixed": "intake limits",
+ "reopen_if": "a judge ruling names the missing experiment as material",
+ "prior": 0.15,
+ "potential_bits": 0.0
+}

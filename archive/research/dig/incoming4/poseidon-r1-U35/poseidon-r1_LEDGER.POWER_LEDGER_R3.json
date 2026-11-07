@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.POWER S^((p-1)/2) mod g",
+ "question": "control (known-answer or independent check)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "control: analytic step arithmetic (proof.md 6: 15,559,415 upper estimate) vs observed 14,769,136 per step (0.949); the old and the fix builds give the identical arith 3,535,... so the stage is one program, charged two ways",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md research/dig/incoming4/_fresh_run_seed100001.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Independent analytic estimate from the transform formulas in proof.md section 6, compared with the fresh-run per-step arith (14,769,136). | universe cell poseidon-r1|LEDGER.POWER|LEDGER|R3",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

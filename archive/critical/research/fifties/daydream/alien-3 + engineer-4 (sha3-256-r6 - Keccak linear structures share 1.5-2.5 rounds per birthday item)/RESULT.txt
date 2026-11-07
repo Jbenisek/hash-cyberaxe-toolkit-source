@@ -1,0 +1,34 @@
+alien-3 + engineer-4: linear-structure birthday on sha3-256-r6. Quick test, 2026-10-09.
+(Folder name: the ':' in the brief's name is not allowed in a Windows path, so it was replaced with ' -'.)
+
+VERDICT: DEAD as a new r6 line.
+
+1. The brief's premise is out of date (COMPUTED from research\rivals\boards_sha3-256-r6-exploratory.json).
+   - Board best is 124.04565 (winglock; GordoAR 124.0457), not 124.295. 124.295 was Th0rgal's 4867f093.
+   - The leader already uses Guo-Liu-Song linear structures and cites them: a theta-neutral column
+     (z in L0 and L5, so the column parity is constant), a prefix affine bijection that forces the four
+     chi-neighbour lanes of round 1 to constants (u3=u4=v0=v4=0), Gray-code z-steps, an incremental
+     round 2 on a 22-word support, 256 messages bitsliced on 256-bit words, round-4/5 dependency cones,
+     35-plane round-6 truncation, and K=13 materialised views.
+     So conditions (a) and (b) of this idea are exactly the leader's round-1 structure.
+   - Unit: C = 1626 ops per 6-round permutation (collision-frontier-v5). It is not a whole call per
+     trial; ops are counted. Check: the leader's 26,850.778 ops per z-step / 256 = 104.89 ops/msg gives
+     a main-loop score of 124.0386, consistent with its claim of 124.04565 (COMPUTED, recount.py).
+
+2. Recount under the same unit (DERIVED, recount_out.txt).
+   - The brief's plan (Gray step + affine correction + rounds 2..5 + truncated round 6, per message):
+     about 1189 ops/msg, score 127.54. Even with round 2 shared too (2-round structure): about 918, score 127.17.
+     Both are worse than the board by about 3 bits. The leader's cost is about 105 ops/msg because it
+     bitslices 256 messages per word, which this plan lacks.
+   - Ceiling of a 2-round structure added on top of the leader's program: it can only remove
+     Th0rgal's block (b), incremental round 2, which is 1,869 of 31,903 ops per z-step at K=12.
+     Rounds 3 and 4 are 25,448, about 80%, and stay non-linear.
+     The O2P patch (554 words x load/xor/store = 1,660 ops) is already the floor for an affine update,
+     so a realistic saving is at most about 209 ops per z-step: -0.011 bits, giving about 124.034
+     (GUESS: K=13 materialised views may already have absorbed part of block (b)).
+     That would be a re-skin of the leader's 16,402-body program for about 0.01 bits, not a new path.
+
+3. Not run: steps 2-3 of the brief (the GF(2) rank of 1- and 2-round structures, and the check on
+   1,000 members). The accounting in step 1 decided the question first. Whether a 32-dimensional
+   2-round structure fits within the leader's prefix constraints is OPEN. It is worth at most about
+   0.01 bits, and only as a contribution to the leader's program.

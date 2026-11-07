@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "DOOR.t36 branch number / active S-boxes in R60-R63",
+ "question": "RELABEL re-ask of the door at r = 1",
+ "labels": [
+  "N"
+ ],
+ "status": "BEDROCK",
+ "number": "M is MDS: all 9 entries, all 9 2x2 minors and the determinant are nonzero (checked on the pinned M) -> branch number 4; so any two consecutive full rounds have >= 4 active S-boxes and R60..R63 >= 8; R63 alone needs >= 2 (LEVELS 4.11)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc3.py research/dig/incoming4/_scan_poseidon/calc3a.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc3.py minors check; wide-trail bound is a standard consequence. | universe cell poseidon-r1|DOOR.t36|DOOR|D1",
+ "held_fixed": "pinned MDS",
+ "reopen_if": "never"
+}

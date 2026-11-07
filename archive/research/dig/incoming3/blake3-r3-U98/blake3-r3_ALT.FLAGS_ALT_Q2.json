@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "flag value: necessity, exhaustive recount",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "all 16 flag values x block length 0..64 x 7 counters (7280 combinations): the operation count is 595 every time; legal root compressions of a single chunk (flags 11 or 10, length 1..64, counter 0: 128 combinations) and the parent root (flags 12): 595",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_ops.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Flags only change immediates; none of the scanned post-column constants becomes 0.",
+ "held_fixed": "cv=IV, m0..m7=0",
+ "reopen_if": "a flag/length combination whose folded constant is 0 (none in the scan)",
+ "topic": "blake3-r3|ALT.FLAGS|ALT|Q2"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "S256-R40-L01-MODULAR-REPLAY-20261021",
+  "hash": "sha256-r40",
+  "row_i": null,
+  "row_j": null,
+  "object": "Task34 L01 message-difference support modular schedule replay",
+  "question": "Does the exact L01 XOR-kernel support vector also make the ordinary modular schedule targets W39-W41 vanish?",
+  "labels": ["X", "C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "+vector: XOR W39/W40/W41=00000000/00000000/00000000; modular W39/W40/W41/W42=8c5b0864/00f0e3ba/f29a808c; -vector modular W39/W40/W41/W42=8027b7bb/5a386da1/206c6469/d9510ddc",
+  "source": "our workflow: Task34 L01 modular audit",
+  "own_test": true,
+  "evidence": "research/luna_dig/task34_l01_modular_audit.py; research/luna_dig/TASK34_L01_MODULAR_AUDIT_20261021.md; research/dig/GRID_R40.md",
+  "date": "2026-10-21",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "notes": "Exact finite message-schedule replay only. The +vector is the exact weight-30 XOR-kernel vector from G_r40_support_zero/ANSWER.md; ordinary modular recurrence is nonzero at W39-W41. The wordwise modular negative is also nonzero. This does not test SHA-256 compression state, a signed characteristic, success probability, or score. Q1/Q9/Q12 static records remain unchanged; Q2/Q3/Q4/Q5/Q7/Q11/Q13/Q14 remain blocked/open and Q8/Q10 remain empty.",
+  "peak_mem": "0 FREE self-contained 16-word Python replay",
+  "held_fixed": "The published weight-30 XOR-kernel vector; SHA-256 sigma0/sigma1; 32-bit schedule only; both + and wordwise modular-negative orientations",
+  "reopen_if": "A permitted full signed modular state/characteristic test, or an exact compression-state witness/UNSAT proof, is available."
+}

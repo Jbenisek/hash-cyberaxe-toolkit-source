@@ -1,0 +1,23 @@
+{
+  "id": "D381-SHA256-R38-PREFIX-PEAK-MEMORY-20261014",
+  "hash": "sha256-38",
+  "row_i": 6,
+  "row_j": 21,
+  "object": "SMC prefix-generation peak RSS",
+  "question": "What peak RSS does the owned chi38 SMC prefix component use under the measured one-thread run?",
+  "labels": ["C"],
+  "status": "SAMPLED",
+  "number": "Maximum RSS 7,944 KiB = 8,134,656 bytes = 2^22.9556499075 under /usr/bin/time -v; exit 0, zero prefix-redraw, y-anchor, and replay inconsistencies.",
+  "source": "our controlled traillab memory probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D381_r38_prefix_peak_memory.md; research/retest/r38_stack/D379_prefix_marginals.out; research/retest/r38_stack/D379_prefix_marginals.time; research/tools/traillab/src/smc.c; research/tools/traillab/src/main.c",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Measured owned SMC prefix component only. This is not a bound for the paper's Step-1 characteristic solver, dense SAT search, development/advice, or multithread production. Closes the RSS-specific S38-D1013-prefix UNKNOWN but does not close the Table-4 independence cell.",
+  "held_fixed": "chi38; rows 22..37 event out; carrier none; np=128,m=64,mt2=256,mw=64,mt=8192; seeds 6001..6008; one thread; --prefix-marginals",
+  "reopen_if": "A production or Step-1 solver memory bound including preprocessing/development/advice is required, or a multithread run is selected for the score.",
+  "supersedes": ["S38-D1013-prefix"],
+  "peak_mem": "22.9556499075 MEASURED /usr/bin/time -v maximum RSS; one-thread eight-seed owned SMC prefix probe"
+}

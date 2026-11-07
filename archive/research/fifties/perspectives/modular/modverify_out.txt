@@ -1,0 +1,14 @@
+[rand] rows 1048576
+  M1.w1 == 0 mod 16 on all rows: True ; M1.w1 mod 32 values: [0, 16]
+  M1.w3 - M1.w4 values: ['0xf5f77e75'] (one constant = dc1 = E1.c1 A-B)
+  parity columns (M1 w1,w3,w4,w6 | M3 w1,w3,w4,w6): constant columns [0], P(=1) [0.0, 0.4994, 0.5006, 0.5007, 0.7034, 0.8746, 0.5, 0.2966]
+  exact parity relation: col 1 ^ col 2 = 1 on all rows
+  exact parity relation: col 4 ^ col 7 = 1 on all rows
+  Rm == M1 + M3 mod 2 on all rows: True
+[ctx] rows 262144
+  M1.w1 == 0 mod 16 on all rows: True ; M1.w1 mod 32 values: [0, 16]
+  M1.w3 - M1.w4 values: ['0xf5f77e75'] (one constant = dc1 = E1.c1 A-B)
+  parity columns (M1 w1,w3,w4,w6 | M3 w1,w3,w4,w6): constant columns [0], P(=1) [0.0, 0.4985, 0.5015, 0.5001, 0.6878, 0.8709, 0.5022, 0.3122]
+  exact parity relation: col 1 ^ col 2 = 1 on all rows
+  exact parity relation: col 4 ^ col 7 = 1 on all rows
+  Rm == M1 + M3 mod 2 on all rows: True

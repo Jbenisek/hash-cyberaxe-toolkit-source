@@ -1,0 +1,23 @@
+{
+  "id": "D561-SHA3-R6-S6DB-PREFILE-AUDIT-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6DB prefile audit",
+  "question": "What is creditable for pkgS6DB without a public request?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6DB prefile ALL PASS: N=79298120549970419637834713353785194323555, time_log2=125.1973, log2(N/1626)=125.19729893. No request or new campaign; no score/premise credit.",
+  "source": "our workflow: D561b read-only pkgS6DB prefile audit",
+  "own_test": false,
+  "evidence": "research/sol_answer_D561_s6db_prefile.md; research/tools/build_pkg/scratch/pkgS6DB/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6DB/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured",
+  "notes": "No public request; no package/stage/filing/submission.",
+  "held_fixed": "pkgS6DB package bytes as found; no writes",
+  "reopen_if": "public request or owner/organizer ruling"
+}

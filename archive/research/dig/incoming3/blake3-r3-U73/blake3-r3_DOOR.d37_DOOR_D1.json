@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "door 37: fresh CV / prior block per context (mode lever)",
+ "question": "D1 RELABEL at 3 rounds: ledger arithmetic, what does one fresh-CV prior block (638 operations = 1 unit) cost on the filed r3 ledger",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Filed ledger reproduced exactly (2.925843e40 operations = 4.585961e37 units, time_log2 125.10856). One prior block of 638 operations (1 unit) costs: once for the attack 3.1e-38 bit; per trail start (18,432 starts) or per finished trail 5.8e-34 bit; per recovery 3.1e-38 bit; per evaluated point (86.08 ledger operations per evaluated point, so one extra block multiplies the cost by 8.41) 3.07 bit; per batch of 7 lanes sharing one block 1.04 bit. The target fixes the chaining value (0^32 || x is one block, flags 11, standard IV), so a fresh CV is not even available for this target; no measured r3 lever uses CV freedom, so nothing buys the cost back.",
+ "evidence": "research/dig/incoming3/blake3-r3-U73/work/d37.py, research/dig/incoming3/blake3-r3-U73/work/d37.out",
+ "notes": "universe cell blake3-r3|DOOR.d37|DOOR|D1. Pure arithmetic on rho.py ledger(256) (exact integers). Unlike the r2 door (many contexts) the r3 line is one birthday search with no context structure, so the penalty is either negligible (once or per trail) or large (per evaluation); there is no middle case. Check first: the base ledger and 125.10856 reproduced.",
+ "held_fixed": "filed ledger of the r3 birthday entry (rho.py plan/ledger); prior block 638 operations",
+ "reopen_if": "a r3 lever that needs a different chaining value per trail or per evaluation and saves more than 3.07 bit per evaluation",
+ "gain_basis": "T"
+}

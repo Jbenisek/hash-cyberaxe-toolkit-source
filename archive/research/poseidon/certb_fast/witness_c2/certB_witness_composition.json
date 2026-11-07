@@ -1,0 +1,99 @@
+{
+  "schema": "P3.22-Frobenius-doubling-v1",
+  "center": "12894125564123335855227378247026121035387943383342050628014288421295627833647",
+  "line": 0,
+  "trial": 0,
+  "factor_degree": 20269,
+  "field_modulus": 28948022309329048855892746252171976963363056481941560715954676764349967630337,
+  "factor_file": "certB_witness_f.txt",
+  "cofactor_file": "certB_witness_cofactor.txt",
+  "checkpoint_files": [
+    "certB_witness_R_0.txt",
+    "certB_witness_R_1.txt",
+    "certB_witness_R_2.txt",
+    "certB_witness_R_3.txt",
+    "certB_witness_R_4.txt",
+    "certB_witness_R_5.txt",
+    "certB_witness_R_6.txt",
+    "certB_witness_R_7.txt",
+    "certB_witness_R_8.txt",
+    "certB_witness_R_9.txt",
+    "certB_witness_R_10.txt",
+    "certB_witness_R_11.txt",
+    "certB_witness_R_12.txt",
+    "certB_witness_R_13.txt",
+    "certB_witness_R_14.txt",
+    "certB_witness_R_15.txt"
+  ],
+  "composition_steps": [
+    {
+      "checkpoint_j": 0,
+      "checkpoint_file": "certB_witness_R_0.txt",
+      "exponent_before": 0,
+      "exponent_after": 1
+    },
+    {
+      "checkpoint_j": 2,
+      "checkpoint_file": "certB_witness_R_2.txt",
+      "exponent_before": 1,
+      "exponent_after": 5
+    },
+    {
+      "checkpoint_j": 3,
+      "checkpoint_file": "certB_witness_R_3.txt",
+      "exponent_before": 5,
+      "exponent_after": 13
+    },
+    {
+      "checkpoint_j": 5,
+      "checkpoint_file": "certB_witness_R_5.txt",
+      "exponent_before": 13,
+      "exponent_after": 45
+    },
+    {
+      "checkpoint_j": 8,
+      "checkpoint_file": "certB_witness_R_8.txt",
+      "exponent_before": 45,
+      "exponent_after": 301
+    },
+    {
+      "checkpoint_j": 9,
+      "checkpoint_file": "certB_witness_R_9.txt",
+      "exponent_before": 301,
+      "exponent_after": 813
+    },
+    {
+      "checkpoint_j": 10,
+      "checkpoint_file": "certB_witness_R_10.txt",
+      "exponent_before": 813,
+      "exponent_after": 1837
+    },
+    {
+      "checkpoint_j": 11,
+      "checkpoint_file": "certB_witness_R_11.txt",
+      "exponent_before": 1837,
+      "exponent_after": 3885
+    },
+    {
+      "checkpoint_j": 14,
+      "checkpoint_file": "certB_witness_R_14.txt",
+      "exponent_before": 3885,
+      "exponent_after": 20269
+    }
+  ],
+  "composition_final_exponent": 20269,
+  "composition_final_equals_X_mod_f": true,
+  "r0_gcd_factor_R0_minus_X_degree": 0,
+  "prime_factor_degree": true,
+  "self_verification": {
+    "recomputed_X_to_p_equals_R0": true,
+    "gcd_factor_R0_minus_X_is_one": true,
+    "all_15_doubling_edges_match": true,
+    "binary_chain_reaches_factor_degree": true,
+    "X_to_p_degree_equals_X_mod_f": true,
+    "factor_times_cofactor_equals_H": true,
+    "factor_squarefree_degree_gt_half": true
+  },
+  "squarefree_gcd_g_gprime_degree": 0,
+  "rabin_result": "PASS"
+}

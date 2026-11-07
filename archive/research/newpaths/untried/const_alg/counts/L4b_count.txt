@@ -1,0 +1,34 @@
+PIN L4b, CLASS eta = 116ff883: COUNT OF THE CLASS RATE (research/paths; nothing here is filed)
+pin (X3,X7,X11,X15,W4,W13) = (9f3d2841, e0c2d7c0, 883c7c3d, 0b7c5846, fffffffe, 4432043f), found for length XOR 4, delta = fffffffc; Y3 = 343ef7b0, D3 = 9783109f, Y11 = 63897843, D11 = b08c16f9
+class: (Y3 + Y4) AND 7883116f = 30800068, 15 fixed bits, 2^17 members. Unit: collision probability per trial in units of 2^-128;
+part(beta) = sum over its outcomes of E1 * N3 / 2^81 (the printed integers of the calculator, added as fractions).
+
+1. BETAS: valid x in all 178045, lightest k 10; k <= 14: 4320 betas, share of c1 0.460571
+   by k (count): 10:12 11:98 12:402 13:1154 14:2654 15:5168 16:8752 17:13104 18:17554 19:21204 20:23166 21:22879 22:20381 23:16306 24:11616 25:7251 26:3869 27:1705 28:592 29:151 30:25 31:2
+
+2. CALCULATOR ALONE, EVERY BETA WITH k <= 14 (no solver, no filter): listed 4320, finished 0  -- NOT COMPLETE (not run to the end for this pin), no eps 0, enumerated completely 0, with a part 0, sum of their parts 0.0000
+
+3. FILTER, EVERY VALID BETA (h8_pair_list in list-only mode: outcomes that pass the calculator's necessary conditions)
+   answered 48898 of 178045; no eps 25433, no passing outcome 20303, with a passing outcome 3162 (passing outcomes in all 2262452); by k: 13:20 14:31 15:309 16:302 17:1400 18:1100
+
+4. SOLVER (h8_sat.py sys, kissat) ON EVERY BETA WITH A PASSING OUTCOME
+   asked 3162 of 3162: SAT 4, UNSAT 3158, undecided or not asked 0; SAT models that are solutions in plain arithmetic 4 of 4
+   check of the filter, random sample of 600 betas without an eps or without a passing outcome: SAT 0, UNSAT 600, undecided 0
+   calculator against solver and filter, betas with both answers: 4; agree (part > 0 exactly for the SAT betas) 4; part > 0 but not SAT 0; SAT but part 0 0
+
+5. CALCULATOR ON THE SAT BETAS (complete enumeration of the outcomes of each): SAT betas 4, counted 4, not finished 0
+   beta      k  outcomes  part                          share     remark
+   907df8c2 15         6         2,162,688.00000000  0.905660  
+   907dfbc2 17         7           225,280.00000000  0.094340  
+   919d7bc3 17         3                 0.00915527  0.000000  
+   919cfbc3 17         6                 0.00133896  0.000000  
+
+6. TOTAL
+   R = 2,387,968.0105 = 2^21.1874  (k <= 14: 0.0000; k > 14: 2,387,968.0105)
+   status: NOT FULL: filter run only for the betas with k <= 18 (48898 of 178045 valid betas)
+   betas with a part: 4; heaviest beta 907df8c2: 0.9057 of the count; the four heaviest 1.0000
+   NOT exact inside R: 0 betas with a remark, their parts (estimates) add up to 0.000000; betas with a remark and part zero: 0
+   calculator complete for every beta with k <= 12: all 0 betas with a passing outcome and k <= 12 are enumerated completely (the other betas with k <= 12 have no eps or no passing outcome); beyond that the calculator finished 4 betas
+   settled for every beta with k <= 18: each is counted by the calculator, or has no eps or no passing outcome, or is UNSAT by the solver
+   the calculator-only enumeration of k <= 14 (section 2) is NOT complete: for the betas it did not reach, part 0 rests on the solver's UNSAT answer or on the filter
+   trust: one solver (kissat), one encoding (h8_sat.py), no proof certificates kept; calculator in double precision (see H8_count.txt section 8)

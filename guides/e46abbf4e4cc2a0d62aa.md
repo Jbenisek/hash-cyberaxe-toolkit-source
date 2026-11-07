@@ -1,0 +1,30 @@
+# par
+
+Source: `research/poseidon/pkg_r7_paper/v3/src/par.h`
+
+Public SHA-256: `9e3d5216ed815fd9afb882abd91e4d19c997ac311f622aa597b5af6f9ea823eb`
+
+## Purpose recorded in the source
+
+ifndef PAR_H
+define PAR_H
+include "common.h"
+define NT_MAX 96
+define WSTACK 16384                 /* bytes of stack of each worker (static, in .bss); the deepest use measured in a full run is under 2,048 bytes */
+define TLS_MAXB 512                 /* bytes reserved for the thread block of each thread (counters, 128 bytes used) */
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/poseidon/pkg_r7_paper/RESULT.md
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

@@ -1,0 +1,17 @@
+blk 0 size 524352 prev 0 used 1
+blk 524352 size 937600 prev 524352 used 1
+blk 1461952 size 524352 prev 937600 used 1
+blk 1986304 size 524352 prev 524352 used 1
+blk 2510656 size 1572928 prev 524352 used 1
+blk 4083584 size 1567424 prev 1572928 used 0
+blk 5651008 size 156288 prev 1567424 used 1
+blk 5807296 size 156288 prev 156288 used 1
+blk 5963584 size 156288 prev 156288 used 1
+blk 6119872 size 577728 prev 156288 used 0
+blk 6697600 size 156352 prev 577728 used 1
+blk 6853952 size 310016 prev 156352 used 0
+blk 7163968 size 1572928 prev 310016 used 1
+blk 8736896 size 6208 prev 1572928 used 0
+blk 8743104 size 128 prev 6208 used 1
+out of memory (1572864)
+EXIT 2

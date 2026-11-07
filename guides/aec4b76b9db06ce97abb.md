@@ -1,0 +1,60 @@
+# count-cost machine
+
+Source: `research/pkg7/review/count-cost_machine.py`
+
+Public SHA-256: `a95602451d596784a13fd27d855e06d249b1b7c224b692dbf1738f5a9a805b67`
+
+## Purpose recorded in the source
+
+count-cost reviewer: the package's counting machine on fresh seeds, for the three rules, and the work per X14.
+
+    python -B count-cost_machine.py [batches for rule 5, default 12000] [batches for rules 4 and 6, default 4000]
+
+Rule 5: the program of the package is run where it lies (python -B, nothing is written there). Rules 4 and 6: a
+copy of the program with the one line RULE_CONDITIONS changed is written into review/ and run. Three processes.
+Then the work per value of X14 is counted again with the functions of tools/prep_count.py on contexts of my own
+(its main() is not called, so the package's evidence file is not rewritten).
+Output: review/count-cost_machine.out and at most ten lines.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "hashlib",
+  "importlib.util",
+  "json",
+  "pathlib",
+  "random",
+  "subprocess",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "main",
+    "line": 28,
+    "arguments": [],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/pkg7/review/judge_common_proof.txt
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

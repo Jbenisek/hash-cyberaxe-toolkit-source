@@ -1,0 +1,3 @@
+{"gpu_vs_cpu_cube_sums_equal": "9/9", "sec": 1.7}
+{"space": "U32", "round": 6, "dim": 20, "mode": "basis", "cubes": 1, "nonzero_digest_sums": 1, "nonzero_delta_sums": 1, "mean_delta_sum_bits": 146.0, "sec": 0.3}
+{"space": "U32", "round": 6, "dim": 20, "mode": "span", "cubes": 1, "nonzero_digest_sums": 1, "nonzero_delta_sums": 1, "mean_delta_sum_bits": 122.0, "sec": 0.3}

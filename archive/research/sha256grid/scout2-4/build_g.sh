@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Publication root: stable even when this driver changes working directories.
+if [ -z "${HASHCYBERAXE_WORKSPACE:-}" ]; then
+  _hca_here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+  while [ ! -d "$_hca_here/research" ] && [ "$_hca_here" != / ]; do _hca_here=$(dirname -- "$_hca_here"); done
+  HASHCYBERAXE_WORKSPACE=$_hca_here
+fi
+export HASHCYBERAXE_WORKSPACE
+cd "${HASHCYBERAXE_WORKSPACE}/research/sha256grid/scout2-4" || exit 1
+gcc -O3 -march=native -Wall -Wno-unused-function -o smc38r smc38r.c -lm 2>&1 | head -30
+date
+/usr/bin/time -v ./smc38r G > g_enum.txt 2> g_enum.err; echo "exit $?"
+cat g_enum.txt; grep -E "Elapsed|Maximum resident" g_enum.err; wc -l Gp.txt
+date

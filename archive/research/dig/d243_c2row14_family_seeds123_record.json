@@ -1,0 +1,20 @@
+{
+  "id": "D243-S38-C2ROW14-FAMILY-SEEDS123",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 14,
+  "object": "Zone D 38 row-14 C2 family seeded fixed-prefix controls",
+  "question": "Does the all-row-14 C2 family count transfer across three seeded late splits?",
+  "labels": ["C", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Seeds 1-3: each 160 row14 base/expansion passers and total C2=1 over 160*2^32 E15 values; E14x=21966471",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D243-zoneD38-c2row14-family.md; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Corrected C2 uses dW16=M.dl[0]. Seeds 1-3 match the published-prefix count. Fixed-prefix diagnostic only; no full late rebuild or final-event claim.",
+  "held_fixed": "seed-specific W6/W7/E16..E21 split; all row-14 E14 cell passers and all 2^32 E15 values",
+  "topic": "sha256-38 zoneD38 residual C2 row14"
+}

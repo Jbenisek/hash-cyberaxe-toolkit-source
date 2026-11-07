@@ -1,0 +1,8 @@
+prefix_rounds,iterations,cpu_seconds,wall_seconds,evals_per_cpu_second,reference_field_ops,language,security_claim
+1,512,0.004323520999999886,0.004331675000230462,118421.99910674969,27,"Python integer modular arithmetic, one process",none
+2,512,0.008481385999999702,0.008484699999826262,60367.49182268299,54,"Python integer modular arithmetic, one process",none
+4,512,0.01507263400000003,0.015076590000262513,33968.8471172324,108,"Python integer modular arithmetic, one process",none
+8,512,0.029897875000000518,0.029904880999765737,17124.9628945198,192,"Python integer modular arithmetic, one process",none
+32,512,0.10731056000000017,0.10732770799995706,4771.198659293169,696,"Python integer modular arithmetic, one process",none
+60,512,0.16534086800000036,0.16535818000011204,3096.633071987979,1284,"Python integer modular arithmetic, one process",none
+64,512,0.19049365500000004,0.19052763100035008,2687.7535632354784,1392,"Python integer modular arithmetic, one process",none

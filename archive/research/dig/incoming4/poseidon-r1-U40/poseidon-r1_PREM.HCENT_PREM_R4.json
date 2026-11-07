@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HCENT number of centres",
+ "question": "score sensitivity",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "score (time + 3.043): 1 centre 30.823, 2 centres 31.824, 3 centres 32.408; if time were divided by P: log2(time/P) = 29.126 / 29.442 / 29.729 for the Poisson model, so a premise priced by P prefers 1 centre by 0.32 bit; the score as written has no P term",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json c1..c3. | universe cell poseidon-r1|PREM.HCENT|PREM|R4",
+ "held_fixed": "fix ledger",
+ "reopen_if": "an organizer statement on how the success probability enters the score"
+}

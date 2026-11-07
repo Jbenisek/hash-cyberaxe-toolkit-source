@@ -1,0 +1,29 @@
+ledger log cap6run_110.txt
+{
+ "time": 25.62072,
+ "time_exact": 25.620719925088093,
+ "mem_bytes": 8829894,
+ "mem_log2": 23.074,
+ "score": 28.69472,
+ "worst": 12227947177,
+ "units": 51594713.82700422,
+ "split": 6145283,
+ "heap": 8468544,
+ "n_cert": 2,
+ "gcd_bound": 3336226186,
+ "gcd_obs": 1508601747,
+ "typ_root": 10393434902,
+ "typ_noroot": 10393386835,
+ "one_centre_typical_log2": 25.386210225932857,
+ "cap_variants": {
+  "6": {
+   "worst": 12227947177,
+   "time_log2": 25.620719925088093
+  },
+  "8": {
+   "worst": 12227947177,
+   "time_log2": 25.620719925088093
+  }
+ }
+}
+note bytes 10582

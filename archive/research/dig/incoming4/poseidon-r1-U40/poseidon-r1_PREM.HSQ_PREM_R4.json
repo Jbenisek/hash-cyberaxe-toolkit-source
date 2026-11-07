@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "PREM.HSQ odd-part method success per centre",
+ "question": "score sensitivity",
+ "labels": [
+  "N",
+  "P"
+ ],
+ "status": "COMPUTED",
+ "number": "per-centre probability model 1-exp(-1/2)=0.3935 (toy F_10007 deg 120: 0.4013 +-0.0175); two centres 0.632; the score has no probability term but each centre costs 1.000 bit (27.780 -> 28.780): the claim 0.53 needs 2 centres on the sampled lower bound 0.318; a proved per-centre bound >= 1/3 (cloud 49 relay) gives 1-(2/3)^2 = 0.556 for two centres, 3 centres 0.704",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json 3rd_openai_workspace/luna3/P3_5_prob.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "cloud 49 relay (CLAIMED, untested): degree-9 polynomial over F_19 has monodromy S_9 but midpoint pair action D_4, so pi = S_d cannot be assumed; under the conditions of its (3) the requested ordered-pair set has one orbit; the >= 1/3 route needs a check on our own F. The arithmetic here is mine. | universe cell poseidon-r1|PREM.HSQ|PREM|R4",
+ "held_fixed": "Poisson/uniform model plus toy F_10007; fix ledger centres",
+ "reopen_if": "a computable certificate on our F (critical point c0 with F''(c0) != 0 and squarefree H(c0,S), or a prime-degree factor with d/2 < l <= d-3 at some c0) -> proved bound"
+}

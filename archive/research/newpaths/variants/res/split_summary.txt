@@ -1,0 +1,14 @@
+res/split_fixed_02_55_t0_k8.txt: solutions 72926 best 224.0 histogram of per-solution best (floor): 224:72926
+res/split_fixed_02_64_t0_k8.txt: solutions 19316 best 192.0 histogram of per-solution best (floor): 192:19316
+res/split_fixed_02_64_t1_k8.txt: solutions 60000 best 192.0 histogram of per-solution best (floor): 192:60000
+res/split_fixed_02_64_t2_k8.txt: solutions 60000 best 192.0 histogram of per-solution best (floor): 192:60000
+res/split_fixed_13_64_t0_k9.txt: solutions 15000 best 224.0 histogram of per-solution best (floor): 224:15000
+res/split_len_13_52_t0_k7.txt: solutions 29254 best 224.0 histogram of per-solution best (floor): 224:29254
+res/split_part_02_t0_Y13_k8.txt: solutions 19316 best 176.0 histogram of per-solution best (floor): 176:19316
+res/split_part_02_t0_Y5-Y13-m9_k8.txt: solutions 19316 best 144.0 histogram of per-solution best (floor): 144:19316
+res/split_part_02_t0_Y5-Y13_k8.txt: solutions 19316 best 160.0 histogram of per-solution best (floor): 160:19316
+res/split_part_02_t0_Y5_k8.txt: solutions 19316 best 176.0 histogram of per-solution best (floor): 176:19316
+res/split_part_02_t0_m9_k8.txt: solutions 19316 best 176.0 histogram of per-solution best (floor): 176:19316
+res/split_partial_summary.txt:  
+res/split_summary.txt:  
+JOB9DONE

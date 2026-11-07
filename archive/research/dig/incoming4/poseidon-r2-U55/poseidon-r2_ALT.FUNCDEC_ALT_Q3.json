@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FUNCDEC (ALT)",
+ "question": "Q3: degrees of freedom: coverage of the divisor lattice and the control",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Divisors of 5^8: d = 5^k, k = 1..7 (7 inner degrees). Covered at r=2 j=0: k = 1,2,3 (earlier) and [625, 3125, 15625] (today) = 6 of 7; j=1,2: k = 1,2,3 only. Control run by the same code at r=1 with planted G.H (625, 3125, 15625) recovered H exactly.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FUNCDEC|ALT|Q3. Coverage count; control from math/decomp_625_3125.md (the r=2 size was not separately planted in this run).",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "the missing (j, d) cells are run (about 100 s each)"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "D636-POSEIDON-R2-GBUF-CORRECTION-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 GBUF exact transform-size correction and density controls",
+  "question": "Does a retained transform or sparse representation of the r=2 g polynomial lower the current live-memory/score envelope?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Source-exact m=195312: coefficient g is 6,250,016 B; g-specific CG uses Np=196608 and is 6,291,456 B. The current lean stage-C heap is 37,624,320 B; a CG-only hybrid has array-level 43,915,776 B and 44,113,322 B including the existing static/stack/allocator allowances (log2 25.3947110724). Six r=0/1 density controls found zero zero-coefficients and all coefficients distinct.",
+  "source": "our workflow: D636 source audit plus isolated density probe",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/d636_density_probe.c; research/poseidon/orchard/exec_r2b/src/lean.c; research/poseidon/orchard/exec_r2b/src/loop.c; research/poseidon/orchard/exec_r2b/pkg_stage/proof.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.2,
+  "gain_basis": "D",
+  "held_fixed": "current exec_r2b source, exact plan lengths, six deterministic r=0/1 density controls, no production source edits",
+  "notes": "Corrects the earlier broad statement that a full transformed g uses the 393216-point buffer: the g-specific CG allocation is 196608 points. The stored-spectrum routine still has larger total live memory. No r=2 sparsity proof, hybrid KAT/ledger, score credit, package, stage, filing, or submission.",
+  "reopen_if": "An r=2 structural sparse representation or a fully audited CG-only hybrid implementation with KAT and complete charged ledger is supplied"
+}

@@ -1,0 +1,36 @@
+fixed mode=msg candidates=495 freedom=4
+non-trivial block-size profiles (count):
+   (84,): 51
+   (83,): 49
+   (82,): 40
+   (88,): 38
+   (79,): 32
+   (78,): 30
+   (92,): 30
+   (87,): 28
+   (86,): 24
+   (77,): 24
+   (80,): 18
+   (73,): 17
+   (81,): 17
+   (93,): 16
+   (91,): 14
+   (75,): 13
+   (85,): 13
+   (89,): 10
+   (74,): 9
+   (90,): 8
+   (76,): 3
+   (72,): 3
+   (69,): 3
+   (68,): 2
+   (71,): 2
+best index sets (smallest largest block), with tearing numbers:
+   index ['m0', 'm4', 'm6', 'm7']: blocks ["68w/t4['K2.c2', 'D1.d1', 'C0.d2', 'C3.c2']"]
+   index ['m0', 'm2', 'm6', 'm7']: blocks ["68w/t5['C3.b1', 'K2.a1', 'D1.a1', 'K2.d2', 'D2.b1']"]
+   index ['m0', 'm2', 'm3', 'm6']: blocks ["69w/t5['D3.c1', 'C1.c2', 'C1.d1', 'C0.c1', 'D2.c1']"]
+   index ['m0', 'm2', 'm4', 'm6']: blocks ["69w/t5['C3.c2', 'K3.a2', 'C3.d1', 'C2.d2', 'D1.c1']"]
+   index ['m0', 'm2', 'm3', 'm4']: blocks ["69w/t5['D0.b1', 'C1.c2', 'D0.d1', 'C1.d1', 'D1.a1']"]
+   index ['m0', 'm2', 'm4', 'm5']: blocks ["71w/t5['K3.d1', 'K3.c2', 'D1.c1', 'C3.c2', 'D2.c1']"]
+   index ['m0', 'm4', 'm5', 'm6']: blocks ["71w/t4['K3.a2', 'C0.a1', 'C3.c2', 'D1.d1']"]
+   index ['m0', 'm13', 'm6', 'm7']: blocks ["72w/t6['C3.c2', 'C3.a1', 'C2.d2', 'K2.a1', 'K2.c2', 'K1.d1']"]

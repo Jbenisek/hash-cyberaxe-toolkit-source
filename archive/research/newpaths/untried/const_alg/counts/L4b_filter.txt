@@ -1,0 +1,1 @@
+FILTER L4b: ONLY the betas with k <= 18: 48898, answered 48898, lines not understood 0; no eps 25433, infeasible 0, no passing outcome 20303, with a passing outcome 3162 (passing outcomes in all 2262452); by k: 13:20 14:31 15:309 16:302 17:1400 18:1100

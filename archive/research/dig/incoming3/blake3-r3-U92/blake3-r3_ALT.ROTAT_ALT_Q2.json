@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "rotational relation: necessity of the asymmetric constants, and the collision bound",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "Z",
+  "P"
+ ],
+ "status": "SAMPLED",
+ "number": "with a rotation-symmetric all-zero start state the full 16-word relation holds after 1 round with P about 2^-16 (k=1: 14/2^20, k=31: 10/2^20, k=4: 1/2^20, k=2,8,16,24: 0/2^20) and 0 of 2^20 after rounds 2 and 3 for every tested k (1,2,4,8,16,24,31): P < 2^-20. Independently a collision from a rotational pair needs d(m) = rotl_k d(m), i.e. at least 8*(32-gcd(k,32)) = 128 digest bits (k=16) rotation-fixed, so P(collision | relation) <= 2^-128 per candidate pair and one candidate pair per evaluation: no gain over 2^128 even if the relation held with P=1",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_rot.py; research/blake3_r3/alt/exp_rot.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "The 2^-128 bound assumes d(m) uniform on the 2^256 outputs (premise H1 of the entry); the sampled part is a measurement on the zero-constant variant, not on the real target.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches) except start state all zero in the symmetric variant; 2^20 samples",
+ "reopen_if": "relation probability above 2^-100 at 3 rounds measured or proved, or digest bits shown biased towards rotation-fixed values",
+ "topic": "blake3-r3|ALT.ROTAT|ALT|Q2"
+}

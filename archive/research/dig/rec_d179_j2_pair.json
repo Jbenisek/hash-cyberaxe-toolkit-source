@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-j2-pair",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 J2 high-bit witness involution",
+  "question": "Does f -> f xor q preserve the exact J2 relation for q=04000000 and 38000000?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "Exact five-carry DP: eps 6e21be55 base=1099511627776 and both paired counts equal; eps 6e61be55 base=824633720832 and both paired counts equal",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/j2_pair_invariance.py; research/retest/b3_omega_coupled/exact/j2_pair_invariance.out; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Together with the high-six-bit ETA lemma and h'=h xor ((E+f) xor (E+f xor q)), this closes full coupled aliveness invariance for class toggles delta 00000040 and 00000380. Alongside the earlier 00000008 and 80000000 maps, 4/15 directions are proved; 11 remain open."
+}

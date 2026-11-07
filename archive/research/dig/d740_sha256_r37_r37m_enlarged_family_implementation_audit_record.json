@@ -1,0 +1,23 @@
+{
+  "id": "D740-SHA256-R37-R37M-ENLARGED-FAMILY-IMPLEMENTATION-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": 5,
+  "row_j": 6,
+  "object": "R37M enlarged-family implementation feasibility audit",
+  "question": "Can the projected enlarged E5/E6 Zone-D family be claimed from the checked-in published-family lowm executable?",
+  "labels": ["C", "D", "N"],
+  "status": "COMPUTED",
+  "number": "No. lowm.py hard-codes one E5/E6 dense context, global G/c7/member functions, a static 222-class table, a 256-lane class plane, and fixed CLASS_TYPES/NVAR. Family (c) has 64 dense parts and 171,853 classes at n>=3456 (500 selected in the projection); no enlarged-family program, self-test, end-to-end KAT, or q3 study exists.",
+  "source": "our workflow: D740 read-only source/dossier implementation audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D740_sha256_r37_r37m_enlarged_family_implementation_audit.md; research/tools/build_pkg/scratch/pkgR37M/pkg/sha256-r37/experiments/lowm.py; research/retest/zoneD_family/RESULT.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.15,
+  "prior": 0.02,
+  "gain_basis": "D",
+  "held_fixed": "checked-in published-family lowm.py and the preregistered Zone-D family dossier",
+  "notes": "Implementation audit only. It prevents promotion of the projected 61.09053 row; no package, stage, filing, submission, or score credit.",
+  "reopen_if": "A per-dense-context enlarged-family implementation with self-test, KAT, end-to-end run, and q3 evidence is available"
+}

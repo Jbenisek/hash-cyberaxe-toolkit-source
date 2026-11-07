@@ -1,0 +1,23 @@
+{
+  "id": "D587-SHA256-R38-ZONED-C2-ROW14-SEED65536-20261014",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 14,
+  "object": "Zone D 38 row-14 C2 fixed-split seed-65536 control",
+  "question": "Does the corrected fixed-prefix row-14 C2 subtest have E15 passers on an additional seeded split?",
+  "labels": ["C", "B", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Current isolated zd38.c cmd_c2split seed 65536 enumerates all 2^32 E15 values and returns exactly 1 corrected C2 passer; the published pair has zero rows 0..15 failures. This is fixed-prefix only and does not rebuild rows 16..21 for every changed E14/E15 candidate.",
+  "source": "our workflow: D587 isolated zoneD38 c2split seed65536",
+  "own_test": true,
+  "evidence": "research/sol_answer_D587_sha256_r38_zoneD_c2_seed65536.md; research/retest/zoneD38/c2split_seed65536.out; research/tools/traillab/digs/zoneD38/zd38.c; research/sol_answer_D243-zoneD38-c2-full-late-spec.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "not material to the fixed-prefix exact scan",
+  "notes": "Additional split-specific corrected C2 control. Full row-14 family, full-late rebuild, split transfer, and final event remain OPEN. No package/stage/filing/submission.",
+  "held_fixed": "seed65536 late split; E15 over all 2^32 values; corrected dW16=M.dl[0]; current zd38 source",
+  "reopen_if": "full-late rebuild or global row-14 C2 rate is established"
+}

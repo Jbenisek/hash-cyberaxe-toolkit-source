@@ -1,0 +1,35 @@
+c 0 opened 7168 hits 12600 passes 197 calls 47 fills 5824 pilot 25 sec 0.4
+c 64 opened 7086 hits 37968 passes 707 calls 162 fills 13104 pilot 71 sec 25.9
+c 128 opened 7424 hits 25312 passes 476 calls 105 fills 11808 pilot 43 sec 48.5
+c 192 opened 6656 hits 21840 passes 387 calls 96 fills 8112 pilot 39 sec 71.3
+c 256 opened 7936 hits 36508 passes 681 calls 204 fills 11748 pilot 60 sec 94.3
+c 320 opened 7888 hits 28592 passes 494 calls 106 fills 12080 pilot 49 sec 116.6
+c 384 opened 7324 hits 33974 passes 575 calls 133 fills 14443 pilot 64 sec 139.4
+c 448 opened 7140 hits 25389 passes 491 calls 125 fills 11684 pilot 41 sec 163.2
+c 512 opened 7168 hits 33440 passes 601 calls 146 fills 12640 pilot 67 sec 186.4
+c 576 opened 7032 hits 43680 passes 740 calls 165 fills 20178 pilot 83 sec 208.7
+c 640 opened 7168 hits 10848 passes 140 calls 33 fills 4896 pilot 23 sec 231.5
+c 704 opened 8722 hits 36500 passes 644 calls 159 fills 17275 pilot 76 sec 254.1
+c 768 opened 6656 hits 36640 passes 701 calls 182 fills 18400 pilot 72 sec 275.3
+c 832 opened 7628 hits 34462 passes 645 calls 143 fills 15184 pilot 61 sec 296.3
+c 896 opened 7168 hits 35360 passes 671 calls 167 fills 8320 pilot 52 sec 316.4
+c 960 opened 7168 hits 11466 passes 212 calls 51 fills 7552 pilot 22 sec 336.5
+c 1024 opened 7656 hits 35033 passes 658 calls 162 fills 14506 pilot 68 sec 357.9
+c 1088 opened 7168 hits 24192 passes 447 calls 89 fills 5824 pilot 44 sec 377.4
+c 1152 opened 7936 hits 35280 passes 665 calls 182 fills 18896 pilot 59 sec 396.4
+c 1216 opened 7936 hits 35912 passes 646 calls 188 fills 15112 pilot 67 sec 416.9
+c 1280 opened 7264 hits 12047 passes 236 calls 72 fills 4095 pilot 18 sec 437.9
+c 1344 opened 7480 hits 34944 passes 677 calls 189 fills 16800 pilot 70 sec 458.3
+c 1408 opened 6968 hits 0 passes 0 calls 0 fills 0 pilot 0 sec 479.2
+c 1472 opened 7276 hits 10707 passes 179 calls 39 fills 5094 pilot 13 sec 498.5
+c 1536 opened 7680 hits 25491 passes 469 calls 119 fills 11049 pilot 42 sec 517.7
+c 1600 opened 7546 hits 25059 passes 456 calls 89 fills 12107 pilot 60 sec 537.3
+c 1664 opened 7168 hits 37661 passes 715 calls 200 fills 17719 pilot 66 sec 556.8
+c 1728 opened 7680 hits 36960 passes 645 calls 126 fills 13695 pilot 71 sec 577.1
+c 1792 opened 7716 hits 25088 passes 517 calls 119 fills 12656 pilot 61 sec 600.8
+c 1856 opened 7936 hits 23504 passes 433 calls 122 fills 11706 pilot 43 sec 624.5
+c 1920 opened 7464 hits 25941 passes 413 calls 104 fills 12608 pilot 55 sec 646.5
+c 1984 opened 6656 hits 20944 passes 399 calls 127 fills 12264 pilot 39 sec 666.2
+c 2047 opened 7936 hits 24304 passes 470 calls 112 fills 11648 pilot 41 sec 685.6
+checks {'scalar_n': 16384, 'scalar_mm': 0, 't_n': 16384, 't_mm': 0, 'fl_n': 16384, 'fl_mm': 0}
+sec 685.6

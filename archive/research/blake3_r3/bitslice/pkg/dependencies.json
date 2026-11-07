@@ -1,0 +1,7 @@
+[
+  {
+    "submissionId": "cf8b0e92-4302-4813-907a-3c970c102646",
+    "rationale": "Our own entry for blake3 round 3 (125.10041). This entry keeps its relation, trail-and-table search, recovery walk, packed 595-operation circuit (now the recovery circuit), ledger method and premise tests, and replaces the chain-step circuit by a 256-lane bit-sliced one with a declared register file, a new loop, new handlers and a restated Lemma 2.",
+    "evidence": "proof.md first paragraph, Sections 2, 3.2, 3.3 and 4, Appendix A."
+  }
+]

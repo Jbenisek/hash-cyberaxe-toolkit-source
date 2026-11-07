@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-HMASK-400-RERUN",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 h-dependent XOR-mask rerun for delta 00000400",
+  "question": "Does the expanded seven-mask witness-map family cover the final residual toggle 00000400?",
+  "labels": ["K"],
+  "status": "COMPUTED",
+  "number": "Exact QF_BV CEGIS terminates UNSAT at iteration 13 after 13 witnesses with a 40-iteration cap.",
+  "source": "our exact QF_BV CEGIS: D179 h-dependent mask rerun",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/SYNTH_HXOR_HMASK.md; research/retest/b3_omega_coupled/exact/synth_hxor_allmask_h.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.witness_map",
+  "notes": "This closes only the stated affine/XOR mask family for 00000400. The arbitrary nonlinear witness map and universal class-invariance theorem remain OPEN; no saving is credited."
+}

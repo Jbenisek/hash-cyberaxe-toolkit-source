@@ -1,0 +1,21 @@
+{
+  "id": "D397-SHA3-R5-BPFULL-BRANCH-SWEEP-20261014",
+  "hash": "sha3-r5",
+  "row_i": null,
+  "row_j": null,
+  "object": "SHA3-r5 full B-prime branch-complete peak sweep",
+  "question": "Does the full B-prime path's peak residency vary across all three deterministic branch selectors, and what is the maximum observed PeakWorkingSetSize?",
+  "labels": ["S", "I"],
+  "status": "LOCAL_ONLY",
+  "number": "k=6/33/37 all exit 0; conservative peaks 43855872, 50438144, 83804160 B; branch-complete maximum 83804160 B = 2^26.3205185246.",
+  "source": "our workflow: owned r5_bpfull_peak_workingset.py branch sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D397_r5_bpfull_branch_sweep.md; research/retest/r5_bpfull_peak_workingset.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 6.96,
+  "prior": 0.2,
+  "peak_mem": 83804160,
+  "notes": "All three k branches of unchanged r5-bpfull source covered, one process at a time. Fixed census runs=48, successes=39, cp95_lower_x1e4=6956. Finite branch sweep only; declared 130149253 B full bound remains conservative. No package/staging/submission action."
+}

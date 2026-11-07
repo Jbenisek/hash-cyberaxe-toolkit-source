@@ -1,0 +1,22 @@
+{
+  "id": "D783-SHA256-R38-STACK-JOINT-20261014",
+  "hash": "sha256-38",
+  "row_i": 19,
+  "row_j": 37,
+  "object": "D250 A plus exact rows-22..37 STACK",
+  "question": "On the same seeds, what is the combined q3 gain from the registered E19/E20 relaxation and the exact rows-22..37 event over the FILED cell event?",
+  "labels": ["C", "S", "E"],
+  "status": "SAMPLED",
+  "number": "32 paired seeds: mean gain +3.4013575439 bits, sd 0.1953485318, preregistered one-sided 99% Student lower bound +3.3166548350 bits; exact paired identity STACK=A+B for every seed; all diagnostics zero.",
+  "source": "our workflow: D250 r38 STACK preregistered paired run",
+  "own_test": true,
+  "evidence": "research/prereg_D250_r38.md; research/retest/r38_stack_D250/run.sh; research/retest/r38_stack_D250/SUMMARY.md; research/sol_answer_D783_r38_stack_transfer.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 3.3166548350,
+  "gain_basis": "q3",
+  "peak_mem": "187884 KiB = 192393216 B = 2^27.51948269 B, representative seed-7133 FILED-arm maximum RSS audit; A arm 2^27.33985000 B",
+  "held_fixed": "chi38.txt; event out; rows 22..37 FILED cells; A=dropv E19 30040e32, dropv E20 20000000, lin E20[29]^E19[29]=0; np=8192; mt=32768; 2^28 proposals per seed; seeds 7101..7132",
+  "notes": "Finite paired sampling under the chi38 law. Lower-bound q3 translation -97.7333451650 and exact pkgR38M7 ledger time 87.85335 are conditional; shipped-law transfer, organizer acceptance and R16x interaction remain open. No package/stage/filing/submission.",
+  "reopen_if": "Independent valid-prefix transfer or organizer replay changes the joint gain or invalidates the additive pairing."
+}

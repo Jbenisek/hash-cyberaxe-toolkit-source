@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.CMPBR compare and branch",
+ "question": "Alternatives to testing the DP filter on every batch.",
+ "labels": [
+  "N",
+  "E"
+ ],
+ "status": "COMPUTED",
+ "number": "GROUPED FILTER: AND the 16 flag words u_i = z0_i + REP*0xFFFFFFFF of one unrolled body, then one AND with BIT32REP, one compare, one branch: 16 adds + 15 ands + 1 + 2 = 34 ops per body instead of 64. Per body 9557 against 9587 ops: delta -0.004496 bit (U=16), -0.004615 bit (U=19). Stage-2 then recomputes the body from its 8 preserved inputs: 16 x 595 extra ops per event costs 5e-8 relative (delta -0.004496 including it). Logic tested: 200,000 random packed groups (k=2,4,16, zeros planted), 0 mismatches against 'some lane low 32 bits zero'. Registers: 25 + 8 preserved + 1 accumulator = 34 with immediates; without immediates (constants in registers) 56 for zero spills (Belady), 48 gives 4 stores.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py); research/blake3_r3/dig_scan/c_tests.json (c_tests.py); research/blake3_r3/dig_scan/d_regs.json (d_regs.py)",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 0.0045,
+ "notes": "universe cell blake3-r3|MACHINE.CMPBR|MACHINE|Q4. NOT built end to end: only the filter logic and the ledger arithmetic are tested. Needs the stage-2 replay coded (about 20 lines in rho.py search) and the proof sections 3.3 and Lemma 2 restated. Stacks with the other small levers (see GENERIC cells); safe combination -0.0068 bit. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "filed circuit and ledger; DP rule and table unchanged (a lane that passes a DP inside the body is replayed from the preserved inputs; it wastes at most 15 lane-steps per DP, about 2^14 x 15 steps).",
+ "reopen_if": "Whole program built and its n=22/32 experiment passing with the grouped filter; or the judge reading the replay as an uncharged cost.",
+ "gain_basis": "T"
+}

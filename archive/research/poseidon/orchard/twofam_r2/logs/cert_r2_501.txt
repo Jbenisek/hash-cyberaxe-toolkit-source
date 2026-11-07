@@ -1,0 +1,30 @@
+r=2 seed=501 D=390625
+  init (twiddle table)                         arith=        132044 other=        929236 total=       1061280     0.0s peak=4194304
+  two line setups + intersection               arith=          1131 other=         12489 total=         13620     0.0s peak=4194304
+  sample x, y = H(x)                           arith=             0 other=           619 total=           619     0.0s peak=4194304
+x: family 1
+  family 1: build F (evaluations + NTT)        arith=      11463423 other=     268227364 total=     279690787     2.8s peak=29277248
+  family 1: W^p mod F                          arith=   34086292492 other=  384765364145 total=  418851656637   838.6s peak=75248736
+    fault detected, rollback 1
+    fault detected, rollback 2
+    fault detected, rollback 3
+    fault detected, rollback 4
+    fault detected, rollback 5
+    fault detected, rollback 6
+  family 1: gcd(F, W^p - W)                    arith=  308524354376 other=             0 total=  308524354376  8681.8s peak=91694496
+    gcd degree 3, charged 308524354376, derived bound 1833164065176 (within)
+  family 1: remove the roots of x              arith=             6 other=            71 total=            77     0.0s peak=16694464
+    remaining roots: 2
+  family 1: isolate one root                   arith=          1136 other=         21311 total=         22447     0.0s peak=4194400
+  map back (two inputs)                        arith=          2274 other=         20466 total=         22740     0.0s peak=4194304
+  verification (2 reference hashes)            arith=           516 other=          4644 total=          5160     0.0s peak=4194304
+RESULT found=1 success=1 split_levels=0 split_tries=0
+COLLISION nk1  0x10fd2bc5b6d89eed48cceac73c63b05310dcc800620f19b90f7ac15601af45a6
+COLLISION rho1 0x075506f9654c54ec1ff13c587ef218fb3a28b6103032f6aa40c13440870d5b4c
+COLLISION nk2  0x12fd7ff09da9592d84b5e6036d51a140575a192461e98cba40a84bf6b387b59c
+COLLISION rho2 0x1caf1849455e966d02c3d6fe297170a1bfc55d62bd0582688918d7bda91720ab
+COLLISION digest 0x01c8fbe5eb57d7c0ea2f042ca08f931ace39253740def485c70aab354bf7a1b1
+SUMMARY total_all=727658390317 units=2820381357.8 log2_units=31.3932 heap_peak=91694496
+DRIVER ops_outside_stages=1562574
+SPLIT shift=0 pow=0 gcd=0 div=0
+EXIT 0

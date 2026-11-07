@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "1-indexed round 4 chi + theta5-at-store (leader 'round-4 cone', 46.11 ops/message, 1363 of 1600 words)",
+ "question": "Which round-4 rows and words are necessary?",
+ "labels": [
+  "N",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "necessary: all 320 chi4 rows and 1600 outputs; of the 1600 theta5-applied words exactly 1363 are necessary and 237 are not (unneeded per lane: lanes 0-9 about 13-15 each, lanes 10-24 6 each); flip test agrees exactly: 1363 of 1600 words change the key, 0 outside the cone, 0 cone words silent (64 states)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/sha3-r6-U03/work/ (kk.py validated 24r vs hashlib and 6r vs organizer verifier; cone.py, fam.py, fp.py, q.py; cone.json, footprint.json, q_results.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell round3.chi|Q2. Family = leader's 128-byte prefix family rebuilt by us (L8=0, L5=L15=D0, C2=NOT rotl(C4,1); z XORed into lanes 4 and 14): A2 affine in z checked 30x256, z-flip support 22 words (matches Lemma 3). Set equality between structural cone and sampled sensitivity verified (q_results.json T5_sens_vs_cone: agree true, 0 sensitive outside cone, 0 cone words without effect; min hits among the 1363 is 21/64). chi4 outputs and theta4-applied words: 1600/1600 sensitive in 64/64 states.",
+ "topic": "sha3r6 round3.chi Q2"
+}

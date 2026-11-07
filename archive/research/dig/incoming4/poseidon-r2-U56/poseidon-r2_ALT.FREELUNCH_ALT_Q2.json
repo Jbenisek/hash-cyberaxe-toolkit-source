@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FREELUNCH (ALT)",
+ "question": "Q2: necessity: could the method be used without the line trick",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "Without the two-free-round skip the ideal degree is 5^(8+r) = 5^10 = 9,765,625; our exact plane-degree tracker (testA.json) gives total degree 5^10 for the digest in (nk, rho), matching D_I of the generic model.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/testA.json; research/poseidon/levels/freelunch/FREELUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FREELUNCH|ALT|Q2. Degree tracker is my arithmetic (dense MDS assumed); the FreeLunch side is read, not tested.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a skip better than two rounds exists in the plane"
+}

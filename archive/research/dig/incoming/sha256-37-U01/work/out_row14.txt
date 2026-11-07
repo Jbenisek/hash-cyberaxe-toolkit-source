@@ -1,0 +1,235 @@
+ROW 14  bases=6 (P0 + A0-variants)
+A14 ======u=n=======n===============
+E14 =+0=1000000111+=1==1n010u0=0101=
+W14 =0===u===n=1=1====1=u=1=====1=1=
+published pair rows 0..15 under base conds: ok; EXACT 1
+VALIDATE unmodified-anchor rebuild: cons1 dmod15=1 failmask<=15=0000 exp=1 r16-22=1 r23-36=1 EXACT=1 identical-w:1
+BASELINE whole-row 14 count (E candidates 2^9, all printed conditions): 8 8 8 8 8 8
+
+A14[15] 'n'
+  A local-flip first-break (P0, variants): A14 A14 A14 A14 A14 A14
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+A14[23] 'n'
+  A local-flip first-break (P0, variants): A14 A14 A14 A14 A14 A14
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+A14[25] 'u'
+  A local-flip first-break (P0, variants): A14 A14 A14 A14 A14 A14
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[1] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[2] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[3] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[4] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[6] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[7] 'u'
+  A local-flip first-break (P0, variants): E14 E14 E14 E14 E14 E14
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[8] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[9] '1'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[10] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[11] 'n'
+  A local-flip first-break (P0, variants): E14 E14 E14 E14 E14 E14
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffe0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[12] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[15] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[18] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[19] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[20] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[21] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffe0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[22] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffe0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[23] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffe0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[24] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffe0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[25] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[26] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[27] '1'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[29] '0'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[1] '1'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[3] '1'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffd0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[9] '1'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[11] 'u'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffd0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[13] '1'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[18] '1'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[20] '1'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[22] 'n'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[26] 'u'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 8 8 8 8 8 8   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=ffe0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 8 total passing (published among them: 1), extras 7; consistent 7; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+W14[30] '0'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=0 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[30] '+'
+  A local-flip first-break (P0, variants): E15 E15 E15 E15 E15 E15
+  B row-local count with condition dropped (P0, variants): 16 16 16 16 16 16   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 16 total passing (published among them: 1), extras 15; consistent 15; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0
+
+E14[17] '+'
+  A local-flip first-break (P0, variants): - - - - - -
+  B row-local count with condition dropped (P0, variants): 12 12 12 12 12 12   (baseline 8)
+  C consistent bit-flip (P0): cons0 dmod15=0 failmask<=15=fff0 exp=1 r16-22=0 r23-36=0 EXACT=0
+  D relaxed-row extra solutions on P0: 12 total passing (published among them: 1), extras 11; consistent 11; dmod<=15 kept 1; rows<=15 ok (dropped conds) 0; full-path EXACT 0

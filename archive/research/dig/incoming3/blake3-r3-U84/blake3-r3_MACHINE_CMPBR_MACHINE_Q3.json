@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.CMPBR compare and branch",
+ "question": "Score-optimal unroll U (degrees of freedom of the loop control).",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Code is charged 39 B x 600 ops per batch copy (374,400 B at U=16). Table 589,824 + counters 2,048 leave room for U=19 (memory 1,036,472 B <= 2^20): delta -0.0000709 bit. U=20 exceeds 2^20 (1,059,872 B): +0.0154. U=8 +0.00045; U=1 +0.0067; U=32 +0.354; U=64 +0.994.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py)",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": 7e-05,
+ "notes": "universe cell blake3-r3|MACHINE.CMPBR|MACHINE|Q3. The 39 B per op is inferred from the filed figure 374,400 = 16 x 600 x 39, not read from a source; gain is far below any filing threshold. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "code size model 39 B per op x 600 ops per batch (derived from the filed 374,400 B); table 32 B per key, 18,432 keys.",
+ "reopen_if": "Code bytes per op declared differently by the judge.",
+ "gain_basis": "T"
+}

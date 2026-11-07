@@ -1,0 +1,17 @@
+[
+  {
+    "submissionId": "10ce9f59-80a1-4304-92cc-ca4dede3bbcc",
+    "rationale": "mitchuski's blake3 round-3 entry (124.70692). Credited for the three-addend pair-carry column used for every all-variable a + b + m: the carry pair (u, U) = U ? 1 : 2u, templates 0 and 1, the boundary columns and the choice of addend order and template by a dry trial, re-implemented in our Python generator and its C port from the text of its note; no file of that entry was used or run.",
+    "evidence": "proof.md first paragraph and Sections 3.2, 3.6 and 8."
+  },
+  {
+    "submissionId": "3c2d1220-540f-480a-81ca-b26e5ae2173a",
+    "rationale": "Our own blake3 round-3 entry B3R3u5b (124.76596): the program, search, handlers, recovery passes, ledger method, Lemma 2 of Section 4, the experiments and the C generator of this entry. Changed: the three-addend columns and the prefix in the step, the stage-1 checkpoint, the quotient-filter table, the checkpoint recovery with its cap, and the re-planned Tp, B, c (time_log2 124.76596 to 124.69481).",
+    "evidence": "proof.md first paragraph and Sections 1 to 8 and Appendix A."
+  },
+  {
+    "submissionId": "11d961ad-d526-4279-8295-382cff99088b",
+    "rationale": "0xplemonade's blake3 round-7 entry. Credited for the idea of choosing a column circuit per stored-polarity context; the four exact-synthesis circuits of form 2 used in our step are our own synthesis, built on that idea.",
+    "evidence": "proof.md Sections 3.2 and 8."
+  }
+]

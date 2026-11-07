@@ -1,0 +1,9 @@
+L1 X0 from the listed omega (both forms): 0 mismatches of 3000
+L2 13-line Y9 path and the shortcut's C2 words from per-context constants: 0 mismatches of 3000
+L3 state 1280: 32832 passing high halves in 19 (state, mask2) lists; partial words per live block <= 19
+L3 state 1536: 32832 passing high halves in 19 (state, mask2) lists; partial words per live block <= 19
+L3 state 1792: 33696 passing high halves in 19 (state, mask2) lists; partial words per live block <= 19
+L3 state 2048: 32832 passing high halves in 19 (state, mask2) lists; partial words per live block <= 19
+L3 state 2304: 32832 passing high halves in 19 (state, mask2) lists; partial words per live block <= 19
+L3 state 2560: 32832 passing high halves in 19 (state, mask2) lists; partial words per live block <= 19
+seconds 0.4

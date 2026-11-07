@@ -1,0 +1,72 @@
+# regspill
+
+Source: `research/pkg7/work/fix3/check/regspill.py`
+
+Public SHA-256: `16e337d64a96c6ea4e7ddf6b1b4f961c5af70cf58013b4b3d258b883ec25579c`
+
+## Purpose recorded in the source
+
+Read-only: under the strict convention, which steps of a batch hold 15 values (17 registers), in which parts, and is
+there a kept (resident) word that is not used anywhere between the first and the last such step (so that dropping it
+and loading it once again costs one load per batch)? Run with python -B.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "halfsearch",
+  "hashlib",
+  "struct",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "at",
+    "line": 11,
+    "arguments": [
+      "self",
+      "part"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "value",
+    "line": 16,
+    "arguments": [
+      "self",
+      "z"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "part_of",
+    "line": 23,
+    "arguments": [
+      "m",
+      "step"
+    ],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+Companion documents are not listed here. Use the linked source for interfaces and prerequisites.
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.POWER S^((p-1)/2) mod g",
+ "question": "own recount of the value",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "fresh run: arith=3,536,772,927 other=42,022,748,610 total=45,559,521,537 = table to the digit; 238 steps x 190,151,482 + Newton 302,883,363 + prefix 508,491; arith identical to the old lean_r1 ledger (3,536,772,927 vs 3,536,768,307 data dependent)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_seed100001.txt research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md research/poseidon/orchard/lean_r1/logs/final_ledger.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Arithmetic is reproduced exactly; \"other\" is 92.2% of the stage in the fix charging. | universe cell poseidon-r1|LEDGER.POWER|LEDGER|R2",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

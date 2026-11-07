@@ -1,0 +1,2 @@
+zero dA2=0 dB2=0 dC2=0 dD2=0 any=0 two_or_more=0  minHW=32 at w12=0ef33c2d
+mean HW of the 128-bit XOR diff after E1 = 60.384

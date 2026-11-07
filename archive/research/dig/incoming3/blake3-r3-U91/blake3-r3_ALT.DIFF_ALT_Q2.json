@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "differential: message-difference sets, sampled recount",
+ "question": "Is it necessary: change it and recount the exact outcome?",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "no digest word equal in any sampled pair: 696 sets |D|<=3 over all 16 words and 92 sets over m8..m15, random 32-bit xor and MSB deltas, 4096 pairs per set (2.85M pairs full domain, 0.38M restricted); max equal digest words 0; min digest-difference weight 87-91 of 256 against 89 (2.85M random pairs) and 86 (8.4M random pairs)",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_diff.py; research/blake3_r3/alt/exp_diff.json; research/blake3_r3/alt/b3h.py; research/blake3_r3/alt/validate.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Sampling cannot see a structural silencing that needs a chosen (not random) difference; it shows no random-level or MSB-level difference gives equal words or a weight below the random-pair minimum. The word-level model of B3R3-X1 (up to 6 silenced words for |D|<=3) is a different, structural claim and was not re-derived here.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches); random messages, restricted case m0..m7=0",
+ "reopen_if": "a chosen difference found by trail search or SAT with a measured P(digest word equal) above 2^-20, or any sampled pair with digest-difference weight below 80",
+ "topic": "blake3-r3|ALT.DIFF|ALT|Q2"
+}

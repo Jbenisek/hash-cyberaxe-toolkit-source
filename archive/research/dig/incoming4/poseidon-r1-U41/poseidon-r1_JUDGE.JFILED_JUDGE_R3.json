@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JFILED rulings on the r=1 filings",
+ "question": "control (known-answer or independent check)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "control: the fresh run under the strict charging reproduces the fix arithmetic exactly (power 3,536,772,927) and prints other = 42.0e9 for stage C, i.e. the old ledger and the fix are the same program charged two ways",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_seed100001.txt research/poseidon/orchard/lean_r1/logs/final_ledger.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Comparison of final_ledger.txt (old) and the fresh run (fix) stage by stage. | universe cell poseidon-r1|JUDGE.JFILED|JUDGE|R3",
+ "held_fixed": "seed 100001 line 2",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

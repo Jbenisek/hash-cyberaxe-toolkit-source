@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.RULE memory term max(0, log2 bytes - 20)",
+ "question": "alternatives for the memory",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "term sensitivity: every 12.5% of bytes removed = 0.193 bit; tmp row 0.1867, MU 0.2255, g 0.2255, Y 0.6532 bit each if free",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json memsave_*. | universe cell poseidon-r1|MEM.RULE|MEM|M4",
+ "held_fixed": "fix memory table",
+ "reopen_if": "a buffer-free schedule for Y"
+}

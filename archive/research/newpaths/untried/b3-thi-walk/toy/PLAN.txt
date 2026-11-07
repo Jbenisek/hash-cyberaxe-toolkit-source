@@ -1,0 +1,23 @@
+toy8 t_hi walk: plan fixed BEFORE the counted runs (2026-10-10, research only, nothing filed)
+
+Rig: the scaled rig of the front line's H1' evidence (research/impl/toy8_prereg: toy.h, tl_lines.inc, sets_w8.txt copied
+unchanged; GPU port re-written here as ctr_walk.cu with one change: high counter word thi in K1 (CTR1) and in v[13]).
+Validation done before this plan: the control arm at the rig's old base reproduces the rig's quick run line for line
+(set 0 runs 0..3: trials 133,694,335, t = 0 523,393, the same 2 hits); a smoke walk (NT = 32, 8 runs) gave 9 hits, all
+confirmed by 88 forward words, 8-word CV equality and complete-message tree hashes, and 0 bad trials in 268,402,842.
+
+Arms (eight sets 0..7, their frozen heaviest beta: bf b3 b3 b3 33 b3 bf bf; 1,280 runs per set; seed base of arm X =
+first 8 bytes, little endian, of sha256("b3-thi-walk toy 2026-10-10 arm X")):
+  C     control, thi = 0 only (the rig's arrangement), nouter = 2048 1170 1170 964 4096 745 2048 2048
+  W32   walk, thi = 0..31 for every (run, g, member) (toy analogue of t_hi < 2^19 of 32 bits: 5 of 8 bits),
+        nouter = 64 37 37 30 128 23 64 64
+  W256  walk, thi = 0..255 (every high word), nouter = 8 5 5 4 16 3 8 8
+Prediction: per counted trial P_s = mass_D / (n |D| 2^40) of the rig's ledger (PREREG.txt section 3):
+  set 0,6,7: 2097152/(16*4*2^40); set 1,2: 3670016/(16*16*2^40); set 3: 4456448/(16*16*2^40);
+  set 4: 1048576/(8*32*2^40); set 5: 5767168/(16*16*2^40). PREDICTED = sum over runs of counted trials * P_s.
+FOUND = hits confirmed by the 88 forward words and the 8-word CV equality of both last-chunk compressions; a capped
+subset (C: 2000 per set, W32: 100 per set, W256: 20 per set) is also confirmed by complete-message toy tree hashes.
+Reading: ratio = FOUND / PREDICTED with Poisson SE; the one-sided 97.7% Garwood lower bound against 10/11; the walk/control
+ratio. Clustering: hits per (set, run) dispersion; number of (set, run, g, member) groups (the walk's unit: everything
+but thi fixed) and of (set, run, g) holding two or more hits, against the Poisson expectation sum(lambda^2)/2.
+One pass per arm, no interim look, no set or run excluded.

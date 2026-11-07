@@ -1,0 +1,22 @@
+{
+  "id": "POSEIDON-R2-TWIDDLE-STAGED-20261013",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "stage-D dynamic NTT twiddle loads",
+  "question": "What is the exact dynamic twiddle-table load count over the recorded r2 stage-D half-gcd run?",
+  "labels": ["D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "One deterministic r=2 trial: forward 207278124, inverse 72931212, fused 0; total exact dynamic twiddle loads 280209336. Calls: forward 194064, inverse 81432, fused 0. Stage-D total 8338576745; whole-run total 49887124164; RECONCILE ok=1.",
+  "source": "our workflow: research-only NTT load probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_poseidon_r2_twiddle_stageD_20261013.md; research/retest/poseidon_twiddle_probe/single.c; research/retest/poseidon_twiddle_probe/ntt.c; research/retest/poseidon_twiddle_probe/run.txt",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "poseidon-r2.MEM.TWID.stage-D",
+  "held_fixed": "The checked-in r2 source, deterministic seed, one successful stage-D trial, and the source charging macros; probe subtracts exact data/coefficient loads from X.ld residuals.",
+  "reopen_if": "A universal all-input half-gcd bound or an additional run with a different plan is required for a claim beyond this recorded trace.",
+  "notes": "Research-only instrumentation copy; no staged source, package, score, or submission changed. Run-level computed result, not an attack lever."
+}

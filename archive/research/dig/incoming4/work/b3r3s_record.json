@@ -1,0 +1,22 @@
+{
+  "id": "B3R3-b3r3s-selftest-current",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 b3r3s self-test and ledger recheck",
+  "question": "Does the distinct b3r3s source reproduce its prefile-clean ledger and pass its shipped finite self-test?",
+  "labels": ["C", "D"],
+  "status": "LOCAL_ONLY",
+  "number": "prefile previously ALL PASS; exact N=29093431801591888499697033443257678941569; time_log2=125.10041; peak memory 1048559 B; selftest exit 0",
+  "source": "our workflow: current-package-audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D316_b3r3s_selftest.md; research/blake3_r3/b3r3s/pkg/blake3/claim.json; research/blake3_r3/b3r3s/pkg/blake3/proof.md; research/blake3_r3/b3r3s/pkg/blake3/experiments/rho.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "count",
+  "topic": "blake3-r3.package-prefile-selftest",
+  "held_fixed": "The shipped b3r3s package and its declared premises; only read-only ledger and self-test execution were added.",
+  "reopen_if": "A changed b3r3s artifact or judge ruling appears.",
+  "notes": "Arithmetic matches b3r3t but source/package hashes differ; superseded fixed-prefix row, no staging/submission."
+}

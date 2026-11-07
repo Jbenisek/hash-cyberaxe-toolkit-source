@@ -1,0 +1,20 @@
+{
+  "id": "B3-D179-class-probe",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "coupled omega aliveness within-class invariance",
+  "question": "Does alive(E,y) stay constant over all 32768 members of a fixed class for a fixed typed E?",
+  "labels": ["I"],
+  "status": "SAMPLED",
+  "number": "5,996,544 raw member checks across the listed runs; 0 mixed fixed-E groups",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_omega_class.md; research/retest/b3_omega_coupled/firm/split_probe_class0_100.out; research/retest/b3_omega_coupled/firm/split_probe_class15_50.out; research/retest/b3_omega_coupled/firm/split_probe_all_class_one.out; research/retest/b3_omega_coupled/firm/fixed_a9fa7d4f_all.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "No within-class split was found. This is bounded evidence only; the full 462,791,680 word/class enumeration or an algebraic witness bijection is still required before the lossless representative claim can be credited.",
+  "topic": "b3.omega.class_invariance"
+}

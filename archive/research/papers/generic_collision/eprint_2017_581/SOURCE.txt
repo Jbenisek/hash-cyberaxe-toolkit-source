@@ -1,0 +1,1 @@
+2017_581	Time-Memory Analysis of Parallel Collision Search Algorithms (TCHES 2021(2); eprint title: Time-Memory Trade-offs for Parallel Collision Search Algorithms)	https://tches.iacr.org/index.php/TCHES/article/download/8794/8394

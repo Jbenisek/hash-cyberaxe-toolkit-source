@@ -1,0 +1,21 @@
+{
+ "src_bytes": 8620,
+ "instructions": 24422,
+ "registers": 771,
+ "nodes": 24679,
+ "calls": 99448,
+ "static_total": 987312,
+ "code_region": 954072,
+ "counters": 16384,
+ "uses": 12340,
+ "state": 2400,
+ "scratch": 16856,
+ "fuel": 23438272,
+ "pages": 16,
+ "spare": 61264,
+ "wasm_instructions": 1522,
+ "wasm_bytes": 4017,
+ "highest_nonzero_byte": 987472,
+ "sha256": "90d580d0b73871bfd7bd3ed8a461851a1ef6d2344c4dab31d7069ca5b4f6fc7c",
+ "identical": true
+}

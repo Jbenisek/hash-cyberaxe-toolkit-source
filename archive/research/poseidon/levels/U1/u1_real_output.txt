@@ -1,0 +1,152 @@
+d = 0x333333333333333333333333333333334e9ee0c9a10a60e2e0f0f3f0cccccccd bits 254 popcount 125
+i = 0x36bdcc7b0f28b5df31744fb72326829dff98203a45f8ebf0e047f48898cdb6db
+
+=== Q1: X2 on real inputs ===
+inputs: 1144 (1000 random + 144 edge pairs) ; hash checks 2288 ; failures 0
+round-0 state == M*(A,B,K) and n.s==K on 1144 of 1144 ; fifth-root inverse returned (nk,rho) on 1144 of 1144
+OBSERVED (this script, Q1)
+
+=== Q2: the plane P0 ===
+n = row 2 of M^-1:
+  n0 = 0x2fcbba6f9159a219723a63a0c09dab26aef9112e952fdbb52a418d8d73a7c908
+  n1 = 0x1ec7372574f3851bb4ddd4b4d6452256c5e4960d7424cd3776efab42d4fba90b
+  n2 = 0xd0c2efd6472f12a3c26fa4b7d25b1e487a7435d30f8be81adc8933c6f3c72ee
+K = (2^65+c02)^5 = 0x1bb8b6550fd0a299151ec6e764ce7a0e7639053ef68202d771242177f32f108c ; 2^65+c02 = 0x150c93fef652fb1c2bf03e1a29aa871fef77e7d736766c5f0939d92753cc5dc8
+plane: n0*s0 + n1*s1 + n2*s2 = K   (s = state after R0.M)
+normalised by n2: n0/n2 = 0x84b41798e620e02bc044194036247e5a3f64f561040e9d1e5052189cb2073f7  n1/n2 = 0x2edf5971df68705154f74403de8f795aaf953c8966aa2a173b3fd87a3853002a  K/n2 = 0xe6582dfa3c4e7b00d4f42c72a98d9f40810029fc8033ec938a901cebd4a5636   (s2 = K/n2 - (n0/n2) s0 - (n1/n2) s1)
+column M_.,0 (axis A->nk): ['0xab5e5b874a68de7b3d59fbdc8c9ead497d7a0ab23850b56323f2486d7e11b63', '0x233162630ebf9ed7f8e24f66822c2d9f3a0a464048bd770ad049cdc8d085167c', '0x2e29dd59c64b1037f333aa91c383346421680eabc56bc15dfee7a9944f84dbe4']
+column M_.,1 (axis B->rho): ['0x31916628e58a5abb293f0f0d886c7954240d4a7cbf7357368eca5596e996ab5e', '0x25cae2599892a8b0b36664548d60957d78f8365c85bbab07402270113e047a2e', '0x1d1aab4ec1cd678892d15e7dceef1665cbeaf48b3a0624c3c771effa43263664']
+column M_.,2 (axis K->capacity): ['0x7c045d5f5e9e5a6d803952bbb364fdfa0a3b71a5fb1573519d1cf25d8e8345d', '0x22f5b5e1e6081c9774938717989a19579aad3d8262efd83ff84d806f685f747a', '0x3bf763086a18936451e0cbead65516b975872c39b59a31f615639415f6e85ef1']
+point at (A,B)=(0,0): K*M_.,2 = ['0x1b43dc42131ed88a30b46da8b2a67905376626dc27e7b05ae1d27389256d3372', '0x11b8fa8315c3ab32de9c6eae34fa3b85493ac16f694bb975ed47d41d25a96e42', '0x3f5f4a93cc7cf2c95141c69485ed312211872e35264ed14e2b961c182800aae3']
+n.M_.,0, n.M_.,1, n.M_.,2 = [0, 0, 1] (expect 0,0,1)
+
+capacity variants (cap enters only via cap+c02, PROVED by the definition):
+ cap=2^65 (real)                        cap_val=36893488147419103232 K=0x1bb8b6550fd0a299151ec6e764ce7a0e7639053ef68202d771242177f32f108c  n.s==K on test pt: True ; through origin: False
+ cap=0                                  cap_val=0 K=0x9c7f277036bd7911c4f72ff3c564ea06bb717782cd836bfa811817410e17c3d  n.s==K on test pt: True ; through origin: False
+ cap=1                                  cap_val=1 K=0x31bb8d1dad3598351e34288dac458b96978f2e1db820fd34ad59e80fe3ce5097  n.s==K on test pt: True ; through origin: False
+ cap=-1                                 cap_val=0x40000000000000000000000000000000224698fc094cf91b992d30ed00000000 K=0xd57edf66fd260a13dea040990e69b5a5d87ff50ea23ec5ea69fd2455c7a54e  n.s==K on test pt: True ; through origin: False
+ cap=cap+c02 = 0 (S-box fixed point)    cap_val=0x2af36c0109ad04e3d40fc1e5d65578e032ceb124d2d68cbe8ff357c5ac33a239 K=0x0  n.s==K on test pt: True ; through origin: True
+ cap=cap+c02 = 1 (S-box fixed point)    cap_val=0x2af36c0109ad04e3d40fc1e5d65578e032ceb124d2d68cbe8ff357c5ac33a23a K=0x1  n.s==K on test pt: True ; through origin: False
+ cap=cap+c02 = -1 (S-box fixed point)   cap_val=0x2af36c0109ad04e3d40fc1e5d65578e032ceb124d2d68cbe8ff357c5ac33a238 K=0x40000000000000000000000000000000224698fc094cf91b992d30ed00000000  n.s==K on test pt: True ; through origin: False
+ cap=cap+c02 = i (S-box fixed point)    cap_val=0x21b1387c18d5bac30584119cf97bfb7e102038630f827f93d70e1b6145015913 K=0x36bdcc7b0f28b5df31744fb72326829dff98203a45f8ebf0e047f48898cdb6db  n.s==K on test pt: True ; through origin: False
+ cap=cap+c02 = -i (S-box fixed point)   cap_val=0x34359f85fa844f04a29b722eb32ef642557d29e6962a99e948d8942a1365eb5f K=0x9423384f0d74a20ce8bb048dcd97d6222ae78c1c3540d2ab8e53c6467324926  n.s==K on test pt: True ; through origin: False
+capacity for which the plane contains the point s=-c1 (all three R1.S inputs zero): K* = n.(-c1) = 0x28a26c8f4a241f2f3e28a633fe1763f03d0f1f3f2f26baf797bb9d5db4fe95d  cap* = 0x2f18e3619011f341bbaffc389afdb4d64e7829a8c52189d869d4c65eefdb9d4e  bits 254 (real cap = 2^65, so not reachable; DERIVED)
+n.(-c1) - K = 0x26d17073e4d19f59dec3c37bdb12fc30afde85b105bd61f3a184c94ae820d8d2 (nonzero => real plane does not contain -c1)
+what stays the same for all capacities: normal n, both axis directions; only the offset K (a 1-parameter family of PARALLEL planes translated along M_.,2).
+
+=== Q4: S-box special inputs at round 0 ===
+ a=0   -> nk=0x9f28b8f9ee1b8c2cac09d70892eef0cd3d582ccd84cbdab41d9a4c769bd9cfe | rho=0x14546b2851ddd2eca23c393a014055ced93decccf66118abdb75eed9409ce776 | capacity value cap=0x2af36c0109ad04e3d40fc1e5d65578e032ceb124d2d68cbe8ff357c5ac33a239
+ a=1   -> nk=0x9f28b8f9ee1b8c2cac09d70892eef0cd3d582ccd84cbdab41d9a4c769bd9cff | rho=0x14546b2851ddd2eca23c393a014055ced93decccf66118abdb75eed9409ce777 | capacity value cap=0x2af36c0109ad04e3d40fc1e5d65578e032ceb124d2d68cbe8ff357c5ac33a23a
+ a=-1  -> nk=0x9f28b8f9ee1b8c2cac09d70892eef0cd3d582ccd84cbdab41d9a4c769bd9cfd | rho=0x14546b2851ddd2eca23c393a014055ced93decccf66118abdb75eed9409ce775 | capacity value cap=0x2af36c0109ad04e3d40fc1e5d65578e032ceb124d2d68cbe8ff357c5ac33a238
+ a=i   -> nk=0xb0580aae0a6ea1fc34ed27ac5571aab1270a0b14f8b08088f46863028b53d8 | rho=0xb1237a3610688cbd3b088f12466d86cb68f740b330d0b812290b274d96a9e50 | capacity value cap=0x21b1387c18d5bac30584119cf97bfb7e102038630f827f93d70e1b6145015913
+ a=-i  -> nk=0x1334bf148fb902e3994c4db966086c6ef683fb8e9ba0cad5fabee12bd0efe624 | rho=0x1d969ead42b51d0d70c7e982de19d330fbec658eb9b525d6945b2b3da7cf309c | capacity value cap=0x34359f85fa844f04a29b722eb32ef642557d29e6962a99e948d8942a1365eb5f
+ all values reduced mod p, hence canonical (< p): True
+ real lane-2 input 2^65+c02 = 0x150c93fef652fb1c2bf03e1a29aa871fef77e7d736766c5f0939d92753cc5dc8  in {0,+-1,+-i}? False
+
+=== Q5 (real part): degree-drop directions, exact degrees on lines ===
+ lane 0 drop direction u/v = 0x171bfeac856e5e7dcee70afd00e457a3e654cb49c74d822788485012522646e1 ; check M_i0 u^5 + M_i1 = 0
+ lane 1 drop direction u/v = 0x38eb3b938273ed52c9a30bef357f3dc8b1c42b81580876f06e069ab16e5e48bc ; check M_i0 u^5 + M_i1 = 0
+ lane 2 drop direction u/v = 0x25ad56736388155dcf81c8af6f02c6b5dd04aacd07adf82444e076c8b371a940 ; check M_i0 u^5 + M_i1 = 0
+ three directions distinct: True
+ degrees per lane after each M (rows R0..R3), generic direction (u,v)=(1,3):
+   after R0.M [5, 5, 5]
+   after R1.M [25, 25, 25]
+   after R2.M [125, 125, 125]
+   after R3.M [625, 625, 625]
+ drop direction of lane 0:
+   after R0.M [4, 5, 5]
+   after R1.M [25, 25, 25]
+   after R2.M [125, 125, 125]
+   after R3.M [625, 625, 625]
+ drop direction of lane 1:
+   after R0.M [5, 4, 5]
+   after R1.M [25, 25, 25]
+   after R2.M [125, 125, 125]
+   after R3.M [625, 625, 625]
+ drop direction of lane 2:
+   after R0.M [5, 5, 4]
+   after R1.M [25, 25, 25]
+   after R2.M [125, 125, 125]
+   after R3.M [625, 625, 625]
+ direction pure nk (1,0) [[5, 5, 5], [25, 25, 25]]
+ direction pure rho (0,1) [[5, 5, 5], [25, 25, 25]]
+(degrees are exact: finite differences over F_p, valid because degree < p)
+
+=== Q6: cost of x^(1/5) = x^d ===
+ d: 254 bits, Hamming weight 125, hex 0x333333333333333333333333333333334e9ee0c9a10a60e2e0f0f3f0cccccccd
+ sliding window k=1: squarings 253, multiplications 124, total 377 ; matches pow() on 10 inputs: True
+ sliding window k=2: squarings 253, multiplications 69, total 322 ; matches pow() on 10 inputs: True
+ sliding window k=3: squarings 253, multiplications 65, total 318 ; matches pow() on 10 inputs: True
+ sliding window k=4: squarings 253, multiplications 63, total 316 ; matches pow() on 10 inputs: True
+ sliding window k=5: squarings 250, multiplications 56, total 306 ; matches pow() on 10 inputs: True
+ sliding window k=6: squarings 249, multiplications 63, total 312 ; matches pow() on 10 inputs: True
+ sliding window k=7: squarings 249, multiplications 95, total 344 ; matches pow() on 10 inputs: True
+ hi = d>>128 = 0x33333333333333333333333333333333 == (2^128-1)//5 ? True ; lo = 0x4e9ee0c9a10a60e2e0f0f3f0cccccccd
+ structured (nibble-pattern doubling for hi, window k=1 for lo): squarings 253, mults 67, total 320, correct: True
+ structured (nibble-pattern doubling for hi, window k=2 for lo): squarings 253, mults 44, total 297, correct: True
+ structured (nibble-pattern doubling for hi, window k=3 for lo): squarings 253, mults 40, total 293, correct: True
+ structured (nibble-pattern doubling for hi, window k=4 for lo): squarings 253, mults 38, total 291, correct: True
+ structured (nibble-pattern doubling for hi, window k=5 for lo): squarings 253, mults 42, total 295, correct: True
+ structured (nibble-pattern doubling for hi, window k=6 for lo): squarings 253, mults 54, total 307, correct: True
+ 100 random x: (x^d)^5 == x: True ; (x^5)^d == x: True
+ python timing: pow(x,d,p) 179.8 us, pow(x,5,p) 5.82 us, ratio 31
+
+=== Q7: the 25 pairs at S-box fixed points (a,b in {0,1,-1,i,-i}) ===
+  (a,b)=( 0, 0) lane bits [253, 253, 254] | rank after R0.M,R1.M [0, 0] | final rank r1 0 r2 0 | output-gradient zero: r1=True r2=True | special lanes []
+  (a,b)=( 0, 1) lane bits [252, 254, 253] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 0,-1) lane bits [254, 254, 254] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 0, i) lane bits [254, 253, 254] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 0,-i) lane bits [253, 252, 253] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 1, 0) lane bits [254, 254, 254] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 1, 1) lane bits [253, 253, 252] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 1,-1) lane bits [254, 252, 253] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 1, i) lane bits [254, 254, 253] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( 1,-i) lane bits [253, 254, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-1, 0) lane bits [253, 254, 253] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-1, 1) lane bits [250, 253, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-1,-1) lane bits [253, 252, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-1, i) lane bits [253, 254, 245] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-1,-i) lane bits [251, 254, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( i, 0) lane bits [253, 254, 253] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( i, 1) lane bits [250, 254, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( i,-1) lane bits [254, 253, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( i, i) lane bits [253, 250, 252] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=( i,-i) lane bits [252, 254, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-i, 0) lane bits [254, 254, 254] | rank after R0.M,R1.M [1, 1] | final rank r1 1 r2 1 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-i, 1) lane bits [253, 252, 249] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-i,-1) lane bits [254, 249, 251] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-i, i) lane bits [254, 254, 253] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+  (a,b)=(-i,-i) lane bits [253, 254, 254] | rank after R0.M,R1.M [2, 2] | final rank r1 2 r2 2 | output-gradient zero: r1=False r2=False | special lanes []
+ hash outputs distinct: r=1 True, r=2 True ; min bit length of any R0.M lane over the 25 states: 245
+ repeated lane values (same lane, same value) among the 25 states: 0
+ collinear triples among the 25 grid points (grid in (A,B); affine map to P0 preserves collinearity): total 172 of 2300, 100 axis-parallel, 72 other
+ (state,lane) pairs where the R0.M output lane is itself in {0,+-1,+-i}: 0
+ (state,lane) pairs where the R1.C input lane is in the set: 0
+
+=== Q8: points of P0 whose R1.C image has zero lanes ===
+ lanes (0,1) zero: A=0x3a6b4715e36197c96a9a6f3872a4228ff76b2e677bc2daee281769346513ae75 B=0x165d64bda0c30365e498649bf11808b860bc6a7b495927fd0ba21062a3e476bb
+   nk=0x22fdda23a1ed8ba205a9acbf2953e1eb648ecb0244e5ac6a2ad0445785d8555d
+   rho=0x86ec112fcea07a0fb8fc8d82c6a716630d9a4f9a0b964decf428cd33aae1069
+   R1.C input lanes: ['0x0', '0x0', '0x9b2d7e67acf680114704863d53135870423bf02a5b6414ddd79da0955bb7210'] -> both zero ok: True ; third lane 2 zero? False
+   Jacobian (3x2 wrt nk,rho) rank after each round r=1: [2, 1, 1, 1, 1, 1, 1, 1, 1]  r=2: [2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   hash r=1 0x267c5251442835b57163db9fb6b114b23218759812fd6641f793d72c319b17b3 ; r=2 0x58e38cb0e66762022cc0cdde4c06f11968d6fa1850f79c817822916ed1a4e79
+   gradient of output r=1: ['0x26e854278af0f88a275235eaa52ec9d24e9c2d1167b0427a86e5fcd194d7fe4c', '0x2acf036208a0bb29cbce1cafda3541539d02bcffd68c6fe6632c4f8b6be38731']  r=2: ['0x1947d7c8a6fc2c6ece787dfa319a5f9ad535c059840e71e1870399a907cf240d', '0x36a2162e50cc82b3dfa928fa6642b6ddf5580729abd27784d41fbccaca682a2e']
+ lanes (0,2) zero: A=0x3c80d88605267033c2acc6e39978ff96d087a8e77d92f7c14652fc91b04c8f83 B=0x1f430622884d4c88c3767dfd251d039a0114a4032402ba9f73e7a14f77073e2e
+   nk=0x30333438102d881c76f5f60f9a752b12d2897a481f5f580e1446c04e42158ba4
+   rho=0x1891445539491447d56d610627875c0dd01f4d7b48fd5846939ece3aa7aab781
+   R1.C input lanes: ['0x0', '0x56ca88352495e3b531f6639906f2a46f1123cf5ea8ca2ead4467a8cc69282fa', '0x0'] -> both zero ok: True ; third lane 1 zero? False
+   Jacobian (3x2 wrt nk,rho) rank after each round r=1: [2, 1, 1, 1, 1, 1, 1, 1, 1]  r=2: [2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   hash r=1 0x22f528deee9815c212ae4609c5a3cd85f953511ee40913320b9c63e76bb0eb85 ; r=2 0xa29275fdd64ed0e4ad7e3c48ac7aac3ba552a113ac4b60613b34fd8861505a
+   gradient of output r=1: ['0x3705e94929c2696916d0956e5c9ede6ecbd76c145c3072a889003857e7822523', '0x28dce2facc346788db2ab02c7d9baf1be229a53a33b3f6536a8d39440233ad6a']  r=2: ['0x3af8bd1c4f0837ffe7aa1c55f7a3c12b4ee46d72703256abad15d1050ecb8556', '0x11b5ab118b862642c29cf0f37fc5ae6d8981d7c79b8b12190d28fbd4ae4d848f']
+ lanes (1,2) zero: A=0x2de17246e844b000296eefaaf2116b9705e3af63806d80541c7d6b4be442036c B=0x2622542e119aef1f7c021664aae329063a3e73651cd62e02756427f9437fdd96
+   nk=0x151d98c790e33dad04edaef22c236ffda4e05e6376b519ed16f06c4fe5e9c17b
+   rho=0x42a0778c4db041191ca688588f82884e352d600cea1ee778898ba0e8d00c97b
+   R1.C input lanes: ['0x2a78890d8503b228bfa6bd9b312401c7af4e02a6376ceebb003ef1138f67c72c', '0x0', '0x0'] -> both zero ok: True ; third lane 0 zero? False
+   Jacobian (3x2 wrt nk,rho) rank after each round r=1: [2, 1, 1, 1, 1, 1, 1, 1, 1]  r=2: [2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   hash r=1 0x377750d3532ab3675ec29845d512150699bf55a88dbbc51be33be0cfc95738ca ; r=2 0x2dc2c9ff6ff98bcf25450017d7937b45ef1f6419a7c4f97cceabfb20ab50d62a
+   gradient of output r=1: ['0x3a4f885fd3aee86906a5b9b544da2c6e614cf898f74b8157e624e67ed5e234e8', '0x4ecf350af81af08f5e801012c241285d6a05742b8ac4d8187d8fe64813462f4']  r=2: ['0x209b471736ebcc0c906b0ddce74ea6e4b0ec8735b94e59a9f538e726cc5c95c8', '0x2aa83bb07f05ffe73876e8001d9df2b02e7a9e99c707c98113e38377864a3697']
+ unique (A,B) per pair since M has all 2x2 minors nonzero: PROVED
+ Bezout view: each zero condition is a quintic curve M_i0 a^5 + M_i1 b^5 = const in (nk,rho); two quintics meet in 25 points over the closure, exactly 1 is F_p-rational: DERIVED
+ all three lanes zero needs n.(-c1)=K; n.(-c1)-K = 0x26d17073e4d19f59dec3c37bdb12fc30afde85b105bd61f3a184c94ae820d8d2 (nonzero): impossible for the real capacity
+
+total time 3.1 s

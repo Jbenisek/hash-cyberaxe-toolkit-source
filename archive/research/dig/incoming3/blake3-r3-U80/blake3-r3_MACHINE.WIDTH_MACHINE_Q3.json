@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "word width (bits per register operation)",
+ "question": "Q3 degrees of freedom: the score-optimal lane pitch at W=256",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Lane pitch p (data 32 bits + p-32 guard bits), W=256: p=32 8 lanes (lane-isolated add) 1,080 ops = 135.0 per step (+0.667 bit); p=33 7 lanes 684 = 97.71 (+0.201); p=34 622 = 88.86 (+0.064); p=35 603 = 86.14 (+0.019); p=36 595 = 85.00 (filed, optimum); p=37..40 6 lanes 592 = 98.67 (+0.215); p=44, 48 5 lanes 592 = 118.4 (+0.478). The filed pitch 36 is the optimum of the family; the only free parameter left is the mask placement (greedy by the tracer; floor of this family is 592 operations at 6 lanes).",
+ "evidence": "research/dig/incoming3/blake3-r3-U80/work/width.py, research/dig/incoming3/blake3-r3-U80/work/width.out",
+ "notes": "universe cell blake3-r3|MACHINE.WIDTH|MACHINE|Q3. Greedy mask insertion; a smarter schedule might shave single operations (each is 0.0024 bit), not tried.",
+ "held_fixed": "W = 256, 3 rounds, folded constants",
+ "reopen_if": "a mask schedule that brings p=36 below 595 or p=34 below 560",
+ "gain_basis": "T"
+}

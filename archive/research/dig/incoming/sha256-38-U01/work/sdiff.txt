@@ -1,0 +1,25 @@
+=== sdiff e0000000
+SDIFF delta e0000000
+    signed patterns of e0000000 with weight <= 6: 4 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ==u=============================  xor 20000000  w  1  Pr 2^-1
+      =un=============================  xor 60000000  w  2  Pr 2^-2
+      nnn=============================  xor e0000000  w  3  Pr 2^-3
+      unn=============================  xor e0000000  w  3  Pr 2^-3
+=== sdiff 0003fff0
+SDIFF delta 0003fff0
+    signed patterns of 0003fff0 with weight <= 6: 15 (probability mass 0.8906250000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =============n=============u====  xor 00040010  w  2  Pr 2^-2
+      =============n============un====  xor 00040030  w  3  Pr 2^-3
+      ============nu=============u====  xor 000c0010  w  3  Pr 2^-3
+      =============n===========unn====  xor 00040070  w  4  Pr 2^-4
+      ============nu============un====  xor 000c0030  w  4  Pr 2^-4
+      ===========nuu=============u====  xor 001c0010  w  4  Pr 2^-4
+      =============n==========unnn====  xor 000400f0  w  5  Pr 2^-5
+      ============nu===========unn====  xor 000c0070  w  5  Pr 2^-5
+      ===========nuu============un====  xor 001c0030  w  5  Pr 2^-5
+      ==========nuuu=============u====  xor 003c0010  w  5  Pr 2^-5
+      =============n=========unnnn====  xor 000401f0  w  6  Pr 2^-6
+      ============nu==========unnn====  xor 000c00f0  w  6  Pr 2^-6
+      ===========nuu===========unn====  xor 001c0070  w  6  Pr 2^-6
+      ==========nuuu============un====  xor 003c0030  w  6  Pr 2^-6
+      =========nuuuu=============u====  xor 007c0010  w  6  Pr 2^-6

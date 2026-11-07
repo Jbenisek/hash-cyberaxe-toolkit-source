@@ -1,0 +1,5 @@
+r=1 line=0 m=39062
+lean-pow breakdown: newton total=56854985 arith=21679399 | prefix+scale total=508491 | loop steps=238 total=8794487081 arith=3515054481 per-step total=36951626 arith=14769136
+trial 1 centre 1: gcd degree 1, charged 1508601747
+free(): double free detected in tcache 2
+EXIT 134

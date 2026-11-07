@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "loop control (3 operations per 16 batches)",
+ "question": "R4 score sensitivity of loop control and unroll factor",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Unroll U: 1 +0.00672 bit; 2 +0.00314; 4 +0.00135; 8 +0.00045; 16 filed; 32 -0.00022; 64 -0.00034 (limit with no control at all -0.00045). Control operations per 16 batches: 0 -0.00045; 6 +0.00045; 10 +0.00105. The whole loop control is worth at most 0.0067 bit; going from U = 16 to the largest unroll that fits 2^20 bytes (U = 19) saves 0.00007 bit.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|LEDGER.CTRL|LEDGER|R4. Exact ledger.",
+ "held_fixed": "ledger of the filed entry",
+ "reopen_if": "none (below 0.001 bit)",
+ "gain_basis": "T"
+}

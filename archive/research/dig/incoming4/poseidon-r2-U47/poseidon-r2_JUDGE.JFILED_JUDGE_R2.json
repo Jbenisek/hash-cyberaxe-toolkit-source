@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JFILED (JUDGE)",
+ "question": "R2: own recount: does the stopped r2 package charge what each ruling named",
+ "labels": [
+  "E"
+ ],
+ "status": "OPEN",
+ "number": "Facts: the r2 staged source charges the NTT dispatch (ntt.c CTL(7) \"call, switch on k ...\" comments) and loops 8 per element; I did not recount the whole proof.md against the executed C. The 56ddf2d0 defect size, 0.005 bit = 0.35 percent, would be about 1.1e9 ops at this total.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/orchard/lean_r2/ntt.c; research/poseidon/orchard/lean_r2/pkg_stage_r2/proof.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|JUDGE.JFILED|JUDGE|R2. Greps only (ntt.c, proof.md lines 88-90, 993-1036).",
+ "held_fixed": "r2 pkg_stage_r2 as of 19:42",
+ "reopen_if": "a line-by-line charge audit of the r2 source (the F-COST class) is run",
+ "prior": 0.3,
+ "potential_bits": 0.01
+}

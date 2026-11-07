@@ -1,0 +1,3 @@
+original_filename: wiener_Full-Cost-of-Cryptanalytic-Attacks_JoC2004.pdf
+source_url: https://cr.yp.to/bib/2004/wiener-fullcost.pdf
+downloaded: 2026-10-20 (export/eprint_in via get_book.ps1)

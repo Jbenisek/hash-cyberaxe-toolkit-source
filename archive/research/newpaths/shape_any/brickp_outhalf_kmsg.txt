@@ -1,0 +1,2 @@
+start: brick width 6 (F'=2, |P|=10)
+BRICKP best brick width 6  P=m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,

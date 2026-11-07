@@ -1,0 +1,69 @@
+{
+  "schema": "P3.22-Frobenius-doubling-v1",
+  "center": "12345",
+  "line": 0,
+  "trial": 0,
+  "factor_degree": 53,
+  "field_modulus": 28948022309329048855892746252171976963363056481941560715954676764349967630337,
+  "factor_file": "certB_witness_f.txt",
+  "cofactor_file": "certB_witness_cofactor.txt",
+  "checkpoint_files": [
+    "certB_witness_R_0.txt",
+    "certB_witness_R_1.txt",
+    "certB_witness_R_2.txt",
+    "certB_witness_R_3.txt",
+    "certB_witness_R_4.txt",
+    "certB_witness_R_5.txt",
+    "certB_witness_R_6.txt",
+    "certB_witness_R_7.txt",
+    "certB_witness_R_8.txt",
+    "certB_witness_R_9.txt",
+    "certB_witness_R_10.txt",
+    "certB_witness_R_11.txt",
+    "certB_witness_R_12.txt",
+    "certB_witness_R_13.txt",
+    "certB_witness_R_14.txt",
+    "certB_witness_R_15.txt"
+  ],
+  "composition_steps": [
+    {
+      "checkpoint_j": 0,
+      "checkpoint_file": "certB_witness_R_0.txt",
+      "exponent_before": 0,
+      "exponent_after": 1
+    },
+    {
+      "checkpoint_j": 2,
+      "checkpoint_file": "certB_witness_R_2.txt",
+      "exponent_before": 1,
+      "exponent_after": 5
+    },
+    {
+      "checkpoint_j": 4,
+      "checkpoint_file": "certB_witness_R_4.txt",
+      "exponent_before": 5,
+      "exponent_after": 21
+    },
+    {
+      "checkpoint_j": 5,
+      "checkpoint_file": "certB_witness_R_5.txt",
+      "exponent_before": 21,
+      "exponent_after": 53
+    }
+  ],
+  "composition_final_exponent": 53,
+  "composition_final_equals_X_mod_f": true,
+  "r0_gcd_factor_R0_minus_X_degree": 53,
+  "prime_factor_degree": true,
+  "self_verification": {
+    "recomputed_X_to_p_equals_R0": true,
+    "gcd_factor_R0_minus_X_is_one": false,
+    "all_15_doubling_edges_match": true,
+    "binary_chain_reaches_factor_degree": true,
+    "X_to_p_degree_equals_X_mod_f": true,
+    "factor_times_cofactor_equals_H": true,
+    "factor_squarefree_degree_gt_half": true
+  },
+  "squarefree_gcd_g_gprime_degree": 0,
+  "rabin_result": "FAIL"
+}

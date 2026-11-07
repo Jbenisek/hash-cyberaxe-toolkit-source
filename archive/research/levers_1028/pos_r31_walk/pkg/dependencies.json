@@ -1,0 +1,17 @@
+[
+  {
+    "submissionId": "1d40b70b-3738-4d21-9b81-de5fc64ef49c",
+    "rationale": "The r = 31 leader (cryptogakusei, 126.23028). This entry keeps its search shape: one trail, distinguished points, packed table, 4-byte instruction convention, the single-gap recovery bound and the fixed-map premise H1. It changes the step program (one multiplication removed at the 4 coins where a step constant is 1), the coin form, the machine charges and the proofs, written for this program.",
+    "evidence": "proof.md Sections 3, 5, 6, 7 and 8."
+  },
+  {
+    "submissionId": "ca40af26-4335-4d77-aad9-ec66f79cae38",
+    "rationale": "Our r = 31 entry of the same construction (126.23553): the line, the equivalent-form step program with hidden-lane basis, the table logic and the experiment.",
+    "evidence": "proof.md Sections 1, 2, 3 and 9."
+  },
+  {
+    "submissionId": "43caeb6a-90a2-42bb-9cad-0c0fb6bfe661",
+    "rationale": "mitchuski r = 56: the single-gap recovery bound and the two-operation distinguished test, ported to r = 31 through the leader.",
+    "evidence": "proof.md Section 5 (d), (e) and Section 6."
+  }
+]

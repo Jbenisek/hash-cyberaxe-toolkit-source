@@ -1,0 +1,10 @@
+r=1 seed=101 line: nk=a+u t, rho=b+v t; a=0x2de90db5ec.. u=0x1b1a8ce34d..
+R0  full    degS=[5, 5, 0] degM=[5, 5, 5] expected 5^1=5  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (0s, 0s total)
+R1  full    degS=[25, 25, 25] degM=[25, 25, 25] expected 5^2=25  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (0s, 0s total)
+R2  full    degS=[125, 125, 125] degM=[125, 125, 125] expected 5^3=125  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (0s, 0s total)
+R3  full    degS=[625, 625, 625] degM=[625, 625, 625] expected 5^4=625  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (0s, 0s total)
+R4  partial degS=[3125, 625, 625] degM=[3125, 3125, 3125] expected 5^5=3125  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (0s, 0s total)
+R60 full    degS=[15625, 15625, 15625] degM=[15625, 15625, 15625] expected 5^6=15625  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (1s, 1s total)
+R61 full    degS=[78125, 78125, 78125] degM=[78125, 78125, 78125] expected 5^7=78125  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (4s, 5s total)
+R62 full    degS=[390625, 390625, 390625] degM=[390625, 390625, 390625] expected 5^8=390625  zero-coeffs-inside=[0, 0, 0] first zero idx=[[], [], []]  state-check=MATCH (16s, 21s total)
+R63 full    degS=[1953125, 1953125, 1953125] degM=[1953125] expected 5^9=1953125  zero-coeffs-inside=[0] first zero idx=[[]]  state-check=MATCH (45s, 66s total)

@@ -1,0 +1,23 @@
+{
+  "id": "D442-B3M-SWAR-EXTRACTION-CHARGE-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "SWAR carry/borrow extraction charge for compact selector",
+  "question": "What conditional operation bound follows from the lossless SWAR feature extractor and fixed 8-tree path?",
+  "labels": ["B", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "D441's lossless SWAR construction costs 10 pre-prefix plus 50 prefix operations in the stated 32-bit model. With 32 path comparisons, 8 leaf accumulations, one average, and either 64 direct or 124 cached feature bit reads, the conditional selector bounds are 165 or 225 operations per candidate. Loads/branches/judge charging remain open; safe gain 0.",
+  "source": "our workflow: D442 derived SWAR selector charge",
+  "own_test": true,
+  "evidence": "research/sol_answer_D442_b3m_swar_extraction_charge.md; research/retest/t2/PREREG_D441_SWAR_FEATURE_KAT.md; research/retest/t2/D441_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured; deterministic single-worker KAT/derivation",
+  "notes": "Conditional word-operation model only. Compiled selector, loads/branches, judge acceptance, and exact rate-to-success linkage remain open. No package/stage/filing/submission.",
+  "held_fixed": "D437 8-tree model, D441 KAT, and PR858 no-transfer rule",
+  "reopen_if": "Compiled SWAR selector ledger and organizer charging ruling are available"
+}

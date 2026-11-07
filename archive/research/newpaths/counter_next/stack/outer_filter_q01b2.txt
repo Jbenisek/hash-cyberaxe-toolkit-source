@@ -1,0 +1,19 @@
+outcomes cube_q01b2.out: 14 rows, 14 distinct tau, 14 distinct (tau, eps); mass sum R = 92,073,028,361,889,443,325,897,263,284,224.00
+(1) Q with some tau solvable: 274143744 of 2^32 = 2^-3.970   (37 patterns, DP width 229)
+(2) E with some (tau,eps) solvable: 670775040 of 2^32 = 2^-2.679   (73 patterns, DP width 218)
+   tau 175020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 175060a0: P(1 solvable) = 2^-7.250 | eps 6e21be55: P(2 solvable) = 2^-4.642
+   tau 185020a0: P(1 solvable) = 2^-6.250 | eps 6e21be55: P(2 solvable) = 2^-4.495
+   tau 185060a0: P(1 solvable) = 2^-5.250 | eps 6e21be55: P(2 solvable) = 2^-3.505
+   tau 275020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 275060a0: P(1 solvable) = 2^-7.250 | eps 6e21be55: P(2 solvable) = 2^-4.642
+   tau 285020a0: P(1 solvable) = 2^-8.250 | eps 6e21be55: P(2 solvable) = 2^-6.495
+   tau 285060a0: P(1 solvable) = 2^-7.250 | eps 6e21be55: P(2 solvable) = 2^-5.505
+   tau 385020a0: P(1 solvable) = 2^-6.250 | eps 6e21be55: P(2 solvable) = 2^-4.910
+   tau 385060a0: P(1 solvable) = 2^-5.250 | eps 6e21be55: P(2 solvable) = 2^-3.920
+   tau 675020a0: P(1 solvable) = 2^-7.261 | eps 6e21be55: P(2 solvable) = 2^-5.633
+   tau 675060a0: P(1 solvable) = 2^-6.261 | eps 6e21be55: P(2 solvable) = 2^-4.642
+   tau 685020a0: P(1 solvable) = 2^-7.261 | eps 6e21be55: P(2 solvable) = 2^-6.495
+   tau 685060a0: P(1 solvable) = 2^-6.261 | eps 6e21be55: P(2 solvable) = 2^-5.505
+P(pass) = 99669577442459648 / 2^64 = 5.403099e-03 = 2^-7.5320  (exact)
+mass per passing outer step is 1/P(pass) = 2^7.532 times the average (skipped steps carry none)

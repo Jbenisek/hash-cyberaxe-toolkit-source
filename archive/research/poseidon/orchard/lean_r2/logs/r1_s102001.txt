@@ -1,0 +1,12 @@
+r=1 ncentres=1 seed=102001 m=39062
+INIT arith=17359 other=153554 total=170913
+lean-pow breakdown: newton total=86672156 arith=21679385 | prefix+scale total=781411 | loop steps=238 total=12551925867 arith=3515054480 per-step total=52739184 arith=14769136
+CENTRE 0 j=1 degG=0 success=0 arith=3893980444 all=15081617023 sec=125.1
+  line_setup                               arith=         391 other=        3608 total=        3999     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  build g                                  arith=     1436260 other=    27561870 total=    28998130     1.0s peak=3347168
+  S^((p-1)/2) mod g                        arith=  3536772927 other=  9102606507 total= 12639379434   113.7s peak=8468544
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770866 other=  2057464591 total=  2413235457    10.4s peak=8468640
+SUMMARY r=1 centres=1 success=0 total_all=15081787936 total_arith=3893997803 units=63636236.0 log2_units=25.9233 heap_peak=8468640 secs=125.1
+GAPS gcd=3989065 root=0
+TYPES add=1357769761 sub=1267418942 mul=1235484893 sqr=33324207 ld=1498578110 st=831658750 ctl=8834255224 rnd=1 perm=23298048

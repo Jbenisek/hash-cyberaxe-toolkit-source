@@ -1,0 +1,12 @@
+W rank = 40 (expect 40)
+FES end-to-end (route works iff mismatches=0 at D and digests all match):
+r | D=2^(r-3) | n | FES@D mismatches | FES@D-1 mismatches (control) | end-to-end digests | sec
+3 |  1 | 12 | 0 of 1310400 | -1 of -1 | 384/384 | 0.6
+4 |  2 | 12 | 0 of 1310400 | 1309758 of 1310400 | 384/384 | 1.5
+5 |  4 | 13 | 0 of 2621120 | 2612800 of 2621120 | 384/384 | 3.4
+6 |  8 | 13 | 0 of 2621120 | 1942080 of 2621120 | 384/384 | 5.1
+
+Degree of the chi_r-input f_t via vectorized cubes (degree exactly D => nonzero at D, zero at D+1):
+r | D=2^(r-3) | nonzero-cube fraction by dim
+6 |  8 | dim7:40/40  dim8:40/40  dim9:0/40  (0.1s)
+7 | 16 | dim15:40/40  dim16:40/40  dim17:0/40  (18.2s)

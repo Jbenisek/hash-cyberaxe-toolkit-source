@@ -1,0 +1,7 @@
+solver: s SATISFIABLE
+per G call (inputs a b c d x y -> outputs a2 b2 c2 d2), LM weight:
+  P: in e3cb498a 00000000 938528e2 00000000 00000000 00000000 -> out c001deae 6003e21e 8f869c20 65898fbd   w=109
+  Q: in 82408c24 00000000 ac24c20c 00000000 00000000 00000000 -> out 8f869c20 65898fbd c001deae 6003e21e   w=56
+invalid transitions: 0
+TOTAL LM WEIGHT (recomputed): 165
+COUNTED WEIGHT (all): 165

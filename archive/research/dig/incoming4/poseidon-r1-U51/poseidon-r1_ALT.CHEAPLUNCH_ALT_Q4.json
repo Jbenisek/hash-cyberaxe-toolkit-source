@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.CHEAPLUNCH CheapLunch",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "alternative: apply CheapLunch to the odd-part problem (find S with g(S)=0 over squares) instead of the whole permutation: that is the univariate root problem we already solve; no gain",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/cheaplunch/CHEAPLUNCH.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Reasoning only. | universe cell poseidon-r1|ALT.CHEAPLUNCH|ALT|Q4",
+ "held_fixed": "r=1",
+ "reopen_if": "a bivariate formulation with ideal degree < 78,125"
+}

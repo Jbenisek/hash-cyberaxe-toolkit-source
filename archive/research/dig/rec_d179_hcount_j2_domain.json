@@ -1,0 +1,18 @@
+{
+  "id": "C0961",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 J2-domain h witness counts",
+  "question": "Are coupled J1/J3 h-witness counts invariant under residual member toggles when the J2-valid f is held fixed?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "2,000/2,000 unequal counts for each of 00002000, 00001000, 00000400 in both epsilon rows",
+  "source": "our workflow: D179 J2-domain h-count DP",
+  "own_test": true,
+  "evidence": "research/sol_answer_D179_hcount_j2_domain.md; research/retest/b3_omega_coupled/exact/h_count_j2_domain.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Restricted proof-strategy negative only; redistribution across f remains possible and universal class invariance remains OPEN."
+}

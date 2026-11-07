@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-joint-map-negative",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 exact joint-witness map audit",
+  "question": "Do the four unresolved class toggles preserve the coupled J1-and-J3 witness intersection under a simple late map?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "All four remaining deltas have SAT joint splits at both epsilon values with f,e2 fixed and h fixed; seven affine h transforms also remain SAT in both rows.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/joint_symmetry_smt.py; research/retest/b3_omega_coupled/exact/joint_symmetry_smt.out; research/retest/b3_omega_coupled/exact/joint_transform_smt.py; research/retest/b3_omega_coupled/exact/joint_transform_smt.out; research/sol_answer_D179_omega_class.md",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Negative only for the tested fixed-f/e2 and simple affine h-map families; it neither proves nor refutes universal class invariance. No saving credited."
+}

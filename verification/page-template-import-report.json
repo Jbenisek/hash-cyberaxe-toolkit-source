@@ -1,0 +1,1 @@
+{"passed":true,"import_public_writes":0,"unchanged_html_files":7718,"explicit_builder_routes_tested":["blake3.html","index.html","poseidon.html","results.html","sha256.html","sha3.html","story.html","wiki.html"],"explicit_builder_output":"in-memory only","scope":"Import isolation and explicit rendering contract; not a browser or scientific check."}

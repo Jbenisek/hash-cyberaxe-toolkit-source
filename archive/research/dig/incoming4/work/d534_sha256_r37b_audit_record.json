@@ -1,0 +1,23 @@
+{
+  "id": "D534-SHA256-R37-R37B-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR37b prefile and shipped self-test",
+  "question": "What remains verifiable for pkgR37b when its proof lacks an executable ledger appendix?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgR37b claims time_log2=61.57882 but prefile is SOME FAIL because no executable ledger appendix is present; all other prefile checks pass. One-thread xtab.py selftest exits 0 with F7 violations 0, 9556 fibre lanes, 5882 good pairs, 0 mismatches, packed-u 8000/0 mismatches, zero presence-word false negatives over 3000 random u, direct-mask zero mismatches, and 34-bit lane-index zero mismatches.",
+  "source": "our workflow: D534 read-only pkgR37b audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D534_r37b_audit.md; research/tools/build_pkg/scratch/pkgR37b/pkg/sha256-r37/claim.json; research/tools/build_pkg/scratch/pkgR37b/pkg/sha256-r37/proof.md; research/tools/build_pkg/scratch/pkgR37b/pkg/sha256-r37/experiments/xtab.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; missing ledger appendix prevents exact N/claim confirmation. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgR37b package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "ledger appendix is added or owner/organizer acceptance ruling arrives"
+}

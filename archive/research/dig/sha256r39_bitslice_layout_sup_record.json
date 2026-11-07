@@ -1,0 +1,20 @@
+{
+  "id": "S39-BITSLICE-W5W12-20261014-SUP",
+  "hash": "sha256-39",
+  "row_i": null,
+  "row_j": null,
+  "object": "bit-sliced gates with layout W5..W12",
+  "question": "Supersede the uncounted gate-count pointer after the exact local probe.",
+  "labels": ["B"],
+  "status": "COMPUTED",
+  "number": "Superseded by exact 53551-gate / 872-plane probe",
+  "source": "research/sol_answer_S39_bitslice_layout_1014.md",
+  "own_test": true,
+  "evidence": "research/dig/sha256r39_bitslice_layout_record.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Bookkeeping only; the conditional lever remains open for a complete charged implementation.",
+  "supersedes": ["S39-D11"],
+  "kind": "supersession"
+}

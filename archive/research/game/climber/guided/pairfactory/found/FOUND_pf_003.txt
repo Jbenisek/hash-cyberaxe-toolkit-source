@@ -1,0 +1,11 @@
+M1: W=19df3b70 9997fb9d f1c12ce5 1f86b92c 30a05105 2faccfd1 0b02b1de a6c5bab0 eb068841 034ff071 815ecee4 f6e25c47 a946e11e b05f04ad 43660038 d80d950f
+   chain=022d61b0 63db70f8 79db272b 05bbef1d c8beef38 86851078 ea879674 7e996b19
+   out=101b46e1 70b83077 11c367ad b2ce4b99 5071bc8d 6a31902c d06d8bdc ea9001d1
+M2: W=19df3b70 9997fb9d f1c12ce5 1f86b92c 30a05105 2faccfd1 0b02b1de a6c5bab0 ab068841 0bcfe071 c15ecee4 f0e07f73 a956f91e b05f04ad 43660038 d80d950f
+   chain=022d61b0 63db70f8 79db272b 05bbef1d c8beef38 86851078 ea879674 7e996b19
+   out=101b46e1 70b83077 11c367ad b2ce4b99 5071bc8d 6a31902c d06d8bdc ea9001d1
+messages differ: True  outputs equal: True
+state XOR diff per register: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000  chaining XOR diff: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+INDEP n=39 w=32 chaining=sfs: differing message words [8, 9, 10, 11, 12]; outputs equal: True
+INDEP VERIFIED
+# pairfactory pf_003: source k030 band 6-9 (first), R=39 pub39 own char sfs; cpu 27.8 s; on-char True; 2026-10-28 04:04

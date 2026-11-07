@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-j2-span",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 exact J2 XOR-span audit",
+  "question": "Do the five common single-mask J2 symmetries generate additional XOR invariances, and do they provide keep-g witnesses for the four unresolved class toggles?",
+  "labels": ["I", "K"],
+  "status": "COMPUTED",
+  "number": "All 32 masks in the XOR span of {00001000,00002000,04000000,20000000,80000000} preserve the exact J2 relation for both epsilon rows; q=ROR12(delta) is outside the span for every unresolved delta, with paired counts 0/0 for 03e00000, 00001000, 00000400 and half-base paired counts for 00002000.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/j2_span_audit.py; research/retest/b3_omega_coupled/exact/j2_span_audit.out",
+  "date": "2026-10-12",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Exact finite carry-DP result for J2 only. It neither proves nor refutes coupled J1/J3 class invariance; no saving credited."
+}

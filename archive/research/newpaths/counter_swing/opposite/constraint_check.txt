@@ -1,0 +1,15 @@
+Part 1 (1000 real trials of the counter arrangement; organizer _chunk_output/_compress, 2 rounds)
+  1a legal pair (B bytes 55..62 = 0): CV words 0,2,5,7 equal 1000/1000
+  1b B bytes 55..62 nonzero (one byte, or all eight): CV words 0,2,5,7 equal 0/2000
+     round-0 column state S equal for A and B: 2000/2000 (the tail words w13..w15 first enter round 0 at the diagonals D2, D3)
+     number of differing words of the round-0 output X (16 words): 4 words: 1004, 8 words: 996
+
+Part 2 (word model; reverse peeling, validated against brute force in counter\structure)
+  [counter fixed, w14 0, w15 0] basis 8: Y4+E1.d1:no  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:no  Y4+E1.b1:no
+  [counter fixed, w14 free, w15 0] basis 9: Y4+E1.d1:no  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:no  Y4+E1.b1:no
+  [counter fixed, w14 0, w15 free] basis 9: Y4+E1.d1:no  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:no  Y4+E1.b1:no
+  [counter fixed, w14 free, w15 free] basis 10: Y4+E1.d1:no  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:no  Y4+E1.b1:no
+  [counter t free, w14 0, w15 0] basis 9: Y4+E1.d1:YES  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:YES  Y4+E1.b1:no
+  [counter t free, w14 free, w15 0] basis 10: Y4+E1.d1:YES  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:YES  Y4+E1.b1:no
+  [counter t free, w14 0, w15 free] basis 10: Y4+E1.d1:YES  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:YES  Y4+E1.b1:no
+  [counter t free, w14 free, w15 free] basis 11: Y4+E1.d1:YES  Y4+E1.d1+E3.h1:no  Y4+E1.d1+E3.g1:no  Y4+E1.d1+E3.f1:no  Y4+E1.d1+E3.e2:no  Y4+E1.d1+Y14:no  Y4+E1.d1+E1.b1:no  Y4+E1.d1+Y9:no  Y4+E1.d1+w8:no  Y4+E3.h1:YES  Y4+E1.b1:no

@@ -1,0 +1,82 @@
+=== Q7: 20 random lines, tracker vs exact ===
+  20 lines x 3 rounds x 3 lanes = 180 exact polynomials: tracker == exact top coefficient everywhere: True; every degree exactly 5^(k+1): True; zero coefficients (exponents 0..deg) in total: 0; t=3.4s
+=== Q5: direction families ===
+F_p roots tau=U/V of the top forms: {'R0_lane0': 1, 'R0_lane1': 1, 'R0_lane2': 1, 'R1_lane0': 1, 'R1_lane1': 1, 'R2_lane0': 1, 'R2_lane1': 2, 'R2_lane2': 1, 'R3_lane2': 1}
+(R3 lane0: none; R3 lane1: none; R3 lane2: 1; R2 lanes 1,1,2 ... see q2_forms_output.txt)
+-- direction from root of form R0_lane0: tau=0x20476d5784fb..., lane 0 should lose its top coefficient after round 0
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 125, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+   after R0 only: degrees [4, 5, 5]
+-- direction from root of form R0_lane1: tau=0x32dd79815648..., lane 1 should lose its top coefficient after round 0
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 125, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+   after R0 only: degrees [5, 4, 5]
+-- direction from root of form R0_lane2: tau=0x76808431efc6..., lane 2 should lose its top coefficient after round 0
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 125, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+   after R0 only: degrees [5, 5, 4]
+-- direction from root of form R1_lane0: tau=0x47f8d471cf80..., lane 0 should lose its top coefficient after round 1
+   after R1: degrees [24, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 125, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+-- direction from root of form R1_lane1: tau=0x37bff86512e7..., lane 1 should lose its top coefficient after round 1
+   after R1: degrees [25, 24, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 125, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+-- direction from root of form R2_lane0: tau=0x2663d0ad5289..., lane 0 should lose its top coefficient after round 2
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [124, 125, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+-- direction from root of form R2_lane1: tau=0x15d88470bd70..., lane 1 should lose its top coefficient after round 2
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 124, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+-- direction from root of form R2_lane1: tau=0x31b7dd680790..., lane 1 should lose its top coefficient after round 2
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 124, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+-- direction from root of form R2_lane2: tau=0x1d7956d7477d..., lane 2 should lose its top coefficient after round 2
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 125, 124] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 625] (generic 625)   [exact; offsets random]
+-- direction from root of form R3_lane2: tau=0x2d13ee69eb7b..., lane 2 should lose its top coefficient after round 3
+   after R1: degrees [25, 25, 25] (generic 25)   [exact; offsets random]
+   after R2: degrees [125, 125, 125] (generic 125)   [exact; offsets random]
+   after R3: degrees [625, 625, 624] (generic 625)   [exact; offsets random]
+-- direction v=0 (horizontal)
+  v=0 (horizontal) R1: degrees [25, 25, 25] (generic 25); tracker==exact top coeff [True, True, True]; zero coefficients among 0..25 per lane [0, 0, 0]
+  v=0 (horizontal) R2: degrees [125, 125, 125] (generic 125); tracker==exact top coeff [True, True, True]; zero coefficients among 0..125 per lane [0, 0, 0]
+  v=0 (horizontal) R3: degrees [625, 625, 625] (generic 625); tracker==exact top coeff [True, True, True]; zero coefficients among 0..625 per lane [0, 0, 0]
+-- direction u=0 (vertical)
+  u=0 (vertical) R1: degrees [25, 25, 25] (generic 25); tracker==exact top coeff [True, True, True]; zero coefficients among 0..25 per lane [0, 0, 0]
+  u=0 (vertical) R2: degrees [125, 125, 125] (generic 125); tracker==exact top coeff [True, True, True]; zero coefficients among 0..125 per lane [0, 0, 0]
+  u=0 (vertical) R3: degrees [625, 625, 625] (generic 625); tracker==exact top coeff [True, True, True]; zero coefficients among 0..625 per lane [0, 0, 0]
+-- direction U=V (tau=1)
+  U=V (tau=1) R1: degrees [25, 25, 25] (generic 25); tracker==exact top coeff [True, True, True]; zero coefficients among 0..25 per lane [0, 0, 0]
+  U=V (tau=1) R2: degrees [125, 125, 125] (generic 125); tracker==exact top coeff [True, True, True]; zero coefficients among 0..125 per lane [0, 0, 0]
+  U=V (tau=1) R3: degrees [625, 625, 625] (generic 625); tracker==exact top coeff [True, True, True]; zero coefficients among 0..625 per lane [0, 0, 0]
+-- direction U=-V (tau=-1)
+  U=-V (tau=-1) R1: degrees [25, 25, 25] (generic 25); tracker==exact top coeff [True, True, True]; zero coefficients among 0..25 per lane [0, 0, 0]
+  U=-V (tau=-1) R2: degrees [125, 125, 125] (generic 125); tracker==exact top coeff [True, True, True]; zero coefficients among 0..125 per lane [0, 0, 0]
+  U=-V (tau=-1) R3: degrees [625, 625, 625] (generic 625); tracker==exact top coeff [True, True, True]; zero coefficients among 0..625 per lane [0, 0, 0]
+-- special offsets (generic direction): sparsity of exact polynomials
+  offset a=0 (nk=-c00), b random
+   R1: degrees [25, 25, 25]; nonzero coeffs [26, 26, 26] of 26; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+   R2: degrees [125, 125, 125]; nonzero coeffs [126, 126, 126] of 126; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+   R3: degrees [625, 625, 625]; nonzero coeffs [626, 626, 626] of 626; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+  offset a=0 and b=0 (through the (0,0) of the S-box inputs)
+   R1: degrees [25, 25, 25]; nonzero coeffs [6, 6, 6] of 26; exponent residues mod 5 present [[0], [0], [0]]
+   R2: degrees [125, 125, 125]; nonzero coeffs [26, 26, 26] of 126; exponent residues mod 5 present [[0], [0], [0]]
+   R3: degrees [625, 625, 625]; nonzero coeffs [126, 126, 126] of 626; exponent residues mod 5 present [[0], [0], [0]]
+  offset a=1,b=1 (fixed-point inputs)
+   R1: degrees [25, 25, 25]; nonzero coeffs [26, 26, 26] of 26; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+   R2: degrees [125, 125, 125]; nonzero coeffs [126, 126, 126] of 126; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+   R3: degrees [625, 625, 625]; nonzero coeffs [626, 626, 626] of 626; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+  offset a=i,b=-i
+   R1: degrees [25, 25, 25]; nonzero coeffs [26, 26, 26] of 26; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+   R2: degrees [125, 125, 125]; nonzero coeffs [126, 126, 126] of 126; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+   R3: degrees [625, 625, 625]; nonzero coeffs [626, 626, 626] of 626; exponent residues mod 5 present [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+done t=7.9s

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "JUDGE.JHEUR score-critical heuristic H1",
+ "question": "control (known-answer or independent check)",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "control: uniform-coefficient toy 0.4013 vs model 0.3935; Poisson context in proof.md vs sample 0.4308 consistent; judges flagged \"CI endpoint is not a lower bound\", pooled lines, old build",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "calc.json toy_*. | universe cell poseidon-r1|JUDGE.JHEUR|JUDGE|R3",
+ "held_fixed": "toy",
+ "reopen_if": "a proved bound"
+}

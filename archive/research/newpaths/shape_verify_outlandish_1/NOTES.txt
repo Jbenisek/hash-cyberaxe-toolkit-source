@@ -1,0 +1,70 @@
+shape_verify_outlandish_1 - skeptic check of the SPHERE door (shape (c), shape_odd/NOTES.txt):
+  "hold 3 of the 4 half-digest words out0,2,5,7 with 0 checks -> h = 32 -> 2^80".
+Research only.  No yukon, no submit, no trace.  Plain text.  Labels: COMPUTED / DERIVED / GUESS.
+
+VERDICT: REFUTED (the door is closed, not open).  In the plain guess-and-determine model it is proven closed; with
+  per-call tables (no promotions) it is closed by computation; with promoted constants + per-call tables a search
+  found nothing (evidence, not proof).  The 600 s "UNKNOWN" SAT runs in shape_odd/ were UNSAT instances.
+
+1. THE LEMMA (DERIVED, checked by brute force)
+  Plain model: each primitive equation solves any ONE of its words once all its others are known.
+  Claim: a 0-check order exists  <=>  the 2-core of the equation hypergraph (peel: drop an equation that has a word
+  occurring in no other remaining equation) is empty.
+  Proof.  With 0 checks the guesses number F = vars - eqs, so every equation solves exactly one word (one equation
+  cannot solve two words: the first solve needs the second known).  Take the core equation used LAST; it solves a
+  core word w; w lies in >= 2 core equations, so another core equation e' was used earlier while w was still
+  unknown - impossible (e' needs all its words but its own target known, and its target is not w).  So a non-empty
+  core forces >= 1 equation that never solves anything = >= 1 check.  Conversely reverse peeling gives an order.
+  Guesses cannot "break" a 2-core (shape_odd/core.py doc line says they must; that is the error).
+  lemma_check.py (COMPUTED): 1406 random small hypergraphs (545 with non-empty core), exhaustive over all guess
+  sets of size F: lemma agrees 1406/1406.
+
+2. THE REAL SYSTEM (COMPUTED, peel.py, independent rebuild from the spec - does not import gd_order.py)
+  peel_base.txt: equations left in the 2-core (plain) and after generous per-call table peeling:
+     held -           core 0   (16 guesses = the message, consistent)
+     held 1 word      core 102 / 102 / 104 / 104      (out0 / out2 / out5 / out7)
+     held 2 words     core 105..107
+     held 3 words     core 107 / 107 / 108 / 108      ({0,2,5} {0,2,7} {0,5,7} {2,5,7})
+     held 4 words     core 109
+  Same numbers as shape_odd/core.txt (two independent builders agree).  So c(k) >= 1 for EVERY k >= 1 and every
+  subset, without SAT: the k = 3 door with 0 checks does not exist in the plain model.  It also answers
+  sat_sphere.py's own question: one word cannot be held with 0 checks.
+  Tables (generous): any subset of ONE call's remaining equations with dof <= 2 (non-constant words minus
+  equations) may be removed when at most dof of its words occur outside it (trigger), trigger validity NOT
+  checked (over-generous on purpose).  This covers gd_promote.py's K-call tables and the C0/C2, C1/C3 cycles and
+  Sol's pivots.  Without promotions only the 4 K calls qualify, and they never peel: core sizes unchanged.
+
+3. PROMOTED CONSTANTS (sub-families) + per-call tables (COMPUTED, evidence only)
+  Promote P to family constants; equations made of constants only drop out (paid once); keep F' >= 3 words.
+  promote_search.py greedy (held 0,2,5): best core 88 at F' = 3 (prom_test.txt).
+  anneal.py: all 58,650 message-word subsets of size 1..10, and 25,000-step annealing over message words +
+  all call outputs, for {0,2,5} and {0,5,7}: results in msg_025.txt, msg_057.txt, ann_025.txt, ann_057.txt.
+  (see RESULTS below).  Not searched: tables spanning two or more G calls; promotions outside the pool.
+
+4. COST ACCOUNTING (DERIVED, contest model literally)
+  If the door existed: 1.18 * 2^80 members (160-bit birthday), each ~ one compression of word ops -> ~2^80.2.
+  The 2^80 arithmetic is right; its premise c(3) = 0 is false (plain) / unsupported (tables).
+  With c(3) >= 1: >= 2^32 rejected attempts per member -> >= 2^(80+32) = 2^112 compression units if an attempt
+  costs a compression; even the extreme word-op discount (1 op = 1/430 unit per failed attempt) leaves >= 2^103.
+  No 1-check order for k = 3 is known (greedy best is 3 checks -> 2^176, i.e. generic 2^128 is cheaper).
+  Note: at the 2^80 level "preprocessing up to 2^85 is negligible" no longer holds; only tables <= ~2^76 work
+  would be negligible.  2-dof tables (2^64) are fine.
+  32-bit extrapolation: the core argument is structural (word level, every primitive is bijective in each word),
+  so it holds at w = 32 exactly; no toy extrapolation is involved.
+
+RESULTS of the promotion searches (COMPUTED, 2026-10-08; equations left after generous table peeling, need 0):
+  all 58,650 message-word promotion sets (size 1..10, F' >= 3):  best 107 for {0,2,5}, 108 for {0,5,7}
+     (= no promotion; promoting a message word never helps, often hurts: m5, m8, m12, m15 occur once and are
+     what the peeling uses)                                        msg_025.txt, msg_057.txt
+  annealing 25,000 steps over msg + all call outputs:              best 104 ({0,2,5}), 105 ({0,5,7})
+  greedy (+3000 random sets):                                       best 88 ({0,2,5}), 89 ({0,5,7}) at F' = 3
+                                                                    prom_test.txt, prom_025.txt, prom_057.txt
+  Nothing comes near an empty system.  Evidence, not proof, for the promoted + table model.
+
+BOTTOM LINE (for the orchestrator)
+  Claim "sphere k=3, 0 checks, 2^80": REFUTED.  Plain model: impossible (lemma + core 107/108).  Per-call tables:
+  impossible (core unchanged).  Promotions + per-call tables: none found.  Not covered: tables over several G
+  calls at once; algorithms outside guess-and-determine.  Corrected: the k = 3 sphere costs >= 2^112 compression
+  units (>= 2^103 with an extreme word-op discount) even if a 1-check order existed; none is known (best found
+  3 checks), so with known orders the sphere is no better than generic 2^128.
+  Compute used: <= 4 Windows python processes, no WSL, no GPU, no yukon, no trace.  Nothing blocked.

@@ -1,0 +1,27 @@
+23:54:43 [filter 6s] FILTER L4b: ONLY the betas with k <= 15: 9488, answered 9488, lines not understood 0; no eps 4357, infeasible 0, no passing outcome 4771, with a passing outcome 360 (passing outcomes in all 187857); by k: 13:20 14:31 15:309
+23:55:02 [sys 19s] sys (ONLY k <= 15) L4b: betas with a passing outcome 360: SAT 1 (models right in plain arithmetic 1), UNSAT 359, undecided 0; sample of the others 300: SAT 0, UNSAT 300, undecided 0; seconds 19
+23:55:03 [satcount 1s] satcount L4b: SAT betas not yet counted 1, finished 1, processes stopped at the time limit 0, sum 2162688.0000, seconds 0
+23:55:03 [report 0s] REPORT L4b: R 2,162,688.0000 (2^21.0444) parts 1 SAT 1 counted 1 k14 0/4320 | NOT FULL: filter run only for the betas with k <= 15 (9488 of 178045 valid betas)
+23:55:03 run_pin L4b done in 26s
+23:56:53 [filter 37s] FILTER L4b: ONLY the betas with k <= 18: 48898, answered 48898, lines not understood 0; no eps 25433, infeasible 0, no passing outcome 20303, with a passing outcome 3162 (passing outcomes in all 2262452); by k: 13:20 14:31 15:309 16:302 17:1400 18:1100
+23:58:29 [sys 96s] sys (ONLY k <= 18) L4b: betas with a passing outcome 3162: SAT 4 (models right in plain arithmetic 4), UNSAT 3158, undecided 0; sample of the others 300: SAT 0, UNSAT 300, undecided 0; seconds 96
+23:58:45 [satcount 16s] satcount L4b: SAT betas not yet counted 4, finished 4, processes stopped at the time limit 0, sum 2387968.0105, seconds 17
+23:58:46 [report 0s] REPORT L4b: R 2,387,968.0105 (2^21.1874) parts 4 SAT 4 counted 4 k14 0/4320 | NOT FULL: filter run only for the betas with k <= 18 (48898 of 178045 valid betas)
+23:58:46 run_pin L4b done in 150s
+23:59:06 [filter 20s] FILTER L8b: ONLY the betas with k <= 18: 30867, answered 30867, lines not understood 0; no eps 16102, infeasible 0, no passing outcome 12134, with a passing outcome 2631 (passing outcomes in all 855582); by k: 10:2 11:4 12:14 13:56 14:77 15:310 16:302 17:1080 18:786
+00:00:47 [sys 101s] sys (ONLY k <= 18) L8b: betas with a passing outcome 2631: SAT 16 (models right in plain arithmetic 16), UNSAT 2615, undecided 0; sample of the others 300: SAT 0, UNSAT 300, undecided 0; seconds 100
+00:07:43 [satcount 416s] satcount L8b: SAT betas not yet counted 16, finished 16, processes stopped at the time limit 0, sum 90794241.6121, seconds 416
+00:07:43 [report 0s] REPORT L8b: R 90,794,241.6121 (2^26.4361) parts 16 SAT 16 counted 16 k14 0/4660 | NOT FULL: filter run only for the betas with k <= 18 (30867 of 101151 valid betas)
+00:07:43 run_pin L8b done in 537s
+00:08:29 [filter 46s] FILTER L8c: ONLY the betas with k <= 18: 48046, answered 48046, lines not understood 0; no eps 19920, infeasible 0, no passing outcome 18367, with a passing outcome 9759 (passing outcomes in all 6283587); by k: 10:11 12:135 14:784 15:20 16:2654 17:233 18:5922
+00:15:05 [sys 396s] sys (ONLY k <= 18) L8c: betas with a passing outcome 9759: SAT 86 (models right in plain arithmetic 86), UNSAT 9673, undecided 0; sample of the others 300: SAT 0, UNSAT 300, undecided 0; seconds 395
+00:25:59 [satcount 654s] satcount L8c: SAT betas not yet counted 86, finished 61, processes stopped at the time limit 2, sum 36988512.9742, seconds 654
+00:26:00 [report 1s] REPORT L8c: R 36,988,512.9742 (2^25.1406) parts 61 SAT 86 counted 61 k14 0/4161 | NOT FULL: filter run only for the betas with k <= 18 (48046 of 182508 valid betas); 25 SAT betas not finished by the calculator (R is a lower bound)
+00:26:00 run_pin L8c done in 1097s
+00:36:47 [filter 36s] FILTER N6a: ONLY the betas with k <= 16: 18829, answered 18829, lines not understood 0; no eps 9363, infeasible 0, no passing outcome 5151, with a passing outcome 4315 (passing outcomes in all 2595559); by k: 10:1 11:9 12:48 13:189 14:540 15:1188 16:2340
+00:43:04 [sys 377s] sys (ONLY k <= 16) N6a: betas with a passing outcome 4315: SAT 17 (models right in plain arithmetic 17), UNSAT 4298, undecided 0; sample of the others 300: SAT 0, UNSAT 300, undecided 0; seconds 376
+00:54:26 [satcount 682s] satcount N6a: SAT betas not yet counted 17, finished 1, processes stopped at the time limit 1, sum 6533.0000, seconds 682
+00:54:26 [report 0s] REPORT N6a: R 6,533.0000 (2^12.6735) parts 1 SAT 17 counted 1 k14 0/4181 | NOT FULL: filter run only for the betas with k <= 16 (18829 of 186143 valid betas); 16 SAT betas not finished by the calculator (R is a lower bound)
+00:54:26 run_pin N6a done in 1095s
+01:03:16 [satfirst 480s] satfirst N6a: SAT betas not yet counted 16, finished 4, processes stopped at the time limit 1, sum 25606286.5000, seconds 480
+01:03:16 [report] REPORT N6a: R 25,612,819.5000 (2^24.6104) parts 5 SAT 17 counted 5 k14 0/4181 | NOT FULL: filter run only for the betas with k <= 16 (18829 of 186143 valid betas); 12 SAT betas not finished by the calculator (R is a lower bound)

@@ -1,0 +1,22 @@
+{
+  "id": "D785-SHA256-R38-CARRIER-NONE-CONTROL-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "r38 late-window carrier option control",
+  "question": "Does disabling the late-window union carrier change the exact-output/cell ratio for chi38 rows 22..37?",
+  "labels": ["C", "S", "Z"],
+  "status": "SAMPLED",
+  "number": "Eight same-seed pairs (7201..7208), 2^27 proposals per arm: union and --carrier none both have pooled exact/cells 42141/16573, log2 ratio +1.3463897705; every per-seed delta is exactly 0 and all diagnostics are zero. Source proves the carrier branch is inactive because a=22>e1=21.",
+  "source": "our workflow: D785 r38 carrier-none preregistered control",
+  "own_test": true,
+  "evidence": "research/prereg_D785_r38_carrier_none.md; research/retest/r38_stack_D250/carrier_none_run.sh; research/retest/r38_stack_D250/analyze_carrier_none.py; research/retest/r38_stack_D250/carrier_none_summary.md; research/sol_answer_D785_r38_carrier_none.md; research/tools/traillab/src/smc.c; research/tools/traillab/src/main.c",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "peak_mem": "union 187776 KiB = 2^27.51865316 B; none 186536 KiB = 2^27.50909456 B, measured seed-7209 maximum RSS",
+  "held_fixed": "chi38.txt; rows 22..37; event out; no prefix relaxation; same seeds 7201..7208; np=8192; mt=16384; six threads nice 10",
+  "notes": "Exact implementation control plus finite paired measurements. The carrier option is inactive for a=22>e1=21, so this does not test global Table-4 independence or transfer to the shipped q3 law. No package/stage/filing/submission.",
+  "reopen_if": "A window beginning at or before e1, or a schedule-recomputed full-path joint-law experiment, is run."
+}

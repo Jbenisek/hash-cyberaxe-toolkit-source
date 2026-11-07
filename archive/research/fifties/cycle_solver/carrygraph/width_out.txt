@@ -1,0 +1,6 @@
+(1) time sweep, all frames 0: peak level 97.00  log2(sum 2^level) 102.16  end level 0.00
+    best of 20 restarts (min log2 sum): frames {'Y12': 8, 'd1': 0, 'a1': 0, 'Dd1': 15, 'w10': 0, 'C1a1': 7, 'C1c1': 20, 'Y1': 0, 'chk': 20} -> peak 75.75, log2 sum 80.60, end 0.00
+(2) bit graph: 567 vertices, 3030 edges
+    treewidth LOWER bound (minor-min-width): 23
+    treewidth upper bound min-degree (best of 5): 107
+    treewidth upper bound min-fill: 112

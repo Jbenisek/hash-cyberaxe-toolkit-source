@@ -1,0 +1,1 @@
+2016/374	Analysis of SHA-512/224 and SHA-512/256	s2	https://link.springer.com/content/pdf/10.1007/978-3-662-48800-3_25.pdf

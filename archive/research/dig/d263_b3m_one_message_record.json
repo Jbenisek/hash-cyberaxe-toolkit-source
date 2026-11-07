@@ -1,0 +1,22 @@
+{
+  "id": "D263-B3M-ONE-MESSAGE-CONSTRUCTION",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "one-message-at-a-time B3M payload construction",
+  "question": "Can the shipped shared trial state construct A and B sequentially without retaining both payloads while preserving exact bytes and solved counter?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "seed 0xD263; 256 random outer/member choices; KAT PASS; 0 payload mismatches; 0 counter mismatches; exact lengths 55 and 63 in all trials",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/b3m_one_message/PREREG_D263_ONE_MESSAGE.md; research/retest/b3m_one_message/one_message_schedule.py; research/sol_answer_D263_b3m_one_message_schedule.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Finite construction-equivalence evidence only. Universal source rewrite, allocator release accounting, output protocol, and organizer memory ruling remain open; no safe claimable gain.",
+  "held_fixed": "Unchanged pkgB3S2 frontline equations; shared state and c1 from shipped step_ct; one payload at a time; seed 0xD263; 256 trials",
+  "reopen_if": "A source-level one-message organizer protocol and exact final-state/memory ledger are accepted",
+  "topic": "blake3-r2 B3M streamed output"
+}

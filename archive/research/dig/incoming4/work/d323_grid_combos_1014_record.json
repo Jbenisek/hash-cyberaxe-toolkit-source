@@ -1,0 +1,22 @@
+{
+  "id": "D323-GRID-COMBOS-1014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "PR858 grid combination arithmetic",
+  "question": "Which live lever combinations have a computed score under the merged memory rule, and which top pairs still require a common-base test?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact/quoted arithmetic: S5Z 39.75228, DP-rho 129.91334 conditional with M=2^22.1, K=13 249.05565 with M=2^145.01, LOW37 60.99099 (<2^20), R38M 87.90374 (<2^20), B3M 86.18657 conditional, Poseidon r1 28.29162 conditional, Poseidon r2 32.81353.",
+  "source": "our workflow: D323 grid combinations",
+  "own_test": true,
+  "evidence": "research/sol_answer_GRID_COMBOS_1014.md; research/LEVERS.md; research/memtriage/SUMMARY.md; research/retest/t1/packed_charge_audit.json; research/retest/poseidon_r2_memrule_arithmetic.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "peak_mem": "UNKNOWN",
+  "notes": "Arithmetic and source reconciliation only. R37/R38 common-base combinations, K=13 own implementation, and B3M full-search stream/memory trace are not runnable within the cap or are blocked by non-owned artifacts; no combination gain is credited.",
+  "held_fixed": "existing ledgers, memory envelopes, and current board rows",
+  "reopen_if": "A common-base shipped implementation and full preprocessing-inclusive memory trace become available"
+}

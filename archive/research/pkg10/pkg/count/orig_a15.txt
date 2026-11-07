@@ -1,0 +1,19 @@
+original pair_calc.c sha256 d13ab39a507d07bd, binary aa02c98936ffeb25
+PAIR 830303cf 18b0e098 wt_eta 15 wt_beta 11 cap 31 taus 322560 passing 128 positive 15 sampled 0  E1 probability of passing 2^-30.1  class-rate part 125280256.0 (log2 26.90)  largest share 0.20
+EXACT-E1 830303cf 18b0e098 Y11 7af77f38: E1 probability of the positive outcomes 2^-32.3  class-rate part 67698688.0 (log2 26.01)  largest share 0.37  formula fallbacks 0
+exit 0 beta 18b0e098
+PAIR 830303cf 18b1a098 wt_eta 15 wt_beta 11 cap 31 taus 403200 passing 106 positive 20 sampled 0  E1 probability of passing 2^-29.0  class-rate part 52219904.0 (log2 25.64)  largest share 0.32
+EXACT-E1 830303cf 18b1a098 Y11 7af77f38: E1 probability of the positive outcomes 2^-30.9  class-rate part 51384320.0 (log2 25.61)  largest share 0.33  formula fallbacks 0
+exit 0 beta 18b1a098
+PAIR 830303cf 18d0e098 wt_eta 15 wt_beta 11 cap 31 taus 322560 passing 176 positive 24 sampled 0  E1 probability of passing 2^-29.9  class-rate part 52658176.0 (log2 25.65)  largest share 0.24
+EXACT-E1 830303cf 18d0e098 Y11 7af77f38: E1 probability of the positive outcomes 2^-31.6  class-rate part 50790400.0 (log2 25.60)  largest share 0.25  formula fallbacks 0
+exit 0 beta 18d0e098
+PAIR 830303cf 18d1a098 wt_eta 15 wt_beta 11 cap 31 taus 403200 passing 100 positive 14 sampled 0  E1 probability of passing 2^-30.3  class-rate part 13295616.0 (log2 23.66)  largest share 0.32
+EXACT-E1 830303cf 18d1a098 Y11 7af77f38: E1 probability of the positive outcomes 2^-32.2  class-rate part 13246464.0 (log2 23.66)  largest share 0.32  formula fallbacks 0
+exit 0 beta 18d1a098
+PAIR 830303cf 18b3e098 wt_eta 15 wt_beta 13 cap 31 taus 860160 passing 164 positive 8 sampled 0  E1 probability of passing 2^-32.8  class-rate part 1372160.0 (log2 20.39)  largest share 0.38
+EXACT-E1 830303cf 18b3e098 Y11 7af77f38: E1 probability of the positive outcomes 2^-34.0  class-rate part 1474560.0 (log2 20.49)  largest share 0.71  formula fallbacks 0
+exit 0 beta 18b3e098
+PAIR 830303cf 18d3e098 wt_eta 15 wt_beta 13 cap 31 taus 860160 passing 228 positive 13 sampled 0  E1 probability of passing 2^-32.6  class-rate part 557056.0 (log2 19.09)  largest share 0.47
+EXACT-E1 830303cf 18d3e098 Y11 7af77f38: E1 probability of the positive outcomes 2^-33.7  class-rate part 755712.0 (log2 19.53)  largest share 0.69  formula fallbacks 0
+exit 0 beta 18d3e098

@@ -1,0 +1,23 @@
+{
+  "id": "D541-SHA3-R6-S6E-REDUCED-CAMPAIGN-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6e prefile and supplied reduced campaign request",
+  "question": "What is verified for pkgS6e when the ledger appendix is absent?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6e claims time_log2=122.67707; prefile SOME FAIL only for no executable ledger appendix and note label D20. Supplied 256-trial fes-campaign-reduced request completes with zero key mismatches, zero key matches, and zero returned pairs; first-trial observations fes_ops=664827, buffer_reads=89425, chi_transpose_ops=2387968, table_ops=835269, sparse_inserts=131072, in_range_mismatches=16279, evaluation_ops=958998, conversion_ops=223313, verify_check_ops=3129.",
+  "source": "our workflow: D541 read-only pkgS6e reduced-campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D541_s6e_audit.md; research/tools/build_pkg/scratch/pkgS6e/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6e/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6e/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6e/work/req256.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Reduced-width finite mechanics only; missing ledger prevents exact score credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS6e package bytes and supplied request specification as found; one process; no file writes",
+  "reopen_if": "ledger appendix/note repair or owner/organizer acceptance ruling arrives"
+}

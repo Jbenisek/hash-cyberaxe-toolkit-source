@@ -1,0 +1,65 @@
+{
+ "Q1": {
+  "N": 20000,
+  "xor_diff_nonzero": 0,
+  "max_bit_bias_w0": 0.009299999999999975,
+  "max_bit_bias_w1": 0.007600000000000051,
+  "minmax_w0": [
+   9845,
+   10186
+  ],
+  "minmax_w1": [
+   9849,
+   10152
+  ]
+ },
+ "Q2": {
+  "w0": {
+   "trials_diff_in_B_only": 6000,
+   "lemmaH_events_kept": 0,
+   "mean_digest_words_differing": 8.0,
+   "min_digest_words_differing": 8,
+   "value_changed_keep_admissible": 0,
+   "value_changed_trials": 3000
+  },
+  "w1": {
+   "trials_diff_in_B_only": 6000,
+   "lemmaH_events_kept": 0,
+   "mean_digest_words_differing": 8.0,
+   "min_digest_words_differing": 8,
+   "value_changed_keep_admissible": 0,
+   "value_changed_trials": 3000
+  }
+ },
+ "Q3_k0_roundtrip": {
+  "trials": 200000,
+  "fwd_inv_ok": 200000,
+  "inv_fwd_ok": 200000
+ },
+ "Q3_X2_sweep": {
+  "n_consecutive": 16777216,
+  "distinct_w0": 16777216,
+  "distinct_w1": 16740360,
+  "distinct_pair": 16777216,
+  "n_random_distinct_X2": 16777216,
+  "distinct_w0_rand": 16777216,
+  "distinct_w1_rand": 16744446
+ },
+ "Q3_surjective_targets": {
+  "trials": 20000,
+  "hit": 20000
+ },
+ "Q3_counter": {
+  "trials": 100000,
+  "ok": 100000,
+  "distinct_w0": 99997,
+  "distinct_t": 99997
+ },
+ "Q4_counter_diff_alt": {
+  "trials": 2000,
+  "K0_states_equal": 2000,
+  "lemmaH_kept": 0,
+  "mean_words_differ": 8.0,
+  "min_words_differ": 8
+ }
+}

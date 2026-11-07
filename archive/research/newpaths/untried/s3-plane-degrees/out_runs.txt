@@ -1,0 +1,78 @@
+run k=1 ncubes=20000 mode=span tshare=1 dshare=1: 0.84s
+run k=2 ncubes=20000 mode=span tshare=1 dshare=1: 0.82s
+run k=3 ncubes=20000 mode=span tshare=1 dshare=1: 0.88s
+run k=4 ncubes=20000 mode=span tshare=1 dshare=1: 0.87s
+run k=5 ncubes=20000 mode=span tshare=1 dshare=1: 0.91s
+run k=6 ncubes=20000 mode=span tshare=1 dshare=1: 0.86s
+run k=7 ncubes=200000 mode=span tshare=1 dshare=1: 0.92s
+run k=8 ncubes=400000 mode=span tshare=1 dshare=1: 1.49s
+run k=9 ncubes=20000 mode=span tshare=1 dshare=1: 0.47s
+run k=15 ncubes=8000 mode=span tshare=1 dshare=1: 0.63s
+run k=16 ncubes=8000 mode=span tshare=1 dshare=1: 0.83s
+run k=17 ncubes=400 mode=span tshare=1 dshare=1: 0.14s
+run k=2 ncubes=20000 mode=basis tshare=1 dshare=1: 0.82s
+run k=4 ncubes=20000 mode=basis tshare=1 dshare=1: 0.87s
+run k=7 ncubes=200000 mode=basis tshare=1 dshare=1: 1.03s
+run k=8 ncubes=400000 mode=basis tshare=1 dshare=1: 1.11s
+run k=16 ncubes=4000 mode=basis tshare=1 dshare=1: 0.40s
+run k=2 ncubes=19200 mode=span tshare=64 dshare=1: 4.26s
+run k=4 ncubes=19200 mode=span tshare=64 dshare=1: 3.94s
+run k=8 ncubes=19200 mode=span tshare=64 dshare=1: 4.09s
+run k=7 ncubes=19200 mode=span tshare=64 dshare=1: 4.20s
+run k=2 ncubes=8000 mode=span tshare=1 dshare=16: 1.68s
+run k=4 ncubes=8000 mode=span tshare=1 dshare=16: 1.68s
+run k=8 ncubes=8000 mode=span tshare=1 dshare=16: 1.82s
+run k=16 ncubes=1600 mode=span tshare=1 dshare=16: 0.47s
+total 361352
+drwxrwxrwx 1 root root     4096 Oct 10 00:55 .
+drwxrwxrwx 1 root root     4096 Oct 10 00:54 ..
+-rwxrwxrwx 1 root root    36867 Oct 10 00:54 basis_k16.counts.txt
+-rwxrwxrwx 1 root root  2808016 Oct 10 00:54 basis_k16.vec.bin
+-rwxrwxrwx 1 root root    69992 Oct 10 00:54 basis_k2.counts.txt
+-rwxrwxrwx 1 root root  8544016 Oct 10 00:54 basis_k2.vec.bin
+-rwxrwxrwx 1 root root    59272 Oct 10 00:54 basis_k4.counts.txt
+-rwxrwxrwx 1 root root  8928016 Oct 10 00:54 basis_k4.vec.bin
+-rwxrwxrwx 1 root root    53659 Oct 10 00:54 basis_k7.counts.txt
+-rwxrwxrwx 1 root root  9504016 Oct 10 00:54 basis_k7.vec.bin
+-rwxrwxrwx 1 root root    56068 Oct 10 00:54 basis_k8.counts.txt
+-rwxrwxrwx 1 root root  9696016 Oct 10 00:54 basis_k8.vec.bin
+-rwxrwxrwx 1 root root    65667 Oct 10 00:54 coset_k2.counts.txt
+-rwxrwxrwx 1 root root 41011216 Oct 10 00:54 coset_k2.vec.bin
+-rwxrwxrwx 1 root root    56067 Oct 10 00:55 coset_k4.counts.txt
+-rwxrwxrwx 1 root root 42854416 Oct 10 00:55 coset_k4.vec.bin
+-rwxrwxrwx 1 root root    46467 Oct 10 00:55 coset_k7.counts.txt
+-rwxrwxrwx 1 root root 45619216 Oct 10 00:55 coset_k7.vec.bin
+-rwxrwxrwx 1 root root    46467 Oct 10 00:55 coset_k8.counts.txt
+-rwxrwxrwx 1 root root 46540816 Oct 10 00:55 coset_k8.vec.bin
+-rwxrwxrwx 1 root root    82495 Oct 10 00:54 span_k1.counts.txt
+-rwxrwxrwx 1 root root  8352016 Oct 10 00:54 span_k1.vec.bin
+-rwxrwxrwx 1 root root    36866 Oct 10 00:54 span_k15.counts.txt
+-rwxrwxrwx 1 root root  5520016 Oct 10 00:54 span_k15.vec.bin
+-rwxrwxrwx 1 root root    36866 Oct 10 00:54 span_k16.counts.txt
+-rwxrwxrwx 1 root root  5616016 Oct 10 00:54 span_k16.vec.bin
+-rwxrwxrwx 1 root root    32065 Oct 10 00:54 span_k17.counts.txt
+-rwxrwxrwx 1 root root  1142416 Oct 10 00:54 span_k17.vec.bin
+-rwxrwxrwx 1 root root    70416 Oct 10 00:54 span_k2.counts.txt
+-rwxrwxrwx 1 root root  8544016 Oct 10 00:54 span_k2.vec.bin
+-rwxrwxrwx 1 root root    59303 Oct 10 00:54 span_k3.counts.txt
+-rwxrwxrwx 1 root root  8736016 Oct 10 00:54 span_k3.vec.bin
+-rwxrwxrwx 1 root root    59310 Oct 10 00:54 span_k4.counts.txt
+-rwxrwxrwx 1 root root  8928016 Oct 10 00:54 span_k4.vec.bin
+-rwxrwxrwx 1 root root    48867 Oct 10 00:54 span_k5.counts.txt
+-rwxrwxrwx 1 root root  9120016 Oct 10 00:54 span_k5.vec.bin
+-rwxrwxrwx 1 root root    48865 Oct 10 00:54 span_k6.counts.txt
+-rwxrwxrwx 1 root root  9312016 Oct 10 00:54 span_k6.vec.bin
+-rwxrwxrwx 1 root root    53690 Oct 10 00:54 span_k7.counts.txt
+-rwxrwxrwx 1 root root  9504016 Oct 10 00:54 span_k7.vec.bin
+-rwxrwxrwx 1 root root    56067 Oct 10 00:54 span_k8.counts.txt
+-rwxrwxrwx 1 root root 14544016 Oct 10 00:54 span_k8.vec.bin
+-rwxrwxrwx 1 root root    37659 Oct 10 00:54 span_k9.counts.txt
+-rwxrwxrwx 1 root root  4944016 Oct 10 00:54 span_k9.vec.bin
+-rwxrwxrwx 1 root root    35267 Oct 10 00:55 tdep_k16.counts.txt
+-rwxrwxrwx 1 root root  4492816 Oct 10 00:55 tdep_k16.vec.bin
+-rwxrwxrwx 1 root root    65666 Oct 10 00:55 tdep_k2.counts.txt
+-rwxrwxrwx 1 root root 17088016 Oct 10 00:55 tdep_k2.vec.bin
+-rwxrwxrwx 1 root root    56066 Oct 10 00:55 tdep_k4.counts.txt
+-rwxrwxrwx 1 root root 17856016 Oct 10 00:55 tdep_k4.vec.bin
+-rwxrwxrwx 1 root root    46466 Oct 10 00:55 tdep_k8.counts.txt
+-rwxrwxrwx 1 root root 19392016 Oct 10 00:55 tdep_k8.vec.bin

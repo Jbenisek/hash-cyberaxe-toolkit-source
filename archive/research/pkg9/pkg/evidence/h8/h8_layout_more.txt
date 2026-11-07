@@ -1,0 +1,16 @@
+layout run 9: early test passes: 48819 (2^-24.425)   E1 requires the eta of Y4: 411 (2^-31.317)   contradictions (must be 0): 0
+layout run 10: early test passes: 48256 (2^-24.442)   E1 requires the eta of Y4: 398 (2^-31.363)   contradictions (must be 0): 0
+layout run 11: early test passes: 48960 (2^-24.421)   E1 requires the eta of Y4: 398 (2^-31.363)   contradictions (must be 0): 0
+layout run 12: early test passes: 48542 (2^-24.433)   E1 requires the eta of Y4: 427 (2^-31.262)   contradictions (must be 0): 0
+layout run 13: early test passes: 48219 (2^-24.443)   E1 requires the eta of Y4: 381 (2^-31.426)   contradictions (must be 0): 0
+layout run 14: early test passes: 48284 (2^-24.441)   E1 requires the eta of Y4: 383 (2^-31.419)   contradictions (must be 0): 0
+layout run 15: early test passes: 48293 (2^-24.440)   E1 requires the eta of Y4: 376 (2^-31.445)   contradictions (must be 0): 0
+layout run 16: early test passes: 48822 (2^-24.425)   E1 requires the eta of Y4: 394 (2^-31.378)   contradictions (must be 0): 0
+layout run 17: early test passes: 48499 (2^-24.434)   E1 requires the eta of Y4: 394 (2^-31.378)   contradictions (must be 0): 0
+layout run 18: early test passes: 48514 (2^-24.434)   E1 requires the eta of Y4: 401 (2^-31.353)   contradictions (must be 0): 0
+layout run 19: early test passes: 48494 (2^-24.434)   E1 requires the eta of Y4: 376 (2^-31.445)   contradictions (must be 0): 0
+layout run 20: early test passes: 48410 (2^-24.437)   E1 requires the eta of Y4: 412 (2^-31.313)   contradictions (must be 0): 0
+layout run 21: early test passes: 48501 (2^-24.434)   E1 requires the eta of Y4: 350 (2^-31.549)   contradictions (must be 0): 0
+layout run 22: early test passes: 48492 (2^-24.435)   E1 requires the eta of Y4: 405 (2^-31.338)   contradictions (must be 0): 0
+layout run 23: early test passes: 48647 (2^-24.430)   E1 requires the eta of Y4: 367 (2^-31.480)   contradictions (must be 0): 0
+layout run 24: early test passes: 48534 (2^-24.433)   E1 requires the eta of Y4: 409 (2^-31.324)   contradictions (must be 0): 0

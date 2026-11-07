@@ -1,0 +1,22 @@
+{
+  "id": "D800-POSEIDON-FLAG-KAT-MATRIX-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "functional KATs for selected lower-spill compiler variants",
+  "question": "Do the lower-spill compiler choices retain NTT functionality on both owned Poseidon sources?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "All six board/flag combinations (r1/r2 x O3 native, O2 native, O3 no-AVX512) compile and pass the complete existing NTT plan/convolution verifier. Peak RSS is 2,273,280--2,334,720 B. Full attack ledger, target register rule and charged spill price remain open.",
+  "source": "owned Poseidon-r1/r2 ntt.c and test_ntt.c",
+  "own_test": true,
+  "evidence": "research/retest/poseidon/d800_flag_kat_matrix.py; research/sol_answer_D800_poseidon_flag_kat_matrix.md; GCC builds in WSL",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "current source and NTT test vectors; only compiler flags varied",
+  "notes": "Functional verifier evidence only; no production attack rebuild, charged ledger, package/stage/filing/submission.",
+  "reopen_if": "A selected variant receives a full attack KAT, exact ledger, memory audit and organizer acceptance.",
+  "peak_mem": "21.1548181091 MEASURED maximum /usr/bin/time -v KAT RSS 2334720 B"
+}

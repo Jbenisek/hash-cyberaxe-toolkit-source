@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "pkgB3U message word m0 (w0)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U06/work/b3lib.py; research/dig/incoming/blake3-r2-U06/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U06/work/scan_m01.py (+scan_m01.out.json)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m0|msgword|Q3",
+ "question": "How many degrees of freedom does this word carry (exact)?",
+ "status": "COMPUTED",
+ "labels": [
+  "I"
+ ],
+ "number": "w0 is 32 bits marginally: within a context w0 <-> X2 is a bijection (2^24 consecutive X2: 16,777,216 distinct w0; 2^24 random distinct X2: 16,777,216 distinct w0). w1 is NOT injective in X2 (16,740,360 / 16,744,446 distinct of 2^24, which is the random-function collision rate; expected about 16,744,448), so (w0,w1) is one 32-bit curve per context (distinct pairs 2^24 of 2^24). Pair (w0,w1) <-> (S4,S8) is an exact bijection of 2^64 (200000/200000 both ways); every target pair has a context (20000/20000 constructed, S9 solved from S4 and X2 from S8, full forward check incl. Lemma H); fibre per pair = 6 free words (C0.c1, C0.d1, D3.d1, S15, w5, y) = 2^192 of the 2^256 admissible blocks. Counter instance: w0 free 32 bits (w0 -> K0.a1 -> t is a bijection, 100000/100000 forward K0 checks with solved t), w1 and t follow.",
+ "notes": "Universe cell blake3-r2|m0|msgword|Q3 (unit blake3-r2-U06). Class: FREE (not pinned w4, not cancelling w5, not forced constant X3/X7/X11/X15). w0 = K0 first message word; a middle line in the root instance (function of the six outer words and X2, Section 4), in the claim's counter instance (Section 8) the free trial word fixed by c1 with the counter t solved from K0's second assignment. Read again only by C2 (fifth assignment, Y2). Exact accounting: 2^256 admissible blocks (Lemma T2d, 8 free words) = 2^64 for (w0,w1) times 2^192; the 2^192 is from the construction (one S9 and one X2 solve per target), verified on samples of targets, not by enumeration of 2^192. w0 and w1 together use 64 of the 256 bits; they are not additional to the eight words.",
+ "topic": "b3r2.m0.msgword.Q3"
+}

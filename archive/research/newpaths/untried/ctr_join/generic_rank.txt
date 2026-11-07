@@ -1,0 +1,6 @@
+counter=0 w14pinned: words 100 eqs 92 rank 92 dimS 8 | rank T1 3, T3 4, (T1,T3) 7 | E3-fixed fibre dim 4, T1 rank on it 3 | E1-fixed fibre dim 5, T3 rank on it 4
+counter=1 w14pinned: words 101 eqs 92 rank 92 dimS 9 | rank T1 3, T3 4, (T1,T3) 7 | E3-fixed fibre dim 5, T1 rank on it 3 | E1-fixed fibre dim 6, T3 rank on it 4
+counter=2 w14pinned: words 102 eqs 92 rank 92 dimS 10 | rank T1 3, T3 4, (T1,T3) 7 | E3-fixed fibre dim 6, T1 rank on it 3 | E1-fixed fibre dim 7, T3 rank on it 4
+counter=0 w14free: words 101 eqs 92 rank 92 dimS 9 | rank T1 3, T3 4, (T1,T3) 7 | E3-fixed fibre dim 5, T1 rank on it 3 | E1-fixed fibre dim 6, T3 rank on it 4
+counter=1 w14free: words 102 eqs 92 rank 92 dimS 10 | rank T1 3, T3 4, (T1,T3) 7 | E3-fixed fibre dim 6, T1 rank on it 3 | E1-fixed fibre dim 7, T3 rank on it 4
+counter=2 w14free: words 103 eqs 92 rank 92 dimS 11 | rank T1 3, T3 4, (T1,T3) 7 | E3-fixed fibre dim 7, T1 rank on it 3 | E1-fixed fibre dim 8, T3 rank on it 4

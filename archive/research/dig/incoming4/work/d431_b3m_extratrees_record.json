@@ -1,0 +1,23 @@
+{
+  "id": "D431-B3M-EXTRATREES-PREDICTOR-SCREEN-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M step-level lambda nonlinear predictor",
+  "question": "Does a fixed nonlinear carry-aware predictor identify a high-rate quarter on the held-out D341 campaign split?",
+  "labels": ["D", "Z"],
+  "status": "SAMPLED",
+  "number": "On 120 train and 40 deduplicated held-out samples, preregistered ExtraTrees selected max_depth=6, min_samples_leaf=1, max_features=0.5 by train-only five-fold CV. Held-out r=0.7055091617 and top-quarter ratio=1.3353856275; the joint threshold passed. This remains finite LOCAL_ONLY evidence with safe gain 0 because selection cost, independent generalisation, and solver-success linkage are unproved.",
+  "source": "our workflow: D431 preregistered ExtraTrees screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D431_b3m_extratrees_predictor_screen.md; research/retest/t2/PREREG_D431_EXTRATREES_SCREEN.md; research/retest/t2/D431_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.55,
+  "gain_basis": "B",
+  "peak_mem": "not measured for the predictor; one-worker finite screen",
+  "notes": "Passes the finite D341/D427/D428 screen only. Independent campaign, charged predictor/selection work, and exact rate-to-success transfer are required before any score or package credit. No package/stage/filing/submission.",
+  "held_fixed": "D341/D427/D428 split, feature construction, thresholds, and PR858 no-transfer rule",
+  "reopen_if": "Independent held-out campaign or fixed charged predictor is available"
+}

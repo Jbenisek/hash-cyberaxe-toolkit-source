@@ -1,0 +1,23 @@
+{
+  "id": "D523-BLAKE3-R2-PKGXB-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgXB halfsearch prefile and self-test",
+  "question": "Does the D2 extra-beta pkgXB draft pass its finite self-test and retain an exact charged numerator?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgXB claim time_log2=78.8913; exact N=241046662574423655669972046 and log2(N/430)=78.89125007243636; prefile SOME FAIL only for missing executable ledger block; halfsearch selftest exits 0 with 256/256 automata/CT/IP/E3/t0/half-collision checks, 16380 packed lanes zero mismatches/bound failures, S9/S counts and G20b admissions pass, E3/P0 halts pass, and G7/G15 513/513 plus G7b/G15b 522/522.",
+  "source": "our workflow: D523 read-only pkgXB audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D523_b3m_pkgxb_audit.md; research/tools/build_pkg/scratch/pkgXB/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgXB/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgXB/blake3-r2/experiments/halfsearch.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics and exact ledger confirmation only; no score/package/stage/filing/submission.",
+  "held_fixed": "pkgXB package bytes as found; one-thread selftest 256; no file writes",
+  "reopen_if": "ledger appendix repair or owner/organizer acceptance ruling arrives"
+}

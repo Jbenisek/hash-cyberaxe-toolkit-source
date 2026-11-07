@@ -1,0 +1,19 @@
+--- (1) W40 2-round field vs capacity ---
+{"cap": "zero", "w40_broken_pairs": 0, "of": 780}
+{"cap": "cap1", "w40_broken_pairs": 780, "of": 780}
+{"cap": "cap2", "w40_broken_pairs": 780, "of": 780}
+{"cap": "cap3", "w40_broken_pairs": 780, "of": 780}
+{"cap": "cap4", "w40_broken_pairs": 780, "of": 780}
+{"B2_linear_in_capacity": false}
+--- (2) 3-round-affine subspace inside W40 ---
+{"cap": "zero", "round3_dim_inside_W40": 1, "W40_dim": 40}
+{"cap": "cap1", "round3_dim_inside_W40": 1, "W40_dim": 40}
+{"cap": "cap2", "round3_dim_inside_W40": 1, "W40_dim": 40}
+{"cap": "cap3", "round3_dim_inside_W40": 1, "W40_dim": 40}
+{"cap": "cap4", "round3_dim_inside_W40": 1, "W40_dim": 40}
+--- (3) 3-round-affine subspace inside a coordinate 2-round field ---
+{"cap": "zero", "coord_2round_clique_dim": 5, "round3_dim_inside": 1}
+{"cap": "cap1", "coord_2round_clique_dim": 10, "round3_dim_inside": 1}
+{"cap": "cap2", "coord_2round_clique_dim": 7, "round3_dim_inside": 1}
+{"cap": "cap3", "coord_2round_clique_dim": 7, "round3_dim_inside": 1}
+{"cap": "cap4", "coord_2round_clique_dim": 9, "round3_dim_inside": 1}

@@ -1,0 +1,1 @@
+2016/827	Security Analysis of BLAKE2's Modes of Operation	openalex	https://tosc.iacr.org/index.php/ToSC/article/download/540/484

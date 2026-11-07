@@ -1,0 +1,10 @@
+inst 0 r=16 dp_count 640 brute_count 640 rootsbad 0 OK
+inst 1 r=8 dp_count 256 brute_count 256 rootsbad 0 OK
+inst 2 r=16 dp_count 64 brute_count 64 rootsbad 0 OK
+inst 3 r=8 dp_count 600 brute_count 600 rootsbad 0 OK
+inst 4 r=16 dp_count 0 brute_count 0 rootsbad 0 OK
+inst 5 r=8 dp_count 0 brute_count 0 rootsbad 0 OK
+inst 6 r=16 dp_count 0 brute_count 0 rootsbad 0 OK
+inst 7 r=8 dp_count 0 brute_count 0 rootsbad 0 OK
+brute summary: 8 instances, 0 mismatches
+exit 0

@@ -1,0 +1,21 @@
+{
+  "id": "D318-SHA3R6-LS1-REVIEW",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "current paired-review verdict for SHA3-r6 dossier 0d1ceaba",
+  "question": "Does the current review accept the SHA3-r6 LS1 claim?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Dossier 0d1ceaba is REFUTED/ineligible at claimed time 124.19487: constants/trial 192 were selected by gen 512, but only gen 1 192 is charged. The selection search is uncharged.",
+  "source": "our workflow: D318 current paired-review refresh",
+  "own_test": false,
+  "evidence": "research/sol_answer_D318_review_refresh.md; research/dossiers/0d1ceaba/review/aggregate.json; research/dossiers/0d1ceaba/review/judge-dossier.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "External review audit only; no package, staging, filing, or submission change.",
+  "held_fixed": "paired-lanes-v1 aggregate status and binding dossier artifacts",
+  "reopen_if": "A corrected charge for gen 512 or an independently fixed constant set is reviewed"
+}

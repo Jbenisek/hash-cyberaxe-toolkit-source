@@ -1,0 +1,25 @@
+trials per case: 500
+root level: chunk root (flags 11) vs parent root (flags 12), t = 0 round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (0, 11), parent (counter, flags) = (0, 12); message words that differ: [(6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]
+non-root, t = 2 (v12 differs)                                round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (2, 3), parent (counter, flags) = (0, 4); message words that differ: [(0, 1, 6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]
+non-root, t = 2^31 (v12 differs)                             round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (2147483648, 3), parent (counter, flags) = (0, 4); message words that differ: [(0, 1, 6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]
+non-root, t = 2^32, k = 1 (v13 differs)                      round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (4294967296, 3), parent (counter, flags) = (0, 4); message words that differ: [(2, 3, 6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]
+non-root, t = 5 * 2^32 (v13 = 5)                             round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (21474836480, 3), parent (counter, flags) = (0, 4); message words that differ: [(2, 3, 6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]
+non-root, t = 2^50 (v13 = 2^18)                              round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (1125899906842624, 3), parent (counter, flags) = (0, 4); message words that differ: [(2, 3, 6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]
+non-root, t = 2^32 + 2 (v12 and v13 differ)                  round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (4294967298, 3), parent (counter, flags) = (0, 4); message words that differ: [(0, 1, 2, 3, 6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]
+non-root, t = (2^19 - 1) * 2^32 (largest k)                  round-0 state equal 500/500 | leaf descriptor from _chunk_output ok 500/500
+    leaf (counter, flags) = (2251795518717952, 3), parent (counter, flags) = (0, 4); message words that differ: [(2, 3, 6, 7)]
+    after 2 rounds, number of the 8 CV/digest words equal: [500, 0, 0, 0, 0, 0, 0, 0, 0]

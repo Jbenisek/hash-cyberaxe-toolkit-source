@@ -1,0 +1,2 @@
+solutions 0 best 1000000000.0
+histogram of per-solution best (floor):

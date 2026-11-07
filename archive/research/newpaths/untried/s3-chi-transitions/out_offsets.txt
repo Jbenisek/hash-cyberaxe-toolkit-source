@@ -1,0 +1,5 @@
+classes (0, 0) offsets [32]
+classes (0, 1) offsets [49, 52]
+classes (1, 0) offsets [12, 15]
+classes (1, 1) offsets [1, 26, 38, 63]
+closed offset triples (word-level necessary condition for a triangle): 0

@@ -1,0 +1,4 @@
+seed=1 give=[K3.a1,S3,S4] vars=6141 clauses=26295 kissat --time=60: UNKNOWN in 60.1s 
+seed=1 give=[w0,w1,w2,w3,w6,w7,w9,w10,w11,t] vars=6141 clauses=26743 kissat --time=20: SATISFIABLE in 0.1s verified: E-inputs equal True, half-collision True, residual equal to planted True, same message True
+seed=1 give=[K3.a1,S3,S4,C0.c1] vars=6141 clauses=26359 kissat --time=60: UNKNOWN in 60.1s 
+seed=1 give=[K3.a1,S3,S4,C0.c1,D2.c1] vars=6141 clauses=26423 kissat --time=60: SATISFIABLE in 0.1s verified: E-inputs equal True, half-collision True, residual equal to planted True, same message True

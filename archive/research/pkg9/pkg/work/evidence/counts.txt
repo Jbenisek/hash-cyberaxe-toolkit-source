@@ -1,0 +1,5 @@
+rule 4: stage A 29+8=37, stage 2 101+27=128, registers 16, largest lane 35 bits; lanes right 10500/10500; TABLES equal True; ok True
+rule 6: stage A 32+9=41, stage 2 105+30=135, registers 16, largest lane 35 bits; lanes right 10500/10500; TABLES equal True; ok True
+rule 8: stage A 37+10=47, stage 2 105+30=135, registers 16, largest lane 35 bits; lanes right 10500/10500; TABLES equal True; ok True
+operations+loads+stores: outer step 148+91+21=260 (registers 11, lane 35 bits); table build 43+26+5=74 (registers 7, lane 34 bits); middle step 85+40+9=134 (registers 13, lane 35 bits)
+RESULT: all counts hold  (detail in work/evidence/counts.txt)

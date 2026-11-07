@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "state word v8 = IV[0]",
+ "question": "Q4 alternatives to the value",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "No alternative: v8 = IV[0] is the constant of every BLAKE3 compression (chunk, parent, keyed or not); the specification has no input that changes it. For the record, the exhaustive scan shows what a free choice would be worth: zero sites reachable: sum p0+p5 (x-add D0): 1 value (first 0x25b281a2); xor p12 (D1): 1 value (first 0x8046ba8b); add p8 (D2): 2 values (first 0xd008097b); xor p4 (D3): 1 value (first 0x0a0e24cd) (a zero site saves 1 or 2 ops of 595, 0.0024 or 0.0048 bits). Not selectable, so no lever.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U61/work/site_scan.c; research/dig/incoming3/blake3-r3-U61/work/scan_all.txt; research/dig/incoming3/blake3-r3-U61/work/lever_demo.py; research/dig/incoming3/blake3-r3-U61/work/lever_demo.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|INIT.v8|INIT|Q4. the scan treats v8 as if it were free, only to size the loss from the fixed constant. validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "all other initial-state words standard (h = IV, v8..v11 = IV[0..3], counter 0, length 64, flags 11), m0..m7 = 0, 3 rounds, filed circuit rules (595 ops), chain m8..m15 free; word v8 varied alone",
+ "reopen_if": "a different BLAKE3 variant or target profile that lets IV[0] vary",
+ "topic": "blake3-r3|INIT.v8|INIT|Q4"
+}

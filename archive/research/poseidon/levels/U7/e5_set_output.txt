@@ -1,0 +1,24 @@
+S-box fixed point set size check: x^5==x for the 5 values: True
+number of x in {0,+-1,+-i,...} with x^5 = x : exactly the 5 (PROVED: x^4=1 or x=0)
+triples: 125
+{'S(v)==v': 125}
+M*v for v in the set^3: number of output lanes landing in the set, histogram: {0: 124, 1: 0, 2: 0, 3: 1}
+triples whose M*v is entirely in the set: [(0, 0, 0)] (only the zero vector expected)
+nonzero v with at least one output lane in the set: 0 of 124
+M * (t,0,0) for t in {1,-1,i,-i}: lanes in set? [[False, False, False], [False, False, False], [False, False, False], [False, False, False]]
+M * M^-1 = I check: True
+M^-1 v lanes in set (histogram over 125): {0: 124, 1: 0, 2: 0, 3: 1}
+
+=== toy ensembles: random Cauchy M over F_q (q = 1 mod 4); count nonzero v in {0,+-1,+-i}^3 with M v having k lanes in the set ===
+q=17  lanes-in-set histogram [87528, 111644, 43564, 5264]   binomial(3,5/q) expectation [87226.5, 109033.2, 45430.5, 6309.8]
+q=29  lanes-in-set histogram [142972, 86284, 17516, 1228]   binomial(3,5/q) expectation [140569.6, 87856.0, 18303.3, 1271.1]
+q=37  lanes-in-set histogram [162228, 74240, 11004, 528]   binomial(3,5/q) expectation [160434.0, 75203.4, 11750.5, 612.0]
+q=97  lanes-in-set histogram [212696, 33460, 1824, 20]   binomial(3,5/q) expectation [211592.3, 34498.8, 1874.9, 34.0]
+q=193  lanes-in-set histogram [230400, 17052, 544, 4]   binomial(3,5/q) expectation [229220.4, 18288.9, 486.4, 4.3]
+q=257  lanes-in-set histogram [234076, 13680, 244, 0]   binomial(3,5/q) expectation [233805.1, 13917.0, 276.1, 1.8]
+q=769  lanes-in-set histogram [243456, 4524, 20, 0]   binomial(3,5/q) expectation [243193.9, 4774.8, 31.2, 0.1]
+
+=== E4b: can the i-relation be made to survive R1.C? needs K = -(M^-1 c1)_2 (one field equality) ===
+z=i: c1_j / M[j,2] =  (lane0 0x2a50c30303c8, lane1 0x1e2a53faa007, lane2 0x3add9a230865)  needs all three == -K=0x244749aaf02f : False
+z=-i: c1_j / M[j,2] =  (lane0 0x2a50c30303c8, lane1 0x1e2a53faa007, lane2 0x3add9a230865)  needs all three == -K=0x244749aaf02f : False
+z=-1: c1_j / M[j,2] =  (lane0 0x2a50c30303c8, lane1 0x1e2a53faa007, lane2 0x3add9a230865)  needs all three == -K=0x244749aaf02f : False

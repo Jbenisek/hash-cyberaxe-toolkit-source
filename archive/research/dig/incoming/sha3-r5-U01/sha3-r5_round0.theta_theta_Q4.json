@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r5",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "row_i": 0,
+ "row_j": 0,
+ "object": "r5 round-0 theta kernel membership and alternatives",
+ "question": "Is the round-0 input difference alpha0 in the column-parity kernel, and what do non-kernel alternatives do?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "alpha0 NOT in kernel in 16 of 16 pairs (142-171 nonzero parity columns of 320); active chi rows alpha0 226-240 -> beta0 280-318; single-bit flips of the 1088 rate bits give beta0 rows 304-319, kernel-preserving same-column pairs 305-319; no flip makes beta0 sparse (all >= 304 rows, base 307-318).",
+ "evidence": "research/dig/incoming/sha3-r5-U01/work/theta_scan.py; work/theta_scan.log; work/theta_scan.json",
+ "notes": "Universe cell sha3-r5|round0.theta|theta|Q4. Method: own Keccak (tools/traillab/sha3_atlas/kk.py) on the 16 collision pairs of the pkgR5L certificates (all 16 reproduce the equal 4-lane digest, beta2 = trail BETA2 and alpha3 = trail alpha3 in the CP kernel, validated first); alternatives tested on the first 3 pairs: every single-bit flip of the round input (non-kernel) and every same-column bit pair (kernel-preserving), counting active chi rows of L(.) and reachability of the required next difference. Window only (16 pairs, local flips), not all kernel alternatives. Round 0 is dense by design: beta0 is chosen by the connector, no sparse path to protect.",
+ "topic": "sha3.r5.theta.r0.kernel"
+}

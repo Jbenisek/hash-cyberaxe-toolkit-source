@@ -1,0 +1,14 @@
+XF1 preregistered seeds, written 2026-10-09 ~19:07 MDT before any walk_mask.py measurement run.
+Context words for seed s: struct.unpack("<7I", shake_256(b"frontline context" + s).digest(160)[:28])  (the same rule as frontline_full.walk).
+
+FULL-CONTEXT SWEEP (all 16384 clusters per context, no budget halts): seeds b"xf1-0000" .. b"xf1-0199" (200 contexts, i = 0..199, s = b"xf1-%04d" % i).
+  Split over 2 processes: i = 0..99 and i = 100..199. Every context is reported; no dropping, no optional stopping.
+  Packed-omega vs straight-line co_ref spot check: every 64th opened cluster of every context, all 32 members.
+
+TRIAL-SHAPE COMPARISON (faithful copy of walk(), organizer trial shape nr = 5, full in-run reference checks):
+  seeds b"xf1-0000" .. b"xf1-0039" (40 contexts), each walked by frontline_full.walk and by walk_mask.walk_x; observations compared.
+  (40 is set by the 20-minute run limit; the 200-context requirement is met by the full sweep above.)
+
+Decision rule fixed in advance (from the task): GAIN iff LOST = 0 in non-fallback clusters, repriced time_log2 <= 63.50,
+and Y9 fills per context <= 1.02 * 12466 (else report the re-measured fill premise). NO_GAIN if any T2 != 0 member is lost
+that the guard does not catch, or delta > -0.10.

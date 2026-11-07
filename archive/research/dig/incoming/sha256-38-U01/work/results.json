@@ -1,0 +1,613 @@
+{
+ "base": {
+  "pre": -85.0249,
+  "ex": 2585,
+  "cells": 1012
+ },
+ "res": {
+  "A17_p01": {
+   "cell": "sha256-38|r17|A|Q4",
+   "kind": "alt",
+   "obj": "A17",
+   "pattern": "=un=============================",
+   "newrow": "=un=============================",
+   "printed": false,
+   "overlap": [],
+   "pre": -90.56795,
+   "pre_each": [
+    -90.348,
+    -90.7879
+   ],
+   "ex": 2633,
+   "cells": 1057,
+   "cells_exact": 1057,
+   "delta_pre": -5.543049999999994,
+   "ex_ratio": 1.018568665377176,
+   "weight": 0.02184570145267641
+  },
+  "A17_p02": {
+   "cell": "sha256-38|r17|A|Q4",
+   "kind": "alt",
+   "obj": "A17",
+   "pattern": "nnn=============================",
+   "newrow": "nnn=============================",
+   "printed": false,
+   "overlap": [],
+   "pre": -96.6139,
+   "pre_each": [
+    -96.358,
+    -96.8698
+   ],
+   "ex": 2644,
+   "cells": 1064,
+   "cells_exact": 1064,
+   "delta_pre": -11.588999999999999,
+   "ex_ratio": 1.0228239845261122,
+   "weight": 0.00033202002935660746
+  },
+  "A17_p03": {
+   "cell": "sha256-38|r17|A|Q4",
+   "kind": "alt",
+   "obj": "A17",
+   "pattern": "unn=============================",
+   "newrow": "unn=============================",
+   "printed": false,
+   "overlap": [],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p01": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "=============n============un====",
+   "newrow": "=0=====+01===n1=+==1==1===un====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p02": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "============nu=============u====",
+   "newrow": "=0=====+01==nu1=+==1==1===0u====",
+   "printed": false,
+   "overlap": [],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p03": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "=============n===========unn====",
+   "newrow": "=0=====+01===n1=+==1==1==unn====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p04": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "============nu============un====",
+   "newrow": "=0=====+01==nu1=+==1==1===un====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p05": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "===========nuu=============u====",
+   "newrow": "=0=====+01=nuu1=+==1==1===0u====",
+   "printed": false,
+   "overlap": [],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p06": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "=============n==========unnn====",
+   "newrow": "=0=====+01===n1=+==1==1=unnn====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p07": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "============nu===========unn====",
+   "newrow": "=0=====+01==nu1=+==1==1==unn====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p08": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "===========nuu============un====",
+   "newrow": "=0=====+01=nuu1=+==1==1===un====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p09": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "==========nuuu=============u====",
+   "newrow": "=0=====+01nuuu1=+==1==1===0u====",
+   "printed": false,
+   "overlap": [],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p10": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "=============n=========unnnn====",
+   "newrow": "=0=====+01===n1=+==1==1unnnn====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p11": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "============nu==========unnn====",
+   "newrow": "=0=====+01==nu1=+==1==1=unnn====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p12": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "===========nuu===========unn====",
+   "newrow": "=0=====+01=nuu1=+==1==1==unn====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p13": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "==========nuuu============un====",
+   "newrow": "=0=====+01nuuu1=+==1==1===un====",
+   "printed": false,
+   "overlap": [
+    [
+     5,
+     "0"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E18_p14": {
+   "cell": "sha256-38|r18|E|Q4",
+   "kind": "alt",
+   "obj": "E18",
+   "pattern": "=========nuuuu=============u====",
+   "newrow": "=0=====+0nuuuu1=+==1==1===0u====",
+   "printed": false,
+   "overlap": [
+    [
+     22,
+     "1"
+    ]
+   ],
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "E21_p01": {
+   "cell": "sha256-38|r21|E|Q4",
+   "kind": "alt",
+   "obj": "E21",
+   "pattern": "=un=============================",
+   "newrow": "=un====10=======1===10==========",
+   "printed": false,
+   "overlap": [],
+   "pre": -86.0249,
+   "pre_each": [
+    -85.995,
+    -86.0548
+   ],
+   "ex": 55,
+   "cells": 24,
+   "cells_exact": 24,
+   "delta_pre": -1.0,
+   "ex_ratio": 0.02127659574468085,
+   "weight": 0.010638297872340425
+  },
+  "E21_p02": {
+   "cell": "sha256-38|r21|E|Q4",
+   "kind": "alt",
+   "obj": "E21",
+   "pattern": "nnn=============================",
+   "newrow": "nnn====10=======1===10==========",
+   "printed": false,
+   "overlap": [],
+   "pre": -87.0249,
+   "pre_each": [
+    -86.995,
+    -87.0548
+   ],
+   "ex": 2,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": -2.0,
+   "ex_ratio": 0.0007736943907156673,
+   "weight": 0.00019342359767891682
+  },
+  "E21_p03": {
+   "cell": "sha256-38|r21|E|Q4",
+   "kind": "alt",
+   "obj": "E21",
+   "pattern": "unn=============================",
+   "newrow": "unn====10=======1===10==========",
+   "printed": false,
+   "overlap": [],
+   "pre": -87.0249,
+   "pre_each": [
+    -86.995,
+    -87.0548
+   ],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": -2.0,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r17_A179_A1720": {
+   "cell": "sha256-38|r17|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "A17[9] = A17[20]",
+   "opposite": "A17[9] != A17[20]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r17_A176_A1718": {
+   "cell": "sha256-38|r17|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "A17[6] = A17[18]",
+   "opposite": "A17[6] != A17[18]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r17_A178_A1717": {
+   "cell": "sha256-38|r17|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "A17[8] = A17[17]",
+   "opposite": "A17[8] != A17[17]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r17_E1715_E1815": {
+   "cell": "sha256-38|r17|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "E17[15] = E18[15]",
+   "opposite": "E17[15] != E18[15]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r17_E1724_E1824": {
+   "cell": "sha256-38|r17|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "E17[24] = E18[24]",
+   "opposite": "E17[24] != E18[24]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r18_A1829_A1929": {
+   "cell": "sha256-38|r18|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "A18[29] = A19[29]",
+   "opposite": "A18[29] != A19[29]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r18_E180_E1813": {
+   "cell": "sha256-38|r18|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "E18[0] != E18[13]",
+   "opposite": "E18[0] = E18[13]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r19_E196_E1919": {
+   "cell": "sha256-38|r19|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "E19[6] != E19[19]",
+   "opposite": "E19[6] = E19[19]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r19_E1920_E192": {
+   "cell": "sha256-38|r19|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "E19[20] = E19[2]",
+   "opposite": "E19[20] != E19[2]",
+   "pre": NaN,
+   "pre_each": [],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": NaN,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r21_E212_E2116": {
+   "cell": "sha256-38|r21|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "E21[2] = E21[16]",
+   "opposite": "E21[2] != E21[16]",
+   "pre": -85.0255,
+   "pre_each": [
+    -84.9955,
+    -85.0555
+   ],
+   "ex": 0,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": -0.0005999999999914962,
+   "ex_ratio": 0.0,
+   "weight": 0.0
+  },
+  "REL_r23_W230_W2330": {
+   "cell": "sha256-38|r23|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "W23[0] != W23[30]",
+   "opposite": "W23[0] = W23[30]",
+   "pre": -85.0249,
+   "pre_each": [
+    -84.995,
+    -85.0548
+   ],
+   "ex": 2585,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": 0.0,
+   "ex_ratio": 1.0,
+   "weight": 1.0
+  },
+  "REL_r23_W2314_W2321": {
+   "cell": "sha256-38|r23|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "W23[14] = W23[21]",
+   "opposite": "W23[14] != W23[21]",
+   "pre": -85.0249,
+   "pre_each": [
+    -84.995,
+    -85.0548
+   ],
+   "ex": 2585,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": 0.0,
+   "ex_ratio": 1.0,
+   "weight": 1.0
+  },
+  "REL_r23_W2316_W2325": {
+   "cell": "sha256-38|r23|REL|Q4",
+   "kind": "rel",
+   "printed_rel": "W23[16] = W23[25]",
+   "opposite": "W23[16] != W23[25]",
+   "pre": -85.0249,
+   "pre_each": [
+    -84.995,
+    -85.0548
+   ],
+   "ex": 2585,
+   "cells": 0,
+   "cells_exact": 0,
+   "delta_pre": 0.0,
+   "ex_ratio": 1.0,
+   "weight": 1.0
+  }
+ }
+}

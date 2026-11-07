@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "round-1 chi on the leader route: necessity of each of the 128 conditions",
+ "question": "Q2 drop each prefix condition: does affinity/rank fail?",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Affinity and rank never fail: dropping any single one of the 128 conditions (all independent, none redundant), dropping a whole family of 32, or dropping all 128 gives 0 second-difference failures (76,800 checks per format for single drops, 600 per family, 1,000 with none) and the 32 z-images keep rank 32. Reason (structural): each chi1 row holds at most one z-varying bit, so chi1 is affine in z with no condition at all. What each condition buys is constancy/sparsity: dropping one makes that direction's chi1 difference prefix-dependent (2 distinct differences, weight 3 in 32-68% of 60 samples, mean 0.49 F64 / 0.50 F135) and raises the theta2 footprint from 22 to 31 or 33 words and chi2 rows from 21 to 30-32 in the violated cases. Dropping a family of 32: mean weight 2.49; none: 3.99.",
+ "evidence": "research/dig/incoming/sha3-r6-U01/work/q12.py; research/dig/incoming/sha3-r6-U01/work/q12_out.json",
+ "notes": "Universe cell sha3-r6|round0.chi|chi|Q2. Sampled (60 prefixes per dropped condition, base prefix uniform over the other 127 equations), no interval given for the weight-3 fraction; the affinity result is exact by structure. Consequence: the conditions are a cost-shape device (AND-free constant-W patch), not a correctness requirement; the leader spends 256 equations of 512 prefix bits on them, free at 2^224 groups against 2^96 needed. Group freedom is not the limit.",
+ "topic": "sha3-r6 leader route chi1 conditions"
+}

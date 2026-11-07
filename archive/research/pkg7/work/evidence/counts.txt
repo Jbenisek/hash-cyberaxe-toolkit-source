@@ -1,0 +1,102 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; python -B work/tools/counts.py 1500
+
+RULE WITH 4 CONDITIONS: 1500 cases, 10500 of 10500 lanes right, stored words right in 1500 of 1500 cases, same counts in every case True, equal to TABLES of the program True; rule A on z: steps [], all 03000300, wanted (position, constant, bits of e1) [(8, 0, '00000001'), (9, 0, '00000002'), (24, 0, '00010000'), (25, 1, '00020000')], free bits of e1 read []
+  outer step: 148 operations + 91 loads + 21 stores = 260; registers 11 of 16; largest lane of a sum 4.993 * 2^32 (35 bits of 36)
+      next w5        6 operations   6 loads  2 stores   largest sum 2.000 * 2^32
+      K2 and D3     67 operations  39 loads  9 stores   largest sum 2.940 * 2^32
+      K3            43 operations  25 loads  4 stores   largest sum 4.993 * 2^32
+      C0 and D2     32 operations  21 loads  6 stores   largest sum 2.999 * 2^32
+  table build: 43 operations + 26 loads + 5 stores = 74; registers 7 of 16; largest lane of a sum 3.247 * 2^32 (34 bits of 36)
+      build loop     3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      build C0      13 operations  11 loads  2 stores   largest sum 2.927 * 2^32
+      build D1      27 operations  14 loads  3 stores   largest sum 3.247 * 2^32
+  middle step: 85 operations + 40 loads + 9 stores = 134; registers 13 of 16; largest lane of a sum 7.113 * 2^32 (35 bits of 36)
+      next X2        6 operations   7 loads  2 stores   largest sum 1.996 * 2^32
+      D2 and K1     47 operations  15 loads  4 stores   largest sum 7.113 * 2^32
+      K0            32 operations   9 loads  3 stores   largest sum 4.937 * 2^32
+      class loop entry   0 operations   9 loads  0 stores   largest sum 0.000 * 2^32
+  batch: 130 operations + 35 loads + 0 stores = 165; registers 16 of 16; largest lane of a sum 7.953 * 2^32 (35 bits of 36)
+      loop           3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      X0 to X10      3 operations   4 loads  0 stores   largest sum 2.963 * 2^32
+      C2 to z       17 operations   2 loads  0 stores   largest sum 3.927 * 2^32
+      rule A         6 operations   1 loads  0 stores   largest sum 1.000 * 2^32
+      entry count    3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      C2, rest      13 operations   4 loads  0 stores   largest sum 4.894 * 2^32
+      C1 to Y1      31 operations   8 loads  0 stores   largest sum 4.580 * 2^32
+      E1, A and B   41 operations   6 loads  0 stores   largest sum 7.953 * 2^32
+      E1 test       13 operations   4 loads  0 stores   largest sum 2.000 * 2^32
+      restore        0 operations   4 loads  0 stores   largest sum 0.000 * 2^32
+  batch, stage A 29 + 8 = 37; stage 2 101 + 27 = 128; in these cases 724 of 10500 lanes satisfy the rule and 345 of 1500 batches enter stage 2 (every fourth case is the short last batch)
+  machine: 16 registers; words kept in registers during a class loop: 9 ['A16', 'B16', 'A12', 'B12', 'A all', 'A carry', 'not bit 32', 'X2+w7', 'w0']; given up by stage 2 and loaded again at its end: ['A carry', 'not bit 32', 'X2+w7', 'w0']; reads of a word kept in a register (no load): stage A 10, stage 2 26; so with every read a load the same operations would have 18 loads in stage A
+  outer step loads, by name: stored by the outer step 1 ['w5']; stored by the middle step 0 []; other 37 ['-IV3-IV7', '1', '1-W13', '11', '2', 'A12', 'A16', 'A20', 'A24', 'A25', 'A7', 'A8', 'B12', 'B16', 'B20', 'B24', 'B25', 'B7', 'B8', 'C0.c1', 'C0.d1', 'D3.d1', 'IV3', 'IV7', 'K2.a1+K2.b1', 'K2.b1', 'K2.c1', 'K2.d1', 'M', 'ROL(X7,7)', 'S15', 'S9', 'X15', 'X3', 'X3+1', 'delta', 'w5 end']
+  table build loads, by name: stored by the outer step 7 ['-C0.b1-w6', '-C0.c1', '-S11', '-X4', 'C0.b1', 'ROL(C0.d1,16)', 'S6']; stored by the middle step 0 []; other 14 ['(rotation mask, list word, table word or counter limit)', 'A12', 'A16', 'A24', 'A7', 'B12', 'B16', 'B24', 'B7', 'C0.d1', 'M', 'X11', 'X11+1', 'end of list']
+  middle step loads, by name: stored by the outer step 8 ['-D2.b1-W13', '-S2-S7', '1-S6', 'D2.c1+1', 'ROL(S4,7)', 'ROL(X13,8)', 'S9+1', 'w7']; stored by the middle step 3 ['X2', 'X2+w7', 'w0']; other 23 ['-IV0', '-IV0-IV4', '-IV1', '1', 'A all', 'A carry', 'A12', 'A16', 'A20', 'A24', 'A7', 'B12', 'B16', 'B20', 'B24', 'B7', 'IV1+IV5+1', 'IV4', 'IV5', 'M', 'S9', 'not bit 32', 'w5 end']
+  batch loads, by name: stored by the outer step 6 ['S10+X15', 'X13', 'X14', 'X9', 'w5', 'w5+delta']; stored by the middle step 7 ['-w2', 'S12', 'S5', 'X2+w7', 'w0', 'w12-S1-S6', 'w3']; other 17 ['(rotation mask, list word, table word or counter limit)', '-X15', '1', 'A carry', 'A7', 'A8', 'B7', 'B8', 'M', 'ROL(X15,8)', 'Y11', "Y11'", 'bit 32', 'end of list', 'eta', 'not bit 32', 'stage-2 budget']
+
+RULE WITH 6 CONDITIONS: 1500 cases, 10500 of 10500 lanes right, stored words right in 1500 of 1500 cases, same counts in every case True, equal to TABLES of the program True; rule A on z: steps ['+24 AND 0c000000'], all 0f000300, wanted (position, constant, bits of e1) [(8, 0, '00000001'), (9, 0, '00000002'), (24, 0, '00010000'), (25, 1, '00020000'), (26, 1, '04040000'), (27, 1, '08080000')], free bits of e1 read [27]
+  outer step: 148 operations + 91 loads + 21 stores = 260; registers 11 of 16; largest lane of a sum 4.998 * 2^32 (35 bits of 36)
+      next w5        6 operations   6 loads  2 stores   largest sum 2.000 * 2^32
+      K2 and D3     67 operations  39 loads  9 stores   largest sum 2.961 * 2^32
+      K3            43 operations  25 loads  4 stores   largest sum 4.998 * 2^32
+      C0 and D2     32 operations  21 loads  6 stores   largest sum 2.997 * 2^32
+  table build: 43 operations + 26 loads + 5 stores = 74; registers 7 of 16; largest lane of a sum 3.226 * 2^32 (34 bits of 36)
+      build loop     3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      build C0      13 operations  11 loads  2 stores   largest sum 2.897 * 2^32
+      build D1      27 operations  14 loads  3 stores   largest sum 3.226 * 2^32
+  middle step: 85 operations + 40 loads + 9 stores = 134; registers 13 of 16; largest lane of a sum 6.897 * 2^32 (35 bits of 36)
+      next X2        6 operations   7 loads  2 stores   largest sum 1.988 * 2^32
+      D2 and K1     47 operations  15 loads  4 stores   largest sum 6.897 * 2^32
+      K0            32 operations   9 loads  3 stores   largest sum 4.961 * 2^32
+      class loop entry   0 operations   9 loads  0 stores   largest sum 0.000 * 2^32
+  batch: 137 operations + 39 loads + 0 stores = 176; registers 16 of 16; largest lane of a sum 7.881 * 2^32 (35 bits of 36)
+      loop           3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      X0 to X10      3 operations   4 loads  0 stores   largest sum 2.954 * 2^32
+      C2 to z       17 operations   3 loads  0 stores   largest sum 3.938 * 2^32
+      rule A         9 operations   1 loads  0 stores   largest sum 1.000 * 2^32
+      entry count    3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      C2, rest      17 operations   7 loads  0 stores   largest sum 4.738 * 2^32
+      C1 to Y1      31 operations   8 loads  0 stores   largest sum 4.751 * 2^32
+      E1, A and B   41 operations   6 loads  0 stores   largest sum 7.881 * 2^32
+      E1 test       13 operations   4 loads  0 stores   largest sum 2.000 * 2^32
+      restore        0 operations   4 loads  0 stores   largest sum 0.000 * 2^32
+  batch, stage A 32 + 9 = 41; stage 2 105 + 30 = 135; in these cases 183 of 10500 lanes satisfy the rule and 143 of 1500 batches enter stage 2 (every fourth case is the short last batch)
+  machine: 16 registers; words kept in registers during a class loop: 9 ['A16', 'B16', 'A12', 'B12', 'A mask 1', 'A all', 'A carry', 'not bit 32', 'X2+w7']; given up by stage 2 and loaded again at its end: ['A all', 'A carry', 'not bit 32', 'X2+w7']; reads of a word kept in a register (no load): stage A 10, stage 2 26; so with every read a load the same operations would have 19 loads in stage A
+  outer step loads, by name: stored by the outer step 1 ['w5']; stored by the middle step 0 []; other 37 ['-IV3-IV7', '1', '1-W13', '11', '2', 'A12', 'A16', 'A20', 'A24', 'A25', 'A7', 'A8', 'B12', 'B16', 'B20', 'B24', 'B25', 'B7', 'B8', 'C0.c1', 'C0.d1', 'D3.d1', 'IV3', 'IV7', 'K2.a1+K2.b1', 'K2.b1', 'K2.c1', 'K2.d1', 'M', 'ROL(X7,7)', 'S15', 'S9', 'X15', 'X3', 'X3+1', 'delta', 'w5 end']
+  table build loads, by name: stored by the outer step 7 ['-C0.b1-w6', '-C0.c1', '-S11', '-X4', 'C0.b1', 'ROL(C0.d1,16)', 'S6']; stored by the middle step 0 []; other 14 ['(rotation mask, list word, table word or counter limit)', 'A12', 'A16', 'A24', 'A7', 'B12', 'B16', 'B24', 'B7', 'C0.d1', 'M', 'X11', 'X11+1', 'end of list']
+  middle step loads, by name: stored by the outer step 8 ['-D2.b1-W13', '-S2-S7', '1-S6', 'D2.c1+1', 'ROL(S4,7)', 'ROL(X13,8)', 'S9+1', 'w7']; stored by the middle step 2 ['X2', 'X2+w7']; other 24 ['-IV0', '-IV0-IV4', '-IV1', '1', 'A all', 'A carry', 'A mask 1', 'A12', 'A16', 'A20', 'A24', 'A7', 'B12', 'B16', 'B20', 'B24', 'B7', 'IV1+IV5+1', 'IV4', 'IV5', 'M', 'S9', 'not bit 32', 'w5 end']
+  batch loads, by name: stored by the outer step 6 ['S10+X15', 'X13', 'X14', 'X9', 'w5', 'w5+delta']; stored by the middle step 7 ['-w2', 'S12', 'S5', 'X2+w7', 'w0', 'w12-S1-S6', 'w3']; other 18 ['(rotation mask, list word, table word or counter limit)', '-X15', '1', 'A all', 'A carry', 'A7', 'A8', 'B7', 'B8', 'M', 'ROL(X15,8)', 'Y11', "Y11'", 'bit 32', 'end of list', 'eta', 'not bit 32', 'stage-2 budget']
+
+RULE WITH 8 CONDITIONS: 1500 cases, 10500 of 10500 lanes right, stored words right in 1500 of 1500 cases, same counts in every case True, equal to TABLES of the program True; rule A on z: steps ['+12 AND 0003c000', 's +12', '+13 AND 40010000'], all 4f010300, wanted (position, constant, bits of e1) [(8, 0, '00000001'), (9, 0, '00000002'), (16, 1, '18000100'), (24, 0, '00010000'), (25, 1, '00020000'), (26, 1, '04040000'), (27, 1, '08080000'), (30, 0, '20400200')], free bits of e1 read [27, 28, 29]
+  outer step: 148 operations + 91 loads + 21 stores = 260; registers 11 of 16; largest lane of a sum 4.994 * 2^32 (35 bits of 36)
+      next w5        6 operations   6 loads  2 stores   largest sum 2.000 * 2^32
+      K2 and D3     67 operations  39 loads  9 stores   largest sum 2.945 * 2^32
+      K3            43 operations  25 loads  4 stores   largest sum 4.994 * 2^32
+      C0 and D2     32 operations  21 loads  6 stores   largest sum 3.000 * 2^32
+  table build: 43 operations + 26 loads + 5 stores = 74; registers 7 of 16; largest lane of a sum 3.223 * 2^32 (34 bits of 36)
+      build loop     3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      build C0      13 operations  11 loads  2 stores   largest sum 2.822 * 2^32
+      build D1      27 operations  14 loads  3 stores   largest sum 3.223 * 2^32
+  middle step: 85 operations + 40 loads + 9 stores = 134; registers 13 of 16; largest lane of a sum 6.927 * 2^32 (35 bits of 36)
+      next X2        6 operations   7 loads  2 stores   largest sum 1.987 * 2^32
+      D2 and K1     47 operations  15 loads  4 stores   largest sum 6.927 * 2^32
+      K0            32 operations   9 loads  3 stores   largest sum 4.948 * 2^32
+      class loop entry   0 operations   9 loads  0 stores   largest sum 0.000 * 2^32
+  batch: 142 operations + 40 loads + 0 stores = 182; registers 16 of 16; largest lane of a sum 7.616 * 2^32 (35 bits of 36)
+      loop           3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      X0 to X10      3 operations   4 loads  0 stores   largest sum 2.974 * 2^32
+      C2 to z       17 operations   4 loads  0 stores   largest sum 3.880 * 2^32
+      rule A        14 operations   1 loads  0 stores   largest sum 1.000 * 2^32
+      entry count    3 operations   1 loads  0 stores   largest sum 0.000 * 2^32
+      C2, rest      17 operations   7 loads  0 stores   largest sum 4.811 * 2^32
+      C1 to Y1      31 operations   8 loads  0 stores   largest sum 4.690 * 2^32
+      E1, A and B   41 operations   6 loads  0 stores   largest sum 7.616 * 2^32
+      E1 test       13 operations   4 loads  0 stores   largest sum 2.000 * 2^32
+      restore        0 operations   4 loads  0 stores   largest sum 0.000 * 2^32
+  batch, stage A 37 + 10 = 47; stage 2 105 + 30 = 135; in these cases 29 of 10500 lanes satisfy the rule and 28 of 1500 batches enter stage 2 (every fourth case is the short last batch)
+  machine: 16 registers; words kept in registers during a class loop: 9 ['A16', 'B16', 'A12', 'B12', 'A mask 1', 'A mask 2', 'A all', 'A carry', 'not bit 32']; given up by stage 2 and loaded again at its end: ['A mask 2', 'A all', 'A carry', 'not bit 32']; reads of a word kept in a register (no load): stage A 10, stage 2 26; so with every read a load the same operations would have 20 loads in stage A
+  outer step loads, by name: stored by the outer step 1 ['w5']; stored by the middle step 0 []; other 37 ['-IV3-IV7', '1', '1-W13', '11', '2', 'A12', 'A16', 'A20', 'A24', 'A25', 'A7', 'A8', 'B12', 'B16', 'B20', 'B24', 'B25', 'B7', 'B8', 'C0.c1', 'C0.d1', 'D3.d1', 'IV3', 'IV7', 'K2.a1+K2.b1', 'K2.b1', 'K2.c1', 'K2.d1', 'M', 'ROL(X7,7)', 'S15', 'S9', 'X15', 'X3', 'X3+1', 'delta', 'w5 end']
+  table build loads, by name: stored by the outer step 7 ['-C0.b1-w6', '-C0.c1', '-S11', '-X4', 'C0.b1', 'ROL(C0.d1,16)', 'S6']; stored by the middle step 0 []; other 14 ['(rotation mask, list word, table word or counter limit)', 'A12', 'A16', 'A24', 'A7', 'B12', 'B16', 'B24', 'B7', 'C0.d1', 'M', 'X11', 'X11+1', 'end of list']
+  middle step loads, by name: stored by the outer step 8 ['-D2.b1-W13', '-S2-S7', '1-S6', 'D2.c1+1', 'ROL(S4,7)', 'ROL(X13,8)', 'S9+1', 'w7']; stored by the middle step 1 ['X2']; other 25 ['-IV0', '-IV0-IV4', '-IV1', '1', 'A all', 'A carry', 'A mask 1', 'A mask 2', 'A12', 'A16', 'A20', 'A24', 'A7', 'B12', 'B16', 'B20', 'B24', 'B7', 'IV1+IV5+1', 'IV4', 'IV5', 'M', 'S9', 'not bit 32', 'w5 end']
+  batch loads, by name: stored by the outer step 6 ['S10+X15', 'X13', 'X14', 'X9', 'w5', 'w5+delta']; stored by the middle step 7 ['-w2', 'S12', 'S5', 'X2+w7', 'w0', 'w12-S1-S6', 'w3']; other 19 ['(rotation mask, list word, table word or counter limit)', '-X15', '1', 'A all', 'A carry', 'A mask 2', 'A7', 'A8', 'B7', 'B8', 'M', 'ROL(X15,8)', 'Y11', "Y11'", 'bit 32', 'end of list', 'eta', 'not bit 32', 'stage-2 budget']
+
+RESULT: all counts hold

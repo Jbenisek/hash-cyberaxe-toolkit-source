@@ -1,0 +1,2 @@
+proof.md:3: 124.76596 is the board score of the credited base 3c2d1220, quoted as such; this entry's value is 124.69481.
+submission-note.md:26: 124.76596 is the 3c2d1220 column of the comparison table; this entry's column is 124.69481.

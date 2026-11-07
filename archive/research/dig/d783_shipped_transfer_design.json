@@ -1,0 +1,21 @@
+{
+  "id": "D783-SHIPPED-Q3-TRANSFER-DESIGN-20261014",
+  "hash": "sha256-38",
+  "row_i": 22,
+  "row_j": 37,
+  "object": "D783 shipped-q3 joint-law transfer",
+  "question": "Does the D250 exact/cells component-B gain transfer to the shipped a0lean38 q3 law?",
+  "labels": ["K", "E"],
+  "status": "OPEN",
+  "number": "Preregistered four paired arms F/A with CELLS, EXACT, and JOINT tail counts on the shipped q3 sampler; primary statistic B_F=log2(P_F(EXACT)/P_F(CELLS)). No run yet because the checked-in q3 interface lacks the cell tally and needs an external counter harness.",
+  "source": "research/prereg_D783_r38_shipped_transfer.md and D784 package-law audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D783_r38_shipped_transfer_design.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "potential_bits": 3.4,
+  "topic": "sha256-r38.d783.shipped-q3-transfer",
+  "peak_mem": null,
+  "notes": "Design only; 32 outer seeds x 20 SMC replicates preregistered. No package/stage/filing/submission."
+}

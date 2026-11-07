@@ -1,0 +1,6 @@
+t = 4294967301 = 2^32 * 1 + 5; v12 = 00000005, v13 = 00000001; stack entries 3; message lengths 4398046516279 / 4398046516287 bytes
+  X0 (55 bytes): organizer descriptor (IV, words, t, len, 3) True; CV_t equal C/organizer True; digest C == organizer-internals True; == own True
+  X1 (55 bytes): organizer descriptor (IV, words, t, len, 3) True; CV_t equal C/organizer True; digest C == organizer-internals True; == own True
+  X2 (63 bytes): organizer descriptor (IV, words, t, len, 3) True; CV_t equal C/organizer True; digest C == organizer-internals True; == own True
+  X3 (63 bytes): organizer descriptor (IV, words, t, len, 3) True; CV_t equal C/organizer True; digest C == organizer-internals True; == own True
+all agree: 4/4

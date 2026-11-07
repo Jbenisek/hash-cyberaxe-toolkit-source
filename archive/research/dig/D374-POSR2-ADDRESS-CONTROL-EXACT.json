@@ -1,0 +1,23 @@
+{
+  "id": "D374-POSR2-ADDRESS-CONTROL-EXACT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.ADDR exact LD/ST address-control count",
+  "question": "Can the r2 LD/ST address-control subtotal be recovered exactly from the macros and the recorded TYPES line?",
+  "labels": ["N", "D"],
+  "status": "COMPUTED",
+  "number": "Exact pkg_stage_r2 run counts: ld=15396537559, st=8656647975, hence LD+ST address controls=24053185534, 16.2969974020% of N=147592743256. Counterfactual freeing them changes log2(N/258) by 0.2566487188 bits; current rules require the charge.",
+  "source": "our exact source-and-ledger reconciliation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D374_poseidon_r2_address_control_exact.md; research/poseidon/orchard/lean_r2/common.h; research/poseidon/orchard/lean_r2/pkg_stage_r2/proof.md; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0,
+  "gain_basis": "S",
+  "notes": "Supersedes C1915. LD/ST address controls are already inside X.ctl and are not added twice; other index/control terms remain separately charged. No package, staging, filing, or submission.",
+  "held_fixed": "pkg_stage_r2 source macros, recorded TYPES line, N=147592743256, C(2)=258",
+  "reopen_if": "the source macros, ledger path, or judge charging rule changes, or a rebuilt kernel changes the count",
+  "supersedes": ["C1915"],
+  "peak_mem": "25.287 ESTIMATED proof-tracked 40934171 B"
+}

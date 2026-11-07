@@ -1,0 +1,35 @@
+[
+  {
+    "test": "All returned linear minimum witnesses independently expanded",
+    "passed": 26
+  },
+  {
+    "test": "All code generator basis vectors independently expanded",
+    "passed": 960
+  },
+  {
+    "test": "Both sigma inverse matrices on all 32 basis vectors",
+    "passed": 64
+  },
+  {
+    "test": "Incidence classification agrees with independent linear rank classification",
+    "passed": 5
+  },
+  {
+    "test": "All four modular bound witnesses recomputed from initial 16 words",
+    "passed": 4
+  },
+  {
+    "test": "All heuristic-run outputs independently recomputed",
+    "passed": 9
+  },
+  {
+    "test": "Random 16-word-window inverse/forward round trips, both models",
+    "passed": 2048
+  },
+  {
+    "test": "Independent scalar enumeration of all 65,535 vectors on a 16D subspace",
+    "passed": 65535,
+    "minimum": 194
+  }
+]

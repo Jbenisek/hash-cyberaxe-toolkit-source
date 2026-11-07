@@ -1,0 +1,30 @@
+PREREG_q3gpu (scout2-3, written 2026-10-10 13:34 before any GPU run; research only, nothing filed)
+
+Question: 99% lower bound of the variant-averaged q3 of the DP family (pkgR38a base, proof.md 6.2 H2) over the whole
+variant population, with far more variants than the leader's 2^20 sample.
+
+Program: q3gpu.cu (sha256 f510c8f156168f61...), consts.h (ce69c39fea284b05...), twobit.h (e1849cec7242bc61...),
+binary q3gpu (e965aad34ef3a51b...). Constants generated from the base package's vt38.py by gen_consts.py.
+Estimator: smc3.c (proof.md B.4) unchanged in design and parameters: NP 4000; children 2048, 64, 64, 8, 8, 4 at
+rows 17..22; 8192 tail proposals per particle; row 16 exact (2^-27); W23 x-value cells imposed (f = 6); weights as smc3.c.
+Variants: uniform over the union of the 256 R_j by rejection from 256 A0 x 768 A2 x the 2^29 A1 window of each A2,
+accepted by the generic test of vt38.valid. Each run draws its own fresh pool of V = 4096 variants; tail proposals
+pick uniformly from the run's pool. Runs are therefore i.i.d. and each is unbiased for the population average.
+RNG: Philox4x32-10, run key = runkey(master, r).
+
+Checks done before this note (CPU build of the same source, check_cpu.txt): 0 disagreements with vt38.py on 200,000
+validity candidates, a 4,096-variant pool, every dumped stage proposal (rows 17..22) and tail proposal, and 219
+successes re-verified by vt38.outcome/compress. selftest.txt: VS 512 valid, G 32/32, |F7| = 287,309,824, SFS 4/4.
+
+Jobs:
+  G1  equivalence (GPU run == CPU run bit for bit, master 777 run 0, NP 200) and a 256-run pilot (master 9001).
+  G2  MAIN: master 20261010, runs r = 0..N-1 with N fixed from the pilot's speed so the job ends within 25 minutes;
+      every run reported. Rule: the reported bound is the one-sided 99% Student bound of the mean of Z over all G2
+      runs. Go for the lever iff it is >= 2^-101.0101.
+  G3  (if time) pool-size check: master 20261011, V = 65536 per run.
+CPU lanes (master 4242, V = 4096, started 13:31 before this note while the GPU lock was held by another session) are
+a fallback/replicate and are reported separately, all runs included.
+
+Addendum 13:35 (before any GPU run): the GPU jobs use q3gpu2, built from q3gpu.cu sha256 d3a796f13d810828... (adds a CPU batch mode with per-A0 accounting; GPU and per-run code unchanged: q3gpu2 reproduces q3gpu's CPU run 777/0 byte for byte); binary b560f7c39f9dd0ba....
+Addendum 13:54 (after G1, before G2): G1 passed (GPU run 777/0 identical to the CPU run; pilot 256 runs in 1.5 s, 0 failed re-verifications). G2 N fixed at 131072 runs (2^29 variants).
+Addendum 14:08 (after G2, before G3): G3 = (a) 65536 runs with ONE fresh variant each (master 20261012; variant-dispersion study, R2 design), (b) the planned pool check, 4096 runs x 65536 variants (master 20261011), (c) exact |R_j| recount of all 256 A0 (exactR.cu).

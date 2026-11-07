@@ -1,0 +1,57 @@
+[
+  {
+    "submissionId": "0ecdfe35-ba7a-4f74-8ba9-779d417974a2",
+    "rationale": "Our own B3R4u5b (time_log2 124.86023), filed 10-17: the program of this entry. Taken from it: the target form, the mask walk, the straight-line step and its generator (C and Python), the search, handlers, recovery, table, ledger, plan method, Section 4 (Lemma 2) and its certificate, and the experiments. Changed: the full adder of three variable planes is 2 XOR and 1 select (a declared three-input bitwise operation, 6-byte record) instead of the 5-gate pivot adder, so the step is 16502 gates instead of 24,422; the table and Tp, B, c are re-planned by the same plan (time_log2 124.86023 to 124.29795).",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "eaef120f-c690-4978-a31e-a3cde49fd669",
+    "rationale": "Our own B3R4f (time_log2 124.93474), filed 10-16, in review: the program of this entry. Taken from it: the target form, the straight-line step, the generator, the search, handlers, ledger, experiments, the register file and Section 4 (first-collision Lemma 2). Changed: the gates of the step, the stage-1 test and the recovery circuit are charged 5 bytes each (instead of 36), the recovery circuit is the straight line (not the rolled program), the table entry is 10 bytes, the table is the largest that fits in 2^20 bytes and Tp, B, c are re-planned (time_log2 124.93474 to 124.86023).",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.8, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "a6ee439c-5b82-41f2-8acb-9917c8c70756",
+    "rationale": "Our own B3R4d (time_log2 125.06000), filed 10-15, in review: the filed version of this program. Taken from it: the target form, the bit-sliced 256-lane step, the circuit generator (rerun with the new code size), the search, handlers, ledger method, Lemma 1, the lazy-sampling facts and the cut count of Section 4, and the experiments. Changed: the success proof of Section 4 (Steps 2 to 5), the recovery circuit (rolled), the table entry (7 bytes), and the plan constants that follow.",
+    "evidence": "proof.md first paragraph and Sections 2, 3.3, 4, 7 and Appendix A."
+  },
+  {
+    "submissionId": "9f69f1cc-f6b2-4e86-a668-19b5a2085a2c",
+    "rationale": "Our own B3R4e (time_log2 125.06177), in review: the same program as a6ee439c with Lemma 2 v2 (cut-count heuristic withdrawn and proved, Chernoff tail certified in exact arithmetic). Taken from it: Step 6 of Section 4 (the cut count), Lemma 1, the lazy-sampling facts and the certification method of Appendix A.",
+    "evidence": "proof.md Section 4 Steps 0, 1, 6, 7 and Appendix A."
+  },
+  {
+    "submissionId": "41b32afc-ed4c-4ef1-b9f2-8c72ab163582",
+    "rationale": "Our own round-4 entry B3R4b (125.02375), rejected by the judges (not_evaluable) on one finding about the success-probability step of its Lemma 2. The program, circuit, ledger method and experiments of this entry descend from 41b32afc; its Lemma 2 is replaced (Section 4).",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.6, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "75d5e1f9-8948-4f49-b7a6-5e9475495a7a",
+    "rationale": "Our own first blake3 round-4 entry (125.35348): the whole program of this entry. This entry keeps its target form (64-byte message 0^32 || x, flags 11), the bit-sliced 256-lane step with pivot full adders, the mask walk g = f XOR q, the two-pass circuit generator, the trail-and-table search, handlers, ledger method, success argument and experiments, and changes three things: the declared register file (800 registers instead of 1,024), the table entry (10 bytes, no stored length, instead of 26) and the recovery, which now recomputes both trail lengths in a first pass and is charged at two passes; the numbers follow.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.6, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "62cfd777-5613-463f-b561-e2340e00e528",
+    "rationale": "Our own entry for blake3 round 3 (124.8123, passed the judges): the bit-sliced 256-lane chain step with pivot full adders, the mask walk g = f XOR q, the declared register file and the 36-byte instruction charge, from which the round-4 program was taken.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.6, 4, 5, 6, 7, 8 and Appendix A."
+  },
+  {
+    "submissionId": "0a9640ed-558a-4f0a-aba8-45e89ffcfd7c",
+    "rationale": "Our own entry for blake3 round 3 (124.96822, bit-sliced 256-lane chain step, declared 1,024-register file, 36-byte instruction charge; passed the judges). Taken from it: the program structure, trail-and-table search, handlers, recovery walk, ledger method, restated Lemma 2 and the form of the experiments.",
+    "evidence": "proof.md first paragraph and Sections 1, 2, 3.1 to 3.4, 4, 5, 6, 7 and Appendix A."
+  },
+  {
+    "submissionId": "3356413f-cd60-410c-8847-2266d6444ac5",
+    "rationale": "Our own entry for blake3 round 3 (124.95448, same program with a fixed first block P as advice; passed the judges). Taken from it: the polarity-signal generator idea, the declared register-file layout and the generator code and peak-storage accounting of its Section 3.6 (restated here for the new generator); its two-block mode, prefix, scan and polarity climb are not used.",
+    "evidence": "proof.md Sections 3.2, 3.6, 3.7 and 7."
+  },
+  {
+    "submissionId": "6ae36351-5836-4a46-ad34-227688264123",
+    "rationale": "jungjipdo's entry for blake3 round 3 (124.91252). Credited for the mask walk g = f XOR q (the digest planes are fed back as stored, so no complement and no polarity search are needed, and equality under g is equivalent to equality under f), re-implemented here from the text of its proof Section 3.4 (no file of that entry was used or run). Its pivot full adder (Section 3.3), used by our 0ecdfe35, is replaced in this entry by the select adder.",
+    "evidence": "proof.md first paragraph and Sections 1, 3.2 and 8."
+  },
+  {
+    "submissionId": "616120b2-f777-44a8-bbd2-44f20c56224a",
+    "rationale": "re-implemented from its text; none of its files used or run",
+    "evidence": "the 5-byte encoding of register-only gate instructions (proof.md Section 3.1)."
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-QE-HMASK-TYPED-400-RERUN",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 typed-domain E-dependent-q rerun for 00000400",
+  "question": "Does q=q0 xor (E&qE) plus the h-mask correction cover t=0, delta 00000400?",
+  "labels": ["K"],
+  "status": "COMPUTED",
+  "number": "Exact typed QF_BV CEGIS terminates UNSAT at iteration 16 after 16 witnesses with a 50-iteration cap.",
+  "source": "our exact typed-domain QF_BV CEGIS: D179 E-dependent q rerun",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/SYNTH_QE_HMASK_TYPED.md; research/retest/b3_omega_coupled/exact/synth_qe_hmask_typed.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.witness_map",
+  "notes": "This closes the final t=0 row only for the stated affine E-dependent-q plus h-XOR family. The arbitrary nonlinear witness map and universal class-invariance theorem remain OPEN; no saving is credited."
+}

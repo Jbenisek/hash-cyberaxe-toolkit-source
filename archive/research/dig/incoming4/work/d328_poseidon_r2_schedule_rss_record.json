@@ -1,0 +1,22 @@
+{
+  "id": "D328-POSEIDON-R2-SCHEDULE-RSS-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "owned lean_r2 two-centre schedule RSS",
+  "question": "What whole-process peak RSS does the owned Poseidon-r2 lean schedule use across its two-centre finite run, including the stage-D cap path?",
+  "labels": ["C", "D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "57,753,600 bytes (56,400 KiB, log2 25.78341) whole-process max RSS; internal heap_peak 40,741,792 bytes; two centres, centre 0 cap then centre 1 success, 12:06.20",
+  "source": "our workflow: D328 Poseidon r2 schedule RSS",
+  "own_test": true,
+  "evidence": "research/sol_answer_D328_poseidon_r2_schedule_rss.md; research/poseidon/orchard/lean_r2/lean_attack",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "count",
+  "peak_mem": "25.783 MEASURED /usr/bin/time -v Maximum RSS for one WSL nice-10 two-centre lean_attack process; includes loader/libc/runtime",
+  "notes": "Owned lean_r2 schedule only. The first centre hit its explicit stage-D work cap; the second centre succeeded. No byte-identity or layout transfer to POSR2LINE2, so no package score change.",
+  "held_fixed": "lean_r2 source/binary; args 2 2 7 0 1 0 0 1; one process; nice 10; 64-KiB stack",
+  "reopen_if": "A byte-identity/layout audit ties this binary to a filed package or a full package-equivalent preprocessing run is measured"
+}

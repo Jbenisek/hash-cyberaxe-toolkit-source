@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "recovery: at most 12 * 2^114 + 2^48 batches, one recovery",
+ "question": "R2 own recount of the recovery bound and per-batch price",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Executed recovery = (a - b) one-lane steps + (b + 1) two-lane steps = a + 1 batches, a the longer stored length; a <= c + Sb - 1 (a trail is cut at the first slice check with age >= c = 12 L, ages grow at most Sb = 2^48 between checks), so at most capr = 12 x 2^114 + 2^48 = 2.4923e35 batches. Needed per batch: 595 + 26 (equality test of the two lanes: 8 shifts, 8 xors, 7 ors, 1 and, compare, branch) + 3 (loop) = 624 in the two-lane phase, 598 in the one-lane phase; charged 659 (595 + 64). The recovery term 1.6424e38 is 0.561 percent of the ledger (0.0081 bit if it were free). The ledger charges 5.6 percent more than the 624 exact need.",
+ "evidence": "research/dig/incoming3/blake3-r3-U76/work/sens.py, research/dig/incoming3/blake3-r3-U76/work/sens.out",
+ "notes": "universe cell blake3-r3|LEDGER.RECOV|LEDGER|R2. Recount of proof.md 3.3 and rho.py recover(); not a separate machine-code build.",
+ "held_fixed": "capr from plan(256); one recovery; two lanes in one circuit",
+ "reopen_if": "a recovery that needs more than one pass over the longer trail (for example a second pass to rebuild lengths)",
+ "gain_basis": "count"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ENDGAME-MAP-REFRESH-20261015",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "endgame map current-data rebuild",
+  "question": "Does the generated endgame map incorporate current board snapshots and indexed research records?",
+  "labels": ["C", "I"],
+  "status": "COMPUTED",
+  "number": "317 method dots; 167 filing events; SHA-256 grid 120 cells; gridwave6 201/255 touched",
+  "source": "research/endgame/make_endgame.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_ENDGAME_MAP_REFRESH_1015.md",
+  "date": "2026-10-15",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Descriptive local visualization only; no package/stage/filing/submission."
+}

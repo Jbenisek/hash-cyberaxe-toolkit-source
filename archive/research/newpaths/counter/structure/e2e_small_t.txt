@@ -1,0 +1,26 @@
+outer steps scanned 620, t range 1..512: outer steps with a hit (t with c1 in the cube) 4; (hits per outer step expected 0.25 on average); 0s
+t = 4: |P||A| = 4151, |P||B| = 4159; organizer digest = root(stack, CV_t) True; CV words 0,2,5,7 equal True; Y4/E1.d1/cube/beta/X True; organizer CV = own True; digests equal False (expected False)
+   last chunk A: c9021a0cea642b3bf10b29e23929734d38564797db96022eb6b4d048cdd7cf33534641ca2aedadca8a0e536472794de9b4b66f5706c007
+   last chunk B: c9021a0cea642b3bf10b29e23929734d40564797d396022eb6b4d048cdd7cf33534641ca2aedadca8a0e536472794de9b4b66f5706c0070000000000000000
+   chunk (P = 4 copies): 819c94d3f9db5866fec3d8da85103dc7bb53dfe668020fa996f6a012035596db...
+   CV_t(A) = 9b537102 622e3f71 fdf9ea51 02c017a1 113c9417 7de077c0 07241a4f 78cc049d
+   CV_t(B) = 9b537102 0f364df2 fdf9ea51 397d3440 667626ba 7de077c0 252bf434 78cc049d
+t = 10: |P||A| = 10295, |P||B| = 10303; organizer digest = root(stack, CV_t) True; CV words 0,2,5,7 equal True; Y4/E1.d1/cube/beta/X True; organizer CV = own True; digests equal False (expected False)
+   last chunk A: ee8bc99155fa492ba1b41eabde30be2438564797bc57a7a67f49a6bd28eb6592a81783180c8502b6b9d294e3cc6e42ec2a4e201006c007
+   last chunk B: ee8bc99155fa492ba1b41eabde30be2440564797b457a7a67f49a6bd28eb6592a81783180c8502b6b9d294e3cc6e42ec2a4e201006c0070000000000000000
+   chunk (P = 10 copies): 6c3a9e3783efda7d914b34687565556fe88f47b4e4365ed6b1d710bab25f65d4...
+   CV_t(A) = 14534ab5 19b40db0 31611713 e3fc674e 2275f1d6 9f4e861d 4f541e53 64f5e09c
+   CV_t(B) = 14534ab5 d2713cde 31611713 cf324957 cfa35e36 9f4e861d b384f348 64f5e09c
+t = 51: |P||A| = 52279, |P||B| = 52287; organizer digest = root(stack, CV_t) True; CV words 0,2,5,7 equal True; Y4/E1.d1/cube/beta/X True; organizer CV = own True; digests equal False (expected False)
+   last chunk A: a3277cf96b54aa95d70ebaf4937f133a38564797e93a1882f348fe0d1bf96291a96df4fa627a2e486beea18c00ad50de1cd79b8806c007
+   last chunk B: a3277cf96b54aa95d70ebaf4937f133a40564797e13a1882f348fe0d1bf96291a96df4fa627a2e486beea18c00ad50de1cd79b8806c0070000000000000000
+   chunk (P = 51 copies): 85f9530eb2c5d1446f1324dacd1b88d0783177843a12f167b1da7aa0d603e106...
+   CV_t(A) = ec11ba33 3c8ab9f2 e2cd8971 f2ee845d 9e76a971 7b70a63a 8d3e0520 841e75e3
+   CV_t(B) = ec11ba33 c6dacb0b e2cd8971 ff1e07b4 7b436855 7b70a63a 237f361a 841e75e3
+t = 133: |P||A| = 136247, |P||B| = 136255; organizer digest = root(stack, CV_t) True; CV words 0,2,5,7 equal True; Y4/E1.d1/cube/beta/X True; organizer CV = own True; digests equal False (expected False)
+   last chunk A: b6155b11df88221420498b37e6fd486938564797e9dfa8e31251c879e9cd2ba247ad931a36e949450b141eff5dd3bb48c514b04d06c007
+   last chunk B: b6155b11df88221420498b37e6fd486940564797e1dfa8e31251c879e9cd2ba247ad931a36e949450b141eff5dd3bb48c514b04d06c0070000000000000000
+   chunk (P = 133 copies): bc706247c64e50a8f8a59fd304ca9408cecda165d3f5e1e835d7c0903d38b9b9...
+   CV_t(A) = 6ea8161c 762a40ec bb745cc0 232fd7fe b11b4e7d 1a8d80f9 570900df dffe3647
+   CV_t(B) = 6ea8161c 53b8c477 bb745cc0 83dff5b0 86f6e835 1a8d80f9 0ba96646 dffe3647
+complete-message checks passed: 4/4

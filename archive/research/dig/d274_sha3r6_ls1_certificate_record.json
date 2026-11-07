@@ -1,0 +1,21 @@
+{
+  "id": "D274-SHA3-R6-LS1-CERTIFICATE-AUDIT",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "LS1 linear-structure rho candidate certificate",
+  "question": "What exact time and memory row does the completed LS1 certificate produce, and which gates remain open?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "Owner cert_out: N=39582258537115801702010357171060089177438; certificate 1626^100000*2^12419486 < N^100000 <= 1626^100000*2^12419487; time/score=124.19487; memory=1,042,630 B <= 2^20. Driver/recovery, full-scale experiments, random-mapping and organizer gates remain open.",
+  "source": "owner artifact audited by our workflow: D274 LS1 certificate",
+  "evidence": "research/sol_answer_D274_sha3r6_ls1_certificate_audit.md; research/sha3r6_gap/ls1/cert_out.txt; research/sha3r6_gap/ls1/cert.py; research/sha3r6_gap/ls1/STAGE12.md; research/sha3r6_gap/ls1/gen.c; research/sha3r6_gap/ls1/selftest.c",
+  "date": "2026-10-13",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Exact local ledger certificate only. The stage note lists missing driver/recovery, full-scale rho/projection experiments and unresolved H_rand/register/organizer premises. No safe filing credit, package, staging or submission.",
+  "held_fixed": "owner LS1 source, cert.py arithmetic, 1626 reference cost, 2^20 memory threshold",
+  "reopen_if": "A complete driver/package passes KAT and organizer checks with all charged resources and premises accepted"
+}

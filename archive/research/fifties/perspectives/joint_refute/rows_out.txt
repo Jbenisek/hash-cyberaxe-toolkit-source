@@ -1,0 +1,7 @@
+rows 131072 skipped(t=0) 0 seed 0xc0ffee2026 time 59.6s
+affine rank R: all 126  half1 126  half2 126 ; uniform control 128
+0 in affine hull of R: True
+E-a failures 0  E-b failures 0
+distinct dc1 values 1 ['0e09818b']  dh1!=eta 0
+spiral identity failures U1,Q7,U3,Z7: [0, 0, 0, 0]
+Pr[dc2 low16 = eps low16] = 5/131072 (uniform 2^-16 -> 2.00 expected)

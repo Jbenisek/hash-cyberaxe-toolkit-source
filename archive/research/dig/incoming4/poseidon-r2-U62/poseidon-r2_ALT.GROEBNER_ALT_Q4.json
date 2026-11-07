@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GROEBNER (ALT)",
+ "question": "Q4: alternatives: weighted-order free basis",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "See ALT.FREELUNCH and ALT.CHEAPLUNCH: both reduce to the same univariate degree; no Groebner route has a lower degree than 5^8.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.GROEBNER|ALT|Q4. No new test.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "regularity measured at a toy size against 1 + 4q",
+ "prior": 0.02,
+ "potential_bits": 1.0
+}

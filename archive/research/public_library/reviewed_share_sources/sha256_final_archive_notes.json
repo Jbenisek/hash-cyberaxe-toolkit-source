@@ -1,0 +1,1173 @@
+{
+  "schema_version": 1,
+  "title": "Final SHA-256 archive notes: closure evidence, joint lever measurements and recovered pair tables",
+  "review_date": "2026-10-29",
+  "scope": "Bounded full reading of six named files; scientific data and technical reasoning preserved without ordinary conversation, work orders or scheduling instructions. Historical measurements are not new experiments.",
+  "sources": [
+    {
+      "path": "research/retest/CLOSURE_AUDIT.md",
+      "bytes": 16977,
+      "sha256": "4c8ab630eab7b88e0142a73a9bd278825d97db960befe0f5c0856c006cfed2cd",
+      "admission": "curated_scientific_extract_only"
+    },
+    {
+      "path": "research/retest/solcloud19_exact_checks_20261014.md",
+      "bytes": 1002,
+      "sha256": "35acade2d28e97be853ca94ce0e1e743ec11f704c1f459e4f130a4369e361dd9",
+      "admission": "safe_full_scientific_source"
+    },
+    {
+      "path": "research/tools/traillab/JUDGE.md",
+      "bytes": 2264,
+      "sha256": "a2f672a70a15e151d865fc2409454028b16d1b0fb2115c78cc577cad283005c0",
+      "admission": "curated_scientific_extract_only"
+    },
+    {
+      "path": "research/tools/traillab/OTHER_HASH_DIG.md",
+      "bytes": 7045,
+      "sha256": "63d787a1541d88bd97db82c154da67826a4271841a904831697f8594cecf7fad",
+      "admission": "curated_scientific_extract_only"
+    },
+    {
+      "path": "research/game/climber/guided/PAIRS_39.tsv",
+      "bytes": 24606,
+      "sha256": "6624ad62c17b8d07d1ec7635d3f04d707257be33c770bdd3f5a4841df0abc6c0",
+      "admission": "safe_full_scientific_source"
+    },
+    {
+      "path": "research/game/climber/guided/TAIL_VALUE_OVERLAY.tsv",
+      "bytes": 2211,
+      "sha256": "8d0b541eba8f7cc019af8fbd183d9e3200238165035fccf2ac9d9879f0c8ecbf",
+      "admission": "safe_full_scientific_source"
+    }
+  ],
+  "admission_reasons": [
+    {
+      "path": "research/retest/CLOSURE_AUDIT.md",
+      "decision": "curated_scientific_extract_only",
+      "reason": "Scientific classifications mixed with proposed work queues, time budgets and register-edit requests. Preserve dated classifications, evidence scope and quantitative summary; omit operational columns."
+    },
+    {
+      "path": "research/retest/solcloud19_exact_checks_20261014.md",
+      "decision": "safe_full_scientific_source",
+      "reason": "Short project-authored reproducibility report with exact commands, numerical output and scope limitations; no chat or external prose."
+    },
+    {
+      "path": "research/tools/traillab/JUDGE.md",
+      "decision": "curated_scientific_extract_only",
+      "reason": "Project technical assessment mixed with pre-filing task instructions. Preserve historical validation, paired measurements and double-counting warnings."
+    },
+    {
+      "path": "research/tools/traillab/OTHER_HASH_DIG.md",
+      "decision": "curated_scientific_extract_only",
+      "reason": "Cross-protocol technical reasoning mixed with ranked work allocation and execution schedules. Preserve hypotheses, negative results and unresolved proof obligations without operational instructions."
+    },
+    {
+      "path": "research/game/climber/guided/PAIRS_39.tsv",
+      "decision": "safe_full_scientific_source",
+      "reason": "Finite numerical CV/message data with historical measurement columns and source labels. The first row explicitly credits a published base; preserve that attribution. Numeric data are not imported paper prose."
+    },
+    {
+      "path": "research/game/climber/guided/TAIL_VALUE_OVERLAY.tsv",
+      "decision": "safe_full_scientific_source",
+      "reason": "Numerical measured-tail overlay; good/bad are source clustering labels, not publication verdicts or exact probability proofs."
+    }
+  ],
+  "notes": [
+    {
+      "id": "closure-audit-evidence-taxonomy",
+      "source": "research/retest/CLOSURE_AUDIT.md",
+      "status": "Historical audit classification, 2026-10-12; not a new proof or current closure state",
+      "finding": "The audit challenged whether negative conclusions had their own replayable evidence or rested on a narrow sample, external verdict, untested argument or an upper bound. This is a methodological result about evidence strength, not a rejection of proof from another researcher.",
+      "counts": {
+        "total": 104,
+        "keep_killed": 40,
+        "sampled_only": 23,
+        "claimed_untested": 41,
+        "sha256_subset": {
+          "total": 11,
+          "keep_killed": 6,
+          "sampled_only": 2,
+          "claimed_untested": 3
+        }
+      },
+      "details": [
+        "KEEP-KILLED includes scoped exact enumeration, UNSAT, ledger arithmetic, controlled measurements and explicit rule closures; it is not uniformly a global mathematical impossibility.",
+        "Older archive-digest-only findings remain flagged as lacking the cited result file. Such a classification should not be upgraded by copying it into a public catalogue.",
+        "The 15 separately reviewed error corrections were excluded from the 104-count denominator. The source reports 13 backed by retests, one open dense-rho unit question and one unreconciled r37 score statement.",
+        "The SHA-256 subset includes 74/74 single-condition UNSAT results and a tail-decision test over 63,386 prefixes as historical cited evidence. The same audit marks nonuniform 1,024-witness late-row coupling as sampled-only and public-tool timeouts as insufficient to close a route.",
+        "The source identifies a row-16 relaxation closure conflicting with its own real-collision evidence. Later joint measurements must supersede that historical closure only within their tested generator and conditioning."
+      ],
+      "rows": [
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "1",
+          "finding": "round 0 cancels fully, \"4 is a law\"",
+          "historical_evidence": "Opus cloud 1 proof",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 28
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "2",
+          "finding": "Idea 1 fix E0/E2 + birthday",
+          "historical_evidence": "own word-level count (AD [1497])",
+          "classification": "KEEP-KILLED",
+          "source_line": 29
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "3",
+          "finding": "parent node / tree host",
+          "historical_evidence": "Sol cloud 8 counts + scout",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 30
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "4",
+          "finding": "swapped rows as solver rows",
+          "historical_evidence": "b3_swap_transfer.md, 792 SAT queries",
+          "classification": "KEEP-KILLED",
+          "source_line": 31
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "5",
+          "finding": "message-only traces {m2,m3,m4,m6}, {m0,m2,m4,m6,m7}",
+          "historical_evidence": "kissat UNSAT, retest/t6",
+          "classification": "KEEP-KILLED (trace)",
+          "source_line": 32
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "6",
+          "finding": "{m2,m3,m4,m6} at h=IV",
+          "historical_evidence": "scout K2 exact + C3 rate bound",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 33
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "7",
+          "finding": "SAT forcing per trial",
+          "historical_evidence": "kissat timing (AD)",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 34
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "8",
+          "finding": "four-active fork",
+          "historical_evidence": "UNSAT to 70-77 + Sol/Grok pricing",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 35
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "9",
+          "finding": "coupled blocks next to Y4",
+          "historical_evidence": "own UNSAT 10 cases (AD)",
+          "classification": "KEEP-KILLED",
+          "source_line": 36
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "10",
+          "finding": "zipper redundant guesses",
+          "historical_evidence": "own count, r=3 case c unfinished",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 37
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "11",
+          "finding": "multi-level loops",
+          "historical_evidence": "own UNSAT, 3 solvers (AD)",
+          "classification": "KEEP-KILLED (2 constructions)",
+          "source_line": 38
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "12",
+          "finding": "bit steering / knobs",
+          "historical_evidence": "2,000 trials + counts (AD)",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 39
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "13",
+          "finding": "outer-word cubes",
+          "historical_evidence": "certified exact (AD)",
+          "classification": "KEEP-KILLED",
+          "source_line": 40
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "14",
+          "finding": "62/64 pin",
+          "historical_evidence": "exact empty slices (AD)",
+          "classification": "KEEP-KILLED",
+          "source_line": 41
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "15",
+          "finding": "third length / extra pins",
+          "historical_evidence": "8,001 mask triples UNSAT, fifties/angles/a4/A4.md",
+          "classification": "KEEP-KILLED",
+          "source_line": 42
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "16",
+          "finding": "shared-constant frame tables",
+          "historical_evidence": "2^20 frames GPU, a6/A6.md",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 43
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "17",
+          "finding": "extra neutral c bits, constant beta",
+          "historical_evidence": "Grok job 43",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 44
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "18",
+          "finding": "counter family 50s/40s bundle",
+          "historical_evidence": "many sub-doors, counts + derived (AD)",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 45
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "19",
+          "finding": "counter hot spots / pair counts",
+          "historical_evidence": "obstruction argument (AD)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 46
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "20",
+          "finding": "Variant A top-level likelihood",
+          "historical_evidence": "Astra 9 proof",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 47
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "21",
+          "finding": "flag-word cancellation",
+          "historical_evidence": "Grok 47 + desk check",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 48
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "22",
+          "finding": "two differences cancelling in round 1",
+          "historical_evidence": "Grok 48",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 49
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "23",
+          "finding": "CV / tree residual < 128",
+          "historical_evidence": "Sol cloud 13",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 50
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "24",
+          "finding": "> 4 digest words by construction",
+          "historical_evidence": "Sol cloud 14 proof",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 51
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "25",
+          "finding": "home-run E3 reuse",
+          "historical_evidence": "own exact carry DP + closure enumerator, pre_blake3_1",
+          "classification": "KEEP-KILLED (scoped)",
+          "source_line": 52
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "26",
+          "finding": "aligned-start walk k=16",
+          "historical_evidence": "retest/t5, 40,000 contexts + control + exact reason",
+          "classification": "KEEP-KILLED",
+          "source_line": 53
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "27",
+          "finding": "closed-form liveness key",
+          "historical_evidence": "retest/pre_blake3_2, 2,400 groups, CV",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 54
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "28",
+          "finding": "trash residual recycling",
+          "historical_evidence": "trash_blake3.md, 2^27 pairs + controls",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 55
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "29",
+          "finding": "G5 as low-50s route",
+          "historical_evidence": "g5_y_result.md, 1.4e9 synthetic D3",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 56
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "30",
+          "finding": "SHA-256 SFS framework on BLAKE3",
+          "historical_evidence": "kissat upper bound 153",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 57
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "31",
+          "finding": "spiral/periodic patterns",
+          "historical_evidence": "exhaustive k <= 4",
+          "classification": "KEEP-KILLED (k<=4)",
+          "source_line": 58
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "32",
+          "finding": "other length pairs 55/63",
+          "historical_evidence": "proofs + derived atlas",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 59
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "33",
+          "finding": "constants in H8 profile",
+          "historical_evidence": "own count (AD)",
+          "classification": "KEEP-KILLED",
+          "source_line": 60
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "34",
+          "finding": "sub-class / 3-gate cluster",
+          "historical_evidence": "own count (AD)",
+          "classification": "KEEP-KILLED",
+          "source_line": 61
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "35",
+          "finding": "step multiplier noise doubt",
+          "historical_evidence": "retest/t2, 120 re-measurements",
+          "classification": "KEEP-KILLED (noise doubt only)",
+          "source_line": 62
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "36",
+          "finding": "further cube on 58.6198 (Grok 90/95)",
+          "historical_evidence": "Grok answers",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 63
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "37",
+          "finding": "standalone fresh CV per context",
+          "historical_evidence": "derived cost cell",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 64
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "38",
+          "finding": "parent/CV separability bias",
+          "historical_evidence": "smoke N=2^20, verdict INCONCLUSIVE",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 65
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "39",
+          "finding": "cost-ceiling levers fa97a08f",
+          "historical_evidence": "own ledger ceilings",
+          "classification": "KEEP-KILLED",
+          "source_line": 66
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "40",
+          "finding": "word loop 46 to 45",
+          "historical_evidence": "retest/tail2, control reproduces N",
+          "classification": "KEEP-KILLED",
+          "source_line": 67
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "41",
+          "finding": "flags word U_WT 3 to 2",
+          "historical_evidence": "one judge review read",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 68
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "42",
+          "finding": "t_hi width W=17 / contiguous X0",
+          "historical_evidence": "tail5 derived; Lemma W/BL brute force NOT run",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 69
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "43",
+          "finding": "FACTOR + S_old bundle",
+          "historical_evidence": "retest/tail1 ledger",
+          "classification": "KEEP-KILLED",
+          "source_line": 70
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "44",
+          "finding": "learn-the-hash / constants BLAKE3",
+          "historical_evidence": "Haiku run; learn half unrun",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 71
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "45",
+          "finding": "224-bit near-collision CV route",
+          "historical_evidence": "derived 2^64",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 72
+        },
+        {
+          "section": "1. BLAKE3 (CLOSED_DOORS sec 1)",
+          "row": "46",
+          "finding": "1-round path A",
+          "historical_evidence": "derived (AD)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 73
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "1",
+          "finding": "chi DDT facts",
+          "historical_evidence": "Sol cloud 18",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 79
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "2",
+          "finding": "weight-2 kernel zero-digest core",
+          "historical_evidence": "Sol cloud 18 addendum",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 80
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "3",
+          "finding": "ePrint 2107 weight-79 completion",
+          "historical_evidence": "Astra 23 certificates",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 81
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "4",
+          "finding": "zero-digest by parity class",
+          "historical_evidence": "Grok cloud relay",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 82
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "5",
+          "finding": "3-round linear structure",
+          "historical_evidence": "Sol 17 + Grok cloud",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 83
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "6",
+          "finding": "extend r5 internal differential to r6",
+          "historical_evidence": "Astra 20",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 84
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "7",
+          "finding": "third affine round / other trails",
+          "historical_evidence": "own rank + measured (TRACKER 15, 27)",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 85
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "8",
+          "finding": "degree-4 FES",
+          "historical_evidence": "freextech_cap_cost own count",
+          "classification": "KEEP-KILLED",
+          "source_line": 86
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "9",
+          "finding": "pre-filter vs shared-id",
+          "historical_evidence": "derived (HANDOFF)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 87
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "10",
+          "finding": "H_capacity birthday bias",
+          "historical_evidence": "retest/t3, 24 of 68 caps + control",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 88
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "11",
+          "finding": "maze walls",
+          "historical_evidence": "TRACKER 20, controls",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 89
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "12",
+          "finding": "learn-the-hash SHA3",
+          "historical_evidence": "TRACKER 6",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 90
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "13",
+          "finding": "equality persistence",
+          "historical_evidence": "TRACKER 21",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 91
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "14",
+          "finding": "bucket/ISD/home-run/hybrid bundle",
+          "historical_evidence": "archive restated, lines not reread",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 92
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "15",
+          "finding": "AND-NOT 6 to 5 ops",
+          "historical_evidence": "judge 84435675",
+          "classification": "KEEP-KILLED (rule)",
+          "source_line": 93
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "16",
+          "finding": "round-3 / blk1 / register ceilings",
+          "historical_evidence": "own ledger + sim",
+          "classification": "KEEP-KILLED",
+          "source_line": 94
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "17",
+          "finding": "rate constant / micro rows",
+          "historical_evidence": "own ledger, threshold",
+          "classification": "KEEP-KILLED",
+          "source_line": 95
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "18",
+          "finding": "key width 140 / 60-record cache",
+          "historical_evidence": "SMOKE on 122.2054 ledger",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 96
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "19",
+          "finding": "coset kernel, interpreter variant",
+          "historical_evidence": "pre_sha3_2 counted",
+          "classification": "KEEP-KILLED",
+          "source_line": 97
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "20",
+          "finding": "ePrint 2107 as direct route",
+          "historical_evidence": "PDF read, derived",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 98
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "21",
+          "finding": "r5 trail/TDA probability 0",
+          "historical_evidence": "proof (AD)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 99
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "22",
+          "finding": "r5 ZHL shortcut",
+          "historical_evidence": "measured/derived (AD)",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 100
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "23",
+          "finding": "r5 K-ladder",
+          "historical_evidence": "charging rule",
+          "classification": "KEEP-KILLED (rule)",
+          "source_line": 101
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "24",
+          "finding": "r5 Hkey from image size",
+          "historical_evidence": "Sol cloud 15",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 102
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "25",
+          "finding": "r5 176-bit key shortcut",
+          "historical_evidence": "Astra 15 + Grok 50",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 103
+        },
+        {
+          "section": "2. SHA3 (CLOSED_DOORS sec 2)",
+          "row": "26",
+          "finding": "r5 online caps",
+          "historical_evidence": "judge refusals",
+          "classification": "KEEP-KILLED (rule)",
+          "source_line": 104
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "1",
+          "finding": "Grok's 7 unforced bits",
+          "historical_evidence": "r37_unforced.md UNSAT + exhaustive 2^32",
+          "classification": "KEEP-KILLED",
+          "source_line": 110
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "2",
+          "finding": "any single removable condition",
+          "historical_evidence": "r37_unforced.md, 74/74 UNSAT",
+          "classification": "KEEP-KILLED",
+          "source_line": 111
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "3",
+          "finding": "tail decision procedure",
+          "historical_evidence": "r37_tail_decision.md, 63,386 prefixes",
+          "classification": "KEEP-KILLED",
+          "source_line": 112
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "4",
+          "finding": "bolt-on tail decision under memory rule",
+          "historical_evidence": "r37_tail_decision.md sec 7",
+          "classification": "KEEP-KILLED",
+          "source_line": 113
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "5",
+          "finding": "late-row trash coupling",
+          "historical_evidence": "trash_sha256.md, 1,024 solver witnesses (not uniform)",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 114
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "6",
+          "finding": "A_C from public tools",
+          "historical_evidence": "fact check + timeouts",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 115
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "7",
+          "finding": "neutral bits / lever sets r37/r38",
+          "historical_evidence": "\"closed/exhausted\" (AD)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 116
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "8",
+          "finding": "equality persistence",
+          "historical_evidence": "TRACKER 21",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 117
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "9",
+          "finding": "late-row smokes",
+          "historical_evidence": "Wave-7 smokes",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 118
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "10",
+          "finding": "tracks r31/r32",
+          "historical_evidence": "organizer",
+          "classification": "KEEP-KILLED (rule)",
+          "source_line": 119
+        },
+        {
+          "section": "3. SHA-256 (CLOSED_DOORS sec 3)",
+          "row": "11",
+          "finding": "r37 cost ceiling 2^60.0014",
+          "historical_evidence": "ledger reproduced",
+          "classification": "KEEP-KILLED",
+          "source_line": 120
+        },
+        {
+          "section": "4. Keccak[800]",
+          "row": "1",
+          "finding": "connector port (linearize every row)",
+          "historical_evidence": "pre_sha3_1 measured + control; verify_grok102.md",
+          "classification": "KEEP-KILLED (scoped)",
+          "source_line": 126
+        },
+        {
+          "section": "4. Keccak[800]",
+          "row": "2",
+          "finding": "lighter trail, core weight <= 10",
+          "historical_evidence": "pre_sha3_1 exhaustive + control",
+          "classification": "KEEP-KILLED",
+          "source_line": 127
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "167",
+          "finding": "SHA3 r6 full collision < 2^115",
+          "historical_evidence": "Cloud 37 / GPT 5.5",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 133
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "168",
+          "finding": "r37/r38 free W22/W23 bits",
+          "historical_evidence": "expansion_audit/w22 + why (exhaustive 2^32)",
+          "classification": "KEEP-KILLED",
+          "source_line": 134
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "169",
+          "finding": "birthday lens, all tracks",
+          "historical_evidence": "retest/birthday/SUMMARY.md; sha3 separability only in a scratchpad script; r5 E1 still OPEN",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 135
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "170",
+          "finding": "r37 drop row-16 two-bit relations",
+          "historical_evidence": "Luna cloud",
+          "classification": "CLAIMED-UNTESTED (and own data disagrees)",
+          "source_line": 136
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "171",
+          "finding": "r5 alt alpha3",
+          "historical_evidence": "own scripts",
+          "classification": "KEEP-KILLED in-kernel / SAMPLED-ONLY off-kernel",
+          "source_line": 137
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "172",
+          "finding": "r6 filter width k / degree",
+          "historical_evidence": "exact ledger / 24 cosets",
+          "classification": "KEEP-KILLED (k) / SAMPLED (degree)",
+          "source_line": 138
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "173",
+          "finding": "r38 six W16 relations",
+          "historical_evidence": "retest/r38_w16_relax, 2.01e8 x 6 seeds, rehash",
+          "classification": "KEEP-KILLED",
+          "source_line": 139
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "174",
+          "finding": "R38M gamma generator",
+          "historical_evidence": "Grok 105 programs (Grok-run)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 140
+        },
+        {
+          "section": "5. CLOSED_DOORS rows appended 10-12 (lines 167-175)",
+          "row": "175",
+          "finding": "Grok L off-path collision",
+          "historical_evidence": "retest/grokL_splice, rebuild + rehash",
+          "classification": "KEEP-KILLED",
+          "source_line": 141
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "116, 141",
+          "finding": "r5 xor cap 2^18 \"killed if R7 charged\"",
+          "historical_evidence": "judge reading",
+          "classification": "CLAIMED-UNTESTED (not a kill: OPEN conditional)",
+          "source_line": 147
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "197",
+          "finding": "w7_cache_audit",
+          "historical_evidence": "smoke",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 148
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "240",
+          "finding": "Grok 102 Keccak trail",
+          "historical_evidence": "verify_grok102.md",
+          "classification": "KEEP-KILLED",
+          "source_line": 149
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "241",
+          "finding": "E_-4/W0 bucket",
+          "historical_evidence": "Grok proof (owner relay)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 150
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "247",
+          "finding": "T3 / T5 lens",
+          "historical_evidence": "lens_t3 exact integers, lens_t5",
+          "classification": "KEEP-KILLED",
+          "source_line": 151
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "247",
+          "finding": "tail_sha3 r6 part",
+          "historical_evidence": "rescaled old ledger, pkgS6K not on disk",
+          "classification": "SAMPLED-ONLY",
+          "source_line": 152
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "248",
+          "finding": "r37 row-17 test order",
+          "historical_evidence": "Grok voice + proof 6.2",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 153
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "256",
+          "finding": "R38M phi^-1",
+          "historical_evidence": "birthday/r38_phiinv own solver, 2^16 entries + floor",
+          "classification": "KEEP-KILLED",
+          "source_line": 154
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "259",
+          "finding": "R38M valid-set reverse side",
+          "historical_evidence": "birthday/r38_validset exhaustive",
+          "classification": "KEEP-KILLED",
+          "source_line": 155
+        },
+        {
+          "section": "6. LEVERS.md KILL/CLOSED rows not duplicated above",
+          "row": "260",
+          "finding": "S6D memory cut 2^20 (D166)",
+          "historical_evidence": "Luna answer (sol_answer_D166_s6db_memory.md)",
+          "classification": "CLAIMED-UNTESTED",
+          "source_line": 156
+        }
+      ],
+      "limits": [
+        "Rows are faithfully preserved historical evidence classifications, not independently replayed negative certificates.",
+        "The original proposed next tests are deliberately not republished as current orders.",
+        "Later corrections and existing library accounts take precedence over a stale closed label."
+      ]
+    },
+    {
+      "id": "solcloud19-finite-reproducibility",
+      "source": "research/retest/solcloud19_exact_checks_20261014.md",
+      "status": "Historical local reproduction; not rerun in this archive task",
+      "finding": "The report records 4096 simultaneous-fibre checks and 4096 E1-invariant checks, but its seed does not pass the gate. Algebraic invariance is therefore not the same as end-to-end reachability.",
+      "numbers": {
+        "simultaneous_fibre_checks": 4096,
+        "E1_invariant_checks": 4096,
+        "seed_E1_key": [
+          "0dd0a280",
+          "e75b8c63",
+          "9636de7b",
+          "800dd0a2"
+        ],
+        "seed_E3_key": [
+          "27c07ad2",
+          "9bc61055",
+          "0680389c",
+          "8aa4dd7c"
+        ],
+        "seed_gate_passes": false,
+        "seed_gate_left": "9bc61055",
+        "seed_gate_right": "9c068038",
+        "neutral_bound_unsat_queries": [
+          19,
+          16,
+          12,
+          8
+        ],
+        "exact_bound_witness_dimension": 7
+      },
+      "reported_commands": [
+        "python solcloud19/exact_checks.py",
+        "python solcloud19/neutral_bound.py"
+      ],
+      "limits": [
+        "The report states UNSAT answers under 15-second solver limits, not that mere timeout is UNSAT.",
+        "Dimension seven is a witness and queried upper-bound result for that encoded structure, not a universal neutral-space optimum.",
+        "Full independent script/model review is outside this bounded archive task."
+      ]
+    },
+    {
+      "id": "traillab-joint-measurement-accounting",
+      "source": "research/tools/traillab/JUDGE.md",
+      "status": "Historical tool validation and sampled joint-lever measurements",
+      "finding": "The judge report records an independent quick regression and explains which apparent gains overlap. Its key result is how to combine measured changes without crediting the same event relaxation twice.",
+      "validation": {
+        "quick_tests_passed": 48,
+        "quick_tests_total": 48,
+        "reported_seconds": 52,
+        "full_suite_tests": 53,
+        "full_suite_rerun": false,
+        "exact_check_values": [
+          9830400,
+          285212672,
+          12103680
+        ],
+        "row16_table": [
+          1052672,
+          1042240,
+          28
+        ],
+        "identity": "1275/512"
+      },
+      "measurements": [
+        {
+          "method": "chi37 R16x over R1",
+          "paired_seeds": [
+            31,
+            32,
+            33,
+            34
+          ],
+          "paired_bit_gains": [
+            0.485,
+            0.506,
+            0.573,
+            0.632
+          ],
+          "mean_bit_gain": 0.549,
+          "reported_95_interval_halfwidth": 0.107,
+          "exact_event_over_cells": 2.528,
+          "baseline_exact_event_over_cells": 2.463
+        },
+        {
+          "method": "chi38 E19 four-patterns with E20[29]=E19[29] tie",
+          "reported_bit_gain": 1.93,
+          "paired_bit_gain": 1.92,
+          "seed_sd": 0.25,
+          "already_included_coset_bit_gain": 1.07,
+          "coset_interval_halfwidth": 0.08,
+          "warning": "Replaces the earlier 8/5 coset credit; do not add it again."
+        },
+        {
+          "method": "chi38 exact-event rows22-37",
+          "measured_ratio": 2.578,
+          "approximate_bit_gain": 1.36,
+          "source_uniform_identity": "2625/1024",
+          "warning": "Replaces the older EX factor1.118; the W25 carry factor1.0655 is already included."
+        }
+      ],
+      "limits": [
+        "The reported combined change from 2^-101.0 to2^-97.71 is computed/sampled, not an unconditional attack bound.",
+        "Per-candidate generator costs, row21 compatibility for every R16x prefix, and a full-system solver recheck were outstanding in this report.",
+        "A Monte Carlo ratio printed as1.00000 is not an identity proof.",
+        "The report did not re-read chi38 cells from the external paper; the paper payload is not republished."
+      ]
+    },
+    {
+      "id": "cross-hash-transfer-of-event-audit",
+      "source": "research/tools/traillab/OTHER_HASH_DIG.md",
+      "status": "Historical cross-protocol hypotheses and cited negative checks; no new experiments",
+      "finding": "The SHA-256 lesson was applied to other hashes by separating genuinely stricter printed conditions from false gains caused by holding dependent values fixed. In BLAKE3, the useful proposed gap was not a relaxed whole-word outcome but an omega list that allowed independent witnesses where the true event requires one shared h.",
+      "reasoning": [
+        "For the proposed BLAKE3 coupled list, J1 and J3 must share g,h and h2=ROR(h XOR(omega+f),8). A candidate impossible for every g,h and free Q=g-h is safely removable under further restrictions, provided the existential checker is sound.",
+        "The source's estimated kept fractions0.866 and0.875 came from samples of82 and72 words. These are not exact list counts. With83 percent of the quoted numerator spent scanning words, the provisional cost change is log2(0.17+0.83*c), before list construction and representation costs.",
+        "Possible per-phase splitting by e1 bits2,21,26 can require eight distinct lists. A lower candidate count does not guarantee a lower total price when DFA construction or per-word scanning becomes more expensive.",
+        "The SHA3 r5 proposal asks whether its24 round2 equations become constant or dependent on the actual affine space. Its quoted0.024-bit ceiling is a ledger opportunity, not a demonstrated reduction.",
+        "The Markov-premise check on real SHA3 passers was a defensive success-law test, not a guaranteed gain. A finite favorable measurement cannot justify an outcome-selected cap."
+      ],
+      "historical_negative_evidence": [
+        "SHA3 r5 round2 clustering: the note reports511 of512 in-kernel cases,50 of50 single-row cases and4000 of4000 random alpha3-prime cases with P45=0. These scopes do not establish every conceivable clustering route impossible.",
+        "SHA3 r6 filter-width comparisons quote k7 costing0.03 extra bit and k9 costing0.19 extra bit relative to k8 in the then-current ledger.",
+        "BLAKE3 unlisted beta-star outcomes had added list costs of37 to590 percent for at most44 percent rate in the cited model. This is a model-specific economic rejection, not nonexistence."
+      ],
+      "limits": [
+        "All candidate gains and proposed tests are historical; this note records no fresh execution.",
+        "Later coupled-list and SHA3 accounts already cover much of the method; these details preserve the original test obligations and negative scopes."
+      ]
+    },
+    {
+      "id": "pair39-data-and-tail-overlay",
+      "sources": [
+        "research/game/climber/guided/PAIRS_39.tsv",
+        "research/game/climber/guided/TAIL_VALUE_OVERLAY.tsv"
+      ],
+      "status": "Original historical measurements plus fresh finite full-width witness replay",
+      "finding": "The pair table adds concrete message/CV data beyond the previously published85. The tail overlay is a partial join, not the full population, and its estimated success columns must stay separate from exact witness verification.",
+      "pair_table": {
+        "source_rows": 61,
+        "distinct_pairs": 60,
+        "duplicate_aliases": [
+          "shipped_dku",
+          "p_n39freeW015s1_neig"
+        ],
+        "historical_finite_tail_values": 60,
+        "unmeasured_alias": "shipped_dku"
+      },
+      "overlay": {
+        "rows": 57,
+        "good": 5,
+        "bad": 52,
+        "good_rows": [
+          [
+            "58fca7a18e",
+            "e000be60",
+            -74.3399
+          ],
+          [
+            "7111e7edc4",
+            "dfff41a0",
+            -74.3587
+          ],
+          [
+            "p_p39chars105_p39s",
+            "dfff3e60",
+            -74.3665
+          ],
+          [
+            "p_p39chars108_p39s",
+            "e000c1a0",
+            -74.342
+          ],
+          [
+            "p_p39chars109_p39s",
+            "dfff3e60",
+            -74.3975
+          ]
+        ],
+        "omitted_rows": [
+          [
+            "shipped_dku",
+            null
+          ],
+          [
+            "p_li39tab23s1_luna",
+            -75.2474
+          ],
+          [
+            "p_nb2wonly16newchar39s1_luna",
+            -75.3662
+          ],
+          [
+            "p_nb3row20newchar39s1_luna",
+            -87.3078
+          ]
+        ]
+      },
+      "fresh_replay": {
+        "source_rows": 61,
+        "distinct_pairs": 60,
+        "verified": 60,
+        "failed": 0,
+        "previously_published": 1,
+        "new_verified": 59,
+        "standard_iv": 0,
+        "one_step_collisions": 0
+      },
+      "checker": "research/public_library/qa/replay_pairs39.cjs",
+      "normalized": "research/public_library/qa/pairs39-normalized.json",
+      "command": "node research/public_library/qa/replay_pairs39.cjs",
+      "limits": [
+        "All60 distinct pairs pass39-step state/feed-forward equality and fail the same-message40-step control; all use a common chosen CV, none the standard IV.",
+        "The59 newly verified identities can extend the distinct public witness count85 to144. Do not add61 table rows as61 independent new witnesses.",
+        "No tail probabilities, sigma-class annotations, generator work or ordinary-hash eligibility were verified by the replay.",
+        "The omitted -87.3078 outlier shows why an overlay view should link back to the complete source table rather than appear exhaustive."
+      ]
+    }
+  ],
+  "already_covered": [
+    "General exact-event-vs-pattern and dependency lessons in sha256-pattern-versus-event and the Traillab guide.",
+    "Joint-lever controls and retest discipline in tool_workflows.json.",
+    "Middle-pinning and chosen-CV model boundaries in the pair-factory and fresh mid-band accounts.",
+    "Sparse-tail price and unpaid-head limitations in sha256-sparse-door-tail-price."
+  ],
+  "new_archive_value": [
+    "All104 historical closure classifications retained without live-work orders.",
+    "Specific SolCloud19 seed gate failure and dimension7 bounded result preserved.",
+    "Detailed Traillab paired gains and anti-double-counting replacements preserved.",
+    "Full pair/tail table coverage, alias deduplication, partial overlay omissions and59 additional independently verified pairs."
+  ],
+  "rights_note": "Project-authored scientific summaries and numerical data; preserve cited external characteristic and published-base lineage. No external paper prose/PDFs or ordinary agent/user conversation are included."
+}

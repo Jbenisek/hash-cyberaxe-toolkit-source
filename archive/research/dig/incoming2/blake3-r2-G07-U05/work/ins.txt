@@ -1,0 +1,33 @@
+  if(argc>1&&!strcmp(argv[1],"fresh")){
+    /* PREREG: seed=argv[2] (u64), nw words per class drawn uniformly (with replacement) from typed list of the class type; all 32768 members each */
+    u64 seed=strtoull(argv[2],0,10); int nw=atoi(argv[3]); rs=seed; build_members();
+    std::vector<u32> TL[2]={loadlist(0),loadlist(1)};
+    long mixed=0,err=0,allalive=0,alldead=0,groups=0;
+    for(int cid=0;cid<16;cid++){
+      int t=cid>>3; size_t gsz=MEM[cid].size(); std::vector<u32> chosen;
+      for(int i=0;i<nw;i++) chosen.push_back(TL[t][rnd()%TL[t].size()]);
+      size_t total=chosen.size()*gsz; std::vector<u32> Es(total),Ys(total); std::vector<unsigned char> O(total);
+      size_t z=0; for(u32 E:chosen) for(u32 y:MEM[cid]){Es[z]=E;Ys[z]=y;z++;}
+      run_pairs(Es.data(),Ys.data(),0,1,O.data(),total,1<<20);
+      long cm=0,ca=0,cd=0,ce=0;
+      for(size_t g=0;g<chosen.size();g++){size_t a=g*gsz,b=a+gsz; unsigned good=0,bad=0,e=0; for(size_t i=a;i<b;i++){if(O[i]==1)good++;else if(O[i]==0)bad++;else e++;}
+        if(e) ce++; else if(good==gsz) ca++; else if(bad==gsz) cd++; else {cm++; printf("MIXED cid %d E %08x alive=%u dead=%u\n",cid,chosen[g],good,bad);} }
+      printf("cid %d groups=%zu allalive=%ld alldead=%ld mixed=%ld err=%ld\n",cid,chosen.size(),ca,cd,cm,ce); fflush(stdout);
+      mixed+=cm;err+=ce;allalive+=ca;alldead+=cd;groups+=chosen.size(); }
+    printf("TOTAL groups=%ld allalive=%ld alldead=%ld mixed=%ld err=%ld evals=%ld\n",groups,allalive,alldead,mixed,err,groups*32768L); return 0; }
+  if(argc>1&&!strcmp(argv[1],"ctrl")){
+    /* NEGATIVE CONTROL: classes a,b of type t; words alive for rep(a) xor rep(b); test vs MEM[a] only, MEM[b] only, and the union (union must be mixed) */
+    int t=atoi(argv[2]),a=atoi(argv[3]),b=atoi(argv[4]),nmax=atoi(argv[5]); int ca=t*8+a, cb=t*8+b; build_members(); std::vector<u32> TL=loadlist(t);
+    size_t n=TL.size(); std::vector<u32> ys1(n,MEM[ca][0]),ys2(n,MEM[cb][0]); std::vector<unsigned char> o1(n),o2(n);
+    run_pairs(TL.data(),ys1.data(),0,1,o1.data(),n,1<<22); run_pairs(TL.data(),ys2.data(),0,1,o2.data(),n,1<<22);
+    std::vector<u32> sd; size_t k1=0,k2=0; for(size_t i=0;i<n;i++){k1+=o1[i]==1;k2+=o2[i]==1; if(o1[i]!=o2[i]) sd.push_back(TL[i]);}
+    printf("rep alive counts class%d=%zu class%d=%zu symdiff=%zu\n",ca,k1,cb,k2,sd.size());
+    if((int)sd.size()>nmax){ std::vector<u32> s2; for(int i=0;i<nmax;i++) s2.push_back(sd[(size_t)i*sd.size()/nmax]); sd=s2; }
+    long mixU=0,mixA=0,mixB=0;
+    for(u32 E:sd){
+      for(int pass=0;pass<3;pass++){
+        std::vector<u32> M; if(pass!=1) M.insert(M.end(),MEM[ca].begin(),MEM[ca].end()); if(pass!=0) M.insert(M.end(),MEM[cb].begin(),MEM[cb].end());
+        std::vector<u32> Es(M.size(),E); std::vector<unsigned char> O(M.size()); run_pairs(Es.data(),M.data(),0,1,O.data(),M.size(),1<<20);
+        size_t g=0; for(auto v:O) g+=v==1; int mixed=(g!=0&&g!=M.size());
+        if(pass==0) mixA+=mixed; else if(pass==1) mixB+=mixed; else mixU+=mixed; } }
+    printf("CTRL words=%zu mixed_in_classA_only=%ld mixed_in_classB_only=%ld mixed_in_union=%ld\n",sd.size(),mixA,mixB,mixU); return 0; }

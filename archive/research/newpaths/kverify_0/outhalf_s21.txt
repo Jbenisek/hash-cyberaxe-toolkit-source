@@ -1,0 +1,13 @@
+outhalf: 128 words, 116 eqs, F=12; greedy set full closure: True
+COMPUTED set 1: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 2: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 3: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 4: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 5: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 6: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 7: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 8: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 9: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 10: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 11: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0
+COMPUTED set 12: max n_sep over all 32767 bipartitions = 0; over 20000 random 4-block = 0

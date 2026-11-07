@@ -1,0 +1,23 @@
+{
+  "id": "D669-SHA256-R38-ROW4-SIGNATURE-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 37,
+  "object": "SHA-256 r38 Zone-D published row-4 final-equality signature",
+  "question": "What exact W8 signature is shared by the published-split row-4 final-equality hits?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Exact seed-0 row4hits: 2^26 G members, 2^26 rebuilds/rows5..15 pass, 4604 final-state-equal hits; all hits satisfy 12 independent affine W8 parity equations (six G-cell equations plus six additional signature equations), giving affine dimension 20; only 4604/2^20 affine candidates are hits.",
+  "source": "our workflow: D669 exact published-split row-4 signature audit",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/row4hits_seed0.summary; research/retest/zoneD38/row4hits_seed0.out; research/retest/zoneD38/analyze_row4hits_d669.py; research/tools/traillab/digs/zoneD38/zd38.c",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.1,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "published seed-0 split, current chi38 row-4 G family, exact tl_build and final-state equality",
+  "notes": "Necessary signature only. The six extra affine relations are not sufficient; no split-transfer, production-rate, charged-score, package, stage, filing, or submission credit.",
+  "reopen_if": "A second split yields a common signature, or the six extra relations are promoted to a proved full-path characterization"
+}

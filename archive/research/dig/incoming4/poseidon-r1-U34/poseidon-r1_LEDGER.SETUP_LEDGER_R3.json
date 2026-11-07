@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.SETUP line setup",
+ "question": "control (known-answer or independent check)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "control: the line identity (state after round 1 affine in W = tau^5) holds in my own r=2 line test on the pinned constants for all three j (r2var.py base: 3 valid lines, digest degree 390625 = 5^8) and the r=1 run verifies the collision",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/r2var.py research/dig/incoming4/_scan_poseidon/r2var.json research/dig/incoming4/_fresh_run_seed100001.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "r2var.py base reproduces poseidon_ref.hash_reduced on 5 random inputs before any variant is read; for r=1 the fresh run collision is accepted by the reference. | universe cell poseidon-r1|LEDGER.SETUP|LEDGER|R3",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

@@ -1,0 +1,60 @@
+REPORT: pkg5 draft (two-stage batch), built in `./research/pkg5`
+
+**What was built**
+- `research\pkg5` is a copy of pkg4 without `review\` and `DATASHEET.md`, with tool files renamed pkg4 to pkg5. State stays "draft"; pkg4 is untouched, and no yukon command, GPU job or shared-binary rebuild was run.
+- `blake3-r2\experiments\halfsearch.py`: the two-stage batch ported from `night_batch4.py` in the filed conventions, plus its own 2-round compression (`compress2`) used only to check lanes.
+- Proof: 6.3 (Lemma E kept, new Lemma N, rule A, Lemma A, "What Lemma A does not say"), 6.4, 6.5, 7 (H1, H2, new H3), 8, 9, 10.
+- `claim.json` (three heuristics), note, manifest and `FILE_STEPS.md` rewritten; AI credits kept and extended.
+- New tools: `rule_a_sat.py`, `recount_calc2.sh`, `selftest_big.sh`, `text_scan_pkg5.py`; `selftest_pkg5.py`, `check_pkg5.py` and `lane_bound.py` adapted.
+
+**Final figures and where each comes from**
+- time_log2 99.4, total below 2^99.3841, factor 2^23, 2^104 trials: `tools\pkg5_data.py` (`derive()`), `claim.json`.
+- Stage A 64 operations + 36 loads = 100; stage 2 96 + 42 = 138: the program's self-test and `evidence\selftest_1200000_61.json`, `_62.json`.
+- Per trial: expected at most 16.448, budgeted 16.756, charged 17.4 (margin 3.8%): `derive()`.
+- Count of all solutions 29,977,922: `evidence\pinB_e7c1815f.total`, recounted with `night_pair_calc2` over all 4,272 betas in `evidence\calc2_total_e7c1815f.txt`.
+- Count the claim uses 29,965,882, which is 3.57 times the factor: 40 of 287 outcomes dropped, carrying 12,039.8 (`evidence\rule_a_sat_e7c1815f.txt`, `evidence\pairs_recount_e7c1815f.txt`).
+- SAT per outcome: all 287 satisfiable; "violates rule A" unsatisfiable for 247, satisfiable for 40. One complete violating solution is printed in the proof and checked by `check_pkg5.py`.
+- Lanes checked against the complete digests of their two messages: 14,000 plus 16,800,000, all right.
+- Rule A on real trials: 17,179,784,810 of 2^40, a share of 2^-6.0000 (`evidence\followup\real32_pinB3.txt`).
+- E1-test pass rate 2^-29.42 (1,521 in 2^40); budget 2^-16.
+- ApproxMC on 30 outcomes: within 0.10 bit (`evidence\followup\pinB3_sat.txt`).
+- Toy runs: 13,337 against 13,505.6 and 84 against 93.3 (`evidence\followup\toy2_*.txt`).
+
+**Changed against the brief, and why (claim unchanged at 99.4)**
+1. Stage 2 is 138, not 134: the algorithm must count stage-2 entries against its budget, and that counter (3 operations, 1 load) is now in the machine count.
+2. Stage-2 budget is one eighth, not 0.115: 14% above seven times the measured rate instead of 5%.
+3. Charge is 17.4, not 17.2, which follows from 1 and 2. With the brief's numbers the total would be below 2^99.37 instead of 2^99.39.
+4. Conservative count is 29,965,882, not 29,852,244: it is now over the 4,272-beta list, where 13 more outcomes can violate the rule.
+5. Pass budget is 2^-16 of the trials (pkg4: 2^-12); at 17.4 per trial the old budget breaks the 2^-7 bound on lower-order terms.
+6. H2 and H3 are each allowed 0.0005, so 0.39 still holds.
+7. H2 is now about the E1 test (Lemma N), because the ported batch no longer uses Lemma E's test.
+8. Advice is 2^6 bytes (three constants of rule A).
+9. "The claim would be the same with class e74181df" is removed: no rule or batch exists for that class.
+
+**Validation (final state)**
+- `tools\selftest_pkg5.py`: all steps hold (16 ok lines). This covers the 300-batch comparison with `night_batch4.py`, 3,000 trials against `check_pkg5.py`, one full class loop, `check_pkg5.py` (83 ok lines), `fmt_pkg5.py` (nothing wrong) and the text scan (6 files, 0 findings).
+- `validate_pkg5.sh check tests intake-ready`: mechanically_valid, 176 tests OK, both experiments 256 of 256 with identical replay, exit status 0. Observations were 64/36, 96/42 and 7 lanes right on all 256 seeds; 22 batches entered stage 2.
+
+**SHA-256**
+- proof.md: `f313e52e725a54f79f38d2359695bd85787a9298578ef6692f5f2dfa28b11fb1`
+- claim.json: `627a7a14d0b940ab403987f08860c2684a51bf67360067b0d607737e483480e8`
+
+**Not established, or not done**
+- Rule A rests on kissat's 247 "unsatisfiable" answers: one solver, one run, no proof certificate, no argument in words.
+- Nobody has reviewed pkg5. The quoted reviews are of pkg4, and the text says so.
+- No independent implementation of the two-stage batch exists; the cross-check is against the program it was ported from.
+- H3 rests on four runs of 2^38 trials from the follow-up's program, in a layout that differs from 6.4 in two stated ways.
+- Nothing on real messages tests rule A together with R = 0. The toy staged runs use lossless rules, a sub-class and a rule on beta, not rule A.
+- I did not rerun ApproxMC, the toy runs or any GPU run; those figures are read from the follow-up's files.
+- Unchanged from pkg4: the seven-word model below about 2^-32, the E1 counts beyond the main session's checks, and no organizer verification of any count.
+- The judge pipeline was not run.
+
+**For a reviewer to look at first**
+1. This also affects pkg4: the whole-list recount shows three betas without a part (c81cd8b3, f81c2873, f81c28b3) where 7 outcomes went through the E3 random-subset branch. pkg4's "enumerated completely" does not hold for them. The lower bound is unaffected, since all 69 of their outcomes have an exact E1 count of zero.
+2. The program now contains a 2-round compression. "Never calls BLAKE3" became "never imports or calls an implementation of BLAKE3"; I found no organizer rule against it, but the owner should confirm.
+3. Proof 6.3: Lemma N, Lemma A and its limits; H1's event is now "R = 0 and rule A".
+4. H3's wording, the one-eighth budget, and the 3.8% margin (pkg4 had 4.4%).
+5. H1's extrapolation and limitations are at 4,075 and 4,061 of 4,096 characters. To fit, the toy staged runs are in the proof and note only, not in the claim.
+6. The WSL validation mirror `~/hashsmash/hash-smash` now holds pkg5 as candidate; `research\validate_track.sh blake3-r2 check` puts the live one back.
+
+Steps and file list are in `research\pkg5\FILE_STEPS.md`.

@@ -1,0 +1,26 @@
+fg1 pid 11924 start Thu Oct  8 13:01:48 MDT 2026
+fg2 pid 11934 start Thu Oct  8 13:01:49 MDT 2026
+tri pid 12610 start Thu Oct  8 13:03:26 MDT 2026
+tri done Thu Oct  8 13:28:26 MDT 2026
+quick3 pid 21813 start Thu Oct  8 13:28:33 MDT 2026
+quick3 done Thu Oct  8 13:32:25 MDT 2026
+quick4 pid 22591 start Thu Oct  8 13:36:47 MDT 2026
+quick4 done Thu Oct  8 13:37:47 MDT 2026
+pksolve pid 22835 start Thu Oct  8 13:39:22 MDT 2026
+fg8-a pid 23197 start Thu Oct  8 13:42:36 MDT 2026
+fg8-a done Thu Oct  8 13:42:36 MDT 2026
+fg8-b pid 23210 start Thu Oct  8 13:42:36 MDT 2026
+fg8-b done Thu Oct  8 13:42:37 MDT 2026
+fg8-a pid 23522 start Thu Oct  8 13:43:39 MDT 2026
+fg8-b pid 23528 start Thu Oct  8 13:43:39 MDT 2026
+pksolve stopped by me after K=8 bound 80 timed out Thu Oct  8 13:51:58 MDT 2026
+pksolve pid 95444 start Thu Oct  8 13:52:07 MDT 2026
+pksolve done Thu Oct  8 14:07:07 MDT 2026
+fg8 a/b stopped by me after their first runs (switching to 2^30-point domain) Thu Oct  8 14:08:43 MDT 2026
+fg8-c1 pid 98650 start Thu Oct  8 14:09:26 MDT 2026
+fg8-c2 pid 98659 start Thu Oct  8 14:09:27 MDT 2026
+fg8-c3 pid 98665 start Thu Oct  8 14:09:27 MDT 2026
+fg8-c1 done Thu Oct  8 14:12:55 MDT 2026
+fg8-c3 done Thu Oct  8 14:13:19 MDT 2026
+fg8-c2 done Thu Oct  8 14:16:33 MDT 2026
+all my jobs finished Thu Oct  8 14:16:45 MDT 2026

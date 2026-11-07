@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-SCHEDULE-SAMPLE-20261014",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "legal G-call schedule sample",
+  "question": "Can reordering independent column/diagonal calls reduce the r4 step gates or register peak?",
+  "labels": ["N", "C", "S"],
+  "status": "SAMPLED",
+  "number": "9 legal schedules: all 24422 gates, 771 peak/live and allocated registers; best schedule KAT PASS against scalar and allocated execution",
+  "source": "research/dig_new/blake3-r4/rotation_schedule_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_schedule_probe_1014.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "771 live/register planes",
+  "notes": "Finite negative sample only; arbitrary Boolean identities and broader rotation rewrites remain open. No package/stage/filing/submission."
+}

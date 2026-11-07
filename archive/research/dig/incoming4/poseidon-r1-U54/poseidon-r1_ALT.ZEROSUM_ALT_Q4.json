@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.ZEROSUM zero-sum structure",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "toy q = 23/43: a fixed relation keeps about 1/q of collision pairs (P3.14)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_14.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Luna 3, not retested. | universe cell poseidon-r1|ALT.ZEROSUM|ALT|Q4",
+ "held_fixed": "toy",
+ "reopen_if": "a lift to the real field"
+}

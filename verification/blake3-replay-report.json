@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-11-05T05:48:02.275Z",
+  "full_round_known_answers": 3,
+  "official_vector_source": "https://github.com/BLAKE3-team/BLAKE3/blob/master/test_vectors/test_vectors.json",
+  "official_cases": "input_len 0 and 3, first 32 output bytes; abc is an additional control",
+  "constructed_one_round_pairs": 256,
+  "column_coalescence_checks": 256,
+  "two_round_noncolliding_controls": 256,
+  "one_bit_noncolliding_controls": 256,
+  "invalid_input_controls": 3,
+  "status": "passed",
+  "scope": "Finite independent implementation checks; the universal family follows from the linked algebraic proof, not these samples."
+}

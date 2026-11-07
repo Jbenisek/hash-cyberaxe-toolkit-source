@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.GBUF (MEM)",
+ "question": "M4: alternatives: g in the transform domain, or half-precision g",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "g in the NTT domain would need 3 x 2^17 elements = 12.6 MB (twice the coefficient form). No alternative that holds less than the 6.25 MB dense vector is known; not built.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.GBUF|MEM|M4. Listed, not tested.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "a streaming reduction schedule that never holds g whole is designed and counted",
+ "prior": 0.03,
+ "potential_bits": 0.2
+}

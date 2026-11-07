@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "target_profile": "blake3-r4-prefix-v1",
+  "attack_class": "ordinary-collision",
+  "rounds": 4,
+  "claim": {
+    "time_log2": 125.35348,
+    "time_unit": "target-compressions",
+    "memory_log2_bytes": 20,
+    "preprocessing_log2": 14.9,
+    "success_probability": 0.39,
+    "nonuniform_advice_log2_bytes": 0
+  },
+  "restrictions": [
+    "Two distinct 64-byte messages 0^32 || x and 0^32 || y (x != y, 256-bit little-endian integers): one chunk of one block, chaining value IV, counter 0, length 64, flags 11 (CHUNK_START|CHUNK_END|ROOT), 4 rounds, unkeyed, the complete 256-bit digest (blake3-r4-prefix-v1). They are found as a collision g(x) = g(y) of the walk g(x) = f(x) XOR q, f(x) = digest(0^32 || x), q a fixed 256-bit mask (the polarities of the digest planes of the generated circuit); g(x) = g(y) iff f(x) = f(y). Plain birthday search; no differential or structural property of the 4 rounds is used.",
+    "Machine, a premise of this entry (H3): a classical load/store machine with 256-bit words, 256-bit immediates and 1,024 registers under collision-frontier-v5 (the profile fixes the word size and charges loads and stores, not a register count); 846 operations (C of blake3-r4) to the unit. Charged: every add, AND, OR, XOR, shift, compare, branch, register move, load, store and the random word. The main loop evaluates 256 trails bit-sliced with pivot full adders: 24459 operations per batch (24422 gates, a 34-operation stage-1 test, 3 loop operations), no load, store or move, no complement operation; it needs 771 registers. Every instruction is charged 36 bytes. Smaller files are priced in proof.md 3.5.",
+    "time_log2 is an upper bound: every term of proof.md Section 3.4 is enforced by a halt of the program (B batches, e2max stage-1 hits, 1744 table keys, 2 cut trails, a recovery of at most c + 2^48 batches, one recovery), and the bound charges each at its limit. The attempt is single: one fresh uniform 256-bit word r, no restart, no amplification, no stored collision, no advice; m0..m7 = 0. Distinguished points: low 32 bits zero and the next 90 bits below 17 (density 17 / 2^122). The generator that builds the circuit at setup is charged (24,774,000 operations).",
+    "Memory: 1744 table entries of 26 bytes (45344 bytes) plus 954072 bytes of code (26502 instructions of 36 bytes) plus 16,384 bytes of counters and the plane copy plus 32,768 bytes for the 1,024 registers: 1048568 bytes <= 2^20; claimed as 2^20. The circuit generator that runs at setup is a two-pass C program charged at 1522 compiled instructions (54792 bytes) and 16856 bytes of scratch, held in the region that the table and the register file occupy once the search runs: setup phase 1042104 bytes, search phase 1048568 (proof 3.6). It was run in a sandbox capped at 1,048,576 bytes of guest memory and as a native binary under prlimit; both emit the identical program.",
+    "Success probability at least 0.39 holds under the model premise H1 (proof.md Sections 4 and 5: success on the fixed target is at least success against a uniformly random function) and the named approximations H2, with the losses of Section 4 (about 1.32e-03 spent of 1.65e-03 available). If the pair-collision rate of the evaluated inputs were (1 - eps) of the random-mapping rate, the success probability stays at least 0.39 for eps <= 0.0011, and at most 0.5 * log2(1/(1-eps)) more bits (0.0072 for eps = 0.01) restore it beyond.",
+    "The declared experiments run this program in the organizer sandbox: bsrho-n18 (one attempt of the 256-lane search per trial at width 18, DP = low 2 bits zero) and proj-k0-w256 (2048 points of the target at width 256 per trial, a pair when two digests agree in the low 21 bits). Each returns pairs whose complete 4-round digests agree in the stated low bits. They are program checks: no number of the claim is estimated from their counts and no sampling premise is used. No outside code or library is used.",
+    "No nonuniform advice and no prefix: the mask q is derived by the generator. Credited derivative: our own 62cfd777 (the same program at 3 rounds), 0a9640ed and 3356413f (program, search, ledger, register convention), and jungjipdo's 6ae36351 for the pivot full adder and the mask walk g = f XOR q (re-implemented from its proof text; no file of it used or run). preprocessing_log2 = 14.9 is the setup and generator row, which is also inside time_log2."
+  ],
+  "baseline_improved": "blake3-r4-nominal-v2",
+  "certificate_manifest": "certificates/manifest.json",
+  "experiment_manifest": "experiments/manifest.json",
+  "heuristics": [
+    {
+      "id": "H1-random-function-model",
+      "role": "score-critical",
+      "statement": "Model premise. Let F be a uniformly random function from 256-bit values to 256-bit values. For the fixed target, the probability that the single attempt of the search succeeds, with the walk g(x) = f(x) XOR q (f(x) = the complete 4-round digest of the 64-byte message 0^32 || x, q the fixed digest-plane mask of the generated circuit), is at least the probability, over the fresh word r and a uniformly random F, that the same search succeeds when every evaluation of g is replaced by F (lazy sampling). In that model the pair-collision rate of evaluated inputs is 2^-256, the iterates have the first-collision law of a random mapping, and a point is a distinguished point (low 32 bits zero and the next 90 bits below 17) with probability 17 / 2^122, independently; the success probability is then at least 0.3903 (proof.md Section 4, under the named approximations H2). This is a comparison of two success events, not a statement about the entropy of r.",
+      "scope": "The fixed target blake3-r4-prefix-v1 restricted to 64-byte messages 0^32 || x, the fixed mask q, the 2^128-scale evaluation of g along about 1400 trails of mean length 2^117.91 started from r + t, 256 trails at a time. Not claimed for other messages, other round counts, or evaluations beyond this scale.",
+      "extrapolation": "Declared and not proved. The full 256-bit functional graph, trails longer than 2^40 and 2^128 evaluations cannot be observed. The organizer experiments bsrho-n18 and proj-k0-w256 run this program on the real target at reduced width (the search at width 18) and at full width for 2048 points with 21-bit projections; they are program checks, no number of the claim is estimated from their counts, and no sampling premise is used. Extrapolation from these sizes to width 256 and 2^128 evaluations is by the premise only. A deficit eps in the pair-collision rate costs 0.5 * log2(1/(1-eps)) bits (0.0072 for eps = 0.01).",
+      "evidence_ids": [
+        "experiment:bsrho-n18",
+        "experiment:proj-k0-w256",
+        "proof:87-106",
+        "proof:107-122",
+        "proof:123-129"
+      ],
+      "limitations": "A model premise about one fixed function, not a theorem: on the target the run is a deterministic function of r. It cannot be tested at width 256; the experiments reach width 18 and 21-bit projections of 2048 points per trial and do not measure collision structure at 2^128 evaluations. A rate deficit eps above 0.0011 lowers the success probability below 0.39 and is repaired by at most 0.5 * log2(1/(1-eps)) more bits of time."
+    },
+    {
+      "id": "H2-tail-approximations",
+      "role": "supporting",
+      "statement": "Supporting, named approximations used in the computation for the random function F (proof.md Section 4, Lemma 2). (a) The age of the trail of each lane at the halt is dominated by an exponential with mean L = 2^117.91 and the 256 ages are independent, although restarts depend on the history of the run; the sum of the ages is then at most 350 L except with probability 1e-6 (Chernoff). (b) The number of cut trails is Poisson with mean 0.024. (c) The probability loss for a cut trail is linear in the lost points with slope 0.605 per unit of relative loss; a third cut is a halt charged as failure; the cut-trail deficit is 1.10e-04. (d) Trail lengths are geometric with mean L; the expected number of colliding pairs inside one trail is at most Q L / N = 1.2e-03. The key-false-match bound 2e-13 and the table-capacity Chernoff bound 2^-45.2 are computations for F. The sum of the loss terms is below 1.323e-03.",
+      "scope": "The parameters of plan(256) in experiments/bsrho.py: 256 lanes, DP density 17 / 2^122, age cap 11 L, table of 1744 keys.",
+      "extrapolation": "Computations for the random function F under the approximations (a) to (d) only; the same formulas are implemented in plan(n) and loss(p), and the plan is exercised at n = 18 in the experiments.",
+      "evidence_ids": [
+        "proof:87-106",
+        "experiment:bsrho-n18"
+      ],
+      "limitations": "Not proved: independence of the 256 ages in the adaptive process, the Poisson law of the cut count and the linearisation of the cut loss; the cut-trail deficit costs 1.10e-04 of the 1.65e-03 of probability slack above 0.39 (the rest of the slack is margin)."
+    },
+    {
+      "id": "H3-machine-convention",
+      "role": "score-critical",
+      "statement": "Score-critical premise of this entry (accepted as such for our 0a9640ed). The cost model prices a 256-bit word RAM with loads and stores and fixes no register count; this entry declares R = 1,024 registers of 256 bits, counted as 32,768 bytes of memory, and charges every operation, load, store and register move. The main loop (one batch of 256 trails, 24459 operations: the 24422-operation generated step, a 34-operation stage-1 test and 3 loop operations) has no load, store or move because the generated line needs 771 registers (output plane j in the register of input plane j). The organizer's reference count C(r4) = 846 is used only as the unit. Every instruction is charged 36 bytes of code, also the three-register ones, and the code of the circuit generator is charged at 36 bytes per instruction of its compiled form (1522 instructions, proof.md 3.6).",
+      "scope": "The loop body of one batch of 256 lanes, its stage-1 test and the handlers; table accesses, recovery, events and setup are charged at the stated bounds including loads and stores of their words.",
+      "extrapolation": "A machine with fewer than 771 registers would add loads and stores to every batch; proof.md 3.5 gives the cost (no table fits with 512 registers). The claim assumes the declared 1,024.",
+      "evidence_ids": [
+        "proof:31-36",
+        "proof:37-44",
+        "proof:45-55",
+        "proof:70-76",
+        "proof:77-83",
+        "proof:130-136"
+      ],
+      "limitations": "The benchmark profile does not fix a register count or an instruction set; the declaration is this entry's own. The count 24422 is produced by the generator in the program (a C port of it emits the identical program in a 1 MiB sandbox, proof 3.6) and the register allocation by `allocate`; smaller files are priced by the program's Belady allocation of the straight line (an upper bound on what a better schedule needs)."
+    }
+  ],
+  "submission_state": "ready",
+  "lane": "exploratory"
+}

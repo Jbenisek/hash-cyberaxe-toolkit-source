@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.INTERP interpolation",
+ "question": "alternatives (other patterns / methods)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "alternative: exact bivariate monomial counts in (A,B): 4,887,501 at R60 (r=1) (ATLAS section 5) - far above the 78,126 of the line",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/levels/atlas/ATLAS_POSEIDON.md research/poseidon/levels/atlas/facts_degree_output.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Quoted from the atlas. | universe cell poseidon-r1|ALT.INTERP|ALT|Q4",
+ "held_fixed": "r=1",
+ "reopen_if": "sparser basis"
+}

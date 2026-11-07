@@ -1,0 +1,22 @@
+{
+  "id": "D799-POSEIDON-IRA-FLAG-MATRIX-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r1/r2 GCC IRA spill sensitivity to compiler flags",
+  "question": "Does a nearby compiler flag set remove the register-spill issue without changing the source?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "All four tested flag sets compile for both r1 and r2, but every variant retains allocator spill records; r1/r2 O2 changes the distribution rather than eliminating spills. No variant has a KAT or charged ledger, so no score credit is available.",
+  "source": "owned Poseidon-r1/r2 ntt.c sources",
+  "own_test": true,
+  "evidence": "research/retest/poseidon/d799_ira_flag_matrix.py; research/sol_answer_D799_poseidon_ira_flag_matrix.md; GCC -fdump-rtl-ira outputs",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "WSL GCC 15.2.0 and current source; only optimization flags varied",
+  "notes": "Compiler-local exploratory matrix; no production rebuild, KAT, memory/primitive ledger, package/stage/filing/submission.",
+  "reopen_if": "A chosen flag set receives a source-identical KAT, exact charged ledger, and organizer target acceptance.",
+  "peak_mem": "UNKNOWN"
+}

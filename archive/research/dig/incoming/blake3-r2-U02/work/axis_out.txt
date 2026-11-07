@@ -1,0 +1,5 @@
+a1 both=1 d2only=1 b2only=0 first: 7ffffff8
+d1 both=1 d2only=15 b2only=0 first: 7af83f3a
+c1 both=2 d2only=6 b2only=0 first: 3efb9f3a befb9f3a
+b1 both=8 d2only=67108856 b2only=24 first: 01200103 01200183 06a00103 06a00183 f9200108 f9200188 fea00108 fea00188
+w13 both=1 d2only=15 b2only=29 first: 0007c006

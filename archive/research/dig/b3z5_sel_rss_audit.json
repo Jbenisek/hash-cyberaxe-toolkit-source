@@ -1,0 +1,21 @@
+{
+  "id": "B3Z5-SEL-RSS-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3Z5 SEL memory-cap audit",
+  "question": "Do the available SEL reruns establish the claimed 2^30 memory cap?",
+  "labels": ["K", "E"],
+  "status": "OPEN",
+  "number": "Current local runs 11, 38 and 72 exit 10 before valid completion (peaks 81608704, 85192704 and 87724032 B respectively); no run-20 artifact exists locally; runs 50 and 52 have no terminal marker and remain pending.",
+  "source": "research/lanes/sel-rss and research/tools/build_pkg/scratch/b3z5_build/sel_results.json",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3Z5_sel_rss_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": null,
+  "topic": "blake3-r2.B3Z5.SEL-memory",
+  "peak_mem": 87724032,
+  "notes": "Failed exits are not valid successful-cap measurements; no jobs were stopped. Package/stage/filing/submission unchanged."
+}

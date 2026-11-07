@@ -1,0 +1,22 @@
+{
+  "id": "D361-POSR2-GBUF-ALTERNATIVE-AUDIT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MEM.GBUF alternative representations",
+  "question": "Can transform-domain or sub-32-byte representations of r2 g reduce the 6,250,016-byte dense coefficient buffer?",
+  "labels": ["N", "D", "S", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact source sizes: coefficient g=195313*32=6250016 B; full NTT-domain g=(3*2^17)*32=12582912 B, so transform-domain is larger. No lossless packed kernel exists in checked-in source; streaming remains OPEN.",
+  "source": "our source and ledger audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D361_poseidon_r2_g_buffer_alternatives.md; research/poseidon/orchard/lean_r2/lean_attack.c; research/poseidon/orchard/lean_r2/lean.c; research/poseidon/orchard/lean_r2/ntt.c; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Partial closure only: transform-domain is exactly larger and naive half-precision is not a lossless field representation. A new streaming/sparse schedule is still OPEN; no score or package credit.",
+  "held_fixed": "checked-in r2 source, fp=32-byte field element, N=3*2^17, existing 236-step schedule",
+  "reopen_if": "A lossless streaming/sparse g representation with KAT, exact ledger, and peak measurement",
+  "peak_mem": "0 FREE source/arithmetic audit"
+}

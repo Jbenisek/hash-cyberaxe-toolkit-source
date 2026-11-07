@@ -1,0 +1,324 @@
+{
+ "batch words": [
+  {
+   "piece": "representative",
+   "distinct X2 in lanes": 1,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 0.7919,
+    "C2 to z": 2.4062,
+    "rule A": 0.9922,
+    "entry count": 0.0,
+    "C2, rest": 2.4062,
+    "C1 to Y1": 2.6918,
+    "E1, A and B": 5.5538,
+    "E1 test": 1.7779,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 0",
+   "distinct X2 in lanes": 1,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 0.9169,
+    "C2 to z": 3.0156,
+    "rule A": 0.9648,
+    "entry count": 0.0,
+    "C2, rest": 3.0156,
+    "C1 to Y1": 3.3854,
+    "E1, A and B": 6.2228,
+    "E1 test": 1.8042,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 1",
+   "distinct X2 in lanes": 1,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 0.6669,
+    "C2 to z": 3.0155,
+    "rule A": 0.9922,
+    "entry count": 0.0,
+    "C2, rest": 3.0155,
+    "C1 to Y1": 3.2486,
+    "E1, A and B": 4.9405,
+    "E1 test": 1.9998,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 2",
+   "distinct X2 in lanes": 2,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 0.6669,
+    "C2 to z": 2.6093,
+    "rule A": 0.9922,
+    "entry count": 0.0,
+    "C2, rest": 2.6093,
+    "C1 to Y1": 3.7017,
+    "E1, A and B": 4.9204,
+    "E1 test": 1.6157,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 3",
+   "distinct X2 in lanes": 2,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 0.9169,
+    "C2 to z": 2.3122,
+    "rule A": 0.9766,
+    "entry count": 0.0,
+    "C2, rest": 2.3122,
+    "C1 to Y1": 3.1657,
+    "E1, A and B": 5.1987,
+    "E1 test": 1.8616,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 4",
+   "distinct X2 in lanes": 2,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 0.9169,
+    "C2 to z": 2.5467,
+    "rule A": 0.9922,
+    "entry count": 0.0,
+    "C2, rest": 2.5467,
+    "C1 to Y1": 3.502,
+    "E1, A and B": 5.7328,
+    "E1 test": 1.9828,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 5",
+   "distinct X2 in lanes": 2,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 1.9614,
+    "C2 to z": 2.5466,
+    "rule A": 0.9922,
+    "entry count": 0.0,
+    "C2, rest": 3.1599,
+    "C1 to Y1": 3.5533,
+    "E1, A and B": 6.494,
+    "E1 test": 1.8789,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 6",
+   "distinct X2 in lanes": 2,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 1.9614,
+    "C2 to z": 2.6719,
+    "rule A": 0.9609,
+    "entry count": 0.0,
+    "C2, rest": 3.1109,
+    "C1 to Y1": 3.1281,
+    "E1, A and B": 4.5789,
+    "E1 test": 1.794,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 7",
+   "distinct X2 in lanes": 2,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 1.9614,
+    "C2 to z": 2.7813,
+    "rule A": 0.9961,
+    "entry count": 0.0,
+    "C2, rest": 2.9117,
+    "C1 to Y1": 2.7084,
+    "E1, A and B": 4.6769,
+    "E1 test": 1.9366,
+    "restore": 0.0
+   }
+  },
+  {
+   "piece": "neighbour word 8",
+   "distinct X2 in lanes": 1,
+   "stage A": 47,
+   "stage 2": 135,
+   "registers": 16,
+   "lanes right": 7,
+   "lanes wrong": 0,
+   "rotation mask loads": 0,
+   "lane-sum bound broken": [],
+   "max lane (units of 2^32)": {
+    "loop": 0.0,
+    "X0 to X10": 0.7114,
+    "C2 to z": 2.7811,
+    "rule A": 0.9609,
+    "entry count": 0.0,
+    "C2, rest": 2.7811,
+    "C1 to Y1": 3.6001,
+    "E1, A and B": 5.171,
+    "E1 test": 1.897,
+    "restore": 0.0
+   }
+  }
+ ],
+ "gate core": {
+  "mine": 9,
+  "pkg": 9,
+  "registers": 5,
+  "parts": {
+   "load": 3,
+   "xor": 1,
+   "and": 1,
+   "add": 1,
+   "or": 1,
+   "cmpbr": 1
+  },
+  "gate flags = gate_pass_z": true
+ },
+ "dispatch (7-lane selector)": {
+  "mine": 29,
+  "pkg": 29,
+  "parts": {
+   "load": 8,
+   "and": 7,
+   "cmpbr": 7
+  }
+ },
+ "Y4-delta kernel": {
+  "mine": 5,
+  "pkg": 5
+ },
+ "lane broadcast": {
+  "mine": 7,
+  "pkg": 7
+ },
+ "mixed-middle cache per group": {
+  "mine": 258,
+  "pkg": 258,
+  "parts": {
+   "load": 90,
+   "xor": 84,
+   "and": 42,
+   "store": 42
+  }
+ },
+ "table build (per list word)": {
+  "mine": 74,
+  "pkg": 74,
+  "parts": {
+   "add": 6,
+   "load": 26,
+   "cmpbr": 1,
+   "xor": 7,
+   "and": 3,
+   "store": 5,
+   "rot": 5
+  },
+  "max lane": {
+   "build loop": 0.0,
+   "build C0": 2.2148,
+   "build D1": 2.0287
+  }
+ },
+ "middle step (per X2 value)": {
+  "mine": 134,
+  "pkg": 134,
+  "parts": {
+   "load": 40,
+   "add": 20,
+   "and": 8,
+   "cmpbr": 1,
+   "store": 9,
+   "xor": 15,
+   "rot": 8
+  }
+ },
+ "stage 2 split": {
+  "per part": {
+   "entry count": 4,
+   "C2, rest": 24,
+   "C1 to Y1": 39,
+   "E1, A and B": 47,
+   "E1 test": 17,
+   "restore": 4
+  },
+  "stage 2 total": 135,
+  "prefix": 81,
+  "tail (no restore extra)": 54,
+  "test (RESULTS.md, not recounted here)": 12,
+  "tail + 3 restore-live": 57,
+  "P(lane passes cheap test)": 0.00640869140625,
+  "P(word of 7 lanes passes)": 0.04400749566483897,
+  "per entered word, test 12, tail+3": 95.50842725289583
+ }
+}

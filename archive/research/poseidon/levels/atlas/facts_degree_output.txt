@@ -1,0 +1,282 @@
+=== A generic degree per lane (total degree in nk,rho) ===
+r = 1
+  init     [1, 1, 0]
+  R0 C     [1, 1, 0]
+  R0 S     [5, 5, 0]
+  R0 M     [5, 5, 5]
+  R1 C     [5, 5, 5]
+  R1 S     [25, 25, 25]
+  R1 M     [25, 25, 25]
+  R2 C     [25, 25, 25]
+  R2 S     [125, 125, 125]
+  R2 M     [125, 125, 125]
+  R3 C     [125, 125, 125]
+  R3 S     [625, 625, 625]
+  R3 M     [625, 625, 625]
+  R4 C     [625, 625, 625]
+  R4 S     [3125, 625, 625]
+  R4 M     [3125, 3125, 3125]
+  R60 C    [3125, 3125, 3125]
+  R60 S    [15625, 15625, 15625]
+  R60 M    [15625, 15625, 15625]
+  R61 C    [15625, 15625, 15625]
+  R61 S    [78125, 78125, 78125]
+  R61 M    [78125, 78125, 78125]
+  R62 C    [78125, 78125, 78125]
+  R62 S    [390625, 390625, 390625]
+  R62 M    [390625, 390625, 390625]
+  R63 C    [390625, 390625, 390625]
+  R63 S    [1953125, 1953125, 1953125]
+  R63 M    [1953125, 1953125, 1953125]
+r = 2
+  init     [1, 1, 0]
+  R0 C     [1, 1, 0]
+  R0 S     [5, 5, 0]
+  R0 M     [5, 5, 5]
+  R1 C     [5, 5, 5]
+  R1 S     [25, 25, 25]
+  R1 M     [25, 25, 25]
+  R2 C     [25, 25, 25]
+  R2 S     [125, 125, 125]
+  R2 M     [125, 125, 125]
+  R3 C     [125, 125, 125]
+  R3 S     [625, 625, 625]
+  R3 M     [625, 625, 625]
+  R4 C     [625, 625, 625]
+  R4 S     [3125, 625, 625]
+  R4 M     [3125, 3125, 3125]
+  R5 C     [3125, 3125, 3125]
+  R5 S     [15625, 3125, 3125]
+  R5 M     [15625, 15625, 15625]
+  R60 C    [15625, 15625, 15625]
+  R60 S    [78125, 78125, 78125]
+  R60 M    [78125, 78125, 78125]
+  R61 C    [78125, 78125, 78125]
+  R61 S    [390625, 390625, 390625]
+  R61 M    [390625, 390625, 390625]
+  R62 C    [390625, 390625, 390625]
+  R62 S    [1953125, 1953125, 1953125]
+  R62 M    [1953125, 1953125, 1953125]
+  R63 C    [1953125, 1953125, 1953125]
+  R63 S    [9765625, 9765625, 9765625]
+  R63 M    [9765625, 9765625, 9765625]
+
+=== B leading-coefficient tracker on random lines (exact; nonzero lc => line degree exactly this) ===
+r=1 trial 0: final lane degrees after each round:
+   R0  full    deg [5, 5, 5]  lc-zero [False, False, False]
+   R1  full    deg [25, 25, 25]  lc-zero [False, False, False]
+   R2  full    deg [125, 125, 125]  lc-zero [False, False, False]
+   R3  full    deg [625, 625, 625]  lc-zero [False, False, False]
+   R4  partial deg [3125, 3125, 3125]  lc-zero [False, False, False]
+   R60 full    deg [15625, 15625, 15625]  lc-zero [False, False, False]
+   R61 full    deg [78125, 78125, 78125]  lc-zero [False, False, False]
+   R62 full    deg [390625, 390625, 390625]  lc-zero [False, False, False]
+   R63 full    deg [1953125, 1953125, 1953125]  lc-zero [False, False, False]
+   final output degree = 1953125 = 5^9? True
+r=1 trial 1: final lane degrees after each round:
+   R0  full    deg [5, 5, 5]  lc-zero [False, False, False]
+   R1  full    deg [25, 25, 25]  lc-zero [False, False, False]
+   R2  full    deg [125, 125, 125]  lc-zero [False, False, False]
+   R3  full    deg [625, 625, 625]  lc-zero [False, False, False]
+   R4  partial deg [3125, 3125, 3125]  lc-zero [False, False, False]
+   R60 full    deg [15625, 15625, 15625]  lc-zero [False, False, False]
+   R61 full    deg [78125, 78125, 78125]  lc-zero [False, False, False]
+   R62 full    deg [390625, 390625, 390625]  lc-zero [False, False, False]
+   R63 full    deg [1953125, 1953125, 1953125]  lc-zero [False, False, False]
+   final output degree = 1953125 = 5^9? True
+r=2 trial 0: final lane degrees after each round:
+   R0  full    deg [5, 5, 5]  lc-zero [False, False, False]
+   R1  full    deg [25, 25, 25]  lc-zero [False, False, False]
+   R2  full    deg [125, 125, 125]  lc-zero [False, False, False]
+   R3  full    deg [625, 625, 625]  lc-zero [False, False, False]
+   R4  partial deg [3125, 3125, 3125]  lc-zero [False, False, False]
+   R5  partial deg [15625, 15625, 15625]  lc-zero [False, False, False]
+   R60 full    deg [78125, 78125, 78125]  lc-zero [False, False, False]
+   R61 full    deg [390625, 390625, 390625]  lc-zero [False, False, False]
+   R62 full    deg [1953125, 1953125, 1953125]  lc-zero [False, False, False]
+   R63 full    deg [9765625, 9765625, 9765625]  lc-zero [False, False, False]
+   final output degree = 9765625 = 5^10? True
+r=2 trial 1: final lane degrees after each round:
+   R0  full    deg [5, 5, 5]  lc-zero [False, False, False]
+   R1  full    deg [25, 25, 25]  lc-zero [False, False, False]
+   R2  full    deg [125, 125, 125]  lc-zero [False, False, False]
+   R3  full    deg [625, 625, 625]  lc-zero [False, False, False]
+   R4  partial deg [3125, 3125, 3125]  lc-zero [False, False, False]
+   R5  partial deg [15625, 15625, 15625]  lc-zero [False, False, False]
+   R60 full    deg [78125, 78125, 78125]  lc-zero [False, False, False]
+   R61 full    deg [390625, 390625, 390625]  lc-zero [False, False, False]
+   R62 full    deg [1953125, 1953125, 1953125]  lc-zero [False, False, False]
+   R63 full    deg [9765625, 9765625, 9765625]  lc-zero [False, False, False]
+   final output degree = 9765625 = 5^10? True
+
+=== C exact univariate line polynomials (random line) ===
+r=1 (cap deg 15625):
+    r1 R0 full S-box out deg [5, 5, 0]  after MDS deg [5, 5, 5]  zero coeffs inside [0, 0, 0]  (0.0s)
+    r1 R1 full S-box out deg [25, 25, 25]  after MDS deg [25, 25, 25]  zero coeffs inside [0, 0, 0]  (0.0s)
+    r1 R2 full S-box out deg [125, 125, 125]  after MDS deg [125, 125, 125]  zero coeffs inside [0, 0, 0]  (0.0s)
+    r1 R3 full S-box out deg [625, 625, 625]  after MDS deg [625, 625, 625]  zero coeffs inside [0, 0, 0]  (0.5s)
+    r1 R4 partial S-box out deg [3125, 625, 625]  after MDS deg [3125, 3125, 3125]  zero coeffs inside [0, 0, 0]  (1.3s)
+    r1 R60 full S-box out deg [15625, 15625, 15625]  after MDS deg [15625, 15625, 15625]  zero coeffs inside [0, 0, 0]  (19.0s)
+r=2 (cap deg 15625):
+    r2 R0 full S-box out deg [5, 5, 0]  after MDS deg [5, 5, 5]  zero coeffs inside [0, 0, 0]  (0.0s)
+    r2 R1 full S-box out deg [25, 25, 25]  after MDS deg [25, 25, 25]  zero coeffs inside [0, 0, 0]  (0.0s)
+    r2 R2 full S-box out deg [125, 125, 125]  after MDS deg [125, 125, 125]  zero coeffs inside [0, 0, 0]  (0.0s)
+    r2 R3 full S-box out deg [625, 625, 625]  after MDS deg [625, 625, 625]  zero coeffs inside [0, 0, 0]  (0.1s)
+    r2 R4 partial S-box out deg [3125, 625, 625]  after MDS deg [3125, 3125, 3125]  zero coeffs inside [0, 0, 0]  (0.3s)
+    r2 R5 partial S-box out deg [15625, 3125, 3125]  after MDS deg [15625, 15625, 15625]  zero coeffs inside [0, 0, 0]  (4.8s)
+
+=== D special directions after round 0 ===
+direction making lane 0 degree-drop after round 0 (u/v=0x171bfeac856e...):
+    dir0 R0 full S-box out deg [5, 5, 0]  after MDS deg [4, 5, 5]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir0 R1 full S-box out deg [20, 25, 25]  after MDS deg [25, 25, 25]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir0 R2 full S-box out deg [125, 125, 125]  after MDS deg [125, 125, 125]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir0 R3 full S-box out deg [625, 625, 625]  after MDS deg [625, 625, 625]  zero coeffs inside [0, 0, 0]  (0.1s)
+    dir0 R4 partial S-box out deg [3125, 625, 625]  after MDS deg [3125, 3125, 3125]  zero coeffs inside [0, 0, 0]  (0.4s)
+   round-0 output degrees on this line: [4, 5, 5] (lane 0 drops to 4; the next MDS restores the top degree)
+direction making lane 1 degree-drop after round 0 (u/v=0x38eb3b938273...):
+    dir1 R0 full S-box out deg [5, 5, 0]  after MDS deg [5, 4, 5]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir1 R1 full S-box out deg [25, 20, 25]  after MDS deg [25, 25, 25]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir1 R2 full S-box out deg [125, 125, 125]  after MDS deg [125, 125, 125]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir1 R3 full S-box out deg [625, 625, 625]  after MDS deg [625, 625, 625]  zero coeffs inside [0, 0, 0]  (0.1s)
+    dir1 R4 partial S-box out deg [3125, 625, 625]  after MDS deg [3125, 3125, 3125]  zero coeffs inside [0, 0, 0]  (0.2s)
+   round-0 output degrees on this line: [5, 4, 5] (lane 1 drops to 4; the next MDS restores the top degree)
+direction making lane 2 degree-drop after round 0 (u/v=0x25ad56736388...):
+    dir2 R0 full S-box out deg [5, 5, 0]  after MDS deg [5, 5, 4]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir2 R1 full S-box out deg [25, 25, 20]  after MDS deg [25, 25, 25]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir2 R2 full S-box out deg [125, 125, 125]  after MDS deg [125, 125, 125]  zero coeffs inside [0, 0, 0]  (0.0s)
+    dir2 R3 full S-box out deg [625, 625, 625]  after MDS deg [625, 625, 625]  zero coeffs inside [0, 0, 0]  (0.1s)
+    dir2 R4 partial S-box out deg [3125, 625, 625]  after MDS deg [3125, 3125, 3125]  zero coeffs inside [0, 0, 0]  (0.3s)
+   round-0 output degrees on this line: [5, 5, 4] (lane 2 drops to 4; the next MDS restores the top degree)
+
+=== E exact bivariate expansion (monomial counts) ===
+R0: after S-box (total deg, #monomials, deg_nk, deg_rho) per lane: [(5, 6, 5, 0), (5, 6, 0, 5), (0, 1, 0, 0)] ; after MDS #monomials [11, 11, 11] ; full triangle for deg 5 = 21
+    round-0 lane-0 monomials (nk^i rho^j): [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0)]
+    mixed monomials (i>0 and j>0) in round-0 output: []
+R1: after S-box (total deg, #monomials, deg_nk, deg_rho) per lane: [(25, 301, 25, 25), (25, 301, 25, 25), (25, 301, 25, 25)] ; after MDS #monomials [301, 301, 301] ; full triangle for deg 25 = 351
+    round-1 support obeys ceil(i/5)+ceil(j/5)<=5 : True ; number of (i,j) allowed = 301 ; actual monomials 301
+R2: after S-box (total deg, #monomials, deg_nk, deg_rho) per lane: [(125, 7751, 125, 125), (125, 7751, 125, 125), (125, 7751, 125, 125)] ; after MDS #monomials [7751, 7751, 7751] ; full triangle for deg 125 = 8001
+
+=== F forward-mode Jacobian and reverse-mode influence at a random point ===
+r=1  (per step: which of nk/rho influence each lane [dlane/dnk != 0, dlane/drho != 0], Jacobian rank)
+   init     lane0 n. lane1 .r lane2 ..   rank 2
+   R0 C     lane0 n. lane1 .r lane2 ..   rank 2
+   R0 S     lane0 n. lane1 .r lane2 ..   rank 2
+   R0 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R1 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R1 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R1 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R2 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R2 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R2 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R3 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R3 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R3 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R4 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R4 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R4 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R60 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R60 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R60 M    lane0 nr lane1 nr lane2 nr   rank 2
+   R61 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R61 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R61 M    lane0 nr lane1 nr lane2 nr   rank 2
+   R62 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R62 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R62 M    lane0 nr lane1 nr lane2 nr   rank 2
+   R63 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R63 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R63 M    lane0 nr lane1 nr lane2 nr   rank 2
+r=2  (per step: which of nk/rho influence each lane [dlane/dnk != 0, dlane/drho != 0], Jacobian rank)
+   init     lane0 n. lane1 .r lane2 ..   rank 2
+   R0 C     lane0 n. lane1 .r lane2 ..   rank 2
+   R0 S     lane0 n. lane1 .r lane2 ..   rank 2
+   R0 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R1 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R1 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R1 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R2 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R2 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R2 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R3 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R3 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R3 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R4 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R4 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R4 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R5 C     lane0 nr lane1 nr lane2 nr   rank 2
+   R5 S     lane0 nr lane1 nr lane2 nr   rank 2
+   R5 M     lane0 nr lane1 nr lane2 nr   rank 2
+   R60 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R60 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R60 M    lane0 nr lane1 nr lane2 nr   rank 2
+   R61 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R61 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R61 M    lane0 nr lane1 nr lane2 nr   rank 2
+   R62 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R62 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R62 M    lane0 nr lane1 nr lane2 nr   rank 2
+   R63 C    lane0 nr lane1 nr lane2 nr   rank 2
+   R63 S    lane0 nr lane1 nr lane2 nr   rank 2
+   R63 M    lane0 nr lane1 nr lane2 nr   rank 2
+reverse-mode: which lanes of the state (at each point) influence the output lane 0 (gradient nonzero?)
+r=1
+   R63 after-M   influence X..
+   R63 after-S   influence XXX
+   R63 before-C  influence XXX
+   R62 after-M   influence XXX
+   R62 after-S   influence XXX
+   R62 before-C  influence XXX
+   R61 after-M   influence XXX
+   R61 after-S   influence XXX
+   R61 before-C  influence XXX
+   R60 after-M   influence XXX
+   R60 after-S   influence XXX
+   R60 before-C  influence XXX
+   R4  after-M   influence XXX
+   R4  after-S   influence XXX
+   R4  before-C  influence XXX
+   R3  after-M   influence XXX
+   R3  after-S   influence XXX
+   R3  before-C  influence XXX
+   R2  after-M   influence XXX
+   R2  after-S   influence XXX
+   R2  before-C  influence XXX
+   R1  after-M   influence XXX
+   R1  after-S   influence XXX
+   R1  before-C  influence XXX
+   R0  after-M   influence XXX
+   R0  after-S   influence XXX
+   R0  before-C  influence XXX
+r=2
+   R63 after-M   influence X..
+   R63 after-S   influence XXX
+   R63 before-C  influence XXX
+   R62 after-M   influence XXX
+   R62 after-S   influence XXX
+   R62 before-C  influence XXX
+   R61 after-M   influence XXX
+   R61 after-S   influence XXX
+   R61 before-C  influence XXX
+   R60 after-M   influence XXX
+   R60 after-S   influence XXX
+   R60 before-C  influence XXX
+   R5  after-M   influence XXX
+   R5  after-S   influence XXX
+   R5  before-C  influence XXX
+   R4  after-M   influence XXX
+   R4  after-S   influence XXX
+   R4  before-C  influence XXX
+   R3  after-M   influence XXX
+   R3  after-S   influence XXX
+   R3  before-C  influence XXX
+   R2  after-M   influence XXX
+   R2  after-S   influence XXX
+   R2  before-C  influence XXX
+   R1  after-M   influence XXX
+   R1  after-S   influence XXX
+   R1  before-C  influence XXX
+   R0  after-M   influence XXX
+   R0  after-S   influence XXX
+   R0  before-C  influence XXX
+
+total seconds 48.2

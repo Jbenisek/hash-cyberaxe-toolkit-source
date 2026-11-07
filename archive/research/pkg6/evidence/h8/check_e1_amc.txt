@@ -1,0 +1,18 @@
+# h8_sat.py e1: the 16 outcomes with the largest products of H8_recount_k14.txt; own CNF, ApproxMC epsilon 0.4 delta 0.1, timeout 1800 s; calculator = E1, triples (c1, b1, a2)
+E1 18b0e098 285020a0 6e21be55 adds 25165824.0 calculator 2251799813685248 log2 51.000 ApproxMC 2251799813685248 log2 51.000 log2(calculator/ApproxMC) +0.000
+E1 18b0e098 385020a0 6e21be55 adds 16777216.0 calculator 1125899906842624 log2 50.000 ApproxMC 1125899906842624 log2 50.000 log2(calculator/ApproxMC) +0.000
+E1 18b0e098 185020a0 6e21be55 adds 16777216.0 calculator 2251799813685248 log2 51.000 ApproxMC 2234207627640832 log2 50.989 log2(calculator/ApproxMC) +0.011
+E1 18d0e098 285020a0 6e61be55 adds 12582912.0 calculator 2251799813685248 log2 51.000 ApproxMC 2251799813685248 log2 51.000 log2(calculator/ApproxMC) +0.000
+E1 18d0e098 17d020a0 6e61be55 adds 12582912.0 calculator 1125899906842624 log2 50.000 ApproxMC 1125899906842624 log2 50.000 log2(calculator/ApproxMC) +0.000
+E1 18d0e098 385020a0 6e61be55 adds 8388608.0 calculator 1125899906842624 log2 50.000 ApproxMC 1125899906842624 log2 50.000 log2(calculator/ApproxMC) +0.000
+E1 18d0e098 185020a0 6e61be55 adds 8388608.0 calculator 2251799813685248 log2 51.000 ApproxMC 2216615441596416 log2 50.977 log2(calculator/ApproxMC) +0.023
+E1 18b1a098 189060a0 6e203e55 adds 8388608.0 calculator 4503599627370496 log2 52.000 ApproxMC 4503599627370496 log2 52.000 log2(calculator/ApproxMC) +0.000
+E1 18b0e098 175020a0 6e21be55 adds 6291456.0 calculator 562949953421312 log2 49.000 ApproxMC 562949953421312 log2 49.000 log2(calculator/ApproxMC) +0.000
+E1 18b1a098 389060a0 6e203e55 adds 4194304.0 calculator 2251799813685248 log2 51.000 ApproxMC 2251799813685248 log2 51.000 log2(calculator/ApproxMC) +0.000
+E1 18b1a098 289060a0 6e203e55 adds 4194304.0 calculator 4503599627370496 log2 52.000 ApproxMC 4503599627370496 log2 52.000 log2(calculator/ApproxMC) +0.000
+E1 18d0e098 175020a0 6e61be55 adds 3145728.0 calculator 562949953421312 log2 49.000 ApproxMC 567347999932416 log2 49.011 log2(calculator/ApproxMC) -0.011
+E1 18d1a098 185060a0 6e603e55 adds 2097152.0 calculator 1125899906842624 log2 50.000 ApproxMC 1125899906842624 log2 50.000 log2(calculator/ApproxMC) +0.000
+E1 18b1a098 18d060a0 6e203e55 adds 2097152.0 calculator 1125899906842624 log2 50.000 ApproxMC 1125899906842624 log2 50.000 log2(calculator/ApproxMC) +0.000
+E1 18b1a098 185060a0 6e203e55 adds 2097152.0 calculator 1125899906842624 log2 50.000 ApproxMC 1125899906842624 log2 50.000 log2(calculator/ApproxMC) +0.000
+E1 18d0e098 27d020a0 6e61be55 adds 1572864.0 calculator 844424930131971 log2 49.585 ApproxMC 844424930131968 log2 49.585 log2(calculator/ApproxMC) +0.000
+SUMMARY e1: compared 16 of 16, mean log2(calculator/ApproxMC) +0.0014, largest |difference| 0.023 bits, ApproxMC zero 0, no answer 0

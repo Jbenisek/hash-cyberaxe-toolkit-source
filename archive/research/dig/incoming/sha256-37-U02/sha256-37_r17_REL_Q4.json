@@ -1,0 +1,19 @@
+{
+ "hash": "sha256-37",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "row_i": 17,
+ "row_j": 19,
+ "object": "row17 relations: E17[0]!=E17[13], E16[24]=E17[24], E16[15]=E17[15], A15[29]=A17[29], A17[29]=A18[29]",
+ "question": "Q4: opposite relation (= vs !=) for each row-17 relation: does it reach the same later differences?",
+ "labels": [
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "Opposite imposed with the original dropped (both copies for the + relations), np 4096, mt 1024, seeds 1,2, window rows 22..36: E17[0]=E17[13]: dead at row 18 (0 of 1,048,576; holders 131,780). E16[24]!=E17[24]: passes row 18 (130,478 / 129,313), dead at row 19 (0; holders accept 1,048,576). E16[15]!=E17[15]: row 18 131,934 / 130,988, dead at row 19. A15[29]!=A17[29]: dead at row 18. A17[29]!=A18[29]: row 18 130,400 / 131,072, dead at row 19. EXACT 0, no sample reaches rows 22..36 in any of the five. Control (both A-side relations re-added as printed) reproduces prefix -58.9863 and EXACT 323.",
+ "evidence": "research/dig/incoming/sha256-37-U02/work/q4.sh; research/dig/incoming/sha256-37-U02/work/r17e.sh; research/dig/incoming/sha256-37-U02/work/out_r17_a.txt; research/dig/incoming/sha256-37-U02/work/out_r17_b.txt; research/dig/incoming/sha256-37-U02/work/out_r17_c.txt; research/dig/incoming/sha256-37-U02/work/out_r17_d.txt; research/dig/incoming/sha256-37-U02/work/out_r17_e2.txt; research/dig/incoming/sha256-37-U02/work/out_r17_e0.txt",
+ "notes": "Universe cell sha256-37|r17|REL|Q4. An earlier variant out_r17_e.txt dropped x2 on A17 without re-adding A15[29]=A17[29] (dropx2 A17 removes both lines touching A17) and is superseded by out_r17_e2.txt. Prefix-only; later cells as printed. Relations imposed on member x, as in the R17-c/R17-d sweeps. A15[29]=A17[29] is the corrected reading (REFERENCE_CARD erratum)."
+}

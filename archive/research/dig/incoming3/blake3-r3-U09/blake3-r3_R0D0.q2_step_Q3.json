@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "R0D0.q2 (c1,b1): 3-round BLAKE3 generic-birthday circuit, round 0 diagonal call D0, quarter-step 2",
+ "question": "Q3 degrees of freedom: which message words reach this step, how many free bits, and whether any constant choice changes the count.",
+ "labels": [
+  "I",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Reaches this step: message words [0, 1, 2, 3, 4, 5, 6, 7, 8]; one of them is free (m8 = 32 free bits); the other words are fixed zeros. The step is a bijection in m8: 1048576 distinct m8 values gave 1048576 distinct outputs (structural: add, xor and rotate by constants are bijections). Ops invariant over 300 random prefixes: [7]. Zero-immediate constructions for this step's immediates (v10 (add) and v5 (xor)): closed-form solves of m1/m3/m5/m7 make them vanish (each alone: 597/596/596/596 ops for v0/v5/v10/v15 = 0; all four: 599, circuit verified correct) - every variant is worse than 595 because a nonzero prefix word costs +2 in rounds 1-2 while deleting one immediate saves 1. Prefix is fixed by the target anyway.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work/b3steps.py; research/dig/incoming3/work/scan.py; research/dig/incoming3/work/scan_out.json; research/dig/incoming3/work/validate_out.txt; research/blake3_r3/candidate_blake3/experiments/rho.py; research/dig/incoming3/work/scan2.py; research/dig/incoming3/work/scan2_out.json; research/dig/incoming3/work/scan3.py; research/dig/incoming3/work/scan3_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r3|R0D0.q2|step|Q3. Dependency sets from taint propagation; injectivity checked on a 2^20 sample; zero-immediate prefixes solved in closed form (scan3.py) and re-counted.",
+ "held_fixed": "blake3-r3 filed circuit: 7 lanes x 36 bits, 595 ops/batch, prefix 0^32, m8..m15 free",
+ "reopen_if": "a target with a chosen prefix, or a cost rule that charges nonzero constants less",
+ "topic": "blake3-r3 R0D0.q2 step op count"
+}

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ROOT.SPLIT (ROOT)",
+ "question": "Q3: degrees of freedom: probability one random shift splits a degree-d product of distinct roots",
+ "labels": [
+  "B"
+ ],
+ "status": "COMPUTED",
+ "number": "model 1 - 2^(1-d): d=2 0.5, d=3 0.75, d=4 0.875, d=8 0.9922, d=16 0.99997; 40 shifts per centre fail with probability 2^-39 at d=2.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/orchard/lean_r2/logs/bound_root.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ROOT.SPLIT|ROOT|Q3. Cantor-Zassenhaus character model for a uniform shift (Weil-bounded); not measured at r=2. 40 shifts per centre is the implemented cap.",
+ "held_fixed": "r2 sampled-probability package pkg_stage_r2 as built 10-12 19:42 (C(2)=258 ops/unit, up to 4 centres, halt budgets D 21,108,000,000 and E 187,665,120, line j=0, ledger run seed 7 with 2 centres); not the two-family template that r2 will use; roots modelled as independent quadratic characters",
+ "reopen_if": "a measured shift-failure rate above the model at d=2 on the real g"
+}

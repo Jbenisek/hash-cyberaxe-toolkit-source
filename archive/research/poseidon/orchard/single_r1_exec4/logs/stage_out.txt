@@ -1,0 +1,10 @@
+--- candidate files
+644      64 /root/hashsmash/yukon/pos_r1_exec4/pareto/candidates/poseidon/certificates/c1-a.bin
+644      64 /root/hashsmash/yukon/pos_r1_exec4/pareto/candidates/poseidon/certificates/c1-b.bin
+644     344 /root/hashsmash/yukon/pos_r1_exec4/pareto/candidates/poseidon/certificates/manifest.json
+644    2728 /root/hashsmash/yukon/pos_r1_exec4/pareto/candidates/poseidon/claim.json
+644  258501 /root/hashsmash/yukon/pos_r1_exec4/pareto/candidates/poseidon/proof.md
+--- pareto_candidate.py --family poseidon --rounds 1
+{"family": "poseidon", "rounds": 1, "state": "ready", "package_sha256": "91e902b2aa8b614c2b864d9875138166bdadc638952ae4bc806064aab3887509"}
+--- STAGED.sha256 written
+6 STAGED.sha256

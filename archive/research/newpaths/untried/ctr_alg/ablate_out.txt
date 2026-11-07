@@ -1,0 +1,8 @@
+23 real systems (main sample)
+default                  zero-conflict 23/23; mean conflicts 0.0, decisions 0.0, propagations 551; unit sources (sum): backbone_units 141, congruent_units 45, substitute_units 167, substituted 4331, sweep_units 22, units 1280
+no-congruence            zero-conflict 23/23; mean conflicts 0.0, decisions 0.0, propagations 1558; unit sources (sum): sweep_units 818, units 2461
+no-congr,no-backbone     zero-conflict 23/23; mean conflicts 0.0, decisions 0.0, propagations 408; unit sources (sum): sweep_units 818, units 2461
+no-congr,no-preprobe     zero-conflict 0/23; mean conflicts 64.0, decisions 396.1, propagations 3201; unit sources (sum): units 1948
+no-preprocess            zero-conflict 0/23; mean conflicts 64.0, decisions 396.1, propagations 3201; unit sources (sum): units 1948
+no-congr,no-preprocess   zero-conflict 0/23; mean conflicts 64.0, decisions 396.1, propagations 3201; unit sources (sum): units 1948
+plain                    zero-conflict 0/23; mean conflicts 52.6, decisions 389.1, propagations 3065; unit sources (sum): units 1169

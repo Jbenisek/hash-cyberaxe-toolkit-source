@@ -1,0 +1,4 @@
+6-bit double-kernel classes: 8  [2.2s]
+numpy weight check ok
+class 4: 4096 chi4-output cases (mids with w4<=13); min over b4 of C_lb = inf, of C_est = inf  ->  family T >= 12 + inf - 6 = inf (rigorous), T ~ 12 + inf = inf (estimate, single best path)  [7.0s]
+class 5: 2048 chi4-output cases (mids with w4<=13); min over b4 of C_lb = 148.4, of C_est = 252.7  ->  family T >= 12 + 148.4 - 6 = 154.4 (rigorous), T ~ 12 + 252.7 = 264.7 (estimate, single best path)  [10.6s]

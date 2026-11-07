@@ -1,0 +1,23 @@
+{
+  "id": "D428-B3M-CARRY-PREDICTOR-SCREEN-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "carry-aware predictor for step-level rate multiplier",
+  "question": "Can a fixed carry/borrow feature ridge model on uG and v select high-rate BLAKE3-r2 steps on the held-out split?",
+  "labels": ["C", "D", "Z"],
+  "status": "SAMPLED",
+  "number": "On the fixed 120/40 split, 224 of 256 carry-aware features survived the training-only variance filter; CV selected alpha=1000. Held-out r=-0.0226519932 and top-quarter rate ratio=1.1287946808. The ratio threshold passes but Pearson r>=0.39 fails; preregistered rule FAIL. Permutation p=0.088. Only this fixed carry/borrow map is closed; broader B3-rate remains OPEN.",
+  "source": "our preregistered D428 carry-aware predictor screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D428_b3m_carry_predictor_screen.md; research/retest/t2/PREREG_D428_CARRY_SCREEN.md; research/retest/t2/pred_carry_screen.py; research/retest/t2/D428_run_summary.json",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "UNKNOWN (single-threaded short predictor screen; no RSS measurement)",
+  "notes": "Finite LOCAL_ONLY evidence. No score/package/stage/submission credit. Other structured predictors and full predictor remain OPEN.",
+  "held_fixed": "D341 split, D341 pass rule, seed 0xD428, fixed carry/borrow feature map and alpha grid",
+  "reopen_if": "A separately preregistered richer predictor with exact selection-cost and memory ledger is supplied"
+}

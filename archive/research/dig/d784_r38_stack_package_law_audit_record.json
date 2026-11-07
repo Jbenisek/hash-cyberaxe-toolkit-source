@@ -1,0 +1,22 @@
+{
+  "id": "D784-SHA256-R38-STACK-PACKAGE-LAW-AUDIT-20261014",
+  "hash": "sha256-38",
+  "row_i": 19,
+  "row_j": 37,
+  "object": "D250 STACK to pkgR38M7 event mapping",
+  "question": "Does the shipped pkgR38M7 q3 sampler implement the same A and B events measured in D250's chi38 STACK run?",
+  "labels": ["C", "E", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact source audit: A maps (four E19 P19 patterns plus E20[29]=E19[29] tie); B does not map directly because row_check is a no-op for rows >=22, while q3 uses row-23/SIG tail conditions and exact equality only at rows 34..37. D250 STACK transfer is therefore OPEN.",
+  "source": "our workflow: D784 read-only pkgR38M7 event audit",
+  "own_test": true,
+  "evidence": "research/retest/r38_stack_D250/package_law_audit.py; research/sol_answer_D784_r38_stack_package_law_audit.md; research/tools/build_pkg/scratch/pkgR38M7/pkg/sha256-r38/experiments/a0lean38.py; research/tools/traillab/chi/chi38.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "peak_mem": "0 FREE",
+  "held_fixed": "Checked-in pkgR38M7 source and chi38 characteristic text; no package edits and no runtime search",
+  "notes": "Exact static mapping audit. It preserves D783's finite chi38 result but blocks unconditional transfer to the shipped q3 law until the late-event equivalence is proved or measured. No package/stage/filing/submission.",
+  "reopen_if": "A schedule-recomputed q3 joint-law experiment or formal proof establishes equivalence of chi38 rows22..37 exact/cell event and the shipped SIG/rows34..37 event."
+}

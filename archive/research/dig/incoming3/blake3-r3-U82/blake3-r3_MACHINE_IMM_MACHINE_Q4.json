@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.IMM immediates",
+ "question": "Alternatives to the 256-bit immediate and their cost.",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "A: constants preloaded once into registers (25 loads at start, 800 B): 0 ops in the loop if R>=48 (50 live incl. 25 constants, Belady 0 spills at 48; +0.0024 bit at 40). B: load per use: +0.3843 bit. C: build masks by shifts from one all-ones word: +1..2 ops per mask use, worse than A. Best alternative = A, cost 0.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/dig_scan/a_machine.json (a_machine.py); research/blake3_r3/dig_scan/d_regs.json (d_regs.py)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MACHINE.IMM|MACHINE|Q4. C is argued (an op per use), not run. A and B are measured. Convention: filed rho.py ledger (research/blake3_r3/candidate_blake3/experiments/rho.py, 125.10856); our copy led() in dig_scan/common.py reproduces total 58516868528290066067270868803654989992793/2 exactly. KNOWN ANSWER reproduced first: verifier blake3 empty-input 7 rounds = af1349b9...f3262; rho.digest_words equals verifier blake3(64 B msg) at 7 and 3 rounds on 400 cases; rho.selftest True (595 ops/batch). Gains are POSITIVE = saving in bits of time_log2 (+memory term).",
+ "held_fixed": "same circuit; 64-register machine assumed only for the 'in-register' variant.",
+ "reopen_if": "Register count below 48 declared by the organizer."
+}

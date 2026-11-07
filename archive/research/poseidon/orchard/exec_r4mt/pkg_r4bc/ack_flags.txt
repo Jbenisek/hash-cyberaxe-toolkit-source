@@ -1,0 +1,2 @@
+# prefile_scan against pkg_fin_check base returns 0 findings, 0 HARD (no STALE/ABOVE/CLAIM flags to answer).
+# The base executed-run figures (33.63159 time, 1.23 GB memory) are history-framed in proof.md sections 1, 6.1 and 7 as the base this entry improves; section 10 carries the best-case claim.

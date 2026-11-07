@@ -1,0 +1,23 @@
+{
+  "id": "D651-SHA256-R38-C2-FULL-LATE-AGGREGATE-20261014",
+  "hash": "sha256-38",
+  "row_i": 14,
+  "row_j": 37,
+  "object": "SHA-256 r38 Zone-D C2 full-late aggregate",
+  "question": "What is the exact aggregate result across the completed fixed-split C2 full-late controls?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Across 10 exact c2all14late controls (seeds 0..4 and 65535..65539), row-14 base/expansion passers were 1600/1600, strict-row15=10, total-C2=10, full-late rows16..37=0, and state-equal=0. Each split had its sole C2 at E14x=0x21966471.",
+  "source": "our workflow: D651 exact aggregate of Zone-D r38 C2 full-late controls",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/aggregate_c2all14late_controls.py; research/retest/zoneD38/aggregate_c2all14late_controls.out; research/retest/zoneD38/c2all14late_seed0.out; research/retest/zoneD38/c2all14late_seed1.out; research/retest/zoneD38/c2all14late_seed2.out; research/retest/zoneD38/c2all14late_seed3.out; research/retest/zoneD38/c2all14late_seed4.out; research/retest/zoneD38/c2all14late_seed65535.out; research/retest/zoneD38/c2all14late_seed65536.out; research/retest/zoneD38/c2all14late_seed65537.out; research/retest/zoneD38/c2all14late_seed65538.out; research/retest/zoneD38/c2all14late_seed65539.out",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "current zd38c2late program and the exact completed fixed-split controls",
+  "notes": "Derived finite late-family aggregate only. It does not prove production split transfer, global completion rate, charged score, package, stage, filing, or submission.",
+  "reopen_if": "A production-law split-transfer proof or a complete multi-split late-family campaign becomes available"
+}

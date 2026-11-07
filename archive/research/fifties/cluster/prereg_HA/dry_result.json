@@ -1,0 +1,33 @@
+{
+ "label": "dry",
+ "seed64": "b755cb248c3c4a7d",
+ "n": 65536,
+ "ref_opens": 29559,
+ "ref_open_mean": 0.4510345458984375,
+ "gpu_opens": 29559,
+ "mismatch_by_field": {
+  "a": 0,
+  "q": 0,
+  "c": 0,
+  "open": 0
+ },
+ "clusters_with_any_mismatch": 0,
+ "omega_identity_failures": 0,
+ "scalar_outer_failures_of_2000": 0,
+ "uniform_key_open": [
+  940000,
+  2097152,
+  0.4482269287109375
+ ],
+ "first_words_hex": [
+  "d213ddf2",
+  "73f536d2",
+  "75653f2c",
+  "09d5e641",
+  "664d7f05",
+  "40a6d147",
+  "f75dd391",
+  "04621d93"
+ ],
+ "pass": true
+}

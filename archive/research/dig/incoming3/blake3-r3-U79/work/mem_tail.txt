@@ -1,0 +1,9 @@
+  breakpoint at 2^20: slack 82304 B ; one extra doubling of anything costs 1 bit of S; a table of d=113 gives total 1556096 B = 2^20.569
+--- JOINT M3/M4: S over (d, entry bytes, U). entry = key + 2 B index + 15 B length (length <= 2^117.6 batches needs 118 bits); key bytes kb; false-key-match probability tmax^2/2^(8kb+1) charged as success loss (0.5*log2 per prob via lambda)
+  S=125.10363 (-0.00493) d=113 key 6 B entry 23 B U=9 total 1044951 B = 2^19.995 T=125.10363 false-match loss 2.3e-06
+  S=125.10373 (-0.00483) d=113 key 6 B entry 23 B U=8 total 1023387 B = 2^19.965 T=125.10373 false-match loss 2.3e-06
+  S=125.10386 (-0.00470) d=113 key 6 B entry 23 B U=7 total 1001823 B = 2^19.934 T=125.10386 false-match loss 2.3e-06
+  S=125.10403 (-0.00453) d=113 key 6 B entry 23 B U=6 total 980259 B = 2^19.903 T=125.10403 false-match loss 2.3e-06
+  S=125.10426 (-0.00430) d=113 key 8 B entry 25 B U=5 total 1029961 B = 2^19.974 T=125.10426 false-match loss 3.4e-11
+  S=125.10427 (-0.00429) d=113 key 6 B entry 23 B U=5 total 958695 B = 2^19.871 T=125.10427 false-match loss 2.3e-06
+  filed-like point in this model (d=114, key 8 B, entry 25 B, U=16): S=125.10856

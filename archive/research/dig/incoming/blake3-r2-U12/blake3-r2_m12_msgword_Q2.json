@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "message word m12 (w12; read by D2.a1 in round 0 and E1.a1 in round 1; free, solved from X2)",
+ "question": "Q2 necessity: relax the condition, recount outcome mass",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "No condition group on the word, nothing to relax. Control (what the free solve protects): shifting w12 by a random odd amount in both blocks without re-solving keeps (X3,X7,X11,X15) in 0/3000 and gives digest words 0,2,5,7 equal in 0/12000 (one-sided 95% bound < 1e-3 per trial); with the solve (w12 from X2) 3000/3000 blocks are admissible and Lemma H holds.",
+ "evidence": "research/dig/incoming/blake3-r2-U12/work/scan_m1213.py; research/dig/incoming/blake3-r2-U12/work/scan_m1213.out.json; research/dig/incoming/blake3-r2-U06/work/b3lib.py (own construction copy)",
+ "notes": "Universe cell blake3-r2|m12|msgword|Q2. The word is not a constraint but a dependent: X7 = D2.b2 depends on w12, so w12 is pinned by X7 given the other seven outer words; this is the solve of proof.md Section 4, not a condition to relax.",
+ "topic": "blake3-r2 m12 word"
+}

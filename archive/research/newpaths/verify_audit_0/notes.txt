@@ -1,0 +1,74 @@
+verify_audit_0 -- skeptic check of the audit claim "look relaxation: fixed variant has no cover with <= 6 guesses,
+so >= 3 checks; no 2-check (~2^66) list-join sampler; projected exponent 81".  2026-10-08.
+
+FILES (all mine, this folder)
+  sys_build.py / sys_build.log   own BLAKE3 ref + own equation system for 'fixed' (len64); sys_fixed.txt
+  flats.c (flats)                independent search: breadth-first over distinct closed sets, plain / look / look1
+  test_small.py / test_small.log 80 random small systems: brute force vs flats (3 modes) vs audit's bf3 (2 modes)
+  trace.py / trace_greedy7.log   which look-solves a guess set uses, and their per-instance parameters
+  split_build.py / .log          variant systems with intermediate-sum words (sys_split_P0..P2.txt)
+  run_flats.sh, run_par.sh, build.sh; flats_*.out; flats_summary.log
+
+1. WIRING  (COMPUTED, sys_build.log)
+  - own 7-round compression gives BLAKE3('') = af1349b9...3262 (matches the published digest).
+  - own 'fixed' system: 100 unknown words, 96 equations, freedom 4; all 96 equations hold on 300 random messages.
+  - identical (same word set, same equation multiset) to audit/rules_fixed_len64_plain.txt, the file bf3 searched.
+
+2. LOOK CLOSURE IS ORDER-INDEPENDENT  (DERIVED, then COMPUTED on small systems)
+  If z is look-acceptable for a plain-closed K, it is look-acceptable (or already known) for every plain-closed
+  K' >= K: replay z's propagation chain s0=z,s1..; every chain equation of a word not in K' is newly covered, and
+  the first chain word that IS in K' has a chain equation still containing an earlier unknown word (else it would
+  be derivable from K), which supplies the extra equation.  So the closure is monotone; BFS over flats and bf.c's
+  sorted-DFS with skip-if-known are both exact.
+  test_small.log: 80 random systems, 0 mismatches between brute force (literal one-at-a-time look, random scan
+  order), flats (look, look1, plain) and audit bf3 (look, none).  bf_unit.log had tested only bf's plain mode.
+
+3. RESULTS ON THE REAL SYSTEM  (COMPUTED; see flats_*.out)
+  look : level sizes 64 / 1,900 / 34,697 / 435,721 / 3,984,291 flats for 1..5 guesses; largest closure at 5
+         guesses 33/100 words.  k<=6: NO COVER.  366.5M six-guess extensions checked (6 parts, 571 s wall),
+         largest six-guess closure 42/100 words (flats_look_k6.out has the size histogram).  Agrees with the
+         audit's bf3 result (bf_summary.log line 14) by a different algorithm and different code.
+  plain: 72 / 2,445 / 52,053 / 779,010 / 8,710,424 / 75,506,131 flats; k<=7: NO COVER (6.87e9 seven-guess
+         extensions, largest closure 56/100, 2111 s).  With the greedy 8-cover: plain kmin = 8 (independent of bf).
+  greedy 8-guess set (gd_best_fixed_len64.txt) K2.c1 K3.d1 K3.d2 C3.a2 m0 D1.d1 K2.d2 C0.a1: full plain cover.
+  Its first 7 words are already a full LOOK cover (look kmin <= 7): trace_greedy7.log shows the only look-solve is
+  z = C0.a1, i.e. the 8th guess itself, pinned by 4 equations whose known words are 22 per-instance words.
+  No 2^32 or one-parameter 2^64 table applies; solving it per instance is ~2^32 work, the same as guessing it and
+  paying a 32-bit check.  The look-mode '3 checks' here is the plain 8-guess / 4-check cover relabelled.
+  So look kmin = 7 exactly (no <=6, one 7 found).
+  minparam.log: no set of <= 3 known per-instance words pins C0.a1 (exhaustive), so any table for this solve has
+  >= 2^(32*5) entries; per instance it is an enumeration (~2^32) -- a 4th check in cost.
+
+4. "ANY ONE-WORD-AT-A-TIME SOLVER" -- scope probes
+  - intermediate-sum words (split_build.py; s = p+q, o = s+r for every 3-term addition, 3 pairings):
+      DERIVED: guessing s is never better than guessing the first original word it derives, so plain kmin is
+      unchanged.  COMPUTED: split_small.log, 140 random small systems, 280 brute-force comparisons (plain and look):
+      split kmin equal in all 280.  Real system: split P0 look k<=5 no cover (9,039,696 five-guess flats, largest
+      38/120); split P1 look k<=5 no cover (947 s); split P2 look k<=5 no cover (873 s); split P0 look k<=6
+      NO COVER (1.01e9 six-guess extensions, largest closure 48/120, 2102 s, 6 parts).
+  - 2-word joint solves: a 2^64-entry table is affordable only when every parameter is a family constant.
+      pairs0.log: from the constants alone, 0 single words and 0 word pairs are pinned (best: 1 check on 2 words,
+      which look already covers).  Larger tables (one per-instance parameter + 2 unknowns = 2^96) exceed 2^88.
+  - table-priced rule sets (2^32 family-constant tables; 2^64 one-parameter tables): audit bf_summary.log has
+      plain / orig / pair k<=7 with 0 covers (bf3 logic validated in test_small.log; rule sets not re-derived here;
+      plain k<=7 re-done independently above).
+
+VERDICT: claim's facts confirmed (no <=6 cover even under look; >= 3 checks; no 2-check ~2^66 sampler).
+  Its 81 is only the brief's 3-check arithmetic.  Every priced model needs 8 guesses = 4 checks: corrected
+  projection 97 in the brief's units (~93.6-94.6 literal, if a separable 3+3 split exists -- unchecked).
+NOT DONE: look-mode search at k=7 (only one 7-cover exhibited, not all); separability of any 8-guess cover;
+  bit-level or multi-word solvers beyond the probes in section 4.
+
+5. COST ACCOUNTING  (DERIVED from the brief's rule unless marked)
+  - checks = guesses - 4 holds in look mode too: every non-guessed word, look-solved or not, uses one equation.
+  - 2 checks needs a 6-guess cover: none, even under look -> no 2-check (~2^66) sampler.  CONFIRMED.
+  - 3 checks (2-list join: 2^80 x 2^80 / 2^96 = 2^64 members, ~2^81 elements) needs a 7-guess cover.  The only kind
+    found needs an unpriced univariate solve with 22 per-instance parameters (~2^32 per instance by enumeration,
+    which is a 4th check in disguise, and it depends on words from all guesses, so it cannot sit on one side of a
+    join).  Every priced model (plain, 2^32 tables, one-parameter 2^64 tables) has kmin = 8 -> 4 checks.
+  - 4 checks, 2-list join: lists 2^96 each for 2^64 members, ~2^97 list elements (brief's units) -> 97.
+    Literal model: each element is word operations at 1/430 unit; at ~40-80 operations per element (GUESS) that is
+    2^97 x 2^-3.4..2^-2.4 ~ 2^93.6..2^94.6.  Needs a separable 2-sided split of the 4 checks (core 2 guesses,
+    3 + 3 side guesses); NOT checked.
+  - Literal reading of the brief's 3-check figure itself: 2^81 elements x ~60/430 ~ 2^78 units, not 2^81 (GUESS on
+    operation count).  Moot, since no priced 3-check cover exists.

@@ -1,0 +1,40 @@
+q=769 r=0 (|mu4 in F_q|=4):
+   zero consts, cap=0         fibre(0)=     1 #distinct nonzero fibre sizes=1 (min 770 max 770) mu4-invariant sizes=True coll-ratio=1.000 var/mean=1.00 image=769
+   zero consts, cap=2^65      fibre(0)=   770 #distinct nonzero fibre sizes=130 (min 683 max 858) mu4-invariant sizes=False coll-ratio=1.000 var/mean=1.00 image=769
+   random consts, cap=0       fibre(0)=   746 #distinct nonzero fibre sizes=133 (min 698 max 871) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.96 image=769
+   random consts, cap=2^65    fibre(0)=   749 #distinct nonzero fibre sizes=131 (min 683 max 858) mu4-invariant sizes=False coll-ratio=1.000 var/mean=1.03 image=769
+q=769 r=1 (|mu4 in F_q|=4):
+   zero consts, cap=0         fibre(0)=   745 #distinct nonzero fibre sizes=87 (min 695 max 845) mu4-invariant sizes=True coll-ratio=1.000 var/mean=0.91 image=769
+   zero consts, cap=2^65      fibre(0)=   725 #distinct nonzero fibre sizes=131 (min 682 max 861) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.95 image=769
+   random consts, cap=0       fibre(0)=   801 #distinct nonzero fibre sizes=133 (min 683 max 868) mu4-invariant sizes=False coll-ratio=1.000 var/mean=1.06 image=769
+   random consts, cap=2^65    fibre(0)=   726 #distinct nonzero fibre sizes=132 (min 687 max 854) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.97 image=769
+q=769 r=2 (|mu4 in F_q|=4):
+   zero consts, cap=0         fibre(0)=   785 #distinct nonzero fibre sizes=88 (min 697 max 879) mu4-invariant sizes=True coll-ratio=1.000 var/mean=0.97 image=769
+   zero consts, cap=2^65      fibre(0)=   790 #distinct nonzero fibre sizes=131 (min 686 max 862) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.98 image=769
+   random consts, cap=0       fibre(0)=   781 #distinct nonzero fibre sizes=136 (min 684 max 856) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.96 image=769
+   random consts, cap=2^65    fibre(0)=   734 #distinct nonzero fibre sizes=133 (min 683 max 863) mu4-invariant sizes=False coll-ratio=1.000 var/mean=1.01 image=769
+   direct check y(lam*(nk,rho))=lam*y, lam in mu4, zero consts cap=0 r=1: True
+   r=0 zero consts cap=0: y(lam x)=lam^(5^8) y(x) for lam in 2,3,5,7: True
+   zero consts cap=0 r=1: inputs mapping to 0: 745 (random function ~769); symmetric pairs inside fibre(0)
+   r=0 zero consts: fibre-size multiset equal to cap=1's for 38/38 other caps tested
+   r=1 zero consts: fibre-size multiset equal to cap=1's for 0/38 other caps tested
+q=4099 r=0 (|mu4 in F_q|=2):
+   zero consts, cap=0         fibre(0)= 12295 #distinct nonzero fibre sizes=1 (min 4097 max 4097) mu4-invariant sizes=True coll-ratio=1.001 var/mean=4.00 image=4099
+   zero consts, cap=2^65      fibre(0)=  4097 #distinct nonzero fibre sizes=363 (min 3859 max 4331) mu4-invariant sizes=False coll-ratio=1.000 var/mean=1.01 image=4099
+   random consts, cap=0       fibre(0)=  4044 #distinct nonzero fibre sizes=348 (min 3896 max 4298) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.97 image=4099
+   random consts, cap=2^65    fibre(0)=  4130 #distinct nonzero fibre sizes=344 (min 3838 max 4305) mu4-invariant sizes=False coll-ratio=1.000 var/mean=1.02 image=4099
+q=4099 r=1 (|mu4 in F_q|=2):
+   zero consts, cap=0         fibre(0)=  4117 #distinct nonzero fibre sizes=316 (min 3892 max 4322) mu4-invariant sizes=True coll-ratio=1.000 var/mean=1.03 image=4099
+   zero consts, cap=2^65      fibre(0)=  4179 #distinct nonzero fibre sizes=346 (min 3867 max 4332) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.98 image=4099
+   random consts, cap=0       fibre(0)=  4180 #distinct nonzero fibre sizes=348 (min 3892 max 4328) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.98 image=4099
+   random consts, cap=2^65    fibre(0)=  4126 #distinct nonzero fibre sizes=348 (min 3891 max 4310) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.97 image=4099
+q=4099 r=2 (|mu4 in F_q|=2):
+   zero consts, cap=0         fibre(0)=  3975 #distinct nonzero fibre sizes=311 (min 3878 max 4330) mu4-invariant sizes=True coll-ratio=1.000 var/mean=1.02 image=4099
+   zero consts, cap=2^65      fibre(0)=  4130 #distinct nonzero fibre sizes=349 (min 3899 max 4328) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.97 image=4099
+   random consts, cap=0       fibre(0)=  4041 #distinct nonzero fibre sizes=345 (min 3877 max 4315) mu4-invariant sizes=False coll-ratio=1.000 var/mean=1.00 image=4099
+   random consts, cap=2^65    fibre(0)=  4048 #distinct nonzero fibre sizes=345 (min 3828 max 4311) mu4-invariant sizes=False coll-ratio=1.000 var/mean=0.98 image=4099
+   direct check y(lam*(nk,rho))=lam*y, lam in mu4, zero consts cap=0 r=1: True
+   r=0 zero consts cap=0: y(lam x)=lam^(5^8) y(x) for lam in 2,3,5,7: True
+   zero consts cap=0 r=1: inputs mapping to 0: 4117 (random function ~4099); symmetric pairs inside fibre(0)
+   r=0 zero consts: fibre-size multiset equal to cap=1's for 6/6 other caps tested
+   r=1 zero consts: fibre-size multiset equal to cap=1's for 0/6 other caps tested

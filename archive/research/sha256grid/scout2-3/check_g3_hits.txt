@@ -1,0 +1,3 @@
+g3_pool.hits: 4096 successes re-verified with vt38 (outcome/compress/cells): 0 failures
+g3_v1.hits: 65536 successes re-verified with vt38 (outcome/compress/cells): 0 failures
+TOTAL disagreements/failures: 0

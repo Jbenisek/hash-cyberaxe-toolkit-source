@@ -1,0 +1,77 @@
+# exact lemmas
+
+Source: `research/pkg7/review/exact_lemmas.py`
+
+Public SHA-256: `dbd44b752101f0554f60d64988e937830b277c65910b20b7dbc7be29ae39a5d9`
+
+## Purpose recorded in the source
+
+exact lens, pkg7 (draft): Fact P, Lemma L, Lemmas Q and Q2 over all 2^32 values of Y4, Lemma A enumerated.
+
+    python -B exact_lemmas.py          everything (about three minutes, one process)
+Typed from the text of Sections 2, 3, 6.1 and 6.3; nothing of the package's code is used.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "exact_blake3",
+  "exact_check",
+  "numpy",
+  "os",
+  "random",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "nror",
+    "line": 23,
+    "arguments": [
+      "x",
+      "r"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "part_p",
+    "line": 27,
+    "arguments": [],
+    "doc": ""
+  },
+  {
+    "name": "part_q",
+    "line": 49,
+    "arguments": [],
+    "doc": ""
+  },
+  {
+    "name": "part_a",
+    "line": 88,
+    "arguments": [
+      "mine"
+    ],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/pkg7/review/judge_common_proof.txt
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

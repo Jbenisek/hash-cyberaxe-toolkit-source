@@ -1,0 +1,119 @@
+====================================================================================================
+MAIN (the contexts of check/run_s101.txt and run_s202.txt) seeds [101, 202] contexts 256
+checks (summed): {'vec_mm': 0, 'vec_n': 8192, 't_mm': 0, 't_n': 8192, 'gate_mm': 0, 'pref_mm': 21001, 'gate_n': 524288, 'closed_hits': 0, 'rebuild_mm': 0, 'notes': 0, 'pref_dead_gate_open': 21001, 'pref_alive_gate_closed': 0}
+baseline columns (hits, sample passes, pilot) mismatches vs check/run_s*.txt: 0 of 256
+--- (a) openings, real CK2 gate ---
+opened mean 7303.06 sd 440.93 CV 0.06038 min 6656 max 8448   (charged A_B/K = 7526.30, p* = 0.459369; measured share 0.445744)
+hits                   mean   29618.16 sd   10603.04 CV 0.3580
+passes(full class)     mean     541.94 sd     201.26 CV 0.3714
+passes(2^15 sample)    mean      33.78 sd      13.83 CV 0.4094
+fills G                mean   12997.11 sd    5200.29 CV 0.4001
+solver calls           mean     136.41 sd      52.95 CV 0.3881
+pilot                  mean      57.43 sd      22.46 CV 0.3910
+CV(open)/CV(passes full) = 0.16258 ; CV(open)/CV(passes sample) = 0.14748
+corr(openings, pilot         ) = -0.0041  95% CI (-0.127, 0.119)
+corr(openings, hits          ) = +0.0174  95% CI (-0.105, 0.14)
+corr(openings, passes        ) = +0.0381  95% CI (-0.085, 0.16)
+corr(openings, sample passes ) = +0.0510  95% CI (-0.072, 0.172)
+corr(pilot, passes) 0.9252  corr(pilot, hits) 0.9437  corr(hits, passes) 0.9783  corr(fills, hits) 0.8904
+8-bit proxy reps (omega mod 128 in S7, rep only): mean 6656.00 sd 0.00
+keep 0.500: opened kept/all 1.0023  hits 1.2837  passes 1.2893  fills 1.2926  calls 1.2898  units 1.2899
+keep 0.250: opened kept/all 0.9974  hits 1.4170  passes 1.4279  fills 1.4257  calls 1.4256  units 1.4241
+keep 0.125: opened kept/all 0.9913  hits 1.5458  passes 1.5711  fills 1.5272  calls 1.5722  units 1.5719
+--- (b) solver side per pass, pilot-kept half vs rejected half ---
+calls   per pass: kept 0.251817  rejected 0.251526  ratio 1.0012  boot se 0.0158  (totals kept 22522 / rejected 12400)
+leaves  per pass: kept 0.00147588  rejected 0.00190673  ratio 0.7740  boot se 0.2202  (totals kept 132 / rejected 94)
+roots   per pass: kept 0  rejected 0  ratio nan  boot se nan  (totals kept 0 / rejected 0)
+units   per pass: kept 1320.28  rejected 1318.71  ratio 1.0012  boot se 0.0158  (totals kept 118083572 / rejected 65011140)
+p_full  per pass: kept 0  rejected 0  ratio nan  boot se nan  (totals kept 0 / rejected 0)
+passes kept 89438 rejected 49299 ; calls kept 22522 rejected 12400
+--- (c) pricing (pkgCJ ledger; success held fixed by the exact full-class pass count) ---
+variant i per-context charge 4925386; shares: {'rep': 0.0352, 'ctx': 0.0001, 'open': 0.5623, 'E': 0.0579, 'fill': 0.1519, 'pass_': 0.0494, 'solver': 0.1432}
+  pilot 11 u/member keep 0.500: R 1.2893 fixed_share 0.5976  gain 0.1994 bit (boot 0.1964 +- 0.0106)  [opening held flat: 0.2010]  score 63.6026 -> 63.4033
+  pilot 11 u/member keep 0.250: R 1.4279 fixed_share 0.5976  gain 0.2762 bit (boot 0.2743 +- 0.0163)  [opening held flat: 0.2744]  score 63.6026 -> 63.3265
+  pilot 11 u/member keep 0.125: R 1.5711 fixed_share 0.5976  gain 0.3454 bit (boot 0.3346 +- 0.0210)  [opening held flat: 0.3398]  score 63.6026 -> 63.2572
+  pilot 25 u/member keep 0.500: R 1.2893 fixed_share 0.5976  gain 0.1919 bit (boot 0.1890 +- 0.0106)  [opening held flat: 0.1936]  score 63.6026 -> 63.4107
+  pilot 25 u/member keep 0.250: R 1.4279 fixed_share 0.5976  gain 0.2620 bit (boot 0.2601 +- 0.0163)  [opening held flat: 0.2603]  score 63.6026 -> 63.3406
+  pilot 25 u/member keep 0.125: R 1.5711 fixed_share 0.5976  gain 0.3186 bit (boot 0.3077 +- 0.0211)  [opening held flat: 0.3130]  score 63.6026 -> 63.2841
+variant ii per-context charge 3616538; shares: {'rep': 0.0479, 'ctx': 0.0002, 'open': 0.4039, 'E': 0.0789, 'fill': 0.2068, 'pass_': 0.0673, 'solver': 0.195}
+  pilot 11 u/member keep 0.500: R 1.2893 fixed_share 0.4520  gain 0.1445 bit (boot 0.1420 +- 0.0083)  [opening held flat: 0.1456]  score 63.1578 -> 63.0133
+  pilot 11 u/member keep 0.250: R 1.4279 fixed_share 0.4520  gain 0.1980 bit (boot 0.1975 +- 0.0133)  [opening held flat: 0.1968]  score 63.1578 -> 62.9597
+  pilot 11 u/member keep 0.125: R 1.5711 fixed_share 0.4520  gain 0.2456 bit (boot 0.2369 +- 0.0175)  [opening held flat: 0.2418]  score 63.1578 -> 62.9122
+  pilot 25 u/member keep 0.500: R 1.2893 fixed_share 0.4520  gain 0.1347 bit (boot 0.1322 +- 0.0084)  [opening held flat: 0.1359]  score 63.1578 -> 63.0231
+  pilot 25 u/member keep 0.250: R 1.4279 fixed_share 0.4520  gain 0.1798 bit (boot 0.1792 +- 0.0135)  [opening held flat: 0.1786]  score 63.1578 -> 62.9780
+  pilot 25 u/member keep 0.125: R 1.5711 fixed_share 0.4520  gain 0.2116 bit (boot 0.2027 +- 0.0177)  [opening held flat: 0.2079]  score 63.1578 -> 62.9462
+--- fixed pilot thresholds t (keep iff pilot >= t): keep rate, R, gains, per-kept-context means ---
+t  30 q 0.8867 n  227 R 1.0801 gain(i) 0.0615/0.0569 gain(ii) 0.0441/0.0380 (pilot 11/25 u)
+        per kept context: hits 32010.5+-569.1  passes 585.3+-11.1  opened 7305.1+-29.4  fills 14035.7+-298.7  calls 147.3+-3.0  units 772274.9+-15836.7
+t  40 q 0.8164 n  209 R 1.1064 gain(i) 0.0830/0.0781 gain(ii) 0.0603/0.0537 (pilot 11/25 u)
+        per kept context: hits 32816.9+-581.4  passes 599.6+-11.5  opened 7293.7+-30.0  fills 14344.8+-310.7  calls 150.9+-3.1  units 790768.6+-16407.4
+t  50 q 0.6055 n  155 R 1.2203 gain(i) 0.1576/0.1513 gain(ii) 0.1138/0.1054 (pilot 11/25 u)
+        per kept context: hits 35980.5+-593.0  passes 661.3+-11.6  opened 7307.1+-35.8  fills 15895.5+-325.5  calls 167.3+-3.1  units 877450.7+-16332.7
+t  58 q 0.4922 n  126 R 1.2942 gain(i) 0.2025/0.1950 gain(ii) 0.1470/0.1371 (pilot 11/25 u)
+        per kept context: hits 38144.4+-557.6  passes 701.4+-11.4  opened 7321.0+-40.7  fills 16825.1+-333.7  calls 176.7+-3.1  units 926702.4+-16635.1
+t  65 q 0.3789 n   97 R 1.3478 gain(i) 0.2359/0.2262 gain(ii) 0.1707/0.1582 (pilot 11/25 u)
+        per kept context: hits 39631.8+-597.0  passes 730.4+-12.3  opened 7289.4+-46.0  fills 17485.1+-356.2  calls 183.9+-3.4  units 964179.3+-18397.2
+t  75 q 0.2188 n   56 R 1.4484 gain(i) 0.2876/0.2715 gain(ii) 0.2064/0.1858 (pilot 11/25 u)
+        per kept context: hits 42395.6+-787.4  passes 784.9+-15.9  opened 7277.4+-58.2  fills 18726.3+-478.3  calls 196.8+-4.5  units 1031105.7+-23995.6
+t  85 q 0.1328 n   34 R 1.5634 gain(i) 0.3445/0.3191 gain(ii) 0.2458/0.2136 (pilot 11/25 u)
+        per kept context: hits 45824.8+-741.6  passes 847.3+-15.4  opened 7230.5+-75.5  fills 19741.4+-639.5  calls 212.9+-4.6  units 1115243.6+-25651.9
+unscreened means: hits 29618.2  passes 541.9  opened 7303.1  fills 12997.1  calls 136.4  units 715213.7
+====================================================================================================
+EXTENSION (independent seeds, out-of-sample) seeds [303, 404] contexts 2048
+checks (summed): {'vec_mm': 0, 'vec_n': 65536, 't_mm': 0, 't_n': 65536, 'gate_mm': 0, 'pref_mm': 4152, 'gate_n': 131072, 'closed_hits': 0, 'rebuild_mm': 0, 'notes': 0, 'pref_dead_gate_open': 4152, 'pref_alive_gate_closed': 0}
+--- (a) openings, real CK2 gate ---
+opened mean 7335.57 sd 466.53 CV 0.06360 min 6656 max 8960   (charged A_B/K = 7526.30, p* = 0.459369; measured share 0.447727)
+hits                   mean   28827.67 sd   10984.21 CV 0.3810
+passes(full class)     mean     524.79 sd     207.74 CV 0.3959
+passes(2^15 sample)    mean      32.93 sd      14.09 CV 0.4277
+fills G                mean   12508.69 sd    5293.78 CV 0.4232
+solver calls           mean     130.73 sd      53.79 CV 0.4114
+pilot                  mean      56.41 sd      22.48 CV 0.3985
+CV(open)/CV(passes full) = 0.16066 ; CV(open)/CV(passes sample) = 0.14868
+corr(openings, pilot         ) = +0.0051  95% CI (-0.038, 0.048)
+corr(openings, hits          ) = +0.0033  95% CI (-0.04, 0.047)
+corr(openings, passes        ) = +0.0102  95% CI (-0.033, 0.053)
+corr(openings, sample passes ) = +0.0099  95% CI (-0.033, 0.053)
+corr(pilot, passes) 0.9328  corr(pilot, hits) 0.9499  corr(hits, passes) 0.9812  corr(fills, hits) 0.8760
+8-bit proxy reps (omega mod 128 in S7, rep only): mean 6656.00 sd 0.00
+keep 0.500: opened kept/all 1.0004  hits 1.3017  passes 1.3064  fills 1.2964  calls 1.3052  units 1.3049
+keep 0.250: opened kept/all 0.9996  hits 1.4551  passes 1.4681  fills 1.4367  calls 1.4704  units 1.4723
+keep 0.125: opened kept/all 0.9932  hits 1.5967  passes 1.6193  fills 1.5672  calls 1.6259  units 1.6292
+--- (b) solver side per pass, pilot-kept half vs rejected half ---
+calls   per pass: kept 0.24888  rejected 0.24955  ratio 0.9973  boot se 0.0054  (totals kept 174726 / rejected 93015)
+leaves  per pass: kept 0.00167225  rejected 0.00175462  ratio 0.9531  boot se 0.0844  (totals kept 1174 / rejected 654)
+roots   per pass: kept 1.4244e-06  rejected 0  ratio nan  boot se nan  (totals kept 1 / rejected 0)
+units   per pass: kept 1304.48  rejected 1308.68  ratio 0.9968  boot se 0.0055  (totals kept 915805692 / rejected 487784268)
+p_full  per pass: kept 0  rejected 0  ratio nan  boot se nan  (totals kept 0 / rejected 0)
+passes kept 702049 rejected 372731 ; calls kept 174726 rejected 93015
+--- (c) pricing (pkgCJ ledger; success held fixed by the exact full-class pass count) ---
+variant i per-context charge 4925386; shares: {'rep': 0.0352, 'ctx': 0.0001, 'open': 0.5623, 'E': 0.0579, 'fill': 0.1519, 'pass_': 0.0494, 'solver': 0.1432}
+  pilot 11 u/member keep 0.500: R 1.3064 fixed_share 0.5976  gain 0.2138 bit (boot 0.2134 +- 0.0037)  [opening held flat: 0.2141]  score 63.6026 -> 63.3889
+  pilot 11 u/member keep 0.250: R 1.4681 fixed_share 0.5976  gain 0.2992 bit (boot 0.2986 +- 0.0062)  [opening held flat: 0.2989]  score 63.6026 -> 63.3034
+  pilot 11 u/member keep 0.125: R 1.6193 fixed_share 0.5976  gain 0.3651 bit (boot 0.3648 +- 0.0082)  [opening held flat: 0.3607]  score 63.6026 -> 63.2375
+  pilot 25 u/member keep 0.500: R 1.3064 fixed_share 0.5976  gain 0.2064 bit (boot 0.2060 +- 0.0037)  [opening held flat: 0.2066]  score 63.6026 -> 63.3963
+  pilot 25 u/member keep 0.250: R 1.4681 fixed_share 0.5976  gain 0.2852 bit (boot 0.2846 +- 0.0063)  [opening held flat: 0.2849]  score 63.6026 -> 63.3174
+  pilot 25 u/member keep 0.125: R 1.6193 fixed_share 0.5976  gain 0.3387 bit (boot 0.3384 +- 0.0083)  [opening held flat: 0.3344]  score 63.6026 -> 63.2640
+variant ii per-context charge 3616538; shares: {'rep': 0.0479, 'ctx': 0.0002, 'open': 0.4039, 'E': 0.0789, 'fill': 0.2068, 'pass_': 0.0673, 'solver': 0.195}
+  pilot 11 u/member keep 0.500: R 1.3064 fixed_share 0.4520  gain 0.1566 bit (boot 0.1564 +- 0.0029)  [opening held flat: 0.1568]  score 63.1578 -> 63.0012
+  pilot 11 u/member keep 0.250: R 1.4681 fixed_share 0.4520  gain 0.2171 bit (boot 0.2164 +- 0.0051)  [opening held flat: 0.2169]  score 63.1578 -> 62.9407
+  pilot 11 u/member keep 0.125: R 1.6193 fixed_share 0.4520  gain 0.2596 bit (boot 0.2592 +- 0.0070)  [opening held flat: 0.2567]  score 63.1578 -> 62.8982
+  pilot 25 u/member keep 0.500: R 1.3064 fixed_share 0.4520  gain 0.1469 bit (boot 0.1466 +- 0.0029)  [opening held flat: 0.1471]  score 63.1578 -> 63.0109
+  pilot 25 u/member keep 0.250: R 1.4681 fixed_share 0.4520  gain 0.1991 bit (boot 0.1985 +- 0.0051)  [opening held flat: 0.1989]  score 63.1578 -> 62.9587
+  pilot 25 u/member keep 0.125: R 1.6193 fixed_share 0.4520  gain 0.2263 bit (boot 0.2258 +- 0.0071)  [opening held flat: 0.2234]  score 63.1578 -> 62.9315
+--- fixed pilot thresholds t (keep iff pilot >= t): keep rate, R, gains, per-kept-context means ---
+t  30 q 0.8721 n 1786 R 1.0908 gain(i) 0.0696/0.0650 gain(ii) 0.0503/0.0441 (pilot 11/25 u)
+        per kept context: hits 31427.5+-216.0  passes 572.5+-4.2  opened 7339.8+-11.1  fills 13624.7+-110.5  calls 142.7+-1.1  units 748204.2+-5769.1
+t  40 q 0.7734 n 1584 R 1.1414 gain(i) 0.1062/0.1011 gain(ii) 0.0774/0.0706 (pilot 11/25 u)
+        per kept context: hits 32869.6+-214.9  passes 599.0+-4.2  opened 7345.3+-11.8  fills 14238.2+-113.7  calls 149.4+-1.1  units 783406.2+-5830.4
+t  50 q 0.5947 n 1218 R 1.2399 gain(i) 0.1721/0.1657 gain(ii) 0.1261/0.1177 (pilot 11/25 u)
+        per kept context: hits 35650.2+-222.5  passes 650.7+-4.4  opened 7347.5+-13.5  fills 15437.4+-125.1  calls 162.0+-1.2  units 849493.5+-6237.2
+t  58 q 0.4756 n  974 R 1.3242 gain(i) 0.2241/0.2164 gain(ii) 0.1640/0.1539 (pilot 11/25 u)
+        per kept context: hits 38042.1+-210.5  passes 694.9+-4.3  opened 7335.6+-15.2  fills 16443.3+-133.3  calls 172.9+-1.2  units 906163.9+-6342.1
+t  65 q 0.3784 n  775 R 1.3819 gain(i) 0.2550/0.2454 gain(ii) 0.1857/0.1734 (pilot 11/25 u)
+        per kept context: hits 39606.6+-219.3  passes 725.2+-4.5  opened 7338.0+-17.0  fills 17142.4+-146.4  calls 180.5+-1.3  units 946103.9+-6848.7
+t  75 q 0.2129 n  436 R 1.5028 gain(i) 0.3153/0.2991 gain(ii) 0.2275/0.2068 (pilot 11/25 u)
+        per kept context: hits 42897.1+-280.9  passes 788.6+-5.8  opened 7321.1+-22.4  fills 18351.2+-206.3  calls 197.2+-1.6  units 1035601.3+-8800.6
+t  85 q 0.1138 n  233 R 1.6359 gain(i) 0.3693/0.3404 gain(ii) 0.2615/0.2252 (pilot 11/25 u)
+        per kept context: hits 46463.7+-282.1  passes 858.5+-6.4  opened 7294.8+-28.8  fills 19796.8+-274.3  calls 214.9+-1.9  units 1128852.7+-10471.3
+unscreened means: hits 28827.7  passes 524.8  opened 7335.6  fills 12508.7  calls 130.7  units 685346.7

@@ -1,0 +1,21 @@
+{
+  "id": "D273-BLAKE3-R3-PREFIX-ADVICE-REVIEW",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "paired-review verdict for dossier a72f48eb",
+  "question": "Does the completed review accept the zero-advice declaration for the selected-prefix BLAKE3-r3 dossier?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Dossier a72f48eb is REFUTED and ineligible at claimed time 125.09556: the selected target-specific prefix is retained but zero nonuniform advice is declared; review lower bound is one 32-byte word, advice log2 at least 5.",
+  "source": "our workflow: D273 external review verdict audit",
+  "evidence": "research/sol_answer_D273_review_verdicts_followup.md; research/dossiers/a72f48eb/review/reports/tracks/blake3-pareto/aggregate.json; research/dossiers/a72f48eb/review/reports/tracks/blake3-pareto/judge-dossier.json",
+  "date": "2026-10-13",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "External paired-review result audited read-only; no package or filing state changed.",
+  "held_fixed": "review aggregate status and binding hashes",
+  "reopen_if": "A corrected package declares and prices the nonuniform prefix and its scan"
+}

@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.FUNCDEC (ALT)",
+ "question": "Q4: alternatives: additive decomposition / other composition types",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "Only composition F = G.H was tested. Additive (linearized) and Dickson-type factors: in characteristic p with degree 5^k the additive case needs degree a power of p, which exceeds 390,625; Dickson/Chebyshev types not tested.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.FUNCDEC|ALT|Q4. Argument; no test.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a Dickson or Chebyshev structure is suspected on a toy",
+ "prior": 0.02,
+ "potential_bits": 1.0
+}

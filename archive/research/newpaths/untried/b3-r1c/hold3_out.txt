@@ -1,0 +1,41 @@
+size 3: 23 of 35 free-holdable (depth-1 exchange)
+   Y4,Y14,Y12                   basis=Y4,Y14,Y12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y4,Y14,w12                   basis=Y4,Y14,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y4,Y14,w5                    basis=Y4,Y14,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y4,Y6,Y12                    basis=Y4,Y6,Y12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y4,Y6,w12                    basis=Y4,Y6,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y4,Y6,w5                     basis=Y4,Y6,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y4,Y12,w12                   basis=Y4,Y12,w12,C0.d1,D2.b1,S11,S4,w6,w0
+   Y4,Y12,w5                    basis=Y4,Y12,w5,C0.d1,D2.a1,D2.b1,X9,w6,w0
+   Y4,w12,w5                    basis=Y4,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4,w0
+   Y14,w8,w12                   basis=Y14,w8,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y14,w8,w5                    basis=Y14,w8,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y14,Y6,w12                   basis=Y14,Y6,w12,D2.a1,D2.b1,S11,S4,w6,C2.c1
+   Y14,Y6,w5                    basis=Y14,Y6,w5,D2.a1,D2.b1,S11,S4,w6,C2.c1
+   Y14,Y12,w12                  basis=Y14,Y12,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y14,Y12,w5                   basis=Y14,Y12,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y14,w12,w5                   basis=Y14,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4,Y4
+   w8,Y6,w12                    basis=w8,Y6,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   w8,Y6,w5                     basis=w8,Y6,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   w8,w12,w5                    basis=w8,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4,w0
+   Y6,Y12,w12                   basis=Y6,Y12,w12,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y6,Y12,w5                    basis=Y6,Y12,w5,C0.d1,D2.a1,D2.b1,S11,S4,w6
+   Y6,w12,w5                    basis=Y6,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4,Y4
+   Y12,w12,w5                   basis=Y12,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4,w0
+size 4: 12 of 35 free-holdable (depth-1 exchange)
+   Y4,Y14,Y12,w12               basis=Y4,Y14,Y12,w12,C0.d1,D2.b1,S11,S4,w6
+   Y4,Y14,Y12,w5                basis=Y4,Y14,Y12,w5,C0.d1,D2.a1,D2.b1,X9,w6
+   Y4,Y14,w12,w5                basis=Y4,Y14,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4
+   Y4,Y6,Y12,w12                basis=Y4,Y6,Y12,w12,C0.d1,D2.b1,S11,S4,w6
+   Y4,Y6,Y12,w5                 basis=Y4,Y6,Y12,w5,C0.d1,D2.a1,D2.b1,X9,w6
+   Y4,Y6,w12,w5                 basis=Y4,Y6,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4
+   Y4,Y12,w12,w5                basis=Y4,Y12,w12,w5,C0.d1,D2.b1,X9,w6,w0
+   Y14,w8,w12,w5                basis=Y14,w8,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4
+   Y14,Y6,w12,w5                basis=Y14,Y6,w12,w5,D2.a1,D2.b1,S11,S4,C2.c1
+   Y14,Y12,w12,w5               basis=Y14,Y12,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4
+   w8,Y6,w12,w5                 basis=w8,Y6,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4
+   Y6,Y12,w12,w5                basis=Y6,Y12,w12,w5,C0.d1,D2.a1,D2.b1,S11,S4
+size 5: 2 of 21 free-holdable (depth-1 exchange)
+   Y4,Y14,Y12,w12,w5            basis=Y4,Y14,Y12,w12,w5,C0.d1,D2.b1,X9,w6
+   Y4,Y6,Y12,w12,w5             basis=Y4,Y6,Y12,w12,w5,C0.d1,D2.b1,X9,w6
+time 7.4s

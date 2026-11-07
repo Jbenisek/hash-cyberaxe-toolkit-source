@@ -1,0 +1,20 @@
+{
+ "hash": "sha3-r5",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "row_i": 1,
+ "row_j": 1,
+ "object": "r5 round-1 chi conditions M4 (beta1' -> alpha2, 59 rows)",
+ "question": "How many round-1 linear conditions (M4) does the constructor add, and how many are independent?",
+ "labels": [
+  "C"
+ ],
+ "status": "SAMPLED",
+ "number": "M4 = 127 conditions in all 7 beta1 candidates (exact, from annih of the 59 alpha2 rows); independent E_M rank gain 117-125 (mean 121.4), so 2 to 10 of the 127 are implied by earlier conditions.",
+ "evidence": "research/dig/incoming/sha3-r5-U01/work/conn_count.py; work/conn_k1,2,5,6,8,9,11 .json/.log; work/summ.txt",
+ "notes": "Universe cell sha3-r5|round1.chi|chi|Q1. Scope: 7 advice runs of the shipped constructor (R7 labels k=1,2,5,6,8,9,11; bprime candidate 0, its (c,j,DF) matches the proof table), up to 40 connector attempts each, 158 accepted attempts; instrumented copy of r5.py _attempt that only adds rank counters. Not the 50 historical R7 spaces (not persisted); a sample, not the full population. Attempts ending in status cond (M4 inconsistent) are excluded from rank figures (8-34 of 40 per advice).",
+ "topic": "sha3.r5.conn.r1.count"
+}

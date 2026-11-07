@@ -1,0 +1,71 @@
+# count-cost final
+
+Source: `research/pkg7/review/count-cost_final.py`
+
+Public SHA-256: `4a42ed0c0389f6484f1b72ca5f9da71032d378a4ac72981b7c820f0ff425a5fd`
+
+## Purpose recorded in the source
+
+count-cost reviewer: the count against my reruns, and the arithmetic of the cost, the trials and the claim.
+
+    python -B count-cost_final.py        (pure Python; reads only; writes review/count-cost_final.out)
+
+1. review/count-cost_calc2.out (night_pair_calc2 executed by me on the eight heaviest betas) against
+   evidence/pairs_recount_830303cf.txt: part of each beta, the set of outcomes with a nonzero product, both logarithms.
+2. review/count-cost_gpt/gpt_sol_parts_A.csv (the other model's Rust program, compiled and run by me) against the file
+   as received and against the count, beta by beta, as exact fractions.
+3. The totals and shares that the text prints.
+4. Cost per trial, charge, total, time_log2 for the three rules and two factors; success probability; budgets;
+   memory. Every figure is recomputed from the stage counts and compared with the sentence of proof.md that prints it.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "fractions",
+  "hashlib",
+  "json",
+  "math",
+  "pathlib",
+  "re",
+  "sys"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "say",
+    "line": 29,
+    "arguments": [
+      "text",
+      "ok"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "main",
+    "line": 35,
+    "arguments": [],
+    "doc": ""
+  }
+]
+```
+
+## Read alongside
+
+- research/pkg7/review/judge_common_proof.txt
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

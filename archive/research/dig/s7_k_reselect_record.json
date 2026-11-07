@@ -1,0 +1,22 @@
+{
+  "id": "S7-K-RESELECT-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "r7 LS1 constant re-selection",
+  "question": "Does reselecting the 512 LS1 constants for seven rounds reduce the S7LS step charge?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "512-trial scan: trial 329 BSTEP=44930 vs shipped 44940; conditional N=67110815168850852220049130304843427093458, upward time_log2=124.73417, peak 1039744 B; scalar and allocated KAT PASS.",
+  "source": "research/r7/s7ls/k_reselect_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_K_reselect_1014.md; research/r7/s7ls/k_reselect_512.json; research/r7/s7ls/k_reselect_validate.py",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.00030,
+  "potential_bits": 0.004,
+  "prior": 0.2,
+  "gain_basis": "T",
+  "peak_mem": "1039744 B = 2^19.98780 conditional ledger",
+  "notes": "Selection is a Python research probe, not a bounded charged generator; success/organizer gates and package rebuild remain open. No package/stage/filing/submission."
+}

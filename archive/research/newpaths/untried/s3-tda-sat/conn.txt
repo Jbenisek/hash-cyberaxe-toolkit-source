@@ -1,0 +1,11 @@
+theta inverse check ok
+class 0: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 702 bits, 284 active chi1 rows, chi1 value-condition floor sum(min w) = 652
+class 1: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 828 bits, 320 active chi1 rows, chi1 value-condition floor sum(min w) = 744
+class 2: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 840 bits, 320 active chi1 rows, chi1 value-condition floor sum(min w) = 753
+class 3: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 840 bits, 320 active chi1 rows, chi1 value-condition floor sum(min w) = 739
+class 4: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 850 bits, 320 active chi1 rows, chi1 value-condition floor sum(min w) = 744
+class 5: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 822 bits, 320 active chi1 rows, chi1 value-condition floor sum(min w) = 740
+class 6: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 538 bits, 209 active chi1 rows, chi1 value-condition floor sum(min w) = 479
+class 7: some compatible a2 has a CP-kernel pre-image: False;  identity a2: |b1| = 850 bits, 320 active chi1 rows, chi1 value-condition floor sum(min w) = 746
+ledger (DERIVED): DF after chi1 <= 1080 - max(520 counting bound, floor); chi2 adds w(a2)=12 conditions and
+the linearization of the 12 chi2 condition bits adds <= 10 each (<= 120).

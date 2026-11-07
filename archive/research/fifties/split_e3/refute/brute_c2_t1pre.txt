@@ -1,0 +1,4 @@
+  closing set: 1 2 8 22 23 44 58
+  closing set: 1 2 8 22 23 44 59
+  closing set: 1 2 8 22 23 44 60
+min K=7: closing guess sets found 2132750; with the counter-high word computable before the last guess: 0

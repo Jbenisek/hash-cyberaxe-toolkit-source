@@ -1,0 +1,21 @@
+== 1/2: organizer verifier on the two t = 1 pairs of structure/e2e_t1.txt
+ pair 0, P = zero chunk: CV_t words 0,2,5,7 equal (counter 1, flags 3): True; as a root block (counter 0, flags 11): 0/4 words equal; final digests of P||A, P||B (1079/1087 bytes) equal on the half mask: False; equal in full: False
+ pair 0, P = 00..ff x4: CV_t words 0,2,5,7 equal (counter 1, flags 3): True; as a root block (counter 0, flags 11): 0/4 words equal; final digests of P||A, P||B (1079/1087 bytes) equal on the half mask: False; equal in full: False
+ pair 1, P = zero chunk: CV_t words 0,2,5,7 equal (counter 1, flags 3): True; as a root block (counter 0, flags 11): 0/4 words equal; final digests of P||A, P||B (1079/1087 bytes) equal on the half mask: False; equal in full: False
+ pair 1, P = 00..ff x4: CV_t words 0,2,5,7 equal (counter 1, flags 3): True; as a root block (counter 0, flags 11): 0/4 words equal; final digests of P||A, P||B (1079/1087 bytes) equal on the half mask: False; equal in full: False
+
+== 3: one formula for every figure: T = log2(lambda) + 128 - log2(C / m) + log2(ops / 430) + c
+ rate factor counter/filed (sub-class): 747.918 = 2^9.5467
+ rate factor against the board count:   748.027 = 2^9.5469
+ whole class (905x):                   904.92
+   92.528  filed 92.53 (clusters; 1.65 per trial-equivalent; margin 2.0)
+   94.751  filed arrangement, no clusters, our machine 7.7, margin 2.0
+   84.960  counter, our machine 6.5, margin 2.0  [VALUE]
+   84.445  counter, our machine 6.5, margin 1.4
+   93.040  board leader shape: board count, margin 1.4, 3.36 ops (their lighter machine)
+   83.510  counter, margin 1.4, 3.4 ops  [STRUCTURE guess]
+   83.249  counter, margin 1.4, 6.5 x 3.36/7.7 = 2.84 ops (board machine scaled by our ratio)
+   85.204  counter, margin 2.0, charge 7.7 (no cost gain at all)
+ board 93.01972: implied ops per trial (c = 0) 3.359
+ board 93.0451: implied ops per trial (c = 0) 3.419
+ toy realised fraction 0.94 +- 0.13 -> -0.089 bit (1 sd range -0.304 .. +0.098)

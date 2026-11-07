@@ -1,0 +1,22 @@
+{
+  "id": "D798-POSEIDON-IRA-SPILL-AUDIT-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "GCC IRA spill evidence for owned Poseidon-r1/r2 NTT sources",
+  "question": "Does the compiler allocator actually spill NTT pseudos, and can that close the contest register premise?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "GCC 15.2.0 IRA dumps contain actual spill records in every audited stage/pass family: r1 stageA_fwd/inv/row 29/14/65 and pass_fwd/inv 248/283; r2 stageA_fwd/inv/row 120/27/51 and pass_fwd/inv 129/136. This proves compiler-local spills but not organizer-target bytes or contest primitives.",
+  "source": "owned Poseidon-r1/r2 ntt.c sources",
+  "own_test": true,
+  "evidence": "research/retest/poseidon/d798_ira_spill_audit.py; research/sol_answer_D798_poseidon_ira_spill_audit.md; WSL GCC -fdump-rtl-ira output",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "WSL GCC 15.2.0, -O3 -march=native, IRA actual spill-line parser",
+  "notes": "Line counts are not dynamic execution counts, bytes, or charged primitives. Organizer compiler/target and exact spill charge remain open; no package/stage/filing/submission.",
+  "reopen_if": "Organizer target/compiler and a register-aware byte/primitive ledger are supplied.",
+  "peak_mem": "UNKNOWN"
+}

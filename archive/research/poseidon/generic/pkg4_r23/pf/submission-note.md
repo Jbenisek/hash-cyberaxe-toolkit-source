@@ -1,0 +1,40 @@
+Model: Claude Opus 5.5. Harness: Claude Code.
+
+# Orchard Poseidon, r = 23: generic birthday search, time_log2 127.020
+
+## Two-minute summary
+This entry is the plain birthday attack on the Orchard hash with 23 partial rounds. It does not use any weakness of the rounds; it is the generic row for this round count. The attack picks a random second input rho0 and a random start x_0, then walks x -> digest(x, rho0). The digest is a field element, so it can be fed straight back in. Sooner or later the walk runs into its own earlier path. The two different points that lead into that meeting value have the same digest, which is a collision. To find that point without storing the whole walk, the program keeps only "distinguished" values (low 128 bits below 27554, about one value in 2^113). That is at most 15,500 entries of 64 bytes, about 1 MB in all. When a stored value comes round again, the program goes back to the stored point before the cycle and walks two pointers in step until they meet.
+
+Cost. The walk is budgeted at 1.70e38 steps. Each step is one call of the permutation (1 unit) plus 9 other word operations at 1/699 unit each. The recovery is capped at 6.7e35 further calls, and table work is about 1.4e9 operations. Every limit is charged in full: log2 of the total is 127.0194, claimed as 127.020. Memory is 1,020,704 bytes, under 2^20, so the memory term is zero.
+
+Probability. For a truly random function, a lemma proves the attempt succeeds with probability at least 0.39. The bound is 0.390000002, worked out exactly in 80-digit arithmetic, with explicit terms for every way the search can fail. The step from "random function" to "the real Orchard map with a random rho0" is the one assumption of the entry (H1); no proof of it is known. We tested it by measurement on the real map at 23 rounds. We cut the output to w bits (w = 16 to 40), ran the same search, and measured how fast the walks collide. With both runs pooled, the collision rate was consistent with the random-function rate at every width (pooled hazard multiplier 1.003, 95% interval [0.987, 1.020] over 13744 walks; 1 is the random-function value), and the search's success rate matched the lemma (2356 successes in 5744 runs of the search at widths 24 to 40, 0.410 against the lemma bound 0.390). We ran every measurement twice with separate seeds, and the organizer's own digest code confirmed every pair the runs returned. Measurements cannot reach 254 bits or 2^127 steps. The full-width statement therefore remains a premise. Its price is stated: if the true collision rate were 5% lower, the attack would need 0.037 bit more time.
+
+## The claim
+Target poseidon-orchard-r23-prefix-v1: the Orchard Poseidon hash with 8 full and 23 partial rounds, initial state [m0, m1, 2^65], digest = state[0], the whole canonical field element compared. Claim: time_log2 = 127.020 target-compressions, memory 2^20 bytes (actual total 1,020,704 bytes), success probability 0.39, preprocessing 0, nonuniform advice 0. Cost model orchard-field-ram-v2, C = 216 + 21 * 23 = 699. The nominal reference is 127.0; this entry is the generic row for r = 23 and uses no algebraic structure.
+
+## Approach
+1. Walk. Draw rho0 and x_0 (low 254 bits of two random words, both canonical) and iterate F(x) = digest(x, rho0). Two inputs (x, rho0) and (y, rho0) with x != y and F(x) = F(y) are a collision.
+2. One trail. A value whose low 128 bits are below 27554 is a distinguished point (exact density (2^126 + 1) * 27554 / p = 2^-113.25). Each one is stored with its index in a 64-byte entry, at most 15,500 of them. A stored value that comes round again means the trail has closed on its cycle.
+3. Recovery. From the stored point before the repeat, walk to the matching point one cycle length ahead, then walk both in lockstep until their images agree: the two points are the collision (proof.md Section 3, deterministic).
+
+## Success lemma
+For a uniformly random function on N = p points, conditioned on any start: a fresh step repeats one of the i + 1 earlier values with probability (i + 1)/N; given the repeat pattern, the distinct values are a uniform sample without replacement, so each fresh value is distinguished with conditional probability between theta_lo = (D - 2^128)/N and theta_hi = D/(N - 2^128), whatever came before (Lemma 1). Lemma 2 then bounds every failure: no repeat in n steps (exp(-n(n + 1)/2N)), start on the cycle (n/N), no distinguished point in the first d = ceil(8/theta_lo) cycle values (e^-8 + n d/N), a gap above gmax = ceil(18/theta_lo) ((S theta_hi + 1) e^-18), table overflow (Chernoff on Binomial(S, theta_hi), e^-109.4). With n = 133698538 * 2^100 the bound is 0.390000002301729877 >= 0.39 (80-digit decimal arithmetic in `plan`).
+
+## Ledger
+S = n + d = 1.6958e38 trail steps at 1 + 9/699 units (the instruction listing in proof.md Section 5: 2 state assignments, counter, move, AND, compare, branch, loop compare, branch); 3 gmax = 6.67e35 recovery evaluations at most, charged 1 + 10/699 each (the listed loops use 5 and 7.5); table scan 6 operations per entry, insertion 3, bisection 12 per probe, setup 2000: 1,441,827,698 operations in all. Total 1.7244182e38 units, log2 127.019377, claimed 127.020. Memory: (15,500 + 2) * 64 = 992,128 bytes of table + 21,600 code + 6,464 constants + 512 registers = 1,020,704 bytes.
+
+## The premise and its evidence
+H1 (score-critical; an assumption, no proof is known): the real map with a random rho0 succeeds at least as often as Lemma 2's random function. Evidence, measured with our own code on the real map at r = 23 (proof.md Section 7, program in Appendix C, data in Appendix D). Outputs were truncated to w = 16, 20, ..., 40 bits, with a fresh rho and start per walk, and every walk ran to its exact first repeat. Two independent runs per width gave 13744 walks. The collision-rate multiplier is 1.004 (95% interval [0.987, 1.020]; a random function has 1), with slope +0.0016 per bit across widths (standard error 0.0019). The full search succeeded in 2356/5744 = 0.410 runs against a mean lemma bound of 0.3900. Distinguished-point gaps followed the geometric law. A keyed pseudo-random control run through the same program gave the same picture. The organizer digest confirmed all 10319 pairs the runs returned. The full width cannot be measured. A collision rate 1, 5 or 10% below random would cost 0.0072, 0.0370 or 0.076 bit, and the lower end of the measured interval costs 0.0097 bit.
+
+## Files and commands
+The package holds claim.json, proof.md and an empty certificate manifest. proof.md Appendix B is the program (`rho.py`, standard library only): `python3 rho.py --plan` prints every parameter, the bound and the total; `python3 rho.py --selftest` runs the search at width 14 and checks its counted operations against the ledger formula. Appendix C is the measurement program, and Appendix D holds the per-run results.
+
+## Experiments
+None are declared: the organizer runner calls the digest on the empty message (`digest_fn(b"")`), which the Orchard digest rejects, so a declared Poseidon experiment fails before it runs.
+
+## Changes from the earlier version of this row (one line each)
+- Success transfer had no evidence: measurements of the real map at r = 23 on truncated outputs, two runs each (proof.md Section 7).
+- DP conditioning ((1 - theta)^g after a stored point): Lemma 1 bounds every conditional DP probability between theta_lo and theta_hi given any history and any start; d and gmax use theta_lo, table and gap terms use theta_hi.
+- 48-byte packed entries on a 256-bit word machine: entries are two aligned 256-bit words (64 bytes); the table cap is 15,500, and memory is 1,020,704 bytes.
+- Tight 9-operation step: the instruction listings of the trail step, the recovery loops, the scan, the insertion and the probe are in proof.md Section 5.
+- Fixed walk map: the attempt draws rho0, so its probability averages over maps (a single fixed map's success over starts varies with its longest cycle, measured in Section 7).

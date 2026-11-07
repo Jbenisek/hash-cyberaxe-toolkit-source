@@ -1,0 +1,1 @@
+case=e3 peak<=6: TIMEOUT  nodes=116470709 states=12455403  380.0s

@@ -1,0 +1,52 @@
+d=1: found=1 is_root=1 levels=0 tries=0 charged=7 0.0s
+   parts: shift=0 pow=0 gcd=0 div=0 (divisions 0) misc=7
+   taylor shift ok: 1
+d=2: found=1 is_root=1 levels=0 tries=0 charged=22536 0.0s
+   parts: shift=0 pow=0 gcd=0 div=0 (divisions 0) misc=22536
+   taylor shift ok: 1
+   gcd degree 0 charged 8181 bound 13524 ratio 0.6049 ok
+d=3: found=1 is_root=1 levels=1 tries=2 charged=172118 0.0s
+   parts: shift=11404 pow=149614 gcd=11050 div=0 (divisions 0) misc=50
+   taylor shift ok: 1
+   gcd degree 0 charged 10965 bound 18984 ratio 0.5776 ok
+d=4: found=1 is_root=1 levels=1 tries=1 charged=148168 0.0s
+   parts: shift=5870 pow=133897 gcd=8364 div=0 (divisions 0) misc=37
+   taylor shift ok: 1
+   gcd degree 0 charged 13773 bound 24468 ratio 0.5629 ok
+d=5: found=1 is_root=1 levels=1 tries=1 charged=251240 0.0s
+   parts: shift=6056 pow=210697 gcd=11180 div=0 (divisions 0) misc=23307
+   taylor shift ok: 1
+   gcd degree 0 charged 16605 bound 29976 ratio 0.5539 ok
+d=9: found=1 is_root=1 levels=2 tries=2 charged=805387 0.0s
+   parts: shift=12746 pow=769804 gcd=22770 div=0 (divisions 0) misc=67
+   taylor shift ok: 1
+   gcd degree 0 charged 28173 bound 52248 ratio 0.5392 ok
+d=17: found=1 is_root=1 levels=3 tries=3 charged=3211395 0.0s
+   parts: shift=22628 pow=3135841 gcd=50044 div=2785 (divisions 1) misc=97
+   taylor shift ok: 1
+   gcd degree 0 charged 52461 bound 97944 ratio 0.5356 ok
+d=40: found=1 is_root=1 levels=4 tries=4 charged=17719283 0.0s
+   parts: shift=97461 pow=17498868 gcd=122827 div=0 (divisions 0) misc=127
+   taylor shift ok: 1
+   gcd degree 0 charged 130845 bound 237876 ratio 0.5501 ok
+d=41: found=1 is_root=1 levels=3 tries=3 charged=28720474 0.0s
+   parts: shift=86091 pow=28520420 gcd=90786 div=0 (divisions 0) misc=23177
+   taylor shift ok: 1
+   gcd degree 0 charged 134541 bound 244248 ratio 0.5508 ok
+d=64: found=1 is_root=1 levels=4 tries=4 charged=64230346 0.1s
+   parts: shift=220074 pow=63799046 gcd=169212 div=18788 (divisions 2) misc=23226
+   taylor shift ok: 1
+   gcd degree 0 charged 226173 bound 397428 ratio 0.5691 ok
+d=200: found=1 is_root=1 levels=5 tries=5 charged=300633898 0.4s
+   parts: shift=748405 pow=298941799 gcd=888541 div=32885 (divisions 2) misc=22268
+   taylor shift ok: 1
+   gcd degree 0 charged 1027485 bound 1562676 ratio 0.6575 ok
+d=1000: found=1 is_root=1 levels=8 tries=8 charged=2146710702 3.1s
+   parts: shift=4846672 pow=2127263784 gcd=14415322 div=184677 (divisions 3) misc=247
+   taylor shift ok: 1
+   gcd degree 0 charged 14726685 bound 17402676 ratio 0.8462 ok
+d=3000: found=1 is_root=1 levels=9 tries=9 charged=4634154605 7.7s
+   parts: shift=10534500 pow=4475982161 gcd=112203947 div=35433720 (divisions 6) misc=277
+   taylor shift ok: 1
+   gcd degree 0 charged 116174685 bound 124202676 ratio 0.9354 ok
+ALL OK

@@ -1,0 +1,188 @@
+shape_any/ - "let the mathematics choose the shape": free width of join trees (tree decompositions) of the
+idea-1 constraint hypergraph.  Owner of this folder: the shape_any research agent.  Plain text.
+
+FILES
+  export.py      gd_order.build() -> system file (unknown words, primitive equations), optional promoted words
+  export_full.py full equation export with roles/constants (for the toy validator)
+  bd.c           free width rho via matching; searches: greedy agglomerative (agg), greedy elimination (elim),
+                 annealing over elimination orders (sa), caterpillar = GD path (catgd, catsa), exact DFS over
+                 elimination states (exact), witness checker (check), local cut search (cut)
+  bdp.c          promotion-aware upper-bound search (promoted words chosen by annealing, slack-limited)
+  lbsat.py       SAT lower bound, no promotions;  lbsat3.py  SAT lower bound with promotions limited by slack
+                 (both sequential counters, slow).  lbsat4.py totalizer version (fixed window [k,2k));
+                 lbsat5.py relative window R/3..2R/3 (valid with no drop check); lbsat6.py = lbsat5 + redundant
+                 clauses.  checkwit.py re-checks a SAT witness independently (Python matching).
+  toyval.c       counts real list sizes at toy word size, against the model
+  coarse.py      condenses a printed tree into a G-call-level drawing
+  *.sys          exported systems; cnf/ solver inputs and outputs; *.txt run outputs
+
+MODEL (DERIVED; generic counting, each primitive equation = one 32-bit condition, solvable in any one word)
+  Words = vertices, primitive equations = hyperedges (fixed: 100 words, 96 equations, F = 4;
+  outhalf: 128 words, 116 equations, F = 12).
+  A join tree = binary tree whose leaves are equations.  Node t holds equation set A_t; its boundary
+  B(A_t) = words of A_t that also occur outside A_t.  The node's list is the projection of Sol(A_t) on B(A_t).
+  rho(A, Z) = min over Z <= Y of |Y| - e_A(Y) = |Z| - (|A| - maxmatching(A, W(A) \ Z))   (Hall/Konig)
+  = log2(list size)/32 when Z = B(A).  Joining children t1, t2 (hash join on shared words, memory free):
+  output = projection of Sol(A_t) on B(A_t1) u B(A_t2), size 2^(32 J_t), J_t = rho(A_t, B1 u B2).
+  Single equations are virtual leaves (never stored; joining one to a list is a guess/determine extension).
+  "free width" of the tree = max_t J_t (words).  Work ~ (#joins) x 2^(32 width) list entries.
+  Every shape is a special case: GD path = caterpillar; 2-list / k-list joins = stars; grid / cube / ring
+  orders = particular elimination orders; tables of gd_promote.py = a G call grouped as a subtree (the same
+  count), so table rules add nothing in this model.
+  Promotions: fixing words of a sub-family = adding unit equations; slack(P) = |P| - E + maxmatch(E, V\P)
+  (dimension consumed); derived constants (a G call made fully constant) cost no extra slack.
+  Need ~2^64 members: fixed has slack 2, outhalf has slack 10 (fixed = outhalf + 12 promoted words, slack 8).
+
+LOWER-BOUND ARGUMENT (DERIVED)
+  In any rooted binary tree with E leaves and any 2 <= k <= E/2 some internal node has k <= |A_t| < 2k (walk the
+  heavy path).  Its join costs J_t >= rho(A_t, B(A_t)).  Hence width >= LB(k) = min_{k<=|A|<2k} rho(A, B(A)).
+  The same holds with nonnegative equation weights (window on the weight).  With promotions the minimum is taken
+  jointly over A and a promotion set of slack <= S (lbsat3.py; window counted on equations still holding an
+  unknown; mode 'drop' checks that slack S cannot delete so many equations that the window is empty).
+  The bound covers EVERY tree shape (path, star, grid, cube, ring with a cut, odd trees), not only elimination
+  orders.  It does not cover algorithms outside "complete lists joined along a tree".
+
+  Bit-level (fractional) promotions and Wagner-style partial-key filters (DERIVED, generic counting): any
+  constraint of s bits lowers the critical list by at most s bits, and one more whole promoted word lying in the
+  critical cut's Y lowers that cut by >= 1, so LB(S) >= LB(S+1) + 1.  A strategy with j words promoted whole and
+  the rest as bits or keys has width >= LB(j) - (10 - j) >= LB(10).  Caveat: the extra word may push a set out of
+  the size window.  So the word-level bound also bounds bit-level and k-list restriction tricks.
+
+RESULTS
+  V1 COMPUTED (toyval.c, w = 8 and 6, constants from a real toy trace): measured list sizes equal the model
+     exactly for K0, K1, K0+K1, K0+D3:a1+D3:d1 (w=8) and C3, C0 (w=6, two fixed output words = two word
+     conditions on the 6 boundary words): log2(count)/w = 1, 2, 3, 3, 4, 4 = model.
+  U1 COMPUTED fixed (100 words, 96 eqs, F = 4), upper bounds on the minimum width found by search:
+       greedy agglomerative 9; greedy elimination 9; annealing over elimination orders 8 (two runs);
+       caterpillar of the main session's GD order 8 (its 4 checks only close at the end);
+       caterpillar annealing 10; top-down bisection 10.   Best found: width 8 (sa2_fixed.txt).
+     Shape of the best width-8 tree (coarse.py, subtrees <= 12 equations collapsed):
+       JOIN J=4 |A|=96
+         JOIN J=6 |A|=87 -> J=6 |A|=86 -> J=7 |A|=79 -> J=8 |A|=70  (spine, peeling [K21 C38], [D2:b2],
+                                                                    [D27], [D11 C18] off the side)
+           J=8 |A|=47: two bushy subtrees ([K07 D01]+[K01 C27], [K26 D03]+[D04]) and ([K35 D17]+[K33 C21])
+           J=8 |A|=23: ([K17 C01]+[C06]) and [K11 D37]
+       = a spine with bushy side branches: neither path, star, grid nor cycle.  Width 8 = lists of 2^256 for
+       2^128 members (F = 4): far above generic.
+  L1 COMPUTED (kissat): fixed, k = 24, T = 5 SAT; witness A = K0+K1+K2 (24 eqs), rho = 5 (bd check).
+     Local search (bd cut, upper bounds on LB(k)): k=2,4,8: 1; k=16: 3; k=32: 6.
+
+THE OWNER'S QUESTION IN THIS LANGUAGE (DERIVED)
+  A "shape" is the way the 100-128 words are grouped and the partial answers glued together.  Every way of
+  gluing complete partial-answer lists along a tree is a tree decomposition of the word/equation hypergraph:
+    path            = guess-and-determine (one growing list)            -> caterpillar
+    star            = k-list join around a core (separable, ksplit)     -> star of bags
+    grid / cube     = bags laid out on a lattice, cut into a tree        -> elimination order by coordinates
+    ring / torus / sphere surface = a cycle of bags; to be solved it must be cut once, and the cut words ride
+                      along every bag (a path with the cut words added)
+    odd shapes      = any other tree; the search here is over ALL trees at once
+  A shape's cost is its widest neck: the largest list it must hold, 2^(32 x width).
+  The lower bound does not test shapes one by one: it proves that EVERY tree has a node holding between 1/3
+  and 2/3 of the equations, and measures the cheapest such chunk's border.  If every chunk of that size has a
+  border with >= w free words, no shape of any kind beats width w.
+  The 4x4 torus symmetry (columns shifted by 2) is real but broken by IV/counter/flags; it would only pair
+  equivalent shapes, it cannot lower the neck of the best one.
+
+COST TRANSLATION (DERIVED; cost model: 1 unit per 2-round compression, word op 1/430, memory free)
+  A tree of width w holds lists of 2^(32w) entries; each entry costs a handful of word ops (hash, key, store;
+  call it c ~ 8-16) and a tree has ~100 joins of which a few reach the maximum.  List work ~ 2^(32w) * c * j / 430.
+  Each of the ~1.2 * 2^64 members then needs out1,3,4,6 (E1, E3 from the known Y state: 2 G calls, ~0.1 unit),
+  plus the birthday table (memory free).
+      w = 2 : lists 2^64      -> total ~2^64 - 2^65  (dominated by the members themselves)
+      w = 3 : lists 2^96      -> ~2^96 * 2^3.5 * 2^2 / 2^8.75 ~ 2^92.8 (2^89.3 if c*j were 10)
+      w = 4 : lists 2^128     -> ~2^125
+      w >= 5: > 2^155;  generic birthday 2^128.
+  So "below 2^85" needs w <= 2 (w < 2.93 even with bit-level tricks), and "competitive with the board (92-94)"
+  needs w = 3 with very few full-width joins.  Comparison: guess-and-determine path with 2 promoted words = 6
+  guesses -> 2^192; k-list stars (separable, ksplit) 2^193 for 2^64 members.
+
+SCOPE OF THE LOWER BOUND (DERIVED unless marked)
+  - Using an equation in several subtrees (extra filters) does not escape it: the heavy path still meets a node
+    with |A_t| in the window, and its list still projects onto at least B(A_t).
+  - Restricting lists to get fewer members (promotions, bit fixing, random sampling, Wagner partial keys) is
+    covered through the slack budget (see above).
+  - Not covered: "virtual" macro-equations (a same-operation chain whose private middle word is eliminated
+    algebraically, e.g. a+b=c, c+d=f -> a+b+d=f) used without building a list.  GUESS: irrelevant here, since a
+    window-size chunk (>= 1/3 of the equations) mixes additions and xor-rotations and cannot collapse to one
+    equation; it only affects tiny pieces.  Also not covered: non-join techniques (differential/algebraic
+    characteristics, multi-block, families where the half-digest takes 2^h values).
+  U2 COMPUTED (bdp.c, promotions chosen by annealing, F' = 2, i.e. slack 10 on outhalf):
+       start fixed-like (E0/E2 inputs + m0, m4): width 8 -> 7;  start m0..m9 (all K calls + D0 constant):
+       width 6 (also after 20000 moves, ub_outhalf_kmsg_long.txt).  Reduced system: 78 words, 76 eqs, F' = 2
+       (outhalf_kmsg.sys).  Shape: two lobes on a spine - lobe 1 = the three free D blocks with the C calls,
+       lobe 2 = E0, E2 and the four output equations; they meet at J = 6 (coarse.py on ub_outhalf_kmsg.txt).
+  C1 COMPUTED (cuts.py, exhaustive over unions of WHOLE G calls in the window R/3..2R/3; an upper bound on the
+       window minimum, because cuts may split calls): outhalf_kmsg 6 (5880 sets), fixed 7 (3003 sets),
+       outhalf with no promotion 10 (215072 sets).  For outhalf_kmsg this equals the width-6 tree: GUESS that
+       6 is optimal for that promotion choice.
+  G1 COMPUTED (geo.py + bd order; LITERAL shapes as elimination orders, best binarization per bucket;
+       geo_results.txt).  width fixed / outhalf / outhalf_kmsg:
+         forward sweep 20/26/14   backward 19/26/13   onion = sphere peeled from both ends 20/32/15
+         cylinder (column by column) 20/31/14   torus diagonal sweep 21/31/13   ring8 polygon 20/28/14
+         hexagon (6 sectors) 20/28/14   message-permutation cycles 22/28/14   star (messages as hub) 21/28/14
+         random orders 18-26 / 33-36 / 15-17.
+       Optimised trees: 8 / - / 6.  The owner's literal shapes are no better than random orders; the shape
+       the mathematics picks (U1, U2) is an irregular spine with bushy branches, 2-3x narrower.
+  T2 COMPUTED (bd shrink, 300000 random connected clusters of 2-15 equations, dim <= 4, fixed): none has a
+       list smaller than its solution set (rho = dim Sol).  Forgetting only pays in large clusters.
+  N1 COMPUTED (bdp cutp, local search over balanced cut + promotions with slack 10, outhalf, 12 restarts):
+       cheapest balanced neck found = 5 (one restart; others 6-7).  Promotion: K0..K3 mostly constant, part of
+       D1, D2.a2, m10 (P5 in ub4.sh; system outhalf_p5.sys, 82 words, 80 eqs, F' = 2).  cuts.py on it: whole-
+       call necks 5 (C3+D0+D1+D2 etc.).  So the exact lower bound over all trees and promotions is <= 5; the
+       SAT queries below ask whether it is >= 3 or >= 4.
+  S1 COMPUTED: the exact neck queries are hard for the available solvers.  On the known-SAT positive control
+       (outhalf_kmsg, T = 6, a whole-call cut with rho 6 exists) kissat found nothing in 150 s (then stopped by
+       me) and z3 with native pseudo-Boolean constraints timed out at 400 s.  Fixed k=24 T=5 was SAT in 9 s (witness K0+K1+K2).
+  N2 COMPUTED (bdp cutp, fixed with slack 2, 8 restarts): cheapest balanced neck found 5 (P = K0 and K3 made
+       mostly constant + m0); others 6-8.
+  U3 COMPUTED (bdp from the neck-5 promotion P5, 15000 moves): tree width 6 again (several different P with
+       width 6: K calls / D0 made constant).  Every promotion search so far ends at width 6 for outhalf.
+  U4 COMPUTED: annealing over elimination orders on outhalf_p5.sys (3 restarts): width 6.  bdp on fixed with
+       2 promoted words (F' = 2): width 6 (P = 6 words incl. derived, 87 words / 85 eqs left).  So for a
+       2^64-member family every route found gives width 6 = lists of 2^192: the same 2^192-2^193 as the GD path
+       with 2 promotions (6 guesses) and the separable/ksplit stars.
+
+ANSWER (to the owner's question, plain words)
+  - Taken literally, the shapes were built and measured (G1): sphere (onion from both ends), hexagon, ring /
+    polygon, torus sweep, cylinder, star, the message-permutation cycles.  None is better than a random order;
+    their widest necks are 13-36 words (lists of 2^416 and up).
+  - Letting the mathematics choose (U1-U4): the best shapes found are irregular - a spine with bushy side
+    branches, or two lobes (round-0 D blocks + C calls | E0, E2 + output equations) meeting at one neck.  Their
+    neck is 8 words for the fixed family (2^128 members) and 6 words for every 2^64-member family tried
+    (outhalf with up to 10 promoted words, fixed with 2): lists of 2^192, total ~2^188.  That equals the
+    guess-and-determine path (6 guesses) and the k-list stars (2^193): no shape opens a shortcut.
+  - Why: between consecutive layers (K->D, D->C, C->E) every G call takes one word from every call of the
+    layer before (complete 4x4 wiring), and each message word is used once per round.  Any chunk holding 1/3
+    to 2/3 of the equations must cut many wires; local search over chunks and promotions finds no neck below
+    5 (N1, N2, cutp2).  This is "expander" behaviour: there is no small separator, so every tree is wide.
+  - Below 2^85 needs a neck of <= 2 words (bit-level tricks cannot help, see above).  Best found 6: dead by
+    ~100 bits.  No toy end-to-end attack was run because no decomposition comes near 2^85.
+  - Not proven: that no tree of width 3-5 exists.  The exact balanced-neck SAT queries did not finish (see S1
+    and the final status lines below).
+  N3 COMPUTED (cutp2_outhalf.txt, 24 restarts x 150000 moves, outhalf, slack 10): necks found 5 (3 times),
+       6 (21 times), never 4.  GUESS: the true minimum balanced neck over all promotions is 5, so the best
+       possible tree width is between 5 and 6 (list 2^160 - 2^192).
+  X1 COMPUTED EXACT (bd calldp, subset DP; class = every tree whose nodes are unions of whole G calls, each call
+       ("brick") built by its own exact optimal sub-tree; the four output equations form one brick).  Grids,
+       cubes, rings, hexagons, stars of G calls all lie in this class:
+         fixed (F=4) 9;  fixed with 2 promoted words (F'=2) 7;  outhalf with K calls + D0 constant (F'=2) 6;
+         outhalf with the neck-5 promotion P5 (F'=2) 6.   (calldp_*.txt)
+       Optimal brick tree for outhalf_kmsg: [E0 E2 out] lobe (J 5-6) joined to [D1 C1 C2 D3] lobe (J 4-6), then
+       C3, C0, D2 added one at a time (J 6, 5, 2).  Brick-level optimum = equation-level best (6) there.
+       Per-brick lists: K 1-2, free D 5-6 (2 when its inputs are constant), C 3-4, E 5, out-group 4.
+  X2 COMPUTED (bdp brickp: promotion annealing scored by the EXACT brick-level width): from P5 6, from
+       m0..m9 6, fixed from m0,m4 7 (3000 moves each); longer runs from m0..m7 (4 seeds x 40000 moves) in
+       brickp2_outhalf_*.txt (results at the bottom).
+  X3 COMPUTED: brickp2 from m0..m7 (300 s): 8 -> 7 -> 6, no further.  Brick-scored promotion search never
+       went below 6 in any run.
+
+FINAL STATUS (2026-10-08 13:28, all of this agent's jobs stopped by stopall.sh)
+  Exact neck queries, all UNDECIDED (stopped, no answer):
+    outhalf slack 10, neck <= 3 ?  (r_outhalf_T3_S10, kissat, 33 min)
+    outhalf slack 10, neck <= 2 ?  (s_outhalf_T2_S10 kissat 26 min; t_/r_ variants 11-21 min; cadical 1 min)
+    fixed slack 2,    neck <= 2 ?  (s_fixed_T2_S2, kissat, 10 min)
+    reduced outhalf_kmsg, neck <= 5 ? (s_kmsg_T5_S0, kissat, 14 min)
+  So: PROVEN within the model = upper bounds (best widths), the exact brick-level optima (X1), the toy
+  validation (V1).  NOT proven = any lower bound above the trivial one; evidence only (N1-N3, C1): no balanced
+  neck below 5 found in 36+ restarts and 3 exhaustive whole-call enumerations.
+  Verdict: no shape gives anything near 2^85; best found 2^188 for a collision family.  Dead by ~100 bits.

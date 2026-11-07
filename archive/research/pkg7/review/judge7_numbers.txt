@@ -1,0 +1,2 @@
+reproduced 94, not reproduced 0
+info: P(X<=204)+P(X>=208) at mean 205.97 = 0.9168; sum of P(k) <= P(204) = 0.9444; P(X<=3 | 14.65) = 0.000281; P(X<=2 | 13.0) = 0.000223; range ratio 2.7170; 2 empty of 2 at 0.25 expected each?: exp(-0.25) = 0.7788, exp(-0.125)^2 = 0.7788

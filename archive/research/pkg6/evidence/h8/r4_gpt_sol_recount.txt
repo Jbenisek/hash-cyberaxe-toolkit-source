@@ -1,0 +1,12 @@
+Independent recount of the class rate of pin H8, class eta 830303cf, by GPT Sol 6.1 (OpenAI) with its own method and code, on the owner's request (brief: astra-jobs\server_tasks_2026-10-06\brief_for_gpt_sol.md, job A; answer: astra-jobs\server_tasks_2026-10-06\gpt_sol_answer_A.md). Recorded by the main session at 16:13 on 2026-10-06 from the owner's paste; the answer file itself has NOT yet been read or checked by the main session.
+Result reported: R = 85074516985129 / 524288 = 162,266,763.6587696075439453125 (exact rational); exactly 60 betas contribute; the four heavy parts equal ours exactly (71,698,432; 54,005,760; 25,692,160; 8,429,568); also 1,566,720 at beta 18b3e098 and 1615/128 at 19b0a098; its counters passed exhaustive checks at smaller word sizes.
+Our count (research\h8\counts\H8_count.txt): 162,266,763.6579 from 60 betas, of which 0.282 came from an estimated branch (118 outcomes in 21 betas). Difference 0.0009, inside that estimated part. TO DO before quoting it in a package: read gpt_sol_answer_A.md, rerun its code here, compare beta by beta, and use its exact figure for the estimated parts with credit.
+
+ADDED 16:48 by the main session. (1) Sol's Job A program was recompiled here from its source
+(research\h8\counts\sol_rerun\, rustc -O, command "all32", 139 seconds): R = 85074516985129/524288, 60 betas,
+66,871 parity-compatible betas checked; all 60 per-beta parts equal Sol's as exact fractions (one intermediate
+column of its CSV differs because Sol changed an enumerator in the source after its first run). (2) Beta by beta
+against our own table (research\h8\counts\cmp_gpt_sol.py -> cmp_gpt_sol.txt): the 29 betas that our exact lines
+give a part agree with Sol's to the printed decimal; the other 31 betas of Sol's list are small (196.66 in all)
+and are in our total through the other branch of our count (H8_count.txt), where 0.28 was estimated. Totals:
+Sol 162,266,763.6588, ours 162,266,763.6579.

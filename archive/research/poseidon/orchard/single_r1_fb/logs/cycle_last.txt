@@ -1,0 +1,15 @@
+=== cycle summary  CAP=6 seeds=[110 103]  source-hash 324330a4772a0fad
+  build                   4.9 s  built
+  ledger_103             89.3 s  ran
+  ledger_110             91.1 s  ran
+  calib                   4.1 s  ran
+  gcdbound               53.1 s  ran identical-to-gcd_bounds.h
+  test_hgcd              12.8 s  ran
+  certificates            0.3 s  verified
+  package                 0.2 s  ok
+  prefile                 0.1 s  done
+  TOTAL WALL            256.7 s  (sum of steps 256.0 s; evidence jobs ran 1 at a time: 250.6 s wall)
+  ledger counts vs previous run: seed110:CHANGED seed103:CHANGED
+  time_log2 25.62072 (exact 25.62072)   memory 8829894 bytes (log2 23.074)   score 28.69472   certificates 2   worst-case ops 12,227,947,177
+  PASS  evidence estimate <= 516,000 B (8 KB under the 524,288 limit)                                      ~399853 B 
+  prefile: ALL PASS

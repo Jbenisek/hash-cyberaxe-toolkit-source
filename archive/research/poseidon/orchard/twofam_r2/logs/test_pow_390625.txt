@@ -1,0 +1,1 @@
+m=390625 E=1234567891011: 0 coefficients differ (first -1) -> OK

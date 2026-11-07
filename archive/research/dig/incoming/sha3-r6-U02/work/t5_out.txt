@@ -1,0 +1,4 @@
+rounds=2: mean pair-pass rate over 496 pairs 0.7863, min 0.0000, max 1.0000  (0.5s)
+  max coordinate-clique size per base (max z-directions jointly affine through 2 rounds): hist {9: 8}
+rounds=3: mean pair-pass rate over 496 pairs 0.0000, min 0.0000, max 0.0000  (0.7s)
+  max coordinate-clique size per base (max z-directions jointly affine through 3 rounds): hist {1: 512}

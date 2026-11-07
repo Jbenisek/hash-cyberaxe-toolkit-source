@@ -1,0 +1,20 @@
+{
+ "hash": "sha256-37",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "row_i": 15,
+ "row_j": 15,
+ "object": "row15 E15 value/sign cells (bits 4,7,9,11,12,15,16,17,18,19,20,22,26,27,30)",
+ "question": "Q2: drop each E15 cell singly: row-15 local solution count over all 2^32 values of W15, and whether any extra W15 survives the next necessary conditions",
+ "labels": [
+  "D",
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "Required: L0 (E15+W15 cells, both members; A15 cell holds for every W15) 131,072 = 2^17 of 2^32; L1 (+ dW17=0 and dW30=0 schedule requirements) 4,096 = 2^12; L2 (+ row-16 local requirement X_E16=e7affd56 and X_A16=0) 32 = exactly the 32 l. Dropped, each as L0/L1/L2: E15[30](u) 131072/4096/32; E15[27](0) 262144/4096/32; E15[26](1) 262144/6144/32; E15[22](n) 131072/4096/32; E15[20](0) 262144/4096/32; E15[19](1) 262144/4096/32; E15[18](1) 262144/8192/32; E15[17](n) 131072/4096/32; E15[16](0) 262144/8192/32; E15[15](1) 262144/8192/32; E15[12](u) 131072/4096/32; E15[11](0) 262144/8192/32; E15[9](u) 131072/4096/32; E15[7](1) 262144/8192/32; E15[4](+) 131072/4096/32. Bits 30,22,17,12,9 and the + at bit 4 add nothing even at L0 (implied by the rest of the row); bits 27,26,20,19,18,16,15,11,7 double L0 and bits 26,18,16,15,11,7 raise L1, but L2 stays 32 for every drop: no extra W15 survives, no gain.",
+ "evidence": "research/dig/incoming/sha256-37-U02/work/row15.c; research/dig/incoming/sha256-37-U02/work/row15.py; research/dig/incoming/sha256-37-U02/work/row15_full.txt; research/dig/incoming/sha256-37-U02/work/backward_15_17.txt",
+ "notes": "Universe cell sha256-37|r15|E|Q2. Own C enumeration (row15.c) of all 2^32 W15; E15y=E15x+dE15 and A15x=A15y are constants of the anchor rows 11..14 (constants from row15.py, own SHA-256 trace, digest checked for both members). Validated on known answers: on the 2^20 subset (mask 00fffff0) it gives cells 512 and drop-E15[7] 1024 exactly as traillab exact does, and at L2 it reproduces the 32 l of chi37 as a derived set (all 32 present, none else). Row-local model with rows 11..14 held (ATLAS37 Limits); extras were not run through rows 17..36, they are removed by the row-16 necessary condition. dropx on n/u bits drops value and sign. The + at bit 4 is the E15[4]=E16[4] relation, see the REL record."
+}

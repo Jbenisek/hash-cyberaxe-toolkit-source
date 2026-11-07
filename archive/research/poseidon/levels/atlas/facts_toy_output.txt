@@ -1,0 +1,80 @@
+=== candidate toy primes (gcd(5,q-1)=1) ===
+1000003 prime? True  gcd(5,1000002)= 1  1000002 = 2*3*166667 -> 2-adicity 1, q mod 4 = 3
+ q=257 prime True gcd(5,q-1)=1 2-adicity 8 q mod 4 = 1 q mod 5 = 2
+ q=769 prime True gcd(5,q-1)=1 2-adicity 8 q mod 4 = 1 q mod 5 = 4
+ q=1009 prime True gcd(5,q-1)=1 2-adicity 4 q mod 4 = 1 q mod 5 = 4
+ q=4099 prime True gcd(5,q-1)=1 2-adicity 1 q mod 4 = 3 q mod 5 = 4
+ q=12289 prime True gcd(5,q-1)=1 2-adicity 12 q mod 4 = 1 q mod 5 = 4
+ q=65537 prime True gcd(5,q-1)=1 2-adicity 16 q mod 4 = 1 q mod 5 = 2
+real p: 2-adicity 32, p mod 4 = 1, p mod 5 = 2
+
+=== x -> x^5 on F_q ===
+ q=257: fixed points of x^5: 5 [0, 1, 16, 241, 256] ; cycle lengths {len:count} {1: 5, 2: 2, 4: 2, 8: 2, 16: 2, 32: 2, 64: 2}
+       differential spectrum for a=1,2,3: #b with k solutions  {1: {0: 160, 2: 65, 3: 1, 4: 31}, 2: {0: 160, 2: 65, 3: 1, 4: 31}, 3: {0: 160, 2: 65, 3: 1, 4: 31}}  (max 4; at most 4 proved, pairs +-y because even in y=x+a/2)
+ q=769: fixed points of x^5: 5 [0, 1, 62, 707, 768] ; cycle lengths {len:count} {1: 5, 2: 10, 4: 6, 8: 6, 16: 6, 32: 6, 64: 6}
+       differential spectrum for a=1,2,3: #b with k solutions  {1: {0: 480, 2: 193, 3: 1, 4: 95}, 2: {0: 480, 2: 193, 3: 1, 4: 95}, 3: {0: 480, 2: 193, 3: 1, 4: 95}}  (max 4; at most 4 proved, pairs +-y because even in y=x+a/2)
+ q=1009: fixed points of x^5: 5 [0, 1, 469, 540, 1008] ; cycle lengths {len:count} {1: 5, 2: 10, 4: 6, 6: 80, 12: 40}
+       differential spectrum for a=1,2,3: #b with k solutions  {1: {0: 630, 2: 253, 3: 1, 4: 125}, 2: {0: 630, 2: 253, 3: 1, 4: 125}, 3: {0: 630, 2: 253, 3: 1, 4: 125}}  (max 4; at most 4 proved, pairs +-y because even in y=x+a/2)
+ q=4099: fixed points of x^5: 3 [0, 1, 4098] ; cycle lengths {len:count} {1: 3, 2: 2, 682: 6}
+       differential spectrum for a=1,2,3: #b with k solutions  {1: {0: 2562, 2: 1024, 3: 1, 4: 512}, 2: {0: 2562, 2: 1024, 3: 1, 4: 512}, 3: {0: 2562, 2: 1024, 3: 1, 4: 512}}  (max 4; at most 4 proved, pairs +-y because even in y=x+a/2)
+
+=== q=257 exhaustive structure checks (seed 1) ===
+ r=1: permutation of all 16974593 states is injective: True
+ round-0 outputs all lie on the plane Minv[2].s = K : True ; distinct states 66049 of 66049
+ r=1: 66049 inputs -> 66049 distinct full 3-lane output states (injective: True); lane-0-only distinct values 257
+       (lane0,lane1) pair injective? False (distinct 41757 of 66049)
+ r=2: 66049 inputs -> 66049 distinct full 3-lane output states (injective: True); lane-0-only distinct values 257
+       (lane0,lane1) pair injective? False (distinct 41681 of 66049)
+
+=== output fibre statistics (lane 0 of output) over ALL q^2 inputs ===
+q=257 (q-1=2^8*1, q mod 4=1, q^2=66049 inputs), r=0
+   seed 1: image size 257/257, fiber mean 257.0 var 237.4 (Poisson var would be 257.0), min 218 max 297, colliding input pairs 8484775 = 0.9997 x random-function expectation 8487168  (0.0s)
+   seed 2: image size 257/257, fiber mean 257.0 var 263.2 (Poisson var would be 257.0), min 223 max 308, colliding input pairs 8488089 = 1.0001 x random-function expectation 8487168  (0.2s)
+   seed 3: image size 257/257, fiber mean 257.0 var 270.9 (Poisson var would be 257.0), min 209 max 305, colliding input pairs 8489083 = 1.0002 x random-function expectation 8487168  (0.2s)
+   seed 4: image size 257/257, fiber mean 257.0 var 237.6 (Poisson var would be 257.0), min 217 max 304, colliding input pairs 8484808 = 0.9997 x random-function expectation 8487168  (0.2s)
+   seed 5: image size 257/257, fiber mean 257.0 var 248.2 (Poisson var would be 257.0), min 218 max 296, colliding input pairs 8486161 = 0.9999 x random-function expectation 8487168  (0.1s)
+q=257 (q-1=2^8*1, q mod 4=1, q^2=66049 inputs), r=1
+   seed 1: image size 257/257, fiber mean 257.0 var 301.1 (Poisson var would be 257.0), min 204 max 313, colliding input pairs 8492965 = 1.0007 x random-function expectation 8487168  (0.2s)
+   seed 2: image size 257/257, fiber mean 257.0 var 237.7 (Poisson var would be 257.0), min 205 max 300, colliding input pairs 8484812 = 0.9997 x random-function expectation 8487168  (0.2s)
+   seed 3: image size 257/257, fiber mean 257.0 var 274.2 (Poisson var would be 257.0), min 211 max 308, colliding input pairs 8489501 = 1.0003 x random-function expectation 8487168  (0.2s)
+   seed 4: image size 257/257, fiber mean 257.0 var 237.3 (Poisson var would be 257.0), min 219 max 309, colliding input pairs 8484760 = 0.9997 x random-function expectation 8487168  (0.3s)
+   seed 5: image size 257/257, fiber mean 257.0 var 211.7 (Poisson var would be 257.0), min 223 max 293, colliding input pairs 8481471 = 0.9993 x random-function expectation 8487168  (0.0s)
+q=257 (q-1=2^8*1, q mod 4=1, q^2=66049 inputs), r=2
+   seed 1: image size 257/257, fiber mean 257.0 var 270.9 (Poisson var would be 257.0), min 214 max 299, colliding input pairs 8489082 = 1.0002 x random-function expectation 8487168  (0.1s)
+   seed 2: image size 257/257, fiber mean 257.0 var 238.1 (Poisson var would be 257.0), min 215 max 302, colliding input pairs 8484863 = 0.9997 x random-function expectation 8487168  (0.1s)
+   seed 3: image size 257/257, fiber mean 257.0 var 276.8 (Poisson var would be 257.0), min 212 max 299, colliding input pairs 8489841 = 1.0003 x random-function expectation 8487168  (0.0s)
+   seed 4: image size 257/257, fiber mean 257.0 var 277.2 (Poisson var would be 257.0), min 217 max 299, colliding input pairs 8489898 = 1.0003 x random-function expectation 8487168  (0.0s)
+   seed 5: image size 257/257, fiber mean 257.0 var 254.8 (Poisson var would be 257.0), min 213 max 309, colliding input pairs 8487020 = 1.0000 x random-function expectation 8487168  (0.0s)
+q=257 (q-1=2^8*1, q mod 4=1, q^2=66049 inputs), r=3
+   seed 1: image size 257/257, fiber mean 257.0 var 276.6 (Poisson var would be 257.0), min 212 max 310, colliding input pairs 8489813 = 1.0003 x random-function expectation 8487168  (0.0s)
+   seed 2: image size 257/257, fiber mean 257.0 var 250.3 (Poisson var would be 257.0), min 192 max 298, colliding input pairs 8486431 = 0.9999 x random-function expectation 8487168  (0.1s)
+   seed 3: image size 257/257, fiber mean 257.0 var 258.8 (Poisson var would be 257.0), min 215 max 300, colliding input pairs 8487522 = 1.0000 x random-function expectation 8487168  (0.1s)
+   seed 4: image size 257/257, fiber mean 257.0 var 295.5 (Poisson var would be 257.0), min 190 max 309, colliding input pairs 8492246 = 1.0006 x random-function expectation 8487168  (0.0s)
+   seed 5: image size 257/257, fiber mean 257.0 var 249.0 (Poisson var would be 257.0), min 215 max 303, colliding input pairs 8486272 = 0.9999 x random-function expectation 8487168  (0.0s)
+q=769 (q-1=2^8*3, q mod 4=1, q^2=591361 inputs), r=1
+   seed 1: image size 769/769, fiber mean 769.0 var 742.2 (Poisson var would be 769.0), min 687 max 854, colliding input pairs 227367981 = 1.0000 x random-function expectation 227377920  (1.7s)
+   seed 2: image size 769/769, fiber mean 769.0 var 756.6 (Poisson var would be 769.0), min 683 max 849, colliding input pairs 227373543 = 1.0000 x random-function expectation 227377920  (3.0s)
+   seed 3: image size 769/769, fiber mean 769.0 var 825.6 (Poisson var would be 769.0), min 684 max 883, colliding input pairs 227400056 = 1.0001 x random-function expectation 227377920  (3.5s)
+q=769 (q-1=2^8*3, q mod 4=1, q^2=591361 inputs), r=2
+   seed 1: image size 769/769, fiber mean 769.0 var 779.2 (Poisson var would be 769.0), min 683 max 863, colliding input pairs 227382229 = 1.0000 x random-function expectation 227377920  (2.7s)
+   seed 2: image size 769/769, fiber mean 769.0 var 764.4 (Poisson var would be 769.0), min 683 max 861, colliding input pairs 227376542 = 1.0000 x random-function expectation 227377920  (0.9s)
+   seed 3: image size 769/769, fiber mean 769.0 var 784.9 (Poisson var would be 769.0), min 692 max 852, colliding input pairs 227384411 = 1.0000 x random-function expectation 227377920  (1.0s)
+q=1009 (q-1=2^4*63, q mod 4=1, q^2=1018081 inputs), r=1
+   seed 1: image size 1009/1009, fiber mean 1009.0 var 954.3 (Poisson var would be 1009.0), min 909 max 1109, colliding input pairs 513594269 = 0.9999 x random-function expectation 513621360  (2.1s)
+   seed 2: image size 1009/1009, fiber mean 1009.0 var 1073.0 (Poisson var would be 1009.0), min 889 max 1119, colliding input pairs 513654137 = 1.0001 x random-function expectation 513621360  (1.7s)
+   seed 3: image size 1009/1009, fiber mean 1009.0 var 953.2 (Poisson var would be 1009.0), min 918 max 1124, colliding input pairs 513593735 = 0.9999 x random-function expectation 513621360  (1.4s)
+q=1009 (q-1=2^4*63, q mod 4=1, q^2=1018081 inputs), r=2
+   seed 1: image size 1009/1009, fiber mean 1009.0 var 955.5 (Poisson var would be 1009.0), min 920 max 1097, colliding input pairs 513594871 = 0.9999 x random-function expectation 513621360  (2.8s)
+   seed 2: image size 1009/1009, fiber mean 1009.0 var 1111.5 (Poisson var would be 1009.0), min 894 max 1113, colliding input pairs 513673598 = 1.0001 x random-function expectation 513621360  (1.7s)
+   seed 3: image size 1009/1009, fiber mean 1009.0 var 997.8 (Poisson var would be 1009.0), min 915 max 1121, colliding input pairs 513616220 = 1.0000 x random-function expectation 513621360  (2.0s)
+q=4099 (q-1=2^1*2049, q mod 4=3, q^2=16801801 inputs), r=1
+   seed 1: image size 4099/4099, fiber mean 4099.0 var 3981.1 (Poisson var would be 4099.0), min 3891 max 4310, colliding input pairs 34435049417 = 1.0000 x random-function expectation 34435289100  (32.7s)
+   seed 2: image size 4099/4099, fiber mean 4099.0 var 3985.0 (Poisson var would be 4099.0), min 3903 max 4386, colliding input pairs 34435057494 = 1.0000 x random-function expectation 34435289100  (34.7s)
+q=4099 (q-1=2^1*2049, q mod 4=3, q^2=16801801 inputs), r=2
+   seed 1: image size 4099/4099, fiber mean 4099.0 var 4015.5 (Poisson var would be 4099.0), min 3828 max 4311, colliding input pairs 34435119951 = 1.0000 x random-function expectation 34435289100  (38.6s)
+   seed 2: image size 4099/4099, fiber mean 4099.0 var 4143.7 (Poisson var would be 4099.0), min 3891 max 4362, colliding input pairs 34435382732 = 1.0000 x random-function expectation 34435289100  (49.6s)
+q=12289 (q-1=2^12*3, q mod 4=1, q^2=151019521 inputs), r=1
+   seed 1: image size 12289/12289, fiber mean 12289.0 var 12052.2 (Poisson var would be 12289.0), min 11851 max 12753, colliding input pairs 927937991686 = 1.0000 x random-function expectation 927939440640  (340.9s)
+q=12289 (q-1=2^12*3, q mod 4=1, q^2=151019521 inputs), r=2
+   seed 1: image size 12289/12289, fiber mean 12289.0 var 12371.2 (Poisson var would be 12289.0), min 11861 max 12713, colliding input pairs 927939951601 = 1.0000 x random-function expectation 927939440640  (370.2s)
+total seconds 995.7

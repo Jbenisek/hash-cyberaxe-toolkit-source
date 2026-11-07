@@ -1,0 +1,22 @@
+{
+ "object": "message word m5",
+ "question": "Q3: degrees of freedom or score-optimal value of m5.",
+ "status": "COMPUTED",
+ "number": "Degrees of freedom of m5: 0 bits (fixed to 0 by the target). Score-optimal value: 0, because a nonzero constant costs +2 ops (tested 0x9e3779b9, 1, 0xffffffff: 597 ops each). The circuit cost does not depend on which nonzero constant it is.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_words.py; research/dig/incoming3/blake3-r3-U46/work/words_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. Value dependence tested only on the constants named; cost depends on constant folding of zero and on whether an all-constant G call appears.",
+ "held_fixed": "other words as in the target; counts from our tracer",
+ "reopen_if": "the embedding or the prefix changes",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|m5|msgword|Q3",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

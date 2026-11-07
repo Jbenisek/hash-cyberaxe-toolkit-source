@@ -1,0 +1,22 @@
+{
+  "id": "D804-ZONED38-AGGREGATE-SEED65555-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": 37,
+  "object": "aggregate refresh of row-4 signature and C2 full-late fixed-split controls",
+  "question": "What are the exact aggregate counts after adding the independent seed-65555 controls?",
+  "labels": ["C", "S", "E"],
+  "status": "COMPUTED",
+  "number": "Nine row-4 controls (eight independent) total 603979776 rebuilds and 9437184 signature candidates; published state-equalities 4604, independent state-equalities 0. Twenty-four C2 controls (23 independent) total 3840 row14 base/expansion passers, 24 strict/C2 candidates, and zero full-late/state equalities. Conditional iid zero-success upper bound for the independent row4 candidates is 3.571190522189127e-7 (21.4170915608 bits). Fixed-split only.",
+  "source": "owned D803 output logs plus prior exact D779/D781 aggregate JSON",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/d804_aggregate_seed65555.py; research/retest/zoneD38/D804_aggregate_seed65555.json; research/sol_answer_D804_sha256_r38_seed65555_aggregate.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "held_fixed": "all prior aggregate rows and exact D803 seed-65555 logs",
+  "notes": "Parser aggregate only; no production split transfer, late-law independence, score, package, staging, filing, or submission credit.",
+  "reopen_if": "Production-law transfer experiment or organizer-approved rate proof lands.",
+  "peak_mem": "0 FREE"
+}

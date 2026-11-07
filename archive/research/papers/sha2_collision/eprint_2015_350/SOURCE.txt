@@ -1,0 +1,1 @@
+2015/350	Improving Local Collisions: New Attacks on Reduced SHA-256	owner_download	https://eprint.iacr.org/2015/350.pdf

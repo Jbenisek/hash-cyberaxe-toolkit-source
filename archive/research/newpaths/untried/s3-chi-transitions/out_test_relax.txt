@@ -1,0 +1,3 @@
+U dims single-bit [2, 2, 2, 2, 2] all [2, 3, 4]
+P_or ok
+relaxation soundness: violations 0 of 1000 | |K| median 188 | |D3| median 544

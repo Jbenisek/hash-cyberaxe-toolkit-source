@@ -1,0 +1,23 @@
+{
+  "id": "D527-SHA256-R38-ABCD-PREFILE-SELFTEST-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgR38a/pkgR38b/pkgR38c/pkgR38d prefile and vt38 self-test family",
+  "question": "Do the older A-D SHA-256-r38 packages have clean intake rows and do their shipped vt38 programs pass finite self-tests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "Claims 72.61489, 71.11412, 72.03195, 71.43541. Four distinct vt38 hashes; all selftests exit 0 with published-pair/row/A2/variant/chaining-value checks and zero mismatches. Prefile defects: R38a no ledger appendix plus note labels D35/audit; R38b no ledger appendix; R38c no ledger appendix; R38d ledger runner prints N=None. No score credit.",
+  "source": "our workflow: D527 read-only SHA256-r38 A-D package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D527_sha256_r38_abcd_audit.md; research/tools/build_pkg/scratch/pkgR38a/pkg/sha256-r38/experiments/vt38.py; research/tools/build_pkg/scratch/pkgR38b/pkg/sha256-r38/experiments/vt38.py; research/tools/build_pkg/scratch/pkgR38c/pkg/sha256-r38/experiments/vt38.py; research/tools/build_pkg/scratch/pkgR38d/pkg/sha256-r38/experiments/vt38.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package/self-test audit only; no score/package/stage/filing/submission.",
+  "held_fixed": "four scratch package copies; one-thread selftests; current prefile checker",
+  "reopen_if": "repaired ledger/labels, changed vt38 source, or owner/organizer acceptance ruling arrives"
+}

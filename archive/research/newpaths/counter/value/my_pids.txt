@@ -1,0 +1,7 @@
+45343 r_sub_cube_s11
+45348 r_sub_cube_s12
+45360 r_all_cube_s13
+45371 r_all_free_s14
+
+95501 run_gpu.sh (sequential GPU runs; children timeout/ctr_gpu)
+all finished by 14:36 (CPU runs about 14:06, GPU runs 14:36); nothing of mine left running

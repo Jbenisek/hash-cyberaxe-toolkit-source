@@ -1,0 +1,2 @@
+counter 2: full 94 words / 88 rels, core 73 words / 67 rels, DOF 6, depth 73
+min: guess set of size <= 6 (k <= 0) closing every word: UNKNOWN

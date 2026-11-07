@@ -1,0 +1,137 @@
+[
+ {
+  "label": "control h=IV",
+  "n": 20000,
+  "pins": 20000,
+  "half": 20000,
+  "dW4_plus8": 20000,
+  "agree": {
+   "1": 276,
+   "3": 495,
+   "4": 334,
+   "6": 231
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "h[0] random uniform, others IV",
+  "n": 20000,
+  "pins": 20000,
+  "half": 20000,
+  "dW4_plus8": 20000,
+  "agree": {
+   "1": 315,
+   "3": 487,
+   "4": 330,
+   "6": 235
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "h[1] random uniform, others IV",
+  "n": 20000,
+  "pins": 20000,
+  "half": 20000,
+  "dW4_plus8": 20000,
+  "agree": {
+   "1": 294,
+   "3": 437,
+   "4": 335,
+   "6": 226
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "h[2] random uniform, others IV",
+  "n": 20000,
+  "pins": 20000,
+  "half": 9935,
+  "dW4_plus8": 9935,
+  "agree": {
+   "1": 562,
+   "3": 306,
+   "4": 644,
+   "6": 224
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "h[3] random uniform, others IV",
+  "n": 20000,
+  "pins": 20000,
+  "half": 20000,
+  "dW4_plus8": 20000,
+  "agree": {
+   "1": 258,
+   "3": 424,
+   "4": 354,
+   "6": 249
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "h[2] random with bit3(h2+h6+W4)=0",
+  "n": 20000,
+  "pins": 20000,
+  "half": 20000,
+  "dW4_plus8": 20000,
+  "agree": {
+   "1": 269,
+   "3": 443,
+   "4": 287,
+   "6": 232
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "h[0..3] all random (h2 with bit3 ok), h4..7=IV",
+  "n": 20000,
+  "pins": 20000,
+  "half": 20000,
+  "dW4_plus8": 20000,
+  "agree": {
+   "1": 303,
+   "3": 456,
+   "4": 360,
+   "6": 213
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "multi-block chunk: h = arbitrary 8-word CV, flags 10 (CHUNK_END|ROOT), h2+h6 ok",
+  "n": 20000,
+  "pins": 20000,
+  "half": 20000,
+  "dW4_plus8": 20000,
+  "agree": {
+   "1": 305,
+   "3": 478,
+   "4": 321,
+   "6": 255
+  },
+  "all4": 0,
+  "notall": 20000
+ },
+ {
+  "label": "multi-block chunk: h arbitrary 8-word CV, flags 10, no filter",
+  "n": 20000,
+  "pins": 20000,
+  "half": 10010,
+  "dW4_plus8": 10010,
+  "agree": {
+   "1": 544,
+   "3": 306,
+   "4": 626,
+   "6": 263
+  },
+  "all4": 0,
+  "notall": 20000
+ }
+]

@@ -1,0 +1,23 @@
+{
+  "id": "D633-BLAKE3-R3-TUNED-POLARITY-SEARCH-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "BLAKE3-r3 tuned-CV bit-slice polarity multi-seed search",
+  "question": "Can a finite independent polarity hill climb improve the checked-in tuned-CV/flags-10 18,866-op circuit?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Ten deterministic seeds (0..9), 1500 iterations each: checked-in reference 18866 ops; best independent seed 1 = 18868 (18749 gates + 119 fixes); all ten starts were no better.",
+  "source": "our workflow: D633 isolated tuned-CV polarity search",
+  "own_test": true,
+  "evidence": "research/retest/blake3_r3/d633_tuned_polarity_multiseed.py; research/blake3_r3/bitslice3/pkg/blake3/experiments/bsrho.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.1,
+  "gain_basis": "D",
+  "held_fixed": "tuned CV, flags=CHUNK_END|ROOT, 10 seeds, 1500 hill-climb iterations per seed",
+  "notes": "Finite search only; no global minimum claim and no score/package/stage/filing/submission credit.",
+  "reopen_if": "A different polarity optimizer, larger seed/iteration budget, or proof of a lower gate/fix count is supplied"
+}

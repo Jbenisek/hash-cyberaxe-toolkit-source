@@ -1,0 +1,7 @@
+batch 16: stream 81.2s
+batch 17: stream 83.7s
+batch 18: stream 89.7s
+batch 19: stream 84.5s
+batch 20: stream 89.5s
+batch 21: stream 88.9s
+batch 22: stream 106.4s

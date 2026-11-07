@@ -1,0 +1,23 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U11/work/b3lib.py; research/dig/incoming/blake3-r2-U11/work/validate_b3.py (+validate_b3.out); research/dig/incoming/blake3-r2-U11/work/scan_m1011.py (+scan_m1011.out.json, scan.log)",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": 0.0,
+ "gain_basis": "T",
+ "id": "blake3-r2|m10|msgword|Q4",
+ "object": "pkgB3U message word m10 (w10)",
+ "question": "Are there alternative treatments of this word (other differences, input-difference absorption, other values)?",
+ "labels": [
+  "I",
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "(w10,w11) with the same D1 outputs: exactly one pair per (S1,S12) input choice. A difference in D1 inputs S1 and/or S12 between A and B is absorbed exactly by (w10,w11): S1 and S12 both differ 100000/100000, S1 only 100000/100000, S12 only 100000/100000 (outputs X1,X6,X11,X12 equal). Differences in S6 or S11 cannot be absorbed: b1,c1,d1 are fixed by the outputs, so S6 = ROL(b1,12)^c1 and S11 = c1-d1 are forced equal (100000/100000). The route is closed: S12 is a function of (S4,S8) at K0 for any counter/flags (200000/200000), so an S12-only difference cannot arise; S12 differing means S4,S8 differ, and S4 (D3 input) and S8 (D2 input) have no absorbing words in this layout (w14=w15=0, w13=W13 pinned). Carry patterns: all additions are solved by subtraction, one outcome each, no 75/32-type multiplicity",
+ "notes": "Universe cell blake3-r2|m10|msgword|Q4. Where it would reach the same later differences: the D1 outputs are identical so X and everything after is identical, but only if the other K-lanes agree; not a usable path in the pkgB3U layout. Not tested: joint hand-designed cancellations through C1/E0 in round 1. Class: FREE trial word (step T of the pkgB3U root construction, one of w8..w11; not pinned w4, not cancelling w5, not a forced constant X3/X7/X11/X15). w10 is the first and w11 the second message word of D1 = G(1,6,11,12) in round 0; in round 1 w10 is the second word of C1 (slot 3, enters Y1) and w11 the second word of E0 (slot 9). Solved lines: w10 = D1.a1 - S1 - S6, w11 = X1 - D1.a1 - D1.b1. Construction validated first on our b3lib.py (3000/3000: X3/X7/X11/X15, Y4=y, S and X equal A vs B, digest words 0,2,5,7 equal). Method as blake3-r2-U06 (scan_m01.py) applied to words 10,11. Tested the pkgB3U root construction only, 2 rounds, A (len 55) vs B (len 63).",
+ "topic": "b3r2.m10.msgword.Q4"
+}

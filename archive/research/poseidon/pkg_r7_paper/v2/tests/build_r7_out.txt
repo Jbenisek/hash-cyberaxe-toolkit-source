@@ -1,0 +1,4 @@
+rc=0 warning_lines=0
+   text	   data	    bss	    dec	    hex	filename
+ 399216	     32	159962873916	159963273164	253e8dd7cc	single_r7
+742108d6a4de08b4

@@ -1,0 +1,22 @@
+{
+  "id": "D377-POSR2-UNROLLED-KERNEL-CEILING",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "MACHINE.CTL/ADDR unrolled-kernel ceiling",
+  "question": "What exact address/control subcounts could a newly built fixed rows=3,a=17/a=16 straight-line kernel remove, and does that close C1917/C1921?",
+  "labels": ["E", "N"],
+  "status": "OPEN",
+  "number": "Source-exact powering-step subcounts: address 19,267,584/step, 4,547,149,824/centre, 18,188,599,296 over four centres; conditional time ceilings -0.0890846 bits (address only), -0.1851613 (address+dispatch+block), -0.1876452 (all listed setup/group/block/dispatch/address). Not claimable until rebuilt and recharged.",
+  "source": "our read-only source/ledger audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D377_poseidon_r2_unrolled_kernel_ceiling.md; research/poseidon/orchard/lean_r2/ntt.c; research/poseidon/orchard/lean_r2/ntt_kern.h; research/poseidon/orchard/lean_r2/pkg_stage_r2/proof.md; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Partial source-level audit only. C1917 and C1921 remain OPEN: no specialized binary, code-size/register/peak bound, fresh KAT, fresh D-budget, or judge charge exists. No score or package credit.",
+  "held_fixed": "checked-in lean_r2 source, rows=3,a=17 and rows=3,a=16 pass plans, 236-step powering loop, current worst-case N=303746130782",
+  "reopen_if": "a new fixed-address/unrolled kernel is built, KAT-clean, memory-measured and its complete ledger/budget is rerun",
+  "peak_mem": "0 FREE"
+}

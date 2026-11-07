@@ -1,0 +1,19 @@
+{
+  "id": "B3-D179-HADD-ALLMASK-TIMEOUT",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D179 input-dependent modular-addition witness-map probe",
+  "question": "Does an input-dependent modular-addition map cover the three residual class toggles?",
+  "labels": ["K"],
+  "status": "OPEN",
+  "number": "QF_BV CEGIS timed out at iterations 6, 4, and 2 for deltas 00002000, 00001000, and 00000400; no map or impossibility result.",
+  "source": "our bounded QF_BV CEGIS: D179 modular-addition mask",
+  "own_test": true,
+  "evidence": "research/retest/b3_omega_coupled/exact/SYNTH_HADD_ALLMASK.md; research/retest/b3_omega_coupled/exact/synth_hadd_allmask.py",
+  "date": "2026-10-12",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "blake3.d179.witness_map",
+  "notes": "All three solver calls returned timeout during synthesis. This is explicitly inconclusive and does not change the finite all-class audit or the OPEN universal class-invariance status. No saving is credited."
+}

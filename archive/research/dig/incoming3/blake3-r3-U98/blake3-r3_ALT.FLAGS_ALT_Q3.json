@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "flags: score-optimal value",
+ "question": "Degrees of freedom or score-optimal value?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "every legal flag/length choice ties at 595; the only operation saving found in the constants comes from the chaining value (ALT.MULTI Q3) or an unusable counter (ALT.COUNTER Q3), not from flags",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_ops.py; research/blake3_r3/alt/exp_multi.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Tie, so any is optimal.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "none",
+ "topic": "blake3-r3|ALT.FLAGS|ALT|Q3"
+}

@@ -1,0 +1,4 @@
+rule 4, every read a load: stage A 29+18=47, stage 2 100+43=143, registers 10, middle step 85+52+9=146; lanes right 10500/10500; ok True
+rule 6, every read a load: stage A 32+19=51, stage 2 100+43=143, registers 10, middle step 85+52+9=146; lanes right 10500/10500; ok True
+rule 8, every read a load: stage A 37+20=57, stage 2 100+43=143, registers 10, middle step 85+52+9=146; lanes right 10500/10500; ok True
+RESULT: all counts hold  (detail in work/evidence/every_use.txt)

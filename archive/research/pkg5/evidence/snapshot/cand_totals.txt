@@ -1,0 +1,17 @@
+eaf434e7,86744b19,0dff30f8,a6095102,6e977fff,2f7ec007 | a219eed7 a205cc13 fffffffe 2ef26894 1f7cb9ff | 1779a21e class 2^17 | betas with mass 1 | exact class rate 997 | heaviest 415a6065 997.0
+4eeb60c1,94149f3f,7ae04000,5420115f,dd000001,bfff1200 | 9c1e56b5 dd4257bf 00000002 31f094a5 115f8220 | f6fba7e1 class 2^11 | betas with mass 3 | exact class rate 1804 | heaviest 8412342a 1008.7
+3c0f0e0c,4a1afb74,7f831fc0,a842c778,b9d5f681,4400c83e | 893e5283 710daf7b 00000002 bb6196be 43792080 | 77859f46 class 2^15 | betas with mass 3 | exact class rate 6552 | heaviest 085910ed 4308.0
+901cbaf4,ec1c850c,a0067fe4,818007c7,03c6bfff,81418060 | 8f8d7ac3 0f8d0301 fffffffe b838c29e 797f7e9f | 9acd779f class 2^11 | betas with mass 6 | exact class rate 2242 | heaviest 30111950 2112.0
+b751a975,68ae568a,fc02fe00,e3d72814,e0000001,60004019 | 5456e897 afd53851 00000002 d5d50bb4 8815a3bf | 18f7ecf9 class 2^13 | betas with mass 1 | exact class rate 7 | heaviest 851d02b4 6.8
+bb907fef,a0358011,7f9d59ff,6637f084,843a0001,8010a5e0 | 3ae5f151 1ef63391 00000002 628da757 d0b4e857 | 31b13fea class 2^14 | betas with mass 3 | exact class rate 150872 | heaviest c93210a5 106520.0
+bef0d319,cb6255e6,87f103f8,ba17f0e0,f5acd701,407ffef9 | 01ca8ba1 1e3e8bd1 00000002 7f1b3a2f b161390f | bbe102db class 2^15 | betas with mass 0 | exact class rate 0 | heaviest 43121c19 0.0
+e8daa3d4,fe645347,7901ffe0,c1d653fd,18c108e6,7e001028 | a5da8c5b 58057c53 00000002 ad1339d2 d1fdb1ae | 9cebde26 class 2^14 | betas with mass 2 | exact class rate 2836 | heaviest 45568068 2402.0
+d5d881ca,aa277e35,1f208000,123f2142,7fffffff,fffd6e01 | 815924bf 4285247f fffffffe 3f52eda0 5ebf5bc0 | e5c1815f class 2^17 | betas with mass 6 | exact class rate 5072896 | heaviest 581c6852 2129920.0
+eb270078,abb92d43,dc3fc2a4,6b143045,a91fd243,61c20401 | 62fa6fbb 6089d629 fffffffe 4e820822 757c50eb | f0c5a51f class 2^16 | betas with mass 4 | exact class rate 43547 | heaviest a69a08a6 19350.0
+be3b9509,19c41cf6,07ff8030,023fece1,28004e01,03000001 | 26c15b6b 263efb81 00000002 ec9ed24a 69e1023f | 676fffc1 class 2^11 | betas with mass 1 | exact class rate 36864 | heaviest b8126410 36864.0
+b376eee7,4c891119,7f00affe,b0dc03bd,7fffffff,801f4ffd | 38b966bb 077961b9 fffffffe e3a2cca2 fc635f24 | 9b4547fe class 2^13 | betas with mass 12 | exact class rate 8523 | heaviest 24708896 4194.0
+6b0e8a14,2ef175ec,780103de,87557421,e6000001,3de00008 | a846a5df 17bef155 00000002 abdc2d10 3201075d | 5de1a8f9 class 2^15 | betas with mass 16 | exact class rate 329769 | heaviest 15d68411 102408.0
+ae072624,31f8d9dc,77ff81d0,5b7f5740,9fffffff,df000000 | 507ed733 ae82b6ff fffffffe 57c11466 07be2480 | 38cdf381 class 2^17 | betas with mass 16 | exact class rate 116395 | heaviest 901d18d4 100913.0
+9f27fa38,37a8d350,2ffc7ee1,fbbe3de5,a92f3279,adef7fc0 | 6a36b779 84360883 00000002 cae52443 6bd7fbfe | 7b8777c9 class 2^12 | betas with mass 11 | exact class rate 56226 | heaviest 883843a0 34464.0
+7109be86,8ef64179,ac037fe0,5e438517,7fffffff,fdfc3fc1 | e7517d25 0a2ebc87 fffffffe 8c56c16d f8e3617c | 853f19d6 class 2^15 | betas with mass 10 | exact class rate 2925288 | heaviest 4890a334 2482176.0
+8a1430fd,b5ebcf02,76e07e00,941f2ea0,3fffffff,dfff0e01 | 63a1296d 5d41283f fffffffe ce2eeb49 f15ed9e0 | f6efaca1 class 2^13 | betas with mass 6 | exact class rate 10713 | heaviest 841e5c12 5664.0

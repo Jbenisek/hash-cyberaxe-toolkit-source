@@ -1,0 +1,37 @@
+# ex1
+
+Source: `research/blake3_r3/bsel/ext/ex1.py`
+
+Public SHA-256: `4554f884ea70dbea6a15c0e1f968ca0b1fd8db115d6d21bd8a62b50d94a1b242`
+
+## Purpose recorded in the source
+
+Read the source and linked research notes for this program's role.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "bsrho",
+  "hashlib",
+  "json",
+  "sys"
+]
+```
+
+## Read alongside
+
+- research/blake3_r3/bsel/RESULT.md
+- research/blake3_r3/bsel/proof_t.md
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

@@ -1,0 +1,108 @@
+# blake3
+
+Source: `research/blake3_r6/compact/cloud_chk/verifier/blake3.py`
+
+Public SHA-256: `632d007d96ee33611835d90edaaadcad4267bd6aa30e586c47d51e0057e86779`
+
+## Purpose recorded in the source
+
+Unkeyed BLAKE3-256 with prefix reduction in every compression.
+
+The standard chunk tree, counters, flags, feed-forward and root output are
+preserved. This organizer reference accepts complete byte messages; it is not
+a compression-only target. See target-profiles/blake3-r{1,2}-prefix-v1.json.
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Imports
+
+```json
+[
+  "struct"
+]
+```
+
+## Entry points
+
+```json
+[
+  {
+    "name": "_ror",
+    "line": 17,
+    "arguments": [
+      "value",
+      "count"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "_g",
+    "line": 21,
+    "arguments": [
+      "v",
+      "a",
+      "b",
+      "c",
+      "d",
+      "x",
+      "y"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "_compress",
+    "line": 32,
+    "arguments": [
+      "cv",
+      "words",
+      "counter",
+      "block_len",
+      "flags",
+      "rounds"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "_chunk_output",
+    "line": 48,
+    "arguments": [
+      "chunk",
+      "counter",
+      "rounds"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "_parent_output",
+    "line": 62,
+    "arguments": [
+      "left",
+      "right"
+    ],
+    "doc": ""
+  },
+  {
+    "name": "blake3",
+    "line": 66,
+    "arguments": [
+      "data",
+      "rounds"
+    ],
+    "doc": "Return the first 32 standard unkeyed root-output bytes."
+  }
+]
+```
+
+## Read alongside
+
+- research/blake3_r6/compact/proof_t.md
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

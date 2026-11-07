@@ -1,0 +1,2 @@
+class e74181df: 4272 betas evaluated, 21 with mass, exact class rate 36358944.5
+class e7c1815f: 4272 betas evaluated, 39 with mass, exact class rate 29977922.4

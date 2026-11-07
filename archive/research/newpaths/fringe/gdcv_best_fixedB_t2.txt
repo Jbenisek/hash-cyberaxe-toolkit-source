@@ -1,0 +1,108 @@
+guess  K3.a1
+solve K3:d1 K3.d1
+solve K3:c1 K3.c1
+guess  K3.c2
+solve K3:c2 K3.d2
+solve K3:d2 K3.a2
+guess  C1.d2
+solve C1:c2 C1.c1
+solve C1:d2 C1.d1
+solve C1:c1 D3.c2
+guess  C0.c2
+solve C0:b2 C0.b1
+solve C0:c2 C0.c1
+solve C0:b1 D3.b2
+solve D3:b2 D3.b1
+guess  K0.d1
+solve K0:c1 K0.c1
+solve K0:d1 K0.a1
+guess  D3.c1
+solve D3:c2 D3.d2
+solve D3:b1 K0.b2
+guess  K3.b1
+solve K3:b2 K3.b2
+solve K3:a2 m7
+solve K3:b1 init7
+guess  D3.a2
+solve D3:d2 D3.d1
+solve D3:c1 K1.c2
+solve D3:a2 D3.a1
+solve D3:d1 K2.d2
+solve D3:a1 m14
+guess  K2.d1
+solve K2:d2 K2.a2
+solve D2:a1 D2.a1
+solve K2:c1 K2.c1
+solve K2:c2 K2.c2
+solve K2:d1 K2.a1
+solve K2:a2 K2.b1
+solve K2:b2 K2.b2
+solve K2:b1 init6
+table CV init5
+table CV init4
+table CV init3
+table CV init2
+table CV init1
+table CV init0
+solve K0:a1 m0
+solve K2:a1 m4
+solve K3:a1 m6
+solve K0:b1 K0.b1
+solve K0:b2 K0.c2
+solve K0:c2 K0.d2
+solve K0:d2 K0.a2
+solve K0:a2 m1
+guess  C0.d1
+solve C0:d2 C0.a2
+solve C0:a2 C0.a1
+solve C0:d1 D1.d2
+solve C0:c1 D2.c2
+guess  K1.c1
+solve K1:c2 K1.d2
+solve D2:d1 D2.d1
+solve D2:c1 D2.c1
+solve D2:c2 D2.d2
+solve C1:d1 C1.a1
+solve D2:d2 D2.a2
+solve D2:b1 D2.b1
+solve D2:b2 D2.b2
+solve C3:a1 C3.a1
+solve D2:a2 m13
+solve C3:a2 C3.b1
+solve C3:b2 C3.b2
+solve C3:b1 C3.c1
+solve C3:c2 C3.d2
+solve C3:d2 C3.d1
+solve C3:c1 D1.c2
+solve D1:c2 D1.c1
+solve D1:b1 D1.b1
+solve D1:b2 D1.b2
+solve C2:a1 C2.a1
+solve C2:d1 C2.d1
+solve C2:d2 C2.a2
+solve C2:a2 C2.b1
+solve C2:b2 C2.c2
+solve C2:c2 C2.c1
+solve C2:c1 D0.c2
+solve D1:c1 D1.d1
+solve D1:d2 D1.a2
+solve D1:d1 D1.a1
+solve D1:a2 m11
+solve C3:d1 D0.d2
+solve D0:c2 D0.c1
+solve D0:c1 D0.d1
+solve D0:d2 D0.a2
+solve C0:a1 m2
+solve K1:a1 K1.a1
+solve K1:d1 K1.d1
+solve K1:d2 K1.a2
+solve D1:a1 m10
+solve C1:a2 C1.b1
+solve C1:b2 C1.b2
+solve C1:b1 D0.b2
+solve C1:a1 m3
+solve K1:a2 K1.b1
+solve K1:b2 K1.b2
+solve D0:b1 D0.b1
+solve D0:a1 D0.a1
+solve D0:a2 m9

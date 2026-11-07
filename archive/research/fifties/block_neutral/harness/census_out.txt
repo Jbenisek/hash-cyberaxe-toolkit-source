@@ -1,0 +1,38 @@
+frame D (133 configs): word  single:[zero-damage with the point moved / and K1 moved]  adjacent-pair:[same]  null blocks  single-bit damage frequency
+  Y4     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y4=1.00 Y9=1.00 T1RANGE=0.24 CLASS=0.53 ETA=0.50 K3=1.00
+  Y9     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 8379  damage freq:
+  w8     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 w8=1.00 T1RANGE=0.23 K3=1.00
+  D2.b1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 T1RANGE=0.52 K3=1.00
+  D3.a1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 T1RANGE=0.52 K3=1.00
+  K0.b1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 T1RANGE=0.52 K3=1.00
+  K3.d1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 T1RANGE=0.52 K3=1.00
+  S14    single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 T1RANGE=0.52 K3=1.00
+  S15    single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 T1RANGE=0.52 K3=1.00
+  C0.b1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 T1RANGE=0.52 K3=1.00
+  Y14    single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y14=1.00 K3=0.99
+frame O (133 configs): word  single:[zero-damage with the point moved / and K1 moved]  adjacent-pair:[same]  null blocks  single-bit damage frequency
+  C0.d1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 K3=1.00
+  D2.a1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 K3=1.00
+  D2.b1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 K3=1.00
+  S11    single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 K3=1.00
+  S4     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 K3=1.00
+  X9     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 K3=1.00
+  w6     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 K3=1.00
+  Y4     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y4=1.00 Y9=1.00 Y14=1.00 w8=1.00 CLASS=0.53 ETA=0.50 K3=1.00
+  T1     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y9=1.00 Y14=1.00 w8=1.00 T1RANGE=0.21 K3=1.00
+  E1.c1  single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y14=1.00 K3=1.00
+frame R (133 configs): word  single:[zero-damage with the point moved / and K1 moved]  adjacent-pair:[same]  null blocks  single-bit damage frequency
+  w0     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w1     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w2     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w3     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w5     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w6     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w7     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w8     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 w8=1.00 Y3B=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=0.81 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w9     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=0.39 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w10    single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X11=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w11    single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X11=1.00 Y11=1.00 Y11B=1.00 dY7=0.98 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  w12    single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X7=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  T0     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00
+  T1     single 4256: [0 / 0]  pair 4123: [0 / 0]  null(same point) 0  damage freq: Y3=1.00 Y4=1.00 Y9=1.00 Y14=1.00 Y3B=1.00 X3=1.00 X7=1.00 X11=1.00 X15=1.00 Y11=1.00 Y11B=1.00 dY7=1.00 dY15=1.00 T1RANGE=0.21 CLASS=1.00 ETA=1.00 DIG0257=1.00 K3=1.00

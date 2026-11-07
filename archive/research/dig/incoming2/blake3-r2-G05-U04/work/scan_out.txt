@@ -1,0 +1,9 @@
+A=3c6ef372 B=1f83d9ab C=3c6ef372 d=55 d'=63 x=12345678 y=9abcdef0 -> solutions (x',y'): 1
+  x'=12345680 y'=9abcdee8
+A=3c6ef372 B=1f83d9ab C=3c6ef372 d=55 d'=54 x=0badf00d y=deadbeef -> solutions (x',y'): 1
+  x'=0badf00e y'=deadbeee
+A=a54ff53a B=5be0cd19 C=a54ff53a d=11 d'=12 x=12345678 y=9abcdef0 -> solutions (x',y'): 1
+  x'=12345679 y'=9abcdeef
+A=a54ff53a B=5be0cd19 C=a54ff53a d=11 d'=11 x=0badf00d y=deadbeef -> solutions (x',y'): 1
+  x'=0badf00d y'=deadbeef
+seconds: 23

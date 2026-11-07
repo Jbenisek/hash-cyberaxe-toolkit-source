@@ -1,0 +1,106 @@
+triangular True checks 0 equations 92
+words that move with E1.d1 (16 incl. itself): E1.a1 E1.a2 E1.b1 E1.d1 E3.e2 E3.f1 E3.g1 E3.h1 K0.a1 T0 Y10 Y14 Y2 Y6 w0 w1
+round-0 words (S*, X*) that move: none
+per-trial equations up to E1.b1: 3  -> E1.a1 Y6 E1.b1
+per-trial equations up to E1.a2: 4  -> E1.a1 Y6 E1.b1 E1.a2
+per-trial equations up to E3.h1: 5  -> E1.a1 Y6 Y10 Y14 E3.h1
+per-trial equations up to E3.g1: 6  -> E1.a1 Y6 Y10 Y14 E3.h1 E3.g1
+per-trial equations up to E3.f1: 7  -> E1.a1 Y6 Y10 Y14 E3.h1 E3.g1 E3.f1
+per-trial equations up to E3.e2: 8  -> E1.a1 Y6 Y10 Y14 E3.h1 E3.g1 E3.f1 E3.e2
+per-trial equations up to T0: 8  -> E1.a1 Y6 Y10 Y14 Y2 w0 K0.a1 T0
+per-trial equations up to w0: 6  -> E1.a1 Y6 Y10 Y14 Y2 w0
+per-trial equations up to w1: 8  -> E1.a1 Y6 Y10 Y14 Y2 w0 K0.a1 w1
+
+solving order (word <- other words of its equation); * = per trial
+  S2     <- w5
+  S14    <- S2
+  S10    <- S14
+  S6     <- S10
+  D3.a1  <- D3.d1 S14
+  D3.c1  <- D3.d1 S9
+  D3.b1  <- D3.a1
+  X14    <- D3.d1
+  X9     <- D3.c1 X14
+  X4     <- D3.b1 X9
+  X8     <- C0.c1 C0.d1
+  C0.b1  <- C0.c1 X4
+  Y8     <- C0.b1 Y4
+  D2.b1  <- X8
+  S4     <- D3.b1 D3.c1
+  Y12    <- C0.c1 Y8
+* E1.a1  <- E1.d1 Y12
+  D2.a1  <- D2.b1 X2
+  S3     <- D3.a1 S4
+  Y0     <- C0.d1 Y12
+  K3.d1  <- S15 S3
+  K3.a1  <- K3.d1
+  K3.c1  <- K3.d1
+  K3.b1  <- K3.c1
+  w7     <- K3.a1 K3.b1 S3
+  S11    <- K3.c1 S15
+  S7     <- K3.b1 S11
+  w12    <- D2.a1 S2 S7
+  D2.c1  <- D2.b1 S7
+  X13    <- D2.c1 X8
+  w6     <- K3.a1
+  D2.d1  <- X13 X2
+  C0.a1  <- C0.b1 Y0 w6
+  S13    <- D2.a1 D2.d1
+  S8     <- D2.c1 D2.d1
+  X12    <- C0.a1 C0.d1
+  K0.b1  <- S4 S8
+  K1.c1  <- S13 S9
+  D1.c1  <- X12
+  K0.c1  <- K0.b1
+  S12    <- K0.c1 S8
+  K1.d1  <- K1.c1
+  K1.b1  <- K1.c1
+  S1     <- K1.d1 S13
+  S5     <- K1.b1 S9
+  D1.d1  <- D1.c1 S11
+  D1.b1  <- D1.c1 S6
+  X1     <- D1.d1 X12
+  X6     <- D1.b1
+  C2.a1  <- X2 X6 w7
+  C2.d1  <- C2.a1 X14
+  K0.d1  <- K0.c1
+  S0     <- K0.d1 S12
+  K1.a1  <- K1.d1
+  w3     <- K1.a1 K1.b1 S1
+  D1.a1  <- D1.d1 S12
+  w11    <- D1.a1 D1.b1 X1
+  w2     <- K1.a1
+  w10    <- D1.a1 S1 S6
+  X0     <- C0.a1 X4 w2
+  D0.d1  <- X0
+  D0.a1  <- D0.d1 S15
+  D0.c1  <- D0.d1 S10
+  D0.b1  <- D0.c1 S5
+  w9     <- D0.a1 D0.b1 X0
+  X10    <- D0.c1
+  X5     <- D0.b1 X10
+  C1.a1  <- X1 X5 w3
+  C1.d1  <- C1.a1 X13
+  C1.c1  <- C1.d1 X9
+  C1.b1  <- C1.c1 X5
+  Y1     <- C1.a1 C1.b1 w10
+  Y13    <- C1.d1 Y1
+  Y9     <- C1.c1 Y13
+  Y5     <- C1.b1 Y9
+  C2.c1  <- C2.d1 X10
+  C2.b1  <- C2.c1 X6
+* Y6     <- E1.a1 Y1 w12
+* E1.b1  <- E1.d1 Y6
+* E1.a2  <- E1.a1 E1.b1 w5
+  w8     <- D0.a1 S0 S5
+* Y10    <- C2.b1 Y6
+* Y14    <- C2.c1 Y10
+* E3.h1  <- Y14 Y4
+* E3.g1  <- E3.h1 Y9
+* E3.f1  <- E3.g1 Y4
+* E3.e2  <- E3.f1 Y4 w8
+* Y2     <- C2.d1 Y14
+* w0     <- C2.a1 C2.b1 Y2
+* K0.a1  <- w0
+* T0     <- K0.a1 K0.d1
+* w1     <- K0.a1 K0.b1 S0

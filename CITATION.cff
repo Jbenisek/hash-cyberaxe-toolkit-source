@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "HASH$CyberAxe: HASH$CyberAxe research toolkit source collection"
+type: software
+authors:
+  - given-names: Jeremy
+    family-names: Benisek
+    alias: CyberAxe
+    website: "https://cyberaxe.dev/"
+url: "https://hashcyberaxe.com/"
+repository-code: "https://github.com/Jbenisek/hash-cyberaxe-toolkit-source"
+license:
+  - MIT
+  - CC-BY-4.0
+date-released: "2026-11-06"
+abstract: "The full source of the HASH$CyberAxe research tools: the programs and scripts used to study reduced-round SHA-256, BLAKE3, SHA-3 and Poseidon. It covers characteristic builders, SAT encoders, independent verifiers, schedule diagnostics, BLAKE3 circuit kernels, cost calculators and the browser labs. Use it to see how a published result was produced, run a method on your own inputs, or build a new tool from the same parts. There are 19 tool families; each has a README in readmes/ and setup guides in guides/."
+keywords:
+  - cryptanalysis
+  - SHA-256
+  - BLAKE3
+  - SHA-3
+  - Poseidon
+  - reproducibility

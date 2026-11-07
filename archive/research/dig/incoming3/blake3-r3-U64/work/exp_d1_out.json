@@ -1,0 +1,166 @@
+{
+ "d21_uncancelled": {
+  "r1_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 0
+ },
+ "d21_cancel_col3": {
+  "r1_equal_words": {
+   "min": 8,
+   "max": 8,
+   "mean": 8.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 2
+ },
+ "d22_len_only_cancel": {
+  "r1_equal_words": {
+   "min": 8,
+   "max": 8,
+   "mean": 8.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 2
+ },
+ "d22_len_and_flags_cancel": {
+  "r1_equal_words": {
+   "min": 8,
+   "max": 8,
+   "mean": 8.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 4
+ },
+ "d22_len_and_flags_nocancel": {
+  "r1_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 0
+ },
+ "d22_len_cancel_flags_left": {
+  "r1_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 2
+ },
+ "d22_flags_cancel_len_left": {
+  "r1_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 2
+ },
+ "d22_ctr_lo_hi_cancel": {
+  "r1_equal_words": {
+   "min": 8,
+   "max": 8,
+   "mean": 8.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 4
+ },
+ "d22_all_four_cancel": {
+  "r1_equal_words": {
+   "min": 8,
+   "max": 8,
+   "mean": 8.0
+  },
+  "r2_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "r3_equal_words": {
+   "min": 0,
+   "max": 0,
+   "mean": 0.0
+  },
+  "message_words_differing": 8
+ },
+ "G_inverse_roundtrip_200000": true,
+ "same_message_d_diff_outputs_equal_count_of_300000": 0
+}

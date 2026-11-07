@@ -1,0 +1,23 @@
+{
+  "id": "D644-SHA256-R38-ZONED-ROW4-SEED5-CONTROL-20261014",
+  "hash": "sha256-38",
+  "row_i": 4,
+  "row_j": null,
+  "object": "SHA-256 r38 Zone-D row-4 seed-5 fixed-split control",
+  "question": "Does an independent fixed row-4 split produce full-late or final state-equal members?",
+  "labels": ["D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "Exact row4full seed 5 enumerated 2^26 G members over a 2^29 cell domain: all rebuilds and rows 5..15 passed, final state-equal=0, published-pair failures=0. Split W6=a3c307c1 W7=0e7becdd E16=481b22fd E17=c3df41c9 E18=bb429b2b E19=f1f91003 E20=b5973307 E21=28a7e293; 32.43 s, RSS 7788 KiB.",
+  "source": "our workflow: D644 exact Zone-D r38 row4 seed-5 control",
+  "own_test": true,
+  "evidence": "research/retest/zoneD38/row4full_seed5.out; research/tools/traillab/digs/zoneD38/zd38",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "prior": 0.5,
+  "gain_basis": "D",
+  "held_fixed": "current zd38 row4full program and deterministic seed-5 split; complete G-family enumeration",
+  "notes": "Finite fixed-split local evidence only. It does not prove split transfer, production/global rate, full-late completion, charged score, package, stage, filing, or submission.",
+  "reopen_if": "A production-law split-transfer proof or a full row-5/6 completion family becomes available"
+}

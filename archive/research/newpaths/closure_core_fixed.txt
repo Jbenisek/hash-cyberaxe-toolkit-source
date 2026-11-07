@@ -1,0 +1,7 @@
+fixed: best 1-word cores by largest core+2 closure (max single, sum of top 4 pairs, core):
+   (20, 80, 'm7')
+   (20, 80, 'm6')
+   (20, 80, 'm0')
+   (20, 80, 'K3.d2')
+   (20, 80, 'K3.d1')
+a 4-side split needs the 4 side closures to cover 100 words

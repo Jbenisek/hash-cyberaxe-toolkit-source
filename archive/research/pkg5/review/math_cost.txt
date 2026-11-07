@@ -1,0 +1,39 @@
+batches per alpha                                          9363   | text: 9,363   ok
+full batches, members in the last                          (9362, 2)   | text: 9,362 and 2   ok
+stage A, stage 2                                           (100, 138)   | text: 100, 138   ok
+operations per alpha, budgeted                             1098067.75   | text: 1,098,067.75   ok
+per trial, budgeted                                        16.755184   | text: < 16.756   ok
+charged per alpha                                          1140326.4   | text: 1,140,326.4   ok
+margin of the charge over the budgeted cost                3.8485%   | text: 3.8%   ok
+per trial, expected with 7 * 2^-6 of the batches           16.447125   | text: <= 16.448   ok
+  (independent lanes: 1 - (63/64)^7 of the batches)        0.104379 -> 16.3486 per trial
+log2 17.4, log2 430                                        4.121015 8.748193   | text: 4.12102, 8.74819   ok
+log2 of 17.4 * 2^104 / 430                                 99.372823   | text: 99.37282   ok
+log2 of the terms after the first                          98.000000   | text: < 98.01   ok
+  they are below 17.4 * 2^104 * 2^-7 = 2^                  101.1210   | text: 101.121   ok
+log2 of the total as written (line 1 of the display)       99.374117   | text: < 99.3841 < 99.39   ok
+log2 of the second line of the display                     99.384050   | text: < 2^99.3841 + 2^64   ok
+log2(1 + 2^-7)                                             0.011227   | text: < 0.01123   ok
+time_log2 rounded up to one decimal                        99.4   | text: 99.4   ok
+  the same from the total as written (not the bound)       99.4
+passes: 2^88 * 2^10 as a share of the main loop, log2      -10.1210   | text: below 2^-10.12   ok
+stage-2 budget as a share of the trials, log2              -5.8072   | text: 2^-5.81   ok
+budget over seven times 2^-6                               1.142857   | text: 1.142   ok
+uniform rate: log2(17.4 * 2^127 / 430)                     122.37282   | text: 122.37282 -> 122.4   ok
+one stage, 34 per trial: log2(34 / 17.4)                   0.9664   | text: 0.96 / 0.97 bits   ok
+1 - exp(-1/2) - 0.002 - 0.0005 - 0.0005                    0.390469   | text: >= 0.39 (0.3904)   ok
+smallest factor f with 1 - exp(-f / 2^24) - 0.003 >= 0.39  8375630.62   | text: 8,375,631   ok
+count used / 2^23, count of all / 2^23                     3.5722 3.5736   | text: 3.57, 3.57   ok
+expected good trials per run under M                       1.7861   | text: 1.78   ok
+cluster size that keeps 0.39                               3.5777   | text: 3.57   ok
+count used / count of all                                  0.999598   | text: 0.999598   ok
+dropped share, percent (12,039.8 of the count)             0.0402%   | text: 0.041%   DIFFERS
+count used / 2^22                                          7.14   | text: 7.1   ok
+E1-test pass rate, 1,521 in 2^40: log2                     -29.4292   | text: 2^-29.42   ok
+rule A: four runs, sum                                     17179784810   | text: 17,179,784,810   ok
+  deviations in binomial sd                                -0.77 -0.64 +0.85 -0.73   | text: -0.8 -0.6 +0.8 -0.7   ok
+  largest relative deviation                               1.28e-05   | text: 1.3e-05   ok
+  share of all four, log2                                  -6.000007   | text: 2^-6.0000   ok
+self-test: 261,798 of 16,800,000 lanes, log2               -6.0039   | text: 2^-6.004   ok
+self-test: 205,330 of 2,400,000 batches                    0.0856   | text: 0.0856   ok
+  expected for that mix (3/4 full, 1/4 last batch)         0.0860

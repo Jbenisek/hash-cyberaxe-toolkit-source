@@ -1,0 +1,4 @@
+Fri Oct 23 00:50:17 MDT 2026
+{"certificates_verified": 1, "evidence": "pareto/.yukon/work/tracks/poseidon-pareto/judge-evidence.json", "package_sha256": "d05aef206c03d880b97a57d070af7db607bdc48dd186362e767fe92c76dc8c76", "status": "mechanically_valid"}
+rc=0
+Fri Oct 23 00:50:17 MDT 2026

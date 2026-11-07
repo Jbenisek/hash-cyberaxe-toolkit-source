@@ -1,0 +1,23 @@
+{
+  "id": "D491-SHA256-R37-R37M3-PACKAGE-AUDIT-20261014",
+  "hash": "sha256-37",
+  "row_i": null,
+  "row_j": null,
+  "object": "read-only audit of R37M3 scratch package",
+  "question": "Does the R37M3 SHA-256-r37 package pass its arithmetic/package checks and bounded manifest tests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R37M3 prefile ALL PASS with N=6058690054895037231741 and time_log2=60.99099; lowm selftest has zero mismatches; one semi-free-start trial is detected by the counted program and an 8-trial online run has one distinct candidate pair with zero diagnostics.",
+  "source": "our workflow: D491 read-only R37M3 package audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D491_r37m3_package_audit.md; research/launch/prefile_check.py; research/tools/build_pkg/scratch/pkgR37M3/pkg/sha256-r37/experiments/lowm.py; research/tools/build_pkg/scratch/pkgR37M3/pkg/sha256-r37/experiments/manifest.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not remeasured in this audit",
+  "notes": "Finite selftest, semi-free-start, and bounded online evidence only; no full-width collision or score-critical premise is proved. No score/package/stage/filing/submission.",
+  "held_fixed": "scratch package bytes as found; existing claim ledger; one-thread read-only commands",
+  "reopen_if": "package contents or organizer premises change, or a full IV-to-IV proof/test is released"
+}

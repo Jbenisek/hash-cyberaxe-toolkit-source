@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-ENTRY25-CHARGE-20261015",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "25-byte contiguous table explicit charge model",
+  "question": "What is the exact conditional word-operation charge for one packed 25-byte record?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "Under the explicit model, 271 read ops and 407 write ops per 32-entry alignment period; maxima 9 and 14",
+  "source": "research/dig_new/blake3-r4/entry25_charge_audit.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_entry25_charge_audit_1015.md",
+  "date": "2026-10-15",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "one or two 256-bit blocks per record",
+  "notes": "Conditional abstract operation model; unaligned 256-bit access and exact emitter convention remain open; no package/stage/filing/submission."
+}

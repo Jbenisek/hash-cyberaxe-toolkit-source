@@ -1,0 +1,20 @@
+{
+  "id": "S7-TIGHTEN-SUMMARY-20261014-SUP",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "r7 tightening pointer supersession",
+  "question": "Supersede the stale no-tightening pointer with the finite K and GB-exit results.",
+  "labels": ["B"],
+  "status": "COMPUTED",
+  "number": "Bookkeeping only; K and GB-exit probes are now recorded.",
+  "source": "research/sol_answer_S7_tighten_summary_1014.md",
+  "own_test": true,
+  "evidence": "research/dig/s7_tighten_open_record.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Bookkeeping only.",
+  "supersedes": ["R7-TIGHTEN-K"],
+  "kind": "supersession"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-PIVOT-SEARCH-20261014-SUP",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "step circuit pivot pointer supersession",
+  "question": "Supersede the stale pivot-only pointer with the completed finite pivot/order/rotation tests.",
+  "labels": ["B"],
+  "status": "COMPUTED",
+  "number": "Bookkeeping only; tested pivot and rotation families are now recorded.",
+  "source": "research/sol_answer_B3R4_pivot_full_1014.md",
+  "own_test": true,
+  "evidence": "research/dig/blake3r4_pivot_open_record.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Bookkeeping only.",
+  "supersedes": ["B3R4-14"],
+  "kind": "supersession"
+}

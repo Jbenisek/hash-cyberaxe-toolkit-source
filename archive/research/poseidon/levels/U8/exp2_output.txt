@@ -1,0 +1,75 @@
+Cauchy det formula prod_{i<j}(x_j-x_i)(y_j-y_i)/prod(x_i+y_j) == det M: True
+ord of 5 mod 3 = 2 (atlas G1 says 3 - a slip, ord must divide phi(3)=2)
+ord of 5 mod 463 = 462  (462 = {2: 1, 3: 1, 7: 1, 11: 1} )
+ord of 5 mod 2^32 = 1073741824 (5 has order 2^(k-2) mod 2^k, k>=3)
+q69 - 1 = {2: 2, 3: 5, 89: 1, 14923: 1, 417677162933: 1} (0.0s)
+ord of 5 mod q69 = 539204044132271846772  ; (q69-1)/ord = 1
+q143 - 1 factorisation attempt (300 s cap): {2: 2, 3: 4, 11: 1, 2531: 1, 115603: 1, 1197907: 1, 22160661629: 1, 325086459374267: 1}
+
+toy primes: [65537, 1000003, 86017, 147457, 270337, 331777, 417793, 577537, 638977, 724993, 786433, 946177]
+
+=== toy q = 65537  q-1 = {2: 16}  q mod 5 = 2  q mod 8 = 1  gcd(5,q-1) = 1
+x->x^5 is a bijection of F_q: True
+fixed points of x^5: 5 = [0, 1, 256, 65281, 65536]  (1+gcd(4,q-1) = 5 )
+cycle-length histogram of x->x^5 (length: #cycles) first 12: [(1, 5), (2, 2), (4, 2), (8, 2), (16, 2), (32, 2), (64, 2), (128, 2), (256, 2), (512, 2), (1024, 2), (2048, 2)]  max length 16384  total cycles 33
+ord of 5 mod (q-1) = 16384 (= max cycle length predicted)
+2-adicity of q: 16
+quadratic character preserved by x^5: True
+sqrt(-1) = 65281 ; quartic character preserved by x^5: True
+2-depth histogram of F_q^* (depth: count): [(0, 32768), (1, 16384), (2, 8192), (3, 4096), (4, 2048), (5, 1024), (6, 512), (7, 256), (8, 128), (9, 64), (10, 32), (11, 16), (12, 8), (13, 4), (14, 2), (15, 1), (16, 1)] (expected (q-1)/2^(d+1), top level d=16 has 1)
+number of elements of order 2^k, k=1..6: [1, 2, 4, 8, 16, 32]
+x^5-c factor patterns (100 random c): {((1, 1), (4, 1)): 100} ; Phi5 irreducible: True ord_5(q) = 4
+q mod 3 = 2 : x->x^3 is a bijection; every x^3-a has exactly one root; F_{q^3} needs a different cubic
+smallest a with x^3-x-a irreducible: 4
+
+=== toy q = 1000003  q-1 = {2: 1, 3: 1, 166667: 1}  q mod 5 = 3  q mod 8 = 3  gcd(5,q-1) = 1
+x->x^5 is a bijection of F_q: True
+fixed points of x^5: 3 = [0, 1, 1000002]  (1+gcd(4,q-1) = 3 )
+cycle-length histogram of x->x^5 (length: #cycles) first 12: [(1, 3), (2, 2), (166666, 6)]  max length 166666  total cycles 11
+ord of 5 mod (q-1) = 166666 (= max cycle length predicted)
+2-adicity of q: 1
+quadratic character preserved by x^5: True
+2-depth histogram of F_q^* (depth: count): [(0, 500001), (1, 500001)] (expected (q-1)/2^(d+1), top level d=1 has 500001)
+number of elements of order 2^k, k=1..6: (skipped, q large)
+x^5-c factor patterns (100 random c): {((1, 1), (4, 1)): 100} ; Phi5 irreducible: True ord_5(q) = 4
+cubes among F_q^*: 333334 = (q-1)/3: True ; smallest non-cube a = 2 ; theta^q = theta* 499501 = omega where omega= 499501
+
+=== toy q = 86017  q-1 = {2: 12, 3: 1, 7: 1}  q mod 5 = 2  q mod 8 = 1  gcd(5,q-1) = 1
+x->x^5 is a bijection of F_q: True
+fixed points of x^5: 5 = [0, 1, 29693, 56324, 86016]  (1+gcd(4,q-1) = 5 )
+cycle-length histogram of x->x^5 (length: #cycles) first 12: [(1, 5), (2, 10), (4, 6), (6, 24), (8, 6), (12, 12), (16, 6), (24, 12), (32, 6), (48, 12), (64, 6), (96, 12)]  max length 3072  total cycles 201
+ord of 5 mod (q-1) = 3072 (= max cycle length predicted)
+2-adicity of q: 12
+quadratic character preserved by x^5: True
+sqrt(-1) = 56324 ; quartic character preserved by x^5: True
+2-depth histogram of F_q^* (depth: count): [(0, 43008), (1, 21504), (2, 10752), (3, 5376), (4, 2688), (5, 1344), (6, 672), (7, 336), (8, 168), (9, 84), (10, 42), (11, 21), (12, 21)] (expected (q-1)/2^(d+1), top level d=12 has 21)
+number of elements of order 2^k, k=1..6: [1, 2, 4, 8, 16, 32]
+x^5-c factor patterns (100 random c): {((1, 1), (4, 1)): 100} ; Phi5 irreducible: True ord_5(q) = 4
+cubes among F_q^*: 28672 = (q-1)/3: True ; smallest non-cube a = 2 ; theta^q = theta* 40648 = omega where omega= 40648
+
+=== toy q = 147457  q-1 = {2: 14, 3: 2}  q mod 5 = 2  q mod 8 = 1  gcd(5,q-1) = 1
+x->x^5 is a bijection of F_q: True
+fixed points of x^5: 5 = [0, 1, 384, 147073, 147456]  (1+gcd(4,q-1) = 5 )
+cycle-length histogram of x->x^5 (length: #cycles) first 12: [(1, 5), (2, 10), (4, 6), (6, 8), (8, 6), (12, 4), (16, 6), (24, 4), (32, 6), (48, 4), (64, 6), (96, 4)]  max length 12288  total cycles 133
+ord of 5 mod (q-1) = 12288 (= max cycle length predicted)
+2-adicity of q: 14
+quadratic character preserved by x^5: True
+sqrt(-1) = 147073 ; quartic character preserved by x^5: True
+2-depth histogram of F_q^* (depth: count): [(0, 73728), (1, 36864), (2, 18432), (3, 9216), (4, 4608), (5, 2304), (6, 1152), (7, 576), (8, 288), (9, 144), (10, 72), (11, 36), (12, 18), (13, 9), (14, 9)] (expected (q-1)/2^(d+1), top level d=14 has 9)
+number of elements of order 2^k, k=1..6: (skipped, q large)
+x^5-c factor patterns (100 random c): {((1, 1), (4, 1)): 100} ; Phi5 irreducible: True ord_5(q) = 4
+cubes among F_q^*: 49152 = (q-1)/3: True ; smallest non-cube a = 2 ; theta^q = theta* 78348 = omega^2 where omega= 1
+
+=== toy q = 270337  q-1 = {2: 13, 3: 1, 11: 1}  q mod 5 = 2  q mod 8 = 1  gcd(5,q-1) = 1
+x->x^5 is a bijection of F_q: True
+fixed points of x^5: 5 = [0, 1, 87291, 183046, 270336]  (1+gcd(4,q-1) = 5 )
+cycle-length histogram of x->x^5 (length: #cycles) first 12: [(1, 5), (2, 10), (4, 6), (5, 8), (8, 6), (10, 20), (16, 6), (20, 12), (32, 6), (40, 12), (64, 6), (80, 12)]  max length 10240  total cycles 223
+ord of 5 mod (q-1) = 10240 (= max cycle length predicted)
+2-adicity of q: 13
+quadratic character preserved by x^5: True
+sqrt(-1) = 87291 ; quartic character preserved by x^5: True
+2-depth histogram of F_q^* (depth: count): [(0, 135168), (1, 67584), (2, 33792), (3, 16896), (4, 8448), (5, 4224), (6, 2112), (7, 1056), (8, 528), (9, 264), (10, 132), (11, 66), (12, 33), (13, 33)] (expected (q-1)/2^(d+1), top level d=13 has 33)
+number of elements of order 2^k, k=1..6: (skipped, q large)
+x^5-c factor patterns (100 random c): {((1, 1), (4, 1)): 100} ; Phi5 irreducible: True ord_5(q) = 4
+cubes among F_q^*: 90112 = (q-1)/3: True ; smallest non-cube a = 2 ; theta^q = theta* 37352 = omega^2 where omega= 1
+done

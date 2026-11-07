@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-ENTRY25-LAYOUT-20261015",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "25-byte contiguous table layout block audit",
+  "question": "Does a contiguous 25-byte entry stream preserve neighbors with no more than two 256-bit block RMWs per entry?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "32-entry alignment period: 8 one-block and 24 two-block records; 56 loads/stores per 32; max 2; 2000-update neighbor KAT PASS; logical pack/unpack 4 ops each",
+  "source": "research/dig_new/blake3-r4/entry25_layout_audit.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_B3R4_entry25_layout_audit_1015.md",
+  "date": "2026-10-15",
+  "lever": true,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "peak_mem": "one or two 256-bit blocks per record",
+  "notes": "Conditional memory-transfer bound only; unaligned 256-bit access and exact bit-pack emitter convention remain open. No package/stage/filing/submission."
+}

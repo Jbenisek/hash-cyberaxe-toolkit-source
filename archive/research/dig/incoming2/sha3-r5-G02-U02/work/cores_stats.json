@@ -1,0 +1,28 @@
+{
+ "ok_known_answer": true,
+ "n_all_cores": 1741,
+ "n_kept": 467,
+ "cores_bin_bytes": 13325904,
+ "per_core_bytes_max": 29324,
+ "per_core_bytes_min": 17596,
+ "per_core_bytes_mean": 28532.856531049252,
+ "sum_rows": 4542,
+ "sum_m": 40896,
+ "bits_kept": 4574,
+ "bits_all": 17100,
+ "max_bits": 10,
+ "rows_hist": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 1,
+  "7": 1,
+  "8": 48,
+  "9": 25,
+  "10": 392
+ },
+ "t1t2_seconds": 62.1,
+ "max_half_entries": 118098
+}

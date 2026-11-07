@@ -1,0 +1,14 @@
+PASS  claim time_log2 found                                                                              24.83745 (C=None)
+PASS  ledger program ran and printed N                                                                   N=7105003812
+PASS  ledger time_log2 == claim                                                                          ledger 24.83745 claim 24.83745
+PASS  no internal labels in note                                                                         
+PASS  no internal labels in claim                                                                        
+PASS  no internal labels in proof header (first 6000 chars)                                              
+PASS  dependencies.json present (only needed for derivatives)                                            none
+PASS  experiment sources <= 64 KiB                                                                       0 B
+PASS  restriction strings <= 1024 chars                                                                  longest 441
+PASS  note >= 5 KiB                                                                                      7153 B
+PASS  evidence estimate <= 516,000 B (8 KB under the 524,288 limit)                                      ~303190 B (ROUGH: matched B3V within 5 KB but under-counted R5T (33 certificates) by ~88 KB; the staging line "evidence N B" is authoritative and must also be <= 516,000)
+PASS  all shipped .md/.py files LF only                                                                  
+PASS  experiment programs known-good (else: time each experiment <= 9 s, quiet machine, before staging)  all known
+ALL PASS

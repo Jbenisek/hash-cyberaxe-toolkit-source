@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.GBUF coefficient buffer of g",
+ "question": "alternatives for the memory",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "black-box evaluation scan avoids g but costs about p/2 evaluations (P3.3, P3.9: constant-memory scan priced 253.65 score); sparse companion/CSR 2,968,680 B for degree 39,061 (P3.13)",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_3_memory.md 3rd_openai_workspace/luna3/P3_9_lowmem.md 3rd_openai_workspace/luna3/P3_13_lowmem_routes.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Numbers are Luna 3 text; not retested here (priced alternatives, none beats the dense vector). | universe cell poseidon-r1|MEM.GBUF|MEM|M4",
+ "held_fixed": "r = 1 line model",
+ "reopen_if": "a sparse representation of g of order <= 100 KB"
+}

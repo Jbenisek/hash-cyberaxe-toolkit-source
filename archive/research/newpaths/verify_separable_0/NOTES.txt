@@ -1,0 +1,69 @@
+verify_separable_0 - skeptic check of the "separable" claim (WHAT IT WOULD TAKE paragraph of separable/NOTES.txt):
+  "a basis with one guess fewer (7 fixed, 15 outhalf) whose 3 checks are all join keys between two sides of >= 3
+   free words, core <= 1 word, gives ~2^81; a 6-word basis with 2 keys ~2^65; today 8 words and 0 keys."
+Research only.  Nothing outside this folder was modified.
+
+FILES
+  vsys.py        independent rebuild of the fixed system from the brief + numeric check on real 2-round BLAKE3
+  vsys_fixed.txt my export (same index order as separable/sys_fixed_plain.txt)
+  vfull.c        my own exhaustive search for full-closure guess sets (no depth bound)
+  vsplit.py      my own join-key recount (all 3^8 core/side assignments of an 8-set)
+  cost.py        literal cost ledger (1 unit per compression, 1/430 per word op)
+  *.out, *.sh    outputs and WSL runners
+
+1 WIRING  (COMPUTED, vsys.py)
+  Rebuilt from the brief's text (not from gd_order.py): 100 unknown words, 96 equations, F = 4; word set and every
+  equation's support identical to separable/sys_fixed_plain.txt.  Unknowns per equation: 28 x 2, 54 x 3, 14 x 4
+  (no 1-unknown equation, so no word is silently constant).  On 2000 random messages at w = 32 all 96 equations
+  hold, my trace equals Grok's job28.compress, and out0/2/5/7 = E0.a^E2.c, E2.a^E0.c, E0.b^E2.d, E2.b^E0.d.
+
+2 MINIMUM BASIS = 8 (fixed, plain model)  (COMPUTED, vfull.c, 8 parts, ~1 min)
+  No guess set of <= 7 words has full closure.  Node counts per part equal separable's fullsets.c exactly
+  (1456137924, 1423695799, ... 1458824399), total 1.17e10.  Positive control: K = 8 in branch (0,1) finds
+  108,710 full 8-sets, equal to the number of "FULL k=8: 0 1 ..." lines in separable's partial listing.
+  Not rechecked: the tables and t2 models (separable reports 0 there too; not rerun by me).
+
+3 JOIN KEYS OF 8-SETS  (COMPUTED, vsplit.py, my own closure and delta code)
+  Every core/side assignment (3^8) of 1,684 local-search 8-sets (separable/ls8_plain.txt) and 1,500 sets drawn
+  from separable/k8_sample200k.txt: max kX = 0 for all 3,184 sets (vsplit_ls8.out, vsplit_k8s.out).
+  Positive control: the 5-word control system gives kX = 2 with my code; separable's jtree on it gives 65
+  (jtree_control.out, rerun).  Still a sample: "0 keys" is not proven for every 8-set.
+  Max closure of k guesses (vmaxcl.c, all subsets): 9, 14, 20, 25 for k = 1..4, equal to separable R1.  So a
+  4-guess side derives at most 21 words in this model (this sets the op count in section 4).
+
+4 COST ACCOUNTING  (DERIVED + COMPUTED, cost.py)
+  Counting.  Need 2^64 members (128-bit birthday, ~39 per cent; 2^64.5 for ~63 per cent).  kX keys of 32 bits,
+  p = 0, one core value: lists 2^x and 2^y with x + y - 32 kX = 64, balanced x = y = 32 + 16 kX.
+  kX = 3: lists 2^80 each, 2^81 entries; kX = 2: lists 2^64, 2^65 entries.  Sides need >= 80 bits -> >= 3 words.
+  Fixed: |S| = 7 = |C| + a + b, a, b >= 3 -> |C| <= 1.  These counts are right (DERIVED, rechecked).
+  BUT the claim's unit is "one list entry = 1 unit".  The contest charges 1 unit per 2-round compression and
+  1/430 per other word op.  A list entry is a partial propagation (a 4-guess closure is at most 25 words in this
+  model, separable R1), 3 key words, a table write/probe: GUESS 30-112 word ops, i.e. 2^-3.8 .. 2^-1.9 units.
+  Literal totals (cost.out):
+     kX = 3: 2^77.2 .. 2^79.1 (55 ops/entry: 2^78.0; 2^78.3 with 2^64.5 members).  Claim: 2^81.
+     kX = 2: 2^64.2 .. 2^64.6 (dominated by the 2^64 compressions).  Claim: 2^65.
+  2^81 is only reached if each list entry cost a full compression (430 ops).  So the 2^81 is an upper bound,
+  about 3 bits above the literal count.
+  Side effect on the claim's threshold (DERIVED): with the literal model an 8-word basis with 4 join keys
+  (|C| = 2, a = b = 3, lists 2^96) costs about 2^93.2 .. 2^95.1 (2^94.0 at 55 ops), not ">= 2^97": board range
+  (92.2 - 94), though not below the best 92.2.  "One guess fewer" is what it takes to BEAT the board, not to
+  reach it.
+  Minor (DERIVED): separable's written bound "cost >= 32 + 16 kX + 32 p" is wrong for p > 0 (kX = 3, p = 1: the
+  formula gives 112, the true minimum of their own cost formula is 97 = 1 + max(32+16kX+16p, 64+32p)).  The p = 0
+  cases used in the claim are unaffected.
+
+5 OUTHALF WORDING  (DERIVED)
+  For outhalf (F = 12) a 15-word basis with 3 keys needs a, b >= 3 but allows |C| up to 9 (15 - 3 - 3), so the
+  claim's "core of at most 1 word" is wrong (too strict) there.  Outhalf "today 16" is heuristic local search
+  only (separable O1), not exhaustive; I did not rerun it.
+
+VERDICT
+  Structure and status CONFIRMED: wiring, F = 4, minimum basis 8 (exhaustive, two independent codes agree to
+  the node), 0 join keys on 3,184 sampled 8-sets.  The exponent is REFUTED as a literal count: 2^81 counts each
+  list entry as a full compression.  Literal: about 2^78 (2^77.2 .. 2^79.1) for 3 keys, about 2^64.3 for 2 keys.
+  "Core <= 1" is right for fixed, wrong (too strict) for outhalf (|C| <= 9).
+  blocked: none.
+
+NOT TESTED
+  tables / t2 / rigid models; outhalf minimum; no toy end-to-end join exists anywhere (separable step 3 was not
+  run because no structure below 2^85 exists in the model; nothing to run).

@@ -1,0 +1,34 @@
+e74181df members 2^16 betas 4272 with mass 21 total 36358945 heaviest 581c6872 16515072
+e7c1815f members 2^16 betas 4272 with mass 39 total 29977922 heaviest 481c6852 14038016
+2fc1815f members 2^17 betas 1500 with mass 12 total 26021728 heaviest c81c6852 11403264
+27c1815f members 2^18 betas 1500 with mass 19 total 25204132 heaviest 58146852 6553600
+e741815f members 2^17 betas 1500 with mass 14 total 24530100 heaviest 581c6852 16121856
+67c181df members 2^16 betas 1500 with mass 13 total 23766776 heaviest d8146872 10444800
+27c182df members 2^17 betas 1500 with mass 45 total 16494326 heaviest 58146872 5447680
+e741835e members 2^17 betas 1500 with mass 24 total 12982696 heaviest 481c3872 8790528
+67c182df members 2^16 betas 1500 with mass 61 total 9158758 heaviest d8146872 1916928
+25c1815f members 2^19 betas 1500 with mass 6 total 8855552 heaviest 581c6852 3727360
+e5c1815f members 2^17 betas 1500 with mass 15 total 6045516 heaviest 581c6852 2129920
+65c1815f members 2^18 betas 1500 with mass 27 total 3735592 heaviest 481c6852 688128
+6741815f members 2^18 betas 1500 with mass 13 total 2703083 heaviest d81c6852 1024000
+6bc181ff members 2^15 betas 1500 with mass 5 total 951184 heaviest d8145852 589824
+65c181df members 2^17 betas 1500 with mass 5 total 944512 heaviest d81c6872 540672
+e74182de members 2^17 betas 1500 with mass 1 total 819200 heaviest 481c39f2 819200
+e7c183de members 2^15 betas 1500 with mass 16 total 505439 heaviest 783c5852 299904
+27c182bf members 2^17 betas 1500 with mass 5 total 327768 heaviest 583c5872 131072
+e541815f members 2^18 betas 1500 with mass 7 total 313351 heaviest 58145852 225280
+e741815e members 2^18 betas 1500 with mass 7 total 260490 heaviest d81c2872 116064
+e5c1815e members 2^18 betas 1500 with mass 14 total 157456 heaviest 481c2872 94720
+67c382df members 2^15 betas 1500 with mass 16 total 87997 heaviest 48147872 69600
+e7ff835e members 2^11 betas 1500 with mass 2 total 56192 heaviest 48147872 53120
+e7ff837f members 2^9 betas 1500 with mass 8 total 49588 heaviest 581c59d2 43696
+65ff82df members 2^12 betas 1500 with mass 7 total 11366 heaviest 481c7872 7066
+e57f83df members 2^11 betas 1500 with mass 6 total 708 heaviest 581c59b2 229
+674382df members 2^16 betas 1500 with mass 8 total 698 heaviest 48f42872 452
+274182df members 2^18 betas 1500 with mass 5 total 294 heaviest 48743872 221
+274f875f members 2^14 betas 1500 with mass 6 total 24 heaviest 783c2852 12
+2541815f members 2^20 betas 1500 with mass 1 total 8 heaviest b8343852 8
+2741815f members 2^19 betas 1500 with mass 0 total 0 heaviest  0
+27c181df members 2^17 betas 1500 with mass 0 total 0 heaviest  0
+e74183be members 2^16 betas 1500 with mass 0 total 0 heaviest  0
+e74786de members 2^14 betas 1500 with mass 0 total 0 heaviest  0

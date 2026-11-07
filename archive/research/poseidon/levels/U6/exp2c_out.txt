@@ -1,0 +1,2 @@
+3 blocks (k=37 with 1): 560 LLL runs, shortest relation seen 2^7.39 (generic floor 2^7.42), hits with norm<30: [], 13s
+4 blocks (k=49 with 1): 1820 LLL runs, shortest relation seen 2^6.05 (generic floor 2^5.94), hits with norm<30: [], 455s

@@ -1,0 +1,15 @@
+{
+ "src_bytes": 10304,
+ "instructions": 17238,
+ "registers": 771,
+ "nodes": 17495,
+ "calls": 35340,
+ "static_total": 902720,
+ "code_region": 687060,
+ "counters": 16384,
+ "emit_scratch": 195005,
+ "trace_scratch": 138140,
+ "fuel": 8562286,
+ "pages": 14,
+ "spare": 145856
+}

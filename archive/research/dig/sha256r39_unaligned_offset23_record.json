@@ -1,0 +1,21 @@
+{
+  "id": "S39-UNALIGNED-OFF23-20261014",
+  "hash": "sha256-39",
+  "row_i": 0,
+  "row_j": 39,
+  "object": "unaligned layout offset 23 bytes (free bytes 23..54)",
+  "question": "Does a byte-misaligned 55-byte free block beat W5..W12?",
+  "labels": ["N", "C", "S"],
+  "status": "COMPUTED",
+  "number": "53249 gates; 208.00390625/lane; interleaved peak 871 planes; 0/256 KAT mismatches",
+  "source": "research/dig_new/sha256-39/unaligned_layout_probe.py",
+  "own_test": true,
+  "evidence": "research/sol_answer_S39_unaligned_offset23_1014.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.008159083588384951,
+  "peak_mem": "871 live planes; code-size and register premise conditional",
+  "notes": "Exact local generator/KAT result. 55-byte message, bytes 23..54 free; no package/stage/filing/submission.",
+  "potential_bits": 0.03,
+  "prior": 1.0
+}

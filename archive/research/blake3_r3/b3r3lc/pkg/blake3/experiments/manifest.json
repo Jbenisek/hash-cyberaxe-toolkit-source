@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "experiments": [
+    {
+      "id": "rho-n22",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 22 bits of the complete digest. Each trial runs the search of proof.md Section 2 at width n = 22 (distinguished points: low 4 bits zero and the next 4 bits below 12; groups of 2 batches with replay; 25-byte table entries; budgets plan(22)), with up to 60 fresh attempts from the trial seed, and returns the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)).",
+      "hypothesis": "For every trial the two messages are distinct and their complete 3-round digests agree on the low 22 bits (digest bytes 0 and 1 and the low 6 bits of byte 2). This is exact: the program recovers a merge of two trails of the chain x -> low 22 bits of the digest of P || 0^32 || x. Observations (untrusted, the program's own): attempts and batches. Expected: about 2 attempts per trial and at most 378 batches per attempt; all 256 trials return a pair; a few trials may return a pair another trial also returns, because at width 22 the merges concentrate on few pairs. Not shown: any width-256 cost or success probability.",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffff3f0000000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "rho-n32-a",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 32 bits of the complete digest. This is the random-mapping test T3 of proof.md Section 5 run by the organizer on this entry's own program (the same rho.py, the same search, grouped filter with 16 batches per group and replay, 25-byte table entries, 7 lanes). Trials 0 to 23 each run exactly one attempt of the search at width n = 32 from the trial seed with the budgets of plan(32, \"32m\") (DP: low 8 bits zero and the 4 bits above them below 12; Q about 75,000 evaluations) and return the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)), or two nulls if the attempt halts or ends without a pair; trials 24 to 255 return two nulls without running (the runner's 20-second limit does not allow 256 attempts; measured 6 to 9 seconds for this experiment).",
+      "hypothesis": "Every returned pair is two distinct messages whose complete 3-round digests agree on the low 32 bits (exact check by the organizer). The number of returned pairs among the 24 attempts is the evidence for the random-mapping premise H1 (parts a and b) at this width: for a random mapping the success probability of one attempt lies between the design value 0.39 (1 - exp(-0.497)) and 0.48 (every one of the Q evaluations counted as a distinct input), so 9.4 to 11.5 pairs are expected in this experiment (binomial, standard deviation about 2.4). Observations (untrusted, the program's own): batches, stage-2 events, finished trails, replays and halts per attempt; none is used. Not shown: any width-256 cost or success probability; an organizer frequency is not an independent-trial probability estimate; the experiment uses one fixed function (K = 0), so it does not test fresh keys (T1) or the 2^26-point projections at width 256 (T2).",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffffffff00000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "rho-n32-b",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 32 bits of the complete digest. This is the random-mapping test T3 of proof.md Section 5 run by the organizer on this entry's own program (the same rho.py, the same search, grouped filter with 16 batches per group and replay, 25-byte table entries, 7 lanes). Trials 0 to 23 each run exactly one attempt of the search at width n = 32 from the trial seed with the budgets of plan(32, \"32m\") (DP: low 8 bits zero and the 4 bits above them below 12; Q about 75,000 evaluations) and return the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)), or two nulls if the attempt halts or ends without a pair; trials 24 to 255 return two nulls without running (the runner's 20-second limit does not allow 256 attempts; measured 6 to 9 seconds for this experiment).",
+      "hypothesis": "Every returned pair is two distinct messages whose complete 3-round digests agree on the low 32 bits (exact check by the organizer). The number of returned pairs among the 24 attempts is the evidence for the random-mapping premise H1 (parts a and b) at this width: for a random mapping the success probability of one attempt lies between the design value 0.39 (1 - exp(-0.497)) and 0.48 (every one of the Q evaluations counted as a distinct input), so 9.4 to 11.5 pairs are expected in this experiment (binomial, standard deviation about 2.4). Observations (untrusted, the program's own): batches, stage-2 events, finished trails, replays and halts per attempt; none is used. Not shown: any width-256 cost or success probability; an organizer frequency is not an independent-trial probability estimate; the experiment uses one fixed function (K = 0), so it does not test fresh keys (T1) or the 2^26-point projections at width 256 (T2).",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffffffff00000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "rho-n32-c",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 32 bits of the complete digest. This is the random-mapping test T3 of proof.md Section 5 run by the organizer on this entry's own program (the same rho.py, the same search, grouped filter with 16 batches per group and replay, 25-byte table entries, 7 lanes). Trials 0 to 23 each run exactly one attempt of the search at width n = 32 from the trial seed with the budgets of plan(32, \"32m\") (DP: low 8 bits zero and the 4 bits above them below 12; Q about 75,000 evaluations) and return the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)), or two nulls if the attempt halts or ends without a pair; trials 24 to 255 return two nulls without running (the runner's 20-second limit does not allow 256 attempts; measured 6 to 9 seconds for this experiment).",
+      "hypothesis": "Every returned pair is two distinct messages whose complete 3-round digests agree on the low 32 bits (exact check by the organizer). The number of returned pairs among the 24 attempts is the evidence for the random-mapping premise H1 (parts a and b) at this width: for a random mapping the success probability of one attempt lies between the design value 0.39 (1 - exp(-0.497)) and 0.48 (every one of the Q evaluations counted as a distinct input), so 9.4 to 11.5 pairs are expected in this experiment (binomial, standard deviation about 2.4). Observations (untrusted, the program's own): batches, stage-2 events, finished trails, replays and halts per attempt; none is used. Not shown: any width-256 cost or success probability; an organizer frequency is not an independent-trial probability estimate; the experiment uses one fixed function (K = 0), so it does not test fresh keys (T1) or the 2^26-point projections at width 256 (T2).",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffffffff00000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "rho-n40-a",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 40 bits of the complete digest. This is the random-mapping test T3 of proof.md Section 5 run by the organizer on this entry's own program (the same rho.py, the same search, grouped filter with 16 batches per group and replay, 25-byte table entries, 7 lanes). Trials 0 to 1 each run exactly one attempt of the search at width n = 40 from the trial seed with the budgets of plan(40, \"40m\") (DP: low 12 bits zero and the 4 bits above them below 12; Q about 1.2 million evaluations) and return the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)), or two nulls if the attempt halts or ends without a pair; trials 2 to 255 return two nulls without running (the runner's 20-second limit does not allow 256 attempts; measured 6 to 9 seconds for this experiment).",
+      "hypothesis": "Every returned pair is two distinct messages whose complete 3-round digests agree on the low 40 bits (exact check by the organizer). The number of returned pairs among the 2 attempts is the evidence for the random-mapping premise H1 (parts a and b) at this width: for a random mapping the success probability of one attempt lies between the design value 0.39 (1 - exp(-0.497)) and 0.48 (every one of the Q evaluations counted as a distinct input), so 0.8 to 1.0 pairs are expected in this experiment (binomial, standard deviation about 0.7). Observations (untrusted, the program's own): batches, stage-2 events, finished trails, replays and halts per attempt; none is used. Not shown: any width-256 cost or success probability; an organizer frequency is not an independent-trial probability estimate; the experiment uses one fixed function (K = 0), so it does not test fresh keys (T1) or the 2^26-point projections at width 256 (T2).",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffffffffff000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "rho-n40-b",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 40 bits of the complete digest. This is the random-mapping test T3 of proof.md Section 5 run by the organizer on this entry's own program (the same rho.py, the same search, grouped filter with 16 batches per group and replay, 25-byte table entries, 7 lanes). Trials 0 to 1 each run exactly one attempt of the search at width n = 40 from the trial seed with the budgets of plan(40, \"40m\") (DP: low 12 bits zero and the 4 bits above them below 12; Q about 1.2 million evaluations) and return the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)), or two nulls if the attempt halts or ends without a pair; trials 2 to 255 return two nulls without running (the runner's 20-second limit does not allow 256 attempts; measured 6 to 9 seconds for this experiment).",
+      "hypothesis": "Every returned pair is two distinct messages whose complete 3-round digests agree on the low 40 bits (exact check by the organizer). The number of returned pairs among the 2 attempts is the evidence for the random-mapping premise H1 (parts a and b) at this width: for a random mapping the success probability of one attempt lies between the design value 0.39 (1 - exp(-0.497)) and 0.48 (every one of the Q evaluations counted as a distinct input), so 0.8 to 1.0 pairs are expected in this experiment (binomial, standard deviation about 0.7). Observations (untrusted, the program's own): batches, stage-2 events, finished trails, replays and halts per attempt; none is used. Not shown: any width-256 cost or success probability; an organizer frequency is not an independent-trial probability estimate; the experiment uses one fixed function (K = 0), so it does not test fresh keys (T1) or the 2^26-point projections at width 256 (T2).",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffffffffff000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "rho-n40-c",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 40 bits of the complete digest. This is the random-mapping test T3 of proof.md Section 5 run by the organizer on this entry's own program (the same rho.py, the same search, grouped filter with 16 batches per group and replay, 25-byte table entries, 7 lanes). Trials 0 to 1 each run exactly one attempt of the search at width n = 40 from the trial seed with the budgets of plan(40, \"40m\") (DP: low 12 bits zero and the 4 bits above them below 12; Q about 1.2 million evaluations) and return the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)), or two nulls if the attempt halts or ends without a pair; trials 2 to 255 return two nulls without running (the runner's 20-second limit does not allow 256 attempts; measured 6 to 9 seconds for this experiment).",
+      "hypothesis": "Every returned pair is two distinct messages whose complete 3-round digests agree on the low 40 bits (exact check by the organizer). The number of returned pairs among the 2 attempts is the evidence for the random-mapping premise H1 (parts a and b) at this width: for a random mapping the success probability of one attempt lies between the design value 0.39 (1 - exp(-0.497)) and 0.48 (every one of the Q evaluations counted as a distinct input), so 0.8 to 1.0 pairs are expected in this experiment (binomial, standard deviation about 0.7). Observations (untrusted, the program's own): batches, stage-2 events, finished trails, replays and halts per attempt; none is used. Not shown: any width-256 cost or success probability; an organizer frequency is not an independent-trial probability estimate; the experiment uses one fixed function (K = 0), so it does not test fresh keys (T1) or the 2^26-point projections at width 256 (T2).",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffffffffff000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "rho-n40-d",
+      "kind": "python-message-pairs-v1",
+      "scope": "The blake3-r3-prefix-v1 target, collision of the low 40 bits of the complete digest. This is the random-mapping test T3 of proof.md Section 5 run by the organizer on this entry's own program (the same rho.py, the same search, grouped filter with 16 batches per group and replay, 25-byte table entries, 7 lanes). Trials 0 to 1 each run exactly one attempt of the search at width n = 40 from the trial seed with the budgets of plan(40, \"40m\") (DP: low 12 bits zero and the 4 bits above them below 12; Q about 1.2 million evaluations) and return the two 128-byte messages P || 0^32 || x and P || 0^32 || y (P = PREFIX of the program, the first block; the last block has flags 10 and chaining value chain_value(P)), or two nulls if the attempt halts or ends without a pair; trials 2 to 255 return two nulls without running (the runner's 20-second limit does not allow 256 attempts; measured 6 to 9 seconds for this experiment).",
+      "hypothesis": "Every returned pair is two distinct messages whose complete 3-round digests agree on the low 40 bits (exact check by the organizer). The number of returned pairs among the 2 attempts is the evidence for the random-mapping premise H1 (parts a and b) at this width: for a random mapping the success probability of one attempt lies between the design value 0.39 (1 - exp(-0.497)) and 0.48 (every one of the Q evaluations counted as a distinct input), so 0.8 to 1.0 pairs are expected in this experiment (binomial, standard deviation about 0.7). Observations (untrusted, the program's own): batches, stage-2 events, finished trails, replays and halts per attempt; none is used. Not shown: any width-256 cost or success probability; an organizer frequency is not an independent-trial probability estimate; the experiment uses one fixed function (K = 0), so it does not test fresh keys (T1) or the 2^26-point projections at width 256 (T2).",
+      "program": "experiments/rho.py",
+      "event": {
+        "kind": "digest-xor-mask",
+        "mask_hex": "ffffffffff000000000000000000000000000000000000000000000000000000",
+        "expected_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    }
+  ]
+}

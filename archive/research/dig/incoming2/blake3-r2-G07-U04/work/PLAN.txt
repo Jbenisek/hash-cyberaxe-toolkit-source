@@ -1,0 +1,5 @@
+Plan written 2026-10-12 before any seed drawn. Shipped program pkgB3W/pkg/blake3-r2/experiments/frontline.py, walk_thi(words_cap None, full_every 64).
+Seeds sha256(b"scanonce-g07u04/"+i), i=0..N-1 (fresh prefix, disjoint from prereg6w and b3T). N=2400 contexts (time-limited, single process).
+Rule: (a) kept share pooled pf_words/words <= 0.11 ; (b) listed_frac = mean listed / 20802.919921875, report mean +-2SE; (b) holds-at-point if mean>=0.99. Mismatch and halt must be 0. Low power for 6-SE rule at this N; reported, not decided.
+AMENDMENT (written 14:41 before the 2400 run's results were read; not looked at): after those 2400, contexts 2400..15999 run as a second segment, pooled to N=16000, same rule; rule applied to the pooled 16000 only.
+AMENDMENT 2 (same time, results unread): the second segment is 2400..7999, pooled N=8000 (time limit), replacing 16000 above.

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.TWID (MEM)",
+ "question": "M1: bytes held",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "65,536 entries x 32 B = 2,097,152 B (rho^j, j < 2^16), 5.12 percent of the 40,934,171 B total; r=1 16,384 entries = 524,288 B.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.TWID|MEM|M1. Table item of the memory table.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "a different buffer layout or a measured smaller peak"
+}

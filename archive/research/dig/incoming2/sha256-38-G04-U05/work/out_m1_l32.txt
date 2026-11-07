@@ -1,0 +1,11 @@
+KTABLE rebuilt on GPU: bins compared 40, mismatches vs proof A.2 table 0 ; total 4294967296 sum_k 25857884160 sum_k2 636623874688 (proof: 25857884160? sum_k2 636623874688)
+MODE 1 steps 38 N=2^32 (4294967296) seed 11  gpu_seconds 4.8
+F7DIRECT x in F7: 287285853 expected 287309824.0 z -1.464
+CLASSES mean k 6.020546 exact 6.020508 z 0.238 ; mean k^2 148.2264 exact 148.2255 ; P(k>0) 0.303197 exact 0.303194 z 0.346
+BITS stat samples 1073866752 ; 256 bit means: max |z| 2.930 at word 6 bit 27 ; sum z^2 247.2 (expect 256 +- 22.6)
+BITS|k>0 samples 325587848 ; 224 bits of words 1..7: max |z| 2.845 at word 2 bit 8 ; sum z^2 (all 256 bits incl. word0, whose bits are shifted by the gate) 335316.8
+KHIST chi2 35.07 on 40 bins (df 39) vs exact A.2 distribution
+TOP12 word 0 chi2 4035.9 df 4095 (sd 90.5) 
+TOP12 word 1 chi2 4151.8 df 4095 (sd 90.5) 
+PAIR A-1 x A-2 samples 268529664 : 1024 joint (1,1) counts, max |z| 3.141 at (15,5), sum z^2 1033.4 (expect 1024 +- 45)
+PAIR A-1 x E-1 samples 268529664 : 1024 joint (1,1) counts, max |z| 3.326 at (2,30), sum z^2 1001.0 (expect 1024 +- 45)

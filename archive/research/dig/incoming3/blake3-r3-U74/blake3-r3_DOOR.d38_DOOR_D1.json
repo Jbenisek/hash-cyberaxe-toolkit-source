@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "door 38: parent/CV separability bias at 3 rounds",
+ "question": "D1 RELABEL at 3 rounds: separability bias test (second-order derivative of the parent compression) at N = 2^22 quadruples, two seeds",
+ "labels": [
+  "Z"
+ ],
+ "status": "SAMPLED",
+ "number": "Own code sep_test3.py (r2 test with rounds=3), parent compress f(L,R) = compress(IV, L||R, t=0, len 64, flags 12, 3 rounds), self-check 50/50 against verifier blake3(rounds=3) on 2-chunk messages and rounds=7 equal. Seed 20261011, N=2^22: T1 xor max |P-1/2| 0.000856 (3.51 sigma, bit 126); T2 add max 0.000654 (2.68 sigma, bit 90), P(word==0) max 0; T3 64 word-pair cells x 65,536 quads worst 0.00810, flagged 0, confirmed 0; T4 1024 bit-pair cells x 16,384 quads worst 0.01715, flagged 0, confirmed 0. Replicate seed 777, N=2^22: T1 0.000706 (2.89 sigma, bit 15), T2 0.000610 (2.50 sigma, bit 8), T3 worst 0.00771, T4 worst 0.01776, flagged 0 confirmed 0. The 3.51 sigma bit (126) did not recur in the replicate (a different bit, 2.89 sigma): sampling noise (the maximum of 256 normal deviates exceeds 3.5 sigma about 11 percent of the time). No usable biased bit at 3 rounds.",
+ "evidence": "research/dig/incoming3/blake3-r3-U74/work/sep_test3.py, research/dig/incoming3/blake3-r3-U74/work/sep22.out, research/dig/incoming3/blake3-r3-U74/work/sep22b.out",
+ "notes": "universe cell blake3-r3|DOOR.d38|DOOR|D1. Same code and flag rules as the r2 run (research/dig/incoming2/blake3-r2-G05-U12/work/sep_test.py) with the round count changed 2 to 3 and the verifier path pointed at the pareto_clone verifier. N=2^22, not 2^24 (time limit 5 minutes); at 2 rounds the same test gave 0.000338 at 2^24. The RELAX 2/4 word-level model (trunc_relax.c) is specific to 2 rounds and was NOT rerun at 3 rounds; word-level r3 results are B3R3-X1 (6 checks at best for up to 3 difference words).",
+ "held_fixed": "cv = IV for the parent node, t = 0, block length 64, flags 12 (PARENT|ROOT), 3 rounds; N = 2^22 quads; seeds 20261011 and 777",
+ "reopen_if": "a bias above 2^-8 confirmed on fresh samples at 3 rounds, or a RELAX model for 3 rounds with fewer than 8 word conditions",
+ "gain_basis": "count"
+}

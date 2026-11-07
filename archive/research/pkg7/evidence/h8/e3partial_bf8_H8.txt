@@ -1,0 +1,1 @@
+partial E3 count against brute force at 8-bit words: 30 cases, outcomes with solutions 87242 equal, 0 different; zero outcomes sampled 59183 agree, 0 disagree

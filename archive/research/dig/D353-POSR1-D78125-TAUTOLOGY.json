@@ -1,0 +1,20 @@
+{
+  "id": "D353-POSR1-D78125-TAUTOLOGY",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "functional-decomposition scope check d=78125",
+  "question": "Is the D250 Poseidon-r1 decomposition candidate d=78125 a nontrivial structural lever?",
+  "labels": ["K", "Z"],
+  "status": "KILLED",
+  "number": "r1 degree n=5^7=78125, so d=n gives outer degree 1 and only the tautological B=F, G=id decomposition",
+  "source": "our exact degree/scope reconciliation",
+  "own_test": true,
+  "evidence": "research/sol_answer_D353_posr1_d78125_tautology.md; research/sol_answer_D250_unfiled.md; research/poseidon/levels/freelunch/FREELUNCH.md; research/poseidon/levels/LEVELS.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Kills only the r1 wording of the D250 item. The r2 interpretation has n=390625 and outer degree 5; D352 tested it and timed out, so it remains UNKNOWN/OPEN.",
+  "peak_mem": "0 FREE"
+}

@@ -1,0 +1,70 @@
+{
+ "d21_flags_no_cancel": {
+  "r1": {
+   "biased_bits": 63,
+   "words_with_biased_bit": 8,
+   "max_dev": 0.44083333333333335
+  },
+  "r2": {
+   "biased_bits": 0,
+   "words_with_biased_bit": 0,
+   "max_dev": 0.022833333333333317
+  },
+  "r3": {
+   "biased_bits": 0,
+   "words_with_biased_bit": 0,
+   "max_dev": 0.02416666666666667
+  }
+ },
+ "d21_flags_cancel_m6m7": {
+  "r1": {
+   "biased_bits": 256,
+   "words_with_biased_bit": 8,
+   "max_dev": 0.5
+  },
+  "r2": {
+   "biased_bits": 17,
+   "words_with_biased_bit": 4,
+   "max_dev": 0.1413333333333333
+  },
+  "r3": {
+   "biased_bits": 0,
+   "words_with_biased_bit": 0,
+   "max_dev": 0.018166666666666664
+  }
+ },
+ "d22_len_cancel_m4m5": {
+  "r1": {
+   "biased_bits": 256,
+   "words_with_biased_bit": 8,
+   "max_dev": 0.5
+  },
+  "r2": {
+   "biased_bits": 64,
+   "words_with_biased_bit": 7,
+   "max_dev": 0.31999999999999995
+  },
+  "r3": {
+   "biased_bits": 0,
+   "words_with_biased_bit": 0,
+   "max_dev": 0.017833333333333312
+  }
+ },
+ "d22_len_flags_both_cancel": {
+  "r1": {
+   "biased_bits": 256,
+   "words_with_biased_bit": 8,
+   "max_dev": 0.5
+  },
+  "r2": {
+   "biased_bits": 0,
+   "words_with_biased_bit": 0,
+   "max_dev": 0.030166666666666675
+  },
+  "r3": {
+   "biased_bits": 0,
+   "words_with_biased_bit": 0,
+   "max_dev": 0.020499999999999963
+  }
+ }
+}

@@ -1,0 +1,5 @@
+HEAD arr filed W 8 set 0 eta d9 ncls 16 sumper 4227072 beta 0 nd 0 nouter 260112 first 2 count 1
+HIT arr filed W 8 set 0 run 2 outer 204319 x2 e2 member 14 y4 d7 d1 cf t 0 A 2013032123121233000233100320211113132323023213003010033 B 201303212312123302313120032021111313232302321300301003300000000 digest 6b b2 cd bf 8d 1c 14 37
+RUN arr filed W 8 set 0 run 2 seed f5 e4 fb 5b nouter 260112 trials 1065418752 tzero 0 bad 0 coll 1 bogus 0 z1 4166302 z3 3210790 z4 4159840 z6 4519854 z2 105621
+PART arr filed W 8 set 0 first 2 count 1 trials 1065418752 tzero 0 bad 0 coll 1 bogus 0 seconds 121.5 rate 8.77e+06
+END

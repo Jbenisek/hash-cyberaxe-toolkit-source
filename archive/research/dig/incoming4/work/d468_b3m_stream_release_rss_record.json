@@ -1,0 +1,22 @@
+{
+  "id": "D468-B3M-STREAM-RELEASE-RSS-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "B3M STREAM release probe RSS measurement",
+  "question": "What RSS does the local lossless release probe use, and does it remain lossless under a fresh timed run?",
+  "labels": ["C", "D", "E"],
+  "status": "LOCAL_ONLY",
+  "number": "Fresh timed run over four deterministic seeds: all release comparisons lossless, same A/B outputs, zero walk mismatches; maximum RSS 22,820 KiB = 23,367,680 B = 2^24.4780111712; elapsed 0.26 s; exit 0.",
+  "source": "our workflow: D468 /usr/bin/time -v around stream_release_probe.py",
+  "own_test": true,
+  "evidence": "research/retest/b3m_maxphase/D468_stream_release_timev.txt; research/retest/b3m_maxphase/stream_release_probe.py; research/sol_answer_D468_b3m_stream_release_rss.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "notes": "Component RSS only. It does not settle organizer logical-residency semantics, the shipped search/output bounds, or the need for a lossless rebuilt production implementation. No package/stage/filing/submission.",
+  "peak_mem": "23,367,680 B measured maximum RSS for the probe process",
+  "held_fixed": "D465 release probe source, four stream-release seeds, original frontline source",
+  "reopen_if": "Organizer ruling and rebuilt lossless production implementation remain required",
+  "supersedes": ["D465-B3M-STREAM-RELEASE-PAYLOAD-20261014"]
+}

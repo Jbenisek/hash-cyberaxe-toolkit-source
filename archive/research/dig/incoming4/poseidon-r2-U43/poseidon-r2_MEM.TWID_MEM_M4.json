@@ -1,0 +1,23 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "MEM.TWID (MEM)",
+ "question": "M4: alternatives: smaller field-size transform (2^16 -> radix-3 combined)",
+ "labels": [
+  "N"
+ ],
+ "status": "OPEN",
+ "number": "The transform length is 3 x 2^17 (Good-Thomas); the table is for 2^17 via 2^16 entries (root powers up to half). A table of 2^15 plus symmetric use is the only variant considered. Not built.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|MEM.TWID|MEM|M4. Listed.",
+ "held_fixed": "r2 package memory table (Y 3x2^17, tmp 2^17, MU, g, F dense 32-byte elements, twiddles 2^16); heap peak 40,741,792 in the half-gcd stage; the score term is log2(bytes) - 20",
+ "reopen_if": "built and counted",
+ "prior": 0.05,
+ "potential_bits": 0.03
+}

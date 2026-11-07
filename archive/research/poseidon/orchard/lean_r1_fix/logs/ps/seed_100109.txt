@@ -1,0 +1,21 @@
+r=1 ncentres=1 seed=100109 m=39062
+INIT arith=17359 other=126238 total=143597
+lean-pow breakdown: newton total=302883363 arith=21679385 | prefix+scale total=508491 | loop steps=238 total=45256052916 arith=3515054480 per-step total=190151482 arith=14769136
+CENTRE 0 j=2 degG=1 success=1 arith=3893983734 all=51453377505 sec=139.5
+  line_setup                               arith=         391 other=        3519 total=        3910     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  build g                                  arith=     1436260 other=    41901929 total=    43338189     0.9s peak=3347168
+  S^((p-1)/2) mod g                        arith=  3536772927 other= 42022748610 total= 45559521537   125.8s peak=8468544
+  gcd(g, S^h-1) (half-gcd)                 arith=   355770535 other=  5494707119 total=  5850477654    12.9s peak=8468640
+  root finding                             arith=           1 other=          11 total=          12     0.0s peak=524352
+  sqrt + map back                          arith=        3146 other=       28314 total=       31460     0.0s peak=524288
+  verification (2 reference hashes)        arith=         474 other=        4266 total=        4740     0.0s peak=524288
+COLLISION nk1  0x0195b8b165f6ba82a266191b31332883be98c444c08643474d010b11995b5901
+COLLISION rho1 0x24ce6a6b2f7ee94d8c4dfb6afadc7b37696709e45d477b663b2ef21718496309
+COLLISION nk2  0x08fc12a5f850caa23823bad9599f8dd5dd94418d328e8ab33dbaaf371bab91f4
+COLLISION rho2 0x1f9f045b932e1e10fd44581217b58bcb0ac76328d33776f8694b73816d231220
+COLLISION digest 0x2ee5e59b82a656adc64c3789c5223b38e4df4a2978b8df190817bdcdb4674d60
+COLLISION centre 0x2ff5d9b0b15cbeeab818bf89607d0bbdb1c5572a3470584d00006103fe07e743
+SUMMARY r=1 centres=1 success=1 total_all=51453521102 total_arith=3894001093 units=217103464.6 log2_units=27.6938 heap_peak=8468640 secs=139.5
+GAPS gcd=170599074 root=12
+TYPES add=1357769928 sub=1267418948 mul=1235485898 sqr=33326319 ld=1498685864 st=831662368 ctl=45205873728 rnd=1 perm=23298048

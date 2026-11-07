@@ -1,0 +1,1 @@
+2021/292	Quantum Collision Attacks on Reduced SHA-256 and SHA-512	owner_download	https://eprint.iacr.org/2021/292.pdf

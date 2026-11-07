@@ -1,0 +1,11 @@
+criterion vs brute force (width 10): mismatches 0 of 400
+popcount beta* 11 popcount tau 285020a0 7
+control (proof 9.7 table 16,32,8,16,32,8,16), delta5=-8: [16, 32, 8, 16, 32, 8, 16]
+control beta2 285020a0, delta5=-8: 32
+beta* tau 285020a0: total (s,pattern) pairs 262144 distinct delta5 values 33048 ; delta5=-8 -> 16 compatible s; delta5=+8 -> 16 ; delta5=0 -> 0
+  top delta5 by compatible-s count: [('f060bff8', 16), ('f060c038', 16), ('f080bff8', 16), ('f080c038', 16), ('f0e0bff8', 16), ('f0e0c038', 16), ('0060bff8', 16), ('0060c038', 16)]
+  max compat s over all delta5: 16 attained at 5880 delta5 values
+beta2 tau 285020a0: total (s,pattern) pairs 262144 distinct delta5 values 29160 ; delta5=-8 -> 32 compatible s; delta5=+8 -> 32 ; delta5=0 -> 0
+  top delta5 by compatible-s count: [('f080bff8', 32), ('f080c038', 32), ('0080bff8', 32), ('0080c038', 32), ('3080bff8', 32), ('3080c038', 32), ('f080bfe8', 32), ('f080c028', 32)]
+  max compat s over all delta5: 32 attained at 1176 delta5 values
+given a compatible s: a2 values giving tau: 2^25 of 2^32 -> P=2^-7; s compatible 16 of 2^11

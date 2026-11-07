@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.BACKSKIP backward skip",
+ "question": "degrees of freedom or score-optimal value",
+ "labels": [
+  "N"
+ ],
+ "status": "CLAIMED-UNTESTED",
+ "number": "degrees of freedom: Luna 3 P3.12: backward output lines affine after inverse x^5; exhausted at q = 23/43; on real constants no affine-line trade",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "3rd_openai_workspace/luna3/P3_12_outsider.md",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Luna 3 claim, not retested. | universe cell poseidon-r1|ALT.BACKSKIP|ALT|Q3",
+ "held_fixed": "toy q = 23/43",
+ "reopen_if": "a real-constant affine backward family"
+}

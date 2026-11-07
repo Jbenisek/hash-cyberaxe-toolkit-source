@@ -1,0 +1,21 @@
+1. call-message graph (COMPUTED): every call has degree 2 -> disjoint cycles
+    C0-m2-K1-m3-C1-m10-D1-m11-E0-m1-K0-m0-C2-m7-K3-m6-C0 (length 8)
+    C3-m4-K2-m5-E1-m12-D2-m13-C3 (length 4)
+    D0-m8-E3-m15-D3-m14-E2-m9-D0 (length 4)
+2. torus-lattice maps (r,c) -> (r, e*c + s*r + t) sending columns->columns and diagonals->diagonals
+   e=1 s=0 t=0: columns {0: 0, 1: 1, 2: 2, 3: 3} diagonals {0: 0, 1: 1, 2: 2, 3: 3}; message map commutes with PERM: True; initial state fixed: True (moves 0 of 16 words)
+   e=1 s=0 t=1: columns {0: 1, 1: 2, 2: 3, 3: 0} diagonals {0: 1, 1: 2, 2: 3, 3: 0}; message map commutes with PERM: False; initial state fixed: False (moves 15 of 16 words)
+   e=1 s=0 t=2: columns {0: 2, 1: 3, 2: 0, 3: 1} diagonals {0: 2, 1: 3, 2: 0, 3: 1}; message map commutes with PERM: False; initial state fixed: False (moves 16 of 16 words)
+   e=1 s=0 t=3: columns {0: 3, 1: 0, 2: 1, 3: 2} diagonals {0: 3, 1: 0, 2: 1, 3: 2}; message map commutes with PERM: False; initial state fixed: False (moves 15 of 16 words)
+3. Moebius/slide (COMPUTED): inverse of round 0 checked on 200 random targets; the unique message with
+   round0(init, M*) = init is M* = f18e6f3b 03b36a40 5b13ce48 79ac165c 1f434a9b ff044d48 804339e9 6023e684 464c6cba 06277727 6ae5892a a0d9a941 ff10325c 1bdae340 d96a2b5b a03a31f6
+   2-round digest of M* == 1-round digest of P(M*): 485fd4c2 8a90605d acc7c964 91a77f57 311c22d9 ea0c7f6e cc9f1bf7 d4f8b95a
+4. circle (DERIVED): words fixed by ROT_r number 2^gcd(r,32); a rotational pair (M, ROT_r M) under an
+   EXACT rotational symmetry collides only if all 8 output words are ROT_r-invariant:
+   r= 1: invariant words 2^1, condition 248 bits -> pair success 2^-248
+   r= 2: invariant words 2^2, condition 240 bits -> pair success 2^-240
+   r= 4: invariant words 2^4, condition 224 bits -> pair success 2^-224
+   r= 8: invariant words 2^8, condition 192 bits -> pair success 2^-192
+   r=16: invariant words 2^16, condition 128 bits -> pair success 2^-128
+   Birthday on rotation classes (canonical form over the 32 rotations) would save at most sqrt(32) = 2^2.5,
+   i.e. 2^125.5, and only if F(ROT M) = ROT F(M) held with probability >= 2^-2.5.

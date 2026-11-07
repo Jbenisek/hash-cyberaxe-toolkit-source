@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "register count",
+ "question": "Q3 score-optimal register count and the cost of fewer",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Any R >= 25 gives the filed score. Below: Belady spill cost in time (loads + stores one operation each, main loop 99.44 percent): R=24 +0.0048 bit (2 ops/batch); 20 +0.0261 (11); 16 +0.0724 (31); 14 +0.1150 (50); 12 +0.1564 (69); 10 +0.1966 (88); 8 +0.2458 (112). Re-ordered by list scheduling: R=20 +0.0190, R=16 +0.0632, R=8 +0.2895 (no better peak, 25). A 16-register machine would cost 0.06 to 0.07 bit.",
+ "evidence": "research/dig/incoming3/blake3-r3-U81/work/regs.py, research/dig/incoming3/blake3-r3-U81/work/regs.out",
+ "notes": "universe cell blake3-r3|MACHINE.REGS|MACHINE|Q3. Belady is optimal for loads, a heuristic for stores; list scheduling is greedy.",
+ "held_fixed": "emitted order and one greedy re-order",
+ "reopen_if": "an organizer register count below 25",
+ "gain_basis": "T"
+}

@@ -1,0 +1,8 @@
+mode 0 col 0 zero counts a'=1 b'=1 c'=1 d'=1 witnesses b4d2fb90 201b8e14 41e5f136 ec448e39
+mode 0 col 1 zero counts a'=1 b'=0 c'=0 d'=0 witnesses b5fded32 00000000 00000000 00000000
+mode 0 col 2 zero counts a'=1 b'=1 c'=1 d'=0 witnesses ab8b5d23 9effdf77 c248160c 00000000
+mode 0 col 3 zero counts a'=1 b'=0 c'=0 d'=0 witnesses 1c8bc0b9 00000000 00000000 00000000
+
+real	0m20.698s
+user	1m50.957s
+sys	0m3.409s

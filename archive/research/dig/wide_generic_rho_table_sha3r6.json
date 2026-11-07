@@ -1,0 +1,20 @@
+{
+  "id": "WIDE-GENERIC-RHO-TABLE-SHA3R6-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "S6LS generic rho table capacity",
+  "question": "Does filling the unused 1 MiB with a larger DP table lower the exact S6LS charge?",
+  "labels": ["K", "E"],
+  "status": "COMPUTED",
+  "number": "S=5000 to S=5508 fits the 16256-byte slack; exact added probe charge is 25,405,080 operations. The table-abort term is already 6.553e-09, so no gain is credited.",
+  "source": "S6LS proof.md Appendix A and Section 6 exact arithmetic",
+  "own_test": true,
+  "evidence": "research/retest/wide_1014/generic_rho_table_audit.py; research/sol_answer_WIDE_generic_rho_table.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "topic": "sha3-r6.wide.generic-rho-table",
+  "peak_mem": 20000000,
+  "notes": "Same-plan fill only; re-optimizing Tb/Tp would require a new success certificate. No package/staging/filing/submission."
+}

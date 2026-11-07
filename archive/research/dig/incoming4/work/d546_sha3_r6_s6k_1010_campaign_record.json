@@ -1,0 +1,23 @@
+{
+  "id": "D546-SHA3-R6-S6K-1010-CAMPAIGN-20261014",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgS6K_1010 prefile and three supplied reduced campaign requests",
+  "question": "What is verified for pkgS6K_1010 when its ledger appendix is absent?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgS6K_1010 claims time_log2=122.55792; prefile SOME FAIL for no executable ledger appendix and note labels D20/D83, while other intake checks pass. Three 256-trial requests complete with zero key mismatches/matches: reduced 0 pairs, within16 224 (513/131526/500), cross16 165 (485/130615/519); fixed fes_ops=664829, chi_transpose_ops=2387968, table_ops=786432, verify_check_ops=2632, in_range_mismatches=0.",
+  "source": "our workflow: D546 read-only pkgS6K_1010 campaign audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D546_s6k_1010_audit.md; research/tools/build_pkg/scratch/pkgS6K_1010/pkg/sha3-256-r6/claim.json; research/tools/build_pkg/scratch/pkgS6K_1010/pkg/sha3-256-r6/proof.md; research/tools/build_pkg/scratch/pkgS6K_1010/pkg/sha3-256-r6/experiments/fes_campaign.py; research/tools/build_pkg/scratch/pkgS6K_1010/work/req_fes-campaign-reduced.json; research/tools/build_pkg/scratch/pkgS6K_1010/work/req_hcoset-within16.json; research/tools/build_pkg/scratch/pkgS6K_1010/work/req_hcoset-cross16.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Reduced-width finite mechanics only; missing ledger prevents exact score credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgS6K_1010 package bytes and supplied request specifications as found; one process; no file writes",
+  "reopen_if": "ledger appendix/note repair or owner/organizer acceptance ruling arrives"
+}

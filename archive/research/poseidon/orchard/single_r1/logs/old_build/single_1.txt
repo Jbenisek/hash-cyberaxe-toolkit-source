@@ -1,0 +1,12 @@
+r=1 seed=1 line=0 m=39062
+gcd degree 0, charged 6392273377, derived bound 11942345981 (within)
+  init (twiddle table)                     arith=       17359 other=      126642 total=      144001     0.0s peak=524288
+  line setup                               arith=         391 other=        3519 total=        3910     0.0s peak=524288
+  random centre                            arith=           0 other=           3 total=           3     0.0s peak=524288
+  B: build g                               arith=     1436260 other=    41901935 total=    43338195     0.6s peak=3347168
+  C: S^((p-1)/2) mod g                     arith=  3536772927 other= 42030109940 total= 45566882867    80.1s peak=8468544
+  D: gcd(g, S^h - 1) (half-gcd)            arith=   389577798 other=  6002695591 total=  6392273389     9.1s peak=9103968
+RESULT found=0 success=0 roots_degree=0
+SPLIT levels=0 tries=0 shift=0 pow=0 gcd=0 div=0
+SUMMARY total_all=52002642365 total_arith=3927804735 units=219420431.9 log2_units=27.7091 heap_peak=9103968 secs=89.7
+EXIT 1

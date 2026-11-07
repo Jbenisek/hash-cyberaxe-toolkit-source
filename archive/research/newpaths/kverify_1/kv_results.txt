@@ -1,0 +1,9 @@
+ALL   n=12 a= 6 t= 6 clamps=   64 exact=    4170 found=    4170 distinct=    4170 bad=0 steps/member=6.99 {'build': 256, 'ins': 4224, 'look': 12288, 'out': 12362}
+ONE   n=12 a= 6 t= 6 clamps=    1 members=      74 (2^(n/2)=64) bad=0 steps/member=11.19 {'build': 256, 'ins': 188, 'look': 189, 'out': 195}
+T3/4  n=12 a= 6 t= 9 clamps=   64 members=     493 bad=0 steps/member=22.47 (formula 2^(n-min(a1+a2,a3+a4)) = 1) {'build': 256, 'ins': 621, 'look': 8703, 'out': 1497}
+ALL   n=16 a= 8 t= 8 clamps=  256 exact=   65189 found=   65189 distinct=   65189 bad=0 steps/member=7.06 {'build': 1024, 'ins': 66048, 'look': 196608, 'out': 196261}
+ONE   n=16 a= 8 t= 8 clamps=    1 members=     225 (2^(n/2)=256) bad=0 steps/member=14.33 {'build': 1024, 'ins': 760, 'look': 740, 'out': 701}
+T3/4  n=16 a= 8 t=12 clamps=   64 members=    1006 bad=0 steps/member=39.11 (formula 2^(n-min(a1+a2,a3+a4)) = 1) {'build': 1024, 'ins': 1536, 'look': 33760, 'out': 3022}
+ALL   n=20 a=10 t=10 clamps= 1024 exact= 1047714 found= 1047714 distinct= 1047714 bad=0 steps/member=7.01 {'build': 4096, 'ins': 1050624, 'look': 3145728, 'out': 3144866}
+ONE   n=20 a=10 t=10 clamps=    1 members=    1061 (2^(n/2)=1024) bad=0 steps/member=12.64 {'build': 4096, 'ins': 3103, 'look': 3073, 'out': 3141}
+T3/4  n=20 a=10 t=15 clamps=   64 members=    2141 bad=0 steps/member=68.98 (formula 2^(n-min(a1+a2,a3+a4)) = 1) {'build': 4096, 'ins': 4175, 'look': 133114, 'out': 6310}

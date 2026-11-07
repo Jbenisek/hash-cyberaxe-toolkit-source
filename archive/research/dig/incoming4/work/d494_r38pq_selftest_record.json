@@ -1,0 +1,23 @@
+{
+  "id": "D494-SHA256-R38-R38PQ-SELFTEST-20261014",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "package-specific vt38 self-tests for R38P and R38Q",
+  "question": "Do the two prefile-clean R38P/R38Q package copies pass their shipped vt38 self-tests?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "R38P and R38Q vt38 selftests both exit 0 and print SELFTEST PASSED; both pass all construction, estimator, and eight zero-mismatch RAM checks. Their vt38.py SHA-256 is identical: BAB4C7B703B8296BD8F2472E9AF8EAD8259A5E1D360EA0740C2B6AA28A087576.",
+  "source": "our workflow: D494 read-only R38P/R38Q package self-test",
+  "own_test": true,
+  "evidence": "research/sol_answer_D494_r38pq_selftest.md; research/tools/build_pkg/scratch/pkgR38P/pkg/sha256-r38/experiments/vt38.py; research/tools/build_pkg/scratch/pkgR38Q/pkg/sha256-r38/experiments/vt38.py; research/sol_answer_D281_r38pq_memory_score_audit.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite package-specific self-tests only; byte-identical code means no independent implementation. No score/package/stage/filing/submission.",
+  "held_fixed": "R38P/R38Q scratch package bytes as found; one process per selftest; no file writes",
+  "reopen_if": "either package bytes or vt38 source changes"
+}

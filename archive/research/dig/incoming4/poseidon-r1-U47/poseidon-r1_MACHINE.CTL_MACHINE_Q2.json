@@ -1,0 +1,22 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "MACHINE.CTL loop control and branches",
+ "question": "necessity: change or drop it and recount the exact outcome",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "control = 90,411,597,007 ops = 87.86% of the run (includes the address ops of loads/stores); free control would gain 3.042 bit; floor with only arith + ld + st + their address ops + unit charges = 17,155,879,029 ops = -2.585 bit; the control column is a straight-line-code lever",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_scan_poseidon/calc.py research/dig/incoming4/_scan_poseidon/calc.json research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md",
+ "date": "2026-10-12",
+ "lever": true,
+ "gain_bits": null,
+ "notes": "Exact arithmetic on the TYPES line. Not a proved reachable value: needs fully unrolled block kernels. | universe cell poseidon-r1|MACHINE.CTL|MACHINE|Q2",
+ "held_fixed": "fix ledger, two-centre as-run TYPES total 102,906,823,052 ops",
+ "reopen_if": "a build with unrolled blocks measured under the same rules",
+ "gain_basis": "T"
+}

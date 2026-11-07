@@ -1,0 +1,22 @@
+{
+  "id": "D253-SHA3-R6-DPRHO-64BIT-RECHECK-20261013",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "dense bitsliced DP-rho 64-bit word/spill model",
+  "question": "What score remains after expanding each 256-bit plane into four 64-bit words and charging fixed-order spills, control, extraction and restart checks?",
+  "labels": ["C", "N"],
+  "status": "LOCAL_ONLY",
+  "number": "Lockstep exit 0: ANDN 2004.50/1928.25/1775.75 ops per step at 16/32/64 planes; no-ANDN 2121.09375/2049.34375/1905.84375. Under 4*1626 word-RAM normalization, S=126.30697..126.13215 (ANDN) and 126.38853..126.23416 (no-ANDN); control layouts with Q 12/780/1792/1548 give S=125.81339..125.82042. Restart/mask controls exit 0.",
+  "source": "our workflow: D253 DP-rho unit recheck",
+  "own_test": true,
+  "evidence": "research/sol_answer_D253_dprho-unit-recheck.md; research/retest/t1/audit_64bit_lockstep.py; research/retest/t1/audit_64bit_noandn_lockstep.py; research/retest/t1/control_cost_audit.json; research/retest/t1/restart_control_sim.json; research/retest/t1/mask_extract_audit.json",
+  "date": "2026-10-13",
+  "lever": true,
+  "gain_bits": 0.0,
+  "notes": "Finite source-model audit only. Endpoint extraction, production restart state, exact register/spill schedule, organizer word-width normalization and memory-rule acceptance remain unresolved; no filing credit.",
+  "potential_bits": 1.5,
+  "prior": 0.1,
+  "gain_basis": "S",
+  "reopen_if": "A counted production kernel and organizer ruling on word width, spills, endpoint extraction and restart charges"
+}

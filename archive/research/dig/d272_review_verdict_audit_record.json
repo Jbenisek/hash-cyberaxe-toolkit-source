@@ -1,0 +1,21 @@
+{
+  "id": "D272-EXTERNAL-REVIEW-VERDICT-AUDIT",
+  "hash": "sha256-38",
+  "row_i": null,
+  "row_j": null,
+  "object": "new paired-review dossier verdicts",
+  "question": "What do the newly landed review aggregates establish for the r38 and r5 submitted dossiers?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Read-only aggregate audit: dossier 83a119de (sha256-r38-prefix-v1, claimed time 87.90374) is REFUTED/ineligible for lane_evaluability/F1-preprocessing-memory-omitted; dossier bf2f848e (sha3-256-r5-prefix-v1, claimed time 32.79157) is REFUTED/ineligible for lane_cost/F-J-SMALL-SIGN. No filing credit is inferred or changed.",
+  "source": "our workflow: D272 external review verdict audit",
+  "evidence": "research/sol_answer_D272_review_verdict_audit.md; research/dossiers/83a119de/review/aggregate.json; research/dossiers/83a119de/review/judge-dossier.json; research/dossiers/bf2f848e/review/aggregate.json; research/dossiers/bf2f848e/review/judge-dossier.json",
+  "date": "2026-10-14",
+  "own_test": false,
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "External paired-review verdicts, audited read-only. The r38 finding is an omitted preprocessing-memory resource; the r5 finding is a confirmed sign error in Appendix J's small development term. No package, staging, submission, or process change.",
+  "held_fixed": "review aggregate status, binding hashes, paired-lanes-v1 verdicts",
+  "reopen_if": "A later organizer review supersedes either aggregate or a corrected package is independently reviewed"
+}

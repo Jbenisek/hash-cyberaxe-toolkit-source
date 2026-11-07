@@ -1,0 +1,33 @@
+{
+ "alive16_bits14_15_free": 0,
+ "alive16_bits0_7_free_given_alive9": 0,
+ "alive16_zero_off_alive9": 0,
+ "LW_popcounts": [
+  8,
+  9
+ ],
+ "alive16_implied_by_T2_sample": 0,
+ "mask_popcounts": [
+  8,
+  9
+ ],
+ "chunks_per_entry": [
+  1,
+  2
+ ],
+ "table_ops_min_max": [
+  32852,
+  33940
+ ],
+ "window_map_bijective_contexts": "64 of 64",
+ "units": {
+  "X_IX": 19,
+  "X_IDX": 16,
+  "X_GUARD": 4,
+  "X_BCAST": 6,
+  "X_CHUNK": 8,
+  "U_MASK_WORST": 236,
+  "U_FALLBACK": 388,
+  "FALLBACK_MAX": 128
+ }
+}

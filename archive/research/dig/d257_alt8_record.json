@@ -1,0 +1,22 @@
+{
+  "id": "D257-SHA3-R6-ALT8-LARGER",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "larger mixed-lane/mixed-slice alternative 8-bit predicates",
+  "question": "Does a larger fixed-seed screen show lower degree for mixed rank-8 predicates?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "seed 0xD257; 64 rank-8 predicate sets x 64 affine 9-cubes = 4096; 512/512 forms have a nonzero eighth derivative, per-form witness count 20..42/64; 0/32768 nonzero ninth derivatives; KAT PASS",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/retest/sha3_r6_alt8/PREREG_D257_LARGER_SCREEN.md; research/retest/sha3_r6_alt8/D257_run_summary.md; research/retest/sha3_r6_alt8/alt8.py",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "S",
+  "notes": "Larger finite deterministic screen only. It strengthens the bounded degree-8/no-degree-9 observation for mixed forms, but does not prove universal degree, survivor uniformity, or a cheaper generated kernel; safe claimable gain remains 0 bits.",
+  "held_fixed": "Filed W40 span; eight independent masks touching at least two lanes and two slices; seed 0xD257; 64 sets and 64 random affine 9-cubes per set",
+  "reopen_if": "Exhaustive or preregistered comparison of the admissible alternative predicate class, including generated-program operation cost and survivor distribution",
+  "topic": "sha3-r6 alternative 8-bit predicates"
+}

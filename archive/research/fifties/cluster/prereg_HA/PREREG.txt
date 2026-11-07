@@ -1,0 +1,70 @@
+PREREGISTRATION prereg_HA  (written 2026-10-09, before any code of this test is run)
+
+CLAIM UNDER TEST (GPT Sol, sol_answer_CI_levers.md: the 1.4 gate and the premise H_A on it):
+  the mean of the universal two-borrow gate opening indicator per cluster is <= 3339/6400 = 0.52171875.
+
+1. OBJECTS
+  Cluster: a representative outer step plus the 31 partners that differ from it only in the free e1 bits 10..14.
+  Representative of a cluster: the member whose e1 bits 10..14 are all zero (W_rep = W AND NOT 0x00007C00), the
+  same convention as research/fifties/cluster/check/exc_check.py.
+  Outer step evaluation: step CO as given by research/impl/outer.py LINES, with
+    e1 = 0x030C0303 OR (W_rep AND 0xFC307CFC),  Y4 = y = e1 - Y3 (mod 2^32),
+  evaluated by the vectorised evaluator of exc_check.py (ev over its SLICE), which that file cross-checks against
+  outer.scalar_outer.
+  Words of the gate (Sol's names; all arithmetic mod 2^32):
+    p = Y0
+    A = C0.b1 + w6 + X4 + w2
+    L = ROL24(X15) XOR S15          (X15 = 0x40C58500)
+    C = e1 - S0 - S5
+  (so that x = p - A and omega = (ROL16(x) XOR L) + C; this identity is checked on the dry set, step 2.)
+  Gate:
+    pH = (p >> 16) AND 511
+    u  = (pH - ((A >> 16) AND 511)) mod 512
+    a  = u mod 128,  q = L AND 127,  c = C mod 128
+    S7 = [0x25, 0x3E] U [0x45, 0x5E]   (52 of the 128 residues)
+    OPEN = 1 if ((a XOR q) + c) mod 128 in S7  OR  ((((a - 1) mod 128) XOR q) + c) mod 128 in S7, else 0.
+
+2. QUANTITY
+  X_i = OPEN of cluster i, for i = 0 .. n-1, each cluster on its own fresh context (one cluster per context).
+  Estimate mu = E[X] on real contexts: the seven outer words ("C0.d1","D2.a1","D2.b1","S11","S4","X9","w6") and W
+  are uniform 32-bit words, as in outer.py draw() (fresh uniform words, low 32 bits per lane).
+
+3. RANDOM WORDS (counter-based, reproducible)
+  seed64(label) = first 8 bytes, big-endian, of SHA-256(label as UTF-8).
+  mix(z) (SplitMix64 finaliser, mod 2^64):
+    z = (z XOR (z >> 30)) * 0xBF58476D1CE4E5B9
+    z = (z XOR (z >> 27)) * 0x94D049BB133111EB
+    z =  z XOR (z >> 31)
+  word(i, k) = mix(seed64 + (8*i + k + 1) * 0x9E3779B97F4A7C15 mod 2^64) >> 32,  k = 0..7.
+  k = 0..6 are the seven outer words in the order above; k = 7 is W.
+  Main run label: "prereg_HA 2026-10-09".   Dry run label: "dry".
+
+4. SIZES
+  Main run: n = 2^32 = 4,294,967,296 clusters (>= 2^30 required).  Dry run: 65,536 clusters.
+
+5. PROCEDURE (strict order)
+  (a) This file and its SHA-256 (PREREG.sha256) are written first.
+  (b) Dry run: an independent Python reference (numpy, exc_check evaluator) and the CUDA kernel compute (a, q, c, OPEN)
+      for the same 65,536 dry clusters. Required: 0 mismatches on all four fields. Also required on the dry set:
+      omega (exc_check evaluator) == (ROL16(p - A) XOR L) + C for all 65,536 clusters, and p, A, L, C from
+      outer.scalar_outer equal to the reference values on the first 2,000 dry clusters.
+      If any of these fails, the main run is NOT executed and the result is reported as NOT RUN.
+  (c) Main run: executed once with the main label and n above. Only a mechanical failure that produces no count
+      (crash, driver error) allows a restart with the identical label and n; any restart is reported.
+  (d) The count k = sum X_i (exact 64-bit integer) is the only input to the decision.
+
+6. DECISION (delta = 0.00135, range [0,1])
+  mean m = k / n;  sample variance V = m (1 - m) n / (n - 1).
+  Empirical Bernstein upper bound (Maurer and Pontil 2009, Thm 4, one-sided):
+    EB = m + sqrt(2 V ln(2/delta) / n) + 7 ln(2/delta) / (3 (n - 1)).
+  KL (Chernoff) upper bound:
+    KLU = the largest mu in [m, 1] with n * kl(m, mu) <= ln(1/delta),
+    kl(x, y) = x ln(x/y) + (1-x) ln((1-x)/(1-y)); found by bisection to 1e-12.
+  SUPPORTED  iff  EB <= 0.52171875  AND  KLU <= 0.52171875.  Otherwise NOT SUPPORTED.
+  Also reported, not part of the decision: SE = sqrt(V / n); the exact OPEN fraction over all 128^3 (a, q, c)
+  triples (the uniform-key value) for comparison.
+
+7. LIMITS STATED IN ADVANCE
+  The test covers the representative convention above (bits 10..14 of e1 zero) and uniform outer words; it says
+  nothing about whether the gate is a correct cover for all 32 members (Sol's 1.4 proof), only about its opening mean.
+  Bounds are statistical (delta = 0.00135 each), not a proof.

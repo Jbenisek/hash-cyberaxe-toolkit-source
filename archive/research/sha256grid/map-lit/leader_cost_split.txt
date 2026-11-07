@@ -1,0 +1,35 @@
+TSV rows per track: {'blake3-r1-exploratory': 67, 'blake3-r2-exploratory': 148, 'sha256-r37-exploratory': 34, 'sha256-r38-exploratory': 43, 'sha3-256-r5-exploratory': 147, 'sha3-256-r6-exploratory': 91}
+sha256-r37-exploratory newest 4: [('d3ec5c41', 'companygardener', 'review', '61.71473', '2026-10-10T15:27'), ('7319bba9', 'winglock', 'review', '62.34263', '2026-10-10T09:53'), ('04441cbc', 'winglock', 'failed', 'None', '2026-10-10T09:01'), ('9c809454', 'itseasypop', 'review', '131.804703', '2026-10-10T00:46')]
+sha256-r38-exploratory newest 4: [('6739adfa', 'newjordan', 'review', '128.1244', '2026-10-10T05:23'), ('1708c3d3', 'newjordan', 'review', '128.1376', '2026-10-10T04:47'), ('8c92f07c', 'newjordan', 'review', '128.1376', '2026-10-10T04:14'), ('f02ff88f', 'newjordan', 'review', '128.2303', '2026-10-10T03:33')]
+
+--- r37 leader arithmetic (inputs DERIVED from d3ec5c41 / 7319bba9 / 1c368173 notes) ---
+T units log2 = 61.71472
+online (T - allowances) log2 = 61.1899  A_C share = 0.3047
+N_FB log2 = 58.3158  per-FB units = 7.331
+Step-3 candidates needed log2 = 73.015  per FB log2 = 14.699
+good pairs needed log2 = 68.015
+floor if only good-pair stage at 17 ops: online 2^60.733, total with A_C 2^61.413
+floor if only good-pair stage at 10 ops: online 2^59.968, total with A_C 2^60.984
+floor if only good-pair stage at 5 ops: online 2^58.968, total with A_C 2^60.574
+first block charged 0.15 units instead of 1: total 2^61.5935 (delta -0.1212)
+first block charged 0.08 units instead of 1: total 2^61.5831 (delta -0.1317)
+q3 x1.18: total 2^61.5530 (delta -0.1617); with A_C=2^46: 2^60.9519
+q3 x1.3: total 2^61.4625 (delta -0.2522); with A_C=2^46: 2^60.8122
+q3 x2: total 2^61.0987 (delta -0.6160); with A_C=2^46: 2^60.1912
+q3 x4: total 2^60.6520 (delta -1.0627); with A_C=2^46: 2^59.1925
+A_C=2^46 alone: 61.1906
+
+--- r38 leader arithmetic (inputs DERIVED from 0ae69bcb / c99df2dc notes) ---
+per group units = 11.979  online log2 = 72.0159 (note says 2^72.016)
+total log2 = 72.6334 (note: 72.633442)
+per-(CV,A0) work x0.5: online 2^71.132, total 2^72.121, with A_C=A_S=2^50: 2^71.233
+per-(CV,A0) work x0.25: online 2^70.338, total 2^71.776, with A_C=A_S=2^50: 2^70.511
+q3 x1.3: total 2^72.398
+q3 x2: total 2^72.064
+q3 x4: total 2^71.665
+allowances only (A_C=A_S=2^50, DEV 2^64): 72.0721
+
+--- GPU sizing (GUESS inputs: RTX 3090 ~2^33.1 full SHA-256/s) ---
+37-step comps per 30 min log2 = 44.7  per day log2 = 50.29
+days for 2^58.32 first blocks = 261.5
+2^51 simple ops at ~2^44 int ops/s (GUESS): seconds = 128.0

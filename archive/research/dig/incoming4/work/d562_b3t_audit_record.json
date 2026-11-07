@@ -1,0 +1,23 @@
+{
+  "id": "D562-BLAKE3-R2-B3T-PREFILE-SELFTEST-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgB3T prefile and frontline selftest",
+  "question": "What is verified for pkgB3T?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgB3T exact N=73008118888537543627, time_log2=57.2365, log2(N/430)=57.23649786. Prefile SOME FAIL only because rough evidence estimate ~517926 B exceeds 516000 B; other checks pass. One-process selftest 256 exits 0 with ok=true, 256 automata, 512 T1/T2, zero mismatches/halts in two contexts, and W/C/R/WB halt drills true.",
+  "source": "our workflow: D562 read-only pkgB3T prefile/selftest audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D562_b3t_audit.md; research/tools/build_pkg/scratch/pkgB3T/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgB3T/pkg/blake3-r2/proof.md; research/tools/build_pkg/scratch/pkgB3T/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite self-test only; evidence-size intake defect prevents clean package credit. No package/stage/filing/submission.",
+  "held_fixed": "pkgB3T package bytes as found; one process; no package writes",
+  "reopen_if": "evidence-size repair or organizer ruling"
+}

@@ -1,0 +1,16 @@
+q=00000000 mode=z fixed=b6abc07a y=29f4866e inC13=1 sum=4294933444 diff_from_2^32=-33852
+q=00000000 mode=z fixed=bde68f64 y=65ae9485 inC13=0 sum=4294951849 diff_from_2^32=-15447
+q=00000000 mode=z fixed=6a11f54e y=45f491b6 inC13=1 sum=4294976807 diff_from_2^32=9511
+q=00000000 mode=z fixed=3329de7d y=b7eb2f81 inC13=0 sum=4294987552 diff_from_2^32=20256
+q=80000000 mode=z fixed=11f8a144 y=7df48e32 inC13=1 sum=4294943239 diff_from_2^32=-24057
+q=80000000 mode=z fixed=633b3227 y=9d932e38 inC13=0 sum=4294919053 diff_from_2^32=-48243
+q=80000000 mode=z fixed=9848a312 y=2604b9f2 inC13=1 sum=4294955427 diff_from_2^32=-11869
+q=80000000 mode=z fixed=487e992f y=374e6398 inC13=0 sum=4294980087 diff_from_2^32=12791
+q=00000000 mode=f fixed=4303542b y=620449ba inC13=1 sum=4294919614 diff_from_2^32=-47682
+q=00000000 mode=f fixed=3ea85509 y=908193c3 inC13=0 sum=4294991626 diff_from_2^32=24330
+q=00000000 mode=f fixed=a8540898 y=260489ca inC13=1 sum=4294909671 diff_from_2^32=-57625
+q=00000000 mode=f fixed=97b1b3f4 y=641320b0 inC13=0 sum=4295020812 diff_from_2^32=53516
+q=80000000 mode=f fixed=252ea3d6 y=3e144276 inC13=1 sum=4294904183 diff_from_2^32=-63113
+q=80000000 mode=f fixed=5922f149 y=8e9364d4 inC13=0 sum=4295046279 diff_from_2^32=78983
+q=80000000 mode=f fixed=f563e00d y=9de45a16 inC13=1 sum=4294986223 diff_from_2^32=18927
+q=80000000 mode=f fixed=c4e21793 y=bd94faf2 inC13=0 sum=4294947651 diff_from_2^32=-19645

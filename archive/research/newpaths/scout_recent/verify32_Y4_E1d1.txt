@@ -1,0 +1,3 @@
+basis ['C0.c1', 'C0.d1', 'D2.d1', 'E1.d1', 'S11', 'S4', 'S9', 'Y4', 'w6']; words checked against the real run: 100; prescribed ['E1.d1', 'Y4']
+example: T0 = 0xf5eb4f8d, w = a588b1c9 b5941d0a c5c289f6 e533ca95 97475638 f0b681ea c4647159 96a71cc2 c70190ad 7db3f018 47513496 b83199c0 0958ed9e 0007c006 00000000 00000000
+2000 assignments: internal-word mismatches 0, half-collision (0,2,5,7) failures 0, counter out of range 0; largest T0 0xffcff05d

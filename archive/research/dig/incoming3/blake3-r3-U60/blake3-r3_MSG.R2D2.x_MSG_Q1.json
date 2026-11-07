@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "read x of call R2D2 = message word m11",
+ "question": "Q1 value/count as used at this read",
+ "labels": [
+  "X"
+ ],
+ "status": "COMPUTED",
+ "number": "Read R2D2.x: m11 is a chain word (digest word 3 fed back by the identity embedding), variable in every lane. Value as used: word index m11 (index checked by running the scalar compression with marker words 100..115 and recording the schedule: m11 at round 2, call D2, position x). Marginal ops of the read = 2 (circuit total 593 with the read replaced by constant 0, filed 595). Statement ops (the a+b add statement) 2; ops of the whole call 31 of 595. Own sampled check, one xor-perturbation of only this read on 400 random chain inputs: on average 4.00 of 8 digest words and 64.4 of 256 digest bits change (minimum 4 words); digest words that changed in every trial: 0,2,5,7.",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U55/work/msg_reads.py; research/dig/incoming3/blake3-r3-U55/work/msg_reads.json; research/dig/incoming3/blake3-r3-U55/work/b3r3lib.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "universe cell blake3-r3|MSG.R2D2.x|MSG|Q1. exact trace counts (COMPUTED); the perturbation counts are sampled (400 trials, fixed seed). validation: b3r3lib.py selftest (7-round official vectors for empty input and [0]; organizer verifier/blake3.py at 3 and 7 rounds on 600 random 0^32||x; trace total 595 and per-kind counts = filed rho.py PH/PH_BY)",
+ "held_fixed": "target 0^32||x (m0..m7 = 0, m8..m15 chain words, identity embedding), standard IV/counter 0/length 64/flags 11, 3 rounds, filed circuit rules (7 lanes x 36-bit pitch, filed Tracer rules, 595 ops per batch of 7); all other reads unchanged",
+ "reopen_if": "a lane layout or add order in which this read could be combined with a constant before the variable state words (a cheaper position for the chain word), or a different embedding of the digest into m8..m15",
+ "topic": "blake3-r3|MSG.R2D2.x|MSG|Q1"
+}

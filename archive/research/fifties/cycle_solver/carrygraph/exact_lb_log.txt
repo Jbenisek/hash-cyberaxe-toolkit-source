@@ -1,0 +1,12 @@
+# exact threshold searches (zero starts = chains from bit 0); python exact_lb_n.py T cap n
+n=8: T=7: unreachable (no order with level <= 7; died at total progress 13)
+n=8: T=8: reachable
+n=16: T=15: unreachable (no order with level <= 15; died at total progress 27)
+n=16: T=16: reachable
+n=32: T=31: unreachable (no order with level <= 31; died at total progress 55)  (exact_lb_T31.txt; beam lattice.py 3000 zero reaches 32.00)
+# free starts (guessed carries); python exact_lb_free.py T cap n
+n=8: n=8 free starts T=7.9: unreachable (no order with level <= 7.9; died at total progress 13)
+n=8: n=8 free starts T=8: reachable
+n=16 free starts T=15.9: aborted at total progress 4 with 8337381 states
+n=16 one guessed carry: n=16 T=15.9, 136 start vectors with <= 1 guessed carry: {'unreachable': 136}
+n=8 one guessed carry: n=8 T=7.9, 64 start vectors with <= 1 guessed carry: {'unreachable': 64}

@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 402104	     32	5083052220	5083454356	12eff5b94	data/cloud_r5u/single

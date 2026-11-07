@@ -1,0 +1,4 @@
+all192 k 192 shortest rel norm 2^5.63 GH 2^3.07 ratio 5.90 time 1s
+all192+MDS9+1+2^65 k 203 shortest rel norm 2^5.63 GH 2^3.04 ratio 6.03 time 2s
+planted 4-term coef<=2^20 at k=193: shortest norm 2^5.7
+planted 4-term coef<=2^30 at k=193: shortest norm 2^5.6 (GH 2^3.1)

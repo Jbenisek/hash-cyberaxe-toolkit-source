@@ -1,0 +1,1 @@
+split search vs plain search (planted target + 7 listed targets): identical and planted found in 200/200 outer steps

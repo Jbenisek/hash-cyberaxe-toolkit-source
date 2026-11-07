@@ -1,0 +1,67 @@
+r1_flag_W20 W=20 tl=60 args=--rounds 1 --dv15 7 rc=10 secs=1
+r2_flag_W62 W=62 tl=540 args=--rounds 2 --dv15 7 rc=0 secs=541
+r2_flag_m67_W200 W=200 tl=240 kconf=sat args=--rounds 2 --dv15 7 --msg 6,7 rc=0 secs=242
+r2_flag_m67_W62 W=62 tl=240 kconf=unsat args=--rounds 2 --dv15 7 --msg 6,7 rc=0 secs=241
+r2_flag_W30 W=30 tl=240 kconf=unsat args=--rounds 2 --dv15 7 rc=0 secs=241
+diagF11_W-1 rc=10 counted=586 t=0s
+diagF11_W585 rc=10 counted=470 t=9s
+diagF11_W469 rc=10 counted=447 t=15s
+diagF11_W446 rc=10 counted=422 t=27s
+diagF11_W-1 rc=10 counted=586 t=0s
+diagF11_W293 rc=0 counted=none t=121s
+diagF11_W440 rc=10 counted=431 t=132s
+diagF11_W362 rc=0 counted=none t=253s
+diagF11_W397 rc=0 counted=none t=374s
+diagF11_W414 rc=10 counted=365 t=409s
+diagF11 RESULT best_found=365 proved_lower_bound=0 last_lo=398
+diagC31_W-1 rc=20 counted=none t=1s
+diagC31 RESULT best_found=-1 proved_lower_bound=0 last_lo=0
+pairAC_W-1 rc=10 counted=341 t=1s
+pairAC_W170 rc=10 counted=165 t=3s
+pairAC_W82 rc=10 counted=79 t=68s
+pairAC_W39 rc=0 counted=none t=188s
+pairAC_W59 rc=0 counted=none t=300s
+pairAC RESULT best_found=79 proved_lower_bound=0 last_lo=60
+pairBD_W-1 rc=10 counted=99 t=0s
+pairAC_LB30 W=30 kconf=unsat rc=0 counted=none secs=120 gen=pair_free.py --msg zero --rows ac
+pairAC_LB25 W=25 kconf=unsat rc=20 counted=none secs=118 gen=pair_free.py --msg zero --rows ac
+pairAC RESULT proved_min_ge=26
+pairBD_LB30 W=30 kconf=unsat rc=0 counted=none secs=120 gen=pair_free.py --msg zero --rows bd
+pairBD_LB25 W=25 kconf=unsat rc=0 counted=none secs=120 gen=pair_free.py --msg zero --rows bd
+pairBD_LB20 W=20 kconf=unsat rc=20 counted=none secs=96 gen=pair_free.py --msg zero --rows bd
+pairBD RESULT proved_min_ge=21
+zCOLS_W-1 rc=10 counted=289 t=0s
+zCOLS_W144 rc=10 counted=136 t=2s
+zCOLS_W68 rc=10 counted=59 t=3s
+zCOLS_W29 rc=10 counted=17 t=3s
+zCOLS_W8 rc=20 counted=none t=3s
+zCOLS_W13 rc=10 counted=11 t=4s
+zCOLS_W10 rc=20 counted=none t=4s
+zCOLS RESULT best_found=11 proved_lower_bound=11 last_lo=11
+zSubA_LB45 W=45 kconf=unsat rc=20 counted=none secs=31 gen=b3trail.py --rounds 2 --dv15 7 --msg 6,7 --s1 zero --pairs 46 --count r1c0,r1c2,r1d0,r1d2
+zSubA RESULT proved_min_ge=46
+pairBDh_LB29 W=29 kconf=unsat rc=0 counted=none secs=151 gen=pair_free.py --msg zero --rows bd --half
+pairBDh_LB27 W=27 kconf=unsat rc=0 counted=none secs=150 gen=pair_free.py --msg zero --rows bd --half
+pairBDh_LB25 W=25 kconf=unsat rc=0 counted=none secs=150 gen=pair_free.py --msg zero --rows bd --half
+pairBDh RESULT no bound proved in [29 27 25]
+zCF31_W-1 rc=10 counted=920 t=1s
+zCF31_W460 rc=0 counted=none t=107s
+zCF31_W690 rc=0 counted=none t=217s
+zCF31_W805 rc=0 counted=none t=309s
+zCF31 RESULT best_found=920 proved_lower_bound=0 last_lo=806
+zCfree_W-1 rc=10 counted=757 t=1s
+zCfree_W378 rc=0 counted=none t=105s
+zCfree_W568 rc=0 counted=none t=211s
+zCfree_W663 rc=0 counted=none t=306s
+zCfree RESULT best_found=757 proved_lower_bound=0 last_lo=664
+zSubA_CF_LB45 W=45 kconf=unsat rc=20 counted=none secs=73 gen=b3trail.py --rounds 2 --ctr-free lo --ctr-even --dv15 7 --msg 0,1,6,7 --s1 zero --pairs 46 --count r1c0,r1c2,r1d0,r1d2
+zSubA_CF RESULT proved_min_ge=46
+zSubA_C_LB45 W=45 kconf=unsat rc=0 counted=none secs=150 gen=b3trail.py --rounds 2 --ctr-free lo --msg 0,1 --s1 zero --pairs 46 --count r1c0,r1c2,r1d0,r1d2
+zSubA_C_LB40 W=40 kconf=unsat rc=0 counted=none secs=151 gen=b3trail.py --rounds 2 --ctr-free lo --msg 0,1 --s1 zero --pairs 46 --count r1c0,r1c2,r1d0,r1d2
+zSubA_C RESULT no bound proved in [45 40]
+diagCF31_W-1 rc=10 counted=614 t=0s
+diagCF31_W307 rc=0 counted=none t=101s
+diagCF31_W461 rc=10 counted=433 t=109s
+diagCF31_W370 rc=0 counted=none t=210s
+diagCF31_W402 rc=0 counted=none t=301s
+diagCF31 RESULT best_found=433 proved_lower_bound=0 last_lo=403

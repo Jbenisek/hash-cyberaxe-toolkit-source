@@ -1,0 +1,20 @@
+{
+  "id": "D355-POSR2-QN1-ARTIFACT-AUDIT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "QN1 rival-ledger artifact audit",
+  "question": "Is the QN1 cached-modulus/windowed/fused rewrite locally implemented and chargeable?",
+  "labels": ["N", "Z"],
+  "status": "OPEN",
+  "number": "No local QN1 source, emitted kernel, ledger, proof, or KAT found; only rival notes",
+  "source": "our recursive Poseidon source/ledger inventory",
+  "own_test": true,
+  "evidence": "research/sol_answer_D355_posr2_qn1_artifact_audit.md; research/LEVERS.md; research/poseidon/rivals/subs.json; research/poseidon/orchard/exec_r2d/ntt.c; research/poseidon/orchard/exec_r2d",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Rival-only conditional estimate. A new implementation and full charge/KAT are required before any score transfer. No local artifact was modified.",
+  "peak_mem": "0 FREE"
+}

@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "E2.q3 (a2,d2) alternative difference patterns reaching digest words 0,2,5,7 equal",
+ "question": "Alternative nonzero difference patterns at E2 quarter-step q3 that still give digest words 0,2,5,7 equal, and whether a legal source can feed them. [universe cell blake3-r2|E2.q3|step|Q4]",
+ "labels": [
+  "0",
+  "Z"
+ ],
+ "status": "LOCAL_ONLY",
+ "number": "alternatives exist only crossed with E0: 2^384 input-pair configurations of (E0,E2) have the event (exact by bijection), verified by inversion 20000/20000; generic cost 4 x 32 = 128 bits (per-bit agreement 15.99 of 32); E0 zero + E2 nonzero = 0; clean-state in-call absorption 0/500000 (+0/500000 structured); all 16 legal message-word sources activate E0 and E2 in 600/600 trials with 0 of 8 digest words equal (baseline 4 of 8)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U05/work/u05.py; research/dig/incoming/blake3-r2-U05/work/u05_stdout.txt; research/dig/incoming/blake3-r2-U05/work/u05_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|E2.q3|step|Q4. q3 outputs (a2,d2) are digest inputs: Z2 (pairs with E0.c2 in word 2) and Z13 (pairs with E0.b2 in word 5). Positive control: pick E2 output pair and an E0 output pair whose XOR differences are the crossed copy (E2.a~E0.c, E2.b~E0.d, E2.c~E0.a, E2.d~E0.b), invert both calls: digest words 0,2,5,7 equal with both calls active. Absorption supports at one G call (outputs equal, messages differ): a-diff by dmx; d-diff by (dmx,-dmx); a+d by dmy or both (K2 pattern); never from an equal-input clean state. Sources: with the Lemma L baseline and pin emulation (Y7,Y15 of the second run set equal after C3) an extra legal difference at any message word 0..15 (w15 low 24 bits, 63-byte side) activates C0-C3 or enough of the chain that E0 and E2 are active in every trial (600 each), digest words 0,2,5,7 then differ: matches door 22 residual claim (256 bits generic) as our own measurement; the unpinned Lemma L baseline also has E0,E2 active (only the C3 pin makes them zero). LOCAL_ONLY: the legal-source part is a 600-trial simulation with pin emulation, not a pinned full-path construction (round-0 inversion to hit X3,X7,X11,X15 not built); not a proof that no cancelling chain exists through round 0. Window: this record covers E2 inputs from the two-round compression of 55/63-byte pairs. No gain."
+}

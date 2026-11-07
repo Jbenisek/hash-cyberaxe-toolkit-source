@@ -1,0 +1,46 @@
+real: pin 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006  eta 830303cf  class of 2^19 values of Y4  D3 fdb77cfd
+  lengths 55/63  w4' 97475640  delta fffffff8  Y3 8127c181 Y3' 7edf3e7e  Y11 7af77f38 Y11' 850000c3 D11 0a08818b  class mask 03cf8303 value 030c0303
+STAT real trials 2^40.00  bad 0
+STAT real layout run 3: outer words C0.c1 47f80e63 C0.d1 800bc068 S11 27d5d6e9 S4 a304a4c5 X13 2ae46489 w0 d50d3dcf, X14 from 3185b0c1, 2097152 values of X14, each with all 524288 members once
+STAT real early test passes: 48091 (2^-24.447)   E1 requires the eta of Y4: 406 (2^-31.335)   contradictions (must be 0): 0
+STAT real E1 deep: trials with a listed beta 4429062608 (2^-7.956)   trials with a listed E1 outcome 0
+STAT real E3 deep: trials with a listed partial E3 event 241 (2^-32.087)
+STAT real word zero:              292 (2^-31.810)       1366 (2^-29.584)        294 (2^-31.800)        172 (2^-32.574)
+STAT real low 16 zero:       16590201 (2^-16.016)   42921770 (2^-14.645)   26265242 (2^-15.353)   12839904 (2^-16.386)
+STAT real low 16 of two:   01:810 02:1766 03:307 12:1125 13:126 23:469
+STAT real two words zero:  01:0 02:0 03:0 12:0 13:0 23:0
+STAT real low 8 of all four: 202   weight <= 16/24/32/40: 0 54 190688 89915132   lowest weight seen 22
+STAT real trailing zero bits >= 24..48: 24:68465 28:4469 32:292 36:19 40:1 44:0 48:0
+STAT real trailing zero bits exactly 0..23: 730093269672 184709240415 92354215613 46177499596 23088656460 11544442307 5772196694 2886053181 1443016643 721447132 360812459 97405027 131556485 65905167 32948888 16371836 8296574 4148978 2070406 1035971 517650 259662 131223 61272
+STAT real rule on h1 (bits 0=0, 1=1, 16=0, 17=0): passes 68720524529 (2^-3.999978)   listed partial E3 events that pass it: 140
+STAT real E1 beta 18b0e098: trials 536847938   with a listed tau 323293   with a listed outcome 0
+STAT real E1 beta 18d0e098: trials 536835765   with a listed tau 774436   with a listed outcome 0
+STAT real E1 beta 18b1a098: trials 536888195   with a listed tau 331330   with a listed outcome 0
+STAT real E1 beta 18d1a098: trials 536873273   with a listed tau 615009   with a listed outcome 0
+STAT real E1 beta 18b3e098: trials 134202174   with a listed tau 18458   with a listed outcome 0
+STAT real E1 beta 18d3e098: trials 134209655   with a listed tau 42760   with a listed outcome 0
+STAT real E1 beta 18d1a398: trials 134196167   with a listed tau 20583   with a listed outcome 0
+STAT real E1 beta 19f1a098: trials 134219159   with a listed tau 15250   with a listed outcome 0
+STAT real E1 beta 18d16398: trials 134211578   with a listed tau 10257   with a listed outcome 0
+STAT real E1 beta 18f1e098: trials 134223579   with a listed tau 27662   with a listed outcome 0
+STAT real E1 beta 19f0e098: trials 134234274   with a listed tau 7137   with a listed outcome 0
+STAT real E1 beta 19b1e098: trials 134214940   with a listed tau 33018   with a listed outcome 0
+STAT real E1 beta 19d1e098: trials 134203704   with a listed tau 15211   with a listed outcome 0
+STAT real E1 beta 19b0a098: trials 536862429   with a listed tau 38113   with a listed outcome 0
+STAT real E1 beta 19d0a098: trials 536839778   with a listed tau 6261   with a listed outcome 0
+STAT real E3 eps 6e61be55: listed partial events 62
+STAT real E3 eps 6e21be55: listed partial events 71
+STAT real E3 eps 6e203e55: listed partial events 40
+STAT real E3 eps 6e603e55: listed partial events 40
+STAT real E3 eps 6e23be55: listed partial events 12
+STAT real E3 eps 6e63be55: listed partial events 8
+STAT real E3 eps 6e5fbe55: listed partial events 1
+STAT real E3 eps 6fdfbe55: listed partial events 3
+STAT real E3 eps 6fa03e55: listed partial events 2
+STAT real E3 eps 6fa1be55: listed partial events 1
+STAT real E3 eps 6e603c55: listed partial events 0
+STAT real E3 eps 6e60bc55: listed partial events 1
+STAT real E3 eps 6fde3e55: listed partial events 0
+STAT real E3 eps 6f9fbe55: listed partial events 0
+STAT real E3 eps 6f9e3e55: listed partial events 0
+RUN h8_layout_run3: h8_class_gpu real 29d4fa98 bee3af28 44036000 40c58500 97475638 0007c006 830303cf 18 12 1024 9803 3 ; exit 0 ; 36 s ; finished 2026-10-06 14:46:52

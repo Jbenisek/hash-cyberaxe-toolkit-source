@@ -1,0 +1,1024 @@
+backward analysis, chi38, rows 17..25. Words' modular differences are the characteristic's signed cells.
+Model for X = dSigma + dBool: the free bits of the three input words are uniform; bits fixed by cells (values, signs) are used; two-bit and '+' conditions are not applied.
+
+== row 17 ==
+  chi: dE17 00000000 dA17 e0000000 dW17 00000000 dE13 ffff016a dA13 20010000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E16) + dCH(E16,E15,E14): 24 values over 9 free bits (EXACT enumeration)
+      X = 1ffffe96  Pr 0.0625
+      X = 1ffffea6  Pr 0.0625
+      X = 5ffffe96  Pr 0.0625
+      X = 5ffffea6  Pr 0.0625
+      X = 9ffffe96  Pr 0.0625
+      X = 9ffffea6  Pr 0.0625
+      X = dffffe96  Pr 0.0625   <- needed by the characteristic
+      X = dffffea6  Pr 0.0625
+    needed X = dffffe96 : Pr 0.0625 (PROVED under the model)
+  words of row 17 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 1ffffe96 (Pr 0.0625):
+    W17 needs modular difference c0000000
+    signed patterns of c0000000 with weight <= 6: 3 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =u==============================  xor 40000000  w  1  Pr 2^-1
+      nn==============================  xor c0000000  w  2  Pr 2^-2
+      un==============================  xor c0000000  w  2  Pr 2^-2
+    E13 needs modular difference bfff016a
+    signed patterns of bfff016a with weight <= 6: 0 (probability mass 0.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+   X = 1ffffea6 (Pr 0.0625):
+    W17 needs modular difference bffffff0
+    signed patterns of bffffff0 with weight <= 6: 13 (probability mass 0.9531250000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =u=========================u====  xor 40000010  w  2  Pr 2^-2
+      =u========================un====  xor 40000030  w  3  Pr 2^-3
+      nn=========================u====  xor c0000010  w  3  Pr 2^-3
+      un=========================u====  xor c0000010  w  3  Pr 2^-3
+      =u=======================unn====  xor 40000070  w  4  Pr 2^-4
+      nn========================un====  xor c0000030  w  4  Pr 2^-4
+      un========================un====  xor c0000030  w  4  Pr 2^-4
+      =u======================unnn====  xor 400000f0  w  5  Pr 2^-5
+      nn=======================unn====  xor c0000070  w  5  Pr 2^-5
+      un=======================unn====  xor c0000070  w  5  Pr 2^-5
+      =u=====================unnnn====  xor 400001f0  w  6  Pr 2^-6
+      nn======================unnn====  xor c00000f0  w  6  Pr 2^-6
+      ... 1 more
+    E13 needs modular difference bfff015a
+    signed patterns of bfff015a with weight <= 6: 0 (probability mass 0.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+   X = 5ffffe96 (Pr 0.0625):
+    W17 needs modular difference 80000000
+    signed patterns of 80000000 with weight <= 6: 2 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      n===============================  xor 80000000  w  1  Pr 2^-1
+      u===============================  xor 80000000  w  1  Pr 2^-1
+    E13 needs modular difference 7fff016a
+    signed patterns of 7fff016a with weight <= 6: 0 (probability mass 0.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+    alternative signings of E_{t-4} (same XOR 0001077a, 512 signings):
+      ===============u=====uuu=uuuu=u=  mod fffef886  Pr[row holds] 0
+      ===============u=====uuu=uuuu=n=  mod fffef88a  Pr[row holds] 0
+      ===============u=====uuu=uuun=u=  mod fffef896  Pr[row holds] 0
+      ===============u=====uuu=uuun=n=  mod fffef89a  Pr[row holds] 0
+      ===============u=====uuu=uunu=u=  mod fffef8a6  Pr[row holds] 0
+      ===============u=====uuu=uunu=n=  mod fffef8aa  Pr[row holds] 0
+      ===============u=====uuu=uunn=u=  mod fffef8b6  Pr[row holds] 0
+      ===============u=====uuu=uunn=n=  mod fffef8ba  Pr[row holds] 0
+      ===============u=====uuu=unuu=u=  mod fffef8c6  Pr[row holds] 0
+      ===============u=====uuu=unuu=n=  mod fffef8ca  Pr[row holds] 0
+      ===============u=====uuu=unun=u=  mod fffef8d6  Pr[row holds] 0
+      ===============u=====uuu=unun=n=  mod fffef8da  Pr[row holds] 0
+      ===============u=====uuu=unnu=u=  mod fffef8e6  Pr[row holds] 0
+      ===============u=====uuu=unnu=n=  mod fffef8ea  Pr[row holds] 0
+      ===============u=====uuu=unnn=u=  mod fffef8f6  Pr[row holds] 0
+      ===============u=====uuu=unnn=n=  mod fffef8fa  Pr[row holds] 0
+      ===============u=====uuu=nuuu=u=  mod fffef906  Pr[row holds] 0
+      ===============u=====uuu=nuuu=n=  mod fffef90a  Pr[row holds] 0
+      ===============u=====uuu=nuun=u=  mod fffef916  Pr[row holds] 0
+      ===============u=====uuu=nuun=n=  mod fffef91a  Pr[row holds] 0
+      ===============u=====uuu=nunu=u=  mod fffef926  Pr[row holds] 0
+      ===============u=====uuu=nunu=n=  mod fffef92a  Pr[row holds] 0
+      ===============u=====uuu=nunn=u=  mod fffef936  Pr[row holds] 0
+      ===============u=====uuu=nunn=n=  mod fffef93a  Pr[row holds] 0
+      ===============u=====uuu=nnuu=u=  mod fffef946  Pr[row holds] 0
+      ===============u=====uuu=nnuu=n=  mod fffef94a  Pr[row holds] 0
+      ===============u=====uuu=nnun=u=  mod fffef956  Pr[row holds] 0
+      ===============u=====uuu=nnun=n=  mod fffef95a  Pr[row holds] 0
+      ===============u=====uuu=nnnu=u=  mod fffef966  Pr[row holds] 0
+      ===============u=====uuu=nnnu=n=  mod fffef96a  Pr[row holds] 0
+      ===============u=====uuu=nnnn=u=  mod fffef976  Pr[row holds] 0
+      ===============u=====uuu=nnnn=n=  mod fffef97a  Pr[row holds] 0
+      ===============u=====uun=uuuu=u=  mod fffefa86  Pr[row holds] 0
+      ===============u=====uun=uuuu=n=  mod fffefa8a  Pr[row holds] 0
+      ===============u=====uun=uuun=u=  mod fffefa96  Pr[row holds] 0
+      ===============u=====uun=uuun=n=  mod fffefa9a  Pr[row holds] 0
+      ===============u=====uun=uunu=u=  mod fffefaa6  Pr[row holds] 0
+      ===============u=====uun=uunu=n=  mod fffefaaa  Pr[row holds] 0
+      ===============u=====uun=uunn=u=  mod fffefab6  Pr[row holds] 0
+      ===============u=====uun=uunn=n=  mod fffefaba  Pr[row holds] 0
+      ===============u=====uun=unuu=u=  mod fffefac6  Pr[row holds] 0
+      ===============u=====uun=unuu=n=  mod fffefaca  Pr[row holds] 0
+      ===============u=====uun=unun=u=  mod fffefad6  Pr[row holds] 0
+      ===============u=====uun=unun=n=  mod fffefada  Pr[row holds] 0
+      ===============u=====uun=unnu=u=  mod fffefae6  Pr[row holds] 0
+      ===============u=====uun=unnu=n=  mod fffefaea  Pr[row holds] 0
+      ===============u=====uun=unnn=u=  mod fffefaf6  Pr[row holds] 0
+      ===============u=====uun=unnn=n=  mod fffefafa  Pr[row holds] 0
+      ===============u=====uun=nuuu=u=  mod fffefb06  Pr[row holds] 0
+      ===============u=====uun=nuuu=n=  mod fffefb0a  Pr[row holds] 0
+      ===============u=====uun=nuun=u=  mod fffefb16  Pr[row holds] 0
+      ===============u=====uun=nuun=n=  mod fffefb1a  Pr[row holds] 0
+      ===============u=====uun=nunu=u=  mod fffefb26  Pr[row holds] 0
+      ===============u=====uun=nunu=n=  mod fffefb2a  Pr[row holds] 0
+      ===============u=====uun=nunn=u=  mod fffefb36  Pr[row holds] 0
+      ===============u=====uun=nunn=n=  mod fffefb3a  Pr[row holds] 0
+      ===============u=====uun=nnuu=u=  mod fffefb46  Pr[row holds] 0
+      ===============u=====uun=nnuu=n=  mod fffefb4a  Pr[row holds] 0
+      ===============u=====uun=nnun=u=  mod fffefb56  Pr[row holds] 0
+      ===============u=====uun=nnun=n=  mod fffefb5a  Pr[row holds] 0
+      ===============u=====uun=nnnu=u=  mod fffefb66  Pr[row holds] 0
+      ===============u=====uun=nnnu=n=  mod fffefb6a  Pr[row holds] 0
+      ===============u=====uun=nnnn=u=  mod fffefb76  Pr[row holds] 0
+      ===============u=====uun=nnnn=n=  mod fffefb7a  Pr[row holds] 0
+      ===============u=====unu=uuuu=u=  mod fffefc86  Pr[row holds] 0
+      ===============u=====unu=uuuu=n=  mod fffefc8a  Pr[row holds] 0
+      ===============u=====unu=uuun=u=  mod fffefc96  Pr[row holds] 0
+      ===============u=====unu=uuun=n=  mod fffefc9a  Pr[row holds] 0
+      ===============u=====unu=uunu=u=  mod fffefca6  Pr[row holds] 0
+      ===============u=====unu=uunu=n=  mod fffefcaa  Pr[row holds] 0
+      ===============u=====unu=uunn=u=  mod fffefcb6  Pr[row holds] 0
+      ===============u=====unu=uunn=n=  mod fffefcba  Pr[row holds] 0
+      ===============u=====unu=unuu=u=  mod fffefcc6  Pr[row holds] 0
+      ===============u=====unu=unuu=n=  mod fffefcca  Pr[row holds] 0
+      ===============u=====unu=unun=u=  mod fffefcd6  Pr[row holds] 0
+      ===============u=====unu=unun=n=  mod fffefcda  Pr[row holds] 0
+      ===============u=====unu=unnu=u=  mod fffefce6  Pr[row holds] 0
+      ===============u=====unu=unnu=n=  mod fffefcea  Pr[row holds] 0
+      ===============u=====unu=unnn=u=  mod fffefcf6  Pr[row holds] 0
+      ===============u=====unu=unnn=n=  mod fffefcfa  Pr[row holds] 0
+      ===============u=====unu=nuuu=u=  mod fffefd06  Pr[row holds] 0
+      ===============u=====unu=nuuu=n=  mod fffefd0a  Pr[row holds] 0
+      ===============u=====unu=nuun=u=  mod fffefd16  Pr[row holds] 0
+      ===============u=====unu=nuun=n=  mod fffefd1a  Pr[row holds] 0
+      ===============u=====unu=nunu=u=  mod fffefd26  Pr[row holds] 0
+      ===============u=====unu=nunu=n=  mod fffefd2a  Pr[row holds] 0
+      ===============u=====unu=nunn=u=  mod fffefd36  Pr[row holds] 0
+      ===============u=====unu=nunn=n=  mod fffefd3a  Pr[row holds] 0
+      ===============u=====unu=nnuu=u=  mod fffefd46  Pr[row holds] 0
+      ===============u=====unu=nnuu=n=  mod fffefd4a  Pr[row holds] 0
+      ===============u=====unu=nnun=u=  mod fffefd56  Pr[row holds] 0
+      ===============u=====unu=nnun=n=  mod fffefd5a  Pr[row holds] 0
+      ===============u=====unu=nnnu=u=  mod fffefd66  Pr[row holds] 0
+      ===============u=====unu=nnnu=n=  mod fffefd6a  Pr[row holds] 0
+      ===============u=====unu=nnnn=u=  mod fffefd76  Pr[row holds] 0
+      ===============u=====unu=nnnn=n=  mod fffefd7a  Pr[row holds] 0
+      ===============u=====unn=uuuu=u=  mod fffefe86  Pr[row holds] 0
+      ===============u=====unn=uuuu=n=  mod fffefe8a  Pr[row holds] 0
+      ===============u=====unn=uuun=u=  mod fffefe96  Pr[row holds] 0
+      ===============u=====unn=uuun=n=  mod fffefe9a  Pr[row holds] 0
+      ===============u=====unn=uunu=u=  mod fffefea6  Pr[row holds] 0
+      ===============u=====unn=uunu=n=  mod fffefeaa  Pr[row holds] 0
+      ===============u=====unn=uunn=u=  mod fffefeb6  Pr[row holds] 0
+      ===============u=====unn=uunn=n=  mod fffefeba  Pr[row holds] 0
+      ===============u=====unn=unuu=u=  mod fffefec6  Pr[row holds] 0
+      ===============u=====unn=unuu=n=  mod fffefeca  Pr[row holds] 0
+      ===============u=====unn=unun=u=  mod fffefed6  Pr[row holds] 0
+      ===============u=====unn=unun=n=  mod fffefeda  Pr[row holds] 0
+      ===============u=====unn=unnu=u=  mod fffefee6  Pr[row holds] 0
+      ===============u=====unn=unnu=n=  mod fffefeea  Pr[row holds] 0
+      ===============u=====unn=unnn=u=  mod fffefef6  Pr[row holds] 0
+      ===============u=====unn=unnn=n=  mod fffefefa  Pr[row holds] 0
+      ===============u=====unn=nuuu=u=  mod fffeff06  Pr[row holds] 0
+      ===============u=====unn=nuuu=n=  mod fffeff0a  Pr[row holds] 0
+      ===============u=====unn=nuun=u=  mod fffeff16  Pr[row holds] 0
+      ===============u=====unn=nuun=n=  mod fffeff1a  Pr[row holds] 0
+      ===============u=====unn=nunu=u=  mod fffeff26  Pr[row holds] 0
+      ===============u=====unn=nunu=n=  mod fffeff2a  Pr[row holds] 0
+      ===============u=====unn=nunn=u=  mod fffeff36  Pr[row holds] 0
+      ===============u=====unn=nunn=n=  mod fffeff3a  Pr[row holds] 0
+      ===============u=====unn=nnuu=u=  mod fffeff46  Pr[row holds] 0
+      ===============u=====unn=nnuu=n=  mod fffeff4a  Pr[row holds] 0
+      ===============u=====unn=nnun=u=  mod fffeff56  Pr[row holds] 0
+      ===============u=====unn=nnun=n=  mod fffeff5a  Pr[row holds] 0
+      ===============u=====unn=nnnu=u=  mod fffeff66  Pr[row holds] 0
+      ===============u=====unn=nnnu=n=  mod fffeff6a  Pr[row holds] 0
+      ===============u=====unn=nnnn=u=  mod fffeff76  Pr[row holds] 0
+      ===============u=====unn=nnnn=n=  mod fffeff7a  Pr[row holds] 0
+      ===============u=====nuu=uuuu=u=  mod ffff0086  Pr[row holds] 0
+      ===============u=====nuu=uuuu=n=  mod ffff008a  Pr[row holds] 0
+      ===============u=====nuu=uuun=u=  mod ffff0096  Pr[row holds] 0
+      ===============u=====nuu=uuun=n=  mod ffff009a  Pr[row holds] 0
+      ===============u=====nuu=uunu=u=  mod ffff00a6  Pr[row holds] 0
+      ===============u=====nuu=uunu=n=  mod ffff00aa  Pr[row holds] 0
+      ===============u=====nuu=uunn=u=  mod ffff00b6  Pr[row holds] 0
+      ===============u=====nuu=uunn=n=  mod ffff00ba  Pr[row holds] 0
+      ===============u=====nuu=unuu=u=  mod ffff00c6  Pr[row holds] 0
+      ===============u=====nuu=unuu=n=  mod ffff00ca  Pr[row holds] 0
+      ===============u=====nuu=unun=u=  mod ffff00d6  Pr[row holds] 0
+      ===============u=====nuu=unun=n=  mod ffff00da  Pr[row holds] 0
+      ===============u=====nuu=unnu=u=  mod ffff00e6  Pr[row holds] 0
+      ===============u=====nuu=unnu=n=  mod ffff00ea  Pr[row holds] 0
+      ===============u=====nuu=unnn=u=  mod ffff00f6  Pr[row holds] 0
+      ===============u=====nuu=unnn=n=  mod ffff00fa  Pr[row holds] 0
+      ===============u=====nuu=nuuu=u=  mod ffff0106  Pr[row holds] 0
+      ===============u=====nuu=nuuu=n=  mod ffff010a  Pr[row holds] 0
+      ===============u=====nuu=nuun=u=  mod ffff0116  Pr[row holds] 0
+      ===============u=====nuu=nuun=n=  mod ffff011a  Pr[row holds] 0
+      ===============u=====nuu=nunu=u=  mod ffff0126  Pr[row holds] 0
+      ===============u=====nuu=nunu=n=  mod ffff012a  Pr[row holds] 0
+      ===============u=====nuu=nunn=u=  mod ffff0136  Pr[row holds] 0
+      ===============u=====nuu=nunn=n=  mod ffff013a  Pr[row holds] 0
+      ===============u=====nuu=nnuu=u=  mod ffff0146  Pr[row holds] 0
+      ===============u=====nuu=nnuu=n=  mod ffff014a  Pr[row holds] 0
+      ===============u=====nuu=nnun=u=  mod ffff0156  Pr[row holds] 0
+      ===============u=====nuu=nnun=n=  mod ffff015a  Pr[row holds] 0.0625
+      ===============u=====nuu=nnnu=u=  mod ffff0166  Pr[row holds] 0
+      ===============u=====nuu=nnnu=n=  mod ffff016a  Pr[row holds] 0.0625   <- characteristic
+      ===============u=====nuu=nnnn=u=  mod ffff0176  Pr[row holds] 0
+      ===============u=====nuu=nnnn=n=  mod ffff017a  Pr[row holds] 0
+      ===============u=====nun=uuuu=u=  mod ffff0286  Pr[row holds] 0
+      ===============u=====nun=uuuu=n=  mod ffff028a  Pr[row holds] 0
+      ===============u=====nun=uuun=u=  mod ffff0296  Pr[row holds] 0
+      ===============u=====nun=uuun=n=  mod ffff029a  Pr[row holds] 0
+      ===============u=====nun=uunu=u=  mod ffff02a6  Pr[row holds] 0
+      ===============u=====nun=uunu=n=  mod ffff02aa  Pr[row holds] 0
+      ===============u=====nun=uunn=u=  mod ffff02b6  Pr[row holds] 0
+      ===============u=====nun=uunn=n=  mod ffff02ba  Pr[row holds] 0
+      ===============u=====nun=unuu=u=  mod ffff02c6  Pr[row holds] 0
+      ===============u=====nun=unuu=n=  mod ffff02ca  Pr[row holds] 0
+      ===============u=====nun=unun=u=  mod ffff02d6  Pr[row holds] 0
+      ===============u=====nun=unun=n=  mod ffff02da  Pr[row holds] 0
+      ===============u=====nun=unnu=u=  mod ffff02e6  Pr[row holds] 0
+      ===============u=====nun=unnu=n=  mod ffff02ea  Pr[row holds] 0
+      ===============u=====nun=unnn=u=  mod ffff02f6  Pr[row holds] 0
+      ===============u=====nun=unnn=n=  mod ffff02fa  Pr[row holds] 0
+      ===============u=====nun=nuuu=u=  mod ffff0306  Pr[row holds] 0
+      ===============u=====nun=nuuu=n=  mod ffff030a  Pr[row holds] 0
+      ===============u=====nun=nuun=u=  mod ffff0316  Pr[row holds] 0
+      ===============u=====nun=nuun=n=  mod ffff031a  Pr[row holds] 0
+      ===============u=====nun=nunu=u=  mod ffff0326  Pr[row holds] 0
+      ===============u=====nun=nunu=n=  mod ffff032a  Pr[row holds] 0
+      ===============u=====nun=nunn=u=  mod ffff0336  Pr[row holds] 0
+      ===============u=====nun=nunn=n=  mod ffff033a  Pr[row holds] 0
+      ===============u=====nun=nnuu=u=  mod ffff0346  Pr[row holds] 0
+      ===============u=====nun=nnuu=n=  mod ffff034a  Pr[row holds] 0
+      ===============u=====nun=nnun=u=  mod ffff0356  Pr[row holds] 0
+      ===============u=====nun=nnun=n=  mod ffff035a  Pr[row holds] 0
+      ===============u=====nun=nnnu=u=  mod ffff0366  Pr[row holds] 0
+      ===============u=====nun=nnnu=n=  mod ffff036a  Pr[row holds] 0
+      ===============u=====nun=nnnn=u=  mod ffff0376  Pr[row holds] 0
+      ===============u=====nun=nnnn=n=  mod ffff037a  Pr[row holds] 0
+      ===============u=====nnu=uuuu=u=  mod ffff0486  Pr[row holds] 0
+      ===============u=====nnu=uuuu=n=  mod ffff048a  Pr[row holds] 0
+      ===============u=====nnu=uuun=u=  mod ffff0496  Pr[row holds] 0
+      ===============u=====nnu=uuun=n=  mod ffff049a  Pr[row holds] 0
+      ===============u=====nnu=uunu=u=  mod ffff04a6  Pr[row holds] 0
+      ===============u=====nnu=uunu=n=  mod ffff04aa  Pr[row holds] 0
+      ===============u=====nnu=uunn=u=  mod ffff04b6  Pr[row holds] 0
+      ===============u=====nnu=uunn=n=  mod ffff04ba  Pr[row holds] 0
+      ===============u=====nnu=unuu=u=  mod ffff04c6  Pr[row holds] 0
+      ===============u=====nnu=unuu=n=  mod ffff04ca  Pr[row holds] 0
+      ===============u=====nnu=unun=u=  mod ffff04d6  Pr[row holds] 0
+      ===============u=====nnu=unun=n=  mod ffff04da  Pr[row holds] 0
+      ===============u=====nnu=unnu=u=  mod ffff04e6  Pr[row holds] 0
+      ===============u=====nnu=unnu=n=  mod ffff04ea  Pr[row holds] 0
+      ===============u=====nnu=unnn=u=  mod ffff04f6  Pr[row holds] 0
+      ===============u=====nnu=unnn=n=  mod ffff04fa  Pr[row holds] 0
+      ===============u=====nnu=nuuu=u=  mod ffff0506  Pr[row holds] 0
+      ===============u=====nnu=nuuu=n=  mod ffff050a  Pr[row holds] 0
+      ===============u=====nnu=nuun=u=  mod ffff0516  Pr[row holds] 0
+      ===============u=====nnu=nuun=n=  mod ffff051a  Pr[row holds] 0
+      ===============u=====nnu=nunu=u=  mod ffff0526  Pr[row holds] 0
+      ===============u=====nnu=nunu=n=  mod ffff052a  Pr[row holds] 0
+      ===============u=====nnu=nunn=u=  mod ffff0536  Pr[row holds] 0
+      ===============u=====nnu=nunn=n=  mod ffff053a  Pr[row holds] 0
+      ===============u=====nnu=nnuu=u=  mod ffff0546  Pr[row holds] 0
+      ===============u=====nnu=nnuu=n=  mod ffff054a  Pr[row holds] 0
+      ===============u=====nnu=nnun=u=  mod ffff0556  Pr[row holds] 0
+      ===============u=====nnu=nnun=n=  mod ffff055a  Pr[row holds] 0
+      ===============u=====nnu=nnnu=u=  mod ffff0566  Pr[row holds] 0
+      ===============u=====nnu=nnnu=n=  mod ffff056a  Pr[row holds] 0
+      ===============u=====nnu=nnnn=u=  mod ffff0576  Pr[row holds] 0
+      ===============u=====nnu=nnnn=n=  mod ffff057a  Pr[row holds] 0
+      ===============u=====nnn=uuuu=u=  mod ffff0686  Pr[row holds] 0
+      ===============u=====nnn=uuuu=n=  mod ffff068a  Pr[row holds] 0
+      ===============u=====nnn=uuun=u=  mod ffff0696  Pr[row holds] 0
+      ===============u=====nnn=uuun=n=  mod ffff069a  Pr[row holds] 0
+      ===============u=====nnn=uunu=u=  mod ffff06a6  Pr[row holds] 0
+      ===============u=====nnn=uunu=n=  mod ffff06aa  Pr[row holds] 0
+      ===============u=====nnn=uunn=u=  mod ffff06b6  Pr[row holds] 0
+      ===============u=====nnn=uunn=n=  mod ffff06ba  Pr[row holds] 0
+      ===============u=====nnn=unuu=u=  mod ffff06c6  Pr[row holds] 0
+      ===============u=====nnn=unuu=n=  mod ffff06ca  Pr[row holds] 0
+      ===============u=====nnn=unun=u=  mod ffff06d6  Pr[row holds] 0
+      ===============u=====nnn=unun=n=  mod ffff06da  Pr[row holds] 0
+      ===============u=====nnn=unnu=u=  mod ffff06e6  Pr[row holds] 0
+      ===============u=====nnn=unnu=n=  mod ffff06ea  Pr[row holds] 0
+      ===============u=====nnn=unnn=u=  mod ffff06f6  Pr[row holds] 0
+      ===============u=====nnn=unnn=n=  mod ffff06fa  Pr[row holds] 0
+      ===============u=====nnn=nuuu=u=  mod ffff0706  Pr[row holds] 0
+      ===============u=====nnn=nuuu=n=  mod ffff070a  Pr[row holds] 0
+      ===============u=====nnn=nuun=u=  mod ffff0716  Pr[row holds] 0
+      ===============u=====nnn=nuun=n=  mod ffff071a  Pr[row holds] 0
+      ===============u=====nnn=nunu=u=  mod ffff0726  Pr[row holds] 0
+      ===============u=====nnn=nunu=n=  mod ffff072a  Pr[row holds] 0
+      ===============u=====nnn=nunn=u=  mod ffff0736  Pr[row holds] 0
+      ===============u=====nnn=nunn=n=  mod ffff073a  Pr[row holds] 0
+      ===============u=====nnn=nnuu=u=  mod ffff0746  Pr[row holds] 0
+      ===============u=====nnn=nnuu=n=  mod ffff074a  Pr[row holds] 0
+      ===============u=====nnn=nnun=u=  mod ffff0756  Pr[row holds] 0
+      ===============u=====nnn=nnun=n=  mod ffff075a  Pr[row holds] 0
+      ===============u=====nnn=nnnu=u=  mod ffff0766  Pr[row holds] 0
+      ===============u=====nnn=nnnu=n=  mod ffff076a  Pr[row holds] 0
+      ===============u=====nnn=nnnn=u=  mod ffff0776  Pr[row holds] 0
+      ===============u=====nnn=nnnn=n=  mod ffff077a  Pr[row holds] 0
+      ===============n=====uuu=uuuu=u=  mod 0000f886  Pr[row holds] 0
+      ===============n=====uuu=uuuu=n=  mod 0000f88a  Pr[row holds] 0
+      ===============n=====uuu=uuun=u=  mod 0000f896  Pr[row holds] 0
+      ===============n=====uuu=uuun=n=  mod 0000f89a  Pr[row holds] 0
+      ===============n=====uuu=uunu=u=  mod 0000f8a6  Pr[row holds] 0
+      ===============n=====uuu=uunu=n=  mod 0000f8aa  Pr[row holds] 0
+      ===============n=====uuu=uunn=u=  mod 0000f8b6  Pr[row holds] 0
+      ===============n=====uuu=uunn=n=  mod 0000f8ba  Pr[row holds] 0
+      ===============n=====uuu=unuu=u=  mod 0000f8c6  Pr[row holds] 0
+      ===============n=====uuu=unuu=n=  mod 0000f8ca  Pr[row holds] 0
+      ===============n=====uuu=unun=u=  mod 0000f8d6  Pr[row holds] 0
+      ===============n=====uuu=unun=n=  mod 0000f8da  Pr[row holds] 0
+      ===============n=====uuu=unnu=u=  mod 0000f8e6  Pr[row holds] 0
+      ===============n=====uuu=unnu=n=  mod 0000f8ea  Pr[row holds] 0
+      ===============n=====uuu=unnn=u=  mod 0000f8f6  Pr[row holds] 0
+      ===============n=====uuu=unnn=n=  mod 0000f8fa  Pr[row holds] 0
+      ===============n=====uuu=nuuu=u=  mod 0000f906  Pr[row holds] 0
+      ===============n=====uuu=nuuu=n=  mod 0000f90a  Pr[row holds] 0
+      ===============n=====uuu=nuun=u=  mod 0000f916  Pr[row holds] 0
+      ===============n=====uuu=nuun=n=  mod 0000f91a  Pr[row holds] 0
+      ===============n=====uuu=nunu=u=  mod 0000f926  Pr[row holds] 0
+      ===============n=====uuu=nunu=n=  mod 0000f92a  Pr[row holds] 0
+      ===============n=====uuu=nunn=u=  mod 0000f936  Pr[row holds] 0
+      ===============n=====uuu=nunn=n=  mod 0000f93a  Pr[row holds] 0
+      ===============n=====uuu=nnuu=u=  mod 0000f946  Pr[row holds] 0
+      ===============n=====uuu=nnuu=n=  mod 0000f94a  Pr[row holds] 0
+      ===============n=====uuu=nnun=u=  mod 0000f956  Pr[row holds] 0
+      ===============n=====uuu=nnun=n=  mod 0000f95a  Pr[row holds] 0
+      ===============n=====uuu=nnnu=u=  mod 0000f966  Pr[row holds] 0
+      ===============n=====uuu=nnnu=n=  mod 0000f96a  Pr[row holds] 0
+      ===============n=====uuu=nnnn=u=  mod 0000f976  Pr[row holds] 0
+      ===============n=====uuu=nnnn=n=  mod 0000f97a  Pr[row holds] 0
+      ===============n=====uun=uuuu=u=  mod 0000fa86  Pr[row holds] 0
+      ===============n=====uun=uuuu=n=  mod 0000fa8a  Pr[row holds] 0
+      ===============n=====uun=uuun=u=  mod 0000fa96  Pr[row holds] 0
+      ===============n=====uun=uuun=n=  mod 0000fa9a  Pr[row holds] 0
+      ===============n=====uun=uunu=u=  mod 0000faa6  Pr[row holds] 0
+      ===============n=====uun=uunu=n=  mod 0000faaa  Pr[row holds] 0
+      ===============n=====uun=uunn=u=  mod 0000fab6  Pr[row holds] 0
+      ===============n=====uun=uunn=n=  mod 0000faba  Pr[row holds] 0
+      ===============n=====uun=unuu=u=  mod 0000fac6  Pr[row holds] 0
+      ===============n=====uun=unuu=n=  mod 0000faca  Pr[row holds] 0
+      ===============n=====uun=unun=u=  mod 0000fad6  Pr[row holds] 0
+      ===============n=====uun=unun=n=  mod 0000fada  Pr[row holds] 0
+      ===============n=====uun=unnu=u=  mod 0000fae6  Pr[row holds] 0
+      ===============n=====uun=unnu=n=  mod 0000faea  Pr[row holds] 0
+      ===============n=====uun=unnn=u=  mod 0000faf6  Pr[row holds] 0
+      ===============n=====uun=unnn=n=  mod 0000fafa  Pr[row holds] 0
+      ===============n=====uun=nuuu=u=  mod 0000fb06  Pr[row holds] 0
+      ===============n=====uun=nuuu=n=  mod 0000fb0a  Pr[row holds] 0
+      ===============n=====uun=nuun=u=  mod 0000fb16  Pr[row holds] 0
+      ===============n=====uun=nuun=n=  mod 0000fb1a  Pr[row holds] 0
+      ===============n=====uun=nunu=u=  mod 0000fb26  Pr[row holds] 0
+      ===============n=====uun=nunu=n=  mod 0000fb2a  Pr[row holds] 0
+      ===============n=====uun=nunn=u=  mod 0000fb36  Pr[row holds] 0
+      ===============n=====uun=nunn=n=  mod 0000fb3a  Pr[row holds] 0
+      ===============n=====uun=nnuu=u=  mod 0000fb46  Pr[row holds] 0
+      ===============n=====uun=nnuu=n=  mod 0000fb4a  Pr[row holds] 0
+      ===============n=====uun=nnun=u=  mod 0000fb56  Pr[row holds] 0
+      ===============n=====uun=nnun=n=  mod 0000fb5a  Pr[row holds] 0
+      ===============n=====uun=nnnu=u=  mod 0000fb66  Pr[row holds] 0
+      ===============n=====uun=nnnu=n=  mod 0000fb6a  Pr[row holds] 0
+      ===============n=====uun=nnnn=u=  mod 0000fb76  Pr[row holds] 0
+      ===============n=====uun=nnnn=n=  mod 0000fb7a  Pr[row holds] 0
+      ===============n=====unu=uuuu=u=  mod 0000fc86  Pr[row holds] 0
+      ===============n=====unu=uuuu=n=  mod 0000fc8a  Pr[row holds] 0
+      ===============n=====unu=uuun=u=  mod 0000fc96  Pr[row holds] 0
+      ===============n=====unu=uuun=n=  mod 0000fc9a  Pr[row holds] 0
+      ===============n=====unu=uunu=u=  mod 0000fca6  Pr[row holds] 0
+      ===============n=====unu=uunu=n=  mod 0000fcaa  Pr[row holds] 0
+      ===============n=====unu=uunn=u=  mod 0000fcb6  Pr[row holds] 0
+      ===============n=====unu=uunn=n=  mod 0000fcba  Pr[row holds] 0
+      ===============n=====unu=unuu=u=  mod 0000fcc6  Pr[row holds] 0
+      ===============n=====unu=unuu=n=  mod 0000fcca  Pr[row holds] 0
+      ===============n=====unu=unun=u=  mod 0000fcd6  Pr[row holds] 0
+      ===============n=====unu=unun=n=  mod 0000fcda  Pr[row holds] 0
+      ===============n=====unu=unnu=u=  mod 0000fce6  Pr[row holds] 0
+      ===============n=====unu=unnu=n=  mod 0000fcea  Pr[row holds] 0
+      ===============n=====unu=unnn=u=  mod 0000fcf6  Pr[row holds] 0
+      ===============n=====unu=unnn=n=  mod 0000fcfa  Pr[row holds] 0
+      ===============n=====unu=nuuu=u=  mod 0000fd06  Pr[row holds] 0
+      ===============n=====unu=nuuu=n=  mod 0000fd0a  Pr[row holds] 0
+      ===============n=====unu=nuun=u=  mod 0000fd16  Pr[row holds] 0
+      ===============n=====unu=nuun=n=  mod 0000fd1a  Pr[row holds] 0
+      ===============n=====unu=nunu=u=  mod 0000fd26  Pr[row holds] 0
+      ===============n=====unu=nunu=n=  mod 0000fd2a  Pr[row holds] 0
+      ===============n=====unu=nunn=u=  mod 0000fd36  Pr[row holds] 0
+      ===============n=====unu=nunn=n=  mod 0000fd3a  Pr[row holds] 0
+      ===============n=====unu=nnuu=u=  mod 0000fd46  Pr[row holds] 0
+      ===============n=====unu=nnuu=n=  mod 0000fd4a  Pr[row holds] 0
+      ===============n=====unu=nnun=u=  mod 0000fd56  Pr[row holds] 0
+      ===============n=====unu=nnun=n=  mod 0000fd5a  Pr[row holds] 0
+      ===============n=====unu=nnnu=u=  mod 0000fd66  Pr[row holds] 0
+      ===============n=====unu=nnnu=n=  mod 0000fd6a  Pr[row holds] 0
+      ===============n=====unu=nnnn=u=  mod 0000fd76  Pr[row holds] 0
+      ===============n=====unu=nnnn=n=  mod 0000fd7a  Pr[row holds] 0
+      ===============n=====unn=uuuu=u=  mod 0000fe86  Pr[row holds] 0
+      ===============n=====unn=uuuu=n=  mod 0000fe8a  Pr[row holds] 0
+      ===============n=====unn=uuun=u=  mod 0000fe96  Pr[row holds] 0
+      ===============n=====unn=uuun=n=  mod 0000fe9a  Pr[row holds] 0
+      ===============n=====unn=uunu=u=  mod 0000fea6  Pr[row holds] 0
+      ===============n=====unn=uunu=n=  mod 0000feaa  Pr[row holds] 0
+      ===============n=====unn=uunn=u=  mod 0000feb6  Pr[row holds] 0
+      ===============n=====unn=uunn=n=  mod 0000feba  Pr[row holds] 0
+      ===============n=====unn=unuu=u=  mod 0000fec6  Pr[row holds] 0
+      ===============n=====unn=unuu=n=  mod 0000feca  Pr[row holds] 0
+      ===============n=====unn=unun=u=  mod 0000fed6  Pr[row holds] 0
+      ===============n=====unn=unun=n=  mod 0000feda  Pr[row holds] 0
+      ===============n=====unn=unnu=u=  mod 0000fee6  Pr[row holds] 0
+      ===============n=====unn=unnu=n=  mod 0000feea  Pr[row holds] 0
+      ===============n=====unn=unnn=u=  mod 0000fef6  Pr[row holds] 0
+      ===============n=====unn=unnn=n=  mod 0000fefa  Pr[row holds] 0
+      ===============n=====unn=nuuu=u=  mod 0000ff06  Pr[row holds] 0
+      ===============n=====unn=nuuu=n=  mod 0000ff0a  Pr[row holds] 0
+      ===============n=====unn=nuun=u=  mod 0000ff16  Pr[row holds] 0
+      ===============n=====unn=nuun=n=  mod 0000ff1a  Pr[row holds] 0
+      ===============n=====unn=nunu=u=  mod 0000ff26  Pr[row holds] 0
+      ===============n=====unn=nunu=n=  mod 0000ff2a  Pr[row holds] 0
+      ===============n=====unn=nunn=u=  mod 0000ff36  Pr[row holds] 0
+      ===============n=====unn=nunn=n=  mod 0000ff3a  Pr[row holds] 0
+      ===============n=====unn=nnuu=u=  mod 0000ff46  Pr[row holds] 0
+      ===============n=====unn=nnuu=n=  mod 0000ff4a  Pr[row holds] 0
+      ===============n=====unn=nnun=u=  mod 0000ff56  Pr[row holds] 0
+      ===============n=====unn=nnun=n=  mod 0000ff5a  Pr[row holds] 0
+      ===============n=====unn=nnnu=u=  mod 0000ff66  Pr[row holds] 0
+      ===============n=====unn=nnnu=n=  mod 0000ff6a  Pr[row holds] 0
+      ===============n=====unn=nnnn=u=  mod 0000ff76  Pr[row holds] 0
+      ===============n=====unn=nnnn=n=  mod 0000ff7a  Pr[row holds] 0
+      ===============n=====nuu=uuuu=u=  mod 00010086  Pr[row holds] 0
+      ===============n=====nuu=uuuu=n=  mod 0001008a  Pr[row holds] 0
+      ===============n=====nuu=uuun=u=  mod 00010096  Pr[row holds] 0
+      ===============n=====nuu=uuun=n=  mod 0001009a  Pr[row holds] 0
+      ===============n=====nuu=uunu=u=  mod 000100a6  Pr[row holds] 0
+      ===============n=====nuu=uunu=n=  mod 000100aa  Pr[row holds] 0
+      ===============n=====nuu=uunn=u=  mod 000100b6  Pr[row holds] 0
+      ===============n=====nuu=uunn=n=  mod 000100ba  Pr[row holds] 0
+      ===============n=====nuu=unuu=u=  mod 000100c6  Pr[row holds] 0
+      ===============n=====nuu=unuu=n=  mod 000100ca  Pr[row holds] 0
+      ===============n=====nuu=unun=u=  mod 000100d6  Pr[row holds] 0
+      ===============n=====nuu=unun=n=  mod 000100da  Pr[row holds] 0
+      ===============n=====nuu=unnu=u=  mod 000100e6  Pr[row holds] 0
+      ===============n=====nuu=unnu=n=  mod 000100ea  Pr[row holds] 0
+      ===============n=====nuu=unnn=u=  mod 000100f6  Pr[row holds] 0
+      ===============n=====nuu=unnn=n=  mod 000100fa  Pr[row holds] 0
+      ===============n=====nuu=nuuu=u=  mod 00010106  Pr[row holds] 0
+      ===============n=====nuu=nuuu=n=  mod 0001010a  Pr[row holds] 0
+      ===============n=====nuu=nuun=u=  mod 00010116  Pr[row holds] 0
+      ===============n=====nuu=nuun=n=  mod 0001011a  Pr[row holds] 0
+      ===============n=====nuu=nunu=u=  mod 00010126  Pr[row holds] 0
+      ===============n=====nuu=nunu=n=  mod 0001012a  Pr[row holds] 0
+      ===============n=====nuu=nunn=u=  mod 00010136  Pr[row holds] 0
+      ===============n=====nuu=nunn=n=  mod 0001013a  Pr[row holds] 0
+      ===============n=====nuu=nnuu=u=  mod 00010146  Pr[row holds] 0
+      ===============n=====nuu=nnuu=n=  mod 0001014a  Pr[row holds] 0
+      ===============n=====nuu=nnun=u=  mod 00010156  Pr[row holds] 0
+      ===============n=====nuu=nnun=n=  mod 0001015a  Pr[row holds] 0
+      ===============n=====nuu=nnnu=u=  mod 00010166  Pr[row holds] 0
+      ===============n=====nuu=nnnu=n=  mod 0001016a  Pr[row holds] 0
+      ===============n=====nuu=nnnn=u=  mod 00010176  Pr[row holds] 0
+      ===============n=====nuu=nnnn=n=  mod 0001017a  Pr[row holds] 0
+      ===============n=====nun=uuuu=u=  mod 00010286  Pr[row holds] 0
+      ===============n=====nun=uuuu=n=  mod 0001028a  Pr[row holds] 0
+      ===============n=====nun=uuun=u=  mod 00010296  Pr[row holds] 0
+      ===============n=====nun=uuun=n=  mod 0001029a  Pr[row holds] 0
+      ===============n=====nun=uunu=u=  mod 000102a6  Pr[row holds] 0
+      ===============n=====nun=uunu=n=  mod 000102aa  Pr[row holds] 0
+      ===============n=====nun=uunn=u=  mod 000102b6  Pr[row holds] 0
+      ===============n=====nun=uunn=n=  mod 000102ba  Pr[row holds] 0
+      ===============n=====nun=unuu=u=  mod 000102c6  Pr[row holds] 0
+      ===============n=====nun=unuu=n=  mod 000102ca  Pr[row holds] 0
+      ===============n=====nun=unun=u=  mod 000102d6  Pr[row holds] 0
+      ===============n=====nun=unun=n=  mod 000102da  Pr[row holds] 0
+      ===============n=====nun=unnu=u=  mod 000102e6  Pr[row holds] 0
+      ===============n=====nun=unnu=n=  mod 000102ea  Pr[row holds] 0
+      ===============n=====nun=unnn=u=  mod 000102f6  Pr[row holds] 0
+      ===============n=====nun=unnn=n=  mod 000102fa  Pr[row holds] 0
+      ===============n=====nun=nuuu=u=  mod 00010306  Pr[row holds] 0
+      ===============n=====nun=nuuu=n=  mod 0001030a  Pr[row holds] 0
+      ===============n=====nun=nuun=u=  mod 00010316  Pr[row holds] 0
+      ===============n=====nun=nuun=n=  mod 0001031a  Pr[row holds] 0
+      ===============n=====nun=nunu=u=  mod 00010326  Pr[row holds] 0
+      ===============n=====nun=nunu=n=  mod 0001032a  Pr[row holds] 0
+      ===============n=====nun=nunn=u=  mod 00010336  Pr[row holds] 0
+      ===============n=====nun=nunn=n=  mod 0001033a  Pr[row holds] 0
+      ===============n=====nun=nnuu=u=  mod 00010346  Pr[row holds] 0
+      ===============n=====nun=nnuu=n=  mod 0001034a  Pr[row holds] 0
+      ===============n=====nun=nnun=u=  mod 00010356  Pr[row holds] 0
+      ===============n=====nun=nnun=n=  mod 0001035a  Pr[row holds] 0
+      ===============n=====nun=nnnu=u=  mod 00010366  Pr[row holds] 0
+      ===============n=====nun=nnnu=n=  mod 0001036a  Pr[row holds] 0
+      ===============n=====nun=nnnn=u=  mod 00010376  Pr[row holds] 0
+      ===============n=====nun=nnnn=n=  mod 0001037a  Pr[row holds] 0
+      ===============n=====nnu=uuuu=u=  mod 00010486  Pr[row holds] 0
+      ===============n=====nnu=uuuu=n=  mod 0001048a  Pr[row holds] 0
+      ===============n=====nnu=uuun=u=  mod 00010496  Pr[row holds] 0
+      ===============n=====nnu=uuun=n=  mod 0001049a  Pr[row holds] 0
+      ===============n=====nnu=uunu=u=  mod 000104a6  Pr[row holds] 0
+      ===============n=====nnu=uunu=n=  mod 000104aa  Pr[row holds] 0
+      ===============n=====nnu=uunn=u=  mod 000104b6  Pr[row holds] 0
+      ===============n=====nnu=uunn=n=  mod 000104ba  Pr[row holds] 0
+      ===============n=====nnu=unuu=u=  mod 000104c6  Pr[row holds] 0
+      ===============n=====nnu=unuu=n=  mod 000104ca  Pr[row holds] 0
+      ===============n=====nnu=unun=u=  mod 000104d6  Pr[row holds] 0
+      ===============n=====nnu=unun=n=  mod 000104da  Pr[row holds] 0
+      ===============n=====nnu=unnu=u=  mod 000104e6  Pr[row holds] 0
+      ===============n=====nnu=unnu=n=  mod 000104ea  Pr[row holds] 0
+      ===============n=====nnu=unnn=u=  mod 000104f6  Pr[row holds] 0
+      ===============n=====nnu=unnn=n=  mod 000104fa  Pr[row holds] 0
+      ===============n=====nnu=nuuu=u=  mod 00010506  Pr[row holds] 0
+      ===============n=====nnu=nuuu=n=  mod 0001050a  Pr[row holds] 0
+      ===============n=====nnu=nuun=u=  mod 00010516  Pr[row holds] 0
+      ===============n=====nnu=nuun=n=  mod 0001051a  Pr[row holds] 0
+      ===============n=====nnu=nunu=u=  mod 00010526  Pr[row holds] 0
+      ===============n=====nnu=nunu=n=  mod 0001052a  Pr[row holds] 0
+      ===============n=====nnu=nunn=u=  mod 00010536  Pr[row holds] 0
+      ===============n=====nnu=nunn=n=  mod 0001053a  Pr[row holds] 0
+      ===============n=====nnu=nnuu=u=  mod 00010546  Pr[row holds] 0
+      ===============n=====nnu=nnuu=n=  mod 0001054a  Pr[row holds] 0
+      ===============n=====nnu=nnun=u=  mod 00010556  Pr[row holds] 0
+      ===============n=====nnu=nnun=n=  mod 0001055a  Pr[row holds] 0
+      ===============n=====nnu=nnnu=u=  mod 00010566  Pr[row holds] 0
+      ===============n=====nnu=nnnu=n=  mod 0001056a  Pr[row holds] 0
+      ===============n=====nnu=nnnn=u=  mod 00010576  Pr[row holds] 0
+      ===============n=====nnu=nnnn=n=  mod 0001057a  Pr[row holds] 0
+      ===============n=====nnn=uuuu=u=  mod 00010686  Pr[row holds] 0
+      ===============n=====nnn=uuuu=n=  mod 0001068a  Pr[row holds] 0
+      ===============n=====nnn=uuun=u=  mod 00010696  Pr[row holds] 0
+      ===============n=====nnn=uuun=n=  mod 0001069a  Pr[row holds] 0
+      ===============n=====nnn=uunu=u=  mod 000106a6  Pr[row holds] 0
+      ===============n=====nnn=uunu=n=  mod 000106aa  Pr[row holds] 0
+      ===============n=====nnn=uunn=u=  mod 000106b6  Pr[row holds] 0
+      ===============n=====nnn=uunn=n=  mod 000106ba  Pr[row holds] 0
+      ===============n=====nnn=unuu=u=  mod 000106c6  Pr[row holds] 0
+      ===============n=====nnn=unuu=n=  mod 000106ca  Pr[row holds] 0
+      ===============n=====nnn=unun=u=  mod 000106d6  Pr[row holds] 0
+      ===============n=====nnn=unun=n=  mod 000106da  Pr[row holds] 0
+      ===============n=====nnn=unnu=u=  mod 000106e6  Pr[row holds] 0
+      ===============n=====nnn=unnu=n=  mod 000106ea  Pr[row holds] 0
+      ===============n=====nnn=unnn=u=  mod 000106f6  Pr[row holds] 0
+      ===============n=====nnn=unnn=n=  mod 000106fa  Pr[row holds] 0
+      ===============n=====nnn=nuuu=u=  mod 00010706  Pr[row holds] 0
+      ===============n=====nnn=nuuu=n=  mod 0001070a  Pr[row holds] 0
+      ===============n=====nnn=nuun=u=  mod 00010716  Pr[row holds] 0
+      ===============n=====nnn=nuun=n=  mod 0001071a  Pr[row holds] 0
+      ===============n=====nnn=nunu=u=  mod 00010726  Pr[row holds] 0
+      ===============n=====nnn=nunu=n=  mod 0001072a  Pr[row holds] 0
+      ===============n=====nnn=nunn=u=  mod 00010736  Pr[row holds] 0
+      ===============n=====nnn=nunn=n=  mod 0001073a  Pr[row holds] 0
+      ===============n=====nnn=nnuu=u=  mod 00010746  Pr[row holds] 0
+      ===============n=====nnn=nnuu=n=  mod 0001074a  Pr[row holds] 0
+      ===============n=====nnn=nnun=u=  mod 00010756  Pr[row holds] 0
+      ===============n=====nnn=nnun=n=  mod 0001075a  Pr[row holds] 0
+      ===============n=====nnn=nnnu=u=  mod 00010766  Pr[row holds] 0
+      ===============n=====nnn=nnnu=n=  mod 0001076a  Pr[row holds] 0
+      ===============n=====nnn=nnnn=u=  mod 00010776  Pr[row holds] 0
+      ===============n=====nnn=nnnn=n=  mod 0001077a  Pr[row holds] 0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A16) + dMAJ(A16,A15,A14): 256 values over 16 free bits (EXACT enumeration)
+      X = 00000000  Pr 0.00390625
+      X = 00007f70  Pr 0.00390625
+      X = 00007f80  Pr 0.00390625
+      X = 00007ff0  Pr 0.00390625
+      X = 00008000  Pr 0.00390625
+      X = 0000ff70  Pr 0.00390625
+      X = 0000ff80  Pr 0.00390625
+      X = 0000fff0  Pr 0.00390625
+    needed X = 00010000 : Pr 0.00390625 (PROVED under the model)
+
+== row 18 ==
+  chi: dE18 0003fff0 dA18 00000000 dW18 00000000 dE14 08010000 dA14 f802ff70
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E17) + dCH(E17,E16,E15): 1 values over 1 free bits (EXACT enumeration)
+      X = 00000080  Pr 1   <- needed by the characteristic
+    needed X = 00000080 : Pr 1 (PROVED under the model)
+  words of row 18 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00000080 (Pr 1):
+    W18 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+    E14 needs modular difference 08010000
+    signed patterns of 08010000 with weight <= 6: 16 (probability mass 0.9062500000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ====n==========n================  xor 08010000  w  2  Pr 2^-2   <- characteristic
+      ====n=========nu================  xor 08030000  w  3  Pr 2^-3
+      ===nu==========n================  xor 18010000  w  3  Pr 2^-3
+      ====n========nuu================  xor 08070000  w  4  Pr 2^-4
+      ===nu=========nu================  xor 18030000  w  4  Pr 2^-4
+      ==nuu==========n================  xor 38010000  w  4  Pr 2^-4
+      ====n=======nuuu================  xor 080f0000  w  5  Pr 2^-5
+      ===nu========nuu================  xor 18070000  w  5  Pr 2^-5
+      ==nuu=========nu================  xor 38030000  w  5  Pr 2^-5
+      =nuuu==========n================  xor 78010000  w  5  Pr 2^-5
+      ====n======nuuuu================  xor 081f0000  w  6  Pr 2^-6
+      ===nu=======nuuu================  xor 180f0000  w  6  Pr 2^-6
+      ... 4 more
+    alternative signings of E_{t-4} (same XOR 08010000, 4 signings):
+      ====u==========u================  mod f7ff0000  Pr[row holds] 0
+      ====u==========n================  mod f8010000  Pr[row holds] 0
+      ====n==========u================  mod 07ff0000  Pr[row holds] 0
+      ====n==========n================  mod 08010000  Pr[row holds] 1   <- characteristic
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A17) + dMAJ(A17,A16,A15): 8192 values over 24 free bits (EXACT enumeration)
+      X = 0778fc80  Pr 0.00012207
+      X = 0778fd80  Pr 0.00012207
+      X = 0778fe80  Pr 0.00012207
+      X = 0778ff80  Pr 0.00012207
+      X = 07790080  Pr 0.00012207
+      X = 07790180  Pr 0.00012207
+      X = 07790280  Pr 0.00012207
+      X = 07790380  Pr 0.00012207
+    needed X = f7feff80 : Pr 0.00012207 (PROVED under the model)
+
+== row 19 ==
+  chi: dE19 01808000 dA19 00000000 dW19 00000000 dE15 fffff880 dA15 01808000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E18) + dCH(E18,E17,E16): 18 values over 6 free bits (EXACT enumeration)
+      X = 00000780  Pr 0.125   <- needed by the characteristic
+      X = 00000880  Pr 0.125
+      X = 00000770  Pr 0.0625
+      X = 00000790  Pr 0.0625
+      X = 00000870  Pr 0.0625
+      X = 00000890  Pr 0.0625
+      X = 00040780  Pr 0.0625
+      X = 00040880  Pr 0.0625
+    needed X = 00000780 : Pr 0.125 (PROVED under the model)
+  words of row 19 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00000780 (Pr 0.125):
+    W19 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+    E15 needs modular difference fffff880
+    signed patterns of fffff880 with weight <= 6: 15 (probability mass 0.9375000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ====================u===n=======  xor 00000880  w  2  Pr 2^-2   <- characteristic
+      ====================u==nu=======  xor 00000980  w  3  Pr 2^-3
+      ===================un===n=======  xor 00001880  w  3  Pr 2^-3
+      =====================uuuu=======  xor 00000780  w  4  Pr 2^-4
+      ====================u=nuu=======  xor 00000b80  w  4  Pr 2^-4
+      ===================un==nu=======  xor 00001980  w  4  Pr 2^-4
+      ==================unn===n=======  xor 00003880  w  4  Pr 2^-4
+      ====================unuuu=======  xor 00000f80  w  5  Pr 2^-5
+      ===================un=nuu=======  xor 00001b80  w  5  Pr 2^-5
+      ==================unn==nu=======  xor 00003980  w  5  Pr 2^-5
+      =================unnn===n=======  xor 00007880  w  5  Pr 2^-5
+      ===================unnuuu=======  xor 00001f80  w  6  Pr 2^-6
+      ... 3 more
+   X = 00000880 (Pr 0.125):
+    W19 needs modular difference ffffff00
+    signed patterns of ffffff00 with weight <= 6: 6 (probability mass 0.9843750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =======================u========  xor 00000100  w  1  Pr 2^-1
+      ======================un========  xor 00000300  w  2  Pr 2^-2
+      =====================unn========  xor 00000700  w  3  Pr 2^-3
+      ====================unnn========  xor 00000f00  w  4  Pr 2^-4
+      ===================unnnn========  xor 00001f00  w  5  Pr 2^-5
+      ==================unnnnn========  xor 00003f00  w  6  Pr 2^-6
+    E15 needs modular difference fffff780
+    signed patterns of fffff780 with weight <= 6: 16 (probability mass 0.9218750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ====================u===u=======  xor 00000880  w  2  Pr 2^-2
+      ====================u==un=======  xor 00000980  w  3  Pr 2^-3
+      ===================un===u=======  xor 00001880  w  3  Pr 2^-3
+      ====================u=unn=======  xor 00000b80  w  4  Pr 2^-4
+      ===================un==un=======  xor 00001980  w  4  Pr 2^-4
+      ==================unn===u=======  xor 00003880  w  4  Pr 2^-4
+      ====================uunnn=======  xor 00000f80  w  5  Pr 2^-5
+      ===================u=nnnn=======  xor 00001780  w  5  Pr 2^-5
+      ===================un=unn=======  xor 00001b80  w  5  Pr 2^-5
+      ==================unn==un=======  xor 00003980  w  5  Pr 2^-5
+      =================unnn===u=======  xor 00007880  w  5  Pr 2^-5
+      ===================ununnn=======  xor 00001f80  w  6  Pr 2^-6
+      ... 4 more
+   X = 00000770 (Pr 0.0625):
+    W19 needs modular difference 00000010
+    signed patterns of 00000010 with weight <= 6: 6 (probability mass 0.9843750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ===========================n====  xor 00000010  w  1  Pr 2^-1
+      ==========================nu====  xor 00000030  w  2  Pr 2^-2
+      =========================nuu====  xor 00000070  w  3  Pr 2^-3
+      ========================nuuu====  xor 000000f0  w  4  Pr 2^-4
+      =======================nuuuu====  xor 000001f0  w  5  Pr 2^-5
+      ======================nuuuuu====  xor 000003f0  w  6  Pr 2^-6
+    E15 needs modular difference fffff890
+    signed patterns of fffff890 with weight <= 6: 25 (probability mass 0.7656250000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ====================u===n==n====  xor 00000890  w  3  Pr 2^-3
+      ====================u===n=nu====  xor 000008b0  w  4  Pr 2^-4
+      ====================u==nu==n====  xor 00000990  w  4  Pr 2^-4
+      ===================un===n==n====  xor 00001890  w  4  Pr 2^-4
+      =====================uuuu==n====  xor 00000790  w  5  Pr 2^-5
+      ====================u===nnuu====  xor 000008f0  w  5  Pr 2^-5
+      ====================u==n=uuu====  xor 00000970  w  5  Pr 2^-5
+      ====================u==nu=nu====  xor 000009b0  w  5  Pr 2^-5
+      ====================u=nuu==n====  xor 00000b90  w  5  Pr 2^-5
+      ===================un===n=nu====  xor 000018b0  w  5  Pr 2^-5
+      ===================un==nu==n====  xor 00001990  w  5  Pr 2^-5
+      ==================unn===n==n====  xor 00003890  w  5  Pr 2^-5
+      ... 13 more
+    alternative signings of E_{t-4} (same XOR 00000880, 4 signings):
+      ====================u===u=======  mod fffff780  Pr[row holds] 0.125
+      ====================u===n=======  mod fffff880  Pr[row holds] 0.125   <- characteristic
+      ====================n===u=======  mod 00000780  Pr[row holds] 0
+      ====================n===n=======  mod 00000880  Pr[row holds] 0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A18) + dMAJ(A18,A17,A16): 8 values over 6 free bits (EXACT enumeration)
+      X = 00000000  Pr 0.125   <- needed by the characteristic
+      X = 20000000  Pr 0.125
+      X = 40000000  Pr 0.125
+      X = 60000000  Pr 0.125
+      X = 80000000  Pr 0.125
+      X = a0000000  Pr 0.125
+      X = c0000000  Pr 0.125
+      X = e0000000  Pr 0.125
+    needed X = 00000000 : Pr 0.125 (PROVED under the model)
+
+== row 20 ==
+  chi: dE20 00000000 dA20 00000000 dW20 00000000 dE16 c03e0e00 dA16 00000000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E19) + dCH(E19,E18,E17): 36 values over 10 free bits (EXACT enumeration)
+      X = 3fc1ee00  Pr 0.0625
+      X = 3fc1f200  Pr 0.0625   <- needed by the characteristic
+      X = 3fc22e00  Pr 0.0625
+      X = 3fc23200  Pr 0.0625
+      X = 3ec1ee00  Pr 0.03125
+      X = 3ec1f200  Pr 0.03125
+      X = 3ec22e00  Pr 0.03125
+      X = 3ec23200  Pr 0.03125
+    needed X = 3fc1f200 : Pr 0.0625 (PROVED under the model)
+  words of row 20 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 3fc1ee00 (Pr 0.0625):
+    W20 needs modular difference 00000400
+    signed patterns of 00000400 with weight <= 6: 6 (probability mass 0.9843750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =====================n==========  xor 00000400  w  1  Pr 2^-1
+      ====================nu==========  xor 00000c00  w  2  Pr 2^-2
+      ===================nuu==========  xor 00001c00  w  3  Pr 2^-3
+      ==================nuuu==========  xor 00003c00  w  4  Pr 2^-4
+      =================nuuuu==========  xor 00007c00  w  5  Pr 2^-5
+      ================nuuuuu==========  xor 0000fc00  w  6  Pr 2^-6
+    E16 needs modular difference c03e1200
+    signed patterns of c03e1200 with weight <= 6: 7 (probability mass 0.1250000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =u=======n====u====n==n=========  xor 40421200  w  5  Pr 2^-5
+      =u=======n====u====n=nu=========  xor 40421600  w  6  Pr 2^-6
+      =u=======n====u===nu==n=========  xor 40423200  w  6  Pr 2^-6
+      =u=======n===un====n==n=========  xor 40461200  w  6  Pr 2^-6
+      =u======nu====u====n==n=========  xor 40c21200  w  6  Pr 2^-6
+      nn=======n====u====n==n=========  xor c0421200  w  6  Pr 2^-6
+      un=======n====u====n==n=========  xor c0421200  w  6  Pr 2^-6
+   X = 3fc1f200 (Pr 0.0625):
+    W20 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+    E16 needs modular difference c03e0e00
+    signed patterns of c03e0e00 with weight <= 6: 8 (probability mass 0.1406250000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =u=======n====u====n==u=========  xor 40421200  w  5  Pr 2^-5   <- characteristic
+      =u=======n====u=====nnn=========  xor 40420e00  w  6  Pr 2^-6
+      =u=======n====u====n=un=========  xor 40421600  w  6  Pr 2^-6
+      =u=======n====u===nu==u=========  xor 40423200  w  6  Pr 2^-6
+      =u=======n===un====n==u=========  xor 40461200  w  6  Pr 2^-6
+      =u======nu====u====n==u=========  xor 40c21200  w  6  Pr 2^-6
+      nn=======n====u====n==u=========  xor c0421200  w  6  Pr 2^-6
+      un=======n====u====n==u=========  xor c0421200  w  6  Pr 2^-6
+   X = 3fc22e00 (Pr 0.0625):
+    W20 needs modular difference ffffc400
+    signed patterns of ffffc400 with weight <= 6: 15 (probability mass 0.9375000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =================u===n==========  xor 00004400  w  2  Pr 2^-2
+      =================u==nu==========  xor 00004c00  w  3  Pr 2^-3
+      ================un===n==========  xor 0000c400  w  3  Pr 2^-3
+      ==================uuuu==========  xor 00003c00  w  4  Pr 2^-4
+      =================u=nuu==========  xor 00005c00  w  4  Pr 2^-4
+      ================un==nu==========  xor 0000cc00  w  4  Pr 2^-4
+      ===============unn===n==========  xor 0001c400  w  4  Pr 2^-4
+      =================unuuu==========  xor 00007c00  w  5  Pr 2^-5
+      ================un=nuu==========  xor 0000dc00  w  5  Pr 2^-5
+      ===============unn==nu==========  xor 0001cc00  w  5  Pr 2^-5
+      ==============unnn===n==========  xor 0003c400  w  5  Pr 2^-5
+      ================unnuuu==========  xor 0000fc00  w  6  Pr 2^-6
+      ... 3 more
+    E16 needs modular difference c03dd200
+    signed patterns of c03dd200 with weight <= 6: 2 (probability mass 0.0312500000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =u=======n====u===uu==n=========  xor 40423200  w  6  Pr 2^-6
+      =u=======n====u==u=n==n=========  xor 40425200  w  6  Pr 2^-6
+    alternative signings of E_{t-4} (same XOR 40421200, 32 signings):
+      =u=======u====u====u==u=========  mod bfbdee00  Pr[row holds] 0
+      =u=======u====u====u==n=========  mod bfbdf200  Pr[row holds] 0
+      =u=======u====u====n==u=========  mod bfbe0e00  Pr[row holds] 0
+      =u=======u====u====n==n=========  mod bfbe1200  Pr[row holds] 0
+      =u=======u====n====u==u=========  mod bfc1ee00  Pr[row holds] 0
+      =u=======u====n====u==n=========  mod bfc1f200  Pr[row holds] 0
+      =u=======u====n====n==u=========  mod bfc20e00  Pr[row holds] 0
+      =u=======u====n====n==n=========  mod bfc21200  Pr[row holds] 0
+      =u=======n====u====u==u=========  mod c03dee00  Pr[row holds] 0
+      =u=======n====u====u==n=========  mod c03df200  Pr[row holds] 0
+      =u=======n====u====n==u=========  mod c03e0e00  Pr[row holds] 0.0625   <- characteristic
+      =u=======n====u====n==n=========  mod c03e1200  Pr[row holds] 0.0625
+      =u=======n====n====u==u=========  mod c041ee00  Pr[row holds] 0
+      =u=======n====n====u==n=========  mod c041f200  Pr[row holds] 0
+      =u=======n====n====n==u=========  mod c0420e00  Pr[row holds] 0
+      =u=======n====n====n==n=========  mod c0421200  Pr[row holds] 0
+      =n=======u====u====u==u=========  mod 3fbdee00  Pr[row holds] 0
+      =n=======u====u====u==n=========  mod 3fbdf200  Pr[row holds] 0
+      =n=======u====u====n==u=========  mod 3fbe0e00  Pr[row holds] 0
+      =n=======u====u====n==n=========  mod 3fbe1200  Pr[row holds] 0
+      =n=======u====n====u==u=========  mod 3fc1ee00  Pr[row holds] 0
+      =n=======u====n====u==n=========  mod 3fc1f200  Pr[row holds] 0
+      =n=======u====n====n==u=========  mod 3fc20e00  Pr[row holds] 0
+      =n=======u====n====n==n=========  mod 3fc21200  Pr[row holds] 0
+      =n=======n====u====u==u=========  mod 403dee00  Pr[row holds] 0
+      =n=======n====u====u==n=========  mod 403df200  Pr[row holds] 0
+      =n=======n====u====n==u=========  mod 403e0e00  Pr[row holds] 0
+      =n=======n====u====n==n=========  mod 403e1200  Pr[row holds] 0
+      =n=======n====n====u==u=========  mod 4041ee00  Pr[row holds] 0
+      =n=======n====n====u==n=========  mod 4041f200  Pr[row holds] 0
+      =n=======n====n====n==u=========  mod 40420e00  Pr[row holds] 0
+      =n=======n====n====n==n=========  mod 40421200  Pr[row holds] 0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A19) + dMAJ(A19,A18,A17): 8 values over 6 free bits (EXACT enumeration)
+      X = 00000000  Pr 0.125   <- needed by the characteristic
+      X = 20000000  Pr 0.125
+      X = 40000000  Pr 0.125
+      X = 60000000  Pr 0.125
+      X = 80000000  Pr 0.125
+      X = a0000000  Pr 0.125
+      X = c0000000  Pr 0.125
+      X = e0000000  Pr 0.125
+    needed X = 00000000 : Pr 0.125 (PROVED under the model)
+
+== row 21 ==
+  chi: dE21 e0000000 dA21 00000000 dW21 00000000 dE17 00000000 dA17 e0000000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E20) + dCH(E20,E19,E18): 1 values over 2 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+  words of row 21 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00000000 (Pr 1):
+    W21 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+    E17 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A20) + dMAJ(A20,A19,A18): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+
+== row 22 ==
+  chi: dE22 00000000 dA22 00000000 dW22 00000000 dE18 0003fff0 dA18 00000000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E21) + dCH(E21,E20,E19): 2 values over 2 free bits (EXACT enumeration)
+      X = 00fc0010  Pr 0.5
+      X = fffc0010  Pr 0.5   <- needed by the characteristic
+    needed X = fffc0010 : Pr 0.5 (PROVED under the model)
+  words of row 22 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00fc0010 (Pr 0.5):
+    W22 needs modular difference ff000000
+    signed patterns of ff000000 with weight <= 6: 6 (probability mass 0.9843750000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =======u========================  xor 01000000  w  1  Pr 2^-1
+      ======un========================  xor 03000000  w  2  Pr 2^-2
+      =====unn========================  xor 07000000  w  3  Pr 2^-3
+      ====unnn========================  xor 0f000000  w  4  Pr 2^-4
+      ===unnnn========================  xor 1f000000  w  5  Pr 2^-5
+      ==unnnnn========================  xor 3f000000  w  6  Pr 2^-6
+    E18 needs modular difference ff03fff0
+    signed patterns of ff03fff0 with weight <= 6: 20 (probability mass 0.6562500000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =======u=====n=============u====  xor 01040010  w  3  Pr 2^-3
+      =======u=====n============un====  xor 01040030  w  4  Pr 2^-4
+      =======u====nu=============u====  xor 010c0010  w  4  Pr 2^-4
+      ======un=====n=============u====  xor 03040010  w  4  Pr 2^-4
+      =======u=====n===========unn====  xor 01040070  w  5  Pr 2^-5
+      =======u====nu============un====  xor 010c0030  w  5  Pr 2^-5
+      =======u===nuu=============u====  xor 011c0010  w  5  Pr 2^-5
+      ======un=====n============un====  xor 03040030  w  5  Pr 2^-5
+      ======un====nu=============u====  xor 030c0010  w  5  Pr 2^-5
+      =====unn=====n=============u====  xor 07040010  w  5  Pr 2^-5
+      =======u=====n==========unnn====  xor 010400f0  w  6  Pr 2^-6
+      =======u====nu===========unn====  xor 010c0070  w  6  Pr 2^-6
+      ... 8 more
+   X = fffc0010 (Pr 0.5):
+    W22 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+    E18 needs modular difference 0003fff0
+    signed patterns of 0003fff0 with weight <= 6: 15 (probability mass 0.8906250000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =============n=============u====  xor 00040010  w  2  Pr 2^-2   <- characteristic
+      =============n============un====  xor 00040030  w  3  Pr 2^-3
+      ============nu=============u====  xor 000c0010  w  3  Pr 2^-3
+      =============n===========unn====  xor 00040070  w  4  Pr 2^-4
+      ============nu============un====  xor 000c0030  w  4  Pr 2^-4
+      ===========nuu=============u====  xor 001c0010  w  4  Pr 2^-4
+      =============n==========unnn====  xor 000400f0  w  5  Pr 2^-5
+      ============nu===========unn====  xor 000c0070  w  5  Pr 2^-5
+      ===========nuu============un====  xor 001c0030  w  5  Pr 2^-5
+      ==========nuuu=============u====  xor 003c0010  w  5  Pr 2^-5
+      =============n=========unnnn====  xor 000401f0  w  6  Pr 2^-6
+      ============nu==========unnn====  xor 000c00f0  w  6  Pr 2^-6
+      ... 3 more
+    alternative signings of E_{t-4} (same XOR 00040010, 4 signings):
+      =============u=============u====  mod fffbfff0  Pr[row holds] 0
+      =============u=============n====  mod fffc0010  Pr[row holds] 0
+      =============n=============u====  mod 0003fff0  Pr[row holds] 0.5   <- characteristic
+      =============n=============n====  mod 00040010  Pr[row holds] 0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A21) + dMAJ(A21,A20,A19): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+
+== row 23 ==
+  chi: dE23 00000000 dA23 00000000 dW23 fe7f8000 dE19 01808000 dA19 00000000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E22) + dCH(E22,E21,E20): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+  words of row 23 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00000000 (Pr 1):
+    W23 needs modular difference fe7f8000
+    signed patterns of fe7f8000 with weight <= 6: 20 (probability mass 0.8125000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =======uu=======u===============  xor 01808000  w  3  Pr 2^-3   <- characteristic
+      ======u=n=======u===============  xor 02808000  w  3  Pr 2^-3
+      =======uu======un===============  xor 01818000  w  4  Pr 2^-4
+      ======u=n======un===============  xor 02818000  w  4  Pr 2^-4
+      ======unu=======u===============  xor 03808000  w  4  Pr 2^-4
+      =====un=n=======u===============  xor 06808000  w  4  Pr 2^-4
+      =======uu=====unn===============  xor 01838000  w  5  Pr 2^-5
+      ======u=n=====unn===============  xor 02838000  w  5  Pr 2^-5
+      ======unu======un===============  xor 03818000  w  5  Pr 2^-5
+      =====un=n======un===============  xor 06818000  w  5  Pr 2^-5
+      =====unnu=======u===============  xor 07808000  w  5  Pr 2^-5
+      ====unn=n=======u===============  xor 0e808000  w  5  Pr 2^-5
+      ... 8 more
+    E19 needs modular difference 01808000
+    signed patterns of 01808000 with weight <= 6: 20 (probability mass 0.8125000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      =======nn=======n===============  xor 01808000  w  3  Pr 2^-3   <- characteristic
+      ======n=u=======n===============  xor 02808000  w  3  Pr 2^-3
+      =======nn======nu===============  xor 01818000  w  4  Pr 2^-4
+      ======n=u======nu===============  xor 02818000  w  4  Pr 2^-4
+      ======nun=======n===============  xor 03808000  w  4  Pr 2^-4
+      =====nu=u=======n===============  xor 06808000  w  4  Pr 2^-4
+      =======nn=====nuu===============  xor 01838000  w  5  Pr 2^-5
+      ======n=u=====nuu===============  xor 02838000  w  5  Pr 2^-5
+      ======nun======nu===============  xor 03818000  w  5  Pr 2^-5
+      =====nu=u======nu===============  xor 06818000  w  5  Pr 2^-5
+      =====nuun=======n===============  xor 07808000  w  5  Pr 2^-5
+      ====nuu=u=======n===============  xor 0e808000  w  5  Pr 2^-5
+      ... 8 more
+    alternative signings of W_t (same XOR 01808000, 8 signings):
+      =======uu=======u===============  mod fe7f8000  Pr[row holds] 1   <- characteristic
+      =======uu=======n===============  mod fe808000  Pr[row holds] 0
+      =======un=======u===============  mod ff7f8000  Pr[row holds] 0
+      =======un=======n===============  mod ff808000  Pr[row holds] 0
+      =======nu=======u===============  mod 007f8000  Pr[row holds] 0
+      =======nu=======n===============  mod 00808000  Pr[row holds] 0
+      =======nn=======u===============  mod 017f8000  Pr[row holds] 0
+      =======nn=======n===============  mod 01808000  Pr[row holds] 0
+    alternative signings of E_{t-4} (same XOR 01808000, 8 signings):
+      =======uu=======u===============  mod fe7f8000  Pr[row holds] 0
+      =======uu=======n===============  mod fe808000  Pr[row holds] 0
+      =======un=======u===============  mod ff7f8000  Pr[row holds] 0
+      =======un=======n===============  mod ff808000  Pr[row holds] 0
+      =======nu=======u===============  mod 007f8000  Pr[row holds] 0
+      =======nu=======n===============  mod 00808000  Pr[row holds] 0
+      =======nn=======u===============  mod 017f8000  Pr[row holds] 0
+      =======nn=======n===============  mod 01808000  Pr[row holds] 1   <- characteristic
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A22) + dMAJ(A22,A21,A20): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+
+== row 24 ==
+  chi: dE24 00000000 dA24 00000000 dW24 00000000 dE20 00000000 dA20 00000000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E23) + dCH(E23,E22,E21): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+  words of row 24 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00000000 (Pr 1):
+    W24 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+    E20 needs modular difference 00000000
+    signed patterns of 00000000 with weight <= 6: 1 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ================================  xor 00000000  w  0  Pr 2^-0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A23) + dMAJ(A23,A22,A21): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+
+== row 25 ==
+  chi: dE25 00000000 dA25 00000000 dW25 20000000 dE21 e0000000 dA21 00000000
+  E equation dE_t = dA_{t-4} + dE_{t-4} + X + dW_t: XE = dS1(E24) + dCH(E24,E23,E22): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+  words of row 25 that can produce it (other words as in the characteristic), for the most likely X values:
+   X = 00000000 (Pr 1):
+    W25 needs modular difference 20000000
+    signed patterns of 20000000 with weight <= 6: 4 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ==n=============================  xor 20000000  w  1  Pr 2^-1   <- characteristic
+      =nu=============================  xor 60000000  w  2  Pr 2^-2
+      nuu=============================  xor e0000000  w  3  Pr 2^-3
+      uuu=============================  xor e0000000  w  3  Pr 2^-3
+    E21 needs modular difference e0000000
+    signed patterns of e0000000 with weight <= 6: 4 (probability mass 1.0000000000 of the 2^32 words x; PROVED: Pr = 2^-weight each)
+      ==u=============================  xor 20000000  w  1  Pr 2^-1   <- characteristic
+      =un=============================  xor 60000000  w  2  Pr 2^-2
+      nnn=============================  xor e0000000  w  3  Pr 2^-3
+      unn=============================  xor e0000000  w  3  Pr 2^-3
+    alternative signings of W_t (same XOR 20000000, 2 signings):
+      ==u=============================  mod e0000000  Pr[row holds] 0
+      ==n=============================  mod 20000000  Pr[row holds] 1   <- characteristic
+    alternative signings of E_{t-4} (same XOR 20000000, 2 signings):
+      ==u=============================  mod e0000000  Pr[row holds] 1   <- characteristic
+      ==n=============================  mod 20000000  Pr[row holds] 0
+  A equation dA_t = dE_t - dA_{t-4} + X: XA = dS0(A24) + dMAJ(A24,A23,A22): 1 values over 0 free bits (EXACT enumeration)
+      X = 00000000  Pr 1   <- needed by the characteristic
+    needed X = 00000000 : Pr 1 (PROVED under the model)
+
+== message schedule: dW_t = ds1(W_{t-2}) + dW_{t-7} + ds0(W_{t-15}) + dW_{t-16} ==
+  base words W0..W15: modular difference = published y - x (held by construction); sigma terms constant when the word is fixed, or in an F-set of that sigma
+  W16: dW = e0000000 PROVED +dW9(e0000000); characteristic e0000000 (agrees)
+  W17: dW = 00000000 PROVED +ds1(W15)=fcfeed6a[fixed] +dW10(03011296); characteristic 00000000 (agrees)
+  W18: characteristic 00000000 = +ds1(W16)[value-dependent, dW16=e0000000] +dW11(fff7ec00) ; requires s1(W16 + e0000000) - s1(W16) = 00081400
+  W19: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W20: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W21: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W22: dW = 00000000 PROVED +dW15(fc400800) +ds0(W7)=03bff800[F-set]; characteristic 00000000 (agrees)
+  W23: characteristic fe7f8000 = +dW16(e0000000) +ds0(W8)[value-dependent, dW8=fbc00800] +dW7(20000000) ; requires s0(W8 + fbc00800) - s0(W8) = fe7f8000
+  W24: dW = 00000000 PROVED +ds0(W9)=043ff800[fixed] +dW8(fbc00800); characteristic 00000000 (agrees)
+  W25: characteristic 20000000 = +ds1(W23)[value-dependent, dW23=fe7f8000] +ds0(W10)=efffa0d0[fixed] +dW9(e0000000) ; requires s1(W23 + fe7f8000) - s1(W23) = 50005f30
+  W26: dW = 00000000 PROVED +ds0(W11)=fcfeed6a[fixed] +dW10(03011296); characteristic 00000000 (agrees)
+  W27: characteristic 00000000 = +ds1(W25)[value-dependent, dW25=20000000] +dW11(fff7ec00) ; requires s1(W25 + 20000000) - s1(W25) = 00081400
+  W28: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W29: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W30: dW = 00000000 PROVED +dW23(fe7f8000) +ds0(W15)=01808000[fixed]; characteristic 00000000 (agrees)
+  W31: characteristic 00000000 = +ds0(W16)[value-dependent, dW16=e0000000] +dW15(fc400800) ; requires s0(W16 + e0000000) - s0(W16) = 03bff800
+  W32: dW = 00000000 PROVED +dW25(20000000) +dW16(e0000000); characteristic 00000000 (agrees)
+  W33: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W34: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W35: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W36: dW = 00000000 PROVED; characteristic 00000000 (agrees)
+  W37: dW = 00000000 PROVED; characteristic 00000000 (agrees)

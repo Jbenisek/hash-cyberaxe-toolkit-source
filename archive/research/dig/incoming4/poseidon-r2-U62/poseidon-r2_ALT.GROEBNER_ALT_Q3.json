@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.GROEBNER (ALT)",
+ "question": "Q3: degrees of freedom of the elimination",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "After the two-free-round skip one variable remains; elimination of the tail variables is a composition of degree-5 polynomials, giving exactly the univariate F of degree 5^8. A resultant of F(a) - F(b) over (a - b) has degree 390,624 per variable: no cheaper than the odd-part gcd.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": false,
+ "evidence": "research/poseidon/orchard/math/degree_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.GROEBNER|ALT|Q3. Argument from the degree count; the 390,625 degree itself was confirmed in degree_r2.txt (fresh-point Horner check True for j = 0,1,2).",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "a resultant structure with low-degree factors"
+}

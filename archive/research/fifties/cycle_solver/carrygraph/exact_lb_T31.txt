@@ -1,0 +1,4 @@
+  progress 16: 576263 states
+  progress 32: 484450 states
+  progress 48: 2442 states
+T=31: unreachable (no order with level <= 31; died at total progress 55)

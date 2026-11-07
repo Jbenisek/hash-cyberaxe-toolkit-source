@@ -1,0 +1,35 @@
+model chi38: 38 steps, anchor row 13 (x and y rows 10..13 held), E-driven rows 16..21, lowest conditioned row 6
+  conditions: 47 two-bit/linear (printed), 44 in the attack model; 'except' words: W7
+  free word W6 (late): W6 rand late
+  free word W7 (late): W7 fset s0 03bff800 late
+  free word W8 (late): W8 cell late
+  relaxation E19coset
+  relaxation W23free
+WINDOW rows 22..37 event=out np 4096 m 256 mt2 1024 mw 256 mt 8192 threads 3 prefix-conditions cells
+-- seed 9301
+  init: 4096 particles, acceptance 1.000000 (rows 14..15)
+  E16 set under the prefix conditions: 32 values (enumerated 2^22 candidates)
+  stage 16 (E-driven, list of 32): accepted 1048576 of 1048576, log2 est -27.0000
+  stage 17 (E-driven): forced  8 bits, accepted 2058 of 1048576, log2 est -43.9930
+  stage 18 (E-driven): forced  9 bits, accepted 65420 of 1048576, log2 est -56.9955
+  stage 19 (E-driven): forced 12 bits, accepted 131098 of 1048576, log2 est -71.9952
+  stage 20 (E-driven): forced  6 bits, accepted 1048576 of 1048576, log2 est -77.9952
+  stage 21 (E-driven): forced  6 bits, accepted 524368 of 1048576, log2 est -84.9950
+[s9301] prefix log2 P(rows 6..21) = -84.9950
+[s9301] samples 33554432 (late words redrawn per sample), prefix broken by redraw 0, y-anchor inconsistent 0, replay mismatches 0
+[s9301]   cells          rows 22..37:          519  rate 1.546741e-05 (log2 -15.9804) 95% [1.4193e-05, 1.6857e-05]  with exact 519
+[s9301]   W23x2          rows 22..37:          519  rate 1.546741e-05 (log2 -15.9804) 95% [1.4193e-05, 1.6857e-05]  with exact 519
+[s9301]   W23all         rows 22..37:          739  rate 2.202392e-05 (log2 -15.4706) 95% [2.0492e-05, 2.3670e-05]  with exact 739
+[s9301]   W23optest      rows 22..37:          739  rate 2.202392e-05 (log2 -15.4706) 95% [2.0492e-05, 2.3670e-05]  with exact 739
+[s9301]   W23opp         rows 22..37:            0  rate 0.000000e+00 (log2     -inf) 95% [-2.6682e-24, 1.1449e-07]  with exact 0
+[s9301]   EXACT          zero output difference after the last step:         1320  rate 3.933907e-05 (log2 -14.6337) 95% [3.7273e-05, 4.1519e-05]
+[s9301]   ratios to 'cells' (95% cluster-robust over particles; halves = particles split in two):
+[s9301]     EXACT/cells = 2.54335 +- 0.17281  (log2 +1.3467)  halves 2.51362 +- 0.23987 | 2.57252 +- 0.24885
+[s9301]     W23x2/cells = 1.00000 +- 0.00000  (log2 +0.0000)  halves 1.00000 +- 0.00000 | 1.00000 +- 0.00000
+[s9301]     W23all/cells = 1.42389 +- 0.06852  (log2 +0.5098)  halves 1.44358 +- 0.10004 | 1.40458 +- 0.09384
+[s9301]     W23optest/cells = 1.42389 +- 0.06852  (log2 +0.5098)  halves 1.44358 +- 0.10004 | 1.40458 +- 0.09384
+[s9301]     W23opp/cells = 0.00000 +- 0.00000  (log2 -inf)  halves 0.00000 +- 0.00000 | 0.00000 +- 0.00000
+[s9301]   log2 P(rows 6..37, model cells) = prefix + log2 rate(cells) = -100.9754
+[s9301]   time 22.2 s
+== summary over 1 seed(s): EXACT/cells 2.54335 +- 0.17281 ; W23x2/cells 1.00000 +- 0.00000 ; W23all/cells 1.42389 +- 0.06852 ; W23optest/cells 1.42389 +- 0.06852 ; W23opp/cells 0.00000 +- 0.00000
+== summary: log2 P(rows 6..37, model cells) mean -100.9754, seed sd 0.0000 (seeds: -100.9754)

@@ -1,0 +1,6 @@
+REFERENCE-ONLY RECORD
+External paper text or downloaded page: citation only.
+The imported payload is not distributed by this library.
+Original project sources and local reference copies are unchanged.
+Reference: research/papers/sha2_collision/eprint_2024_349/paper.txt
+Publisher/preprint locator (derived from the source identifier): https://eprint.iacr.org/2024/349

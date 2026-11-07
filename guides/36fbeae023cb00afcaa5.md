@@ -1,0 +1,28 @@
+# line
+
+Source: `research/poseidon/orchard/tf_test/line.c`
+
+Public SHA-256: `a14a508719b964b7cc099e70bc782ed0b5115f15dbc5399d536fb21e92cc9a26`
+
+## Purpose recorded in the source
+
+include "attack.h"
+include "pallas_consts.h"
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+- research/poseidon/orchard/tf_test/proof_template.md
+- research/poseidon/d189_gpu_results.jsonl
+- research/poseidon/d192_r2_results.jsonl
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

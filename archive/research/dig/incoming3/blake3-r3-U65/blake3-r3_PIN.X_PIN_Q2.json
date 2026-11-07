@@ -1,0 +1,24 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "chain input words m8..m15 = x (identity embedding)",
+ "question": "Q2: necessity (change it, recount the exact outcome)",
+ "labels": [
+  "N",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "Placement of x changed. x in words s..s+7 (rest zero, blen = 4s+32): ops 706/691/680/666/653/636/624/610/595 for s = 0..8; the filed s = 8 is the unique minimum. All 16 words variable: 730 ops. Unaligned (x shifted 1..3 bytes, s = 7, 9 words touched with shifts): 644 ops. Fewer variable words is impossible: the chain feeds all 256 digest bits back (identity embedding) and fewer input bits would make the iterated map not a map on the digest space.",
+ "topic": "b3r3.PIN.X.Q2",
+ "notes": "universe cell blake3-r3|PIN.X|PIN|Q2. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Aligned layouts traced and checked against scalar compress (check true for all nine).",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "a legal value or layout that gives fewer than 595 ops per 7-lane batch, or a ledger line that charges a different count"
+}

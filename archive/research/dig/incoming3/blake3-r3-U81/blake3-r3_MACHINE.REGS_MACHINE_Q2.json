@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "register count",
+ "question": "Q2 necessity: smallest register count with no loads or stores in the main loop (exact liveness)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "The 595-operation batch plus the 4 filter operations, 3-address form with immediates free and the 8 digest registers loop-carried: exact peak of simultaneously live 256-bit values = 25 (profile max 25, mean 21.5); Belady eviction needs R >= 25 for zero loads/stores (R=24: 2 loads, +0.0048 bit). Lower-bound reading: 16 state words + 8 live message words + 1 temporary. The entry's remark 'fewer than about 40 registers would need loads and stores' is not what the code needs: 25 plus the loop counter and a few control values (about 30) suffice; the organizer text is silent on register count, 64 is the entry's stated machine.",
+ "evidence": "research/dig/incoming3/blake3-r3-U81/work/regs.py, research/dig/incoming3/blake3-r3-U81/work/regs.out",
+ "notes": "universe cell blake3-r3|MACHINE.REGS|MACHINE|Q2. Liveness on the emitted order; the register assignment is not emitted as machine code.",
+ "held_fixed": "emitted 595-operation order, 3-address, immediates free, digest registers loop-carried",
+ "reopen_if": "a register file below 25 in the cost model",
+ "gain_basis": "count"
+}

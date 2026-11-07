@@ -1,0 +1,1 @@
+targets 20000 mismatch 0

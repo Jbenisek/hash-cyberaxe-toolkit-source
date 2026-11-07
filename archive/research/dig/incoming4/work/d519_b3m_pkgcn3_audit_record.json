@@ -1,0 +1,23 @@
+{
+  "id": "D519-BLAKE3-R2-PKGCN3-AUDIT-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgCN3 frontline prefile and self-test",
+  "question": "Does the pkgCN3 executable pass its finite self-test, and what defects remain in the current draft?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgCN3 executable SHA-256 1F88C963607FFC5B195AC8EDEA6E30C79D9646EACCEF8FBA57A66CB28DC4C045; prefile SOME FAIL (no ledger appendix/exact N; internal labels D25,D41,D52 in note/proof and D25,D41,D52,audit,fallback in claim); claim time_log2=62.6678; selftest exits 0 with 256 automata cases, 512 T1/T2 cases, S7/precheck/XG/replica/F1_fill=224, all halt drills, and all gate drills passing.",
+  "source": "our workflow: D519 read-only pkgCN3 audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D519_b3m_pkgcn3_audit.md; research/tools/build_pkg/scratch/pkgCN3/pkg/blake3-r2/experiments/frontline.py",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this audit",
+  "notes": "Finite mechanics only; current draft lacks an exact ledger N and has internal-label defects. Executable hash is shared with an older scratch copy. No score/package/stage/filing/submission.",
+  "held_fixed": "pkgCN3 package bytes as found; one-thread selftest; no file writes",
+  "reopen_if": "package ledger/label repair or a new owner artifact arrives"
+}

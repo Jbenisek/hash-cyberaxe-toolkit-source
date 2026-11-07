@@ -1,0 +1,1 @@
+2022/1714	Meet-in-the-Middle Preimage Attacks on Sponge-based Hashing	owner_download	https://eprint.iacr.org/2022/1714.pdf

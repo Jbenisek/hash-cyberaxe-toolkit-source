@@ -1,0 +1,23 @@
+{
+  "id": "D524-BLAKE3-R2-HALFSEARCH-AP-FAMILY-SWEEP-20261014",
+  "hash": "blake3-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "pkgAP/pkgAM/pkgPF71 halfsearch identity and prefile sweep",
+  "question": "Are the AP/AM/PF71 halfsearch variants distinct executables, and do their current claim rows pass intake checks?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "pkgAP/pkgAM/pkgPF71 share halfsearch.py SHA-256 7078CF8A1BC8EA79937564298FD5F8CA75FEA446CB3463089B355BC40741F83D; shared pkgAP selftest exits 0 with 256/256 cases and 1792/1792 lanes right, zero mismatches, exact count tables, 16 registers at limit, and all bounds passing. Claims AP 70.6662, AM 70.9844, PF71 71.1410. Each prefile is SOME FAIL only for missing executable ledger block, with AM also carrying note label fallback; all other checks pass.",
+  "source": "our workflow: D524 read-only halfsearch AP-family sweep",
+  "own_test": true,
+  "evidence": "research/sol_answer_D524_b3m_halfsearch_ap_family_sweep.md; research/tools/build_pkg/scratch/pkgAP/pkg/blake3-r2/experiments/halfsearch.py; research/tools/build_pkg/scratch/pkgAM/pkg/blake3-r2/claim.json; research/tools/build_pkg/scratch/pkgPF71/pkg/blake3-r2/claim.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "B",
+  "peak_mem": "not measured in this sweep",
+  "notes": "Copy/claim identity only; one shared selftest covers the executable. No score/package/stage/filing/submission.",
+  "held_fixed": "three current scratch package copies; byte identity by SHA-256; shared pkgAP selftest",
+  "reopen_if": "a changed halfsearch.py or repaired ledger/note arrives"
+}

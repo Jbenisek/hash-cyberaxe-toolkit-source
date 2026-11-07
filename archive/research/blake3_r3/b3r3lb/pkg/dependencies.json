@@ -1,0 +1,7 @@
+[
+  {
+    "submissionId": "cf8b0e92-4302-4813-907a-3c970c102646",
+    "rationale": "Our own entry for blake3 round 3 (125.10041). This entry keeps its construction, circuit, filter, distinguished points, recovery, ledger and premise tests, and changes the message to a two-block message with a fixed first block P whose chaining value removes one addition from the circuit.",
+    "evidence": "proof.md first paragraph, Sections 3.2, 8 and Appendix A."
+  }
+]

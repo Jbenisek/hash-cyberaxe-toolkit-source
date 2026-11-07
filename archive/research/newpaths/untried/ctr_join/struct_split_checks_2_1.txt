@@ -1,0 +1,1 @@
+counter=2 w14free mode=split max_checks=2: unsat (457.0s, words 103, equations 92)

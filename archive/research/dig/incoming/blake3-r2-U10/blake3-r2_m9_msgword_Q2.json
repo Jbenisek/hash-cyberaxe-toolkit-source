@@ -1,0 +1,20 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "message word m9 (w9): free, pairs with m8 under X0/X15 pin",
+ "question": "Q2 necessity of each condition group (relax, recount outcome mass)",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Relaxing the pin on w9: diff in w9 in B only, 6000 trials: lemma-H digest words 0,2,5,7 kept 0, round-1 state X equal 0, mean digest words differing 8.0/8. Changing w9 in both blocks keeps X3/X7/X11/X15 admissible 0/3000. The word is necessary: any change loses all of the outcome mass at 2^-128 scale of the sample.",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U10/work/scan_m89.py; research/dig/incoming/blake3-r2-U10/work/scan_m89.out.json; research/dig/incoming/blake3-r2-U10/work/b3lib.py; research/dig/incoming/blake3-r2-U10/work/validate_b3.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|m9|msgword|Q2. Own b3lib construction (pkgB3U Sec 4) validated 3000/3000 first. Sampled, window of 8-parameter construction, all words recomputed from the parameters; no gain seen.",
+ "topic": "blake3-r2 msgword m9"
+}

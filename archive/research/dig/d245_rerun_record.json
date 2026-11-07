@@ -1,0 +1,23 @@
+{
+  "id": "POSEIDON-R2-D245-DYNAMIC-20261013-RERUN",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "D245 dynamic integer-operation site frequencies (instrumented rerun)",
+  "question": "How many times do the remaining non-power-of-two index/control sites execute on the recorded exec_r2d path?",
+  "labels": ["D", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "One reconciled r=2 run: plan_for_len candidates/allow3/rows3=15/15/1; plan3 calls/candidates=4055/28201; make_plan(rows3) calls/iterations=4056/1198320; layout calls/rows3 k%3=196608/196608; driver calls/nonempty/(hi-i)/3=198697/197362/197362; stageA c0%3=99201; plan_theta calls=1; limbs_div3 calls=1 (4 /3 and 4 %3 each); hgcd calls/nonbase=4082/2036. RECONCILE ok=1.",
+  "source": "our workflow: D245 dynamic-counter probe",
+  "own_test": true,
+  "evidence": "research/sol_answer_D245_dynamic_probe_20261013.md; research/retest/d245_exec_r2_probe/run_second.txt; research/retest/d245_exec_r2_probe/ntt.c; research/retest/d245_exec_r2_probe/hgcd.c; research/retest/d245_exec_r2_probe/single.c",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "q3",
+  "topic": "poseidon-r2.MACHINE.D245.dynamic",
+  "held_fixed": "The checked-in exec_r2d source semantics, deterministic one-trial path, and existing charging macros; instrumentation only counts site executions.",
+  "reopen_if": "A rebuilt exec7/exec2e declares exact primitive schedules for /3, %3, /100 and instruments r=1 and all relevant paths.",
+  "supersedes": ["POSEIDON-R2-D245-DYNAMIC-20261013"],
+  "notes": "The prior run_first record omitted plan3 call and make_plan iteration counters. This rerun supplies exact r=2 execution counts and leaves only primitive rewrite prices symbolic. No package, staging, or submission."
+}

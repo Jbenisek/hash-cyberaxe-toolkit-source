@@ -1,0 +1,6 @@
+VALIDATE ok (7 anchors: R-vector, n, half, lengths vs h8_ref/hash2)
+lanes 16777216  batches 2396746  (members 524288 x contexts 32)
+digest words 0,2,5,7 collide (half): 16777216 / 16777216
+Lemma-N word == R3 ^ ROL(R6,8) of the two real digests: 16777216 / 16777216
+lengths 55/63: 16777216 / 16777216 ; stage-A rule passes: 1051548 (2^-3.9959)
+lanes fully right (half AND n-match): 16777216 / 16777216

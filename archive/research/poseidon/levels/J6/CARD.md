@@ -1,0 +1,15 @@
+# J6 card - tail activity table (R60..R63), differences ending in M0.dT = 0
+
+Files: predict.py (arithmetic table + real MDS check), tail_table.py (exhaustive toy, all ordered pairs of R60-input states), analyze.py, tail_q23_s1.json, tail_q29_s1.json. Toys q=23, 29 (gcd(5,q-1)=1, Cauchy MDS, random RC, seed 1). q=103/257 not run: exhaustive pairs are q^6 (too big); q=23/29 are fully exhaustive instead.
+
+Definitions. s_k = support (set of nonzero lanes) of the state difference at the input of the S layer of round 60+k (k=0..3). S preserves supports exactly (x->x^5 is a bijection, so x!=y gives x^5!=y^5; PROVED). M maps support s to t. Collision = lane 0 equal after R63.M, i.e. M0.dT = 0 with dT the difference after R63.S (support s3).
+
+## Results
+1. PROVED/DERIVED: a chain (s0..s3) is possible iff |s_k|+|s_{k+1}| >= 4 across each M (branch number 4; real MDS has all entries and all 2x2 minors nonzero, checked) and |s3| >= 2 (row M0 has all entries nonzero). 337 of 2401 support chains are possible; 25 weight patterns. Every mask-level pair with |s|+|t|>=4 is reachable (weight 2 -> 2: 9 directions, 3 per output zero lane; 1 -> 3 always; 3 -> 1: columns of M^-1).
+2. Minimum total active S-boxes over the four tail rounds = 8, reached only by (2,2,2,2) [81 support chains], (1,3,2,2) [27], (1,3,1,3) [9]. Never fewer than 8, never weight 1 at s3. Table of counts by total active: 8:117 chains, 9:144, 10:63, 11:12, 12:1.
+3. DERIVED then OBSERVED: the number of colliding ordered pairs of chain c is ~ q^(3+|s0|-zeros(s1..s3)-1) (each forced zero lane costs one factor q, the collision one more). Exhaustive q=23: all 25 weight patterns collide at 1.00 +- noise of (pairs/q) (aggregate ratios 0.92-1.15 on the small cells, 0.98-1.04 on cells with >10^4 hits; 3,3,3,3 ratio 1.0000); q=29 the same. Total collisions 6,424,176 (q=23; q^5 = 6,436,343) and 20,486,760 (q=29; q^5 = 20,511,149). So the tail adds no collision bias beyond the support combinatorics: OBSERVED random-rate.
+4. OBSERVED: chains with last weight 1 occur as pairs (e.g. (1,3,3,1), 4420 pairs at q=23) but never collide (0 of ~1.9M); no feasible chain collides with |s3|<2. 336/337 feasible chains collide at q=29 (q=23: 336/337 as well, chain (3,6,5,3) = weight (2,2,2,2) had 0 hits at q=23 but 18 at q=29, so a thin 1-dim curve with no point, not a structural exclusion; GUESS).
+5. The deepest cells are 1-dimensional pair sets (dim 1 = ~q pairs per chain, 117 chains), dim 2: 144 chains, 3: 63, 4: 12, 5: 1 (generic). Low-activity corner is thin (3.4e-4 of pairs at q=29 are in weight-8 cells, their collisions are q-ish per chain), consistent with U11 s5 (weight 1 reappears at ~3/q^2).
+
+Control: weight-1 pairs after R60 reappear at random rate (shown by weights (1,..) cell counts: (1,3,*,*) pairs ~ 3(q-1)q^3 each ordering; collisions at q^-1 rate). Value check against poseidon_ref.py not applicable (toy field).
+Empty squares: q=103/257 not run; real-field table is DERIVED (counting only); no front-to-tail compatibility (which s0 the front can produce, see J5/J1).

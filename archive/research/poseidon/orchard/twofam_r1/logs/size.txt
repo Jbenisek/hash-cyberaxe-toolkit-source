@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+  82967	    752	   6776	  90495	  1617f	twofam

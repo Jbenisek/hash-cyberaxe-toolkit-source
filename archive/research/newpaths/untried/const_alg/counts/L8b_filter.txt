@@ -1,0 +1,1 @@
+FILTER L8b: ONLY the betas with k <= 18: 30867, answered 30867, lines not understood 0; no eps 16102, infeasible 0, no passing outcome 12134, with a passing outcome 2631 (passing outcomes in all 855582); by k: 10:2 11:4 12:14 13:56 14:77 15:310 16:302 17:1080 18:786

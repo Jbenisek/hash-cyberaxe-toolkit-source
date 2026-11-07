@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "distinguished-point table",
+ "question": "M2 time to recompute / shrink / drop the table instead of holding it, priced on the filed ledger",
+ "labels": [
+  "N"
+ ],
+ "status": "SAMPLED",
+ "number": "Held: 18,432 entries x 32 B = 589,824 B (total 966,272 B = 2^19.88, memory term 0). Shrinking the entry costs no time and no score while the total stays under 2^20: 25 B (key 8, index 2, length 15) 460,800 B; 16 B 294,912 B; key-only 8 B 147,456 B needs a second pass to find the owner, +1 bit. Dropping the table altogether (memory-free cycle finding, measured on random mappings, evaluations to find a collision pair in units of sqrt(N), same success 0.39): Floyd quantile 2.64 (N=2^20) and 2.54 (2^22) sqrtN, Brent 2.88 and 1.93 sqrtN, against 0.99885 sqrtN for the filed program: +1.40 / +1.34 / +1.53 / +0.95 bit (one random mapping per N, so the spread is the instance). Memory-free is dearer than the whole memory term could ever save.",
+ "evidence": "research/dig/incoming3/blake3-r3-U79/work/mem.py, research/dig/incoming3/blake3-r3-U79/work/mem.out, research/dig/incoming3/blake3-r3-U79/work/cyc.py, research/dig/incoming3/blake3-r3-U79/work/cyc.out",
+ "notes": "universe cell blake3-r3|MEM.DPTAB|MEM|M2. Cycle-finding numbers are on random functions of 2^20 and 2^22 points (one instance each, 6,000 and 3,000 starts), not on the 3-round target; the order of magnitude, about 1 bit or more, is what matters. Known answers first (validate.out): own numpy compress == organizer verifier _compress on 1200 random calls at rounds 1/2/3/7, 0 mismatches; BLAKE3('') 7 rounds = af1349b9...f3262; rho.py digest_words == verifier blake3(0^32||x) at 7 and 3 rounds (300 each, 0 mismatches); packed 7-lane circuit == verifier at 3 rounds (700 lanes, 0 mismatches).",
+ "held_fixed": "ledger of the filed entry; code and counters as filed; success 0.39",
+ "reopen_if": "a memory-free collision method that finds a pair within 1.2 sqrtN evaluations at success 0.39",
+ "gain_basis": "S"
+}

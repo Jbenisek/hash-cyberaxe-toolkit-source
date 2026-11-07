@@ -1,0 +1,22 @@
+{
+  "id": "S7-REGFILE-CONVENTION-AUDIT-20261014",
+  "hash": "sha3-r7",
+  "row_i": null,
+  "row_j": null,
+  "object": "r7 package register-convention audit",
+  "question": "Is the register-file convention in the r7 package supporting or score-critical, and what exact prices are available?",
+  "labels": ["E", "C"],
+  "status": "COMPUTED",
+  "number": "claim.json has only H_rand score-critical; H_machine is supporting. Local prices: 1194 total regs score 124.72370 in-bound; 2192 total regs score 124.75338 conditional",
+  "source": "read-only parse of research/r7/pkgS7P/sha3-256/claim.json and proof.md",
+  "own_test": true,
+  "evidence": "research/sol_answer_S7_register_convention_audit_1014.md; research/sol_answer_S7_regfile_fine_1014.md; research/sha3r6_gap/LS1C_compare.md",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.01077,
+  "gain_basis": "T",
+  "potential_bits": 0.12,
+  "prior": 0.3,
+  "peak_mem": "1038432 B at 1194 total; 1070368 B at 2192 total",
+  "notes": "Exact text/role audit and conditional allocator prices. Acceptance remains an external judge ruling; no package/stage/filing/submission."
+}

@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r1",
+ "row_i": null,
+ "row_j": null,
+ "object": "LEDGER.INIT twiddle table and roots of unity",
+ "question": "control (known-answer or independent check)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "the same run produced a collision that the big-integer reference (poseidon_ref.hash_reduced) and the organizer digest both accept -> the NTT (which needs the table) is correct",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/_fresh_run_seed100001.txt research/poseidon/orchard/lean_r1_fix/verify_collision.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "verify_collision.py: \"collision verified reference ok organizer ok\". poseidon_ref reproduces the pinned vectors (known_answers_reduced.txt, r=2 lines checked True in r2var.py). A wrong twiddle table cannot give a correct collision. | universe cell poseidon-r1|LEDGER.INIT|LEDGER|R3",
+ "held_fixed": "filed r=1 program of lean_r1_fix (proof.md 28.781 charging rules, C(1)=237, 2 centres, 8.8e9 half-gcd budget, 3.043 memory bits); the line j, seed 100001 fresh run",
+ "reopen_if": "a rerun or a recount of the stage that disagrees with the table by more than the data-dependent gap, or a charging rule change by the judge"
+}

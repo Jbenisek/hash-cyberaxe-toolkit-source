@@ -1,0 +1,22 @@
+{
+  "id": "D368-POSR1-FIX-FACTORIZED-CHARGE",
+  "hash": "poseidon-r1",
+  "row_i": null,
+  "row_j": null,
+  "object": "lean_r1_fix factorized twiddle charge",
+  "question": "What is the exact H/L twiddle replacement charge under lean_r1_fix, where every load/store includes one address-control operation?",
+  "labels": ["N", "D", "S"],
+  "status": "COMPUTED",
+  "number": "With F=417307279 direct twiddle accesses, the fixed-ledger replacement costs +5F per access (two extra loads with their address charges, one field multiply, one shift and one mask). Direct twiddle init is 131071 ops; conservative H/L init is 2053, saving 129018. Net ΔN=2086407377, N=111333778252, time_log2=28.8073571622 (upward 28.8074). Conditional tracked peak 8468640->7952544 B and score 31.7937632269->31.7303421805, saving 0.0634210464 bits.",
+  "source": "our source-level arithmetic audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_D368_poseidon_r1_fix_factorized_charge.md; research/poseidon/orchard/lean_r1_fix/ntt.c; research/poseidon/orchard/lean_r1_fix/common.h; research/poseidon/orchard/lean_r1_fix/pkg_stage/proof.md; research/poseidon/count_twolevel_fetches.py; D357; D359; D362; D367",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": 0.0634210464,
+  "gain_basis": "S",
+  "notes": "Exact only for the stated source-level H/L implementation and lean_r1_fix charge convention. No rebuilt binary, compiler register/spill report, KAT, or whole-run allocator trace; memory and score remain conditional. No package, staging, filing, or submission.",
+  "held_fixed": "lean_r1_fix N0=109247370875, C=237, D359 F=417307279, D357 H/L identity, unchanged non-twiddle work",
+  "reopen_if": "A rebuilt lean_r1_fix factorized kernel supplies dynamic ledger, KAT, compiler spill report, and peak trace",
+  "peak_mem": "22.922985 ESTIMATED conditional post-cut tracked peak 7952544 B"
+}

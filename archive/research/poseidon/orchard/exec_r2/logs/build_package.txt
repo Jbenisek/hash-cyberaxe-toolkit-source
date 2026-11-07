@@ -1,0 +1,15 @@
+stale tokens in proof text: []
+{
+ "time": 27.05075,
+ "time_exact": 27.050743119979458,
+ "mem_bytes": 40933715,
+ "mem_log2": 25.287,
+ "score": 32.33775,
+ "N": 35867804181,
+ "N_run": 35867769181,
+ "trials": 1,
+ "last_centre": 1,
+ "heap": 40741792,
+ "per_step": 120981777
+}
+note bytes 8897

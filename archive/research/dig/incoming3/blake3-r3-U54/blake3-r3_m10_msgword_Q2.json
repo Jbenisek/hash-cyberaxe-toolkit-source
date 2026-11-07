@@ -1,0 +1,22 @@
+{
+ "object": "message word m10",
+ "question": "Q2: necessity of m10 - change it and recount the exact outcome (ops, time_log2, digest).",
+ "status": "COMPUTED",
+ "number": "Change m10: to the constant 0 (word frozen, not part of the chain): 577 ops, -18 (-0.0440 bit); to 0x9e3779b9: 579 ops (-16). Diffusion test (flip each of the 32 bits of m10, 48 random inputs each, 3 rounds): mean 128.0 of 256 digest bits change (per-bit means 126.0 to 129.8), and all 8 digest words change in every flip tested (8 flips per bit class sampled), so the word fully reaches the digest. Structural necessity (argued, NOT run): with m10 frozen the chain function lives on a smaller domain and a full 256-bit digest match then needs many partial collisions (for one frozen word about 2^32 collisions of a 224-bit function); at memory near 2^20 bytes the parallel-collision-search price per collision (about 2.5*sqrt(N/w), a literature formula applied by hand) is far above the saving. So the word stays variable; the op saving is not a lever on present knowledge.",
+ "evidence": "research/dig/incoming3/blake3-r3-U46/work/b3scan.py; research/dig/incoming3/blake3-r3-U46/work/exp_words.py; research/dig/incoming3/blake3-r3-U46/work/words_out.json; research/blake3_r3/candidate_blake3/experiments/rho.py (ledger formula)",
+ "notes": "Tools first reproduced: 7-round empty-input vector af1349b9...f3262 and verifier blake3.py (rounds 1,2,3,5,7 on 40 random blocks each, 3-round 0^32||x on 100 inputs, all equal); traced circuit = 595 ops and time_log2 125.10856 (shipped), 0 mismatches vs scalar on 200 inputs. Variants traced and compared with the scalar function on 60 inputs (0 mismatches). The multi-collision cost is not tested by search.",
+ "held_fixed": "all other words as in the target; same layout; ledger rho.py with PH replaced",
+ "reopen_if": "a memory-cheap method to collect many partial collisions is found (then freezing chain words is worth up to 0.18 bit for m8..m11)",
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "topic": "blake3-r3|m10|msgword|Q2",
+ "lever": false,
+ "gain_bits": null,
+ "labels": [
+  "N"
+ ]
+}

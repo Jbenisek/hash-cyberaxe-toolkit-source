@@ -1,0 +1,20 @@
+{
+  "id": "D640-POSEIDON-R2-GBUF-SUP-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 GBUF queue closure index",
+  "question": "Has the Poseidon-r2 GBUF alternative-layout cell been closed by the full r=2 audit?",
+  "labels": ["N", "D", "X", "C", "E"],
+  "status": "COMPUTED",
+  "number": "D639 supplies the full r=2 raw-CG KAT and exact conditional score 32.27543 versus 32.26329 for the streamed layout; the GBUF cell is closed as non-winning.",
+  "source": "our workflow: D640 supersession index for D639 GBUF closure",
+  "own_test": true,
+  "evidence": "research/sol_answer_D639_poseidon_r2_gbuf_full_kat.md; research/sol_answer_D640_poseidon_r2_gbuf_supersession.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Queue bookkeeping only. No package/stage/filing/submission.",
+  "supersedes": ["D454-POSEIDON-R2-GBUF-BLOCKER-20261014", "D636-POSEIDON-R2-GBUF-CORRECTION-20261014", "D638-POSEIDON-R2-GBUF-HYBRID-CONTROL-20261014"],
+  "kind": "supersession"
+}

@@ -1,0 +1,23 @@
+K1.d1 depends on the loop word: False
+C0.b1  loop ops 43, ops before K1.a1 known 24, early-abort cost per usable trial 2^49.59 (score 83.83), plain 2^50.38
+Y8     loop ops 43, ops before K1.a1 known 24, early-abort cost per usable trial 2^49.59 (score 83.83), plain 2^50.38
+C0.c1  loop ops 43, ops before K1.a1 known 24, early-abort cost per usable trial 2^49.59 (score 83.83), plain 2^50.38
+Y12    NOT a loop word (propagation stalls); its equations: ['-Y8 +C0.c1 +Y12 = 0 (mod 2^32)', 'Y0 ^ rol(Y12,8) ^ C0.d1 = 0']
+C0.d1  loop ops 43, ops before K1.a1 known 24, early-abort cost per usable trial 2^49.59 (score 83.83), plain 2^50.38
+Y0     NOT a loop word (propagation stalls); its equations: ['Y0 ^ rol(Y12,8) ^ C0.d1 = 0', '-Y0 +C0.b1 +w6 +C0.a1 = 0 (mod 2^32)']
+C0.a1  NOT a loop word (propagation stalls); its equations: ['-Y0 +C0.b1 +w6 +C0.a1 = 0 (mod 2^32)', '-C0.a1 +X4 +w2 +X0 = 0 (mod 2^32)', 'X12 ^ rol(C0.d1,16) ^ C0.a1 = 0']
+X12    NOT a loop word (propagation stalls); its equations: ['X12 ^ rol(C0.d1,16) ^ C0.a1 = 0', '+X12 +D1.c1 + bbfca000 = 0 (mod 2^32)', 'X1 ^ rol(X12,8) ^ D1.d1 = 0']
+D1.c1  NOT a loop word (propagation stalls); its equations: ['+X12 +D1.c1 + bbfca000 = 0 (mod 2^32)', '-D1.c1 +S11 +D1.d1 = 0 (mod 2^32)', 'D1.b1 ^ rol(S6,20) ^ rol(D1.c1,20) = 0']
+D1.d1  NOT a loop word (propagation stalls); its equations: ['-D1.c1 +S11 +D1.d1 = 0 (mod 2^32)', 'X1 ^ rol(X12,8) ^ D1.d1 = 0', 'D1.a1 ^ rol(D1.d1,16) ^ S12 = 0']
+X1     NOT a loop word (propagation stalls); its equations: ['X1 ^ rol(X12,8) ^ D1.d1 = 0', '-X1 -X5 -w3 +C1.a1 = 0 (mod 2^32)', '-X1 +D1.a1 +D1.b1 +w11 = 0 (mod 2^32)']
+D1.a1  NOT a loop word (propagation stalls); its equations: ['D1.a1 ^ rol(D1.d1,16) ^ S12 = 0', '-D1.a1 +S1 +S6 +w10 = 0 (mod 2^32)', '-X1 +D1.a1 +D1.b1 +w11 = 0 (mod 2^32)']
+w10    NOT a loop word (propagation stalls); its equations: ['-D1.a1 +S1 +S6 +w10 = 0 (mod 2^32)', '-C1.a1 -C1.b1 -w10 +Y1 = 0 (mod 2^32)']
+w2     NOT a loop word (propagation stalls); its equations: ['-K1.a1 +w2 + 566d1711 = 0 (mod 2^32)', '-C0.a1 +X4 +w2 +X0 = 0 (mod 2^32)']
+K1.a1  NOT a loop word (propagation stalls); its equations: ['K1.a1 ^ rol(K1.d1,16) ^ T1 = 0', '-K1.a1 +w2 + 566d1711 = 0 (mod 2^32)', '-S1 +K1.a1 +K1.b1 +w3 = 0 (mod 2^32)']
+w3     NOT a loop word (propagation stalls); its equations: ['-S1 +K1.a1 +K1.b1 +w3 = 0 (mod 2^32)', '-X1 -X5 -w3 +C1.a1 = 0 (mod 2^32)']
+C1.a1  loop ops 43, ops before K1.a1 known 25, early-abort cost per usable trial 2^49.65 (score 83.88), plain 2^50.38
+C1.d1  loop ops 43, ops before K1.a1 known 25, early-abort cost per usable trial 2^49.65 (score 83.88), plain 2^50.38
+C1.c1  loop ops 43, ops before K1.a1 known 25, early-abort cost per usable trial 2^49.65 (score 83.88), plain 2^50.38
+C1.b1  loop ops 43, ops before K1.a1 known 25, early-abort cost per usable trial 2^49.65 (score 83.88), plain 2^50.38
+Y1     NOT a loop word (propagation stalls); its equations: ['-C1.a1 -C1.b1 -w10 +Y1 = 0 (mod 2^32)', 'Y13 ^ rol(C1.d1,24) ^ rol(Y1,24) = 0', '+K -Y1 -w12 = 0 (mod 2^32)']
+Y13    loop ops 43, ops before K1.a1 known 25, early-abort cost per usable trial 2^49.65 (score 83.88), plain 2^50.38

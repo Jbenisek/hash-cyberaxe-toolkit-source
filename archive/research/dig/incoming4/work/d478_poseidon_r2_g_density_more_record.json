@@ -1,0 +1,23 @@
+{
+  "id": "D478-POSEIDON-R2-GBUF-DENSITY-MORE-20261014",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "Poseidon-r2 MEM.GBUF coefficient-density extension, eight centres",
+  "question": "Do eight further independently generated r=2 centres contain any zero g coefficients?",
+  "labels": ["C", "Z"],
+  "status": "LOCAL_ONLY",
+  "number": "At r=2 (m=195312, m+1=195313 coefficients), eight centres with seed 422003 each produced zero=0 and nonzero=195313; each build_g cost exactly 121817140 counted operations. Together with D422 and D476, 16 sampled centres were fully dense.",
+  "source": "Own single-threaded source probe of the checked-in lean_r2 build_g implementation",
+  "own_test": true,
+  "evidence": "research/retest/poseidon_r2/PREREG_D478_GBUF_DENSITY_MORE.md; research/retest/poseidon_r2/d422_g_density_probe.c; research/retest/poseidon_r2/D478_g_density_output.txt; research/sol_answer_D478_poseidon_r2_g_density_more.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "16596992 B = 2^23.9844184588 (one process)",
+  "notes": "Finite density evidence only: 16 centres do not prove every centre is dense and do not provide a sparse implementation. The information-theoretic packed-255-bit lower bound remains 6225602 bytes versus current dense 6250016 bytes. No package/stage/submit.",
+  "held_fixed": "Exact owned lean_r2 build_g, r=2, n=8, seed 422003, pass rule zero=0 and nonzero=195313",
+  "reopen_if": "A lossless streaming/packed representation with KAT, exact ledger, and peak measurement lands"
+}

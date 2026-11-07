@@ -1,0 +1,10 @@
+PROGRAM sha256 cde9b8279eaad69a148d570714fbbcceea8bd81faab8ef10773faa9fa38f5563; python -B work/tools/plan_negative.py
+the unchanged program compiles and runs rule_a_constants() without an error
+stopped: wrong mask in the third step: rule A: a read position does not hold a new combination of the conditions
+stopped: wrong distance in the second step: rule A: a read position does not hold a new combination of the conditions
+stopped: one read position more: rule A: a read position does not hold a new combination of the conditions
+stopped: one read position less: rule A: the read positions are not the rule
+stopped: a shift to the right that brings bits 32 and 33 of the lane to the read positions 8 and 9: rule A: a read position holds a bit of another lane or a bit above 31
+stopped: a shift to the left that brings a bit of the lane below to a read position: rule A: a read position holds a bit of another lane or a bit above 31
+stopped: the second mask without bit 30 (the eighth condition is not read): rule A: a read position does not hold a new combination of the conditions
+RESULT: all 7 wrong plans are refused

@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "object": "H3-machine-convention: ledger counted in the convention of the organizer count C(r3) = 638",
+ "question": "R4 score sensitivity of the machine convention (registers, spills, width)",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "Per batch operation: +/-1 operation = +/-0.00241 bit; 10 percent of the batch (59.5 operations) = 0.149 bit. Registers: zero loads/stores need 25 simultaneously live values (exact liveness; list scheduling gives 25 too); at 24 registers +0.0048 bit (2 loads), 20 +0.026, 16 +0.072 (31 extra ops/batch), 12 +0.156, 8 +0.246 (emitted order; Belady eviction). The entry's remark that fewer than about 40 registers would cost is too pessimistic: 25 plus a few control registers suffice. Width: a 512-bit word at the same priced op would be -1.0355 bit (15 lanes of 34, 622 ops, 41.47 per step) if priced as one op; as two ops 0. The convention costs the score at most these amounts; none is a saving on the filed entry.",
+ "evidence": "research/dig/incoming3/blake3-r3-U81/work/regs.py, research/dig/incoming3/blake3-r3-U81/work/regs.out, research/dig/incoming3/blake3-r3-U80/work/width.py, research/dig/incoming3/blake3-r3-U80/work/width.out",
+ "notes": "universe cell blake3-r3|PREM.H3|PREM|R4. Spill counts use Belady eviction on the emitted order (optimal for loads, heuristic for stores) with one operation per load or store; a register-starved machine is not offered by the organizer text (register count is silent).",
+ "held_fixed": "straight-line batch of 595 + 4 filter operations, loop-carried digest registers, immediates free",
+ "reopen_if": "organizer text that fixes a register count below 25 or prices a 512-bit word",
+ "gain_basis": "T"
+}

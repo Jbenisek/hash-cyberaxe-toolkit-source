@@ -1,0 +1,20 @@
+{
+  "id": "R6-DPrho-packed-charge-audit",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "DP-rho packed emitted charge",
+  "question": "What exact arithmetic and spill body is charged by the emitted 64-bit packed DAG, and what terms remain outside it?",
+  "labels": ["D", "X", "B", "E"],
+  "status": "COMPUTED",
+  "number": "B16=403208, B32=385196, B64=364460; exact conditional 64-plane score 127.813342986868207 before Q",
+  "source": "our workflow: packed charge audit",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-DPrho-packed-charge-audit.md; research/retest/t1/packed_charge_audit.json; research/retest/t1/packed_kernel_result.txt",
+  "date": "2026-10-13",
+  "lever": true,
+  "gain_bits": 0.218085997642,
+  "gain_basis": "T",
+  "notes": "Exact for the finite Boolean DAG and emitted spill trace. The symbolic Q term covers per-batch hit-mask consumption, lane extraction, restart/recovery, and any organizer-required width/control charges; therefore the conditional saving is not filing-safe and no package or submission was changed.",
+  "reopen_if": "A generated production kernel with an exact Q ledger and organizer ruling on packed width/register spills."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "D352-POSR2-D78125-DECOMP-TIMEOUT",
+  "hash": "poseidon-r2",
+  "row_i": null,
+  "row_j": null,
+  "object": "real Orchard functional-decomposition screen d=78125",
+  "question": "Does the r=2, j=0 skip-line polynomial decompose through an inner degree d=78125 polynomial?",
+  "labels": ["C", "Z"],
+  "status": "SAMPLED",
+  "number": "UNKNOWN: no SCREEN output by 29.7-minute wall bound; sampled WorkingSet64 2^25.15260",
+  "source": "our preregistered D352 Poseidon decomposition screen",
+  "own_test": true,
+  "evidence": "research/sol_answer_D352_poseidon_d78125_decomp_timeout.md; research/poseidon/levels/decomp/PREREG_D352_D78125.md; research/poseidon/levels/decomp/run_d78125_j0_d352.py; research/poseidon/levels/decomp/run_d78125_j0_d352.out",
+  "date": "2026-10-14",
+  "lever": true,
+  "gain_bits": null,
+  "gain_basis": "S",
+  "notes": "Owner-stopped at the preregistered wall bound; no remainder degree was observed. This is inconclusive and does not support a decomposition or its negation. No score credit.",
+  "peak_mem": "25.15260 SAMPLED WorkingSet64; not a certified peak"
+}

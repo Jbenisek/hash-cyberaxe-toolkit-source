@@ -1,0 +1,2 @@
+rounds=1 mask=0x11 evals=300000000 restarts=6112 best_bitdiff=28  (random mean 128, min over 1e8 draws ~82)
+ restart-min hist: 28:1 restart-min hist: 30:6 restart-min hist: 31:12 restart-min hist: 32:22 restart-min hist: 33:47 restart-min hist: 34:80 restart-min hist: 35:149

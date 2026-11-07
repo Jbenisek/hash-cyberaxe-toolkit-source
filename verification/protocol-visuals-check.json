@@ -1,0 +1,1 @@
+{"passed":true,"finished_at":"2026-11-05T00:27:12.406831+00:00","protocols":["sha256.html","sha3.html","blake3.html","poseidon.html"],"widths":[320,390,1440],"javascript_modes":[true,false],"keyboard_stage_controls":true,"no_document_overflow":true,"scope":"Explanatory schematics and teaching controls; not simulated cryptographic state."}

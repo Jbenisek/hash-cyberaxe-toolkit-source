@@ -1,0 +1,4 @@
+== out\h_sub.bin: partial E3 events with eps3 = eps(beta*): 1126
+   Delta f1 = tau ^ ror(tau,1) for some listed tau of beta*: 1126 of 1126
+   Delta h2 on target: 1126; Delta g2 on a target tau: 0
+   HW(Delta g2 ^ tau) + HW(Delta h2 ^ target), distribution: 5:2 6:14 7:28 8:38 9:78 10:106 11:122 12:147 13:161 14:143 15:96 16:94 17:53 18:24 19:11 20:8 21:1

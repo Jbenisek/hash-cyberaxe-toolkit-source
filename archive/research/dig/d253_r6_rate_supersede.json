@@ -1,0 +1,21 @@
+{
+  "id": "D253-SHA3-R6-RATE-CLOSE-20261013",
+  "hash": "sha3-r6",
+  "row_i": null,
+  "row_j": null,
+  "object": "rate-constant lanes: shipped S6K closure",
+  "question": "Does the exact shipped S6K audit close the original rate-constant-lane OPEN row?",
+  "labels": ["C", "Z"],
+  "status": "COMPUTED",
+  "number": "Exact shipped-source audit: additional charge is 0 word operations and 0 bits; fixed zero lanes and lane 16=0x86 are already folded in generator/setup and verification.",
+  "source": "our trail lab",
+  "own_test": true,
+  "evidence": "research/sol_answer_R6-rate-constant-lanes-audit-20261013.md; research/tools/build_pkg/scratch/pkgS6K/work/k/kgen.py; research/tools/build_pkg/scratch/pkgS6K/work/k/kernel2.py; research/tools/build_pkg/scratch/pkgS6K/pkg/sha3-256-r6/proof.md",
+  "date": "2026-10-13",
+  "lever": false,
+  "gain_bits": 0.0,
+  "gain_basis": "T",
+  "notes": "Closes the stale tail_sha3 rate row for the shipped S6K layout only. No alternative algebraic schedule is proved; no package/stage/submission.",
+  "supersedes": ["R6-RATE", "R6-RATE-open-input"],
+  "reopen_if": "A different shipped layout leaves fixed-lane operations uncharged or supplies a new algebraic schedule with a separately counted gain."
+}

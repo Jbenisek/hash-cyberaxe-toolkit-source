@@ -1,0 +1,24 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/blake3-r3-U64/work/eng.py, exp1.py, exp1_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "gain_basis": "count",
+ "object": "key words m0..m7 = 0 (message prefix 0^32)",
+ "question": "Q2: necessity (change it, recount the exact outcome)",
+ "labels": [
+  "N",
+  "K"
+ ],
+ "status": "COMPUTED",
+ "number": "Key words m0..m7 changed from 0 to nonzero: each nonzero word adds exactly 2 ops (it is added once in round 1 and once in round 2): any single word 597, two words 599, all eight words 612 ops (vs 595); 612 = swar_count.py figure. Cost of nonzero K over the filed K = 0: +0.0403 bit for all eight words. In round 0 the K words only enter all-constant column calls, so they cost nothing there.",
+ "topic": "b3r3.PIN.K.Q2",
+ "notes": "universe cell blake3-r3|PIN.K|PIN|Q2. Validated first: own engine (eng.py) reproduces BLAKE3 7-round known vectors (inputs of length 0, 1, 2) and equals verifier/blake3.py on 140 cases (rounds 1..7, 20 lengths up to 8193 bytes, own chunk tree); the traced 7-lane SWAR circuit (rho.py Tracer, generalized) equals the own scalar compress on 7 lanes; baseline 3-round chain circuit = 595 ops = rho.py PH, time_log2 125.10856, one op = 0.00241 bit. Random nonzero 32-bit words; message layout x in m8..m15.",
+ "held_fixed": "target blake3-r3-prefix-v1; chain x -> digest(0^32||x) with identity embedding in m8..m15; 7-lane SWAR op model of rho.py (add/and/or/xor/shl/shr, constants folded, guard bits, masks as in the filed circuit); ledger of the filed entry (125.1087) with only PH changed",
+ "reopen_if": "a legal value or layout that gives fewer than 595 ops per 7-lane batch, or a ledger line that charges a different count"
+}

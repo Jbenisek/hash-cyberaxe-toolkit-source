@@ -1,0 +1,43 @@
+sources read: 187 files
+== proof: 493 figures from line 541, 32 distinct ones found in no source
+                1,424,469  line 777 (+13)
+                1,424,468  line 777 (+1)
+                  131,071  line 820 (+1)
+                   18,724  line 822 (+2)
+                  131,068  line 823
+                  102.442  line 1218
+                    17.44  line 1232
+               49,323,560  line 1265
+                  121.208  line 1270
+                    121.3  line 1271
+                     5.52  line 1272
+                  880,075  line 1311
+                 6.714439  line 1311
+             78,996.09375  line 1312
+                 0.602692  line 1312
+              0.000322622  line 1314
+              1.000000002  line 1316
+             959,206.0941  line 1317 (+1)
+              1,009,254.4  line 1318
+                    7.319  line 1332
+               101.441993  line 1380
+                 2.944859  line 1381
+                 8.748192  line 1381
+                    10.58  line 1399
+                  131,587  line 1411
+                4,210,784  line 1411 (+1)
+                   100.53  line 1598 (+1)
+         185,358,111.4676  line 1614
+         185,355,453.4537  line 1614
+                 2,658.01  line 1629
+               3,679.1722  line 1973
+                   2.3109  line 1974
+== claim: 87 figures from line 1, 5 distinct ones found in no source
+                    121.3  line 21 (+1)
+                1,424,469  line 30
+                6,805,032  line 31
+               49,323,560  line 33
+                    17.44  line 39
+== note: 83 figures from line 1, 2 distinct ones found in no source
+                    121.3  line 68
+                6,805,032  line 126 (+1)

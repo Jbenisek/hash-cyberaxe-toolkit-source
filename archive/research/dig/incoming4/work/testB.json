@@ -1,0 +1,37 @@
+{
+ "r0_n2^14": {
+  "r": 0,
+  "j": 0,
+  "logn": 14,
+  "sum_minus_n_F0_is_zero": true,
+  "secs": 0.8
+ },
+ "r0_n2^13_control": {
+  "r": 0,
+  "j": 0,
+  "logn": 13,
+  "sum_minus_n_F0_is_zero": false,
+  "secs": 0.4
+ },
+ "r2_n2^19": {
+  "r": 2,
+  "j": 0,
+  "logn": 19,
+  "sum_minus_n_F0_is_zero": true,
+  "secs": 33.6
+ },
+ "r2_n2^18_control": {
+  "r": 2,
+  "j": 0,
+  "logn": 18,
+  "sum_minus_n_F0_is_zero": false,
+  "secs": 18.0
+ },
+ "r2_n2^19_line1": {
+  "r": 2,
+  "j": 1,
+  "logn": 19,
+  "sum_minus_n_F0_is_zero": true,
+  "secs": 35.4
+ }
+}

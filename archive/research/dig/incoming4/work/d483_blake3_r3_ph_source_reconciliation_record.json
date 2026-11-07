@@ -1,0 +1,23 @@
+{
+  "id": "D483-BLAKE3-R3-PH-SOURCE-RECONCILIATION-20261014",
+  "hash": "blake3-r3",
+  "row_i": null,
+  "row_j": null,
+  "object": "tuned-CV PH source reconciliation",
+  "question": "Does the checked-in source support PH=590, or does the concrete tuned-CV tracer count 589?",
+  "labels": ["C", "D", "Z"],
+  "status": "COMPUTED",
+  "number": "verify.py calls the ordinary rho.Tracer with h_tuned and flags 10; PH=590 exists only in wave-1 prose. D481 and D482 independently give 589 and the IV control 595. Treat 589 as the supported source-level count pending a contrary replay; no ledger or score change.",
+  "source": "our workflow: D483 PH source reconciliation",
+  "own_test": true,
+  "evidence": "research/blake3_r3/lastblock/verify.py; research/blake3_r3/b3r3s/pkg/blake3/experiments/rho.py; research/blake3_r3/wave1/LEADS.md; research/blake3_r3/wave1/dig_cells.md; research/sol_answer_D481_blake3_r3_tuned_cv_ph_audit.md; research/sol_answer_D482_blake3_r3_ph_replay.md; research/sol_answer_D483_blake3_r3_ph_source_reconciliation.md",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": null,
+  "potential_bits": 0.0,
+  "gain_basis": "C",
+  "peak_mem": "N/A (read-only source audit; D481/D482 peaks retained separately)",
+  "notes": "The reconciliation changes no package, filed row, score, or submission. Prefix-search/advice, memory, and organizer-acceptance gates remain open.",
+  "held_fixed": "checked-in verify.py, b3r3s Tracer, stored h_tuned.json, D481/D482 outputs",
+  "reopen_if": "A source-equivalent executable replay produces 590 for the stored h_tuned and identifies the accounting difference"
+}

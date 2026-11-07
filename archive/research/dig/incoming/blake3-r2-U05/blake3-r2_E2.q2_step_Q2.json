@@ -1,0 +1,19 @@
+{
+ "hash": "blake3-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "E2.q2 (c1,b1) zero difference, relaxed with E0 left zero",
+ "question": "Necessity: if the zero difference of E2 quarter-step q2 is relaxed (nonzero input difference injected), does the digest event (words 0,2,5,7 equal across the pair) survive? [universe cell blake3-r2|E2.q2|step|Q2]",
+ "labels": [
+  "0"
+ ],
+ "status": "COMPUTED",
+ "number": "event mass with E0 zero and equal m9,m14 after relaxing E2.q2 = 0 exactly (G is a bijection, outputs equal forces inputs equal); measured 0/150000 (no message word enters q2)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "evidence": "research/dig/incoming/blake3-r2-U05/work/u05.py; research/dig/incoming/blake3-r2-U05/work/u05_stdout.txt; research/dig/incoming/blake3-r2-U05/work/u05_out.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell blake3-r2|E2.q2|step|Q2. Validated first: our 2-round compress equals verifier/blake3.py on 2000/2000 inputs; G inverse round trip 100000/100000; Fact P reproduced from the pkgCK constants (C3 b,d equal, a,c = 8127c181/7edf3e7e and 7af77f38/850000c3); Lemma L round 0 identical 2000/2000; round-1 baseline with pins gives digest equal on exactly words 0,2,5,7 in 20000/20000. Quarter-step map (c,d1,b)->(c1,b1). Toy width 3 and 4 exhaustive: G is a bijection on all states. Sources of a difference at this step: Y8 (c), Y2/Y7 via b,d1 chain; every legal message-word source also activates all of C0-C3 and E0-E3 (see Q4 record), so the relaxation is not free-standing. Outcome: zero difference here is necessary while E0 stays zero; the only relaxation is the crossed one with E0 (Q4). No gain."
+}

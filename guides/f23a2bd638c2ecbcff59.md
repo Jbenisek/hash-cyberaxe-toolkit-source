@@ -1,0 +1,31 @@
+# scan38
+
+Source: `research/dig/incoming2/sha256-38-G04-U03/work/scan38.c`
+
+Public SHA-256: `1257976f73dd5fb5e1eca2a5b150c3904a82c3cf31422455b4d241899d2334fb`
+
+## Purpose recorded in the source
+
+define _GNU_SOURCE
+include "../../../../tools/traillab/src/traillab.h"
+include <stdlib.h>
+include <string.h>
+include <math.h>
+include <time.h>
+include <pthread.h>
+
+## Source inspection and available execution evidence
+
+static-source-review; not-replayed-for-publication.
+
+A run budget is not specified in this guide. Check loop bounds, worker counts and memory requirements before choosing an experiment size.
+
+## Read alongside
+
+Companion documents are not listed here. Use the linked source for interfaces and prerequisites.
+
+## Failure modes
+
+- Missing historical dependencies or input files.
+- Domain or target parameters may differ from the intended experiment.
+- Publication redactions can change executable strings; compare source and public digests.

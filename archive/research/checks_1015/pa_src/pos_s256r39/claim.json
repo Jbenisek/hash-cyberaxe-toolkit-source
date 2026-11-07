@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "target_profile": "sha256-r39-prefix-v1",
+  "attack_class": "ordinary-collision",
+  "rounds": 39,
+  "claim": {
+    "time_log2": 124.98494,
+    "time_unit": "target-compressions",
+    "memory_log2_bytes": 20,
+    "preprocessing_log2": 9.8,
+    "success_probability": 0.39,
+    "nonuniform_advice_log2_bytes": 0
+  },
+  "restrictions": [
+    "Two distinct 32-byte messages M(x) and M(y), the 256-bit integers x != y written big-endian: one block (FIPS padding), standard IV, the steps with indices 0 to 38, feed-forward, the complete 256-bit digest (sha256-r39-prefix-v1). They are found as a collision f(x) = f(y) of the walk f(x) = digest(M(x)) read as a big-endian integer. Plain birthday search with distinguished points; no differential or structural property of the 39 steps is used.",
+    "Machine, a convention declared by this entry (H3, supporting): a classical load/store machine with 256-bit words, 256-bit immediates and 64 registers under collision-frontier-v5 (the benchmark fixes the word size and charges loads and stores, not a register count, constants or lane packing); 2812 operations (C of sha256-r39) to the unit. Charged: every add, AND, OR, XOR, shift, compare, branch, register move, load, store and the random word. The main loop evaluates 7 trails packed in the 36-bit lanes of a 256-bit word: 2433 operations per batch (2426 kernel, a 4-operation stage-1 test, 3 loop operations), no load, store or move; it needs 43 registers. Every instruction is charged 36 bytes. Smaller files and the absence of immediates are priced in proof.md 3.5 (124.9932 at 32 registers, 125.0183 at 16, 125.0402 without immediates).",
+    "time_log2 is an upper bound: every term of proof.md Section 3.4 is enforced by a halt of the program (B batches, e2max stage-1 hits, 33662 table keys, 2 cut trails, a recovery of at most c + 2^48 batches, one recovery), and the bound charges each at its limit. The attempt is single: one fresh uniform 256-bit word r, no restart, no amplification, no stored collision, no advice. Distinguished points: low 32 bits zero and the next 90 bits below 505 (density 505 / 2^122). The generator that builds the kernel at setup is charged (2,357,600 operations).",
+    "Memory: 33662 table entries of 25 bytes (841550 bytes) plus 198828 bytes of code (5523 instructions of 36 bytes: loop body, recovery copy of the kernel, handlers) plus 6144 bytes of counters plus 2048 bytes for the 64 registers: 1048570 bytes <= 2^20; claimed as 2^20. The circuit generator that runs at setup is accounted in proof 3.6: 1170 instructions (42120 bytes) and a scratch of 16384 bytes held in the region that the table and the register file occupy once the search runs; the setup phase needs 263476 bytes, the search phase 1048570. A C port of the generator, run in a sandbox capped at 1,048,576 bytes of guest memory, emits the identical program (scratch 13096 bytes, proof 3.6).",
+    "Success probability at least 0.39 holds under the model premise H1 (proof.md Sections 4 and 5: success on the fixed target is at least success against a uniformly random function) and the named approximations H2, with the losses of Section 4 (about 4.98e-04 spent of 1.65e-03 available). If the pair-collision rate of the evaluated inputs were (1 - eps) of the random-mapping rate, the success probability stays at least 0.39 for eps <= 0.0038, and at most 0.5 * log2(1/(1-eps)) more bits (0.0072 for eps = 0.01) restore it beyond.",
+    "The declared experiments run this program in the organizer sandbox: shrho-n18 (one attempt of the 7-lane search per trial at width 18, DP = low 2 bits zero) and proj-k0-w256 (448 points of the target at width 256 per trial, a pair when two digests agree in the low 16 bits). Each returns pairs whose complete 39-step digests agree in the stated low bits. They are program checks: no number of the claim is estimated from their counts and no sampling premise is used. No outside code or library is used.",
+    "No nonuniform advice and no prefix. Credited derivative of our own blake3 round-3 entries 0a9640ed, 3356413f, cf8b0e92 (packed lanes), 62cfd777 and of Jbenisek's e479cbbf (program structure, search, ledger method); no dependency is declared because this lane has no earlier submission and Pareto dependencies must come from the same challenge. preprocessing_log2 = 9.8 is the setup and generator row, which is also inside time_log2."
+  ],
+  "baseline_improved": "sha256-r39-nominal-v2",
+  "certificate_manifest": "certificates/manifest.json",
+  "experiment_manifest": "experiments/manifest.json",
+  "heuristics": [
+    {
+      "id": "H1-random-function-model",
+      "role": "score-critical",
+      "statement": "Model premise. Let F be a uniformly random function from 256-bit values to 256-bit values. For the fixed target, the probability that the single attempt of the search succeeds, with the walk f(x) = the complete 39-step SHA-256 digest of the 32-byte message x (read as a 256-bit big-endian integer), is at least the probability, over the fresh word r and a uniformly random F, that the same search succeeds when every evaluation of f is replaced by F (lazy sampling). In that model the pair-collision rate of evaluated inputs is 2^-256, the iterates have the first-collision law of a random mapping, and a point is a distinguished point (low 32 bits zero and the next 90 bits below 505) with probability 505 / 2^122, independently; the success probability is then at least 0.3911 (proof.md Section 4, under the named approximations H2). This is a comparison of two success events, not a statement about the entropy of r.",
+      "scope": "The fixed target sha256-r39-prefix-v1 restricted to 32-byte messages, the 2^128-scale evaluation of f along about 32300 trails of mean length 2^113.02 started from r + t, 7 trails at a time. Not claimed for other messages, other round counts, or evaluations beyond this scale.",
+      "extrapolation": "Declared and not proved. The full 256-bit functional graph, trails longer than 2^40 and 2^128 evaluations cannot be observed. The organizer experiments shrho-n18 and proj-k0-w256 run this program on the real target at reduced width (the search at width 18) and at full width for 448 points with 16-bit projections; they are program checks, no number of the claim is estimated from their counts, and no sampling premise is used. Extrapolation from these sizes to width 256 and 2^128 evaluations is by the premise only. A deficit eps in the pair-collision rate costs 0.5 * log2(1/(1-eps)) bits (0.0072 for eps = 0.01).",
+      "evidence_ids": [
+        "experiment:shrho-n18",
+        "experiment:proj-k0-w256",
+        "proof:84-100",
+        "proof:101-117",
+        "proof:118-124"
+      ],
+      "limitations": "A model premise about one fixed function, not a theorem: on the target the run is a deterministic function of r. It cannot be tested at width 256; the experiments reach width 18 and 16-bit projections of 448 points per trial and do not measure collision structure at 2^128 evaluations. A rate deficit eps above 0.0038 lowers the success probability below 0.39 and is repaired by at most 0.5 * log2(1/(1-eps)) more bits of time."
+    },
+    {
+      "id": "H2-tail-approximations",
+      "role": "supporting",
+      "statement": "Supporting, named approximations used in the computation for the random function F (proof.md Section 4, Lemma 2). (a) The age of the trail of each lane at the halt is dominated by an exponential with mean L = 2^113.02 and the 7 ages are independent, although restarts depend on the history of the run; the sum of the ages is then at most 32 L except with probability 1e-6 (Chernoff). (b) The number of cut trails is Poisson with mean 0.198. (c) The probability loss for a cut trail is linear in the lost points with slope 0.605 per unit of relative loss; a third cut is a halt charged as failure; the cut-trail deficit is 4.66e-04. (d) Trail lengths are geometric with mean L; the expected number of colliding pairs inside one trail is at most Q L / N = 3.1e-05. The key-false-match bound 3e-11 and the table-capacity Chernoff bound 2^-43.4 are computations for F. The sum of the loss terms is below 4.979e-04.",
+      "scope": "The parameters of plan(256) in experiments/shrho.py: 7 lanes, DP density 505 / 2^122, age cap 12 L, table of 33662 keys.",
+      "extrapolation": "Computations for the random function F under the approximations (a) to (d) only; the same formulas are implemented in plan(n) and loss(p), and the plan is exercised at n = 18 in the experiments.",
+      "evidence_ids": [
+        "proof:84-100",
+        "experiment:shrho-n18"
+      ],
+      "limitations": "Not proved: independence of the 7 ages in the adaptive process, the Poisson law of the cut count and the linearisation of the cut loss; the cut-trail deficit costs 4.66e-04 of the 1.65e-03 of probability slack above 0.39 (the rest of the slack is margin)."
+    },
+    {
+      "id": "H3-machine-convention",
+      "role": "supporting",
+      "statement": "Supporting, a declared machine convention. The cost model prices a 256-bit word RAM with loads and stores and fixes no register count, no rule for constants and no rule for packing several independent computations in one word. This entry declares R = 64 registers of 256 bits (the straight line needs 43; counted as 2,048 bytes of memory), 256-bit immediate operands (as in the organizer's reference count, which charges no constants) and 7 independent lanes of 36 bits in each word (one word operation is one operation, whatever the word holds; the same packing as our cf8b0e92), and charges every operation, load, store and register move. The main loop (one batch of 7 trails, 2433 operations: the 2426-operation kernel, a 4-operation stage-1 test and 3 loop operations) has no load, store or move. The organizer's reference count C = 2812 is used only as the unit. Every instruction is charged 36 bytes of code.",
+      "scope": "The loop body and the recovery copy of the kernel (2426 operations per evaluation of 7 lanes), the stage-1 test, the handlers and the memory account.",
+      "extrapolation": "None statistical: a declared convention, priced. Fewer registers: 32 gives time_log2 124.99321, 16 gives 125.01835; no immediates (the 21 spare registers hold the most used patterns, 95 other uses are loads per batch): 125.04023 (proof.md 3.5).",
+      "evidence_ids": [
+        "proof:28-33",
+        "proof:34-40",
+        "proof:41-51",
+        "proof:66-75",
+        "proof:76-80",
+        "proof:125-131"
+      ],
+      "limitations": "If a reviewer requires a different convention the score rises by the priced amount; the success argument and the set of colliding pairs are unaffected. The kernel (2426 operations, 7 lanes) is produced by the generator in the program (a C port emits the identical program in a 1 MiB sandbox, proof 3.6) and the register allocation by `allocate`; smaller files are priced by the program's Belady allocation of the straight line (an upper bound on what a better schedule needs). With one lane per word the same kernel would cost 7 times more per trail."
+    }
+  ],
+  "submission_state": "ready",
+  "lane": "exploratory"
+}

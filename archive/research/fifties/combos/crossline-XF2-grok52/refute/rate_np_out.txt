@@ -1,0 +1,47 @@
+evaluator_vs_scored_mismatches 0
+progress 16384 sec 48.1 rate 0.40625277161598206
+progress 32768 sec 76.1 rate 0.40625290386378765
+progress 49152 sec 104.8 rate 0.4062528572976589
+progress 65536 sec 132.7 rate 0.4062528107315302
+progress 81920 sec 197.4 rate 0.40625287443399427
+progress 98304 sec 324.1 rate 0.40625282873709995
+progress 114688 sec 406.4 rate 0.4062528131263597
+progress 131072 sec 518.1 rate 0.40625278698280454
+progress 147456 sec 676.6 rate 0.40625276333755916
+progress 163840 sec 765.3 rate 0.406252758949995
+progress 180224 sec 807.7 rate 0.40625277026133105
+progress 196608 sec 850.5 rate 0.4062527759621541
+progress 212992 sec 890.8 rate 0.406252766171327
+progress 229376 sec 924.2 rate 0.40625275671482086
+progress 245760 sec 953.0 rate 0.4062527510027091
+progress 262144 sec 981.6 rate 0.40625275461934507
+contexts 262144 clusters 4294967296 seconds 981.6
+cl 4294967296
+new_open 1744842295
+old_open 1925047920
+guard 290368
+guard_tab 290368
+guard_tab_mismatch 0
+byte_eq 16752384
+guard_not_block_const 0
+blocks_off 67104327
+blocks_off_not_26 0
+blocks_off_not_parity_class 0
+extra_opens_on_guard 11826
+ctx_over_6656_plus_fires 0
+beq_clusters_full 16752384
+beq_split 107814
+beq_split_outside_guard 0
+beq_false_close 0
+beq_rep_mismatch 0
+full_cl 16777216
+split 320
+split_out 0
+false_close 0
+guard_full 896
+gate_open_full 6815783
+new_gate_open_rate 0.40625275461934507 se_over_contexts 5.531247709331724e-08 z_vs_52/128 49.80104833167452 ctx_rate_std 2.8319988271778426e-05
+old_gate_open_rate 0.44821014627814293
+guard_rate 6.760656833648682e-05 bound 9/65536 0.0001373291015625 byte_eq_rate 0.003900468349456787
+upper_99.9pct_one_sided 0.4062529255348993
+exit 0

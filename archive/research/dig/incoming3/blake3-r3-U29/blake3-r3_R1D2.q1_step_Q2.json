@@ -1,0 +1,21 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/dig/incoming3/work_b3r3/analyze.py; research/dig/incoming3/work_b3r3/b3steps.py; research/dig/incoming3/work_b3r3/analysis.json; research/blake3_r3/candidate_blake3/experiments/rho.py",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "question": "Q2 necessity: if R1D2.q1 were removed or free, what changes?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "free-step ceiling: 7 of 599.19 ops per main-loop batch (599 + 3/16 loop) x 0.9944 main share = 0.0169 bit of time_log2 (125.1087 would become 125.0918) if the step cost nothing - impossible, because it is part of the function; replacing the step by the identity changed the digest for 1024 of 1024 random x (mean Hamming distance 127.9 of 256), so it cannot be dropped without changing the target",
+ "notes": "validation first: filed scalar digest vs organizer verifier/blake3.py matched 300/300 random 64-byte messages at 7, 3, 2 and 1 rounds; verifier empty-input 7-round hash = af1349b9...3262 (spec vector) ok; numpy tracer vs scalar 200/200; filed packed circuit selftest True (595 ops). Ceiling only; no cheaper equivalent computation is claimed. gain_bits left null: no real saving.",
+ "held_fixed": "all other steps and the ledger (main loop 99.44%% of total); 1024 random x for the identity-replacement test",
+ "reopen_if": "a cheaper exact computation of this step's outputs is found (then the ceiling 0.0169 bit is the most it could be worth)",
+ "object": "step R1D2.q1 (G call R1D2 quarter-step q1)"
+}

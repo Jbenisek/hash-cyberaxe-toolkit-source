@@ -1,0 +1,21 @@
+{
+ "hash": "sha3-r6",
+ "row_i": null,
+ "row_j": null,
+ "object": "round idx 4 chi (leader's round-5 cone), key = digest lanes (0..3,0) x z=0..34 (140 bits)",
+ "source": "our workflow: scan-once",
+ "own_test": true,
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "evidence": "research/dig/incoming/sha3-r6-U04/work/cone5.py; research/dig/incoming/sha3-r6-U04/work/cone5_out.json",
+ "id": "sha3-r6|round4.chi|chi|Q1",
+ "question": "Round 4 chi (leader's round-5 cone): how many cone rows/bits are used by the 140-bit key?",
+ "labels": [
+  "C"
+ ],
+ "status": "COMPUTED",
+ "number": "Backward cone of key (140 bits, z=0..34): chi5 inputs 175 = theta5 outputs 175; theta5 inputs = chi4 outputs needed 1505 bits (301 columns x 5, 320 of 320 chi rows touched); chi4 inputs needed 1600 of 1600 (320 rows). Variants: z=0..28 (116-bit key) 1362 out / 1600 in; all 64 z (256-bit) 1600/1600.",
+ "topic": "sha3r6.cone.round4",
+ "notes": "Universe cell sha3-r6|round4.chi|chi|Q1. Exact structural cone, cross-checked by bit-flip test (see Q2). Own Keccak-f (validated: 24-round perm reproduces hashlib sha3_256('') digest). Key z=0..34 is the natural reading of '35 planes x 4 lanes' (leader z-set unpublished); contiguous 29 planes gives 1362 (leader 1363), no prefix matches leader's 140/175/1363 jointly. Round idx 4 = 1-based round 5; the leader's 2.19 ops figure itself is not reproduced."
+}

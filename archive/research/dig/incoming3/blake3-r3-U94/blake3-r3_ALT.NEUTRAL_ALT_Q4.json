@@ -1,0 +1,22 @@
+{
+ "hash": "blake3-r3",
+ "row_i": null,
+ "row_j": null,
+ "object": "neutral bits alternatives: inversion / unspent words (use table of m8..m15)",
+ "question": "Alternatives?",
+ "labels": [
+  "N"
+ ],
+ "status": "COMPUTED",
+ "number": "every free word m8..m15 is used in round 0 (diagonal G), round 1 and round 2 (use table in exp_neutral.json): none is unspent after round 0, so the 2-round trick of inverting the first quarter-steps with a free word has no free word at 3 rounds; m10, m12, m13, m14 enter a column G from round 1 or 2 on",
+ "source": "our workflow: dig-scan-b3r3",
+ "own_test": true,
+ "evidence": "research/blake3_r3/alt/exp_neutral.py; research/blake3_r3/alt/exp_neutral.json",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Table from the BLAKE3 permutation; no attack built on it.",
+ "held_fixed": "3 rounds, standard IV, counter 0, block length 64, flags 11, unkeyed; code validated first: own numpy BLAKE3 reproduces the 7-round empty-input hash af1349b9...3262, 1400 random single compressions at 1..7 rounds and 600 messages 0^32||x at 3 and 7 rounds equal verifier/blake3.py (0 mismatches)",
+ "reopen_if": "a trail in which some word is only needed after round 2",
+ "topic": "blake3-r3|ALT.NEUTRAL|ALT|Q4"
+}

@@ -1,0 +1,38 @@
+{
+ "KNOWN-FAIL 5a08fffa (judge REFUTED F1)": {
+  "M1 SEL programs not in package": true,
+  "M2 instance sha256 stated": false,
+  "M3 solver binary sha256 stated": false,
+  "M4 generator listing shipped": false,
+  "M5 replay record": false,
+  "M6 compares output with stored record": false,
+  "M7 admits SEL may return other/none": true
+ },
+ "pkgB3L retry-1 (staged, pinned SEL)": {
+  "M1 SEL programs not in package": true,
+  "M2 instance sha256 stated": false,
+  "M3 solver binary sha256 stated": false,
+  "M4 generator listing shipped": false,
+  "M5 replay record": false,
+  "M6 compares output with stored record": false,
+  "M7 admits SEL may return other/none": true
+ },
+ "pkgB3U (filed c994a61f, PASSED)": {
+  "M1 SEL programs not in package": false,
+  "M2 instance sha256 stated": true,
+  "M3 solver binary sha256 stated": true,
+  "M4 generator listing shipped": true,
+  "M5 replay record": true,
+  "M6 compares output with stored record": true,
+  "M7 admits SEL may return other/none": false
+ },
+ "pkgB3V (staged, next)": {
+  "M1 SEL programs not in package": false,
+  "M2 instance sha256 stated": true,
+  "M3 solver binary sha256 stated": true,
+  "M4 generator listing shipped": true,
+  "M5 replay record": true,
+  "M6 compares output with stored record": true,
+  "M7 admits SEL may return other/none": false
+ }
+}

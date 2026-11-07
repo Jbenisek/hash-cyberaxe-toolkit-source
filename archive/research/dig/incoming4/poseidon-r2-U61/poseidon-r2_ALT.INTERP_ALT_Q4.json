@@ -1,0 +1,21 @@
+{
+ "hash": "poseidon-r2",
+ "row_i": null,
+ "row_j": null,
+ "object": "ALT.INTERP (ALT)",
+ "question": "Q4: alternatives: fewer evaluations of the digest",
+ "labels": [
+  "Z"
+ ],
+ "status": "COMPUTED",
+ "number": "The build charges 393,216 line evaluations = 101,449,728 ops per centre = 0.00193 bit of the total, and both signs c +- s are needed for the odd part; the only saving is the 2,590-point surplus (1.27e-05 bit). Direct evaluation of F from the affine state (skipping the 2 free rounds) would charge fewer than 258 ops per point: bounded by the whole evaluation cost 0.00193 bit. Negligible either way.",
+ "source": "our workflow: dig-scan-poseidon",
+ "own_test": true,
+ "evidence": "research/dig/incoming4/work/ledger_numbers.json; research/poseidon/orchard/lean_r2/logs/ledger_r2.txt",
+ "date": "2026-10-12",
+ "lever": false,
+ "gain_bits": null,
+ "notes": "Universe cell poseidon-r2|ALT.INTERP|ALT|Q4. Bound by removal.",
+ "held_fixed": "the r=2 line polynomial F_j(W) (j = 0, 1, 2; degree 5^8 = 390,625, leading coefficient nonzero) on Pallas; other round counts only as stated",
+ "reopen_if": "never for the score"
+}

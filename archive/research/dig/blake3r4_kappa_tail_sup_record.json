@@ -1,0 +1,20 @@
+{
+  "id": "B3R4-KAPPA-TAIL-20261014-SUP",
+  "hash": "blake3-r4",
+  "row_i": null,
+  "row_j": null,
+  "object": "kappa / tail",
+  "question": "Supersede the untested pointer after the exact local sweep.",
+  "labels": ["B"],
+  "status": "COMPUTED",
+  "number": "Exact kappa sweep and conditional tail=3e-3 arithmetic saved in the computed record",
+  "source": "research/sol_answer_B3R4_kappa_tail_1014.md",
+  "own_test": true,
+  "evidence": "research/dig/blake3r4_kappa_tail_record.json",
+  "date": "2026-10-14",
+  "lever": false,
+  "gain_bits": 0.0,
+  "notes": "Bookkeeping only. Kappa=10 is directly reusable; tail row remains conditional on the relaxed premise and is not a filing claim.",
+  "supersedes": ["B3R4-13"],
+  "kind": "supersession"
+}
